@@ -1,5 +1,5 @@
 ---
-title: "lostineconomics.com"
+title: "lost_in_economics"
 listing:
   contents: posts
   sort: "date desc"
