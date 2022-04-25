@@ -1,15 +1,11 @@
 /* css styles */
 /* @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap'); */
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-@font-face {
-    font-family: 'Minguk-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Minguk-Bold' !important;
+    font-family: 'NanumSquare' !important;
+    font-weight : 600;
   }
 
 p {

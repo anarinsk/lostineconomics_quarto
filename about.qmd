@@ -30,6 +30,6 @@ Hi, I'm Junsok Huhh. If you are interested in me, check my c.v. and contact. The
 [long](https://anarinsk.github.io/cv/long.html) | [short](https://anarinsk.github.io/cv/short.html)
 
 ### History of lostineconomics.com 
-- [v2](https://anarinsk.github.io/) built with [fastpages](https://github.com/fastai/fastpages) 
+- [v2](https://anarinsk.github.io/lostineconomics-v2-1/) built with [fastpages](https://github.com/fastai/fastpages) 
 - [v1](https://anarinsk.github.io/) built with markdown on github 
 - [v0](https://lostineconomics.netlify.com/) built with [BlogDown](https://bookdown.org/yihui/blogdown) on github 
