@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "lost_in_economics",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\nThis is a post with executable code.\n\n\n\n\n\n\nApr 25, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\nThis is the first post in a Quarto blog. Welcome!\n\n\n\n\n\n\nApr 22, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\nThis is a post with executable code.\n\n\n\n\n\n\nApr 25, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\nThis is the first post in a Quarto blog. Welcome!\n\n\n\n\n\n\nApr 22, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncoding\n\n\nWSL\n\n\n\n\nDocker Desktop 없이 WSL에서 콘테이너를 써보자\n\n\n\n\n\n\nSep 13, 2021\n\n\nJS HUHH\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -26,5 +26,187 @@
     "title": "Welcome To My Blog",
     "section": "",
     "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.html",
+    "href": "posts/WSL-without-docker-desktop/index.html",
+    "title": "WSL without Docker Desktop",
+    "section": "",
+    "text": "도커 데스크탑의 유료화 정책이 발표되었다. 대부분의 사용자나 회사에게는 해당 사항이 없겠지만, 오픈소스로 시작한 회사의 정책이라고 보기에는 뭔가 께름칙하다. 대안이 있는데도 굳이 고집할 필요는 없다. 여러 프로젝트가 복잡하게 의존하는, 즉 발목 잡힌 상황이 아니라면 다른 길을 찾으면 된다.\nWSL 내에서 컨테이너를 돌리고 이 서비스를 윈도우에서 웹브라우저로 끌어다 쓰는 형태가 내 일상적인 작업 환경이다. Docker Desktop이 중요한 역할을 하고 있지만 발목은 잡힐 것이 없기에 대안을 시도해보기로 했다. 사실 WSL 내에서 도커를 쓰면 약간 ’가짜’인 듯한 기분이 들 때가 있다. Docker Desktop은 WSL을 거의 완벽에 가깝게 지원한다. 그런데 구조를 뜯어보면 조금 복잡하다. Docker Desktop이 docker 엔진 활용을 위한 두 개의 자체의 컨테이너를 만들고, 이 둘이 WSL과 통신한다. 즉 도커 컨테이너가 WSL 안의 OS에서 돌고 있지 않다는 뜻이다. Windows 및 WSL 지원을 구현하기 위한 궁여지책을 사용하는 느낌이다.\ndocker 엔진 대신 나름 쓸만한 녀석이 podman이다. podman은 OCI(Open Container Initiative)의 표준을 준수하며 docker와 거의 모든 면에서 호환된다. docker의 명령어 뿐 아니라 docker에서 활용하는 이미지도 그대로 쓸 수 있다.\n\n\npodman에 관한 기술적 설명은 LINK, LINK를 참고하자.\n비유를 하자면 컨테이너를 운반하는 배가 바뀔 뿐 컨테이너 자체는 그대로 운용할 수 있다. 아울러 podman을 쓰면 앞서 말한 Docker Desktop의 복잡한 구조가 필요 없다. podman은 WSL 에 설치된 OS 안에서 운용된다. 그리고 podman은 엔진을 제외한 docker 생태계의 다른 요소들과 함께 쓸 수도 있다. 내 경우 작업 환경을 유지하는데 docker-compose가 중요한 역할을 한다. 이 녀석도 podman과도 잘 어울렸다. 각설하고 내용으로 바로 들어가보자.\n\n\n윈도에서 Docker Desktop 버전을 사용하는 대신 Docker CE 버전을 WSL-Ubuntu에 깔아서 사용할 수 있다. 이 글을 관심은 docker를 대체하는 데 있으니, 이에 관한 내용은 다루지 않는다."
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.html#assumptions",
+    "href": "posts/WSL-without-docker-desktop/index.html#assumptions",
+    "title": "WSL without Docker Desktop",
+    "section": "Assumptions",
+    "text": "Assumptions\n\nWSL 2가 잘 깔려 있고 설정되어 있다.\nUbuntu 20.04가 깔여 있고 업데이트도 잘 되어 있다.\nDocker Desktop이 깨끗하게 언인스톨되어 있다.\n\n이 가정에 관해서는 별도로 설명하지 않겠다. 구글 검색을 하시면 관련한 좋은 포스팅이 많이 나올 것이다. WSL에 관해서는 MS의 공식 가이드도 더할 나위 없이 잘 되어 있다.\npodman에 관해 내가 풀고 싶은 문제는 세 가지다.\n\ndocker를 podman으로 대체하기\npodman으로 nvidia gpu 부리기\npodman과 함께 docker-composer 쓰기\n\n1, 2의 방법은 Ubuntu 20.04에서 그대로 활용할 수 있다. 3의 경우 WSL이 지니는 OS 구조의 특성 때문에 몇 가지 추가적인 작업이 필요하다."
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.html#references",
+    "href": "posts/WSL-without-docker-desktop/index.html#references",
+    "title": "WSL without Docker Desktop",
+    "section": "References",
+    "text": "References\n\nLINK\n\n잘 되어 있지만 진행 순서에 살짝 오류가 있어서 아래 수정했다.\n\nLINK"
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.html#basics",
+    "href": "posts/WSL-without-docker-desktop/index.html#basics",
+    "title": "WSL without Docker Desktop",
+    "section": "Basics",
+    "text": "Basics\n최신 버전의 podman을 설치하기 위해서는 apt 저장소의 주소를 별도로 업데이트해줘야 한다. 20.10 이후부터는 podman을 공식적으로 지원하고 있다. 다음번 Ubuntu LTS 버전이 나오면 PPA를 추가하는 이슈는 해소될 듯 싶다.\ncat /etc/lsb-release\nDISTRIB_ID=Ubuntu\nDISTRIB_RELEASE=20.04\nDISTRIB_CODENAME=focal\nDISTRIB_DESCRIPTION=\"Ubuntu 20.04.2 LTS\"\n\nexport VERSION_ID=\"20.04\"\n\necho \"deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_${VERSION_ID}/ /\" | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list\ncurl -L https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_${VERSION_ID}/Release.key | sudo apt-key add -\nsudo apt-get update\nsudo apt-get -y upgrade\nsudo apt-get -y install podman\n\n셸 스크립트에서 cat..., export...라고 되어 있는 부분은 설명이 필요한 부분이다. 실행을 할 때는 $이후만 필요하다.\n\n\ncat...은 현재 설치된 Ubuntu의 버전 등을 알아내는 대목이다.\nexport...은 VERSION_ID 변수를 설정한다.\n\n\n나머지 부분은 PPA를 설정하고 패키지 저장소를 업데이트하고 포드맨을 설치하기 위한 작업이다."
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.html#setting",
+    "href": "posts/WSL-without-docker-desktop/index.html#setting",
+    "title": "WSL without Docker Desktop",
+    "section": "Setting",
+    "text": "Setting\n많은 가이드를 보면 아래 두 파일 중 하나의 내용을 수정할 것을 권고하고 있다. 후자의 파일은 없기 때문에 생성하면 된다.\n\n/usr/share/containers/containers.conf\n~/.config/containers/containers.conf\n\n수정 혹은 생성 내용은 아래와 같다.\n[engine]\nevents_logger=\"file\"\ncgroup_manager=\"cgroupfs\"\n\n그런데 굳이 고치지 않아도 컨테이너를 돌리는 데 큰 이슈는 없는 듯 싶다."
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.html#testrun",
+    "href": "posts/WSL-without-docker-desktop/index.html#testrun",
+    "title": "WSL without Docker Desktop",
+    "section": "Testrun",
+    "text": "Testrun\npodman이 잘 깔렸는데 아래와 같이 테스트해보자.\npodman run hello-world \ndocker의 hello-world를 테스트로 사용하면 된다. 잘 되었다면 잘 깔린 것이다."
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.html#references-1",
+    "href": "posts/WSL-without-docker-desktop/index.html#references-1",
+    "title": "WSL without Docker Desktop",
+    "section": "References",
+    "text": "References\n\nLINK\nLINK"
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.html#installation",
+    "href": "posts/WSL-without-docker-desktop/index.html#installation",
+    "title": "WSL without Docker Desktop",
+    "section": "Installation",
+    "text": "Installation\nnvidia 컨테이너 툴킷 설치를 위해서 먼저 PPA를 설정하자.\ncurl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -\ndistribution=$(. /etc/os-release;echo $ID$VERSION_ID)\ncurl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list\nsudo apt-get update\n컨테이너 툴킷을 설치한다.\nsudo apt install -y nvidia-container-toolkit\n/usr/share/containers/oci/hooks.d/oci-nvidia-hook.json 파일이 있는지 확인해본다. 없으면 생성하고 아래의 내용을 담도록 하자.\n{\n    \"version\": \"1.0.0\",\n    \"hook\": {\n        \"path\": \"/usr/bin/nvidia-container-toolkit\",\n        \"args\": [\"nvidia-container-toolkit\", \"prestart\"],\n        \"env\": [\n            \"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"\n        ]\n    },\n    \"when\": {\n        \"always\": true,\n        \"commands\": [\".*\"]\n    },\n    \"stages\": [\"prestart\"]\n}\n/etc/nvidia-container-runtime/config.toml 파일을 수정하도록 하자. 아래 코드를 통해, config.toml에서 필요한 부분을 수정하고 제대로 수정되었는지 조회한다. no-cgroups = true를 설정하는 것이 핵심이다. 파일을 에디터로 열어 직접 수정해도 된다.\n$ sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-runtime/config.toml\n$ cat /etc/nvidia-container-runtime/config.toml\n부팅을 다시 해주자. WSL에서 나갔다가 다시 들어가면 된다. 셸 자체를 껐다가 다시 켜도 된다."
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.html#testrun-1",
+    "href": "posts/WSL-without-docker-desktop/index.html#testrun-1",
+    "title": "WSL without Docker Desktop",
+    "section": "Testrun",
+    "text": "Testrun\n아래 예는 nvidia-smi 명령을 통해서 OS에 드라이버가 제대로 설정되어 있는지 확인하는 명령어이다. WSL이 깨끗하게 설치된 상태라면 WSL-Ubuntu에는 nvidia driver가 설치되어 있지 않다. 컨테이너를 통해서 드라이버가 설정된 이미지에 진입해 GPU를 부리는 것이라고 보면 되겠다. 단 하드웨어와 직접 소통하는 윈도 드라이버가 WSL2을 지원하는 버전인지 여부는 꼭 확인하시라. 최신 버전은 대체로 WSL2를 잘 자원한다.\npodman run --rm --security-opt=label=disable nvidia/cuda nvidia-smi\nCUDA를 활용한 nbody example도 돌려보자.\npodman run --env NVIDIA_DISABLE_REQUIRE=1 nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark"
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.html#reference",
+    "href": "posts/WSL-without-docker-desktop/index.html#reference",
+    "title": "WSL without Docker Desktop",
+    "section": "Reference",
+    "text": "Reference\nLINK"
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.html#problem",
+    "href": "posts/WSL-without-docker-desktop/index.html#problem",
+    "title": "WSL without Docker Desktop",
+    "section": "Problem",
+    "text": "Problem\nWSL이 Ubuntu의 systemd를 처음부터 활성화하지 않는다. docker CE 버전을 데스크탑을 거치지 않고 WSL 안에서 깔아서 쓸 때 이게 문제가 된다. systemd를 먼저 활성화해야 한다."
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.html#solution",
+    "href": "posts/WSL-without-docker-desktop/index.html#solution",
+    "title": "WSL without Docker Desktop",
+    "section": "Solution",
+    "text": "Solution\n\nRuntime\n\n먼저 MS 런타임을 설치하자.\n\nwget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb\nsudo dpkg -i packages-microsoft-prod.deb\nrm packages-microsoft-prod.deb\n\n\nwsl-transdevian\n\n이 녀석을 설치하기 위해서 먼저 lsb를 설치하자.\n\nsudo apt-get install lsb \n\nsudo로 실행되어야 하는 항목에서 이를 타이핑하는 번거로움을 피하기 위해서 sudo -s를 실행하자. 이후 아래 스크립트를 실행한다.\n\nwget -O /etc/apt/trusted.gpg.d/wsl-transdebian.gpg https://arkane-systems.github.io/wsl-transdebian/apt/wsl-transdebian.gpg\nchmod a+r /etc/apt/trusted.gpg.d/wsl-transdebian.gpg\n\ncat << EOF > /etc/apt/sources.list.d/wsl-transdebian.list\ndeb https://arkane-systems.github.io/wsl-transdebian/apt/ $(lsb_release -cs) main\ndeb-src https://arkane-systems.github.io/wsl-transdebian/apt/ $(lsb_release -cs) main\nEOF\n\napt update\n\n\ngenie & docker-compose\n이제 마지막으로 genie와 docker-compose를 설치해준다.\n$ sudo apt update\n$ sudo apt install -y systemd-genie\n$ sudo apt install docker-compose\n\n\nSetting\n1$ systemctl --user start podman.socket\n2$ export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock\n\nsystemctl... 명령을 통해서 podman의 소켓을 시작한다. 소켓의 상태를 보고 싶다면 start → status로 바뀌 실행해보자.\ndocker가 설치되지 않았기 때문에 docker-compose가 쓸 수 있는 가상화 앱을 지정해야 한다. 이를 위에 열어준 포드맨 소켓과 연결한다.\n\n여기까지 마치면 docker-compose가 잘 돌아간다.\n\nWSL-Ubuntu 부팅 시 자동으로 이 상태가 갖춰지길 원하면 1,2를 .bashrc에 넣으면 된다.\n\n단 wsl genie -s으로 실행한 상태가 아니라면 systemd 사용이 제한되기 때문에 아래 같은 경고 메시지를 볼 수 있다.\n\nFailed to connect to bus: No such file or directory"
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.html#testrun-2",
+    "href": "posts/WSL-without-docker-desktop/index.html#testrun-2",
+    "title": "WSL without Docker Desktop",
+    "section": "Testrun",
+    "text": "Testrun\n\n현재 위치(대체로는 유저 홈)에 아래와 같이 docker-compose.yml 파일을 생성하자.\n현재 위치에 data디렉토리를 생성하자.\n\nversion: '3'\n#\nservices:\n    tf-gpu:\n        image: tensorflow/tensorflow:latest-gpu-jupyter\n        environment:\n            - NVIDIA_DISABLE_REQUIRE=1\n            - GRANT_SUDO=yes\n            - JUPYTER_ENABLE_LAB=yes\n            - JUPYTER_TOKEN=1234\n        volumes:\n            - \"./data:/mnt/space/ml\"\n        ports:\n            - \"8888:8888\"\n        # deploy:\n        #     resources:\n        #         reservations:\n        #             devices:\n        #                 - driver: nvidia\n        #                   device_ids: ['all']\n        #                   capabilities: [gpu]\n        container_name: tf_gpu\n이제 다음을 실행하자.\n$ docker-compose up \n잘 실행되었다면 주피터 서버가 생성되었을 것이다. 접속 주소는 웹브라우저에서 localhost:8888을 치면 된다. 토큰(비밀번호)은 1234로 설정해두었다. GPU가 잘 돌아가고 있음을 직접 확인해보자. 노트북의 Cell을 열고 아래 내용을 실행해보자.\nimport tensorflow as tf\ntf.config.get_visible_devices(\n    device_type=None\n)\nCPU 이외에 GPU가 보이면 잘 설정된 것이다. 컨테이너 안에 담긴 fashion mnist 등의 예제를 마음껏 시험해보시라.\nyml 파일에서 눈치를 챘을지 모르겠지만, deploy 항목은 docker에서만 실행되는 항목이다. 이를 주석처리 하지 않고 podman에서 돌리면 에러가 발생한다."
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.qmd.html",
+    "href": "posts/WSL-without-docker-desktop/index.qmd.html",
+    "title": "WSL without Docker Desktop",
+    "section": "",
+    "text": "도커 데스크탑의 유료화 정책이 발표되었다. 대부분의 사용자나 회사에게는 해당 사항이 없겠지만, 오픈소스로 시작한 회사의 정책이라고 보기에는 뭔가 께름칙하다. 대안이 있는데도 굳이 고집할 필요는 없다. 여러 프로젝트가 복잡하게 의존하는, 즉 발목 잡힌 상황이 아니라면 다른 길을 찾으면 된다.\nWSL 내에서 컨테이너를 돌리고 이 서비스를 윈도우에서 웹브라우저로 끌어다 쓰는 형태가 내 일상적인 작업 환경이다. Docker Desktop이 중요한 역할을 하고 있지만 발목은 잡힐 것이 없기에 대안을 시도해보기로 했다. 사실 WSL 내에서 도커를 쓰면 약간 ’가짜’인 듯한 기분이 들 때가 있다. Docker Desktop은 WSL을 거의 완벽에 가깝게 지원한다. 그런데 구조를 뜯어보면 조금 복잡하다. Docker Desktop이 docker 엔진 활용을 위한 두 개의 자체의 컨테이너를 만들고, 이 둘이 WSL과 통신한다. 즉 도커 컨테이너가 WSL 안의 OS에서 돌고 있지 않다는 뜻이다. Windows 및 WSL 지원을 구현하기 위한 궁여지책을 사용하는 느낌이다.\ndocker 엔진 대신 나름 쓸만한 녀석이 podman이다. podman은 OCI(Open Container Initiative)의 표준을 준수하며 docker와 거의 모든 면에서 호환된다. docker의 명령어 뿐 아니라 docker에서 활용하는 이미지도 그대로 쓸 수 있다.\n\n\npodman에 관한 기술적 설명은 LINK, LINK를 참고하자.\n비유를 하자면 컨테이너를 운반하는 배가 바뀔 뿐 컨테이너 자체는 그대로 운용할 수 있다. 아울러 podman을 쓰면 앞서 말한 Docker Desktop의 복잡한 구조가 필요 없다. podman은 WSL 에 설치된 OS 안에서 운용된다. 그리고 podman은 엔진을 제외한 docker 생태계의 다른 요소들과 함께 쓸 수도 있다. 내 경우 작업 환경을 유지하는데 docker-compose가 중요한 역할을 한다. 이 녀석도 podman과도 잘 어울렸다. 각설하고 내용으로 바로 들어가보자.\n\n\n윈도에서 Docker Desktop 버전을 사용하는 대신 Docker CE 버전을 WSL-Ubuntu에 깔아서 사용할 수 있다. 이 글을 관심은 docker를 대체하는 데 있으니, 이에 관한 내용은 다루지 않는다."
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.qmd.html#assumptions",
+    "href": "posts/WSL-without-docker-desktop/index.qmd.html#assumptions",
+    "title": "WSL without Docker Desktop",
+    "section": "Assumptions",
+    "text": "Assumptions\n\nWSL 2가 잘 깔려 있고 설정되어 있다.\nUbuntu 20.04가 깔여 있고 업데이트도 잘 되어 있다.\nDocker Desktop이 깨끗하게 언인스톨되어 있다.\n\n이 가정에 관해서는 별도로 설명하지 않겠다. 구글 검색을 하시면 관련한 좋은 포스팅이 많이 나올 것이다. WSL에 관해서는 MS의 공식 가이드도 더할 나위 없이 잘 되어 있다.\npodman에 관해 내가 풀고 싶은 문제는 세 가지다.\n\ndocker를 podman으로 대체하기\npodman으로 nvidia gpu 부리기\npodman과 함께 docker-composer 쓰기\n\n1, 2의 방법은 Ubuntu 20.04에서 그대로 활용할 수 있다. 3의 경우 WSL이 지니는 OS 구조의 특성 때문에 몇 가지 추가적인 작업이 필요하다."
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.qmd.html#references",
+    "href": "posts/WSL-without-docker-desktop/index.qmd.html#references",
+    "title": "WSL without Docker Desktop",
+    "section": "References",
+    "text": "References\n\nLINK\n\n잘 되어 있지만 진행 순서에 살짝 오류가 있어서 아래 수정했다.\n\nLINK"
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.qmd.html#basics",
+    "href": "posts/WSL-without-docker-desktop/index.qmd.html#basics",
+    "title": "WSL without Docker Desktop",
+    "section": "Basics",
+    "text": "Basics\n최신 버전의 podman을 설치하기 위해서는 apt 저장소의 주소를 별도로 업데이트해줘야 한다. 20.10 이후부터는 podman을 공식적으로 지원하고 있다. 다음번 Ubuntu LTS 버전이 나오면 PPA를 추가하는 이슈는 해소될 듯 싶다.\ncat /etc/lsb-release\nDISTRIB_ID=Ubuntu\nDISTRIB_RELEASE=20.04\nDISTRIB_CODENAME=focal\nDISTRIB_DESCRIPTION=\"Ubuntu 20.04.2 LTS\"\n\nexport VERSION_ID=\"20.04\"\n\necho \"deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_${VERSION_ID}/ /\" | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list\ncurl -L https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_${VERSION_ID}/Release.key | sudo apt-key add -\nsudo apt-get update\nsudo apt-get -y upgrade\nsudo apt-get -y install podman\n\n셸 스크립트에서 cat..., export...라고 되어 있는 부분은 설명이 필요한 부분이다. 실행을 할 때는 $이후만 필요하다.\n\n\ncat...은 현재 설치된 Ubuntu의 버전 등을 알아내는 대목이다.\nexport...은 VERSION_ID 변수를 설정한다.\n\n\n나머지 부분은 PPA를 설정하고 패키지 저장소를 업데이트하고 포드맨을 설치하기 위한 작업이다."
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.qmd.html#setting",
+    "href": "posts/WSL-without-docker-desktop/index.qmd.html#setting",
+    "title": "WSL without Docker Desktop",
+    "section": "Setting",
+    "text": "Setting\n많은 가이드를 보면 아래 두 파일 중 하나의 내용을 수정할 것을 권고하고 있다. 후자의 파일은 없기 때문에 생성하면 된다.\n\n/usr/share/containers/containers.conf\n~/.config/containers/containers.conf\n\n수정 혹은 생성 내용은 아래와 같다.\n[engine]\nevents_logger=\"file\"\ncgroup_manager=\"cgroupfs\"\n\n그런데 굳이 고치지 않아도 컨테이너를 돌리는 데 큰 이슈는 없는 듯 싶다."
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.qmd.html#testrun",
+    "href": "posts/WSL-without-docker-desktop/index.qmd.html#testrun",
+    "title": "WSL without Docker Desktop",
+    "section": "Testrun",
+    "text": "Testrun\npodman이 잘 깔렸는데 아래와 같이 테스트해보자.\npodman run hello-world \ndocker의 hello-world를 테스트로 사용하면 된다. 잘 되었다면 잘 깔린 것이다."
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.qmd.html#references-1",
+    "href": "posts/WSL-without-docker-desktop/index.qmd.html#references-1",
+    "title": "WSL without Docker Desktop",
+    "section": "References",
+    "text": "References\n\nLINK\nLINK"
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.qmd.html#installation",
+    "href": "posts/WSL-without-docker-desktop/index.qmd.html#installation",
+    "title": "WSL without Docker Desktop",
+    "section": "Installation",
+    "text": "Installation\nnvidia 컨테이너 툴킷 설치를 위해서 먼저 PPA를 설정하자.\ncurl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -\ndistribution=$(. /etc/os-release;echo $ID$VERSION_ID)\ncurl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list\nsudo apt-get update\n컨테이너 툴킷을 설치한다.\nsudo apt install -y nvidia-container-toolkit\n/usr/share/containers/oci/hooks.d/oci-nvidia-hook.json 파일이 있는지 확인해본다. 없으면 생성하고 아래의 내용을 담도록 하자.\n{\n    \"version\": \"1.0.0\",\n    \"hook\": {\n        \"path\": \"/usr/bin/nvidia-container-toolkit\",\n        \"args\": [\"nvidia-container-toolkit\", \"prestart\"],\n        \"env\": [\n            \"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"\n        ]\n    },\n    \"when\": {\n        \"always\": true,\n        \"commands\": [\".*\"]\n    },\n    \"stages\": [\"prestart\"]\n}\n/etc/nvidia-container-runtime/config.toml 파일을 수정하도록 하자. 아래 코드를 통해, config.toml에서 필요한 부분을 수정하고 제대로 수정되었는지 조회한다. no-cgroups = true를 설정하는 것이 핵심이다. 파일을 에디터로 열어 직접 수정해도 된다.\n$ sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-runtime/config.toml\n$ cat /etc/nvidia-container-runtime/config.toml\n부팅을 다시 해주자. WSL에서 나갔다가 다시 들어가면 된다. 셸 자체를 껐다가 다시 켜도 된다."
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.qmd.html#testrun-1",
+    "href": "posts/WSL-without-docker-desktop/index.qmd.html#testrun-1",
+    "title": "WSL without Docker Desktop",
+    "section": "Testrun",
+    "text": "Testrun\n아래 예는 nvidia-smi 명령을 통해서 OS에 드라이버가 제대로 설정되어 있는지 확인하는 명령어이다. WSL이 깨끗하게 설치된 상태라면 WSL-Ubuntu에는 nvidia driver가 설치되어 있지 않다. 컨테이너를 통해서 드라이버가 설정된 이미지에 진입해 GPU를 부리는 것이라고 보면 되겠다. 단 하드웨어와 직접 소통하는 윈도 드라이버가 WSL2을 지원하는 버전인지 여부는 꼭 확인하시라. 최신 버전은 대체로 WSL2를 잘 자원한다.\npodman run --rm --security-opt=label=disable nvidia/cuda nvidia-smi\nCUDA를 활용한 nbody example도 돌려보자.\npodman run --env NVIDIA_DISABLE_REQUIRE=1 nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark"
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.qmd.html#reference",
+    "href": "posts/WSL-without-docker-desktop/index.qmd.html#reference",
+    "title": "WSL without Docker Desktop",
+    "section": "Reference",
+    "text": "Reference\nLINK"
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.qmd.html#problem",
+    "href": "posts/WSL-without-docker-desktop/index.qmd.html#problem",
+    "title": "WSL without Docker Desktop",
+    "section": "Problem",
+    "text": "Problem\nWSL이 Ubuntu의 systemd를 처음부터 활성화하지 않는다. docker CE 버전을 데스크탑을 거치지 않고 WSL 안에서 깔아서 쓸 때 이게 문제가 된다. systemd를 먼저 활성화해야 한다."
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.qmd.html#solution",
+    "href": "posts/WSL-without-docker-desktop/index.qmd.html#solution",
+    "title": "WSL without Docker Desktop",
+    "section": "Solution",
+    "text": "Solution\n\nRuntime\n\n먼저 MS 런타임을 설치하자.\n\nwget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb\nsudo dpkg -i packages-microsoft-prod.deb\nrm packages-microsoft-prod.deb\n\n\nwsl-transdevian\n\n이 녀석을 설치하기 위해서 먼저 lsb를 설치하자.\n\nsudo apt-get install lsb \n\nsudo로 실행되어야 하는 항목에서 이를 타이핑하는 번거로움을 피하기 위해서 sudo -s를 실행하자. 이후 아래 스크립트를 실행한다.\n\nwget -O /etc/apt/trusted.gpg.d/wsl-transdebian.gpg https://arkane-systems.github.io/wsl-transdebian/apt/wsl-transdebian.gpg\nchmod a+r /etc/apt/trusted.gpg.d/wsl-transdebian.gpg\n\ncat << EOF > /etc/apt/sources.list.d/wsl-transdebian.list\ndeb https://arkane-systems.github.io/wsl-transdebian/apt/ $(lsb_release -cs) main\ndeb-src https://arkane-systems.github.io/wsl-transdebian/apt/ $(lsb_release -cs) main\nEOF\n\napt update\n\n\ngenie & docker-compose\n이제 마지막으로 genie와 docker-compose를 설치해준다.\n$ sudo apt update\n$ sudo apt install -y systemd-genie\n$ sudo apt install docker-compose\n\n\nSetting\n1$ systemctl --user start podman.socket\n2$ export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock\n\nsystemctl... 명령을 통해서 podman의 소켓을 시작한다. 소켓의 상태를 보고 싶다면 start → status로 바뀌 실행해보자.\ndocker가 설치되지 않았기 때문에 docker-compose가 쓸 수 있는 가상화 앱을 지정해야 한다. 이를 위에 열어준 포드맨 소켓과 연결한다.\n\n여기까지 마치면 docker-compose가 잘 돌아간다.\n\nWSL-Ubuntu 부팅 시 자동으로 이 상태가 갖춰지길 원하면 1,2를 .bashrc에 넣으면 된다.\n\n단 wsl genie -s으로 실행한 상태가 아니라면 systemd 사용이 제한되기 때문에 아래 같은 경고 메시지를 볼 수 있다.\n\nFailed to connect to bus: No such file or directory"
+  },
+  {
+    "objectID": "posts/WSL-without-docker-desktop/index.qmd.html#testrun-2",
+    "href": "posts/WSL-without-docker-desktop/index.qmd.html#testrun-2",
+    "title": "WSL without Docker Desktop",
+    "section": "Testrun",
+    "text": "Testrun\n\n현재 위치(대체로는 유저 홈)에 아래와 같이 docker-compose.yml 파일을 생성하자.\n현재 위치에 data디렉토리를 생성하자.\n\nversion: '3'\n#\nservices:\n    tf-gpu:\n        image: tensorflow/tensorflow:latest-gpu-jupyter\n        environment:\n            - NVIDIA_DISABLE_REQUIRE=1\n            - GRANT_SUDO=yes\n            - JUPYTER_ENABLE_LAB=yes\n            - JUPYTER_TOKEN=1234\n        volumes:\n            - \"./data:/mnt/space/ml\"\n        ports:\n            - \"8888:8888\"\n        # deploy:\n        #     resources:\n        #         reservations:\n        #             devices:\n        #                 - driver: nvidia\n        #                   device_ids: ['all']\n        #                   capabilities: [gpu]\n        container_name: tf_gpu\n이제 다음을 실행하자.\n$ docker-compose up \n잘 실행되었다면 주피터 서버가 생성되었을 것이다. 접속 주소는 웹브라우저에서 localhost:8888을 치면 된다. 토큰(비밀번호)은 1234로 설정해두었다. GPU가 잘 돌아가고 있음을 직접 확인해보자. 노트북의 Cell을 열고 아래 내용을 실행해보자.\nimport tensorflow as tf\ntf.config.get_visible_devices(\n    device_type=None\n)\nCPU 이외에 GPU가 보이면 잘 설정된 것이다. 컨테이너 안에 담긴 fashion mnist 등의 예제를 마음껏 시험해보시라.\nyml 파일에서 눈치를 챘을지 모르겠지만, deploy 항목은 docker에서만 실행되는 항목이다. 이를 주석처리 하지 않고 podman에서 돌리면 에러가 발생한다."
   }
 ]
