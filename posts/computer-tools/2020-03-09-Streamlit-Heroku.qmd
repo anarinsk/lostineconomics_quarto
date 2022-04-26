@@ -3,7 +3,7 @@ title:  Streamlit + Heroku
 description: python 만으로 웹 앱을 만들어보자  
 author: "JS HUHH"
 date: "03/09/2020"
-image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Streamlit-logo-primary-colormark-darktext.png/800px-Streamlit-logo-primary-colormark-darktext.png"
+image: "https://thumbs.dreamstime.com/z/obsolete-stamp-obsolete-round-grunge-stamp-obsolete-sign-obsolete-136960901.jpg"
 categories: [computer-tool]
 #margin-header: subscribe.html
 ---

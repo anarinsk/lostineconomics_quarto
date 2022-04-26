@@ -3,7 +3,7 @@ title:  Build Your Blog on Github, Easily
 description: 깃헙 위에 블로그를 보다 쉽게 만들어볼까?
 author: "JS HUHH"
 date: "03/07/2020"
-image: "fastpages.png"
+image: "https://thumbs.dreamstime.com/z/obsolete-stamp-obsolete-round-grunge-stamp-obsolete-sign-obsolete-136960901.jpg"
 categories: [computer-tool]
 #margin-header: subscribe.html
 ---
