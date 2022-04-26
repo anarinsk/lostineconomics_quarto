@@ -10,7 +10,80 @@
 <atom:link href="https://www.github.io/lostineconomics_quarto/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-0.9.305</generator>
-<lastBuildDate>Thu, 18 Nov 2021 15:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 26 Apr 2022 15:00:00 GMT</lastBuildDate>
+<item>
+  <title>Happy Git-ing!</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://www.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>이 포스팅은 깃 혹은 깃허브에 관한 일반적인 해설이나 이용법이 아닙니다. 깃 혹은 깃허브를 어느 정도 활용하고 있다고 할 때 가려움을 긁어주는 용도로 작성된 글입니다.</p>
+</div>
+</div>
+<section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">tl; dr</h2>
+<ul>
+<li>깃과 깃허브를 OS를 아우르면서 써보자.</li>
+</ul>
+</section>
+<section id="common-tools" class="level2">
+<h2 class="anchored" data-anchor-id="common-tools">Common Tools</h2>
+<p>이상적으로 말하면 git을 쓸 때 터미널(CLI)을 통해 쓰면 좋다. 하지만 우리는 인간이고 터미널은 잊기 쉽고 이 때문에 고통받을 수 있다. 그래서 UI를 갖춘 틀이 있으면 좋다.</p>
+<p>아마도 깃을 쓴다면 저장소로 깃랩이나 깃헙을 같이 쓸 것이다. 나는 깃헙을 쓰고 있으므로 깃헙을 중심으로 설명하겠다.</p>
+<p><a href="https://desktop.github.com">깃헙 데스크탑</a>플랫폼을 가리지 않고 깃헙을 같이 쓸 수 있는 앱이 있다. 플랫폼 별로 다운로드 받아서 쓰면 된다. 리포지터리(리포)를 생성하고 클론하고 하는 작업이 모두 UI 내에서 가능해서 제법 편리하다. 자세한 사용법은 생략한다.</p>
+</section>
+<section id="그래도-터미널을-써야-한다면" class="level2">
+<h2 class="anchored" data-anchor-id="그래도-터미널을-써야-한다면">그래도 터미널을 써야 한다면?</h2>
+<p>그래도 터미널에서 직접 깃을 써야 할 때가 있다. 이때부터 문제가 다소 복잡해진다. 깃을 원격 저장소를 세팅해야 하고, 깃헙을 인증도 해야하고… 이걸 뭔가 편리하게 할 수 없을까? 머신을 자주 세팅해야 하는 상황이라면 이것도 나름 피곤한 일이다.</p>
+<section id="gh-cli" class="level3">
+<h3 class="anchored" data-anchor-id="gh-cli">gh CLI</h3>
+<p>이러한 불편을 해소하기 위해서 github에서 만든 툴이 <a href="https://cli.github.com/">gh CLI</a>다. 이 녀석도 플랫폼별로 제공된다. 한마디로 말해서 터미널에서 깃헙을 제어하고 여러가지 작업을 할 수 있게 만든 툴이다. 다른 명령어들도 유용하지만 제일 유용한 것은 인증에 관련된 것이다.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;">$</span> gh auth login  </span></code></pre></div>
+<p>최근부터 깃헙에서 id/password를 통한 로그인을 막고 있다. 예전에 소개된 문서에서처럼 저장소 주소를 때리고 로그인 하는게 불가능하다. 위 명령어를 실행하면 조건에 따라서 로그인 절차를 상세하게 안내해준다. 그대로 따라서 로그인 하면 큰 불편함을 느끼지 않을 것이다.</p>
+</section>
+</section>
+<section id="os-별-설치" class="level2">
+<h2 class="anchored" data-anchor-id="os-별-설치">OS 별 설치</h2>
+<p>앞에 소개했던 github desktop은 그 자체로서 운용된다. 다시 말해 이 앱 자체가 뭔가에 의존하지 않기 때문에 앱 내에서 git을 쓰는 이상 뭔가를 더 깔거나 할 필요는 없다. 다만 gh CLI의 경우에는 OS에 깃이 깔려 있어야 한다.</p>
+<section id="linux-macos" class="level3">
+<h3 class="anchored" data-anchor-id="linux-macos">Linux, Macos</h3>
+<p>두 OS 모두 깃이 기본으로 깔려 있다. 따라서 gh CLI를 깔아서 잘 쓰면 된다.</p>
+</section>
+<section id="windows-10" class="level3">
+<h3 class="anchored" data-anchor-id="windows-10">Windows 10</h3>
+<p>원도10의 경우는 고려해야 할 사항이 몇 가지 있다. 윈도우용 깃을 깔아도 되지만 그것보다는 Powershell을 통해서 윈도 패키지 매니저인 <code>winget</code>을 이용하기를 권한다.</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb2-1">winget install <span class="op" style="color: #5E5E5E;">-</span>e <span class="op" style="color: #5E5E5E;">--</span>id Git<span class="op" style="color: #5E5E5E;">.</span><span class="fu" style="color: #4758AB;">Git</span></span></code></pre></div>
+<p>이렇게 깃을 설치한 후 <code>gh auth login</code>을 통해서 로그인을 수행하면 git의 원격 저장소 설정이 잘 이루어진다.</p>
+<section id="wsl" class="level4">
+<h4 class="anchored" data-anchor-id="wsl">WSL</h4>
+<p>문제는 WSL에서 생긴다. WSL은 Windows 10 안에서 돌고 있는 가상 머신이고 엄밀한 관점에서는 별도의 기계다. 그리고 다른 Ubuntu와 마찬가지로 깃이 이 안에도 깔려 있다.</p>
+<p>WSL 내에서 인증은 조금 복잡하다. 상식적으로는 gh CLI를 통해서 가능할 것 같은데 그렇지 않다. 이에 대한 해결책은 <a href="https://docs.microsoft.com/ko-kr/windows/wsl/tutorials/wsl-git">여기</a> 나와 았다. 쉽게 말해서 윈도의 자격 증명을 가져오는 방식이다. 따라서 윈도에 깃과 깃허브에 관한 설정이 이미 완료되어 있어야 한다.</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="ex" style="color: null;">$</span> git config <span class="at" style="color: #657422;">--global</span> credential.helper <span class="st" style="color: #20794D;">"/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe"</span></span></code></pre></div>
+
+
+</section>
+</section>
+</section>
+
+ ]]></description>
+  <category>git</category>
+  <guid>https://www.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</guid>
+  <pubDate>Tue, 26 Apr 2022 15:00:00 GMT</pubDate>
+  <media:content url="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmxcpJ%2Fbtq9IDonGa1%2FLGoNFr3kBHT3tm8QnIwjrK%2Fimg.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Python in the Browser</title>
   <dc:creator>JS HUHH</dc:creator>
@@ -337,12 +410,117 @@
 </section>
 
  ]]></description>
-  <category>coding</category>
-  <category>wsl</category>
   <category>container</category>
   <guid>https://www.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</guid>
   <pubDate>Sun, 12 Sep 2021 15:00:00 GMT</pubDate>
   <media:content url="https://www.github.io/lostineconomics_quarto//posts/container/image.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Docker + Jupyter + 한글 폰트</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://www.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="build도-어렵지-않다" class="level2">
+<h2 class="anchored" data-anchor-id="build도-어렵지-않다">Build도 어렵지 않다!</h2>
+<p>이 글은 <a href="https://anarinsk.github.io/lostineconomics-v2-1/docker/data-science/2020/09/24/install-hangul-in-docker.html">이 포스팅</a>에서 이어진다. 컨테이너를 올린 뒤 컨테이너 내 터미널에서 sh 스크립트를 실행하지 않고 한글 문제 처음부터 해결할 수 없을까?</p>
+<p>사실 이 포스팅을 쓰게 된 동기는 따로 있다. 글을 쓰는 시점에서 <code>matplotlib.font_manager._rebuild()</code>가 사라졌다! Jupyter에서 폰트 목록을 다시 생성할 다른 방법을 찾아야 했다. docker-compose로 필요한 이미지를 끌어올 때 단순히 이미지를 끌어오는 대신 특화된 형태로 build를 할 수도 있다. 이전 포스팅에서 소개한 방법에서는 build 옵션을 사용하지 않았다. 일단 Build가 꽤 거창하게 느껴졌기 때문이다. 적당한 ubuntu 버전을 끌어오고 여기에 Python, Jupyter를 깔고… 이런 빌드 과정이 꽤 험난하고 불필요해 보였다. Jupyter의 경우 데이터사이언스를 위한 잘 갖춰진 도커 이미지가 이미 있고, 이를 그대로 쓰면 큰 문제는 없다.</p>
+<p>문제가 생겼으니 해결책을 찾아야 한다. 특화된 이미지에 기반해서 빌드를 하면 한글 문제와 같은 특정하게 발생하는 문제를 미리 해결할 수 있지 않을까? 이후 소개하는 방법을 통해 확인한 내용은 다음과 같다. 이용 조건이 비슷하다면 참고해보시라.</p>
+<ul>
+<li>docker-compose를 쓸 때 이미지를 지정하는 image 부분을 제외한 나머지는 거의 그대로 재사용이 가능하다.</li>
+<li>image를 그대로 끌어오는 것이나 몇 가지 명령어를 넣어서 build를 하는 것이나 시간 상으로는 크게 차이가 없다.</li>
+</ul>
+</section>
+<section id="how-to-implement" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-implement">How to Implement</h2>
+<p>본론이다.</p>
+<ol type="1">
+<li>docker-compose를 위한 file이 있는 디렉토리 아래 dockerfiles 디렉토리를 하나 더 만든다 (디렉토리 이름은 각자 알아서). 여기에 docker build를 위한 파일을 넣어어둔다.</li>
+<li>docker-compose용 파일을 약간 수정한다.</li>
+</ol>
+<section id="실행-환경" class="level3">
+<h3 class="anchored" data-anchor-id="실행-환경">실행 환경</h3>
+<ol type="1">
+<li>Windows 10 WSL 2 + Ubuntu 20.04</li>
+<li>Docker for Desktop (Windows)</li>
+</ol>
+<ul>
+<li>도커를 쓰지 않더라도 dockerfiles과 호환되는 빌드 체계를 갖추고 있다면 응용이 가능하다.</li>
+</ul>
+</section>
+<section id="dockerfiles" class="level3">
+<h3 class="anchored" data-anchor-id="dockerfiles">dockerfiles</h3>
+<p>데이터 사이언스를 위한 Jupyter docker 파일을 예시로 들겠다. 다른 이미지라면 응용해서 쓰면 된다.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode dockerfile code-with-copy"><code class="sourceCode dockerfile"><span id="cb1-1"><span class="kw" style="color: #003B4F;">FROM</span> jupyter/datascience-notebook:latest</span>
+<span id="cb1-2"><span class="co" style="color: #5E5E5E;"># Declare root as user </span></span>
+<span id="cb1-3"><span class="kw" style="color: #003B4F;">USER</span> root</span>
+<span id="cb1-4"><span class="co" style="color: #5E5E5E;"># Update Ubuntu </span></span>
+<span id="cb1-5"><span class="kw" style="color: #003B4F;">RUN</span> <span class="fu" style="color: #4758AB;">sed</span> <span class="at" style="color: #657422;">-i</span> <span class="st" style="color: #20794D;">'s/archive.ubuntu.com/mirror.kakao.com/g'</span> /etc/apt/sources.list <span class="kw" style="color: #003B4F;">&amp;&amp;</span> <span class="fu" style="color: #4758AB;">sed</span> <span class="at" style="color: #657422;">-i</span> <span class="st" style="color: #20794D;">'s/security.ubuntu.com/mirror.kakao.com/g'</span> /etc/apt/sources.list</span>
+<span id="cb1-6"><span class="co" style="color: #5E5E5E;"># Install Nanum for Korean Font </span></span>
+<span id="cb1-7"><span class="kw" style="color: #003B4F;">RUN</span> <span class="ex" style="color: null;">apt-get</span> update <span class="kw" style="color: #003B4F;">&amp;&amp;</span> <span class="ex" style="color: null;">apt-get</span> <span class="at" style="color: #657422;">-y</span> upgrade <span class="kw" style="color: #003B4F;">&amp;&amp;</span> <span class="ex" style="color: null;">apt-get</span> install <span class="at" style="color: #657422;">-y</span> fonts-nanum<span class="pp" style="color: #AD0000;">*</span> <span class="kw" style="color: #003B4F;">&amp;&amp;</span> <span class="ex" style="color: null;">fc-cache</span> <span class="at" style="color: #657422;">-fv</span> <span class="kw" style="color: #003B4F;">&amp;&amp;</span> <span class="fu" style="color: #4758AB;">rm</span> <span class="at" style="color: #657422;">-fr</span> ~/.cache/matplotlib</span></code></pre></div>
+<ul>
+<li><code>FROM jupyter/datascience-notebook:latest</code> 끌어올 이미지를 지정한다.</li>
+<li><code>USER root</code> 이미지 내에서 root 권한을 부여한다. 이후 sudo는 안 써도 된다.</li>
+<li><code>RUN sed -i...</code> 끌어온 우분투 이미지가 미국 기준이기 때문에 업데이트 서버 주소 역시 미국이다. 이걸 국내에서 가장 안정적이고 빠른 카카오 서버로 바꾼다.</li>
+<li><code>RUN apt-get update &amp;&amp; apt-get -y upgrade...</code>
+<ul>
+<li>우분투 배포판의 업데이트 및 업그레이드를 실행한다.<br>
+</li>
+<li>나눔 폰트를 깔아준다.</li>
+<li>docker 이미지 배포판의 폰트 캐시를 지운다.</li>
+<li>Jupyter의 폰트 캐시를 지운다.</li>
+</ul></li>
+</ul>
+</section>
+<section id="docker-compose.yml" class="level3">
+<h3 class="anchored" data-anchor-id="docker-compose.yml">docker-compose.yml</h3>
+<p>docker-compose를 위한 yml을 예시한다. 이 내용 역시 각자 환경에 맞게 변형해서 쓰면 된다. 파일 이름을 “docker-jupyter.yml”이라고 하자.</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><span class="fu" style="color: #4758AB;">version</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">'3'</span></span>
+<span id="cb2-2"><span class="co" style="color: #5E5E5E;">#</span></span>
+<span id="cb2-3"><span class="fu" style="color: #4758AB;">services</span><span class="kw" style="color: #003B4F;">:</span></span>
+<span id="cb2-4"><span class="co" style="color: #5E5E5E;">#</span></span>
+<span id="cb2-5"><span class="at" style="color: #657422;">    </span><span class="fu" style="color: #4758AB;">jupyter-ds</span><span class="kw" style="color: #003B4F;">:</span></span>
+<span id="cb2-6"><span class="at" style="color: #657422;">      </span><span class="fu" style="color: #4758AB;">build</span><span class="kw" style="color: #003B4F;">:</span></span>
+<span id="cb2-7"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">context</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> .</span></span>
+<span id="cb2-8"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">dockerfile</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> ./dockerfiles/dockerfile-jupyter</span></span>
+<span id="cb2-9"><span class="at" style="color: #657422;">      </span><span class="fu" style="color: #4758AB;">user</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> root</span></span>
+<span id="cb2-10"><span class="at" style="color: #657422;">      </span><span class="fu" style="color: #4758AB;">environment</span><span class="kw" style="color: #003B4F;">:</span></span>
+<span id="cb2-11"><span class="at" style="color: #657422;">        </span><span class="kw" style="color: #003B4F;">-</span><span class="at" style="color: #657422;"> GRANT_SUDO=yes</span></span>
+<span id="cb2-12"><span class="at" style="color: #657422;">        </span><span class="kw" style="color: #003B4F;">-</span><span class="at" style="color: #657422;"> JUPYTER_ENABLE_LAB=yes</span></span>
+<span id="cb2-13"><span class="at" style="color: #657422;">        </span><span class="kw" style="color: #003B4F;">-</span><span class="at" style="color: #657422;"> JUPYTER_TOKEN={YOUR-PASSWORD}</span></span>
+<span id="cb2-14"><span class="at" style="color: #657422;">      </span><span class="fu" style="color: #4758AB;">volumes</span><span class="kw" style="color: #003B4F;">:</span></span>
+<span id="cb2-15"><span class="at" style="color: #657422;">        </span><span class="kw" style="color: #003B4F;">-</span><span class="at" style="color: #657422;"> /mnt/c/Users/{YOUR-DIR}:/home/jovyan/github-anari</span></span>
+<span id="cb2-16"><span class="at" style="color: #657422;">      </span><span class="fu" style="color: #4758AB;">ports</span><span class="kw" style="color: #003B4F;">:</span></span>
+<span id="cb2-17"><span class="at" style="color: #657422;">        </span><span class="kw" style="color: #003B4F;">-</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"8888:8888"</span></span>
+<span id="cb2-18"><span class="at" style="color: #657422;">      </span><span class="fu" style="color: #4758AB;">container_name</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"jupyter-ds"</span></span>
+<span id="cb2-19"><span class="co" style="color: #5E5E5E;"># End of yml</span></span></code></pre></div>
+<ul>
+<li>위의 yml 파일에서 “{}”로 처리된 부분은 각자 채워 넣으면 된다.</li>
+<li>image 대신 build 명령어를 사용했다. 앞서 지정한 dockerfiles 디렉토리 내의 도커 명령어를 통해 빌드를 수행한다. 이렇게 빌드된 이미지는 처음부터 matplotlib 사용 시 한글 구현에 아무런 문제가 없다.</li>
+</ul>
+<p>주피터 환경의 파이썬 그리고 주피터 혹은 R스튜디오 환경의 R에서 한글 설정 방법 및 간단한 테스트는 <a href="https://github.com/anarinsk/setup_k8s/tree/main/testing">여기</a>를 참고하자.</p>
+<p>도커 컴포즈를 실행하는 방법은 아래와 같다.</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="ex" style="color: null;">$</span> sudo docker-compose <span class="at" style="color: #657422;">-f</span> /mnt/{YOUR DIR}/docker-jupyter.yml <span class="at" style="color: #657422;">-p</span> <span class="st" style="color: #20794D;">"jupyter-ds"</span> up <span class="at" style="color: #657422;">-d</span></span></code></pre></div>
+<p>실행 옵션은 다음과 같다. 역시 “{}”는 각자의 환경에 맞게 바꾸면 된다.</p>
+<ul>
+<li><code>-f</code> 도커 콤포즈를 특정 파일로 실행하기 위한 옵션이다. 만일 이를 안쓰려면 yml 파일의 이름을 <code>docker-compose.yml</code>로 두고 해당 디렉토리 안에서 실행하면 된다.</li>
+<li><code>-p</code> 콤포즈 안에 묶인 서비스의 이름을 나타낸다. 같은 네트워크로 묶이며 이 이름을 네트워크 이름으로 갖는다.</li>
+<li><code>up</code> yml 내에 있는 포함된 콘테이너를 가동한다.</li>
+<li><code>-d</code> 디태치 모드, 즉 별도의 실행되는 과정으로 실행한다.</li>
+</ul>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>container</category>
+  <guid>https://www.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</guid>
+  <pubDate>Sat, 08 May 2021 15:00:00 GMT</pubDate>
+  <media:content url="https://developers.redhat.com/sites/default/files/styles/article_feature/public/blog/2014/05/homepage-docker-logo.png?itok=zx0e-vcP" medium="image"/>
 </item>
 <item>
   <title>All into VS Code</title>
@@ -782,6 +960,240 @@
   <media:content url="https://upload.wikimedia.org/wikipedia/commons/0/01/Windows_Terminal_Logo_256x256.png" medium="image" type="image/png"/>
 </item>
 <item>
+  <title>Docker 컨테이너 + 한글 폰트</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://www.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="다른-방법" class="level2">
+<h2 class="anchored" data-anchor-id="다른-방법">다른 방법</h2>
+<p>이 <a href="https://anarinsk.github.io/lostineconomics-v2-1/docker/data-science/2020/09/24/install-hangul-in-docker.html">포스팅</a>은 도커 컨테이너 안에서 한글 문제를 해결하는 다른 방법을 제시하고 있다. 같이 참고 하시라.</p>
+</section>
+<section id="왜-필요한가" class="level2">
+<h2 class="anchored" data-anchor-id="왜-필요한가">왜 필요한가?</h2>
+<p>Jupyter 등에서 matplotlib을 쓸 때 라벨이 한글일 경우, 대부분 한글 출력에 문제를 겪게 된다. ㅁㅁㅁ형태로 출력되는데, 파이썬 환경에서 한글 폰트가 인식되지 않게 때문이다. 일반적인 환경이라면 웹 검색으로 찾을 수 있는 <a href="https://financedata.github.io/posts/matplotlib-hangul-for-windows-anaconda.html">가이드</a>를 통해 해결할 수 있다.</p>
+<p>그런데 도커 환경을 쓴다면 이런 가이드가 별 소용이 없다. 도커는 아래 그림과 같이 ’host os - 도커 - 컨테이너’의 구조로 돌아간다. 컨테이너(App x)가 각기 독자적인 os를 지니고 있기 때문에 해당 os에서 한글을 인식시켜줘야 특정 컨테이너 환경 안에서 한글을 쓸 수 있게 된다.</p>
+<p><img src="https://www.github.io/lostineconomics_quarto/posts/container/https:/www.docker.com/sites/default/files/d8/styles/large/public/2018-11/container-what-is-container.png?itok=vle7kjDj" class="img-fluid"></p>
+</section>
+<section id="simple-solution" class="level2">
+<h2 class="anchored" data-anchor-id="simple-solution">Simple Solution</h2>
+<p>방법은 간단하다. 컨테이너 환경 os에 직접 한글을 설치해주면 된다. 해당 os 내의 bash 혹은 상응하는 CLI에 들어가서 필요한 명령(스크립트)들을 실행하면 된다. 해당 명령들을 별도의 bash 스크립트로 만들고 필요한 경우 녀석들을 한방에 돌리면 살짝 더 편리할 것이다. 아래는 나눔 계열 폰트를 설치하는 스크립트다. 파일 이름을 <code>install_nanum.sh</code>로 하자.</p>
+<pre class="shell"><code>#!/bin/sh
+
+sudo sed -i 's/archive.ubuntu.com/ftp.daumkakao.com/g' /etc/apt/sources.list
+sudo apt-get update 
+sudo apt-get install -y fonts-nanum*
+sudo fc-cache -fv</code></pre>
+<p>나머지는 대체로 자명한 명령어다. 첫행의 sed는 ftp 주소를 국내로 바꿔주는 것이다. 업데이트 시 걸리는 시간을 단축하기 위해 사용했다. 터미널에서 스크립트 파일이 있는 디렉토리로 이동한 후 bash 스크립트를 실행하면 된다. bash 스크립트는 도커를 쓸 때 유용하다. 초기에 갖춰져야 하는 세팅이 있을 경우 스크립트로 만들어두고 도커 이미지를 새로 올렸을 때 실행해주면 되겠다. 약간 귀찮지만 못 견딜 정도는 아니다.</p>
+<pre class="shell"><code>&gt; ./install_nanum.sh ⏎</code></pre>
+<p>윈도에서 파일을 편집할 경우 <code>^M</code>이 달라 붙어 문제가 생기는 경우가 있다. OS의 개행 문자가 달라서 생기는 문제다. docker 내부 터미널에서 <code>vim</code>, <code>nano</code> 등으로 파일을 열어 해당 부분을 지우고 다시 저장하면 된다.</p>
+<p>이제 도커 컨테이너 안의 이용한 주피터 노트북에서 다음과 같이 실행하면 나눔고딕 폰트를 쓸 수 있게 된다.</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="op" style="color: #5E5E5E;">!</span>.<span class="op" style="color: #5E5E5E;">/</span>install_nanum.sh</span>
+<span id="cb3-2"><span class="im" style="color: #00769E;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;">as</span> plt</span>
+<span id="cb3-3"><span class="im" style="color: #00769E;">import</span> matplotlib <span class="im" style="color: #00769E;">as</span> mpl</span>
+<span id="cb3-4"><span class="im" style="color: #00769E;">from</span> matplotlib <span class="im" style="color: #00769E;">import</span> rc, font_manager</span>
+<span id="cb3-5">font_fname <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'/usr/share/fonts/truetype/nanum/NanumGothic.ttf'</span></span>
+<span id="cb3-6">prop <span class="op" style="color: #5E5E5E;">=</span> font_manager.FontProperties(fname<span class="op" style="color: #5E5E5E;">=</span>font_fname)</span>
+<span id="cb3-7">mpl.rcParams[<span class="st" style="color: #20794D;">'font.family'</span>] <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'NanumGothic'</span></span>
+<span id="cb3-8">mpl.rcParams[<span class="st" style="color: #20794D;">'axes.unicode_minus'</span>]  <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">False</span></span>
+<span id="cb3-9">font_manager._rebuild()</span></code></pre></div>
+<p>첫줄은 Jupyter 안에서 스크립트를 실행하는 명령어다. 혹시 잘 보이지 않으면, 커널을 한번 리프레시 해주면 된다. 다른 폰트를 설정하고 싶다면 비슷하게 응용해 활용하면 되겠다.</p>
+<section id="updated" class="level3">
+<h3 class="anchored" data-anchor-id="updated">Updated</h3>
+<p>2021년 5월 8일 기준으로 <code>font_manager</code>에서 <code>_rebuild()</code> 모듈이 없어졌더라. 현재 시점으로는 보이지 않았다. <code>install_nanum.sh</code>에서 <code>sudo rm -fr ~/.cache/matplotlib</code>를 추가로 하나 더 실행해주자. 캐시에 저장된 matplotlib의 폰트 리스트를 지워버리면 최초 실행될 때 자동으로 폰트 리스트를 빌드한다. 이때 설치한 일련의 나눔 폰트가 폰트 리스트에 잡힌다.</p>
+<p>Docker 컨테이너 내에 설치된 폰트를 확인하고 싶다면, 아래를 참고하라.</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">font_list <span class="op" style="color: #5E5E5E;">=</span> font_manager.findSystemFonts(fontpaths<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">None</span>, fontext<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'ttf'</span>)</span>
+<span id="cb4-2">font_list</span></code></pre></div>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>container</category>
+  <guid>https://www.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html</guid>
+  <pubDate>Wed, 23 Sep 2020 15:00:00 GMT</pubDate>
+  <media:content url="https://developers.redhat.com/sites/default/files/styles/article_feature/public/blog/2014/05/homepage-docker-logo.png?itok=zx0e-vcP" medium="image"/>
+</item>
+<item>
+  <title>Docker, 소박한 사용법</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://www.github.io/lostineconomics_quarto/posts/container/2020-09-23-docker-humble-practice.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="아마도-이런-분들에게-유용할-것" class="level2">
+<h2 class="anchored" data-anchor-id="아마도-이런-분들에게-유용할-것">아마도 이런 분들에게 유용할 것</h2>
+</section>
+<section id="허름한-도커-사용" class="level1">
+<h1>허름한 도커 사용</h1>
+<section id="사전-전제" class="level2">
+<h2 class="anchored" data-anchor-id="사전-전제">사전 전제</h2>
+<ul>
+<li>도커에 관해서 대충 알고 있다.</li>
+<li>도커를 써보기는 했헀다. 하지만… (막상 쓰려면…)</li>
+</ul>
+</section>
+<section id="내가-도커를-쓰는-이유" class="level2">
+<h2 class="anchored" data-anchor-id="내가-도커를-쓰는-이유">내가 도커를 쓰는 이유</h2>
+<ul>
+<li>(사실 있어 보이고 싶어서…)</li>
+<li>개발 환경의 격리고립 및 일관된 환경 공유를 위해서공유를 위한 사전 작업</li>
+<li>가끔 리눅스 환경에서만 구현할 수 있는 파이썬 패키지들이 있다.</li>
+<li>윈도에서 한번은 마주하게 되는 (지긋지긋한) 한글 인코딩 이슈에서 해방</li>
+</ul>
+</section>
+<section id="원칙" class="level2">
+<h2 class="anchored" data-anchor-id="원칙">원칙</h2>
+<p>우선 문과생이 도커(docker) 이미지를 쓰는 원칙 하나 보고 가자.</p>
+<p><strong>본인에게 특화된 이미지를 빌드하지 말고 그냥 official build를 당겨와서 쓰자!</strong></p>
+<p>도커의 장점이 개발환경의 격리다. 그렇다면 자신에게 적합한 환경을 세팅해두고 이 녀석을 끌어와 쓰면 좋지 않을까? 약간의 취향과 사용성의 차이를 감안하고 말하자면, 커스텀 이미지는 되도록 피하는게 좋다. 도커 허브에서 공식적으로 관리되고 업데이트되는 도커 이미지들이 많다. 문과생이 쓰는 환경에서 99%의 확률로 여기서 부족함이 없을 것 같다.</p>
+<p>내가 쓰는 특정 환경을 특정 시점에 이미지로 말아두었다고 치자. 당분간은 편리하게 필요할 때 끌어다 쓸 수 있을 것이다. 하지만 이렇게 ‘고정된’ 이미지를 쓸 경우 도커 이미지 안에 속한 패키지나 구성요소들을 개별적으로 업데이트 해줘야 한다. 시간이 지날수록 업데이트해야 할 항목과 갯수가 늘어나게 된다.</p>
+<p>한편 도커 허브의 공식 이미지의 경우 필요한 업데이트를 이미지 관리자가 정기적으로 수행한다. 이 이미지를 주기적으로 새로 끌어다쓰면 업데이트의 번거로움을 피할 수 있다. 물론 팀별로 통일된 환경이 필요하고 이 환경을 조직에서 관리할 수 있다면,Finding Giants in Docker</p>
+<p>도커를 써봤다면 빌드를 해봤을 것이다. 여러가지 바탕이 되는 OS나 패키지들을 끌어와서 자신에게 특화된 이미패키지를 만들어 써도 좋을 것이다.</p>
+<p>파이썬으로 코딩을 하고 주피터 환경을 쓰고 싶다면, 주피터에서 공식적으로 운영하는 도커 이미지를 쓰자. R과 RStudio를 쓰고 싶다면, 역시 rocker라는 공식적인 도커 프로젝트가 있다. 개인이 제조한 사설 이미지 보다는 이런 공식 이미지가 대체로 편안하다.</p>
+<ul>
+<li><a href="https://hub.docker.com/r/jupyter/datascience-notebook">https://hub.docker.com/r/jupyter/datascience-notebook</a></li>
+<li><a href="https://hub.docker.com/r/rocker/rstudio">https://hub.docker.com/r/rocker/rstudio</a></li>
+</ul>
+<p>이하에서는 내가 기본으로 사용하는 두 개의 도커 환경, 주피터 + 파이썬, RStudio + R을 어떻게 쓰는지 살펴 보겠다.</p>
+</section>
+<section id="미리-해야-할-것들" class="level2">
+<h2 class="anchored" data-anchor-id="미리-해야-할-것들">미리 해야 할 것들</h2>
+<section id="원도10-2004-build-이후-wsl-2-환경" class="level3">
+<h3 class="anchored" data-anchor-id="원도10-2004-build-이후-wsl-2-환경">원도10 2004 Build 이후 WSL 2 환경</h3>
+<p>WSL 2가 깔리는 윈도10 버전으로 업데이트하고 이를 설치하도록 하자. 시중에 가이드가 많으니 구글 검색 후 참고하면 되겠다.</p>
+<ul>
+<li><a href="https://docs.microsoft.com/ko-kr/windows/wsl/">MS 공식 가이드</a></li>
+</ul>
+</section>
+<section id="docker-desktop-윈도10" class="level3">
+<h3 class="anchored" data-anchor-id="docker-desktop-윈도10">Docker Desktop (윈도10)</h3>
+<p>네이티브 우분투 환경이라면 <code>sudo apt-get</code>으로 도커를 설치해서 쓰면 된다. 우리는 윈도10과 리눅스를 오가야 하므로, 이에 적합한 맞춤형 도커 버전이 좋다. 다행스럽게 도커 개발사가 WSL 2에 특화된 도커 클라이언트를 제공하고 있다. 보다 안정적인 버전인 Stable과 보다 최신 기능을 담은 버전인 Edge 모두 WSL 2 지원한다.</p>
+<ul>
+<li><a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows">Docker Desktop for WIndows</a></li>
+</ul>
+</section>
+<section id="windows-terminal" class="level3">
+<h3 class="anchored" data-anchor-id="windows-terminal">Windows Terminal</h3>
+<p>반드시 써야 하는 것은 아니다. 하지만 윈도10에서 리눅스 배포판을 윈도 터미널과 함께 쓰면 더할 나위 없이 좋다. 무엇보다도 별다른 조작 없이 우분투 등 WSL 2에 깔린 리눅스를 터미널이 잘 잡아준다. 다음으로 터미널 환경(폰트, 컬러 등등) 커스터마이즈가 쉽다.</p>
+<ul>
+<li><a href="https://docs.microsoft.com/ko-kr/windows/terminal/">MS 공식 가이드</a></li>
+</ul>
+</section>
+</section>
+<section id="내-환경" class="level2">
+<h2 class="anchored" data-anchor-id="내-환경">내 환경</h2>
+<p>이 글을 쓰는 시점에서 내가 도커를 이용하는 환경은 아래와 같다.</p>
+<ol type="1">
+<li>Windows 10 Insider Preview 20190.rs</li>
+<li>Docker Desktop Edge 2.3.7.0</li>
+<li>Windows Terminal Preview 1.3</li>
+</ol>
+<section id="comments" class="level3">
+<h3 class="anchored" data-anchor-id="comments">Comments</h3>
+<ol type="1">
+<li>윈도우10 20190.rs 버전은 인사이드 프리뷰 버전이다. 프리뷰 버전을 꼭 쓰지 않아도 된다. 202XXX 버전을 쓸 것이라면 20226 이후를 써야 한다.</li>
+<li>도커 버전은 최신 버전을 유지하는 편을 권한다. Edge가 불안하다면 Stable을 쓰면 된다.</li>
+</ol>
+</section>
+</section>
+<section id="docker-compose" class="level2">
+<h2 class="anchored" data-anchor-id="docker-compose">Docker Compose</h2>
+<p>도커를 써본 사람이라면 개별 컨테이너를 띄울 때 옵션들–예를 들어 root 권한을 줄 건지, 포트는 어떤 것을 열 것인지 등등–을 써봤을 것이다. 일상적으로 쓸 때에도 이것들을 매번 지정해서 실행해야 할까? 그렇게 해도 되겠지만 조금 불편하다. 한번 정해두고 재사용할 수 있으면 좋겠다. 이러한 용도에 적합한 것이 ’도커 콤포즈’다.</p>
+<p><code>.yml</code> 확장자의 설정 파일을 만들어 두고 녀석을 실행해서 매번 동일한 환경을 손쉽게 구축할 수 있다. 내가 쓰는 <code>.yml</code> 환경으로 간략하게 살펴보자.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="fu" style="color: #4758AB;">version</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">'3'</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;">services</span><span class="kw" style="color: #003B4F;">:</span></span>
+<span id="cb1-3"><span class="at" style="color: #657422;">    </span><span class="fu" style="color: #4758AB;">jupyter-ds</span><span class="kw" style="color: #003B4F;">:</span></span>
+<span id="cb1-4"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">image</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> jupyter/datascience-notebook</span></span>
+<span id="cb1-5"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">user</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> root</span></span>
+<span id="cb1-6"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">volumes</span><span class="kw" style="color: #003B4F;">:</span></span>
+<span id="cb1-7"><span class="at" style="color: #657422;">            </span><span class="kw" style="color: #003B4F;">-</span><span class="at" style="color: #657422;"> </span><span class="kw" style="color: #003B4F;">[</span><span class="at" style="color: #657422;">WSL2 디렉토리</span><span class="kw" style="color: #003B4F;">]</span><span class="at" style="color: #657422;">:[컨테이너 디렉토리]</span></span>
+<span id="cb1-8"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">ports</span><span class="kw" style="color: #003B4F;">:</span></span>
+<span id="cb1-9"><span class="at" style="color: #657422;">            </span><span class="kw" style="color: #003B4F;">-</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"8888:8888"</span></span>
+<span id="cb1-10"><span class="at" style="color: #657422;">            </span><span class="kw" style="color: #003B4F;">-</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"8501-8510:8501-8510"</span><span class="at" style="color: #657422;">   </span></span>
+<span id="cb1-11"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">environment</span><span class="kw" style="color: #003B4F;">:</span></span>
+<span id="cb1-12"><span class="at" style="color: #657422;">           </span><span class="kw" style="color: #003B4F;">-</span><span class="at" style="color: #657422;"> GRANT_SUDO=yes</span></span>
+<span id="cb1-13"><span class="at" style="color: #657422;">           </span><span class="kw" style="color: #003B4F;">-</span><span class="at" style="color: #657422;"> JUPYTER_ENABLE_LAB=yes</span></span>
+<span id="cb1-14"><span class="at" style="color: #657422;">           </span><span class="kw" style="color: #003B4F;">-</span><span class="at" style="color: #657422;"> JUPYTER_TOKEN=[내 비번]</span></span>
+<span id="cb1-15"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">container_name</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> jupyter</span></span>
+<span id="cb1-16"><span class="co" style="color: #5E5E5E;">#</span></span>
+<span id="cb1-17"><span class="at" style="color: #657422;">    </span><span class="fu" style="color: #4758AB;">rstudio</span><span class="kw" style="color: #003B4F;">:</span></span>
+<span id="cb1-18"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">image</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> rocker/verse:latest</span></span>
+<span id="cb1-19"><span class="co" style="color: #5E5E5E;">        #image: rocker/verse:4.0.2</span></span>
+<span id="cb1-20"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">volumes</span><span class="kw" style="color: #003B4F;">:</span></span>
+<span id="cb1-21"><span class="at" style="color: #657422;">            </span><span class="kw" style="color: #003B4F;">-</span><span class="at" style="color: #657422;"> </span><span class="kw" style="color: #003B4F;">[</span><span class="at" style="color: #657422;">WSL2 디렉토리</span><span class="kw" style="color: #003B4F;">]</span><span class="at" style="color: #657422;">:[컨테이너 디렉토리]</span></span>
+<span id="cb1-22"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">ports</span><span class="kw" style="color: #003B4F;">:</span></span>
+<span id="cb1-23"><span class="at" style="color: #657422;">            </span><span class="kw" style="color: #003B4F;">-</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"8787:8787"</span></span>
+<span id="cb1-24"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">environment</span><span class="kw" style="color: #003B4F;">:</span></span>
+<span id="cb1-25"><span class="at" style="color: #657422;">            </span><span class="kw" style="color: #003B4F;">-</span><span class="at" style="color: #657422;"> ROOT=true</span></span>
+<span id="cb1-26"><span class="at" style="color: #657422;">            </span><span class="kw" style="color: #003B4F;">-</span><span class="at" style="color: #657422;"> PASSWORD=[내 비번]</span></span>
+<span id="cb1-27"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">container_name</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> rstudio</span></span>
+<span id="cb1-28"><span class="co" style="color: #5E5E5E;"># End of yml</span></span></code></pre></div>
+<p>yml 파일에서 <code>service</code> 아래 두 개의 항목이 있다. 각각 <code>jupyter/datasicence-notebook</code>과 <code>rocker/verse</code>의 컨테이터 이미지를 의미한다. 첫번째는 데이터를 다룰 때 필요한 파이썬 라이브러리를 주피터와 묶은 이미지이고, 두번째는 R과 RStudio 그리고 tidyverse 및 문서 도구를 묶은 이미지다.</p>
+<ul>
+<li><code>image</code>: docker-hub 상의 이미지 이름을 뜻한다. <code>:</code> 뒤의 내용은 버전 혹은 여러가지 다른 형태로 묶인 이미지를 나타낸다. <code>latest</code> 최신 버전을 의미한다.</li>
+<li><code>volume</code>: WSL 2 환경의 디렉토리와 이미지 내 디렉토리를 매핑한다. 즉, X : Y라고 할 때 X는 윈도우 10의 폴더, Y는 도커 이미지 내의 폴더 이름을 뜻한다. WSL 2는 <code>/mnt</code> 내에 윈도 드라이브를 마운트한다. 따라서 윈도10 환경과 연동된다고 보면 얼추 맞다.</li>
+<li><code>ports</code>: WSL 2에서 인식하는 포트와 이미지 내에서 인식하는 포트를 매핑한다.</li>
+<li>environment: 각각 이미지에 맞는 환경을 지정할 수 있다. 이 사례에서 주피터 노트북에는 <code>sudo</code> 권한을 주고, 주피터랩 버전을 쓰며, 최초 진입시 비번은 [내 비번]을 쓰겠다고 지정한 것이다. RStudio의 경우 root 권한을 주고, 패스워드는 내 비번을 쓰겠다는 의미다.</li>
+</ul>
+<ol type="1">
+<li>통상적으로 쓰려면 <code>docker-compose.yml</code>로 이름을 지은 후 적당한 폴더에 둔다.</li>
+<li>윈도 터미널 등을 통해 Ubuntu와 같은 리눅스 배포판에 접근한다.</li>
+<li>1의 파일이 있는 디렉토리로 이동한 후,</li>
+</ol>
+<pre class="shell"><code>sudo docker-compose -f "\mnt\[YOUR-YML-DIRECTORY]" -p "[NAME-OF-PROJECT]" up -d</code></pre>
+<p>그러면 도커 컴포즈가 알아서 이미지를 끌어온 후 실행까지 할 것이다.</p>
+<p>주의사항 하나 지적하자. docker-compose를 <code>-f</code> 옵션 없이 실행하면 녀석은 HOME 디렉토리에서 해당 파일을 찾는다. WSL 기준에서 볼 때 홈 디렉토리는 윈도의 사용자-계정 디렉토리다. 해당 디렉토리에 <code>docker-compose.yml</code> 파일이 있으면 녀석으로 실행할 것이다. 이렇게 써도 문제는 없지만 yml을 계속 바꿔줘야 할 경우 이는 문제를 일으킬 수 있다. 가급적 <code>yml</code> 파일을 지정해서 활용하는 습관을 들이도록 하자.</p>
+<ul>
+<li><a href="https://docs.docker.com/compose/">도커 컴포즈 공식 가이드</a></li>
+</ul>
+</section>
+<section id="실제-사용해보자" class="level2">
+<h2 class="anchored" data-anchor-id="실제-사용해보자">실제 사용해보자</h2>
+<p>앞서 말했듯이 수 있다! 처음에는 이 개념이 환상적일 수 있다. 게다가 개인용 저장소만 만들지 않으면 도커허브에 그냥 올릴 수 있다. 하지만 이런 접근은 본인이 특화된 용도로 사용을 하거나 아니면 패키지 제조에 능숙하지 않다면 크게 권하고 싶지 않다. 당분간 별 문제가 없더라도 언젠가는 이상하게 탈이 난다.</p>
+<p>다행스럽게 도커 허브에서는 여러가지 공식적으로 관리되고 업데이트되는 도커 이미지들이 많이 올라와 있다. 문과생이라면되도록 초반에는 이런 이미지들을 취사선택해서 활용하는 편을 권장한다. 주피터든 RStudio든 모두 웹 브라우저에서 돌아간다. 이미지가 도커 컨테이터로 구동된 이후 범용 웹브라우저에서 다음과 같이 실행하자.</p>
+<ul>
+<li>Juypterlab + Python: <code>localhost:8888</code></li>
+<li>RStudio + R: <code>localhost:8787</code></li>
+</ul>
+<p>주피터야 원래부터 웹 브라우저 기반이었으니 보통 깔아 쓰는 것과 차이를 느낄 수 없다.</p>
+<p><img src="https://www.github.io/lostineconomics_quarto/posts/container/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/jupyter.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p>RStudio도 그럴까? 그렇다. 원래 RStudio라는 IDE가 웹 기반으로 만들어졌기 때문에 이 역시 차이를 느낄 수 없다. 아래 화면에서 로그인을 하면 친숙한 RStudio의 화면이 뜬다.</p>
+<p><img src="https://www.github.io/lostineconomics_quarto/posts/container/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/rstudio_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://www.github.io/lostineconomics_quarto/posts/container/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/rstudio_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p>해당 페이지 아이콘을 바탕화면 혹은 바로가기에 두고 쓰면 조금 편리 하겠다.</p>
+<section id="특화된-패키지-혹은-설정이-필요하다면" class="level3">
+<h3 class="anchored" data-anchor-id="특화된-패키지-혹은-설정이-필요하다면">특화된 패키지 혹은 설정이 필요하다면?</h3>
+<p>그때그때 깔면 된다. 원 도커 이미지에서 웬만해서는 더 깔 것이 없을 것이다. 필요한 경우가 있다면 bash script를 만들어 깔아주도록 하자. 해당 이미지를 내리지 않는 이상 한번 설치한 상태는 유효하다.</p>
+</section>
+<section id="도커-이미지-관리" class="level3">
+<h3 class="anchored" data-anchor-id="도커-이미지-관리">도커 이미지 관리</h3>
+<p>이미지를 업데이트하고 싶다면 어떻게 해야 할까? 정석대로 하자면, WSL 2 콘솔창에서 실행중인 컨테이너를 멈추고, 이 컨테이너의 이미지를 지워야 할 것이다. 그렇게 해도 되지만, 윈도용 도커 프로그램에서는 보다 간편한 방법을 제공한다.</p>
+<p>대시보드 상에서 컨테이너를 실행하고 멈출 수 있고 이미지도 관리할 수 있다.</p>
+<p><img src="https://www.github.io/lostineconomics_quarto/posts/container/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/docker_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p>아예 해당 이미지 및 컨테이너 데이터 전체를 리셋하는 방법도 있다.</p>
+<p><img src="https://www.github.io/lostineconomics_quarto/posts/container/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/docker_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p>예를 들어보자. 파이썬으로 코딩을 한다면 그리고 주피터 환경을 써야 한다면 어떻게 하는 것이 좋을까? 주피터에서 공식적으로 운영하는 도커 이미지가 있다. 도커로 R을 쓰고 싶다면? 역시 rocker라는 공식적인 프로젝트가 있다. 개인이 제조한 사설 이미지보다는 이런 녀석들을 끌어다쓰는 편이 좋다.</p>
+<p>이하에서는 내가 기본으로 사용하는 두 개의 이미지를 바탕에 깔고 설명을 진행하도록 하겠다.</p>
+
+
+</section>
+</section>
+</section>
+
+ ]]></description>
+  <category>container</category>
+  <guid>https://www.github.io/lostineconomics_quarto/posts/container/2020-09-23-docker-humble-practice.html</guid>
+  <pubDate>Tue, 22 Sep 2020 15:00:00 GMT</pubDate>
+  <media:content url="https://developers.redhat.com/sites/default/files/styles/article_feature/public/blog/2014/05/homepage-docker-logo.png?itok=zx0e-vcP" medium="image"/>
+</item>
+<item>
   <title>Streamlit + Heroku</title>
   <dc:creator>JS HUHH</dc:creator>
   <link>https://www.github.io/lostineconomics_quarto/posts/computer-tools/2020-03-09-Streamlit-Heroku.html</link>
@@ -1144,6 +1556,333 @@ Note
   <guid>https://www.github.io/lostineconomics_quarto/posts/computer-tools/2020-03-07-blogging-with-fastpages.html</guid>
   <pubDate>Fri, 06 Mar 2020 15:00:00 GMT</pubDate>
   <media:content url="https://t3.ftcdn.net/jpg/03/67/94/46/240_F_367944626_tkPR8g1rZihc0ql5WpJhDYffS3nTfKqP.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Using Git ‘Smoothly’ in Windows 10</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://www.github.io/lostineconomics_quarto/posts/git/2020-03-05-using-git-w10.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>윈도에서 깃을 쓸 때 이렇게 불편하게 쓰지 않아도 된다.</p>
+</div>
+</div>
+<section id="why" class="level2">
+<h2 class="anchored" data-anchor-id="why">Why</h2>
+<p>단언컨대 git은 곧 문과생도 알아야 할 필수 도구가 될 것이다. 버전 관리가 절실해지는 그리고 코딩이 학제를 넘어선 필수처럼 인정되는, 그런 세상에서 컴퓨터를 끼고 있으면서 git의 사용을 피하기는 힘들 듯 싶다. git에 관한 포스트는 아니니 여기까지 하자.</p>
+<p>macos나 linux 계열을 쓸 때는 git에 관해서 크게 고민하지 않아도 된다. 터미널 켜고, CLI(Command Line Interface)로 쓰면 그만이다. 이렇게 쓰는 것이 윈도에서는 쉽지 않다. 물론 윈도에서 WSL로 리눅스를 지원하기는 한다. 하지만 그냥 메인 os 위에 얹어 쓰는 게 편할 때가 있다.</p>
+</section>
+<section id="what" class="level2">
+<h2 class="anchored" data-anchor-id="what">What</h2>
+<p>우리는 아래 두 개의 소프트웨어를 쓸 것이다.</p>
+<ul>
+<li><a href="https://git-scm.com/download/win">Git for Windows</a></li>
+<li><a href="https://cmder.net">Cmder</a></li>
+</ul>
+<section id="git-for-windows" class="level3">
+<h3 class="anchored" data-anchor-id="git-for-windows">Git for Windows</h3>
+<p>웬만하면 64비트로 깔자. 그리고 중간에 여러 가지 선택지에 관해서 질문한다. 커맨드라인은 어떤 것으로 쓸 것인지 등등. 원래 git이 linux에 뿌리를 두고 있는 만큼 윈도의 디폴트 명령창보다는 Bash를 쓰는 편이 좋다. <code>ls</code> 등의 명령어를 자유롭게 쓸 수 있어서 꽤 편하다. 윈도용 git은 특화된 <code>git-bash</code>를 제공하니, 이 녀석을 쓰면 좋을 듯 싶다.</p>
+</section>
+<section id="cmder" class="level3">
+<h3 class="anchored" data-anchor-id="cmder">Cmder</h3>
+<p>“커맨더”라고 읽으면 된다. git은 이미 깔았으므로 쓰면 된다. 다만 좀 더 편리한 환경에서 CLI를 쓰기 위해서 Cmder를 깔아보도록 하자. 이 녀석은 별도의 인스톨 없이 쓸 수 있다. git을 포함한 무거운 버전과 git이 빠진 미니 버전이 있다. 어차피 우리는 별도로 깃을 깔았으니, 미니 버전을 다운받으면 되겠다. 다운 받은 후 아무 위치에나 두어도 된다. 어차피 exe 파일만 사용할 것이기 때문이다. 다만, 관리가 편하도록 나는 아래의 위치에 두었다.</p>
+<p><code>Users\[your id]\cmder_mini\</code></p>
+<p>최초 실행하면 윈도우가 경고를 날린다. 이래 그림에서 형광색이 칠해진 부분을 클릭하고 프로그램을 허용해준다. 이후 몇 번의 경고성 질문이 더 날아온다. 전부 “허용”해주면 되겠다.</p>
+<p><img src="https://www.github.io/lostineconomics_quarto/posts/git/%7B%7B%20site.baseurl%20%7D%7D/images/git-cmder/fig_4.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
+<p>그리고 cmder 실행 파일 위에서 좌 클릭해서, <code>속성 &gt; 호환성 &gt; 관리자 권한으로 이 프로그램을 실행</code>을 체크해두는 편을 권한다. 혹시 dock에 cmder를 박아둔 상태라면 Shift 키와 함께 좌 클릭을 하면 <code>속성</code>을 선택할 수 있다.</p>
+</section>
+</section>
+<section id="how" class="level2">
+<h2 class="anchored" data-anchor-id="how">How</h2>
+<p>깃을 편하게 쓰기 위해서 Cmder의 설정을 약간 바꿔주겠다. 우선 아래의 그림처럼 맨 위 메뉴의 삼선을 클릭하면 Cmder의 세팅으로 갈 수 있다.</p>
+<p><img src="https://www.github.io/lostineconomics_quarto/posts/git/%7B%7B%20site.baseurl%20%7D%7D/images/git-cmder/fig_1.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
+<p>엄청나게 많은 설정들이 있다. 창을 투명으로 만든다든가, 텍스트의 폰트를 바꾼다든가, 하는 것들이 가능하다. 여기서는 git bash를 쓰는 설정만 간단하게 설명하도록 하자.</p>
+<p><img src="https://www.github.io/lostineconomics_quarto/posts/git/%7B%7B%20site.baseurl%20%7D%7D/images/git-cmder/fig_2.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
+<p>그림에서 보듯이 <code>startup &gt; task</code>를 선택한다. 선택 가능한 CLI 중에서 <code>{Bash:: Git bash}</code>를 선택한다. 이 녀석을 디폴트 CLI로 설정한다. 시작 디렉토리를 지정하고 싶다면 아래 <code>Startup dir...</code>을 선택해 바꿔주면 된다.</p>
+</section>
+<section id="finally" class="level2">
+<h2 class="anchored" data-anchor-id="finally">Finally?</h2>
+<p>아래 그림에서 보듯이 윈도 명령 창에서는 먹지 않는 <code>ls</code> 등의 명령어가 잘 먹고, git도 편안하게 사용할 수 있다.</p>
+<p><img src="https://www.github.io/lostineconomics_quarto/posts/git/%7B%7B%20site.baseurl%20%7D%7D/images/git-cmder/fig_3.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
+</section>
+<section id="seriously" class="level2">
+<h2 class="anchored" data-anchor-id="seriously">Seriously!</h2>
+<p>여기까지 좋은데, git-bash에서 python을 쓰시는 분들이라면 python을 제대로 띄울 수 없다. 해결책은 간단하다. 아래와 같이 실행하면 된다.<sup>1</sup></p>
+<p>매번 이럴게 <code>winpty</code>로 띄울 수는 없으니 <code>.bashrc</code>에 넣도록 하자.</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;">$</span> echo <span class="st" style="color: #20794D;">"alias python='winpty python.exe'"</span> <span class="op" style="color: #5E5E5E;">&gt;&gt;</span> ~/.bashrc</span></code></pre></div>
+<p>넣은 뒤에 터미널을 재실행하거나 <code>source ~/.bashrc</code>를 실행해주면 된다.</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>출처는 <a href="https://stackoverflow.com/questions/32597209/python-not-working-in-the-command-line-of-git-bash">여기</a>다.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;">$</span> winpty python.exe</span>
+<span id="cb1-2"><span class="ex" style="color: null;">Python</span> 3.7.6 <span class="er" style="color: #AD0000;">(</span><span class="ex" style="color: null;">default,</span> Oct  2 2018, 09:18:58<span class="kw" style="color: #003B4F;">)</span></span>
+<span id="cb1-3"><span class="ex" style="color: null;">Type</span> <span class="st" style="color: #20794D;">"help"</span>, <span class="st" style="color: #20794D;">"copyright"</span>, <span class="st" style="color: #20794D;">"credits"</span> or <span class="st" style="color: #20794D;">"license"</span> for more information.</span>
+<span id="cb1-4"><span class="op" style="color: #5E5E5E;">&gt;&gt;&gt;</span></span></code></pre></div>
+↩︎</li>
+</ol>
+</section></div> ]]></description>
+  <category>git</category>
+  <guid>https://www.github.io/lostineconomics_quarto/posts/git/2020-03-05-using-git-w10.html</guid>
+  <pubDate>Wed, 04 Mar 2020 15:00:00 GMT</pubDate>
+  <media:content url="https://t3.ftcdn.net/jpg/03/67/94/46/240_F_367944626_tkPR8g1rZihc0ql5WpJhDYffS3nTfKqP.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>The College Wealth Divide</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://www.github.io/lostineconomics_quarto/posts/economics/2020-01-22-Wealth-divided.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="source" class="level2">
+<h2 class="anchored" data-anchor-id="source">Source</h2>
+<p>The College Wealth Divide: Education and Inequality in America, 1956-2016 <a href="%5Bhttps://www.stlouisfed.org/~/media/files/pdfs/hfs/is-college-worth-it/bartscher_kuhn_schularick_college_wealth_divide.pdf?la=en%5D(https://www.stlouisfed.org/~/media/files/pdfs/hfs/is-college-worth-it/bartscher_kuhn_schularick_college_wealth_divide.pdf?la=en)">download</a> <em>Alina K. Bartscher, Moritz Kuhn, and Moritz Schularick</em></p>
+</section>
+<section id="addressing-issues" class="level2">
+<h2 class="anchored" data-anchor-id="addressing-issues">Addressing Issues</h2>
+<ul>
+<li>새로운 설문 데이터의 발굴을 통해 대졸자와 비대졸자 사이의 소득과 부의 장기 추세를 살펴본다.</li>
+<li>대학 졸업에 따른 소득 프리미엄과 부 프리미엄의 패턴 차이가 확연히 존재하는데, 이러한 결과가 생긴 원인을 추적한다.</li>
+</ul>
+</section>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<ul>
+<li>미국 연준에서 다운로드 받을 수 있는 <a href="%5Bhttps://www.federalreserve.gov/econres/scfindex.htm%5D(https://www.federalreserve.gov/econres/scfindex.htm)">Survey of Consumer Finances</a>(SCF)라는 데이터가 있다. 이 데이터는 3년 간격으로 1983년부터 설문 자료를 수집하고 있는데, 여타 센서스와 같은 설문 항목과 비교해서 금용 관련된 상세한 내용을 담고 있다.</li>
+<li>그런데 SCF에 선배라고 할만한 자료가 1947년에서 1971년 사이 그리고 1977년에 대해서 미시건 대의 서베이 리서치 센터에 존재한다. Kuhn, Schularick, Steins가 이 두 자료를 코드 북에 기반해서 자료를 최대한 비슷하게 맞춰 결합했고, 이렇게 1949년~2016년의 전후 기간을 망라한 소득, 부 그리고 관련된 인구 통계적 정보를 담고 있는 데이터 셋이 만들어졌다. 저자들은 이를 SCF+라고 부른다.[^1] [^1]: 매칭과 데이터 결합에 필요한 절차 및 기법은 논문에 비교적 상세하게 소개되어 있으니 관심 있는 분은 참조하시라.</li>
+</ul>
+</section>
+<section id="issues" class="level2">
+<h2 class="anchored" data-anchor-id="issues">Issues</h2>
+<section id="income-premium-vs-wealth-premium" class="level3">
+<h3 class="anchored" data-anchor-id="income-premium-vs-wealth-premium">Income premium vs wealth premium</h3>
+<ul>
+<li>저자들의 관심사는 대졸자와 비대졸자(앞으로 혼란의 여지가 없을 때 각각 c(college), nc(noncollege)로 표기하겠다) 사이에 소득과 부의 차이가 역사적으로 어떻게 진화했는지를 파악하는 것이다. 우선 그림 1을 보자.</li>
+</ul>
+<figure class="figure">
+<figcaption class="figure-caption">
+그림 1. 소득과 부의 역사적 변화
+</figcaption>
+<p align="center">
+<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-001.png?raw=true" width="900" class="figure-img"><br>
+</kbd>
+</p>
+</figure>
+<ul>
+<li><p>그림1에서 <img src="https://latex.codecogs.com/png.latex?y">축은 1971년도 수준을 1로 두었을 때 각 연도의 소득과 부의 수준을 나타낸다. 시간에 흐름에 따라서 소득의 차이가 상대적으로 적게 벌어졌음에 반해서 부의 차이는 크게 벌어지고 있다. 특히 1980년대 이후 차이가 크게 벌어지고 있다.</p></li>
+<li><p>이는 소득과 부의 비율을 c와 nc로 나누어 비교한 그림2에서 보다 분명하게 드러난다.</p></li>
+</ul>
+<figure class="figure">
+<figcaption class="figure-caption">
+그림 2. c와 nc의 부/소득의 역사적 변화
+</figcaption>
+<p align="center">
+<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-002.png?raw=true" width="600" class="figure-img"><br>
+</kbd>
+</p>
+</figure>
+</section>
+<section id="decomposing-wealth-premium" class="level3">
+<h3 class="anchored" data-anchor-id="decomposing-wealth-premium">Decomposing wealth premium</h3>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7B%5Coverline%7BW%7D_%7Be,t%7D%7D%7B%5Coverline%7BW%7D_%7Be,71%7D%7D%20=%20%5Cdfrac%7B%5Csum%5E%7B3%7D_%7Bi=1%7D%20s_%7Be,i,t%7D%20%5Coverline%7BW%7D_%7Be,i,t%7D%7D%7B%5Coverline%7BW%7D_%7Be,71%7D%7D%20=%20%5Csum%5E%7B3%7D_%7Bi=1%7D%20s_%7Be,i,t%7D%20%5Cdfrac%7B%5Coverline%7BW%7D_%7Be,i,71%7D%7D%7B%5Coverline%7BW%7D_%7Be,71%7D%7D%20%5Cdfrac%7B%5Coverline%7BW%7D_%7Be,i,t%7D%7D%7B%5Coverline%7BW%7D_%7Be,i,71%7D%7D%0A"> - 변수 - <img src="https://latex.codecogs.com/png.latex?%5Coverline%20%7BW%7D_%5Ccdot">: 해당 집단이 보유한 평균 부 - <img src="https://latex.codecogs.com/png.latex?s_%5Ccdot">: 해당 부 계층의 비율. - <img src="https://latex.codecogs.com/png.latex?s_%7Bc,%201,%2081%7D">이라면 1981년도 c에 속한 사람들 중에서 전체 부의 계층 1에 속하는 비율을 나타낸다.</p>
+<ul>
+<li><p>인덱스</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?e%20=%20%7B%5Crm%20c,%20nc%7D"></li>
+<li><img src="https://latex.codecogs.com/png.latex?t%20="> 56, 61, 66, 71, 76, 81, 86, 91, 96, 01, 06,11, 16</li>
+<li><img src="https://latex.codecogs.com/png.latex?i%20=%201,%202,%203"></li>
+</ul></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?e">는 c와 nc의 구분을 <img src="https://latex.codecogs.com/png.latex?t">는 연도, 그리고 <img src="https://latex.codecogs.com/png.latex?i">는 세 가지로 구분한 부 계층을 구분하기 위한 인덱스다. 1은 하위 50%, 2는 중위 50%~90%, 그리고 3은 상위 10%를 각각 나타낸다.</p></li>
+<li><p>분해 식을 통해서 크게 세가지 변동을 구분할 수 있다.</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?s">의 변화</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cdfrac%7B%5Coverline%7BW%7D_%7Be,i,71%7D%7D%7B%5Coverline%7BW%7D_%7Be,71%7D%7D">: 기준 연도의 부 계층의 차이</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cdfrac%7B%5Coverline%7BW%7D_%7Be,i,t%7D%7D%7B%5Coverline%7BW%7D_%7Be,i,71%7D%7D">: 기준 연도 대비 특정 부 계층의 연도별 변화</li>
+</ul></li>
+<li><p>이 세 가지에 분해 요소 중에서 시간을 따라가지 않은 두 번째를 제외하고 나머지에 대해서 반사실(counterfactual)을 적용해보자.</p></li>
+<li><p>Counterfactual 1 <img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7B%5Coverline%7BW%7D_%7Bx,i,t%7D%7D%7B%5Coverline%7BW%7D_%7Bx,i,71%7D%7D%20=%0A%5Cbegin%7Bcases%7D%0A%5Cdfrac%7B%5Coverline%7BW%7D_%7Bnc,i,t%7D%7D%7B%5Coverline%7BW%7D_%7Bnc,i,71%7D%7D%20&amp;%20%5Ctext%7Bif%20$x%20=%20%5Crm%7Bc%7D$%7D%20%5C%5C%0A%5Cdfrac%7B%5Coverline%7BW%7D_%7Bc,i,t%7D%7D%7B%5Coverline%7BW%7D_%7Bc,i,71%7D%7D%20%20&amp;%20%5Ctext%7Bif%20$x%20=%20%5Crm%7Bnc%7D$%7D%0A%5Cend%7Bcases%7D%0A"></p></li>
+<li><p>Counterfactual 2</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?s_%7Bx,i,t%7D"> 대신 <img src="https://latex.codecogs.com/png.latex?s_%7Bx,i,71%7D">을 적용한다. 즉, 시간이 지나면서 학력별 부 계급의 분포가 1971년도 지표에 고정되어 있었을 상황을 대입해본다. 이는 시간이 지나면서 소득 불평등의 패턴이 n, nc 사이에 차별적으로 타나났는지를 추적한다.</li>
+<li>같은 맥락에서 n와 nc의 <img src="https://latex.codecogs.com/png.latex?s">를 바꾸는 분석도 해볼 수 있을 듯 한데, 저자들이 시도하지는 않았다.</li>
+</ul></li>
+</ul>
+<figure class="figure">
+<figcaption class="figure-caption">
+그림 3. c와 nc의 변화는 어디에서 왔는가?
+</figcaption>
+<p align="center">
+<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-003.png?raw=true" width="900" class="figure-img"><br>
+</kbd>
+</p>
+</figure>
+<ul>
+<li>그림 3의 A는 c의 부에 대해서 반사실 1, 2 그리고 1+2를 적용했을 때의 변화를 나타낸다. 반사실 1의 영향이 크고, 반사실 2는 거의 영향을 주지 않았다. 이를 통해 시간이 지나면서 c의 경우 nc에 비해서 더 많은 부를 축적했음을 보여준다. 반면, 코호트(n, nc) 내에서 부의 계층 변화는 거의 영향을 주지 않았다.</li>
+<li>한편, nc의 경우는 반사실 1과 반사실 2가 모두 부의 축적에 악영향을 주었음을 알 수 있다.</li>
+<li>각 코호트별로 부의 계층별 점유율 변화는 그림 4와 같다.</li>
+</ul>
+<figure class="figure">
+<figcaption class="figure-caption">
+그림 4. c와 nc 내의 소득 계층별 비율의 역사적 변화
+</figcaption>
+<p align="center">
+<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/acs-college_wealth/blob/master/assets/imgs/K-004.png?raw=true" width="900" class="figure-img"><br>
+</kbd>
+</p>
+</figure>
+<ul>
+<li>그림에서 보듯이 c의 경우 연도 변화에 따른 계층별 변화가 크지 않다. nc의 경우 상위 10%에 속하는 비율이 경향적으로 낮아지고 있다.</li>
+</ul>
+<figure class="figure">
+<figcaption class="figure-caption">
+그림 5. 소득 계층별 c/nc 비율의 역사적 변화
+</figcaption>
+<p align="center">
+<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-005.png?raw=true" width="900" class="figure-img"><br>
+</kbd>
+</p>
+</figure>
+<ul>
+<li>그림 5는 전체 인구에서 c가 차지하는 비중의 연도별 변화와 중간 계층(50~90%)의 변화가 비슷하게 진행되었음을 알 수 있다. 반면 c의 경우 50% 아래로 떨어지기보다는 상위 10%로 진입한 경향이 많았다는 점도 확인할 수 있다.</li>
+</ul>
+</section>
+</section>
+<section id="regression-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="regression-analysis">Regression analysis</h2>
+<ul>
+<li>대학 졸업 여부가 어느 측면에서 부의 축적에 영향을 주었는지 살펴보기 위해서 계량적 분석을 시도 했다. 즉, c 여부가 부의 증가에 어떻게 영향을 주었는가를 보다 면밀하게 살펴보는 것이 분석의 목표다.</li>
+</ul>
+<figure class="figure">
+<figcaption class="figure-caption">
+그림 6. c/nc의 소득 비율과 부 비율의 역사적 변화
+</figcaption>
+<p align="center">
+<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-007.png?raw=true" width="900" class="figure-img"><br>
+</kbd>
+</p>
+</figure>
+<ul>
+<li>그림 6은 c와 nc의 격차를 소득과 부 각각에 관해 표시한 것이다. 앞서 보았듯이 1980년대 이전까지는 소득과 부 모두 1 주변에 머물다가 1980년대 이후 부의 증가가 점점 격차를 벌이며 증가하는 추세를 보이고 있다. 혹시 이러하는 추세가 c에 속한 상위 10%의 보다 빠른 부의 축적 때문이었을까? 코호트를 중위 소득 계층(50~90%)으로 제한해서 살펴보면 그림 7과 같다. 그림에서 보듯이 c의 자산 증가는 최상 계층의 현상이 아닌 일반적인 추세였다고 볼 수 있겠다.</li>
+</ul>
+<figure class="figure">
+<figcaption class="figure-caption">
+그림 7. 50~90% 부 계층의 소득 및 부 수준의 역사적 변화 (10년 단위)
+</figcaption>
+<p align="center">
+<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-008.png?raw=true" width="900" class="figure-img"><br>
+</kbd>
+</p>
+</figure>
+<ul>
+<li>질문은 무엇이 c의 빠른 부의 축적을 낳았는가, 하는 대목이다. 일반 기본적으로 살펴본 회귀 식은 다음과 같다.</li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?%0AW_%7Bit%7D%20=%20%5Calpha_0%20+%20%5Cunderbrace%7B%5Cbeta_1%20c_%7Bit%7D%7D_%7BA%7D%20+%20%5Cunderbrace%7B%5Csum_%7Bt%20%3E%201956%7D%20%5Cbeta_%7B2,t%7D~%5Cmathbb%7BI%7D_%7Byear%20=%20t%7D%20%5Ccdot%20c_t%7D_%7BB%7D%20+%20%20%5Cunderbrace%7B%5Csum_%7Bt%20%3E%201956%7D%20%5Cbeta_%7B3,t%7D~%5Cmathbb%7BI%7D_%7Byear%20=%20t%7D%7D_%7BC%7D%20+%20%5Cunderbrace%7B%5CGamma'%20X_%7Bit%7D%7D_%7BD%7D%20+%20%5Cxi_%7Bit%7D%0A"></p>
+<ul>
+<li>회귀분석의 각 부분을 간략하게 살펴보자.
+<ul>
+<li>A: 대학 졸업 여부가 전체 기간에 걸쳐 부에 미치는 효과</li>
+<li>B: 연도별로 구분된 대학 졸업 여부가 부에 미치는 효과</li>
+<li>C: 연도별 효과가 부에 미치는 효과</li>
+<li>D: 통제 변수 (소득수준, 결혼 여부, 자녀 유무 등)</li>
+</ul></li>
+<li>부에 c가 미치는 효과는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_1%20+%20%5Cbeta_%7B2,t%7D">로 연도별로 측정할 수 있다.</li>
+</ul>
+<figure class="figure">
+<figcaption class="figure-caption">
+그림 8. c의 부 관련 회귀 계수의 역사적 변화
+</figcaption>
+<p align="center">
+<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-010.png?raw=true" width="600" class="figure-img"><br>
+</kbd>
+</p>
+</figure>
+<ul>
+<li>그림 8에서 보듯이 c의 효과는 분명하다. 다만 소득 계층 기준으로 전체 집단의 효과가 50~90%의 중간 층에 비해 강하게 나타고 있다. 그림 9를 통해 이 내용을 다시 살펴보자.</li>
+</ul>
+<figure class="figure">
+<figcaption class="figure-caption">
+그림 9. c의 부와 소득 회귀 계수의 비교
+</figcaption>
+<p align="center">
+<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-009.png?raw=true" width="900" class="figure-img"><br>
+</kbd>
+</p>
+</figure>
+<ul>
+<li><p>그림 9는 소득 계층별로 나누어 결과를 나타내고 있다. 왼쪽은 좌변의 종속 변수가 부이고 오른쪽은 종속 변수가 소득이다.</p>
+<ul>
+<li>c에 대해서 부의 효과가 전반적으로 높으며 특히 상위 10%에 두드러진다.</li>
+<li>소득에 대해서는 이러한 효과가 나타나지 않는다. 특히 상위 10%를 제외하면 c의 소득 증가 효과는 거의 없다고 봐도 좋다.</li>
+</ul></li>
+<li><p>논문에서는 이러한 c의 효과가 어디서 비롯하는지를 조금 더 탐구하고 있다. 자료의 한계 때문에 상세하게 추적하지는 못한다. 다만 c와 nc 사이에 존재하는 중요한 차이로 금융 지식(financial literacy)의 차이를 지목하고 있다. 즉, 소득을 투자로 전환할 수 있는 수단을 알고 있었는지 여부가 중요하다는 것이다. 논문에서 주목한 또 하나의 차이는 사업체의 소유 여부다. 이 역시 부의 차이를 만들어내는 데 일정한 역할을 한다.</p></li>
+<li><p>논문에서 제기한 또 하나의 흥미로운 질문은 금융 지식의 여부가 c와 nc 사이에 세분화되어 있는지 여부다. 다시 말하면, 두 코호트가 같이 금융 상품에 투자했다면, 누가 더 잘 하는가에 관한 것이다.</p></li>
+</ul>
+<figure class="figure">
+<figcaption class="figure-caption">
+그림 10. 금융 및 사업 관련 부의 수익률 비교
+</figcaption>
+<p align="center">
+<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-012.png?raw=true" width="900" class="figure-img"><br>
+</kbd>
+</p>
+</figure>
+<ul>
+<li>그림 10의 A에 따르면 사업체 보유자와 미 보유자 사이에는 수익률 차이가 존재한다. 하지만 n와 nc 사이에 차이는 거의 없다. 나머지 그림에서도 n와 nc 사이에 뚜렷한 차이를 발견하기 힘들다. 즉 c와 nc 사이의 금융 지식의 차이란 투자 대상의 인지 및 실행과 같은 차원일 가능성이 높다는 것이다.</li>
+</ul>
+</section>
+<section id="extra" class="level2">
+<h2 class="anchored" data-anchor-id="extra">Extra</h2>
+<ul>
+<li><p>개인적으로 재미있게 본 내용 하나 추가한다. 유유상종 혼(assortative marriage)이 존재하는지 여부에 관한 것이다.</p>
+<ul>
+<li>교육 년수를 12년 미만(중퇴), 고졸, 대졸로 구분하면 3X3 테이블이 나온다.</li>
+<li>이제 각각의 경우에 해당하는 부부의 비율을 구한다.</li>
+<li>각각의 인구 비율이 무작위로 매칭되었을 때의 비율을 구한다.</li>
+<li>실제의 유유상종 혼의 비율과 무작위의 비율을 비교하면 유유상종의 정도가 계산된다.</li>
+</ul></li>
+<li><p>논문에서 밝힌 바에 따르면 대졸자의 유유상종 혼은 줄어드는 추세다. 즉, 1965년에 위 비율은 5.9였는데, 2016년에는 1.8에 불과하다. 즉 유유상종 혼은 감소하는 추세다.</p></li>
+<li><p>다음으로 유유상종 혼이 부의 창출에 있어서 단순 합을 넘어서는 추가적인 이득을 제공하는가 여부에 관한 것이다.</p></li>
+</ul>
+<figure class="figure">
+<figcaption class="figure-caption">
+그림 11. 유유상종 혼은 부의 형성에 어떻게 영향을 주었는가
+</figcaption>
+<p align="center">
+<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-006.png?raw=true" width="900" class="figure-img"><br>
+</kbd>
+</p>
+</figure>
+<ul>
+<li>A, B에서 보듯이 소득과 부 모두 유유상종 혼 상태의 가구가 평균보다 두 배 가량 높다. 하지만 C, D에서 보듯이 이를 각 해당 연도의 유유상종 혼 인구가 점유한 부의 비율과 유유상종 혼 인구의 비율로 나눈 수치는 거의 일정한 수준을 유지하고 있다.</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>economics</category>
+  <guid>https://www.github.io/lostineconomics_quarto/posts/economics/2020-01-22-Wealth-divided.html</guid>
+  <pubDate>Tue, 21 Jan 2020 15:00:00 GMT</pubDate>
+  <media:content url="https://www.aeaweb.org/content/file?id=13305" medium="image"/>
 </item>
 <item>
   <title>Understanding Logit Regression</title>

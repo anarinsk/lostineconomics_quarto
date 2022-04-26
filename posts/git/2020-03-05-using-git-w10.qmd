@@ -1,12 +1,16 @@
 ---
-toc: false
-layout: post
-comments: true 
 title: Using Git ‘Smoothly’ in Windows 10
 description: 윈도 10에서 git 잘 쓰기 
-categories: [coding-tool, git]
-
+author: "JS HUHH"
+date: "03/05/2020"
+image: "https://t3.ftcdn.net/jpg/03/67/94/46/240_F_367944626_tkPR8g1rZihc0ql5WpJhDYffS3nTfKqP.jpg"
+categories: [git]
+#margin-header: subscribe.html
 ---
+
+:::{.callout-note}
+윈도에서 깃을 쓸 때 이렇게 불편하게 쓰지 않아도 된다. 
+:::
 
 ## Why 
 
@@ -75,7 +79,3 @@ $ echo "alias python='winpty python.exe'" >> ~/.bashrc
 ```
 
 넣은 뒤에 터미널을 재실행하거나 `source ~/.bashrc`를 실행해주면 된다. 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTE3MzUxMDQsMTQ2NjAyMDE0Miw3Mj
-EzNzcxMDJdfQ==
--->

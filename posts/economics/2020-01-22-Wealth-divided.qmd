@@ -1,11 +1,11 @@
 ---
-toc: true
-layout: post
-comments: true
-title: The College Wealth Divide
-description: 미국 대졸자와 비대졸자의 투자 행태에 따른 부의 불평등 
-categories: [economics, paper-summary]
-
+title:  The College Wealth Divide
+description: 미국 대졸자와 비대졸자의 투자 행태에 따른 부의 불평등  
+author: "JS HUHH"
+date: "01/22/2020"
+image: "https://www.aeaweb.org/content/file?id=13305"
+categories: [economics]
+#margin-header: subscribe.html
 ---
 
 ## Source 
@@ -200,8 +200,3 @@ $$
 </figure>
 
 - A, B에서 보듯이 소득과 부 모두 유유상종 혼 상태의 가구가 평균보다 두 배 가량 높다. 하지만 C, D에서 보듯이 이를 각 해당 연도의 유유상종 혼 인구가 점유한 부의 비율과 유유상종 혼 인구의 비율로 나눈 수치는 거의 일정한 수준을 유지하고 있다. 
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjU2Mzk5MzIsNDkyNzA3MTQ4LC0yNj
-MwNDU3NjYsMTIxNTEzNzcxN119
--->

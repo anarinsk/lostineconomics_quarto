@@ -3,7 +3,7 @@ title:  Docker + Jupyter + 한글 폰트
 description: 빌드할 때 Jupyter의 한글 문제도 같이 해결하자!
 author: "JS HUHH"
 date: "05/09/2021"
-image: "image.jpg"
+image: "https://developers.redhat.com/sites/default/files/styles/article_feature/public/blog/2014/05/homepage-docker-logo.png?itok=zx0e-vcP"
 categories: [container]
 #margin-header: subscribe.html
 ---
@@ -37,7 +37,7 @@ categories: [container]
 
 데이터 사이언스를 위한 Jupyter docker 파일을 예시로 들겠다. 다른 이미지라면 응용해서 쓰면 된다. 
 
-```shell
+```dockerfile
 FROM jupyter/datascience-notebook:latest
 # Declare root as user 
 USER root
@@ -60,7 +60,7 @@ RUN apt-get update && apt-get -y upgrade && apt-get install -y fonts-nanum* && f
 
 docker-compose를 위한 yml을 예시한다. 이 내용 역시 각자 환경에 맞게 변형해서 쓰면 된다. 파일 이름을 "docker-jupyter.yml"이라고 하자. 
 
-```shell
+```yaml
 version: '3'
 #
 services:
@@ -85,8 +85,12 @@ services:
 + 위의 yml 파일에서 "{}"로 처리된 부분은 각자 채워 넣으면 된다. 
 + image 대신 build 명령어를 사용했다. 앞서 지정한 dockerfiles 디렉토리 내의 도커 명령어를 통해 빌드를 수행한다. 이렇게 빌드된 이미지는 처음부터 matplotlib 사용 시 한글 구현에 아무런 문제가 없다. 
 
-```shell
-> sudo docker-compose -f /mnt/{YOUR DIR}/docker-jupyter.yml -p "jupyter-ds" up -d
+주피터 환경의 파이썬 그리고 주피터 혹은 R스튜디오 환경의 R에서 한글 설정 방법 및 간단한 테스트는 [여기](https://github.com/anarinsk/setup_k8s/tree/main/testing)를 참고하자. 
+
+도커 컴포즈를 실행하는 방법은 아래와 같다. 
+
+```bash
+$ sudo docker-compose -f /mnt/{YOUR DIR}/docker-jupyter.yml -p "jupyter-ds" up -d
 ```
 
 실행 옵션은 다음과 같다. 역시 "{}"는 각자의 환경에 맞게 바꾸면 된다. 

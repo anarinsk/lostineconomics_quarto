@@ -1,11 +1,11 @@
 ---
-layout: post
-toc: false
-comments: true
-title:  Docker 컨테이너 + 한글 폰트 
-description:  컨테이너 안에서도 한글을 써보자 
-categories: [docker, data-science]
-
+title:  Docker 컨테이너 + 한글 폰트  
+description: 컨테이너 안에서도 한글을 써보자 
+author: "JS HUHH"
+date: "09/24/2020"
+image: "https://developers.redhat.com/sites/default/files/styles/article_feature/public/blog/2014/05/homepage-docker-logo.png?itok=zx0e-vcP"
+categories: [container]
+#margin-header: subscribe.html
 ---
 
 ## 다른 방법 
@@ -66,10 +66,3 @@ Docker 컨테이너 내에 설치된 폰트를 확인하고 싶다면, 아래를
 font_list = font_manager.findSystemFonts(fontpaths=None, fontext='ttf')
 font_list
 ```
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MjY3NTA1NCwxNzYzMTc5OTE3LC0xMj
-E1OTc3NTk3LDEyMjgwMTk5NTMsMTQ1ODUxODUwLC0xODcwNjc5
-OTQyLDE4MjI3Mzc0MzYsMTI5MjUwMTE2NCwtNDg5NDI0MzY2XX
-0=
--->
