@@ -8,6 +8,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight : 600;
   }
 
+  ul, li, ol{
+    font-family: 'pretendard' !important;
+    font-size:95%;
+   }
+
 p {
     font-family: 'pretendard' !important;
     font-size: 90%;

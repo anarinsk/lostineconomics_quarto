@@ -2,9 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html",
-      "/posts/WSL-without-docker-desktop/index.html"
+      "/posts/container/2021-09-13-podman-1.html",
+      "/posts/regression/2019-10-25-understanding-regression.html",
+      "/posts/math-simple/2019-07-18-dot-product.html",
+      "/posts/math-simple/2019-07-13-Poisson.html"
     ]
   }
 ]
