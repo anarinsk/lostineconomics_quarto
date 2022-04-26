@@ -1,5 +1,5 @@
 ---
-title:  Pythonin Browser 
+title:  Python in the Browser 
 description: 브라우저에서 파이썬을 돌린다굽쇼? 
 author: "JS HUHH"
 date: "11/19/2021"
