@@ -1,5 +1,5 @@
 ---
-title:  Python in Browser 
+title:  Pythonin Browser 
 description: 브라우저에서 파이썬을 돌린다굽쇼? 
 author: "JS HUHH"
 date: "11/19/2021"
@@ -8,7 +8,7 @@ categories: [computer-tool]
 #margin-header: subscribe.html
 ---
 
- # Python이 갑자기 필요하다면? 
+# Python이 갑자기 필요하다면? 
 
 이런 상황을 생각해보자. 
 
@@ -17,7 +17,7 @@ categories: [computer-tool]
 
 이럴 때 쓸 수 있는 도구가 몇 개 있다. 대표적으로 아래 구글 코랩이 있다. 
 
-- 구글 드라이브와 연동되는 [구글 코랩]( https://colab.research.google.com/)
+- 구글 드라이브와 연동되는 [구글 코랩](https://colab.research.google.com/)
 
 그런데 많은 회사에서 구글 서비스를 막아두는 경우가 있다. 그렇다면 어떻게 할까? 
 
@@ -44,7 +44,7 @@ github를 dev 모드로 돌린다. 웹 브라우저 리포지터리 창에서 `.
 
 ## Do your work! 
 
-이제 `.ipynb` 확장자 파일을 만들고 늘상 쓰듯이 jupyter를 쓰면 된다. 아주 특이하거나 무거운 환경이 아닌 이상, 어지간한 간단한 작업은 쾌적하게 수행할 수 있다. 익스텐션을 깔면, 인터페이스는 Jupyter에 적합하게 알아서 변한다. 
+이제 `.ipynb` 확장자 파일을 만들고 늘상 쓰듯이 jupyter를 쓰면 된다. 아주 특이하거나 무거운 환경이 아닌 이상, 어지간한 간단한 작업은 쾌적하게 수행할 수 있다. 익스텐션을 깔면, 인터페이스는 Jupyter에 적합하게 알아서 변한다. 물론 한계도 있다. 브라우저에 올라간 파이썬 엔진인 만큼 로컬이나 서버에 깔린 python 만큼 많은 일을 할 수는 없다.  
 
 
 
