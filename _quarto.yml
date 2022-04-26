@@ -3,7 +3,7 @@ project:
   output-dir: docs
 website:
   title: "lostineconomics.com"
-  margin-footer: "subscribe.html"
+  #margin-footer: "subscribe.html"
   navbar:
     right:
       - about.qmd
