@@ -2,7 +2,15 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/computer-tools/2021-11-19-python-in-github.html",
       "/posts/container/2021-09-13-podman-1.html",
+      "/posts/computer-tools/2021-02-02-all_for_vs_code.html",
+      "/posts/computer-tools/2020-10-27-viva-binder.html",
+      "/posts/computer-tools/2020-10-24-classy-latex.html",
+      "/posts/computer-tools/2020-09-26-windows-terminal.html",
+      "/posts/computer-tools/2020-03-09-Streamlit-Heroku.html",
+      "/posts/computer-tools/2020-03-07-blogging-with-fastpages.html",
+      "/posts/regression/2019-11-10-understanding-logit-regression.html",
       "/posts/regression/2019-10-25-understanding-regression.html",
       "/posts/math-simple/2019-07-18-dot-product.html",
       "/posts/math-simple/2019-07-13-Poisson.html"

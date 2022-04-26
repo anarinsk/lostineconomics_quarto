@@ -1,0 +1,76 @@
+---
+
+layout: post
+toc: false
+comments: true
+title: Following Gilbert Strang 3
+description: LU 분해 그리고 순열 행렬
+categories: [math, matrix-theory, gilbert-strang]
+
+---
+
+## LU Decomposition 
+
+- 큰 이슈는 없다. 
+- 다만 이 녀석을 G-J 프로세스로 이해하면 흥미로운 구석이 있다. 
+- 무선, 열 바꿈은 없다고 가정하자. 
+- 이 상태에서 적당한 매트릭스 $\mathbf A$를 G-J 프로세스에 따라서 U 매트릭스(상삼각 행렬), 즉 Upper Triangular Matrix로 바꾼다고 해보자. 
+
+$$
+E_1 \dotsb E_k {\mathbf A} = {\mathbf U}
+$$
+
+이제 $\mathbf A$ 앞에 붙은 오퍼레이터들의 역행렬을 왼쪽으로 곱해보자. 
+
+$$
+{\mathbf A} = \underbrace{E_k^{-1} \dotsb E_1^{-1}}_{\ast} {\mathbf U}
+$$
+
+- $\ast$ 부분이 바로 $\mathbf L$ 매트릭스가 된다! 즉, 
+
+$$
+{\mathbf A} = {\mathbf L} {\mathbf U} =  {\mathbf L} {\mathbf D}{\mathbf U^\prime}
+$$
+
+- LU 분해란 매트릭스 $\mathbf A$를 $\mathbf U$로 만드는 과정에서 자연스럽게 등장한다. 
+
+## Permutation 
+
+- 정의상 열바꿈을 수행하는 매트릭스를 뜻한다. 
+- 왜 Permutation이 필요할까? 
+	- 만일 pivot (대각선에 위치한 행렬)이 너무 작다면, 계산의 관점에서 효율적이지 않다. 
+	- 따라서 얘네들은 뒤로 미뤄주는 것이 좋다. 0으로 간주. 
+		- 여기서는 pivot을 내림차순으로 배치해주는 매트릭스라고 생각해도 좋겠다. 
+- for Invertible $\mathbf A$, 
+
+$$
+\mathbf{PA = LU}
+$$
+
+- P is identity matrix which reordered rows. 
+	- 어차피 열만 바꾸는 것이므로 0, 1을 한 열에 하나씩만 갖게 된다! 
+
+$$
+\begin{aligned}
+\mathbf P^{-1} & = \mathbf P^\mathrm T \\
+\mathbf P^\mathrm T \mathbf P & = \mathbf I
+\end{aligned}
+$$
+
+## Transpose 
+
+- 생략한다. 
+
+## Symmetric 
+
+$$
+\mathbf A^\mathrm T = \mathbf A
+$$
+
+- $\mathbf R^\mathrm T \mathbf R$ is always symmetric. 
+	- 회귀 계수 구하는 식에서 $(\mathbf X^\mathrm T \mathbf X)$이 대목이 symmetric! 
+	- $(\mathbf R^\mathrm T \mathbf R)^\mathrm T = \mathbf R^\mathrm T \mathbf R$ by rules of tranpose. 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE4ODE4OTAzMDUsMTgzOTE0NDcyMywtMT
+AwNTk1MjIyOV19
+-->

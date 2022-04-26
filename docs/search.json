@@ -11,7 +11,252 @@
     "href": "index.html",
     "title": "lost_in_economics",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncoding\n\n\nwsl\n\n\ncontainer\n\n\n\n\nDocker Desktop 없이 WSL에서 Podman으로 콘테이너를 써보자\n\n\n\n\n\n\nSep 13, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nregression\n\n\n\n\n회귀분석, 기하학적으로 한 방에 깨우치기\n\n\n\n\n\n\nOct 25, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nmath-simple\n\n\n\n\n기하학적으로 내적을 살펴보자.\n\n\n\n\n\n\nJul 18, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nmath-simple\n\n\n\n\n이항 분포의 관점에서 푸아송 분포 이해하기\n\n\n\n\n\n\nJul 13, 2019\n\n\nJS HUHH\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n브라우저에서 파이썬을 돌린다굽쇼?\n\n\n\n\n\n\nNov 19, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncoding\n\n\nwsl\n\n\ncontainer\n\n\n\n\nDocker Desktop 없이 WSL에서 Podman으로 콘테이너를 써보자\n\n\n\n\n\n\nSep 13, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\nPython, Julia, R을 하나의 도구로 코딩하자.\n\n\n\n\n\n\nFeb 2, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n코드 셰어링, 이제 걱정 끝\n\n\n\n\n\n\nOct 27, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n\\(\\rm\\LaTeX\\)을 다시 써볼까?\n\n\n\n\n\n\nOct 24, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n윈도 터미널 잘 쓰기\n\n\n\n\n\n\nSep 26, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\npython 만으로 웹 앱을 만들어보자\n\n\n\n\n\n\nMar 9, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n깃헙 위에 블로그를 보다 쉽게 만들어볼까?\n\n\n\n\n\n\nMar 7, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nregression\n\n\n\n\n로지스틱 회귀를 이해해봅시다!\n\n\n\n\n\n\nNov 10, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nregression\n\n\n\n\n회귀분석, 기하학적으로 한 방에 깨우치기\n\n\n\n\n\n\nOct 25, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nmath-simple\n\n\n\n\n기하학적으로 내적을 살펴보자.\n\n\n\n\n\n\nJul 18, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nmath-simple\n\n\n\n\n이항 분포의 관점에서 푸아송 분포 이해하기\n\n\n\n\n\n\nJul 13, 2019\n\n\nJS HUHH\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html",
+    "href": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html",
+    "title": "Build Your Blog on Github, Easily",
+    "section": "",
+    "text": "Note\n\n\n\n현재는 fastpages를 활용하고 있지 않습니다. 이유는 두 가지입니다.\n\nfastpages의 지원의 미비\n커스터마이징의 미비함"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#tldr",
+    "href": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#tldr",
+    "title": "Build Your Blog on Github, Easily",
+    "section": "tl;dr",
+    "text": "tl;dr\n\n깃헙에서 가장 쉽게 블로그를 빌드할 수 있는 방법을 알아보자.\n디자인은 포기하시라, 마. (지금으로도 사실 훌륭하니까!)"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#blogging-with-github",
+    "href": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#blogging-with-github",
+    "title": "Build Your Blog on Github, Easily",
+    "section": "Blogging with Github",
+    "text": "Blogging with Github\n깃헙을 통해 static web 기반의 블로그 / 홈페이지를 운영할 수 있다. 많은 분들이 이미 그렇게 하고 있다. Hugo, Jekyll의 도구를 잘 사용하면 상용 수준의 블로그 운영도 가능하다. 물론 이 도구들을 쓸 경우 관리를 위해서는 약간의 번거로움을 감수해야 한다. Hugo의 경우 R의 BlogDown 패키지를 활용할 수 있다. Jekyll의 경우 Ruby 기반으로 제작되어서 블로그 관리를 위해서는 local에서 해줘야 하는 작업이 있다.1\n이상적인 형태의 블로그 툴이란 무엇일까? 내 생각은 이렇다.\n\n최초의 설정 및 초기 디자인 요소를 제외하면 코드를 수정할 필요가 없어야 한다.\nhtml을 되도록 쓰지 않고, md 형태로 작성한 후 바로 반영이 되어야 한다.\n무료로 제한 없이 호스팅이 가능해야 한다.\n\n3은 깃헙으로 가볍게 해결된다. 1, 2는 사실 좀 어려운 부분이었다. 깃헙을 블로그 툴로 쓰기 위한 일종의 트레이드오프랄까… 2\n이 글에서 소개할 fastpages는 깃헙의 기본 웹툴인 Jekyll을 기반으로 1,2를 구현해주는 이상적인 서비스다. 게다가 fastpages는 ipynb 형태의 노트북, word 파일도 알아서 블로그 페이지로 바꿔준다. 문송한 나로서는 참으로 반가운 서비스다.\n\nBefore we go\n\n이하의 글에서 [your-x-id]라고 표기된 부분은 x라는 서비스의 각자 계정명 등의 정보를 바꿔서 설정해야 하는 부분이다. 그냥 복붙하지 마시라는 말씀.\n[repo root]는 해당 리퍼지토리의 최상위 디렉토리를 나타낸다."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#fastpages-by-fast.ai",
+    "href": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#fastpages-by-fast.ai",
+    "title": "Build Your Blog on Github, Easily",
+    "section": "fastpages by fast.ai",
+    "text": "fastpages by fast.ai\n일단 별도의 인스톨 과정이 필요 없다! 사전에 준비해야 할 것은 깃헙 계정 뿐.\n\n페이지 생성\nhttps://github.com/fastai/fastpages/generate\n\n깃헙에 로그인한 상태에서 이 곳에 접속해 페이지를 생성한다. 페이지를 생성한 후 내 깃헙 계정에서 조금 기다리면 “Pull Request”(PR) 메시지가 날아온다.\n\n\n\nPR\nPR을 하기 전에 SSH 키를 생성하는 작업을 해줘야 한다. 메시지에 친절하게 설명이 되어 있으니 그대로 따라하면 된다.\n\n\n링크를 눌러 웹 페이지에서 private key와 public 키를 생성한다. RSA, 4069를 선택하도록 하다.\n두번째의 링크를 눌러 새 sceret을 생성하고 private key를 넣어준다. 이름은 반드시 SSH_DEPLOY_KEY로 해야 한다.\n세번째의 링크를 눌러 deploy key를 생성하고 여기에 public key를 넣어주면 된다. 이름은 임의로 지정하면 된다.\n\n마지막으로 PR를 수락하고 이를 아래 화면 같이 merge하면 준비가 완료된다. 깃헙이 작업을 하는 동안 잠시 기다리면 된다. 작업 상태가 궁금하면 github actions 탭을 확인하면 된다. 이후 몇 가지를 더 묻는데 대충 진행해도 문제 없다.\n\n설치가 끝나면 아래와 같이 생성된 페이지를 확인할 수 있다. 아래는 위의 절차에 따라서 테스트계정(test-fastpages)에 페이지를 생성한 결과다.\nhttps://anarinsk.github.io/test-fastpages/"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#customize-yours",
+    "href": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#customize-yours",
+    "title": "Build Your Blog on Github, Easily",
+    "section": "Customize yours",
+    "text": "Customize yours\n이제 각자의 취향에 맞게 몇 가지 커스터마이즈를 거치면 된다. 대체로 md를 고치면 되기 때문에 크게 어려운 대목은 없다.\n\nhome\n\nrepo root의 index.md를 적당히 수정하면 된다.\n\nabout\n\n[repo root]/_pages/about.md 를 수정하면 된다.\n\ncomments\n\nutterances 앱을 깔면, github의 issue 기능을 활용해 코멘트를 관리할 수 있다.\n인스톨 페이지의 안내대로 하면 된다.\n별도로 뭘 까는 것은 아니고 github 계정의 해당 repo를 설정하면 끝.\n다만 코멘트를 달기 위해서는 github 계정이 필요하다.\n\nfavicon\n\n[repo root]/images의 favicon.ico를 고치면 된다.\n\n그림 관리\n\n[repo root]/images에 적절한 디렉토리를 만들어 관리하면 된다.\n그림 링크는 ![](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/git-cmder/fig_3.png) 식으로 {{ site.baseurl }}로 시작하면 된다.\n\ncss\n\ncss를 다룰 줄 안다면 블로그의 많은 것은 커스터마이즈할 수 있다.\n[repo root]/_sass/minima안에 보면 custom-styles.scss와 fastpages-styles.scss 두 개가 있다. custom-styles.scss에 부가 내용을 수정하면 스타일을 바꿀 수 있다. 필요한 폰트를 로딩해 설정한다든가 하는 디자인 수정 사항을 여기에 넣으면 된다.\n예를 들어 기본 텍스트의 크기를 바꾸고 싶다면,\n\n\n.post-content  p, .post-content  li {\n    font-size: 15px; //원래값은20px\n    color: #515151;\n    }\n\ngoogle analytics\n\n먼저 google analytics id가 필요하다. 알아서 발급 받으시라.\n\n구글 페이지에도 안내가 되어 있지만, gs 모듈을 활용하기 위해서 [repo root]/_include에 google_analytics.html과 같은 파일을 만들어 아래의 내용을 넣는다. 물론 자신의 analytics id로 바꿔 넣어야 한다.\n\n\n<!-- Global site tag (gtag.js) - Google Analytics -->\n<script  async  src=\"https://www.googletagmanager.com/gtag/js?id=[your-ga-id]\"></script>\n<script>\n    window.dataLayer = window.dataLayer || [];\n    function  gtag(){dataLayer.push(arguments);}\n    gtag('js', new  Date());\n    gtag('config', '[your-ga-id]');\n    gtag('set', {'user_id':  'USER_ID'}); // 로그인한 User-ID를 사용하여 User-ID를 설정합니다.\n</script>\n\n[repo root]/_include의 custom_head.html의 적당한 줄에 아래 코드를 넣어준다.\ngoogle analytics의 ‘실시간’ 항목에서 작동 여부를 확인할 수 있다."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#활용",
+    "href": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#활용",
+    "title": "Build Your Blog on Github, Easily",
+    "section": "활용",
+    "text": "활용\n\nPost 작성\n통상적인 md 파일로 작성하면 된다. 두 가지만 주의하면 된다. 우선 파일 이름을 년도-월-일-이름.md 형태로 넣어야 한다. 그래야 fastpages가 컴파일을 할 수 있다. 예를 들어 이 포스팅의 파일 이름은 2020-03-07-blogging-with-fastpages.md다.\n둘째, 포스팅 만 앞에 yml을 넣어 해당 포스트에 관한 정보를 지정해야 한다.\n---\nlayout: post # 글의 레이아웃, 보통이라면 post로 두면 된다. \ntoc: false # 목차 출력 여부 \ncomments: true # 코멘트 기능 사용 여부 \ntitle: Free Your Blog with Github # 제목 \ndescription: github에서 무료 블로그를! # 제목 아래 부제목 \ncategories: [coding-tool, web-tool] # tag 혹은 카테고리 \n---\n---으로 감싼 후 안에 정보를 넣으면 된다.\n\n\nfastpage의 몇가지 장점\n\n보통 github 기반의 블로그를 만들면, [your-git-id].github.io만을 주소로 가지게 된다. fastpages를 쓰면 repo 수준의 홈페이지를 운영할 수 있다. 예를 들어, 이 블로그의 주소는 anarinsk.github.io/lostineconomics-v2-1다.\n강력한 장점은 ipynb 확장자의 노트북 파일을 그대로 포스팅으로 바꿔준다는 것이다. [repo root]/_notebooks에 파일을 넣어주면 된다.\n\n디자인은 포기하라. css나 html을 잘 안다면 커스터마이즈할 여지가 있지만, 그럴 수 있는 사람이라면 Hugo나 Jekyll을 직접 쓰는 편이 나을 수도 있겠다.\n\nfastpages가 사용하는 Jekyll 테마는 minima다.\n\n매번 markdown을 에디터에 올려쓰는 것이 불편하다면 웹 에디터를 활용할 수 있다.\n\nstackedit의 경우 github 저장을 지원하기 때문에 해당 repo의 _posts/ 아래의 md 문서를 동기화해두면 웹에서 수정 후 동기화하는 것만으로도 포스트의 수정을 쉽게 할 수 있다. stackedit의 활용에 관해서는 이 포스팅을 참고하면 좋겠다. 사실 웹에서 이렇게 수준 높은 마크다운 에디터를 제공한다는 사실이 고맙고 놀랍다. (그래서 나는 이 회사에 매년 기부한다!)\n\nfastpages의 경우 commit이 발생하면 자동으로 블로그의 빌드에 들어간다.\n\n따라서 웹 에디터에서 글을 수정한 후 적절한 주소를 지정해주고 동기화를 하면, 즉 커밋을 하면 바뀐 내용을 반영해 블로그가 다시 빌드 된다."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#update는-어떻게-하지",
+    "href": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#update는-어떻게-하지",
+    "title": "Build Your Blog on Github, Easily",
+    "section": "Update는 어떻게 하지?",
+    "text": "Update는 어떻게 하지?\n블로그 자체의 Jekyll 기반 코드들도 업데이트될텐데, 이건 어쩌나 생각하셨다면 걱정할 필요가 없다. 깃헙에서 제공하는 PR 기능을 활용해서 내 리포지토리까지 거의 자동으로 업데이트해준다. 다만 커스터마이즈를 많이 했다면 지원이 안될 수도 있다는 점에 유념하시라. - issues > New issue > Get started를 누르면 아래의 그림을 볼 수 있다.\n\n여기서 아무 것도 바꾸지 말고 Submit new issue를 하면 업데이트 요청이 들어가고 업데이트 사항이 없을 경우는 이슈가 그낭 종결되고 있을 경우는 그대로 따라가면 된다. 처음 페이지를 깔 때처럼 PR을 해주는 형태로 진행된다. 꽤나 영리한 업데이트 방법이다.\n\n바뀌는 파일들\n아직까지는 사소한 업데이트만 진행되는 듯 싶다. PR을 완료한 이후 커밋 메시지에 “upgrade fastpages”라고 적혀 있는 부분을 확인해서 커스터마이즈한 부분을 적당히 바꾸면 된다. _pages/about.md, |includes/custom_head.html 와 같이 커스터마이즈해둔 파일들도 바뀌게 되는 경우가 종종 있으므로 항상 백업본을 어딘가 로컬에 유지해두는 편이 좋겠다."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html",
+    "title": "Streamlit + Heroku",
+    "section": "",
+    "text": "Note\n\n\n\n현재는 streamlit에서 꽤 좋은 조건으로 자체 클라우드를 운영한다. 특별한 이유가 없는 이상 여기 소개한 것과 같이 Heroku를 쓰는 것은 불필요하다."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#들어가며",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#들어가며",
+    "title": "Streamlit + Heroku",
+    "section": "들어가며",
+    "text": "들어가며\n구슬이 서 말이라도 꿰어야 보배다. 당연하다. 데이터 분석은\n\n스마트한 노가다\n갈고 닦은 모델링\n환상적인 시각화\n\n의 삼위 일체다. 물론 이 모든 과정에 화룡점정은 “전달”이다. 이 세 개를 어떻게 묶어서 전달하느냐에 따라서 분석을 받아들이는 그 사람의 판단이 달라진다. 어떻게 하면 잘 전달하는 것일까?\n지구상의 많은 인구가 손 안에 컴퓨터를 하나씩 들고 다니는 시대다. 안타깝게도 PC에서 많이 쓰던 PDF는 모바일에 적절하지 않다. 문서의 확대, 축소가 동적이지 않기 때문이다. 아울러 새로운 정보를 계속 주고 받을 수 있다는 점을 생각하면 결국은 ‘웹’, html이 데이터 분석을 전달하는 새로운 합의점이 되지 않을까 싶다. 아니 이미 그런 시대다."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#streamlit",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#streamlit",
+    "title": "Streamlit + Heroku",
+    "section": "Streamlit",
+    "text": "Streamlit\nPython은 이제 자타가 공인하는 데이터 사이언스의 주요 도구다. Python에는 이미 좋은 웹 개발 도구들이 있다. Django, Flask가 그렇다. 하지만 역시 나 같은 문송한 자들이 쓰기는 쉽지 않다. 아마도 네트워크 관련 지식이나 웹 관련 지식에 익숙하지 않은 탓이다. 그냥 pandas, numpy 정도만 배울 용이가 있는 사람들에게는 넘기 쉽지 않은 장벽이다. 어쩌면 닭잡고 싶은데 소잡는 칼을 휘두르는 법을 배워야 해서 그럴지도 모르겠다.\n이런 웹 개발 프레임워크들은 “데이터 혹은 그 시각화를 인터랙티브하게 공유한다,”라는 기본 목적에 비추어보면 살짝 과한 면도 있다. 비슷한 필요를 느낀 사람들이 많았는지 작년에 Streamlit라는 반가운 프로젝트가 등장했다.\nR에는 이미 Shiny라는 비슷한 프로젝트가 있다. R의 기능을 활용해 데이터를 처리하고 별도의 웹 개발 없이 R의 기능을 그대로 시각화로 구현할 수 있는 툴이다. Python에도 비슷한 기능을 구현하는 시도는 많았으나 어딘가 불편했다. Streamlit는 이런 2%의 부족함을 꽤 잘 해결했다. 어떤 면에서는 Shiny보다도 쓰기가 편리한 듯도 싶다. 다만 잃는 것도 있다. Shiny의 ’미감’에는 미치지 못하고 기능도 살짝 부족하다. 하지만 통상적인 데이터 탐색 및 시각화의 용도로는 충분하다.\n\nWorkflow\n여기서 Streamlit를 자세히 설명하지는 않겠다. Python을 써보면 사람이면 예제를 쉽게 따라해보면 된다. 페이지의 설명대로 아래 명령만 실행해봐도 느낌을 한번에 받을 수 있다. 아래와 같이 설치하고 hello를 띄울 수 있다.\n$ pip install streamlit \n$ steamlit hello\n대략의 워크플로우는 아래와 같다.\n\nPython으로 작업한다.\nStreamlit로 interactive하게 처리될 부분을 간단히 설계한다.\n터미널에서 streamlit run [앱이름].py\n\n각자의 컴퓨터, 즉 로컬에서 실행하면 알아서 브라우저 앱이 뜬다. 디자인이 다소 허접해보일 수 있지만, 미니멀을 좋아하는 사람이라면 ’본질’에 집중할 수 있는 점을 칭찬할 것이다. R의 Shiny와 마찬가지로 어지간한 Python 비주얼 라이브러리(matplotlib, Vega, Plotly 등등)는 모두 구현이 가능하다."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#how-to-deploy-to-web",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#how-to-deploy-to-web",
+    "title": "Streamlit + Heroku",
+    "section": "How to deploy to web…",
+    "text": "How to deploy to web…\n로컬에서 Steamlit를 이용해 그럴 듯한 앱을 만들었다. 이제 이 녀석을 어떻게 배포할까? 즉 이걸 남들에게 어떻게 보여줄까?\n일단 배포를 위해서는 전용 웹 서비스가 있어야 한다. AWS의 무료 티어를 활용해서 배포할 수도 있지만 세팅이 간단하지는 않다. 솔직히 말하면 이 마저 귀찮고 살짝 겁난다. 이런 사람들이 쉽게 쓸 수 있는 서비스가 salesforce에서 제공하는 Heroku다. 원래 Ruby로 제작된 웹 앱만 서비스 했으나, 최근 쓰임새가 늘어나면서 다양한 랭귀지를 지원하고 있다. 당연히 Python도 포함된다. 작업의 전체적인 개념은 다음과 같다.\n\nHeroku 계정 생성\nCLI 설치\nStreamlit 앱 제작\nHeroku 빌드를 위한 파일 생성\nStreamlit 작업 디렉토리를 Heroku로 push\nPush와 동시에 웹 빌드 및 자동 배포\n\n필요한 과정을 간략하게 살펴보자.\n\nHeroku 계정 생성 및 CLI 설치\n홈페이지에 들어가서 가입하면 된다. CLI, 즉 터미널 툴은 왜 필요할까? 터미널에서 작업을 하면 좀 더 편하다. CLI를 설치해야 제대로 Heroku를 사용할 수 있다. 아래와 같이 터미널에서 로그인을 한다.\n$ heroku login \n\n\n앱 디렉토리에 깃 생성\ngit을 통해 heroku를 관리하는 게 편하다. git을 쓸 줄 모른다면, 야매로라도 얼른 배우고 오시라. git으로 작업을 브랜치에서 commit 한 후 heroku로 푸시하는 것으로 일종의 작은 CI/CD가 달성된다.\n\n\n빌드를 위한 파일 생성\nHeroku로 제작한 Streamlit 앱을 푸시하면 자동으로 빌드가 진행된다. 이를 위해서 제작한 앱의 최상위 디렉토리에 아래의 파일을 넣어주자.\nproject \n├── app.py (제작한 앱)\n├── requirements.txt  \n├── setup.sh  \n└── Procfile\n\nrequirements.txt\n설치해야 하는 Python 패키지를 지정해준다. 아래의 예와 같다.\n numpy==1.16.4 \n streamlit==0.52.1 \n seaborn==0.9.0 \n pandas==0.25.1 \n matplotlib==3.1.1 \n scikit_learn==0.22\n이 파일을 자동으로 생성하는 pipreqs를 이용해도 된다.\n\n\nsetup.sh\nmkdir -p ~/.streamlit/\n\necho \"\\\n[general]\\n\\\nemail = \\\"your-email@domain.com\\\"\\n\\\n\" > ~/.streamlit/credentials.toml\n\necho \"\\\n[server]\\n\\\nheadless = true\\n\\\nenableCORS=false\\n\\\nport = $PORT\\n\\\n\" > ~/.streamlit/config.toml\nsh 명령을 실행할 내용을 담고 있다.\n\n\nProcfile\nweb: sh setup.sh && streamlit run app.py\nsh 명령을 실행하고 streamlit를 띄우는 명령어를 담고 있다.\n\n\nruntime.txt\n특정 Python 버전이 필요하다면 이 파일을 추가할 수 있다. 파일 안에 담긴 내용은 아래와 같다.\npython-3.7.3\n\n\n\nCreate and Just push\n이제 heroku로 나갈 앱을 만들고 보내면 끝이다. master에서 작업했다면 아래와 같이 명령어를 실행하면 된다.\n$ heroku create\n$ git push heroku master"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#protips",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#protips",
+    "title": "Streamlit + Heroku",
+    "section": "Protips",
+    "text": "Protips\n\n한글이 안나와요~\nstreamlit는 웹에서 즉 브라우저 위에서 돌아가기 때문에 한글이 잘 나오는 것이 정상이다. 문제는 Python 내에서 그래프에 한글을 렌더링할 경우 이것이 제대로 표현되지 않는다는 것이다. 보통 matplotlib과 같은 패키지들을 써본 사람이라면 해당 내용을 한번 검색해본 기억이 있을 것이다. 대략 로컬에서는 폰트를 찾은 후 이를 matplotlib이 쓸 수 있도록 인식시켜주는 것으로 간단히 끝난다.\n왜 Heroku에서는 이것이 안될까? 간단하다. Heroku는 외부의 웹서버이고 그 웹 서버에 한글 폰트가 없는 것이다. 웹 서버에 한글 폰트를 심어주면 될 것이다. 하지만 어떻게 심을까? 간단하다. 작업 중인 앱의 루트 디렉토리에 다음과 같은 시스템 디렉토리를 하나 생성한다.\n/.fonts \n이 디렉토리 안에 필요한 한글 폰트를 넣으면 된다. 그러면 해당 앱이 Heroku로 푸시되었을 때 시스템 폰트로 디렉토리 안의 폰트들이 잘 등록된다."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#예제",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#예제",
+    "title": "Streamlit + Heroku",
+    "section": "예제",
+    "text": "예제\nhttps://morning-depths-10545.herokuapp.com/\n\n앱 안에 비교적 자세한 설명을 달아 두었으니 별도의 과정은 생략하도록 하겠다.\n\n데이터 정리 등의 지저분한 코드는 생략하고 위 Heroku 앱을 구현하는 데 동원된 코드는 다음과 같다.\nhttps://github.com/anarinsk/adp-st-kap_1"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#참고자료",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#참고자료",
+    "title": "Streamlit + Heroku",
+    "section": "참고자료",
+    "text": "참고자료\nhttps://github.com/Taxuspt/heroku_streamlit_nginx\nhttps://towardsdatascience.com/quickly-build-and-deploy-an-application-with-streamlit-988ca08c7e83\nhttps://blog.jcharistech.com/2019/10/24/how-to-deploy-your-streamlit-apps-to-heroku/"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-09-26-windows-terminal.html",
+    "href": "posts/computer-tools/2020-09-26-windows-terminal.html",
+    "title": "The Best Terminal App for Windows",
+    "section": "",
+    "text": "마소가 리눅스 생태계를 품으려고 진심으로 노력하고 있다. 보통 윈도에서 터미널을 쓰려면 cmd를 쳐서 들어간다. 일단 모양이 별로일 뿐만 아니라 불편하다. 그래서 보통 서드파티에서 제작한 터미널 앱을 별도로 쓰곤 한다. 이 앱들로도 부족한 것이 없다. cmder도 높은 수준의 커스터마이즈와 뛰어난 사용성을 보장한다.\nWSL을 통해 윈도에 설치하는 리눅스의 경우 기본으로 CLI(Command Line Interface)를 활용하게 된다. 따라서 좋은 터미널 앱은 필수적이다. 간편하면서도 심미적으로도 유려한 그런 앱이 하나 있었으면 싶은데, MS는 이미 그런 앱을 제공하고 있다.\nWindows 10 기준으로, Microsoft Store에 들어가서 “terminal”을 검색해보자. “Windows Terminal”과 “Windows Terminal Preview” 두 개를 찾을 수 있다. 전자는 안정 버전이고 후자는 실험적인 기능을 구현한 버전이다. 어느 것을 써도 괜찮다.\n공식 가이드 https://docs.microsoft.com/ko-kr/windows/terminal/\n왠만한 내용은 공식 가이드에 잘 정리되어 있으므로 몇 가지 팁만 적도록 하자."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-09-26-windows-terminal.html#설정",
+    "href": "posts/computer-tools/2020-09-26-windows-terminal.html#설정",
+    "title": "The Best Terminal App for Windows",
+    "section": "설정",
+    "text": "설정\nVS Code도 그렇고 윈도 터미널도 그렇고 설정이 settings.json 파일로 되어 있다. GUI가 아니라서 처음엔 어색할 수 있겠지만, 쓰다보면 이게 훨씬 편하다는 것을 알게 될 것이다.\n{: style=“textalign:center;” width=“500”}\n{: style=“textalign:center;” width=“500”}\n\n테마\n엄청나게 다양한 테마를 손쉽게 구현할 수 있다.\nhttps://windowsterminalthemes.dev/\n원하는 테마를 바꿔가며 확인할 수 있다. 마음에 드는 녀석을 “Get theme” 버튼을 눌러 클립보드에 복사하도록 하자. 녀석을 어디에 붙여 넣어야 할까?\nsettings.json 파일을 자세히 보면, 아래 \"schemes\":라는 항목이 있다. 여기에 클립보드에서 복사한 내용을 {} 안에 붙여 넣도록 하자. 그리고 설정 파일의 위로 이동하면 \"profiles\" - \"defaults\"라는 항목이 보일 것이다. 여기에는 터미널 앱을 띄웠을 때 어떤 세팅으로 시작할 것인지를 넣을 수 있다. 여러가지 항목을 넣을 수 있는데, 이중 colorScheme 항목에 방금 붙여 넣은 테마의 이름을 넣어주면 된다. 저장을 하면 테마가 바로 적용되며, 뭔가 문제가 있을 경우에는 에러가 뜬다. 이 경우 설정 파일을 다시 고치면 된다. 내가 사용중인 default는 아래와 같다.\n\"defaults\":\n{\n    \"fontFace\" : \"D2Coding\",\n    \"fontSize\" : 10,\n    \"historySize\" : 9001,\n    \"colorScheme\" : \"Monokai Vivid\",\n    \"cursorColor\" : \"#FFFFFF\",\n    \"cursorShape\" : \"vintage\",\n    \"padding\" : \"2, 2, 0, 0\",\n    \"snapOnInput\" : true,\n    \"useAcrylic\" : true,\n    \"acrylicOpacity\" : 0.95,\n    \"antialiasingMode\":\"cleartype\"\n    // Put settings here that you want to apply to all profiles\n}\n\n폰트는 D2Coding을 썼다. 폰트 크기 등등은 쭉 생략하고, 안티얼라이어싱 모드로 cleartype을 쓴 정도가 특징이다. 폰트는 한글 폰트를 써야 한글이 잘 나온다는 점만 기억하자."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html",
+    "href": "posts/computer-tools/2020-10-24-classy-latex.html",
+    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
+    "section": "",
+    "text": "박사 논문을 \\(\\rm\\LaTeX\\)(이하 그냥 레이텍 혹은 텍이라고 쓰겠다)으로 썼지만… 역시 안 쓰면 잊는다. 갑자기 텍을 다시 써볼까, 라는 생각이 드는 순간 갑갑하더라. 윈도를 쓰건 맥을 쓰건 용량이 적지 않고 관리가 쉽지 않은 텍라이브를 깔게 되지는 않는다. 물론 당신이 논문을 쓰고 있다면…\n이 두 가지를 놓고 해결책을 찾아봤다. 세 가지 정도 해법이 있더라."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html#tinytex-with-r",
+    "href": "posts/computer-tools/2020-10-24-classy-latex.html#tinytex-with-r",
+    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
+    "section": "tinytex with R",
+    "text": "tinytex with R\nR의 문서 관련 패키지를 거의 혼자 만들고 있는 谢益辉(사익휘, 시에-이-휘)가 R에서 텍을 컴파일할 수 있도록 아주 가벼운 패키지 tinytex을 만들었다. R을 쓴다면 RStudio를 쓸 것이고, 이 녀석은 편집기로서 역할 역시 모자라지 않다.\ninstall.packages('devtools')\ndevtools::install_github('yihui/tinytex')\ntinytex::install_tinytex()\n\ndevtools 패키지를 설치한다.\n깃헙에서 tinytex이라는 R패키지를 설치한다.\ntinytex 패키지를 통해서 tinytex을 설치한다.\n\n간략하게 잘 컴파일 되는지 확인해보자.\nwriteLines(c(\n    '\\\\documentclass{article}',\n    '\\\\begin{document}', 'Hello world!', '\\\\end{document}'\n    ), 'test.tex')\n\ntinytex::pdflatex('test.tex')\n\ntest.tex이라는 파일을 쓰고\n예를 pdflatex으로 컴파일 한다.\n\n\nCompling .tex directly\n이제 .tex 파일을 직접 컴파일 해보자. 테스트할 용도의 파일은 다음과 같다. 적당한 이름으로 아래의 tex 파일을 적당한 디렉토리에 생성하자.\n\\documentclass{article}\n\\usepackage{kotex}\n\\begin{document}\nHello world! 한글은 어떠함?\n\\end{document}\n.tex 파일을 RStudio에서 열면 위에 pdf를 생성하는 버튼을 볼 수 있다. 이걸 실행해보도록 하자. 아마도 컴파일하면 에러를 만나게 될 것이다. 한글 패키지가 제대로 설치되어 있지 않기 때문이다. 텍도 마찬가지로 패키지들을 설치해야 할 때가 많다. 몇가지 방법이 있지만, 편리한 방법을 소개하겠다.\ntinytex::parse_install(\n    text = \"! LaTeX Error: File `kotex.sty' not found.\"\n)\nR로 돌아와서 발생한 에러 메시지를 text의 인자로 넣으면 어떤 패키지가 필요한지 인식해서 texlive에서 끌어와 설치한다. 설치 후 tex 패키지를 업데이트하자.\ntinytex::tlmgr_update()\n이제 tinytex::pdflatex('test.tex')을 실행하면 pdf가 잘 생성될 것이다. 다시 .tex 파일로 와서 pdf 버튼을 눌러보자. 아마도 에러가 뜰 것이다. 방법 패키지를 설치했는데 왜 에러가 뜰까? 해법은 간단하다. 메뉴에서 다음과 같은 순서로 찾아들어가자.\nTools > Global Options > Sweave\n“Use tinytex when compling .tex files”을 체크해주자."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html#wsl-tinytex-vs-code",
+    "href": "posts/computer-tools/2020-10-24-classy-latex.html#wsl-tinytex-vs-code",
+    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
+    "section": "WSL + Tinytex + VS Code",
+    "text": "WSL + Tinytex + VS Code\n사이휘는 tinytex을 R에서만 쓰도록 만들지 않았다. 리눅스 인스톨러를 제공한다. 이 블로그를 보신 분은 잘 알고 계시리라. 나는 WSL의 광팬이다! WSL에 tinytex을 깔고 녀석을 VS Code에 붙여서 쓰면 된다. 물론 맥OS, 윈도 인스톨러도 제공하니 관심이 있으시면 직접 확인을 하시면 되겠다. 홈페이지 인스톨 섹션에서 확인하면 되겠다.\nWSL 터미널에서 다음과 같이 실행하자.\nwget -qO- \"https://yihui.org/tinytex/install-bin-unix.sh\" | sh\n기타 패키지 설치 등은 tlmgr 명령을 활용하면 된다. 위 홈페이지를 참고하면 되겠다.\nVS Code에서는 어떤 확장을 쓰면 될까? Latex Workshop이 어떤 전용 에디터 못지 않은 풍부하고 다양한 확장 기능을 제공한다. extension의 settings.json을 통해 다양한 컴파일 옵션도 제공하니 자세한 것은 위 페이지의 안내를 참고하면 되겠다. 일단 pdflatex을 쓴다고 가정하자.\nVS Code에서의 활용은 아래 섹션을 참고하자."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html#texlive-with-docker",
+    "href": "posts/computer-tools/2020-10-24-classy-latex.html#texlive-with-docker",
+    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
+    "section": "TexLive with Docker!",
+    "text": "TexLive with Docker!\n본격적으로 텍을 쓰는 사람이라면 어찌해야 하나? Tinytex이 많이 부족해 보일 수 있다. Texlive를 온전하게 쓰고 싶다면 역시 OS 별로 텍라이브를 까는 방법 밖에 없나? 이럴 때 손쉽게 동원할 수 있는 게 docker이다. 비슷한 계열의 OS라도 텍라이브를 전부 까는 것이 편하지는 않다. 윈도는 더 부담스럽다. 그냥 필요할 때 불러서 쓰고 잊을 수 있다면 좋지 않을까? 도커는 이런 용도로 쓰기에도 좋다.\n내가 검색해본 바로는 공인 이미지는 없는 것 같다. 다양한 사용자 이미지 중에서 꽤 관리가 잘되는 것을 골라서 쓰면 되겠다. 내가 활용하는 이미지는 다음과 같다.\nhttps://hub.docker.com/r/thomasweise/docker-pandoc/\n녀석을 도커에 마운트하자. WSL에서 도커를 쓰는 법은 이 글을 참고하라.\n​docker run -v /mnt/[YOUR-LOCAL]:/doc/ -t -i thomasweise/docker-pandoc\n\nWSL이 /mnt 디렉토리 아래 윈도의 디스크를 마운트한다. 따라서 저 아래 로컬 폴더의 주소를 넣으면 된다. 예를 들어, C의 doc라는 이름이라면, c/doc를 넣으면 된다. 이렇게 두면 해당 폴더가 도커의 /doc 아래 연결된다.\n\n초기에 이것저것 깔아주고 초기화해야 하는 것들이 있다. 이 녀석들을 셸스크립트(sh)로 만들어두자. install_kotex.sh 라는 스크립트는 아래와 같이 만들어보자. 해당 스크립트는 위에 마운트하는 폴더에 넣어두면 좋다. 그러면 도커 이미지가 올라갔을 때 해당 스크립에 쉽게 접근할 수 있다.\n#!/bin/sh\ntlmgr init-usertree\n#\ntlmgr repository add https://cran.asia/KTUG/texlive/tlnet/ ktug\n#tlmgr pinning add ktug \"*\"\ntlmgr install collection-langkorean\nupdmap -sys\nupdmap -sys\ntlmgr update --all\n상태를 초기화하고 한글을 까는 명령어들을 모아둔 것이다. 실행 중인 도커 내에서 해당 디렉토리로 이동해서 ./install_kotex.sh로 명령을 실행하자.\n이제 VS Code로 가자. 필요한 Extension은 앞서 살펴본 Latex workshop과 더불어 Remote-Container를 설치하자. 이 녀석을 설치하면 WSL 내에서 돌아가는 컨테이너 안에도 VS Code를 통해 바로 접속할 수 있다.\n - 아래 ><으로 된 부분을 클릭하면 상단에 메뉴가 뜬다.\n - “attach to running container”를 실행해서 실행중인 도커 콘테이너를 부착한다.\n\n\n부착하면 새 창이 뜨면서 아래 녹색 창이 콘테이너 부착되었음을 알려준다.\n콘테이너 내부에 Latex Workshop 확장(extension)을 설치해야 한다.\n\n\n\n설치 후 해당 Extension의 설정을 고쳐주자.\n위에 찾기창에서 디폴트로 떠 있는 내용 뒤에 “pdf” 치면 pdf에 관련된 설정만 필터링된다.\n\n\n\n위 항목을 찾아서 적당한 포워딩 포트를 넣어준다.\n포트가 잘 포워딩 된다면, 아래와 같이 VS Code에서 PDF 뷰어를 활성화할 수 있다.\n포트 포워딩 설정은 Latex Workshop 확장의 미비함 때문에 필요하다. 이후 해당 확장의 업데이트를 통해 해결될 것으로 기대한다.\n\n\nActivating PDF Viewer\n확장의 PDF 뷰어의 작동 방식 때문에 포트포워딩 선택을 해줘야 한다.\n\nPort Forward\n일단 확장 설정에서 적당히 포워딩될 포트를 설정해야 한다.\n\n\nContainer Setting\n콘테이너에서 해당 포트가 잘 포워딩되고 있는지 확인하자.\n\n\n옆에 원으로 표시해 둔 곳은 Remote-Container 확장으로 바로 가는 단축 아이콘이다.\n위 그림처럼 35556 포트를 통해 잘 포워딩되고 있음을 알 수 있다.\n\n만일 포워딩이 되고 있지 않다면, 마우스 우클릭으로 포워딩을 해주도록 하자.\n\n\n이제 VS Code에서 텍 파일을 열고 문서를 작성하고 컴파일하면 된다. Latex Workshop이 설치되어 있다면, .tex 파일에 알아서 반응하니 걱정 마시라."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html#references",
+    "href": "posts/computer-tools/2020-10-24-classy-latex.html#references",
+    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
+    "section": "References",
+    "text": "References\n\ntinytex\ntexlive 도커 이미지\nkotex 리눅스 설치\nVS Code Remote-Cotainer 포트 포워딩\n컴파일에 활용된 파일은 여기를 참고하라.\n\nhttps://github.com/anarinsk/test-vscode-latex"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-27-viva-binder.html",
+    "href": "posts/computer-tools/2020-10-27-viva-binder.html",
+    "title": "Viva, Binder!",
+    "section": "",
+    "text": "내가 보고 있는 것을 남이 그대로 봐야 의사 소통이 온전해지는 경우가 있다. 아마도 코드를 나누는 경우가 그렇지 않을까 싶다. 이 점에서 Github은 꽤 좋은 코드 나눔 도구다. 그런데 문제가 하나 있다. Github을 통해 배포하는 것이 패키지라면 각자 땡겨가서 쓰면 되겠지만, 특정하게 실현된 결과물이라면?\n예를 들어보자. Python으로 특정한 결과를 도출하는 코드를 짰다고 하자. 당연히 내가 작업한 환경에 의존할 것이다. 다른 환경에서 돌아갈지 아닐지 모르지만 어쨌든 의존성은 피할 수 없다. 상대를 불러서 내 컴퓨터에서 돌아가는 모습을 보여줄 수 있다면 좋겠지만 그럴 수 없는 경우가 많다. 내가 돌려본 환경을 그대로 상대가 볼 수 있게 할 수는 없는 것일까?\n당장 떠오르는 솔루션이 클라우드다. 클라우드에 소프트웨어 환경을 세팅하고 내가 테스트해본다. 원하는 상대에게 url을 주고 같은 테스트를 반복 체험하게 한다. 물론 좋다. 사실 AWS 같은 곳에 Linux 서버를 깔고 주피터 관련 패키지나 RStudio 등을 설치하기는 쉽다. AWS를 비롯해 많은 클라우드 업체에서 원스톱 서비스까지 제공한다. 그런데, 문제가 있다. 비용이 든다. 사용량이 많아서 뽕을 뽑을 수 있다면 덜 아깝겠지만 코드 공유하고 결과를 확인하는 정도가 족하다면 많이 아깝다.\n이런 용도로 활용할 수 있는 ‘무료’ 서비스가 Binder이다.\nhttps://mybinder.org"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-27-viva-binder.html#turn-a-git-repo-into",
+    "href": "posts/computer-tools/2020-10-27-viva-binder.html#turn-a-git-repo-into",
+    "title": "Viva, Binder!",
+    "section": "Turn a Git repo into!",
+    "text": "Turn a Git repo into!\n서비스 참 시원시원하다. 로그인도 필요 없다. 깃헙 레포에 있는 코드를 받아서 가상 머신 위에 해당 결과를 구현해준다. R, Python, Julia를 지원한다. 세 언어 모두 기본 베이스로 Jupyter허브를 활용한다. 간편한 연동을 위해서는 깃헙 리포를 public으로 설정해야 한다.\n\n\nGitHub: 깃헙 주소를 넣는다.\nGit branch, tag or commit: 관련된 깃 브렌치, 태그, 커밋 등을 넣는다.\nPath to a notebook file: ipynb 파일이 깃 내에 서브 디렉토리에 있다면 여기서 노트북 파일의 위치등을 지정해주면 된다.\n\nRStudio나 Shiny를 쓰고 싶다면, “File” 대신 “URL”로 바꾸고 rstudio, shiny 등을 지정해주면 된다.\n\nR의 경우 r-2020-10-26 식으로 날짜가 적힌 runtime.txt 파일 그리고 패키지를 미리 인스톨하는 install.R 파일 두 개를 준비하면 된다.\n\n\n\n아래 공유를 위한 주소도 떠 있으니 공유를 할 때는 해당 주소만 던져주면 된다. 이제 launch 버튼을 누르자. 상당히 오랜 시간 동안 뭔가가 설치된다. 설치되는 내용을 보면 소프트웨어 구동에 필요한 개별 이미지를 빌드한 후 이를 클라우드에 띄워 구동한다.\n\n\n장점은 충분히 많다. 코드가 제대로 구현되는지 확인하는 수준이거나 코드를 가끔 짧은 시간 동안 실행해야 하는 정도라면 더 이상 바랄 게 없다. 단점이라면 도커 이미지를 빌드하고 녀석을 푸시해 실행할 때까지 시간이 좀 걸린다는 것인데, 뭐 이 정도 시간 비용 쯤이야!"
+  },
+  {
+    "objectID": "posts/computer-tools/2021-02-02-all_for_vs_code.html",
+    "href": "posts/computer-tools/2021-02-02-all_for_vs_code.html",
+    "title": "All into VS Code",
+    "section": "",
+    "text": "각자 언어에 맞는 IDE가 있다. 예를 들어 R에는 RStudio가 가장 잘 어울린다. 언어 별로 별도의 IDE 보다는 모든 것을 한방에 해결할 수는 없을까? 이러한 목적에 복무하는 코더를 위한 좋은 에디터들이 많이 있다. 하지만 설정이 쉽지 않고 아무래도 나 같은 문송한 존재들에게는 접근성이 떨어진다. 그리고 대체로 유료다! 이 사이에서 타협할 수 있는 제품이 없을까?\nMS에서 제공하는 무료 (만능) 에디터 VS Code는 여기서 제법 괜찮은 대안이다. 각설하고 파이썬, 줄리아, R을 VS code로 부리는 데 필요한 준비물을 살펴보자."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-02-02-all_for_vs_code.html#필요-조건",
+    "href": "posts/computer-tools/2021-02-02-all_for_vs_code.html#필요-조건",
+    "title": "All into VS Code",
+    "section": "필요 조건",
+    "text": "필요 조건\n\nWindows 10 with WSL 2\nVS Code\n\nGlobal extension\n\nRemote-Container\n\nContainer extension\n\nJulia\nJupyter\nPython\nR\nR LSP Client\nRadian\n\n\nDocker Desktop\njupyter/datascience-notebook:latest (from dockerhub)\n\n개별 소프트웨어를 로컬 머신에 깔아서 쓸 수도 있고, 이 경우 역시 아래를 참고해 설정하는 데 어려움이 없으리라 본다. 여기서는\n\nWSL 2를 통해 docker를 활성화하고\njupyter 개발자가 직접 관리하는 Data Science 노트북을 끌어와\n\nVS Code를 통해 부리는 방법을 소개한다. 위의 적은 두 가지 사항은 이 포스팅을 참고하자. 간단히 결론만 요약하면 다음과 같다. 도커를 쓰면 별도의 인스톨이 필요 없고 뭔가 꼬였을 때 해당 컨테이너만 날려버리면 된다. 위에 소개한 jupyter/datascience 컨테이너는 다소 큰 용량이지만 잘 갖춰진 파이썬, 줄리아, R의 프리셋을 제공한다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-02-02-all_for_vs_code.html#핵심",
+    "href": "posts/computer-tools/2021-02-02-all_for_vs_code.html#핵심",
+    "title": "All into VS Code",
+    "section": "핵심",
+    "text": "핵심\n{: style=“margin: auto; display: block; border:1.5px solid #021a40;”}{: width=“700”}\n\nVS Code의 익스텐션 Remote-Container 컨테이너 접속 기능을 활용해 datascience-notebook 컨테이너 접속한다.\n\n오른쪽 하단에 >< 표시된 부분을 클릭하자. 위의 그림을 볼 수 있다. 여기에서 “Remote-Containers: Attach to Running Container…”를 클릭하면 현재 돌아가고 있는 docker 컨테이너를 볼 수 있다. 미리 docker를 통해 돌려 둔 datascience 컨테이너를 선택하자.\n이 컨테이너는 안에 python, jupyterlab, R, Julia를 모두 갖고 있다. 따라서 이 녀석 하나만 도커에 올리면 된다.\n\n각각의 언어에 접근하기 위해서 필요한 VS Code Extension을 설치한다.\n\nJulia, Python의 경우 공식 확장이 있어서 그대로 쓰면 된다.\nR의 경우 비공식 확장이지만 약간의 세팅을 거치면 꽤 근사하게 사용할 수 있다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-02-02-all_for_vs_code.html#for-julia",
+    "href": "posts/computer-tools/2021-02-02-all_for_vs_code.html#for-julia",
+    "title": "All into VS Code",
+    "section": "For Julia",
+    "text": "For Julia\n\n필요한 줄리아 작업 파일을 .jl 확장자로 만든다.\nVS Code가 알아서 잘 잡아서 줄리아 커널과 연결시켜준다.\n간략한 실행 명령 체계를 살펴보자. 자세한 내용은 여기를 참고하자.\n\n코드 셀 구분은 ##\nCTRL + ENTER 해당 라인 실행\nALT + ENTER 코드 블럭 실행 (드래그앤드롭 선택)\nSHIFT + ENTER 코드 셀 실행\n\n패키지 설치는 두가지로 가능하다.\n\nJulia 콘솔에서 ]를 치면 패키지 관리 모드로 들어간다.\n\n>(pkg) add SOMETHING\n\n이렇게 설치할 경우는 별도로 Pkg를 호출하지 않도 설치가 가능하다.\n\n\n아래와 같이 설치할 수도 있다.\n\nusing Pkg \nPkg.add(\"Plots\")\nPkg.add(\"PyPlot\") \nJulia는 JIT를 쓰기 때문에 패키지를 설치하고 명령을 구동하는 데 시간이 오래 걸린다. 이 과정을 작업을 시작하기 전에 미래 해두는 것이 좋다. 즉, 필요한 경우 미리 컴파일을 해놓는 것이 좋다.\nQuantEcon에 소개된 사례를 따르자."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-02-02-all_for_vs_code.html#for-python",
+    "href": "posts/computer-tools/2021-02-02-all_for_vs_code.html#for-python",
+    "title": "All into VS Code",
+    "section": "For Python",
+    "text": "For Python\n\n필요한 파일을 .py 확장자로 만든다.\n간략한 명령어\n\nCode 블럭의 구별은 #%%\nPython은 VS Code에서 거의 완벽하고 편리하게 지원이 된다.\n별다른 설명이 필요하지 않다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-02-02-all_for_vs_code.html#for-rstat",
+    "href": "posts/computer-tools/2021-02-02-all_for_vs_code.html#for-rstat",
+    "title": "All into VS Code",
+    "section": "For Rstat",
+    "text": "For Rstat\n\n익스텐션 두 개를 깐다.\n\nR Support\nR LSP Client\n\n다음으로 R 내에서 LSP와 연결할 패키지를 설치한다.\n\nremotes::install_github(\"REditorSupport/languageserver\")\n\n마지막으로 Rstat에서 편리하게 사용할 터미널 앱을 깐다. 파이썬으로 제작되었다. 다행스럽게도 DS 도커는 이미 파이썬을 잘 지원하기 때문에 쉽게 쓸 수 있다. 주의할 것은 Rstat 내부가 아니라 그냥 docker의 bash에 접속한 상태에서 깔아야 한다는 것이다. Radian은 텍스트 상에서 모든 정보를 편리하게 보여주기 때문에 VS Code의 부족함을 잘 메워준다.\n\npip install -U radian \n\n이제 VS Code에서 설정 몇 가지를 바로 잡아 줘야 한다.\n\nFile > Preferences > Settings로 가자\n옆에 탭을 보면 Extensions가 있을 것이다. 여기서 R로 찾아가자.\nExtension의 설정을\n\nUser, Remote, Workspace 등 상황에 맞게 다양하게 정할 수 있다.\n여기서는 Workspace에 하도록 하겠다.\n\nR: Bracketed Paste 항목 체크\nR › Rterm: Linux\n\n/opt/conda/bin/radian\n\nR: Session Watcher 항목 체크\n\n\n\n설정 항목에서 json 파일로 한방에 해결할 수도 있다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-02-02-all_for_vs_code.html#jupyterlab",
+    "href": "posts/computer-tools/2021-02-02-all_for_vs_code.html#jupyterlab",
+    "title": "All into VS Code",
+    "section": "Jupyterlab",
+    "text": "Jupyterlab\n\nipynb를 확장자로 해서 노트북을 쓰고 싶다면, 그냥 만들어 쓰면 된다!\nVS Code에 Jupyter 확장이 있기 때문에 보통의 웹 브라우저에서 쓰는 Jupyter 노트북과 거의 동일한 기능을 제공한다. 웹 노트북에서와 마찬가지로 파이썬, 줄리아, R의 커널을 선택하면 된다 (아래 그림의 오른쪽 상단 박스). jupyterlab과 거의 비슷한 인터페이스를 지니고 있다. 오히려 주피터에 비해 복잡하지 않아서 좋다고 느낄지도 모르겠다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-02-02-all_for_vs_code.html#setting-for-remote-connection",
+    "href": "posts/computer-tools/2021-02-02-all_for_vs_code.html#setting-for-remote-connection",
+    "title": "All into VS Code",
+    "section": "Setting for Remote Connection",
+    "text": "Setting for Remote Connection\n앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 좋다면 아래와 같이 하면 된다.\n\n\n만일 위와 같은 화면에 Remote Exlorer에서 뜨지 않는다면 컨테이너가 부착되지 않는 것이다. 컨테이너를 부착하면 된다.\n\n\n\nExtension > REMOTE EXPLORER > DETAILS 탭에서 가운데 설정 모양이 “Open Container Configuration File”이다.\n옆 에디터 창에 json 형식의 설정이 뜬뜬다. 여기서 관련 extension 등의 설정을 지정할 수 있다. 이렇게 설정을 해두면 해당 컨테이너를 부착할 때 설정한 대로 자동으로 옵션들이 적용된다. 매우 편리하다.\n\n{\n    \"extensions\": [\n        \"Ikuyadeu.r\",\n        \"julialang.language-julia\",\n        \"ms-python.python\",\n        \"ms-toolsai.jupyter\",\n        \"REditorSupport.r-lsp\"\n    ],\n    \"workspaceFolder\": \"/home/jovyan/github-anari\",\n    \"forwardPorts\": [\n        43463,      \n    ],\n    \"settings\": {\n        \"jupyter.alwaysTrustNotebooks\": true,\n        \"r.bracketedPaste\": true,\n        \"r.sessionWatcher\": true,\n        \"r.rterm.linux\": \"/opt/conda/bin/radian\"\n    }\n}\n\n\nFile > Perefences > Settings에서도 설정에 접근할 수 있다.\nVS Code의 설정은 두가지 축을 지닌다. 하나는 설정 전체를 담은 json 파일이다. 왼쪽 > 표시된 항목에서처럼 카테고리 별로 구별되어 쉽게 접근할 수 있다. 이 하나의 설정을 위 그림에서 보듯이 User, Remote(컨네이터), Workspace 별로 별도로 지정해 활용할 수도 있다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html",
+    "href": "posts/computer-tools/2021-11-19-python-in-github.html",
+    "title": "Python in Browser",
+    "section": "",
+    "text": "# Python이 갑자기 필요하다면?\n이런 상황을 생각해보자.\n이럴 때 쓸 수 있는 도구가 몇 개 있다. 대표적으로 아래 구글 코랩이 있다.\n그런데 많은 회사에서 구글 서비스를 막아두는 경우가 있다. 그렇다면 어떻게 할까?"
+  },
+  {
+    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html#dev-모드-진입",
+    "href": "posts/computer-tools/2021-11-19-python-in-github.html#dev-모드-진입",
+    "title": "Python in Browser",
+    "section": "dev 모드 진입",
+    "text": "dev 모드 진입\ngithub를 dev 모드로 돌린다. 웹 브라우저 리포지터리 창에서 . 버튼을 누르거나 .dev 주소로 접근하면 된다. 익숙한 vs code 화면에 보일 것이다.\n이제 아래 왼쪽 탭 화면에서 extension을 찾으면 된다. 아래 그림처럼 생겼다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html#extension-설치",
+    "href": "posts/computer-tools/2021-11-19-python-in-github.html#extension-설치",
+    "title": "Python in Browser",
+    "section": "extension 설치",
+    "text": "extension 설치\n검색에서 아래 익스텐션을 찾아서 설치해준다.\nexteion: vscode-pyodide\n\n이 익스텐션은 주피터에서 브라우저 기반으로 파이썬을 돌리는 Pyodide를 구현한다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html#do-your-work",
+    "href": "posts/computer-tools/2021-11-19-python-in-github.html#do-your-work",
+    "title": "Python in Browser",
+    "section": "Do your work!",
+    "text": "Do your work!\n이제 .ipynb 확장자 파일을 만들고 늘상 쓰듯이 jupyter를 쓰면 된다. 아주 특이하거나 무거운 환경이 아닌 이상, 어지간한 간단한 작업은 쾌적하게 수행할 수 있다. 익스텐션을 깔면, 인터페이스는 Jupyter에 적합하게 알아서 변한다."
   },
   {
     "objectID": "posts/container/2021-09-13-podman-1.html",
@@ -194,5 +439,40 @@
     "title": "Understanding Regression",
     "section": "Bonus: Regression vs PCA",
     "text": "Bonus: Regression vs PCA\n회귀 분석과 PCA는 어떻게 다른가? 여러가지 답이 있을 수 있다. 그걸 다 소개하겠다는 게 아니다. 둘이 데이터 모델링의 시야에서 어떻게 다른지를 살펴보는 게 이 글의 목적이다. 이 글은 둘을 어떻게 실행하는지를 다루지 않는다. 앞선 PCA 관련 포스팅을 읽고 오시면 이해에 도움이 될 것이다.\n\n\n더 자세한 내용은 여기를 참고하자.\n\n공통점\n\nFeature\n일단 둘 다 \\(k\\) 개의 feature 비슷한 것을 지닌다. 그리고 \\(n\\) 개의 데이터 포인트가 제시된다.\n\n\n차원 축소\n흔히 PCA를 차원축소의 방법으로 이해하는데, 이 말은 맞다. 반대로 회귀분석은 이와 다르다고 이해하는 경우가 많은데 이 말은 틀리다. 회귀 분석도 어떻게 보면 ’차원 축소’다. 회귀 분석에서 target 변수는 \\(n\\) 차원 공간 위의 주어진 한 점이다. 우리의 목표는 이 한 점을 잘 설명하는 더 낮은 차원의 어떤 지점을 찾는 것이다. 이런 점에서 본다면 회귀 분석 역시 차원 축소의 한 방법이라고 봐야 할 것이다.\n\n\n극소화\nPCA에서 ’분산 최대화’에 이르기까지 과정을 생략하다보면, PCA를 별도의 어떤 방법으로 인식하곤 한다. 그런데 앞선 포스팅에서 보았듯이 ’분산 최대화’란 사실 피처 벡터와 이를 예측하기 위한 어떤 벡터 사이의 거리를 최소화하는 과정에서 도출된 결과다. 이런 점에서 본다면, 회귀 분석이든 PCA는 MSE(Mean Square Error)를 최소화한다는 점에서는 목적 함수의 유형은 동일하다.\n\n\n\n차이점\n\nSupervised or Unsupervised?\n회귀 분석과 PCA를 지도 학습(supervised learning), 비지도 학습(unsupervised learning)으로 구분할 수는 없다. 다만 이 구분과 어느 정도 비슷한 부분이 있다. 회귀 분석은 target이 있다. 이 타겟과의 거리를 최소화하는 feature 공간의 어떤 위치를 찾는 것이 목적이다. 반면, PCA에는 target이 없다. \\(k\\) 개의 feature를 최소 거리로 투영할 수 있는 스크린 벡터를 찾는게 목적이다. 간단히 말해서 PCA는 target 없이 벡터의 거리가 1인 임의의 프로젝션 벡터를 찾는 것이 목적이다."
+  },
+  {
+    "objectID": "posts/regression/2019-11-10-understanding-logit-regression.html",
+    "href": "posts/regression/2019-11-10-understanding-logit-regression.html",
+    "title": "Understanding Logit Regression",
+    "section": "",
+    "text": "로짓 회귀는 우리가 알던 그 ’회귀’와는 조금 다르다.\n로짓 회귀는 아래와 같은 데이터 모형에 기반을 둔 추정법이다.\n\n\\[\n\\ln \\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})} =\\boldsymbol{x_i}\\boldsymbol{\\beta}\n\\]\n\n회귀식의 계수 \\(\\boldsymbol{\\beta}\\)를 해석할 때 주의하자. 이를 통상적인 회귀분석의 계수(한계 효과)처럼 해석하려면 별도의 계산이 필요하다."
+  },
+  {
+    "objectID": "posts/regression/2019-11-10-understanding-logit-regression.html#로짓-회귀-제대로-알고-있나",
+    "href": "posts/regression/2019-11-10-understanding-logit-regression.html#로짓-회귀-제대로-알고-있나",
+    "title": "Understanding Logit Regression",
+    "section": "로짓 회귀, 제대로 알고 있나?",
+    "text": "로짓 회귀, 제대로 알고 있나?\n잘 알고 있다고 여기고 있지만 사실 잘 모르는 것이 있다. 로지스틱 회귀(logistic regression) 혹은 로짓 회귀가 그렇지 않을까? 요즘 기계 학습을 배우게 되면, 로짓 회귀는 첫 챕터에서그냥 쓱 지나치기 쉽다. 뒤에 소개될 랜덤 포레스트, SVM, 뉴럴넷 등이 더 진보된 방법으로 보이기 때문이다.\n로짓 회귀는 단순하면서도 강력한 방법이다. 필자는 분류(classification)의 문제에 접근할 때 로짓 회귀를 먼저 해볼 것을 권한다. 로짓 회귀에서 ’견적’이 나오면 그 질문 혹은 문제는 더 흥미로운 형태로 진화할 가능성이 높다. 반면 로짓 회귀에서 싹수가 없으면 더 복잡한 고급 방법도 소용이 없는 경우가 많다. 요컨대 로짓 회귀는 시간 낭비를 막는 일종의 ’맛보기’로서 유용하다."
+  },
+  {
+    "objectID": "posts/regression/2019-11-10-understanding-logit-regression.html#로짓-함수는-어떻게-등장하나",
+    "href": "posts/regression/2019-11-10-understanding-logit-regression.html#로짓-함수는-어떻게-등장하나",
+    "title": "Understanding Logit Regression",
+    "section": "로짓 함수는 어떻게 등장하나?",
+    "text": "로짓 함수는 어떻게 등장하나?\n로짓 회귀는 말 그대로 로지스틱 함수(logistic function)를 활용하는 회귀 분석이라는 뜻이다. 로지스틱 함수는 어디서 어떻게 등장할까? 로짓 회귀의 데이터 형식을 살펴보자. 종속 변수, 반응(response), regressand 등 다양한 형태로 불리는 식의 좌변은 0 또는 1로만 되어 있다. 어떤 상태라면 1, 그렇지 않으면 0이다. 이때 0 또는 1은 값 자체로 의미를 지니지 않는다. 이는 범주형 변수로서 True or False와 같은 이항 변수로 이해하면 좋겠다. 식의 우변에는 통상적인 독립 변수, 예측 변수(predictor), regressor가 등장한다.\n\n덤: 잠시, 용어 정리\n생각난 김에 짬을 내 회귀식에서 좌변과 우변을 지칭하는 용어를 정리해보자. 취향에 맞춰서 쓰되 일관성만 갖추면 되겠다.\n\n\n\n좌변\n우변\n\n\n\n\n\\(y\\)\n\\(x\\), \\(\\boldsymbol X\\)\n\n\ndependent variable\nindependent variables\n\n\nresponse variable\npredictor variable\n\n\nregressand\nregressor\n\n\ncriterion\ncovariate\n\n\npredicted variable\ncontrolled variable\n\n\nmeasured variable\nmanipulated variable\n\n\nexplained variable\nexplanatory variable\n\n\nexperimental variable\nexposure variable\n\n\nresponding variable\ncovariate\n\n\noutcome variable\ncovariate\n\n\noutput variable\ninput variable\n\n\nendogenous variable\nexogenous variable\n\n\ntarget\nfeature\n\n\nlabel\nfeature\n\n\n\n\n\n어떤 경우 OLS는 곤란한가?\n\nregressor가 하나인 상황을 가정하고 위의 그림을 보자. regressand가 0, 1인 상태로 그대로 회귀분석을 하면 그림의 왼쪽 같이 나온다. 이 상태에서는 뭐가 문제일까? 회귀식의 기울기를 구할 수 있으니 된 것 아니냐? 문제가 있다. 앞서 0과 1은 값 그 자체로 의미를 지니지 않는다고 말했다. 그런데 이를 그대로 값으로 바꿔서 회귀분석을 해도 좋은 것일까? 그러기에는 뭔가 찜찜하다. 게다가 \\(x\\) 값에 따라서 회귀식의 예측치가 \\([0,1]\\)을 벗어날 수 있다. 임의로 계단 함수를 다시 얹어서 OLS(통상적인 최소자승법이라는 의미에서 Ordinary Least Squares라고 흔히 부른다)를 구제할 수도 있겠다. 즉,\n\\[\ns(\\beta x) =\n\\begin{cases}\n1 & \\text{if $\\beta x \\geq 1$}  \\\\\n0 & \\text{if $\\beta x < 0$}\n\\end{cases}\n\\]\n회귀식의 예측을 확률에 맞게 임의로 꺾어주는 것이다. 이러한 과정을 조금 더 ‘부드럽게’ 혹은 보다 ‘그럴 듯하게’ 할 수 없을까?\n\n\n범주형에서 확률로\n앞서 0 또는 1의 문제가 범주형의 문제라고 했다. 따라서 0, 1은 값 자체로는 아무 의미를 지니지 않는다. 회귀분석의 regressand가 실수값을 지닐 때 분석으로서 의미를 지닌다. 그렇다면 그렇게 바뀌보면 어떨까. 범주형 변수가 결국 상태를 나타내는 것이라면 1이라는 상태를 지닐 ’확률’을 추정하는 문제로 바꿔 생각해볼 수 있겠다. 즉,\n\\[\np(y_i = 1 | \\boldsymbol{x_i}) = p(\\boldsymbol{x_i})\n\\]\n그런데 앞서 보았듯이 확률 값을 선형 회귀로 추정하는 데에는 어려움이 있다. 통상적인 회귀 모형의 특성을 유지하면서도 확률 값을 [0,1] 사이에 ‘잘’ 떨궈야 하기 때문이다.\n\\[\n\\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})}\n\\]\nregressand를 이렇게 바꾸면 우선 가능한 값의 범위가 \\([0, \\infty)\\)로 확장된다. 여기서 음수 값을 포괄하는 방법은 없을까? 여기에 자연 로그를 적용해보자.\n\\[\n\\ln \\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})}\n\\]\n이렇게 되면 가능한 값의 범위가 \\((-\\infty, \\infty)\\)가 된다. Regressand가 이 형태라면 선형 회귀를 적용해도 좋겠다.\n즉,\n\\[\n\\ln \\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})} = \\underset{1 \\times k}{\\phantom{\\boldsymbol{\\beta}}\\boldsymbol{\\boldsymbol{x_i}} \\phantom{\\boldsymbol{\\beta}}}\\underset{k \\times 1}{\\boldsymbol{\\beta}}, ~k = 1,  2, \\dotsc, n\n\\]\n\\(n\\) 개의 관찰에 있을 때 이를 매트릭스 형태로 적으면 다음과 같다.\n\\[\n\\ln \\dfrac{p(\\boldsymbol{X})}{1-p(\\boldsymbol{X})} = \\underset{n \\times k}{\\phantom{\\boldsymbol{\\beta}}\\boldsymbol{X}\\phantom{\\boldsymbol{\\beta}}}\\underset{k \\times 1}{\\boldsymbol{\\beta}}\n\\]\n애석하지만 이 식은 우리에게 주어진 자료로는 추정할 수 없다. 당장 좌변의 regressand를 얻으려면 관찰별로 확률값을 알아야 하는데 우리에게 주어진 값은 0 또는 1 뿐이다. 따라서 위의 식은 선형 회귀와 유사한 모형을 적용할 수 있는 방법을 찾은 것일 뿐 실제로 추정할 수 있는 식이 아니다. \\(\\boldsymbol{\\beta}\\)는 어떻게 구해야 할까?\n이를 보기 전에 추정 모형에서 로지스틱 함수를 찾아보자. 위의 식에서 \\(p(x_i)\\)를 구해보자.\n\\[\n\\begin{aligned}\n\\ln \\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})} & =\\boldsymbol{x_i}\\boldsymbol{\\beta} \\\\\n\\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})}  & = e^{\\boldsymbol{x_i}\\boldsymbol{\\beta}} \\\\\np(\\boldsymbol{x_i}) & = \\dfrac{e^{\\boldsymbol{x_i}\\boldsymbol{\\beta}}}{1+e^{\\boldsymbol{x_i}\\boldsymbol{\\beta}}} \\\\\np(\\boldsymbol{x_i}) & = \\dfrac{1}{e^{-\\boldsymbol{x_i}\\boldsymbol{\\beta}} + 1}\n\\end{aligned}\n\\]\n앞서 본 그림의 오른쪽과 같은 형태의 로지스틱 함수가 도출된다. 요컨대, 로지스틱 함수는 regressor를 해당 사건이 발생할 확률과 연결시키는 장치다. 이렇게 보면 로지스틱 회귀는 이른바 일반 선형 모형(Generalized Linear Model)의 한 사례다. 일반 선형 모형이란 종속 변수, 즉 식의 왼쪽이 어려가지 이유에서 실수 값이 아닌 제한된 값 혹은 범주 값을 지닐 때 이를 여러가지 방법을 통해 실수로 바꾸는 방식으로 추정을 하는 방법이다. 지금까지 살펴본 방법이 그 사례의 하나다."
+  },
+  {
+    "objectID": "posts/regression/2019-11-10-understanding-logit-regression.html#link-function",
+    "href": "posts/regression/2019-11-10-understanding-logit-regression.html#link-function",
+    "title": "Understanding Logit Regression",
+    "section": "Link function",
+    "text": "Link function\n말이 나온 김에 링크 함수에 대해서 살펴보고 가자. 위에서 보듯이, 사실 회귀 분석이란 실수의 범위를 지니는 좌변을 역시 변수의 선형결합을 통해 이루어진 우변으로 설명하려는 것이다. 그런데 만일 좌변의 영역이 실수 전체가 아니라면? - 절단 자료 (truncated): 지속 시간의 경우 0보다 큰 실수가 된다. - 범주형 자료: 이 경우는 수료 표현이 힘들다. - 정수형 자료\n이럴 때는 어떻게 해야 할까? 회귀 분석의 틀을 벗어나지 않으면서 가장 간단한 해결책은 좌변을 바꾸는 것이다. 좌변은 어떻게 바꿔야 할까? 우선 좌변에 올 것의 조건부 평균을 다음과 같이 두자.\n\\[\n\\mathrm E (y_i | \\boldsymbol x_i) =\\mu_i\n\\]\n그리고 우변의 경우 평범하게 다음과 같이 두자.\n\\[\n\\eta_i = \\beta_0 + \\beta_1 x_{i1}  + \\dotsb + \\beta_p x_{ip}\n\\]\n이 둘은 바로 연결이 안된다. 이 둘을 연결시켜주는 어떤 함수가 있다면? 즉,\n\\[\ng(\\mu_i) = \\eta_i = \\boldsymbol x_i^T \\beta\n\\]\n\\(g(\\cdot)\\)이 링크 함수에 해당한다. 로짓 회귀의 경우에는 \\(\\ln \\frac{p(x_i)}{1-p(x_i)}\\)에 해당한다. 링크 함수의 역함수는 뭐라고 부를까? 로짓 회귀에서 아래의 값에 해당한다.\n\\[\np(\\boldsymbol{x_i}) = \\dfrac{1}{e^{-\\boldsymbol{x_i}\\boldsymbol{\\beta}} + 1}\n\\]\n이는 평균 함수(mean function)이라고 부른다. 로짓 회귀의 경우는 이산 변수를 활용하기 때문에 확률 질량 함수가 곧 확률이 된다는 점을 기억해두자.\n\nThree steps\n위 과정이 세 가지 단계를 거쳤다는 점을 쉽게 알 수 있을 것이다.\n\\[\ny_i \\xrightarrow{\\rm prob.~function} \\mu_i \\xrightarrow{\\rm link~function} \\eta_i = \\boldsymbol x_i \\beta\n\\]\n원래 관찰값 \\(y_i\\)는 모형에 관한 가정을 통해서 확률 (질량/밀도) 함수를 통해 \\(\\mu_i\\) 값으로 변형된다. 이 값은 다시 연결 함수를 통해서 선형 회귀가 가능한 형태로 변형된다. 이제 \\(y_i\\)에 관해서 어떤 가정을 하는지에 따라서 다양한 형태의 \\(\\mu_i\\)를 얻게 된다는 점을 알 수 있을 것이다.\n문제는 어떻게 연결 함수를 찾을 수 있을까 인데, 이는 여기서 다룰 범위를 벗어난다. 이 글을 참고하자."
+  },
+  {
+    "objectID": "posts/regression/2019-11-10-understanding-logit-regression.html#계수는-어떻게-구하나",
+    "href": "posts/regression/2019-11-10-understanding-logit-regression.html#계수는-어떻게-구하나",
+    "title": "Understanding Logit Regression",
+    "section": "계수는 어떻게 구하나?",
+    "text": "계수는 어떻게 구하나?\n\\(\\hat{\\boldsymbol \\beta}\\)은 어떻게 구할 수 있을까? 현재까지 우리에게 주어진 조건을 보자.\n\nregressand는 0 또는 1 뿐이다.\n로짓 함수를 통해서 regressor를 해당 관찰의 확률과 연결시킬 수 있게 되었다.\n\n어차피 regressand를 실수로 바꿀 수 없는 이상 우리가 아는 선형 회귀분석을 쓸 수는 없다. 그래서 이름과 달리 우리가 아는 ‘회귀분석’, 즉 OLS를 여기서 쓸 수는 없다. 미안하다. 앞에서 거짓말 했다.\n\\[\n\\ln \\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})} = \\underset{1 \\times k}{\\phantom{\\boldsymbol{\\beta}}\\boldsymbol{x_i}\\phantom{\\boldsymbol{\\beta}}}\\underset{k \\times 1}{\\boldsymbol{\\beta}}, ~k = 1,  2, \\dotsc, n\n\\]\n애초에 \\(\\boldsymbol \\beta\\)을 알고 있어야, 이 식으로부터 \\(p(\\cdot)\\)을 구해낼 수 있다. 그런데 우리가 아는 회귀분석이란 \\(y\\)와 \\(\\boldsymbol{\\rm X}\\)가 주어졌을 때 하는 것 아닌가? 회귀분석의 좌변이 없기에 OLS로는 추정할 수 없다.\n그래서 로짓 회귀는 이름과 달리 \\(\\boldsymbol{\\beta}\\)의 추정치 \\(\\hat{\\boldsymbol\\beta}\\)를 구하는데 OLS의 방법을 쓰지 않는다. 로짓 회귀에서는 어떻게 \\(\\hat{\\boldsymbol\\beta}\\)를 얻는 것일까?\n\n확률 vs 우도\n잠시 로짓 회귀의 추정을 살펴보기 전에 확률과 우도의 차이점에 관해서 알아보자. 분포와 그 분포의 파리미터를 알고 있을 때 해당 샘플이 관찰될 확률을 구할 수 있다. 거칠게 표현하면 이렇다. 연속 확률변수 \\(x\\)가 따르는 어떤 분포가 있다고 할 때, 해당 분포의 파라미터(정규분포라면 평균과 분산이다) \\(\\theta\\)에 대해서 \\(P(x_1 < x <x_2 | \\theta)\\)이 확률이다. 우도(likelihood)는 무엇일까? 우도는 확률 분포의 수학적인 형태를 뒤집은 것이다. 일단 연속 확률 변수를 가정하자. 어떤 샘플이 관찰되었다고 할 때 우도란 특정 파라미터 하에서 얻게 되는 분포의 특정 확률 밀도함수를 의미한다. 연속 확률변수가 아니라 이산 확률변수라면, 확률 질량함수가 될 것이고 이 경우에는 확률과 같다. 파라미터를 변수로 잡으면 이 확률 밀도함수 혹은 질량함수가 우도가 된다.\n요컨대 주어진 것(conditioning)의 차이에 따라서 확률과 우도의 정의가 달라진다. 다시 정리해보자. 우도를 일종의 함수라고 할 때 그 함수의 \\(x\\)에 해당하는 것이 파라미터다.\n\n\n최대 우도 추정(maximum likelihood estimation)\n다시 문제로 돌아오자. 우리는 0, 1 즉 존재/비존재의 특징을 지니는 변수를 갖고 있다. 그리고 이 녀석은 이산 확률 분포를 따르기 때문에 우도 역시 그냥 확률이 되고, 이는 베르누이 분포를 따른다. 즉, 해당 확률이 발생할 확률 \\(p\\)일 때 발생하면 1, 아니면 0이 된다. 베르누이 분포의 확률 질량 함수를 간단하게 표현하는 방법은 없을까?\n\\[\nL(y_i) = p(\\boldsymbol{x_i}; \\boldsymbol{\\beta})^{y_i} (1-p(\\boldsymbol{x_i}; \\boldsymbol{\\beta}))^{1-y_i}\n\\]\n위와 같은 식으로 간단히 해결된다. 위 식에서 \\(y_i\\)가 1이면 \\(p(\\cdot)\\)가, 0이면 \\(1-p(\\cdot)\\)가 할당된다. 이제 우리는 \\(n\\) 개의 관찰에 관해서 식의 좌변에는 0,1을 갖고 있다. 각각의 시행이 독립적이라고 가정하면 주어진 형태의 데이터를 관찰하게 될 우도는 이 확률을 곱한 것과 같다. 즉,\n\\[\nL(y|{\\boldsymbol X}) = \\prod_{i = 1}^{n}  L(y_i) = \\prod p(\\boldsymbol{x_i}; \\boldsymbol{\\beta})^{y_i} (1-p(\\boldsymbol{x_i}; \\boldsymbol{\\beta}))^{1-y_i} = L(\\boldsymbol{\\beta}|y, {\\boldsymbol X})\n\\]\n\\(\\boldsymbol{\\beta}\\)에 따라서 우도가 달라지게 되므로 우도 함수가 일종의 목적 함수가 된다. 우도를 극대화해주는 \\(\\boldsymbol{\\beta}\\)가 최대 우도 추정치, 즉 MLE(MLE, maximum likelihood estimator) \\(\\hat{\\boldsymbol\\beta}\\) 이다. 즉,\n\\[\n\\hat {\\boldsymbol \\beta} = \\text{arg max }{L({\\boldsymbol \\beta}|y, {\\boldsymbol X})}\n\\]\n간혹 목적 함수, 즉 우도 함수가 비선형이라서 목적 함수의 최대화를 달성하는 해 \\(\\hat{\\boldsymbol\\beta}\\)를 축약형(reduced form)으로 구하기 힘들다는 내용을 접하곤 한다. 이는 반쪽만 맞다. 반례로 선형 회귀 모형에서 에러 항이 정규 분포를 따른다고 가정하면 최대 우도 추정을 적용할 수 있다. 정규 분포의 우도 역시 비선형이지만, 축약형 해를 쉽게 구할 수 있다.\n\n\n이때 MLE \\(\\hat{\\boldsymbol\\beta}\\)은 통상적인 방법으로 구한 OLS 추정량와 동일하다. 본문에서 말했듯이, 이는 수치적인 방법이 아니라 분석적인 방법을 통해 축약형으로 도출 가능하다. 여기를 참고하라.\n왜 로짓 회귀에서는 축약형 해를 구할 수 없을까? 우도 추정에서 우리가 관심이 있는 것은 목적함수를 극대화하는 \\(\\hat{\\boldsymbol\\beta}\\) 값이지 우도 자체가 아니다. 따라서 원래의 우도를 적절한 형태로 변형해도 변형된 목적함수를 극대화해주는 \\(\\hat{\\boldsymbol\\beta}\\)가 바뀌지 않는다면 목적 함수를 변형해도 괜찮다. 때로는 변형이 계산을 쉽게 바꿔준다. 정규분포는 오일러 수(\\(e\\))의 지수 위에 최대화에 필요한 파라미터가 다 올라가 있다. 따라서 원래 목적함수에 \\(\\log_n\\)를 취하면 곱셈이 덧셈으로 변하고 오일러 수 위에 지수로 올라가 있단 파라미터들이 앞으로 나오게 된다. 하지만 아래 식에서 보듯이 로짓 함수는 그렇지 않다.\n\\[\np(\\boldsymbol{x_i})  = \\dfrac{1}{e^{-\\boldsymbol{\\boldsymbol{x_i}}\\boldsymbol{\\beta}} + 1}\n\\]\n이 함수에 \\(\\log_n\\)을 취한다고 해서 단순해지지 않는다. 로짓 함수의 경우 우도 극대화에서 축약형을 해를 구할 수 있는 변형이 없기 때문에 해당 우도를 극대화하는 파라미터를 찾기 위해서는 수치 최적화(numerical optimization)를 활용하는 것이다.\n\n\n수치 최적화의 자세한 내용과 사례는 이 글을 참고하라.\n\n\n계수의 의미는?\n보통 기계 학습의 맥락에서 로짓 회귀는 가장 원시적인 분류기(classifier)로 소개된다. 즉 \\(y_i\\)의 속성을 예측하는 분류 장치이기 때문에 \\(\\hat{\\boldsymbol\\beta}\\)에 특별한 의미를 부여하지 않는다. 하지만 회귀 분석을 인과관계의 추론의 활용해 온 여타 분야에서는 \\(\\hat{\\boldsymbol\\beta}\\)를 어떻게 해석할 것인지는 중요한 질문이다.\n먼저 OLS의 경우 변수를 어떻게 변형했는지에 따라서 다르지만, 대체적으로 \\(\\beta_i\\)는 해당 regressor \\(x_i\\)의 한계효과로 해석할 수 있다. 즉, \\(x_i\\)가 한 단위 변할 때 이에 따른 \\(y_i\\)의 변화량을 의미한다. 그런데, 로짓 회귀에서는 이렇게 해석할 수 없다. 앞서 보았듯이, 로짓 회귀의 추정식은 다음과 같다.\n\\[\n\\ln \\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})} = \\underset{1 \\times k}{\\phantom{\\boldsymbol{\\beta}}\\boldsymbol{\\boldsymbol{x_i}}\\phantom{\\boldsymbol{\\beta}}}\\underset{k \\times 1}{\\boldsymbol{\\beta}}, ~k = 1,  2, \\dotsc, n\n\\]\n흔히 좌변의 \\(\\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})}\\)를 오즈(odds) 혹은 승산(勝計)이라고 부른다. 이때 \\(\\boldsymbol{\\beta} = [\\beta_1, \\dotsc, \\beta_j, \\dotsc, \\beta_k]\\)에서 \\(\\beta_j\\)는 regressor \\(\\boldsymbol{x_i}\\)에 속한 \\(x_j\\) 한 단위가 변할 때 오즈에 미치는 영향을 뜻한다.\n간혹 \\(\\beta_i\\)를 좌변의 상태를 변화시킬 확률의 변화로 해석하는 경우가 있는데 그렇게 하면 안된다. \\(x_i\\)의 변화가 상태를 0에서 1로 바꾸는 데 미치는 확률에 관심이 있다면, 아래의 두 가지에 유의하자.\n\nOLS의 경우 회귀식 자체가 선형이기 때문에 \\(\\beta_i\\)에 관한 해석이 쉽고 단순하다. 그냥 직선의 기울기다. 그런데 로짓 회귀에서는 그렇게 분명하지 않다. 회귀식 자체가 비선형이므로 한계 효과를 구하기 위한 기울기를 ‘어디서’ 구할지가 문제가 된다. 측정 위치에 따라서 기울기가 달라지기 때문이다.\n도출하는 방법이 크게 어렵지는 않다. 측정에는 대체로 두 가지 방식이 많이 활용된다. regressor 값에서 \\(x_i\\)별로 확률값의 변화를 추정한 뒤 이를 평균하는 방식이다. 반대로 regressor 값의 평균에서 한번만 \\(p_i\\)에 미치는 영향을 추정하는 방법이다. 통계 패키지가 대체로 두 방법을 모두 지원하니 필요할 경우 찾아서 값을 구하면 되겠다.\n\n\n\n계수의 수학적인 이해\n이 부분이 부담스럽다면 넘어가도 좋다. 앞서 말한 한계 효과는 \\(\\frac{\\partial p}{\\partial x_j}\\)이다. 즉, regressor의 한 변수\\(x_j\\) 가 한 단위 변할 때 확률 변화를 측정한다. 즉,\n\\[\np(\\boldsymbol{x_i}) = \\dfrac{1}{e^{-\\boldsymbol{x_i}\\boldsymbol{\\beta}} + 1}\n\\]\n이 녀석을 그대로 미분해보자. 먼저 아래와 같이 \\(p(\\cdot)\\)을 변형하자.\n\\[\n\\begin{aligned}\np(\\boldsymbol{x_i}) & = \\dfrac{1}{e^{-\\boldsymbol{x_i}\\boldsymbol{\\beta}} + 1} \\\\\n& = \\dfrac{e^{\\boldsymbol{x_i}\\boldsymbol{\\beta}}}{1 + e^{\\boldsymbol{x_i}\\boldsymbol{\\beta}}}\n\\end{aligned}\n\\]\n\\(\\boldsymbol x_i = [x^1, \\dotsc, x^k]\\)이고, \\(x^j\\)에 대해서 미분하면 아래와 같다.\n\\[\n\\dfrac{\\partial p(\\boldsymbol{x_i})}{\\partial x^j} = \\dfrac{\\beta_j e^{\\boldsymbol{x_i}\\boldsymbol{\\beta}}}{(e^{\\boldsymbol{x_i}\\boldsymbol{\\beta}} + 1)^2}\n\\]\n이처럼 한계 효과는 미분을 통해 간단히 도출할 수 있다. 앞서 말했던 측정의 어려운 점이 무엇인지 이제 잘 볼 수 있다. \\(\\boldsymbol{\\beta}\\)의 추정치로 MLE를 통해 구한 \\(\\hat{\\boldsymbol\\beta}\\)를 활용한다고 해도, 어떤 \\(\\boldsymbol{x_i}\\)에서 측정하는지에 따라서 값이 달라진다. 평균(marginal effect at mean)에서 한 번만 측정할 것인지 아니면 \\(n\\)개의 모든 데이터 포인트에 대해서 계산한 뒤 이를 평균(average marginal effect)할 것인지 등의 선택이 필요하다. 보통 후자를 많이 활용하고 통계 패키지마다 해당 옵션을 제공하고 있다."
   }
 ]
