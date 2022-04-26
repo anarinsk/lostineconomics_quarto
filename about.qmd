@@ -9,7 +9,7 @@ about:
       href: https://twitter.com/anarinsk
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
+      href: https://www.linkedin.com/in/jun-sok-huhh-bb539a19/
     - icon: github
       text: Github
       href: https://github.com/anarinsk
