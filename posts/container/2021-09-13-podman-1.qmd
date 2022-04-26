@@ -4,7 +4,7 @@ description: Docker Desktop 없이  WSL에서 Podman으로 콘테이너를 써�
 author: "JS HUHH"
 date: "09/13/2021"
 image: "image.jpg"
-categories: [coding, wsl, container]
+categories: [container]
 #margin-header: subscribe.html
 ---
 

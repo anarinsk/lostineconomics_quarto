@@ -1,11 +1,11 @@
 ---
-layout: post
-toc: false
-comments: true
-title:  Docker + Jupyter + 한글 폰트  
+title:  Docker + Jupyter + 한글 폰트 
 description: 빌드할 때 Jupyter의 한글 문제도 같이 해결하자!
-categories: [coding, docker, jupyter]
-
+author: "JS HUHH"
+date: "05/09/2021"
+image: "image.jpg"
+categories: [container]
+#margin-header: subscribe.html
 ---
 
 ## Build도 어렵지 않다! 
@@ -14,7 +14,7 @@ categories: [coding, docker, jupyter]
 
 사실 이 포스팅을 쓰게 된 동기는 따로 있다. 글을 쓰는 시점에서 `matplotlib.font_manager._rebuild()`가 사라졌다! Jupyter에서 폰트 목록을 다시 생성할 다른 방법을 찾아야 했다. docker-compose로 필요한 이미지를 끌어올 때 단순히 이미지를 끌어오는 대신 특화된 형태로 build를 할 수도 있다. 이전 포스팅에서 소개한 방법에서는 build 옵션을 사용하지 않았다. 일단 Build가 꽤 거창하게 느껴졌기 때문이다. 적당한 ubuntu 버전을 끌어오고 여기에 Python, Jupyter를 깔고... 이런 빌드 과정이 꽤 험난하고 불필요해 보였다. Jupyter의 경우 데이터사이언스를 위한 잘 갖춰진 도커 이미지가 이미 있고, 이를 그대로 쓰면 큰 문제는 없다. 
 
-이제 문제가 생겼으니 해결책을 찾아야 한다. 이 특화된 이미지에 기반해서 빌드를 하면 한글 문제와 같은 특정하게 발생하는 문제를 미리 해결할 수 있지 않을까? 이후 소개하는 방법을 통해 확인한 내용은 다음과 같다. 이용 조건이 비슷하다면 참고해보시라.  
+문제가 생겼으니 해결책을 찾아야 한다. 특화된 이미지에 기반해서 빌드를 하면 한글 문제와 같은 특정하게 발생하는 문제를 미리 해결할 수 있지 않을까? 이후 소개하는 방법을 통해 확인한 내용은 다음과 같다. 이용 조건이 비슷하다면 참고해보시라.  
 
 - docker-compose를 쓸 때 이미지를 지정하는 image 부분을 제외한 나머지는 거의 그대로 재사용이 가능하다. 
 - image를 그대로 끌어오는 것이나 몇 가지 명령어를 넣어서 build를 하는 것이나 시간 상으로는 크게 차이가 없다. 
@@ -30,6 +30,8 @@ categories: [coding, docker, jupyter]
 
 1. Windows 10 WSL 2 + Ubuntu 20.04 
 2. Docker for Desktop (Windows)
+
+- 도커를 쓰지 않더라도 dockerfiles과 호환되는 빌드 체계를 갖추고 있다면 응용이 가능하다. 
 
 ### dockerfiles 
 
