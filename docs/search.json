@@ -1,17 +1,45 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Junsok Huhh",
+    "objectID": "posts/computer-tools/2020-09-26-windows-terminal.html",
+    "href": "posts/computer-tools/2020-09-26-windows-terminal.html",
+    "title": "The Best Terminal App for Windows",
     "section": "",
-    "text": "C.V.\nlong | short\n\n\nHistory of lostineconomics.com\n\nv2 built with fastpages\nv1 built with markdown on github\nv0 built with BlogDown on github"
+    "text": "마소가 리눅스 생태계를 품으려고 진심으로 노력하고 있다. 보통 윈도에서 터미널을 쓰려면 cmd를 쳐서 들어간다. 일단 모양이 별로일 뿐만 아니라 불편하다. 그래서 보통 서드파티에서 제작한 터미널 앱을 별도로 쓰곤 한다. 이 앱들로도 부족한 것이 없다. cmder도 높은 수준의 커스터마이즈와 뛰어난 사용성을 보장한다.\nWSL을 통해 윈도에 설치하는 리눅스의 경우 기본으로 CLI(Command Line Interface)를 활용하게 된다. 따라서 좋은 터미널 앱은 필수적이다. 간편하면서도 심미적으로도 유려한 그런 앱이 하나 있었으면 싶은데, MS는 이미 그런 앱을 제공하고 있다.\nWindows 10 기준으로, Microsoft Store에 들어가서 “terminal”을 검색해보자. “Windows Terminal”과 “Windows Terminal Preview” 두 개를 찾을 수 있다. 전자는 안정 버전이고 후자는 실험적인 기능을 구현한 버전이다. 어느 것을 써도 괜찮다.\n공식 가이드 https://docs.microsoft.com/ko-kr/windows/terminal/\n왠만한 내용은 공식 가이드에 잘 정리되어 있으므로 몇 가지 팁만 적도록 하자."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "lost_in_economics",
+    "objectID": "posts/computer-tools/2020-09-26-windows-terminal.html#설정",
+    "href": "posts/computer-tools/2020-09-26-windows-terminal.html#설정",
+    "title": "The Best Terminal App for Windows",
+    "section": "설정",
+    "text": "설정\nVS Code도 그렇고 윈도 터미널도 그렇고 설정이 settings.json 파일로 되어 있다. GUI가 아니라서 처음엔 어색할 수 있겠지만, 쓰다보면 이게 훨씬 편하다는 것을 알게 될 것이다.\n{: style=“textalign:center;” width=“500”}\n{: style=“textalign:center;” width=“500”}\n\n테마\n엄청나게 다양한 테마를 손쉽게 구현할 수 있다.\nhttps://windowsterminalthemes.dev/\n원하는 테마를 바꿔가며 확인할 수 있다. 마음에 드는 녀석을 “Get theme” 버튼을 눌러 클립보드에 복사하도록 하자. 녀석을 어디에 붙여 넣어야 할까?\nsettings.json 파일을 자세히 보면, 아래 \"schemes\":라는 항목이 있다. 여기에 클립보드에서 복사한 내용을 {} 안에 붙여 넣도록 하자. 그리고 설정 파일의 위로 이동하면 \"profiles\" - \"defaults\"라는 항목이 보일 것이다. 여기에는 터미널 앱을 띄웠을 때 어떤 세팅으로 시작할 것인지를 넣을 수 있다. 여러가지 항목을 넣을 수 있는데, 이중 colorScheme 항목에 방금 붙여 넣은 테마의 이름을 넣어주면 된다. 저장을 하면 테마가 바로 적용되며, 뭔가 문제가 있을 경우에는 에러가 뜬다. 이 경우 설정 파일을 다시 고치면 된다. 내가 사용중인 default는 아래와 같다.\n\"defaults\":\n{\n    \"fontFace\" : \"D2Coding\",\n    \"fontSize\" : 10,\n    \"historySize\" : 9001,\n    \"colorScheme\" : \"Monokai Vivid\",\n    \"cursorColor\" : \"#FFFFFF\",\n    \"cursorShape\" : \"vintage\",\n    \"padding\" : \"2, 2, 0, 0\",\n    \"snapOnInput\" : true,\n    \"useAcrylic\" : true,\n    \"acrylicOpacity\" : 0.95,\n    \"antialiasingMode\":\"cleartype\"\n    // Put settings here that you want to apply to all profiles\n}\n\n폰트는 D2Coding을 썼다. 폰트 크기 등등은 쭉 생략하고, 안티얼라이어싱 모드로 cleartype을 쓴 정도가 특징이다. 폰트는 한글 폰트를 써야 한글이 잘 나온다는 점만 기억하자."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html",
+    "href": "posts/computer-tools/2021-11-19-python-in-github.html",
+    "title": "Python in the Browser",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n브라우저에서 파이썬을 돌린다굽쇼?\n\n\n\n\n\n\nNov 19, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncoding\n\n\nwsl\n\n\ncontainer\n\n\n\n\nDocker Desktop 없이 WSL에서 Podman으로 콘테이너를 써보자\n\n\n\n\n\n\nSep 13, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\nPython, Julia, R을 하나의 도구로 코딩하자.\n\n\n\n\n\n\nFeb 2, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n코드 셰어링, 이제 걱정 끝\n\n\n\n\n\n\nOct 27, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n\\(\\rm\\LaTeX\\)을 다시 써볼까?\n\n\n\n\n\n\nOct 24, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n윈도 터미널 잘 쓰기\n\n\n\n\n\n\nSep 26, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\npython 만으로 웹 앱을 만들어보자\n\n\n\n\n\n\nMar 9, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n깃헙 위에 블로그를 보다 쉽게 만들어볼까?\n\n\n\n\n\n\nMar 7, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nregression\n\n\n\n\n로지스틱 회귀를 이해해봅시다!\n\n\n\n\n\n\nNov 10, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nregression\n\n\n\n\n회귀분석, 기하학적으로 한 방에 깨우치기\n\n\n\n\n\n\nOct 25, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nmath-simple\n\n\n\n\n기하학적으로 내적을 살펴보자.\n\n\n\n\n\n\nJul 18, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nmath-simple\n\n\n\n\n이항 분포의 관점에서 푸아송 분포 이해하기\n\n\n\n\n\n\nJul 13, 2019\n\n\nJS HUHH\n\n\n\n\n\n\nNo matching items"
+    "text": "이런 상황을 생각해보자.\n\n파이썬을 갑자기 써야한다!\n그런데 조건상 클라이언트에 깔 상황이 안된다!\n\n이럴 때 쓸 수 있는 도구가 몇 개 있다. 대표적으로 아래 구글 코랩이 있다.\n\n구글 드라이브와 연동되는 구글 코랩\n\n그런데 많은 회사에서 구글 서비스를 막아두는 경우가 있다. 그렇다면 어떻게 할까?"
+  },
+  {
+    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html#dev-모드-진입",
+    "href": "posts/computer-tools/2021-11-19-python-in-github.html#dev-모드-진입",
+    "title": "Python in the Browser",
+    "section": "dev 모드 진입",
+    "text": "dev 모드 진입\ngithub를 dev 모드로 돌린다. 웹 브라우저 리포지터리 창에서 . 버튼을 누르거나 .dev 주소로 접근하면 된다. 익숙한 vs code 화면에 보일 것이다.\n이제 아래 왼쪽 탭 화면에서 extension을 찾으면 된다. 아래 그림처럼 생겼다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html#extension-설치",
+    "href": "posts/computer-tools/2021-11-19-python-in-github.html#extension-설치",
+    "title": "Python in the Browser",
+    "section": "extension 설치",
+    "text": "extension 설치\n검색에서 아래 익스텐션을 찾아서 설치해준다.\nexteion: vscode-pyodide\n\n이 익스텐션은 주피터에서 브라우저 기반으로 파이썬을 돌리는 Pyodide를 구현한다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html#do-your-work",
+    "href": "posts/computer-tools/2021-11-19-python-in-github.html#do-your-work",
+    "title": "Python in the Browser",
+    "section": "Do your work!",
+    "text": "Do your work!\n이제 .ipynb 확장자 파일을 만들고 늘상 쓰듯이 jupyter를 쓰면 된다. 아주 특이하거나 무거운 환경이 아닌 이상, 어지간한 간단한 작업은 쾌적하게 수행할 수 있다. 익스텐션을 깔면, 인터페이스는 Jupyter에 적합하게 알아서 변한다. 물론 한계도 있다. 브라우저에 올라간 파이썬 엔진인 만큼 로컬이나 서버에 깔린 python 만큼 많은 일을 할 수는 없다."
   },
   {
     "objectID": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html",
@@ -63,69 +91,6 @@
     "text": "Update는 어떻게 하지?\n블로그 자체의 Jekyll 기반 코드들도 업데이트될텐데, 이건 어쩌나 생각하셨다면 걱정할 필요가 없다. 깃헙에서 제공하는 PR 기능을 활용해서 내 리포지토리까지 거의 자동으로 업데이트해준다. 다만 커스터마이즈를 많이 했다면 지원이 안될 수도 있다는 점에 유념하시라. - issues > New issue > Get started를 누르면 아래의 그림을 볼 수 있다.\n\n여기서 아무 것도 바꾸지 말고 Submit new issue를 하면 업데이트 요청이 들어가고 업데이트 사항이 없을 경우는 이슈가 그낭 종결되고 있을 경우는 그대로 따라가면 된다. 처음 페이지를 깔 때처럼 PR을 해주는 형태로 진행된다. 꽤나 영리한 업데이트 방법이다.\n\n바뀌는 파일들\n아직까지는 사소한 업데이트만 진행되는 듯 싶다. PR을 완료한 이후 커밋 메시지에 “upgrade fastpages”라고 적혀 있는 부분을 확인해서 커스터마이즈한 부분을 적당히 바꾸면 된다. _pages/about.md, |includes/custom_head.html 와 같이 커스터마이즈해둔 파일들도 바뀌게 되는 경우가 종종 있으므로 항상 백업본을 어딘가 로컬에 유지해두는 편이 좋겠다."
   },
   {
-    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html",
-    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html",
-    "title": "Streamlit + Heroku",
-    "section": "",
-    "text": "Note\n\n\n\n현재는 streamlit에서 꽤 좋은 조건으로 자체 클라우드를 운영한다. 특별한 이유가 없는 이상 여기 소개한 것과 같이 Heroku를 쓰는 것은 불필요하다."
-  },
-  {
-    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#들어가며",
-    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#들어가며",
-    "title": "Streamlit + Heroku",
-    "section": "들어가며",
-    "text": "들어가며\n구슬이 서 말이라도 꿰어야 보배다. 당연하다. 데이터 분석은\n\n스마트한 노가다\n갈고 닦은 모델링\n환상적인 시각화\n\n의 삼위 일체다. 물론 이 모든 과정에 화룡점정은 “전달”이다. 이 세 개를 어떻게 묶어서 전달하느냐에 따라서 분석을 받아들이는 그 사람의 판단이 달라진다. 어떻게 하면 잘 전달하는 것일까?\n지구상의 많은 인구가 손 안에 컴퓨터를 하나씩 들고 다니는 시대다. 안타깝게도 PC에서 많이 쓰던 PDF는 모바일에 적절하지 않다. 문서의 확대, 축소가 동적이지 않기 때문이다. 아울러 새로운 정보를 계속 주고 받을 수 있다는 점을 생각하면 결국은 ‘웹’, html이 데이터 분석을 전달하는 새로운 합의점이 되지 않을까 싶다. 아니 이미 그런 시대다."
-  },
-  {
-    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#streamlit",
-    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#streamlit",
-    "title": "Streamlit + Heroku",
-    "section": "Streamlit",
-    "text": "Streamlit\nPython은 이제 자타가 공인하는 데이터 사이언스의 주요 도구다. Python에는 이미 좋은 웹 개발 도구들이 있다. Django, Flask가 그렇다. 하지만 역시 나 같은 문송한 자들이 쓰기는 쉽지 않다. 아마도 네트워크 관련 지식이나 웹 관련 지식에 익숙하지 않은 탓이다. 그냥 pandas, numpy 정도만 배울 용이가 있는 사람들에게는 넘기 쉽지 않은 장벽이다. 어쩌면 닭잡고 싶은데 소잡는 칼을 휘두르는 법을 배워야 해서 그럴지도 모르겠다.\n이런 웹 개발 프레임워크들은 “데이터 혹은 그 시각화를 인터랙티브하게 공유한다,”라는 기본 목적에 비추어보면 살짝 과한 면도 있다. 비슷한 필요를 느낀 사람들이 많았는지 작년에 Streamlit라는 반가운 프로젝트가 등장했다.\nR에는 이미 Shiny라는 비슷한 프로젝트가 있다. R의 기능을 활용해 데이터를 처리하고 별도의 웹 개발 없이 R의 기능을 그대로 시각화로 구현할 수 있는 툴이다. Python에도 비슷한 기능을 구현하는 시도는 많았으나 어딘가 불편했다. Streamlit는 이런 2%의 부족함을 꽤 잘 해결했다. 어떤 면에서는 Shiny보다도 쓰기가 편리한 듯도 싶다. 다만 잃는 것도 있다. Shiny의 ’미감’에는 미치지 못하고 기능도 살짝 부족하다. 하지만 통상적인 데이터 탐색 및 시각화의 용도로는 충분하다.\n\nWorkflow\n여기서 Streamlit를 자세히 설명하지는 않겠다. Python을 써보면 사람이면 예제를 쉽게 따라해보면 된다. 페이지의 설명대로 아래 명령만 실행해봐도 느낌을 한번에 받을 수 있다. 아래와 같이 설치하고 hello를 띄울 수 있다.\n$ pip install streamlit \n$ steamlit hello\n대략의 워크플로우는 아래와 같다.\n\nPython으로 작업한다.\nStreamlit로 interactive하게 처리될 부분을 간단히 설계한다.\n터미널에서 streamlit run [앱이름].py\n\n각자의 컴퓨터, 즉 로컬에서 실행하면 알아서 브라우저 앱이 뜬다. 디자인이 다소 허접해보일 수 있지만, 미니멀을 좋아하는 사람이라면 ’본질’에 집중할 수 있는 점을 칭찬할 것이다. R의 Shiny와 마찬가지로 어지간한 Python 비주얼 라이브러리(matplotlib, Vega, Plotly 등등)는 모두 구현이 가능하다."
-  },
-  {
-    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#how-to-deploy-to-web",
-    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#how-to-deploy-to-web",
-    "title": "Streamlit + Heroku",
-    "section": "How to deploy to web…",
-    "text": "How to deploy to web…\n로컬에서 Steamlit를 이용해 그럴 듯한 앱을 만들었다. 이제 이 녀석을 어떻게 배포할까? 즉 이걸 남들에게 어떻게 보여줄까?\n일단 배포를 위해서는 전용 웹 서비스가 있어야 한다. AWS의 무료 티어를 활용해서 배포할 수도 있지만 세팅이 간단하지는 않다. 솔직히 말하면 이 마저 귀찮고 살짝 겁난다. 이런 사람들이 쉽게 쓸 수 있는 서비스가 salesforce에서 제공하는 Heroku다. 원래 Ruby로 제작된 웹 앱만 서비스 했으나, 최근 쓰임새가 늘어나면서 다양한 랭귀지를 지원하고 있다. 당연히 Python도 포함된다. 작업의 전체적인 개념은 다음과 같다.\n\nHeroku 계정 생성\nCLI 설치\nStreamlit 앱 제작\nHeroku 빌드를 위한 파일 생성\nStreamlit 작업 디렉토리를 Heroku로 push\nPush와 동시에 웹 빌드 및 자동 배포\n\n필요한 과정을 간략하게 살펴보자.\n\nHeroku 계정 생성 및 CLI 설치\n홈페이지에 들어가서 가입하면 된다. CLI, 즉 터미널 툴은 왜 필요할까? 터미널에서 작업을 하면 좀 더 편하다. CLI를 설치해야 제대로 Heroku를 사용할 수 있다. 아래와 같이 터미널에서 로그인을 한다.\n$ heroku login \n\n\n앱 디렉토리에 깃 생성\ngit을 통해 heroku를 관리하는 게 편하다. git을 쓸 줄 모른다면, 야매로라도 얼른 배우고 오시라. git으로 작업을 브랜치에서 commit 한 후 heroku로 푸시하는 것으로 일종의 작은 CI/CD가 달성된다.\n\n\n빌드를 위한 파일 생성\nHeroku로 제작한 Streamlit 앱을 푸시하면 자동으로 빌드가 진행된다. 이를 위해서 제작한 앱의 최상위 디렉토리에 아래의 파일을 넣어주자.\nproject \n├── app.py (제작한 앱)\n├── requirements.txt  \n├── setup.sh  \n└── Procfile\n\nrequirements.txt\n설치해야 하는 Python 패키지를 지정해준다. 아래의 예와 같다.\n numpy==1.16.4 \n streamlit==0.52.1 \n seaborn==0.9.0 \n pandas==0.25.1 \n matplotlib==3.1.1 \n scikit_learn==0.22\n이 파일을 자동으로 생성하는 pipreqs를 이용해도 된다.\n\n\nsetup.sh\nmkdir -p ~/.streamlit/\n\necho \"\\\n[general]\\n\\\nemail = \\\"your-email@domain.com\\\"\\n\\\n\" > ~/.streamlit/credentials.toml\n\necho \"\\\n[server]\\n\\\nheadless = true\\n\\\nenableCORS=false\\n\\\nport = $PORT\\n\\\n\" > ~/.streamlit/config.toml\nsh 명령을 실행할 내용을 담고 있다.\n\n\nProcfile\nweb: sh setup.sh && streamlit run app.py\nsh 명령을 실행하고 streamlit를 띄우는 명령어를 담고 있다.\n\n\nruntime.txt\n특정 Python 버전이 필요하다면 이 파일을 추가할 수 있다. 파일 안에 담긴 내용은 아래와 같다.\npython-3.7.3\n\n\n\nCreate and Just push\n이제 heroku로 나갈 앱을 만들고 보내면 끝이다. master에서 작업했다면 아래와 같이 명령어를 실행하면 된다.\n$ heroku create\n$ git push heroku master"
-  },
-  {
-    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#protips",
-    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#protips",
-    "title": "Streamlit + Heroku",
-    "section": "Protips",
-    "text": "Protips\n\n한글이 안나와요~\nstreamlit는 웹에서 즉 브라우저 위에서 돌아가기 때문에 한글이 잘 나오는 것이 정상이다. 문제는 Python 내에서 그래프에 한글을 렌더링할 경우 이것이 제대로 표현되지 않는다는 것이다. 보통 matplotlib과 같은 패키지들을 써본 사람이라면 해당 내용을 한번 검색해본 기억이 있을 것이다. 대략 로컬에서는 폰트를 찾은 후 이를 matplotlib이 쓸 수 있도록 인식시켜주는 것으로 간단히 끝난다.\n왜 Heroku에서는 이것이 안될까? 간단하다. Heroku는 외부의 웹서버이고 그 웹 서버에 한글 폰트가 없는 것이다. 웹 서버에 한글 폰트를 심어주면 될 것이다. 하지만 어떻게 심을까? 간단하다. 작업 중인 앱의 루트 디렉토리에 다음과 같은 시스템 디렉토리를 하나 생성한다.\n/.fonts \n이 디렉토리 안에 필요한 한글 폰트를 넣으면 된다. 그러면 해당 앱이 Heroku로 푸시되었을 때 시스템 폰트로 디렉토리 안의 폰트들이 잘 등록된다."
-  },
-  {
-    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#예제",
-    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#예제",
-    "title": "Streamlit + Heroku",
-    "section": "예제",
-    "text": "예제\nhttps://morning-depths-10545.herokuapp.com/\n\n앱 안에 비교적 자세한 설명을 달아 두었으니 별도의 과정은 생략하도록 하겠다.\n\n데이터 정리 등의 지저분한 코드는 생략하고 위 Heroku 앱을 구현하는 데 동원된 코드는 다음과 같다.\nhttps://github.com/anarinsk/adp-st-kap_1"
-  },
-  {
-    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#참고자료",
-    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#참고자료",
-    "title": "Streamlit + Heroku",
-    "section": "참고자료",
-    "text": "참고자료\nhttps://github.com/Taxuspt/heroku_streamlit_nginx\nhttps://towardsdatascience.com/quickly-build-and-deploy-an-application-with-streamlit-988ca08c7e83\nhttps://blog.jcharistech.com/2019/10/24/how-to-deploy-your-streamlit-apps-to-heroku/"
-  },
-  {
-    "objectID": "posts/computer-tools/2020-09-26-windows-terminal.html",
-    "href": "posts/computer-tools/2020-09-26-windows-terminal.html",
-    "title": "The Best Terminal App for Windows",
-    "section": "",
-    "text": "마소가 리눅스 생태계를 품으려고 진심으로 노력하고 있다. 보통 윈도에서 터미널을 쓰려면 cmd를 쳐서 들어간다. 일단 모양이 별로일 뿐만 아니라 불편하다. 그래서 보통 서드파티에서 제작한 터미널 앱을 별도로 쓰곤 한다. 이 앱들로도 부족한 것이 없다. cmder도 높은 수준의 커스터마이즈와 뛰어난 사용성을 보장한다.\nWSL을 통해 윈도에 설치하는 리눅스의 경우 기본으로 CLI(Command Line Interface)를 활용하게 된다. 따라서 좋은 터미널 앱은 필수적이다. 간편하면서도 심미적으로도 유려한 그런 앱이 하나 있었으면 싶은데, MS는 이미 그런 앱을 제공하고 있다.\nWindows 10 기준으로, Microsoft Store에 들어가서 “terminal”을 검색해보자. “Windows Terminal”과 “Windows Terminal Preview” 두 개를 찾을 수 있다. 전자는 안정 버전이고 후자는 실험적인 기능을 구현한 버전이다. 어느 것을 써도 괜찮다.\n공식 가이드 https://docs.microsoft.com/ko-kr/windows/terminal/\n왠만한 내용은 공식 가이드에 잘 정리되어 있으므로 몇 가지 팁만 적도록 하자."
-  },
-  {
-    "objectID": "posts/computer-tools/2020-09-26-windows-terminal.html#설정",
-    "href": "posts/computer-tools/2020-09-26-windows-terminal.html#설정",
-    "title": "The Best Terminal App for Windows",
-    "section": "설정",
-    "text": "설정\nVS Code도 그렇고 윈도 터미널도 그렇고 설정이 settings.json 파일로 되어 있다. GUI가 아니라서 처음엔 어색할 수 있겠지만, 쓰다보면 이게 훨씬 편하다는 것을 알게 될 것이다.\n{: style=“textalign:center;” width=“500”}\n{: style=“textalign:center;” width=“500”}\n\n테마\n엄청나게 다양한 테마를 손쉽게 구현할 수 있다.\nhttps://windowsterminalthemes.dev/\n원하는 테마를 바꿔가며 확인할 수 있다. 마음에 드는 녀석을 “Get theme” 버튼을 눌러 클립보드에 복사하도록 하자. 녀석을 어디에 붙여 넣어야 할까?\nsettings.json 파일을 자세히 보면, 아래 \"schemes\":라는 항목이 있다. 여기에 클립보드에서 복사한 내용을 {} 안에 붙여 넣도록 하자. 그리고 설정 파일의 위로 이동하면 \"profiles\" - \"defaults\"라는 항목이 보일 것이다. 여기에는 터미널 앱을 띄웠을 때 어떤 세팅으로 시작할 것인지를 넣을 수 있다. 여러가지 항목을 넣을 수 있는데, 이중 colorScheme 항목에 방금 붙여 넣은 테마의 이름을 넣어주면 된다. 저장을 하면 테마가 바로 적용되며, 뭔가 문제가 있을 경우에는 에러가 뜬다. 이 경우 설정 파일을 다시 고치면 된다. 내가 사용중인 default는 아래와 같다.\n\"defaults\":\n{\n    \"fontFace\" : \"D2Coding\",\n    \"fontSize\" : 10,\n    \"historySize\" : 9001,\n    \"colorScheme\" : \"Monokai Vivid\",\n    \"cursorColor\" : \"#FFFFFF\",\n    \"cursorShape\" : \"vintage\",\n    \"padding\" : \"2, 2, 0, 0\",\n    \"snapOnInput\" : true,\n    \"useAcrylic\" : true,\n    \"acrylicOpacity\" : 0.95,\n    \"antialiasingMode\":\"cleartype\"\n    // Put settings here that you want to apply to all profiles\n}\n\n폰트는 D2Coding을 썼다. 폰트 크기 등등은 쭉 생략하고, 안티얼라이어싱 모드로 cleartype을 쓴 정도가 특징이다. 폰트는 한글 폰트를 써야 한글이 잘 나온다는 점만 기억하자."
-  },
-  {
     "objectID": "posts/computer-tools/2020-10-24-classy-latex.html",
     "href": "posts/computer-tools/2020-10-24-classy-latex.html",
     "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
@@ -159,20 +124,6 @@
     "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
     "section": "References",
     "text": "References\n\ntinytex\ntexlive 도커 이미지\nkotex 리눅스 설치\nVS Code Remote-Cotainer 포트 포워딩\n컴파일에 활용된 파일은 여기를 참고하라.\n\nhttps://github.com/anarinsk/test-vscode-latex"
-  },
-  {
-    "objectID": "posts/computer-tools/2020-10-27-viva-binder.html",
-    "href": "posts/computer-tools/2020-10-27-viva-binder.html",
-    "title": "Viva, Binder!",
-    "section": "",
-    "text": "내가 보고 있는 것을 남이 그대로 봐야 의사 소통이 온전해지는 경우가 있다. 아마도 코드를 나누는 경우가 그렇지 않을까 싶다. 이 점에서 Github은 꽤 좋은 코드 나눔 도구다. 그런데 문제가 하나 있다. Github을 통해 배포하는 것이 패키지라면 각자 땡겨가서 쓰면 되겠지만, 특정하게 실현된 결과물이라면?\n예를 들어보자. Python으로 특정한 결과를 도출하는 코드를 짰다고 하자. 당연히 내가 작업한 환경에 의존할 것이다. 다른 환경에서 돌아갈지 아닐지 모르지만 어쨌든 의존성은 피할 수 없다. 상대를 불러서 내 컴퓨터에서 돌아가는 모습을 보여줄 수 있다면 좋겠지만 그럴 수 없는 경우가 많다. 내가 돌려본 환경을 그대로 상대가 볼 수 있게 할 수는 없는 것일까?\n당장 떠오르는 솔루션이 클라우드다. 클라우드에 소프트웨어 환경을 세팅하고 내가 테스트해본다. 원하는 상대에게 url을 주고 같은 테스트를 반복 체험하게 한다. 물론 좋다. 사실 AWS 같은 곳에 Linux 서버를 깔고 주피터 관련 패키지나 RStudio 등을 설치하기는 쉽다. AWS를 비롯해 많은 클라우드 업체에서 원스톱 서비스까지 제공한다. 그런데, 문제가 있다. 비용이 든다. 사용량이 많아서 뽕을 뽑을 수 있다면 덜 아깝겠지만 코드 공유하고 결과를 확인하는 정도가 족하다면 많이 아깝다.\n이런 용도로 활용할 수 있는 ‘무료’ 서비스가 Binder이다.\nhttps://mybinder.org"
-  },
-  {
-    "objectID": "posts/computer-tools/2020-10-27-viva-binder.html#turn-a-git-repo-into",
-    "href": "posts/computer-tools/2020-10-27-viva-binder.html#turn-a-git-repo-into",
-    "title": "Viva, Binder!",
-    "section": "Turn a Git repo into!",
-    "text": "Turn a Git repo into!\n서비스 참 시원시원하다. 로그인도 필요 없다. 깃헙 레포에 있는 코드를 받아서 가상 머신 위에 해당 결과를 구현해준다. R, Python, Julia를 지원한다. 세 언어 모두 기본 베이스로 Jupyter허브를 활용한다. 간편한 연동을 위해서는 깃헙 리포를 public으로 설정해야 한다.\n\n\nGitHub: 깃헙 주소를 넣는다.\nGit branch, tag or commit: 관련된 깃 브렌치, 태그, 커밋 등을 넣는다.\nPath to a notebook file: ipynb 파일이 깃 내에 서브 디렉토리에 있다면 여기서 노트북 파일의 위치등을 지정해주면 된다.\n\nRStudio나 Shiny를 쓰고 싶다면, “File” 대신 “URL”로 바꾸고 rstudio, shiny 등을 지정해주면 된다.\n\nR의 경우 r-2020-10-26 식으로 날짜가 적힌 runtime.txt 파일 그리고 패키지를 미리 인스톨하는 install.R 파일 두 개를 준비하면 된다.\n\n\n\n아래 공유를 위한 주소도 떠 있으니 공유를 할 때는 해당 주소만 던져주면 된다. 이제 launch 버튼을 누르자. 상당히 오랜 시간 동안 뭔가가 설치된다. 설치되는 내용을 보면 소프트웨어 구동에 필요한 개별 이미지를 빌드한 후 이를 클라우드에 띄워 구동한다.\n\n\n장점은 충분히 많다. 코드가 제대로 구현되는지 확인하는 수준이거나 코드를 가끔 짧은 시간 동안 실행해야 하는 정도라면 더 이상 바랄 게 없다. 단점이라면 도커 이미지를 빌드하고 녀석을 푸시해 실행할 때까지 시간이 좀 걸린다는 것인데, 뭐 이 정도 시간 비용 쯤이야!"
   },
   {
     "objectID": "posts/computer-tools/2021-02-02-all_for_vs_code.html",
@@ -231,32 +182,67 @@
     "text": "Setting for Remote Connection\n앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 좋다면 아래와 같이 하면 된다.\n\n\n만일 위와 같은 화면에 Remote Exlorer에서 뜨지 않는다면 컨테이너가 부착되지 않는 것이다. 컨테이너를 부착하면 된다.\n\n\n\nExtension > REMOTE EXPLORER > DETAILS 탭에서 가운데 설정 모양이 “Open Container Configuration File”이다.\n옆 에디터 창에 json 형식의 설정이 뜬뜬다. 여기서 관련 extension 등의 설정을 지정할 수 있다. 이렇게 설정을 해두면 해당 컨테이너를 부착할 때 설정한 대로 자동으로 옵션들이 적용된다. 매우 편리하다.\n\n{\n    \"extensions\": [\n        \"Ikuyadeu.r\",\n        \"julialang.language-julia\",\n        \"ms-python.python\",\n        \"ms-toolsai.jupyter\",\n        \"REditorSupport.r-lsp\"\n    ],\n    \"workspaceFolder\": \"/home/jovyan/github-anari\",\n    \"forwardPorts\": [\n        43463,      \n    ],\n    \"settings\": {\n        \"jupyter.alwaysTrustNotebooks\": true,\n        \"r.bracketedPaste\": true,\n        \"r.sessionWatcher\": true,\n        \"r.rterm.linux\": \"/opt/conda/bin/radian\"\n    }\n}\n\n\nFile > Perefences > Settings에서도 설정에 접근할 수 있다.\nVS Code의 설정은 두가지 축을 지닌다. 하나는 설정 전체를 담은 json 파일이다. 왼쪽 > 표시된 항목에서처럼 카테고리 별로 구별되어 쉽게 접근할 수 있다. 이 하나의 설정을 위 그림에서 보듯이 User, Remote(컨네이터), Workspace 별로 별도로 지정해 활용할 수도 있다."
   },
   {
-    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html",
-    "href": "posts/computer-tools/2021-11-19-python-in-github.html",
-    "title": "Python in the Browser",
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html",
+    "title": "Streamlit + Heroku",
     "section": "",
-    "text": "이런 상황을 생각해보자.\n\n파이썬을 갑자기 써야한다!\n그런데 조건상 클라이언트에 깔 상황이 안된다!\n\n이럴 때 쓸 수 있는 도구가 몇 개 있다. 대표적으로 아래 구글 코랩이 있다.\n\n구글 드라이브와 연동되는 구글 코랩\n\n그런데 많은 회사에서 구글 서비스를 막아두는 경우가 있다. 그렇다면 어떻게 할까?"
+    "text": "Note\n\n\n\n현재는 streamlit에서 꽤 좋은 조건으로 자체 클라우드를 운영한다. 특별한 이유가 없는 이상 여기 소개한 것과 같이 Heroku를 쓰는 것은 불필요하다."
   },
   {
-    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html#dev-모드-진입",
-    "href": "posts/computer-tools/2021-11-19-python-in-github.html#dev-모드-진입",
-    "title": "Python in the Browser",
-    "section": "dev 모드 진입",
-    "text": "dev 모드 진입\ngithub를 dev 모드로 돌린다. 웹 브라우저 리포지터리 창에서 . 버튼을 누르거나 .dev 주소로 접근하면 된다. 익숙한 vs code 화면에 보일 것이다.\n이제 아래 왼쪽 탭 화면에서 extension을 찾으면 된다. 아래 그림처럼 생겼다."
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#들어가며",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#들어가며",
+    "title": "Streamlit + Heroku",
+    "section": "들어가며",
+    "text": "들어가며\n구슬이 서 말이라도 꿰어야 보배다. 당연하다. 데이터 분석은\n\n스마트한 노가다\n갈고 닦은 모델링\n환상적인 시각화\n\n의 삼위 일체다. 물론 이 모든 과정에 화룡점정은 “전달”이다. 이 세 개를 어떻게 묶어서 전달하느냐에 따라서 분석을 받아들이는 그 사람의 판단이 달라진다. 어떻게 하면 잘 전달하는 것일까?\n지구상의 많은 인구가 손 안에 컴퓨터를 하나씩 들고 다니는 시대다. 안타깝게도 PC에서 많이 쓰던 PDF는 모바일에 적절하지 않다. 문서의 확대, 축소가 동적이지 않기 때문이다. 아울러 새로운 정보를 계속 주고 받을 수 있다는 점을 생각하면 결국은 ‘웹’, html이 데이터 분석을 전달하는 새로운 합의점이 되지 않을까 싶다. 아니 이미 그런 시대다."
   },
   {
-    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html#extension-설치",
-    "href": "posts/computer-tools/2021-11-19-python-in-github.html#extension-설치",
-    "title": "Python in the Browser",
-    "section": "extension 설치",
-    "text": "extension 설치\n검색에서 아래 익스텐션을 찾아서 설치해준다.\nexteion: vscode-pyodide\n\n이 익스텐션은 주피터에서 브라우저 기반으로 파이썬을 돌리는 Pyodide를 구현한다."
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#streamlit",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#streamlit",
+    "title": "Streamlit + Heroku",
+    "section": "Streamlit",
+    "text": "Streamlit\nPython은 이제 자타가 공인하는 데이터 사이언스의 주요 도구다. Python에는 이미 좋은 웹 개발 도구들이 있다. Django, Flask가 그렇다. 하지만 역시 나 같은 문송한 자들이 쓰기는 쉽지 않다. 아마도 네트워크 관련 지식이나 웹 관련 지식에 익숙하지 않은 탓이다. 그냥 pandas, numpy 정도만 배울 용이가 있는 사람들에게는 넘기 쉽지 않은 장벽이다. 어쩌면 닭잡고 싶은데 소잡는 칼을 휘두르는 법을 배워야 해서 그럴지도 모르겠다.\n이런 웹 개발 프레임워크들은 “데이터 혹은 그 시각화를 인터랙티브하게 공유한다,”라는 기본 목적에 비추어보면 살짝 과한 면도 있다. 비슷한 필요를 느낀 사람들이 많았는지 작년에 Streamlit라는 반가운 프로젝트가 등장했다.\nR에는 이미 Shiny라는 비슷한 프로젝트가 있다. R의 기능을 활용해 데이터를 처리하고 별도의 웹 개발 없이 R의 기능을 그대로 시각화로 구현할 수 있는 툴이다. Python에도 비슷한 기능을 구현하는 시도는 많았으나 어딘가 불편했다. Streamlit는 이런 2%의 부족함을 꽤 잘 해결했다. 어떤 면에서는 Shiny보다도 쓰기가 편리한 듯도 싶다. 다만 잃는 것도 있다. Shiny의 ’미감’에는 미치지 못하고 기능도 살짝 부족하다. 하지만 통상적인 데이터 탐색 및 시각화의 용도로는 충분하다.\n\nWorkflow\n여기서 Streamlit를 자세히 설명하지는 않겠다. Python을 써보면 사람이면 예제를 쉽게 따라해보면 된다. 페이지의 설명대로 아래 명령만 실행해봐도 느낌을 한번에 받을 수 있다. 아래와 같이 설치하고 hello를 띄울 수 있다.\n$ pip install streamlit \n$ steamlit hello\n대략의 워크플로우는 아래와 같다.\n\nPython으로 작업한다.\nStreamlit로 interactive하게 처리될 부분을 간단히 설계한다.\n터미널에서 streamlit run [앱이름].py\n\n각자의 컴퓨터, 즉 로컬에서 실행하면 알아서 브라우저 앱이 뜬다. 디자인이 다소 허접해보일 수 있지만, 미니멀을 좋아하는 사람이라면 ’본질’에 집중할 수 있는 점을 칭찬할 것이다. R의 Shiny와 마찬가지로 어지간한 Python 비주얼 라이브러리(matplotlib, Vega, Plotly 등등)는 모두 구현이 가능하다."
   },
   {
-    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html#do-your-work",
-    "href": "posts/computer-tools/2021-11-19-python-in-github.html#do-your-work",
-    "title": "Python in the Browser",
-    "section": "Do your work!",
-    "text": "Do your work!\n이제 .ipynb 확장자 파일을 만들고 늘상 쓰듯이 jupyter를 쓰면 된다. 아주 특이하거나 무거운 환경이 아닌 이상, 어지간한 간단한 작업은 쾌적하게 수행할 수 있다. 익스텐션을 깔면, 인터페이스는 Jupyter에 적합하게 알아서 변한다. 물론 한계도 있다. 브라우저에 올라간 파이썬 엔진인 만큼 로컬이나 서버에 깔린 python 만큼 많은 일을 할 수는 없다."
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#how-to-deploy-to-web",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#how-to-deploy-to-web",
+    "title": "Streamlit + Heroku",
+    "section": "How to deploy to web…",
+    "text": "How to deploy to web…\n로컬에서 Steamlit를 이용해 그럴 듯한 앱을 만들었다. 이제 이 녀석을 어떻게 배포할까? 즉 이걸 남들에게 어떻게 보여줄까?\n일단 배포를 위해서는 전용 웹 서비스가 있어야 한다. AWS의 무료 티어를 활용해서 배포할 수도 있지만 세팅이 간단하지는 않다. 솔직히 말하면 이 마저 귀찮고 살짝 겁난다. 이런 사람들이 쉽게 쓸 수 있는 서비스가 salesforce에서 제공하는 Heroku다. 원래 Ruby로 제작된 웹 앱만 서비스 했으나, 최근 쓰임새가 늘어나면서 다양한 랭귀지를 지원하고 있다. 당연히 Python도 포함된다. 작업의 전체적인 개념은 다음과 같다.\n\nHeroku 계정 생성\nCLI 설치\nStreamlit 앱 제작\nHeroku 빌드를 위한 파일 생성\nStreamlit 작업 디렉토리를 Heroku로 push\nPush와 동시에 웹 빌드 및 자동 배포\n\n필요한 과정을 간략하게 살펴보자.\n\nHeroku 계정 생성 및 CLI 설치\n홈페이지에 들어가서 가입하면 된다. CLI, 즉 터미널 툴은 왜 필요할까? 터미널에서 작업을 하면 좀 더 편하다. CLI를 설치해야 제대로 Heroku를 사용할 수 있다. 아래와 같이 터미널에서 로그인을 한다.\n$ heroku login \n\n\n앱 디렉토리에 깃 생성\ngit을 통해 heroku를 관리하는 게 편하다. git을 쓸 줄 모른다면, 야매로라도 얼른 배우고 오시라. git으로 작업을 브랜치에서 commit 한 후 heroku로 푸시하는 것으로 일종의 작은 CI/CD가 달성된다.\n\n\n빌드를 위한 파일 생성\nHeroku로 제작한 Streamlit 앱을 푸시하면 자동으로 빌드가 진행된다. 이를 위해서 제작한 앱의 최상위 디렉토리에 아래의 파일을 넣어주자.\nproject \n├── app.py (제작한 앱)\n├── requirements.txt  \n├── setup.sh  \n└── Procfile\n\nrequirements.txt\n설치해야 하는 Python 패키지를 지정해준다. 아래의 예와 같다.\n numpy==1.16.4 \n streamlit==0.52.1 \n seaborn==0.9.0 \n pandas==0.25.1 \n matplotlib==3.1.1 \n scikit_learn==0.22\n이 파일을 자동으로 생성하는 pipreqs를 이용해도 된다.\n\n\nsetup.sh\nmkdir -p ~/.streamlit/\n\necho \"\\\n[general]\\n\\\nemail = \\\"your-email@domain.com\\\"\\n\\\n\" > ~/.streamlit/credentials.toml\n\necho \"\\\n[server]\\n\\\nheadless = true\\n\\\nenableCORS=false\\n\\\nport = $PORT\\n\\\n\" > ~/.streamlit/config.toml\nsh 명령을 실행할 내용을 담고 있다.\n\n\nProcfile\nweb: sh setup.sh && streamlit run app.py\nsh 명령을 실행하고 streamlit를 띄우는 명령어를 담고 있다.\n\n\nruntime.txt\n특정 Python 버전이 필요하다면 이 파일을 추가할 수 있다. 파일 안에 담긴 내용은 아래와 같다.\npython-3.7.3\n\n\n\nCreate and Just push\n이제 heroku로 나갈 앱을 만들고 보내면 끝이다. master에서 작업했다면 아래와 같이 명령어를 실행하면 된다.\n$ heroku create\n$ git push heroku master"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#protips",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#protips",
+    "title": "Streamlit + Heroku",
+    "section": "Protips",
+    "text": "Protips\n\n한글이 안나와요~\nstreamlit는 웹에서 즉 브라우저 위에서 돌아가기 때문에 한글이 잘 나오는 것이 정상이다. 문제는 Python 내에서 그래프에 한글을 렌더링할 경우 이것이 제대로 표현되지 않는다는 것이다. 보통 matplotlib과 같은 패키지들을 써본 사람이라면 해당 내용을 한번 검색해본 기억이 있을 것이다. 대략 로컬에서는 폰트를 찾은 후 이를 matplotlib이 쓸 수 있도록 인식시켜주는 것으로 간단히 끝난다.\n왜 Heroku에서는 이것이 안될까? 간단하다. Heroku는 외부의 웹서버이고 그 웹 서버에 한글 폰트가 없는 것이다. 웹 서버에 한글 폰트를 심어주면 될 것이다. 하지만 어떻게 심을까? 간단하다. 작업 중인 앱의 루트 디렉토리에 다음과 같은 시스템 디렉토리를 하나 생성한다.\n/.fonts \n이 디렉토리 안에 필요한 한글 폰트를 넣으면 된다. 그러면 해당 앱이 Heroku로 푸시되었을 때 시스템 폰트로 디렉토리 안의 폰트들이 잘 등록된다."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#예제",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#예제",
+    "title": "Streamlit + Heroku",
+    "section": "예제",
+    "text": "예제\nhttps://morning-depths-10545.herokuapp.com/\n\n앱 안에 비교적 자세한 설명을 달아 두었으니 별도의 과정은 생략하도록 하겠다.\n\n데이터 정리 등의 지저분한 코드는 생략하고 위 Heroku 앱을 구현하는 데 동원된 코드는 다음과 같다.\nhttps://github.com/anarinsk/adp-st-kap_1"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#참고자료",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#참고자료",
+    "title": "Streamlit + Heroku",
+    "section": "참고자료",
+    "text": "참고자료\nhttps://github.com/Taxuspt/heroku_streamlit_nginx\nhttps://towardsdatascience.com/quickly-build-and-deploy-an-application-with-streamlit-988ca08c7e83\nhttps://blog.jcharistech.com/2019/10/24/how-to-deploy-your-streamlit-apps-to-heroku/"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-27-viva-binder.html",
+    "href": "posts/computer-tools/2020-10-27-viva-binder.html",
+    "title": "Viva, Binder!",
+    "section": "",
+    "text": "내가 보고 있는 것을 남이 그대로 봐야 의사 소통이 온전해지는 경우가 있다. 아마도 코드를 나누는 경우가 그렇지 않을까 싶다. 이 점에서 Github은 꽤 좋은 코드 나눔 도구다. 그런데 문제가 하나 있다. Github을 통해 배포하는 것이 패키지라면 각자 땡겨가서 쓰면 되겠지만, 특정하게 실현된 결과물이라면?\n예를 들어보자. Python으로 특정한 결과를 도출하는 코드를 짰다고 하자. 당연히 내가 작업한 환경에 의존할 것이다. 다른 환경에서 돌아갈지 아닐지 모르지만 어쨌든 의존성은 피할 수 없다. 상대를 불러서 내 컴퓨터에서 돌아가는 모습을 보여줄 수 있다면 좋겠지만 그럴 수 없는 경우가 많다. 내가 돌려본 환경을 그대로 상대가 볼 수 있게 할 수는 없는 것일까?\n당장 떠오르는 솔루션이 클라우드다. 클라우드에 소프트웨어 환경을 세팅하고 내가 테스트해본다. 원하는 상대에게 url을 주고 같은 테스트를 반복 체험하게 한다. 물론 좋다. 사실 AWS 같은 곳에 Linux 서버를 깔고 주피터 관련 패키지나 RStudio 등을 설치하기는 쉽다. AWS를 비롯해 많은 클라우드 업체에서 원스톱 서비스까지 제공한다. 그런데, 문제가 있다. 비용이 든다. 사용량이 많아서 뽕을 뽑을 수 있다면 덜 아깝겠지만 코드 공유하고 결과를 확인하는 정도가 족하다면 많이 아깝다.\n이런 용도로 활용할 수 있는 ‘무료’ 서비스가 Binder이다.\nhttps://mybinder.org"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-27-viva-binder.html#turn-a-git-repo-into",
+    "href": "posts/computer-tools/2020-10-27-viva-binder.html#turn-a-git-repo-into",
+    "title": "Viva, Binder!",
+    "section": "Turn a Git repo into!",
+    "text": "Turn a Git repo into!\n서비스 참 시원시원하다. 로그인도 필요 없다. 깃헙 레포에 있는 코드를 받아서 가상 머신 위에 해당 결과를 구현해준다. R, Python, Julia를 지원한다. 세 언어 모두 기본 베이스로 Jupyter허브를 활용한다. 간편한 연동을 위해서는 깃헙 리포를 public으로 설정해야 한다.\n\n\nGitHub: 깃헙 주소를 넣는다.\nGit branch, tag or commit: 관련된 깃 브렌치, 태그, 커밋 등을 넣는다.\nPath to a notebook file: ipynb 파일이 깃 내에 서브 디렉토리에 있다면 여기서 노트북 파일의 위치등을 지정해주면 된다.\n\nRStudio나 Shiny를 쓰고 싶다면, “File” 대신 “URL”로 바꾸고 rstudio, shiny 등을 지정해주면 된다.\n\nR의 경우 r-2020-10-26 식으로 날짜가 적힌 runtime.txt 파일 그리고 패키지를 미리 인스톨하는 install.R 파일 두 개를 준비하면 된다.\n\n\n\n아래 공유를 위한 주소도 떠 있으니 공유를 할 때는 해당 주소만 던져주면 된다. 이제 launch 버튼을 누르자. 상당히 오랜 시간 동안 뭔가가 설치된다. 설치되는 내용을 보면 소프트웨어 구동에 필요한 개별 이미지를 빌드한 후 이를 클라우드에 띄워 구동한다.\n\n\n장점은 충분히 많다. 코드가 제대로 구현되는지 확인하는 수준이거나 코드를 가끔 짧은 시간 동안 실행해야 하는 정도라면 더 이상 바랄 게 없다. 단점이라면 도커 이미지를 빌드하고 녀석을 푸시해 실행할 때까지 시간이 좀 걸린다는 것인데, 뭐 이 정도 시간 비용 쯤이야!"
   },
   {
     "objectID": "posts/container/2021-09-13-podman-1.html",
@@ -350,69 +336,6 @@
     "text": "Testrun\n\n현재 위치(대체로는 유저 홈)에 아래와 같이 docker-compose.yml 파일을 생성하자.\n현재 위치에 data디렉토리를 생성하자.\n\nversion: '3'\n#\nservices:\n    tf-gpu:\n        image: tensorflow/tensorflow:latest-gpu-jupyter\n        environment:\n            - NVIDIA_DISABLE_REQUIRE=1\n            - GRANT_SUDO=yes\n            - JUPYTER_ENABLE_LAB=yes\n            - JUPYTER_TOKEN=1234\n        volumes:\n            - \"./data:/mnt/space/ml\"\n        ports:\n            - \"8888:8888\"\n        # deploy:\n        #     resources:\n        #         reservations:\n        #             devices:\n        #                 - driver: nvidia\n        #                   device_ids: ['all']\n        #                   capabilities: [gpu]\n        container_name: tf_gpu\n이제 다음을 실행하자.\n$ docker-compose up \n잘 실행되었다면 주피터 서버가 생성되었을 것이다. 접속 주소는 웹브라우저에서 localhost:8888을 치면 된다. 토큰(비밀번호)은 1234로 설정해두었다. GPU가 잘 돌아가고 있음을 직접 확인해보자. 노트북의 Cell을 열고 아래 내용을 실행해보자.\nimport tensorflow as tf\ntf.config.get_visible_devices(\n    device_type=None\n)\nCPU 이외에 GPU가 보이면 잘 설정된 것이다. 컨테이너 안에 담긴 fashion mnist 등의 예제를 마음껏 시험해보시라.\nyml 파일에서 눈치를 챘을지 모르겠지만, deploy 항목은 docker에서만 실행되는 항목이다. 이를 주석처리 하지 않고 podman에서 돌리면 에러가 발생한다."
   },
   {
-    "objectID": "posts/math-simple/2019-07-13-Poisson.html",
-    "href": "posts/math-simple/2019-07-13-Poisson.html",
-    "title": "Poisson as Binormial Distribution",
-    "section": "",
-    "text": "푸아송 분포는 이항 분포를 주어진 시간(기간) 안에 발생하는 평균 발생 횟수로 다시 모델링한 분포다.\n이항 분포의 평균은 \\(\\lambda = n p\\)이고, 이항 분포에 \\(p = \\frac{\\lambda}{n}\\)을 다시 넣은 후 \\(n \\to \\infty\\) 극한값을 얻은 결과가 푸아송 분포다."
-  },
-  {
-    "objectID": "posts/math-simple/2019-07-13-Poisson.html#defining-poisson-distribution",
-    "href": "posts/math-simple/2019-07-13-Poisson.html#defining-poisson-distribution",
-    "title": "Poisson as Binormial Distribution",
-    "section": "Defining Poisson Distribution",
-    "text": "Defining Poisson Distribution\n사실, 푸아송 분포 직관적으로 잘 안 와 닿는다. 정의부터 먼저 살펴보자. 한글 위키피디어에서 가져왔다.\n푸아송 분포(Poisson distribution)는 확률론에서 단위 시간 안에 어떤 사건이 몇 번 발생할 것인지를 표현하는 이산 확률 분포이다. 일단 정의에서 알 수 있는 것:\n\n푸아송이라는 사람이 만들었다.\n단위 시간 안에 발생하는 사건이 중요하다.\n이산 확률 분포다.\n\n수학적인 정의는 일단 생략하자. 뒤에서 다시 만나게 될 테니까. 정의만 봐서는 이해가 쉽지 않은 분포다. 직관적인 방식으로 푸아송 분포의 정의를 끌어낼 수는 없을까?\n\n\n정확하게 언급하자면 분포의 정의라기보다는 분포의 확률 질량 함수 혹은 확률 밀도 함수라고 적는 게 맞을 것이다. 하지만 편의상 특별한 언급이 없는 경우 분포의 정의를 이런 의미로 사용하도록 하자."
-  },
-  {
-    "objectID": "posts/math-simple/2019-07-13-Poisson.html#poisson-as-binary",
-    "href": "posts/math-simple/2019-07-13-Poisson.html#poisson-as-binary",
-    "title": "Poisson as Binormial Distribution",
-    "section": "Poisson as Binary",
-    "text": "Poisson as Binary\n잠시 이항 분포를 떠올려보자. 아마도 모든 확률 관련 수업에서 제일 처음 배우는 분포가 아닐까 한다. 이항 분포란, 1회 시행 시 발생할 확률이 \\(p\\;\\)인 어떤 사건을 \\(n\\) 번 시행할 때 해당 사건이 \\(k\\) 번 발생할 확률의 분포를 나타낸다. 개별적으로 존재하는 사건이니까 당연히 이산 확률 분포에 속한다. 수학적으로는 아래와 같다.\n\\[\nB(k;  n,p)  =  {n \\choose k}  p^k(1-p)^{n-k}\n\\]\n위 정의를 말로 풀어보자. n번 시행 중에 사건이 발생한 경우 \\(k\\) 개를 뽑는다. 즉, 이런 경우가 \\(n\\) 번 중에서 얼마나 발생할 수 있는지 따진다. 그리고 해당 경우의 수가 발생할 확률을 곱해준 것이다.\n이항 분포를 ’시간’의 맥락으로 한번 바꿔보자. 하루 동안 내 사이트에 방문객이 한 명 찾아올 확률을 0.1이라고 하자. 28일 동안 10 명의 방문자가 찾아올 확률은? 이항 분포의 맥락에서 생각한다면, \\(B(10; 28, 0.1)\\)로 나타낼 수 있다. 그런데 이 모델링 어딘가 찜찜하다.\n이항 분포의 모델링은 하루 동안 사이트 방문객이 한 명일 확률에 기대고 있다. 그런데 하루에 방문객이 두 명 이상이라면? 하루에 방문객이 한 명 씩만 온다는 가정이 비현실적이지 않나?\n두 명 이상의 방문자를 수용하려면 이항 분포의 모형을 어떻게 수정해야 할까? 가장 손쉬운 방법은 단위 시간을 바꾸는 것이다. 단위 시간을 하루가 아니라 시간으로 바꿔보자. 하루는 24시간이고 매 시간 동일한 정도로 이용자가 방문한다면, 시간당 1명이 방문할 확률은 0.1/24이 된다. 낮은 확률이지만 이러한 가정에서 하루에 두 명 이상도 방문할 수 있게 된다."
-  },
-  {
-    "objectID": "posts/math-simple/2019-07-13-Poisson.html#deriving-poisson",
-    "href": "posts/math-simple/2019-07-13-Poisson.html#deriving-poisson",
-    "title": "Poisson as Binormial Distribution",
-    "section": "Deriving Poisson",
-    "text": "Deriving Poisson\n이항 분포와 달리 푸아송 분포에서 파라미터는 한 개다. 푸아송 분포의 파라미터 \\(\\lambda\\)는 단위 시간 당 평균 발생 횟수를 뜻한다. 비율(rate)이라고도 부른다.\n\\(\\lambda\\)가 ’파라미터’라는 의미는 무엇일까? 과거의 데이터로부터 혹은 어떤 방법으로든 푸아송 분포를 정의하는 시점에서 알려진 혹은 정의된 사실이라는 의미다. 즉, 우리가 관심을 두고 있는 기간 내에 평균적인 방문자 수가 주어진다는 뜻이다.\n기간 내에 특정 순간 동안 어느 정도의 방문자가 올지 미리 알 수 없다. 방문자가 없다가 어느 순간 10명이 몰려올 수도 있다. 일정한 간격으로 한 명씩 10 명이 올 수도 있다. 매번 시행 때마다 해당 사건이 발생할 확률을 모형화하는 이항분포를 시간의 맥락으로 바꾸면 이렇게 뭔가 어색해 보인다.\n이항 분포를 통해 푸아송 분포를 표현하는 방법은 없을까? 어떤 패턴으로 방문자가 올지 알 수 없다면, 이항 분포의 기준이 되는 시행(시점)을 최대한 잘게 쪼개면 어떨까? 이항 분포에서 평균은 \\(np\\;\\) 다. 즉, 이항 분포의 맥락에서 보면 푸아송 분포의 파라미터 \\(\\lambda = n p\\;\\)다. \\(\\lambda\\)가 고정되어 있다면 \\(n\\)을 무한대로 갈 때 \\(p\\)는 적절한 방식으로 0으로 접근한다고 가정해도 무방하다. 정리하면 푸아송 분포를 이항 분포에서 도출하기 위한 전략은 다음과 같다.\n\n\\(n\\)과 \\(p\\)를 \\(\\lambda\\) 파라미터 하나로 바꾼다.\n\\(n\\)이 무한대로 갈 때 이항 분포의 확률 밀도 함수의 극한값을 도출한다.\n\n\\[\n\\begin{aligned}\n\\lim_{n \\to \\infty} B(k; n, p) = & \\lim_{n \\to \\infty}  {n \\choose k }  p^k(1-p)^{n-k} \\\\\n= & \\lim_{n \\to \\infty}  \\dfrac{n!}{k!(n-k)!}(\\dfrac{\\lambda}{n})^k  (1-\\dfrac{\\lambda}{n})^{n-k}  \\\\\n= & \\lim_{n \\to \\infty}  \\underbrace{\\left[  \\dfrac{n!}{(n-k)!  n^k} \\right]}_{(가)}  \\left[  \\dfrac{\\lambda^k}{k!}  (1-\\dfrac{\\lambda}{n})^{n}  \\right]  \\underbrace{\\left[  (1-\\dfrac{\\lambda}{n})^{-k}\\right]}_{(나)}  \\\\\n= &  1\\left[  \\dfrac{\\lambda^k}{k!}  e^{-\\lambda}\\right] 1 \\\\\n= & f(k; \\lambda)\n\\end{aligned}\n\\]\n푸아송 분포 확률 질량 함수 \\(f(k; \\lambda)\\) 앞 뒤로 붙은 극한값 (가)와 (나)에 관해 사족을 덧붙여보자. 먼저 (가)는 아래와 같다.\n\\[\n  \\lim_{n \\to \\infty} \\dfrac{n!}{(n-k)!  n^k} =  \\lim_{n \\to \\infty}  \\dfrac{n(n-1)\\dotsb(n-(k-1))}{n^k}  = 1\n\\]\n분자와 분모 모두 가장 높은 \\(n\\)의 차수는 \\(k\\)이고, 그 계수가 모두 1이므로 극한값은 1이다. (나)의 극한값은 쉽게 알 수 있으니 생략하자.\n이항 분포의 확률 혹은 확률 질량 함수의 극한값이 바로 푸아송 분포의 그것이다! 이거 참 재미있는 연결 고리가 아닌가! 사실 푸아송 분포의 정의를 그냥 들여다봐서는 그다지 직관적인 이해를 얻기는 쉽지 않다. 이렇게 이항 분포에서 출발하는 것이 직관적으로 이해하는 데 도움이 된다."
-  },
-  {
-    "objectID": "posts/math-simple/2019-07-18-dot-product.html",
-    "href": "posts/math-simple/2019-07-18-dot-product.html",
-    "title": "Dot Product with Geometry",
-    "section": "",
-    "text": "닷 프로덕트 혹은 내적을 기하적으로 이해하면 여러모로 편리하고 기억에도 잘 남는다."
-  },
-  {
-    "objectID": "posts/math-simple/2019-07-18-dot-product.html#definition",
-    "href": "posts/math-simple/2019-07-18-dot-product.html#definition",
-    "title": "Dot Product with Geometry",
-    "section": "Definition",
-    "text": "Definition\ndot product는 내적이라고도 번역하지만 여기서는 닷 프로덕트로 쓰기로 하겠다. 먼저 정의부터 살펴보자.\n\\[\n\\mathbf{u}=\\left[u_{1}, {u}_{2}, \\ldots, {u}_{n}\\right] \\in {\\mathbb R}^n\n\\] \\[\n\\mathbf{v}=\\left[{v}_{1}, {v}_{2}, \\ldots, {v}_{n}\\right] \\in {\\mathbb R}^n\n\\] \\[\n\\mathbf{u} \\cdot \\mathbf{v} = \\sum_{n} u_i v_i\n\\]\n쉽게 말해서 닷 프로덕트는 차원이 같은 두 개의 인풋 벡터를 하나의 스칼라로 바꿔주는 일종의 함수로 이해할 수 있다. 두 개의 벡터를 서로 연관 짓는데 이를 해당 벡터의 길이라는 정보로 압축한다고 보면 얼추 맞을 듯 싶다. 하나의 숫자로 요약된다는 뜻에서 스칼라 프로덕트라고도 불린다. 그림으로 나타내면 아래와 같다.\n\n\nFrom Definition to Geometry\n닷 프로덕트에 관한 설명은 정의에서 바로 코사인 법칙으로 넘어간다. 하지만 뭔가 분명하지 않다. 이걸 조금 더 풀어보자.\n\n위 그림은 \\(2 \\times 2\\) 벡터의 닷 프로덕트를 각 요소로 분해한 것이다. 이중에서 \\(\\dfrac{\\pi}{2}\\) 각을 이루고 있는 벡터는 서로 곱하면 0이 된다. 따라서 닷 프로덕트 계산에서는 \\(a_x b_x\\)와 \\(a_y b_y\\)가 남게 된다.\n\n닷 프로덕트란 길이만 문제가 되므로 두 벡터를 한 방향으로 정렬하자.이렇게 되면, 파란색 높이가 \\(0\\)이 된다. 따라서 위 그림과 같은 코사인 법칙이 쉽게 도출된다.\n\n\nSymmetry\n\\(\\mathbf{v}\\) 벡터를 \\(\\mathbf u\\) 벡터 위에, 즉 이 벡터를 스크린 삼아 직각으로 쏜 프로젝션 벡터(\\(\\mathrm{Proj}_{\\mathbf u}{\\mathbf v}\\))의 길이와 \\(\\mathbf u\\) 길이를 곱하면 그것이 \\(\\mathbf u\\)와 \\(\\mathbf v\\)의 닷 프로덕트가 된다. 어느 벡터로 프로젝션 하는지는 관계가 없다. 즉,\n\\[\n{\\mathbf v} \\cdot {\\mathbf u} = \\Vert \\mathbf u \\Vert \\Vert {\\rm Proj}_{\\mathbf u} {\\mathbf v} \\Vert =  \\Vert \\mathbf u \\Vert (\\Vert \\mathbf v \\Vert \\cos\\theta)\n\\] \\[\n{\\mathbf u} \\cdot {\\mathbf v} = \\Vert \\mathbf v \\Vert \\Vert {\\rm Proj}_{\\mathbf v} {\\mathbf u} \\Vert = \\Vert \\mathbf v \\Vert (\\Vert \\mathbf u \\Vert \\cos\\theta)\n\\]\n다시 보면, 닷 프로덕트의 정의상 \\({\\mathbf v} \\cdot {\\mathbf u} = {\\mathbf u} \\cdot {\\mathbf v}\\)인 셈이다. 닷 프로덕트는 어떻게 도출하는가? 그 기하학적인 구조는 무엇인가?"
-  },
-  {
-    "objectID": "posts/math-simple/2019-07-18-dot-product.html#with-law-of-cosine",
-    "href": "posts/math-simple/2019-07-18-dot-product.html#with-law-of-cosine",
-    "title": "Dot Product with Geometry",
-    "section": "With ‘Law of Cosine’",
-    "text": "With ‘Law of Cosine’\n우선 정석부터 가보자. 코사인 법칙을 활용해서 닷 프로덕트를 도출할 수 있다.\n\n\n여기를 참고 했다.\n우선 코사인의 법칙부터 살펴보자.\n\nLaw of COS\n\n\\[\n\\lVert \\mathbf u -  \\mathbf v \\rVert^2 = \\lVert  \\mathbf  u \\rVert^2 + \\lVert   \\mathbf  v \\rVert^2 - 2\\lVert  \\mathbf  u \\rVert \\lVert   \\mathbf  v \\rVert \\cos \\theta\n\\]\n\n노름(norm, 길이)에 대해서는 대칭과 쌍방선형이 유지되기 때문에 아래와 같이 쓸 수 있다.\n\n\\[\n\\lVert  \\mathbf u -  \\mathbf v \\rVert^2 = ( \\mathbf u -  \\mathbf v) \\cdot ( \\mathbf u -  \\mathbf v ) = \\lVert \\mathbf u \\rVert^2 +  \\lVert \\mathbf v \\rVert^2 - 2  (\\mathbf u \\cdot \\mathbf v)\n\\]\n따라서\n\\[\n\\mathbf u \\cdot  \\mathbf v = \\lVert \\mathbf u \\rVert \\lVert \\mathbf v \\rVert   \\cos \\theta = \\lVert \\mathbf u \\rVert   ( \\lVert \\mathbf v \\rVert \\cos \\theta) = \\lVert \\mathbf u \\rVert \\rVert \\text{Proj}_{\\mathbf u} \\mathbf v \\lVert\n\\]\n한편 반대로 \\(\\mathbf u\\)에서 \\(\\mathbf v\\)로 프로젝션하는 경우를 생각해 볼 수도 있겠다.\n\\[\n\\mathbf u \\cdot  \\mathbf v = \\lVert \\mathbf u \\rVert \\lVert \\mathbf v \\rVert   \\cos \\theta = \\lVert \\mathbf v \\rVert   ( \\lVert \\mathbf u \\rVert \\cos \\theta) = \\lVert \\mathbf v \\rVert \\rVert \\text{Proj}_{\\mathbf v} \\mathbf u \\lVert\n\\]"
-  },
-  {
-    "objectID": "posts/math-simple/2019-07-18-dot-product.html#applications",
-    "href": "posts/math-simple/2019-07-18-dot-product.html#applications",
-    "title": "Dot Product with Geometry",
-    "section": "Applications",
-    "text": "Applications\n\nCosine similarity\n두 개의 벡터가 얼마나 유사한지를 나타내는 지표로 코사인 유사도라는 게 있다. 위에서 보듯이 두 개의 벡터(\\(\\mathbf v, \\mathbf u\\))가 이루는 각 \\(\\theta\\)의 코사인 값은 다음과 같다.\n\\[\n\\cos \\theta = \\dfrac{\\mathbf u \\cdot \\mathbf v}{\\lVert \\mathbf u \\rVert \\lVert \\mathbf v \\rVert}\n\\]\n두 벡터가 가까울수록 코사인 값이 1에 가깝게 될 것이고, 멀수록 -1에 가깝게 될 것이다.\n\n\nHyperplane\n닷 프로덕트를 이해하고 있으면 기하학 문제를 쉽게 풀 수 있는 게 많다. 가장 좋은 예가 초평면(hyperplane)이다. 예를 들어 3차원 공간에서 점 \\(\\mathbf{x}^0 = (x_1^0, x_2^0, x_3^0)\\)를 지나면서 벡터 \\(\\mathbf{p} = (p_1, p_2, p_3)\\)에 수직인 평면을 찾고 있다고 하자. 복잡해보이지만 닷 프로덕트를 활용하면 쉽게 풀린다. 즉,\n\\[\n\\mathbf{p} \\cdot (\\mathbf{x} - \\mathbf{x}^0) = 0\n\\]\n평면 \\(\\mathbf x\\)가 \\(\\mathbf{x}^0\\)를 지나는 것은 분명하다. 이 평면이 \\(\\mathbf{p}\\)에 수직이라는 것은 두 벡터의 닷 프로덕트가 0이 되면 된다."
-  },
-  {
-    "objectID": "posts/math-simple/2019-07-18-dot-product.html#appendix-geometrically",
-    "href": "posts/math-simple/2019-07-18-dot-product.html#appendix-geometrically",
-    "title": "Dot Product with Geometry",
-    "section": "Appendix: Geometrically",
-    "text": "Appendix: Geometrically\n기하적으로 도출하는 보다 복잡한 방법도 있다. 이해를 돕기 위해서 2차원 벡터공간으로 한정해서 논의하겠다. \\(n\\) 차원으로 확대하는 것이 수학적으로 어렵지는 않다.\n\n\n보다 상세한 내용은 여기를 참고하라.\n일단 \\(\\mathbf u\\)가 길이 1로 표준화된 벡터라고 정의를 살짝 바꾸겠다. 즉, 새로운 \\(\\mathbf u\\)는 \\(\\rVert \\mathbf u \\lVert\\)로 \\(\\mathbf u\\)를 나눈 벡터다. 아래 그림처럼 이 벡터를 향해서 2차원 평면의 기저를 구성하는 \\((1,0)(\\equiv i)\\)과 \\((0,1)(\\equiv j)\\)에서 벡터로 프로젝션을 해보자.\n이렇게 프로젝션을 하면 프로젝션된 지점의 \\(x\\) 좌표는 공교롭게도 원점에서부터 해당 프로젝션된 지점까지의 벡터의 길이가 된다. \\(y\\)에 대해서도 마찬가지다.\n\n\n이제 (1,1)에서 벡터 \\(\\mathbf u\\)로 프로젝션을 해보자. (1,1)은 각각 두 개의 기저를 1의 가중치로 선형결합한 벡터다. 이 벡터의 프로젝션의 길이는 어떻게 구성될까? 그림에서 보듯이 \\(u_x + u_y\\)가 된다. 이를 일반적인 논리로 확장해보자. 어떤 임의의 벡터 \\(\\mathbf v(=(x,y))\\)가 존재할 때 해당 벡터는 각각 두 개의 기저의 선형 결합으로 이해할 수 있다.\n\n따라서 \\(\\mathbf v\\) 벡터를 \\(\\mathbf u\\)로 프로젝션한 길이는 다음과 같다.\n\\[\n\\underset{\\mathbf u 프로젝션}{\\left[\\begin{array}{ll}{u_{x}} & { u_{y}}\\end{array}\\right]}\\left[\\begin{array}{l}{x} \\\\ {y}\\end{array}\\right]= u_{x} \\cdot x + u_{y} \\cdot y = \\mathbf u \\cdot \\mathbf v\n\\]\n벡터를 기저의 선형결합을 통해 나타낼 수 있듯이, 벡터의 프로젝션의 길이 역시 비슷한 방식의 선형결합을 동원해서 나타낼 수 있다. 앞서 \\(\\mathbf u\\)가 표준화된 벡터라고 했다. 따라서 원래대로 돌려 놓으면 닷 프로덕트는 프로젝션된 지점까지의 벡터의 거리와 해당 벡터의 길이의 곱이 된다. 즉,\n\\[\n\\mathbf u \\cdot \\mathbf v = \\rVert \\mathbf u \\lVert \\rVert \\text{Proj}_{\\mathbf u} \\mathbf v \\lVert\n\\]"
-  },
-  {
     "objectID": "posts/regression/2019-10-25-understanding-regression.html",
     "href": "posts/regression/2019-10-25-understanding-regression.html",
     "title": "Understanding Regression",
@@ -474,5 +397,82 @@
     "title": "Understanding Logit Regression",
     "section": "계수는 어떻게 구하나?",
     "text": "계수는 어떻게 구하나?\n\\(\\hat{\\boldsymbol \\beta}\\)은 어떻게 구할 수 있을까? 현재까지 우리에게 주어진 조건을 보자.\n\nregressand는 0 또는 1 뿐이다.\n로짓 함수를 통해서 regressor를 해당 관찰의 확률과 연결시킬 수 있게 되었다.\n\n어차피 regressand를 실수로 바꿀 수 없는 이상 우리가 아는 선형 회귀분석을 쓸 수는 없다. 그래서 이름과 달리 우리가 아는 ‘회귀분석’, 즉 OLS를 여기서 쓸 수는 없다. 미안하다. 앞에서 거짓말 했다.\n\\[\n\\ln \\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})} = \\underset{1 \\times k}{\\phantom{\\boldsymbol{\\beta}}\\boldsymbol{x_i}\\phantom{\\boldsymbol{\\beta}}}\\underset{k \\times 1}{\\boldsymbol{\\beta}}, ~k = 1,  2, \\dotsc, n\n\\]\n애초에 \\(\\boldsymbol \\beta\\)을 알고 있어야, 이 식으로부터 \\(p(\\cdot)\\)을 구해낼 수 있다. 그런데 우리가 아는 회귀분석이란 \\(y\\)와 \\(\\boldsymbol{\\rm X}\\)가 주어졌을 때 하는 것 아닌가? 회귀분석의 좌변이 없기에 OLS로는 추정할 수 없다.\n그래서 로짓 회귀는 이름과 달리 \\(\\boldsymbol{\\beta}\\)의 추정치 \\(\\hat{\\boldsymbol\\beta}\\)를 구하는데 OLS의 방법을 쓰지 않는다. 로짓 회귀에서는 어떻게 \\(\\hat{\\boldsymbol\\beta}\\)를 얻는 것일까?\n\n확률 vs 우도\n잠시 로짓 회귀의 추정을 살펴보기 전에 확률과 우도의 차이점에 관해서 알아보자. 분포와 그 분포의 파리미터를 알고 있을 때 해당 샘플이 관찰될 확률을 구할 수 있다. 거칠게 표현하면 이렇다. 연속 확률변수 \\(x\\)가 따르는 어떤 분포가 있다고 할 때, 해당 분포의 파라미터(정규분포라면 평균과 분산이다) \\(\\theta\\)에 대해서 \\(P(x_1 < x <x_2 | \\theta)\\)이 확률이다. 우도(likelihood)는 무엇일까? 우도는 확률 분포의 수학적인 형태를 뒤집은 것이다. 일단 연속 확률 변수를 가정하자. 어떤 샘플이 관찰되었다고 할 때 우도란 특정 파라미터 하에서 얻게 되는 분포의 특정 확률 밀도함수를 의미한다. 연속 확률변수가 아니라 이산 확률변수라면, 확률 질량함수가 될 것이고 이 경우에는 확률과 같다. 파라미터를 변수로 잡으면 이 확률 밀도함수 혹은 질량함수가 우도가 된다.\n요컨대 주어진 것(conditioning)의 차이에 따라서 확률과 우도의 정의가 달라진다. 다시 정리해보자. 우도를 일종의 함수라고 할 때 그 함수의 \\(x\\)에 해당하는 것이 파라미터다.\n\n\n최대 우도 추정(maximum likelihood estimation)\n다시 문제로 돌아오자. 우리는 0, 1 즉 존재/비존재의 특징을 지니는 변수를 갖고 있다. 그리고 이 녀석은 이산 확률 분포를 따르기 때문에 우도 역시 그냥 확률이 되고, 이는 베르누이 분포를 따른다. 즉, 해당 확률이 발생할 확률 \\(p\\)일 때 발생하면 1, 아니면 0이 된다. 베르누이 분포의 확률 질량 함수를 간단하게 표현하는 방법은 없을까?\n\\[\nL(y_i) = p(\\boldsymbol{x_i}; \\boldsymbol{\\beta})^{y_i} (1-p(\\boldsymbol{x_i}; \\boldsymbol{\\beta}))^{1-y_i}\n\\]\n위와 같은 식으로 간단히 해결된다. 위 식에서 \\(y_i\\)가 1이면 \\(p(\\cdot)\\)가, 0이면 \\(1-p(\\cdot)\\)가 할당된다. 이제 우리는 \\(n\\) 개의 관찰에 관해서 식의 좌변에는 0,1을 갖고 있다. 각각의 시행이 독립적이라고 가정하면 주어진 형태의 데이터를 관찰하게 될 우도는 이 확률을 곱한 것과 같다. 즉,\n\\[\nL(y|{\\boldsymbol X}) = \\prod_{i = 1}^{n}  L(y_i) = \\prod p(\\boldsymbol{x_i}; \\boldsymbol{\\beta})^{y_i} (1-p(\\boldsymbol{x_i}; \\boldsymbol{\\beta}))^{1-y_i} = L(\\boldsymbol{\\beta}|y, {\\boldsymbol X})\n\\]\n\\(\\boldsymbol{\\beta}\\)에 따라서 우도가 달라지게 되므로 우도 함수가 일종의 목적 함수가 된다. 우도를 극대화해주는 \\(\\boldsymbol{\\beta}\\)가 최대 우도 추정치, 즉 MLE(MLE, maximum likelihood estimator) \\(\\hat{\\boldsymbol\\beta}\\) 이다. 즉,\n\\[\n\\hat {\\boldsymbol \\beta} = \\text{arg max }{L({\\boldsymbol \\beta}|y, {\\boldsymbol X})}\n\\]\n간혹 목적 함수, 즉 우도 함수가 비선형이라서 목적 함수의 최대화를 달성하는 해 \\(\\hat{\\boldsymbol\\beta}\\)를 축약형(reduced form)으로 구하기 힘들다는 내용을 접하곤 한다. 이는 반쪽만 맞다. 반례로 선형 회귀 모형에서 에러 항이 정규 분포를 따른다고 가정하면 최대 우도 추정을 적용할 수 있다. 정규 분포의 우도 역시 비선형이지만, 축약형 해를 쉽게 구할 수 있다.\n\n\n이때 MLE \\(\\hat{\\boldsymbol\\beta}\\)은 통상적인 방법으로 구한 OLS 추정량와 동일하다. 본문에서 말했듯이, 이는 수치적인 방법이 아니라 분석적인 방법을 통해 축약형으로 도출 가능하다. 여기를 참고하라.\n왜 로짓 회귀에서는 축약형 해를 구할 수 없을까? 우도 추정에서 우리가 관심이 있는 것은 목적함수를 극대화하는 \\(\\hat{\\boldsymbol\\beta}\\) 값이지 우도 자체가 아니다. 따라서 원래의 우도를 적절한 형태로 변형해도 변형된 목적함수를 극대화해주는 \\(\\hat{\\boldsymbol\\beta}\\)가 바뀌지 않는다면 목적 함수를 변형해도 괜찮다. 때로는 변형이 계산을 쉽게 바꿔준다. 정규분포는 오일러 수(\\(e\\))의 지수 위에 최대화에 필요한 파라미터가 다 올라가 있다. 따라서 원래 목적함수에 \\(\\log_n\\)를 취하면 곱셈이 덧셈으로 변하고 오일러 수 위에 지수로 올라가 있단 파라미터들이 앞으로 나오게 된다. 하지만 아래 식에서 보듯이 로짓 함수는 그렇지 않다.\n\\[\np(\\boldsymbol{x_i})  = \\dfrac{1}{e^{-\\boldsymbol{\\boldsymbol{x_i}}\\boldsymbol{\\beta}} + 1}\n\\]\n이 함수에 \\(\\log_n\\)을 취한다고 해서 단순해지지 않는다. 로짓 함수의 경우 우도 극대화에서 축약형을 해를 구할 수 있는 변형이 없기 때문에 해당 우도를 극대화하는 파라미터를 찾기 위해서는 수치 최적화(numerical optimization)를 활용하는 것이다.\n\n\n수치 최적화의 자세한 내용과 사례는 이 글을 참고하라.\n\n\n계수의 의미는?\n보통 기계 학습의 맥락에서 로짓 회귀는 가장 원시적인 분류기(classifier)로 소개된다. 즉 \\(y_i\\)의 속성을 예측하는 분류 장치이기 때문에 \\(\\hat{\\boldsymbol\\beta}\\)에 특별한 의미를 부여하지 않는다. 하지만 회귀 분석을 인과관계의 추론의 활용해 온 여타 분야에서는 \\(\\hat{\\boldsymbol\\beta}\\)를 어떻게 해석할 것인지는 중요한 질문이다.\n먼저 OLS의 경우 변수를 어떻게 변형했는지에 따라서 다르지만, 대체적으로 \\(\\beta_i\\)는 해당 regressor \\(x_i\\)의 한계효과로 해석할 수 있다. 즉, \\(x_i\\)가 한 단위 변할 때 이에 따른 \\(y_i\\)의 변화량을 의미한다. 그런데, 로짓 회귀에서는 이렇게 해석할 수 없다. 앞서 보았듯이, 로짓 회귀의 추정식은 다음과 같다.\n\\[\n\\ln \\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})} = \\underset{1 \\times k}{\\phantom{\\boldsymbol{\\beta}}\\boldsymbol{\\boldsymbol{x_i}}\\phantom{\\boldsymbol{\\beta}}}\\underset{k \\times 1}{\\boldsymbol{\\beta}}, ~k = 1,  2, \\dotsc, n\n\\]\n흔히 좌변의 \\(\\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})}\\)를 오즈(odds) 혹은 승산(勝計)이라고 부른다. 이때 \\(\\boldsymbol{\\beta} = [\\beta_1, \\dotsc, \\beta_j, \\dotsc, \\beta_k]\\)에서 \\(\\beta_j\\)는 regressor \\(\\boldsymbol{x_i}\\)에 속한 \\(x_j\\) 한 단위가 변할 때 오즈에 미치는 영향을 뜻한다.\n간혹 \\(\\beta_i\\)를 좌변의 상태를 변화시킬 확률의 변화로 해석하는 경우가 있는데 그렇게 하면 안된다. \\(x_i\\)의 변화가 상태를 0에서 1로 바꾸는 데 미치는 확률에 관심이 있다면, 아래의 두 가지에 유의하자.\n\nOLS의 경우 회귀식 자체가 선형이기 때문에 \\(\\beta_i\\)에 관한 해석이 쉽고 단순하다. 그냥 직선의 기울기다. 그런데 로짓 회귀에서는 그렇게 분명하지 않다. 회귀식 자체가 비선형이므로 한계 효과를 구하기 위한 기울기를 ‘어디서’ 구할지가 문제가 된다. 측정 위치에 따라서 기울기가 달라지기 때문이다.\n도출하는 방법이 크게 어렵지는 않다. 측정에는 대체로 두 가지 방식이 많이 활용된다. regressor 값에서 \\(x_i\\)별로 확률값의 변화를 추정한 뒤 이를 평균하는 방식이다. 반대로 regressor 값의 평균에서 한번만 \\(p_i\\)에 미치는 영향을 추정하는 방법이다. 통계 패키지가 대체로 두 방법을 모두 지원하니 필요할 경우 찾아서 값을 구하면 되겠다.\n\n\n\n계수의 수학적인 이해\n이 부분이 부담스럽다면 넘어가도 좋다. 앞서 말한 한계 효과는 \\(\\frac{\\partial p}{\\partial x_j}\\)이다. 즉, regressor의 한 변수\\(x_j\\) 가 한 단위 변할 때 확률 변화를 측정한다. 즉,\n\\[\np(\\boldsymbol{x_i}) = \\dfrac{1}{e^{-\\boldsymbol{x_i}\\boldsymbol{\\beta}} + 1}\n\\]\n이 녀석을 그대로 미분해보자. 먼저 아래와 같이 \\(p(\\cdot)\\)을 변형하자.\n\\[\n\\begin{aligned}\np(\\boldsymbol{x_i}) & = \\dfrac{1}{e^{-\\boldsymbol{x_i}\\boldsymbol{\\beta}} + 1} \\\\\n& = \\dfrac{e^{\\boldsymbol{x_i}\\boldsymbol{\\beta}}}{1 + e^{\\boldsymbol{x_i}\\boldsymbol{\\beta}}}\n\\end{aligned}\n\\]\n\\(\\boldsymbol x_i = [x^1, \\dotsc, x^k]\\)이고, \\(x^j\\)에 대해서 미분하면 아래와 같다.\n\\[\n\\dfrac{\\partial p(\\boldsymbol{x_i})}{\\partial x^j} = \\dfrac{\\beta_j e^{\\boldsymbol{x_i}\\boldsymbol{\\beta}}}{(e^{\\boldsymbol{x_i}\\boldsymbol{\\beta}} + 1)^2}\n\\]\n이처럼 한계 효과는 미분을 통해 간단히 도출할 수 있다. 앞서 말했던 측정의 어려운 점이 무엇인지 이제 잘 볼 수 있다. \\(\\boldsymbol{\\beta}\\)의 추정치로 MLE를 통해 구한 \\(\\hat{\\boldsymbol\\beta}\\)를 활용한다고 해도, 어떤 \\(\\boldsymbol{x_i}\\)에서 측정하는지에 따라서 값이 달라진다. 평균(marginal effect at mean)에서 한 번만 측정할 것인지 아니면 \\(n\\)개의 모든 데이터 포인트에 대해서 계산한 뒤 이를 평균(average marginal effect)할 것인지 등의 선택이 필요하다. 보통 후자를 많이 활용하고 통계 패키지마다 해당 옵션을 제공하고 있다."
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-18-dot-product.html",
+    "href": "posts/math-simple/2019-07-18-dot-product.html",
+    "title": "Dot Product with Geometry",
+    "section": "",
+    "text": "닷 프로덕트 혹은 내적을 기하적으로 이해하면 여러모로 편리하고 기억에도 잘 남는다."
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-18-dot-product.html#definition",
+    "href": "posts/math-simple/2019-07-18-dot-product.html#definition",
+    "title": "Dot Product with Geometry",
+    "section": "Definition",
+    "text": "Definition\ndot product는 내적이라고도 번역하지만 여기서는 닷 프로덕트로 쓰기로 하겠다. 먼저 정의부터 살펴보자.\n\\[\n\\mathbf{u}=\\left[u_{1}, {u}_{2}, \\ldots, {u}_{n}\\right] \\in {\\mathbb R}^n\n\\] \\[\n\\mathbf{v}=\\left[{v}_{1}, {v}_{2}, \\ldots, {v}_{n}\\right] \\in {\\mathbb R}^n\n\\] \\[\n\\mathbf{u} \\cdot \\mathbf{v} = \\sum_{n} u_i v_i\n\\]\n쉽게 말해서 닷 프로덕트는 차원이 같은 두 개의 인풋 벡터를 하나의 스칼라로 바꿔주는 일종의 함수로 이해할 수 있다. 두 개의 벡터를 서로 연관 짓는데 이를 해당 벡터의 길이라는 정보로 압축한다고 보면 얼추 맞을 듯 싶다. 하나의 숫자로 요약된다는 뜻에서 스칼라 프로덕트라고도 불린다. 그림으로 나타내면 아래와 같다.\n\n\nFrom Definition to Geometry\n닷 프로덕트에 관한 설명은 정의에서 바로 코사인 법칙으로 넘어간다. 하지만 뭔가 분명하지 않다. 이걸 조금 더 풀어보자.\n\n위 그림은 \\(2 \\times 2\\) 벡터의 닷 프로덕트를 각 요소로 분해한 것이다. 이중에서 \\(\\dfrac{\\pi}{2}\\) 각을 이루고 있는 벡터는 서로 곱하면 0이 된다. 따라서 닷 프로덕트 계산에서는 \\(a_x b_x\\)와 \\(a_y b_y\\)가 남게 된다.\n\n닷 프로덕트란 길이만 문제가 되므로 두 벡터를 한 방향으로 정렬하자.이렇게 되면, 파란색 높이가 \\(0\\)이 된다. 따라서 위 그림과 같은 코사인 법칙이 쉽게 도출된다.\n\n\nSymmetry\n\\(\\mathbf{v}\\) 벡터를 \\(\\mathbf u\\) 벡터 위에, 즉 이 벡터를 스크린 삼아 직각으로 쏜 프로젝션 벡터(\\(\\mathrm{Proj}_{\\mathbf u}{\\mathbf v}\\))의 길이와 \\(\\mathbf u\\) 길이를 곱하면 그것이 \\(\\mathbf u\\)와 \\(\\mathbf v\\)의 닷 프로덕트가 된다. 어느 벡터로 프로젝션 하는지는 관계가 없다. 즉,\n\\[\n{\\mathbf v} \\cdot {\\mathbf u} = \\Vert \\mathbf u \\Vert \\Vert {\\rm Proj}_{\\mathbf u} {\\mathbf v} \\Vert =  \\Vert \\mathbf u \\Vert (\\Vert \\mathbf v \\Vert \\cos\\theta)\n\\] \\[\n{\\mathbf u} \\cdot {\\mathbf v} = \\Vert \\mathbf v \\Vert \\Vert {\\rm Proj}_{\\mathbf v} {\\mathbf u} \\Vert = \\Vert \\mathbf v \\Vert (\\Vert \\mathbf u \\Vert \\cos\\theta)\n\\]\n다시 보면, 닷 프로덕트의 정의상 \\({\\mathbf v} \\cdot {\\mathbf u} = {\\mathbf u} \\cdot {\\mathbf v}\\)인 셈이다. 닷 프로덕트는 어떻게 도출하는가? 그 기하학적인 구조는 무엇인가?"
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-18-dot-product.html#with-law-of-cosine",
+    "href": "posts/math-simple/2019-07-18-dot-product.html#with-law-of-cosine",
+    "title": "Dot Product with Geometry",
+    "section": "With ‘Law of Cosine’",
+    "text": "With ‘Law of Cosine’\n우선 정석부터 가보자. 코사인 법칙을 활용해서 닷 프로덕트를 도출할 수 있다.\n\n\n여기를 참고 했다.\n우선 코사인의 법칙부터 살펴보자.\n\nLaw of COS\n\n\\[\n\\lVert \\mathbf u -  \\mathbf v \\rVert^2 = \\lVert  \\mathbf  u \\rVert^2 + \\lVert   \\mathbf  v \\rVert^2 - 2\\lVert  \\mathbf  u \\rVert \\lVert   \\mathbf  v \\rVert \\cos \\theta\n\\]\n\n노름(norm, 길이)에 대해서는 대칭과 쌍방선형이 유지되기 때문에 아래와 같이 쓸 수 있다.\n\n\\[\n\\lVert  \\mathbf u -  \\mathbf v \\rVert^2 = ( \\mathbf u -  \\mathbf v) \\cdot ( \\mathbf u -  \\mathbf v ) = \\lVert \\mathbf u \\rVert^2 +  \\lVert \\mathbf v \\rVert^2 - 2  (\\mathbf u \\cdot \\mathbf v)\n\\]\n따라서\n\\[\n\\mathbf u \\cdot  \\mathbf v = \\lVert \\mathbf u \\rVert \\lVert \\mathbf v \\rVert   \\cos \\theta = \\lVert \\mathbf u \\rVert   ( \\lVert \\mathbf v \\rVert \\cos \\theta) = \\lVert \\mathbf u \\rVert \\rVert \\text{Proj}_{\\mathbf u} \\mathbf v \\lVert\n\\]\n한편 반대로 \\(\\mathbf u\\)에서 \\(\\mathbf v\\)로 프로젝션하는 경우를 생각해 볼 수도 있겠다.\n\\[\n\\mathbf u \\cdot  \\mathbf v = \\lVert \\mathbf u \\rVert \\lVert \\mathbf v \\rVert   \\cos \\theta = \\lVert \\mathbf v \\rVert   ( \\lVert \\mathbf u \\rVert \\cos \\theta) = \\lVert \\mathbf v \\rVert \\rVert \\text{Proj}_{\\mathbf v} \\mathbf u \\lVert\n\\]"
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-18-dot-product.html#applications",
+    "href": "posts/math-simple/2019-07-18-dot-product.html#applications",
+    "title": "Dot Product with Geometry",
+    "section": "Applications",
+    "text": "Applications\n\nCosine similarity\n두 개의 벡터가 얼마나 유사한지를 나타내는 지표로 코사인 유사도라는 게 있다. 위에서 보듯이 두 개의 벡터(\\(\\mathbf v, \\mathbf u\\))가 이루는 각 \\(\\theta\\)의 코사인 값은 다음과 같다.\n\\[\n\\cos \\theta = \\dfrac{\\mathbf u \\cdot \\mathbf v}{\\lVert \\mathbf u \\rVert \\lVert \\mathbf v \\rVert}\n\\]\n두 벡터가 가까울수록 코사인 값이 1에 가깝게 될 것이고, 멀수록 -1에 가깝게 될 것이다.\n\n\nHyperplane\n닷 프로덕트를 이해하고 있으면 기하학 문제를 쉽게 풀 수 있는 게 많다. 가장 좋은 예가 초평면(hyperplane)이다. 예를 들어 3차원 공간에서 점 \\(\\mathbf{x}^0 = (x_1^0, x_2^0, x_3^0)\\)를 지나면서 벡터 \\(\\mathbf{p} = (p_1, p_2, p_3)\\)에 수직인 평면을 찾고 있다고 하자. 복잡해보이지만 닷 프로덕트를 활용하면 쉽게 풀린다. 즉,\n\\[\n\\mathbf{p} \\cdot (\\mathbf{x} - \\mathbf{x}^0) = 0\n\\]\n평면 \\(\\mathbf x\\)가 \\(\\mathbf{x}^0\\)를 지나는 것은 분명하다. 이 평면이 \\(\\mathbf{p}\\)에 수직이라는 것은 두 벡터의 닷 프로덕트가 0이 되면 된다."
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-18-dot-product.html#appendix-geometrically",
+    "href": "posts/math-simple/2019-07-18-dot-product.html#appendix-geometrically",
+    "title": "Dot Product with Geometry",
+    "section": "Appendix: Geometrically",
+    "text": "Appendix: Geometrically\n기하적으로 도출하는 보다 복잡한 방법도 있다. 이해를 돕기 위해서 2차원 벡터공간으로 한정해서 논의하겠다. \\(n\\) 차원으로 확대하는 것이 수학적으로 어렵지는 않다.\n\n\n보다 상세한 내용은 여기를 참고하라.\n일단 \\(\\mathbf u\\)가 길이 1로 표준화된 벡터라고 정의를 살짝 바꾸겠다. 즉, 새로운 \\(\\mathbf u\\)는 \\(\\rVert \\mathbf u \\lVert\\)로 \\(\\mathbf u\\)를 나눈 벡터다. 아래 그림처럼 이 벡터를 향해서 2차원 평면의 기저를 구성하는 \\((1,0)(\\equiv i)\\)과 \\((0,1)(\\equiv j)\\)에서 벡터로 프로젝션을 해보자.\n이렇게 프로젝션을 하면 프로젝션된 지점의 \\(x\\) 좌표는 공교롭게도 원점에서부터 해당 프로젝션된 지점까지의 벡터의 길이가 된다. \\(y\\)에 대해서도 마찬가지다.\n\n\n이제 (1,1)에서 벡터 \\(\\mathbf u\\)로 프로젝션을 해보자. (1,1)은 각각 두 개의 기저를 1의 가중치로 선형결합한 벡터다. 이 벡터의 프로젝션의 길이는 어떻게 구성될까? 그림에서 보듯이 \\(u_x + u_y\\)가 된다. 이를 일반적인 논리로 확장해보자. 어떤 임의의 벡터 \\(\\mathbf v(=(x,y))\\)가 존재할 때 해당 벡터는 각각 두 개의 기저의 선형 결합으로 이해할 수 있다.\n\n따라서 \\(\\mathbf v\\) 벡터를 \\(\\mathbf u\\)로 프로젝션한 길이는 다음과 같다.\n\\[\n\\underset{\\mathbf u 프로젝션}{\\left[\\begin{array}{ll}{u_{x}} & { u_{y}}\\end{array}\\right]}\\left[\\begin{array}{l}{x} \\\\ {y}\\end{array}\\right]= u_{x} \\cdot x + u_{y} \\cdot y = \\mathbf u \\cdot \\mathbf v\n\\]\n벡터를 기저의 선형결합을 통해 나타낼 수 있듯이, 벡터의 프로젝션의 길이 역시 비슷한 방식의 선형결합을 동원해서 나타낼 수 있다. 앞서 \\(\\mathbf u\\)가 표준화된 벡터라고 했다. 따라서 원래대로 돌려 놓으면 닷 프로덕트는 프로젝션된 지점까지의 벡터의 거리와 해당 벡터의 길이의 곱이 된다. 즉,\n\\[\n\\mathbf u \\cdot \\mathbf v = \\rVert \\mathbf u \\lVert \\rVert \\text{Proj}_{\\mathbf u} \\mathbf v \\lVert\n\\]"
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-13-Poisson.html",
+    "href": "posts/math-simple/2019-07-13-Poisson.html",
+    "title": "Poisson as Binormial Distribution",
+    "section": "",
+    "text": "푸아송 분포는 이항 분포를 주어진 시간(기간) 안에 발생하는 평균 발생 횟수로 다시 모델링한 분포다.\n이항 분포의 평균은 \\(\\lambda = n p\\)이고, 이항 분포에 \\(p = \\frac{\\lambda}{n}\\)을 다시 넣은 후 \\(n \\to \\infty\\) 극한값을 얻은 결과가 푸아송 분포다."
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-13-Poisson.html#defining-poisson-distribution",
+    "href": "posts/math-simple/2019-07-13-Poisson.html#defining-poisson-distribution",
+    "title": "Poisson as Binormial Distribution",
+    "section": "Defining Poisson Distribution",
+    "text": "Defining Poisson Distribution\n사실, 푸아송 분포 직관적으로 잘 안 와 닿는다. 정의부터 먼저 살펴보자. 한글 위키피디어에서 가져왔다.\n푸아송 분포(Poisson distribution)는 확률론에서 단위 시간 안에 어떤 사건이 몇 번 발생할 것인지를 표현하는 이산 확률 분포이다. 일단 정의에서 알 수 있는 것:\n\n푸아송이라는 사람이 만들었다.\n단위 시간 안에 발생하는 사건이 중요하다.\n이산 확률 분포다.\n\n수학적인 정의는 일단 생략하자. 뒤에서 다시 만나게 될 테니까. 정의만 봐서는 이해가 쉽지 않은 분포다. 직관적인 방식으로 푸아송 분포의 정의를 끌어낼 수는 없을까?\n\n\n정확하게 언급하자면 분포의 정의라기보다는 분포의 확률 질량 함수 혹은 확률 밀도 함수라고 적는 게 맞을 것이다. 하지만 편의상 특별한 언급이 없는 경우 분포의 정의를 이런 의미로 사용하도록 하자."
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-13-Poisson.html#poisson-as-binary",
+    "href": "posts/math-simple/2019-07-13-Poisson.html#poisson-as-binary",
+    "title": "Poisson as Binormial Distribution",
+    "section": "Poisson as Binary",
+    "text": "Poisson as Binary\n잠시 이항 분포를 떠올려보자. 아마도 모든 확률 관련 수업에서 제일 처음 배우는 분포가 아닐까 한다. 이항 분포란, 1회 시행 시 발생할 확률이 \\(p\\;\\)인 어떤 사건을 \\(n\\) 번 시행할 때 해당 사건이 \\(k\\) 번 발생할 확률의 분포를 나타낸다. 개별적으로 존재하는 사건이니까 당연히 이산 확률 분포에 속한다. 수학적으로는 아래와 같다.\n\\[\nB(k;  n,p)  =  {n \\choose k}  p^k(1-p)^{n-k}\n\\]\n위 정의를 말로 풀어보자. n번 시행 중에 사건이 발생한 경우 \\(k\\) 개를 뽑는다. 즉, 이런 경우가 \\(n\\) 번 중에서 얼마나 발생할 수 있는지 따진다. 그리고 해당 경우의 수가 발생할 확률을 곱해준 것이다.\n이항 분포를 ’시간’의 맥락으로 한번 바꿔보자. 하루 동안 내 사이트에 방문객이 한 명 찾아올 확률을 0.1이라고 하자. 28일 동안 10 명의 방문자가 찾아올 확률은? 이항 분포의 맥락에서 생각한다면, \\(B(10; 28, 0.1)\\)로 나타낼 수 있다. 그런데 이 모델링 어딘가 찜찜하다.\n이항 분포의 모델링은 하루 동안 사이트 방문객이 한 명일 확률에 기대고 있다. 그런데 하루에 방문객이 두 명 이상이라면? 하루에 방문객이 한 명 씩만 온다는 가정이 비현실적이지 않나?\n두 명 이상의 방문자를 수용하려면 이항 분포의 모형을 어떻게 수정해야 할까? 가장 손쉬운 방법은 단위 시간을 바꾸는 것이다. 단위 시간을 하루가 아니라 시간으로 바꿔보자. 하루는 24시간이고 매 시간 동일한 정도로 이용자가 방문한다면, 시간당 1명이 방문할 확률은 0.1/24이 된다. 낮은 확률이지만 이러한 가정에서 하루에 두 명 이상도 방문할 수 있게 된다."
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-13-Poisson.html#deriving-poisson",
+    "href": "posts/math-simple/2019-07-13-Poisson.html#deriving-poisson",
+    "title": "Poisson as Binormial Distribution",
+    "section": "Deriving Poisson",
+    "text": "Deriving Poisson\n이항 분포와 달리 푸아송 분포에서 파라미터는 한 개다. 푸아송 분포의 파라미터 \\(\\lambda\\)는 단위 시간 당 평균 발생 횟수를 뜻한다. 비율(rate)이라고도 부른다.\n\\(\\lambda\\)가 ’파라미터’라는 의미는 무엇일까? 과거의 데이터로부터 혹은 어떤 방법으로든 푸아송 분포를 정의하는 시점에서 알려진 혹은 정의된 사실이라는 의미다. 즉, 우리가 관심을 두고 있는 기간 내에 평균적인 방문자 수가 주어진다는 뜻이다.\n기간 내에 특정 순간 동안 어느 정도의 방문자가 올지 미리 알 수 없다. 방문자가 없다가 어느 순간 10명이 몰려올 수도 있다. 일정한 간격으로 한 명씩 10 명이 올 수도 있다. 매번 시행 때마다 해당 사건이 발생할 확률을 모형화하는 이항분포를 시간의 맥락으로 바꾸면 이렇게 뭔가 어색해 보인다.\n이항 분포를 통해 푸아송 분포를 표현하는 방법은 없을까? 어떤 패턴으로 방문자가 올지 알 수 없다면, 이항 분포의 기준이 되는 시행(시점)을 최대한 잘게 쪼개면 어떨까? 이항 분포에서 평균은 \\(np\\;\\) 다. 즉, 이항 분포의 맥락에서 보면 푸아송 분포의 파라미터 \\(\\lambda = n p\\;\\)다. \\(\\lambda\\)가 고정되어 있다면 \\(n\\)을 무한대로 갈 때 \\(p\\)는 적절한 방식으로 0으로 접근한다고 가정해도 무방하다. 정리하면 푸아송 분포를 이항 분포에서 도출하기 위한 전략은 다음과 같다.\n\n\\(n\\)과 \\(p\\)를 \\(\\lambda\\) 파라미터 하나로 바꾼다.\n\\(n\\)이 무한대로 갈 때 이항 분포의 확률 밀도 함수의 극한값을 도출한다.\n\n\\[\n\\begin{aligned}\n\\lim_{n \\to \\infty} B(k; n, p) = & \\lim_{n \\to \\infty}  {n \\choose k }  p^k(1-p)^{n-k} \\\\\n= & \\lim_{n \\to \\infty}  \\dfrac{n!}{k!(n-k)!}(\\dfrac{\\lambda}{n})^k  (1-\\dfrac{\\lambda}{n})^{n-k}  \\\\\n= & \\lim_{n \\to \\infty}  \\underbrace{\\left[  \\dfrac{n!}{(n-k)!  n^k} \\right]}_{(가)}  \\left[  \\dfrac{\\lambda^k}{k!}  (1-\\dfrac{\\lambda}{n})^{n}  \\right]  \\underbrace{\\left[  (1-\\dfrac{\\lambda}{n})^{-k}\\right]}_{(나)}  \\\\\n= &  1\\left[  \\dfrac{\\lambda^k}{k!}  e^{-\\lambda}\\right] 1 \\\\\n= & f(k; \\lambda)\n\\end{aligned}\n\\]\n푸아송 분포 확률 질량 함수 \\(f(k; \\lambda)\\) 앞 뒤로 붙은 극한값 (가)와 (나)에 관해 사족을 덧붙여보자. 먼저 (가)는 아래와 같다.\n\\[\n  \\lim_{n \\to \\infty} \\dfrac{n!}{(n-k)!  n^k} =  \\lim_{n \\to \\infty}  \\dfrac{n(n-1)\\dotsb(n-(k-1))}{n^k}  = 1\n\\]\n분자와 분모 모두 가장 높은 \\(n\\)의 차수는 \\(k\\)이고, 그 계수가 모두 1이므로 극한값은 1이다. (나)의 극한값은 쉽게 알 수 있으니 생략하자.\n이항 분포의 확률 혹은 확률 질량 함수의 극한값이 바로 푸아송 분포의 그것이다! 이거 참 재미있는 연결 고리가 아닌가! 사실 푸아송 분포의 정의를 그냥 들여다봐서는 그다지 직관적인 이해를 얻기는 쉽지 않다. 이렇게 이항 분포에서 출발하는 것이 직관적으로 이해하는 데 도움이 된다."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "lost_in_economics",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n브라우저에서 파이썬을 돌린다굽쇼?\n\n\n\n\n\n\nNov 19, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncoding\n\n\nwsl\n\n\ncontainer\n\n\n\n\nDocker Desktop 없이 WSL에서 Podman으로 콘테이너를 써보자\n\n\n\n\n\n\nSep 13, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\nPython, Julia, R을 하나의 도구로 코딩하자.\n\n\n\n\n\n\nFeb 2, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n코드 셰어링, 이제 걱정 끝\n\n\n\n\n\n\nOct 27, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n\\(\\rm\\LaTeX\\)을 다시 써볼까?\n\n\n\n\n\n\nOct 24, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n윈도 터미널 잘 쓰기\n\n\n\n\n\n\nSep 26, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\npython 만으로 웹 앱을 만들어보자\n\n\n\n\n\n\nMar 9, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n깃헙 위에 블로그를 보다 쉽게 만들어볼까?\n\n\n\n\n\n\nMar 7, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nregression\n\n\n\n\n로지스틱 회귀를 이해해봅시다!\n\n\n\n\n\n\nNov 10, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nregression\n\n\n\n\n회귀분석, 기하학적으로 한 방에 깨우치기\n\n\n\n\n\n\nOct 25, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nmath-simple\n\n\n\n\n기하학적으로 내적을 살펴보자.\n\n\n\n\n\n\nJul 18, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nmath-simple\n\n\n\n\n이항 분포의 관점에서 푸아송 분포 이해하기\n\n\n\n\n\n\nJul 13, 2019\n\n\nJS HUHH\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Junsok Huhh",
+    "section": "",
+    "text": "C.V.\nlong | short\n\n\nHistory of lostineconomics.com\n\nv2 built with fastpages\nv1 built with markdown on github\nv0 built with BlogDown on github"
   }
 ]
