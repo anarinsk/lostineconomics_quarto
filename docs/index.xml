@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>lostineconomics.com</title>
-<link>https://www.github.io/lostineconomics_quarto/index.html</link>
-<atom:link href="https://www.github.io/lostineconomics_quarto/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://anarinsk.github.io/lostineconomics_quarto/index.html</link>
+<atom:link href="https://anarinsk.github.io/lostineconomics_quarto/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-0.9.305</generator>
 <lastBuildDate>Tue, 26 Apr 2022 15:00:00 GMT</lastBuildDate>
 <item>
   <title>Happy Git-ing!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://www.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</link>
   <description><![CDATA[ 
 
 
@@ -80,14 +80,14 @@ Note
 
  ]]></description>
   <category>git</category>
-  <guid>https://www.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</guid>
   <pubDate>Tue, 26 Apr 2022 15:00:00 GMT</pubDate>
   <media:content url="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmxcpJ%2Fbtq9IDonGa1%2FLGoNFr3kBHT3tm8QnIwjrK%2Fimg.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Python in the Browser</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://www.github.io/lostineconomics_quarto/posts/computer-tools/2021-11-19-python-in-github.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2021-11-19-python-in-github.html</link>
   <description><![CDATA[ 
 
 
@@ -113,7 +113,7 @@ Note
 <h2 class="anchored" data-anchor-id="dev-모드-진입">dev 모드 진입</h2>
 <p>github를 dev 모드로 돌린다. 웹 브라우저 리포지터리 창에서 <code>.</code> 버튼을 누르거나 <code>.dev</code> 주소로 접근하면 된다. 익숙한 vs code 화면에 보일 것이다.</p>
 <p>이제 아래 왼쪽 탭 화면에서 extension을 찾으면 된다. 아래 그림처럼 생겼다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/code.visualstudio.com/assets/docs/editor/extension-marketplace/extensions-view-icon.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 10%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/code.visualstudio.com/assets/docs/editor/extension-marketplace/extensions-view-icon.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 10%;"></p>
 </section>
 <section id="extension-설치" class="level2">
 <h2 class="anchored" data-anchor-id="extension-설치">extension 설치</h2>
@@ -133,14 +133,14 @@ Note
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://www.github.io/lostineconomics_quarto/posts/computer-tools/2021-11-19-python-in-github.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2021-11-19-python-in-github.html</guid>
   <pubDate>Thu, 18 Nov 2021 15:00:00 GMT</pubDate>
   <media:content url="https://pyodide.org/en/stable/_static/pyodide-logo.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Enter the Podman!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://www.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</link>
   <description><![CDATA[ 
 
 
@@ -411,14 +411,14 @@ Note
 
  ]]></description>
   <category>container</category>
-  <guid>https://www.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</guid>
   <pubDate>Sun, 12 Sep 2021 15:00:00 GMT</pubDate>
-  <media:content url="https://www.github.io/lostineconomics_quarto//posts/container/image.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://anarinsk.github.io/lostineconomics_quarto//posts/container/image.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Docker + Jupyter + 한글 폰트</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://www.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</link>
   <description><![CDATA[ 
 
 
@@ -518,14 +518,14 @@ Note
 
  ]]></description>
   <category>container</category>
-  <guid>https://www.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</guid>
   <pubDate>Sat, 08 May 2021 15:00:00 GMT</pubDate>
   <media:content url="https://developers.redhat.com/sites/default/files/styles/article_feature/public/blog/2014/05/homepage-docker-logo.png?itok=zx0e-vcP" medium="image"/>
 </item>
 <item>
   <title>All into VS Code</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://www.github.io/lostineconomics_quarto/posts/computer-tools/2021-02-02-all_for_vs_code.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2021-02-02-all_for_vs_code.html</link>
   <description><![CDATA[ 
 
 
@@ -565,7 +565,7 @@ Note
 </section>
 <section id="핵심" class="level2">
 <h2 class="anchored" data-anchor-id="핵심">핵심</h2>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="img-fluid">{: style=“margin: auto; display: block; border:1.5px solid #021a40;”}{: width=“700”}</p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="img-fluid">{: style=“margin: auto; display: block; border:1.5px solid #021a40;”}{: width=“700”}</p>
 <ul>
 <li>VS Code의 익스텐션 <code>Remote-Container</code> 컨테이너 접속 기능을 활용해 <code>datascience-notebook</code> 컨테이너 접속한다.
 <ul>
@@ -664,16 +664,16 @@ Note
 <li><code>ipynb</code>를 확장자로 해서 노트북을 쓰고 싶다면, 그냥 만들어 쓰면 된다!</li>
 <li>VS Code에 Jupyter 확장이 있기 때문에 보통의 웹 브라우저에서 쓰는 Jupyter 노트북과 거의 동일한 기능을 제공한다. 웹 노트북에서와 마찬가지로 파이썬, 줄리아, R의 커널을 선택하면 된다 (아래 그림의 오른쪽 상단 박스). jupyterlab과 거의 비슷한 인터페이스를 지니고 있다. 오히려 주피터에 비해 복잡하지 않아서 좋다고 느낄지도 모르겠다.</li>
 </ul>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 </section>
 <section id="setting-for-remote-connection" class="level2">
 <h2 class="anchored" data-anchor-id="setting-for-remote-connection">Setting for Remote Connection</h2>
 <p>앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 좋다면 아래와 같이 하면 된다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <ul>
 <li>만일 위와 같은 화면에 Remote Exlorer에서 뜨지 않는다면 컨테이너가 부착되지 않는 것이다. 컨테이너를 부착하면 된다.</li>
 </ul>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <ul>
 <li><code>Extension</code> &gt; <code>REMOTE EXPLORER</code> &gt; <code>DETAILS</code> 탭에서 가운데 설정 모양이 “Open Container Configuration File”이다.</li>
 <li>옆 에디터 창에 json 형식의 설정이 뜬뜬다. 여기서 관련 extension 등의 설정을 지정할 수 있다. 이렇게 설정을 해두면 해당 컨테이너를 부착할 때 설정한 대로 자동으로 옵션들이 적용된다. 매우 편리하다.</li>
@@ -697,7 +697,7 @@ Note
 <span id="cb5-17">        <span class="dt" style="color: #AD0000;">"r.rterm.linux"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/opt/conda/bin/radian"</span></span>
 <span id="cb5-18">    <span class="fu" style="color: #4758AB;">}</span></span>
 <span id="cb5-19"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <ul>
 <li><code>File</code> &gt; <code>Perefences</code> &gt; <code>Settings</code>에서도 설정에 접근할 수 있다.</li>
 <li>VS Code의 설정은 두가지 축을 지닌다. 하나는 설정 전체를 담은 json 파일이다. 왼쪽 <code>&gt;</code> 표시된 항목에서처럼 카테고리 별로 구별되어 쉽게 접근할 수 있다. 이 하나의 설정을 위 그림에서 보듯이 User, Remote(컨네이터), Workspace 별로 별도로 지정해 활용할 수도 있다.</li>
@@ -708,14 +708,14 @@ Note
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://www.github.io/lostineconomics_quarto/posts/computer-tools/2021-02-02-all_for_vs_code.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2021-02-02-all_for_vs_code.html</guid>
   <pubDate>Mon, 01 Feb 2021 15:00:00 GMT</pubDate>
   <media:content url="https://velog.velcdn.com/images/jeongjae96/post/0db5fc06-a8bb-4970-bf6c-3b5a69ebe940/vs%20code.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Viva, Binder!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://www.github.io/lostineconomics_quarto/posts/computer-tools/2020-10-27-viva-binder.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-10-27-viva-binder.html</link>
   <description><![CDATA[ 
 
 
@@ -729,7 +729,7 @@ Note
 <section id="turn-a-git-repo-into" class="level2">
 <h2 class="anchored" data-anchor-id="turn-a-git-repo-into">Turn a Git repo into!</h2>
 <p>서비스 참 시원시원하다. 로그인도 필요 없다. 깃헙 레포에 있는 코드를 받아서 가상 머신 위에 해당 결과를 구현해준다. R, Python, Julia를 지원한다. 세 언어 모두 기본 베이스로 Jupyter허브를 활용한다. 간편한 연동을 위해서는 깃헙 리포를 public으로 설정해야 한다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/binder_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/binder_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <ul>
 <li><code>GitHub</code>: 깃헙 주소를 넣는다.</li>
 <li><code>Git branch, tag or commit</code>: 관련된 깃 브렌치, 태그, 커밋 등을 넣는다.</li>
@@ -742,8 +742,8 @@ Note
 </ul></li>
 </ul>
 <p>아래 공유를 위한 주소도 떠 있으니 공유를 할 때는 해당 주소만 던져주면 된다. 이제 <kbd>launch</kbd> 버튼을 누르자. 상당히 오랜 시간 동안 뭔가가 설치된다. 설치되는 내용을 보면 소프트웨어 구동에 필요한 개별 이미지를 빌드한 후 이를 클라우드에 띄워 구동한다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <p>장점은 충분히 많다. 코드가 제대로 구현되는지 확인하는 수준이거나 코드를 가끔 짧은 시간 동안 실행해야 하는 정도라면 더 이상 바랄 게 없다. 단점이라면 도커 이미지를 빌드하고 녀석을 푸시해 실행할 때까지 시간이 좀 걸린다는 것인데, 뭐 이 정도 시간 비용 쯤이야!</p>
 
 
@@ -751,14 +751,14 @@ Note
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://www.github.io/lostineconomics_quarto/posts/computer-tools/2020-10-27-viva-binder.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-10-27-viva-binder.html</guid>
   <pubDate>Mon, 26 Oct 2020 15:00:00 GMT</pubDate>
   <media:content url="https://mybinder.org/static/logo.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
   <title>\(\rm\LaTeX\) in Modern Ways</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://www.github.io/lostineconomics_quarto/posts/computer-tools/2020-10-24-classy-latex.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-10-24-classy-latex.html</link>
   <description><![CDATA[ 
 
 
@@ -842,19 +842,19 @@ Note
 <span id="cb8-9"><span class="ex" style="color: null;">tlmgr</span> update <span class="at" style="color: #657422;">--all</span></span></code></pre></div>
 <p>상태를 초기화하고 한글을 까는 명령어들을 모아둔 것이다. 실행 중인 도커 내에서 해당 디렉토리로 이동해서 <code>./install_kotex.sh</code>로 명령을 실행하자.</p>
 <p>이제 VS Code로 가자. 필요한 Extension은 앞서 살펴본 Latex workshop과 더불어 <a href="https://code.visualstudio.com/docs/remote/remote-overview">Remote-Container</a>를 설치하자. 이 녀석을 설치하면 WSL 내에서 돌아가는 컨테이너 안에도 VS Code를 통해 바로 접속할 수 있다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - 아래 <code>&gt;&lt;</code>으로 된 부분을 클릭하면 상단에 메뉴가 뜬다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - “attach to running container”를 실행해서 실행중인 도커 콘테이너를 부착한다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_3.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - 아래 <code>&gt;&lt;</code>으로 된 부분을 클릭하면 상단에 메뉴가 뜬다.</p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - “attach to running container”를 실행해서 실행중인 도커 콘테이너를 부착한다.</p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_3.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>부착하면 새 창이 뜨면서 아래 녹색 창이 콘테이너 부착되었음을 알려준다.</li>
 <li>콘테이너 내부에 Latex Workshop 확장(extension)을 설치해야 한다.</li>
 </ul>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_4.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_4.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>설치 후 해당 Extension의 설정을 고쳐주자.</li>
 <li>위에 찾기창에서 디폴트로 떠 있는 내용 뒤에 “pdf” 치면 pdf에 관련된 설정만 필터링된다.</li>
 </ul>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>위 항목을 찾아서 적당한 포워딩 포트를 넣어준다.</li>
 <li>포트가 잘 포워딩 된다면, 아래와 같이 VS Code에서 PDF 뷰어를 활성화할 수 있다.</li>
@@ -870,7 +870,7 @@ Note
 <section id="container-setting" class="level4">
 <h4 class="anchored" data-anchor-id="container-setting">Container Setting</h4>
 <p>콘테이너에서 해당 포트가 잘 포워딩되고 있는지 확인하자.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>옆에 원으로 표시해 둔 곳은 <code>Remote-Container</code> 확장으로 바로 가는 단축 아이콘이다.</li>
 <li>위 그림처럼 35556 포트를 통해 잘 포워딩되고 있음을 알 수 있다.
@@ -879,7 +879,7 @@ Note
 </ul></li>
 </ul>
 <p>이제 VS Code에서 텍 파일을 열고 문서를 작성하고 컴파일하면 된다. Latex Workshop이 설치되어 있다면, <code>.tex</code> 파일에 알아서 반응하니 걱정 마시라.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_6.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_6.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 </section>
 </section>
 </section>
@@ -901,14 +901,14 @@ Note
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://www.github.io/lostineconomics_quarto/posts/computer-tools/2020-10-24-classy-latex.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-10-24-classy-latex.html</guid>
   <pubDate>Fri, 23 Oct 2020 15:00:00 GMT</pubDate>
   <media:content url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/LaTeX_project_logo_bird.svg/1920px-LaTeX_project_logo_bird.svg.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>The Best Terminal App for Windows</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://www.github.io/lostineconomics_quarto/posts/computer-tools/2020-09-26-windows-terminal.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-09-26-windows-terminal.html</link>
   <description><![CDATA[ 
 
 
@@ -922,8 +922,8 @@ Note
 <section id="설정" class="level2">
 <h2 class="anchored" data-anchor-id="설정">설정</h2>
 <p>VS Code도 그렇고 윈도 터미널도 그렇고 설정이 <code>settings.json</code> 파일로 되어 있다. GUI가 아니라서 처음엔 어색할 수 있겠지만, 쓰다보면 이게 훨씬 편하다는 것을 알게 될 것이다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/window-terminal/wt_1.png" class="img-fluid">{: style=“textalign:center;” width=“500”}<br>
-<img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/window-terminal/wt_2.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/window-terminal/wt_1.png" class="img-fluid">{: style=“textalign:center;” width=“500”}<br>
+<img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/window-terminal/wt_2.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
 <section id="테마" class="level3">
 <h3 class="anchored" data-anchor-id="테마">테마</h3>
 <p>엄청나게 다양한 테마를 손쉽게 구현할 수 있다.</p>
@@ -955,14 +955,14 @@ Note
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://www.github.io/lostineconomics_quarto/posts/computer-tools/2020-09-26-windows-terminal.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-09-26-windows-terminal.html</guid>
   <pubDate>Fri, 25 Sep 2020 15:00:00 GMT</pubDate>
   <media:content url="https://upload.wikimedia.org/wikipedia/commons/0/01/Windows_Terminal_Logo_256x256.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Docker 컨테이너 + 한글 폰트</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://www.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html</link>
   <description><![CDATA[ 
 
 
@@ -976,7 +976,7 @@ Note
 <h2 class="anchored" data-anchor-id="왜-필요한가">왜 필요한가?</h2>
 <p>Jupyter 등에서 matplotlib을 쓸 때 라벨이 한글일 경우, 대부분 한글 출력에 문제를 겪게 된다. ㅁㅁㅁ형태로 출력되는데, 파이썬 환경에서 한글 폰트가 인식되지 않게 때문이다. 일반적인 환경이라면 웹 검색으로 찾을 수 있는 <a href="https://financedata.github.io/posts/matplotlib-hangul-for-windows-anaconda.html">가이드</a>를 통해 해결할 수 있다.</p>
 <p>그런데 도커 환경을 쓴다면 이런 가이드가 별 소용이 없다. 도커는 아래 그림과 같이 ’host os - 도커 - 컨테이너’의 구조로 돌아간다. 컨테이너(App x)가 각기 독자적인 os를 지니고 있기 때문에 해당 os에서 한글을 인식시켜줘야 특정 컨테이너 환경 안에서 한글을 쓸 수 있게 된다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/container/https:/www.docker.com/sites/default/files/d8/styles/large/public/2018-11/container-what-is-container.png?itok=vle7kjDj" class="img-fluid"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/container/https:/www.docker.com/sites/default/files/d8/styles/large/public/2018-11/container-what-is-container.png?itok=vle7kjDj" class="img-fluid"></p>
 </section>
 <section id="simple-solution" class="level2">
 <h2 class="anchored" data-anchor-id="simple-solution">Simple Solution</h2>
@@ -1014,14 +1014,14 @@ sudo fc-cache -fv</code></pre>
 
  ]]></description>
   <category>container</category>
-  <guid>https://www.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html</guid>
   <pubDate>Wed, 23 Sep 2020 15:00:00 GMT</pubDate>
   <media:content url="https://developers.redhat.com/sites/default/files/styles/article_feature/public/blog/2014/05/homepage-docker-logo.png?itok=zx0e-vcP" medium="image"/>
 </item>
 <item>
   <title>Docker, 소박한 사용법</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://www.github.io/lostineconomics_quarto/posts/container/2020-09-23-docker-humble-practice.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-23-docker-humble-practice.html</link>
   <description><![CDATA[ 
 
 
@@ -1163,10 +1163,10 @@ sudo fc-cache -fv</code></pre>
 <li>RStudio + R: <code>localhost:8787</code></li>
 </ul>
 <p>주피터야 원래부터 웹 브라우저 기반이었으니 보통 깔아 쓰는 것과 차이를 느낄 수 없다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/container/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/jupyter.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/container/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/jupyter.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <p>RStudio도 그럴까? 그렇다. 원래 RStudio라는 IDE가 웹 기반으로 만들어졌기 때문에 이 역시 차이를 느낄 수 없다. 아래 화면에서 로그인을 하면 친숙한 RStudio의 화면이 뜬다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/container/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/rstudio_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/container/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/rstudio_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/container/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/rstudio_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/container/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/rstudio_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <p>해당 페이지 아이콘을 바탕화면 혹은 바로가기에 두고 쓰면 조금 편리 하겠다.</p>
 <section id="특화된-패키지-혹은-설정이-필요하다면" class="level3">
 <h3 class="anchored" data-anchor-id="특화된-패키지-혹은-설정이-필요하다면">특화된 패키지 혹은 설정이 필요하다면?</h3>
@@ -1176,9 +1176,9 @@ sudo fc-cache -fv</code></pre>
 <h3 class="anchored" data-anchor-id="도커-이미지-관리">도커 이미지 관리</h3>
 <p>이미지를 업데이트하고 싶다면 어떻게 해야 할까? 정석대로 하자면, WSL 2 콘솔창에서 실행중인 컨테이너를 멈추고, 이 컨테이너의 이미지를 지워야 할 것이다. 그렇게 해도 되지만, 윈도용 도커 프로그램에서는 보다 간편한 방법을 제공한다.</p>
 <p>대시보드 상에서 컨테이너를 실행하고 멈출 수 있고 이미지도 관리할 수 있다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/container/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/docker_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/container/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/docker_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <p>아예 해당 이미지 및 컨테이너 데이터 전체를 리셋하는 방법도 있다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/container/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/docker_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/container/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/docker_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <p>예를 들어보자. 파이썬으로 코딩을 한다면 그리고 주피터 환경을 써야 한다면 어떻게 하는 것이 좋을까? 주피터에서 공식적으로 운영하는 도커 이미지가 있다. 도커로 R을 쓰고 싶다면? 역시 rocker라는 공식적인 프로젝트가 있다. 개인이 제조한 사설 이미지보다는 이런 녀석들을 끌어다쓰는 편이 좋다.</p>
 <p>이하에서는 내가 기본으로 사용하는 두 개의 이미지를 바탕에 깔고 설명을 진행하도록 하겠다.</p>
 
@@ -1189,14 +1189,14 @@ sudo fc-cache -fv</code></pre>
 
  ]]></description>
   <category>container</category>
-  <guid>https://www.github.io/lostineconomics_quarto/posts/container/2020-09-23-docker-humble-practice.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-23-docker-humble-practice.html</guid>
   <pubDate>Tue, 22 Sep 2020 15:00:00 GMT</pubDate>
   <media:content url="https://developers.redhat.com/sites/default/files/styles/article_feature/public/blog/2014/05/homepage-docker-logo.png?itok=zx0e-vcP" medium="image"/>
 </item>
 <item>
   <title>Streamlit + Heroku</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://www.github.io/lostineconomics_quarto/posts/computer-tools/2020-03-09-Streamlit-Heroku.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-03-09-Streamlit-Heroku.html</link>
   <description><![CDATA[ 
 
 
@@ -1351,14 +1351,14 @@ Note
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://www.github.io/lostineconomics_quarto/posts/computer-tools/2020-03-09-Streamlit-Heroku.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-03-09-Streamlit-Heroku.html</guid>
   <pubDate>Sun, 08 Mar 2020 15:00:00 GMT</pubDate>
   <media:content url="https://t3.ftcdn.net/jpg/03/67/94/46/240_F_367944626_tkPR8g1rZihc0ql5WpJhDYffS3nTfKqP.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Build Your Blog on Github, Easily</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://www.github.io/lostineconomics_quarto/posts/computer-tools/2020-03-07-blogging-with-fastpages.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-03-07-blogging-with-fastpages.html</link>
   <description><![CDATA[ 
 
 
@@ -1413,21 +1413,21 @@ Note
 <section id="페이지-생성" class="level3">
 <h3 class="anchored" data-anchor-id="페이지-생성">페이지 생성</h3>
 <p><a href="https://github.com/fastai/fastpages/generate">https://github.com/fastai/fastpages/generate</a></p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <p>깃헙에 로그인한 상태에서 이 곳에 접속해 페이지를 생성한다. 페이지를 생성한 후 내 깃헙 계정에서 조금 기다리면 “Pull Request”(PR) 메시지가 날아온다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 </section>
 <section id="pr" class="level3">
 <h3 class="anchored" data-anchor-id="pr">PR</h3>
 <p>PR을 하기 전에 SSH 키를 생성하는 작업을 해줘야 한다. 메시지에 친절하게 설명이 되어 있으니 그대로 따라하면 된다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_3.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_3.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <ol type="1">
 <li>링크를 눌러 웹 페이지에서 private key와 public 키를 생성한다. RSA, 4069를 선택하도록 하다.</li>
 <li>두번째의 링크를 눌러 새 sceret을 생성하고 private key를 넣어준다. 이름은 반드시 <code>SSH_DEPLOY_KEY</code>로 해야 한다.</li>
 <li>세번째의 링크를 눌러 deploy key를 생성하고 여기에 public key를 넣어주면 된다. 이름은 임의로 지정하면 된다.</li>
 </ol>
 <p>마지막으로 PR를 수락하고 이를 아래 화면 같이 merge하면 준비가 완료된다. 깃헙이 작업을 하는 동안 잠시 기다리면 된다. 작업 상태가 궁금하면 github actions 탭을 확인하면 된다. 이후 몇 가지를 더 묻는데 대충 진행해도 문제 없다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_4.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_4.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <p>설치가 끝나면 아래와 같이 생성된 페이지를 확인할 수 있다. 아래는 위의 절차에 따라서 테스트계정(test-fastpages)에 페이지를 생성한 결과다.</p>
 <p><a href="https://anarinsk.github.io/test-fastpages/">https://anarinsk.github.io/test-fastpages/</a></p>
 </section>
@@ -1528,13 +1528,13 @@ Note
 <li>따라서 웹 에디터에서 글을 수정한 후 적절한 주소를 지정해주고 동기화를 하면, 즉 커밋을 하면 바뀐 내용을 반영해 블로그가 다시 빌드 된다.</li>
 </ul></li>
 </ul>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_6.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_6.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 </section>
 </section>
 <section id="update는-어떻게-하지" class="level2">
 <h2 class="anchored" data-anchor-id="update는-어떻게-하지">Update는 어떻게 하지?</h2>
 <p>블로그 자체의 Jekyll 기반 코드들도 업데이트될텐데, 이건 어쩌나 생각하셨다면 걱정할 필요가 없다. 깃헙에서 제공하는 PR 기능을 활용해서 내 리포지토리까지 거의 자동으로 업데이트해준다. 다만 커스터마이즈를 많이 했다면 지원이 안될 수도 있다는 점에 유념하시라. - <code>issues</code> &gt; <code>New issue</code> &gt; <code>Get started</code>를 누르면 아래의 그림을 볼 수 있다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <p>여기서 아무 것도 바꾸지 말고 <code>Submit new issue</code>를 하면 업데이트 요청이 들어가고 업데이트 사항이 없을 경우는 이슈가 그낭 종결되고 있을 경우는 그대로 따라가면 된다. 처음 페이지를 깔 때처럼 PR을 해주는 형태로 진행된다. 꽤나 영리한 업데이트 방법이다.</p>
 <section id="바뀌는-파일들" class="level3">
 <h3 class="anchored" data-anchor-id="바뀌는-파일들">바뀌는 파일들</h3>
@@ -1553,14 +1553,14 @@ Note
 </ol>
 </section></div> ]]></description>
   <category>computer-tool</category>
-  <guid>https://www.github.io/lostineconomics_quarto/posts/computer-tools/2020-03-07-blogging-with-fastpages.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-03-07-blogging-with-fastpages.html</guid>
   <pubDate>Fri, 06 Mar 2020 15:00:00 GMT</pubDate>
   <media:content url="https://t3.ftcdn.net/jpg/03/67/94/46/240_F_367944626_tkPR8g1rZihc0ql5WpJhDYffS3nTfKqP.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Using Git ‘Smoothly’ in Windows 10</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://www.github.io/lostineconomics_quarto/posts/git/2020-03-05-using-git-w10.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2020-03-05-using-git-w10.html</link>
   <description><![CDATA[ 
 
 
@@ -1600,22 +1600,22 @@ Note
 <p>“커맨더”라고 읽으면 된다. git은 이미 깔았으므로 쓰면 된다. 다만 좀 더 편리한 환경에서 CLI를 쓰기 위해서 Cmder를 깔아보도록 하자. 이 녀석은 별도의 인스톨 없이 쓸 수 있다. git을 포함한 무거운 버전과 git이 빠진 미니 버전이 있다. 어차피 우리는 별도로 깃을 깔았으니, 미니 버전을 다운받으면 되겠다. 다운 받은 후 아무 위치에나 두어도 된다. 어차피 exe 파일만 사용할 것이기 때문이다. 다만, 관리가 편하도록 나는 아래의 위치에 두었다.</p>
 <p><code>Users\[your id]\cmder_mini\</code></p>
 <p>최초 실행하면 윈도우가 경고를 날린다. 이래 그림에서 형광색이 칠해진 부분을 클릭하고 프로그램을 허용해준다. 이후 몇 번의 경고성 질문이 더 날아온다. 전부 “허용”해주면 되겠다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/git/%7B%7B%20site.baseurl%20%7D%7D/images/git-cmder/fig_4.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/git/%7B%7B%20site.baseurl%20%7D%7D/images/git-cmder/fig_4.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
 <p>그리고 cmder 실행 파일 위에서 좌 클릭해서, <code>속성 &gt; 호환성 &gt; 관리자 권한으로 이 프로그램을 실행</code>을 체크해두는 편을 권한다. 혹시 dock에 cmder를 박아둔 상태라면 Shift 키와 함께 좌 클릭을 하면 <code>속성</code>을 선택할 수 있다.</p>
 </section>
 </section>
 <section id="how" class="level2">
 <h2 class="anchored" data-anchor-id="how">How</h2>
 <p>깃을 편하게 쓰기 위해서 Cmder의 설정을 약간 바꿔주겠다. 우선 아래의 그림처럼 맨 위 메뉴의 삼선을 클릭하면 Cmder의 세팅으로 갈 수 있다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/git/%7B%7B%20site.baseurl%20%7D%7D/images/git-cmder/fig_1.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/git/%7B%7B%20site.baseurl%20%7D%7D/images/git-cmder/fig_1.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
 <p>엄청나게 많은 설정들이 있다. 창을 투명으로 만든다든가, 텍스트의 폰트를 바꾼다든가, 하는 것들이 가능하다. 여기서는 git bash를 쓰는 설정만 간단하게 설명하도록 하자.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/git/%7B%7B%20site.baseurl%20%7D%7D/images/git-cmder/fig_2.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/git/%7B%7B%20site.baseurl%20%7D%7D/images/git-cmder/fig_2.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
 <p>그림에서 보듯이 <code>startup &gt; task</code>를 선택한다. 선택 가능한 CLI 중에서 <code>{Bash:: Git bash}</code>를 선택한다. 이 녀석을 디폴트 CLI로 설정한다. 시작 디렉토리를 지정하고 싶다면 아래 <code>Startup dir...</code>을 선택해 바꿔주면 된다.</p>
 </section>
 <section id="finally" class="level2">
 <h2 class="anchored" data-anchor-id="finally">Finally?</h2>
 <p>아래 그림에서 보듯이 윈도 명령 창에서는 먹지 않는 <code>ls</code> 등의 명령어가 잘 먹고, git도 편안하게 사용할 수 있다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/git/%7B%7B%20site.baseurl%20%7D%7D/images/git-cmder/fig_3.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/git/%7B%7B%20site.baseurl%20%7D%7D/images/git-cmder/fig_3.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
 </section>
 <section id="seriously" class="level2">
 <h2 class="anchored" data-anchor-id="seriously">Seriously!</h2>
@@ -1640,14 +1640,14 @@ Note
 </ol>
 </section></div> ]]></description>
   <category>git</category>
-  <guid>https://www.github.io/lostineconomics_quarto/posts/git/2020-03-05-using-git-w10.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2020-03-05-using-git-w10.html</guid>
   <pubDate>Wed, 04 Mar 2020 15:00:00 GMT</pubDate>
   <media:content url="https://t3.ftcdn.net/jpg/03/67/94/46/240_F_367944626_tkPR8g1rZihc0ql5WpJhDYffS3nTfKqP.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>The College Wealth Divide</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://www.github.io/lostineconomics_quarto/posts/economics/2020-01-22-Wealth-divided.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/economics/2020-01-22-Wealth-divided.html</link>
   <description><![CDATA[ 
 
 
@@ -1683,7 +1683,7 @@ Note
 그림 1. 소득과 부의 역사적 변화
 </figcaption>
 <p align="center">
-<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-001.png?raw=true" width="900" class="figure-img"><br>
+<kbd> <img src="https://anarinsk.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-001.png?raw=true" width="900" class="figure-img"><br>
 </kbd>
 </p>
 </figure>
@@ -1696,7 +1696,7 @@ Note
 그림 2. c와 nc의 부/소득의 역사적 변화
 </figcaption>
 <p align="center">
-<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-002.png?raw=true" width="600" class="figure-img"><br>
+<kbd> <img src="https://anarinsk.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-002.png?raw=true" width="600" class="figure-img"><br>
 </kbd>
 </p>
 </figure>
@@ -1731,7 +1731,7 @@ Note
 그림 3. c와 nc의 변화는 어디에서 왔는가?
 </figcaption>
 <p align="center">
-<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-003.png?raw=true" width="900" class="figure-img"><br>
+<kbd> <img src="https://anarinsk.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-003.png?raw=true" width="900" class="figure-img"><br>
 </kbd>
 </p>
 </figure>
@@ -1745,7 +1745,7 @@ Note
 그림 4. c와 nc 내의 소득 계층별 비율의 역사적 변화
 </figcaption>
 <p align="center">
-<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/acs-college_wealth/blob/master/assets/imgs/K-004.png?raw=true" width="900" class="figure-img"><br>
+<kbd> <img src="https://anarinsk.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/acs-college_wealth/blob/master/assets/imgs/K-004.png?raw=true" width="900" class="figure-img"><br>
 </kbd>
 </p>
 </figure>
@@ -1757,7 +1757,7 @@ Note
 그림 5. 소득 계층별 c/nc 비율의 역사적 변화
 </figcaption>
 <p align="center">
-<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-005.png?raw=true" width="900" class="figure-img"><br>
+<kbd> <img src="https://anarinsk.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-005.png?raw=true" width="900" class="figure-img"><br>
 </kbd>
 </p>
 </figure>
@@ -1776,7 +1776,7 @@ Note
 그림 6. c/nc의 소득 비율과 부 비율의 역사적 변화
 </figcaption>
 <p align="center">
-<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-007.png?raw=true" width="900" class="figure-img"><br>
+<kbd> <img src="https://anarinsk.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-007.png?raw=true" width="900" class="figure-img"><br>
 </kbd>
 </p>
 </figure>
@@ -1788,7 +1788,7 @@ Note
 그림 7. 50~90% 부 계층의 소득 및 부 수준의 역사적 변화 (10년 단위)
 </figcaption>
 <p align="center">
-<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-008.png?raw=true" width="900" class="figure-img"><br>
+<kbd> <img src="https://anarinsk.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-008.png?raw=true" width="900" class="figure-img"><br>
 </kbd>
 </p>
 </figure>
@@ -1811,7 +1811,7 @@ Note
 그림 8. c의 부 관련 회귀 계수의 역사적 변화
 </figcaption>
 <p align="center">
-<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-010.png?raw=true" width="600" class="figure-img"><br>
+<kbd> <img src="https://anarinsk.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-010.png?raw=true" width="600" class="figure-img"><br>
 </kbd>
 </p>
 </figure>
@@ -1823,7 +1823,7 @@ Note
 그림 9. c의 부와 소득 회귀 계수의 비교
 </figcaption>
 <p align="center">
-<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-009.png?raw=true" width="900" class="figure-img"><br>
+<kbd> <img src="https://anarinsk.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-009.png?raw=true" width="900" class="figure-img"><br>
 </kbd>
 </p>
 </figure>
@@ -1841,7 +1841,7 @@ Note
 그림 10. 금융 및 사업 관련 부의 수익률 비교
 </figcaption>
 <p align="center">
-<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-012.png?raw=true" width="900" class="figure-img"><br>
+<kbd> <img src="https://anarinsk.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-012.png?raw=true" width="900" class="figure-img"><br>
 </kbd>
 </p>
 </figure>
@@ -1867,7 +1867,7 @@ Note
 그림 11. 유유상종 혼은 부의 형성에 어떻게 영향을 주었는가
 </figcaption>
 <p align="center">
-<kbd> <img src="https://www.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-006.png?raw=true" width="900" class="figure-img"><br>
+<kbd> <img src="https://anarinsk.github.io/lostineconomics_quarto/posts/economics/https:/github.com/anarinsk/aps-college_wealth/blob/master/assets/imgs/K-006.png?raw=true" width="900" class="figure-img"><br>
 </kbd>
 </p>
 </figure>
@@ -1880,14 +1880,14 @@ Note
 
  ]]></description>
   <category>economics</category>
-  <guid>https://www.github.io/lostineconomics_quarto/posts/economics/2020-01-22-Wealth-divided.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/economics/2020-01-22-Wealth-divided.html</guid>
   <pubDate>Tue, 21 Jan 2020 15:00:00 GMT</pubDate>
   <media:content url="https://www.aeaweb.org/content/file?id=13305" medium="image"/>
 </item>
 <item>
   <title>Understanding Logit Regression</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://www.github.io/lostineconomics_quarto/posts/regression/2019-11-10-understanding-logit-regression.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-11-10-understanding-logit-regression.html</link>
   <description><![CDATA[ 
 
 
@@ -1988,7 +1988,7 @@ Note
 </section>
 <section id="어떤-경우-ols는-곤란한가" class="level3">
 <h3 class="anchored" data-anchor-id="어떤-경우-ols는-곤란한가">어떤 경우 OLS는 곤란한가?</h3>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/regression/https:/miro.medium.com/max/1280/0*gKOV65tvGfY8SMem.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/miro.medium.com/max/1280/0*gKOV65tvGfY8SMem.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <p>regressor가 하나인 상황을 가정하고 위의 그림을 보자. regressand가 0, 1인 상태로 그대로 회귀분석을 하면 그림의 왼쪽 같이 나온다. 이 상태에서는 뭐가 문제일까? 회귀식의 기울기를 구할 수 있으니 된 것 아니냐? 문제가 있다. 앞서 0과 1은 값 그 자체로 의미를 지니지 않는다고 말했다. 그런데 이를 그대로 값으로 바꿔서 회귀분석을 해도 좋은 것일까? 그러기에는 뭔가 찜찜하다. 게다가 <img src="https://latex.codecogs.com/png.latex?x"> 값에 따라서 회귀식의 예측치가 <img src="https://latex.codecogs.com/png.latex?%5B0,1%5D">을 벗어날 수 있다. 임의로 계단 함수를 다시 얹어서 OLS(통상적인 최소자승법이라는 의미에서 Ordinary Least Squares라고 흔히 부른다)를 구제할 수도 있겠다. 즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0As(%5Cbeta%20x)%20=%0A%5Cbegin%7Bcases%7D%0A1%20&amp;%20%5Ctext%7Bif%20$%5Cbeta%20x%20%5Cgeq%201$%7D%20%20%5C%5C%0A0%20&amp;%20%5Ctext%7Bif%20$%5Cbeta%20x%20%3C%200$%7D%0A%5Cend%7Bcases%7D%0A"></p>
 <p>회귀식의 예측을 확률에 맞게 임의로 꺾어주는 것이다. 이러한 과정을 조금 더 ‘부드럽게’ 혹은 보다 ‘그럴 듯하게’ 할 수 없을까?</p>
@@ -2095,14 +2095,14 @@ Note
 
  ]]></description>
   <category>regression</category>
-  <guid>https://www.github.io/lostineconomics_quarto/posts/regression/2019-11-10-understanding-logit-regression.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-11-10-understanding-logit-regression.html</guid>
   <pubDate>Sat, 09 Nov 2019 15:00:00 GMT</pubDate>
   <media:content url="https://miro.medium.com/max/1280/0*gKOV65tvGfY8SMem.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Understanding Regression</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://www.github.io/lostineconomics_quarto/posts/regression/2019-10-25-understanding-regression.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-10-25-understanding-regression.html</link>
   <description><![CDATA[ 
 
 
@@ -2119,18 +2119,18 @@ Note
 <section id="regression-in-vector-space" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="regression-in-vector-space">Regression in vector space</h2>
 <p>여기서 회귀분석을 해설할 생각은 없다. 이미 너무나 많은 그리고 매우 훌륭한 내용들이 책, 웹, 강의로 넘쳐날테니까. 이 글의 용도는 그림 하나로 지나치기 쉬운 회귀분석의 ’핵심’을 살피는 것이다. <a href="https://stats.stackexchange.com/questions/123651/geometric-interpretation-of-multiple-correlation-coefficient-r-and-coefficient">crossvalidated</a>에서 아래 그림을 보는 순간 일종의 ’돈오돈수’가 강림했다. (이렇게 이해하면 쉬웠을 것을…)</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/regression/https:/github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <p>먼저 우리에게 익숙한 회귀분석 모델을 매트릭스로 적어보자.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cunderset%7Bn%20%5Ctimes%201%7D%7B%5Cphantom%7B%5Cboldsymbol%20%5Cgamma%7D%5Cmathbf%7BY%7D%5Cphantom%7B%5Cboldsymbol%20%5Cgamma%7D%7D%20=%20%5Cunderset%7Bn%20%5Ctimes%20k%7D%7B%5Cphantom%7B%5Cboldsymbol%20%5Cgamma%7D%20%5Cmathbf%7BX%7D%20%5Cphantom%7B%5Cboldsymbol%20%5Cgamma%7D%20%7D%5Cunderset%7Bk%20%5Ctimes%201%7D%7B%5Cboldsymbol%20%5Cbeta%7D%20+%20%5Cunderset%7Bn%20%5Ctimes%201%7D%7B%5Cphantom%7B%5Cboldsymbol%20%5Cbeta%7D%20%5Cboldsymbol%20%5Cvarepsilon%20%5Cphantom%7B%5Cboldsymbol%20%5Cgamma%7D%20%7D%0A"></p>
 <p>식에 관한 자세한 설명 역시 생략한다. 대충 <img src="https://latex.codecogs.com/png.latex?n"> 개의 관찰 수과 <img src="https://latex.codecogs.com/png.latex?k"> 개의 regressor를 지닌 중회귀분석 모형이라고 생각하면 되겠다. 앞서 본 그림은 보통 회귀분석의 예시로 많이 활용되는 아래 그림과는 다르다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>흔히 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20Y">를 종속변수, <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">를 독립변수로 부르기도 한다. 하지만 이러한 이름에는 혼란의 여지가 있다. 여기서는 regressor, regressand라는 영어 표현을 그대로 쓰도록 하겠다.</p>
-</div></div><p><img src="https://www.github.io/lostineconomics_quarto/posts/regression/https:/github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+</div></div><p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <p>위 그림은 1개의 regressor가 존재할 때 이것과 regressand를 그대로 2차원 평면에 관찰 수만큼 찍은 것이다. 첫번째 그림에서 “Observed Y”는 점 하나가 <img src="https://latex.codecogs.com/png.latex?n"> 개의 regressand를 모두 포괄한다. <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BY%7D%20%5Cin%20%7B%5Cmathbb%20R%7D%5E%7Bn%7D"> 벡터, 즉 <img src="https://latex.codecogs.com/png.latex?n"> 차원 벡터이고, 이것이 회귀식 좌변의 관찰값 <img src="https://latex.codecogs.com/png.latex?n"> 개를 표현한다.</p>
 <p>이제 선형대수의 세계로 들어가보자. <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">의 열(column)이 각각 <img src="https://latex.codecogs.com/png.latex?n"> 개의 관찰 값을 지닌 regressor에 해당한다. 이 각각의 컬럼 <img src="https://latex.codecogs.com/png.latex?x_i">는 <img src="https://latex.codecogs.com/png.latex?x_i%20%5Cin%20%7B%5Cmathbb%20R%7D%5E%7Bn%7D"> 벡터이다. <img src="https://latex.codecogs.com/png.latex?x_i"> 벡터 <img src="https://latex.codecogs.com/png.latex?k"> 개가 생성할 수 있는 공간이 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">의 열 공간(column space)이다. 앞으로 이를 col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">로 표기하자.</p>
 <p>이렇게 생각하면 좋겠다. <img src="https://latex.codecogs.com/png.latex?x_i%20%5Cin%20%7B%5Cmathbb%20R%7D%5E%7Bn%7D"> 벡터가 <img src="https://latex.codecogs.com/png.latex?k(%3Cn)"> 개 있다고 하자. 이는 <img src="https://latex.codecogs.com/png.latex?n"> 보다 차원이 낮기 때문에 기하학적으로는 <img src="https://latex.codecogs.com/png.latex?n"> 차원 공간에서 초평면(hyperplane)으로 나타날 것이다. 위 그림에서 컬럼 스페이스가 평면으로 표현되는 것은 이러한 취지다. 3차원 벡터의 열 공간이 생성하는 초평면을 예시하면 아래와 같다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/regression/https:/miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <p>col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">의 최대 차원, 즉 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">의 랭크(위수)는 무엇일까? 회귀분석에서는 대체로 <img src="https://latex.codecogs.com/png.latex?n%20%3E%20k">가 일반적이고 이런 상황에서 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">의 랭크는 <img src="https://latex.codecogs.com/png.latex?k">를 넘을 수 없다. 다시 말하면, <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">가 생성하는(span)하는 컬럼 스페이스의 차원의 크기가 <img src="https://latex.codecogs.com/png.latex?k">를 넘을 수 없다. 그리고 잘 된 회귀분석이라면 <img src="https://latex.codecogs.com/png.latex?%7B%5Crm%20rank%7D(%5Cmathbf%20X)%20=%20k">를 만족한다.</p>
 <p>맨 앞에 제시했던 그림을 다시 보자. 아래 색칠된 평면이 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">가 생성하는 컬럼 스페이스, 즉 col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">를 표현하고 있다. 몹시 특별한 경우가 아니라면 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20Y%20%5Cin%20%7B%5Cmathbb%20R%7D%5E%7Bn%7D"> 벡터가 col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">에 속할 가능성은 없다. 그렇다면 회귀분석의 필요도 애초에 없었을 것이다. col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">를 통해서 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20Y">를 완벽하게 예측할 수 있는데 무슨 걱정이 있겠는가? 대체로 우리가 마주하는 상황은 <img src="https://latex.codecogs.com/png.latex?n"> 차원 벡터를 <img src="https://latex.codecogs.com/png.latex?k"> 차원 공간에 끼워 넣기 힘든 상황이다.</p>
 
@@ -2146,7 +2146,7 @@ Note
 <p>선형 대수의 관점에서 내용을 다시 음미해보자. <img src="https://latex.codecogs.com/png.latex?x_i%20%5Cin%20%7B%5Cmathbb%20R%7D%5En"> (for <img src="https://latex.codecogs.com/png.latex?i%20=%201,%20%5Cdotsc,%20k">) 벡터의 리그레서 <img src="https://latex.codecogs.com/png.latex?k"> 개를 선형 결합해서 초평면의 한점, 즉 원래의 관찰 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20Y">와 최소 거리를 지니는 벡터를 찾아야 한다. 이 거리를 최소화하는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_i">를 알고 있다면 이 벡터는 다음과 같이 표현된다. <img src="https://latex.codecogs.com/png.latex?%7B%5Cmathbf%20X%7D%20=%20%5Bx_1,%20%5Cdotsc,%20x_k%5D">일 때,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cunderset%7B(n%20%5Ctimes%201)%7D%7B%5Chat%7B%5Cmathbf%20Y%7D%7D%20&amp;%20=%20X%5Cbeta%20%5C%5C%0A&amp;%20=%20%5Bx_1,%20%5Cdotsc,%20x_k%5D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cbeta_1%20%5C%5C%0A%5Cvdots%20%5C%5C%0A%5Cbeta_k%0A%5Cend%7Bbmatrix%7D%20%5C%5C%0A&amp;=%0Ax_1%20%5Cbeta_1%20+%20%5Cdotsc%20+%20x_k%20%5Cbeta_k%0A%5Cend%7Baligned%7D%0A"></p>
 <p>아래 그림을 참고하자.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/regression/https:/github.com/anarinsk/lie-regression/blob/master/assets/imgs/regression-vector_comb.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/github.com/anarinsk/lie-regression/blob/master/assets/imgs/regression-vector_comb.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 </section>
 <section id="r-squared-as-pythagorean-theorem" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="r-squared-as-pythagorean-theorem">R squared as Pythagorean Theorem</h2>
@@ -2207,14 +2207,14 @@ Note
 
  ]]></description>
   <category>regression</category>
-  <guid>https://www.github.io/lostineconomics_quarto/posts/regression/2019-10-25-understanding-regression.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-10-25-understanding-regression.html</guid>
   <pubDate>Thu, 24 Oct 2019 15:00:00 GMT</pubDate>
   <media:content url="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" medium="image"/>
 </item>
 <item>
   <title>Dot Product with Geometry</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://www.github.io/lostineconomics_quarto/posts/math-simple/2019-07-18-dot-product.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/2019-07-18-dot-product.html</link>
   <description><![CDATA[ 
 
 
@@ -2231,13 +2231,13 @@ Note
 <p>dot product는 내적이라고도 번역하지만 여기서는 닷 프로덕트로 쓰기로 하겠다. 먼저 정의부터 살펴보자.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathbf%7Bu%7D=%5Cleft%5Bu_%7B1%7D,%20%7Bu%7D_%7B2%7D,%20%5Cldots,%20%7Bu%7D_%7Bn%7D%5Cright%5D%20%5Cin%20%7B%5Cmathbb%20R%7D%5En%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cmathbf%7Bv%7D=%5Cleft%5B%7Bv%7D_%7B1%7D,%20%7Bv%7D_%7B2%7D,%20%5Cldots,%20%7Bv%7D_%7Bn%7D%5Cright%5D%20%5Cin%20%7B%5Cmathbb%20R%7D%5En%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cmathbf%7Bu%7D%20%5Ccdot%20%5Cmathbf%7Bv%7D%20=%20%5Csum_%7Bn%7D%20u_i%20v_i%0A"></p>
 <p>쉽게 말해서 닷 프로덕트는 차원이 같은 두 개의 인풋 벡터를 하나의 스칼라로 바꿔주는 일종의 함수로 이해할 수 있다. 두 개의 벡터를 서로 연관 짓는데 이를 해당 벡터의 길이라는 정보로 압축한다고 보면 얼추 맞을 듯 싶다. 하나의 숫자로 요약된다는 뜻에서 스칼라 프로덕트라고도 불린다. 그림으로 나타내면 아래와 같다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/math-simple/https:/github.com/anarinsk/lie-dot_product/blob/master/assets/images/perpendicularprojection.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/https:/github.com/anarinsk/lie-dot_product/blob/master/assets/images/perpendicularprojection.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40;"></p>
 <section id="from-definition-to-geometry" class="level3">
 <h3 class="anchored" data-anchor-id="from-definition-to-geometry">From Definition to Geometry</h3>
 <p>닷 프로덕트에 관한 설명은 정의에서 바로 코사인 법칙으로 넘어간다. 하지만 뭔가 분명하지 않다. 이걸 조금 더 풀어보자.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/math-simple/https:/betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_components.png.webp" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/https:/betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_components.png.webp" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40;"></p>
 <p>위 그림은 <img src="https://latex.codecogs.com/png.latex?2%20%5Ctimes%202"> 벡터의 닷 프로덕트를 각 요소로 분해한 것이다. 이중에서 <img src="https://latex.codecogs.com/png.latex?%5Cdfrac%7B%5Cpi%7D%7B2%7D"> 각을 이루고 있는 벡터는 서로 곱하면 0이 된다. 따라서 닷 프로덕트 계산에서는 <img src="https://latex.codecogs.com/png.latex?a_x%20b_x">와 <img src="https://latex.codecogs.com/png.latex?a_y%20b_y">가 남게 된다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/math-simple/https:/betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_rotation.png.webp" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/https:/betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_rotation.png.webp" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40;"></p>
 <p>닷 프로덕트란 길이만 문제가 되므로 두 벡터를 한 방향으로 정렬하자.이렇게 되면, 파란색 높이가 <img src="https://latex.codecogs.com/png.latex?0">이 된다. 따라서 위 그림과 같은 코사인 법칙이 쉽게 도출된다.</p>
 </section>
 <section id="symmetry" class="level3">
@@ -2280,7 +2280,7 @@ Note
 <p>닷 프로덕트를 이해하고 있으면 기하학 문제를 쉽게 풀 수 있는 게 많다. 가장 좋은 예가 초평면(hyperplane)이다. 예를 들어 3차원 공간에서 점 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%5E0%20=%20(x_1%5E0,%20x_2%5E0,%20x_3%5E0)">를 지나면서 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bp%7D%20=%20(p_1,%20p_2,%20p_3)">에 수직인 평면을 찾고 있다고 하자. 복잡해보이지만 닷 프로덕트를 활용하면 쉽게 풀린다. 즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathbf%7Bp%7D%20%5Ccdot%20(%5Cmathbf%7Bx%7D%20-%20%5Cmathbf%7Bx%7D%5E0)%20=%200%0A"></p>
 <p>평면 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20x">가 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bx%7D%5E0">를 지나는 것은 분명하다. 이 평면이 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7Bp%7D">에 수직이라는 것은 두 벡터의 닷 프로덕트가 0이 되면 된다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/math-simple/https:/github.com/anarinsk/lie-dot_product/blob/master/assets/images/hyperplane.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/https:/github.com/anarinsk/lie-dot_product/blob/master/assets/images/hyperplane.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 </section>
 </section>
 <section id="appendix-geometrically" class="level2 page-columns page-full">
@@ -2291,10 +2291,10 @@ Note
 <p>보다 상세한 내용은 <a href="(https://www.youtube.com/watch?v=LyGKycYT2v0&amp;t=610s)">여기</a>를 참고하라.</p>
 </div></div><p>일단 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20u">가 길이 1로 표준화된 벡터라고 정의를 살짝 바꾸겠다. 즉, 새로운 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20u">는 <img src="https://latex.codecogs.com/png.latex?%5CrVert%20%5Cmathbf%20u%20%5ClVert">로 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20u">를 나눈 벡터다. 아래 그림처럼 이 벡터를 향해서 2차원 평면의 기저를 구성하는 <img src="https://latex.codecogs.com/png.latex?(1,0)(%5Cequiv%20i)">과 <img src="https://latex.codecogs.com/png.latex?(0,1)(%5Cequiv%20j)">에서 벡터로 프로젝션을 해보자.</p>
 <p>이렇게 프로젝션을 하면 프로젝션된 지점의 <img src="https://latex.codecogs.com/png.latex?x"> 좌표는 공교롭게도 원점에서부터 해당 프로젝션된 지점까지의 벡터의 길이가 된다. <img src="https://latex.codecogs.com/png.latex?y">에 대해서도 마찬가지다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/math-simple/https:/github.com/anarinsk/public_writing/blob/master/assets/images/dot_1.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/math-simple/https:/github.com/anarinsk/public_writing/blob/master/assets/images/dot_2.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/https:/github.com/anarinsk/public_writing/blob/master/assets/images/dot_1.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/https:/github.com/anarinsk/public_writing/blob/master/assets/images/dot_2.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <p>이제 (1,1)에서 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20u">로 프로젝션을 해보자. (1,1)은 각각 두 개의 기저를 1의 가중치로 선형결합한 벡터다. 이 벡터의 프로젝션의 길이는 어떻게 구성될까? 그림에서 보듯이 <img src="https://latex.codecogs.com/png.latex?u_x%20+%20u_y">가 된다. 이를 일반적인 논리로 확장해보자. 어떤 임의의 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20v(=(x,y))">가 존재할 때 해당 벡터는 각각 두 개의 기저의 선형 결합으로 이해할 수 있다.</p>
-<p><img src="https://www.github.io/lostineconomics_quarto/posts/math-simple/https:/github.com/anarinsk/public_writing/blob/master/assets/images/dot_3.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/https:/github.com/anarinsk/public_writing/blob/master/assets/images/dot_3.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <p>따라서 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20v"> 벡터를 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20u">로 프로젝션한 길이는 다음과 같다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cunderset%7B%5Cmathbf%20u%20%ED%94%84%EB%A1%9C%EC%A0%9D%EC%85%98%7D%7B%5Cleft%5B%5Cbegin%7Barray%7D%7Bll%7D%7Bu_%7Bx%7D%7D%20&amp;%20%7B%20u_%7By%7D%7D%5Cend%7Barray%7D%5Cright%5D%7D%5Cleft%5B%5Cbegin%7Barray%7D%7Bl%7D%7Bx%7D%20%5C%5C%20%7By%7D%5Cend%7Barray%7D%5Cright%5D=%20u_%7Bx%7D%20%5Ccdot%20x%20+%20u_%7By%7D%20%5Ccdot%20y%20=%20%5Cmathbf%20u%20%5Ccdot%20%5Cmathbf%20v%0A"></p>
 <p>벡터를 기저의 선형결합을 통해 나타낼 수 있듯이, 벡터의 프로젝션의 길이 역시 비슷한 방식의 선형결합을 동원해서 나타낼 수 있다. 앞서 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20u">가 표준화된 벡터라고 했다. 따라서 원래대로 돌려 놓으면 닷 프로덕트는 프로젝션된 지점까지의 벡터의 거리와 해당 벡터의 길이의 곱이 된다. 즉,</p>
@@ -2305,14 +2305,14 @@ Note
 
  ]]></description>
   <category>math-simple</category>
-  <guid>https://www.github.io/lostineconomics_quarto/posts/math-simple/2019-07-18-dot-product.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/2019-07-18-dot-product.html</guid>
   <pubDate>Wed, 17 Jul 2019 15:00:00 GMT</pubDate>
   <media:content url="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/perpendicularprojection.jpg?raw=true" medium="image"/>
 </item>
 <item>
   <title>Poisson as Binormial Distribution</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://www.github.io/lostineconomics_quarto/posts/math-simple/2019-07-13-Poisson.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/2019-07-13-Poisson.html</link>
   <description><![CDATA[ 
 
 
@@ -2369,7 +2369,7 @@ Note
 
  ]]></description>
   <category>math-simple</category>
-  <guid>https://www.github.io/lostineconomics_quarto/posts/math-simple/2019-07-13-Poisson.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/2019-07-13-Poisson.html</guid>
   <pubDate>Fri, 12 Jul 2019 15:00:00 GMT</pubDate>
   <media:content url="https://seungwooham.github.io/assets/images/2020-03-24-PD1.png" medium="image" type="image/png"/>
 </item>

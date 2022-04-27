@@ -9,7 +9,7 @@ website:
     type: default
     categories: true
     feed: true
-  site-url: https://www.github.io/lostineconomics_quarto
+  site-url: https://anarinsk.github.io/lostineconomics_quarto
   #margin-footer: "subscribe.html"
   navbar:
     right:
