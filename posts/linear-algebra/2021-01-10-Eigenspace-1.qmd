@@ -1,13 +1,12 @@
 ---
-layout: post
-toc: false
-comments: true
 title:  Eigenspace, part 1 
-description: 아이겐 공간을 이해하자.  
-categories: [math, matrix-theory]
+description: 아이겐 공간을 이해보자. 
+author: "JS HUHH"
+date: "01/10/2021"
+image: "http://cau.ac.kr/~mhhgtx/courses/LinearAlgebra/images/LinearAlgebra.png"
+categories: [linear-algebra]
+#margin-header: subscribe.html
 ---
-
-
 
 ## Why? 
 
@@ -233,13 +232,14 @@ Orthogonal 기저는 어떻게 만들까? 먼저 과정을 살펴보자.   .
 - $e_1 = v_1$
 - $e_2 = v_2 - \Pi_{e_1}(v_2)$
 
-![gram-schmidt 1](https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png){: style="margin: auto; display: block; border:1.5px solid #021a40;"}{: width="500"}
+![gram-schmidt 1](https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;" }
 
+<br>
 위의 그림에서 보듯이 $v_2$는 $v_1$ 프로젝션된 벡터와 이와 직교하는 $e_2$와의 합으로 계산할 수 있다. 따라서 $e_2 = v_2 - \Pi_{e_1}(v_2)$가 성립한다. 벡터의 빼기 관점에서 생각해보면 어떨까? $v_2$와 $\Pi_{e_1}(v_2)$의 차이가 $e_2$다. 벡터는 방향과 크기로 정의된다는 점을 다시 기억하자. 같은 방식으로 아래 그림에서 보듯이 더 많은 축과 직교하는 벡터들을 구성할 수 있다. 
 
 이후 $\hat e_i = \dfrac{e_i}{\Vert e_i \Vert}$로 $e_i$를 표준화하면 된다. 
 
-![enter image description here](https://t1.daumcdn.net/cfile/tistory/2334554B591BF2B720){: style="margin: auto; display: block; border:1.5px solid #021a40;"}{: width="500"}
+![](https://gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;" }
 
 $$
 v = {\rm proj}_{u_1} (v) + {\rm proj}_{u_2}(v) + w

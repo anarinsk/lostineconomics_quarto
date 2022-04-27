@@ -1,15 +1,16 @@
 ---
-layout: post
-toc: false
-comments: true
 title:  Matrix as Linear Transformation
-description: 함수로써의 매트릭스 
-categories: [math, matrix-theory]
-
+description: Matrix as Linear Transformation
+author: "JS HUHH"
+date: "01/07/2021"
+image: "http://cau.ac.kr/~mhhgtx/courses/LinearAlgebra/images/LinearAlgebra.png"
+categories: [linear-algebra]
+#margin-header: subscribe.html
 ---
 
-![enter image description here](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func.png?raw=true){: style="margin: auto; display: block; border:1.5px solid #021a40;"}{: width="500"}
+![function vs linear transformation](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;" }
 
+<br>
 위의 내용을 이해할 수 있다면, 더 할 것이 없다. 일단 잘 봐두도록 하자. 나중에 돌아와서 음미하면 의미가 와 닿을 것이다. 
 
 선형 변환은 특별한 형태의 함수로 이해할 수 있다. 다만 투입과 산출이 다양한 차원(벡터)을 취할 수 있다. 그리고 이 선형 변환이 매트릭스로 표현될 수 있다. 때문에 매트릭스 표현이 강력하다. 추상적인 선형 변환 함수를 구체적으로 표현하고 쉽게 계산할 수 있게 만드는 것이 매트릭스다. 
@@ -23,8 +24,9 @@ categories: [math, matrix-theory]
 - $T: V \to W$: $V$에서 $W$로의 선형 변환 
 	- $T(\vec v) = \vec w$. 즉, $\vec v \in V$를 $\vec w \in W$로 변환하는 것을 나타낸다. 
 
-![enter image description here](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func_fig.png?raw=true){: style="margin: auto; display: block; border:1.5px solid #021a40;"}{: width="500"}
+![](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func_fig.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;" }
 
+<br>
 함수와 마찬가지로 위의 선형 변환에서 치역(Im($T$))와 커널(스칼라 함수에서는 $f(x) = 0$의 해)이 정의된다. 
 
 $$
@@ -60,7 +62,7 @@ $$
 
 선형의 의미는 무엇일까? 기하적으로 선을 다룬다는 뜻이 아니다. 선형의 의미는 함수적인 의미다. 아래 그림을 보자. 
 
-![enter image description here](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/linearity.png?raw=true){: style="margin: auto; display: block; border:1.5px solid #021a40;"}{: width="500"}
+![](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/linearity.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;" }
 
 즉, 
 
@@ -101,7 +103,7 @@ $$
 
 ### Surjective and Injective 
 
-![enter image description here](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/sur_inj.png?raw=true){: style="margin: auto; display: block; border:1.5px solid #021a40;"}{: width="500"}
+![](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/sur_inj.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;" }
 
 함수에서 전사 함수와 단사 함수의 개념을 그대로 적용할 수 있다. 선형 변환 혹은 행렬도 함수다. 
 

@@ -1,10 +1,11 @@
 ---
-layout: post
-toc: false
-comments: true
-title:  Eigenspace, part 2
-description: 아이겐 공간을 이해하자.  
-categories: [math, matrix-theory]
+title:  Eigenspace, part 2 
+description: 아이겐 공간을 이해하자. 
+author: "JS HUHH"
+date: "01/18/2021"
+image: "http://cau.ac.kr/~mhhgtx/courses/LinearAlgebra/images/LinearAlgebra.png"
+categories: [linear-algebra]
+#margin-header: subscribe.html
 ---
 
 ## Singluar Value Decomposition
@@ -234,9 +235,3 @@ Q^T A = Q^T Q R = 1 R
 $$
 
 따라서 $R$은 $Q^T A$로 구할 수 있다. 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAzMDc4NjM4LDkyMzM2MDQ1NCwtOTE4OD
-UxNjc4LC05NDMxMTE1MDUsMTM1MjA2MDIyLDE0NTI1NTY4MTAs
-MTA2MTYwMTEzNywtMjEyNzA0NDgyOSwtMTYyMTY0ODM2OSw1OT
-I4MDIwMDIsLTIwMjMzODg3NTAsMF19
--->

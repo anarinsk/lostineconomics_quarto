@@ -1,13 +1,12 @@
 ---
-layout: post
-toc: false
-comments: true
-title:  Basis 
-description:  두서 없는 정리 
-categories: [math, matrix-theory]
-
+title:  Basis
+description: 두서 없이 정리
+author: "JS HUHH"
+date: "01/08/2021"
+image: "http://cau.ac.kr/~mhhgtx/courses/LinearAlgebra/images/LinearAlgebra.png"
+categories: [linear-algebra]
+#margin-header: subscribe.html
 ---
-
 
 ## Concepts & Definition 
 
@@ -75,7 +74,6 @@ $b_i$의 값을 제대로 반영하기 위해서는 정규화된 orthorgonal bas
 
 $$
 \{ \vec f_1, \dotsc, \vec f_n \}
-
 $$
 
 가 있다고 하자. $\vec c$를 이 기저로 어떻게 표현할 수 있을까? 
@@ -317,7 +315,7 @@ $$
 
 로 나타낼 수 있다.  
 
-![enter image description here](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true){: style="margin: auto; display: block; border:1.5px solid #021a40;"}{: width="500"}
+![enter image description here](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width=60%; }
 
 Similar matrix인 $A$과 $B$ 사이에서 다음과 같은 관계가 성립한다. 
 

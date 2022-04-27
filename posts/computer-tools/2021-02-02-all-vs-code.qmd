@@ -39,7 +39,7 @@ VS Code를 통해 부리는 방법을 소개한다. 위의 적은 두 가지 사
 
 ## 핵심
 
-![](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true){: style="margin: auto; display: block; border:1.5px solid #021a40;"}{: width="700"}
+![](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;" }
 
 - VS Code의 익스텐션 `Remote-Container` 컨테이너 접속 기능을 활용해 `datascience-notebook` 컨테이너 접속한다. 
   - 오른쪽 하단에 `><` 표시된 부분을 클릭하자. 위의 그림을 볼 수 있다. 여기에서 "Remote-Containers: Attach to Running Container..."를 클릭하면 현재 돌아가고 있는 docker 컨테이너를 볼 수 있다. 미리 docker를 통해 돌려 둔 datascience 컨테이너를 선택하자. 
@@ -129,11 +129,11 @@ pip install -U radian
 
 앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 좋다면 아래와 같이 하면 된다. 
 
-![](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;" }
+![](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;" }
 
 - 만일 위와 같은 화면에 Remote Exlorer에서 뜨지 않는다면 컨테이너가 부착되지 않는 것이다. 컨테이너를 부착하면 된다. 
 
-![](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;" }
+![](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;" }
 
 - `Extension` > `REMOTE EXPLORER` > `DETAILS` 탭에서 가운데 설정 모양이 "Open Container Configuration File"이다.
 - 옆 에디터 창에 json 형식의 설정이 뜬뜬다. 여기서 관련 extension 등의 설정을 지정할 수 있다. 이렇게 설정을 해두면 해당 컨테이너를 부착할 때 설정한 대로 자동으로 옵션들이 적용된다. 매우 편리하다. 
