@@ -1,0 +1,20 @@
+project:
+  type: website
+  output-dir: docs
+website:
+  title: "lostineconomics.com"
+  site-url: "https://anarinsk.github.io/lostineconomics_quarto"
+  description: "Another useless blog"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/anarinsk
+      - icon: twitter
+        href: https://twitter.com/anarinsk
+      - icon: rss
+        href: index.xml
+format:
+  html:
+    theme: flatly
+    css: styles.css
