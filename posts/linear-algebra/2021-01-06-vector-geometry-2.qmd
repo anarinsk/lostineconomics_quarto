@@ -2,7 +2,7 @@
 title: Vector Geometrically, part 2
 description: 벡터 공간의 기하적 특성
 author: "JS HUHH"
-date: "01/06/2022"
+date: "01/06/2021"
 image: "https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg"
 categories: [linear-algebra]
 #margin-header: subscribe.html
