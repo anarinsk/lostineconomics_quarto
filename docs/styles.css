@@ -1,0 +1,28 @@
+/* css styles */
+/* @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap'); */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'NanumSquare' !important;
+    font-weight : 600;
+  }
+
+  ul, li, ol{
+    font-family: 'pretendard' !important;
+    font-size:95%;
+   }
+
+p {
+    font-family: 'pretendard' !important;
+    font-size: 90%;
+    font-weight: 400; 
+}
+
+.category {
+  font-size: 90%;
+}
+
+.sourceCode {
+  font-size: 90%;
+}

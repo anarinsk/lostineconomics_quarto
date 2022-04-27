@@ -1,0 +1,856 @@
+[
+  {
+    "objectID": "posts/computer-tools/2020-09-26-windows-terminal.html",
+    "href": "posts/computer-tools/2020-09-26-windows-terminal.html",
+    "title": "The Best Terminal App for Windows",
+    "section": "",
+    "text": "마소가 리눅스 생태계를 품으려고 진심으로 노력하고 있다. 보통 윈도에서 터미널을 쓰려면 cmd를 쳐서 들어간다. 일단 모양이 별로일 뿐만 아니라 불편하다. 그래서 보통 서드파티에서 제작한 터미널 앱을 별도로 쓰곤 한다. 이 앱들로도 부족한 것이 없다. cmder도 높은 수준의 커스터마이즈와 뛰어난 사용성을 보장한다.\nWSL을 통해 윈도에 설치하는 리눅스의 경우 기본으로 CLI(Command Line Interface)를 활용하게 된다. 따라서 좋은 터미널 앱은 필수적이다. 간편하면서도 심미적으로도 유려한 그런 앱이 하나 있었으면 싶은데, MS는 이미 그런 앱을 제공하고 있다.\nWindows 10 기준으로, Microsoft Store에 들어가서 “terminal”을 검색해보자. “Windows Terminal”과 “Windows Terminal Preview” 두 개를 찾을 수 있다. 전자는 안정 버전이고 후자는 실험적인 기능을 구현한 버전이다. 어느 것을 써도 괜찮다.\n공식 가이드 https://docs.microsoft.com/ko-kr/windows/terminal/\n왠만한 내용은 공식 가이드에 잘 정리되어 있으므로 몇 가지 팁만 적도록 하자."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-09-26-windows-terminal.html#설정",
+    "href": "posts/computer-tools/2020-09-26-windows-terminal.html#설정",
+    "title": "The Best Terminal App for Windows",
+    "section": "설정",
+    "text": "설정\nVS Code도 그렇고 윈도 터미널도 그렇고 설정이 settings.json 파일로 되어 있다. GUI가 아니라서 처음엔 어색할 수 있겠지만, 쓰다보면 이게 훨씬 편하다는 것을 알게 될 것이다.\n{: style=“textalign:center;” width=“500”}\n{: style=“textalign:center;” width=“500”}\n\n테마\n엄청나게 다양한 테마를 손쉽게 구현할 수 있다.\nhttps://windowsterminalthemes.dev/\n원하는 테마를 바꿔가며 확인할 수 있다. 마음에 드는 녀석을 “Get theme” 버튼을 눌러 클립보드에 복사하도록 하자. 녀석을 어디에 붙여 넣어야 할까?\nsettings.json 파일을 자세히 보면, 아래 \"schemes\":라는 항목이 있다. 여기에 클립보드에서 복사한 내용을 {} 안에 붙여 넣도록 하자. 그리고 설정 파일의 위로 이동하면 \"profiles\" - \"defaults\"라는 항목이 보일 것이다. 여기에는 터미널 앱을 띄웠을 때 어떤 세팅으로 시작할 것인지를 넣을 수 있다. 여러가지 항목을 넣을 수 있는데, 이중 colorScheme 항목에 방금 붙여 넣은 테마의 이름을 넣어주면 된다. 저장을 하면 테마가 바로 적용되며, 뭔가 문제가 있을 경우에는 에러가 뜬다. 이 경우 설정 파일을 다시 고치면 된다. 내가 사용중인 default는 아래와 같다.\n\"defaults\":\n{\n    \"fontFace\" : \"D2Coding\",\n    \"fontSize\" : 10,\n    \"historySize\" : 9001,\n    \"colorScheme\" : \"Monokai Vivid\",\n    \"cursorColor\" : \"#FFFFFF\",\n    \"cursorShape\" : \"vintage\",\n    \"padding\" : \"2, 2, 0, 0\",\n    \"snapOnInput\" : true,\n    \"useAcrylic\" : true,\n    \"acrylicOpacity\" : 0.95,\n    \"antialiasingMode\":\"cleartype\"\n    // Put settings here that you want to apply to all profiles\n}\n\n폰트는 D2Coding을 썼다. 폰트 크기 등등은 쭉 생략하고, 안티얼라이어싱 모드로 cleartype을 쓴 정도가 특징이다. 폰트는 한글 폰트를 써야 한글이 잘 나온다는 점만 기억하자."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html",
+    "href": "posts/computer-tools/2021-11-19-python-in-github.html",
+    "title": "Python in the Browser",
+    "section": "",
+    "text": "이런 상황을 생각해보자.\n\n파이썬을 갑자기 써야 한다!\n그런데 조건상 클라이언트에 깔 상황이 안 된다!\n\n이럴 때 쓸 수 있는 도구가 몇 개 있다. 대표적으로 아래 구글 코랩이 있다.\n\n구글 드라이브와 연동되는 구글 코랩\n\n그런데 많은 회사에서 구글 서비스를 막아두는 경우가 있다. 그렇다면 어떻게 할까?"
+  },
+  {
+    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html#dev-모드-진입",
+    "href": "posts/computer-tools/2021-11-19-python-in-github.html#dev-모드-진입",
+    "title": "Python in the Browser",
+    "section": "dev 모드 진입",
+    "text": "dev 모드 진입\ngithub를 dev 모드로 돌린다. 웹 브라우저 리포지터리 창에서 . 버튼을 누르거나 .dev 주소로 접근하면 된다. 익숙한 vs code 화면에 보일 것이다.\n이제 아래 왼쪽 탭 화면에서 extension을 찾으면 된다. 아래 그림처럼 생겼다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html#extension-설치",
+    "href": "posts/computer-tools/2021-11-19-python-in-github.html#extension-설치",
+    "title": "Python in the Browser",
+    "section": "extension 설치",
+    "text": "extension 설치\n검색에서 아래 익스텐션을 찾아서 설치해준다.\nexteion: vscode-pyodide\n\n이 익스텐션은 주피터에서 브라우저 기반으로 파이썬을 돌리는 Pyodide를 구현한다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html#do-your-work",
+    "href": "posts/computer-tools/2021-11-19-python-in-github.html#do-your-work",
+    "title": "Python in the Browser",
+    "section": "Do your work!",
+    "text": "Do your work!\n이제 .ipynb 확장자 파일을 만들고 늘상 쓰듯이 jupyter를 쓰면 된다. 아주 특이하거나 무거운 환경이 아닌 이상, 어지간한 간단한 작업은 쾌적하게 수행할 수 있다. 익스텐션을 깔면, 인터페이스는 Jupyter에 적합하게 알아서 변한다. 물론 한계도 있다. 브라우저에 올라간 파이썬 엔진인 만큼 로컬이나 서버에 깔린 python처럼 ‘많은’ 일을 할 수는 없다."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html",
+    "href": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html",
+    "title": "Build Your Blog on Github, Easily",
+    "section": "",
+    "text": "Note\n\n\n\n현재는 fastpages를 활용하고 있지 않습니다. 이유는 두 가지입니다.\n\nfastpages의 지원의 미비\n커스터마이징의 미비함"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#tldr",
+    "href": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#tldr",
+    "title": "Build Your Blog on Github, Easily",
+    "section": "tl;dr",
+    "text": "tl;dr\n\n깃헙에서 가장 쉽게 블로그를 빌드할 수 있는 방법을 알아보자.\n디자인은 포기하시라, 마. (지금으로도 사실 훌륭하니까!)"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#blogging-with-github",
+    "href": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#blogging-with-github",
+    "title": "Build Your Blog on Github, Easily",
+    "section": "Blogging with Github",
+    "text": "Blogging with Github\n깃헙을 통해 static web 기반의 블로그 / 홈페이지를 운영할 수 있다. 많은 분들이 이미 그렇게 하고 있다. Hugo, Jekyll의 도구를 잘 사용하면 상용 수준의 블로그 운영도 가능하다. 물론 이 도구들을 쓸 경우 관리를 위해서는 약간의 번거로움을 감수해야 한다. Hugo의 경우 R의 BlogDown 패키지를 활용할 수 있다. Jekyll의 경우 Ruby 기반으로 제작되어서 블로그 관리를 위해서는 local에서 해줘야 하는 작업이 있다.1\n이상적인 형태의 블로그 툴이란 무엇일까? 내 생각은 이렇다.\n\n최초의 설정 및 초기 디자인 요소를 제외하면 코드를 수정할 필요가 없어야 한다.\nhtml을 되도록 쓰지 않고, md 형태로 작성한 후 바로 반영이 되어야 한다.\n무료로 제한 없이 호스팅이 가능해야 한다.\n\n3은 깃헙으로 가볍게 해결된다. 1, 2는 사실 좀 어려운 부분이었다. 깃헙을 블로그 툴로 쓰기 위한 일종의 트레이드오프랄까… 2\n이 글에서 소개할 fastpages는 깃헙의 기본 웹툴인 Jekyll을 기반으로 1,2를 구현해주는 이상적인 서비스다. 게다가 fastpages는 ipynb 형태의 노트북, word 파일도 알아서 블로그 페이지로 바꿔준다. 문송한 나로서는 참으로 반가운 서비스다.\n\nBefore we go\n\n이하의 글에서 [your-x-id]라고 표기된 부분은 x라는 서비스의 각자 계정명 등의 정보를 바꿔서 설정해야 하는 부분이다. 그냥 복붙하지 마시라는 말씀.\n[repo root]는 해당 리퍼지토리의 최상위 디렉토리를 나타낸다."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#fastpages-by-fast.ai",
+    "href": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#fastpages-by-fast.ai",
+    "title": "Build Your Blog on Github, Easily",
+    "section": "fastpages by fast.ai",
+    "text": "fastpages by fast.ai\n일단 별도의 인스톨 과정이 필요 없다! 사전에 준비해야 할 것은 깃헙 계정 뿐.\n\n페이지 생성\nhttps://github.com/fastai/fastpages/generate\n\n깃헙에 로그인한 상태에서 이 곳에 접속해 페이지를 생성한다. 페이지를 생성한 후 내 깃헙 계정에서 조금 기다리면 “Pull Request”(PR) 메시지가 날아온다.\n\n\n\nPR\nPR을 하기 전에 SSH 키를 생성하는 작업을 해줘야 한다. 메시지에 친절하게 설명이 되어 있으니 그대로 따라하면 된다.\n\n\n링크를 눌러 웹 페이지에서 private key와 public 키를 생성한다. RSA, 4069를 선택하도록 하다.\n두번째의 링크를 눌러 새 sceret을 생성하고 private key를 넣어준다. 이름은 반드시 SSH_DEPLOY_KEY로 해야 한다.\n세번째의 링크를 눌러 deploy key를 생성하고 여기에 public key를 넣어주면 된다. 이름은 임의로 지정하면 된다.\n\n마지막으로 PR를 수락하고 이를 아래 화면 같이 merge하면 준비가 완료된다. 깃헙이 작업을 하는 동안 잠시 기다리면 된다. 작업 상태가 궁금하면 github actions 탭을 확인하면 된다. 이후 몇 가지를 더 묻는데 대충 진행해도 문제 없다.\n\n설치가 끝나면 아래와 같이 생성된 페이지를 확인할 수 있다. 아래는 위의 절차에 따라서 테스트계정(test-fastpages)에 페이지를 생성한 결과다.\nhttps://anarinsk.github.io/test-fastpages/"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#customize-yours",
+    "href": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#customize-yours",
+    "title": "Build Your Blog on Github, Easily",
+    "section": "Customize yours",
+    "text": "Customize yours\n이제 각자의 취향에 맞게 몇 가지 커스터마이즈를 거치면 된다. 대체로 md를 고치면 되기 때문에 크게 어려운 대목은 없다.\n\nhome\n\nrepo root의 index.md를 적당히 수정하면 된다.\n\nabout\n\n[repo root]/_pages/about.md 를 수정하면 된다.\n\ncomments\n\nutterances 앱을 깔면, github의 issue 기능을 활용해 코멘트를 관리할 수 있다.\n인스톨 페이지의 안내대로 하면 된다.\n별도로 뭘 까는 것은 아니고 github 계정의 해당 repo를 설정하면 끝.\n다만 코멘트를 달기 위해서는 github 계정이 필요하다.\n\nfavicon\n\n[repo root]/images의 favicon.ico를 고치면 된다.\n\n그림 관리\n\n[repo root]/images에 적절한 디렉토리를 만들어 관리하면 된다.\n그림 링크는 ![](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/git-cmder/fig_3.png) 식으로 {{ site.baseurl }}로 시작하면 된다.\n\ncss\n\ncss를 다룰 줄 안다면 블로그의 많은 것은 커스터마이즈할 수 있다.\n[repo root]/_sass/minima안에 보면 custom-styles.scss와 fastpages-styles.scss 두 개가 있다. custom-styles.scss에 부가 내용을 수정하면 스타일을 바꿀 수 있다. 필요한 폰트를 로딩해 설정한다든가 하는 디자인 수정 사항을 여기에 넣으면 된다.\n예를 들어 기본 텍스트의 크기를 바꾸고 싶다면,\n\n\n.post-content  p, .post-content  li {\n    font-size: 15px; //원래값은20px\n    color: #515151;\n    }\n\ngoogle analytics\n\n먼저 google analytics id가 필요하다. 알아서 발급 받으시라.\n\n구글 페이지에도 안내가 되어 있지만, gs 모듈을 활용하기 위해서 [repo root]/_include에 google_analytics.html과 같은 파일을 만들어 아래의 내용을 넣는다. 물론 자신의 analytics id로 바꿔 넣어야 한다.\n\n\n<!-- Global site tag (gtag.js) - Google Analytics -->\n<script  async  src=\"https://www.googletagmanager.com/gtag/js?id=[your-ga-id]\"></script>\n<script>\n    window.dataLayer = window.dataLayer || [];\n    function  gtag(){dataLayer.push(arguments);}\n    gtag('js', new  Date());\n    gtag('config', '[your-ga-id]');\n    gtag('set', {'user_id':  'USER_ID'}); // 로그인한 User-ID를 사용하여 User-ID를 설정합니다.\n</script>\n\n[repo root]/_include의 custom_head.html의 적당한 줄에 아래 코드를 넣어준다.\ngoogle analytics의 ‘실시간’ 항목에서 작동 여부를 확인할 수 있다."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#활용",
+    "href": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#활용",
+    "title": "Build Your Blog on Github, Easily",
+    "section": "활용",
+    "text": "활용\n\nPost 작성\n통상적인 md 파일로 작성하면 된다. 두 가지만 주의하면 된다. 우선 파일 이름을 년도-월-일-이름.md 형태로 넣어야 한다. 그래야 fastpages가 컴파일을 할 수 있다. 예를 들어 이 포스팅의 파일 이름은 2020-03-07-blogging-with-fastpages.md다.\n둘째, 포스팅 만 앞에 yml을 넣어 해당 포스트에 관한 정보를 지정해야 한다.\n---\nlayout: post # 글의 레이아웃, 보통이라면 post로 두면 된다. \ntoc: false # 목차 출력 여부 \ncomments: true # 코멘트 기능 사용 여부 \ntitle: Free Your Blog with Github # 제목 \ndescription: github에서 무료 블로그를! # 제목 아래 부제목 \ncategories: [coding-tool, web-tool] # tag 혹은 카테고리 \n---\n---으로 감싼 후 안에 정보를 넣으면 된다.\n\n\nfastpage의 몇가지 장점\n\n보통 github 기반의 블로그를 만들면, [your-git-id].github.io만을 주소로 가지게 된다. fastpages를 쓰면 repo 수준의 홈페이지를 운영할 수 있다. 예를 들어, 이 블로그의 주소는 anarinsk.github.io/lostineconomics-v2-1다.\n강력한 장점은 ipynb 확장자의 노트북 파일을 그대로 포스팅으로 바꿔준다는 것이다. [repo root]/_notebooks에 파일을 넣어주면 된다.\n\n디자인은 포기하라. css나 html을 잘 안다면 커스터마이즈할 여지가 있지만, 그럴 수 있는 사람이라면 Hugo나 Jekyll을 직접 쓰는 편이 나을 수도 있겠다.\n\nfastpages가 사용하는 Jekyll 테마는 minima다.\n\n매번 markdown을 에디터에 올려쓰는 것이 불편하다면 웹 에디터를 활용할 수 있다.\n\nstackedit의 경우 github 저장을 지원하기 때문에 해당 repo의 _posts/ 아래의 md 문서를 동기화해두면 웹에서 수정 후 동기화하는 것만으로도 포스트의 수정을 쉽게 할 수 있다. stackedit의 활용에 관해서는 이 포스팅을 참고하면 좋겠다. 사실 웹에서 이렇게 수준 높은 마크다운 에디터를 제공한다는 사실이 고맙고 놀랍다. (그래서 나는 이 회사에 매년 기부한다!)\n\nfastpages의 경우 commit이 발생하면 자동으로 블로그의 빌드에 들어간다.\n\n따라서 웹 에디터에서 글을 수정한 후 적절한 주소를 지정해주고 동기화를 하면, 즉 커밋을 하면 바뀐 내용을 반영해 블로그가 다시 빌드 된다."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#update는-어떻게-하지",
+    "href": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html#update는-어떻게-하지",
+    "title": "Build Your Blog on Github, Easily",
+    "section": "Update는 어떻게 하지?",
+    "text": "Update는 어떻게 하지?\n블로그 자체의 Jekyll 기반 코드들도 업데이트될텐데, 이건 어쩌나 생각하셨다면 걱정할 필요가 없다. 깃헙에서 제공하는 PR 기능을 활용해서 내 리포지토리까지 거의 자동으로 업데이트해준다. 다만 커스터마이즈를 많이 했다면 지원이 안될 수도 있다는 점에 유념하시라. - issues > New issue > Get started를 누르면 아래의 그림을 볼 수 있다.\n\n여기서 아무 것도 바꾸지 말고 Submit new issue를 하면 업데이트 요청이 들어가고 업데이트 사항이 없을 경우는 이슈가 그낭 종결되고 있을 경우는 그대로 따라가면 된다. 처음 페이지를 깔 때처럼 PR을 해주는 형태로 진행된다. 꽤나 영리한 업데이트 방법이다.\n\n바뀌는 파일들\n아직까지는 사소한 업데이트만 진행되는 듯 싶다. PR을 완료한 이후 커밋 메시지에 “upgrade fastpages”라고 적혀 있는 부분을 확인해서 커스터마이즈한 부분을 적당히 바꾸면 된다. _pages/about.md, |includes/custom_head.html 와 같이 커스터마이즈해둔 파일들도 바뀌게 되는 경우가 종종 있으므로 항상 백업본을 어딘가 로컬에 유지해두는 편이 좋겠다."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html",
+    "href": "posts/computer-tools/2020-10-24-classy-latex.html",
+    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
+    "section": "",
+    "text": "박사 논문을 \\(\\rm\\LaTeX\\)(이하 그냥 레이텍 혹은 텍이라고 쓰겠다)으로 썼지만… 역시 안 쓰면 잊는다. 갑자기 텍을 다시 써볼까, 라는 생각이 드는 순간 갑갑하더라. 윈도를 쓰건 맥을 쓰건 용량이 적지 않고 관리가 쉽지 않은 텍라이브를 깔게 되지는 않는다. 물론 당신이 논문을 쓰고 있다면…\n이 두 가지를 놓고 해결책을 찾아봤다. 세 가지 정도 해법이 있더라."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html#tinytex-with-r",
+    "href": "posts/computer-tools/2020-10-24-classy-latex.html#tinytex-with-r",
+    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
+    "section": "tinytex with R",
+    "text": "tinytex with R\nR의 문서 관련 패키지를 거의 혼자 만들고 있는 谢益辉(사익휘, 시에-이-휘)가 R에서 텍을 컴파일할 수 있도록 아주 가벼운 패키지 tinytex을 만들었다. R을 쓴다면 RStudio를 쓸 것이고, 이 녀석은 편집기로서 역할 역시 모자라지 않다.\ninstall.packages('devtools')\ndevtools::install_github('yihui/tinytex')\ntinytex::install_tinytex()\n\ndevtools 패키지를 설치한다.\n깃헙에서 tinytex이라는 R패키지를 설치한다.\ntinytex 패키지를 통해서 tinytex을 설치한다.\n\n간략하게 잘 컴파일 되는지 확인해보자.\nwriteLines(c(\n    '\\\\documentclass{article}',\n    '\\\\begin{document}', 'Hello world!', '\\\\end{document}'\n    ), 'test.tex')\n\ntinytex::pdflatex('test.tex')\n\ntest.tex이라는 파일을 쓰고\n예를 pdflatex으로 컴파일 한다.\n\n\nCompling .tex directly\n이제 .tex 파일을 직접 컴파일 해보자. 테스트할 용도의 파일은 다음과 같다. 적당한 이름으로 아래의 tex 파일을 적당한 디렉토리에 생성하자.\n\\documentclass{article}\n\\usepackage{kotex}\n\\begin{document}\nHello world! 한글은 어떠함?\n\\end{document}\n.tex 파일을 RStudio에서 열면 위에 pdf를 생성하는 버튼을 볼 수 있다. 이걸 실행해보도록 하자. 아마도 컴파일하면 에러를 만나게 될 것이다. 한글 패키지가 제대로 설치되어 있지 않기 때문이다. 텍도 마찬가지로 패키지들을 설치해야 할 때가 많다. 몇가지 방법이 있지만, 편리한 방법을 소개하겠다.\ntinytex::parse_install(\n    text = \"! LaTeX Error: File `kotex.sty' not found.\"\n)\nR로 돌아와서 발생한 에러 메시지를 text의 인자로 넣으면 어떤 패키지가 필요한지 인식해서 texlive에서 끌어와 설치한다. 설치 후 tex 패키지를 업데이트하자.\ntinytex::tlmgr_update()\n이제 tinytex::pdflatex('test.tex')을 실행하면 pdf가 잘 생성될 것이다. 다시 .tex 파일로 와서 pdf 버튼을 눌러보자. 아마도 에러가 뜰 것이다. 방법 패키지를 설치했는데 왜 에러가 뜰까? 해법은 간단하다. 메뉴에서 다음과 같은 순서로 찾아들어가자.\nTools > Global Options > Sweave\n“Use tinytex when compling .tex files”을 체크해주자."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html#wsl-tinytex-vs-code",
+    "href": "posts/computer-tools/2020-10-24-classy-latex.html#wsl-tinytex-vs-code",
+    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
+    "section": "WSL + Tinytex + VS Code",
+    "text": "WSL + Tinytex + VS Code\n사이휘는 tinytex을 R에서만 쓰도록 만들지 않았다. 리눅스 인스톨러를 제공한다. 이 블로그를 보신 분은 잘 알고 계시리라. 나는 WSL의 광팬이다! WSL에 tinytex을 깔고 녀석을 VS Code에 붙여서 쓰면 된다. 물론 맥OS, 윈도 인스톨러도 제공하니 관심이 있으시면 직접 확인을 하시면 되겠다. 홈페이지 인스톨 섹션에서 확인하면 되겠다.\nWSL 터미널에서 다음과 같이 실행하자.\nwget -qO- \"https://yihui.org/tinytex/install-bin-unix.sh\" | sh\n기타 패키지 설치 등은 tlmgr 명령을 활용하면 된다. 위 홈페이지를 참고하면 되겠다.\nVS Code에서는 어떤 확장을 쓰면 될까? Latex Workshop이 어떤 전용 에디터 못지 않은 풍부하고 다양한 확장 기능을 제공한다. extension의 settings.json을 통해 다양한 컴파일 옵션도 제공하니 자세한 것은 위 페이지의 안내를 참고하면 되겠다. 일단 pdflatex을 쓴다고 가정하자.\nVS Code에서의 활용은 아래 섹션을 참고하자."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html#texlive-with-docker",
+    "href": "posts/computer-tools/2020-10-24-classy-latex.html#texlive-with-docker",
+    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
+    "section": "TexLive with Docker!",
+    "text": "TexLive with Docker!\n본격적으로 텍을 쓰는 사람이라면 어찌해야 하나? Tinytex이 많이 부족해 보일 수 있다. Texlive를 온전하게 쓰고 싶다면 역시 OS 별로 텍라이브를 까는 방법 밖에 없나? 이럴 때 손쉽게 동원할 수 있는 게 docker이다. 비슷한 계열의 OS라도 텍라이브를 전부 까는 것이 편하지는 않다. 윈도는 더 부담스럽다. 그냥 필요할 때 불러서 쓰고 잊을 수 있다면 좋지 않을까? 도커는 이런 용도로 쓰기에도 좋다.\n내가 검색해본 바로는 공인 이미지는 없는 것 같다. 다양한 사용자 이미지 중에서 꽤 관리가 잘되는 것을 골라서 쓰면 되겠다. 내가 활용하는 이미지는 다음과 같다.\nhttps://hub.docker.com/r/thomasweise/docker-pandoc/\n녀석을 도커에 마운트하자. WSL에서 도커를 쓰는 법은 이 글을 참고하라.\n​docker run -v /mnt/[YOUR-LOCAL]:/doc/ -t -i thomasweise/docker-pandoc\n\nWSL이 /mnt 디렉토리 아래 윈도의 디스크를 마운트한다. 따라서 저 아래 로컬 폴더의 주소를 넣으면 된다. 예를 들어, C의 doc라는 이름이라면, c/doc를 넣으면 된다. 이렇게 두면 해당 폴더가 도커의 /doc 아래 연결된다.\n\n초기에 이것저것 깔아주고 초기화해야 하는 것들이 있다. 이 녀석들을 셸스크립트(sh)로 만들어두자. install_kotex.sh 라는 스크립트는 아래와 같이 만들어보자. 해당 스크립트는 위에 마운트하는 폴더에 넣어두면 좋다. 그러면 도커 이미지가 올라갔을 때 해당 스크립에 쉽게 접근할 수 있다.\n#!/bin/sh\ntlmgr init-usertree\n#\ntlmgr repository add https://cran.asia/KTUG/texlive/tlnet/ ktug\n#tlmgr pinning add ktug \"*\"\ntlmgr install collection-langkorean\nupdmap -sys\nupdmap -sys\ntlmgr update --all\n상태를 초기화하고 한글을 까는 명령어들을 모아둔 것이다. 실행 중인 도커 내에서 해당 디렉토리로 이동해서 ./install_kotex.sh로 명령을 실행하자.\n이제 VS Code로 가자. 필요한 Extension은 앞서 살펴본 Latex workshop과 더불어 Remote-Container를 설치하자. 이 녀석을 설치하면 WSL 내에서 돌아가는 컨테이너 안에도 VS Code를 통해 바로 접속할 수 있다.\n - 아래 ><으로 된 부분을 클릭하면 상단에 메뉴가 뜬다.\n - “attach to running container”를 실행해서 실행중인 도커 콘테이너를 부착한다.\n\n\n부착하면 새 창이 뜨면서 아래 녹색 창이 콘테이너 부착되었음을 알려준다.\n콘테이너 내부에 Latex Workshop 확장(extension)을 설치해야 한다.\n\n\n\n설치 후 해당 Extension의 설정을 고쳐주자.\n위에 찾기창에서 디폴트로 떠 있는 내용 뒤에 “pdf” 치면 pdf에 관련된 설정만 필터링된다.\n\n\n\n위 항목을 찾아서 적당한 포워딩 포트를 넣어준다.\n포트가 잘 포워딩 된다면, 아래와 같이 VS Code에서 PDF 뷰어를 활성화할 수 있다.\n포트 포워딩 설정은 Latex Workshop 확장의 미비함 때문에 필요하다. 이후 해당 확장의 업데이트를 통해 해결될 것으로 기대한다.\n\n\nActivating PDF Viewer\n확장의 PDF 뷰어의 작동 방식 때문에 포트포워딩 선택을 해줘야 한다.\n\nPort Forward\n일단 확장 설정에서 적당히 포워딩될 포트를 설정해야 한다.\n\n\nContainer Setting\n콘테이너에서 해당 포트가 잘 포워딩되고 있는지 확인하자.\n\n\n옆에 원으로 표시해 둔 곳은 Remote-Container 확장으로 바로 가는 단축 아이콘이다.\n위 그림처럼 35556 포트를 통해 잘 포워딩되고 있음을 알 수 있다.\n\n만일 포워딩이 되고 있지 않다면, 마우스 우클릭으로 포워딩을 해주도록 하자.\n\n\n이제 VS Code에서 텍 파일을 열고 문서를 작성하고 컴파일하면 된다. Latex Workshop이 설치되어 있다면, .tex 파일에 알아서 반응하니 걱정 마시라."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html#references",
+    "href": "posts/computer-tools/2020-10-24-classy-latex.html#references",
+    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
+    "section": "References",
+    "text": "References\n\ntinytex\ntexlive 도커 이미지\nkotex 리눅스 설치\nVS Code Remote-Cotainer 포트 포워딩\n컴파일에 활용된 파일은 여기를 참고하라.\n\nhttps://github.com/anarinsk/test-vscode-latex"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html",
+    "title": "Streamlit + Heroku",
+    "section": "",
+    "text": "Note\n\n\n\n현재는 streamlit에서 꽤 좋은 조건으로 자체 클라우드를 운영한다. 특별한 이유가 없는 이상 여기 소개한 것과 같이 Heroku를 쓰는 것은 불필요하다."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#들어가며",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#들어가며",
+    "title": "Streamlit + Heroku",
+    "section": "들어가며",
+    "text": "들어가며\n구슬이 서 말이라도 꿰어야 보배다. 당연하다. 데이터 분석은\n\n스마트한 노가다\n갈고 닦은 모델링\n환상적인 시각화\n\n의 삼위 일체다. 물론 이 모든 과정에 화룡점정은 “전달”이다. 이 세 개를 어떻게 묶어서 전달하느냐에 따라서 분석을 받아들이는 그 사람의 판단이 달라진다. 어떻게 하면 잘 전달하는 것일까?\n지구상의 많은 인구가 손 안에 컴퓨터를 하나씩 들고 다니는 시대다. 안타깝게도 PC에서 많이 쓰던 PDF는 모바일에 적절하지 않다. 문서의 확대, 축소가 동적이지 않기 때문이다. 아울러 새로운 정보를 계속 주고 받을 수 있다는 점을 생각하면 결국은 ‘웹’, html이 데이터 분석을 전달하는 새로운 합의점이 되지 않을까 싶다. 아니 이미 그런 시대다."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#streamlit",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#streamlit",
+    "title": "Streamlit + Heroku",
+    "section": "Streamlit",
+    "text": "Streamlit\nPython은 이제 자타가 공인하는 데이터 사이언스의 주요 도구다. Python에는 이미 좋은 웹 개발 도구들이 있다. Django, Flask가 그렇다. 하지만 역시 나 같은 문송한 자들이 쓰기는 쉽지 않다. 아마도 네트워크 관련 지식이나 웹 관련 지식에 익숙하지 않은 탓이다. 그냥 pandas, numpy 정도만 배울 용이가 있는 사람들에게는 넘기 쉽지 않은 장벽이다. 어쩌면 닭잡고 싶은데 소잡는 칼을 휘두르는 법을 배워야 해서 그럴지도 모르겠다.\n이런 웹 개발 프레임워크들은 “데이터 혹은 그 시각화를 인터랙티브하게 공유한다,”라는 기본 목적에 비추어보면 살짝 과한 면도 있다. 비슷한 필요를 느낀 사람들이 많았는지 작년에 Streamlit라는 반가운 프로젝트가 등장했다.\nR에는 이미 Shiny라는 비슷한 프로젝트가 있다. R의 기능을 활용해 데이터를 처리하고 별도의 웹 개발 없이 R의 기능을 그대로 시각화로 구현할 수 있는 툴이다. Python에도 비슷한 기능을 구현하는 시도는 많았으나 어딘가 불편했다. Streamlit는 이런 2%의 부족함을 꽤 잘 해결했다. 어떤 면에서는 Shiny보다도 쓰기가 편리한 듯도 싶다. 다만 잃는 것도 있다. Shiny의 ’미감’에는 미치지 못하고 기능도 살짝 부족하다. 하지만 통상적인 데이터 탐색 및 시각화의 용도로는 충분하다.\n\nWorkflow\n여기서 Streamlit를 자세히 설명하지는 않겠다. Python을 써보면 사람이면 예제를 쉽게 따라해보면 된다. 페이지의 설명대로 아래 명령만 실행해봐도 느낌을 한번에 받을 수 있다. 아래와 같이 설치하고 hello를 띄울 수 있다.\n$ pip install streamlit \n$ steamlit hello\n대략의 워크플로우는 아래와 같다.\n\nPython으로 작업한다.\nStreamlit로 interactive하게 처리될 부분을 간단히 설계한다.\n터미널에서 streamlit run [앱이름].py\n\n각자의 컴퓨터, 즉 로컬에서 실행하면 알아서 브라우저 앱이 뜬다. 디자인이 다소 허접해보일 수 있지만, 미니멀을 좋아하는 사람이라면 ’본질’에 집중할 수 있는 점을 칭찬할 것이다. R의 Shiny와 마찬가지로 어지간한 Python 비주얼 라이브러리(matplotlib, Vega, Plotly 등등)는 모두 구현이 가능하다."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#how-to-deploy-to-web",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#how-to-deploy-to-web",
+    "title": "Streamlit + Heroku",
+    "section": "How to deploy to web…",
+    "text": "How to deploy to web…\n로컬에서 Steamlit를 이용해 그럴 듯한 앱을 만들었다. 이제 이 녀석을 어떻게 배포할까? 즉 이걸 남들에게 어떻게 보여줄까?\n일단 배포를 위해서는 전용 웹 서비스가 있어야 한다. AWS의 무료 티어를 활용해서 배포할 수도 있지만 세팅이 간단하지는 않다. 솔직히 말하면 이 마저 귀찮고 살짝 겁난다. 이런 사람들이 쉽게 쓸 수 있는 서비스가 salesforce에서 제공하는 Heroku다. 원래 Ruby로 제작된 웹 앱만 서비스 했으나, 최근 쓰임새가 늘어나면서 다양한 랭귀지를 지원하고 있다. 당연히 Python도 포함된다. 작업의 전체적인 개념은 다음과 같다.\n\nHeroku 계정 생성\nCLI 설치\nStreamlit 앱 제작\nHeroku 빌드를 위한 파일 생성\nStreamlit 작업 디렉토리를 Heroku로 push\nPush와 동시에 웹 빌드 및 자동 배포\n\n필요한 과정을 간략하게 살펴보자.\n\nHeroku 계정 생성 및 CLI 설치\n홈페이지에 들어가서 가입하면 된다. CLI, 즉 터미널 툴은 왜 필요할까? 터미널에서 작업을 하면 좀 더 편하다. CLI를 설치해야 제대로 Heroku를 사용할 수 있다. 아래와 같이 터미널에서 로그인을 한다.\n$ heroku login \n\n\n앱 디렉토리에 깃 생성\ngit을 통해 heroku를 관리하는 게 편하다. git을 쓸 줄 모른다면, 야매로라도 얼른 배우고 오시라. git으로 작업을 브랜치에서 commit 한 후 heroku로 푸시하는 것으로 일종의 작은 CI/CD가 달성된다.\n\n\n빌드를 위한 파일 생성\nHeroku로 제작한 Streamlit 앱을 푸시하면 자동으로 빌드가 진행된다. 이를 위해서 제작한 앱의 최상위 디렉토리에 아래의 파일을 넣어주자.\nproject \n├── app.py (제작한 앱)\n├── requirements.txt  \n├── setup.sh  \n└── Procfile\n\nrequirements.txt\n설치해야 하는 Python 패키지를 지정해준다. 아래의 예와 같다.\n numpy==1.16.4 \n streamlit==0.52.1 \n seaborn==0.9.0 \n pandas==0.25.1 \n matplotlib==3.1.1 \n scikit_learn==0.22\n이 파일을 자동으로 생성하는 pipreqs를 이용해도 된다.\n\n\nsetup.sh\nmkdir -p ~/.streamlit/\n\necho \"\\\n[general]\\n\\\nemail = \\\"your-email@domain.com\\\"\\n\\\n\" > ~/.streamlit/credentials.toml\n\necho \"\\\n[server]\\n\\\nheadless = true\\n\\\nenableCORS=false\\n\\\nport = $PORT\\n\\\n\" > ~/.streamlit/config.toml\nsh 명령을 실행할 내용을 담고 있다.\n\n\nProcfile\nweb: sh setup.sh && streamlit run app.py\nsh 명령을 실행하고 streamlit를 띄우는 명령어를 담고 있다.\n\n\nruntime.txt\n특정 Python 버전이 필요하다면 이 파일을 추가할 수 있다. 파일 안에 담긴 내용은 아래와 같다.\npython-3.7.3\n\n\n\nCreate and Just push\n이제 heroku로 나갈 앱을 만들고 보내면 끝이다. master에서 작업했다면 아래와 같이 명령어를 실행하면 된다.\n$ heroku create\n$ git push heroku master"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#protips",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#protips",
+    "title": "Streamlit + Heroku",
+    "section": "Protips",
+    "text": "Protips\n\n한글이 안나와요~\nstreamlit는 웹에서 즉 브라우저 위에서 돌아가기 때문에 한글이 잘 나오는 것이 정상이다. 문제는 Python 내에서 그래프에 한글을 렌더링할 경우 이것이 제대로 표현되지 않는다는 것이다. 보통 matplotlib과 같은 패키지들을 써본 사람이라면 해당 내용을 한번 검색해본 기억이 있을 것이다. 대략 로컬에서는 폰트를 찾은 후 이를 matplotlib이 쓸 수 있도록 인식시켜주는 것으로 간단히 끝난다.\n왜 Heroku에서는 이것이 안될까? 간단하다. Heroku는 외부의 웹서버이고 그 웹 서버에 한글 폰트가 없는 것이다. 웹 서버에 한글 폰트를 심어주면 될 것이다. 하지만 어떻게 심을까? 간단하다. 작업 중인 앱의 루트 디렉토리에 다음과 같은 시스템 디렉토리를 하나 생성한다.\n/.fonts \n이 디렉토리 안에 필요한 한글 폰트를 넣으면 된다. 그러면 해당 앱이 Heroku로 푸시되었을 때 시스템 폰트로 디렉토리 안의 폰트들이 잘 등록된다."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#예제",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#예제",
+    "title": "Streamlit + Heroku",
+    "section": "예제",
+    "text": "예제\nhttps://morning-depths-10545.herokuapp.com/\n\n앱 안에 비교적 자세한 설명을 달아 두었으니 별도의 과정은 생략하도록 하겠다.\n\n데이터 정리 등의 지저분한 코드는 생략하고 위 Heroku 앱을 구현하는 데 동원된 코드는 다음과 같다.\nhttps://github.com/anarinsk/adp-st-kap_1"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#참고자료",
+    "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html#참고자료",
+    "title": "Streamlit + Heroku",
+    "section": "참고자료",
+    "text": "참고자료\nhttps://github.com/Taxuspt/heroku_streamlit_nginx\nhttps://towardsdatascience.com/quickly-build-and-deploy-an-application-with-streamlit-988ca08c7e83\nhttps://blog.jcharistech.com/2019/10/24/how-to-deploy-your-streamlit-apps-to-heroku/"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-27-viva-binder.html",
+    "href": "posts/computer-tools/2020-10-27-viva-binder.html",
+    "title": "Viva, Binder!",
+    "section": "",
+    "text": "내가 보고 있는 것을 남이 그대로 봐야 의사 소통이 온전해지는 경우가 있다. 아마도 코드를 나누는 경우가 그렇지 않을까 싶다. 이 점에서 Github은 꽤 좋은 코드 나눔 도구다. 그런데 문제가 하나 있다. Github을 통해 배포하는 것이 패키지라면 각자 땡겨가서 쓰면 되겠지만, 특정하게 실현된 결과물이라면?\n예를 들어보자. Python으로 특정한 결과를 도출하는 코드를 짰다고 하자. 당연히 내가 작업한 환경에 의존할 것이다. 다른 환경에서 돌아갈지 아닐지 모르지만 어쨌든 의존성은 피할 수 없다. 상대를 불러서 내 컴퓨터에서 돌아가는 모습을 보여줄 수 있다면 좋겠지만 그럴 수 없는 경우가 많다. 내가 돌려본 환경을 그대로 상대가 볼 수 있게 할 수는 없는 것일까?\n당장 떠오르는 솔루션이 클라우드다. 클라우드에 소프트웨어 환경을 세팅하고 내가 테스트해본다. 원하는 상대에게 url을 주고 같은 테스트를 반복 체험하게 한다. 물론 좋다. 사실 AWS 같은 곳에 Linux 서버를 깔고 주피터 관련 패키지나 RStudio 등을 설치하기는 쉽다. AWS를 비롯해 많은 클라우드 업체에서 원스톱 서비스까지 제공한다. 그런데, 문제가 있다. 비용이 든다. 사용량이 많아서 뽕을 뽑을 수 있다면 덜 아깝겠지만 코드 공유하고 결과를 확인하는 정도가 족하다면 많이 아깝다.\n이런 용도로 활용할 수 있는 ‘무료’ 서비스가 Binder이다.\nhttps://mybinder.org"
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-27-viva-binder.html#turn-a-git-repo-into",
+    "href": "posts/computer-tools/2020-10-27-viva-binder.html#turn-a-git-repo-into",
+    "title": "Viva, Binder!",
+    "section": "Turn a Git repo into!",
+    "text": "Turn a Git repo into!\n서비스 참 시원시원하다. 로그인도 필요 없다. 깃헙 레포에 있는 코드를 받아서 가상 머신 위에 해당 결과를 구현해준다. R, Python, Julia를 지원한다. 세 언어 모두 기본 베이스로 Jupyter허브를 활용한다. 간편한 연동을 위해서는 깃헙 리포를 public으로 설정해야 한다.\n\n\nGitHub: 깃헙 주소를 넣는다.\nGit branch, tag or commit: 관련된 깃 브렌치, 태그, 커밋 등을 넣는다.\nPath to a notebook file: ipynb 파일이 깃 내에 서브 디렉토리에 있다면 여기서 노트북 파일의 위치등을 지정해주면 된다.\n\nRStudio나 Shiny를 쓰고 싶다면, “File” 대신 “URL”로 바꾸고 rstudio, shiny 등을 지정해주면 된다.\n\nR의 경우 r-2020-10-26 식으로 날짜가 적힌 runtime.txt 파일 그리고 패키지를 미리 인스톨하는 install.R 파일 두 개를 준비하면 된다.\n\n\n\n아래 공유를 위한 주소도 떠 있으니 공유를 할 때는 해당 주소만 던져주면 된다. 이제 launch 버튼을 누르자. 상당히 오랜 시간 동안 뭔가가 설치된다. 설치되는 내용을 보면 소프트웨어 구동에 필요한 개별 이미지를 빌드한 후 이를 클라우드에 띄워 구동한다.\n\n\n장점은 충분히 많다. 코드가 제대로 구현되는지 확인하는 수준이거나 코드를 가끔 짧은 시간 동안 실행해야 하는 정도라면 더 이상 바랄 게 없다. 단점이라면 도커 이미지를 빌드하고 녀석을 푸시해 실행할 때까지 시간이 좀 걸린다는 것인데, 뭐 이 정도 시간 비용 쯤이야!"
+  },
+  {
+    "objectID": "posts/computer-tools/2021-02-02-all-vs-code.html",
+    "href": "posts/computer-tools/2021-02-02-all-vs-code.html",
+    "title": "All into VS Code",
+    "section": "",
+    "text": "각자 언어에 맞는 IDE가 있다. 예를 들어 R에는 RStudio가 가장 잘 어울린다. 언어 별로 별도의 IDE 보다는 모든 것을 한방에 해결할 수는 없을까? 이러한 목적에 복무하는 코더를 위한 좋은 에디터들이 많이 있다. 하지만 설정이 쉽지 않고 아무래도 나 같은 문송한 존재들에게는 접근성이 떨어진다. 그리고 대체로 유료다! 이 사이에서 타협할 수 있는 제품이 없을까?\nMS에서 제공하는 무료 (만능) 에디터 VS Code는 여기서 제법 괜찮은 대안이다. 각설하고 파이썬, 줄리아, R을 VS code로 부리는 데 필요한 준비물을 살펴보자."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-02-02-all-vs-code.html#필요-조건",
+    "href": "posts/computer-tools/2021-02-02-all-vs-code.html#필요-조건",
+    "title": "All into VS Code",
+    "section": "필요 조건",
+    "text": "필요 조건\n\nWindows 10 with WSL 2\nVS Code\n\nGlobal extension\n\nRemote-Container\n\nContainer extension\n\nJulia\nJupyter\nPython\nR\nR LSP Client\nRadian\n\n\nDocker Desktop\njupyter/datascience-notebook:latest (from dockerhub)\n\n개별 소프트웨어를 로컬 머신에 깔아서 쓸 수도 있고, 이 경우 역시 아래를 참고해 설정하는 데 어려움이 없으리라 본다. 여기서는\n\nWSL 2를 통해 docker를 활성화하고\njupyter 개발자가 직접 관리하는 Data Science 노트북을 끌어와\n\nVS Code를 통해 부리는 방법을 소개한다. 위의 적은 두 가지 사항은 이 포스팅을 참고하자. 간단히 결론만 요약하면 다음과 같다. 도커를 쓰면 별도의 인스톨이 필요 없고 뭔가 꼬였을 때 해당 컨테이너만 날려버리면 된다. 위에 소개한 jupyter/datascience 컨테이너는 다소 큰 용량이지만 잘 갖춰진 파이썬, 줄리아, R의 프리셋을 제공한다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-02-02-all-vs-code.html#핵심",
+    "href": "posts/computer-tools/2021-02-02-all-vs-code.html#핵심",
+    "title": "All into VS Code",
+    "section": "핵심",
+    "text": "핵심\n\n\nVS Code의 익스텐션 Remote-Container 컨테이너 접속 기능을 활용해 datascience-notebook 컨테이너 접속한다.\n\n오른쪽 하단에 >< 표시된 부분을 클릭하자. 위의 그림을 볼 수 있다. 여기에서 “Remote-Containers: Attach to Running Container…”를 클릭하면 현재 돌아가고 있는 docker 컨테이너를 볼 수 있다. 미리 docker를 통해 돌려 둔 datascience 컨테이너를 선택하자.\n이 컨테이너는 안에 python, jupyterlab, R, Julia를 모두 갖고 있다. 따라서 이 녀석 하나만 도커에 올리면 된다.\n\n각각의 언어에 접근하기 위해서 필요한 VS Code Extension을 설치한다.\n\nJulia, Python의 경우 공식 확장이 있어서 그대로 쓰면 된다.\nR의 경우 비공식 확장이지만 약간의 세팅을 거치면 꽤 근사하게 사용할 수 있다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-02-02-all-vs-code.html#for-julia",
+    "href": "posts/computer-tools/2021-02-02-all-vs-code.html#for-julia",
+    "title": "All into VS Code",
+    "section": "For Julia",
+    "text": "For Julia\n\n필요한 줄리아 작업 파일을 .jl 확장자로 만든다.\nVS Code가 알아서 잘 잡아서 줄리아 커널과 연결시켜준다.\n간략한 실행 명령 체계를 살펴보자. 자세한 내용은 여기를 참고하자.\n\n코드 셀 구분은 ##\nCTRL + ENTER 해당 라인 실행\nALT + ENTER 코드 블럭 실행 (드래그앤드롭 선택)\nSHIFT + ENTER 코드 셀 실행\n\n패키지 설치는 두가지로 가능하다.\n\nJulia 콘솔에서 ]를 치면 패키지 관리 모드로 들어간다.\n\n>(pkg) add SOMETHING\n\n이렇게 설치할 경우는 별도로 Pkg를 호출하지 않도 설치가 가능하다.\n\n\n아래와 같이 설치할 수도 있다.\n\nusing Pkg \nPkg.add(\"Plots\")\nPkg.add(\"PyPlot\") \nJulia는 JIT를 쓰기 때문에 패키지를 설치하고 명령을 구동하는 데 시간이 오래 걸린다. 이 과정을 작업을 시작하기 전에 미래 해두는 것이 좋다. 즉, 필요한 경우 미리 컴파일을 해놓는 것이 좋다.\nQuantEcon에 소개된 사례를 따르자."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-02-02-all-vs-code.html#for-python",
+    "href": "posts/computer-tools/2021-02-02-all-vs-code.html#for-python",
+    "title": "All into VS Code",
+    "section": "For Python",
+    "text": "For Python\n\n필요한 파일을 .py 확장자로 만든다.\n간략한 명령어\n\nCode 블럭의 구별은 #%%\nPython은 VS Code에서 거의 완벽하고 편리하게 지원이 된다.\n별다른 설명이 필요하지 않다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-02-02-all-vs-code.html#for-rstat",
+    "href": "posts/computer-tools/2021-02-02-all-vs-code.html#for-rstat",
+    "title": "All into VS Code",
+    "section": "For Rstat",
+    "text": "For Rstat\n\n익스텐션 두 개를 깐다.\n\nR Support\nR LSP Client\n\n다음으로 R 내에서 LSP와 연결할 패키지를 설치한다.\n\nremotes::install_github(\"REditorSupport/languageserver\")\n\n마지막으로 Rstat에서 편리하게 사용할 터미널 앱을 깐다. 파이썬으로 제작되었다. 다행스럽게도 DS 도커는 이미 파이썬을 잘 지원하기 때문에 쉽게 쓸 수 있다. 주의할 것은 Rstat 내부가 아니라 그냥 docker의 bash에 접속한 상태에서 깔아야 한다는 것이다. Radian은 텍스트 상에서 모든 정보를 편리하게 보여주기 때문에 VS Code의 부족함을 잘 메워준다.\n\npip install -U radian \n\n이제 VS Code에서 설정 몇 가지를 바로 잡아 줘야 한다.\n\nFile > Preferences > Settings로 가자\n옆에 탭을 보면 Extensions가 있을 것이다. 여기서 R로 찾아가자.\nExtension의 설정을\n\nUser, Remote, Workspace 등 상황에 맞게 다양하게 정할 수 있다.\n여기서는 Workspace에 하도록 하겠다.\n\nR: Bracketed Paste 항목 체크\nR › Rterm: Linux\n\n/opt/conda/bin/radian\n\nR: Session Watcher 항목 체크\n\n\n\n설정 항목에서 json 파일로 한방에 해결할 수도 있다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-02-02-all-vs-code.html#jupyterlab",
+    "href": "posts/computer-tools/2021-02-02-all-vs-code.html#jupyterlab",
+    "title": "All into VS Code",
+    "section": "Jupyterlab",
+    "text": "Jupyterlab\n\nipynb를 확장자로 해서 노트북을 쓰고 싶다면, 그냥 만들어 쓰면 된다!\nVS Code에 Jupyter 확장이 있기 때문에 보통의 웹 브라우저에서 쓰는 Jupyter 노트북과 거의 동일한 기능을 제공한다. 웹 노트북에서와 마찬가지로 파이썬, 줄리아, R의 커널을 선택하면 된다 (아래 그림의 오른쪽 상단 박스). jupyterlab과 거의 비슷한 인터페이스를 지니고 있다. 오히려 주피터에 비해 복잡하지 않아서 좋다고 느낄지도 모르겠다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-02-02-all-vs-code.html#setting-for-remote-connection",
+    "href": "posts/computer-tools/2021-02-02-all-vs-code.html#setting-for-remote-connection",
+    "title": "All into VS Code",
+    "section": "Setting for Remote Connection",
+    "text": "Setting for Remote Connection\n앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 좋다면 아래와 같이 하면 된다.\n\n\n만일 위와 같은 화면에 Remote Exlorer에서 뜨지 않는다면 컨테이너가 부착되지 않는 것이다. 컨테이너를 부착하면 된다.\n\n\n\nExtension > REMOTE EXPLORER > DETAILS 탭에서 가운데 설정 모양이 “Open Container Configuration File”이다.\n옆 에디터 창에 json 형식의 설정이 뜬뜬다. 여기서 관련 extension 등의 설정을 지정할 수 있다. 이렇게 설정을 해두면 해당 컨테이너를 부착할 때 설정한 대로 자동으로 옵션들이 적용된다. 매우 편리하다.\n\n{\n    \"extensions\": [\n        \"Ikuyadeu.r\",\n        \"julialang.language-julia\",\n        \"ms-python.python\",\n        \"ms-toolsai.jupyter\",\n        \"REditorSupport.r-lsp\"\n    ],\n    \"workspaceFolder\": \"/home/jovyan/github-anari\",\n    \"forwardPorts\": [\n        43463,      \n    ],\n    \"settings\": {\n        \"jupyter.alwaysTrustNotebooks\": true,\n        \"r.bracketedPaste\": true,\n        \"r.sessionWatcher\": true,\n        \"r.rterm.linux\": \"/opt/conda/bin/radian\"\n    }\n}\n\n\nFile > Perefences > Settings에서도 설정에 접근할 수 있다.\nVS Code의 설정은 두가지 축을 지닌다. 하나는 설정 전체를 담은 json 파일이다. 왼쪽 > 표시된 항목에서처럼 카테고리 별로 구별되어 쉽게 접근할 수 있다. 이 하나의 설정을 위 그림에서 보듯이 User, Remote(컨네이터), Workspace 별로 별도로 지정해 활용할 수도 있다."
+  },
+  {
+    "objectID": "posts/container/2020-09-23-docker-humble-practice.html#사전-전제",
+    "href": "posts/container/2020-09-23-docker-humble-practice.html#사전-전제",
+    "title": "Docker, 소박한 사용법",
+    "section": "사전 전제",
+    "text": "사전 전제\n\n도커에 관해서 대충 알고 있다.\n도커를 써보기는 했헀다. 하지만… (막상 쓰려면…)"
+  },
+  {
+    "objectID": "posts/container/2020-09-23-docker-humble-practice.html#내가-도커를-쓰는-이유",
+    "href": "posts/container/2020-09-23-docker-humble-practice.html#내가-도커를-쓰는-이유",
+    "title": "Docker, 소박한 사용법",
+    "section": "내가 도커를 쓰는 이유",
+    "text": "내가 도커를 쓰는 이유\n\n(사실 있어 보이고 싶어서…)\n개발 환경의 격리고립 및 일관된 환경 공유를 위해서공유를 위한 사전 작업\n가끔 리눅스 환경에서만 구현할 수 있는 파이썬 패키지들이 있다.\n윈도에서 한번은 마주하게 되는 (지긋지긋한) 한글 인코딩 이슈에서 해방"
+  },
+  {
+    "objectID": "posts/container/2020-09-23-docker-humble-practice.html#원칙",
+    "href": "posts/container/2020-09-23-docker-humble-practice.html#원칙",
+    "title": "Docker, 소박한 사용법",
+    "section": "원칙",
+    "text": "원칙\n우선 문과생이 도커(docker) 이미지를 쓰는 원칙 하나 보고 가자.\n본인에게 특화된 이미지를 빌드하지 말고 그냥 official build를 당겨와서 쓰자!\n도커의 장점이 개발환경의 격리다. 그렇다면 자신에게 적합한 환경을 세팅해두고 이 녀석을 끌어와 쓰면 좋지 않을까? 약간의 취향과 사용성의 차이를 감안하고 말하자면, 커스텀 이미지는 되도록 피하는게 좋다. 도커 허브에서 공식적으로 관리되고 업데이트되는 도커 이미지들이 많다. 문과생이 쓰는 환경에서 99%의 확률로 여기서 부족함이 없을 것 같다.\n내가 쓰는 특정 환경을 특정 시점에 이미지로 말아두었다고 치자. 당분간은 편리하게 필요할 때 끌어다 쓸 수 있을 것이다. 하지만 이렇게 ‘고정된’ 이미지를 쓸 경우 도커 이미지 안에 속한 패키지나 구성요소들을 개별적으로 업데이트 해줘야 한다. 시간이 지날수록 업데이트해야 할 항목과 갯수가 늘어나게 된다.\n한편 도커 허브의 공식 이미지의 경우 필요한 업데이트를 이미지 관리자가 정기적으로 수행한다. 이 이미지를 주기적으로 새로 끌어다쓰면 업데이트의 번거로움을 피할 수 있다. 물론 팀별로 통일된 환경이 필요하고 이 환경을 조직에서 관리할 수 있다면,Finding Giants in Docker\n도커를 써봤다면 빌드를 해봤을 것이다. 여러가지 바탕이 되는 OS나 패키지들을 끌어와서 자신에게 특화된 이미패키지를 만들어 써도 좋을 것이다.\n파이썬으로 코딩을 하고 주피터 환경을 쓰고 싶다면, 주피터에서 공식적으로 운영하는 도커 이미지를 쓰자. R과 RStudio를 쓰고 싶다면, 역시 rocker라는 공식적인 도커 프로젝트가 있다. 개인이 제조한 사설 이미지 보다는 이런 공식 이미지가 대체로 편안하다.\n\nhttps://hub.docker.com/r/jupyter/datascience-notebook\nhttps://hub.docker.com/r/rocker/rstudio\n\n이하에서는 내가 기본으로 사용하는 두 개의 도커 환경, 주피터 + 파이썬, RStudio + R을 어떻게 쓰는지 살펴 보겠다."
+  },
+  {
+    "objectID": "posts/container/2020-09-23-docker-humble-practice.html#미리-해야-할-것들",
+    "href": "posts/container/2020-09-23-docker-humble-practice.html#미리-해야-할-것들",
+    "title": "Docker, 소박한 사용법",
+    "section": "미리 해야 할 것들",
+    "text": "미리 해야 할 것들\n\n원도10 2004 Build 이후 WSL 2 환경\nWSL 2가 깔리는 윈도10 버전으로 업데이트하고 이를 설치하도록 하자. 시중에 가이드가 많으니 구글 검색 후 참고하면 되겠다.\n\nMS 공식 가이드\n\n\n\nDocker Desktop (윈도10)\n네이티브 우분투 환경이라면 sudo apt-get으로 도커를 설치해서 쓰면 된다. 우리는 윈도10과 리눅스를 오가야 하므로, 이에 적합한 맞춤형 도커 버전이 좋다. 다행스럽게 도커 개발사가 WSL 2에 특화된 도커 클라이언트를 제공하고 있다. 보다 안정적인 버전인 Stable과 보다 최신 기능을 담은 버전인 Edge 모두 WSL 2 지원한다.\n\nDocker Desktop for WIndows\n\n\n\nWindows Terminal\n반드시 써야 하는 것은 아니다. 하지만 윈도10에서 리눅스 배포판을 윈도 터미널과 함께 쓰면 더할 나위 없이 좋다. 무엇보다도 별다른 조작 없이 우분투 등 WSL 2에 깔린 리눅스를 터미널이 잘 잡아준다. 다음으로 터미널 환경(폰트, 컬러 등등) 커스터마이즈가 쉽다.\n\nMS 공식 가이드"
+  },
+  {
+    "objectID": "posts/container/2020-09-23-docker-humble-practice.html#내-환경",
+    "href": "posts/container/2020-09-23-docker-humble-practice.html#내-환경",
+    "title": "Docker, 소박한 사용법",
+    "section": "내 환경",
+    "text": "내 환경\n이 글을 쓰는 시점에서 내가 도커를 이용하는 환경은 아래와 같다.\n\nWindows 10 Insider Preview 20190.rs\nDocker Desktop Edge 2.3.7.0\nWindows Terminal Preview 1.3\n\n\nComments\n\n윈도우10 20190.rs 버전은 인사이드 프리뷰 버전이다. 프리뷰 버전을 꼭 쓰지 않아도 된다. 202XXX 버전을 쓸 것이라면 20226 이후를 써야 한다.\n도커 버전은 최신 버전을 유지하는 편을 권한다. Edge가 불안하다면 Stable을 쓰면 된다."
+  },
+  {
+    "objectID": "posts/container/2020-09-23-docker-humble-practice.html#docker-compose",
+    "href": "posts/container/2020-09-23-docker-humble-practice.html#docker-compose",
+    "title": "Docker, 소박한 사용법",
+    "section": "Docker Compose",
+    "text": "Docker Compose\n도커를 써본 사람이라면 개별 컨테이너를 띄울 때 옵션들–예를 들어 root 권한을 줄 건지, 포트는 어떤 것을 열 것인지 등등–을 써봤을 것이다. 일상적으로 쓸 때에도 이것들을 매번 지정해서 실행해야 할까? 그렇게 해도 되겠지만 조금 불편하다. 한번 정해두고 재사용할 수 있으면 좋겠다. 이러한 용도에 적합한 것이 ’도커 콤포즈’다.\n.yml 확장자의 설정 파일을 만들어 두고 녀석을 실행해서 매번 동일한 환경을 손쉽게 구축할 수 있다. 내가 쓰는 .yml 환경으로 간략하게 살펴보자.\nversion: '3'\nservices:\n    jupyter-ds:\n        image: jupyter/datascience-notebook\n        user: root\n        volumes:\n            - [WSL2 디렉토리]:[컨테이너 디렉토리]\n        ports:\n            - \"8888:8888\"\n            - \"8501-8510:8501-8510\"   \n        environment:\n           - GRANT_SUDO=yes\n           - JUPYTER_ENABLE_LAB=yes\n           - JUPYTER_TOKEN=[내 비번]\n        container_name: jupyter\n#\n    rstudio:\n        image: rocker/verse:latest\n        #image: rocker/verse:4.0.2\n        volumes:\n            - [WSL2 디렉토리]:[컨테이너 디렉토리]\n        ports:\n            - \"8787:8787\"\n        environment:\n            - ROOT=true\n            - PASSWORD=[내 비번]\n        container_name: rstudio\n# End of yml\nyml 파일에서 service 아래 두 개의 항목이 있다. 각각 jupyter/datasicence-notebook과 rocker/verse의 컨테이터 이미지를 의미한다. 첫번째는 데이터를 다룰 때 필요한 파이썬 라이브러리를 주피터와 묶은 이미지이고, 두번째는 R과 RStudio 그리고 tidyverse 및 문서 도구를 묶은 이미지다.\n\nimage: docker-hub 상의 이미지 이름을 뜻한다. : 뒤의 내용은 버전 혹은 여러가지 다른 형태로 묶인 이미지를 나타낸다. latest 최신 버전을 의미한다.\nvolume: WSL 2 환경의 디렉토리와 이미지 내 디렉토리를 매핑한다. 즉, X : Y라고 할 때 X는 윈도우 10의 폴더, Y는 도커 이미지 내의 폴더 이름을 뜻한다. WSL 2는 /mnt 내에 윈도 드라이브를 마운트한다. 따라서 윈도10 환경과 연동된다고 보면 얼추 맞다.\nports: WSL 2에서 인식하는 포트와 이미지 내에서 인식하는 포트를 매핑한다.\nenvironment: 각각 이미지에 맞는 환경을 지정할 수 있다. 이 사례에서 주피터 노트북에는 sudo 권한을 주고, 주피터랩 버전을 쓰며, 최초 진입시 비번은 [내 비번]을 쓰겠다고 지정한 것이다. RStudio의 경우 root 권한을 주고, 패스워드는 내 비번을 쓰겠다는 의미다.\n\n\n통상적으로 쓰려면 docker-compose.yml로 이름을 지은 후 적당한 폴더에 둔다.\n윈도 터미널 등을 통해 Ubuntu와 같은 리눅스 배포판에 접근한다.\n1의 파일이 있는 디렉토리로 이동한 후,\n\nsudo docker-compose -f \"\\mnt\\[YOUR-YML-DIRECTORY]\" -p \"[NAME-OF-PROJECT]\" up -d\n그러면 도커 컴포즈가 알아서 이미지를 끌어온 후 실행까지 할 것이다.\n주의사항 하나 지적하자. docker-compose를 -f 옵션 없이 실행하면 녀석은 HOME 디렉토리에서 해당 파일을 찾는다. WSL 기준에서 볼 때 홈 디렉토리는 윈도의 사용자-계정 디렉토리다. 해당 디렉토리에 docker-compose.yml 파일이 있으면 녀석으로 실행할 것이다. 이렇게 써도 문제는 없지만 yml을 계속 바꿔줘야 할 경우 이는 문제를 일으킬 수 있다. 가급적 yml 파일을 지정해서 활용하는 습관을 들이도록 하자.\n\n도커 컴포즈 공식 가이드"
+  },
+  {
+    "objectID": "posts/container/2020-09-23-docker-humble-practice.html#실제-사용해보자",
+    "href": "posts/container/2020-09-23-docker-humble-practice.html#실제-사용해보자",
+    "title": "Docker, 소박한 사용법",
+    "section": "실제 사용해보자",
+    "text": "실제 사용해보자\n앞서 말했듯이 수 있다! 처음에는 이 개념이 환상적일 수 있다. 게다가 개인용 저장소만 만들지 않으면 도커허브에 그냥 올릴 수 있다. 하지만 이런 접근은 본인이 특화된 용도로 사용을 하거나 아니면 패키지 제조에 능숙하지 않다면 크게 권하고 싶지 않다. 당분간 별 문제가 없더라도 언젠가는 이상하게 탈이 난다.\n다행스럽게 도커 허브에서는 여러가지 공식적으로 관리되고 업데이트되는 도커 이미지들이 많이 올라와 있다. 문과생이라면되도록 초반에는 이런 이미지들을 취사선택해서 활용하는 편을 권장한다. 주피터든 RStudio든 모두 웹 브라우저에서 돌아간다. 이미지가 도커 컨테이터로 구동된 이후 범용 웹브라우저에서 다음과 같이 실행하자.\n\nJuypterlab + Python: localhost:8888\nRStudio + R: localhost:8787\n\n주피터야 원래부터 웹 브라우저 기반이었으니 보통 깔아 쓰는 것과 차이를 느낄 수 없다.\n\nRStudio도 그럴까? 그렇다. 원래 RStudio라는 IDE가 웹 기반으로 만들어졌기 때문에 이 역시 차이를 느낄 수 없다. 아래 화면에서 로그인을 하면 친숙한 RStudio의 화면이 뜬다.\n\n\n해당 페이지 아이콘을 바탕화면 혹은 바로가기에 두고 쓰면 조금 편리 하겠다.\n\n특화된 패키지 혹은 설정이 필요하다면?\n그때그때 깔면 된다. 원 도커 이미지에서 웬만해서는 더 깔 것이 없을 것이다. 필요한 경우가 있다면 bash script를 만들어 깔아주도록 하자. 해당 이미지를 내리지 않는 이상 한번 설치한 상태는 유효하다.\n\n\n도커 이미지 관리\n이미지를 업데이트하고 싶다면 어떻게 해야 할까? 정석대로 하자면, WSL 2 콘솔창에서 실행중인 컨테이너를 멈추고, 이 컨테이너의 이미지를 지워야 할 것이다. 그렇게 해도 되지만, 윈도용 도커 프로그램에서는 보다 간편한 방법을 제공한다.\n대시보드 상에서 컨테이너를 실행하고 멈출 수 있고 이미지도 관리할 수 있다.\n\n아예 해당 이미지 및 컨테이너 데이터 전체를 리셋하는 방법도 있다.\n\n예를 들어보자. 파이썬으로 코딩을 한다면 그리고 주피터 환경을 써야 한다면 어떻게 하는 것이 좋을까? 주피터에서 공식적으로 운영하는 도커 이미지가 있다. 도커로 R을 쓰고 싶다면? 역시 rocker라는 공식적인 프로젝트가 있다. 개인이 제조한 사설 이미지보다는 이런 녀석들을 끌어다쓰는 편이 좋다.\n이하에서는 내가 기본으로 사용하는 두 개의 이미지를 바탕에 깔고 설명을 진행하도록 하겠다."
+  },
+  {
+    "objectID": "posts/container/2021-05-09-docker_korfont.html",
+    "href": "posts/container/2021-05-09-docker_korfont.html",
+    "title": "Docker + Jupyter + 한글 폰트",
+    "section": "",
+    "text": "이 글은 이 포스팅에서 이어진다. 컨테이너를 올린 뒤 컨테이너 내 터미널에서 sh 스크립트를 실행하지 않고 한글 문제 처음부터 해결할 수 없을까?\n사실 이 포스팅을 쓰게 된 동기는 따로 있다. 글을 쓰는 시점에서 matplotlib.font_manager._rebuild()가 사라졌다! Jupyter에서 폰트 목록을 다시 생성할 다른 방법을 찾아야 했다. docker-compose로 필요한 이미지를 끌어올 때 단순히 이미지를 끌어오는 대신 특화된 형태로 build를 할 수도 있다. 이전 포스팅에서 소개한 방법에서는 build 옵션을 사용하지 않았다. 일단 Build가 꽤 거창하게 느껴졌기 때문이다. 적당한 ubuntu 버전을 끌어오고 여기에 Python, Jupyter를 깔고… 이런 빌드 과정이 꽤 험난하고 불필요해 보였다. Jupyter의 경우 데이터사이언스를 위한 잘 갖춰진 도커 이미지가 이미 있고, 이를 그대로 쓰면 큰 문제는 없다.\n문제가 생겼으니 해결책을 찾아야 한다. 특화된 이미지에 기반해서 빌드를 하면 한글 문제와 같은 특정하게 발생하는 문제를 미리 해결할 수 있지 않을까? 이후 소개하는 방법을 통해 확인한 내용은 다음과 같다. 이용 조건이 비슷하다면 참고해보시라.\n\ndocker-compose를 쓸 때 이미지를 지정하는 image 부분을 제외한 나머지는 거의 그대로 재사용이 가능하다.\nimage를 그대로 끌어오는 것이나 몇 가지 명령어를 넣어서 build를 하는 것이나 시간 상으로는 크게 차이가 없다."
+  },
+  {
+    "objectID": "posts/container/2021-05-09-docker_korfont.html#how-to-implement",
+    "href": "posts/container/2021-05-09-docker_korfont.html#how-to-implement",
+    "title": "Docker + Jupyter + 한글 폰트",
+    "section": "How to Implement",
+    "text": "How to Implement\n본론이다.\n\ndocker-compose를 위한 file이 있는 디렉토리 아래 dockerfiles 디렉토리를 하나 더 만든다 (디렉토리 이름은 각자 알아서). 여기에 docker build를 위한 파일을 넣어어둔다.\ndocker-compose용 파일을 약간 수정한다.\n\n\n실행 환경\n\nWindows 10 WSL 2 + Ubuntu 20.04\nDocker for Desktop (Windows)\n\n\n도커를 쓰지 않더라도 dockerfiles과 호환되는 빌드 체계를 갖추고 있다면 응용이 가능하다.\n\n\n\ndockerfiles\n데이터 사이언스를 위한 Jupyter docker 파일을 예시로 들겠다. 다른 이미지라면 응용해서 쓰면 된다.\nFROM jupyter/datascience-notebook:latest\n# Declare root as user \nUSER root\n# Update Ubuntu \nRUN sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list && sed -i 's/security.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list\n# Install Nanum for Korean Font \nRUN apt-get update && apt-get -y upgrade && apt-get install -y fonts-nanum* && fc-cache -fv && rm -fr ~/.cache/matplotlib\n\nFROM jupyter/datascience-notebook:latest 끌어올 이미지를 지정한다.\nUSER root 이미지 내에서 root 권한을 부여한다. 이후 sudo는 안 써도 된다.\nRUN sed -i... 끌어온 우분투 이미지가 미국 기준이기 때문에 업데이트 서버 주소 역시 미국이다. 이걸 국내에서 가장 안정적이고 빠른 카카오 서버로 바꾼다.\nRUN apt-get update && apt-get -y upgrade...\n\n우분투 배포판의 업데이트 및 업그레이드를 실행한다.\n\n나눔 폰트를 깔아준다.\ndocker 이미지 배포판의 폰트 캐시를 지운다.\nJupyter의 폰트 캐시를 지운다.\n\n\n\n\ndocker-compose.yml\ndocker-compose를 위한 yml을 예시한다. 이 내용 역시 각자 환경에 맞게 변형해서 쓰면 된다. 파일 이름을 “docker-jupyter.yml”이라고 하자.\nversion: '3'\n#\nservices:\n#\n    jupyter-ds:\n      build:\n        context: .\n        dockerfile: ./dockerfiles/dockerfile-jupyter\n      user: root\n      environment:\n        - GRANT_SUDO=yes\n        - JUPYTER_ENABLE_LAB=yes\n        - JUPYTER_TOKEN={YOUR-PASSWORD}\n      volumes:\n        - /mnt/c/Users/{YOUR-DIR}:/home/jovyan/github-anari\n      ports:\n        - \"8888:8888\"\n      container_name: \"jupyter-ds\"\n# End of yml\n\n위의 yml 파일에서 “{}”로 처리된 부분은 각자 채워 넣으면 된다.\nimage 대신 build 명령어를 사용했다. 앞서 지정한 dockerfiles 디렉토리 내의 도커 명령어를 통해 빌드를 수행한다. 이렇게 빌드된 이미지는 처음부터 matplotlib 사용 시 한글 구현에 아무런 문제가 없다.\n\n주피터 환경의 파이썬 그리고 주피터 혹은 R스튜디오 환경의 R에서 한글 설정 방법 및 간단한 테스트는 여기를 참고하자.\n도커 컴포즈를 실행하는 방법은 아래와 같다.\n$ sudo docker-compose -f /mnt/{YOUR DIR}/docker-jupyter.yml -p \"jupyter-ds\" up -d\n실행 옵션은 다음과 같다. 역시 “{}”는 각자의 환경에 맞게 바꾸면 된다.\n\n-f 도커 콤포즈를 특정 파일로 실행하기 위한 옵션이다. 만일 이를 안쓰려면 yml 파일의 이름을 docker-compose.yml로 두고 해당 디렉토리 안에서 실행하면 된다.\n-p 콤포즈 안에 묶인 서비스의 이름을 나타낸다. 같은 네트워크로 묶이며 이 이름을 네트워크 이름으로 갖는다.\nup yml 내에 있는 포함된 콘테이너를 가동한다.\n-d 디태치 모드, 즉 별도의 실행되는 과정으로 실행한다."
+  },
+  {
+    "objectID": "posts/container/2020-09-24-install-hangul-in-docker.html",
+    "href": "posts/container/2020-09-24-install-hangul-in-docker.html",
+    "title": "Docker 컨테이너 + 한글 폰트",
+    "section": "",
+    "text": "이 포스팅은 도커 컨테이너 안에서 한글 문제를 해결하는 다른 방법을 제시하고 있다. 같이 참고 하시라."
+  },
+  {
+    "objectID": "posts/container/2020-09-24-install-hangul-in-docker.html#왜-필요한가",
+    "href": "posts/container/2020-09-24-install-hangul-in-docker.html#왜-필요한가",
+    "title": "Docker 컨테이너 + 한글 폰트",
+    "section": "왜 필요한가?",
+    "text": "왜 필요한가?\nJupyter 등에서 matplotlib을 쓸 때 라벨이 한글일 경우, 대부분 한글 출력에 문제를 겪게 된다. ㅁㅁㅁ형태로 출력되는데, 파이썬 환경에서 한글 폰트가 인식되지 않게 때문이다. 일반적인 환경이라면 웹 검색으로 찾을 수 있는 가이드를 통해 해결할 수 있다.\n그런데 도커 환경을 쓴다면 이런 가이드가 별 소용이 없다. 도커는 아래 그림과 같이 ’host os - 도커 - 컨테이너’의 구조로 돌아간다. 컨테이너(App x)가 각기 독자적인 os를 지니고 있기 때문에 해당 os에서 한글을 인식시켜줘야 특정 컨테이너 환경 안에서 한글을 쓸 수 있게 된다."
+  },
+  {
+    "objectID": "posts/container/2020-09-24-install-hangul-in-docker.html#simple-solution",
+    "href": "posts/container/2020-09-24-install-hangul-in-docker.html#simple-solution",
+    "title": "Docker 컨테이너 + 한글 폰트",
+    "section": "Simple Solution",
+    "text": "Simple Solution\n방법은 간단하다. 컨테이너 환경 os에 직접 한글을 설치해주면 된다. 해당 os 내의 bash 혹은 상응하는 CLI에 들어가서 필요한 명령(스크립트)들을 실행하면 된다. 해당 명령들을 별도의 bash 스크립트로 만들고 필요한 경우 녀석들을 한방에 돌리면 살짝 더 편리할 것이다. 아래는 나눔 계열 폰트를 설치하는 스크립트다. 파일 이름을 install_nanum.sh로 하자.\n#!/bin/sh\n\nsudo sed -i 's/archive.ubuntu.com/ftp.daumkakao.com/g' /etc/apt/sources.list\nsudo apt-get update \nsudo apt-get install -y fonts-nanum*\nsudo fc-cache -fv\n나머지는 대체로 자명한 명령어다. 첫행의 sed는 ftp 주소를 국내로 바꿔주는 것이다. 업데이트 시 걸리는 시간을 단축하기 위해 사용했다. 터미널에서 스크립트 파일이 있는 디렉토리로 이동한 후 bash 스크립트를 실행하면 된다. bash 스크립트는 도커를 쓸 때 유용하다. 초기에 갖춰져야 하는 세팅이 있을 경우 스크립트로 만들어두고 도커 이미지를 새로 올렸을 때 실행해주면 되겠다. 약간 귀찮지만 못 견딜 정도는 아니다.\n> ./install_nanum.sh ⏎\n윈도에서 파일을 편집할 경우 ^M이 달라 붙어 문제가 생기는 경우가 있다. OS의 개행 문자가 달라서 생기는 문제다. docker 내부 터미널에서 vim, nano 등으로 파일을 열어 해당 부분을 지우고 다시 저장하면 된다.\n이제 도커 컨테이너 안의 이용한 주피터 노트북에서 다음과 같이 실행하면 나눔고딕 폰트를 쓸 수 있게 된다.\n!./install_nanum.sh\nimport matplotlib.pyplot as plt\nimport matplotlib as mpl\nfrom matplotlib import rc, font_manager\nfont_fname = '/usr/share/fonts/truetype/nanum/NanumGothic.ttf'\nprop = font_manager.FontProperties(fname=font_fname)\nmpl.rcParams['font.family'] = 'NanumGothic'\nmpl.rcParams['axes.unicode_minus']  = False\nfont_manager._rebuild()\n첫줄은 Jupyter 안에서 스크립트를 실행하는 명령어다. 혹시 잘 보이지 않으면, 커널을 한번 리프레시 해주면 된다. 다른 폰트를 설정하고 싶다면 비슷하게 응용해 활용하면 되겠다.\n\nUpdated\n2021년 5월 8일 기준으로 font_manager에서 _rebuild() 모듈이 없어졌더라. 현재 시점으로는 보이지 않았다. install_nanum.sh에서 sudo rm -fr ~/.cache/matplotlib를 추가로 하나 더 실행해주자. 캐시에 저장된 matplotlib의 폰트 리스트를 지워버리면 최초 실행될 때 자동으로 폰트 리스트를 빌드한다. 이때 설치한 일련의 나눔 폰트가 폰트 리스트에 잡힌다.\nDocker 컨테이너 내에 설치된 폰트를 확인하고 싶다면, 아래를 참고하라.\nfont_list = font_manager.findSystemFonts(fontpaths=None, fontext='ttf')\nfont_list"
+  },
+  {
+    "objectID": "posts/container/2021-09-13-podman-1.html",
+    "href": "posts/container/2021-09-13-podman-1.html",
+    "title": "Enter the Podman!",
+    "section": "",
+    "text": "도커 데스크탑의 유료화 정책이 발표되었다. 대부분의 사용자나 회사에게는 해당 사항이 없겠지만, 오픈소스로 시작한 회사의 정책이라고 보기에는 뭔가 께름칙하다. 대안이 있는데도 굳이 고집할 필요는 없다. 여러 프로젝트가 복잡하게 의존하는, 즉 발목 잡힌 상황이 아니라면 다른 길을 찾으면 된다.\nWSL 내에서 컨테이너를 돌리고 이 서비스를 윈도우에서 웹브라우저로 끌어다 쓰는 형태가 내 일상적인 작업 환경이다. Docker Desktop이 중요한 역할을 하고 있지만 발목은 잡힐 것이 없기에 대안을 시도해보기로 했다. 사실 WSL 내에서 도커를 쓰면 약간 ’가짜’인 듯한 기분이 들 때가 있다. Docker Desktop은 WSL을 거의 완벽에 가깝게 지원한다. 그런데 구조를 뜯어보면 조금 복잡하다. Docker Desktop이 docker 엔진 활용을 위한 두 개의 자체의 컨테이너를 만들고, 이 둘이 WSL과 통신한다. 즉 도커 컨테이너가 WSL 안의 OS에서 돌고 있지 않다는 뜻이다. Windows 및 WSL 지원을 구현하기 위한 궁여지책을 사용하는 느낌이다.\ndocker 엔진 대신 나름 쓸만한 녀석이 podman이다. podman은 OCI(Open Container Initiative)의 표준을 준수하며 docker와 거의 모든 면에서 호환된다. docker의 명령어 뿐 아니라 docker에서 활용하는 이미지도 그대로 쓸 수 있다.\n\n\npodman에 관한 기술적 설명은 LINK, LINK를 참고하자.\n비유를 하자면 컨테이너를 운반하는 배가 바뀔 뿐 컨테이너 자체는 그대로 운용할 수 있다. 아울러 podman을 쓰면 앞서 말한 Docker Desktop의 복잡한 구조가 필요 없다. podman은 WSL 에 설치된 OS 안에서 운용된다. 그리고 podman은 엔진을 제외한 docker 생태계의 다른 요소들과 함께 쓸 수도 있다. 내 경우 작업 환경을 유지하는데 docker-compose가 중요한 역할을 한다. 이 녀석도 podman과도 잘 어울렸다. 각설하고 내용으로 바로 들어가보자.\n\n\n윈도에서 Docker Desktop 버전을 사용하는 대신 Docker CE 버전을 WSL-Ubuntu에 깔아서 사용할 수 있다. 이 글을 관심은 docker를 대체하는 데 있으니, 이에 관한 내용은 다루지 않는다."
+  },
+  {
+    "objectID": "posts/container/2021-09-13-podman-1.html#assumptions",
+    "href": "posts/container/2021-09-13-podman-1.html#assumptions",
+    "title": "Enter the Podman!",
+    "section": "Assumptions",
+    "text": "Assumptions\n\nWSL 2가 잘 깔려 있고 설정되어 있다.\nUbuntu 20.04가 깔여 있고 업데이트도 잘 되어 있다.\nDocker Desktop이 깨끗하게 언인스톨되어 있다.\n\n이 가정에 관해서는 별도로 설명하지 않겠다. 구글 검색을 하시면 관련한 좋은 포스팅이 많이 나올 것이다. WSL에 관해서는 MS의 공식 가이드도 더할 나위 없이 잘 되어 있다.\npodman에 관해 내가 풀고 싶은 문제는 세 가지다.\n\ndocker를 podman으로 대체하기\npodman으로 nvidia gpu 부리기\npodman과 함께 docker-composer 쓰기\n\n1, 2의 방법은 Ubuntu 20.04에서 그대로 활용할 수 있다. 3의 경우 WSL이 지니는 OS 구조의 특성 때문에 몇 가지 추가적인 작업이 필요하다."
+  },
+  {
+    "objectID": "posts/container/2021-09-13-podman-1.html#references",
+    "href": "posts/container/2021-09-13-podman-1.html#references",
+    "title": "Enter the Podman!",
+    "section": "References",
+    "text": "References\n\nLINK\n\n잘 되어 있지만 진행 순서에 살짝 오류가 있어서 아래 수정했다.\n\nLINK"
+  },
+  {
+    "objectID": "posts/container/2021-09-13-podman-1.html#basics",
+    "href": "posts/container/2021-09-13-podman-1.html#basics",
+    "title": "Enter the Podman!",
+    "section": "Basics",
+    "text": "Basics\n최신 버전의 podman을 설치하기 위해서는 apt 저장소의 주소를 별도로 업데이트해줘야 한다. 20.10 이후부터는 podman을 공식적으로 지원하고 있다. 다음번 Ubuntu LTS 버전이 나오면 PPA를 추가하는 이슈는 해소될 듯 싶다.\ncat /etc/lsb-release\nDISTRIB_ID=Ubuntu\nDISTRIB_RELEASE=20.04\nDISTRIB_CODENAME=focal\nDISTRIB_DESCRIPTION=\"Ubuntu 20.04.2 LTS\"\n\nexport VERSION_ID=\"20.04\"\n\necho \"deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_${VERSION_ID}/ /\" | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list\ncurl -L https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_${VERSION_ID}/Release.key | sudo apt-key add -\nsudo apt-get update\nsudo apt-get -y upgrade\nsudo apt-get -y install podman\n\n셸 스크립트에서 cat..., export...라고 되어 있는 부분은 설명이 필요한 부분이다. 실행을 할 때는 $이후만 필요하다.\n\n\ncat...은 현재 설치된 Ubuntu의 버전 등을 알아내는 대목이다.\nexport...은 VERSION_ID 변수를 설정한다.\n\n\n나머지 부분은 PPA를 설정하고 패키지 저장소를 업데이트하고 포드맨을 설치하기 위한 작업이다."
+  },
+  {
+    "objectID": "posts/container/2021-09-13-podman-1.html#setting",
+    "href": "posts/container/2021-09-13-podman-1.html#setting",
+    "title": "Enter the Podman!",
+    "section": "Setting",
+    "text": "Setting\n많은 가이드를 보면 아래 두 파일 중 하나의 내용을 수정할 것을 권고하고 있다. 후자의 파일은 없기 때문에 생성하면 된다.\n\n/usr/share/containers/containers.conf\n~/.config/containers/containers.conf\n\n수정 혹은 생성 내용은 아래와 같다.\n[engine]\nevents_logger=\"file\"\ncgroup_manager=\"cgroupfs\"\n\n그런데 굳이 고치지 않아도 컨테이너를 돌리는 데 큰 이슈는 없는 듯 싶다."
+  },
+  {
+    "objectID": "posts/container/2021-09-13-podman-1.html#testrun",
+    "href": "posts/container/2021-09-13-podman-1.html#testrun",
+    "title": "Enter the Podman!",
+    "section": "Testrun",
+    "text": "Testrun\npodman이 잘 깔렸는데 아래와 같이 테스트해보자.\npodman run hello-world \ndocker의 hello-world를 테스트로 사용하면 된다. 잘 되었다면 잘 깔린 것이다."
+  },
+  {
+    "objectID": "posts/container/2021-09-13-podman-1.html#references-1",
+    "href": "posts/container/2021-09-13-podman-1.html#references-1",
+    "title": "Enter the Podman!",
+    "section": "References",
+    "text": "References\n\nLINK\nLINK"
+  },
+  {
+    "objectID": "posts/container/2021-09-13-podman-1.html#installation",
+    "href": "posts/container/2021-09-13-podman-1.html#installation",
+    "title": "Enter the Podman!",
+    "section": "Installation",
+    "text": "Installation\nnvidia 컨테이너 툴킷 설치를 위해서 먼저 PPA를 설정하자.\ncurl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -\ndistribution=$(. /etc/os-release;echo $ID$VERSION_ID)\ncurl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list\nsudo apt-get update\n컨테이너 툴킷을 설치한다.\nsudo apt install -y nvidia-container-toolkit\n/usr/share/containers/oci/hooks.d/oci-nvidia-hook.json 파일이 있는지 확인해본다. 없으면 생성하고 아래의 내용을 담도록 하자.\n{\n    \"version\": \"1.0.0\",\n    \"hook\": {\n        \"path\": \"/usr/bin/nvidia-container-toolkit\",\n        \"args\": [\"nvidia-container-toolkit\", \"prestart\"],\n        \"env\": [\n            \"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"\n        ]\n    },\n    \"when\": {\n        \"always\": true,\n        \"commands\": [\".*\"]\n    },\n    \"stages\": [\"prestart\"]\n}\n/etc/nvidia-container-runtime/config.toml 파일을 수정하도록 하자. 아래 코드를 통해, config.toml에서 필요한 부분을 수정하고 제대로 수정되었는지 조회한다. no-cgroups = true를 설정하는 것이 핵심이다. 파일을 에디터로 열어 직접 수정해도 된다.\n$ sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-runtime/config.toml\n$ cat /etc/nvidia-container-runtime/config.toml\n부팅을 다시 해주자. WSL에서 나갔다가 다시 들어가면 된다. 셸 자체를 껐다가 다시 켜도 된다."
+  },
+  {
+    "objectID": "posts/container/2021-09-13-podman-1.html#testrun-1",
+    "href": "posts/container/2021-09-13-podman-1.html#testrun-1",
+    "title": "Enter the Podman!",
+    "section": "Testrun",
+    "text": "Testrun\n아래 예는 nvidia-smi 명령을 통해서 OS에 드라이버가 제대로 설정되어 있는지 확인하는 명령어이다. WSL이 깨끗하게 설치된 상태라면 WSL-Ubuntu에는 nvidia driver가 설치되어 있지 않다. 컨테이너를 통해서 드라이버가 설정된 이미지에 진입해 GPU를 부리는 것이라고 보면 되겠다. 단 하드웨어와 직접 소통하는 윈도 드라이버가 WSL2을 지원하는 버전인지 여부는 꼭 확인하시라. 최신 버전은 대체로 WSL2를 잘 자원한다.\npodman run --rm --security-opt=label=disable nvidia/cuda nvidia-smi\nCUDA를 활용한 nbody example도 돌려보자.\npodman run --env NVIDIA_DISABLE_REQUIRE=1 nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark"
+  },
+  {
+    "objectID": "posts/container/2021-09-13-podman-1.html#reference",
+    "href": "posts/container/2021-09-13-podman-1.html#reference",
+    "title": "Enter the Podman!",
+    "section": "Reference",
+    "text": "Reference\nLINK"
+  },
+  {
+    "objectID": "posts/container/2021-09-13-podman-1.html#problem",
+    "href": "posts/container/2021-09-13-podman-1.html#problem",
+    "title": "Enter the Podman!",
+    "section": "Problem",
+    "text": "Problem\nWSL이 Ubuntu의 systemd를 처음부터 활성화하지 않는다. docker CE 버전을 데스크탑을 거치지 않고 WSL 안에서 깔아서 쓸 때 이게 문제가 된다. systemd를 먼저 활성화해야 한다."
+  },
+  {
+    "objectID": "posts/container/2021-09-13-podman-1.html#solution",
+    "href": "posts/container/2021-09-13-podman-1.html#solution",
+    "title": "Enter the Podman!",
+    "section": "Solution",
+    "text": "Solution\n\nRuntime\n\n먼저 MS 런타임을 설치하자.\n\nwget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb\nsudo dpkg -i packages-microsoft-prod.deb\nrm packages-microsoft-prod.deb\n\n\nwsl-transdevian\n\n이 녀석을 설치하기 위해서 먼저 lsb를 설치하자.\n\nsudo apt-get install lsb \n\nsudo로 실행되어야 하는 항목에서 이를 타이핑하는 번거로움을 피하기 위해서 sudo -s를 실행하자. 이후 아래 스크립트를 실행한다.\n\nwget -O /etc/apt/trusted.gpg.d/wsl-transdebian.gpg https://arkane-systems.github.io/wsl-transdebian/apt/wsl-transdebian.gpg\nchmod a+r /etc/apt/trusted.gpg.d/wsl-transdebian.gpg\n\ncat << EOF > /etc/apt/sources.list.d/wsl-transdebian.list\ndeb https://arkane-systems.github.io/wsl-transdebian/apt/ $(lsb_release -cs) main\ndeb-src https://arkane-systems.github.io/wsl-transdebian/apt/ $(lsb_release -cs) main\nEOF\n\napt update\n\n\ngenie & docker-compose\n이제 마지막으로 genie와 docker-compose를 설치해준다.\n$ sudo apt update\n$ sudo apt install -y systemd-genie\n$ sudo apt install docker-compose\n\n\nSetting\n1$ systemctl --user start podman.socket\n2$ export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock\n\nsystemctl... 명령을 통해서 podman의 소켓을 시작한다. 소켓의 상태를 보고 싶다면 start → status로 바뀌 실행해보자.\ndocker가 설치되지 않았기 때문에 docker-compose가 쓸 수 있는 가상화 앱을 지정해야 한다. 이를 위에 열어준 포드맨 소켓과 연결한다.\n\n여기까지 마치면 docker-compose가 잘 돌아간다.\n\nWSL-Ubuntu 부팅 시 자동으로 이 상태가 갖춰지길 원하면 1,2를 .bashrc에 넣으면 된다.\n\n단 wsl genie -s으로 실행한 상태가 아니라면 systemd 사용이 제한되기 때문에 아래 같은 경고 메시지를 볼 수 있다.\n\nFailed to connect to bus: No such file or directory"
+  },
+  {
+    "objectID": "posts/container/2021-09-13-podman-1.html#testrun-2",
+    "href": "posts/container/2021-09-13-podman-1.html#testrun-2",
+    "title": "Enter the Podman!",
+    "section": "Testrun",
+    "text": "Testrun\n\n현재 위치(대체로는 유저 홈)에 아래와 같이 docker-compose.yml 파일을 생성하자.\n현재 위치에 data디렉토리를 생성하자.\n\nversion: '3'\n#\nservices:\n    tf-gpu:\n        image: tensorflow/tensorflow:latest-gpu-jupyter\n        environment:\n            - NVIDIA_DISABLE_REQUIRE=1\n            - GRANT_SUDO=yes\n            - JUPYTER_ENABLE_LAB=yes\n            - JUPYTER_TOKEN=1234\n        volumes:\n            - \"./data:/mnt/space/ml\"\n        ports:\n            - \"8888:8888\"\n        # deploy:\n        #     resources:\n        #         reservations:\n        #             devices:\n        #                 - driver: nvidia\n        #                   device_ids: ['all']\n        #                   capabilities: [gpu]\n        container_name: tf_gpu\n이제 다음을 실행하자.\n$ docker-compose up \n잘 실행되었다면 주피터 서버가 생성되었을 것이다. 접속 주소는 웹브라우저에서 localhost:8888을 치면 된다. 토큰(비밀번호)은 1234로 설정해두었다. GPU가 잘 돌아가고 있음을 직접 확인해보자. 노트북의 Cell을 열고 아래 내용을 실행해보자.\nimport tensorflow as tf\ntf.config.get_visible_devices(\n    device_type=None\n)\nCPU 이외에 GPU가 보이면 잘 설정된 것이다. 컨테이너 안에 담긴 fashion mnist 등의 예제를 마음껏 시험해보시라.\nyml 파일에서 눈치를 챘을지 모르겠지만, deploy 항목은 docker에서만 실행되는 항목이다. 이를 주석처리 하지 않고 podman에서 돌리면 에러가 발생한다."
+  },
+  {
+    "objectID": "posts/economics/2020-01-22-Wealth-divided.html",
+    "href": "posts/economics/2020-01-22-Wealth-divided.html",
+    "title": "The College Wealth Divide",
+    "section": "",
+    "text": "The College Wealth Divide: Education and Inequality in America, 1956-2016 download Alina K. Bartscher, Moritz Kuhn, and Moritz Schularick"
+  },
+  {
+    "objectID": "posts/economics/2020-01-22-Wealth-divided.html#addressing-issues",
+    "href": "posts/economics/2020-01-22-Wealth-divided.html#addressing-issues",
+    "title": "The College Wealth Divide",
+    "section": "Addressing Issues",
+    "text": "Addressing Issues\n\n새로운 설문 데이터의 발굴을 통해 대졸자와 비대졸자 사이의 소득과 부의 장기 추세를 살펴본다.\n대학 졸업에 따른 소득 프리미엄과 부 프리미엄의 패턴 차이가 확연히 존재하는데, 이러한 결과가 생긴 원인을 추적한다."
+  },
+  {
+    "objectID": "posts/economics/2020-01-22-Wealth-divided.html#data",
+    "href": "posts/economics/2020-01-22-Wealth-divided.html#data",
+    "title": "The College Wealth Divide",
+    "section": "Data",
+    "text": "Data\n\n미국 연준에서 다운로드 받을 수 있는 Survey of Consumer Finances(SCF)라는 데이터가 있다. 이 데이터는 3년 간격으로 1983년부터 설문 자료를 수집하고 있는데, 여타 센서스와 같은 설문 항목과 비교해서 금용 관련된 상세한 내용을 담고 있다.\n그런데 SCF에 선배라고 할만한 자료가 1947년에서 1971년 사이 그리고 1977년에 대해서 미시건 대의 서베이 리서치 센터에 존재한다. Kuhn, Schularick, Steins가 이 두 자료를 코드 북에 기반해서 자료를 최대한 비슷하게 맞춰 결합했고, 이렇게 1949년~2016년의 전후 기간을 망라한 소득, 부 그리고 관련된 인구 통계적 정보를 담고 있는 데이터 셋이 만들어졌다. 저자들은 이를 SCF+라고 부른다.[^1] [^1]: 매칭과 데이터 결합에 필요한 절차 및 기법은 논문에 비교적 상세하게 소개되어 있으니 관심 있는 분은 참조하시라."
+  },
+  {
+    "objectID": "posts/economics/2020-01-22-Wealth-divided.html#issues",
+    "href": "posts/economics/2020-01-22-Wealth-divided.html#issues",
+    "title": "The College Wealth Divide",
+    "section": "Issues",
+    "text": "Issues\n\nIncome premium vs wealth premium\n\n저자들의 관심사는 대졸자와 비대졸자(앞으로 혼란의 여지가 없을 때 각각 c(college), nc(noncollege)로 표기하겠다) 사이에 소득과 부의 차이가 역사적으로 어떻게 진화했는지를 파악하는 것이다. 우선 그림 1을 보자.\n\n\n\n그림 1. 소득과 부의 역사적 변화\n\n\n \n\n\n\n\n그림1에서 \\(y\\)축은 1971년도 수준을 1로 두었을 때 각 연도의 소득과 부의 수준을 나타낸다. 시간에 흐름에 따라서 소득의 차이가 상대적으로 적게 벌어졌음에 반해서 부의 차이는 크게 벌어지고 있다. 특히 1980년대 이후 차이가 크게 벌어지고 있다.\n이는 소득과 부의 비율을 c와 nc로 나누어 비교한 그림2에서 보다 분명하게 드러난다.\n\n\n\n그림 2. c와 nc의 부/소득의 역사적 변화\n\n\n \n\n\n\n\n\nDecomposing wealth premium\n\\[\n\\dfrac{\\overline{W}_{e,t}}{\\overline{W}_{e,71}} = \\dfrac{\\sum^{3}_{i=1} s_{e,i,t} \\overline{W}_{e,i,t}}{\\overline{W}_{e,71}} = \\sum^{3}_{i=1} s_{e,i,t} \\dfrac{\\overline{W}_{e,i,71}}{\\overline{W}_{e,71}} \\dfrac{\\overline{W}_{e,i,t}}{\\overline{W}_{e,i,71}}\n\\] - 변수 - \\(\\overline {W}_\\cdot\\): 해당 집단이 보유한 평균 부 - \\(s_\\cdot\\): 해당 부 계층의 비율. - \\(s_{c, 1, 81}\\)이라면 1981년도 c에 속한 사람들 중에서 전체 부의 계층 1에 속하는 비율을 나타낸다.\n\n인덱스\n\n\\(e = {\\rm c, nc}\\)\n\\(t =\\) 56, 61, 66, 71, 76, 81, 86, 91, 96, 01, 06,11, 16\n\\(i = 1, 2, 3\\)\n\n\\(e\\)는 c와 nc의 구분을 \\(t\\)는 연도, 그리고 \\(i\\)는 세 가지로 구분한 부 계층을 구분하기 위한 인덱스다. 1은 하위 50%, 2는 중위 50%~90%, 그리고 3은 상위 10%를 각각 나타낸다.\n분해 식을 통해서 크게 세가지 변동을 구분할 수 있다.\n\n\\(s\\)의 변화\n\\[\\dfrac{\\overline{W}_{e,i,71}}{\\overline{W}_{e,71}}\\]: 기준 연도의 부 계층의 차이\n\\[\\dfrac{\\overline{W}_{e,i,t}}{\\overline{W}_{e,i,71}}\\]: 기준 연도 대비 특정 부 계층의 연도별 변화\n\n이 세 가지에 분해 요소 중에서 시간을 따라가지 않은 두 번째를 제외하고 나머지에 대해서 반사실(counterfactual)을 적용해보자.\nCounterfactual 1 \\[\n\\dfrac{\\overline{W}_{x,i,t}}{\\overline{W}_{x,i,71}} =\n\\begin{cases}\n\\dfrac{\\overline{W}_{nc,i,t}}{\\overline{W}_{nc,i,71}} & \\text{if $x = \\rm{c}$} \\\\\n\\dfrac{\\overline{W}_{c,i,t}}{\\overline{W}_{c,i,71}}  & \\text{if $x = \\rm{nc}$}\n\\end{cases}\n\\]\nCounterfactual 2\n\n\\(s_{x,i,t}\\) 대신 \\(s_{x,i,71}\\)을 적용한다. 즉, 시간이 지나면서 학력별 부 계급의 분포가 1971년도 지표에 고정되어 있었을 상황을 대입해본다. 이는 시간이 지나면서 소득 불평등의 패턴이 n, nc 사이에 차별적으로 타나났는지를 추적한다.\n같은 맥락에서 n와 nc의 \\(s\\)를 바꾸는 분석도 해볼 수 있을 듯 한데, 저자들이 시도하지는 않았다.\n\n\n\n\n그림 3. c와 nc의 변화는 어디에서 왔는가?\n\n\n \n\n\n\n\n그림 3의 A는 c의 부에 대해서 반사실 1, 2 그리고 1+2를 적용했을 때의 변화를 나타낸다. 반사실 1의 영향이 크고, 반사실 2는 거의 영향을 주지 않았다. 이를 통해 시간이 지나면서 c의 경우 nc에 비해서 더 많은 부를 축적했음을 보여준다. 반면, 코호트(n, nc) 내에서 부의 계층 변화는 거의 영향을 주지 않았다.\n한편, nc의 경우는 반사실 1과 반사실 2가 모두 부의 축적에 악영향을 주었음을 알 수 있다.\n각 코호트별로 부의 계층별 점유율 변화는 그림 4와 같다.\n\n\n\n그림 4. c와 nc 내의 소득 계층별 비율의 역사적 변화\n\n\n \n\n\n\n\n그림에서 보듯이 c의 경우 연도 변화에 따른 계층별 변화가 크지 않다. nc의 경우 상위 10%에 속하는 비율이 경향적으로 낮아지고 있다.\n\n\n\n그림 5. 소득 계층별 c/nc 비율의 역사적 변화\n\n\n \n\n\n\n\n그림 5는 전체 인구에서 c가 차지하는 비중의 연도별 변화와 중간 계층(50~90%)의 변화가 비슷하게 진행되었음을 알 수 있다. 반면 c의 경우 50% 아래로 떨어지기보다는 상위 10%로 진입한 경향이 많았다는 점도 확인할 수 있다."
+  },
+  {
+    "objectID": "posts/economics/2020-01-22-Wealth-divided.html#regression-analysis",
+    "href": "posts/economics/2020-01-22-Wealth-divided.html#regression-analysis",
+    "title": "The College Wealth Divide",
+    "section": "Regression analysis",
+    "text": "Regression analysis\n\n대학 졸업 여부가 어느 측면에서 부의 축적에 영향을 주었는지 살펴보기 위해서 계량적 분석을 시도 했다. 즉, c 여부가 부의 증가에 어떻게 영향을 주었는가를 보다 면밀하게 살펴보는 것이 분석의 목표다.\n\n\n\n그림 6. c/nc의 소득 비율과 부 비율의 역사적 변화\n\n\n \n\n\n\n\n그림 6은 c와 nc의 격차를 소득과 부 각각에 관해 표시한 것이다. 앞서 보았듯이 1980년대 이전까지는 소득과 부 모두 1 주변에 머물다가 1980년대 이후 부의 증가가 점점 격차를 벌이며 증가하는 추세를 보이고 있다. 혹시 이러하는 추세가 c에 속한 상위 10%의 보다 빠른 부의 축적 때문이었을까? 코호트를 중위 소득 계층(50~90%)으로 제한해서 살펴보면 그림 7과 같다. 그림에서 보듯이 c의 자산 증가는 최상 계층의 현상이 아닌 일반적인 추세였다고 볼 수 있겠다.\n\n\n\n그림 7. 50~90% 부 계층의 소득 및 부 수준의 역사적 변화 (10년 단위)\n\n\n \n\n\n\n\n질문은 무엇이 c의 빠른 부의 축적을 낳았는가, 하는 대목이다. 일반 기본적으로 살펴본 회귀 식은 다음과 같다.\n\n\\[\nW_{it} = \\alpha_0 + \\underbrace{\\beta_1 c_{it}}_{A} + \\underbrace{\\sum_{t > 1956} \\beta_{2,t}~\\mathbb{I}_{year = t} \\cdot c_t}_{B} +  \\underbrace{\\sum_{t > 1956} \\beta_{3,t}~\\mathbb{I}_{year = t}}_{C} + \\underbrace{\\Gamma' X_{it}}_{D} + \\xi_{it}\n\\]\n\n회귀분석의 각 부분을 간략하게 살펴보자.\n\nA: 대학 졸업 여부가 전체 기간에 걸쳐 부에 미치는 효과\nB: 연도별로 구분된 대학 졸업 여부가 부에 미치는 효과\nC: 연도별 효과가 부에 미치는 효과\nD: 통제 변수 (소득수준, 결혼 여부, 자녀 유무 등)\n\n부에 c가 미치는 효과는 \\(\\beta_1 + \\beta_{2,t}\\)로 연도별로 측정할 수 있다.\n\n\n\n그림 8. c의 부 관련 회귀 계수의 역사적 변화\n\n\n \n\n\n\n\n그림 8에서 보듯이 c의 효과는 분명하다. 다만 소득 계층 기준으로 전체 집단의 효과가 50~90%의 중간 층에 비해 강하게 나타고 있다. 그림 9를 통해 이 내용을 다시 살펴보자.\n\n\n\n그림 9. c의 부와 소득 회귀 계수의 비교\n\n\n \n\n\n\n\n그림 9는 소득 계층별로 나누어 결과를 나타내고 있다. 왼쪽은 좌변의 종속 변수가 부이고 오른쪽은 종속 변수가 소득이다.\n\nc에 대해서 부의 효과가 전반적으로 높으며 특히 상위 10%에 두드러진다.\n소득에 대해서는 이러한 효과가 나타나지 않는다. 특히 상위 10%를 제외하면 c의 소득 증가 효과는 거의 없다고 봐도 좋다.\n\n논문에서는 이러한 c의 효과가 어디서 비롯하는지를 조금 더 탐구하고 있다. 자료의 한계 때문에 상세하게 추적하지는 못한다. 다만 c와 nc 사이에 존재하는 중요한 차이로 금융 지식(financial literacy)의 차이를 지목하고 있다. 즉, 소득을 투자로 전환할 수 있는 수단을 알고 있었는지 여부가 중요하다는 것이다. 논문에서 주목한 또 하나의 차이는 사업체의 소유 여부다. 이 역시 부의 차이를 만들어내는 데 일정한 역할을 한다.\n논문에서 제기한 또 하나의 흥미로운 질문은 금융 지식의 여부가 c와 nc 사이에 세분화되어 있는지 여부다. 다시 말하면, 두 코호트가 같이 금융 상품에 투자했다면, 누가 더 잘 하는가에 관한 것이다.\n\n\n\n그림 10. 금융 및 사업 관련 부의 수익률 비교\n\n\n \n\n\n\n\n그림 10의 A에 따르면 사업체 보유자와 미 보유자 사이에는 수익률 차이가 존재한다. 하지만 n와 nc 사이에 차이는 거의 없다. 나머지 그림에서도 n와 nc 사이에 뚜렷한 차이를 발견하기 힘들다. 즉 c와 nc 사이의 금융 지식의 차이란 투자 대상의 인지 및 실행과 같은 차원일 가능성이 높다는 것이다."
+  },
+  {
+    "objectID": "posts/economics/2020-01-22-Wealth-divided.html#extra",
+    "href": "posts/economics/2020-01-22-Wealth-divided.html#extra",
+    "title": "The College Wealth Divide",
+    "section": "Extra",
+    "text": "Extra\n\n개인적으로 재미있게 본 내용 하나 추가한다. 유유상종 혼(assortative marriage)이 존재하는지 여부에 관한 것이다.\n\n교육 년수를 12년 미만(중퇴), 고졸, 대졸로 구분하면 3X3 테이블이 나온다.\n이제 각각의 경우에 해당하는 부부의 비율을 구한다.\n각각의 인구 비율이 무작위로 매칭되었을 때의 비율을 구한다.\n실제의 유유상종 혼의 비율과 무작위의 비율을 비교하면 유유상종의 정도가 계산된다.\n\n논문에서 밝힌 바에 따르면 대졸자의 유유상종 혼은 줄어드는 추세다. 즉, 1965년에 위 비율은 5.9였는데, 2016년에는 1.8에 불과하다. 즉 유유상종 혼은 감소하는 추세다.\n다음으로 유유상종 혼이 부의 창출에 있어서 단순 합을 넘어서는 추가적인 이득을 제공하는가 여부에 관한 것이다.\n\n\n\n그림 11. 유유상종 혼은 부의 형성에 어떻게 영향을 주었는가\n\n\n \n\n\n\n\nA, B에서 보듯이 소득과 부 모두 유유상종 혼 상태의 가구가 평균보다 두 배 가량 높다. 하지만 C, D에서 보듯이 이를 각 해당 연도의 유유상종 혼 인구가 점유한 부의 비율과 유유상종 혼 인구의 비율로 나눈 수치는 거의 일정한 수준을 유지하고 있다."
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-18-Eigenspace-2.html",
+    "href": "posts/linear-algebra/2021-01-18-Eigenspace-2.html",
+    "title": "Eigenspace, part 2",
+    "section": "",
+    "text": "\\(A \\in \\mathbb C^{m \\times n}\\)을 생각해보자. 이런 조건에서 아이겐 분해를 어떻게 활용할 수 있을까? 일단 \\(A\\)를 정방행렬로 만들어주어야 할 것이고, 이에는 두 가지 방법이 있다.\n\\[\n\\underbrace{A^T A}_{n \\times n}, \\overbrace{A A^T}^{m \\times m}\n\\]\n아울러, \\((A^T A)^T = A^T A\\), \\((AA^T)^T = A A^T\\)가 성립하기 때문에 두 매트릭스 모두 normal 매트릭스다. 따라서 아래와 같은 개념화가 가능하다.\n\\[\nA =\n\\underbrace{\n\\begin{bmatrix}\n\\vert & \\dotsb & \\vert \\\\\nu_1 & \\dotsb & u_m \\\\\n\\vert & \\dotsb & \\vert \\\\\n\\end{bmatrix}}_{m \\times m}\n\\overbrace{\n\\begin{bmatrix}\n\\sigma_1 & 0 & \\dotsb \\\\\n0 & \\sigma_2 & \\dotsb \\\\\n0 & 0 & \\dotsb \\\\\n\\end{bmatrix}}^{m \\times n}\n\\underbrace{\n\\begin{bmatrix}\n-- & v_1^T & -- \\\\\n-- & \\vdots & -- \\\\\n-- & v_n^T & -- \\\\\n\\end{bmatrix}}_{n \\times n} =\nU \\Sigma V^T\n\\]\n\\(U\\)를 통해 분해되는 부분을과 \\(V\\)를 통해 분해되는 부분을 다음과 같이 나타내보자.\n\\[\n\\begin{aligned}\nA A^T & = U \\Lambda_l U^T \\\\\nA^T A & = V \\Lambda_r V^T \\\\\n\\end{aligned}\n\\]\n소문자의 \\(l\\)와 \\(r\\)은 각각 left, right를 뜻한다. \\(U\\)와 \\(V^T\\)를 명시적으로 적어보자.\n\\[\nU =\n\\begin{bmatrix}\n\\vert & \\dotsb & \\vert \\\\\nu_1 & \\dotsb & u_m \\\\\n\\vert & \\dotsb & \\vert \\\\\n\\end{bmatrix}, \\text{~where}\n\\{ (\\lambda_i, u_i) = \\text{eigenvects}(A A^T) \\}\n\\] \\[\nV =\n\\begin{bmatrix}\n-- & v_1^T & -- \\\\\n-- & \\vdots & -- \\\\\n-- & v_n^T & -- \\\\\n\\end{bmatrix}, \\text{~where}\n\\{ (\\lambda_i, v_i) = \\text{eigenvects}(A^T A) \\}\n\\]\n이제 유사 대각행렬 \\(\\Sigma\\)를 보자. 이 행렬은 \\(m \\times n\\) 형태다.\n\\[\n\\sigma_i = \\sqrt{\\lambda_i}, \\text{ where } \\lambda_i = \\text{eigenvals}(A A^T) = \\text{eigenvals}(A^T A)\n\\]\n\n\n기저를 바꾸는 관점에서 다시 음미해보자.\n\\[\n\\vec y = A \\vec x = U \\Sigma V^T \\vec x\n\\]\n\n\\(V^T \\vec x\\): \\(V^T = \\phantom{}\\_{B\\_{SVD}}[1]\\_{B_S}\\). 즉, \\(B_{SVD} \\leftarrow B_S\\)를 수행한다.\n\\(\\Sigma\\): 유사 대각행렬을 곱해 각 기저의 크기를 조절한다.\n\\(U\\): \\(U = \\phantom{}\\_{B_{S}}[1]\\_{B\\_{SVD}}\\): \\(B_{S} \\leftarrow B_{SVD}\\)\n\n즉, \\(B_S \\leftarrow B_{SVD} \\leftarrow B_S\\)를 수행한다.\n\n\n\n외적의 관점에서 이해하는 것도 흥미롭다. 일단 외적에 관해서 간단히 살펴보자. 벡터 \\(u \\in \\mathbb R^m\\), \\(v \\in \\mathbb R^n\\)이 있다고 할 때,\n\\[\nu v^T \\in \\mathbb R^{m \\times n}\n\\]\n외적의 rank는 어떻게 될까? 1이다. 직관적으로는 이해가 안될 수 있다.\n\\[\n{\\rm rank} (AB) \\leq \\min({\\rm rank}(A), {\\rm rank} (B)) =  1\n\\]\nSVD 식을 다시 조립해보자. 일단 \\(m \\geq n\\)을 가정하자.\n\\[\nU \\Sigma =\n\\begin{bmatrix}\n\\vert & \\dotsb & \\vert \\\\\nu_1 & \\dotsb & u_m \\\\\n\\vert & \\dotsb & \\vert \\\\\n\\end{bmatrix}\n\\begin{bmatrix}\n\\sigma_1 & 0 & \\dotsb \\\\\n0 & \\sigma_2 & \\dotsb \\\\\n0 & 0 & \\dotsb \\\\\n\\end{bmatrix}\n\\] \\[\n\\begin{aligned}\nA & = U \\Sigma V^T \\\\\n& =\n\\underbrace{\n\\begin{bmatrix}\n\\sigma_1 u_1, \\dotsb,  \\sigma_n u_n, \\dotsc,  0 u_m\n\\end{bmatrix}}_{U \\Sigma}\n\\begin{bmatrix}\n-- & v_1^T & -- \\\\\n-- & \\vdots & -- \\\\\n-- & v_n^T & -- \\\\\n\\end{bmatrix} \\\\\n& =  \\sigma_1 u_1 v_1^T + \\dotsb + \\sigma_n u_n v_n^T + \\dotsb + 0 u_m v_m^T\n\\end{aligned}\n\\]\n\\(u_i v_i^T\\)는 각각 1의 rank를 지니고 앞에 곱해진 singular value의 기저로 이해할 수 있다. 해당 기저들의 선형 결합으로 매트릭스 \\(A\\)를 다시 분해할 수 있다.\n\n\n\n이렇게 대각화를 할 때 어떤 이득이 있을까? 앞서 유사 행렬을 활용하면 행렬의 곱이 간단해진다는 점을 보았다. SVD에도 비슷한 이점이 있다. 이 외에 SVD를 써서 할 수 있는 중요한 이득이 있다. 계산량을 줄이는 것이다.\n\\(M \\in \\mathbb R^{1000 \\times 2000}\\)의 변환이 있다고 하자. 이 변환의 싱귤러 밸류들 많아야 1000개가 나올 것이다. 만일 이 1000개 중에서 3개를 제외하고 나머지 값이 0에 가깝다고 하자.\n\\(M\\)이라는 변환의 근사값을 구하고 싶다면, 0에 가까운 값을 모두 0으로 둔다. 이렇게 바꾸면,\n\\[\nM \\approx \\hat M = \\hat U \\hat \\Sigma \\hat V^T\n\\]\n\n\\(\\hat U \\in \\mathbb R^{1000 \\times 3}\\)\n\\(\\hat \\Sigma \\in \\mathbb R^{3 \\times 3}\\)\n\\(\\hat V^T \\in \\mathbb R^{3 \\times 2000}\\)\n\n이렇게 근사값을 구하면 계산량이 많이 줄어들 것이다. \\(M\\)와 \\(\\hat M\\) 사이의 힐베르트-슈미트 거리를 구하면,\n\\[\n\\Vert M - \\hat M \\Vert_{\\rm HS} = \\sqrt{\\sum_{i=4}^{1000} \\sigma_i^2}\n\\]\n이 값이 크지 않다면, \\(M \\approx \\hat M\\)으로 간주할 수 있다. 실제로 이미지 압축 등에서 많이 사용되는 방법이다."
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-18-Eigenspace-2.html#lu",
+    "href": "posts/linear-algebra/2021-01-18-Eigenspace-2.html#lu",
+    "title": "Eigenspace, part 2",
+    "section": "LU",
+    "text": "LU\n\\(n \\times n\\) 정방 행렬에 대해서 \\(A = LU\\)를 수행할 수 있다. \\(L\\)과 \\(U\\)는 하방삼각 행렬과 상방삼각 행렬이다. 이렇게 매트릭스를 쪼개는 이유를 각각에 관해서 역행렬을 구하기 힘들기 때문이다. 즉,\n\\[\nA \\vec x = LU \\vec x = b \\Leftrightarrow U \\vec x = L^{-1}b \\Leftrightarrow \\vec x = U^{-1}L^{-1}b\n\\]\n우선 LU가 가능하라면 \\(A\\)가 RREF으로 열의 교환 없이 환원될 수 있어야 한다.\n\nCholesky\n\\(A\\)가 대칭이고 PSD 매트릭스라면 \\(LU\\) 분해는 더욱 단순해진다.\n\\[\nA = L L^T \\text{ or } A = U^T U\n\\]"
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-18-Eigenspace-2.html#qr",
+    "href": "posts/linear-algebra/2021-01-18-Eigenspace-2.html#qr",
+    "title": "Eigenspace, part 2",
+    "section": "QR",
+    "text": "QR\n\\(A \\in \\mathbb R^{n \\times n}\\)일 때 이 매트릭스를 쪼개는 강력한 방법은 G-S 알고리듬을 활용하는 것이다.\n\\[\nA = O U\n\\]\n\n\\(O\\): orthogonal matrix\n\\(U\\): Upper triangluar matrix\n\n보통 \\(U\\)를 right-triangular matrix로도 쓰기 때문에, 이를 \\(QR\\)로 표기하기도 한다. \\(R\\)의 경우 \\(O\\)의 컬럼 벡터를 하나씩 추가해가면서 계산하게 된다. 이는 G-S 알고리듬에서 하나씩 벡터를 빼가면서 계산하는 것을 구현할 수 있게 해준다.\n\nExample\n실제로는 어떻게 하는지 살펴보자. 먼저 \\(A\\)의 각 컬럼들을 두고, 두번째 열은 첫번째에 직교하게, 세번째는 첫번째와 두번째에 직교하게 행렬을 변형한다.\n\\[\nA =\n\\begin{bmatrix}\na_{11} & a_{12} & a_{13} \\\\\na_{21} & a_{22} & a_{23} \\\\\na_{31} & a_{32} & a_{33}\n\\end{bmatrix}\n\\]\n\\(O\\) 혹은 \\(Q\\)를 구해보자. G-S 알고리듬을 활용하자.\n\\[\nA = [a_1, a_2, a_3]\n\\]\n\\(a_1\\)과 직교하는 \\(e_2\\)를 구하면 아래와 같다.\n\\[\ne_2 = a_2 - \\dfrac{a_2 \\cdot a_1}{\\Vert a_1 \\Vert^2}\n\\]\n다음으로 \\(e_3\\)는 \\(a_1\\)과 직교하고 동시에 \\(e_2\\)와 직교해야 한다. 따라서,\n\\[\ne_3 = a_3 - \\dfrac{a_3 \\cdot a_1}{\\Vert a_1 \\Vert^2} - \\dfrac{a_3 \\cdot e_2}{\\Vert e_2 \\Vert^2}\n\\]\n이를 다시 길이 1로 표준화하면 \\(Q\\)를 구할 수 있다. 그리고\n\\[\nQ^T A = Q^T Q R = 1 R\n\\]\n따라서 \\(R\\)은 \\(Q^T A\\)로 구할 수 있다."
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-05-vector-geometry-1.html",
+    "href": "posts/linear-algebra/2021-01-05-vector-geometry-1.html",
+    "title": "Vector Geometrically, part 1",
+    "section": "",
+    "text": "편의상 3차원 공간으로 예시하도록 한다. \\(n\\) 차원으로 확장은 쉽게 된다.\n\n\\(p = (p_x, p_y, p_z)\\): \\(p \\in \\mathbb R^3\\)\n\\(\\vec v = (v_x, v_y, v_z)\\): \\(\\vec v \\in \\mathbb R^3\\)\n\\(\\hat v = \\dfrac{v}{\\lVert v \\lVert}\\): Unit vector\n\n\n\n\\(p_0\\)를 지나는 무한의 1차원 벡터는 다음과 같이 정의된다.\n\nParametric equation:\n\n\\[\nl : \\{ (x, y, z) \\in \\mathbb R^3 | p_0 + t \\vec v, t \\in \\mathbb R\\}\n\\]\n\nSymetric equation:\n\n\\[\nl: \\{  (x, y, z) \\in \\mathbb R^3 | \\dfrac{x - p_{0x}}{v_x} = \\dfrac{y - p_{0y}}{v_y}  =  \\dfrac{z - p_{0z}}{v_z} \\}\n\\]\n\n\n\n\\(p_0\\)를 지나는 무한 평면 P는 다음과 같이 정의된다. 평면을 표현하기 위해서는 벡터 두 개( \\(\\vec v, \\vec w\\) )가 필요하다.\n\nGeneral equation\n\n\\[\nP: \\{ (x, y, z) \\in \\mathbb R^3 | Ax + By + Cz = D \\}\n\\]\n\nParametric equation\n\n\\[\nP : \\{ (x, y, z) \\in \\mathbb R^3 | p_0 + s \\vec v + t \\vec w, s,t \\in \\mathbb R \\}\n\\]\n\nGeometric equation\n\n\\[\nP : \\{ (x, y, z) \\in \\mathbb R^3 | \\vec n \\cdot [(x,y,z) - p_0] = 0 \\} \\text{~with normal vector $\\vec n$}\n\\]\n\n\n\n점과 벡터의 차이는 무엇일까? 점은 좌표계에서 원점을 기준으로 한 위치를 나타낸다. 벡터는 크기와 방향을 모두 나타내며, 벡터는 \\((0,0)\\) 같은 기준이 없다. 벡터에서 중요한 것은 크기와 방향이다. 좌표 상에서 위치가 달라고 크기와 방향이 같으면 같은 벡터다.\n벡터를 점으로 나타내려면 어떻게 해야 할까? 두 점의 차이를 구하면 이는 벡터가 된다. 쉽게 생각해보자. 2차원 데카르트 좌표계에서 \\((3,3)\\)이라는 점을 생각해보자. \\((3,3)\\)이면 그냥 점이다. 반면, \\((3,3) \\leftarrow (0,0)\\)을 의미하면 \\((3,3)\\)은 벡터다. 그래프 상에서 \\((0,0)\\)에서 \\((3,3)\\)으로 화살표를 그리면 이 역시 벡터다. 아래 그림을 참고 하자.\n\n\n\n\n노멀 벡터는 아래 평면(plane) 혹은 벡터과 직교하는 성분의 벡터다. 이 녀석을 어떻게 구할까? 평면 \\(P\\)의 parametric 식을 보자. 2차원 플레인을 구성하는 두 벡터 \\(\\vec v\\), \\(\\vec w\\)가 있다. 노멀 벡터는 이 두 성분 모두와 직교하는 성분의 벡터이다. 이는 바로 크로스 프로덕트의 정의를 그대로 따른다. 평면위의 어떤 세 점 \\(p, q, r\\)이 있다고 하자. 평면 위에 존재하는 벡터 두 개를 \\(\\vec v = q - p\\), \\(\\vec w = r - p\\)과 같이 만들자. 이 벡터와 직교하는 벡터 \\(\\vec n\\)은 다음과 같다.\n\\[\n\\vec n  = \\vec v \\times \\vec w = (q-p) \\times (r-p)\n\\]"
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-05-vector-geometry-1.html#distance",
+    "href": "posts/linear-algebra/2021-01-05-vector-geometry-1.html#distance",
+    "title": "Vector Geometrically, part 1",
+    "section": "Distance",
+    "text": "Distance\n거리 역시 세 가지로 나누어 이해해보자. 점과 점 사이의 유클리드 거리는 생략하겠다. 벡터와 점의 거리는 어떻게 구할까? 플레인과 점의 거리는 어떻게 구할까? 이 포스팅을 참고하라."
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html",
+    "href": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html",
+    "title": "Matrix as Linear Transformation",
+    "section": "",
+    "text": "function vs linear transformation\n위의 내용을 이해할 수 있다면, 더 할 것이 없다. 일단 잘 봐두도록 하자. 나중에 돌아와서 음미하면 의미가 와 닿을 것이다.\n선형 변환은 특별한 형태의 함수로 이해할 수 있다. 다만 투입과 산출이 다양한 차원(벡터)을 취할 수 있다. 그리고 이 선형 변환이 매트릭스로 표현될 수 있다. 때문에 매트릭스 표현이 강력하다. 추상적인 선형 변환 함수를 구체적으로 표현하고 쉽게 계산할 수 있게 만드는 것이 매트릭스다."
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html#linear-transformation",
+    "href": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html#linear-transformation",
+    "title": "Matrix as Linear Transformation",
+    "section": "Linear Transformation",
+    "text": "Linear Transformation\n\nConcepts\n\n\\(V\\): \\(T\\)의 인풋\n\\(W\\): \\(T\\)의 아웃풋\n\\(T: V \\to W\\): \\(V\\)에서 \\(W\\)로의 선형 변환\n\n\\(T(\\vec v) = \\vec w\\). 즉, \\(\\vec v \\in V\\)를 \\(\\vec w \\in W\\)로 변환하는 것을 나타낸다.\n\n\n\n 함수와 마찬가지로 위의 선형 변환에서 치역(Im(\\(T\\)))와 커널(스칼라 함수에서는 \\(f(x) = 0\\)의 해)이 정의된다.\n\\[\n{\\rm Im}(T) \\overset{\\rm def}{=} \\{ \\vec w \\in W | \\vec w = T(\\vec v) \\text{ for some } \\vec v \\} \\subseteq W\n\\] \\[\n{\\rm Ker}(T) \\overset{\\rm def}{=} \\{ \\vec v \\in V | T(\\vec v) = \\vec 0 \\} \\subseteq V\n\\]"
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html#matrix-representation",
+    "href": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html#matrix-representation",
+    "title": "Matrix as Linear Transformation",
+    "section": "Matrix Representation",
+    "text": "Matrix Representation\n인풋, 아웃풋의 기저 벡터를 다음과 같이 두자.\n\\[\nB_V = \\{ \\vec e_1, \\dotsc, \\vec e_n \\}\n\\] \\[\nB_W = \\{ \\vec b_1, \\dotsc, \\vec b_m \\}\n\\]\n\n\\(M_T \\in \\mathbb R^{m \\times n}\\)은 선형 변환 \\(T\\)의 매트릭스 표현이다.\n보다 정확하게 표현해보자.\n\n\\[\n\\phantom{}_{B_W}[M]_{B_V}\n\\]\n즉, \\(V\\)의 기저로 표현되는 인풋을 \\(W\\)의 기저로 표현되는 아웃풋으로 바꿔준다."
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html#linearity",
+    "href": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html#linearity",
+    "title": "Matrix as Linear Transformation",
+    "section": "Linearity",
+    "text": "Linearity\n선형의 의미는 무엇일까? 기하적으로 선을 다룬다는 뜻이 아니다. 선형의 의미는 함수적인 의미다. 아래 그림을 보자.\n\n즉,\n\\[\nT(\\alpha_1 \\vec v_1 + \\alpha_2 \\vec v_2) = \\alpha_1 T(\\vec v_1) + \\alpha_2 T(\\vec v_2) = \\alpha_1 \\vec w_1 + \\alpha_2 \\vec w_2\n\\]"
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html#matrix-as-linear-transformation",
+    "href": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html#matrix-as-linear-transformation",
+    "title": "Matrix as Linear Transformation",
+    "section": "Matrix as Linear Transformation",
+    "text": "Matrix as Linear Transformation\n왜 매트릭스가 선형 변환을 나타낼 수 있는지를 좀 더 들여다보자.\n\\[\n\\begin{aligned}\nT(\\vec v)  &=  T(v_1{\\hat e_1} + \\dotsb + v_n{\\hat e_n} ) \\\\\n& =  v_1 T(\\hat e_1) + \\dotsb+ v_n T(\\hat e_n)  \\\\\n& =\n\\begin{bmatrix}\n\\vert & \\vert & \\vert \\\\\nT(\\hat e_1) & \\cdots & T(\\hat e_n) \\\\\n\\vert & \\vert & \\vert\n\\end{bmatrix} \\vec v \\\\\n& = M_T \\vec v\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html#eat-this",
+    "href": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html#eat-this",
+    "title": "Matrix as Linear Transformation",
+    "section": "Eat This!",
+    "text": "Eat This!\n\nMapping Spaces\n선형 변환을 다시 적어보자. \\(T: V \\to W\\) where \\(V \\in \\mathbb R^n\\), \\(W \\in \\mathbb R^m\\). 즉 이 변환은 \\(n\\) 차원의 벡터를 \\(m\\) 차원으로 바꿔주는 것이다. 이 변환의 투입이 지니는 차원을 생각해보자. \\(n\\) 차원은 로우 공간이 생성하는 \\(\\mathcal R (M_T)\\)와 널 공간으로 가는 \\(\\mathcal N(M_T)\\)으로 나뉘게 된다. 그리고 이 공간은 서로 직합(direct sum) 관계다. 이를 요약하면 다음과 같다.\n\\[\nT: \\mathcal R(M_T) \\to \\mathcal C(M_T),~  \nT: \\mathcal N(M_T) \\to \\{ \\vec 0 \\}\n\\]\n즉 함수처럼 인풋 \\(\\vec v \\in \\mathcal R(M_T)\\)이 \\(\\vec w \\in \\mathcal C(M_T)\\)로 대응된다. 한편, \\(\\vec v \\in \\mathcal N(M_T)\\)는 \\(\\vec 0 \\in W\\)으로 대응된다.\n\n\nSurjective and Injective\n\n함수에서 전사 함수와 단사 함수의 개념을 그대로 적용할 수 있다. 선형 변환 혹은 행렬도 함수다.\n만일, \\(\\vec v_1 \\neq \\vec v_2\\)이고 \\(\\vec v_1, \\vec v_2 \\in \\mathcal R(M_T)\\)라면 이는 선형 변환의 정의에 따라서 서로 다른 \\(\\vec w\\)로 매핑된다. 따라서 만일 단사 변환이 되려면, \\(\\mathcal N(M_T) = \\{ \\vec 0 \\}\\)만 성립하면 된다.\n\\[\nAy - Az = A(y-z)\n\\]\n단사 변환이란 오직 \\(x = y\\)일 때만 \\(Ax = Ay\\)가 성립한다는 뜻이다. 즉 위의 식에서 \\(A(x-y) = 0\\)이 \\(x=y\\)일 때만 성립하면 된다. 즉, \\(A x = 0\\)이 \\(x=0\\)일 때만 성립하면 된다. 전사 변환의 정의는 통상적인 정의와 같다; \\({\\rm Im} (T) = \\mathbb R^m\\).\n매트릭스의 맥락에서 다시 음미해보자. 만일 전사(surjective) 변환이 되려면 \\(n \\geq m\\)이 성립해야 한다. 로우 스페이스의 차원이 컬럼 스페이스보다 커야 컬럼 스페이스 전체를 생성할 수 있다. 반면 단사(injective) 변환이 되려면 \\(n \\leq m\\)이 되어야 한다. 1-1 대응이 가능하려면 컬럼 스페이스의 크기가 로우 스페이스보다 커여 한다.\n따라서 전단사 변환이 되기 위한 조건은 \\(m=n\\)이다. 함수에서 역함수가 존재하려면 전단사 함수여야 한다. 선형 변환도 마찬가지다. 역행렬이 존재하기 위한 필요 조건은 정방 행렬, \\(m=n\\)이다.\n보다 상세한 내용은 여기를 참고하자."
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-06-vector-geometry-2.html",
+    "href": "posts/linear-algebra/2021-01-06-vector-geometry-2.html",
+    "title": "Vector Geometrically, part 2",
+    "section": "",
+    "text": "먼저 벡터 스페이스를 살펴보기 위해서 몇 가지 정의부터 보자.\n\n\\(V\\) is vector space\n\\(\\vec v \\in V\\)\n\\(W\\) is vector subspace \\(W \\subseteq V\\)\nspan: 벡터의 선형 결합을 통해 생성되는 벡터 집합 \\[\n\\text{span}(\\vec v_1, \\dotsc, \\vec v_n) = \\{\\vec v | \\vec v = \\alpha_1 \\vec v_1 + \\dotsb + \\alpha_n \\vec v_n, \\alpha_i \\in \\mathbb R \\}\n\\]\n\n행렬 \\(M \\in \\mathbb R^{m \\times n}\\)이 있다고 할 때\n\n\\(\\mathcal R(M) \\subseteq \\mathbb R^n\\): \\(M\\)의 로우 스페이스, 즉 \\(M\\)의 행들의 모든 가능한 선형 결합이 나타내는 벡터 공간\n\n\\[\n\\mathcal R (M) \\overset{\\rm def}{=} \\{ \\vec v \\in \\mathbb R^n | \\vec v = \\vec w^T M \\text{ for some } \\vec w \\in \\mathbb R^m \\}\n\\]\n\n\\(\\mathcal C(M) \\subseteq \\mathbb R^m\\): \\(M\\)의 컬럼 스페이스, 즉 \\(M\\)의 열들의 모든 가능한 선형 결합이 나타내는 벡터 공간\n\n\\[\n\\mathcal C (M) \\overset{\\rm def}{=} \\{ \\vec w \\in \\mathbb R^m | \\vec w = M v \\text{ for some } \\vec v \\in \\mathbb R^n \\}\n\\]\n\n\\(\\mathcal N(M) \\subseteq \\mathbb R^n\\): \\(M\\)의 널 스페이스. 즉, 오른쪽에 곱해졌을 때 \\(\\vec 0_{m}\\)이 되는 벡터의 집합 \\[\n\\mathcal N(M) \\overset{\\rm def}{=} \\{ \\vec v \\in \\mathbb R^n | M \\vec v = \\vec 0 \\}\n\\]\n\\(\\mathcal N(M^T) \\subseteq \\mathbb R^n\\): \\(M\\)의 좌 널 스페이스. 즉, 왼쪽에 곱해졌을 때 \\(\\vec 0_{n}\\)이 되는 벡터의 집합\n\n\\[\n\\mathcal N(M^T) \\overset{\\rm def}{=} \\{ \\vec w \\in \\mathbb R^m | \\vec w^T M  = \\vec 0^T \\}\n\\]\n혹은\n\\[\n\\mathcal N(M^T) \\overset{\\rm def}{=} \\{ \\vec w \\in \\mathbb R^m | M^T \\vec w = \\vec 0 \\}\n\\]\n\\(M\\)의 랭크는 컬럼 스페이스의 차원 그리고 로우 스페이스의 차원과 같다.\n\\[\nr(M) = \\dim(\\mathcal R (M)) = \\dim(\\mathcal C(M))\n\\]"
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#checklist",
+    "href": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#checklist",
+    "title": "Vector Geometrically, part 2",
+    "section": "Checklist",
+    "text": "Checklist\n\nZero vector\n벡터 스페이스가 되려면 \\(\\vec 0\\)를 집합 내에 지니고 있어야 한다. 간단한 내용 같지만 참 중요하다. 일단 벡터 스페이스의 정의에서 \\(\\alpha \\vec v\\)가 들어가기 때문에 \\(\\alpha=0\\)의 조건에 따라서 \\(\\vec 0\\)는 포함되어야 한다. 생각해 볼만한 대목. 벡터 서브스페이스 역시 마찬가지로 \\(\\vec 0\\)을 포함해야 한다. 2차원 벡터로 이야기한다면, \\(y = 2x + 1\\) 같은 형태의 선은 벡터 (서브) 스페이스가 될 수 없다.\n\n\nSubset vs subspace\n부분집합은 원래 집합에 일정한 조건을 부여한 것이고, 이 점에서는 서브 스페이스 역시 부분 집합에 속한다. 다만 모든 부분 집합이 서브 스페이스가 되진 않는다. 이 점에서 서브 스페이스의 조건이 보다 제약적이다.\n다음과 같은 두 방정식의 해를 비교해보자. \\(A \\vec x = \\vec b\\), \\(A \\vec x = \\vec 0\\)\n\\(A \\vec v_1 = \\vec b\\)와 \\(A \\vec v_2 = \\vec b\\)를 생각해보자. \\(A(\\vec v_1 + \\vec v_2)\\)는 원래의 벡터 스페이스에 들어 있는가?\n\\[\nA(\\vec v_1 + \\vec v_2) = 2 \\vec b\n\\]\n\\(\\vec b = \\vec 0\\)가 아니라면, \\(\\vec v_1 + \\vec v_2\\)는 해가 될 수 없다. 조금 더 자세하게 표현해보자.\n\\(A \\vec v = \\vec b\\)의 해 공간은 다음과 같은 완전해의 집합이다.\n\\[\n\\{ \\vec c + \\vec v_n\\} \\text{ where }\\vec v_n \\in \\mathcal N (A)\n\\]\n즉, 해 공간은 특수해(particular solution) \\(\\vec c\\)와 널 스페이스에 속한 벡터의 합으로 구성된다. 해 공간의 원소 하나를 \\(\\vec x_1 = \\vec c + \\vec v_1\\)이라고 하고 다른 하나를 \\(\\vec x_2 = \\vec c + \\vec v_2\\)라고 하자. 이 둘을 더하면, \\(2 \\vec c + \\vec v_1 + \\vec v_2\\)가 된다. 이것이 해 공간 안에 있어야 하는데, \\(\\vec c \\neq 0\\)이면 성립하지 않는다.\n한편 \\(\\mathcal N(M)\\)은 자연스럽게 벡터 공간을 이룬다. 더한 것도 \\(\\vec 0\\)에 있고, 스칼라 곱 역시 마찬가지다. 참고로 아래에서 보겠지만, \\(\\mathcal R(M)\\), \\(\\mathcal C(M)\\), \\(\\mathcal N(M)\\), \\(\\mathcal N(M^T)\\)를 네 개의 근본 서브 스페이스라고 부른다. 네 개는 밀접한 연관을 지니고 있다.\n\n\nSolutions\n이 기회에 해의 종류를 한번 살펴보고 넘어가자.\n\nParticular solution (특수해): RREF에서 free variables를 모두 0으로 두고 찾은 해를 뜻한다.\nHomogenous soution (일반해): 일반해는 널 스페이스에 속하는 해를 뜻한다. 즉, \\(A \\vec x = 0\\)을 만족시키는 \\(\\vec x\\)를 의미한다.\nComplete solution (완전해): 완전해란 특수해와 일반해를 더한 형태이다. 즉, \\(x_c = x_p + c_h\\)\n\n이제 각각의 의미를 음미해보자.\n\\[\nA \\vec x = A x_c = A(x_p + x_h) = A x_p + A x_h = A x_p + \\vec 0_{m}\n\\]\n보다 자세한 사례는 여기를 참고하라. 약간의 직관적인 설명만 곁들이겠다. 특수해는 딱 그 위치에 있어야 하는 벡터다. 즉 free variable이 어떤 값이 오건 간에 이 벡터의 값은 고정되어 있다. 반면 일반해는 널 스페이스에 속한다. 앞서 널 스페이스는 부분 공간이라고 말했다. 이는 \\(\\vec 0\\)를 중심으로 각각 벡터가 지나가야 한다는 뜻이다. 따라서 free variable의 경우 하나를 구하기 위해서 나머지를 0으로 두고 구해야 한다. 그리고 이렇게 구해진 vector에 곱해지는 스칼라 값이 free variable에 해당한다."
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#system-of-linear-equations",
+    "href": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#system-of-linear-equations",
+    "title": "Vector Geometrically, part 2",
+    "section": "System of Linear Equations",
+    "text": "System of Linear Equations\n다음 방정식의 해 공간을 생각해보자.\n\\[\nM \\vec x = \\vec b\n\\]\n먼저 \\(M\\)의 널 스페이스를 생각해보자. 여기 속한 \\(\\vec x\\)는 \\(\\mathbb R^n\\) 집합에 속한다. 정의상 \\(M \\vec x = 0\\)이므로 \\(\\vec x\\)를 어떤 해에 더하면 이 값 역시 해가 된다. 따라서, \\(M \\vec x = \\vec b\\)를 만족하는 \\(\\vec x = \\vec c\\)라고 하자. 이를 특수 해라고 부른다. 여기에 널 스페이스에 속한 임의의 원소를 더하면 완전해가 된다. 즉,\n\\[\n\\vec x = \\vec c + \\text{span}(\\vec v_1, \\dotsc, \\vec v_k) \\text{ where } \\text{span}(\\vec v_1, \\dotsc, \\vec v_k) = \\mathcal N(M)\n\\]\n\nRREF method\n연립방정식의 해를 구하는 가장 기초적인 방법, 즉 RREF, 기약 행사다리꼴 행렬을 만드는 과정이 이에 부합한다. 즉, \\([M \\lvert \\vec b]\\)를 RREF로 만들면, \\([\\text{rref}(M) \\vert \\vec c]\\)의 형태가 된다. 이때, \\(\\text{rref}(M)\\)는 \\(k\\) 개의 자유 변수를 \\(n-k\\) 개의 특수 해를 지니게 된다. 자유 변수에서 널 스페이스에 속하는 일반해를 얻을 수 있다."
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#two-transformation",
+    "href": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#two-transformation",
+    "title": "Vector Geometrically, part 2",
+    "section": "Two Transformation",
+    "text": "Two Transformation\n\\(M \\in \\mathbb R^{m \\times n}\\)이 편리한 이유는 \\(M\\)이 \\(\\vec x \\in \\mathbb R^n\\)을 \\(\\vec y \\in \\mathbb R^m\\)으로 바꾸는 선형 변환 모두를 표현할 수 있기 때문이다. 그렇다면, \\(M^T\\)는 어떨까? 이는 같은 맥락에서 \\(\\vec a \\in \\mathbb R^m\\)을 \\(\\vec b \\in \\mathbb R^n\\)으로 바꾸는 선형 변환을 표현한다. 즉,\n\\[\n\\vec a^T M = \\vec b\n\\]\n이는 \\(M^T \\vec a= \\vec b\\)가 된다. 즉, \\(M^T\\)는 \\(M\\)의 좌 벡터 공간의 집합을 표현한다. 마찬가지로 \\(M\\)은 \\(M\\)의 우 벡터 공간의 집합을 표현한다. \\(M\\)의 좌 벡터 공간이 바로 로우 공간이고 우 벡터 공간이 컬럼 공간이다.\n이제, \\(\\mathcal N(M)\\)의 원소는 \\(\\mathbb R^n\\)에 속한다. 이와 직교하는 공간은 어떤 공간일까? 좌 벡터 공간일까? 우 벡터 공간일까? 쉽게 생각하자. 직교 하기 위해서는 서로 차원이 같아야 한다. 우 벡터 공간은 \\(\\mathbb R^m\\)에 속한다. 따라서 직교한다면 좌 벡터 공간과 한다. 확인해보자. \\(M \\vec v_n = \\vec 0_m\\) where \\(\\vec v_n \\in \\mathcal N(M)\\) 가 성립한다. 이제 양번에 \\(\\vec a^T\\)를 곱해보자.\n\\[\n\\underbrace{(M^T \\vec a)^T}_{\\text{left space}} \\vec v_n = \\vec a^T M\\vec v_n = \\vec a^T \\vec 0_m = 0\n\\] \\[\n\\mathcal R(M) \\oplus \\mathcal N(M) = \\mathbb R^n\n\\]\n한편 같은 논리로\n\\[\n\\mathcal C(M) \\oplus \\mathcal N(M^T) = \\mathbb R^m\n\\]\n앞서 보았듯이 \\({\\rm rank} (M) =\\dim(\\mathcal R(M)) = \\dim(\\mathcal C(M))\\)다. \\(\\dim(\\mathcal N(M)) = {\\rm nullity} (M)\\)이라고 하면,\n\\[\n{\\rm rank} (M) + {\\rm nullity} (M) = n = \\dim(\\mathbb R^n)\n\\]\n이 모든 걸 그림 하나로 정리하면 다음과 같다! 아래 보듯이 특수해(particular solution) \\(x_r\\)은 로우 스페이스에서 생성되는 해이다. 일반해(homogeneous solution) \\(x_n\\)은 널 스페이스에서 생성되는 해다. 이 둘을 합치면 완전해(complete solution)가 된다. 아래 그림에서 보듯이\n\\[\n\\begin{aligned}\nAx_r & \\rightarrow \\mathcal C(M) \\\\\nAx_n & \\rightarrow \\mathcal N(M) \\\\\nAx_c = A(x_r + x_n) & \\rightarrow \\mathcal C(M)\n\\end{aligned}\n\\]\n\n보통 homogenous라는 말이 들어가면 \\(Ax = 0\\)과 같은 형태의 연립방정식을 의미 의미한다."
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-08-basis.html",
+    "href": "posts/linear-algebra/2021-01-08-basis.html",
+    "title": "Basis",
+    "section": "",
+    "text": "벡터 공간 \\(V\\)의 기저\n\\[\nB = \\{ \\vec{e_1}, \\dotsc, \\vec{e_n} \\}  \n\\]\n는 다음의 두 특성을 만족한다.\n\n\n모든 \\(v \\in V\\)는 다음과 같이 기저의 선형 결합으로 표현된다.\n\\[\nv = v_1 \\vec{e_1} + \\dotsc + v_n \\vec{e_n}\n\\]\n\n\n\n즉, 기저를 구성하는 벡터 \\(\\vec{e_i}\\)에 불필요한 것이 없어야 한다. 즉, \\(\\vec{e}\\)를 구성하는 어떤 \\(e_i\\)도 다른 \\(e_j\\)(\\(j \\neq i\\))의 선형 결합으로 표현될 수 없다.\n\n\n\n\\[\nB_{\\hat{e}} = \\{ \\hat{e_1}, \\dotsc, \\hat{e_n} \\} \\text{~with}\n\\] \\[\n\\begin{cases}\n\\hat{e_i} \\cdot \\hat{e_j} = 1 & \\text{if $i = j$} \\\\\n\\hat{e_i} \\cdot \\hat{e_j} = 0 & \\text{if $i \\neq j$}\n\\end{cases}\n\\] \\[\n(a_1, \\dotsc, a_n)_{B_{\\hat{e}}} = \\underbrace{(\\vec{a} \\cdot \\hat{e_i})}_{a_1} \\hat{e_i} + \\dotsb + (\\vec{a} \\cdot \\hat{e_n}) \\hat{e_n}\n\\]"
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-08-basis.html#orthogonal-basis",
+    "href": "posts/linear-algebra/2021-01-08-basis.html#orthogonal-basis",
+    "title": "Basis",
+    "section": "Orthogonal basis",
+    "text": "Orthogonal basis\n\\[\nB_{e} = \\{ e_1, \\dotsc, e_n \\} \\text{~with}\n\\] \\[\n\\begin{cases}\ne_i \\cdot e_j \\neq 0 & \\text{if $i = j$} \\\\\ne_i \\cdot e_j = 0 & \\text{if $i \\neq j$}\n\\end{cases}\n\\] \\[\n(b_1, \\dotsc, b_n)_{B_e} = \\underbrace{(\\vec b \\cdot \\dfrac{e_i}{\\Vert e_i \\Vert})}_{b_1} e_1 + \\dotsb + (\\vec b \\cdot \\dfrac{e_i}{\\Vert e_i \\Vert}) e_n\n\\]\n\\(b_i\\)의 값을 제대로 반영하기 위해서는 정규화된 orthorgonal basis가 필요하고, \\(\\frac{e_i}{\\Vert e_i \\Vert}\\)가 내적 계산에 들어간다."
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-08-basis.html#take-this",
+    "href": "posts/linear-algebra/2021-01-08-basis.html#take-this",
+    "title": "Basis",
+    "section": "Take This!",
+    "text": "Take This!\n\nGeneric basis\n서로 직교하지 않는 기저,\n\\[\n\\{ \\vec f_1, \\dotsc, \\vec f_n \\}\n\\]\n가 있다고 하자. \\(\\vec c\\)를 이 기저로 어떻게 표현할 수 있을까?\n\\[\n\\begin{aligned}\nc_1 f_1 + \\dotsb + c_n f_n = \\vec c\n\\end{aligned}\n\\]\n\\(f_i\\)가 직교행렬이 아니기 때문에, \\(c_i\\) 역시 하나씩 결정될 수 없고 동시에 결정되어야 한다. 즉, 이는 연립방정식을 푸는 문제와 같다. 즉 \\(n\\) 개의 미지수와 \\(n\\) 개의 방정식을 푸는 문제다.\n\n\nExample\n\\(T: \\mathbb R^2 \\to \\mathbb R^2\\)의 변환을 생각해보자. 어떤 이유에서인가 \\(T\\)를 기본 기저가 아닌 다른 기저로 표현해야 한다고 하자. 두 개의 기저를 아래와 같이 두자.\n\\[\n\\\\{ \\vec v_1 = (v_{1x}, v_{1y})^T, \\vec v_2 = (v_{2x}, v_{2y})^T \\\\}\n\\]\n이 기저는 \\(T\\)에 의해서 다음과 같이 변형된다.\n\\[\nT(\\vec v_1) =\n\\begin{bmatrix}\nt_{1x} \\\\\nt_{1y}\n\\end{bmatrix},~\nT(\\vec v_2) =\n\\begin{bmatrix}\nt_{2x} \\\\\nt_{2y}\n\\end{bmatrix}\n\\]\n이걸 매트릭스로 표현하면 어떻게 될까? \\(2 \\times 2\\)로 이 변형이 표현될 수 있기 때문에,\n\\[\nM_T =\n\\begin{bmatrix}\nm_{11} & m_{12} \\\\\nm_{21} & m_{22}\n\\end{bmatrix}\n\\]\n앞서 변형을 그대로 적어보자.\n\\[\n\\begin{aligned}\nm_{11} v_{1x} + m_{12} v_{1y} & = t_{1x} \\\\\nm_{21} v_{1x} + m_{22} v_{1y} & = t_{1y} \\\\\nm_{11} v_{2x} + m_{12} v_{2y} & = t_{2x} \\\\\nm_{21} v_{2x} + m_{22} v_{2y} & = t_{2y} \\\\\n\\end{aligned}\n\\]\n여기서 미지수는 \\(m_{\\cdot}\\)이다. 즉 4개의 미지수를 지니는 연립방정식이 된다.\n\\[\nA \\vec m = \\vec t ~\\Leftrightarrow~\n\\begin{bmatrix}\nv_{1x} & v_{1y} & 0 & 0 \\\\\nv_{1x} & v_{1y} & 0 & 0 \\\\\n0 & 0 & v_{2x} & v_{2y} \\\\\n0 & 0 & v_{2x} & v_{2y} \\\\\n\\end{bmatrix}\n\\begin{bmatrix}\nm_{11} \\\\\nm_{12} \\\\\nm_{21} \\\\\nm_{22} \\\\\n\\end{bmatrix} =\n\\begin{bmatrix}\nt_{1x} \\\\\nt_{1y} \\\\\nt_{2x} \\\\\nt_{2y}\n\\end{bmatrix}\n\\]"
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-08-basis.html#change-of-basis",
+    "href": "posts/linear-algebra/2021-01-08-basis.html#change-of-basis",
+    "title": "Basis",
+    "section": "Change of Basis",
+    "text": "Change of Basis\n한 벡터의 기저를 다른 기저로 바꾸는 것을 생각해보자. 일반적으로는 \\(T: V \\to W\\) 역시 \\(B_V\\)에서 \\(B_W\\)로 기저를 바꾸는 것이다. 차원이 바뀐다면 기저 역시 바뀐다.\n기저 변환(change-of-basis)은 매트릭스를 이해하는 매우 중요한 방식이다. 이를 통해 역시 매트릭스 표현에 도달할 수 있다. 선형 번환 \\(T: V \\to W\\)가 있다고 하자.\n\\[\n\\begin{aligned}\nB_V & = \\{ \\hat e_1, \\dotsc, \\hat e_n \\} \\\\\nB_W & =  \\{ \\hat b_1, \\dotsc, \\hat b_m \\}\n\\end{aligned}\n\\] \\[\n\\begin{aligned}\n[M_T]_{B_V} \\vec v_{B_V} & =\n\\begin{bmatrix}\n\\vert & \\vert & \\vert \\\\\nT(\\hat e_1) & \\dotsc & T(\\hat e_n) \\\\\n\\vert & \\vert & \\vert \\\\\n\\end{bmatrix}_{B_V}\n\\begin{bmatrix}\nv_1 \\\\\n\\vdots \\\\\nv_n \\\\\n\\end{bmatrix}_{B_V} \\\\\n& = T(\\hat e_1) v_1 + \\dotsb + T(\\hat e_n) v_n \\\\\n& = T(v_1 \\hat e_1 + \\dotsb + v_n \\hat e_n) \\\\\n&  = T(\\vec v) \\\\\n& = \\vec w_{B_W}\n\\end{aligned}\n\\]\n이제 \\(T(\\hat e_1)\\) 하나만 구체적으로 풀어보자. \\(T\\)를 통해서 기저는 \\(B_V\\)에서 \\(B_W\\)로 바뀐다.\n\\[\nT(\\hat e_1) =\n\\begin{bmatrix}\nc_{11} \\\\\n\\vdots \\\\\nc_{m1}\n\\end{bmatrix}_{B_W} = c_{11} \\hat b_1 + \\dotsb + c_{m1} \\hat b_m\n\\]\n이를 모든 행에 대해서 적용하면, 다음과 같다.\n\\[\n\\phantom{}_{B_W}M_{B_V} =\n\\vphantom{\n\\begin{bmatrix}\n\\\\\n\\\\\n\\\\\n\\end{bmatrix}\n}_{B_W}\n\\begin{bmatrix}\nc_{11} & \\cdots & c_{1n} \\\\\n&\\cdots&\\\\\nc_{m1}  & \\cdots & c_{mn} \\\\\n\\end{bmatrix}_{B_V}\n\\]\n정리하면 다음과 같다.\n\\[\n[T(\\vec v)]_{B_W} = \\phantom{}_{B_W} [M_T]_{B_V} [\\vec v]_{B_V}\n\\]\n\nChange-of-basis\n이제 하나의 같은 벡터의 기저를 \\(B_v \\to B_{v^{\\prime}}\\)으로 바꾸는 것을 살펴보자. 즉 \\(T: V \\to V\\)의 경우에 해당한다.\n\\[\n\\vec v = (v_1, v_2, v_3)_B = v_1 \\hat e_1 + v_2 \\hat e_2 + v_3 \\hat e_3\n\\]\n이제 기저를 \\(B \\to B^\\prime\\)으로 바꾸는 어떤 변환이 있다고 하자. 이 변환을 \\(\\phantom{}_{B^{\\prime}}[1]_B\\)라고 표기하자. 이 표기의 뜻은 매트릭스의 인풋(오른쪽)이 원래의 기저 \\(B\\)이고 변환을 통해 산출되는 기저를 \\(B^{\\prime}\\)으로 나타낸 것이다. \\(1\\)의 의미는 벡터의 기저만 바뀌었을 뿐 동일한 벡터의 변환이라는 의미를 지닌다 즉,\n\\[\n(v^{\\prime}_1, v^{\\prime}_2, v^{\\prime}_3) = v^{\\prime}_1 \\hat e^{\\prime}_1 +  + v_2 \\hat e^{\\prime}_2 + v_3 \\hat e^{\\prime}_3 = \\vec v = v_1 \\hat e_1 + v_2 \\hat e_2 + v_3 \\hat e_3\n\\]\n\\(_{B^{\\prime}}1_B\\)을 찾기 위해서 \\(\\hat e_1\\)을 \\(B^{\\prime}\\) 기저로 표현해보자.\n\\[\n\\hat e_1 = (\\hat e^{\\prime}_1 \\cdot \\hat e_1) e^{\\prime}_1 + (\\hat e^{\\prime}_2 \\cdot \\hat e_1) e^{\\prime}_2 + (\\hat e^{\\prime}_3 \\cdot \\hat e_1) e^{\\prime}_3 = ( \\hat e^{\\prime}_1 \\cdot \\hat e_1,  \\hat e^{\\prime}_2 \\cdot \\hat e_1 ,  \\hat e^{\\prime}_3 \\cdot \\hat e_1  )_{B^{\\prime}}\n\\]\n따라서 기저 변환을 위한 매트릭스는 다음과 같다.\n\\[\n\\begin{bmatrix}\ne^{\\prime}_1 & e^{\\prime}_2 & e^{\\prime}_3\n\\end{bmatrix} =\n\\begin{bmatrix}\ne^{\\prime}_1 \\cdot \\hat e_1  & e^{\\prime}_1 \\cdot \\hat e_2 & e^{\\prime}_1 \\cdot \\hat e_3 \\\\\ne^{\\prime}_2 \\cdot \\hat e_1  & e^{\\prime}_2 \\cdot \\hat e_2 & e^{\\prime}_2 \\cdot \\hat e_3 \\\\\ne^{\\prime}_3 \\cdot \\hat e_1  & e^{\\prime}_3 \\cdot \\hat e_2 & e^{\\prime}_3 \\cdot \\hat e_3 \\\\\n\\end{bmatrix} =\n\\phantom{}_{B^{\\prime}}[1]_B\n\\]\n\n\nBack to generic bases\n다시 위에서 살펴보았던 날 기저(generic basis) \\(f\\) 의 문제로 돌아와보자. \\(\\phantom{}_S1_f\\)는 어떻게 구할 수 있을까? 위의 식을 참고하면 된다. \\(B_S = \\{(1,0,0), (0,1,0), (0,0,1)\\}\\)이라고 하자. 표기의 편의상 \\(B_S\\) 각각을 \\(i\\), \\(j\\), \\(\\hat i\\), \\(\\hat j\\), \\(\\hat k\\) 라고 하자.\n\\[\n\\phantom{}_S[1]_f =\n\\begin{bmatrix}\n\\vec f_1 \\cdot \\hat i  & \\vec f_2 \\cdot \\hat i  & \\vec f_3 \\cdot \\hat i \\\\\n\\vec f_1 \\cdot \\hat j  & \\vec f_2 \\cdot \\hat j  & \\vec f_3 \\cdot \\hat j \\\\\n\\vec f_1 \\cdot \\hat k & \\vec f_2 \\cdot \\hat k & \\vec f_3 \\cdot \\hat k \\\\\n\\end{bmatrix}\n\\]\n\\(\\phantom{}_S[1]_f\\) 매트릭스는 \\(B_f\\) 기저의 벡터를 \\(B_S\\) 기저의 벡터로 바꿔주는 매트릭스다. 이를 적용하면 \\(B_S\\) 기저의 매트리스 벡터가 나온다.\n\\[\n\\underbrace{\\phantom{}_S[1]_f}_{B_S \\leftarrow B_f} \\vec v_{B_f} = \\vec v_{B_S}\n\\]\n\n\nTransformation with change-of-basis\n이제 \\(\\phantom{}\\_B[M\\_T]\\_B\\) 가 주어져 있다고 하자. 이를 \\(\\phantom{}\\_{B^{\\prime}}[M^T]\\_{B^{\\prime}}\\phantom{}\\)로 어떻게 교체할 수 있을까? 개념적으로는 이럴 것이다.\n\\[\n\\phantom{}_{B^{\\prime}}{[M^T]}_{B^{\\prime}} = \\underbrace{\\phantom{}_{B^{\\prime}}{[1]}_{B}}_{B^\\prime \\leftarrow B}\\phantom{}_{B}{[M^T]}_{B}\\overbrace{\\phantom{}_{B}{[1]}_{B^{\\prime}}}^{B \\leftarrow B^\\prime}\n\\]\n\\(\\phantom{}\\_{B^{\\prime}}{[1]}\\_{B}\\)과 \\(\\phantom{}\\_{B}{[1]}\\_{B^{\\prime}}\\)이 서로 역행렬의 관계이 있음을 기억해두자."
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-08-basis.html#similar-matrix",
+    "href": "posts/linear-algebra/2021-01-08-basis.html#similar-matrix",
+    "title": "Basis",
+    "section": "Similar Matrix",
+    "text": "Similar Matrix\n\\(B \\in \\mathbb R^{n \\times n}\\)과 역행렬이 존재하는 매트릭스 \\(C \\in \\mathbb R^{n \\times n}\\)가 있다고 하자. A은 다음과 같이 정의된다.\n\\[\nA = C B C^{-1}\n\\]\n\\(A\\)과 \\(B\\)은 서로 닮은 꼴의 매트릭스다. 위 식을 만족하는 매트릭스 \\(A\\)과 \\(B\\)을 similar matrix라고 정의한다. 우선 두 매트릭스가 서로 닮은 꼴일 때에는 \\(n \\geq 1\\)에 대해서 \\(A^n = C B^n C^{-1}\\)이 성립한다. 이는 아이겐 분해에서 보듯이 \\(B\\)가 어떤 매트릭스냐에 따라서 계산 상 편리함을 줄 수 있다. 만일 \\(B\\)가 대각 행렬이라면 행렬의 \\(n\\)은 대각 원소의 \\(n\\) 승만 수행하면 된다.\n\\(C\\)가 역행렬을 지니기 때문에 \\(C\\)의 컬럼은 \\(\\mathbb R^n\\)의 기저가 된다. 이렇게 보면 \\(C\\)는 change-of-basis와 같은 맥락에서 이해할 수 있다. 즉, 앞서 살펴 본 기저를 바꾸는 행렬과 동일한 행렬이다. \\(A x\\)라는 변환을 이 맥락에서 다시 이해해보자. 여기서 \\(\\mathcal B\\)는 표준 기저(\\(\\hat e_i\\))로 이해하면 된다.\n\n\\(C^{-1} x\\)는 \\([x]\\_{u}\\)의 기저를 \\([x]\\_{\\mathcal B}\\)로 바꾸는 것이다. 즉, \\(\\phantom{}\\_{\\mathcal B}1\\_u\\)\n이 바뀐 기저에서 \\(B\\)이라는 변환을 수행한다. 즉, \\(\\phantom{}\\_{\\mathcal B}B\\_\\mathcal B\\)\n\\(C\\)는 곱해 다시 통상적인 기저로 돌아오게 된다. 즉, \\(\\phantom{}\\_{u}1\\_\\mathcal B\\)\n\n아래 그림에서 보듯이, \\(Ax\\)라는 변환과 \\(B[x]_{\\mathcal B}\\)라는 변환은 좌표계만 다를 뿐 동일한 변환이다. \\(C B C^{-1}\\)의 기저의 변화를 살펴보면,\n\\[\n\\begin{aligned}\n\\underbrace{u \\rightarrow \\mathcal B}_{C^{-1}} & \\cdots B \\cdots \\underbrace{\\mathcal B \\rightarrow u}_{C} \\\\\n& \\cdots A \\cdots\n\\end{aligned}\n\\]\n로 나타낼 수 있다.\n{ style=“margin: auto; display: block; border:1.5px solid #021a40; width=60%; }\nSimilar matrix인 \\(A\\)과 \\(B\\) 사이에서 다음과 같은 관계가 성립한다.\n\n\\({\\rm Tr}(A) = {\\rm Tr}(B)\\)\n\\({\\rm det}(A) = {\\rm det}(B)\\)\n\\({\\rm rank}(A) = {\\rm rank}(B)\\)\n\\({\\rm eig}(A) = {\\rm eig}(B)\\)"
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-10-Eigenspace-1.html",
+    "href": "posts/linear-algebra/2021-01-10-Eigenspace-1.html",
+    "title": "Eigenspace, part 1",
+    "section": "",
+    "text": "아이겐밸류, 아이겐벡터는 중요하다. 어디서나 튀어나온다. 그래서 친숙하지만 나는 이걸 제대로 알고 있는 것일까? 이번 포스팅에서는 아이겐 공간의 관점에서 이 문제를 살펴볼 예정이다.\n사실 아이겐 공간은 \\(n \\times n\\) 매트릭스의 숨은 구조(뼈대)와 같다. 아이겐밸류를 구하는 식을 떠올려보자.\n\\[\nM_T \\vec x = \\lambda \\vec x\n\\]\n\\(M_T\\)라는 \\(n \\times n\\) 변환이 특정한 벡터 아래서는 스칼라 곱의 문제로 환원된다. 이런 의미에서 아이겐벡터는 \\(M_T\\)라는 매트릭스가 지닌 일종의 축이다. 이 축 위에서 변환이 다시 축으로 환원되기 때문이다. \\(M_T\\)의 원래 기저와 상관 없이, 이 아이겐벡터로 다시 기저를 구성한다고 생각해보자. 이때 아이겐밸류는 해당 축의 크기(길이)로 이해할 수 있다."
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-10-Eigenspace-1.html#eigenspace",
+    "href": "posts/linear-algebra/2021-01-10-Eigenspace-1.html#eigenspace",
+    "title": "Eigenspace, part 1",
+    "section": "Eigenspace",
+    "text": "Eigenspace\n아이겐 공간이란 무엇일까? 특정한 아이겐밸류 \\(\\lambda_i\\)에 의해 파생되는 아이겐 공간은 다음과 같이 정의될 수 있다.\n\\[\nE_{\\lambda_i}  \\overset{\\rm def}{=} \\mathcal N (A - \\lambda_i 1) = \\{ \\vec v | (A - \\lambda_i ) \\vec v = \\vec 0 \\}\n\\]\n즉, \\(A - \\lambda_i 1\\)의 널 스페이스다. 사실 여기서 아이겐밸류를 구하는 공식도 파생된다. 아이겐벡터가 \\(A - \\lambda_i 1\\)의 널 스페이스에 있다는 것은 \\(A - \\lambda_i 1\\)라는 변환이 서로 선형 종속이라는 뜻이다. 즉 \\(\\det (A - \\lambda_i 1) = 0\\)의 의미와 같다. 아이겐밸류를 구하는 특성방정식이 여기서 도출된다.\n\\[\np(\\lambda) = \\vert A - \\lambda 1 \\vert = 0\n\\]\n\nAll distinct eigenvalues\n실용적으로 접근해보자. 모든 아이겐밸류가 다르다면, 아이겐벡터는 선형독립이다. \\(n\\) 개의 서로 다른 아이겐벡터가 있다면 원래 매트릭스(\\(M_T\\))의 컬럼 스페이스를 생성하는 기저가 될 수 있다.\n\n\nAlgebraic vs geometric\n대수적 중복도(algebraic multiplicity: AM)란 특성 방정식에서 특정한 아이겐밸류 \\(\\lambda\\)가 몇 번 나타나는지를 표시한다. 한편 기하적 중복도(geometric multiplicity: GM)란 \\(\\lambda\\)의 아이겐벡터가 생성하는 널 공간의 차원을 의미한다. 예를 들어보자.\n\\[\nA =\n\\begin{bmatrix}\n1 & 2 \\\\\n0 & 1\n\\end{bmatrix}\n\\]\n\\(A\\) 특성방정식을 구하면 \\(p(\\lambda) = (1-\\lambda)^2\\)이다. 따라서 아이겐밸류 1의 AM는 2이다. GM은 어떨까?\n\\[\nA - \\lambda I =\n\\begin{bmatrix}\n0 & 2 \\\\\n0 & 0 \\\\\n\\end{bmatrix} x = 0\n\\]\n이를 만족하는 널 스페이스 \\(x\\)는 아래 벡터 하나다.\n\\[\nx = \\alpha\n\\begin{bmatrix}\n1 \\\\\n0\n\\end{bmatrix}\n\\]\n따라서 \\(\\lambda=1\\)의 GM은 1이 된다.\n일단 직관적으로 알 수 있는 점은 아이겐밸류 \\(\\lambda\\)의 기하적 중복도가 대수적 중복도 보다 클 수는 없다는 점이다. 즉, \\({\\rm GM}(\\lambda) \\leq {\\rm AM}(\\lambda)\\)\n\n\nDefective eigenvalues\n\\({\\rm GM}(\\lambda) < {\\rm AM}(\\lambda)\\)가 되는 \\(\\lambda\\)를 defective eigenvalue라고 부른다. 특성 방정식에서 해당 아이겐벡터가 생성하는 널 스페이스의 차원이 AM보다 작다면, 아이겐벡터를 모아서 특성 방정식 생성한 널 스페이스를 생성할 수 없다. 다시 말하면, 이는 아이겐 분해를 통해서 원래 매트릭스의 컬럼 스페이스를 온전하게 생성할 수 없다는 뜻이다.\n모든 아이겐밸류의 값이 다를 경우, 즉 아이겐밸류의 중복이 없을 경우 각각 아이겐밸류의 AM은 1이 된다. 이 경우 아이겐벡터들이 모두 선형 독립이기 때문에 각 아이겐밸류의 기하적 중복도 역시 1이 된다. 따라서 반복되는 아이겐밸류가 없는 경우에는 defective eigenvalue는 없고, 행렬의 아이겐 분해가 가능해진다."
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-10-Eigenspace-1.html#diagonalization-as-change-of-basis",
+    "href": "posts/linear-algebra/2021-01-10-Eigenspace-1.html#diagonalization-as-change-of-basis",
+    "title": "Eigenspace, part 1",
+    "section": "Diagonalization as Change-of-Basis",
+    "text": "Diagonalization as Change-of-Basis\n아이겐벡터와 아이겐밸류를 동원해서 매트릭스를 분해하는 것을 대각화라고도 부른다.\n\\[\nA = Q \\Lambda Q^{-1}\n\\]\n이렇게 분해될 때 가운데 매트릭스 \\(\\Lambda\\)가 아이겐밸류의 대각 행렬로 구성되기 때문이다. \\(Q\\)는 다음과 같이 정의된다.\n\\[\nQ =\n\\begin{bmatrix}\n\\vert & \\vert & \\vert \\\\\n\\vec e_{\\lambda_1} & \\dotsc & \\vec e_{\\lambda_n} \\\\\n\\vert & \\vert & \\vert \\\\\n\\end{bmatrix}\n\\]\n앞서 아이겐벡터가 일종의 축의 역할을 한다고 했다. 즉, 이 아이겐벡터는 매트릭스의 인풋으로 아이겐 스페이스 벡터를 받고 이를 현재의 표준 스페이스로 바꿔준다.\\(B_S \\leftarrow B_\\lambda\\) 역할을 한다. 즉,\n\\[\nQ = \\phantom{}_{B_S}[1]_{B_\\lambda}\n\\]\n\\(Q\\)를 기저 변환의 관점에서 보면 아이겐 공간의 좌표를 표준 좌표로 바뀌주는 역할을 한다. \\(Q^{-1}\\)은 반대로 \\(B_{\\lambda} \\leftarrow B_{S}\\)의 역할을 한다. 즉,\n\\[\nQ^{-1} = \\phantom{}_{B_\\lambda}[1]_{B_S}\n\\]\n이 관점에서 보면 행렬의 대각화가 새롭게 보인다.\n\\[\n[\\vec w]_{B_S} = \\phantom{}_{B_S}[A]_{B_S} [\\vec v]_{B_S} = Q \\Lambda Q^{-1}[\\vec v]_{B_S}\n\\] \\[\nQ \\Lambda Q^{-1}[\\vec v]_{B_S} = \\underbrace{\\phantom{}_{B_S}[1]_{B_\\lambda}}_{Q}\\phantom{}_{B_\\lambda}[\\Lambda]_{B_\\lambda}\\overbrace{\\phantom{}_{B_\\lambda}[1]_{B_S}}^{Q^{-1}}[\\vec v]_{B_S}\n\\]\n행렬의 대각화란 일정한 변환 혹은 매트릭스를 아이겐 공간을 통해 다시 해석하는 과정이다. 즉, \\(B_S \\to B_\\lambda \\to B_S\\)의 과정을 거친다.\n대각 행렬 \\(\\Lambda\\)는 아이겐벡터들로 구성된 아이겐 공간의 기저(아이겐벡터)의 크기를 나타낸다.\n\nEat this!\n대각화를 통해서 아이겐밸류의 중요한 특성 두 가지를 다시 음미해보자.\n\\[\n{\\rm det}(A) = \\vert A \\vert = \\prod_{i} \\lambda_i\n\\] \\[\n{\\rm Tr}(A) = \\sum_{i} a_{ii} = \\sum_{i} \\lambda_i\n\\]\n논리는 아래와 같이 간단하다.\n\\[\n\\vert A \\vert = \\vert Q \\Lambda Q^{-1} \\vert =  \\vert Q \\vert \\vert \\Lambda \\vert \\vert Q^{-1} \\vert = \\vert Q \\vert \\vert Q^{-1} \\vert \\vert \\Lambda \\vert = \\dfrac{\\vert Q \\vert}{\\vert Q^{} \\vert} \\vert \\Lambda \\vert = \\vert \\Lambda \\vert\n\\] \\[\n{\\rm Tr}(Q \\Lambda Q^{-1}) = {\\rm Tr}(\\Lambda Q Q^{-1}) = {\\rm Tr}(\\Lambda 1) = {\\rm Tr}(\\Lambda) = \\sum_{i} \\lambda_i\n\\]\n두 가지 속성은 \\({\\rm det}(A) = \\vert A \\vert = \\prod_{i} \\lambda_i\\)는 대각화가 가능한 경우 뿐 아니라 일반적으로 성립한다. 첫번째 속성만 살펴보자. 특성방정식을 생각해보면, \\(\\vert A - \\lambda I \\vert = 0\\)이다. 즉,\n\\[\n\\begin{aligned}\np(\\lambda)  = & {\\rm det} (A - \\lambda I) \\\\\n& (-1)^n (\\lambda - \\lambda_1) \\dotsb  (\\lambda - \\lambda_n) \\\\\n& (\\lambda_1 - \\lambda)\\dotsb(\\lambda_n - \\lambda)\n\\end{aligned}\n\\]\n따라서, \\(\\det (A) = \\lambda_1 \\dotsb \\lambda_n\\).\n\n\nNormal matrix\n매트릭스 \\(A\\)가 노멀이라면, 이는 \\(A^T A = A A^T\\)를 만족하는 경우를 뜻한다. 모든 노멀 매트릭스는 대각화가 가능하고 아울러 \\(Q\\)를 직교 행렬(orthgonal matrix or orthonormal matrix) \\(O\\) 로 택할 수 있다. 이는 \\(Q^{-1}\\)의 계산이 간단해진다는 뜻이다. 즉,\n\\[\nOO^T = I = O^T O\n\\] \\[\nO^TO =\n\\begin{bmatrix}\n-- & \\hat e_1 & -- \\\\\n   & \\vdots & \\\\\n-- & \\hat e_n & -- \\\\\n\\end{bmatrix}\n\\begin{bmatrix}\n\\vert &  & \\vert \\\\\n\\hat e_1 & \\dotsc & \\hat e_n \\\\\n\\vert & & \\vert \\\\\n\\end{bmatrix} = I\n\\]"
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-10-Eigenspace-1.html#gram-schmidt-orthogonalization",
+    "href": "posts/linear-algebra/2021-01-10-Eigenspace-1.html#gram-schmidt-orthogonalization",
+    "title": "Eigenspace, part 1",
+    "section": "Gram-Schmidt Orthogonalization",
+    "text": "Gram-Schmidt Orthogonalization\northnormal, orthogonal, generic 세 가지 기저의 품질을 따져보자. 당연히 orthonormal 기저가 가장 작업하기 쉽다. 위에서 보듯이, \\(Q^T = Q^{-1}\\)라는 좋은 특징도 지니고 있다. 만일 통상적인 벡터를 orthonormal 기저로 변형할 수 있다면, 작업이 훨씬 쉬울 것이다.\n\nDefinition\n\n\\(V\\): \\(n\\) 차원 벡터\n\\(\\{ v_1, \\dotsc, v_n \\}\\): \\(V\\)의 generic 기저\n\\(\\{ e_1, \\dotsc, e_n \\}\\): \\(V\\)의 orthogonal 기저. \\(e_i \\cdot e_j = 0\\) for \\(i \\neq j\\)\n\\(\\{\\hat e_1, \\dotsc, \\hat e_n \\}\\) V의 orthonormal 기저.\nInner production operation: \\(\\langle \\cdot, \\cdot \\rangle: V \\times V \\to \\mathbb R\\)\nLength: \\(\\Vert v \\Vert = \\langle v, v \\rangle\\)\nProjection operation: Projection of \\(u\\) onto \\(e\\):\n\n\\[\n\\Pi_e(u) = \\dfrac{\\langle u, e \\rangle}{\\Vert e \\Vert^2}e\n\\]\n\nThe projection complement of projection \\(\\Pi_e(u)\\) is \\(w\\)\n\n\\[\n\\Pi_e(u) + w = u ~~~\\Rightarrow~~~w = u - \\Pi_e(u)  \n\\]\n\n\nOrthonormal basis is nice\n어떤 벡터 \\(v\\)든 orthonormal 기저를 통해 간편하게 나타낼 수 있다. 즉,\n\\[\nv = \\langle v, \\hat e_1 \\rangle  \\hat e_1 + \\dotsb + \\langle v, \\hat e_n \\rangle \\hat e_n\n\\]\n\n\nOrthogonalization\n일단 기억해야 할 것은 generic 기저 \\(\\{v_i\\}\\)가 생성하는 벡터 공간과 \\(\\{ \\hat e_i \\}\\)가 생성하는 벡터 공간이 동일하다는 것이다. 즉,\n\\[\n\\text{span}(v_1, \\dotsc, v_n) = V = \\text{span}(\\hat e_1, \\dotsc, \\hat e_n)\n\\]\n그람-슈미트 알고리듬은 다음과 같다.\n\n일단 orthogonal 기저를 만든다.\n해당 벡터를 표준화한다.\n\nOrthogonal 기저는 어떻게 만들까? 먼저 과정을 살펴보자. .\n\n\\(e_1 = v_1\\)\n\\(e_2 = v_2 - \\Pi_{e_1}(v_2)\\)\n\n\n\n\ngram-schmidt 1\n\n\n 위의 그림에서 보듯이 \\(v_2\\)는 \\(v_1\\) 프로젝션된 벡터와 이와 직교하는 \\(e_2\\)와의 합으로 계산할 수 있다. 따라서 \\(e_2 = v_2 - \\Pi_{e_1}(v_2)\\)가 성립한다. 벡터의 빼기 관점에서 생각해보면 어떨까? \\(v_2\\)와 \\(\\Pi_{e_1}(v_2)\\)의 차이가 \\(e_2\\)다. 벡터는 방향과 크기로 정의된다는 점을 다시 기억하자. 같은 방식으로 아래 그림에서 보듯이 더 많은 축과 직교하는 벡터들을 구성할 수 있다.\n이후 \\(\\hat e_i = \\dfrac{e_i}{\\Vert e_i \\Vert}\\)로 \\(e_i\\)를 표준화하면 된다.\n\n\\[\nv = {\\rm proj}_{u_1} (v) + {\\rm proj}_{u_2}(v) + w\n\\]\n즉, 원래 벡터(\\(v\\))에서 이미 확립된 직교 벡터에서 \\(v\\)로 쏜 프로젝션 벡터를 빼주면 원하는 새로운 직교 벡터를 얻을 수 있다. 따라서\n\\[\n\\begin{aligned}\ne_3 & = v_3 - \\Pi_{e_1}(v_3) - \\Pi_{e_2}(v_3) \\\\\n&~~~\\vdots \\\\\ne_n & = v_n - \\sum_{i=1}^{n-1} \\Pi_{e_i}(v_n)\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-10-Eigenspace-1.html#wrap-it-up",
+    "href": "posts/linear-algebra/2021-01-10-Eigenspace-1.html#wrap-it-up",
+    "title": "Eigenspace, part 1",
+    "section": "Wrap-it-up",
+    "text": "Wrap-it-up\n행렬 대각화에 관해서 다시 한번 정리해보자. 때로는 혼동될 사안이라서 정리한다. 증명은 일단 생략한다.\n\nDiagonalization Theorem\n매트릭스 \\(A \\in \\mathbb C^{n \\times n}\\)가 대각화가 가능하다는 것은 \\(n\\)의 선형 독립인 아이겐벡터를 지니고 있다는 뜻이다. 즉, \\(A =Q \\Lambda Q^{-1}\\) 형태로 분해될 수 있음을 뜻한다.\n\n착각하지 말아야 할 것! 대각가능 행렬과 역행렬이 존재하는 행렬은 아무 관계가 없다. 둘은 서로 다른 이야기다.\n아이겐분해(eigendecomposition)이란 닮음 행렬을 통해서 기저를 바꾸는 과정인데, 이때 기저를 바꾸는 매트릭스로 동원되는 것이 아이겐벡터 매트릭스다.\n\n\n\nEat this!\n\n\\(A\\) positive semidefinite \\(\\Rightarrow\\) 아이겐밸류는 비음이다.\n\\(A\\) symmetric \\(\\Rightarrow\\) 아이겐밸류는 실수\n\\(A\\) normal (\\(A^T A = A A^T\\)) \\(\\Rightarrow\\) \\(Q\\)를 직교 행렬 \\(O\\)로 고를 수 있다(\\(O^T O = I\\))."
+  },
+  {
+    "objectID": "posts/regression/2019-10-25-understanding-regression.html",
+    "href": "posts/regression/2019-10-25-understanding-regression.html",
+    "title": "Understanding Regression",
+    "section": "",
+    "text": "회귀분석을 선형 대수를 통해서 이해하면 새로운 깨달음을 얻을 수 있다.\n회귀분석이라는 것은 PCA와 마찬가지로 차원을 ’축소’하는 방법이다. \\(n\\) 개의 관찰을 지닌 어떤 한 대상을 이보다 낮은 \\(k(<n)\\) 개의 변수로 요약하는 것이 핵심이다.\n선형대수로 보면 \\(\\mathrm R^2\\) 공식은 피타고라스 정리의 흔한 응용 사례이며, 코사인 유사도와 거의 같은 개념이다."
+  },
+  {
+    "objectID": "posts/regression/2019-10-25-understanding-regression.html#regression-in-vector-space",
+    "href": "posts/regression/2019-10-25-understanding-regression.html#regression-in-vector-space",
+    "title": "Understanding Regression",
+    "section": "Regression in vector space",
+    "text": "Regression in vector space\n여기서 회귀분석을 해설할 생각은 없다. 이미 너무나 많은 그리고 매우 훌륭한 내용들이 책, 웹, 강의로 넘쳐날테니까. 이 글의 용도는 그림 하나로 지나치기 쉬운 회귀분석의 ’핵심’을 살피는 것이다. crossvalidated에서 아래 그림을 보는 순간 일종의 ’돈오돈수’가 강림했다. (이렇게 이해하면 쉬웠을 것을…)\n\n먼저 우리에게 익숙한 회귀분석 모델을 매트릭스로 적어보자.\n\\[\n\\underset{n \\times 1}{\\phantom{\\boldsymbol \\gamma}\\mathbf{Y}\\phantom{\\boldsymbol \\gamma}} = \\underset{n \\times k}{\\phantom{\\boldsymbol \\gamma} \\mathbf{X} \\phantom{\\boldsymbol \\gamma} }\\underset{k \\times 1}{\\boldsymbol \\beta} + \\underset{n \\times 1}{\\phantom{\\boldsymbol \\beta} \\boldsymbol \\varepsilon \\phantom{\\boldsymbol \\gamma} }\n\\]\n식에 관한 자세한 설명 역시 생략한다. 대충 \\(n\\) 개의 관찰 수과 \\(k\\) 개의 regressor를 지닌 중회귀분석 모형이라고 생각하면 되겠다. 앞서 본 그림은 보통 회귀분석의 예시로 많이 활용되는 아래 그림과는 다르다.\n\n\n흔히 \\(\\mathbf Y\\)를 종속변수, \\(\\mathbf X\\)를 독립변수로 부르기도 한다. 하지만 이러한 이름에는 혼란의 여지가 있다. 여기서는 regressor, regressand라는 영어 표현을 그대로 쓰도록 하겠다.\n\n위 그림은 1개의 regressor가 존재할 때 이것과 regressand를 그대로 2차원 평면에 관찰 수만큼 찍은 것이다. 첫번째 그림에서 “Observed Y”는 점 하나가 \\(n\\) 개의 regressand를 모두 포괄한다. \\(\\mathbf{Y} \\in {\\mathbb R}^{n}\\) 벡터, 즉 \\(n\\) 차원 벡터이고, 이것이 회귀식 좌변의 관찰값 \\(n\\) 개를 표현한다.\n이제 선형대수의 세계로 들어가보자. \\(\\mathbf X\\)의 열(column)이 각각 \\(n\\) 개의 관찰 값을 지닌 regressor에 해당한다. 이 각각의 컬럼 \\(x_i\\)는 \\(x_i \\in {\\mathbb R}^{n}\\) 벡터이다. \\(x_i\\) 벡터 \\(k\\) 개가 생성할 수 있는 공간이 \\(\\mathbf X\\)의 열 공간(column space)이다. 앞으로 이를 col \\(\\mathbf X\\)로 표기하자.\n이렇게 생각하면 좋겠다. \\(x_i \\in {\\mathbb R}^{n}\\) 벡터가 \\(k(<n)\\) 개 있다고 하자. 이는 \\(n\\) 보다 차원이 낮기 때문에 기하학적으로는 \\(n\\) 차원 공간에서 초평면(hyperplane)으로 나타날 것이다. 위 그림에서 컬럼 스페이스가 평면으로 표현되는 것은 이러한 취지다. 3차원 벡터의 열 공간이 생성하는 초평면을 예시하면 아래와 같다.\n\ncol \\(\\mathbf X\\)의 최대 차원, 즉 \\(\\mathbf X\\)의 랭크(위수)는 무엇일까? 회귀분석에서는 대체로 \\(n > k\\)가 일반적이고 이런 상황에서 \\(\\mathbf X\\)의 랭크는 \\(k\\)를 넘을 수 없다. 다시 말하면, \\(\\mathbf X\\)가 생성하는(span)하는 컬럼 스페이스의 차원의 크기가 \\(k\\)를 넘을 수 없다. 그리고 잘 된 회귀분석이라면 \\({\\rm rank}(\\mathbf X) = k\\)를 만족한다.\n맨 앞에 제시했던 그림을 다시 보자. 아래 색칠된 평면이 \\(\\mathbf X\\)가 생성하는 컬럼 스페이스, 즉 col \\(\\mathbf X\\)를 표현하고 있다. 몹시 특별한 경우가 아니라면 \\(\\mathbf Y \\in {\\mathbb R}^{n}\\) 벡터가 col \\(\\mathbf X\\)에 속할 가능성은 없다. 그렇다면 회귀분석의 필요도 애초에 없었을 것이다. col \\(\\mathbf X\\)를 통해서 \\(\\mathbf Y\\)를 완벽하게 예측할 수 있는데 무슨 걱정이 있겠는가? 대체로 우리가 마주하는 상황은 \\(n\\) 차원 벡터를 \\(k\\) 차원 공간에 끼워 넣기 힘든 상황이다.\n\n\n이를 선형 대수에서 배운 연립방정식을 푸는 문제로 이해해도 좋겠다. \\(A x = b(b \\neq \\boldsymbol{0})\\)라고 하자. \\(n\\) 개의 미지수가 유일한 해를 지니고 위해서는 \\({\\rm rank}(A) = n\\)이어야 한다. 즉 서로 독립인 식이 \\(n\\) 개 주어져야 고유의 해 \\(x\\)를 찾을 수 있다. 그런데 회귀분석은 식이 \\(k(<n)\\) 개만 주어진 상황이다.\n회귀분석의 목표는 regressor를 통해서, 더 정확하게는 regressor의 집합이 생성하는 공간을 통해서 regressand를 ‘가장’ 잘 설명하는 것이다. 회귀분석이란 regressand와 ‘닮은’ 것 col \\(\\mathbf X\\)에서 찾는 것이다. 즉 \\(\\mathbf Y\\)와 닮은 무엇을 \\(\\mathbf X\\)의 컬럼 스페이스에 찾아야 한다. 직관적으로 쉽게 떠올릴 수 있는 것은 이 평면과 \\(\\mathbf Y\\)의 (유클리드) 거리를 가장 짧게 만들어주는 벡터일 것이다. 그리고 이 최단거리는 \\(\\mathbf Y\\)에서 \\(\\mathbf X\\) 컬럼 스페이스로 내린 수선의 발이 닿는 col \\(\\mathbf X\\)의 지점이다. col \\(\\mathbf X\\) 내에 있는 이런 지점을 찾는 연산자(operator)가 회귀분석 계수 \\(\\hat{\\boldsymbol \\beta}\\)이다. 즉,\n\\[\n\\hat{\\boldsymbol \\beta} = ({\\mathbf X}'{\\mathbf X})^{-1} ({\\mathbf X}' \\mathbf Y)\n\\]\n정석은 아니지만 이 연산자를 이해하는 흥미로운 방법이 있다.\n\\({\\boldsymbol X} {\\boldsymbol \\beta} = {\\boldsymbol Y}\\)가 연립방정식이라면 해는 \\({\\mathbf X}^{-1}\\)을 구해서 얻을 수 있을 것이다. 하지만 \\({\\mathbf X} \\in \\mathbb R^{n \\times k}\\)이므로 딱 떨어지는 특수해 1개를 구할 수 없다. 되도록 근사값의 해를 구하려면 어떻게 해야 할까?\n\\[\n\\begin{aligned}\n{\\boldsymbol X}'{\\boldsymbol X} \\hat{\\boldsymbol \\beta} & = {\\boldsymbol X}'{\\boldsymbol Y} \\\\\n\\hat{\\boldsymbol \\beta} & = ({\\boldsymbol X}'{\\boldsymbol X})^{-1}{\\boldsymbol X}'{\\boldsymbol Y}\n\\end{aligned}\n\\]\n\\(\\hat{\\boldsymbol \\beta}\\)가 왠지 원래 식의 근사값으로 기능할 것 같지 않은가? (실제로 그렇다)\n이 연산자를 reggressor의 모음인 col \\(\\mathbf X\\)에 적용하면, \\(\\mathbf{X} \\hat{\\boldsymbol \\beta} =\\hat{\\mathbf Y}\\)이 {X}’계산된다. 그림에서 보듯이 \\(\\hat{\\mathbf Y}\\)은 \\(\\mathbf Y\\)와 col \\(\\mathbf X\\)의 거리를 최소화하는 위치에 존재한다. \\(\\hat{\\mathbf Y}\\)는 어떤 벡터일까? \\(\\hat{\\mathbf Y} \\in {\\mathbb R}^n\\) 벡터지만, col \\(\\mathbf X(\\in {\\mathbb R}^k)\\)내에 위치하고 있다. \\(n\\) 차원이 \\(k\\) 차원으로 축소된 셈이다. 이것이 회귀분석의 핵심이다.\n선형 대수의 관점에서 내용을 다시 음미해보자. \\(x_i \\in {\\mathbb R}^n\\) (for \\(i = 1, \\dotsc, k\\)) 벡터의 리그레서 \\(k\\) 개를 선형 결합해서 초평면의 한점, 즉 원래의 관찰 \\(\\mathbf Y\\)와 최소 거리를 지니는 벡터를 찾아야 한다. 이 거리를 최소화하는 \\(\\beta_i\\)를 알고 있다면 이 벡터는 다음과 같이 표현된다. \\({\\mathbf X} = [x_1, \\dotsc, x_k]\\)일 때,\n\\[\n\\begin{aligned}\n\\underset{(n \\times 1)}{\\hat{\\mathbf Y}} & = X\\beta \\\\\n& = [x_1, \\dotsc, x_k]\n\\begin{bmatrix}\n\\beta_1 \\\\\n\\vdots \\\\\n\\beta_k\n\\end{bmatrix} \\\\\n&=\nx_1 \\beta_1 + \\dotsc + x_k \\beta_k\n\\end{aligned}\n\\]\n아래 그림을 참고하자."
+  },
+  {
+    "objectID": "posts/regression/2019-10-25-understanding-regression.html#r-squared-as-pythagorean-theorem",
+    "href": "posts/regression/2019-10-25-understanding-regression.html#r-squared-as-pythagorean-theorem",
+    "title": "Understanding Regression",
+    "section": "R squared as Pythagorean Theorem",
+    "text": "R squared as Pythagorean Theorem\n이제 \\(\\mathrm R^2\\)의 의미를 살펴보자. 결론부터 이야기하면 \\(\\mathrm R^2\\)는 그림에서 \\((\\mathbf Y - \\overline{\\mathbf Y})\\) 벡터와 \\((\\hat{\\mathbf Y}-\\overline{\\mathbf Y})\\) 벡터가 이루는 각의 코사인 값, 즉 \\(\\cos \\theta\\)다. 잠깐! 왜 직접 거리를 재지 않고 코사인 값을 재는 것일까? 우리는 얼마나 가까운지를 판단하기 쉽지 않다. 그래서 가까운 정도를 상대적인 비율로 나타내면 좋을 것이다. 즉, regressor의 컬럼 스페이스에 위치한 \\(\\overline{\\mathbf Y}\\)를 기준으로 거리를 재는 셈이다. 이렇게 측정된 상대적인 거리가 \\(\\cos \\theta\\)이다. 이는 원점을 중심으로 두 벡터 사이의 코사인 값을 재는 코사인 유사도와 거의 같은 개념이다! 코사인 유사도란 길이가 서로 다른 두 벡터가 얼마나 비슷한지를 측정한다. 이를 응용하면 \\(\\mathrm R^2\\)란 관찰된 값(\\(\\mathbf Y\\))과 피팅된 값(\\(\\mathbf {\\hat Y}\\))이 얼마나 비슷한지를 측정한다.\n\n\n이런 면에서 보면, \\(\\mathrm R^2\\)에 코사인 유사도가 숨어 있는 셈이다. 두 벡터의 코사인 유사도란 개별 벡터가 지니고 있는 (유클리드) 길이와 관계 없이 벡터의 지향성을 중심으로 비슷한 정도를 파악하는 것이다. \\(\\mathrm R^2\\) 역시 마찬가지다.\n\\(\\overline{\\mathbf Y}\\)는 무엇일까? 포스팅의 맨 처음 보았던 그림과 같이 \\(\\overline{Y} \\mathbf{1}_n\\)로 표기할 수 있다. \\(\\mathbf Y\\)의 평균값 \\(\\overline{Y}\\)만으로 구성된 \\((n \\times 1)\\) 벡터다. 이 벡터는 col \\(\\mathbf X\\) 안에 있을까? 당연히 그렇다. \\(\\mathbf X\\)는 최대한 \\(k(<n)\\) 차원의 벡터이고, \\(\\overline{\\mathbf Y}\\)는 1차원 벡터다.\n\n\n왜 그런지 잠시 따져보자. 앞서 보았듯이 regressor의 평면은 \\(\\alpha_1 x_1 + \\dotsb + \\alpha_k x_k\\) 와 같은 형태의 선형 결합을 통해 달성된다. 즉, \\(\\alpha_i\\)를 어떻게 잡는지에 따라서 \\(k\\) 차원까지 이 식을 통해서 생성할 수 있다. 그런데 \\(\\overline{\\mathbf Y}\\)는 1차원 즉, 모든 원소가 \\(\\overline{y}\\), 즉 \\(y\\)의 평균이다. 따라서 이를 만족하는 \\(\\alpha_i\\)(for \\(i = 1, \\dotsc, k\\))를 \\({\\rm col}~{\\mathbf X}\\)에서 반드시 찾을 수 있다.\n어쨌든 이 코사인 값의 의미는 무엇일까?\n그림에서 보듯이 세 개의 벡터가 직각삼각형을 이루고 있으므로 아래의 식이 성립한다.\n\\[\n\\underset{\\text{TSS}}{\\Vert \\mathbf Y - \\overline{\\mathbf Y} \\Vert^2} = \\underset{\\text{RSS}}{\\Vert \\mathbf Y - \\hat{\\mathbf Y} \\Vert^2} + \\underset{\\text{ESS}}{\\Vert \\hat{\\mathbf Y} - \\overline{\\mathbf Y} \\Vert^2}\n\\]\n흔한 피타고라스의 정리다. 그런데 이것 어디서 많이 보던 식이다. 회귀분석 배우면 언제나 나오는 식이다. Regressand의 평균과 관찰의 이른바 총 제곱의 합(TSS: Total Sum of Squares)은 설명된 제곱의 합(ESS: Explained Sum of Squares)과 잔차 제곱의 합(RSS:Residual Sum of Squares)와 같다. 대체로 복잡하게 소개되는 이 식이 기하학적으로 보면 그냥 피타고라스의 공식에 불과한 것이다.\n양변을 \\(\\Vert \\mathbf Y - \\overline{\\mathbf Y} \\Vert^2\\)으로 나누면 다음과 같다.\n\\[\n1 =  \\dfrac{\\Vert \\mathbf Y - \\hat{\\mathbf Y} \\Vert^2}{\\Vert \\mathbf Y - \\overline{\\mathbf Y} \\Vert^2} + \\dfrac{\\Vert \\hat{\\mathbf Y} - \\overline{\\mathbf Y} \\Vert^2}{\\Vert \\mathbf Y - \\overline{\\mathbf Y} \\Vert^2}\n\\]\n정의에 따라서 \\(1 = \\dfrac{\\text{RSS}} {\\text{TSS}} + {\\mathrm R}^2\\)가 된다. 즉,\n\\[\n  {\\mathrm R}^2 = 1 - \\dfrac{\\text{RSS}}{\\text{TSS}}\n\\]\n사실 \\(\\textrm R^2\\)는 가끔 회귀분석의 성과 지표로 남용되는 경우가 있다. 이렇게 기하학적으로 보면 col \\(\\mathbf X\\) 내에 표현된 \\(\\hat{\\mathbf Y}\\) 가 \\(\\mathbf Y\\)와 얼마나 가깝게 있는지를 \\(\\overline{\\mathbf Y}\\)를 기준으로 지표화한 것에 불과하다.\n\\({\\mathrm R}^2\\)는 회귀분석의 성과 지표로 어떤 의미가 있을까? 분석의 목표가 회귀분석을 통한 예측이라면, 즉 원래 관찰값과 예측된 값이 얼마나 떨어져 있는지 여부가 중요하다면 \\(\\textrm R^2\\)는 의미를 지닐 수 있다. 반면, 분석의 목표가 회귀분석을 통한 이러한 종류의 예측이 아니라 특정한 regressor의 인과관계에 관한 추정이라면, \\(\\textrm R^2\\)는 거의 무시해도 좋다.\n아울러 회귀분석이라는 이름을 달고 있지만 전형적인 회귀분석의 방법을 따르지 않는 기법에서 \\(\\textrm R^2\\)가 정의되지 않는 경우도 있다. 잘 알려진 로지스틱 회귀가 이에 해당한다. 로지스틱 회귀에서 회귀 계수의 추정은 여기서 봤듯이 관찰과 col \\(\\mathbf X\\) 사이의 거리를 최소화하는 방식이 아니라 우도(likelihood)를 극대화하는 방식을 따른다. 따라서 벡터 공간의 피타고라스 정리를 따르는 \\(\\textrm R^2\\)는 정의되지 않는다.\n\n\n궁여지책으로 이와 유사한 지표를 만들어낼 수는 있겠다. 여기를 참고하라."
+  },
+  {
+    "objectID": "posts/regression/2019-10-25-understanding-regression.html#bonus-regression-vs-pca",
+    "href": "posts/regression/2019-10-25-understanding-regression.html#bonus-regression-vs-pca",
+    "title": "Understanding Regression",
+    "section": "Bonus: Regression vs PCA",
+    "text": "Bonus: Regression vs PCA\n회귀 분석과 PCA는 어떻게 다른가? 여러가지 답이 있을 수 있다. 그걸 다 소개하겠다는 게 아니다. 둘이 데이터 모델링의 시야에서 어떻게 다른지를 살펴보는 게 이 글의 목적이다. 이 글은 둘을 어떻게 실행하는지를 다루지 않는다. 앞선 PCA 관련 포스팅을 읽고 오시면 이해에 도움이 될 것이다.\n\n\n더 자세한 내용은 여기를 참고하자.\n\n공통점\n\nFeature\n일단 둘 다 \\(k\\) 개의 feature 비슷한 것을 지닌다. 그리고 \\(n\\) 개의 데이터 포인트가 제시된다.\n\n\n차원 축소\n흔히 PCA를 차원축소의 방법으로 이해하는데, 이 말은 맞다. 반대로 회귀분석은 이와 다르다고 이해하는 경우가 많은데 이 말은 틀리다. 회귀 분석도 어떻게 보면 ’차원 축소’다. 회귀 분석에서 target 변수는 \\(n\\) 차원 공간 위의 주어진 한 점이다. 우리의 목표는 이 한 점을 잘 설명하는 더 낮은 차원의 어떤 지점을 찾는 것이다. 이런 점에서 본다면 회귀 분석 역시 차원 축소의 한 방법이라고 봐야 할 것이다.\n\n\n극소화\nPCA에서 ’분산 최대화’에 이르기까지 과정을 생략하다보면, PCA를 별도의 어떤 방법으로 인식하곤 한다. 그런데 앞선 포스팅에서 보았듯이 ’분산 최대화’란 사실 피처 벡터와 이를 예측하기 위한 어떤 벡터 사이의 거리를 최소화하는 과정에서 도출된 결과다. 이런 점에서 본다면, 회귀 분석이든 PCA는 MSE(Mean Square Error)를 최소화한다는 점에서는 목적 함수의 유형은 동일하다.\n\n\n\n차이점\n\nSupervised or Unsupervised?\n회귀 분석과 PCA를 지도 학습(supervised learning), 비지도 학습(unsupervised learning)으로 구분할 수는 없다. 다만 이 구분과 어느 정도 비슷한 부분이 있다. 회귀 분석은 target이 있다. 이 타겟과의 거리를 최소화하는 feature 공간의 어떤 위치를 찾는 것이 목적이다. 반면, PCA에는 target이 없다. \\(k\\) 개의 feature를 최소 거리로 투영할 수 있는 스크린 벡터를 찾는게 목적이다. 간단히 말해서 PCA는 target 없이 벡터의 거리가 1인 임의의 프로젝션 벡터를 찾는 것이 목적이다."
+  },
+  {
+    "objectID": "posts/regression/2019-11-10-understanding-logit-regression.html",
+    "href": "posts/regression/2019-11-10-understanding-logit-regression.html",
+    "title": "Understanding Logit Regression",
+    "section": "",
+    "text": "로짓 회귀는 우리가 알던 그 ’회귀’와는 조금 다르다.\n로짓 회귀는 아래와 같은 데이터 모형에 기반을 둔 추정법이다.\n\n\\[\n\\ln \\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})} =\\boldsymbol{x_i}\\boldsymbol{\\beta}\n\\]\n\n회귀식의 계수 \\(\\boldsymbol{\\beta}\\)를 해석할 때 주의하자. 이를 통상적인 회귀분석의 계수(한계 효과)처럼 해석하려면 별도의 계산이 필요하다."
+  },
+  {
+    "objectID": "posts/regression/2019-11-10-understanding-logit-regression.html#로짓-회귀-제대로-알고-있나",
+    "href": "posts/regression/2019-11-10-understanding-logit-regression.html#로짓-회귀-제대로-알고-있나",
+    "title": "Understanding Logit Regression",
+    "section": "로짓 회귀, 제대로 알고 있나?",
+    "text": "로짓 회귀, 제대로 알고 있나?\n잘 알고 있다고 여기고 있지만 사실 잘 모르는 것이 있다. 로지스틱 회귀(logistic regression) 혹은 로짓 회귀가 그렇지 않을까? 요즘 기계 학습을 배우게 되면, 로짓 회귀는 첫 챕터에서그냥 쓱 지나치기 쉽다. 뒤에 소개될 랜덤 포레스트, SVM, 뉴럴넷 등이 더 진보된 방법으로 보이기 때문이다.\n로짓 회귀는 단순하면서도 강력한 방법이다. 필자는 분류(classification)의 문제에 접근할 때 로짓 회귀를 먼저 해볼 것을 권한다. 로짓 회귀에서 ’견적’이 나오면 그 질문 혹은 문제는 더 흥미로운 형태로 진화할 가능성이 높다. 반면 로짓 회귀에서 싹수가 없으면 더 복잡한 고급 방법도 소용이 없는 경우가 많다. 요컨대 로짓 회귀는 시간 낭비를 막는 일종의 ’맛보기’로서 유용하다."
+  },
+  {
+    "objectID": "posts/regression/2019-11-10-understanding-logit-regression.html#로짓-함수는-어떻게-등장하나",
+    "href": "posts/regression/2019-11-10-understanding-logit-regression.html#로짓-함수는-어떻게-등장하나",
+    "title": "Understanding Logit Regression",
+    "section": "로짓 함수는 어떻게 등장하나?",
+    "text": "로짓 함수는 어떻게 등장하나?\n로짓 회귀는 말 그대로 로지스틱 함수(logistic function)를 활용하는 회귀 분석이라는 뜻이다. 로지스틱 함수는 어디서 어떻게 등장할까? 로짓 회귀의 데이터 형식을 살펴보자. 종속 변수, 반응(response), regressand 등 다양한 형태로 불리는 식의 좌변은 0 또는 1로만 되어 있다. 어떤 상태라면 1, 그렇지 않으면 0이다. 이때 0 또는 1은 값 자체로 의미를 지니지 않는다. 이는 범주형 변수로서 True or False와 같은 이항 변수로 이해하면 좋겠다. 식의 우변에는 통상적인 독립 변수, 예측 변수(predictor), regressor가 등장한다.\n\n덤: 잠시, 용어 정리\n생각난 김에 짬을 내 회귀식에서 좌변과 우변을 지칭하는 용어를 정리해보자. 취향에 맞춰서 쓰되 일관성만 갖추면 되겠다.\n\n\n\n좌변\n우변\n\n\n\n\n\\(y\\)\n\\(x\\), \\(\\boldsymbol X\\)\n\n\ndependent variable\nindependent variables\n\n\nresponse variable\npredictor variable\n\n\nregressand\nregressor\n\n\ncriterion\ncovariate\n\n\npredicted variable\ncontrolled variable\n\n\nmeasured variable\nmanipulated variable\n\n\nexplained variable\nexplanatory variable\n\n\nexperimental variable\nexposure variable\n\n\nresponding variable\ncovariate\n\n\noutcome variable\ncovariate\n\n\noutput variable\ninput variable\n\n\nendogenous variable\nexogenous variable\n\n\ntarget\nfeature\n\n\nlabel\nfeature\n\n\n\n\n\n어떤 경우 OLS는 곤란한가?\n\nregressor가 하나인 상황을 가정하고 위의 그림을 보자. regressand가 0, 1인 상태로 그대로 회귀분석을 하면 그림의 왼쪽 같이 나온다. 이 상태에서는 뭐가 문제일까? 회귀식의 기울기를 구할 수 있으니 된 것 아니냐? 문제가 있다. 앞서 0과 1은 값 그 자체로 의미를 지니지 않는다고 말했다. 그런데 이를 그대로 값으로 바꿔서 회귀분석을 해도 좋은 것일까? 그러기에는 뭔가 찜찜하다. 게다가 \\(x\\) 값에 따라서 회귀식의 예측치가 \\([0,1]\\)을 벗어날 수 있다. 임의로 계단 함수를 다시 얹어서 OLS(통상적인 최소자승법이라는 의미에서 Ordinary Least Squares라고 흔히 부른다)를 구제할 수도 있겠다. 즉,\n\\[\ns(\\beta x) =\n\\begin{cases}\n1 & \\text{if $\\beta x \\geq 1$}  \\\\\n0 & \\text{if $\\beta x < 0$}\n\\end{cases}\n\\]\n회귀식의 예측을 확률에 맞게 임의로 꺾어주는 것이다. 이러한 과정을 조금 더 ‘부드럽게’ 혹은 보다 ‘그럴 듯하게’ 할 수 없을까?\n\n\n범주형에서 확률로\n앞서 0 또는 1의 문제가 범주형의 문제라고 했다. 따라서 0, 1은 값 자체로는 아무 의미를 지니지 않는다. 회귀분석의 regressand가 실수값을 지닐 때 분석으로서 의미를 지닌다. 그렇다면 그렇게 바뀌보면 어떨까. 범주형 변수가 결국 상태를 나타내는 것이라면 1이라는 상태를 지닐 ’확률’을 추정하는 문제로 바꿔 생각해볼 수 있겠다. 즉,\n\\[\np(y_i = 1 | \\boldsymbol{x_i}) = p(\\boldsymbol{x_i})\n\\]\n그런데 앞서 보았듯이 확률 값을 선형 회귀로 추정하는 데에는 어려움이 있다. 통상적인 회귀 모형의 특성을 유지하면서도 확률 값을 [0,1] 사이에 ‘잘’ 떨궈야 하기 때문이다.\n\\[\n\\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})}\n\\]\nregressand를 이렇게 바꾸면 우선 가능한 값의 범위가 \\([0, \\infty)\\)로 확장된다. 여기서 음수 값을 포괄하는 방법은 없을까? 여기에 자연 로그를 적용해보자.\n\\[\n\\ln \\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})}\n\\]\n이렇게 되면 가능한 값의 범위가 \\((-\\infty, \\infty)\\)가 된다. Regressand가 이 형태라면 선형 회귀를 적용해도 좋겠다.\n즉,\n\\[\n\\ln \\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})} = \\underset{1 \\times k}{\\phantom{\\boldsymbol{\\beta}}\\boldsymbol{\\boldsymbol{x_i}} \\phantom{\\boldsymbol{\\beta}}}\\underset{k \\times 1}{\\boldsymbol{\\beta}}, ~k = 1,  2, \\dotsc, n\n\\]\n\\(n\\) 개의 관찰에 있을 때 이를 매트릭스 형태로 적으면 다음과 같다.\n\\[\n\\ln \\dfrac{p(\\boldsymbol{X})}{1-p(\\boldsymbol{X})} = \\underset{n \\times k}{\\phantom{\\boldsymbol{\\beta}}\\boldsymbol{X}\\phantom{\\boldsymbol{\\beta}}}\\underset{k \\times 1}{\\boldsymbol{\\beta}}\n\\]\n애석하지만 이 식은 우리에게 주어진 자료로는 추정할 수 없다. 당장 좌변의 regressand를 얻으려면 관찰별로 확률값을 알아야 하는데 우리에게 주어진 값은 0 또는 1 뿐이다. 따라서 위의 식은 선형 회귀와 유사한 모형을 적용할 수 있는 방법을 찾은 것일 뿐 실제로 추정할 수 있는 식이 아니다. \\(\\boldsymbol{\\beta}\\)는 어떻게 구해야 할까?\n이를 보기 전에 추정 모형에서 로지스틱 함수를 찾아보자. 위의 식에서 \\(p(x_i)\\)를 구해보자.\n\\[\n\\begin{aligned}\n\\ln \\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})} & =\\boldsymbol{x_i}\\boldsymbol{\\beta} \\\\\n\\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})}  & = e^{\\boldsymbol{x_i}\\boldsymbol{\\beta}} \\\\\np(\\boldsymbol{x_i}) & = \\dfrac{e^{\\boldsymbol{x_i}\\boldsymbol{\\beta}}}{1+e^{\\boldsymbol{x_i}\\boldsymbol{\\beta}}} \\\\\np(\\boldsymbol{x_i}) & = \\dfrac{1}{e^{-\\boldsymbol{x_i}\\boldsymbol{\\beta}} + 1}\n\\end{aligned}\n\\]\n앞서 본 그림의 오른쪽과 같은 형태의 로지스틱 함수가 도출된다. 요컨대, 로지스틱 함수는 regressor를 해당 사건이 발생할 확률과 연결시키는 장치다. 이렇게 보면 로지스틱 회귀는 이른바 일반 선형 모형(Generalized Linear Model)의 한 사례다. 일반 선형 모형이란 종속 변수, 즉 식의 왼쪽이 어려가지 이유에서 실수 값이 아닌 제한된 값 혹은 범주 값을 지닐 때 이를 여러가지 방법을 통해 실수로 바꾸는 방식으로 추정을 하는 방법이다. 지금까지 살펴본 방법이 그 사례의 하나다."
+  },
+  {
+    "objectID": "posts/regression/2019-11-10-understanding-logit-regression.html#link-function",
+    "href": "posts/regression/2019-11-10-understanding-logit-regression.html#link-function",
+    "title": "Understanding Logit Regression",
+    "section": "Link function",
+    "text": "Link function\n말이 나온 김에 링크 함수에 대해서 살펴보고 가자. 위에서 보듯이, 사실 회귀 분석이란 실수의 범위를 지니는 좌변을 역시 변수의 선형결합을 통해 이루어진 우변으로 설명하려는 것이다. 그런데 만일 좌변의 영역이 실수 전체가 아니라면? - 절단 자료 (truncated): 지속 시간의 경우 0보다 큰 실수가 된다. - 범주형 자료: 이 경우는 수료 표현이 힘들다. - 정수형 자료\n이럴 때는 어떻게 해야 할까? 회귀 분석의 틀을 벗어나지 않으면서 가장 간단한 해결책은 좌변을 바꾸는 것이다. 좌변은 어떻게 바꿔야 할까? 우선 좌변에 올 것의 조건부 평균을 다음과 같이 두자.\n\\[\n\\mathrm E (y_i | \\boldsymbol x_i) =\\mu_i\n\\]\n그리고 우변의 경우 평범하게 다음과 같이 두자.\n\\[\n\\eta_i = \\beta_0 + \\beta_1 x_{i1}  + \\dotsb + \\beta_p x_{ip}\n\\]\n이 둘은 바로 연결이 안된다. 이 둘을 연결시켜주는 어떤 함수가 있다면? 즉,\n\\[\ng(\\mu_i) = \\eta_i = \\boldsymbol x_i^T \\beta\n\\]\n\\(g(\\cdot)\\)이 링크 함수에 해당한다. 로짓 회귀의 경우에는 \\(\\ln \\frac{p(x_i)}{1-p(x_i)}\\)에 해당한다. 링크 함수의 역함수는 뭐라고 부를까? 로짓 회귀에서 아래의 값에 해당한다.\n\\[\np(\\boldsymbol{x_i}) = \\dfrac{1}{e^{-\\boldsymbol{x_i}\\boldsymbol{\\beta}} + 1}\n\\]\n이는 평균 함수(mean function)이라고 부른다. 로짓 회귀의 경우는 이산 변수를 활용하기 때문에 확률 질량 함수가 곧 확률이 된다는 점을 기억해두자.\n\nThree steps\n위 과정이 세 가지 단계를 거쳤다는 점을 쉽게 알 수 있을 것이다.\n\\[\ny_i \\xrightarrow{\\rm prob.~function} \\mu_i \\xrightarrow{\\rm link~function} \\eta_i = \\boldsymbol x_i \\beta\n\\]\n원래 관찰값 \\(y_i\\)는 모형에 관한 가정을 통해서 확률 (질량/밀도) 함수를 통해 \\(\\mu_i\\) 값으로 변형된다. 이 값은 다시 연결 함수를 통해서 선형 회귀가 가능한 형태로 변형된다. 이제 \\(y_i\\)에 관해서 어떤 가정을 하는지에 따라서 다양한 형태의 \\(\\mu_i\\)를 얻게 된다는 점을 알 수 있을 것이다.\n문제는 어떻게 연결 함수를 찾을 수 있을까 인데, 이는 여기서 다룰 범위를 벗어난다. 이 글을 참고하자."
+  },
+  {
+    "objectID": "posts/regression/2019-11-10-understanding-logit-regression.html#계수는-어떻게-구하나",
+    "href": "posts/regression/2019-11-10-understanding-logit-regression.html#계수는-어떻게-구하나",
+    "title": "Understanding Logit Regression",
+    "section": "계수는 어떻게 구하나?",
+    "text": "계수는 어떻게 구하나?\n\\(\\hat{\\boldsymbol \\beta}\\)은 어떻게 구할 수 있을까? 현재까지 우리에게 주어진 조건을 보자.\n\nregressand는 0 또는 1 뿐이다.\n로짓 함수를 통해서 regressor를 해당 관찰의 확률과 연결시킬 수 있게 되었다.\n\n어차피 regressand를 실수로 바꿀 수 없는 이상 우리가 아는 선형 회귀분석을 쓸 수는 없다. 그래서 이름과 달리 우리가 아는 ‘회귀분석’, 즉 OLS를 여기서 쓸 수는 없다. 미안하다. 앞에서 거짓말 했다.\n\\[\n\\ln \\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})} = \\underset{1 \\times k}{\\phantom{\\boldsymbol{\\beta}}\\boldsymbol{x_i}\\phantom{\\boldsymbol{\\beta}}}\\underset{k \\times 1}{\\boldsymbol{\\beta}}, ~k = 1,  2, \\dotsc, n\n\\]\n애초에 \\(\\boldsymbol \\beta\\)을 알고 있어야, 이 식으로부터 \\(p(\\cdot)\\)을 구해낼 수 있다. 그런데 우리가 아는 회귀분석이란 \\(y\\)와 \\(\\boldsymbol{\\rm X}\\)가 주어졌을 때 하는 것 아닌가? 회귀분석의 좌변이 없기에 OLS로는 추정할 수 없다.\n그래서 로짓 회귀는 이름과 달리 \\(\\boldsymbol{\\beta}\\)의 추정치 \\(\\hat{\\boldsymbol\\beta}\\)를 구하는데 OLS의 방법을 쓰지 않는다. 로짓 회귀에서는 어떻게 \\(\\hat{\\boldsymbol\\beta}\\)를 얻는 것일까?\n\n확률 vs 우도\n잠시 로짓 회귀의 추정을 살펴보기 전에 확률과 우도의 차이점에 관해서 알아보자. 분포와 그 분포의 파리미터를 알고 있을 때 해당 샘플이 관찰될 확률을 구할 수 있다. 거칠게 표현하면 이렇다. 연속 확률변수 \\(x\\)가 따르는 어떤 분포가 있다고 할 때, 해당 분포의 파라미터(정규분포라면 평균과 분산이다) \\(\\theta\\)에 대해서 \\(P(x_1 < x <x_2 | \\theta)\\)이 확률이다. 우도(likelihood)는 무엇일까? 우도는 확률 분포의 수학적인 형태를 뒤집은 것이다. 일단 연속 확률 변수를 가정하자. 어떤 샘플이 관찰되었다고 할 때 우도란 특정 파라미터 하에서 얻게 되는 분포의 특정 확률 밀도함수를 의미한다. 연속 확률변수가 아니라 이산 확률변수라면, 확률 질량함수가 될 것이고 이 경우에는 확률과 같다. 파라미터를 변수로 잡으면 이 확률 밀도함수 혹은 질량함수가 우도가 된다.\n요컨대 주어진 것(conditioning)의 차이에 따라서 확률과 우도의 정의가 달라진다. 다시 정리해보자. 우도를 일종의 함수라고 할 때 그 함수의 \\(x\\)에 해당하는 것이 파라미터다.\n\n\n최대 우도 추정(maximum likelihood estimation)\n다시 문제로 돌아오자. 우리는 0, 1 즉 존재/비존재의 특징을 지니는 변수를 갖고 있다. 그리고 이 녀석은 이산 확률 분포를 따르기 때문에 우도 역시 그냥 확률이 되고, 이는 베르누이 분포를 따른다. 즉, 해당 확률이 발생할 확률 \\(p\\)일 때 발생하면 1, 아니면 0이 된다. 베르누이 분포의 확률 질량 함수를 간단하게 표현하는 방법은 없을까?\n\\[\nL(y_i) = p(\\boldsymbol{x_i}; \\boldsymbol{\\beta})^{y_i} (1-p(\\boldsymbol{x_i}; \\boldsymbol{\\beta}))^{1-y_i}\n\\]\n위와 같은 식으로 간단히 해결된다. 위 식에서 \\(y_i\\)가 1이면 \\(p(\\cdot)\\)가, 0이면 \\(1-p(\\cdot)\\)가 할당된다. 이제 우리는 \\(n\\) 개의 관찰에 관해서 식의 좌변에는 0,1을 갖고 있다. 각각의 시행이 독립적이라고 가정하면 주어진 형태의 데이터를 관찰하게 될 우도는 이 확률을 곱한 것과 같다. 즉,\n\\[\nL(y|{\\boldsymbol X}) = \\prod_{i = 1}^{n}  L(y_i) = \\prod p(\\boldsymbol{x_i}; \\boldsymbol{\\beta})^{y_i} (1-p(\\boldsymbol{x_i}; \\boldsymbol{\\beta}))^{1-y_i} = L(\\boldsymbol{\\beta}|y, {\\boldsymbol X})\n\\]\n\\(\\boldsymbol{\\beta}\\)에 따라서 우도가 달라지게 되므로 우도 함수가 일종의 목적 함수가 된다. 우도를 극대화해주는 \\(\\boldsymbol{\\beta}\\)가 최대 우도 추정치, 즉 MLE(MLE, maximum likelihood estimator) \\(\\hat{\\boldsymbol\\beta}\\) 이다. 즉,\n\\[\n\\hat {\\boldsymbol \\beta} = \\text{arg max }{L({\\boldsymbol \\beta}|y, {\\boldsymbol X})}\n\\]\n간혹 목적 함수, 즉 우도 함수가 비선형이라서 목적 함수의 최대화를 달성하는 해 \\(\\hat{\\boldsymbol\\beta}\\)를 축약형(reduced form)으로 구하기 힘들다는 내용을 접하곤 한다. 이는 반쪽만 맞다. 반례로 선형 회귀 모형에서 에러 항이 정규 분포를 따른다고 가정하면 최대 우도 추정을 적용할 수 있다. 정규 분포의 우도 역시 비선형이지만, 축약형 해를 쉽게 구할 수 있다.\n\n\n이때 MLE \\(\\hat{\\boldsymbol\\beta}\\)은 통상적인 방법으로 구한 OLS 추정량와 동일하다. 본문에서 말했듯이, 이는 수치적인 방법이 아니라 분석적인 방법을 통해 축약형으로 도출 가능하다. 여기를 참고하라.\n왜 로짓 회귀에서는 축약형 해를 구할 수 없을까? 우도 추정에서 우리가 관심이 있는 것은 목적함수를 극대화하는 \\(\\hat{\\boldsymbol\\beta}\\) 값이지 우도 자체가 아니다. 따라서 원래의 우도를 적절한 형태로 변형해도 변형된 목적함수를 극대화해주는 \\(\\hat{\\boldsymbol\\beta}\\)가 바뀌지 않는다면 목적 함수를 변형해도 괜찮다. 때로는 변형이 계산을 쉽게 바꿔준다. 정규분포는 오일러 수(\\(e\\))의 지수 위에 최대화에 필요한 파라미터가 다 올라가 있다. 따라서 원래 목적함수에 \\(\\log_n\\)를 취하면 곱셈이 덧셈으로 변하고 오일러 수 위에 지수로 올라가 있단 파라미터들이 앞으로 나오게 된다. 하지만 아래 식에서 보듯이 로짓 함수는 그렇지 않다.\n\\[\np(\\boldsymbol{x_i})  = \\dfrac{1}{e^{-\\boldsymbol{\\boldsymbol{x_i}}\\boldsymbol{\\beta}} + 1}\n\\]\n이 함수에 \\(\\log_n\\)을 취한다고 해서 단순해지지 않는다. 로짓 함수의 경우 우도 극대화에서 축약형을 해를 구할 수 있는 변형이 없기 때문에 해당 우도를 극대화하는 파라미터를 찾기 위해서는 수치 최적화(numerical optimization)를 활용하는 것이다.\n\n\n수치 최적화의 자세한 내용과 사례는 이 글을 참고하라.\n\n\n계수의 의미는?\n보통 기계 학습의 맥락에서 로짓 회귀는 가장 원시적인 분류기(classifier)로 소개된다. 즉 \\(y_i\\)의 속성을 예측하는 분류 장치이기 때문에 \\(\\hat{\\boldsymbol\\beta}\\)에 특별한 의미를 부여하지 않는다. 하지만 회귀 분석을 인과관계의 추론의 활용해 온 여타 분야에서는 \\(\\hat{\\boldsymbol\\beta}\\)를 어떻게 해석할 것인지는 중요한 질문이다.\n먼저 OLS의 경우 변수를 어떻게 변형했는지에 따라서 다르지만, 대체적으로 \\(\\beta_i\\)는 해당 regressor \\(x_i\\)의 한계효과로 해석할 수 있다. 즉, \\(x_i\\)가 한 단위 변할 때 이에 따른 \\(y_i\\)의 변화량을 의미한다. 그런데, 로짓 회귀에서는 이렇게 해석할 수 없다. 앞서 보았듯이, 로짓 회귀의 추정식은 다음과 같다.\n\\[\n\\ln \\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})} = \\underset{1 \\times k}{\\phantom{\\boldsymbol{\\beta}}\\boldsymbol{\\boldsymbol{x_i}}\\phantom{\\boldsymbol{\\beta}}}\\underset{k \\times 1}{\\boldsymbol{\\beta}}, ~k = 1,  2, \\dotsc, n\n\\]\n흔히 좌변의 \\(\\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})}\\)를 오즈(odds) 혹은 승산(勝計)이라고 부른다. 이때 \\(\\boldsymbol{\\beta} = [\\beta_1, \\dotsc, \\beta_j, \\dotsc, \\beta_k]\\)에서 \\(\\beta_j\\)는 regressor \\(\\boldsymbol{x_i}\\)에 속한 \\(x_j\\) 한 단위가 변할 때 오즈에 미치는 영향을 뜻한다.\n간혹 \\(\\beta_i\\)를 좌변의 상태를 변화시킬 확률의 변화로 해석하는 경우가 있는데 그렇게 하면 안된다. \\(x_i\\)의 변화가 상태를 0에서 1로 바꾸는 데 미치는 확률에 관심이 있다면, 아래의 두 가지에 유의하자.\n\nOLS의 경우 회귀식 자체가 선형이기 때문에 \\(\\beta_i\\)에 관한 해석이 쉽고 단순하다. 그냥 직선의 기울기다. 그런데 로짓 회귀에서는 그렇게 분명하지 않다. 회귀식 자체가 비선형이므로 한계 효과를 구하기 위한 기울기를 ‘어디서’ 구할지가 문제가 된다. 측정 위치에 따라서 기울기가 달라지기 때문이다.\n도출하는 방법이 크게 어렵지는 않다. 측정에는 대체로 두 가지 방식이 많이 활용된다. regressor 값에서 \\(x_i\\)별로 확률값의 변화를 추정한 뒤 이를 평균하는 방식이다. 반대로 regressor 값의 평균에서 한번만 \\(p_i\\)에 미치는 영향을 추정하는 방법이다. 통계 패키지가 대체로 두 방법을 모두 지원하니 필요할 경우 찾아서 값을 구하면 되겠다.\n\n\n\n계수의 수학적인 이해\n이 부분이 부담스럽다면 넘어가도 좋다. 앞서 말한 한계 효과는 \\(\\frac{\\partial p}{\\partial x_j}\\)이다. 즉, regressor의 한 변수\\(x_j\\) 가 한 단위 변할 때 확률 변화를 측정한다. 즉,\n\\[\np(\\boldsymbol{x_i}) = \\dfrac{1}{e^{-\\boldsymbol{x_i}\\boldsymbol{\\beta}} + 1}\n\\]\n이 녀석을 그대로 미분해보자. 먼저 아래와 같이 \\(p(\\cdot)\\)을 변형하자.\n\\[\n\\begin{aligned}\np(\\boldsymbol{x_i}) & = \\dfrac{1}{e^{-\\boldsymbol{x_i}\\boldsymbol{\\beta}} + 1} \\\\\n& = \\dfrac{e^{\\boldsymbol{x_i}\\boldsymbol{\\beta}}}{1 + e^{\\boldsymbol{x_i}\\boldsymbol{\\beta}}}\n\\end{aligned}\n\\]\n\\(\\boldsymbol x_i = [x^1, \\dotsc, x^k]\\)이고, \\(x^j\\)에 대해서 미분하면 아래와 같다.\n\\[\n\\dfrac{\\partial p(\\boldsymbol{x_i})}{\\partial x^j} = \\dfrac{\\beta_j e^{\\boldsymbol{x_i}\\boldsymbol{\\beta}}}{(e^{\\boldsymbol{x_i}\\boldsymbol{\\beta}} + 1)^2}\n\\]\n이처럼 한계 효과는 미분을 통해 간단히 도출할 수 있다. 앞서 말했던 측정의 어려운 점이 무엇인지 이제 잘 볼 수 있다. \\(\\boldsymbol{\\beta}\\)의 추정치로 MLE를 통해 구한 \\(\\hat{\\boldsymbol\\beta}\\)를 활용한다고 해도, 어떤 \\(\\boldsymbol{x_i}\\)에서 측정하는지에 따라서 값이 달라진다. 평균(marginal effect at mean)에서 한 번만 측정할 것인지 아니면 \\(n\\)개의 모든 데이터 포인트에 대해서 계산한 뒤 이를 평균(average marginal effect)할 것인지 등의 선택이 필요하다. 보통 후자를 많이 활용하고 통계 패키지마다 해당 옵션을 제공하고 있다."
+  },
+  {
+    "objectID": "posts/git/2022-04-27-happy-giting.html",
+    "href": "posts/git/2022-04-27-happy-giting.html",
+    "title": "Happy Git-ing!",
+    "section": "",
+    "text": "Note\n\n\n\n이 포스팅은 깃 혹은 깃허브에 관한 일반적인 해설이나 이용법이 아닙니다. 깃 혹은 깃허브를 어느 정도 활용하고 있다고 할 때 가려움을 긁어주는 용도로 작성된 글입니다."
+  },
+  {
+    "objectID": "posts/git/2022-04-27-happy-giting.html#tl-dr",
+    "href": "posts/git/2022-04-27-happy-giting.html#tl-dr",
+    "title": "Happy Git-ing!",
+    "section": "tl; dr",
+    "text": "tl; dr\n\n깃과 깃허브를 OS를 아우르면서 써보자."
+  },
+  {
+    "objectID": "posts/git/2022-04-27-happy-giting.html#common-tools",
+    "href": "posts/git/2022-04-27-happy-giting.html#common-tools",
+    "title": "Happy Git-ing!",
+    "section": "Common Tools",
+    "text": "Common Tools\n이상적으로 말하면 git을 쓸 때 터미널(CLI)을 통해 쓰면 좋다. 하지만 우리는 인간이고 터미널은 잊기 쉽고 이 때문에 고통받을 수 있다. 그래서 UI를 갖춘 틀이 있으면 좋다.\n아마도 깃을 쓴다면 저장소로 깃랩이나 깃헙을 같이 쓸 것이다. 나는 깃헙을 쓰고 있으므로 깃헙을 중심으로 설명하겠다.\n깃헙 데스크탑플랫폼을 가리지 않고 깃헙을 같이 쓸 수 있는 앱이 있다. 플랫폼 별로 다운로드 받아서 쓰면 된다. 리포지터리(리포)를 생성하고 클론하고 하는 작업이 모두 UI 내에서 가능해서 제법 편리하다. 자세한 사용법은 생략한다."
+  },
+  {
+    "objectID": "posts/git/2022-04-27-happy-giting.html#그래도-터미널을-써야-한다면",
+    "href": "posts/git/2022-04-27-happy-giting.html#그래도-터미널을-써야-한다면",
+    "title": "Happy Git-ing!",
+    "section": "그래도 터미널을 써야 한다면?",
+    "text": "그래도 터미널을 써야 한다면?\n그래도 터미널에서 직접 깃을 써야 할 때가 있다. 이때부터 문제가 다소 복잡해진다. 깃의 원격 저장소를 세팅해야 하는데, 깃헙을 쓴다면 인증도 해야한다. 이걸 뭔가 편리하게 할 수 없을까?\n\ngh CLI\n이러한 불편을 해소하기 위해서 github에서 만든 툴이 gh CLI다. 이 녀석도 플랫폼별로 제공된다. 한마디로 말해서 터미널에서 깃헙을 제어하고 여러가지 작업을 할 수 있게 만든 툴이다. 다른 명령어들도 유용하지만 제일 유용한 것은 인증에 관련된 것이다.\n$ gh auth login  \n현재 깃헙에서 터미널에서 id/password를 통한 로그인을 막고 있다. 저장소 주소를 origin에 박고 id/password로 로그인 힐 수 없다. 위 명령어를 실행하면 조건에 따라서 로그인 절차를 상세하게 안내해준다. 그대로 따라서 로그인 하면 큰 불편함을 느끼지 않을 것이다."
+  },
+  {
+    "objectID": "posts/git/2022-04-27-happy-giting.html#os-별-설치",
+    "href": "posts/git/2022-04-27-happy-giting.html#os-별-설치",
+    "title": "Happy Git-ing!",
+    "section": "OS 별 설치",
+    "text": "OS 별 설치\n앞에 소개했던 github desktop은 그 자체로서 온전하게 운용된다. 다시 말해 이 앱 자체가 외부의 다른 앱에 의존하지 않기 때문에 앱 내에서 git을 쓰는 이상 이 녀석만 깔면 된다. gh CLI의 경우에는 OS에 깃이 깔려 있어야 한다.\n\nLinux, Macos\n두 OS 모두 깃이 기본으로 깔려 있다. 따라서 gh CLI를 깔아서 잘 쓰면 된다.\n\n\nWindows 10\n원도10의 경우는 고려해야 할 사항이 몇 가지 있다. 윈도우용 깃을 다운받아서 깔아도 되지만 그것보다는 Powershell을 통해서 윈도 패키지 매니저인 winget을 이용해 설치하면 좋다.\n$ winget install -e --id Git.Git\n이렇게 깃을 설치한 후 gh auth login을 통해서 로그인을 수행하면 git의 원격 저장소 설정이 잘 이루어진다.\n\nWSL\nWSL은 Windows 10 안에서 돌고 있는 가상 머신이고 엄밀한 관점에서는 별도의 기계다. 다른 Ubuntu와 마찬가지로 깃이 기본으로 깔려 있다. 따라서 외부 저장소에 대한 인증이 필요하다.\n상식적으로는 gh CLI를 통해서 가능할 것 같은데 그렇지 않다. 이에 대한 해결책은 여기 나와 았다. 쉽게 말해서 윈도의 자격 증명을 가져오는 방식이다. 따라서 윈도에 깃과 깃허브에 관한 설정이 이미 완료되어 있어야 한다.\n$ git config --global credential.helper \"/mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe\""
+  },
+  {
+    "objectID": "posts/git/2020-03-05-using-git-w10.html",
+    "href": "posts/git/2020-03-05-using-git-w10.html",
+    "title": "Using Git ‘Smoothly’ in Windows 10",
+    "section": "",
+    "text": "Note\n\n\n\n윈도에서 깃을 쓸 때 이렇게 불편하게 쓰지 않아도 된다."
+  },
+  {
+    "objectID": "posts/git/2020-03-05-using-git-w10.html#why",
+    "href": "posts/git/2020-03-05-using-git-w10.html#why",
+    "title": "Using Git ‘Smoothly’ in Windows 10",
+    "section": "Why",
+    "text": "Why\n단언컨대 git은 곧 문과생도 알아야 할 필수 도구가 될 것이다. 버전 관리가 절실해지는 그리고 코딩이 학제를 넘어선 필수처럼 인정되는, 그런 세상에서 컴퓨터를 끼고 있으면서 git의 사용을 피하기는 힘들 듯 싶다. git에 관한 포스트는 아니니 여기까지 하자.\nmacos나 linux 계열을 쓸 때는 git에 관해서 크게 고민하지 않아도 된다. 터미널 켜고, CLI(Command Line Interface)로 쓰면 그만이다. 이렇게 쓰는 것이 윈도에서는 쉽지 않다. 물론 윈도에서 WSL로 리눅스를 지원하기는 한다. 하지만 그냥 메인 os 위에 얹어 쓰는 게 편할 때가 있다."
+  },
+  {
+    "objectID": "posts/git/2020-03-05-using-git-w10.html#what",
+    "href": "posts/git/2020-03-05-using-git-w10.html#what",
+    "title": "Using Git ‘Smoothly’ in Windows 10",
+    "section": "What",
+    "text": "What\n우리는 아래 두 개의 소프트웨어를 쓸 것이다.\n\nGit for Windows\nCmder\n\n\nGit for Windows\n웬만하면 64비트로 깔자. 그리고 중간에 여러 가지 선택지에 관해서 질문한다. 커맨드라인은 어떤 것으로 쓸 것인지 등등. 원래 git이 linux에 뿌리를 두고 있는 만큼 윈도의 디폴트 명령창보다는 Bash를 쓰는 편이 좋다. ls 등의 명령어를 자유롭게 쓸 수 있어서 꽤 편하다. 윈도용 git은 특화된 git-bash를 제공하니, 이 녀석을 쓰면 좋을 듯 싶다.\n\n\nCmder\n“커맨더”라고 읽으면 된다. git은 이미 깔았으므로 쓰면 된다. 다만 좀 더 편리한 환경에서 CLI를 쓰기 위해서 Cmder를 깔아보도록 하자. 이 녀석은 별도의 인스톨 없이 쓸 수 있다. git을 포함한 무거운 버전과 git이 빠진 미니 버전이 있다. 어차피 우리는 별도로 깃을 깔았으니, 미니 버전을 다운받으면 되겠다. 다운 받은 후 아무 위치에나 두어도 된다. 어차피 exe 파일만 사용할 것이기 때문이다. 다만, 관리가 편하도록 나는 아래의 위치에 두었다.\nUsers\\[your id]\\cmder_mini\\\n최초 실행하면 윈도우가 경고를 날린다. 이래 그림에서 형광색이 칠해진 부분을 클릭하고 프로그램을 허용해준다. 이후 몇 번의 경고성 질문이 더 날아온다. 전부 “허용”해주면 되겠다.\n{: style=“textalign:center;” width=“500”}\n그리고 cmder 실행 파일 위에서 좌 클릭해서, 속성 > 호환성 > 관리자 권한으로 이 프로그램을 실행을 체크해두는 편을 권한다. 혹시 dock에 cmder를 박아둔 상태라면 Shift 키와 함께 좌 클릭을 하면 속성을 선택할 수 있다."
+  },
+  {
+    "objectID": "posts/git/2020-03-05-using-git-w10.html#how",
+    "href": "posts/git/2020-03-05-using-git-w10.html#how",
+    "title": "Using Git ‘Smoothly’ in Windows 10",
+    "section": "How",
+    "text": "How\n깃을 편하게 쓰기 위해서 Cmder의 설정을 약간 바꿔주겠다. 우선 아래의 그림처럼 맨 위 메뉴의 삼선을 클릭하면 Cmder의 세팅으로 갈 수 있다.\n{: style=“textalign:center;” width=“500”}\n엄청나게 많은 설정들이 있다. 창을 투명으로 만든다든가, 텍스트의 폰트를 바꾼다든가, 하는 것들이 가능하다. 여기서는 git bash를 쓰는 설정만 간단하게 설명하도록 하자.\n{: style=“textalign:center;” width=“500”}\n그림에서 보듯이 startup > task를 선택한다. 선택 가능한 CLI 중에서 {Bash:: Git bash}를 선택한다. 이 녀석을 디폴트 CLI로 설정한다. 시작 디렉토리를 지정하고 싶다면 아래 Startup dir...을 선택해 바꿔주면 된다."
+  },
+  {
+    "objectID": "posts/git/2020-03-05-using-git-w10.html#finally",
+    "href": "posts/git/2020-03-05-using-git-w10.html#finally",
+    "title": "Using Git ‘Smoothly’ in Windows 10",
+    "section": "Finally?",
+    "text": "Finally?\n아래 그림에서 보듯이 윈도 명령 창에서는 먹지 않는 ls 등의 명령어가 잘 먹고, git도 편안하게 사용할 수 있다.\n{: style=“textalign:center;” width=“500”}"
+  },
+  {
+    "objectID": "posts/git/2020-03-05-using-git-w10.html#seriously",
+    "href": "posts/git/2020-03-05-using-git-w10.html#seriously",
+    "title": "Using Git ‘Smoothly’ in Windows 10",
+    "section": "Seriously!",
+    "text": "Seriously!\n여기까지 좋은데, git-bash에서 python을 쓰시는 분들이라면 python을 제대로 띄울 수 없다. 해결책은 간단하다. 아래와 같이 실행하면 된다.1\n매번 이럴게 winpty로 띄울 수는 없으니 .bashrc에 넣도록 하자.\n$ echo \"alias python='winpty python.exe'\" >> ~/.bashrc\n넣은 뒤에 터미널을 재실행하거나 source ~/.bashrc를 실행해주면 된다."
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-18-dot-product.html",
+    "href": "posts/math-simple/2019-07-18-dot-product.html",
+    "title": "Dot Product with Geometry",
+    "section": "",
+    "text": "닷 프로덕트 혹은 내적을 기하적으로 이해하면 여러모로 편리하고 기억에도 잘 남는다."
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-18-dot-product.html#definition",
+    "href": "posts/math-simple/2019-07-18-dot-product.html#definition",
+    "title": "Dot Product with Geometry",
+    "section": "Definition",
+    "text": "Definition\ndot product는 내적이라고도 번역하지만 여기서는 닷 프로덕트로 쓰기로 하겠다. 먼저 정의부터 살펴보자.\n\\[\n\\mathbf{u}=\\left[u_{1}, {u}_{2}, \\ldots, {u}_{n}\\right] \\in {\\mathbb R}^n\n\\] \\[\n\\mathbf{v}=\\left[{v}_{1}, {v}_{2}, \\ldots, {v}_{n}\\right] \\in {\\mathbb R}^n\n\\] \\[\n\\mathbf{u} \\cdot \\mathbf{v} = \\sum_{n} u_i v_i\n\\]\n쉽게 말해서 닷 프로덕트는 차원이 같은 두 개의 인풋 벡터를 하나의 스칼라로 바꿔주는 일종의 함수로 이해할 수 있다. 두 개의 벡터를 서로 연관 짓는데 이를 해당 벡터의 길이라는 정보로 압축한다고 보면 얼추 맞을 듯 싶다. 하나의 숫자로 요약된다는 뜻에서 스칼라 프로덕트라고도 불린다. 그림으로 나타내면 아래와 같다.\n\n\nFrom Definition to Geometry\n닷 프로덕트에 관한 설명은 정의에서 바로 코사인 법칙으로 넘어간다. 하지만 뭔가 분명하지 않다. 이걸 조금 더 풀어보자.\n\n위 그림은 \\(2 \\times 2\\) 벡터의 닷 프로덕트를 각 요소로 분해한 것이다. 이중에서 \\(\\dfrac{\\pi}{2}\\) 각을 이루고 있는 벡터는 서로 곱하면 0이 된다. 따라서 닷 프로덕트 계산에서는 \\(a_x b_x\\)와 \\(a_y b_y\\)가 남게 된다.\n\n닷 프로덕트란 길이만 문제가 되므로 두 벡터를 한 방향으로 정렬하자.이렇게 되면, 파란색 높이가 \\(0\\)이 된다. 따라서 위 그림과 같은 코사인 법칙이 쉽게 도출된다.\n\n\nSymmetry\n\\(\\mathbf{v}\\) 벡터를 \\(\\mathbf u\\) 벡터 위에, 즉 이 벡터를 스크린 삼아 직각으로 쏜 프로젝션 벡터(\\(\\mathrm{Proj}_{\\mathbf u}{\\mathbf v}\\))의 길이와 \\(\\mathbf u\\) 길이를 곱하면 그것이 \\(\\mathbf u\\)와 \\(\\mathbf v\\)의 닷 프로덕트가 된다. 어느 벡터로 프로젝션 하는지는 관계가 없다. 즉,\n\\[\n{\\mathbf v} \\cdot {\\mathbf u} = \\Vert \\mathbf u \\Vert \\Vert {\\rm Proj}_{\\mathbf u} {\\mathbf v} \\Vert =  \\Vert \\mathbf u \\Vert (\\Vert \\mathbf v \\Vert \\cos\\theta)\n\\] \\[\n{\\mathbf u} \\cdot {\\mathbf v} = \\Vert \\mathbf v \\Vert \\Vert {\\rm Proj}_{\\mathbf v} {\\mathbf u} \\Vert = \\Vert \\mathbf v \\Vert (\\Vert \\mathbf u \\Vert \\cos\\theta)\n\\]\n다시 보면, 닷 프로덕트의 정의상 \\({\\mathbf v} \\cdot {\\mathbf u} = {\\mathbf u} \\cdot {\\mathbf v}\\)인 셈이다. 닷 프로덕트는 어떻게 도출하는가? 그 기하학적인 구조는 무엇인가?"
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-18-dot-product.html#with-law-of-cosine",
+    "href": "posts/math-simple/2019-07-18-dot-product.html#with-law-of-cosine",
+    "title": "Dot Product with Geometry",
+    "section": "With ‘Law of Cosine’",
+    "text": "With ‘Law of Cosine’\n우선 정석부터 가보자. 코사인 법칙을 활용해서 닷 프로덕트를 도출할 수 있다.\n\n\n여기를 참고 했다.\n우선 코사인의 법칙부터 살펴보자.\n\nLaw of COS\n\n\\[\n\\lVert \\mathbf u -  \\mathbf v \\rVert^2 = \\lVert  \\mathbf  u \\rVert^2 + \\lVert   \\mathbf  v \\rVert^2 - 2\\lVert  \\mathbf  u \\rVert \\lVert   \\mathbf  v \\rVert \\cos \\theta\n\\]\n\n노름(norm, 길이)에 대해서는 대칭과 쌍방선형이 유지되기 때문에 아래와 같이 쓸 수 있다.\n\n\\[\n\\lVert  \\mathbf u -  \\mathbf v \\rVert^2 = ( \\mathbf u -  \\mathbf v) \\cdot ( \\mathbf u -  \\mathbf v ) = \\lVert \\mathbf u \\rVert^2 +  \\lVert \\mathbf v \\rVert^2 - 2  (\\mathbf u \\cdot \\mathbf v)\n\\]\n따라서\n\\[\n\\mathbf u \\cdot  \\mathbf v = \\lVert \\mathbf u \\rVert \\lVert \\mathbf v \\rVert   \\cos \\theta = \\lVert \\mathbf u \\rVert   ( \\lVert \\mathbf v \\rVert \\cos \\theta) = \\lVert \\mathbf u \\rVert \\rVert \\text{Proj}_{\\mathbf u} \\mathbf v \\lVert\n\\]\n한편 반대로 \\(\\mathbf u\\)에서 \\(\\mathbf v\\)로 프로젝션하는 경우를 생각해 볼 수도 있겠다.\n\\[\n\\mathbf u \\cdot  \\mathbf v = \\lVert \\mathbf u \\rVert \\lVert \\mathbf v \\rVert   \\cos \\theta = \\lVert \\mathbf v \\rVert   ( \\lVert \\mathbf u \\rVert \\cos \\theta) = \\lVert \\mathbf v \\rVert \\rVert \\text{Proj}_{\\mathbf v} \\mathbf u \\lVert\n\\]"
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-18-dot-product.html#applications",
+    "href": "posts/math-simple/2019-07-18-dot-product.html#applications",
+    "title": "Dot Product with Geometry",
+    "section": "Applications",
+    "text": "Applications\n\nCosine similarity\n두 개의 벡터가 얼마나 유사한지를 나타내는 지표로 코사인 유사도라는 게 있다. 위에서 보듯이 두 개의 벡터(\\(\\mathbf v, \\mathbf u\\))가 이루는 각 \\(\\theta\\)의 코사인 값은 다음과 같다.\n\\[\n\\cos \\theta = \\dfrac{\\mathbf u \\cdot \\mathbf v}{\\lVert \\mathbf u \\rVert \\lVert \\mathbf v \\rVert}\n\\]\n두 벡터가 가까울수록 코사인 값이 1에 가깝게 될 것이고, 멀수록 -1에 가깝게 될 것이다.\n\n\nHyperplane\n닷 프로덕트를 이해하고 있으면 기하학 문제를 쉽게 풀 수 있는 게 많다. 가장 좋은 예가 초평면(hyperplane)이다. 예를 들어 3차원 공간에서 점 \\(\\mathbf{x}^0 = (x_1^0, x_2^0, x_3^0)\\)를 지나면서 벡터 \\(\\mathbf{p} = (p_1, p_2, p_3)\\)에 수직인 평면을 찾고 있다고 하자. 복잡해보이지만 닷 프로덕트를 활용하면 쉽게 풀린다. 즉,\n\\[\n\\mathbf{p} \\cdot (\\mathbf{x} - \\mathbf{x}^0) = 0\n\\]\n평면 \\(\\mathbf x\\)가 \\(\\mathbf{x}^0\\)를 지나는 것은 분명하다. 이 평면이 \\(\\mathbf{p}\\)에 수직이라는 것은 두 벡터의 닷 프로덕트가 0이 되면 된다."
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-18-dot-product.html#appendix-geometrically",
+    "href": "posts/math-simple/2019-07-18-dot-product.html#appendix-geometrically",
+    "title": "Dot Product with Geometry",
+    "section": "Appendix: Geometrically",
+    "text": "Appendix: Geometrically\n기하적으로 도출하는 보다 복잡한 방법도 있다. 이해를 돕기 위해서 2차원 벡터공간으로 한정해서 논의하겠다. \\(n\\) 차원으로 확대하는 것이 수학적으로 어렵지는 않다.\n\n\n보다 상세한 내용은 여기를 참고하라.\n일단 \\(\\mathbf u\\)가 길이 1로 표준화된 벡터라고 정의를 살짝 바꾸겠다. 즉, 새로운 \\(\\mathbf u\\)는 \\(\\rVert \\mathbf u \\lVert\\)로 \\(\\mathbf u\\)를 나눈 벡터다. 아래 그림처럼 이 벡터를 향해서 2차원 평면의 기저를 구성하는 \\((1,0)(\\equiv i)\\)과 \\((0,1)(\\equiv j)\\)에서 벡터로 프로젝션을 해보자.\n이렇게 프로젝션을 하면 프로젝션된 지점의 \\(x\\) 좌표는 공교롭게도 원점에서부터 해당 프로젝션된 지점까지의 벡터의 길이가 된다. \\(y\\)에 대해서도 마찬가지다.\n\n\n이제 (1,1)에서 벡터 \\(\\mathbf u\\)로 프로젝션을 해보자. (1,1)은 각각 두 개의 기저를 1의 가중치로 선형결합한 벡터다. 이 벡터의 프로젝션의 길이는 어떻게 구성될까? 그림에서 보듯이 \\(u_x + u_y\\)가 된다. 이를 일반적인 논리로 확장해보자. 어떤 임의의 벡터 \\(\\mathbf v(=(x,y))\\)가 존재할 때 해당 벡터는 각각 두 개의 기저의 선형 결합으로 이해할 수 있다.\n\n따라서 \\(\\mathbf v\\) 벡터를 \\(\\mathbf u\\)로 프로젝션한 길이는 다음과 같다.\n\\[\n\\underset{\\mathbf u 프로젝션}{\\left[\\begin{array}{ll}{u_{x}} & { u_{y}}\\end{array}\\right]}\\left[\\begin{array}{l}{x} \\\\ {y}\\end{array}\\right]= u_{x} \\cdot x + u_{y} \\cdot y = \\mathbf u \\cdot \\mathbf v\n\\]\n벡터를 기저의 선형결합을 통해 나타낼 수 있듯이, 벡터의 프로젝션의 길이 역시 비슷한 방식의 선형결합을 동원해서 나타낼 수 있다. 앞서 \\(\\mathbf u\\)가 표준화된 벡터라고 했다. 따라서 원래대로 돌려 놓으면 닷 프로덕트는 프로젝션된 지점까지의 벡터의 거리와 해당 벡터의 길이의 곱이 된다. 즉,\n\\[\n\\mathbf u \\cdot \\mathbf v = \\rVert \\mathbf u \\lVert \\rVert \\text{Proj}_{\\mathbf u} \\mathbf v \\lVert\n\\]"
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-13-Poisson.html",
+    "href": "posts/math-simple/2019-07-13-Poisson.html",
+    "title": "Poisson as Binormial Distribution",
+    "section": "",
+    "text": "푸아송 분포는 이항 분포를 주어진 시간(기간) 안에 발생하는 평균 발생 횟수로 다시 모델링한 분포다.\n이항 분포의 평균은 \\(\\lambda = n p\\)이고, 이항 분포에 \\(p = \\frac{\\lambda}{n}\\)을 다시 넣은 후 \\(n \\to \\infty\\) 극한값을 얻은 결과가 푸아송 분포다."
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-13-Poisson.html#defining-poisson-distribution",
+    "href": "posts/math-simple/2019-07-13-Poisson.html#defining-poisson-distribution",
+    "title": "Poisson as Binormial Distribution",
+    "section": "Defining Poisson Distribution",
+    "text": "Defining Poisson Distribution\n사실, 푸아송 분포 직관적으로 잘 안 와 닿는다. 정의부터 먼저 살펴보자. 한글 위키피디어에서 가져왔다.\n푸아송 분포(Poisson distribution)는 확률론에서 단위 시간 안에 어떤 사건이 몇 번 발생할 것인지를 표현하는 이산 확률 분포이다. 일단 정의에서 알 수 있는 것:\n\n푸아송이라는 사람이 만들었다.\n단위 시간 안에 발생하는 사건이 중요하다.\n이산 확률 분포다.\n\n수학적인 정의는 일단 생략하자. 뒤에서 다시 만나게 될 테니까. 정의만 봐서는 이해가 쉽지 않은 분포다. 직관적인 방식으로 푸아송 분포의 정의를 끌어낼 수는 없을까?\n\n\n정확하게 언급하자면 분포의 정의라기보다는 분포의 확률 질량 함수 혹은 확률 밀도 함수라고 적는 게 맞을 것이다. 하지만 편의상 특별한 언급이 없는 경우 분포의 정의를 이런 의미로 사용하도록 하자."
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-13-Poisson.html#poisson-as-binary",
+    "href": "posts/math-simple/2019-07-13-Poisson.html#poisson-as-binary",
+    "title": "Poisson as Binormial Distribution",
+    "section": "Poisson as Binary",
+    "text": "Poisson as Binary\n잠시 이항 분포를 떠올려보자. 아마도 모든 확률 관련 수업에서 제일 처음 배우는 분포가 아닐까 한다. 이항 분포란, 1회 시행 시 발생할 확률이 \\(p\\;\\)인 어떤 사건을 \\(n\\) 번 시행할 때 해당 사건이 \\(k\\) 번 발생할 확률의 분포를 나타낸다. 개별적으로 존재하는 사건이니까 당연히 이산 확률 분포에 속한다. 수학적으로는 아래와 같다.\n\\[\nB(k;  n,p)  =  {n \\choose k}  p^k(1-p)^{n-k}\n\\]\n위 정의를 말로 풀어보자. n번 시행 중에 사건이 발생한 경우 \\(k\\) 개를 뽑는다. 즉, 이런 경우가 \\(n\\) 번 중에서 얼마나 발생할 수 있는지 따진다. 그리고 해당 경우의 수가 발생할 확률을 곱해준 것이다.\n이항 분포를 ’시간’의 맥락으로 한번 바꿔보자. 하루 동안 내 사이트에 방문객이 한 명 찾아올 확률을 0.1이라고 하자. 28일 동안 10 명의 방문자가 찾아올 확률은? 이항 분포의 맥락에서 생각한다면, \\(B(10; 28, 0.1)\\)로 나타낼 수 있다. 그런데 이 모델링 어딘가 찜찜하다.\n이항 분포의 모델링은 하루 동안 사이트 방문객이 한 명일 확률에 기대고 있다. 그런데 하루에 방문객이 두 명 이상이라면? 하루에 방문객이 한 명 씩만 온다는 가정이 비현실적이지 않나?\n두 명 이상의 방문자를 수용하려면 이항 분포의 모형을 어떻게 수정해야 할까? 가장 손쉬운 방법은 단위 시간을 바꾸는 것이다. 단위 시간을 하루가 아니라 시간으로 바꿔보자. 하루는 24시간이고 매 시간 동일한 정도로 이용자가 방문한다면, 시간당 1명이 방문할 확률은 0.1/24이 된다. 낮은 확률이지만 이러한 가정에서 하루에 두 명 이상도 방문할 수 있게 된다."
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-13-Poisson.html#deriving-poisson",
+    "href": "posts/math-simple/2019-07-13-Poisson.html#deriving-poisson",
+    "title": "Poisson as Binormial Distribution",
+    "section": "Deriving Poisson",
+    "text": "Deriving Poisson\n이항 분포와 달리 푸아송 분포에서 파라미터는 한 개다. 푸아송 분포의 파라미터 \\(\\lambda\\)는 단위 시간 당 평균 발생 횟수를 뜻한다. 비율(rate)이라고도 부른다.\n\\(\\lambda\\)가 ’파라미터’라는 의미는 무엇일까? 과거의 데이터로부터 혹은 어떤 방법으로든 푸아송 분포를 정의하는 시점에서 알려진 혹은 정의된 사실이라는 의미다. 즉, 우리가 관심을 두고 있는 기간 내에 평균적인 방문자 수가 주어진다는 뜻이다.\n기간 내에 특정 순간 동안 어느 정도의 방문자가 올지 미리 알 수 없다. 방문자가 없다가 어느 순간 10명이 몰려올 수도 있다. 일정한 간격으로 한 명씩 10 명이 올 수도 있다. 매번 시행 때마다 해당 사건이 발생할 확률을 모형화하는 이항분포를 시간의 맥락으로 바꾸면 이렇게 뭔가 어색해 보인다.\n이항 분포를 통해 푸아송 분포를 표현하는 방법은 없을까? 어떤 패턴으로 방문자가 올지 알 수 없다면, 이항 분포의 기준이 되는 시행(시점)을 최대한 잘게 쪼개면 어떨까? 이항 분포에서 평균은 \\(np\\;\\) 다. 즉, 이항 분포의 맥락에서 보면 푸아송 분포의 파라미터 \\(\\lambda = n p\\;\\)다. \\(\\lambda\\)가 고정되어 있다면 \\(n\\)을 무한대로 갈 때 \\(p\\)는 적절한 방식으로 0으로 접근한다고 가정해도 무방하다. 정리하면 푸아송 분포를 이항 분포에서 도출하기 위한 전략은 다음과 같다.\n\n\\(n\\)과 \\(p\\)를 \\(\\lambda\\) 파라미터 하나로 바꾼다.\n\\(n\\)이 무한대로 갈 때 이항 분포의 확률 밀도 함수의 극한값을 도출한다.\n\n\\[\n\\begin{aligned}\n\\lim_{n \\to \\infty} B(k; n, p) = & \\lim_{n \\to \\infty}  {n \\choose k }  p^k(1-p)^{n-k} \\\\\n= & \\lim_{n \\to \\infty}  \\dfrac{n!}{k!(n-k)!}(\\dfrac{\\lambda}{n})^k  (1-\\dfrac{\\lambda}{n})^{n-k}  \\\\\n= & \\lim_{n \\to \\infty}  \\underbrace{\\left[  \\dfrac{n!}{(n-k)!  n^k} \\right]}_{(가)}  \\left[  \\dfrac{\\lambda^k}{k!}  (1-\\dfrac{\\lambda}{n})^{n}  \\right]  \\underbrace{\\left[  (1-\\dfrac{\\lambda}{n})^{-k}\\right]}_{(나)}  \\\\\n= &  1\\left[  \\dfrac{\\lambda^k}{k!}  e^{-\\lambda}\\right] 1 \\\\\n= & f(k; \\lambda)\n\\end{aligned}\n\\]\n푸아송 분포 확률 질량 함수 \\(f(k; \\lambda)\\) 앞 뒤로 붙은 극한값 (가)와 (나)에 관해 사족을 덧붙여보자. 먼저 (가)는 아래와 같다.\n\\[\n  \\lim_{n \\to \\infty} \\dfrac{n!}{(n-k)!  n^k} =  \\lim_{n \\to \\infty}  \\dfrac{n(n-1)\\dotsb(n-(k-1))}{n^k}  = 1\n\\]\n분자와 분모 모두 가장 높은 \\(n\\)의 차수는 \\(k\\)이고, 그 계수가 모두 1이므로 극한값은 1이다. (나)의 극한값은 쉽게 알 수 있으니 생략하자.\n이항 분포의 확률 혹은 확률 질량 함수의 극한값이 바로 푸아송 분포의 그것이다! 이거 참 재미있는 연결 고리가 아닌가! 사실 푸아송 분포의 정의를 그냥 들여다봐서는 그다지 직관적인 이해를 얻기는 쉽지 않다. 이렇게 이항 분포에서 출발하는 것이 직관적으로 이해하는 데 도움이 된다."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "lost_in_economics",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ngit\n\n\n\n\n모든 플랫폼에서 git과 github 잘 쓰기\n\n\n\n\n\n\nApr 27, 2022\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n브라우저에서 python을 돌린다굽쇼?\n\n\n\n\n\n\nNov 19, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncontainer\n\n\n\n\nDocker Desktop 없이 WSL에서 Podman으로 콘테이너를 써보자\n\n\n\n\n\n\nSep 13, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncontainer\n\n\n\n\n빌드할 때 Jupyter의 한글 문제도 같이 해결하자!\n\n\n\n\n\n\nMay 9, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\nPython, Julia, R을 하나의 도구로 코딩하자.\n\n\n\n\n\n\nFeb 2, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n아이겐 공간을 이해하자.\n\n\n\n\n\n\nJan 18, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n아이겐 공간을 이해보자.\n\n\n\n\n\n\nJan 10, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n두서 없이 정리\n\n\n\n\n\n\nJan 8, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\nMatrix as Linear Transformation\n\n\n\n\n\n\nJan 7, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n벡터 공간의 기하적 특성\n\n\n\n\n\n\nJan 6, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n벡터 공간의 기하적 특성\n\n\n\n\n\n\nJan 5, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n코드 셰어링, 이제 걱정 끝\n\n\n\n\n\n\nOct 27, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n\\(\\rm\\LaTeX\\)을 다시 써볼까?\n\n\n\n\n\n\nOct 24, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n윈도 터미널 잘 쓰기\n\n\n\n\n\n\nSep 26, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncontainer\n\n\n\n\n컨테이너 안에서도 한글을 써보자\n\n\n\n\n\n\nSep 24, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncontainer\n\n\n\n\n문과생이 도커를 쓰는 법\n\n\n\n\n\n\nSep 23, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\npython 만으로 웹 앱을 만들어보자\n\n\n\n\n\n\nMar 9, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n깃헙 위에 블로그를 보다 쉽게 만들어볼까?\n\n\n\n\n\n\nMar 7, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ngit\n\n\n\n\n윈도 10에서 git 잘 쓰기\n\n\n\n\n\n\nMar 5, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\neconomics\n\n\n\n\n미국 대졸자와 비대졸자의 투자 행태에 따른 부의 불평등\n\n\n\n\n\n\nJan 22, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nregression\n\n\n\n\n로지스틱 회귀를 이해해봅시다!\n\n\n\n\n\n\nNov 10, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nregression\n\n\n\n\n회귀분석, 기하학적으로 한 방에 깨우치기\n\n\n\n\n\n\nOct 25, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nmath-simple\n\n\n\n\n기하학적으로 내적을 살펴보자.\n\n\n\n\n\n\nJul 18, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nmath-simple\n\n\n\n\n이항 분포의 관점에서 푸아송 분포 이해하기\n\n\n\n\n\n\nJul 13, 2019\n\n\nJS HUHH\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Junsok Huhh",
+    "section": "",
+    "text": "C.V.\nlong | short\n\n\nHistory of lostineconomics.com\n\nv2 built with fastpages\nv1 built with markdown on github\nv0 built with BlogDown on github"
+  }
+]
