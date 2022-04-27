@@ -3,7 +3,7 @@ title:  Basis
 description: 두서 없이 정리
 author: "JS HUHH"
 date: "01/08/2021"
-image: "http://cau.ac.kr/~mhhgtx/courses/LinearAlgebra/images/LinearAlgebra.png"
+image: "https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg"
 categories: [linear-algebra]
 #margin-header: subscribe.html
 ---
