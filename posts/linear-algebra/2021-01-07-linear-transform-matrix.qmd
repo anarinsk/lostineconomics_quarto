@@ -3,7 +3,7 @@ title:  Matrix as Linear Transformation
 description: Matrix as Linear Transformation
 author: "JS HUHH"
 date: "01/07/2021"
-image: "http://cau.ac.kr/~mhhgtx/courses/LinearAlgebra/images/LinearAlgebra.png"
+image: "https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg"
 categories: [linear-algebra]
 #margin-header: subscribe.html
 ---
