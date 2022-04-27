@@ -1,11 +1,11 @@
 ---
-layout: post
-toc: false
-comments: true
-title:  Vector Geometry, part 2 
-description: 벡터 공간의 기하적 특성 2
-categories: [math, matrix-theory]
-
+title: Vector Geometrically, part 2
+description: 벡터 공간의 기하적 특성
+author: "JS HUHH"
+date: "01/06/2022"
+image: "https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg"
+categories: [linear-algebra]
+#margin-header: subscribe.html
 ---
 
 ## Vector Space 
@@ -154,7 +154,7 @@ $$
 {\rm rank} (M) + {\rm nullity} (M) = n = \dim(\mathbb R^n)
 $$
 
-이 모든 걸 그림 하나로 정리하면 다음과 같다! 아래 보듯이 특수해(particular solution) $x_r$은 로우 스페이스에서 생성되는 해이다. 일반해(homogeneous solution) $x_n$은 널 스페이스에서 생성되는 해다.[^1] 이 둘을 합치면 완전해(complete solution)가 된다. 아래 그림에서 보듯이
+이 모든 걸 그림 하나로 정리하면 다음과 같다! 아래 보듯이 특수해(particular solution) $x_r$은 로우 스페이스에서 생성되는 해이다. 일반해(homogeneous solution) $x_n$은 널 스페이스에서 생성되는 해다. 이 둘을 합치면 완전해(complete solution)가 된다. 아래 그림에서 보듯이
 
 $$
 \begin{aligned}
@@ -164,6 +164,8 @@ Ax_c = A(x_r + x_n) & \rightarrow \mathcal C(M)
 \end{aligned}
 $$
 
-[^1]: 보통 homogenous라는 말이 들어가면 $Ax = 0$과 같은 형태의 연립방정식을 의미 의미한다. 
+:::{column-margin}
+보통 homogenous라는 말이 들어가면 $Ax = 0$과 같은 형태의 연립방정식을 의미 의미한다. 
+:::
 
-![enter image description here](https://www.cs.utexas.edu/users/flame/laff/alaff-beta/images/Chapter04/FundamentalSpaces.png){: style="margin: auto; display: block; border:1.5px solid #021a40;"}{: width="500"}
+![](https://www.cs.utexas.edu/users/flame/laff/alaff-beta/images/Chapter04/FundamentalSpaces.png){ style="margin: auto; display: block; border:1.5px solid #021a40; width:80%;"}

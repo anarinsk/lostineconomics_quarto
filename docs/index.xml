@@ -85,6 +85,182 @@ Note
   <media:content url="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmxcpJ%2Fbtq9IDonGa1%2FLGoNFr3kBHT3tm8QnIwjrK%2Fimg.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
+  <title>Vector Geometrically, part 2</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-06-vector-geometry-2.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="vector-space" class="level2">
+<h2 class="anchored" data-anchor-id="vector-space">Vector Space</h2>
+<p>먼저 벡터 스페이스를 살펴보기 위해서 몇 가지 정의부터 보자.</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?V"> is vector space</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20%5Cin%20V"></li>
+<li><img src="https://latex.codecogs.com/png.latex?W"> is vector subspace <img src="https://latex.codecogs.com/png.latex?W%20%5Csubseteq%20V"></li>
+<li>span: 벡터의 선형 결합을 통해 생성되는 벡터 집합 <img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7Bspan%7D(%5Cvec%20v_1,%20%5Cdotsc,%20%5Cvec%20v_n)%20=%20%5C%7B%5Cvec%20v%20%7C%20%5Cvec%20v%20=%20%5Calpha_1%20%5Cvec%20v_1%20+%20%5Cdotsb%20+%20%5Calpha_n%20%5Cvec%20v_n,%20%5Calpha_i%20%5Cin%20%5Cmathbb%20R%20%5C%7D%0A"></li>
+</ul>
+<p>행렬 <img src="https://latex.codecogs.com/png.latex?M%20%5Cin%20%5Cmathbb%20R%5E%7Bm%20%5Ctimes%20n%7D">이 있다고 할 때</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20R(M)%20%5Csubseteq%20%5Cmathbb%20R%5En">: <img src="https://latex.codecogs.com/png.latex?M">의 로우 스페이스, 즉 <img src="https://latex.codecogs.com/png.latex?M">의 행들의 모든 가능한 선형 결합이 나타내는 벡터 공간</li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20R%20(M)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20v%20%5Cin%20%5Cmathbb%20R%5En%20%7C%20%5Cvec%20v%20=%20%5Cvec%20w%5ET%20M%20%5Ctext%7B%20for%20some%20%7D%20%5Cvec%20w%20%5Cin%20%5Cmathbb%20R%5Em%20%5C%7D%0A"></p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20C(M)%20%5Csubseteq%20%5Cmathbb%20R%5Em">: <img src="https://latex.codecogs.com/png.latex?M">의 컬럼 스페이스, 즉 <img src="https://latex.codecogs.com/png.latex?M">의 열들의 모든 가능한 선형 결합이 나타내는 벡터 공간</li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20C%20(M)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20w%20%5Cin%20%5Cmathbb%20R%5Em%20%7C%20%5Cvec%20w%20=%20M%20v%20%5Ctext%7B%20for%20some%20%7D%20%5Cvec%20v%20%5Cin%20%5Cmathbb%20R%5En%20%5C%7D%0A"></p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M)%20%5Csubseteq%20%5Cmathbb%20R%5En">: <img src="https://latex.codecogs.com/png.latex?M">의 널 스페이스. 즉, 오른쪽에 곱해졌을 때 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200_%7Bm%7D">이 되는 벡터의 집합 <img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20N(M)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20v%20%5Cin%20%5Cmathbb%20R%5En%20%7C%20M%20%5Cvec%20v%20=%20%5Cvec%200%20%5C%7D%0A"></li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M%5ET)%20%5Csubseteq%20%5Cmathbb%20R%5En">: <img src="https://latex.codecogs.com/png.latex?M">의 좌 널 스페이스. 즉, 왼쪽에 곱해졌을 때 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200_%7Bn%7D">이 되는 벡터의 집합</li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20N(M%5ET)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20w%20%5Cin%20%5Cmathbb%20R%5Em%20%7C%20%5Cvec%20w%5ET%20M%20%20=%20%5Cvec%200%5ET%20%5C%7D%0A"></p>
+<p>혹은</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20N(M%5ET)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20w%20%5Cin%20%5Cmathbb%20R%5Em%20%7C%20M%5ET%20%5Cvec%20w%20=%20%5Cvec%200%20%5C%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?M">의 랭크는 컬럼 스페이스의 차원 그리고 로우 스페이스의 차원과 같다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ar(M)%20=%20%5Cdim(%5Cmathcal%20R%20(M))%20=%20%5Cdim(%5Cmathcal%20C(M))%0A"></p>
+</section>
+<section id="checklist" class="level2">
+<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
+<section id="zero-vector" class="level3">
+<h3 class="anchored" data-anchor-id="zero-vector">Zero vector</h3>
+<p>벡터 스페이스가 되려면 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">를 집합 내에 지니고 있어야 한다. 간단한 내용 같지만 참 중요하다. 일단 벡터 스페이스의 정의에서 <img src="https://latex.codecogs.com/png.latex?%5Calpha%20%5Cvec%20v">가 들어가기 때문에 <img src="https://latex.codecogs.com/png.latex?%5Calpha=0">의 조건에 따라서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">는 포함되어야 한다. 생각해 볼만한 대목. 벡터 서브스페이스 역시 마찬가지로 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">을 포함해야 한다. 2차원 벡터로 이야기한다면, <img src="https://latex.codecogs.com/png.latex?y%20=%202x%20+%201"> 같은 형태의 선은 벡터 (서브) 스페이스가 될 수 없다.</p>
+</section>
+<section id="subset-vs-subspace" class="level3">
+<h3 class="anchored" data-anchor-id="subset-vs-subspace">Subset vs subspace</h3>
+<p>부분집합은 원래 집합에 일정한 조건을 부여한 것이고, 이 점에서는 서브 스페이스 역시 부분 집합에 속한다. 다만 모든 부분 집합이 서브 스페이스가 되진 않는다. 이 점에서 서브 스페이스의 조건이 보다 제약적이다.</p>
+<p>다음과 같은 두 방정식의 해를 비교해보자. <img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20x%20=%20%5Cvec%20b">, <img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20x%20=%20%5Cvec%200"></p>
+<p><img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20v_1%20=%20%5Cvec%20b">와 <img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20v_2%20=%20%5Cvec%20b">를 생각해보자. <img src="https://latex.codecogs.com/png.latex?A(%5Cvec%20v_1%20+%20%5Cvec%20v_2)">는 원래의 벡터 스페이스에 들어 있는가?</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AA(%5Cvec%20v_1%20+%20%5Cvec%20v_2)%20=%202%20%5Cvec%20b%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cvec%20b%20=%20%5Cvec%200">가 아니라면, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_1%20+%20%5Cvec%20v_2">는 해가 될 수 없다. 조금 더 자세하게 표현해보자.</p>
+<p><img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20v%20=%20%5Cvec%20b">의 해 공간은 다음과 같은 완전해의 집합이다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5C%7B%20%5Cvec%20c%20+%20%5Cvec%20v_n%5C%7D%20%5Ctext%7B%20where%20%7D%5Cvec%20v_n%20%5Cin%20%5Cmathcal%20N%20(A)%0A"></p>
+<p>즉, 해 공간은 특수해(particular solution) <img src="https://latex.codecogs.com/png.latex?%5Cvec%20c">와 널 스페이스에 속한 벡터의 합으로 구성된다. 해 공간의 원소 하나를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x_1%20=%20%5Cvec%20c%20+%20%5Cvec%20v_1">이라고 하고 다른 하나를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x_2%20=%20%5Cvec%20c%20+%20%5Cvec%20v_2">라고 하자. 이 둘을 더하면, <img src="https://latex.codecogs.com/png.latex?2%20%5Cvec%20c%20+%20%5Cvec%20v_1%20+%20%5Cvec%20v_2">가 된다. 이것이 해 공간 안에 있어야 하는데, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20c%20%5Cneq%200">이면 성립하지 않는다.</p>
+<p>한편 <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M)">은 자연스럽게 벡터 공간을 이룬다. 더한 것도 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">에 있고, 스칼라 곱 역시 마찬가지다. 참고로 아래에서 보겠지만, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20R(M)">, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20C(M)">, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M)">, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M%5ET)">를 네 개의 근본 서브 스페이스라고 부른다. 네 개는 밀접한 연관을 지니고 있다.</p>
+</section>
+<section id="solutions" class="level3">
+<h3 class="anchored" data-anchor-id="solutions">Solutions</h3>
+<p>이 기회에 해의 종류를 한번 살펴보고 넘어가자.</p>
+<ol type="1">
+<li>Particular solution (특수해): RREF에서 free variables를 모두 0으로 두고 찾은 해를 뜻한다.</li>
+<li>Homogenous soution (일반해): 일반해는 널 스페이스에 속하는 해를 뜻한다. 즉, <img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20x%20=%200">을 만족시키는 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x">를 의미한다.</li>
+<li>Complete solution (완전해): 완전해란 특수해와 일반해를 더한 형태이다. 즉, <img src="https://latex.codecogs.com/png.latex?x_c%20=%20x_p%20+%20c_h"></li>
+</ol>
+<p>이제 각각의 의미를 음미해보자.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AA%20%5Cvec%20x%20=%20A%20x_c%20=%20A(x_p%20+%20x_h)%20=%20A%20x_p%20+%20A%20x_h%20=%20A%20x_p%20+%20%5Cvec%200_%7Bm%7D%0A"></p>
+<p>보다 자세한 사례는 <a href="https://m.blog.naver.com/crm06217/221674223212">여기</a>를 참고하라. 약간의 직관적인 설명만 곁들이겠다. 특수해는 딱 그 위치에 있어야 하는 벡터다. 즉 free variable이 어떤 값이 오건 간에 이 벡터의 값은 고정되어 있다. 반면 일반해는 널 스페이스에 속한다. 앞서 널 스페이스는 부분 공간이라고 말했다. 이는 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">를 중심으로 각각 벡터가 지나가야 한다는 뜻이다. 따라서 free variable의 경우 하나를 구하기 위해서 나머지를 0으로 두고 구해야 한다. 그리고 이렇게 구해진 vector에 곱해지는 스칼라 값이 free variable에 해당한다.</p>
+</section>
+</section>
+<section id="system-of-linear-equations" class="level2">
+<h2 class="anchored" data-anchor-id="system-of-linear-equations">System of Linear Equations</h2>
+<p>다음 방정식의 해 공간을 생각해보자.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AM%20%5Cvec%20x%20=%20%5Cvec%20b%0A"></p>
+<p>먼저 <img src="https://latex.codecogs.com/png.latex?M">의 널 스페이스를 생각해보자. 여기 속한 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x">는 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5En"> 집합에 속한다. 정의상 <img src="https://latex.codecogs.com/png.latex?M%20%5Cvec%20x%20=%200">이므로 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x">를 어떤 해에 더하면 이 값 역시 해가 된다. 따라서, <img src="https://latex.codecogs.com/png.latex?M%20%5Cvec%20x%20=%20%5Cvec%20b">를 만족하는 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x%20=%20%5Cvec%20c">라고 하자. 이를 특수 해라고 부른다. 여기에 널 스페이스에 속한 임의의 원소를 더하면 완전해가 된다. 즉,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20x%20=%20%5Cvec%20c%20+%20%5Ctext%7Bspan%7D(%5Cvec%20v_1,%20%5Cdotsc,%20%5Cvec%20v_k)%20%5Ctext%7B%20where%20%7D%20%5Ctext%7Bspan%7D(%5Cvec%20v_1,%20%5Cdotsc,%20%5Cvec%20v_k)%20=%20%5Cmathcal%20N(M)%0A"></p>
+<section id="rref-method" class="level3">
+<h3 class="anchored" data-anchor-id="rref-method">RREF method</h3>
+<p>연립방정식의 해를 구하는 가장 기초적인 방법, 즉 RREF, 기약 행사다리꼴 행렬을 만드는 과정이 이에 부합한다. 즉, <img src="https://latex.codecogs.com/png.latex?%5BM%20%5Clvert%20%5Cvec%20b%5D">를 RREF로 만들면, <img src="https://latex.codecogs.com/png.latex?%5B%5Ctext%7Brref%7D(M)%20%5Cvert%20%5Cvec%20c%5D">의 형태가 된다. 이때, <img src="https://latex.codecogs.com/png.latex?%5Ctext%7Brref%7D(M)">는 <img src="https://latex.codecogs.com/png.latex?k"> 개의 자유 변수를 <img src="https://latex.codecogs.com/png.latex?n-k"> 개의 특수 해를 지니게 된다. 자유 변수에서 널 스페이스에 속하는 일반해를 얻을 수 있다.</p>
+</section>
+</section>
+<section id="two-transformation" class="level2">
+<h2 class="anchored" data-anchor-id="two-transformation">Two Transformation</h2>
+<p><img src="https://latex.codecogs.com/png.latex?M%20%5Cin%20%5Cmathbb%20R%5E%7Bm%20%5Ctimes%20n%7D">이 편리한 이유는 <img src="https://latex.codecogs.com/png.latex?M">이 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x%20%5Cin%20%5Cmathbb%20R%5En">을 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20y%20%5Cin%20%5Cmathbb%20R%5Em">으로 바꾸는 선형 변환 모두를 표현할 수 있기 때문이다. 그렇다면, <img src="https://latex.codecogs.com/png.latex?M%5ET">는 어떨까? 이는 같은 맥락에서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20a%20%5Cin%20%5Cmathbb%20R%5Em">을 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20b%20%5Cin%20%5Cmathbb%20R%5En">으로 바꾸는 선형 변환을 표현한다. 즉,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20a%5ET%20M%20=%20%5Cvec%20b%0A"></p>
+<p>이는 <img src="https://latex.codecogs.com/png.latex?M%5ET%20%5Cvec%20a=%20%5Cvec%20b">가 된다. 즉, <img src="https://latex.codecogs.com/png.latex?M%5ET">는 <img src="https://latex.codecogs.com/png.latex?M">의 좌 벡터 공간의 집합을 표현한다. 마찬가지로 <img src="https://latex.codecogs.com/png.latex?M">은 <img src="https://latex.codecogs.com/png.latex?M">의 우 벡터 공간의 집합을 표현한다. <img src="https://latex.codecogs.com/png.latex?M">의 좌 벡터 공간이 바로 로우 공간이고 우 벡터 공간이 컬럼 공간이다.</p>
+<p>이제, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M)">의 원소는 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5En">에 속한다. 이와 직교하는 공간은 어떤 공간일까? 좌 벡터 공간일까? 우 벡터 공간일까? 쉽게 생각하자. 직교 하기 위해서는 서로 차원이 같아야 한다. 우 벡터 공간은 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5Em">에 속한다. 따라서 직교한다면 좌 벡터 공간과 한다. 확인해보자. <img src="https://latex.codecogs.com/png.latex?M%20%5Cvec%20v_n%20=%20%5Cvec%200_m"> where <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_n%20%5Cin%20%5Cmathcal%20N(M)"> 가 성립한다. 이제 양번에 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20a%5ET">를 곱해보자.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cunderbrace%7B(M%5ET%20%5Cvec%20a)%5ET%7D_%7B%5Ctext%7Bleft%20space%7D%7D%20%5Cvec%20v_n%20=%20%5Cvec%20a%5ET%20M%5Cvec%20v_n%20=%20%5Cvec%20a%5ET%20%5Cvec%200_m%20=%200%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20R(M)%20%5Coplus%20%5Cmathcal%20N(M)%20=%20%5Cmathbb%20R%5En%0A"></p>
+<p>한편 같은 논리로</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20C(M)%20%5Coplus%20%5Cmathcal%20N(M%5ET)%20=%20%5Cmathbb%20R%5Em%0A"></p>
+<p>앞서 보았듯이 <img src="https://latex.codecogs.com/png.latex?%7B%5Crm%20rank%7D%20(M)%20=%5Cdim(%5Cmathcal%20R(M))%20=%20%5Cdim(%5Cmathcal%20C(M))">다. <img src="https://latex.codecogs.com/png.latex?%5Cdim(%5Cmathcal%20N(M))%20=%20%7B%5Crm%20nullity%7D%20(M)">이라고 하면,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%7B%5Crm%20rank%7D%20(M)%20+%20%7B%5Crm%20nullity%7D%20(M)%20=%20n%20=%20%5Cdim(%5Cmathbb%20R%5En)%0A"></p>
+<p>이 모든 걸 그림 하나로 정리하면 다음과 같다! 아래 보듯이 특수해(particular solution) <img src="https://latex.codecogs.com/png.latex?x_r">은 로우 스페이스에서 생성되는 해이다. 일반해(homogeneous solution) <img src="https://latex.codecogs.com/png.latex?x_n">은 널 스페이스에서 생성되는 해다. 이 둘을 합치면 완전해(complete solution)가 된다. 아래 그림에서 보듯이</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0AAx_r%20&amp;%20%5Crightarrow%20%5Cmathcal%20C(M)%20%5C%5C%0AAx_n%20&amp;%20%5Crightarrow%20%5Cmathcal%20N(M)%20%5C%5C%0AAx_c%20=%20A(x_r%20+%20x_n)%20&amp;%20%5Crightarrow%20%5Cmathcal%20C(M)%0A%5Cend%7Baligned%7D%0A"></p>
+<div class="{column-margin}">
+<p>보통 homogenous라는 말이 들어가면 <img src="https://latex.codecogs.com/png.latex?Ax%20=%200">과 같은 형태의 연립방정식을 의미 의미한다.</p>
+</div>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/www.cs.utexas.edu/users/flame/laff/alaff-beta/images/Chapter04/FundamentalSpaces.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:80%;"></p>
+
+
+</section>
+
+ ]]></description>
+  <category>linear-algebra</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-06-vector-geometry-2.html</guid>
+  <pubDate>Wed, 05 Jan 2022 15:00:00 GMT</pubDate>
+  <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Vector Geometrically, part 1</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-05-vector-geometry-1.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="concepts" class="level2">
+<h2 class="anchored" data-anchor-id="concepts">Concepts</h2>
+<p>편의상 3차원 공간으로 예시하도록 한다. <img src="https://latex.codecogs.com/png.latex?n"> 차원으로 확장은 쉽게 된다.</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?p%20=%20(p_x,%20p_y,%20p_z)">: <img src="https://latex.codecogs.com/png.latex?p%20%5Cin%20%5Cmathbb%20R%5E3"></li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20=%20(v_x,%20v_y,%20v_z)">: <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20%5Cin%20%5Cmathbb%20R%5E3"></li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Chat%20v%20=%20%5Cdfrac%7Bv%7D%7B%5ClVert%20v%20%5ClVert%7D">: Unit vector</li>
+</ul>
+<section id="vector" class="level3">
+<h3 class="anchored" data-anchor-id="vector">Vector</h3>
+<p><img src="https://latex.codecogs.com/png.latex?p_0">를 지나는 무한의 1차원 벡터는 다음과 같이 정의된다.</p>
+<ul>
+<li>Parametric equation:</li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?%0Al%20:%20%5C%7B%20(x,%20y,%20z)%20%5Cin%20%5Cmathbb%20R%5E3%20%7C%20p_0%20+%20t%20%5Cvec%20v,%20t%20%5Cin%20%5Cmathbb%20R%5C%7D%0A"></p>
+<ul>
+<li>Symetric equation:</li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?%0Al:%20%5C%7B%20%20(x,%20y,%20z)%20%5Cin%20%5Cmathbb%20R%5E3%20%7C%20%5Cdfrac%7Bx%20-%20p_%7B0x%7D%7D%7Bv_x%7D%20=%20%5Cdfrac%7By%20-%20p_%7B0y%7D%7D%7Bv_y%7D%20%20=%20%20%5Cdfrac%7Bz%20-%20p_%7B0z%7D%7D%7Bv_z%7D%20%5C%7D%0A"></p>
+</section>
+<section id="plane" class="level3">
+<h3 class="anchored" data-anchor-id="plane">Plane</h3>
+<p><img src="https://latex.codecogs.com/png.latex?p_0">를 지나는 무한 평면 P는 다음과 같이 정의된다. 평면을 표현하기 위해서는 벡터 두 개( <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v,%20%5Cvec%20w"> )가 필요하다.</p>
+<ul>
+<li>General equation</li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP:%20%5C%7B%20(x,%20y,%20z)%20%5Cin%20%5Cmathbb%20R%5E3%20%7C%20Ax%20+%20By%20+%20Cz%20=%20D%20%5C%7D%0A"></p>
+<ul>
+<li>Parametric equation</li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP%20:%20%5C%7B%20(x,%20y,%20z)%20%5Cin%20%5Cmathbb%20R%5E3%20%7C%20p_0%20+%20s%20%5Cvec%20v%20+%20t%20%5Cvec%20w,%20s,t%20%5Cin%20%5Cmathbb%20R%20%5C%7D%0A"></p>
+<ul>
+<li>Geometric equation</li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP%20:%20%5C%7B%20(x,%20y,%20z)%20%5Cin%20%5Cmathbb%20R%5E3%20%7C%20%5Cvec%20n%20%5Ccdot%20%5B(x,y,z)%20-%20p_0%5D%20=%200%20%5C%7D%20%5Ctext%7B~with%20normal%20vector%20$%5Cvec%20n$%7D%0A"></p>
+</section>
+<section id="point-vs-vector" class="level3">
+<h3 class="anchored" data-anchor-id="point-vs-vector">Point vs vector</h3>
+<p>점과 벡터의 차이는 무엇일까? 점은 좌표계에서 원점을 기준으로 한 위치를 나타낸다. 벡터는 크기와 방향을 모두 나타내며, 벡터는 <img src="https://latex.codecogs.com/png.latex?(0,0)"> 같은 기준이 없다. 벡터에서 중요한 것은 크기와 방향이다. 좌표 상에서 위치가 달라고 크기와 방향이 같으면 같은 벡터다.</p>
+<p>벡터를 점으로 나타내려면 어떻게 해야 할까? 두 점의 차이를 구하면 이는 벡터가 된다. 쉽게 생각해보자. 2차원 데카르트 좌표계에서 <img src="https://latex.codecogs.com/png.latex?(3,3)">이라는 점을 생각해보자. <img src="https://latex.codecogs.com/png.latex?(3,3)">이면 그냥 점이다. 반면, <img src="https://latex.codecogs.com/png.latex?(3,3)%20%5Cleftarrow%20(0,0)">을 의미하면 <img src="https://latex.codecogs.com/png.latex?(3,3)">은 벡터다. 그래프 상에서 <img src="https://latex.codecogs.com/png.latex?(0,0)">에서 <img src="https://latex.codecogs.com/png.latex?(3,3)">으로 화살표를 그리면 이 역시 벡터다. 아래 그림을 참고 하자.</p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/cdn.britannica.com/72/77672-004-AB0064CA.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+</section>
+<section id="normal-vector" class="level3">
+<h3 class="anchored" data-anchor-id="normal-vector">Normal vector</h3>
+<p>노멀 벡터는 아래 평면(plane) 혹은 벡터과 직교하는 성분의 벡터다. 이 녀석을 어떻게 구할까? 평면 <img src="https://latex.codecogs.com/png.latex?P">의 parametric 식을 보자. 2차원 플레인을 구성하는 두 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w">가 있다. 노멀 벡터는 이 두 성분 모두와 직교하는 성분의 벡터이다. 이는 바로 크로스 프로덕트의 정의를 그대로 따른다. 평면위의 어떤 세 점 <img src="https://latex.codecogs.com/png.latex?p,%20q,%20r">이 있다고 하자. 평면 위에 존재하는 벡터 두 개를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20=%20q%20-%20p">, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w%20=%20r%20-%20p">과 같이 만들자. 이 벡터와 직교하는 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20n">은 다음과 같다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20n%20%20=%20%5Cvec%20v%20%5Ctimes%20%5Cvec%20w%20=%20(q-p)%20%5Ctimes%20(r-p)%0A"></p>
+</section>
+</section>
+<section id="distance" class="level2">
+<h2 class="anchored" data-anchor-id="distance">Distance</h2>
+<p>거리 역시 세 가지로 나누어 이해해보자. 점과 점 사이의 유클리드 거리는 생략하겠다. 벡터와 점의 거리는 어떻게 구할까? 플레인과 점의 거리는 어떻게 구할까? <a href="https://anarinsk.github.io/lostineconomics-v2-1/math/matrix-theory/2020/12/16/Projection.html">이 포스팅</a>을 참고하라.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>linear-algebra</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-05-vector-geometry-1.html</guid>
+  <pubDate>Tue, 04 Jan 2022 15:00:00 GMT</pubDate>
+  <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
   <title>Python in the Browser</title>
   <dc:creator>JS HUHH</dc:creator>
   <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2021-11-19-python-in-github.html</link>
@@ -2351,333 +2527,6 @@ Note
   <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/economics/2020-01-22-Wealth-divided.html</guid>
   <pubDate>Tue, 21 Jan 2020 15:00:00 GMT</pubDate>
   <media:content url="https://www.aeaweb.org/content/file?id=13305" medium="image"/>
-</item>
-<item>
-  <title>Understanding Logit Regression</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-11-10-understanding-logit-regression.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="tldr" class="level2">
-<h2 class="anchored" data-anchor-id="tldr">tl;dr</h2>
-<ul>
-<li>로짓 회귀는 우리가 알던 그 ’회귀’와는 조금 다르다.</li>
-<li>로짓 회귀는 아래와 같은 데이터 모형에 기반을 둔 추정법이다.</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cln%20%5Cdfrac%7Bp(%5Cboldsymbol%7Bx_i%7D)%7D%7B1-p(%5Cboldsymbol%7Bx_i%7D)%7D%20=%5Cboldsymbol%7Bx_i%7D%5Cboldsymbol%7B%5Cbeta%7D%0A"></p>
-<ul>
-<li>회귀식의 계수 <img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%7B%5Cbeta%7D">를 해석할 때 주의하자. 이를 통상적인 회귀분석의 계수(한계 효과)처럼 해석하려면 별도의 계산이 필요하다.</li>
-</ul>
-</section>
-<section id="로짓-회귀-제대로-알고-있나" class="level2">
-<h2 class="anchored" data-anchor-id="로짓-회귀-제대로-알고-있나">로짓 회귀, 제대로 알고 있나?</h2>
-<p>잘 알고 있다고 여기고 있지만 사실 잘 모르는 것이 있다. 로지스틱 회귀(logistic regression) 혹은 로짓 회귀가 그렇지 않을까? 요즘 기계 학습을 배우게 되면, 로짓 회귀는 첫 챕터에서그냥 쓱 지나치기 쉽다. 뒤에 소개될 랜덤 포레스트, SVM, 뉴럴넷 등이 더 진보된 방법으로 보이기 때문이다.</p>
-<p>로짓 회귀는 단순하면서도 강력한 방법이다. 필자는 분류(classification)의 문제에 접근할 때 로짓 회귀를 먼저 해볼 것을 권한다. 로짓 회귀에서 ’견적’이 나오면 그 질문 혹은 문제는 더 흥미로운 형태로 진화할 가능성이 높다. 반면 로짓 회귀에서 싹수가 없으면 더 복잡한 고급 방법도 소용이 없는 경우가 많다. 요컨대 로짓 회귀는 시간 낭비를 막는 일종의 ’맛보기’로서 유용하다.</p>
-</section>
-<section id="로짓-함수는-어떻게-등장하나" class="level2">
-<h2 class="anchored" data-anchor-id="로짓-함수는-어떻게-등장하나">로짓 함수는 어떻게 등장하나?</h2>
-<p>로짓 회귀는 말 그대로 로지스틱 함수(logistic function)를 활용하는 회귀 분석이라는 뜻이다. 로지스틱 함수는 어디서 어떻게 등장할까? 로짓 회귀의 데이터 형식을 살펴보자. 종속 변수, 반응(response), regressand 등 다양한 형태로 불리는 식의 좌변은 0 또는 1로만 되어 있다. 어떤 상태라면 1, 그렇지 않으면 0이다. 이때 0 또는 1은 값 자체로 의미를 지니지 않는다. 이는 범주형 변수로서 True or False와 같은 이항 변수로 이해하면 좋겠다. 식의 우변에는 통상적인 독립 변수, 예측 변수(predictor), regressor가 등장한다.</p>
-<section id="덤-잠시-용어-정리" class="level3">
-<h3 class="anchored" data-anchor-id="덤-잠시-용어-정리">덤: 잠시, 용어 정리</h3>
-<p>생각난 김에 짬을 내 회귀식에서 좌변과 우변을 지칭하는 용어를 정리해보자. 취향에 맞춰서 쓰되 일관성만 갖추면 되겠다.</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>좌변</th>
-<th>우변</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><img src="https://latex.codecogs.com/png.latex?y"></td>
-<td><img src="https://latex.codecogs.com/png.latex?x">, <img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%20X"></td>
-</tr>
-<tr class="even">
-<td>dependent variable</td>
-<td>independent variables</td>
-</tr>
-<tr class="odd">
-<td>response variable</td>
-<td>predictor variable</td>
-</tr>
-<tr class="even">
-<td>regressand</td>
-<td>regressor</td>
-</tr>
-<tr class="odd">
-<td>criterion</td>
-<td>covariate</td>
-</tr>
-<tr class="even">
-<td>predicted variable</td>
-<td>controlled variable</td>
-</tr>
-<tr class="odd">
-<td>measured variable</td>
-<td>manipulated variable</td>
-</tr>
-<tr class="even">
-<td>explained variable</td>
-<td>explanatory variable</td>
-</tr>
-<tr class="odd">
-<td>experimental variable</td>
-<td>exposure variable</td>
-</tr>
-<tr class="even">
-<td>responding variable</td>
-<td>covariate</td>
-</tr>
-<tr class="odd">
-<td>outcome variable</td>
-<td>covariate</td>
-</tr>
-<tr class="even">
-<td>output variable</td>
-<td>input variable</td>
-</tr>
-<tr class="odd">
-<td>endogenous variable</td>
-<td>exogenous variable</td>
-</tr>
-<tr class="even">
-<td>target</td>
-<td>feature</td>
-</tr>
-<tr class="odd">
-<td>label</td>
-<td>feature</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="어떤-경우-ols는-곤란한가" class="level3">
-<h3 class="anchored" data-anchor-id="어떤-경우-ols는-곤란한가">어떤 경우 OLS는 곤란한가?</h3>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/miro.medium.com/max/1280/0*gKOV65tvGfY8SMem.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
-<p>regressor가 하나인 상황을 가정하고 위의 그림을 보자. regressand가 0, 1인 상태로 그대로 회귀분석을 하면 그림의 왼쪽 같이 나온다. 이 상태에서는 뭐가 문제일까? 회귀식의 기울기를 구할 수 있으니 된 것 아니냐? 문제가 있다. 앞서 0과 1은 값 그 자체로 의미를 지니지 않는다고 말했다. 그런데 이를 그대로 값으로 바꿔서 회귀분석을 해도 좋은 것일까? 그러기에는 뭔가 찜찜하다. 게다가 <img src="https://latex.codecogs.com/png.latex?x"> 값에 따라서 회귀식의 예측치가 <img src="https://latex.codecogs.com/png.latex?%5B0,1%5D">을 벗어날 수 있다. 임의로 계단 함수를 다시 얹어서 OLS(통상적인 최소자승법이라는 의미에서 Ordinary Least Squares라고 흔히 부른다)를 구제할 수도 있겠다. 즉,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0As(%5Cbeta%20x)%20=%0A%5Cbegin%7Bcases%7D%0A1%20&amp;%20%5Ctext%7Bif%20$%5Cbeta%20x%20%5Cgeq%201$%7D%20%20%5C%5C%0A0%20&amp;%20%5Ctext%7Bif%20$%5Cbeta%20x%20%3C%200$%7D%0A%5Cend%7Bcases%7D%0A"></p>
-<p>회귀식의 예측을 확률에 맞게 임의로 꺾어주는 것이다. 이러한 과정을 조금 더 ‘부드럽게’ 혹은 보다 ‘그럴 듯하게’ 할 수 없을까?</p>
-</section>
-<section id="범주형에서-확률로" class="level3">
-<h3 class="anchored" data-anchor-id="범주형에서-확률로">범주형에서 확률로</h3>
-<p>앞서 0 또는 1의 문제가 범주형의 문제라고 했다. 따라서 0, 1은 값 자체로는 아무 의미를 지니지 않는다. 회귀분석의 regressand가 실수값을 지닐 때 분석으로서 의미를 지닌다. 그렇다면 그렇게 바뀌보면 어떨까. 범주형 변수가 결국 상태를 나타내는 것이라면 1이라는 상태를 지닐 ’확률’을 추정하는 문제로 바꿔 생각해볼 수 있겠다. 즉,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0Ap(y_i%20=%201%20%7C%20%5Cboldsymbol%7Bx_i%7D)%20=%20p(%5Cboldsymbol%7Bx_i%7D)%0A"></p>
-<p>그런데 앞서 보았듯이 확률 값을 선형 회귀로 추정하는 데에는 어려움이 있다. 통상적인 회귀 모형의 특성을 유지하면서도 확률 값을 [0,1] 사이에 ‘잘’ 떨궈야 하기 때문이다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bp(%5Cboldsymbol%7Bx_i%7D)%7D%7B1-p(%5Cboldsymbol%7Bx_i%7D)%7D%0A"></p>
-<p>regressand를 이렇게 바꾸면 우선 가능한 값의 범위가 <img src="https://latex.codecogs.com/png.latex?%5B0,%20%5Cinfty)">로 확장된다. 여기서 음수 값을 포괄하는 방법은 없을까? 여기에 자연 로그를 적용해보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cln%20%5Cdfrac%7Bp(%5Cboldsymbol%7Bx_i%7D)%7D%7B1-p(%5Cboldsymbol%7Bx_i%7D)%7D%0A"></p>
-<p>이렇게 되면 가능한 값의 범위가 <img src="https://latex.codecogs.com/png.latex?(-%5Cinfty,%20%5Cinfty)">가 된다. Regressand가 이 형태라면 선형 회귀를 적용해도 좋겠다.</p>
-<p>즉,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cln%20%5Cdfrac%7Bp(%5Cboldsymbol%7Bx_i%7D)%7D%7B1-p(%5Cboldsymbol%7Bx_i%7D)%7D%20=%20%5Cunderset%7B1%20%5Ctimes%20k%7D%7B%5Cphantom%7B%5Cboldsymbol%7B%5Cbeta%7D%7D%5Cboldsymbol%7B%5Cboldsymbol%7Bx_i%7D%7D%20%5Cphantom%7B%5Cboldsymbol%7B%5Cbeta%7D%7D%7D%5Cunderset%7Bk%20%5Ctimes%201%7D%7B%5Cboldsymbol%7B%5Cbeta%7D%7D,%20~k%20=%201,%20%202,%20%5Cdotsc,%20n%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?n"> 개의 관찰에 있을 때 이를 매트릭스 형태로 적으면 다음과 같다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cln%20%5Cdfrac%7Bp(%5Cboldsymbol%7BX%7D)%7D%7B1-p(%5Cboldsymbol%7BX%7D)%7D%20=%20%5Cunderset%7Bn%20%5Ctimes%20k%7D%7B%5Cphantom%7B%5Cboldsymbol%7B%5Cbeta%7D%7D%5Cboldsymbol%7BX%7D%5Cphantom%7B%5Cboldsymbol%7B%5Cbeta%7D%7D%7D%5Cunderset%7Bk%20%5Ctimes%201%7D%7B%5Cboldsymbol%7B%5Cbeta%7D%7D%0A"></p>
-<p>애석하지만 이 식은 우리에게 주어진 자료로는 추정할 수 없다. 당장 좌변의 regressand를 얻으려면 관찰별로 확률값을 알아야 하는데 우리에게 주어진 값은 0 또는 1 뿐이다. 따라서 위의 식은 선형 회귀와 유사한 모형을 적용할 수 있는 방법을 찾은 것일 뿐 실제로 추정할 수 있는 식이 아니다. <img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%7B%5Cbeta%7D">는 어떻게 구해야 할까?</p>
-<p>이를 보기 전에 추정 모형에서 로지스틱 함수를 찾아보자. 위의 식에서 <img src="https://latex.codecogs.com/png.latex?p(x_i)">를 구해보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cln%20%5Cdfrac%7Bp(%5Cboldsymbol%7Bx_i%7D)%7D%7B1-p(%5Cboldsymbol%7Bx_i%7D)%7D%20&amp;%20=%5Cboldsymbol%7Bx_i%7D%5Cboldsymbol%7B%5Cbeta%7D%20%5C%5C%0A%5Cdfrac%7Bp(%5Cboldsymbol%7Bx_i%7D)%7D%7B1-p(%5Cboldsymbol%7Bx_i%7D)%7D%20%20&amp;%20=%20e%5E%7B%5Cboldsymbol%7Bx_i%7D%5Cboldsymbol%7B%5Cbeta%7D%7D%20%5C%5C%0Ap(%5Cboldsymbol%7Bx_i%7D)%20&amp;%20=%20%5Cdfrac%7Be%5E%7B%5Cboldsymbol%7Bx_i%7D%5Cboldsymbol%7B%5Cbeta%7D%7D%7D%7B1+e%5E%7B%5Cboldsymbol%7Bx_i%7D%5Cboldsymbol%7B%5Cbeta%7D%7D%7D%20%5C%5C%0Ap(%5Cboldsymbol%7Bx_i%7D)%20&amp;%20=%20%5Cdfrac%7B1%7D%7Be%5E%7B-%5Cboldsymbol%7Bx_i%7D%5Cboldsymbol%7B%5Cbeta%7D%7D%20+%201%7D%0A%5Cend%7Baligned%7D%0A"></p>
-<p>앞서 본 그림의 오른쪽과 같은 형태의 로지스틱 함수가 도출된다. 요컨대, 로지스틱 함수는 regressor를 해당 사건이 발생할 확률과 연결시키는 장치다. 이렇게 보면 로지스틱 회귀는 이른바 일반 선형 모형(Generalized Linear Model)의 한 사례다. 일반 선형 모형이란 종속 변수, 즉 식의 왼쪽이 어려가지 이유에서 실수 값이 아닌 제한된 값 혹은 범주 값을 지닐 때 이를 여러가지 방법을 통해 실수로 바꾸는 방식으로 추정을 하는 방법이다. 지금까지 살펴본 방법이 그 사례의 하나다.</p>
-</section>
-</section>
-<section id="link-function" class="level2">
-<h2 class="anchored" data-anchor-id="link-function">Link function</h2>
-<p>말이 나온 김에 링크 함수에 대해서 살펴보고 가자. 위에서 보듯이, 사실 회귀 분석이란 실수의 범위를 지니는 좌변을 역시 변수의 선형결합을 통해 이루어진 우변으로 설명하려는 것이다. 그런데 만일 좌변의 영역이 실수 전체가 아니라면? - 절단 자료 (truncated): 지속 시간의 경우 0보다 큰 실수가 된다. - 범주형 자료: 이 경우는 수료 표현이 힘들다. - 정수형 자료</p>
-<p>이럴 때는 어떻게 해야 할까? 회귀 분석의 틀을 벗어나지 않으면서 가장 간단한 해결책은 좌변을 바꾸는 것이다. 좌변은 어떻게 바꿔야 할까? 우선 좌변에 올 것의 조건부 평균을 다음과 같이 두자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathrm%20E%20(y_i%20%7C%20%5Cboldsymbol%20x_i)%20=%5Cmu_i%0A"></p>
-<p>그리고 우변의 경우 평범하게 다음과 같이 두자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ceta_i%20=%20%5Cbeta_0%20+%20%5Cbeta_1%20x_%7Bi1%7D%20%20+%20%5Cdotsb%20+%20%5Cbeta_p%20x_%7Bip%7D%0A"></p>
-<p>이 둘은 바로 연결이 안된다. 이 둘을 연결시켜주는 어떤 함수가 있다면? 즉,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0Ag(%5Cmu_i)%20=%20%5Ceta_i%20=%20%5Cboldsymbol%20x_i%5ET%20%5Cbeta%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?g(%5Ccdot)">이 링크 함수에 해당한다. 로짓 회귀의 경우에는 <img src="https://latex.codecogs.com/png.latex?%5Cln%20%5Cfrac%7Bp(x_i)%7D%7B1-p(x_i)%7D">에 해당한다. 링크 함수의 역함수는 뭐라고 부를까? 로짓 회귀에서 아래의 값에 해당한다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0Ap(%5Cboldsymbol%7Bx_i%7D)%20=%20%5Cdfrac%7B1%7D%7Be%5E%7B-%5Cboldsymbol%7Bx_i%7D%5Cboldsymbol%7B%5Cbeta%7D%7D%20+%201%7D%0A"></p>
-<p>이는 평균 함수(mean function)이라고 부른다. 로짓 회귀의 경우는 이산 변수를 활용하기 때문에 확률 질량 함수가 곧 확률이 된다는 점을 기억해두자.</p>
-<section id="three-steps" class="level3">
-<h3 class="anchored" data-anchor-id="three-steps">Three steps</h3>
-<p>위 과정이 세 가지 단계를 거쳤다는 점을 쉽게 알 수 있을 것이다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0Ay_i%20%5Cxrightarrow%7B%5Crm%20prob.~function%7D%20%5Cmu_i%20%5Cxrightarrow%7B%5Crm%20link~function%7D%20%5Ceta_i%20=%20%5Cboldsymbol%20x_i%20%5Cbeta%0A"></p>
-<p>원래 관찰값 <img src="https://latex.codecogs.com/png.latex?y_i">는 모형에 관한 가정을 통해서 확률 (질량/밀도) 함수를 통해 <img src="https://latex.codecogs.com/png.latex?%5Cmu_i"> 값으로 변형된다. 이 값은 다시 연결 함수를 통해서 선형 회귀가 가능한 형태로 변형된다. 이제 <img src="https://latex.codecogs.com/png.latex?y_i">에 관해서 어떤 가정을 하는지에 따라서 다양한 형태의 <img src="https://latex.codecogs.com/png.latex?%5Cmu_i">를 얻게 된다는 점을 알 수 있을 것이다.</p>
-<p>문제는 어떻게 연결 함수를 찾을 수 있을까 인데, 이는 여기서 다룰 범위를 벗어난다. <a href="https://www.stat.cmu.edu/~ryantibs/advmethods/notes/glm.pdf">이 글</a>을 참고하자.</p>
-</section>
-</section>
-<section id="계수는-어떻게-구하나" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="계수는-어떻게-구하나">계수는 어떻게 구하나?</h2>
-<p><img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cboldsymbol%20%5Cbeta%7D">은 어떻게 구할 수 있을까? 현재까지 우리에게 주어진 조건을 보자.</p>
-<ol type="1">
-<li>regressand는 0 또는 1 뿐이다.</li>
-<li>로짓 함수를 통해서 regressor를 해당 관찰의 확률과 연결시킬 수 있게 되었다.</li>
-</ol>
-<p>어차피 regressand를 실수로 바꿀 수 없는 이상 우리가 아는 선형 회귀분석을 쓸 수는 없다. 그래서 이름과 달리 우리가 아는 ‘회귀분석’, 즉 OLS를 여기서 쓸 수는 없다. 미안하다. 앞에서 거짓말 했다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cln%20%5Cdfrac%7Bp(%5Cboldsymbol%7Bx_i%7D)%7D%7B1-p(%5Cboldsymbol%7Bx_i%7D)%7D%20=%20%5Cunderset%7B1%20%5Ctimes%20k%7D%7B%5Cphantom%7B%5Cboldsymbol%7B%5Cbeta%7D%7D%5Cboldsymbol%7Bx_i%7D%5Cphantom%7B%5Cboldsymbol%7B%5Cbeta%7D%7D%7D%5Cunderset%7Bk%20%5Ctimes%201%7D%7B%5Cboldsymbol%7B%5Cbeta%7D%7D,%20~k%20=%201,%20%202,%20%5Cdotsc,%20n%0A"></p>
-<p>애초에 <img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%20%5Cbeta">을 알고 있어야, 이 식으로부터 <img src="https://latex.codecogs.com/png.latex?p(%5Ccdot)">을 구해낼 수 있다. 그런데 우리가 아는 회귀분석이란 <img src="https://latex.codecogs.com/png.latex?y">와 <img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%7B%5Crm%20X%7D">가 주어졌을 때 하는 것 아닌가? 회귀분석의 좌변이 없기에 OLS로는 추정할 수 없다.</p>
-<p>그래서 로짓 회귀는 이름과 달리 <img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%7B%5Cbeta%7D">의 추정치 <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cboldsymbol%5Cbeta%7D">를 구하는데 OLS의 방법을 쓰지 않는다. 로짓 회귀에서는 어떻게 <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cboldsymbol%5Cbeta%7D">를 얻는 것일까?</p>
-<section id="확률-vs-우도" class="level3">
-<h3 class="anchored" data-anchor-id="확률-vs-우도">확률 vs 우도</h3>
-<p>잠시 로짓 회귀의 추정을 살펴보기 전에 확률과 우도의 차이점에 관해서 알아보자. 분포와 그 분포의 파리미터를 알고 있을 때 해당 샘플이 관찰될 확률을 구할 수 있다. 거칠게 표현하면 이렇다. 연속 확률변수 <img src="https://latex.codecogs.com/png.latex?x">가 따르는 어떤 분포가 있다고 할 때, 해당 분포의 파라미터(정규분포라면 평균과 분산이다) <img src="https://latex.codecogs.com/png.latex?%5Ctheta">에 대해서 <img src="https://latex.codecogs.com/png.latex?P(x_1%20%3C%20x%20%3Cx_2%20%7C%20%5Ctheta)">이 확률이다. 우도(likelihood)는 무엇일까? 우도는 확률 분포의 수학적인 형태를 뒤집은 것이다. 일단 연속 확률 변수를 가정하자. 어떤 샘플이 관찰되었다고 할 때 우도란 특정 파라미터 하에서 얻게 되는 분포의 특정 확률 밀도함수를 의미한다. 연속 확률변수가 아니라 이산 확률변수라면, 확률 질량함수가 될 것이고 이 경우에는 확률과 같다. 파라미터를 변수로 잡으면 이 확률 밀도함수 혹은 질량함수가 우도가 된다.</p>
-<p>요컨대 주어진 것(conditioning)의 차이에 따라서 확률과 우도의 정의가 달라진다. 다시 정리해보자. 우도를 일종의 함수라고 할 때 그 함수의 <img src="https://latex.codecogs.com/png.latex?x">에 해당하는 것이 파라미터다.</p>
-</section>
-<section id="최대-우도-추정maximum-likelihood-estimation" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="최대-우도-추정maximum-likelihood-estimation">최대 우도 추정(maximum likelihood estimation)</h3>
-<p>다시 문제로 돌아오자. 우리는 0, 1 즉 존재/비존재의 특징을 지니는 변수를 갖고 있다. 그리고 이 녀석은 이산 확률 분포를 따르기 때문에 우도 역시 그냥 확률이 되고, 이는 베르누이 분포를 따른다. 즉, 해당 확률이 발생할 확률 <img src="https://latex.codecogs.com/png.latex?p">일 때 발생하면 1, 아니면 0이 된다. 베르누이 분포의 확률 질량 함수를 간단하게 표현하는 방법은 없을까?</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AL(y_i)%20=%20p(%5Cboldsymbol%7Bx_i%7D;%20%5Cboldsymbol%7B%5Cbeta%7D)%5E%7By_i%7D%20(1-p(%5Cboldsymbol%7Bx_i%7D;%20%5Cboldsymbol%7B%5Cbeta%7D))%5E%7B1-y_i%7D%0A"></p>
-<p>위와 같은 식으로 간단히 해결된다. 위 식에서 <img src="https://latex.codecogs.com/png.latex?y_i">가 1이면 <img src="https://latex.codecogs.com/png.latex?p(%5Ccdot)">가, 0이면 <img src="https://latex.codecogs.com/png.latex?1-p(%5Ccdot)">가 할당된다. 이제 우리는 <img src="https://latex.codecogs.com/png.latex?n"> 개의 관찰에 관해서 식의 좌변에는 0,1을 갖고 있다. 각각의 시행이 독립적이라고 가정하면 주어진 형태의 데이터를 관찰하게 될 우도는 이 확률을 곱한 것과 같다. 즉,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AL(y%7C%7B%5Cboldsymbol%20X%7D)%20=%20%5Cprod_%7Bi%20=%201%7D%5E%7Bn%7D%20%20L(y_i)%20=%20%5Cprod%20p(%5Cboldsymbol%7Bx_i%7D;%20%5Cboldsymbol%7B%5Cbeta%7D)%5E%7By_i%7D%20(1-p(%5Cboldsymbol%7Bx_i%7D;%20%5Cboldsymbol%7B%5Cbeta%7D))%5E%7B1-y_i%7D%20=%20L(%5Cboldsymbol%7B%5Cbeta%7D%7Cy,%20%7B%5Cboldsymbol%20X%7D)%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%7B%5Cbeta%7D">에 따라서 우도가 달라지게 되므로 우도 함수가 일종의 목적 함수가 된다. 우도를 극대화해주는 <img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%7B%5Cbeta%7D">가 최대 우도 추정치, 즉 MLE(MLE, maximum likelihood estimator) <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cboldsymbol%5Cbeta%7D"> 이다. 즉,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%20%7B%5Cboldsymbol%20%5Cbeta%7D%20=%20%5Ctext%7Barg%20max%20%7D%7BL(%7B%5Cboldsymbol%20%5Cbeta%7D%7Cy,%20%7B%5Cboldsymbol%20X%7D)%7D%0A"></p>
-<p>간혹 목적 함수, 즉 우도 함수가 비선형이라서 목적 함수의 최대화를 달성하는 해 <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cboldsymbol%5Cbeta%7D">를 축약형(reduced form)으로 구하기 힘들다는 내용을 접하곤 한다. 이는 반쪽만 맞다. 반례로 선형 회귀 모형에서 에러 항이 정규 분포를 따른다고 가정하면 최대 우도 추정을 적용할 수 있다. 정규 분포의 우도 역시 비선형이지만, 축약형 해를 쉽게 구할 수 있다.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>이때 MLE <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cboldsymbol%5Cbeta%7D">은 통상적인 방법으로 구한 OLS 추정량와 동일하다. 본문에서 말했듯이, 이는 수치적인 방법이 아니라 분석적인 방법을 통해 축약형으로 도출 가능하다. <a href="https://en.wikipedia.org/wiki/Proofs_involving_ordinary_least_squares#Maximum_likelihood_approach">여기</a>를 참고하라.</p>
-</div></div><p>왜 로짓 회귀에서는 축약형 해를 구할 수 없을까? 우도 추정에서 우리가 관심이 있는 것은 목적함수를 극대화하는 <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cboldsymbol%5Cbeta%7D"> 값이지 우도 자체가 아니다. 따라서 원래의 우도를 적절한 형태로 변형해도 변형된 목적함수를 극대화해주는 <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cboldsymbol%5Cbeta%7D">가 바뀌지 않는다면 목적 함수를 변형해도 괜찮다. 때로는 변형이 계산을 쉽게 바꿔준다. 정규분포는 오일러 수(<img src="https://latex.codecogs.com/png.latex?e">)의 지수 위에 최대화에 필요한 파라미터가 다 올라가 있다. 따라서 원래 목적함수에 <img src="https://latex.codecogs.com/png.latex?%5Clog_n">를 취하면 곱셈이 덧셈으로 변하고 오일러 수 위에 지수로 올라가 있단 파라미터들이 앞으로 나오게 된다. 하지만 아래 식에서 보듯이 로짓 함수는 그렇지 않다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0Ap(%5Cboldsymbol%7Bx_i%7D)%20%20=%20%5Cdfrac%7B1%7D%7Be%5E%7B-%5Cboldsymbol%7B%5Cboldsymbol%7Bx_i%7D%7D%5Cboldsymbol%7B%5Cbeta%7D%7D%20+%201%7D%0A"></p>
-<p>이 함수에 <img src="https://latex.codecogs.com/png.latex?%5Clog_n">을 취한다고 해서 단순해지지 않는다. 로짓 함수의 경우 우도 극대화에서 축약형을 해를 구할 수 있는 변형이 없기 때문에 해당 우도를 극대화하는 파라미터를 찾기 위해서는 수치 최적화(numerical optimization)를 활용하는 것이다.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>수치 최적화의 자세한 내용과 사례는 <a href="https://ratsgo.github.io/machine%20learning/2017/07/02/logistic/">이 글</a>을 참고하라.</p>
-</div></div></section>
-<section id="계수의-의미는" class="level3">
-<h3 class="anchored" data-anchor-id="계수의-의미는">계수의 의미는?</h3>
-<p>보통 기계 학습의 맥락에서 로짓 회귀는 가장 원시적인 분류기(classifier)로 소개된다. 즉 <img src="https://latex.codecogs.com/png.latex?y_i">의 속성을 예측하는 분류 장치이기 때문에 <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cboldsymbol%5Cbeta%7D">에 특별한 의미를 부여하지 않는다. 하지만 회귀 분석을 인과관계의 추론의 활용해 온 여타 분야에서는 <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cboldsymbol%5Cbeta%7D">를 어떻게 해석할 것인지는 중요한 질문이다.</p>
-<p>먼저 OLS의 경우 변수를 어떻게 변형했는지에 따라서 다르지만, 대체적으로 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_i">는 해당 regressor <img src="https://latex.codecogs.com/png.latex?x_i">의 한계효과로 해석할 수 있다. 즉, <img src="https://latex.codecogs.com/png.latex?x_i">가 한 단위 변할 때 이에 따른 <img src="https://latex.codecogs.com/png.latex?y_i">의 변화량을 의미한다. 그런데, 로짓 회귀에서는 이렇게 해석할 수 없다. 앞서 보았듯이, 로짓 회귀의 추정식은 다음과 같다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cln%20%5Cdfrac%7Bp(%5Cboldsymbol%7Bx_i%7D)%7D%7B1-p(%5Cboldsymbol%7Bx_i%7D)%7D%20=%20%5Cunderset%7B1%20%5Ctimes%20k%7D%7B%5Cphantom%7B%5Cboldsymbol%7B%5Cbeta%7D%7D%5Cboldsymbol%7B%5Cboldsymbol%7Bx_i%7D%7D%5Cphantom%7B%5Cboldsymbol%7B%5Cbeta%7D%7D%7D%5Cunderset%7Bk%20%5Ctimes%201%7D%7B%5Cboldsymbol%7B%5Cbeta%7D%7D,%20~k%20=%201,%20%202,%20%5Cdotsc,%20n%0A"></p>
-<p>흔히 좌변의 <img src="https://latex.codecogs.com/png.latex?%5Cdfrac%7Bp(%5Cboldsymbol%7Bx_i%7D)%7D%7B1-p(%5Cboldsymbol%7Bx_i%7D)%7D">를 오즈(odds) 혹은 승산(勝計)이라고 부른다. 이때 <img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%7B%5Cbeta%7D%20=%20%5B%5Cbeta_1,%20%5Cdotsc,%20%5Cbeta_j,%20%5Cdotsc,%20%5Cbeta_k%5D">에서 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_j">는 regressor <img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%7Bx_i%7D">에 속한 <img src="https://latex.codecogs.com/png.latex?x_j"> 한 단위가 변할 때 오즈에 미치는 영향을 뜻한다.</p>
-<p>간혹 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_i">를 좌변의 상태를 변화시킬 확률의 변화로 해석하는 경우가 있는데 그렇게 하면 안된다. <img src="https://latex.codecogs.com/png.latex?x_i">의 변화가 상태를 0에서 1로 바꾸는 데 미치는 확률에 관심이 있다면, 아래의 두 가지에 유의하자.</p>
-<ol type="1">
-<li>OLS의 경우 회귀식 자체가 선형이기 때문에 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_i">에 관한 해석이 쉽고 단순하다. 그냥 직선의 기울기다. 그런데 로짓 회귀에서는 그렇게 분명하지 않다. 회귀식 자체가 비선형이므로 한계 효과를 구하기 위한 기울기를 ‘어디서’ 구할지가 문제가 된다. 측정 위치에 따라서 기울기가 달라지기 때문이다.</li>
-<li>도출하는 방법이 크게 어렵지는 않다. 측정에는 대체로 두 가지 방식이 많이 활용된다. regressor 값에서 <img src="https://latex.codecogs.com/png.latex?x_i">별로 확률값의 변화를 추정한 뒤 이를 평균하는 방식이다. 반대로 regressor 값의 평균에서 한번만 <img src="https://latex.codecogs.com/png.latex?p_i">에 미치는 영향을 추정하는 방법이다. 통계 패키지가 대체로 두 방법을 모두 지원하니 필요할 경우 찾아서 값을 구하면 되겠다.</li>
-</ol>
-</section>
-<section id="계수의-수학적인-이해" class="level3">
-<h3 class="anchored" data-anchor-id="계수의-수학적인-이해">계수의 수학적인 이해</h3>
-<p>이 부분이 부담스럽다면 넘어가도 좋다. 앞서 말한 한계 효과는 <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B%5Cpartial%20p%7D%7B%5Cpartial%20x_j%7D">이다. 즉, regressor의 한 변수<img src="https://latex.codecogs.com/png.latex?x_j"> 가 한 단위 변할 때 확률 변화를 측정한다. 즉,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0Ap(%5Cboldsymbol%7Bx_i%7D)%20=%20%5Cdfrac%7B1%7D%7Be%5E%7B-%5Cboldsymbol%7Bx_i%7D%5Cboldsymbol%7B%5Cbeta%7D%7D%20+%201%7D%0A"></p>
-<p>이 녀석을 그대로 미분해보자. 먼저 아래와 같이 <img src="https://latex.codecogs.com/png.latex?p(%5Ccdot)">을 변형하자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0Ap(%5Cboldsymbol%7Bx_i%7D)%20&amp;%20=%20%5Cdfrac%7B1%7D%7Be%5E%7B-%5Cboldsymbol%7Bx_i%7D%5Cboldsymbol%7B%5Cbeta%7D%7D%20+%201%7D%20%5C%5C%0A&amp;%20=%20%5Cdfrac%7Be%5E%7B%5Cboldsymbol%7Bx_i%7D%5Cboldsymbol%7B%5Cbeta%7D%7D%7D%7B1%20+%20e%5E%7B%5Cboldsymbol%7Bx_i%7D%5Cboldsymbol%7B%5Cbeta%7D%7D%7D%0A%5Cend%7Baligned%7D%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%20x_i%20=%20%5Bx%5E1,%20%5Cdotsc,%20x%5Ek%5D">이고, <img src="https://latex.codecogs.com/png.latex?x%5Ej">에 대해서 미분하면 아래와 같다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7B%5Cpartial%20p(%5Cboldsymbol%7Bx_i%7D)%7D%7B%5Cpartial%20x%5Ej%7D%20=%20%5Cdfrac%7B%5Cbeta_j%20e%5E%7B%5Cboldsymbol%7Bx_i%7D%5Cboldsymbol%7B%5Cbeta%7D%7D%7D%7B(e%5E%7B%5Cboldsymbol%7Bx_i%7D%5Cboldsymbol%7B%5Cbeta%7D%7D%20+%201)%5E2%7D%0A"></p>
-<p>이처럼 한계 효과는 미분을 통해 간단히 도출할 수 있다. 앞서 말했던 측정의 어려운 점이 무엇인지 이제 잘 볼 수 있다. <img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%7B%5Cbeta%7D">의 추정치로 MLE를 통해 구한 <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cboldsymbol%5Cbeta%7D">를 활용한다고 해도, 어떤 <img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%7Bx_i%7D">에서 측정하는지에 따라서 값이 달라진다. 평균(marginal effect at mean)에서 한 번만 측정할 것인지 아니면 <img src="https://latex.codecogs.com/png.latex?n">개의 모든 데이터 포인트에 대해서 계산한 뒤 이를 평균(average marginal effect)할 것인지 등의 선택이 필요하다. 보통 후자를 많이 활용하고 통계 패키지마다 해당 옵션을 제공하고 있다.</p>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>regression</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-11-10-understanding-logit-regression.html</guid>
-  <pubDate>Sat, 09 Nov 2019 15:00:00 GMT</pubDate>
-  <media:content url="https://miro.medium.com/max/1280/0*gKOV65tvGfY8SMem.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Understanding Regression</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-10-25-understanding-regression.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="tldr" class="level2">
-<h2 class="anchored" data-anchor-id="tldr">tl;dr</h2>
-<ul>
-<li>회귀분석을 선형 대수를 통해서 이해하면 새로운 깨달음을 얻을 수 있다.</li>
-<li>회귀분석이라는 것은 PCA와 마찬가지로 차원을 ’축소’하는 방법이다. <img src="https://latex.codecogs.com/png.latex?n"> 개의 관찰을 지닌 어떤 한 대상을 이보다 낮은 <img src="https://latex.codecogs.com/png.latex?k(%3Cn)"> 개의 변수로 요약하는 것이 핵심이다.</li>
-<li>선형대수로 보면 <img src="https://latex.codecogs.com/png.latex?%5Cmathrm%20R%5E2"> 공식은 피타고라스 정리의 흔한 응용 사례이며, 코사인 유사도와 거의 같은 개념이다.</li>
-</ul>
-</section>
-<section id="regression-in-vector-space" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="regression-in-vector-space">Regression in vector space</h2>
-<p>여기서 회귀분석을 해설할 생각은 없다. 이미 너무나 많은 그리고 매우 훌륭한 내용들이 책, 웹, 강의로 넘쳐날테니까. 이 글의 용도는 그림 하나로 지나치기 쉬운 회귀분석의 ’핵심’을 살피는 것이다. <a href="https://stats.stackexchange.com/questions/123651/geometric-interpretation-of-multiple-correlation-coefficient-r-and-coefficient">crossvalidated</a>에서 아래 그림을 보는 순간 일종의 ’돈오돈수’가 강림했다. (이렇게 이해하면 쉬웠을 것을…)</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
-<p>먼저 우리에게 익숙한 회귀분석 모델을 매트릭스로 적어보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cunderset%7Bn%20%5Ctimes%201%7D%7B%5Cphantom%7B%5Cboldsymbol%20%5Cgamma%7D%5Cmathbf%7BY%7D%5Cphantom%7B%5Cboldsymbol%20%5Cgamma%7D%7D%20=%20%5Cunderset%7Bn%20%5Ctimes%20k%7D%7B%5Cphantom%7B%5Cboldsymbol%20%5Cgamma%7D%20%5Cmathbf%7BX%7D%20%5Cphantom%7B%5Cboldsymbol%20%5Cgamma%7D%20%7D%5Cunderset%7Bk%20%5Ctimes%201%7D%7B%5Cboldsymbol%20%5Cbeta%7D%20+%20%5Cunderset%7Bn%20%5Ctimes%201%7D%7B%5Cphantom%7B%5Cboldsymbol%20%5Cbeta%7D%20%5Cboldsymbol%20%5Cvarepsilon%20%5Cphantom%7B%5Cboldsymbol%20%5Cgamma%7D%20%7D%0A"></p>
-<p>식에 관한 자세한 설명 역시 생략한다. 대충 <img src="https://latex.codecogs.com/png.latex?n"> 개의 관찰 수과 <img src="https://latex.codecogs.com/png.latex?k"> 개의 regressor를 지닌 중회귀분석 모형이라고 생각하면 되겠다. 앞서 본 그림은 보통 회귀분석의 예시로 많이 활용되는 아래 그림과는 다르다.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>흔히 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20Y">를 종속변수, <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">를 독립변수로 부르기도 한다. 하지만 이러한 이름에는 혼란의 여지가 있다. 여기서는 regressor, regressand라는 영어 표현을 그대로 쓰도록 하겠다.</p>
-</div></div><p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
-<p>위 그림은 1개의 regressor가 존재할 때 이것과 regressand를 그대로 2차원 평면에 관찰 수만큼 찍은 것이다. 첫번째 그림에서 “Observed Y”는 점 하나가 <img src="https://latex.codecogs.com/png.latex?n"> 개의 regressand를 모두 포괄한다. <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BY%7D%20%5Cin%20%7B%5Cmathbb%20R%7D%5E%7Bn%7D"> 벡터, 즉 <img src="https://latex.codecogs.com/png.latex?n"> 차원 벡터이고, 이것이 회귀식 좌변의 관찰값 <img src="https://latex.codecogs.com/png.latex?n"> 개를 표현한다.</p>
-<p>이제 선형대수의 세계로 들어가보자. <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">의 열(column)이 각각 <img src="https://latex.codecogs.com/png.latex?n"> 개의 관찰 값을 지닌 regressor에 해당한다. 이 각각의 컬럼 <img src="https://latex.codecogs.com/png.latex?x_i">는 <img src="https://latex.codecogs.com/png.latex?x_i%20%5Cin%20%7B%5Cmathbb%20R%7D%5E%7Bn%7D"> 벡터이다. <img src="https://latex.codecogs.com/png.latex?x_i"> 벡터 <img src="https://latex.codecogs.com/png.latex?k"> 개가 생성할 수 있는 공간이 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">의 열 공간(column space)이다. 앞으로 이를 col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">로 표기하자.</p>
-<p>이렇게 생각하면 좋겠다. <img src="https://latex.codecogs.com/png.latex?x_i%20%5Cin%20%7B%5Cmathbb%20R%7D%5E%7Bn%7D"> 벡터가 <img src="https://latex.codecogs.com/png.latex?k(%3Cn)"> 개 있다고 하자. 이는 <img src="https://latex.codecogs.com/png.latex?n"> 보다 차원이 낮기 때문에 기하학적으로는 <img src="https://latex.codecogs.com/png.latex?n"> 차원 공간에서 초평면(hyperplane)으로 나타날 것이다. 위 그림에서 컬럼 스페이스가 평면으로 표현되는 것은 이러한 취지다. 3차원 벡터의 열 공간이 생성하는 초평면을 예시하면 아래와 같다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
-<p>col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">의 최대 차원, 즉 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">의 랭크(위수)는 무엇일까? 회귀분석에서는 대체로 <img src="https://latex.codecogs.com/png.latex?n%20%3E%20k">가 일반적이고 이런 상황에서 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">의 랭크는 <img src="https://latex.codecogs.com/png.latex?k">를 넘을 수 없다. 다시 말하면, <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">가 생성하는(span)하는 컬럼 스페이스의 차원의 크기가 <img src="https://latex.codecogs.com/png.latex?k">를 넘을 수 없다. 그리고 잘 된 회귀분석이라면 <img src="https://latex.codecogs.com/png.latex?%7B%5Crm%20rank%7D(%5Cmathbf%20X)%20=%20k">를 만족한다.</p>
-<p>맨 앞에 제시했던 그림을 다시 보자. 아래 색칠된 평면이 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">가 생성하는 컬럼 스페이스, 즉 col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">를 표현하고 있다. 몹시 특별한 경우가 아니라면 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20Y%20%5Cin%20%7B%5Cmathbb%20R%7D%5E%7Bn%7D"> 벡터가 col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">에 속할 가능성은 없다. 그렇다면 회귀분석의 필요도 애초에 없었을 것이다. col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">를 통해서 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20Y">를 완벽하게 예측할 수 있는데 무슨 걱정이 있겠는가? 대체로 우리가 마주하는 상황은 <img src="https://latex.codecogs.com/png.latex?n"> 차원 벡터를 <img src="https://latex.codecogs.com/png.latex?k"> 차원 공간에 끼워 넣기 힘든 상황이다.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>이를 선형 대수에서 배운 연립방정식을 푸는 문제로 이해해도 좋겠다. <img src="https://latex.codecogs.com/png.latex?A%20x%20=%20b(b%20%5Cneq%20%5Cboldsymbol%7B0%7D)">라고 하자. <img src="https://latex.codecogs.com/png.latex?n"> 개의 미지수가 유일한 해를 지니고 위해서는 <img src="https://latex.codecogs.com/png.latex?%7B%5Crm%20rank%7D(A)%20=%20n">이어야 한다. 즉 서로 독립인 식이 <img src="https://latex.codecogs.com/png.latex?n"> 개 주어져야 고유의 해 <img src="https://latex.codecogs.com/png.latex?x">를 찾을 수 있다. 그런데 회귀분석은 식이 <img src="https://latex.codecogs.com/png.latex?k(%3Cn)"> 개만 주어진 상황이다.</p>
-</div></div><p>회귀분석의 목표는 regressor를 통해서, 더 정확하게는 regressor의 집합이 생성하는 공간을 통해서 regressand를 ‘가장’ 잘 설명하는 것이다. 회귀분석이란 regressand와 ‘닮은’ 것 col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">에서 찾는 것이다. 즉 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20Y">와 닮은 무엇을 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">의 컬럼 스페이스에 찾아야 한다. 직관적으로 쉽게 떠올릴 수 있는 것은 이 평면과 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20Y">의 (유클리드) 거리를 가장 짧게 만들어주는 벡터일 것이다. 그리고 이 최단거리는 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20Y">에서 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X"> 컬럼 스페이스로 내린 수선의 발이 닿는 col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">의 지점이다. col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X"> 내에 있는 이런 지점을 찾는 연산자(operator)가 회귀분석 계수 <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cboldsymbol%20%5Cbeta%7D">이다. 즉,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%7B%5Cboldsymbol%20%5Cbeta%7D%20=%20(%7B%5Cmathbf%20X%7D'%7B%5Cmathbf%20X%7D)%5E%7B-1%7D%20(%7B%5Cmathbf%20X%7D'%20%5Cmathbf%20Y)%0A"></p>
-<p>정석은 아니지만 이 연산자를 이해하는 흥미로운 방법이 있다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%7B%5Cboldsymbol%20X%7D%20%7B%5Cboldsymbol%20%5Cbeta%7D%20=%20%7B%5Cboldsymbol%20Y%7D">가 연립방정식이라면 해는 <img src="https://latex.codecogs.com/png.latex?%7B%5Cmathbf%20X%7D%5E%7B-1%7D">을 구해서 얻을 수 있을 것이다. 하지만 <img src="https://latex.codecogs.com/png.latex?%7B%5Cmathbf%20X%7D%20%5Cin%20%5Cmathbb%20R%5E%7Bn%20%5Ctimes%20k%7D">이므로 딱 떨어지는 특수해 1개를 구할 수 없다. 되도록 근사값의 해를 구하려면 어떻게 해야 할까?</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%7B%5Cboldsymbol%20X%7D'%7B%5Cboldsymbol%20X%7D%20%5Chat%7B%5Cboldsymbol%20%5Cbeta%7D%20&amp;%20=%20%7B%5Cboldsymbol%20X%7D'%7B%5Cboldsymbol%20Y%7D%20%5C%5C%0A%5Chat%7B%5Cboldsymbol%20%5Cbeta%7D%20&amp;%20=%20(%7B%5Cboldsymbol%20X%7D'%7B%5Cboldsymbol%20X%7D)%5E%7B-1%7D%7B%5Cboldsymbol%20X%7D'%7B%5Cboldsymbol%20Y%7D%0A%5Cend%7Baligned%7D%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cboldsymbol%20%5Cbeta%7D">가 왠지 원래 식의 근사값으로 기능할 것 같지 않은가? (실제로 그렇다)</p>
-<p>이 연산자를 reggressor의 모음인 col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">에 적용하면, <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%7BX%7D%20%5Chat%7B%5Cboldsymbol%20%5Cbeta%7D%20=%5Chat%7B%5Cmathbf%20Y%7D">이 {X}’계산된다. 그림에서 보듯이 <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cmathbf%20Y%7D">은 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20Y">와 col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">의 거리를 최소화하는 위치에 존재한다. <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cmathbf%20Y%7D">는 어떤 벡터일까? <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cmathbf%20Y%7D%20%5Cin%20%7B%5Cmathbb%20R%7D%5En"> 벡터지만, col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X(%5Cin%20%7B%5Cmathbb%20R%7D%5Ek)">내에 위치하고 있다. <img src="https://latex.codecogs.com/png.latex?n"> 차원이 <img src="https://latex.codecogs.com/png.latex?k"> 차원으로 축소된 셈이다. 이것이 회귀분석의 핵심이다.</p>
-<p>선형 대수의 관점에서 내용을 다시 음미해보자. <img src="https://latex.codecogs.com/png.latex?x_i%20%5Cin%20%7B%5Cmathbb%20R%7D%5En"> (for <img src="https://latex.codecogs.com/png.latex?i%20=%201,%20%5Cdotsc,%20k">) 벡터의 리그레서 <img src="https://latex.codecogs.com/png.latex?k"> 개를 선형 결합해서 초평면의 한점, 즉 원래의 관찰 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20Y">와 최소 거리를 지니는 벡터를 찾아야 한다. 이 거리를 최소화하는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_i">를 알고 있다면 이 벡터는 다음과 같이 표현된다. <img src="https://latex.codecogs.com/png.latex?%7B%5Cmathbf%20X%7D%20=%20%5Bx_1,%20%5Cdotsc,%20x_k%5D">일 때,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cunderset%7B(n%20%5Ctimes%201)%7D%7B%5Chat%7B%5Cmathbf%20Y%7D%7D%20&amp;%20=%20X%5Cbeta%20%5C%5C%0A&amp;%20=%20%5Bx_1,%20%5Cdotsc,%20x_k%5D%0A%5Cbegin%7Bbmatrix%7D%0A%5Cbeta_1%20%5C%5C%0A%5Cvdots%20%5C%5C%0A%5Cbeta_k%0A%5Cend%7Bbmatrix%7D%20%5C%5C%0A&amp;=%0Ax_1%20%5Cbeta_1%20+%20%5Cdotsc%20+%20x_k%20%5Cbeta_k%0A%5Cend%7Baligned%7D%0A"></p>
-<p>아래 그림을 참고하자.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/github.com/anarinsk/lie-regression/blob/master/assets/imgs/regression-vector_comb.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
-</section>
-<section id="r-squared-as-pythagorean-theorem" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="r-squared-as-pythagorean-theorem">R squared as Pythagorean Theorem</h2>
-<p>이제 <img src="https://latex.codecogs.com/png.latex?%5Cmathrm%20R%5E2">의 의미를 살펴보자. 결론부터 이야기하면 <img src="https://latex.codecogs.com/png.latex?%5Cmathrm%20R%5E2">는 그림에서 <img src="https://latex.codecogs.com/png.latex?(%5Cmathbf%20Y%20-%20%5Coverline%7B%5Cmathbf%20Y%7D)"> 벡터와 <img src="https://latex.codecogs.com/png.latex?(%5Chat%7B%5Cmathbf%20Y%7D-%5Coverline%7B%5Cmathbf%20Y%7D)"> 벡터가 이루는 각의 코사인 값, 즉 <img src="https://latex.codecogs.com/png.latex?%5Ccos%20%5Ctheta">다. 잠깐! 왜 직접 거리를 재지 않고 코사인 값을 재는 것일까? 우리는 얼마나 가까운지를 판단하기 쉽지 않다. 그래서 가까운 정도를 상대적인 비율로 나타내면 좋을 것이다. 즉, regressor의 컬럼 스페이스에 위치한 <img src="https://latex.codecogs.com/png.latex?%5Coverline%7B%5Cmathbf%20Y%7D">를 기준으로 거리를 재는 셈이다. 이렇게 측정된 상대적인 거리가 <img src="https://latex.codecogs.com/png.latex?%5Ccos%20%5Ctheta">이다. 이는 원점을 중심으로 두 벡터 사이의 코사인 값을 재는 코사인 유사도와 거의 같은 개념이다! 코사인 유사도란 길이가 서로 다른 두 벡터가 얼마나 비슷한지를 측정한다. 이를 응용하면 <img src="https://latex.codecogs.com/png.latex?%5Cmathrm%20R%5E2">란 관찰된 값(<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20Y">)과 피팅된 값(<img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20%7B%5Chat%20Y%7D">)이 얼마나 비슷한지를 측정한다.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>이런 면에서 보면, <img src="https://latex.codecogs.com/png.latex?%5Cmathrm%20R%5E2">에 코사인 유사도가 숨어 있는 셈이다. 두 벡터의 코사인 유사도란 개별 벡터가 지니고 있는 (유클리드) 길이와 관계 없이 벡터의 지향성을 중심으로 비슷한 정도를 파악하는 것이다. <img src="https://latex.codecogs.com/png.latex?%5Cmathrm%20R%5E2"> 역시 마찬가지다.</p>
-</div></div><p><img src="https://latex.codecogs.com/png.latex?%5Coverline%7B%5Cmathbf%20Y%7D">는 무엇일까? 포스팅의 맨 처음 보았던 그림과 같이 <img src="https://latex.codecogs.com/png.latex?%5Coverline%7BY%7D%20%5Cmathbf%7B1%7D_n">로 표기할 수 있다. <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20Y">의 평균값 <img src="https://latex.codecogs.com/png.latex?%5Coverline%7BY%7D">만으로 구성된 <img src="https://latex.codecogs.com/png.latex?(n%20%5Ctimes%201)"> 벡터다. 이 벡터는 col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X"> 안에 있을까? 당연히 그렇다. <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X">는 최대한 <img src="https://latex.codecogs.com/png.latex?k(%3Cn)"> 차원의 벡터이고, <img src="https://latex.codecogs.com/png.latex?%5Coverline%7B%5Cmathbf%20Y%7D">는 1차원 벡터다.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>왜 그런지 잠시 따져보자. 앞서 보았듯이 regressor의 평면은 <img src="https://latex.codecogs.com/png.latex?%5Calpha_1%20x_1%20+%20%5Cdotsb%20+%20%5Calpha_k%20x_k"> 와 같은 형태의 선형 결합을 통해 달성된다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Calpha_i">를 어떻게 잡는지에 따라서 <img src="https://latex.codecogs.com/png.latex?k"> 차원까지 이 식을 통해서 생성할 수 있다. 그런데 <img src="https://latex.codecogs.com/png.latex?%5Coverline%7B%5Cmathbf%20Y%7D">는 1차원 즉, 모든 원소가 <img src="https://latex.codecogs.com/png.latex?%5Coverline%7By%7D">, 즉 <img src="https://latex.codecogs.com/png.latex?y">의 평균이다. 따라서 이를 만족하는 <img src="https://latex.codecogs.com/png.latex?%5Calpha_i">(for <img src="https://latex.codecogs.com/png.latex?i%20=%201,%20%5Cdotsc,%20k">)를 <img src="https://latex.codecogs.com/png.latex?%7B%5Crm%20col%7D~%7B%5Cmathbf%20X%7D">에서 반드시 찾을 수 있다.</p>
-</div></div><p>어쨌든 이 코사인 값의 의미는 무엇일까?</p>
-<p>그림에서 보듯이 세 개의 벡터가 직각삼각형을 이루고 있으므로 아래의 식이 성립한다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cunderset%7B%5Ctext%7BTSS%7D%7D%7B%5CVert%20%5Cmathbf%20Y%20-%20%5Coverline%7B%5Cmathbf%20Y%7D%20%5CVert%5E2%7D%20=%20%5Cunderset%7B%5Ctext%7BRSS%7D%7D%7B%5CVert%20%5Cmathbf%20Y%20-%20%5Chat%7B%5Cmathbf%20Y%7D%20%5CVert%5E2%7D%20+%20%5Cunderset%7B%5Ctext%7BESS%7D%7D%7B%5CVert%20%5Chat%7B%5Cmathbf%20Y%7D%20-%20%5Coverline%7B%5Cmathbf%20Y%7D%20%5CVert%5E2%7D%0A"></p>
-<p>흔한 피타고라스의 정리다. 그런데 이것 어디서 많이 보던 식이다. 회귀분석 배우면 언제나 나오는 식이다. Regressand의 평균과 관찰의 이른바 총 제곱의 합(TSS: Total Sum of Squares)은 설명된 제곱의 합(ESS: Explained Sum of Squares)과 잔차 제곱의 합(RSS:Residual Sum of Squares)와 같다. 대체로 복잡하게 소개되는 이 식이 기하학적으로 보면 그냥 피타고라스의 공식에 불과한 것이다.</p>
-<p>양변을 <img src="https://latex.codecogs.com/png.latex?%5CVert%20%5Cmathbf%20Y%20-%20%5Coverline%7B%5Cmathbf%20Y%7D%20%5CVert%5E2">으로 나누면 다음과 같다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A1%20=%20%20%5Cdfrac%7B%5CVert%20%5Cmathbf%20Y%20-%20%5Chat%7B%5Cmathbf%20Y%7D%20%5CVert%5E2%7D%7B%5CVert%20%5Cmathbf%20Y%20-%20%5Coverline%7B%5Cmathbf%20Y%7D%20%5CVert%5E2%7D%20+%20%5Cdfrac%7B%5CVert%20%5Chat%7B%5Cmathbf%20Y%7D%20-%20%5Coverline%7B%5Cmathbf%20Y%7D%20%5CVert%5E2%7D%7B%5CVert%20%5Cmathbf%20Y%20-%20%5Coverline%7B%5Cmathbf%20Y%7D%20%5CVert%5E2%7D%0A"></p>
-<p>정의에 따라서 <img src="https://latex.codecogs.com/png.latex?1%20=%20%5Cdfrac%7B%5Ctext%7BRSS%7D%7D%20%7B%5Ctext%7BTSS%7D%7D%20+%20%7B%5Cmathrm%20R%7D%5E2">가 된다. 즉,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%20%20%7B%5Cmathrm%20R%7D%5E2%20=%201%20-%20%5Cdfrac%7B%5Ctext%7BRSS%7D%7D%7B%5Ctext%7BTSS%7D%7D%0A"></p>
-<p>사실 <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%20R%5E2">는 가끔 회귀분석의 성과 지표로 남용되는 경우가 있다. 이렇게 기하학적으로 보면 col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X"> 내에 표현된 <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cmathbf%20Y%7D"> 가 <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20Y">와 얼마나 가깝게 있는지를 <img src="https://latex.codecogs.com/png.latex?%5Coverline%7B%5Cmathbf%20Y%7D">를 기준으로 지표화한 것에 불과하다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%7B%5Cmathrm%20R%7D%5E2">는 회귀분석의 성과 지표로 어떤 의미가 있을까? 분석의 목표가 회귀분석을 통한 예측이라면, 즉 원래 관찰값과 예측된 값이 얼마나 떨어져 있는지 여부가 중요하다면 <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%20R%5E2">는 의미를 지닐 수 있다. 반면, 분석의 목표가 회귀분석을 통한 이러한 종류의 예측이 아니라 특정한 regressor의 인과관계에 관한 추정이라면, <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%20R%5E2">는 거의 무시해도 좋다.</p>
-<p>아울러 회귀분석이라는 이름을 달고 있지만 전형적인 회귀분석의 방법을 따르지 않는 기법에서 <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%20R%5E2">가 정의되지 않는 경우도 있다. 잘 알려진 로지스틱 회귀가 이에 해당한다. 로지스틱 회귀에서 회귀 계수의 추정은 여기서 봤듯이 관찰과 col <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20X"> 사이의 거리를 최소화하는 방식이 아니라 우도(likelihood)를 극대화하는 방식을 따른다. 따라서 벡터 공간의 피타고라스 정리를 따르는 <img src="https://latex.codecogs.com/png.latex?%5Ctextrm%20R%5E2">는 정의되지 않는다.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>궁여지책으로 이와 유사한 지표를 만들어낼 수는 있겠다. <a href="https://thestatsgeek.com/2014/02/08/r-squared-in-logistic-regression">여기</a>를 참고하라.</p>
-</div></div></section>
-<section id="bonus-regression-vs-pca" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="bonus-regression-vs-pca">Bonus: Regression vs PCA</h2>
-<p>회귀 분석과 PCA는 어떻게 다른가? 여러가지 답이 있을 수 있다. 그걸 다 소개하겠다는 게 아니다. 둘이 데이터 모델링의 시야에서 어떻게 다른지를 살펴보는 게 이 글의 목적이다. 이 글은 둘을 어떻게 실행하는지를 다루지 않는다. 앞선 PCA 관련 <a href="https://anarinsk.github.io/lie-math_pca/">포스팅</a>을 읽고 오시면 이해에 도움이 될 것이다.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>더 자세한 내용은 <a href="https://anarinsk.github.io/lie-qa_reg_pca/">여기</a>를 참고하자.</p>
-</div></div><section id="공통점" class="level3">
-<h3 class="anchored" data-anchor-id="공통점">공통점</h3>
-<section id="feature" class="level4">
-<h4 class="anchored" data-anchor-id="feature">Feature</h4>
-<p>일단 둘 다 <img src="https://latex.codecogs.com/png.latex?k"> 개의 feature 비슷한 것을 지닌다. 그리고 <img src="https://latex.codecogs.com/png.latex?n"> 개의 데이터 포인트가 제시된다.</p>
-</section>
-<section id="차원-축소" class="level4">
-<h4 class="anchored" data-anchor-id="차원-축소">차원 축소</h4>
-<p>흔히 PCA를 차원축소의 방법으로 이해하는데, 이 말은 맞다. 반대로 회귀분석은 이와 다르다고 이해하는 경우가 많은데 이 말은 틀리다. 회귀 분석도 어떻게 보면 ’차원 축소’다. 회귀 분석에서 target 변수는 <img src="https://latex.codecogs.com/png.latex?n"> 차원 공간 위의 주어진 한 점이다. 우리의 목표는 이 한 점을 잘 설명하는 더 낮은 차원의 어떤 지점을 찾는 것이다. 이런 점에서 본다면 회귀 분석 역시 차원 축소의 한 방법이라고 봐야 할 것이다.</p>
-</section>
-<section id="극소화" class="level4">
-<h4 class="anchored" data-anchor-id="극소화">극소화</h4>
-<p>PCA에서 ’분산 최대화’에 이르기까지 과정을 생략하다보면, PCA를 별도의 어떤 방법으로 인식하곤 한다. 그런데 앞선 포스팅에서 보았듯이 ’분산 최대화’란 사실 피처 벡터와 이를 예측하기 위한 어떤 벡터 사이의 거리를 최소화하는 과정에서 도출된 결과다. 이런 점에서 본다면, 회귀 분석이든 PCA는 MSE(Mean Square Error)를 최소화한다는 점에서는 목적 함수의 유형은 동일하다.</p>
-</section>
-</section>
-<section id="차이점" class="level3">
-<h3 class="anchored" data-anchor-id="차이점">차이점</h3>
-<section id="supervised-or-unsupervised" class="level4">
-<h4 class="anchored" data-anchor-id="supervised-or-unsupervised">Supervised or Unsupervised?</h4>
-<p>회귀 분석과 PCA를 지도 학습(supervised learning), 비지도 학습(unsupervised learning)으로 구분할 수는 없다. 다만 이 구분과 어느 정도 비슷한 부분이 있다. 회귀 분석은 target이 있다. 이 타겟과의 거리를 최소화하는 feature 공간의 어떤 위치를 찾는 것이 목적이다. 반면, PCA에는 target이 없다. <img src="https://latex.codecogs.com/png.latex?k"> 개의 feature를 최소 거리로 투영할 수 있는 스크린 벡터를 찾는게 목적이다. 간단히 말해서 PCA는 target 없이 벡터의 거리가 1인 임의의 프로젝션 벡터를 찾는 것이 목적이다.</p>
-
-
-</section>
-</section>
-</section>
-
- ]]></description>
-  <category>regression</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-10-25-understanding-regression.html</guid>
-  <pubDate>Thu, 24 Oct 2019 15:00:00 GMT</pubDate>
-  <media:content url="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" medium="image"/>
 </item>
 </channel>
 </rss>

@@ -1,12 +1,13 @@
 ---
-layout: post
-toc: false
-comments: true
-title:  Vector Geometry, part 1 
-description: 벡터 공간의 기하적 특성 1
-categories: [math, matrix-theory]
-
+title: Vector Geometrically, part 1
+description: 벡터 공간의 기하적 특성
+author: "JS HUHH"
+date: "01/05/2022"
+image: "https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg"
+categories: [linear-algebra]
+#margin-header: subscribe.html
 ---
+
 
 ## Concepts 
 
@@ -60,7 +61,7 @@ $$
 
 벡터를 점으로 나타내려면 어떻게 해야 할까? 두 점의 차이를 구하면 이는 벡터가 된다. 쉽게 생각해보자. 2차원 데카르트 좌표계에서 $(3,3)$이라는 점을 생각해보자. $(3,3)$이면 그냥 점이다. 반면, $(3,3) \leftarrow (0,0)$을 의미하면 $(3,3)$은 벡터다. 그래프 상에서 $(0,0)$에서 $(3,3)$으로 화살표를 그리면 이 역시 벡터다. 아래 그림을 참고 하자. 
 
-![enter image description here](https://notesclasses.com/wp-content/uploads/2020/04/Displacement-in-Physics-Explanation.png){: style="margin: auto; display: block; border:1.5px solid #021a40;"}{: width="400"}
+![](https://cdn.britannica.com/72/77672-004-AB0064CA.gif){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;" }
 
 ### Normal vector 
 
