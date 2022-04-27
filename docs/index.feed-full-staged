@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>lostineconomics.com</title>
+<link>https://anarinsk.github.io/lostineconomics_quarto/index.html</link>
+<atom:link href="https://anarinsk.github.io/lostineconomics_quarto/index.xml" rel="self" type="application/rss+xml"/>
+<description>Another useless blog</description>
+<generator>quarto-0.9.312</generator>
+<lastBuildDate>Tue, 26 Apr 2022 15:00:00 GMT</lastBuildDate>
+<item>
+  <title>{B4F502887207:/posts/git/2022-04-27-happy-giting.html}</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</link>
+  <description>{B4F502887207:/posts/git/2022-04-27-happy-giting.html}</description>
+  <category>git</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</guid>
+  <pubDate>Tue, 26 Apr 2022 15:00:00 GMT</pubDate>
+  <media:content url="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmxcpJ%2Fbtq9IDonGa1%2FLGoNFr3kBHT3tm8QnIwjrK%2Fimg.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>{B4F502887207:/posts/computer-tools/2021-11-19-python-in-github.html}</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2021-11-19-python-in-github.html</link>
+  <description>{B4F502887207:/posts/computer-tools/2021-11-19-python-in-github.html}</description>
+  <category>computer-tool</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2021-11-19-python-in-github.html</guid>
+  <pubDate>Thu, 18 Nov 2021 15:00:00 GMT</pubDate>
+  <media:content url="https://pyodide.org/en/stable/_static/pyodide-logo.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>{B4F502887207:/posts/container/2021-09-13-podman-1.html}</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</link>
+  <description>{B4F502887207:/posts/container/2021-09-13-podman-1.html}</description>
+  <category>container</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</guid>
+  <pubDate>Sun, 12 Sep 2021 15:00:00 GMT</pubDate>
+  <media:content url="https://anarinsk.github.io/lostineconomics_quarto//posts/container/image.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>{B4F502887207:/posts/container/2021-05-09-docker_korfont.html}</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</link>
+  <description>{B4F502887207:/posts/container/2021-05-09-docker_korfont.html}</description>
+  <category>container</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</guid>
+  <pubDate>Sat, 08 May 2021 15:00:00 GMT</pubDate>
+  <media:content url="https://developers.redhat.com/sites/default/files/styles/article_feature/public/blog/2014/05/homepage-docker-logo.png?itok=zx0e-vcP" medium="image"/>
+</item>
+<item>
+  <title>{B4F502887207:/posts/computer-tools/2021-02-02-all-vs-code.html}</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2021-02-02-all-vs-code.html</link>
+  <description>{B4F502887207:/posts/computer-tools/2021-02-02-all-vs-code.html}</description>
+  <category>computer-tool</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2021-02-02-all-vs-code.html</guid>
+  <pubDate>Mon, 01 Feb 2021 15:00:00 GMT</pubDate>
+  <media:content url="https://velog.velcdn.com/images/jeongjae96/post/0db5fc06-a8bb-4970-bf6c-3b5a69ebe940/vs%20code.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>{B4F502887207:/posts/computer-tools/2020-10-27-viva-binder.html}</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-10-27-viva-binder.html</link>
+  <description>{B4F502887207:/posts/computer-tools/2020-10-27-viva-binder.html}</description>
+  <category>computer-tool</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-10-27-viva-binder.html</guid>
+  <pubDate>Mon, 26 Oct 2020 15:00:00 GMT</pubDate>
+  <media:content url="https://mybinder.org/static/logo.svg" medium="image" type="image/svg+xml"/>
+</item>
+<item>
+  <title>{B4F502887207:/posts/computer-tools/2020-10-24-classy-latex.html}</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-10-24-classy-latex.html</link>
+  <description>{B4F502887207:/posts/computer-tools/2020-10-24-classy-latex.html}</description>
+  <category>computer-tool</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-10-24-classy-latex.html</guid>
+  <pubDate>Fri, 23 Oct 2020 15:00:00 GMT</pubDate>
+  <media:content url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/LaTeX_project_logo_bird.svg/1920px-LaTeX_project_logo_bird.svg.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>{B4F502887207:/posts/computer-tools/2020-09-26-windows-terminal.html}</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-09-26-windows-terminal.html</link>
+  <description>{B4F502887207:/posts/computer-tools/2020-09-26-windows-terminal.html}</description>
+  <category>computer-tool</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-09-26-windows-terminal.html</guid>
+  <pubDate>Fri, 25 Sep 2020 15:00:00 GMT</pubDate>
+  <media:content url="https://upload.wikimedia.org/wikipedia/commons/0/01/Windows_Terminal_Logo_256x256.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>{B4F502887207:/posts/container/2020-09-24-install-hangul-in-docker.html}</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html</link>
+  <description>{B4F502887207:/posts/container/2020-09-24-install-hangul-in-docker.html}</description>
+  <category>container</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html</guid>
+  <pubDate>Wed, 23 Sep 2020 15:00:00 GMT</pubDate>
+  <media:content url="https://developers.redhat.com/sites/default/files/styles/article_feature/public/blog/2014/05/homepage-docker-logo.png?itok=zx0e-vcP" medium="image"/>
+</item>
+<item>
+  <title>{B4F502887207:/posts/container/2020-09-23-docker-humble-practice.html}</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-23-docker-humble-practice.html</link>
+  <description>{B4F502887207:/posts/container/2020-09-23-docker-humble-practice.html}</description>
+  <category>container</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-23-docker-humble-practice.html</guid>
+  <pubDate>Tue, 22 Sep 2020 15:00:00 GMT</pubDate>
+  <media:content url="https://developers.redhat.com/sites/default/files/styles/article_feature/public/blog/2014/05/homepage-docker-logo.png?itok=zx0e-vcP" medium="image"/>
+</item>
+<item>
+  <title>{B4F502887207:/posts/computer-tools/2020-03-09-Streamlit-Heroku.html}</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-03-09-Streamlit-Heroku.html</link>
+  <description>{B4F502887207:/posts/computer-tools/2020-03-09-Streamlit-Heroku.html}</description>
+  <category>computer-tool</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-03-09-Streamlit-Heroku.html</guid>
+  <pubDate>Sun, 08 Mar 2020 15:00:00 GMT</pubDate>
+  <media:content url="https://t3.ftcdn.net/jpg/03/67/94/46/240_F_367944626_tkPR8g1rZihc0ql5WpJhDYffS3nTfKqP.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>{B4F502887207:/posts/computer-tools/2020-03-07-blogging-with-fastpages.html}</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-03-07-blogging-with-fastpages.html</link>
+  <description>{B4F502887207:/posts/computer-tools/2020-03-07-blogging-with-fastpages.html}</description>
+  <category>computer-tool</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-03-07-blogging-with-fastpages.html</guid>
+  <pubDate>Fri, 06 Mar 2020 15:00:00 GMT</pubDate>
+  <media:content url="https://t3.ftcdn.net/jpg/03/67/94/46/240_F_367944626_tkPR8g1rZihc0ql5WpJhDYffS3nTfKqP.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>{B4F502887207:/posts/git/2020-03-05-using-git-w10.html}</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2020-03-05-using-git-w10.html</link>
+  <description>{B4F502887207:/posts/git/2020-03-05-using-git-w10.html}</description>
+  <category>git</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2020-03-05-using-git-w10.html</guid>
+  <pubDate>Wed, 04 Mar 2020 15:00:00 GMT</pubDate>
+  <media:content url="https://t3.ftcdn.net/jpg/03/67/94/46/240_F_367944626_tkPR8g1rZihc0ql5WpJhDYffS3nTfKqP.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>{B4F502887207:/posts/economics/2020-01-22-Wealth-divided.html}</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/economics/2020-01-22-Wealth-divided.html</link>
+  <description>{B4F502887207:/posts/economics/2020-01-22-Wealth-divided.html}</description>
+  <category>economics</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/economics/2020-01-22-Wealth-divided.html</guid>
+  <pubDate>Tue, 21 Jan 2020 15:00:00 GMT</pubDate>
+  <media:content url="https://www.aeaweb.org/content/file?id=13305" medium="image"/>
+</item>
+<item>
+  <title>{B4F502887207:/posts/regression/2019-11-10-understanding-logit-regression.html}</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-11-10-understanding-logit-regression.html</link>
+  <description>{B4F502887207:/posts/regression/2019-11-10-understanding-logit-regression.html}</description>
+  <category>regression</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-11-10-understanding-logit-regression.html</guid>
+  <pubDate>Sat, 09 Nov 2019 15:00:00 GMT</pubDate>
+  <media:content url="https://miro.medium.com/max/1280/0*gKOV65tvGfY8SMem.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>{B4F502887207:/posts/regression/2019-10-25-understanding-regression.html}</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-10-25-understanding-regression.html</link>
+  <description>{B4F502887207:/posts/regression/2019-10-25-understanding-regression.html}</description>
+  <category>regression</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-10-25-understanding-regression.html</guid>
+  <pubDate>Thu, 24 Oct 2019 15:00:00 GMT</pubDate>
+  <media:content url="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" medium="image"/>
+</item>
+<item>
+  <title>{B4F502887207:/posts/math-simple/2019-07-18-dot-product.html}</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/2019-07-18-dot-product.html</link>
+  <description>{B4F502887207:/posts/math-simple/2019-07-18-dot-product.html}</description>
+  <category>math-simple</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/2019-07-18-dot-product.html</guid>
+  <pubDate>Wed, 17 Jul 2019 15:00:00 GMT</pubDate>
+  <media:content url="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/perpendicularprojection.jpg?raw=true" medium="image"/>
+</item>
+<item>
+  <title>{B4F502887207:/posts/math-simple/2019-07-13-Poisson.html}</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/2019-07-13-Poisson.html</link>
+  <description>{B4F502887207:/posts/math-simple/2019-07-13-Poisson.html}</description>
+  <category>math-simple</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/2019-07-13-Poisson.html</guid>
+  <pubDate>Fri, 12 Jul 2019 15:00:00 GMT</pubDate>
+  <media:content url="https://seungwooham.github.io/assets/images/2020-03-24-PD1.png" medium="image" type="image/png"/>
+</item>
+</channel>
+</rss>
