@@ -8,14 +8,33 @@ categories: [linear-algebra]
 #margin-header: subscribe.html
 ---
 
+## tl; dr 
+
+- 벡터와 포인트를 오가는 방법을 배우자. 
 
 ## Concepts 
 
 편의상 3차원 공간으로 예시하도록 한다. $n$ 차원으로 확장은 쉽게 된다. 
 
-- $p = (p_x, p_y, p_z)$: $p \in \mathbb R^3$
-- $\vec v = (v_x, v_y, v_z)$: $\vec v \in \mathbb R^3$
-- $\hat v = \dfrac{v}{\lVert v \lVert}$: Unit vector 
+- $p = (p_x, p_y, p_z)$: $p \in \mathbb R^3$ is a point
+- $\vec v = (v_x, v_y, v_z)$: $\vec v \in \mathbb R^3$ is a vector 
+- $\hat v = \frac{v}{\lVert v \lVert}$: Unit vector 
+
+### First thing first 
+
+점과 벡터의 차이를 다시 새기고 가자.
+
+- 점은 공간에서 위치를 지니고 있다. 점의 특성은 위치 뿐이다. 
+- 벡터는 크기와 방향을 지니고 있다. 벡터는 공간에서 위치를 지니고 있지 않다. 
+
+![](https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/position-vector-1627294113.png){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;" }
+
+점과 벡터를 연결해보자. 위 그림에서 원점 $O$를 기준으로 하면 $P$, $Q$가 정의될 것이다. 이때 $\overrightarrow{OP}$, $\overrightarrow{OQ}$는 벡터가 된다. 이제 $\vec v$를 $P$에서 $Q$로 가는 벡터라고 정의하자. 이는 
+
+$$
+\vec v = Q - P
+$$
+
 
 ### Vector 
 
@@ -24,14 +43,33 @@ $p_0$를 지나는 무한의 1차원 벡터는 다음과 같이 정의된다.
 - Parametric equation: 
 
 $$
-l : \{ (x, y, z) \in \mathbb R^3 | p_0 + t \vec v, t \in \mathbb R\}
+l : \lbrace p_0 + t \vec v, t \in \mathbb R \rbrace
 $$
-	
-- Symetric equation: 
+
+![](https://www.maths.usyd.edu.au/u/MOW/vectors/images/v120x.gif){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;" }
+
+위의 그림을 보면서 식을 도출해보자. 포인트 $p_0$를 (원점 기준) 벡터로 나타내면 $\vec r_0$가 된다. 그리고 $P$ 점을 벡터로 나타내면 $\vec r$이 된다. 벡터 $\overrightarrow{p_0 p}$와 수평인 벡터를 $\vec v$라고 하자. 이 두 가지 사실을 조합하면 다음과 같다. 
+
+1. $\overrightarrow{p_0 p} = \overrightarrow{o p} - \overrightarrow{o p_0} = \vec r - \vec r_0$
+2. $\vec r - \vec r_0 = t v$
+
+위 결과에 따라서 파라메트릭 표현이 바로 도출된다. 
+
+- Cartesian(symetric) equation: 
 
 $$
-l: \{  (x, y, z) \in \mathbb R^3 | \dfrac{x - p_{0x}}{v_x} = \dfrac{y - p_{0y}}{v_y}  =  \dfrac{z - p_{0z}}{v_z} \}
+l: \lbrace \dfrac{x - p_{0x}}{v_x} = \dfrac{y - p_{0y}}{v_y}  =  \dfrac{z - p_{0z}}{v_z} \rbrace
 $$ 
+
+앞서 파리메트릭 표현에서 $P$의 좌표는 다음과 같다. 
+
+$$
+\vec r = (x, y, z) = ( p_{0x} + t v_x, p_{0y} + t v_y, p_{0z} + t v_z )
+$$
+
+$$
+\dfrac{x - p_{0x}}{v_x} = \dfrac{x - p_{0y}}{v_y} = \dfrac{x - p_{0z}}{v_z} = t
+$$
 
 ### Plane 
 
@@ -57,11 +95,9 @@ $$
 
 ### Point vs vector 
 
-점과 벡터의 차이는 무엇일까? 점은 좌표계에서 원점을 기준으로 한 위치를 나타낸다. 벡터는 크기와 방향을 모두 나타내며, 벡터는 $(0,0)$ 같은 기준이 없다. 벡터에서 중요한 것은 크기와 방향이다. 좌표 상에서 위치가 달라고 크기와 방향이 같으면 같은 벡터다. 
+점과 벡터의 차이는 무엇일까? 점은 좌표계에서 원점을 기준으로 한 위치를 나타낸다. 벡터는 크기와 방향을 모두 나타내며, 벡터는 $(0,0)$ 같은 기준이 없다. 벡터에서 중요한 것은 크기와 방향이다. 좌표 상에서 위치가 달라도 크기와 방향이 같으면 같은 벡터다. 
 
-벡터를 점으로 나타내려면 어떻게 해야 할까? 두 점의 차이를 구하면 이는 벡터가 된다. 쉽게 생각해보자. 2차원 데카르트 좌표계에서 $(3,3)$이라는 점을 생각해보자. $(3,3)$이면 그냥 점이다. 반면, $(3,3) \leftarrow (0,0)$을 의미하면 $(3,3)$은 벡터다. 그래프 상에서 $(0,0)$에서 $(3,3)$으로 화살표를 그리면 이 역시 벡터다. 아래 그림을 참고 하자. 
-
-![](https://cdn.britannica.com/72/77672-004-AB0064CA.gif){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;" }
+벡터를 점으로 나타내려면 어떻게 해야 할까? 두 점의 차이를 구하면 이는 벡터가 된다. 쉽게 생각해보자. 2차원 데카르트 좌표계에서 $(3,3)$이라는 점을 생각해보자. $(3,3)$이면 그냥 점이다. 반면, $(3,3) \leftarrow (0,0)$을 의미하면 $(3,3)$은 벡터다. 그래프 상에서 $(0,0)$에서 $(3,3)$으로 화살표를 그리면 이 벡터다. 
 
 ### Normal vector 
 
