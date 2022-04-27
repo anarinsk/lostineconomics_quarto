@@ -16,13 +16,13 @@ h1, h2, h3, h4, h5, h6 {
 p {
     font-family: 'pretendard' !important;
     font-size: 90%;
-    font-weight: 350; 
+    font-weight: 400; 
 }
 
 .category {
   font-size: 90%;
 }
 
-.sourceCode{
+.sourceCode {
   font-size: 90%;
 }

@@ -122,7 +122,7 @@ $$
 기하적으로 도출하는 보다 복잡한 방법도 있다. 이해를 돕기 위해서 2차원 벡터공간으로 한정해서 논의하겠다. $n$ 차원으로 확대하는 것이 수학적으로 어렵지는 않다.  
 
 :::{.column-margin}
-보다 상세한 내용은 [여기]((https://www.youtube.com/watch?v=LyGKycYT2v0&t=610s))를 참고하라. 
+보다 상세한 내용은 [여기](https://www.youtube.com/watch?v=LyGKycYT2v0&t=610s)를 참고하라. 
 :::
 
 일단 $\mathbf u$가 길이 1로 표준화된 벡터라고 정의를 살짝 바꾸겠다. 즉, 새로운 $\mathbf u$는  $\rVert \mathbf u \lVert$로 $\mathbf u$를 나눈 벡터다. 아래 그림처럼 이 벡터를 향해서 2차원 평면의 기저를 구성하는 $(1,0)(\equiv i)$과 $(0,1)(\equiv j)$에서 벡터로 프로젝션을 해보자. 

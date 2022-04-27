@@ -10,7 +10,7 @@ categories: [economics]
 
 ## Source 
 
-The College Wealth Divide: Education and Inequality in America, 1956-2016 [download]([https://www.stlouisfed.org/~/media/files/pdfs/hfs/is-college-worth-it/bartscher_kuhn_schularick_college_wealth_divide.pdf?la=en](https://www.stlouisfed.org/~/media/files/pdfs/hfs/is-college-worth-it/bartscher_kuhn_schularick_college_wealth_divide.pdf?la=en))
+The College Wealth Divide: Education and Inequality in America, 1956-2016 [download](https://www.stlouisfed.org/~/media/files/pdfs/hfs/is-college-worth-it/bartscher_kuhn_schularick_college_wealth_divide.pdf?la=en)
 *Alina K. Bartscher, Moritz Kuhn, and Moritz Schularick*
 
 ## Addressing Issues 
@@ -20,7 +20,7 @@ The College Wealth Divide: Education and Inequality in America, 1956-2016 [downl
 
 ## Data 
 
-- 미국 연준에서 다운로드 받을 수 있는 [Survey of Consumer Finances]([https://www.federalreserve.gov/econres/scfindex.htm](https://www.federalreserve.gov/econres/scfindex.htm))(SCF)라는 데이터가 있다. 이 데이터는 3년 간격으로 1983년부터 설문 자료를 수집하고 있는데, 여타 센서스와 같은 설문 항목과 비교해서 금용 관련된 상세한 내용을 담고 있다. 
+- 미국 연준에서 다운로드 받을 수 있는 [Survey of Consumer Finances](https://www.federalreserve.gov/econres/scfindex.htm)(SCF)라는 데이터가 있다. 이 데이터는 3년 간격으로 1983년부터 설문 자료를 수집하고 있는데, 여타 센서스와 같은 설문 항목과 비교해서 금용 관련된 상세한 내용을 담고 있다. 
 - 그런데 SCF에 선배라고 할만한 자료가 1947년에서 1971년 사이 그리고 1977년에 대해서 미시건 대의 서베이 리서치 센터에 존재한다. Kuhn, Schularick, Steins가 이 두 자료를 코드 북에 기반해서 자료를 최대한 비슷하게 맞춰 결합했고, 이렇게 1949년~2016년의 전후 기간을 망라한 소득, 부 그리고 관련된 인구 통계적 정보를 담고 있는 데이터 셋이 만들어졌다. 저자들은 이를 SCF+라고 부른다.[^1]
 [^1]:  매칭과 데이터 결합에 필요한 절차 및 기법은 논문에 비교적 상세하게 소개되어 있으니 관심 있는 분은 참조하시라. 
 

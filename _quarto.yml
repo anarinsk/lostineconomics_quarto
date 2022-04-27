@@ -3,14 +3,8 @@ project:
   output-dir: docs
 website:
   title: "lostineconomics.com"
-  listing:
-    contents: posts
-    sort: "date desc"
-    type: default
-    categories: true
-    feed: true
-  site-url: https://anarinsk.github.io/lostineconomics_quarto
-  #margin-footer: "subscribe.html"
+  site-url: "https://anarinsk.github.io/lostineconomics_quarto"
+  description: "Another useless blog"
   navbar:
     right:
       - about.qmd
@@ -22,5 +16,5 @@ website:
         href: index.xml
 format:
   html:
-    theme: yeti
+    theme: flatly
     css: styles.css
