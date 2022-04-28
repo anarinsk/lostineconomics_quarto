@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.312">
+<meta name="generator" content="quarto-0.9.305">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -130,7 +130,7 @@ ul.task-list{list-style: none;}
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 26, 2022</p>
+        <p class="date">04/26/2022</p>
       </div>
     </div>
       
@@ -147,10 +147,16 @@ ul.task-list{list-style: none;}
 
 
 
-<section id="docker-compose-대신-kubernetes" class="level1">
-<h1>Docker-compose 대신 Kubernetes</h1>
-<section id="before-you-go-go" class="level2">
-<h2 class="anchored" data-anchor-id="before-you-go-go">Before you go go</h2>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
 <li>이 포스팅은
 <ul>
@@ -163,33 +169,29 @@ ul.task-list{list-style: none;}
 <li>데이터 관련 프로그램만 제한적으로 다룰 예정입니다.</li>
 </ul></li>
 </ul>
-</section>
+</div>
+</div>
 <section id="alternatives" class="level2">
 <h2 class="anchored" data-anchor-id="alternatives">Alternatives</h2>
 <p>도커의 대안을 좀 검토해보기로 하겠다.</p>
 <section id="why" class="level3">
 <h3 class="anchored" data-anchor-id="why">Why</h3>
-<section id="without-docker" class="level4">
-<h4 class="anchored" data-anchor-id="without-docker">Without docker</h4>
-<p>도커가 여러 문제점이 있지만 개인 툴로써 쓰기에는 큰 불편함이 없다. 하지만 도커 데스크탑 앱이 유료화된 후로 왠지 쓰기에 찜찜해진 것은 사실이다. 유료화 그리고 많은 오픈소스 기반 쿠버네티스 진영의 컨테이너 기본 툴 변경 등등을 무시하기도 힘들다.</p>
-<p>컨테이너 도구로서 도커를 버린다고 해도, 버리기 힘든 도구가 도커-콤포즈다. 부팅이 잦은 데스크 탑에서 필요한 툴을 불러와서 각종 설정을 매번 도커로 해줄 수는 없다. 이떄 도커-콤포즈로 설정을 맞춰고 한방에 띄우면 제법 깔끔하게 쓸 수 있다. 도커-콤포즈를 꼭 도커와 써야하는 것은 아니다. 앞서 소개한 내용처럼 podman과 합쳐서 쓸 수도 있다. 그래도 궁금했다. 도커-콤포즈 없이 컨테이너를 관리할 수는 없을까?</p>
-</section>
+<p>도커가 여러 문제점이 있지만 개인 툴로써 쓰기에는 큰 불편함이 없다. 하지만 도커 데스크탑 앱이 유료화된 후로 왠지 쓰기에 찜찜해진 것은 사실이다. 유료화 그리고 많은 오픈소스 기반 쿠버네티스 진영의 컨테이너 기본 툴 변경 등등을 무시하기도 힘들다. 컨테이너 도구로서 도커를 버린다고 해도, 버리기 힘든 도구가 도커-콤포즈다. 부팅이 잦은 데스크 탑에서 필요한 툴을 불러와서 각종 설정을 매번 도커로 해줄 수는 없다. 이떄 도커-콤포즈로 설정을 맞춰고 한방에 띄우면 제법 깔끔하게 쓸 수 있다. 도커-콤포즈를 꼭 도커와 써야하는 것은 아니다. 앞서 소개한 내용처럼 podman과 합쳐서 쓸 수도 있다. 그래도 궁금했다. 도커-콤포즈 없이 컨테이너를 관리할 수는 없을까?</p>
 <section id="across-os" class="level4">
 <h4 class="anchored" data-anchor-id="across-os">Across Os</h4>
-<p>다른 문제 하나는 운영 체제간 호환성이다. 윈도에서 WSL를 통해 리눅스를 쓰게 되면서 운영 체제를 가리지 않는 개발 도구(분석 도구) 운영이 가능해졌다. 다만 여기에도 미묘한 차이는 있다. WSL은 서비스 매니저로 systemd를 쓰지 않기 때문에 systemd에 의존하는 도커-콤포즈를 쓰기 위해서는 별도의 설정이 필요하다. 이런 것 없이 윈도우, mac os, 리눅스를 두루 걸쳐서 쓸 수 없을까?</p>
+<p>다른 문제 하나는 운영 체제간 호환성이다. 윈도에서 WSL를 통해 리눅스를 쓰게 되면서 운영 체제를 가리지 않는 개발 도구(분석 도구) 운영이 가능해졌다. 다만 여기에도 미묘한 차이는 있다. WSL은 서비스 매니저로 systemd를 쓰지 않기 때문에 systemd에 의존하는 도커-콤포즈를 쓰기 위해서는 별도의 설정이 필요하다. 이런 종류의 번거로움 없이 윈도우, mac os, 리눅스를 두루 걸쳐서 쓸 수 없을까?</p>
 </section>
 </section>
-<section id="alternative-1-nerdctl" class="level3">
-<h3 class="anchored" data-anchor-id="alternative-1-nerdctl">Alternative 1: nerdctl</h3>
-<p>도커의 명령어와 거의 완벽하게 호환되면서도 도커-컴포즈의 기능까지 구현한 오픈소스 프로젝트가 Cotainerd 표준 기반의 <a href="https://github.com/containerd/nerdctl">nerdctl</a>이다. 페이지에서 확인하듯이 도커 및 도커-콤포즈의 거의 모든 명령어가 호환되며 모든 OS를 가리지 않고 쓸 수 있다. nerdctl로 거의 모든 것이 해결될 것 같았으나, 그렇지 않았다.</p>
-<p>도커 리포지토리인 도커 허브의 이미지에 따라서 nerdctl에서 제대로 작동하지 않는 녀석들이 있다. 아마도 원래 이미지 자체가 도커에 특화된 것이 아닐까 추측해보지만, 이걸 다 짚으면서 빌드를 할 여유가 있지는 않았다.</p>
+<section id="nerdctl" class="level3">
+<h3 class="anchored" data-anchor-id="nerdctl">nerdctl</h3>
+<p>우선 도커를 대체하기 위해서는 도커의 컨테이너 엔진 자체의 대안을 찾아야 한다. 다행스럽게 Cotainerd 표준 기반의 <a href="https://github.com/containerd/nerdctl">nerdctl</a>이라는 녀석이 있다. 이 서비스는 도커의 명령어와 거의 완벽하게 호환되면서도 도커-컴포즈의 기능까지 구현한다. 페이지에서 확인하듯이 도커 및 도커-콤포즈의 거의 모든 명령어가 호환되며 모든 OS를 가리지 않고 쓸 수 있다. nerdctl로 거의 모든 것이 해결될 것 같았으나, 아쉽게도 그렇지 않았다.</p>
+<p>도커 이미지를 쌓아둔 저장소(도커 레지스트리) 도커 허브에 있는 이미지 중 일부는 nerdctl에서 제대로 작동하지 않는 녀석들이 있다. 아마도 원래 이미지 자체가 도커에 특화된 것이 아닐까 추측해보지만, 이걸 다 따져가며 사용하는 것도 까다로운 일이다.</p>
 </section>
-<section id="alternative-2-kuberntes" class="level3">
-<h3 class="anchored" data-anchor-id="alternative-2-kuberntes">Alternative 2: Kuberntes</h3>
-<p>다음 후보로 컨테이너 오케스트레이션 도구인 쿠버네티스에 눈을 돌렸다. 사실 쿠버네티스를 이 용도로 쓰는 것은 닭 잡는데 소 잡는 칼을 쓰는 격이다. 쿠버네티스를 배운다는 개인적인 욕심이 있긴 했지만, 이걸 꼭 써야 하나?</p>
-<p>그떄 만난 것이 Rancher Desktop이다! 리눅스 배포판을 만드는 회사인 SUSE에서 내 놓은 경량화된 쿠버네티스(K3s) 앱인데, 이 녀석이 아주 쓸만 했다. 원래는 nerdctl을 좀 편하게 써볼까 하는 용도로 설치했는데 사용성이 좋았다.</p>
+<section id="kuberntes" class="level3">
+<h3 class="anchored" data-anchor-id="kuberntes">Kuberntes</h3>
+<p>다음으로 컨테이너 오케스트레이션 도구인 쿠버네티스에 눈을 돌렸다. 사실 쿠버네티스를 이 용도로 쓰는 것은 닭 잡는데 소 잡는 칼을 쓰는 격이다. 쿠버네티스를 배운다는 개인적인 욕심이 있긴 했지만, 이걸 꼭 써야 하나? 윈도에서는 인스톨도 간단치 않았다. 그때 알게 된 것이 Rancher Desktop이다. 리눅스 배포판을 만드는 회사인 SUSE에서 내 놓은 경량화된 쿠버네티스(K3s) 앱인데, 이 녀석이 아주 쓸만 했다. 원래는 nerdctl을 좀 편하게 써볼까 하는 용도로 설치했는데 사용성이 좋았다.</p>
 <ul>
-<li><p>사용자 경험이 Docker Desktop과 비슷하다. 사용자는 OS별로 설치하면 커맨드라인 툴에 알아서 잘 돌아간다. Windows(파워셀), WSL2, M1 기반의 macos에서 거의 동일한 경험을 제공한다.</p></li>
+<li><p>사용자 경험이 Docker Desktop과 비슷하다. 사용자는 OS별로 설치하면 OS별 커맨드라인 툴에 명령어들을 잘 사용할 수 있다. Windows(파워셀), WSL2, M1 기반의 macos에서 거의 동일한 경험을 제공한다.</p></li>
 <li><p>경량화된 쿠버네티스가 들어 있어서 minikube를 별도로 설치하지 않고 데스크탑에서 쉽게 쿠버네티스를 활용할 수 있다. 부팅 후에도 원래 올려 놓은 쿠버네티스 설정을 유지하고 있어서 개인용 PC에서 쓰기에도 적합하다.</p></li>
 <li><p>간력하지만 GUI를 갖추고 있다.</p></li>
 </ul>
@@ -209,13 +211,13 @@ ul.task-list{list-style: none;}
 <section id="image-build" class="level3">
 <h3 class="anchored" data-anchor-id="image-build">Image build</h3>
 <p>이미지를 빌드해보자. 도커-컴포즈가 좋은 이유는 도커 허브의 이미지를 끌어다가 필요에 맞춰 세팅을 한 후 이를 도커에 올려 사용할 수 있는 데 있다. 컨테이너를 빌드하는 단계와 컨테이너를 쿠버네티스에 올리는 단계로 나눠보자.</p>
-<p>이미지 빌드는 여러가지 방식으로 해도 된다. 도커에서 빌드해서 도커 리포지토리(도커 허브)로 올려도 된다. 여기서는 조금 더 쿠버네티스 친화적인 방식, 즉 도커를 활용하지 않는 방식으로 이미지를 빌드해보자. 도커의 의존성 제거를 위해서 구글이 오픈소스로 내놓은 프로젝트가 Kaniko다. 카니코는 쿠버네티스 컨테이너로 카니코 서비스를 끌어온 후 이 녀석이 컨테이너 내부에서 containerd 기반으로 이미지를 빌드한 후에 도커 레지스트리로 보내는 것까지 알아서 한다. 쿠버네티스 안에서 작업할 수 밖에 없을 때 유용한 녀석이다.</p>
+<p>이미지 빌드는 여러가지 방식으로 해도 된다. nerdctl에서 빌드해서 도커 리포지토리(도커 허브)로 올려서 쓰면 된다. 조금 더 쿠버네티스 친화적인 방식, 즉 nerdctl을 활용하지 않는 방식으로 이미지를 빌드할 수도 있다. Kaniko는 도커의 의존성 제거를 위해서 구글이 오픈소스로 내놓은 프로젝트다. 카니코는 쿠버네티스 컨테이너로 카니코 서비스를 끌어온 후 이 녀석이 컨테이너 내부에서 containerd 기반으로 이미지를 빌드한 후에 도커 레지스트리로 보내는 것까지 모두 알아서 한다. 쿠버네티스 안에서 작업할 수 밖에 없을 때 유용한 녀석이다. 다만 설정이 다소 복잡하다. 자세한 것은 [여기]를 참고하기 바란다.</p>
 </section>
-<section id="pull-and-run" class="level3">
-<h3 class="anchored" data-anchor-id="pull-and-run">Pull and run</h3>
+<section id="k8s에-서비스를-올려보자." class="level3">
+<h3 class="anchored" data-anchor-id="k8s에-서비스를-올려보자.">K8s에 서비스를 올려보자.</h3>
+<p>이제 필요한 이미지를 빌드해서</p>
 
 
-</section>
 </section>
 </section>
 

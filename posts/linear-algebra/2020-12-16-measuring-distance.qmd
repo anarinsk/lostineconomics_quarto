@@ -45,7 +45,7 @@ $$
 
 ### Vector projection 
 
-스칼라 프로젝션의 크기로 $\vec b$의 벡터를 만든 것이 벡터 프로젝션이다. $\vec a$를 $\vec b$ 위로 프로젝션한 벡터 $\Pi_{\vec b} (\vec a)$는 다음과 같다. 
+스칼라 프로젝션의 크기로 $\vec b$의 벡터를 만든 것이 벡터 프로젝션이다. $\vec a$를 $\vec b$ 위로 프로젝션한 벡터 $\Pi_{\vec b} (\vec a)$는 다음과 같다. 스칼라 프로젝션의 크기 만큼 $\vec b$ 성분을 지녀야 한다. 따라서 $\vec b$는 정규화된 $\hat b$를 써야 한다. 
 
 $$
 \vec a_1 = \Pi_{\vec b} (\vec a) = a_1 \hat b = \dfrac{\vec a \cdot \vec b}{\lVert\vec b\lVert} \dfrac{\vec b}{\lVert\vec b\lVert}
