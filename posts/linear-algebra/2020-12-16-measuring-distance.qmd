@@ -51,7 +51,7 @@ $$
 \vec a_1 = \Pi_{\vec b} (\vec a) = a_1 \hat b = \dfrac{\vec a \cdot \vec b}{\lVert\vec b\lVert} \dfrac{\vec b}{\lVert\vec b\lVert}
 $$
 
-말로 풀어보자. $\vec b$와 같은 방향성을 지니는 벡터를 $\vec a$와 $\vec b$ 간의 스칼라 프로젝션의 크기로 만들어주는 것이 벡터 프로젝션이다. 영상을 화면 위로 쏘는 행위를 떠올려보자. 이때 스크린에 해당하는 것이 $\vec b$이고 여기에 투영되는 상이 $\vec a$이다. 
+말로 풀어보자. $\vec b$와 같은 방향성을 지니는 벡터를 $\vec a$와 $\vec b$ 간의 스칼라 프로젝션의 크기로 만들어주는 것이 벡터 프로젝션이다. 영상을 화면 위로 쏘는 행위를 떠올려보자. 이때 스크린에 해당하는 것이 $\hat b$이고 여기에 투영되는 상이 $\vec a$이다. 
 
 ### Projection as outer product 
 
@@ -111,7 +111,7 @@ $$
 \end{aligned}
 $$
 
-이 결과를 일반적인 벡터 $\vec b$에도 확장할 수 있다. $\vec b$로의 프로젝션을 구현하기 위해서는 표준화된 벡터 $\hat b$를 먼저 구해야 한다. 
+이 결과를 일반적인 벡터 $\vec b$에도 확장할 수 있다. $\vec b$로의 프로젝션을 구현하기 위해서는 표준화된 벡터 $\hat b$를 먼저 구해야 한다. 그리고 해당 벡터로 아웃터 프로덕트(외적)를 구한다.  
 
 $$
 \hat b = \dfrac{\vec b}{\Vert b \Vert},~M_{\Pi_{\hat b}} \vec a = \hat b \hat b^T \vec a  
@@ -124,7 +124,7 @@ $\vec a$를 인풋 벡터로 이해하면 이를 $\vec b$의 프로젝션 위치
 - $S \subseteq \mathbb R^n$: $S$는 벡터 부분공간이라고 하자. 
 - $S^\perp$: $S$와 직교 벡터들의 집합이고 이 역시 벡터 부분공간이다. 
 $$
-S^\perp = \{ \vec w \in \mathbb R^n : \vec w \cdot S = 0 \} 
+S^\perp = \lbrace \vec w \in \mathbb R^n : \vec w \cdot s = 0~\text{for all}~ s \in S \rbrace 
 $$
 - $\Pi_S$: 부분공간 $S$ 위로 프로젝션 
 - $\Pi_{S^\perp}$: 부분공간 $S^\perp$ 위로 프로젝션

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.305">
+<meta name="generator" content="quarto-0.9.309">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -131,7 +131,7 @@ ul.task-list{list-style: none;}
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">12/16/2020</p>
+        <p class="date">December 16, 2020</p>
       </div>
     </div>
       
@@ -178,7 +178,7 @@ a_1 = {\cos \theta}{\lVert \vec a \lVert} = \dfrac{\vec a \cdot \vec b}{\lVert\v
 <p><span class="math display">\[
 \vec a_1 = \Pi_{\vec b} (\vec a) = a_1 \hat b = \dfrac{\vec a \cdot \vec b}{\lVert\vec b\lVert} \dfrac{\vec b}{\lVert\vec b\lVert}
 \]</span></p>
-<p>말로 풀어보자. <span class="math inline">\(\vec b\)</span>와 같은 방향성을 지니는 벡터를 <span class="math inline">\(\vec a\)</span>와 <span class="math inline">\(\vec b\)</span> 간의 스칼라 프로젝션의 크기로 만들어주는 것이 벡터 프로젝션이다. 영상을 화면 위로 쏘는 행위를 떠올려보자. 이때 스크린에 해당하는 것이 <span class="math inline">\(\vec b\)</span>이고 여기에 투영되는 상이 <span class="math inline">\(\vec a\)</span>이다.</p>
+<p>말로 풀어보자. <span class="math inline">\(\vec b\)</span>와 같은 방향성을 지니는 벡터를 <span class="math inline">\(\vec a\)</span>와 <span class="math inline">\(\vec b\)</span> 간의 스칼라 프로젝션의 크기로 만들어주는 것이 벡터 프로젝션이다. 영상을 화면 위로 쏘는 행위를 떠올려보자. 이때 스크린에 해당하는 것이 <span class="math inline">\(\hat b\)</span>이고 여기에 투영되는 상이 <span class="math inline">\(\vec a\)</span>이다.</p>
 </section>
 <section id="projection-as-outer-product" class="level3">
 <h3 class="anchored" data-anchor-id="projection-as-outer-product">Projection as outer product</h3>
@@ -232,7 +232,7 @@ M_{\Pi_x} =
 \end{bmatrix} \vec v = M_{\Pi_x} \vec v
 \end{aligned}
 \]</span></p>
-<p>이 결과를 일반적인 벡터 <span class="math inline">\(\vec b\)</span>에도 확장할 수 있다. <span class="math inline">\(\vec b\)</span>로의 프로젝션을 구현하기 위해서는 표준화된 벡터 <span class="math inline">\(\hat b\)</span>를 먼저 구해야 한다.</p>
+<p>이 결과를 일반적인 벡터 <span class="math inline">\(\vec b\)</span>에도 확장할 수 있다. <span class="math inline">\(\vec b\)</span>로의 프로젝션을 구현하기 위해서는 표준화된 벡터 <span class="math inline">\(\hat b\)</span>를 먼저 구해야 한다. 그리고 해당 벡터로 아웃터 프로덕트(외적)를 구한다.</p>
 <p><span class="math display">\[
 \hat b = \dfrac{\vec b}{\Vert b \Vert},~M_{\Pi_{\hat b}} \vec a = \hat b \hat b^T \vec a  
 \]</span></p>
@@ -244,7 +244,7 @@ M_{\Pi_x} =
 <ul>
 <li><span class="math inline">\(S \subseteq \mathbb R^n\)</span>: <span class="math inline">\(S\)</span>는 벡터 부분공간이라고 하자.</li>
 <li><span class="math inline">\(S^\perp\)</span>: <span class="math inline">\(S\)</span>와 직교 벡터들의 집합이고 이 역시 벡터 부분공간이다. <span class="math display">\[
-S^\perp = \{ \vec w \in \mathbb R^n : \vec w \cdot S = 0 \}
+S^\perp = \lbrace \vec w \in \mathbb R^n : \vec w \cdot s = 0~\text{for all}~ s \in S \rbrace
 \]</span></li>
 <li><span class="math inline">\(\Pi_S\)</span>: 부분공간 <span class="math inline">\(S\)</span> 위로 프로젝션</li>
 <li><span class="math inline">\(\Pi_{S^\perp}\)</span>: 부분공간 <span class="math inline">\(S^\perp\)</span> 위로 프로젝션</li>

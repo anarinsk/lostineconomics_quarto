@@ -1,17 +1,45 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Junsok Huhh",
+    "objectID": "posts/computer-tools/2020-09-26-windows-terminal.html",
+    "href": "posts/computer-tools/2020-09-26-windows-terminal.html",
+    "title": "The Best Terminal App for Windows",
     "section": "",
-    "text": "C.V.\nlong | short\n\n\nHistory of lostineconomics.com\n\nv2 built with fastpages\nv1 built with markdown on github\nv0 built with BlogDown on github"
+    "text": "마소가 리눅스 생태계를 품으려고 진심으로 노력하고 있다. 보통 윈도에서 터미널을 쓰려면 cmd를 쳐서 들어간다. 일단 모양이 별로일 뿐만 아니라 불편하다. 그래서 보통 서드파티에서 제작한 터미널 앱을 별도로 쓰곤 한다. 이 앱들로도 부족한 것이 없다. cmder도 높은 수준의 커스터마이즈와 뛰어난 사용성을 보장한다.\nWSL을 통해 윈도에 설치하는 리눅스의 경우 기본으로 CLI(Command Line Interface)를 활용하게 된다. 따라서 좋은 터미널 앱은 필수적이다. 간편하면서도 심미적으로도 유려한 그런 앱이 하나 있었으면 싶은데, MS는 이미 그런 앱을 제공하고 있다.\nWindows 10 기준으로, Microsoft Store에 들어가서 “terminal”을 검색해보자. “Windows Terminal”과 “Windows Terminal Preview” 두 개를 찾을 수 있다. 전자는 안정 버전이고 후자는 실험적인 기능을 구현한 버전이다. 어느 것을 써도 괜찮다.\n공식 가이드 https://docs.microsoft.com/ko-kr/windows/terminal/\n왠만한 내용은 공식 가이드에 잘 정리되어 있으므로 몇 가지 팁만 적도록 하자."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "lost_in_economics",
+    "objectID": "posts/computer-tools/2020-09-26-windows-terminal.html#설정",
+    "href": "posts/computer-tools/2020-09-26-windows-terminal.html#설정",
+    "title": "The Best Terminal App for Windows",
+    "section": "설정",
+    "text": "설정\nVS Code도 그렇고 윈도 터미널도 그렇고 설정이 settings.json 파일로 되어 있다. GUI가 아니라서 처음엔 어색할 수 있겠지만, 쓰다보면 이게 훨씬 편하다는 것을 알게 될 것이다.\n{: style=“textalign:center;” width=“500”}\n{: style=“textalign:center;” width=“500”}\n\n테마\n엄청나게 다양한 테마를 손쉽게 구현할 수 있다.\nhttps://windowsterminalthemes.dev/\n원하는 테마를 바꿔가며 확인할 수 있다. 마음에 드는 녀석을 “Get theme” 버튼을 눌러 클립보드에 복사하도록 하자. 녀석을 어디에 붙여 넣어야 할까?\nsettings.json 파일을 자세히 보면, 아래 \"schemes\":라는 항목이 있다. 여기에 클립보드에서 복사한 내용을 {} 안에 붙여 넣도록 하자. 그리고 설정 파일의 위로 이동하면 \"profiles\" - \"defaults\"라는 항목이 보일 것이다. 여기에는 터미널 앱을 띄웠을 때 어떤 세팅으로 시작할 것인지를 넣을 수 있다. 여러가지 항목을 넣을 수 있는데, 이중 colorScheme 항목에 방금 붙여 넣은 테마의 이름을 넣어주면 된다. 저장을 하면 테마가 바로 적용되며, 뭔가 문제가 있을 경우에는 에러가 뜬다. 이 경우 설정 파일을 다시 고치면 된다. 내가 사용중인 default는 아래와 같다.\n\"defaults\":\n{\n    \"fontFace\" : \"D2Coding\",\n    \"fontSize\" : 10,\n    \"historySize\" : 9001,\n    \"colorScheme\" : \"Monokai Vivid\",\n    \"cursorColor\" : \"#FFFFFF\",\n    \"cursorShape\" : \"vintage\",\n    \"padding\" : \"2, 2, 0, 0\",\n    \"snapOnInput\" : true,\n    \"useAcrylic\" : true,\n    \"acrylicOpacity\" : 0.95,\n    \"antialiasingMode\":\"cleartype\"\n    // Put settings here that you want to apply to all profiles\n}\n\n폰트는 D2Coding을 썼다. 폰트 크기 등등은 쭉 생략하고, 안티얼라이어싱 모드로 cleartype을 쓴 정도가 특징이다. 폰트는 한글 폰트를 써야 한글이 잘 나온다는 점만 기억하자."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html",
+    "href": "posts/computer-tools/2021-11-19-python-in-github.html",
+    "title": "Python in the Browser",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ngit\n\n\n\n\n모든 플랫폼에서 git과 github 잘 쓰기\n\n\n\n\n\n\nApr 27, 2022\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n브라우저에서 python을 돌린다굽쇼?\n\n\n\n\n\n\nNov 19, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncontainer\n\n\n\n\nDocker Desktop 없이 WSL에서 Podman으로 콘테이너를 써보자\n\n\n\n\n\n\nSep 13, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncontainer\n\n\n\n\n빌드할 때 Jupyter의 한글 문제도 같이 해결하자!\n\n\n\n\n\n\nMay 9, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\nPython, Julia, R을 하나의 도구로 코딩하자.\n\n\n\n\n\n\nFeb 2, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n아이겐 공간을 이해하자.\n\n\n\n\n\n\nJan 18, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n아이겐 공간을 이해보자.\n\n\n\n\n\n\nJan 10, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n두서 없이 정리\n\n\n\n\n\n\nJan 8, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\nMatrix as Linear Transformation\n\n\n\n\n\n\nJan 7, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n벡터 공간의 기하적 특성\n\n\n\n\n\n\nJan 6, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n벡터 공간의 기하적 특성\n\n\n\n\n\n\nJan 5, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n프로젝션과 거리 측정에 관해 알아보자.\n\n\n\n\n\n\nDec 16, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nregression\n\n\n\n\n베타를 어떻게 해석할까?\n\n\n\n\n\n\nNov 11, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n코드 셰어링, 이제 걱정 끝\n\n\n\n\n\n\nOct 27, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n\\(\\rm\\LaTeX\\)을 다시 써볼까?\n\n\n\n\n\n\nOct 24, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n윈도 터미널 잘 쓰기\n\n\n\n\n\n\nSep 26, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncontainer\n\n\n\n\n컨테이너 안에서도 한글을 써보자\n\n\n\n\n\n\nSep 24, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncontainer\n\n\n\n\n문과생이 도커를 쓰는 법\n\n\n\n\n\n\nSep 23, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\npython 만으로 웹 앱을 만들어보자\n\n\n\n\n\n\nMar 9, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n깃헙 위에 블로그를 보다 쉽게 만들어볼까?\n\n\n\n\n\n\nMar 7, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ngit\n\n\n\n\n윈도 10에서 git 잘 쓰기\n\n\n\n\n\n\nMar 5, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\neconomics\n\n\n\n\n미국 대졸자와 비대졸자의 투자 행태에 따른 부의 불평등\n\n\n\n\n\n\nJan 22, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n고유치와 고유벡터에 관해 알아보자.\n\n\n\n\n\n\nDec 3, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nregression\n\n\n\n\n로지스틱 회귀를 이해해봅시다!\n\n\n\n\n\n\nNov 10, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nregression\n\n\n\n\n회귀분석, 기하학적으로 한 방에 깨우치기\n\n\n\n\n\n\nOct 25, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nmath-simple\n\n\n\n\n기하학적으로 내적을 살펴보자.\n\n\n\n\n\n\nJul 18, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nmath-simple\n\n\n\n\n이항 분포의 관점에서 푸아송 분포 이해하기\n\n\n\n\n\n\nJul 13, 2019\n\n\nJS HUHH\n\n\n\n\n\n\nNo matching items"
+    "text": "이런 상황을 생각해보자.\n\n파이썬을 갑자기 써야 한다!\n그런데 조건상 클라이언트에 깔 상황이 안 된다!\n\n이럴 때 쓸 수 있는 도구가 몇 개 있다. 대표적으로 아래 구글 코랩이 있다.\n\n구글 드라이브와 연동되는 구글 코랩\n\n그런데 많은 회사에서 구글 서비스를 막아두는 경우가 있다. 그렇다면 어떻게 할까?"
+  },
+  {
+    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html#dev-모드-진입",
+    "href": "posts/computer-tools/2021-11-19-python-in-github.html#dev-모드-진입",
+    "title": "Python in the Browser",
+    "section": "dev 모드 진입",
+    "text": "dev 모드 진입\ngithub를 dev 모드로 돌린다. 웹 브라우저 리포지터리 창에서 . 버튼을 누르거나 .dev 주소로 접근하면 된다. 익숙한 vs code 화면에 보일 것이다.\n이제 아래 왼쪽 탭 화면에서 extension을 찾으면 된다. 아래 그림처럼 생겼다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html#extension-설치",
+    "href": "posts/computer-tools/2021-11-19-python-in-github.html#extension-설치",
+    "title": "Python in the Browser",
+    "section": "extension 설치",
+    "text": "extension 설치\n검색에서 아래 익스텐션을 찾아서 설치해준다.\nexteion: vscode-pyodide\n\n이 익스텐션은 주피터에서 브라우저 기반으로 파이썬을 돌리는 Pyodide를 구현한다."
+  },
+  {
+    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html#do-your-work",
+    "href": "posts/computer-tools/2021-11-19-python-in-github.html#do-your-work",
+    "title": "Python in the Browser",
+    "section": "Do your work!",
+    "text": "Do your work!\n이제 .ipynb 확장자 파일을 만들고 늘상 쓰듯이 jupyter를 쓰면 된다. 아주 특이하거나 무거운 환경이 아닌 이상, 어지간한 간단한 작업은 쾌적하게 수행할 수 있다. 익스텐션을 깔면, 인터페이스는 Jupyter에 적합하게 알아서 변한다. 물론 한계도 있다. 브라우저에 올라간 파이썬 엔진인 만큼 로컬이나 서버에 깔린 python처럼 ‘많은’ 일을 할 수는 없다."
   },
   {
     "objectID": "posts/computer-tools/2020-03-07-blogging-with-fastpages.html",
@@ -63,6 +91,41 @@
     "text": "Update는 어떻게 하지?\n블로그 자체의 Jekyll 기반 코드들도 업데이트될텐데, 이건 어쩌나 생각하셨다면 걱정할 필요가 없다. 깃헙에서 제공하는 PR 기능을 활용해서 내 리포지토리까지 거의 자동으로 업데이트해준다. 다만 커스터마이즈를 많이 했다면 지원이 안될 수도 있다는 점에 유념하시라. - issues > New issue > Get started를 누르면 아래의 그림을 볼 수 있다.\n\n여기서 아무 것도 바꾸지 말고 Submit new issue를 하면 업데이트 요청이 들어가고 업데이트 사항이 없을 경우는 이슈가 그낭 종결되고 있을 경우는 그대로 따라가면 된다. 처음 페이지를 깔 때처럼 PR을 해주는 형태로 진행된다. 꽤나 영리한 업데이트 방법이다.\n\n바뀌는 파일들\n아직까지는 사소한 업데이트만 진행되는 듯 싶다. PR을 완료한 이후 커밋 메시지에 “upgrade fastpages”라고 적혀 있는 부분을 확인해서 커스터마이즈한 부분을 적당히 바꾸면 된다. _pages/about.md, |includes/custom_head.html 와 같이 커스터마이즈해둔 파일들도 바뀌게 되는 경우가 종종 있으므로 항상 백업본을 어딘가 로컬에 유지해두는 편이 좋겠다."
   },
   {
+    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html",
+    "href": "posts/computer-tools/2020-10-24-classy-latex.html",
+    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
+    "section": "",
+    "text": "박사 논문을 \\(\\rm\\LaTeX\\)(이하 그냥 레이텍 혹은 텍이라고 쓰겠다)으로 썼지만… 역시 안 쓰면 잊는다. 갑자기 텍을 다시 써볼까, 라는 생각이 드는 순간 갑갑하더라. 윈도를 쓰건 맥을 쓰건 용량이 적지 않고 관리가 쉽지 않은 텍라이브를 깔게 되지는 않는다. 물론 당신이 논문을 쓰고 있다면…\n이 두 가지를 놓고 해결책을 찾아봤다. 세 가지 정도 해법이 있더라."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html#tinytex-with-r",
+    "href": "posts/computer-tools/2020-10-24-classy-latex.html#tinytex-with-r",
+    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
+    "section": "tinytex with R",
+    "text": "tinytex with R\nR의 문서 관련 패키지를 거의 혼자 만들고 있는 谢益辉(사익휘, 시에-이-휘)가 R에서 텍을 컴파일할 수 있도록 아주 가벼운 패키지 tinytex을 만들었다. R을 쓴다면 RStudio를 쓸 것이고, 이 녀석은 편집기로서 역할 역시 모자라지 않다.\ninstall.packages('devtools')\ndevtools::install_github('yihui/tinytex')\ntinytex::install_tinytex()\n\ndevtools 패키지를 설치한다.\n깃헙에서 tinytex이라는 R패키지를 설치한다.\ntinytex 패키지를 통해서 tinytex을 설치한다.\n\n간략하게 잘 컴파일 되는지 확인해보자.\nwriteLines(c(\n    '\\\\documentclass{article}',\n    '\\\\begin{document}', 'Hello world!', '\\\\end{document}'\n    ), 'test.tex')\n\ntinytex::pdflatex('test.tex')\n\ntest.tex이라는 파일을 쓰고\n예를 pdflatex으로 컴파일 한다.\n\n\nCompling .tex directly\n이제 .tex 파일을 직접 컴파일 해보자. 테스트할 용도의 파일은 다음과 같다. 적당한 이름으로 아래의 tex 파일을 적당한 디렉토리에 생성하자.\n\\documentclass{article}\n\\usepackage{kotex}\n\\begin{document}\nHello world! 한글은 어떠함?\n\\end{document}\n.tex 파일을 RStudio에서 열면 위에 pdf를 생성하는 버튼을 볼 수 있다. 이걸 실행해보도록 하자. 아마도 컴파일하면 에러를 만나게 될 것이다. 한글 패키지가 제대로 설치되어 있지 않기 때문이다. 텍도 마찬가지로 패키지들을 설치해야 할 때가 많다. 몇가지 방법이 있지만, 편리한 방법을 소개하겠다.\ntinytex::parse_install(\n    text = \"! LaTeX Error: File `kotex.sty' not found.\"\n)\nR로 돌아와서 발생한 에러 메시지를 text의 인자로 넣으면 어떤 패키지가 필요한지 인식해서 texlive에서 끌어와 설치한다. 설치 후 tex 패키지를 업데이트하자.\ntinytex::tlmgr_update()\n이제 tinytex::pdflatex('test.tex')을 실행하면 pdf가 잘 생성될 것이다. 다시 .tex 파일로 와서 pdf 버튼을 눌러보자. 아마도 에러가 뜰 것이다. 방법 패키지를 설치했는데 왜 에러가 뜰까? 해법은 간단하다. 메뉴에서 다음과 같은 순서로 찾아들어가자.\nTools > Global Options > Sweave\n“Use tinytex when compling .tex files”을 체크해주자."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html#wsl-tinytex-vs-code",
+    "href": "posts/computer-tools/2020-10-24-classy-latex.html#wsl-tinytex-vs-code",
+    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
+    "section": "WSL + Tinytex + VS Code",
+    "text": "WSL + Tinytex + VS Code\n사이휘는 tinytex을 R에서만 쓰도록 만들지 않았다. 리눅스 인스톨러를 제공한다. 이 블로그를 보신 분은 잘 알고 계시리라. 나는 WSL의 광팬이다! WSL에 tinytex을 깔고 녀석을 VS Code에 붙여서 쓰면 된다. 물론 맥OS, 윈도 인스톨러도 제공하니 관심이 있으시면 직접 확인을 하시면 되겠다. 홈페이지 인스톨 섹션에서 확인하면 되겠다.\nWSL 터미널에서 다음과 같이 실행하자.\nwget -qO- \"https://yihui.org/tinytex/install-bin-unix.sh\" | sh\n기타 패키지 설치 등은 tlmgr 명령을 활용하면 된다. 위 홈페이지를 참고하면 되겠다.\nVS Code에서는 어떤 확장을 쓰면 될까? Latex Workshop이 어떤 전용 에디터 못지 않은 풍부하고 다양한 확장 기능을 제공한다. extension의 settings.json을 통해 다양한 컴파일 옵션도 제공하니 자세한 것은 위 페이지의 안내를 참고하면 되겠다. 일단 pdflatex을 쓴다고 가정하자.\nVS Code에서의 활용은 아래 섹션을 참고하자."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html#texlive-with-docker",
+    "href": "posts/computer-tools/2020-10-24-classy-latex.html#texlive-with-docker",
+    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
+    "section": "TexLive with Docker!",
+    "text": "TexLive with Docker!\n본격적으로 텍을 쓰는 사람이라면 어찌해야 하나? Tinytex이 많이 부족해 보일 수 있다. Texlive를 온전하게 쓰고 싶다면 역시 OS 별로 텍라이브를 까는 방법 밖에 없나? 이럴 때 손쉽게 동원할 수 있는 게 docker이다. 비슷한 계열의 OS라도 텍라이브를 전부 까는 것이 편하지는 않다. 윈도는 더 부담스럽다. 그냥 필요할 때 불러서 쓰고 잊을 수 있다면 좋지 않을까? 도커는 이런 용도로 쓰기에도 좋다.\n내가 검색해본 바로는 공인 이미지는 없는 것 같다. 다양한 사용자 이미지 중에서 꽤 관리가 잘되는 것을 골라서 쓰면 되겠다. 내가 활용하는 이미지는 다음과 같다.\nhttps://hub.docker.com/r/thomasweise/docker-pandoc/\n녀석을 도커에 마운트하자. WSL에서 도커를 쓰는 법은 이 글을 참고하라.\n​docker run -v /mnt/[YOUR-LOCAL]:/doc/ -t -i thomasweise/docker-pandoc\n\nWSL이 /mnt 디렉토리 아래 윈도의 디스크를 마운트한다. 따라서 저 아래 로컬 폴더의 주소를 넣으면 된다. 예를 들어, C의 doc라는 이름이라면, c/doc를 넣으면 된다. 이렇게 두면 해당 폴더가 도커의 /doc 아래 연결된다.\n\n초기에 이것저것 깔아주고 초기화해야 하는 것들이 있다. 이 녀석들을 셸스크립트(sh)로 만들어두자. install_kotex.sh 라는 스크립트는 아래와 같이 만들어보자. 해당 스크립트는 위에 마운트하는 폴더에 넣어두면 좋다. 그러면 도커 이미지가 올라갔을 때 해당 스크립에 쉽게 접근할 수 있다.\n#!/bin/sh\ntlmgr init-usertree\n#\ntlmgr repository add https://cran.asia/KTUG/texlive/tlnet/ ktug\n#tlmgr pinning add ktug \"*\"\ntlmgr install collection-langkorean\nupdmap -sys\nupdmap -sys\ntlmgr update --all\n상태를 초기화하고 한글을 까는 명령어들을 모아둔 것이다. 실행 중인 도커 내에서 해당 디렉토리로 이동해서 ./install_kotex.sh로 명령을 실행하자.\n이제 VS Code로 가자. 필요한 Extension은 앞서 살펴본 Latex workshop과 더불어 Remote-Container를 설치하자. 이 녀석을 설치하면 WSL 내에서 돌아가는 컨테이너 안에도 VS Code를 통해 바로 접속할 수 있다.\n - 아래 ><으로 된 부분을 클릭하면 상단에 메뉴가 뜬다.\n - “attach to running container”를 실행해서 실행중인 도커 콘테이너를 부착한다.\n\n\n부착하면 새 창이 뜨면서 아래 녹색 창이 콘테이너 부착되었음을 알려준다.\n콘테이너 내부에 Latex Workshop 확장(extension)을 설치해야 한다.\n\n\n\n설치 후 해당 Extension의 설정을 고쳐주자.\n위에 찾기창에서 디폴트로 떠 있는 내용 뒤에 “pdf” 치면 pdf에 관련된 설정만 필터링된다.\n\n\n\n위 항목을 찾아서 적당한 포워딩 포트를 넣어준다.\n포트가 잘 포워딩 된다면, 아래와 같이 VS Code에서 PDF 뷰어를 활성화할 수 있다.\n포트 포워딩 설정은 Latex Workshop 확장의 미비함 때문에 필요하다. 이후 해당 확장의 업데이트를 통해 해결될 것으로 기대한다.\n\n\nActivating PDF Viewer\n확장의 PDF 뷰어의 작동 방식 때문에 포트포워딩 선택을 해줘야 한다.\n\nPort Forward\n일단 확장 설정에서 적당히 포워딩될 포트를 설정해야 한다.\n\n\nContainer Setting\n콘테이너에서 해당 포트가 잘 포워딩되고 있는지 확인하자.\n\n\n옆에 원으로 표시해 둔 곳은 Remote-Container 확장으로 바로 가는 단축 아이콘이다.\n위 그림처럼 35556 포트를 통해 잘 포워딩되고 있음을 알 수 있다.\n\n만일 포워딩이 되고 있지 않다면, 마우스 우클릭으로 포워딩을 해주도록 하자.\n\n\n이제 VS Code에서 텍 파일을 열고 문서를 작성하고 컴파일하면 된다. Latex Workshop이 설치되어 있다면, .tex 파일에 알아서 반응하니 걱정 마시라."
+  },
+  {
+    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html#references",
+    "href": "posts/computer-tools/2020-10-24-classy-latex.html#references",
+    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
+    "section": "References",
+    "text": "References\n\ntinytex\ntexlive 도커 이미지\nkotex 리눅스 설치\nVS Code Remote-Cotainer 포트 포워딩\n컴파일에 활용된 파일은 여기를 참고하라.\n\nhttps://github.com/anarinsk/test-vscode-latex"
+  },
+  {
     "objectID": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html",
     "href": "posts/computer-tools/2020-03-09-Streamlit-Heroku.html",
     "title": "Streamlit + Heroku",
@@ -110,55 +173,6 @@
     "title": "Streamlit + Heroku",
     "section": "참고자료",
     "text": "참고자료\nhttps://github.com/Taxuspt/heroku_streamlit_nginx\nhttps://towardsdatascience.com/quickly-build-and-deploy-an-application-with-streamlit-988ca08c7e83\nhttps://blog.jcharistech.com/2019/10/24/how-to-deploy-your-streamlit-apps-to-heroku/"
-  },
-  {
-    "objectID": "posts/computer-tools/2020-09-26-windows-terminal.html",
-    "href": "posts/computer-tools/2020-09-26-windows-terminal.html",
-    "title": "The Best Terminal App for Windows",
-    "section": "",
-    "text": "마소가 리눅스 생태계를 품으려고 진심으로 노력하고 있다. 보통 윈도에서 터미널을 쓰려면 cmd를 쳐서 들어간다. 일단 모양이 별로일 뿐만 아니라 불편하다. 그래서 보통 서드파티에서 제작한 터미널 앱을 별도로 쓰곤 한다. 이 앱들로도 부족한 것이 없다. cmder도 높은 수준의 커스터마이즈와 뛰어난 사용성을 보장한다.\nWSL을 통해 윈도에 설치하는 리눅스의 경우 기본으로 CLI(Command Line Interface)를 활용하게 된다. 따라서 좋은 터미널 앱은 필수적이다. 간편하면서도 심미적으로도 유려한 그런 앱이 하나 있었으면 싶은데, MS는 이미 그런 앱을 제공하고 있다.\nWindows 10 기준으로, Microsoft Store에 들어가서 “terminal”을 검색해보자. “Windows Terminal”과 “Windows Terminal Preview” 두 개를 찾을 수 있다. 전자는 안정 버전이고 후자는 실험적인 기능을 구현한 버전이다. 어느 것을 써도 괜찮다.\n공식 가이드 https://docs.microsoft.com/ko-kr/windows/terminal/\n왠만한 내용은 공식 가이드에 잘 정리되어 있으므로 몇 가지 팁만 적도록 하자."
-  },
-  {
-    "objectID": "posts/computer-tools/2020-09-26-windows-terminal.html#설정",
-    "href": "posts/computer-tools/2020-09-26-windows-terminal.html#설정",
-    "title": "The Best Terminal App for Windows",
-    "section": "설정",
-    "text": "설정\nVS Code도 그렇고 윈도 터미널도 그렇고 설정이 settings.json 파일로 되어 있다. GUI가 아니라서 처음엔 어색할 수 있겠지만, 쓰다보면 이게 훨씬 편하다는 것을 알게 될 것이다.\n{: style=“textalign:center;” width=“500”}\n{: style=“textalign:center;” width=“500”}\n\n테마\n엄청나게 다양한 테마를 손쉽게 구현할 수 있다.\nhttps://windowsterminalthemes.dev/\n원하는 테마를 바꿔가며 확인할 수 있다. 마음에 드는 녀석을 “Get theme” 버튼을 눌러 클립보드에 복사하도록 하자. 녀석을 어디에 붙여 넣어야 할까?\nsettings.json 파일을 자세히 보면, 아래 \"schemes\":라는 항목이 있다. 여기에 클립보드에서 복사한 내용을 {} 안에 붙여 넣도록 하자. 그리고 설정 파일의 위로 이동하면 \"profiles\" - \"defaults\"라는 항목이 보일 것이다. 여기에는 터미널 앱을 띄웠을 때 어떤 세팅으로 시작할 것인지를 넣을 수 있다. 여러가지 항목을 넣을 수 있는데, 이중 colorScheme 항목에 방금 붙여 넣은 테마의 이름을 넣어주면 된다. 저장을 하면 테마가 바로 적용되며, 뭔가 문제가 있을 경우에는 에러가 뜬다. 이 경우 설정 파일을 다시 고치면 된다. 내가 사용중인 default는 아래와 같다.\n\"defaults\":\n{\n    \"fontFace\" : \"D2Coding\",\n    \"fontSize\" : 10,\n    \"historySize\" : 9001,\n    \"colorScheme\" : \"Monokai Vivid\",\n    \"cursorColor\" : \"#FFFFFF\",\n    \"cursorShape\" : \"vintage\",\n    \"padding\" : \"2, 2, 0, 0\",\n    \"snapOnInput\" : true,\n    \"useAcrylic\" : true,\n    \"acrylicOpacity\" : 0.95,\n    \"antialiasingMode\":\"cleartype\"\n    // Put settings here that you want to apply to all profiles\n}\n\n폰트는 D2Coding을 썼다. 폰트 크기 등등은 쭉 생략하고, 안티얼라이어싱 모드로 cleartype을 쓴 정도가 특징이다. 폰트는 한글 폰트를 써야 한글이 잘 나온다는 점만 기억하자."
-  },
-  {
-    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html",
-    "href": "posts/computer-tools/2020-10-24-classy-latex.html",
-    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
-    "section": "",
-    "text": "박사 논문을 \\(\\rm\\LaTeX\\)(이하 그냥 레이텍 혹은 텍이라고 쓰겠다)으로 썼지만… 역시 안 쓰면 잊는다. 갑자기 텍을 다시 써볼까, 라는 생각이 드는 순간 갑갑하더라. 윈도를 쓰건 맥을 쓰건 용량이 적지 않고 관리가 쉽지 않은 텍라이브를 깔게 되지는 않는다. 물론 당신이 논문을 쓰고 있다면…\n이 두 가지를 놓고 해결책을 찾아봤다. 세 가지 정도 해법이 있더라."
-  },
-  {
-    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html#tinytex-with-r",
-    "href": "posts/computer-tools/2020-10-24-classy-latex.html#tinytex-with-r",
-    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
-    "section": "tinytex with R",
-    "text": "tinytex with R\nR의 문서 관련 패키지를 거의 혼자 만들고 있는 谢益辉(사익휘, 시에-이-휘)가 R에서 텍을 컴파일할 수 있도록 아주 가벼운 패키지 tinytex을 만들었다. R을 쓴다면 RStudio를 쓸 것이고, 이 녀석은 편집기로서 역할 역시 모자라지 않다.\ninstall.packages('devtools')\ndevtools::install_github('yihui/tinytex')\ntinytex::install_tinytex()\n\ndevtools 패키지를 설치한다.\n깃헙에서 tinytex이라는 R패키지를 설치한다.\ntinytex 패키지를 통해서 tinytex을 설치한다.\n\n간략하게 잘 컴파일 되는지 확인해보자.\nwriteLines(c(\n    '\\\\documentclass{article}',\n    '\\\\begin{document}', 'Hello world!', '\\\\end{document}'\n    ), 'test.tex')\n\ntinytex::pdflatex('test.tex')\n\ntest.tex이라는 파일을 쓰고\n예를 pdflatex으로 컴파일 한다.\n\n\nCompling .tex directly\n이제 .tex 파일을 직접 컴파일 해보자. 테스트할 용도의 파일은 다음과 같다. 적당한 이름으로 아래의 tex 파일을 적당한 디렉토리에 생성하자.\n\\documentclass{article}\n\\usepackage{kotex}\n\\begin{document}\nHello world! 한글은 어떠함?\n\\end{document}\n.tex 파일을 RStudio에서 열면 위에 pdf를 생성하는 버튼을 볼 수 있다. 이걸 실행해보도록 하자. 아마도 컴파일하면 에러를 만나게 될 것이다. 한글 패키지가 제대로 설치되어 있지 않기 때문이다. 텍도 마찬가지로 패키지들을 설치해야 할 때가 많다. 몇가지 방법이 있지만, 편리한 방법을 소개하겠다.\ntinytex::parse_install(\n    text = \"! LaTeX Error: File `kotex.sty' not found.\"\n)\nR로 돌아와서 발생한 에러 메시지를 text의 인자로 넣으면 어떤 패키지가 필요한지 인식해서 texlive에서 끌어와 설치한다. 설치 후 tex 패키지를 업데이트하자.\ntinytex::tlmgr_update()\n이제 tinytex::pdflatex('test.tex')을 실행하면 pdf가 잘 생성될 것이다. 다시 .tex 파일로 와서 pdf 버튼을 눌러보자. 아마도 에러가 뜰 것이다. 방법 패키지를 설치했는데 왜 에러가 뜰까? 해법은 간단하다. 메뉴에서 다음과 같은 순서로 찾아들어가자.\nTools > Global Options > Sweave\n“Use tinytex when compling .tex files”을 체크해주자."
-  },
-  {
-    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html#wsl-tinytex-vs-code",
-    "href": "posts/computer-tools/2020-10-24-classy-latex.html#wsl-tinytex-vs-code",
-    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
-    "section": "WSL + Tinytex + VS Code",
-    "text": "WSL + Tinytex + VS Code\n사이휘는 tinytex을 R에서만 쓰도록 만들지 않았다. 리눅스 인스톨러를 제공한다. 이 블로그를 보신 분은 잘 알고 계시리라. 나는 WSL의 광팬이다! WSL에 tinytex을 깔고 녀석을 VS Code에 붙여서 쓰면 된다. 물론 맥OS, 윈도 인스톨러도 제공하니 관심이 있으시면 직접 확인을 하시면 되겠다. 홈페이지 인스톨 섹션에서 확인하면 되겠다.\nWSL 터미널에서 다음과 같이 실행하자.\nwget -qO- \"https://yihui.org/tinytex/install-bin-unix.sh\" | sh\n기타 패키지 설치 등은 tlmgr 명령을 활용하면 된다. 위 홈페이지를 참고하면 되겠다.\nVS Code에서는 어떤 확장을 쓰면 될까? Latex Workshop이 어떤 전용 에디터 못지 않은 풍부하고 다양한 확장 기능을 제공한다. extension의 settings.json을 통해 다양한 컴파일 옵션도 제공하니 자세한 것은 위 페이지의 안내를 참고하면 되겠다. 일단 pdflatex을 쓴다고 가정하자.\nVS Code에서의 활용은 아래 섹션을 참고하자."
-  },
-  {
-    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html#texlive-with-docker",
-    "href": "posts/computer-tools/2020-10-24-classy-latex.html#texlive-with-docker",
-    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
-    "section": "TexLive with Docker!",
-    "text": "TexLive with Docker!\n본격적으로 텍을 쓰는 사람이라면 어찌해야 하나? Tinytex이 많이 부족해 보일 수 있다. Texlive를 온전하게 쓰고 싶다면 역시 OS 별로 텍라이브를 까는 방법 밖에 없나? 이럴 때 손쉽게 동원할 수 있는 게 docker이다. 비슷한 계열의 OS라도 텍라이브를 전부 까는 것이 편하지는 않다. 윈도는 더 부담스럽다. 그냥 필요할 때 불러서 쓰고 잊을 수 있다면 좋지 않을까? 도커는 이런 용도로 쓰기에도 좋다.\n내가 검색해본 바로는 공인 이미지는 없는 것 같다. 다양한 사용자 이미지 중에서 꽤 관리가 잘되는 것을 골라서 쓰면 되겠다. 내가 활용하는 이미지는 다음과 같다.\nhttps://hub.docker.com/r/thomasweise/docker-pandoc/\n녀석을 도커에 마운트하자. WSL에서 도커를 쓰는 법은 이 글을 참고하라.\n​docker run -v /mnt/[YOUR-LOCAL]:/doc/ -t -i thomasweise/docker-pandoc\n\nWSL이 /mnt 디렉토리 아래 윈도의 디스크를 마운트한다. 따라서 저 아래 로컬 폴더의 주소를 넣으면 된다. 예를 들어, C의 doc라는 이름이라면, c/doc를 넣으면 된다. 이렇게 두면 해당 폴더가 도커의 /doc 아래 연결된다.\n\n초기에 이것저것 깔아주고 초기화해야 하는 것들이 있다. 이 녀석들을 셸스크립트(sh)로 만들어두자. install_kotex.sh 라는 스크립트는 아래와 같이 만들어보자. 해당 스크립트는 위에 마운트하는 폴더에 넣어두면 좋다. 그러면 도커 이미지가 올라갔을 때 해당 스크립에 쉽게 접근할 수 있다.\n#!/bin/sh\ntlmgr init-usertree\n#\ntlmgr repository add https://cran.asia/KTUG/texlive/tlnet/ ktug\n#tlmgr pinning add ktug \"*\"\ntlmgr install collection-langkorean\nupdmap -sys\nupdmap -sys\ntlmgr update --all\n상태를 초기화하고 한글을 까는 명령어들을 모아둔 것이다. 실행 중인 도커 내에서 해당 디렉토리로 이동해서 ./install_kotex.sh로 명령을 실행하자.\n이제 VS Code로 가자. 필요한 Extension은 앞서 살펴본 Latex workshop과 더불어 Remote-Container를 설치하자. 이 녀석을 설치하면 WSL 내에서 돌아가는 컨테이너 안에도 VS Code를 통해 바로 접속할 수 있다.\n - 아래 ><으로 된 부분을 클릭하면 상단에 메뉴가 뜬다.\n - “attach to running container”를 실행해서 실행중인 도커 콘테이너를 부착한다.\n\n\n부착하면 새 창이 뜨면서 아래 녹색 창이 콘테이너 부착되었음을 알려준다.\n콘테이너 내부에 Latex Workshop 확장(extension)을 설치해야 한다.\n\n\n\n설치 후 해당 Extension의 설정을 고쳐주자.\n위에 찾기창에서 디폴트로 떠 있는 내용 뒤에 “pdf” 치면 pdf에 관련된 설정만 필터링된다.\n\n\n\n위 항목을 찾아서 적당한 포워딩 포트를 넣어준다.\n포트가 잘 포워딩 된다면, 아래와 같이 VS Code에서 PDF 뷰어를 활성화할 수 있다.\n포트 포워딩 설정은 Latex Workshop 확장의 미비함 때문에 필요하다. 이후 해당 확장의 업데이트를 통해 해결될 것으로 기대한다.\n\n\nActivating PDF Viewer\n확장의 PDF 뷰어의 작동 방식 때문에 포트포워딩 선택을 해줘야 한다.\n\nPort Forward\n일단 확장 설정에서 적당히 포워딩될 포트를 설정해야 한다.\n\n\nContainer Setting\n콘테이너에서 해당 포트가 잘 포워딩되고 있는지 확인하자.\n\n\n옆에 원으로 표시해 둔 곳은 Remote-Container 확장으로 바로 가는 단축 아이콘이다.\n위 그림처럼 35556 포트를 통해 잘 포워딩되고 있음을 알 수 있다.\n\n만일 포워딩이 되고 있지 않다면, 마우스 우클릭으로 포워딩을 해주도록 하자.\n\n\n이제 VS Code에서 텍 파일을 열고 문서를 작성하고 컴파일하면 된다. Latex Workshop이 설치되어 있다면, .tex 파일에 알아서 반응하니 걱정 마시라."
-  },
-  {
-    "objectID": "posts/computer-tools/2020-10-24-classy-latex.html#references",
-    "href": "posts/computer-tools/2020-10-24-classy-latex.html#references",
-    "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
-    "section": "References",
-    "text": "References\n\ntinytex\ntexlive 도커 이미지\nkotex 리눅스 설치\nVS Code Remote-Cotainer 포트 포워딩\n컴파일에 활용된 파일은 여기를 참고하라.\n\nhttps://github.com/anarinsk/test-vscode-latex"
   },
   {
     "objectID": "posts/computer-tools/2020-10-27-viva-binder.html",
@@ -231,34 +245,6 @@
     "text": "Setting for Remote Connection\n앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 좋다면 아래와 같이 하면 된다.\n\n\n만일 위와 같은 화면에 Remote Exlorer에서 뜨지 않는다면 컨테이너가 부착되지 않는 것이다. 컨테이너를 부착하면 된다.\n\n\n\nExtension > REMOTE EXPLORER > DETAILS 탭에서 가운데 설정 모양이 “Open Container Configuration File”이다.\n옆 에디터 창에 json 형식의 설정이 뜬뜬다. 여기서 관련 extension 등의 설정을 지정할 수 있다. 이렇게 설정을 해두면 해당 컨테이너를 부착할 때 설정한 대로 자동으로 옵션들이 적용된다. 매우 편리하다.\n\n{\n    \"extensions\": [\n        \"Ikuyadeu.r\",\n        \"julialang.language-julia\",\n        \"ms-python.python\",\n        \"ms-toolsai.jupyter\",\n        \"REditorSupport.r-lsp\"\n    ],\n    \"workspaceFolder\": \"/home/jovyan/github-anari\",\n    \"forwardPorts\": [\n        43463,      \n    ],\n    \"settings\": {\n        \"jupyter.alwaysTrustNotebooks\": true,\n        \"r.bracketedPaste\": true,\n        \"r.sessionWatcher\": true,\n        \"r.rterm.linux\": \"/opt/conda/bin/radian\"\n    }\n}\n\n\nFile > Perefences > Settings에서도 설정에 접근할 수 있다.\nVS Code의 설정은 두가지 축을 지닌다. 하나는 설정 전체를 담은 json 파일이다. 왼쪽 > 표시된 항목에서처럼 카테고리 별로 구별되어 쉽게 접근할 수 있다. 이 하나의 설정을 위 그림에서 보듯이 User, Remote(컨네이터), Workspace 별로 별도로 지정해 활용할 수도 있다."
   },
   {
-    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html",
-    "href": "posts/computer-tools/2021-11-19-python-in-github.html",
-    "title": "Python in the Browser",
-    "section": "",
-    "text": "이런 상황을 생각해보자.\n\n파이썬을 갑자기 써야 한다!\n그런데 조건상 클라이언트에 깔 상황이 안 된다!\n\n이럴 때 쓸 수 있는 도구가 몇 개 있다. 대표적으로 아래 구글 코랩이 있다.\n\n구글 드라이브와 연동되는 구글 코랩\n\n그런데 많은 회사에서 구글 서비스를 막아두는 경우가 있다. 그렇다면 어떻게 할까?"
-  },
-  {
-    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html#dev-모드-진입",
-    "href": "posts/computer-tools/2021-11-19-python-in-github.html#dev-모드-진입",
-    "title": "Python in the Browser",
-    "section": "dev 모드 진입",
-    "text": "dev 모드 진입\ngithub를 dev 모드로 돌린다. 웹 브라우저 리포지터리 창에서 . 버튼을 누르거나 .dev 주소로 접근하면 된다. 익숙한 vs code 화면에 보일 것이다.\n이제 아래 왼쪽 탭 화면에서 extension을 찾으면 된다. 아래 그림처럼 생겼다."
-  },
-  {
-    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html#extension-설치",
-    "href": "posts/computer-tools/2021-11-19-python-in-github.html#extension-설치",
-    "title": "Python in the Browser",
-    "section": "extension 설치",
-    "text": "extension 설치\n검색에서 아래 익스텐션을 찾아서 설치해준다.\nexteion: vscode-pyodide\n\n이 익스텐션은 주피터에서 브라우저 기반으로 파이썬을 돌리는 Pyodide를 구현한다."
-  },
-  {
-    "objectID": "posts/computer-tools/2021-11-19-python-in-github.html#do-your-work",
-    "href": "posts/computer-tools/2021-11-19-python-in-github.html#do-your-work",
-    "title": "Python in the Browser",
-    "section": "Do your work!",
-    "text": "Do your work!\n이제 .ipynb 확장자 파일을 만들고 늘상 쓰듯이 jupyter를 쓰면 된다. 아주 특이하거나 무거운 환경이 아닌 이상, 어지간한 간단한 작업은 쾌적하게 수행할 수 있다. 익스텐션을 깔면, 인터페이스는 Jupyter에 적합하게 알아서 변한다. 물론 한계도 있다. 브라우저에 올라간 파이썬 엔진인 만큼 로컬이나 서버에 깔린 python처럼 ‘많은’ 일을 할 수는 없다."
-  },
-  {
     "objectID": "posts/container/2020-09-23-docker-humble-practice.html#사전-전제",
     "href": "posts/container/2020-09-23-docker-humble-practice.html#사전-전제",
     "title": "Docker, 소박한 사용법",
@@ -308,6 +294,20 @@
     "text": "실제 사용해보자\n앞서 말했듯이 수 있다! 처음에는 이 개념이 환상적일 수 있다. 게다가 개인용 저장소만 만들지 않으면 도커허브에 그냥 올릴 수 있다. 하지만 이런 접근은 본인이 특화된 용도로 사용을 하거나 아니면 패키지 제조에 능숙하지 않다면 크게 권하고 싶지 않다. 당분간 별 문제가 없더라도 언젠가는 이상하게 탈이 난다.\n다행스럽게 도커 허브에서는 여러가지 공식적으로 관리되고 업데이트되는 도커 이미지들이 많이 올라와 있다. 문과생이라면되도록 초반에는 이런 이미지들을 취사선택해서 활용하는 편을 권장한다. 주피터든 RStudio든 모두 웹 브라우저에서 돌아간다. 이미지가 도커 컨테이터로 구동된 이후 범용 웹브라우저에서 다음과 같이 실행하자.\n\nJuypterlab + Python: localhost:8888\nRStudio + R: localhost:8787\n\n주피터야 원래부터 웹 브라우저 기반이었으니 보통 깔아 쓰는 것과 차이를 느낄 수 없다.\n\nRStudio도 그럴까? 그렇다. 원래 RStudio라는 IDE가 웹 기반으로 만들어졌기 때문에 이 역시 차이를 느낄 수 없다. 아래 화면에서 로그인을 하면 친숙한 RStudio의 화면이 뜬다.\n\n\n해당 페이지 아이콘을 바탕화면 혹은 바로가기에 두고 쓰면 조금 편리 하겠다.\n\n특화된 패키지 혹은 설정이 필요하다면?\n그때그때 깔면 된다. 원 도커 이미지에서 웬만해서는 더 깔 것이 없을 것이다. 필요한 경우가 있다면 bash script를 만들어 깔아주도록 하자. 해당 이미지를 내리지 않는 이상 한번 설치한 상태는 유효하다.\n\n\n도커 이미지 관리\n이미지를 업데이트하고 싶다면 어떻게 해야 할까? 정석대로 하자면, WSL 2 콘솔창에서 실행중인 컨테이너를 멈추고, 이 컨테이너의 이미지를 지워야 할 것이다. 그렇게 해도 되지만, 윈도용 도커 프로그램에서는 보다 간편한 방법을 제공한다.\n대시보드 상에서 컨테이너를 실행하고 멈출 수 있고 이미지도 관리할 수 있다.\n\n아예 해당 이미지 및 컨테이너 데이터 전체를 리셋하는 방법도 있다.\n\n예를 들어보자. 파이썬으로 코딩을 한다면 그리고 주피터 환경을 써야 한다면 어떻게 하는 것이 좋을까? 주피터에서 공식적으로 운영하는 도커 이미지가 있다. 도커로 R을 쓰고 싶다면? 역시 rocker라는 공식적인 프로젝트가 있다. 개인이 제조한 사설 이미지보다는 이런 녀석들을 끌어다쓰는 편이 좋다.\n이하에서는 내가 기본으로 사용하는 두 개의 이미지를 바탕에 깔고 설명을 진행하도록 하겠다."
   },
   {
+    "objectID": "posts/container/2021-05-09-docker_korfont.html",
+    "href": "posts/container/2021-05-09-docker_korfont.html",
+    "title": "Docker + Jupyter + 한글 폰트",
+    "section": "",
+    "text": "이 글은 이 포스팅에서 이어진다. 컨테이너를 올린 뒤 컨테이너 내 터미널에서 sh 스크립트를 실행하지 않고 한글 문제 처음부터 해결할 수 없을까?\n사실 이 포스팅을 쓰게 된 동기는 따로 있다. 글을 쓰는 시점에서 matplotlib.font_manager._rebuild()가 사라졌다! Jupyter에서 폰트 목록을 다시 생성할 다른 방법을 찾아야 했다. docker-compose로 필요한 이미지를 끌어올 때 단순히 이미지를 끌어오는 대신 특화된 형태로 build를 할 수도 있다. 이전 포스팅에서 소개한 방법에서는 build 옵션을 사용하지 않았다. 일단 Build가 꽤 거창하게 느껴졌기 때문이다. 적당한 ubuntu 버전을 끌어오고 여기에 Python, Jupyter를 깔고… 이런 빌드 과정이 꽤 험난하고 불필요해 보였다. Jupyter의 경우 데이터사이언스를 위한 잘 갖춰진 도커 이미지가 이미 있고, 이를 그대로 쓰면 큰 문제는 없다.\n문제가 생겼으니 해결책을 찾아야 한다. 특화된 이미지에 기반해서 빌드를 하면 한글 문제와 같은 특정하게 발생하는 문제를 미리 해결할 수 있지 않을까? 이후 소개하는 방법을 통해 확인한 내용은 다음과 같다. 이용 조건이 비슷하다면 참고해보시라.\n\ndocker-compose를 쓸 때 이미지를 지정하는 image 부분을 제외한 나머지는 거의 그대로 재사용이 가능하다.\nimage를 그대로 끌어오는 것이나 몇 가지 명령어를 넣어서 build를 하는 것이나 시간 상으로는 크게 차이가 없다."
+  },
+  {
+    "objectID": "posts/container/2021-05-09-docker_korfont.html#how-to-implement",
+    "href": "posts/container/2021-05-09-docker_korfont.html#how-to-implement",
+    "title": "Docker + Jupyter + 한글 폰트",
+    "section": "How to Implement",
+    "text": "How to Implement\n본론이다.\n\ndocker-compose를 위한 file이 있는 디렉토리 아래 dockerfiles 디렉토리를 하나 더 만든다 (디렉토리 이름은 각자 알아서). 여기에 docker build를 위한 파일을 넣어어둔다.\ndocker-compose용 파일을 약간 수정한다.\n\n\n실행 환경\n\nWindows 10 WSL 2 + Ubuntu 20.04\nDocker for Desktop (Windows)\n\n\n도커를 쓰지 않더라도 dockerfiles과 호환되는 빌드 체계를 갖추고 있다면 응용이 가능하다.\n\n\n\ndockerfiles\n데이터 사이언스를 위한 Jupyter docker 파일을 예시로 들겠다. 다른 이미지라면 응용해서 쓰면 된다.\nFROM jupyter/datascience-notebook:latest\n# Declare root as user \nUSER root\n# Update Ubuntu \nRUN sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list && sed -i 's/security.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list\n# Install Nanum for Korean Font \nRUN apt-get update && apt-get -y upgrade && apt-get install -y fonts-nanum* && fc-cache -fv && rm -fr ~/.cache/matplotlib\n\nFROM jupyter/datascience-notebook:latest 끌어올 이미지를 지정한다.\nUSER root 이미지 내에서 root 권한을 부여한다. 이후 sudo는 안 써도 된다.\nRUN sed -i... 끌어온 우분투 이미지가 미국 기준이기 때문에 업데이트 서버 주소 역시 미국이다. 이걸 국내에서 가장 안정적이고 빠른 카카오 서버로 바꾼다.\nRUN apt-get update && apt-get -y upgrade...\n\n우분투 배포판의 업데이트 및 업그레이드를 실행한다.\n\n나눔 폰트를 깔아준다.\ndocker 이미지 배포판의 폰트 캐시를 지운다.\nJupyter의 폰트 캐시를 지운다.\n\n\n\n\ndocker-compose.yml\ndocker-compose를 위한 yml을 예시한다. 이 내용 역시 각자 환경에 맞게 변형해서 쓰면 된다. 파일 이름을 “docker-jupyter.yml”이라고 하자.\nversion: '3'\n#\nservices:\n#\n    jupyter-ds:\n      build:\n        context: .\n        dockerfile: ./dockerfiles/dockerfile-jupyter\n      user: root\n      environment:\n        - GRANT_SUDO=yes\n        - JUPYTER_ENABLE_LAB=yes\n        - JUPYTER_TOKEN={YOUR-PASSWORD}\n      volumes:\n        - /mnt/c/Users/{YOUR-DIR}:/home/jovyan/github-anari\n      ports:\n        - \"8888:8888\"\n      container_name: \"jupyter-ds\"\n# End of yml\n\n위의 yml 파일에서 “{}”로 처리된 부분은 각자 채워 넣으면 된다.\nimage 대신 build 명령어를 사용했다. 앞서 지정한 dockerfiles 디렉토리 내의 도커 명령어를 통해 빌드를 수행한다. 이렇게 빌드된 이미지는 처음부터 matplotlib 사용 시 한글 구현에 아무런 문제가 없다.\n\n주피터 환경의 파이썬 그리고 주피터 혹은 R스튜디오 환경의 R에서 한글 설정 방법 및 간단한 테스트는 여기를 참고하자.\n도커 컴포즈를 실행하는 방법은 아래와 같다.\n$ sudo docker-compose -f /mnt/{YOUR DIR}/docker-jupyter.yml -p \"jupyter-ds\" up -d\n실행 옵션은 다음과 같다. 역시 “{}”는 각자의 환경에 맞게 바꾸면 된다.\n\n-f 도커 콤포즈를 특정 파일로 실행하기 위한 옵션이다. 만일 이를 안쓰려면 yml 파일의 이름을 docker-compose.yml로 두고 해당 디렉토리 안에서 실행하면 된다.\n-p 콤포즈 안에 묶인 서비스의 이름을 나타낸다. 같은 네트워크로 묶이며 이 이름을 네트워크 이름으로 갖는다.\nup yml 내에 있는 포함된 콘테이너를 가동한다.\n-d 디태치 모드, 즉 별도의 실행되는 과정으로 실행한다."
+  },
+  {
     "objectID": "posts/container/2020-09-24-install-hangul-in-docker.html",
     "href": "posts/container/2020-09-24-install-hangul-in-docker.html",
     "title": "Docker 컨테이너 + 한글 폰트",
@@ -327,20 +327,6 @@
     "title": "Docker 컨테이너 + 한글 폰트",
     "section": "Simple Solution",
     "text": "Simple Solution\n방법은 간단하다. 컨테이너 환경 os에 직접 한글을 설치해주면 된다. 해당 os 내의 bash 혹은 상응하는 CLI에 들어가서 필요한 명령(스크립트)들을 실행하면 된다. 해당 명령들을 별도의 bash 스크립트로 만들고 필요한 경우 녀석들을 한방에 돌리면 살짝 더 편리할 것이다. 아래는 나눔 계열 폰트를 설치하는 스크립트다. 파일 이름을 install_nanum.sh로 하자.\n#!/bin/sh\n\nsudo sed -i 's/archive.ubuntu.com/ftp.daumkakao.com/g' /etc/apt/sources.list\nsudo apt-get update \nsudo apt-get install -y fonts-nanum*\nsudo fc-cache -fv\n나머지는 대체로 자명한 명령어다. 첫행의 sed는 ftp 주소를 국내로 바꿔주는 것이다. 업데이트 시 걸리는 시간을 단축하기 위해 사용했다. 터미널에서 스크립트 파일이 있는 디렉토리로 이동한 후 bash 스크립트를 실행하면 된다. bash 스크립트는 도커를 쓸 때 유용하다. 초기에 갖춰져야 하는 세팅이 있을 경우 스크립트로 만들어두고 도커 이미지를 새로 올렸을 때 실행해주면 되겠다. 약간 귀찮지만 못 견딜 정도는 아니다.\n> ./install_nanum.sh ⏎\n윈도에서 파일을 편집할 경우 ^M이 달라 붙어 문제가 생기는 경우가 있다. OS의 개행 문자가 달라서 생기는 문제다. docker 내부 터미널에서 vim, nano 등으로 파일을 열어 해당 부분을 지우고 다시 저장하면 된다.\n이제 도커 컨테이너 안의 이용한 주피터 노트북에서 다음과 같이 실행하면 나눔고딕 폰트를 쓸 수 있게 된다.\n!./install_nanum.sh\nimport matplotlib.pyplot as plt\nimport matplotlib as mpl\nfrom matplotlib import rc, font_manager\nfont_fname = '/usr/share/fonts/truetype/nanum/NanumGothic.ttf'\nprop = font_manager.FontProperties(fname=font_fname)\nmpl.rcParams['font.family'] = 'NanumGothic'\nmpl.rcParams['axes.unicode_minus']  = False\nfont_manager._rebuild()\n첫줄은 Jupyter 안에서 스크립트를 실행하는 명령어다. 혹시 잘 보이지 않으면, 커널을 한번 리프레시 해주면 된다. 다른 폰트를 설정하고 싶다면 비슷하게 응용해 활용하면 되겠다.\n\nUpdated\n2021년 5월 8일 기준으로 font_manager에서 _rebuild() 모듈이 없어졌더라. 현재 시점으로는 보이지 않았다. install_nanum.sh에서 sudo rm -fr ~/.cache/matplotlib를 추가로 하나 더 실행해주자. 캐시에 저장된 matplotlib의 폰트 리스트를 지워버리면 최초 실행될 때 자동으로 폰트 리스트를 빌드한다. 이때 설치한 일련의 나눔 폰트가 폰트 리스트에 잡힌다.\nDocker 컨테이너 내에 설치된 폰트를 확인하고 싶다면, 아래를 참고하라.\nfont_list = font_manager.findSystemFonts(fontpaths=None, fontext='ttf')\nfont_list"
-  },
-  {
-    "objectID": "posts/container/2021-05-09-docker_korfont.html",
-    "href": "posts/container/2021-05-09-docker_korfont.html",
-    "title": "Docker + Jupyter + 한글 폰트",
-    "section": "",
-    "text": "이 글은 이 포스팅에서 이어진다. 컨테이너를 올린 뒤 컨테이너 내 터미널에서 sh 스크립트를 실행하지 않고 한글 문제 처음부터 해결할 수 없을까?\n사실 이 포스팅을 쓰게 된 동기는 따로 있다. 글을 쓰는 시점에서 matplotlib.font_manager._rebuild()가 사라졌다! Jupyter에서 폰트 목록을 다시 생성할 다른 방법을 찾아야 했다. docker-compose로 필요한 이미지를 끌어올 때 단순히 이미지를 끌어오는 대신 특화된 형태로 build를 할 수도 있다. 이전 포스팅에서 소개한 방법에서는 build 옵션을 사용하지 않았다. 일단 Build가 꽤 거창하게 느껴졌기 때문이다. 적당한 ubuntu 버전을 끌어오고 여기에 Python, Jupyter를 깔고… 이런 빌드 과정이 꽤 험난하고 불필요해 보였다. Jupyter의 경우 데이터사이언스를 위한 잘 갖춰진 도커 이미지가 이미 있고, 이를 그대로 쓰면 큰 문제는 없다.\n문제가 생겼으니 해결책을 찾아야 한다. 특화된 이미지에 기반해서 빌드를 하면 한글 문제와 같은 특정하게 발생하는 문제를 미리 해결할 수 있지 않을까? 이후 소개하는 방법을 통해 확인한 내용은 다음과 같다. 이용 조건이 비슷하다면 참고해보시라.\n\ndocker-compose를 쓸 때 이미지를 지정하는 image 부분을 제외한 나머지는 거의 그대로 재사용이 가능하다.\nimage를 그대로 끌어오는 것이나 몇 가지 명령어를 넣어서 build를 하는 것이나 시간 상으로는 크게 차이가 없다."
-  },
-  {
-    "objectID": "posts/container/2021-05-09-docker_korfont.html#how-to-implement",
-    "href": "posts/container/2021-05-09-docker_korfont.html#how-to-implement",
-    "title": "Docker + Jupyter + 한글 폰트",
-    "section": "How to Implement",
-    "text": "How to Implement\n본론이다.\n\ndocker-compose를 위한 file이 있는 디렉토리 아래 dockerfiles 디렉토리를 하나 더 만든다 (디렉토리 이름은 각자 알아서). 여기에 docker build를 위한 파일을 넣어어둔다.\ndocker-compose용 파일을 약간 수정한다.\n\n\n실행 환경\n\nWindows 10 WSL 2 + Ubuntu 20.04\nDocker for Desktop (Windows)\n\n\n도커를 쓰지 않더라도 dockerfiles과 호환되는 빌드 체계를 갖추고 있다면 응용이 가능하다.\n\n\n\ndockerfiles\n데이터 사이언스를 위한 Jupyter docker 파일을 예시로 들겠다. 다른 이미지라면 응용해서 쓰면 된다.\nFROM jupyter/datascience-notebook:latest\n# Declare root as user \nUSER root\n# Update Ubuntu \nRUN sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list && sed -i 's/security.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list\n# Install Nanum for Korean Font \nRUN apt-get update && apt-get -y upgrade && apt-get install -y fonts-nanum* && fc-cache -fv && rm -fr ~/.cache/matplotlib\n\nFROM jupyter/datascience-notebook:latest 끌어올 이미지를 지정한다.\nUSER root 이미지 내에서 root 권한을 부여한다. 이후 sudo는 안 써도 된다.\nRUN sed -i... 끌어온 우분투 이미지가 미국 기준이기 때문에 업데이트 서버 주소 역시 미국이다. 이걸 국내에서 가장 안정적이고 빠른 카카오 서버로 바꾼다.\nRUN apt-get update && apt-get -y upgrade...\n\n우분투 배포판의 업데이트 및 업그레이드를 실행한다.\n\n나눔 폰트를 깔아준다.\ndocker 이미지 배포판의 폰트 캐시를 지운다.\nJupyter의 폰트 캐시를 지운다.\n\n\n\n\ndocker-compose.yml\ndocker-compose를 위한 yml을 예시한다. 이 내용 역시 각자 환경에 맞게 변형해서 쓰면 된다. 파일 이름을 “docker-jupyter.yml”이라고 하자.\nversion: '3'\n#\nservices:\n#\n    jupyter-ds:\n      build:\n        context: .\n        dockerfile: ./dockerfiles/dockerfile-jupyter\n      user: root\n      environment:\n        - GRANT_SUDO=yes\n        - JUPYTER_ENABLE_LAB=yes\n        - JUPYTER_TOKEN={YOUR-PASSWORD}\n      volumes:\n        - /mnt/c/Users/{YOUR-DIR}:/home/jovyan/github-anari\n      ports:\n        - \"8888:8888\"\n      container_name: \"jupyter-ds\"\n# End of yml\n\n위의 yml 파일에서 “{}”로 처리된 부분은 각자 채워 넣으면 된다.\nimage 대신 build 명령어를 사용했다. 앞서 지정한 dockerfiles 디렉토리 내의 도커 명령어를 통해 빌드를 수행한다. 이렇게 빌드된 이미지는 처음부터 matplotlib 사용 시 한글 구현에 아무런 문제가 없다.\n\n주피터 환경의 파이썬 그리고 주피터 혹은 R스튜디오 환경의 R에서 한글 설정 방법 및 간단한 테스트는 여기를 참고하자.\n도커 컴포즈를 실행하는 방법은 아래와 같다.\n$ sudo docker-compose -f /mnt/{YOUR DIR}/docker-jupyter.yml -p \"jupyter-ds\" up -d\n실행 옵션은 다음과 같다. 역시 “{}”는 각자의 환경에 맞게 바꾸면 된다.\n\n-f 도커 콤포즈를 특정 파일로 실행하기 위한 옵션이다. 만일 이를 안쓰려면 yml 파일의 이름을 docker-compose.yml로 두고 해당 디렉토리 안에서 실행하면 된다.\n-p 콤포즈 안에 묶인 서비스의 이름을 나타낸다. 같은 네트워크로 묶이며 이 이름을 네트워크 이름으로 갖는다.\nup yml 내에 있는 포함된 콘테이너를 가동한다.\n-d 디태치 모드, 즉 별도의 실행되는 과정으로 실행한다."
   },
   {
     "objectID": "posts/container/2021-09-13-podman-1.html",
@@ -476,151 +462,25 @@
     "text": "Extra\n\n개인적으로 재미있게 본 내용 하나 추가한다. 유유상종 혼(assortative marriage)이 존재하는지 여부에 관한 것이다.\n\n교육 년수를 12년 미만(중퇴), 고졸, 대졸로 구분하면 3X3 테이블이 나온다.\n이제 각각의 경우에 해당하는 부부의 비율을 구한다.\n각각의 인구 비율이 무작위로 매칭되었을 때의 비율을 구한다.\n실제의 유유상종 혼의 비율과 무작위의 비율을 비교하면 유유상종의 정도가 계산된다.\n\n논문에서 밝힌 바에 따르면 대졸자의 유유상종 혼은 줄어드는 추세다. 즉, 1965년에 위 비율은 5.9였는데, 2016년에는 1.8에 불과하다. 즉 유유상종 혼은 감소하는 추세다.\n다음으로 유유상종 혼이 부의 창출에 있어서 단순 합을 넘어서는 추가적인 이득을 제공하는가 여부에 관한 것이다.\n\n\n\n그림 11. 유유상종 혼은 부의 형성에 어떻게 영향을 주었는가\n\n\n \n\n\n\n\nA, B에서 보듯이 소득과 부 모두 유유상종 혼 상태의 가구가 평균보다 두 배 가량 높다. 하지만 C, D에서 보듯이 이를 각 해당 연도의 유유상종 혼 인구가 점유한 부의 비율과 유유상종 혼 인구의 비율로 나눈 수치는 거의 일정한 수준을 유지하고 있다."
   },
   {
-    "objectID": "posts/git/2020-03-05-using-git-w10.html",
-    "href": "posts/git/2020-03-05-using-git-w10.html",
-    "title": "Using Git ‘Smoothly’ in Windows 10",
+    "objectID": "posts/linear-algebra/2021-01-18-Eigenspace-2.html",
+    "href": "posts/linear-algebra/2021-01-18-Eigenspace-2.html",
+    "title": "Eigenspace, part 2",
     "section": "",
-    "text": "Note\n\n\n\n윈도에서 깃을 쓸 때 이렇게 불편하게 쓰지 않아도 된다."
+    "text": "\\(A \\in \\mathbb C^{m \\times n}\\)을 생각해보자. 이런 조건에서 아이겐 분해를 어떻게 활용할 수 있을까? 일단 \\(A\\)를 정방행렬로 만들어주어야 할 것이고, 이에는 두 가지 방법이 있다.\n\\[\n\\underbrace{A^T A}_{n \\times n}, \\overbrace{A A^T}^{m \\times m}\n\\]\n아울러, \\((A^T A)^T = A^T A\\), \\((AA^T)^T = A A^T\\)가 성립하기 때문에 두 매트릭스 모두 normal 매트릭스다. 따라서 아래와 같은 개념화가 가능하다.\n\\[\nA =\n\\underbrace{\n\\begin{bmatrix}\n\\vert & \\dotsb & \\vert \\\\\nu_1 & \\dotsb & u_m \\\\\n\\vert & \\dotsb & \\vert \\\\\n\\end{bmatrix}}_{m \\times m}\n\\overbrace{\n\\begin{bmatrix}\n\\sigma_1 & 0 & \\dotsb \\\\\n0 & \\sigma_2 & \\dotsb \\\\\n0 & 0 & \\dotsb \\\\\n\\end{bmatrix}}^{m \\times n}\n\\underbrace{\n\\begin{bmatrix}\n-- & v_1^T & -- \\\\\n-- & \\vdots & -- \\\\\n-- & v_n^T & -- \\\\\n\\end{bmatrix}}_{n \\times n} =\nU \\Sigma V^T\n\\]\n\\(U\\)를 통해 분해되는 부분을과 \\(V\\)를 통해 분해되는 부분을 다음과 같이 나타내보자.\n\\[\n\\begin{aligned}\nA A^T & = U \\Lambda_l U^T \\\\\nA^T A & = V \\Lambda_r V^T \\\\\n\\end{aligned}\n\\]\n소문자의 \\(l\\)와 \\(r\\)은 각각 left, right를 뜻한다. \\(U\\)와 \\(V^T\\)를 명시적으로 적어보자.\n\\[\nU =\n\\begin{bmatrix}\n\\vert & \\dotsb & \\vert \\\\\nu_1 & \\dotsb & u_m \\\\\n\\vert & \\dotsb & \\vert \\\\\n\\end{bmatrix}, \\text{~where}\n\\{ (\\lambda_i, u_i) = \\text{eigenvects}(A A^T) \\}\n\\] \\[\nV =\n\\begin{bmatrix}\n-- & v_1^T & -- \\\\\n-- & \\vdots & -- \\\\\n-- & v_n^T & -- \\\\\n\\end{bmatrix}, \\text{~where}\n\\{ (\\lambda_i, v_i) = \\text{eigenvects}(A^T A) \\}\n\\]\n이제 유사 대각행렬 \\(\\Sigma\\)를 보자. 이 행렬은 \\(m \\times n\\) 형태다.\n\\[\n\\sigma_i = \\sqrt{\\lambda_i}, \\text{ where } \\lambda_i = \\text{eigenvals}(A A^T) = \\text{eigenvals}(A^T A)\n\\]\n\n\n기저를 바꾸는 관점에서 다시 음미해보자.\n\\[\n\\vec y = A \\vec x = U \\Sigma V^T \\vec x\n\\]\n\n\\(V^T \\vec x\\): \\(V^T = \\phantom{}\\_{B\\_{SVD}}[1]\\_{B_S}\\). 즉, \\(B_{SVD} \\leftarrow B_S\\)를 수행한다.\n\\(\\Sigma\\): 유사 대각행렬을 곱해 각 기저의 크기를 조절한다.\n\\(U\\): \\(U = \\phantom{}\\_{B_{S}}[1]\\_{B\\_{SVD}}\\): \\(B_{S} \\leftarrow B_{SVD}\\)\n\n즉, \\(B_S \\leftarrow B_{SVD} \\leftarrow B_S\\)를 수행한다.\n\n\n\n외적의 관점에서 이해하는 것도 흥미롭다. 일단 외적에 관해서 간단히 살펴보자. 벡터 \\(u \\in \\mathbb R^m\\), \\(v \\in \\mathbb R^n\\)이 있다고 할 때,\n\\[\nu v^T \\in \\mathbb R^{m \\times n}\n\\]\n외적의 rank는 어떻게 될까? 1이다. 직관적으로는 이해가 안될 수 있다.\n\\[\n{\\rm rank} (AB) \\leq \\min({\\rm rank}(A), {\\rm rank} (B)) =  1\n\\]\nSVD 식을 다시 조립해보자. 일단 \\(m \\geq n\\)을 가정하자.\n\\[\nU \\Sigma =\n\\begin{bmatrix}\n\\vert & \\dotsb & \\vert \\\\\nu_1 & \\dotsb & u_m \\\\\n\\vert & \\dotsb & \\vert \\\\\n\\end{bmatrix}\n\\begin{bmatrix}\n\\sigma_1 & 0 & \\dotsb \\\\\n0 & \\sigma_2 & \\dotsb \\\\\n0 & 0 & \\dotsb \\\\\n\\end{bmatrix}\n\\] \\[\n\\begin{aligned}\nA & = U \\Sigma V^T \\\\\n& =\n\\underbrace{\n\\begin{bmatrix}\n\\sigma_1 u_1, \\dotsb,  \\sigma_n u_n, \\dotsc,  0 u_m\n\\end{bmatrix}}_{U \\Sigma}\n\\begin{bmatrix}\n-- & v_1^T & -- \\\\\n-- & \\vdots & -- \\\\\n-- & v_n^T & -- \\\\\n\\end{bmatrix} \\\\\n& =  \\sigma_1 u_1 v_1^T + \\dotsb + \\sigma_n u_n v_n^T + \\dotsb + 0 u_m v_m^T\n\\end{aligned}\n\\]\n\\(u_i v_i^T\\)는 각각 1의 rank를 지니고 앞에 곱해진 singular value의 기저로 이해할 수 있다. 해당 기저들의 선형 결합으로 매트릭스 \\(A\\)를 다시 분해할 수 있다.\n\n\n\n이렇게 대각화를 할 때 어떤 이득이 있을까? 앞서 유사 행렬을 활용하면 행렬의 곱이 간단해진다는 점을 보았다. SVD에도 비슷한 이점이 있다. 이 외에 SVD를 써서 할 수 있는 중요한 이득이 있다. 계산량을 줄이는 것이다.\n\\(M \\in \\mathbb R^{1000 \\times 2000}\\)의 변환이 있다고 하자. 이 변환의 싱귤러 밸류들 많아야 1000개가 나올 것이다. 만일 이 1000개 중에서 3개를 제외하고 나머지 값이 0에 가깝다고 하자.\n\\(M\\)이라는 변환의 근사값을 구하고 싶다면, 0에 가까운 값을 모두 0으로 둔다. 이렇게 바꾸면,\n\\[\nM \\approx \\hat M = \\hat U \\hat \\Sigma \\hat V^T\n\\]\n\n\\(\\hat U \\in \\mathbb R^{1000 \\times 3}\\)\n\\(\\hat \\Sigma \\in \\mathbb R^{3 \\times 3}\\)\n\\(\\hat V^T \\in \\mathbb R^{3 \\times 2000}\\)\n\n이렇게 근사값을 구하면 계산량이 많이 줄어들 것이다. \\(M\\)와 \\(\\hat M\\) 사이의 힐베르트-슈미트 거리를 구하면,\n\\[\n\\Vert M - \\hat M \\Vert_{\\rm HS} = \\sqrt{\\sum_{i=4}^{1000} \\sigma_i^2}\n\\]\n이 값이 크지 않다면, \\(M \\approx \\hat M\\)으로 간주할 수 있다. 실제로 이미지 압축 등에서 많이 사용되는 방법이다."
   },
   {
-    "objectID": "posts/git/2020-03-05-using-git-w10.html#why",
-    "href": "posts/git/2020-03-05-using-git-w10.html#why",
-    "title": "Using Git ‘Smoothly’ in Windows 10",
-    "section": "Why",
-    "text": "Why\n단언컨대 git은 곧 문과생도 알아야 할 필수 도구가 될 것이다. 버전 관리가 절실해지는 그리고 코딩이 학제를 넘어선 필수처럼 인정되는, 그런 세상에서 컴퓨터를 끼고 있으면서 git의 사용을 피하기는 힘들 듯 싶다. git에 관한 포스트는 아니니 여기까지 하자.\nmacos나 linux 계열을 쓸 때는 git에 관해서 크게 고민하지 않아도 된다. 터미널 켜고, CLI(Command Line Interface)로 쓰면 그만이다. 이렇게 쓰는 것이 윈도에서는 쉽지 않다. 물론 윈도에서 WSL로 리눅스를 지원하기는 한다. 하지만 그냥 메인 os 위에 얹어 쓰는 게 편할 때가 있다."
+    "objectID": "posts/linear-algebra/2021-01-18-Eigenspace-2.html#lu",
+    "href": "posts/linear-algebra/2021-01-18-Eigenspace-2.html#lu",
+    "title": "Eigenspace, part 2",
+    "section": "LU",
+    "text": "LU\n\\(n \\times n\\) 정방 행렬에 대해서 \\(A = LU\\)를 수행할 수 있다. \\(L\\)과 \\(U\\)는 하방삼각 행렬과 상방삼각 행렬이다. 이렇게 매트릭스를 쪼개는 이유를 각각에 관해서 역행렬을 구하기 힘들기 때문이다. 즉,\n\\[\nA \\vec x = LU \\vec x = b \\Leftrightarrow U \\vec x = L^{-1}b \\Leftrightarrow \\vec x = U^{-1}L^{-1}b\n\\]\n우선 LU가 가능하라면 \\(A\\)가 RREF으로 열의 교환 없이 환원될 수 있어야 한다.\n\nCholesky\n\\(A\\)가 대칭이고 PSD 매트릭스라면 \\(LU\\) 분해는 더욱 단순해진다.\n\\[\nA = L L^T \\text{ or } A = U^T U\n\\]"
   },
   {
-    "objectID": "posts/git/2020-03-05-using-git-w10.html#what",
-    "href": "posts/git/2020-03-05-using-git-w10.html#what",
-    "title": "Using Git ‘Smoothly’ in Windows 10",
-    "section": "What",
-    "text": "What\n우리는 아래 두 개의 소프트웨어를 쓸 것이다.\n\nGit for Windows\nCmder\n\n\nGit for Windows\n웬만하면 64비트로 깔자. 그리고 중간에 여러 가지 선택지에 관해서 질문한다. 커맨드라인은 어떤 것으로 쓸 것인지 등등. 원래 git이 linux에 뿌리를 두고 있는 만큼 윈도의 디폴트 명령창보다는 Bash를 쓰는 편이 좋다. ls 등의 명령어를 자유롭게 쓸 수 있어서 꽤 편하다. 윈도용 git은 특화된 git-bash를 제공하니, 이 녀석을 쓰면 좋을 듯 싶다.\n\n\nCmder\n“커맨더”라고 읽으면 된다. git은 이미 깔았으므로 쓰면 된다. 다만 좀 더 편리한 환경에서 CLI를 쓰기 위해서 Cmder를 깔아보도록 하자. 이 녀석은 별도의 인스톨 없이 쓸 수 있다. git을 포함한 무거운 버전과 git이 빠진 미니 버전이 있다. 어차피 우리는 별도로 깃을 깔았으니, 미니 버전을 다운받으면 되겠다. 다운 받은 후 아무 위치에나 두어도 된다. 어차피 exe 파일만 사용할 것이기 때문이다. 다만, 관리가 편하도록 나는 아래의 위치에 두었다.\nUsers\\[your id]\\cmder_mini\\\n최초 실행하면 윈도우가 경고를 날린다. 이래 그림에서 형광색이 칠해진 부분을 클릭하고 프로그램을 허용해준다. 이후 몇 번의 경고성 질문이 더 날아온다. 전부 “허용”해주면 되겠다.\n{: style=“textalign:center;” width=“500”}\n그리고 cmder 실행 파일 위에서 좌 클릭해서, 속성 > 호환성 > 관리자 권한으로 이 프로그램을 실행을 체크해두는 편을 권한다. 혹시 dock에 cmder를 박아둔 상태라면 Shift 키와 함께 좌 클릭을 하면 속성을 선택할 수 있다."
-  },
-  {
-    "objectID": "posts/git/2020-03-05-using-git-w10.html#how",
-    "href": "posts/git/2020-03-05-using-git-w10.html#how",
-    "title": "Using Git ‘Smoothly’ in Windows 10",
-    "section": "How",
-    "text": "How\n깃을 편하게 쓰기 위해서 Cmder의 설정을 약간 바꿔주겠다. 우선 아래의 그림처럼 맨 위 메뉴의 삼선을 클릭하면 Cmder의 세팅으로 갈 수 있다.\n{: style=“textalign:center;” width=“500”}\n엄청나게 많은 설정들이 있다. 창을 투명으로 만든다든가, 텍스트의 폰트를 바꾼다든가, 하는 것들이 가능하다. 여기서는 git bash를 쓰는 설정만 간단하게 설명하도록 하자.\n{: style=“textalign:center;” width=“500”}\n그림에서 보듯이 startup > task를 선택한다. 선택 가능한 CLI 중에서 {Bash:: Git bash}를 선택한다. 이 녀석을 디폴트 CLI로 설정한다. 시작 디렉토리를 지정하고 싶다면 아래 Startup dir...을 선택해 바꿔주면 된다."
-  },
-  {
-    "objectID": "posts/git/2020-03-05-using-git-w10.html#finally",
-    "href": "posts/git/2020-03-05-using-git-w10.html#finally",
-    "title": "Using Git ‘Smoothly’ in Windows 10",
-    "section": "Finally?",
-    "text": "Finally?\n아래 그림에서 보듯이 윈도 명령 창에서는 먹지 않는 ls 등의 명령어가 잘 먹고, git도 편안하게 사용할 수 있다.\n{: style=“textalign:center;” width=“500”}"
-  },
-  {
-    "objectID": "posts/git/2020-03-05-using-git-w10.html#seriously",
-    "href": "posts/git/2020-03-05-using-git-w10.html#seriously",
-    "title": "Using Git ‘Smoothly’ in Windows 10",
-    "section": "Seriously!",
-    "text": "Seriously!\n여기까지 좋은데, git-bash에서 python을 쓰시는 분들이라면 python을 제대로 띄울 수 없다. 해결책은 간단하다. 아래와 같이 실행하면 된다.1\n매번 이럴게 winpty로 띄울 수는 없으니 .bashrc에 넣도록 하자.\n$ echo \"alias python='winpty python.exe'\" >> ~/.bashrc\n넣은 뒤에 터미널을 재실행하거나 source ~/.bashrc를 실행해주면 된다."
-  },
-  {
-    "objectID": "posts/git/2022-04-27-happy-giting.html",
-    "href": "posts/git/2022-04-27-happy-giting.html",
-    "title": "Happy Git-ing!",
-    "section": "",
-    "text": "Note\n\n\n\n이 포스팅은 깃 혹은 깃허브에 관한 일반적인 해설이나 이용법이 아닙니다. 깃 혹은 깃허브를 어느 정도 활용하고 있다고 할 때 가려움을 긁어주는 용도로 작성된 글입니다."
-  },
-  {
-    "objectID": "posts/git/2022-04-27-happy-giting.html#tl-dr",
-    "href": "posts/git/2022-04-27-happy-giting.html#tl-dr",
-    "title": "Happy Git-ing!",
-    "section": "tl; dr",
-    "text": "tl; dr\n\n깃과 깃허브를 OS를 아우르면서 써보자."
-  },
-  {
-    "objectID": "posts/git/2022-04-27-happy-giting.html#common-tools",
-    "href": "posts/git/2022-04-27-happy-giting.html#common-tools",
-    "title": "Happy Git-ing!",
-    "section": "Common Tools",
-    "text": "Common Tools\n이상적으로 말하면 git을 쓸 때 터미널(CLI)을 통해 쓰면 좋다. 하지만 우리는 인간이고 터미널은 잊기 쉽고 이 때문에 고통받을 수 있다. 그래서 UI를 갖춘 틀이 있으면 좋다.\n아마도 깃을 쓴다면 저장소로 깃랩이나 깃헙을 같이 쓸 것이다. 나는 깃헙을 쓰고 있으므로 깃헙을 중심으로 설명하겠다.\n깃헙 데스크탑플랫폼을 가리지 않고 깃헙을 같이 쓸 수 있는 앱이 있다. 플랫폼 별로 다운로드 받아서 쓰면 된다. 리포지터리(리포)를 생성하고 클론하고 하는 작업이 모두 UI 내에서 가능해서 제법 편리하다. 자세한 사용법은 생략한다."
-  },
-  {
-    "objectID": "posts/git/2022-04-27-happy-giting.html#그래도-터미널을-써야-한다면",
-    "href": "posts/git/2022-04-27-happy-giting.html#그래도-터미널을-써야-한다면",
-    "title": "Happy Git-ing!",
-    "section": "그래도 터미널을 써야 한다면?",
-    "text": "그래도 터미널을 써야 한다면?\n그래도 터미널에서 직접 깃을 써야 할 때가 있다. 이때부터 문제가 다소 복잡해진다. 깃의 원격 저장소를 세팅해야 하는데, 깃헙을 쓴다면 인증도 해야한다. 이걸 뭔가 편리하게 할 수 없을까?\n\ngh CLI\n이러한 불편을 해소하기 위해서 github에서 만든 툴이 gh CLI다. 이 녀석도 플랫폼별로 제공된다. 한마디로 말해서 터미널에서 깃헙을 제어하고 여러가지 작업을 할 수 있게 만든 툴이다. 다른 명령어들도 유용하지만 제일 유용한 것은 인증에 관련된 것이다.\n$ gh auth login  \n현재 깃헙에서 터미널에서 id/password를 통한 로그인을 막고 있다. 저장소 주소를 origin에 박고 id/password로 로그인 힐 수 없다. 위 명령어를 실행하면 조건에 따라서 로그인 절차를 상세하게 안내해준다. 그대로 따라서 로그인 하면 큰 불편함을 느끼지 않을 것이다."
-  },
-  {
-    "objectID": "posts/git/2022-04-27-happy-giting.html#os-별-설치",
-    "href": "posts/git/2022-04-27-happy-giting.html#os-별-설치",
-    "title": "Happy Git-ing!",
-    "section": "OS 별 설치",
-    "text": "OS 별 설치\n앞에 소개했던 github desktop은 그 자체로서 온전하게 운용된다. 다시 말해 이 앱 자체가 외부의 다른 앱에 의존하지 않기 때문에 앱 내에서 git을 쓰는 이상 이 녀석만 깔면 된다. gh CLI의 경우에는 OS에 깃이 깔려 있어야 한다.\n\nLinux, Macos\n두 OS 모두 깃이 기본으로 깔려 있다. 따라서 gh CLI를 깔아서 잘 쓰면 된다.\n\n\nWindows 10\n원도10의 경우는 고려해야 할 사항이 몇 가지 있다. 윈도우용 깃을 다운받아서 깔아도 되지만 그것보다는 Powershell을 통해서 윈도 패키지 매니저인 winget을 이용해 설치하면 좋다.\n$ winget install -e --id Git.Git\n이렇게 깃을 설치한 후 gh auth login을 통해서 로그인을 수행하면 git의 원격 저장소 설정이 잘 이루어진다.\n\nWSL\nWSL은 Windows 10 안에서 돌고 있는 가상 머신이고 엄밀한 관점에서는 별도의 기계다. 다른 Ubuntu와 마찬가지로 깃이 기본으로 깔려 있다. 따라서 외부 저장소에 대한 인증이 필요하다.\n상식적으로는 gh CLI를 통해서 가능할 것 같은데 그렇지 않다. 이에 대한 해결책은 여기 나와 았다. 쉽게 말해서 윈도의 자격 증명을 가져오는 방식이다. 따라서 윈도에 깃과 깃허브에 관한 설정이 이미 완료되어 있어야 한다.\n$ git config --global credential.helper \"/mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe\""
-  },
-  {
-    "objectID": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html",
-    "href": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html",
-    "title": "Eigenvalues and Eigenvectors",
-    "section": "",
-    "text": "행렬 대각화를 이루는 방법 중 하나는 아이겐벡터와 아이겐밸류를 재구성하는 것이다.\n대각화가 가능한 행렬 \\(A\\)가 있고, 그 아이겐벡터를 열 벡터로 하는 행렬을 \\(Q\\)라고 하면\n\n\\[\n\\begin{aligned}\nA Q & = A[x_1, \\dotsc, x_n] \\\\\n& = [\\lambda_1 x_1, \\cdots, \\lambda_n x_n] \\\\\n&= Q \\boldsymbol{\\lambda}\n\\end{aligned}\n\\] \\[\nAQ Q^{-1} = A = Q \\boldsymbol{\\lambda}Q^{-1}\n\\]\n\n대각화가 가능하기 위해서는 우선 행렬 \\(Q\\)가 비특이(non-singular) 행렬이어야 한다. \\(Q\\)는 아이겐벡터의 조합이기 때문에 서로 다른 아이겐밸류를 지니거나 혹은 아이겐벡터의 선형독립이 성립해야 한다.\n대칭 행렬의 경우 모든 아이겐밸류가 실수이고, \\(Q\\)는 직교 행렬(orthogonal matrix)이 된다. 이 경우\n\n\\[\nA = Q\\boldsymbol{\\lambda}Q^T\n\\]"
-  },
-  {
-    "objectID": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#definition",
-    "href": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#definition",
-    "title": "Eigenvalues and Eigenvectors",
-    "section": "Definition",
-    "text": "Definition\n\\[\n\\underset{(n \\times n)}{\\boldsymbol{A}} \\underset{(n \\times 1)}{x} = \\lambda x, \\text{ for $x \\neq 0$}\n\\]\n벡터 \\(x(\\in {\\mathbb R}^n)\\)가 있다고 하자. \\(\\boldsymbol{A}\\)는 일종의 함수이고 이는 \\(x\\)를 변형시키게 된다. 이 변형이 그 다시 자신이 되고 벡터의 크기만 조정해주는 형태가 될 때, \\(\\lambda\\)를 아이겐밸류 그리고 그 벡터 \\(x\\)를 아이겐벡터라고 한다. 잠깐! 여기서 아이겐 벡터는 우 아이겐벡터다. 왜냐하면, 벡터가 매트릭스의 오른쪽에 곱해지기 때문이다. 우(right) 아이겐벡터를 보통 아이겐벡터라고 쓴다. 하지만 좌(left) 아이겐벡터도 있다. 일단 이 점만 지적해두도록 하자.\n\n\n좌 아이겐벡터와 우 아이겐벡터가 절묘하게 사용되는 사례는 마르코프 체인이다. 아이겐밸류 1이 존재하고, 그 아이겐벡터가 해당 상태의 극한 분포가 된다는 사실이 좌, 우 아이겐벡터를 번갈아 사용하면서 도출된다. 자세한 것은 여기를 참고하자.\n\nEigenspace\n벡터들의 집합 중에서 아래의 조건을 만족하면 이를 벡터 (부분) 공간이라고 부른다.\n\n영 벡터 \\(\\boldsymbol 0\\)가 원소이다.\n\\(x\\)가 원소일 때 \\(\\alpha x\\) (\\(\\alpha \\in \\mathbb{R})\\)도 원소다.\n\\(x\\), \\(y\\)가 원소일 때 \\(x + y\\)도 원소다.\n\n쉽게 말해서 벡터 (부분) 공간 위에서는 덧셈과 스칼라 곱셈이 정의된다. 아이겐벡터로 구성된 공간은 이런 벡터 공간이 될까?\n\n\\(A {\\boldsymbol 0} = \\lambda {\\boldsymbol 0}\\)\n\\(A(\\alpha x) = \\alpha(A x) = \\alpha (\\lambda x) = \\lambda(\\alpha x)\\)\n\\(A(x_1 + x_2) = A x_1 + A x_2 = \\lambda x_1 + \\lambda x_2 = \\lambda(x_1 + x_2)\\)\n\n3번의 경우 정의대로 하나의 아이겐밸류 \\(\\lambda\\)에 대해서 두 개 이상의 아이겐벡터가 대응될 때에 해당한다. 아이겐벡터를 원소로 하는 공간은 벡터 부분 공간이 되며, 이를 아이겐스페이스(eigenspace)라고 부른다.\n\n\n얼핏 생각하면 이런 경우가 있나 싶을 수 있다. 가장 좋은 사례는 항등 행렬, \\({\\boldsymbol I}_n\\)이다. 이 항등행렬의 경우 아이겐밸류는 1이고, 대응 가능한 어떤 벡터도 아이겐벡터가 된다."
-  },
-  {
-    "objectID": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#determinant-and-eigenvalues",
-    "href": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#determinant-and-eigenvalues",
-    "title": "Eigenvalues and Eigenvectors",
-    "section": "Determinant and Eigenvalues",
-    "text": "Determinant and Eigenvalues\n아이겐밸류의 아이겐벡터를 구하는 과정은 다음과 같다.\n\\[\n|(\\boldsymbol{A} - \\lambda I)|  = 0\n\\]\n즉, 임의의아이겐밸류, 아이겐벡터 정의에서 \\(\\boldsymbol 0\\) 벡터가 아닌 매트릭스 \\(x\\)를 \\(\\boldsymbol 0\\) 벡터로 만들기 위해서는 위의 행렬식 값이 0이어야 한다. 행렬식이 \\(\\lambda\\)의 \\(n\\) 차 방정식이고, \\(n\\)차 방정식의 근이 각각 아이겐밸류가 된다. 즉,\n\\[\n|(\\boldsymbol{A} - \\lambda {\\boldsymbol I})|  = (\\lambda_1 - \\lambda) \\cdot  (\\lambda_2 - \\lambda) \\dotsb  (\\lambda_n - \\lambda)\n\\]\n위의 식에서 두가지 사실을 알 수 있다.\n\n$ $의 행렬식은 아이겐밸류의 곱과 같다. 즉, \\(\\lambda = 0\\)을 넣으면 이 결과를 쉽게 얻을 수 있다.\n가역행렬(invertible matrix)이 될 조건, 즉 역행렬이 존재할 조건은 행렬식의 값이 0이 아닌 경우다. 1에 따르면 이는 모든 아이겐밸류의 값이 0이 아닌 조건과 동치다.\n\n\nTranspose\n원래 행렬의 행렬식과 전치행렬의 행렬식은 같다. 이를 아이겐밸류 계산에 응용해보자.\n\\[\n|\\boldsymbol{A}^T - \\lambda {\\boldsymbol I}| = |(\\boldsymbol{A}-\\lambda {\\boldsymbol I})^T| = |\\boldsymbol{A}-\\lambda {\\boldsymbol I}|\n\\]\n즉, 원래 행렬 \\(\\boldsymbol{A}\\)와 전치 행렬 \\(\\boldsymbol{A}^T\\)는 같은 아이겐밸류를 갖는다."
-  },
-  {
-    "objectID": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#diagonalization",
-    "href": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#diagonalization",
-    "title": "Eigenvalues and Eigenvectors",
-    "section": "Diagonalization",
-    "text": "Diagonalization\n아이겐밸류와 아이겐벡터가 가장 많이 사용되는 경우는 행렬의 대각화이다. 여기서 대각화란, 정방 행렬의 대각에 위치한 원소, \\(a_{ii}\\)를 제외한 나머지 원소가 모두 0인 행렬, 즉 대각 행렬을 품는 변형을 의미한다. 대각 행렬은 여러가지로 쓸모가 많다. 특히 행렬의 \\(k\\) 제곱이 필요한 경우 대각행렬은 그냥 해당 대각원소의 \\(k\\) 제곱과 동일해진다. 행렬의 대각화를 살펴보자.\n\\[\ny = \\boldsymbol{A} x\n\\]\n기본적으로 행렬은 함수다. 즉, 벡터 \\(x\\)를 투입(input)으로 보면 이를 선형 결합을 통해서 다른 어떤 산출(output) 벡터로 보내는 것이다. 일단 설명의 편의를 위해서 \\(x\\)가 2차원 벡터라고 두고 설명해보자. 즉,\n\\[x =\n\\begin{bmatrix}  \nx_1 \\\\  \nx_2\n\\end{bmatrix}.\n\\]\n\\(\\boldsymbol{A}\\)에 의해 변형된 결과를 아이겐벡터 \\(v_1\\)과 \\(v_2\\)를 통해서 표현할 수 있다고 가정하자. \\(v_1\\), \\(v_2\\)를 통해 \\(x\\), \\(y\\)를 표현하면 다음과 같다.\n\\[\n\\begin{aligned}\nx & = w_1 v_1 + w_2 v_2 \\\\\ny & = z_1 v_1 + z_2 v_2\n\\end{aligned}\n\\]\n이때, \\(w_\\cdot\\), \\(z_\\cdot\\)은 스칼라 값임에 유의하자. 이를 매트릭스로 표시하면 다음과 같다.\n\\[\nx =\n\\boldsymbol{Q}\n\\begin{bmatrix}  \nw_1 \\\\  \nw_2\n\\end{bmatrix},~\ny =\n\\boldsymbol{Q}\n\\begin{bmatrix}  \nz_1 \\\\  \nz_2\n\\end{bmatrix}, \\text{where}\n\\] \\[\n\\boldsymbol{Q} =\n\\begin{bmatrix}  \nv_1, v_2\n\\end{bmatrix}\n\\]\n\\(v_i' v_i = 1(i = 1,2)\\) 이고, \\(v_1 \\cdot v_2 = 0\\) 이라고 가정하자. 즉, \\(Q\\)가 직교행렬이라고 가정하자.\n\\[\n\\begin{aligned}\n\\boldsymbol{Q}z & = \\boldsymbol{A} \\boldsymbol{Q} w \\\\\nz & = \\boldsymbol{Q}^{-1} \\boldsymbol{A} \\boldsymbol{Q} w \\\\\nz & = \\boldsymbol{Q}^T \\boldsymbol{A} \\boldsymbol{Q} w\n\\end{aligned}\n\\]\n직교행렬의 경우 \\(\\boldsymbol{Q}^{-1} = \\boldsymbol{Q}^T\\)가 성립한다. 이때\n\n\n직교행렬의 경우 \\(\\boldsymbol{Q}^T \\boldsymbol{Q} = \\boldsymbol{Q} \\boldsymbol{Q}^T = {\\boldsymbol I}\\)가 성립한다. 따라서 \\(\\boldsymbol{Q}^{-1} = \\boldsymbol{Q}^T\\)\n\\[\n\\boldsymbol{A} \\boldsymbol{Q} = [A v_1, A v_2] = [\\lambda_1 v_1, \\lambda_2 v_2] = [v_1, v_2]\n\\begin{bmatrix}  \n  \\lambda_1 & 0 \\\\  \n  0 & \\lambda_2\n\\end{bmatrix} = \\boldsymbol{Q} \\boldsymbol{\\lambda}.\n\\]\n따라서,\n\\[\nz = \\boldsymbol{Q}^T \\boldsymbol{Q} \\boldsymbol{\\lambda} w\n\\]\n여기서 대각화의 핵심은\n\\[\n\\boldsymbol{Q}^T \\boldsymbol{A} \\boldsymbol{Q} = \\boldsymbol{\\lambda}\\text{ or }\\boldsymbol{A} = \\boldsymbol{Q}\\boldsymbol{\\lambda}\\boldsymbol{Q}^T\n\\]\n즉, 어떤 매트릭스의 아이겐벡터가 서로 직교하면 이를 통해 직교행렬 \\(\\boldsymbol{Q}\\)를 얻을 수 있다. 이를 원래 매트릭스의 좌우로 곱하면 아이겐밸류를 대각원소로 갖는 대각행렬을 얻을 수 있다.\n\nGeneralization\n일반화 해보자. 대각화는 다음과 같다.\n\\[\n\\boldsymbol{AQ} = \\boldsymbol{A} [x_1, \\dotsc, x_n] = [\\lambda_1 x_1, \\dotsc, \\lambda_n x_n] = [x_1, \\dotsc, x_n]\n\\begin{bmatrix}\n\\lambda_1& \\dotsc & 0  \\\\\n\\vdots& \\ddots& \\vdots \\\\\n0& \\dotsc& \\lambda_n\n\\end{bmatrix} = \\boldsymbol{Q} \\boldsymbol{\\lambda}\n\\]\n행렬의 인수분해(factorization)은 다음을 의미한다.\n\\[\n\\boldsymbol{A} = \\boldsymbol{Q} \\boldsymbol{\\lambda} \\boldsymbol{Q}^{-1}\n\\]"
-  },
-  {
-    "objectID": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#diagonalizable",
-    "href": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#diagonalizable",
-    "title": "Eigenvalues and Eigenvectors",
-    "section": "Diagonalizable",
-    "text": "Diagonalizable\n쉽게 생각하자. 우선 \\(Q^{-1}\\)이 존재해야 한다. 즉, \\(Q\\)가 비특이 행렬이어야 한다. \\(Q\\)가 비특이 행렬이 되기 위한 조건들은 일단 행렬 대각화를 위한 필요 조건이다.\n그런데 \\(Q\\)는 아이겐벡터들로 구성된 행렬이다. 따라서 \\(Q\\)가 비특이 행렬이 되기 위해서는 해당 아이겐밸류들이 모두 다르거나, 중복된 아이겐밸류가 있다면 아이겐벡터의 선형 독립이 성립해야 한다. 아이겐밸류가 모두 다르면, 즉 각기 다른 아이겐백터가 존재하면, 대각화가 가능하다. 만일 아이겐밸류가 중복이라면, 경우에 따라서 다르다.\n\nSymmetric matrix\n행렬이 대칭이면 \\(Q\\)에 더 좋은 특성이 생긴다.\n\n\\(\\boldsymbol A\\) 의 아이겐밸류는 모두 실수이다.\n\\(Q\\)는 직교행렬이다. 즉, \\(Q^T = Q^{-1}\\) 가 성립한다.\n\n이를 종합하면 아래와 같다.\n\\[\n\\boldsymbol{A} = \\boldsymbol{Q} \\boldsymbol{\\lambda} \\boldsymbol{Q}^{-1} =  \\boldsymbol{Q} \\boldsymbol{\\lambda} \\boldsymbol{Q}^{T}\n\\]\n\n\nGraphic interpretation with vector space\n앞서의 식을 다시 음미해보자.\n\\[\nAQ = A[x_1, \\dotsc, x_n]\n\\]\n\\(A x_i\\)는 \\(A\\)라는 일종의 함수에 의해 선형 변형된 벡터를 나타낸다. 이러한 벡터를 모아 놓은 것이 \\(AQ\\)이다. 이는 벡터 (서브) 스페이스를 형성한다.\n\\[\nQ \\lambda = [x_1, \\dotsc, x_n] \\begin{bmatrix}\n\\lambda_1& \\dotsc & 0  \\\\\n\\vdots& \\ddots& \\vdots \\\\\n0& \\dotsc& \\lambda_n\n\\end{bmatrix}\n\\]\n이것 역시 벡터 (서브) 스페이스를 형성한다. 여기서 서브 스페이스의 축은 아이겐벡터가 되고, 그 크기를 좌우하는 것은 아이겐벡터가 된다. 이렇게 살펴보면, 왜 아이겐벡터-아이겐밸류가 선형 변환 함수 \\(A\\)의 축과 크기를 바꾸는 것인지 이해할 수 있다.\n\nPCA의 예를 들어보자. \\(x-y\\) 축 위에 찍힌 점들에 대해서 변동성(분산-공분산 행렬)이 큰 방향으로 축을 바꾸면 어떻게 될까? 위에서 보는 PCA의 새로운 축은 아이겐벡터를 중심으로 재정렬한 상태를 나타낸다. 이 축에 할당된 변동성의 크기는 각각 축의 아이겐밸류가 된다."
-  },
-  {
-    "objectID": "posts/linear-algebra/2020-12-16-measuring-distance.html",
-    "href": "posts/linear-algebra/2020-12-16-measuring-distance.html",
-    "title": "Projection and Distance",
-    "section": "",
-    "text": "다음과 같은 두 개의 벡터, \\(\\vec a\\), \\(\\vec b\\)를 일단 떠올려보자.\n\n스칼라 프로젝션 \\(a_1\\)의 정의는 다음과 같다.\n\\[\na_1 ={\\cos \\theta}{\\lVert \\vec a \\lVert} = \\lVert \\vec a_1 \\lVert\n\\]\n각 \\(\\theta\\)에 관해서 다음과 같이 정의할 수 있다. 혹시 리마인드가 필요하면 포스팅 dot product를 참고하라.\n\\[\n\\cos \\theta = \\dfrac{\\vec a \\cdot \\vec b}{\\lVert \\vec a \\lVert \\lVert \\vec b \\lVert}\n\\]\n그리고\n\\[\n\\hat b = \\dfrac{\\vec b}{\\lVert \\vec b \\lVert}\n\\]\n라고 할 때,\n\\[\na_1 = {\\cos \\theta}{\\lVert \\vec a \\lVert} = \\dfrac{\\vec a \\cdot \\vec b}{\\lVert\\vec b\\lVert} = \\vec a \\cdot \\hat b\n\\]\n쉽게 말해서, \\(\\vec a\\) 벡터와 정규화된 \\(\\vec b\\)의 닷프로덕트라고 생각하면 된다.\n\n\n\n스칼라 프로젝션의 크기로 \\(\\vec b\\)의 벡터를 만든 것이 벡터 프로젝션이다. \\(\\vec a\\)를 \\(\\vec b\\) 위로 프로젝션한 벡터 \\(\\Pi_{\\vec b} (\\vec a)\\)는 다음과 같다. 스칼라 프로젝션의 크기 만큼 \\(\\vec b\\) 성분을 지녀야 한다. 따라서 \\(\\vec b\\)는 정규화된 \\(\\hat b\\)를 써야 한다.\n\\[\n\\vec a_1 = \\Pi_{\\vec b} (\\vec a) = a_1 \\hat b = \\dfrac{\\vec a \\cdot \\vec b}{\\lVert\\vec b\\lVert} \\dfrac{\\vec b}{\\lVert\\vec b\\lVert}\n\\]\n말로 풀어보자. \\(\\vec b\\)와 같은 방향성을 지니는 벡터를 \\(\\vec a\\)와 \\(\\vec b\\) 간의 스칼라 프로젝션의 크기로 만들어주는 것이 벡터 프로젝션이다. 영상을 화면 위로 쏘는 행위를 떠올려보자. 이때 스크린에 해당하는 것이 \\(\\vec b\\)이고 여기에 투영되는 상이 \\(\\vec a\\)이다.\n\n\n\n\\(x\\)축 위로 프로젝션을 생각해보자. 이 역시 선형 변환이다. 기저를 생각하면 아래와 같다.\n\\[\n\\Pi_{x}(\n\\begin{bmatrix}\n1 \\\\\n0 \\\\\n\\end{bmatrix}) =\n\\begin{bmatrix}\n1 \\\\\n0 \\\\\n\\end{bmatrix}, ~\n\\Pi_{x}(\n\\begin{bmatrix}\n0 \\\\\n1 \\\\\n\\end{bmatrix}) =\n\\begin{bmatrix}\n0 \\\\\n0 \\\\\n\\end{bmatrix}\n\\] \\[\nM_{\\Pi_x} =\n\\begin{bmatrix}\n\\Pi_{x}(\n\\begin{bmatrix}\n1 \\\\\n0 \\\\\n\\end{bmatrix}),~\n\\Pi_{x}(\n\\begin{bmatrix}\n0 \\\\\n1 \\\\\n\\end{bmatrix})\n\\end{bmatrix} =\n\\begin{bmatrix}\n1 & 0 \\\\\n0 & 0\n\\end{bmatrix}\n\\]\n\\(M_{\\Pi_x}\\)를 외적의 관점에서 표현해보자.\n\\[\n\\begin{aligned}\n\\Pi_{x}(\\vec v) & = (\\hat i \\cdot \\vec v) \\hat i = \\hat i (\\hat i \\cdot \\vec v) = \\hat i (\\hat i^T \\vec v) = (\\hat i \\hat i^T)\\vec v \\\\\n& =\n\\begin{bmatrix}\n1 & 0 \\\\\n0 & 0\n\\end{bmatrix} \\vec v = M_{\\Pi_x} \\vec v\n\\end{aligned}\n\\]\n이 결과를 일반적인 벡터 \\(\\vec b\\)에도 확장할 수 있다. \\(\\vec b\\)로의 프로젝션을 구현하기 위해서는 표준화된 벡터 \\(\\hat b\\)를 먼저 구해야 한다.\n\\[\n\\hat b = \\dfrac{\\vec b}{\\Vert b \\Vert},~M_{\\Pi_{\\hat b}} \\vec a = \\hat b \\hat b^T \\vec a  \n\\]\n\\(\\vec a\\)를 인풋 벡터로 이해하면 이를 \\(\\vec b\\)의 프로젝션 위치로 옮기는 선형 변환이 \\(\\Pi_{\\hat b}\\)에 해당한다."
-  },
-  {
-    "objectID": "posts/linear-algebra/2020-12-16-measuring-distance.html#more-definition",
-    "href": "posts/linear-algebra/2020-12-16-measuring-distance.html#more-definition",
-    "title": "Projection and Distance",
-    "section": "More Definition",
-    "text": "More Definition\n\n\\(S \\subseteq \\mathbb R^n\\): \\(S\\)는 벡터 부분공간이라고 하자.\n\\(S^\\perp\\): \\(S\\)와 직교 벡터들의 집합이고 이 역시 벡터 부분공간이다. \\[\nS^\\perp = \\{ \\vec w \\in \\mathbb R^n : \\vec w \\cdot S = 0 \\}\n\\]\n\\(\\Pi_S\\): 부분공간 \\(S\\) 위로 프로젝션\n\\(\\Pi_{S^\\perp}\\): 부분공간 \\(S^\\perp\\) 위로 프로젝션\n\n\\(\\Pi_S\\)는 일종의 함수로서 다음과 같이 정의된다.\n\\[\n\\Pi_S: \\mathbb R^n \\to S\n\\]\n\\(\\vec x \\in \\mathbb R^n\\)의 어떤 벡터가 \\(\\Pi_S\\)를 거치면 \\(S\\)에 속하지 않는 나머지 부분은 사라지게 된다. 즉, \\(S\\)라는 화면 위로 자신의 이미지를 투영한다고 보면 된다. 그래서 프로젝션이다.\n몇가지 특징은 다음과 같다.\n\nIf \\({\\vec v} \\in S\\), then \\(\\Pi_S(\\vec v) = \\vec v\\)\nIf \\(\\vec w \\in S^\\perp\\), then \\(\\Pi_S(\\vec w) = \\vec 0\\)\nif \\(\\vec u = \\alpha \\vec v + \\beta \\vec w\\) where \\(\\vec v \\in S\\), \\(\\vec w \\in S^{\\perp}\\), then \\(\\Pi_S(\\vec u) = \\alpha \\vec v\\)\n\\(\\Pi_S(\\vec v) (\\Pi_S(\\vec v) ) = \\Pi_S(\\vec v)\\) (idempotent)\n\n\nProjection onto line\n\n그림에서 \\(\\vec u\\)의 \\(\\vec v\\)로의 프로젝션은 앞서 살펴본 벡터 프로젝션이다. \\(\\vec v\\) 대신 \\(l\\)로 표기된 점에 유의하자.\n\\[\nl: \\{ \\vec v' \\in \\mathbb R^n \\lvert \\vec v' = \\vec 0 + t \\vec v, t \\in \\mathbb R \\}\n\\] \\[\n\\Pi_l(\\vec u) = \\dfrac{\\vec u \\cdot \\vec v}{\\lVert\\vec v\\lVert^2} \\vec v\n\\]\n이제 여기서 \\(\\Pi_{l^{\\perp}}\\)를 구해보자.\n\\[\n\\vec u = \\Pi_{l} (\\vec u) + \\Pi_{l^{\\perp}} (\\vec u)\n\\]\n잠시 생각해볼 것이 있다.\n\n\\(\\Pi_{l^{\\perp}}(\\vec u)\\)가 의미하는 것은 무엇일까? \\(\\vec u\\)에서 \\(\\Pi_{l}(\\vec u)\\)와 직교하는 벡터 프로젝션이다. 그런데, 둘은 \\(\\Pi_{l^{\\perp}}(\\vec u)\\) 만난다. 따라서, 프로젝션의 결과는 \\(\\Pi_{l^{\\perp}}(\\vec u)\\) 위에 있게 된다.위 그림은 이를 나타낸다.\n\\(\\vec u\\)라는 벡터가 두 개의 직교하는 성분의 결합을 통해 표현될 수 있다는 것을 알 수 있다. \\(\\vec u = \\Pi_{l}(\\vec u) + \\Pi_{l^\\perp}(\\vec u)\\)\n\n\n\nProjection onto plane\n\n평면 위로의 프로젝션을 생각해보자. 기본적인 원리는 동일하다. 이에 앞서 평면을 벡터로 표현하는 방법에 대해 알아보자. 가장 편리한 방법은 노멀 벡터를 활용하는 것이다. 즉, 평면 위의 점 \\(\\vec {p_0}\\)를 지나는 \\(P\\)는 다음과 같이 정의할 수 있다.\n\\[\nP = \\{ \\vec p \\in \\mathbb R^n : \\vec n \\cdot(\\vec p - \\vec p_0) = 0 \\}\n\\]\n여기서 노멀 벡터 \\(\\vec n\\)은 프로젝션된 지점에서 평면과 직교하는 성분을 나타낸다. 3차원의 경우 노멜 벡터는 3차원 공간에서 해당 평면이 놓인 모습을 결정한다.\n\\[\n\\vec u = \\Pi_P(\\vec u) + \\Pi_{P^\\perp}(\\vec u)\n\\]\n그림에서 보듯이 \\(\\vec u\\)에서 \\(\\vec n\\)으로의 프로젝션은 앞서 보았던 벡터에서 벡터로의 프로젝션이다. 따라서 앞서 구한 공식을 그대로 활용하자. 즉,\n\\[\n\\Pi_{P^\\perp}(\\vec u) = \\dfrac{\\vec u \\cdot \\vec n}{\\lVert\\vec n\\lVert}\\dfrac{\\vec n}{\\lVert \\vec n \\lVert}\n\\]\n\n벡터는 점과 달리 상대적인 위치로 정의된다. 벡터 연산은 그런 맥락에서 이루어진다. \\(\\Pi_{P^\\perp}\\)를 위 그림처럼 이동해 보자. 이렇게 보면 벡터 프로젝션이 자연스럽다. P에서의 위치는 변하지 않고 노멀 벡터 쪽으로만 변화하므로 벡터 자체는 이동 전 벡터와 이동 후 벡터가 동일하다. 즉, \\(\\Pi_{P^\\perp}\\)를 왼쪽으로 이동시킨 벡터에 대한 프로젝션과 \\(\\Pi_{P^\\perp}\\)이 같다.\n\\[\n\\Pi_{P^\\perp} = \\dfrac{\\vec u \\cdot \\vec n}{\\lVert\\vec n\\lVert^2}{\\vec n}\n\\]\n이제 \\(\\Pi_{P^\\perp}\\) 대입하면 \\(\\Pi_{P}\\)를 쉽게 구할 수 있다. 즉,\n\\[\n\\Pi_P(\\vec u) + \\Pi_{P^\\perp} = \\vec u\n\\] \\[\n\\Pi_P(\\vec u)  = \\vec u - \\dfrac{\\vec u \\cdot \\vec n}{\\lVert\\vec n\\lVert^2}{\\vec n}\n\\]"
-  },
-  {
-    "objectID": "posts/linear-algebra/2020-12-16-measuring-distance.html#distance-in-vector-space",
-    "href": "posts/linear-algebra/2020-12-16-measuring-distance.html#distance-in-vector-space",
-    "title": "Projection and Distance",
-    "section": "Distance in Vector Space",
-    "text": "Distance in Vector Space\n프로젝션은 거리를 측정할 때 유용하다. 먼저 원점(굳이 원점일 필요는 없다)과 해당 벡터 공간을 지나는 선 사이의 거리를 구해보자.\n\\[\nl: \\{ \\vec p \\in \\mathbb R^n | \\vec p = \\mathbf {p}_0 + t \\vec v, t \\in \\mathbb R \\}\n\\]\n\n위 그림에서 원점과 \\(l\\)의 거리는 어떻게 나타낼 수 있을까? \\(l\\)이 지나가는 \\(\\vec p_0\\)를 그대로 두고, \\(l\\)이 원점을 지나가도록 이동해보자. 즉,\n\\[\nl_0 = \\{  \\vec p \\in \\mathbb R^n | \\vec p = \\mathbf {0} + t \\vec v, t \\in \\mathbb R \\}\n\\]\n\n이제 이 벡터과 \\(\\vec p_0\\) 사이의 거리를 구하면 된다 .이는 앞서 제시한 벡터 프로젝션의 수직 벡터의 길이와 같다. 즉,\n\\[\nd(l, \\vec 0) = d(\\vec p_0, l_0) = \\lVert \\mathbf p_0 - \\dfrac{\\mathbf p_0 \\cdot \\vec v}{\\lVert \\vec v\\lVert^2}\\vec v \\lVert\n\\]\n이제 아래와 같은 평면과 원점의 거리를 측정해보자.\n\\[\nP = \\{ \\vec p \\in \\mathbb R^n : \\vec n \\cdot(\\vec p - \\vec {p}_0) = 0 \\}\n\\]\n\n원점을 지나도록 평면을 이동시키고 평면의 노멀 벡터가 정의된 \\(p_0\\)와 원점을 지나는 평면 \\(P_0\\) 사이의 거리를 측정하면 된다.\n\\[\nP_0 = \\{ \\vec p \\in \\mathbb R^n : \\vec n \\cdot(\\vec p - \\vec {0}) = 0 \\}\n\\]\n이 둘 사이의 거리는 \\(\\Pi_{P^\\perp}\\)의 거리와 같다. 즉,\n\\[\nd(P, \\vec 0) = d(P_0, \\vec p_0) = \\lVert  \\dfrac{\\vec p_0 \\cdot \\vec n}{\\lVert\\vec n\\lVert}\\dfrac{\\vec n}{\\lVert \\vec n \\lVert}\\lVert = \\dfrac{|\\vec p_0 \\cdot \\vec n |}{\\lVert\\vec n\\lVert}\n\\]\n다시 확인해보자. 노멀 벡터 \\(\\vec n\\)은 \\(\\vec p_0\\)와 같은 같은 방향에 있는 벡터다. 따라서 위의 식이 성립한다."
-  },
-  {
-    "objectID": "posts/linear-algebra/2020-12-16-measuring-distance.html#application-regression-coefficient",
-    "href": "posts/linear-algebra/2020-12-16-measuring-distance.html#application-regression-coefficient",
-    "title": "Projection and Distance",
-    "section": "Application: Regression Coefficient",
-    "text": "Application: Regression Coefficient\n\n앞서 소개했던 회귀 분석에 관한 포스팅 Understanding Regression을 다시 보자. Origin–Observed Y–Fitted \\(\\hat Y\\)이 만드는 삼각형을 보자. 직각 삼각형이다. 여기서 잔차에 해당하는 \\(e\\)는 \\(X\\)의 컬럼 스페이스와 항상 직교한다. 즉, \\(X' e = 0\\)이 성립한다. 그리고 \\(\\hat Y = X \\hat\\beta\\)이므로\n\\[\nX'(Y - \\hat Y)  = X'(Y - X \\hat\\beta) = 0\n\\]\n이를 노멀 방정식이라고 부른다. 앞서 평면과 직교하는 벡터를 노멀 벡터라고 불렀는데, 둘은 일맥상통한다."
-  },
-  {
-    "objectID": "posts/linear-algebra/2020-12-16-measuring-distance.html#references",
-    "href": "posts/linear-algebra/2020-12-16-measuring-distance.html#references",
-    "title": "Projection and Distance",
-    "section": "References",
-    "text": "References\n\nIvan Savov, No bullshit guide to linear algebra 2nd Edition, Minireference, 2017"
+    "objectID": "posts/linear-algebra/2021-01-18-Eigenspace-2.html#qr",
+    "href": "posts/linear-algebra/2021-01-18-Eigenspace-2.html#qr",
+    "title": "Eigenspace, part 2",
+    "section": "QR",
+    "text": "QR\n\\(A \\in \\mathbb R^{n \\times n}\\)일 때 이 매트릭스를 쪼개는 강력한 방법은 G-S 알고리듬을 활용하는 것이다.\n\\[\nA = O U\n\\]\n\n\\(O\\): orthogonal matrix\n\\(U\\): Upper triangluar matrix\n\n보통 \\(U\\)를 right-triangular matrix로도 쓰기 때문에, 이를 \\(QR\\)로 표기하기도 한다. \\(R\\)의 경우 \\(O\\)의 컬럼 벡터를 하나씩 추가해가면서 계산하게 된다. 이는 G-S 알고리듬에서 하나씩 벡터를 빼가면서 계산하는 것을 구현할 수 있게 해준다.\n\nExample\n실제로는 어떻게 하는지 살펴보자. 먼저 \\(A\\)의 각 컬럼들을 두고, 두번째 열은 첫번째에 직교하게, 세번째는 첫번째와 두번째에 직교하게 행렬을 변형한다.\n\\[\nA =\n\\begin{bmatrix}\na_{11} & a_{12} & a_{13} \\\\\na_{21} & a_{22} & a_{23} \\\\\na_{31} & a_{32} & a_{33}\n\\end{bmatrix}\n\\]\n\\(O\\) 혹은 \\(Q\\)를 구해보자. G-S 알고리듬을 활용하자.\n\\[\nA = [a_1, a_2, a_3]\n\\]\n\\(a_1\\)과 직교하는 \\(e_2\\)를 구하면 아래와 같다.\n\\[\ne_2 = a_2 - \\dfrac{a_2 \\cdot a_1}{\\Vert a_1 \\Vert^2}\n\\]\n다음으로 \\(e_3\\)는 \\(a_1\\)과 직교하고 동시에 \\(e_2\\)와 직교해야 한다. 따라서,\n\\[\ne_3 = a_3 - \\dfrac{a_3 \\cdot a_1}{\\Vert a_1 \\Vert^2} - \\dfrac{a_3 \\cdot e_2}{\\Vert e_2 \\Vert^2}\n\\]\n이를 다시 길이 1로 표준화하면 \\(Q\\)를 구할 수 있다. 그리고\n\\[\nQ^T A = Q^T Q R = 1 R\n\\]\n따라서 \\(R\\)은 \\(Q^T A\\)로 구할 수 있다."
   },
   {
     "objectID": "posts/linear-algebra/2021-01-05-vector-geometry-1.html",
@@ -642,34 +502,6 @@
     "title": "Vector Geometrically, part 1",
     "section": "Distance",
     "text": "Distance\n거리 역시 세 가지로 나누어 이해해보자. 점과 점 사이의 유클리드 거리는 생략하겠다. 벡터와 점의 거리는 어떻게 구할까? 플레인과 점의 거리는 어떻게 구할까? 이 포스팅을 참고하라."
-  },
-  {
-    "objectID": "posts/linear-algebra/2021-01-06-vector-geometry-2.html",
-    "href": "posts/linear-algebra/2021-01-06-vector-geometry-2.html",
-    "title": "Vector Geometrically, part 2",
-    "section": "",
-    "text": "먼저 벡터 스페이스를 살펴보기 위해서 몇 가지 정의부터 보자.\n\n\\(V\\) is vector space\n\\(\\vec v \\in V\\)\n\\(W\\) is vector subspace \\(W \\subseteq V\\)\nspan: 벡터의 선형 결합을 통해 생성되는 벡터 집합 \\[\n\\text{span}(\\vec v_1, \\dotsc, \\vec v_n) = \\{\\vec v | \\vec v = \\alpha_1 \\vec v_1 + \\dotsb + \\alpha_n \\vec v_n, \\alpha_i \\in \\mathbb R \\}\n\\]\n\n행렬 \\(M \\in \\mathbb R^{m \\times n}\\)이 있다고 할 때\n\n\\(\\mathcal R(M) \\subseteq \\mathbb R^n\\): \\(M\\)의 로우 스페이스, 즉 \\(M\\)의 행들의 모든 가능한 선형 결합이 나타내는 벡터 공간\n\n\\[\n\\mathcal R (M) \\overset{\\rm def}{=} \\{ \\vec v \\in \\mathbb R^n | \\vec v = \\vec w^T M \\text{ for some } \\vec w \\in \\mathbb R^m \\}\n\\]\n\n\\(\\mathcal C(M) \\subseteq \\mathbb R^m\\): \\(M\\)의 컬럼 스페이스, 즉 \\(M\\)의 열들의 모든 가능한 선형 결합이 나타내는 벡터 공간\n\n\\[\n\\mathcal C (M) \\overset{\\rm def}{=} \\{ \\vec w \\in \\mathbb R^m | \\vec w = M v \\text{ for some } \\vec v \\in \\mathbb R^n \\}\n\\]\n\n\\(\\mathcal N(M) \\subseteq \\mathbb R^n\\): \\(M\\)의 널 스페이스. 즉, 오른쪽에 곱해졌을 때 \\(\\vec 0_{m}\\)이 되는 벡터의 집합 \\[\n\\mathcal N(M) \\overset{\\rm def}{=} \\{ \\vec v \\in \\mathbb R^n | M \\vec v = \\vec 0 \\}\n\\]\n\\(\\mathcal N(M^T) \\subseteq \\mathbb R^n\\): \\(M\\)의 좌 널 스페이스. 즉, 왼쪽에 곱해졌을 때 \\(\\vec 0_{n}\\)이 되는 벡터의 집합\n\n\\[\n\\mathcal N(M^T) \\overset{\\rm def}{=} \\{ \\vec w \\in \\mathbb R^m | \\vec w^T M  = \\vec 0^T \\}\n\\]\n혹은\n\\[\n\\mathcal N(M^T) \\overset{\\rm def}{=} \\{ \\vec w \\in \\mathbb R^m | M^T \\vec w = \\vec 0 \\}\n\\]\n\\(M\\)의 랭크는 컬럼 스페이스의 차원 그리고 로우 스페이스의 차원과 같다.\n\\[\nr(M) = \\dim(\\mathcal R (M)) = \\dim(\\mathcal C(M))\n\\]"
-  },
-  {
-    "objectID": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#checklist",
-    "href": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#checklist",
-    "title": "Vector Geometrically, part 2",
-    "section": "Checklist",
-    "text": "Checklist\n\nZero vector\n벡터 스페이스가 되려면 \\(\\vec 0\\)를 집합 내에 지니고 있어야 한다. 간단한 내용 같지만 참 중요하다. 일단 벡터 스페이스의 정의에서 \\(\\alpha \\vec v\\)가 들어가기 때문에 \\(\\alpha=0\\)의 조건에 따라서 \\(\\vec 0\\)는 포함되어야 한다. 생각해 볼만한 대목. 벡터 서브스페이스 역시 마찬가지로 \\(\\vec 0\\)을 포함해야 한다. 2차원 벡터로 이야기한다면, \\(y = 2x + 1\\) 같은 형태의 선은 벡터 (서브) 스페이스가 될 수 없다.\n\n\nSubset vs subspace\n부분집합은 원래 집합에 일정한 조건을 부여한 것이고, 이 점에서는 서브 스페이스 역시 부분 집합에 속한다. 다만 모든 부분 집합이 서브 스페이스가 되진 않는다. 이 점에서 서브 스페이스의 조건이 보다 제약적이다.\n다음과 같은 두 방정식의 해를 비교해보자. \\(A \\vec x = \\vec b\\), \\(A \\vec x = \\vec 0\\)\n\\(A \\vec v_1 = \\vec b\\)와 \\(A \\vec v_2 = \\vec b\\)를 생각해보자. \\(A(\\vec v_1 + \\vec v_2)\\)는 원래의 벡터 스페이스에 들어 있는가?\n\\[\nA(\\vec v_1 + \\vec v_2) = 2 \\vec b\n\\]\n\\(\\vec b = \\vec 0\\)가 아니라면, \\(\\vec v_1 + \\vec v_2\\)는 해가 될 수 없다. 조금 더 자세하게 표현해보자.\n\\(A \\vec v = \\vec b\\)의 해 공간은 다음과 같은 완전해의 집합이다.\n\\[\n\\{ \\vec c + \\vec v_n\\} \\text{ where }\\vec v_n \\in \\mathcal N (A)\n\\]\n즉, 해 공간은 특수해(particular solution) \\(\\vec c\\)와 널 스페이스에 속한 벡터의 합으로 구성된다. 해 공간의 원소 하나를 \\(\\vec x_1 = \\vec c + \\vec v_1\\)이라고 하고 다른 하나를 \\(\\vec x_2 = \\vec c + \\vec v_2\\)라고 하자. 이 둘을 더하면, \\(2 \\vec c + \\vec v_1 + \\vec v_2\\)가 된다. 이것이 해 공간 안에 있어야 하는데, \\(\\vec c \\neq 0\\)이면 성립하지 않는다.\n한편 \\(\\mathcal N(M)\\)은 자연스럽게 벡터 공간을 이룬다. 더한 것도 \\(\\vec 0\\)에 있고, 스칼라 곱 역시 마찬가지다. 참고로 아래에서 보겠지만, \\(\\mathcal R(M)\\), \\(\\mathcal C(M)\\), \\(\\mathcal N(M)\\), \\(\\mathcal N(M^T)\\)를 네 개의 근본 서브 스페이스라고 부른다. 네 개는 밀접한 연관을 지니고 있다.\n\n\nSolutions\n이 기회에 해의 종류를 한번 살펴보고 넘어가자.\n\nParticular solution (특수해): RREF에서 free variables를 모두 0으로 두고 찾은 해를 뜻한다.\nHomogenous soution (일반해): 일반해는 널 스페이스에 속하는 해를 뜻한다. 즉, \\(A \\vec x = 0\\)을 만족시키는 \\(\\vec x\\)를 의미한다.\nComplete solution (완전해): 완전해란 특수해와 일반해를 더한 형태이다. 즉, \\(x_c = x_p + c_h\\)\n\n이제 각각의 의미를 음미해보자.\n\\[\nA \\vec x = A x_c = A(x_p + x_h) = A x_p + A x_h = A x_p + \\vec 0_{m}\n\\]\n보다 자세한 사례는 여기를 참고하라. 약간의 직관적인 설명만 곁들이겠다. 특수해는 딱 그 위치에 있어야 하는 벡터다. 즉 free variable이 어떤 값이 오건 간에 이 벡터의 값은 고정되어 있다. 반면 일반해는 널 스페이스에 속한다. 앞서 널 스페이스는 부분 공간이라고 말했다. 이는 \\(\\vec 0\\)를 중심으로 각각 벡터가 지나가야 한다는 뜻이다. 따라서 free variable의 경우 하나를 구하기 위해서 나머지를 0으로 두고 구해야 한다. 그리고 이렇게 구해진 vector에 곱해지는 스칼라 값이 free variable에 해당한다."
-  },
-  {
-    "objectID": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#system-of-linear-equations",
-    "href": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#system-of-linear-equations",
-    "title": "Vector Geometrically, part 2",
-    "section": "System of Linear Equations",
-    "text": "System of Linear Equations\n다음 방정식의 해 공간을 생각해보자.\n\\[\nM \\vec x = \\vec b\n\\]\n먼저 \\(M\\)의 널 스페이스를 생각해보자. 여기 속한 \\(\\vec x\\)는 \\(\\mathbb R^n\\) 집합에 속한다. 정의상 \\(M \\vec x = 0\\)이므로 \\(\\vec x\\)를 어떤 해에 더하면 이 값 역시 해가 된다. 따라서, \\(M \\vec x = \\vec b\\)를 만족하는 \\(\\vec x = \\vec c\\)라고 하자. 이를 특수 해라고 부른다. 여기에 널 스페이스에 속한 임의의 원소를 더하면 완전해가 된다. 즉,\n\\[\n\\vec x = \\vec c + \\text{span}(\\vec v_1, \\dotsc, \\vec v_k) \\text{ where } \\text{span}(\\vec v_1, \\dotsc, \\vec v_k) = \\mathcal N(M)\n\\]\n\nRREF method\n연립방정식의 해를 구하는 가장 기초적인 방법, 즉 RREF, 기약 행사다리꼴 행렬을 만드는 과정이 이에 부합한다. 즉, \\([M \\lvert \\vec b]\\)를 RREF로 만들면, \\([\\text{rref}(M) \\vert \\vec c]\\)의 형태가 된다. 이때, \\(\\text{rref}(M)\\)는 \\(k\\) 개의 자유 변수를 \\(n-k\\) 개의 특수 해를 지니게 된다. 자유 변수에서 널 스페이스에 속하는 일반해를 얻을 수 있다."
-  },
-  {
-    "objectID": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#two-transformation",
-    "href": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#two-transformation",
-    "title": "Vector Geometrically, part 2",
-    "section": "Two Transformation",
-    "text": "Two Transformation\n\\(M \\in \\mathbb R^{m \\times n}\\)이 편리한 이유는 \\(M\\)이 \\(\\vec x \\in \\mathbb R^n\\)을 \\(\\vec y \\in \\mathbb R^m\\)으로 바꾸는 선형 변환 모두를 표현할 수 있기 때문이다. 그렇다면, \\(M^T\\)는 어떨까? 이는 같은 맥락에서 \\(\\vec a \\in \\mathbb R^m\\)을 \\(\\vec b \\in \\mathbb R^n\\)으로 바꾸는 선형 변환을 표현한다. 즉,\n\\[\n\\vec a^T M = \\vec b\n\\]\n이는 \\(M^T \\vec a= \\vec b^T\\)가 된다. 즉, \\(M^T\\)는 \\(M\\)의 좌 벡터 공간의 집합을 표현한다. 마찬가지로 \\(M\\)은 \\(M\\)의 우 벡터 공간의 집합을 표현한다. \\(M\\)의 좌 벡터 공간이 바로 로우 공간이고 우 벡터 공간이 컬럼 공간이다.\n이제, \\(\\mathcal N(M)\\)의 원소는 \\(\\mathbb R^n\\)에 속한다. 이와 직교하는 공간은 어떤 공간일까? 좌 벡터 공간일까? 우 벡터 공간일까? 쉽게 생각하자. 직교 하기 위해서는 서로 차원이 같아야 한다. 우 벡터 공간은 \\(\\mathbb R^m\\)에 속한다. 따라서 직교한다면 좌 벡터 공간과 한다. 확인해보자. \\(M \\vec v_n = \\vec 0_m\\) where \\(\\vec v_n \\in \\mathcal N(M)\\) 가 성립한다. 이제 양번에 \\(\\vec a^T\\)를 곱해보자.\n\\[\n\\underbrace{(M^T \\vec a)^T}_{\\text{left space}} \\vec v_n = \\vec a^T M\\vec v_n = \\vec a^T \\vec 0_m = 0\n\\] \\[\n\\mathcal R(M) \\oplus \\mathcal N(M) = \\mathbb R^n\n\\]\n한편 같은 논리로\n\\[\n\\mathcal C(M) \\oplus \\mathcal N(M^T) = \\mathbb R^m\n\\]\n앞서 보았듯이 \\({\\rm rank} (M) =\\dim(\\mathcal R(M)) = \\dim(\\mathcal C(M))\\)다. \\(\\dim(\\mathcal N(M)) = {\\rm nullity} (M)\\)이라고 하면,\n\\[\n{\\rm rank} (M) + {\\rm nullity} (M) = n = \\dim(\\mathbb R^n)\n\\]\n이 모든 걸 그림 하나로 정리하면 다음과 같다! 아래 보듯이 특수해(particular solution) \\(x_r\\)은 로우 스페이스에서 생성되는 해이다. 일반해(homogeneous solution) \\(x_n\\)은 널 스페이스에서 생성되는 해다. 이 둘을 합치면 완전해(complete solution)가 된다. 아래 그림에서 보듯이\n\\[\n\\begin{aligned}\nAx_r & \\rightarrow \\mathcal C(M) \\\\\nAx_n & \\rightarrow \\mathcal N(M) \\\\\nAx_c = A(x_r + x_n) & \\rightarrow \\mathcal C(M)\n\\end{aligned}\n\\]\n\n보통 homogenous라는 말이 들어가면 \\(Ax = 0\\)과 같은 형태의 연립방정식을 의미 의미한다."
   },
   {
     "objectID": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html",
@@ -712,6 +544,69 @@
     "title": "Matrix as Linear Transformation",
     "section": "Eat This!",
     "text": "Eat This!\n\nMapping Spaces\n선형 변환을 다시 적어보자. \\(T: V \\to W\\) where \\(V \\in \\mathbb R^n\\), \\(W \\in \\mathbb R^m\\). 즉 이 변환은 \\(n\\) 차원의 벡터를 \\(m\\) 차원으로 바꿔주는 것이다. 이 변환의 투입이 지니는 차원을 생각해보자. \\(n\\) 차원은 로우 공간이 생성하는 \\(\\mathcal R (M_T)\\)와 널 공간으로 가는 \\(\\mathcal N(M_T)\\)으로 나뉘게 된다. 그리고 이 공간은 서로 직합(direct sum) 관계다. 이를 요약하면 다음과 같다.\n\\[\nT: \\mathcal R(M_T) \\to \\mathcal C(M_T),~  \nT: \\mathcal N(M_T) \\to \\{ \\vec 0 \\}\n\\]\n즉 함수처럼 인풋 \\(\\vec v \\in \\mathcal R(M_T)\\)이 \\(\\vec w \\in \\mathcal C(M_T)\\)로 대응된다. 한편, \\(\\vec v \\in \\mathcal N(M_T)\\)는 \\(\\vec 0 \\in W\\)으로 대응된다.\n\n\nSurjective and Injective\n\n함수에서 전사 함수와 단사 함수의 개념을 그대로 적용할 수 있다. 선형 변환 혹은 행렬도 함수다.\n만일, \\(\\vec v_1 \\neq \\vec v_2\\)이고 \\(\\vec v_1, \\vec v_2 \\in \\mathcal R(M_T)\\)라면 이는 선형 변환의 정의에 따라서 서로 다른 \\(\\vec w\\)로 매핑된다. 따라서 만일 단사 변환이 되려면, \\(\\mathcal N(M_T) = \\{ \\vec 0 \\}\\)만 성립하면 된다.\n\\[\nAy - Az = A(y-z)\n\\]\n단사 변환이란 오직 \\(x = y\\)일 때만 \\(Ax = Ay\\)가 성립한다는 뜻이다. 즉 위의 식에서 \\(A(x-y) = 0\\)이 \\(x=y\\)일 때만 성립하면 된다. 즉, \\(A x = 0\\)이 \\(x=0\\)일 때만 성립하면 된다. 전사 변환의 정의는 통상적인 정의와 같다; \\({\\rm Im} (T) = \\mathbb R^m\\).\n매트릭스의 맥락에서 다시 음미해보자. 만일 전사(surjective) 변환이 되려면 \\(n \\geq m\\)이 성립해야 한다. 로우 스페이스의 차원이 컬럼 스페이스보다 커야 컬럼 스페이스 전체를 생성할 수 있다. 반면 단사(injective) 변환이 되려면 \\(n \\leq m\\)이 되어야 한다. 1-1 대응이 가능하려면 컬럼 스페이스의 크기가 로우 스페이스보다 커여 한다.\n따라서 전단사 변환이 되기 위한 조건은 \\(m=n\\)이다. 함수에서 역함수가 존재하려면 전단사 함수여야 한다. 선형 변환도 마찬가지다. 역행렬이 존재하기 위한 필요 조건은 정방 행렬, \\(m=n\\)이다.\n보다 상세한 내용은 여기를 참고하자."
+  },
+  {
+    "objectID": "posts/linear-algebra/2020-12-16-measuring-distance.html",
+    "href": "posts/linear-algebra/2020-12-16-measuring-distance.html",
+    "title": "Projection and Distance",
+    "section": "",
+    "text": "다음과 같은 두 개의 벡터, \\(\\vec a\\), \\(\\vec b\\)를 일단 떠올려보자.\n\n스칼라 프로젝션 \\(a_1\\)의 정의는 다음과 같다.\n\\[\na_1 ={\\cos \\theta}{\\lVert \\vec a \\lVert} = \\lVert \\vec a_1 \\lVert\n\\]\n각 \\(\\theta\\)에 관해서 다음과 같이 정의할 수 있다. 혹시 리마인드가 필요하면 포스팅 dot product를 참고하라.\n\\[\n\\cos \\theta = \\dfrac{\\vec a \\cdot \\vec b}{\\lVert \\vec a \\lVert \\lVert \\vec b \\lVert}\n\\]\n그리고\n\\[\n\\hat b = \\dfrac{\\vec b}{\\lVert \\vec b \\lVert}\n\\]\n라고 할 때,\n\\[\na_1 = {\\cos \\theta}{\\lVert \\vec a \\lVert} = \\dfrac{\\vec a \\cdot \\vec b}{\\lVert\\vec b\\lVert} = \\vec a \\cdot \\hat b\n\\]\n쉽게 말해서, \\(\\vec a\\) 벡터와 정규화된 \\(\\vec b\\)의 닷프로덕트라고 생각하면 된다.\n\n\n\n스칼라 프로젝션의 크기로 \\(\\vec b\\)의 벡터를 만든 것이 벡터 프로젝션이다. \\(\\vec a\\)를 \\(\\vec b\\) 위로 프로젝션한 벡터 \\(\\Pi_{\\vec b} (\\vec a)\\)는 다음과 같다. 스칼라 프로젝션의 크기 만큼 \\(\\vec b\\) 성분을 지녀야 한다. 따라서 \\(\\vec b\\)는 정규화된 \\(\\hat b\\)를 써야 한다.\n\\[\n\\vec a_1 = \\Pi_{\\vec b} (\\vec a) = a_1 \\hat b = \\dfrac{\\vec a \\cdot \\vec b}{\\lVert\\vec b\\lVert} \\dfrac{\\vec b}{\\lVert\\vec b\\lVert}\n\\]\n말로 풀어보자. \\(\\vec b\\)와 같은 방향성을 지니는 벡터를 \\(\\vec a\\)와 \\(\\vec b\\) 간의 스칼라 프로젝션의 크기로 만들어주는 것이 벡터 프로젝션이다. 영상을 화면 위로 쏘는 행위를 떠올려보자. 이때 스크린에 해당하는 것이 \\(\\hat b\\)이고 여기에 투영되는 상이 \\(\\vec a\\)이다.\n\n\n\n\\(x\\)축 위로 프로젝션을 생각해보자. 이 역시 선형 변환이다. 기저를 생각하면 아래와 같다.\n\\[\n\\Pi_{x}(\n\\begin{bmatrix}\n1 \\\\\n0 \\\\\n\\end{bmatrix}) =\n\\begin{bmatrix}\n1 \\\\\n0 \\\\\n\\end{bmatrix}, ~\n\\Pi_{x}(\n\\begin{bmatrix}\n0 \\\\\n1 \\\\\n\\end{bmatrix}) =\n\\begin{bmatrix}\n0 \\\\\n0 \\\\\n\\end{bmatrix}\n\\] \\[\nM_{\\Pi_x} =\n\\begin{bmatrix}\n\\Pi_{x}(\n\\begin{bmatrix}\n1 \\\\\n0 \\\\\n\\end{bmatrix}),~\n\\Pi_{x}(\n\\begin{bmatrix}\n0 \\\\\n1 \\\\\n\\end{bmatrix})\n\\end{bmatrix} =\n\\begin{bmatrix}\n1 & 0 \\\\\n0 & 0\n\\end{bmatrix}\n\\]\n\\(M_{\\Pi_x}\\)를 외적의 관점에서 표현해보자.\n\\[\n\\begin{aligned}\n\\Pi_{x}(\\vec v) & = (\\hat i \\cdot \\vec v) \\hat i = \\hat i (\\hat i \\cdot \\vec v) = \\hat i (\\hat i^T \\vec v) = (\\hat i \\hat i^T)\\vec v \\\\\n& =\n\\begin{bmatrix}\n1 & 0 \\\\\n0 & 0\n\\end{bmatrix} \\vec v = M_{\\Pi_x} \\vec v\n\\end{aligned}\n\\]\n이 결과를 일반적인 벡터 \\(\\vec b\\)에도 확장할 수 있다. \\(\\vec b\\)로의 프로젝션을 구현하기 위해서는 표준화된 벡터 \\(\\hat b\\)를 먼저 구해야 한다. 그리고 해당 벡터로 아웃터 프로덕트(외적)를 구한다.\n\\[\n\\hat b = \\dfrac{\\vec b}{\\Vert b \\Vert},~M_{\\Pi_{\\hat b}} \\vec a = \\hat b \\hat b^T \\vec a  \n\\]\n\\(\\vec a\\)를 인풋 벡터로 이해하면 이를 \\(\\vec b\\)의 프로젝션 위치로 옮기는 선형 변환이 \\(\\Pi_{\\hat b}\\)에 해당한다."
+  },
+  {
+    "objectID": "posts/linear-algebra/2020-12-16-measuring-distance.html#more-definition",
+    "href": "posts/linear-algebra/2020-12-16-measuring-distance.html#more-definition",
+    "title": "Projection and Distance",
+    "section": "More Definition",
+    "text": "More Definition\n\n\\(S \\subseteq \\mathbb R^n\\): \\(S\\)는 벡터 부분공간이라고 하자.\n\\(S^\\perp\\): \\(S\\)와 직교 벡터들의 집합이고 이 역시 벡터 부분공간이다. \\[\nS^\\perp = \\lbrace \\vec w \\in \\mathbb R^n : \\vec w \\cdot s = 0~\\text{for all}~ s \\in S \\rbrace\n\\]\n\\(\\Pi_S\\): 부분공간 \\(S\\) 위로 프로젝션\n\\(\\Pi_{S^\\perp}\\): 부분공간 \\(S^\\perp\\) 위로 프로젝션\n\n\\(\\Pi_S\\)는 일종의 함수로서 다음과 같이 정의된다.\n\\[\n\\Pi_S: \\mathbb R^n \\to S\n\\]\n\\(\\vec x \\in \\mathbb R^n\\)의 어떤 벡터가 \\(\\Pi_S\\)를 거치면 \\(S\\)에 속하지 않는 나머지 부분은 사라지게 된다. 즉, \\(S\\)라는 화면 위로 자신의 이미지를 투영한다고 보면 된다. 그래서 프로젝션이다.\n몇가지 특징은 다음과 같다.\n\nIf \\({\\vec v} \\in S\\), then \\(\\Pi_S(\\vec v) = \\vec v\\)\nIf \\(\\vec w \\in S^\\perp\\), then \\(\\Pi_S(\\vec w) = \\vec 0\\)\nif \\(\\vec u = \\alpha \\vec v + \\beta \\vec w\\) where \\(\\vec v \\in S\\), \\(\\vec w \\in S^{\\perp}\\), then \\(\\Pi_S(\\vec u) = \\alpha \\vec v\\)\n\\(\\Pi_S(\\vec v) (\\Pi_S(\\vec v) ) = \\Pi_S(\\vec v)\\) (idempotent)\n\n\nProjection onto line\n\n그림에서 \\(\\vec u\\)의 \\(\\vec v\\)로의 프로젝션은 앞서 살펴본 벡터 프로젝션이다. \\(\\vec v\\) 대신 \\(l\\)로 표기된 점에 유의하자.\n\\[\nl: \\{ \\vec v' \\in \\mathbb R^n \\lvert \\vec v' = \\vec 0 + t \\vec v, t \\in \\mathbb R \\}\n\\] \\[\n\\Pi_l(\\vec u) = \\dfrac{\\vec u \\cdot \\vec v}{\\lVert\\vec v\\lVert^2} \\vec v\n\\]\n이제 여기서 \\(\\Pi_{l^{\\perp}}\\)를 구해보자.\n\\[\n\\vec u = \\Pi_{l} (\\vec u) + \\Pi_{l^{\\perp}} (\\vec u)\n\\]\n잠시 생각해볼 것이 있다.\n\n\\(\\Pi_{l^{\\perp}}(\\vec u)\\)가 의미하는 것은 무엇일까? \\(\\vec u\\)에서 \\(\\Pi_{l}(\\vec u)\\)와 직교하는 벡터 프로젝션이다. 그런데, 둘은 \\(\\Pi_{l^{\\perp}}(\\vec u)\\) 만난다. 따라서, 프로젝션의 결과는 \\(\\Pi_{l^{\\perp}}(\\vec u)\\) 위에 있게 된다.위 그림은 이를 나타낸다.\n\\(\\vec u\\)라는 벡터가 두 개의 직교하는 성분의 결합을 통해 표현될 수 있다는 것을 알 수 있다. \\(\\vec u = \\Pi_{l}(\\vec u) + \\Pi_{l^\\perp}(\\vec u)\\)\n\n\n\nProjection onto plane\n\n평면 위로의 프로젝션을 생각해보자. 기본적인 원리는 동일하다. 이에 앞서 평면을 벡터로 표현하는 방법에 대해 알아보자. 가장 편리한 방법은 노멀 벡터를 활용하는 것이다. 즉, 평면 위의 점 \\(\\vec {p_0}\\)를 지나는 \\(P\\)는 다음과 같이 정의할 수 있다.\n\\[\nP = \\{ \\vec p \\in \\mathbb R^n : \\vec n \\cdot(\\vec p - \\vec p_0) = 0 \\}\n\\]\n여기서 노멀 벡터 \\(\\vec n\\)은 프로젝션된 지점에서 평면과 직교하는 성분을 나타낸다. 3차원의 경우 노멜 벡터는 3차원 공간에서 해당 평면이 놓인 모습을 결정한다.\n\\[\n\\vec u = \\Pi_P(\\vec u) + \\Pi_{P^\\perp}(\\vec u)\n\\]\n그림에서 보듯이 \\(\\vec u\\)에서 \\(\\vec n\\)으로의 프로젝션은 앞서 보았던 벡터에서 벡터로의 프로젝션이다. 따라서 앞서 구한 공식을 그대로 활용하자. 즉,\n\\[\n\\Pi_{P^\\perp}(\\vec u) = \\dfrac{\\vec u \\cdot \\vec n}{\\lVert\\vec n\\lVert}\\dfrac{\\vec n}{\\lVert \\vec n \\lVert}\n\\]\n\n벡터는 점과 달리 상대적인 위치로 정의된다. 벡터 연산은 그런 맥락에서 이루어진다. \\(\\Pi_{P^\\perp}\\)를 위 그림처럼 이동해 보자. 이렇게 보면 벡터 프로젝션이 자연스럽다. P에서의 위치는 변하지 않고 노멀 벡터 쪽으로만 변화하므로 벡터 자체는 이동 전 벡터와 이동 후 벡터가 동일하다. 즉, \\(\\Pi_{P^\\perp}\\)를 왼쪽으로 이동시킨 벡터에 대한 프로젝션과 \\(\\Pi_{P^\\perp}\\)이 같다.\n\\[\n\\Pi_{P^\\perp} = \\dfrac{\\vec u \\cdot \\vec n}{\\lVert\\vec n\\lVert^2}{\\vec n}\n\\]\n이제 \\(\\Pi_{P^\\perp}\\) 대입하면 \\(\\Pi_{P}\\)를 쉽게 구할 수 있다. 즉,\n\\[\n\\Pi_P(\\vec u) + \\Pi_{P^\\perp} = \\vec u\n\\] \\[\n\\Pi_P(\\vec u)  = \\vec u - \\dfrac{\\vec u \\cdot \\vec n}{\\lVert\\vec n\\lVert^2}{\\vec n}\n\\]"
+  },
+  {
+    "objectID": "posts/linear-algebra/2020-12-16-measuring-distance.html#distance-in-vector-space",
+    "href": "posts/linear-algebra/2020-12-16-measuring-distance.html#distance-in-vector-space",
+    "title": "Projection and Distance",
+    "section": "Distance in Vector Space",
+    "text": "Distance in Vector Space\n프로젝션은 거리를 측정할 때 유용하다. 먼저 원점(굳이 원점일 필요는 없다)과 해당 벡터 공간을 지나는 선 사이의 거리를 구해보자.\n\\[\nl: \\{ \\vec p \\in \\mathbb R^n | \\vec p = \\mathbf {p}_0 + t \\vec v, t \\in \\mathbb R \\}\n\\]\n\n위 그림에서 원점과 \\(l\\)의 거리는 어떻게 나타낼 수 있을까? \\(l\\)이 지나가는 \\(\\vec p_0\\)를 그대로 두고, \\(l\\)이 원점을 지나가도록 이동해보자. 즉,\n\\[\nl_0 = \\{  \\vec p \\in \\mathbb R^n | \\vec p = \\mathbf {0} + t \\vec v, t \\in \\mathbb R \\}\n\\]\n\n이제 이 벡터과 \\(\\vec p_0\\) 사이의 거리를 구하면 된다 .이는 앞서 제시한 벡터 프로젝션의 수직 벡터의 길이와 같다. 즉,\n\\[\nd(l, \\vec 0) = d(\\vec p_0, l_0) = \\lVert \\mathbf p_0 - \\dfrac{\\mathbf p_0 \\cdot \\vec v}{\\lVert \\vec v\\lVert^2}\\vec v \\lVert\n\\]\n이제 아래와 같은 평면과 원점의 거리를 측정해보자.\n\\[\nP = \\{ \\vec p \\in \\mathbb R^n : \\vec n \\cdot(\\vec p - \\vec {p}_0) = 0 \\}\n\\]\n\n원점을 지나도록 평면을 이동시키고 평면의 노멀 벡터가 정의된 \\(p_0\\)와 원점을 지나는 평면 \\(P_0\\) 사이의 거리를 측정하면 된다.\n\\[\nP_0 = \\{ \\vec p \\in \\mathbb R^n : \\vec n \\cdot(\\vec p - \\vec {0}) = 0 \\}\n\\]\n이 둘 사이의 거리는 \\(\\Pi_{P^\\perp}\\)의 거리와 같다. 즉,\n\\[\nd(P, \\vec 0) = d(P_0, \\vec p_0) = \\lVert  \\dfrac{\\vec p_0 \\cdot \\vec n}{\\lVert\\vec n\\lVert}\\dfrac{\\vec n}{\\lVert \\vec n \\lVert}\\lVert = \\dfrac{|\\vec p_0 \\cdot \\vec n |}{\\lVert\\vec n\\lVert}\n\\]\n다시 확인해보자. 노멀 벡터 \\(\\vec n\\)은 \\(\\vec p_0\\)와 같은 같은 방향에 있는 벡터다. 따라서 위의 식이 성립한다."
+  },
+  {
+    "objectID": "posts/linear-algebra/2020-12-16-measuring-distance.html#application-regression-coefficient",
+    "href": "posts/linear-algebra/2020-12-16-measuring-distance.html#application-regression-coefficient",
+    "title": "Projection and Distance",
+    "section": "Application: Regression Coefficient",
+    "text": "Application: Regression Coefficient\n\n앞서 소개했던 회귀 분석에 관한 포스팅 Understanding Regression을 다시 보자. Origin–Observed Y–Fitted \\(\\hat Y\\)이 만드는 삼각형을 보자. 직각 삼각형이다. 여기서 잔차에 해당하는 \\(e\\)는 \\(X\\)의 컬럼 스페이스와 항상 직교한다. 즉, \\(X' e = 0\\)이 성립한다. 그리고 \\(\\hat Y = X \\hat\\beta\\)이므로\n\\[\nX'(Y - \\hat Y)  = X'(Y - X \\hat\\beta) = 0\n\\]\n이를 노멀 방정식이라고 부른다. 앞서 평면과 직교하는 벡터를 노멀 벡터라고 불렀는데, 둘은 일맥상통한다."
+  },
+  {
+    "objectID": "posts/linear-algebra/2020-12-16-measuring-distance.html#references",
+    "href": "posts/linear-algebra/2020-12-16-measuring-distance.html#references",
+    "title": "Projection and Distance",
+    "section": "References",
+    "text": "References\n\nIvan Savov, No bullshit guide to linear algebra 2nd Edition, Minireference, 2017"
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-06-vector-geometry-2.html",
+    "href": "posts/linear-algebra/2021-01-06-vector-geometry-2.html",
+    "title": "Vector Geometrically, part 2",
+    "section": "",
+    "text": "먼저 벡터 스페이스를 살펴보기 위해서 몇 가지 정의부터 보자.\n\n\\(V\\) is vector space\n\\(\\vec v \\in V\\)\n\\(W\\) is vector subspace \\(W \\subseteq V\\)\nspan: 벡터의 선형 결합을 통해 생성되는 벡터 집합 \\[\n\\text{span}(\\vec v_1, \\dotsc, \\vec v_n) = \\{\\vec v | \\vec v = \\alpha_1 \\vec v_1 + \\dotsb + \\alpha_n \\vec v_n, \\alpha_i \\in \\mathbb R \\}\n\\]\n\n행렬 \\(M \\in \\mathbb R^{m \\times n}\\)이 있다고 할 때\n\n\\(\\mathcal R(M) \\subseteq \\mathbb R^n\\): \\(M\\)의 로우 스페이스, 즉 \\(M\\)의 행들의 모든 가능한 선형 결합이 나타내는 벡터 공간\n\n\\[\n\\mathcal R (M) \\overset{\\rm def}{=} \\{ \\vec v \\in \\mathbb R^n | \\vec v = \\vec w^T M \\text{ for some } \\vec w \\in \\mathbb R^m \\}\n\\]\n\n\\(\\mathcal C(M) \\subseteq \\mathbb R^m\\): \\(M\\)의 컬럼 스페이스, 즉 \\(M\\)의 열들의 모든 가능한 선형 결합이 나타내는 벡터 공간\n\n\\[\n\\mathcal C (M) \\overset{\\rm def}{=} \\{ \\vec w \\in \\mathbb R^m | \\vec w = M v \\text{ for some } \\vec v \\in \\mathbb R^n \\}\n\\]\n\n\\(\\mathcal N(M) \\subseteq \\mathbb R^n\\): \\(M\\)의 널 스페이스. 즉, 오른쪽에 곱해졌을 때 \\(\\vec 0_{m}\\)이 되는 벡터의 집합 \\[\n\\mathcal N(M) \\overset{\\rm def}{=} \\{ \\vec v \\in \\mathbb R^n | M \\vec v = \\vec 0 \\}\n\\]\n\\(\\mathcal N(M^T) \\subseteq \\mathbb R^n\\): \\(M\\)의 좌 널 스페이스. 즉, 왼쪽에 곱해졌을 때 \\(\\vec 0_{n}\\)이 되는 벡터의 집합\n\n\\[\n\\mathcal N(M^T) \\overset{\\rm def}{=} \\{ \\vec w \\in \\mathbb R^m | \\vec w^T M  = \\vec 0^T \\}\n\\]\n혹은\n\\[\n\\mathcal N(M^T) \\overset{\\rm def}{=} \\{ \\vec w \\in \\mathbb R^m | M^T \\vec w = \\vec 0 \\}\n\\]\n\\(M\\)의 랭크는 컬럼 스페이스의 차원 그리고 로우 스페이스의 차원과 같다.\n\\[\nr(M) = \\dim(\\mathcal R (M)) = \\dim(\\mathcal C(M))\n\\]"
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#checklist",
+    "href": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#checklist",
+    "title": "Vector Geometrically, part 2",
+    "section": "Checklist",
+    "text": "Checklist\n\nZero vector\n벡터 스페이스가 되려면 \\(\\vec 0\\)를 집합 내에 지니고 있어야 한다. 간단한 내용 같지만 참 중요하다. 일단 벡터 스페이스의 정의에서 \\(\\alpha \\vec v\\)가 들어가기 때문에 \\(\\alpha=0\\)의 조건에 따라서 \\(\\vec 0\\)는 포함되어야 한다. 생각해 볼만한 대목. 벡터 서브스페이스 역시 마찬가지로 \\(\\vec 0\\)을 포함해야 한다. 2차원 벡터로 이야기한다면, \\(y = 2x + 1\\) 같은 형태의 선은 벡터 (서브) 스페이스가 될 수 없다.\n\n\nSubset vs subspace\n부분집합은 원래 집합에 일정한 조건을 부여한 것이고, 이 점에서는 서브 스페이스 역시 부분 집합에 속한다. 다만 모든 부분 집합이 서브 스페이스가 되진 않는다. 이 점에서 서브 스페이스의 조건이 보다 제약적이다.\n다음과 같은 두 방정식의 해를 비교해보자. \\(A \\vec x = \\vec b\\), \\(A \\vec x = \\vec 0\\)\n\\(A \\vec v_1 = \\vec b\\)와 \\(A \\vec v_2 = \\vec b\\)를 생각해보자. \\(A(\\vec v_1 + \\vec v_2)\\)는 원래의 벡터 스페이스에 들어 있는가?\n\\[\nA(\\vec v_1 + \\vec v_2) = 2 \\vec b\n\\]\n\\(\\vec b = \\vec 0\\)가 아니라면, \\(\\vec v_1 + \\vec v_2\\)는 해가 될 수 없다. 조금 더 자세하게 표현해보자.\n\\(A \\vec v = \\vec b\\)의 해 공간은 다음과 같은 완전해의 집합이다.\n\\[\n\\{ \\vec c + \\vec v_n\\} \\text{ where }\\vec v_n \\in \\mathcal N (A)\n\\]\n즉, 해 공간은 특수해(particular solution) \\(\\vec c\\)와 널 스페이스에 속한 벡터의 합으로 구성된다. 해 공간의 원소 하나를 \\(\\vec x_1 = \\vec c + \\vec v_1\\)이라고 하고 다른 하나를 \\(\\vec x_2 = \\vec c + \\vec v_2\\)라고 하자. 이 둘을 더하면, \\(2 \\vec c + \\vec v_1 + \\vec v_2\\)가 된다. 이것이 해 공간 안에 있어야 하는데, \\(\\vec c \\neq 0\\)이면 성립하지 않는다.\n한편 \\(\\mathcal N(M)\\)은 자연스럽게 벡터 공간을 이룬다. 더한 것도 \\(\\vec 0\\)에 있고, 스칼라 곱 역시 마찬가지다. 참고로 아래에서 보겠지만, \\(\\mathcal R(M)\\), \\(\\mathcal C(M)\\), \\(\\mathcal N(M)\\), \\(\\mathcal N(M^T)\\)를 네 개의 근본 서브 스페이스라고 부른다. 네 개는 밀접한 연관을 지니고 있다.\n\n\nSolutions\n이 기회에 해의 종류를 한번 살펴보고 넘어가자.\n\nParticular solution (특수해): RREF에서 free variables를 모두 0으로 두고 찾은 해를 뜻한다.\nHomogenous soution (일반해): 일반해는 널 스페이스에 속하는 해를 뜻한다. 즉, \\(A \\vec x = 0\\)을 만족시키는 \\(\\vec x\\)를 의미한다.\nComplete solution (완전해): 완전해란 특수해와 일반해를 더한 형태이다. 즉, \\(x_c = x_p + c_h\\)\n\n이제 각각의 의미를 음미해보자.\n\\[\nA \\vec x = A x_c = A(x_p + x_h) = A x_p + A x_h = A x_p + \\vec 0_{m}\n\\]\n보다 자세한 사례는 여기를 참고하라. 약간의 직관적인 설명만 곁들이겠다. 특수해는 딱 그 위치에 있어야 하는 벡터다. 즉 free variable이 어떤 값이 오건 간에 이 벡터의 값은 고정되어 있다. 반면 일반해는 널 스페이스에 속한다. 앞서 널 스페이스는 부분 공간이라고 말했다. 이는 \\(\\vec 0\\)를 중심으로 각각 벡터가 지나가야 한다는 뜻이다. 따라서 free variable의 경우 하나를 구하기 위해서 나머지를 0으로 두고 구해야 한다. 그리고 이렇게 구해진 vector에 곱해지는 스칼라 값이 free variable에 해당한다."
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#system-of-linear-equations",
+    "href": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#system-of-linear-equations",
+    "title": "Vector Geometrically, part 2",
+    "section": "System of Linear Equations",
+    "text": "System of Linear Equations\n다음 방정식의 해 공간을 생각해보자.\n\\[\nM \\vec x = \\vec b\n\\]\n먼저 \\(M\\)의 널 스페이스를 생각해보자. 여기 속한 \\(\\vec x\\)는 \\(\\mathbb R^n\\) 집합에 속한다. 정의상 \\(M \\vec x = 0\\)이므로 \\(\\vec x\\)를 어떤 해에 더하면 이 값 역시 해가 된다. 따라서, \\(M \\vec x = \\vec b\\)를 만족하는 \\(\\vec x = \\vec c\\)라고 하자. 이를 특수 해라고 부른다. 여기에 널 스페이스에 속한 임의의 원소를 더하면 완전해가 된다. 즉,\n\\[\n\\vec x = \\vec c + \\text{span}(\\vec v_1, \\dotsc, \\vec v_k) \\text{ where } \\text{span}(\\vec v_1, \\dotsc, \\vec v_k) = \\mathcal N(M)\n\\]\n\nRREF method\n연립방정식의 해를 구하는 가장 기초적인 방법, 즉 RREF, 기약 행사다리꼴 행렬을 만드는 과정이 이에 부합한다. 즉, \\([M \\lvert \\vec b]\\)를 RREF로 만들면, \\([\\text{rref}(M) \\vert \\vec c]\\)의 형태가 된다. 이때, \\(\\text{rref}(M)\\)는 \\(k\\) 개의 자유 변수를 \\(n-k\\) 개의 특수 해를 지니게 된다. 자유 변수에서 널 스페이스에 속하는 일반해를 얻을 수 있다."
+  },
+  {
+    "objectID": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#two-transformation",
+    "href": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#two-transformation",
+    "title": "Vector Geometrically, part 2",
+    "section": "Two Transformation",
+    "text": "Two Transformation\n\\(M \\in \\mathbb R^{m \\times n}\\)이 편리한 이유는 \\(M\\)이 \\(\\vec x \\in \\mathbb R^n\\)을 \\(\\vec y \\in \\mathbb R^m\\)으로 바꾸는 선형 변환 모두를 표현할 수 있기 때문이다. 그렇다면, \\(M^T\\)는 어떨까? 이는 같은 맥락에서 \\(\\vec a \\in \\mathbb R^m\\)을 \\(\\vec b \\in \\mathbb R^n\\)으로 바꾸는 선형 변환을 표현한다. 즉,\n\\[\n\\vec a^T M = \\vec b\n\\]\n이는 \\(M^T \\vec a= \\vec b^T\\)가 된다. 즉, \\(M^T\\)는 \\(M\\)의 좌 벡터 공간의 집합을 표현한다. 마찬가지로 \\(M\\)은 \\(M\\)의 우 벡터 공간의 집합을 표현한다. \\(M\\)의 좌 벡터 공간이 바로 로우 공간이고 우 벡터 공간이 컬럼 공간이다.\n이제, \\(\\mathcal N(M)\\)의 원소는 \\(\\mathbb R^n\\)에 속한다. 이와 직교하는 공간은 어떤 공간일까? 좌 벡터 공간일까? 우 벡터 공간일까? 쉽게 생각하자. 직교 하기 위해서는 서로 차원이 같아야 한다. 우 벡터 공간은 \\(\\mathbb R^m\\)에 속한다. 따라서 직교한다면 좌 벡터 공간과 한다. 확인해보자. \\(M \\vec v_n = \\vec 0_m\\) where \\(\\vec v_n \\in \\mathcal N(M)\\) 가 성립한다. 이제 양번에 \\(\\vec a^T\\)를 곱해보자.\n\\[\n\\underbrace{(M^T \\vec a)^T}_{\\text{left space}} \\vec v_n = \\vec a^T M\\vec v_n = \\vec a^T \\vec 0_m = 0\n\\] \\[\n\\mathcal R(M) \\oplus \\mathcal N(M) = \\mathbb R^n\n\\]\n한편 같은 논리로\n\\[\n\\mathcal C(M) \\oplus \\mathcal N(M^T) = \\mathbb R^m\n\\]\n앞서 보았듯이 \\({\\rm rank} (M) =\\dim(\\mathcal R(M)) = \\dim(\\mathcal C(M))\\)다. \\(\\dim(\\mathcal N(M)) = {\\rm nullity} (M)\\)이라고 하면,\n\\[\n{\\rm rank} (M) + {\\rm nullity} (M) = n = \\dim(\\mathbb R^n)\n\\]\n이 모든 걸 그림 하나로 정리하면 다음과 같다! 아래 보듯이 특수해(particular solution) \\(x_r\\)은 로우 스페이스에서 생성되는 해이다. 일반해(homogeneous solution) \\(x_n\\)은 널 스페이스에서 생성되는 해다. 이 둘을 합치면 완전해(complete solution)가 된다. 아래 그림에서 보듯이\n\\[\n\\begin{aligned}\nAx_r & \\rightarrow \\mathcal C(M) \\\\\nAx_n & \\rightarrow \\mathcal N(M) \\\\\nAx_c = A(x_r + x_n) & \\rightarrow \\mathcal C(M)\n\\end{aligned}\n\\]\n\n보통 homogenous라는 말이 들어가면 \\(Ax = 0\\)과 같은 형태의 연립방정식을 의미 의미한다."
   },
   {
     "objectID": "posts/linear-algebra/2021-01-08-basis.html",
@@ -784,88 +679,39 @@
     "text": "Wrap-it-up\n행렬 대각화에 관해서 다시 한번 정리해보자. 때로는 혼동될 사안이라서 정리한다. 증명은 일단 생략한다.\n\nDiagonalization Theorem\n매트릭스 \\(A \\in \\mathbb C^{n \\times n}\\)가 대각화가 가능하다는 것은 \\(n\\)의 선형 독립인 아이겐벡터를 지니고 있다는 뜻이다. 즉, \\(A =Q \\Lambda Q^{-1}\\) 형태로 분해될 수 있음을 뜻한다.\n\n착각하지 말아야 할 것! 대각가능 행렬과 역행렬이 존재하는 행렬은 아무 관계가 없다. 둘은 서로 다른 이야기다.\n아이겐분해(eigendecomposition)이란 닮음 행렬을 통해서 기저를 바꾸는 과정인데, 이때 기저를 바꾸는 매트릭스로 동원되는 것이 아이겐벡터 매트릭스다.\n\n\n\nEat this!\n\n\\(A\\) positive semidefinite \\(\\Rightarrow\\) 아이겐밸류는 비음이다.\n\\(A\\) symmetric \\(\\Rightarrow\\) 아이겐밸류는 실수\n\\(A\\) normal (\\(A^T A = A A^T\\)) \\(\\Rightarrow\\) \\(Q\\)를 직교 행렬 \\(O\\)로 고를 수 있다(\\(O^T O = I\\))."
   },
   {
-    "objectID": "posts/linear-algebra/2021-01-18-Eigenspace-2.html",
-    "href": "posts/linear-algebra/2021-01-18-Eigenspace-2.html",
-    "title": "Eigenspace, part 2",
+    "objectID": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html",
+    "href": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html",
+    "title": "Eigenvalues and Eigenvectors",
     "section": "",
-    "text": "\\(A \\in \\mathbb C^{m \\times n}\\)을 생각해보자. 이런 조건에서 아이겐 분해를 어떻게 활용할 수 있을까? 일단 \\(A\\)를 정방행렬로 만들어주어야 할 것이고, 이에는 두 가지 방법이 있다.\n\\[\n\\underbrace{A^T A}_{n \\times n}, \\overbrace{A A^T}^{m \\times m}\n\\]\n아울러, \\((A^T A)^T = A^T A\\), \\((AA^T)^T = A A^T\\)가 성립하기 때문에 두 매트릭스 모두 normal 매트릭스다. 따라서 아래와 같은 개념화가 가능하다.\n\\[\nA =\n\\underbrace{\n\\begin{bmatrix}\n\\vert & \\dotsb & \\vert \\\\\nu_1 & \\dotsb & u_m \\\\\n\\vert & \\dotsb & \\vert \\\\\n\\end{bmatrix}}_{m \\times m}\n\\overbrace{\n\\begin{bmatrix}\n\\sigma_1 & 0 & \\dotsb \\\\\n0 & \\sigma_2 & \\dotsb \\\\\n0 & 0 & \\dotsb \\\\\n\\end{bmatrix}}^{m \\times n}\n\\underbrace{\n\\begin{bmatrix}\n-- & v_1^T & -- \\\\\n-- & \\vdots & -- \\\\\n-- & v_n^T & -- \\\\\n\\end{bmatrix}}_{n \\times n} =\nU \\Sigma V^T\n\\]\n\\(U\\)를 통해 분해되는 부분을과 \\(V\\)를 통해 분해되는 부분을 다음과 같이 나타내보자.\n\\[\n\\begin{aligned}\nA A^T & = U \\Lambda_l U^T \\\\\nA^T A & = V \\Lambda_r V^T \\\\\n\\end{aligned}\n\\]\n소문자의 \\(l\\)와 \\(r\\)은 각각 left, right를 뜻한다. \\(U\\)와 \\(V^T\\)를 명시적으로 적어보자.\n\\[\nU =\n\\begin{bmatrix}\n\\vert & \\dotsb & \\vert \\\\\nu_1 & \\dotsb & u_m \\\\\n\\vert & \\dotsb & \\vert \\\\\n\\end{bmatrix}, \\text{~where}\n\\{ (\\lambda_i, u_i) = \\text{eigenvects}(A A^T) \\}\n\\] \\[\nV =\n\\begin{bmatrix}\n-- & v_1^T & -- \\\\\n-- & \\vdots & -- \\\\\n-- & v_n^T & -- \\\\\n\\end{bmatrix}, \\text{~where}\n\\{ (\\lambda_i, v_i) = \\text{eigenvects}(A^T A) \\}\n\\]\n이제 유사 대각행렬 \\(\\Sigma\\)를 보자. 이 행렬은 \\(m \\times n\\) 형태다.\n\\[\n\\sigma_i = \\sqrt{\\lambda_i}, \\text{ where } \\lambda_i = \\text{eigenvals}(A A^T) = \\text{eigenvals}(A^T A)\n\\]\n\n\n기저를 바꾸는 관점에서 다시 음미해보자.\n\\[\n\\vec y = A \\vec x = U \\Sigma V^T \\vec x\n\\]\n\n\\(V^T \\vec x\\): \\(V^T = \\phantom{}\\_{B\\_{SVD}}[1]\\_{B_S}\\). 즉, \\(B_{SVD} \\leftarrow B_S\\)를 수행한다.\n\\(\\Sigma\\): 유사 대각행렬을 곱해 각 기저의 크기를 조절한다.\n\\(U\\): \\(U = \\phantom{}\\_{B_{S}}[1]\\_{B\\_{SVD}}\\): \\(B_{S} \\leftarrow B_{SVD}\\)\n\n즉, \\(B_S \\leftarrow B_{SVD} \\leftarrow B_S\\)를 수행한다.\n\n\n\n외적의 관점에서 이해하는 것도 흥미롭다. 일단 외적에 관해서 간단히 살펴보자. 벡터 \\(u \\in \\mathbb R^m\\), \\(v \\in \\mathbb R^n\\)이 있다고 할 때,\n\\[\nu v^T \\in \\mathbb R^{m \\times n}\n\\]\n외적의 rank는 어떻게 될까? 1이다. 직관적으로는 이해가 안될 수 있다.\n\\[\n{\\rm rank} (AB) \\leq \\min({\\rm rank}(A), {\\rm rank} (B)) =  1\n\\]\nSVD 식을 다시 조립해보자. 일단 \\(m \\geq n\\)을 가정하자.\n\\[\nU \\Sigma =\n\\begin{bmatrix}\n\\vert & \\dotsb & \\vert \\\\\nu_1 & \\dotsb & u_m \\\\\n\\vert & \\dotsb & \\vert \\\\\n\\end{bmatrix}\n\\begin{bmatrix}\n\\sigma_1 & 0 & \\dotsb \\\\\n0 & \\sigma_2 & \\dotsb \\\\\n0 & 0 & \\dotsb \\\\\n\\end{bmatrix}\n\\] \\[\n\\begin{aligned}\nA & = U \\Sigma V^T \\\\\n& =\n\\underbrace{\n\\begin{bmatrix}\n\\sigma_1 u_1, \\dotsb,  \\sigma_n u_n, \\dotsc,  0 u_m\n\\end{bmatrix}}_{U \\Sigma}\n\\begin{bmatrix}\n-- & v_1^T & -- \\\\\n-- & \\vdots & -- \\\\\n-- & v_n^T & -- \\\\\n\\end{bmatrix} \\\\\n& =  \\sigma_1 u_1 v_1^T + \\dotsb + \\sigma_n u_n v_n^T + \\dotsb + 0 u_m v_m^T\n\\end{aligned}\n\\]\n\\(u_i v_i^T\\)는 각각 1의 rank를 지니고 앞에 곱해진 singular value의 기저로 이해할 수 있다. 해당 기저들의 선형 결합으로 매트릭스 \\(A\\)를 다시 분해할 수 있다.\n\n\n\n이렇게 대각화를 할 때 어떤 이득이 있을까? 앞서 유사 행렬을 활용하면 행렬의 곱이 간단해진다는 점을 보았다. SVD에도 비슷한 이점이 있다. 이 외에 SVD를 써서 할 수 있는 중요한 이득이 있다. 계산량을 줄이는 것이다.\n\\(M \\in \\mathbb R^{1000 \\times 2000}\\)의 변환이 있다고 하자. 이 변환의 싱귤러 밸류들 많아야 1000개가 나올 것이다. 만일 이 1000개 중에서 3개를 제외하고 나머지 값이 0에 가깝다고 하자.\n\\(M\\)이라는 변환의 근사값을 구하고 싶다면, 0에 가까운 값을 모두 0으로 둔다. 이렇게 바꾸면,\n\\[\nM \\approx \\hat M = \\hat U \\hat \\Sigma \\hat V^T\n\\]\n\n\\(\\hat U \\in \\mathbb R^{1000 \\times 3}\\)\n\\(\\hat \\Sigma \\in \\mathbb R^{3 \\times 3}\\)\n\\(\\hat V^T \\in \\mathbb R^{3 \\times 2000}\\)\n\n이렇게 근사값을 구하면 계산량이 많이 줄어들 것이다. \\(M\\)와 \\(\\hat M\\) 사이의 힐베르트-슈미트 거리를 구하면,\n\\[\n\\Vert M - \\hat M \\Vert_{\\rm HS} = \\sqrt{\\sum_{i=4}^{1000} \\sigma_i^2}\n\\]\n이 값이 크지 않다면, \\(M \\approx \\hat M\\)으로 간주할 수 있다. 실제로 이미지 압축 등에서 많이 사용되는 방법이다."
+    "text": "행렬 대각화를 이루는 방법 중 하나는 아이겐벡터와 아이겐밸류를 재구성하는 것이다.\n대각화가 가능한 행렬 \\(A\\)가 있고, 그 아이겐벡터를 열 벡터로 하는 행렬을 \\(Q\\)라고 하면\n\n\\[\n\\begin{aligned}\nA Q & = A[x_1, \\dotsc, x_n] \\\\\n& = [\\lambda_1 x_1, \\cdots, \\lambda_n x_n] \\\\\n&= Q \\boldsymbol{\\lambda}\n\\end{aligned}\n\\] \\[\nAQ Q^{-1} = A = Q \\boldsymbol{\\lambda}Q^{-1}\n\\]\n\n대각화가 가능하기 위해서는 우선 행렬 \\(Q\\)가 비특이(non-singular) 행렬이어야 한다. \\(Q\\)는 아이겐벡터의 조합이기 때문에 서로 다른 아이겐밸류를 지니거나 혹은 아이겐벡터의 선형독립이 성립해야 한다.\n대칭 행렬의 경우 모든 아이겐밸류가 실수이고, \\(Q\\)는 직교 행렬(orthogonal matrix)이 된다. 이 경우\n\n\\[\nA = Q\\boldsymbol{\\lambda}Q^T\n\\]"
   },
   {
-    "objectID": "posts/linear-algebra/2021-01-18-Eigenspace-2.html#lu",
-    "href": "posts/linear-algebra/2021-01-18-Eigenspace-2.html#lu",
-    "title": "Eigenspace, part 2",
-    "section": "LU",
-    "text": "LU\n\\(n \\times n\\) 정방 행렬에 대해서 \\(A = LU\\)를 수행할 수 있다. \\(L\\)과 \\(U\\)는 하방삼각 행렬과 상방삼각 행렬이다. 이렇게 매트릭스를 쪼개는 이유를 각각에 관해서 역행렬을 구하기 힘들기 때문이다. 즉,\n\\[\nA \\vec x = LU \\vec x = b \\Leftrightarrow U \\vec x = L^{-1}b \\Leftrightarrow \\vec x = U^{-1}L^{-1}b\n\\]\n우선 LU가 가능하라면 \\(A\\)가 RREF으로 열의 교환 없이 환원될 수 있어야 한다.\n\nCholesky\n\\(A\\)가 대칭이고 PSD 매트릭스라면 \\(LU\\) 분해는 더욱 단순해진다.\n\\[\nA = L L^T \\text{ or } A = U^T U\n\\]"
-  },
-  {
-    "objectID": "posts/linear-algebra/2021-01-18-Eigenspace-2.html#qr",
-    "href": "posts/linear-algebra/2021-01-18-Eigenspace-2.html#qr",
-    "title": "Eigenspace, part 2",
-    "section": "QR",
-    "text": "QR\n\\(A \\in \\mathbb R^{n \\times n}\\)일 때 이 매트릭스를 쪼개는 강력한 방법은 G-S 알고리듬을 활용하는 것이다.\n\\[\nA = O U\n\\]\n\n\\(O\\): orthogonal matrix\n\\(U\\): Upper triangluar matrix\n\n보통 \\(U\\)를 right-triangular matrix로도 쓰기 때문에, 이를 \\(QR\\)로 표기하기도 한다. \\(R\\)의 경우 \\(O\\)의 컬럼 벡터를 하나씩 추가해가면서 계산하게 된다. 이는 G-S 알고리듬에서 하나씩 벡터를 빼가면서 계산하는 것을 구현할 수 있게 해준다.\n\nExample\n실제로는 어떻게 하는지 살펴보자. 먼저 \\(A\\)의 각 컬럼들을 두고, 두번째 열은 첫번째에 직교하게, 세번째는 첫번째와 두번째에 직교하게 행렬을 변형한다.\n\\[\nA =\n\\begin{bmatrix}\na_{11} & a_{12} & a_{13} \\\\\na_{21} & a_{22} & a_{23} \\\\\na_{31} & a_{32} & a_{33}\n\\end{bmatrix}\n\\]\n\\(O\\) 혹은 \\(Q\\)를 구해보자. G-S 알고리듬을 활용하자.\n\\[\nA = [a_1, a_2, a_3]\n\\]\n\\(a_1\\)과 직교하는 \\(e_2\\)를 구하면 아래와 같다.\n\\[\ne_2 = a_2 - \\dfrac{a_2 \\cdot a_1}{\\Vert a_1 \\Vert^2}\n\\]\n다음으로 \\(e_3\\)는 \\(a_1\\)과 직교하고 동시에 \\(e_2\\)와 직교해야 한다. 따라서,\n\\[\ne_3 = a_3 - \\dfrac{a_3 \\cdot a_1}{\\Vert a_1 \\Vert^2} - \\dfrac{a_3 \\cdot e_2}{\\Vert e_2 \\Vert^2}\n\\]\n이를 다시 길이 1로 표준화하면 \\(Q\\)를 구할 수 있다. 그리고\n\\[\nQ^T A = Q^T Q R = 1 R\n\\]\n따라서 \\(R\\)은 \\(Q^T A\\)로 구할 수 있다."
-  },
-  {
-    "objectID": "posts/math-simple/2019-07-13-Poisson.html",
-    "href": "posts/math-simple/2019-07-13-Poisson.html",
-    "title": "Poisson as Binormial Distribution",
-    "section": "",
-    "text": "푸아송 분포는 이항 분포를 주어진 시간(기간) 안에 발생하는 평균 발생 횟수로 다시 모델링한 분포다.\n이항 분포의 평균은 \\(\\lambda = n p\\)이고, 이항 분포에 \\(p = \\frac{\\lambda}{n}\\)을 다시 넣은 후 \\(n \\to \\infty\\) 극한값을 얻은 결과가 푸아송 분포다."
-  },
-  {
-    "objectID": "posts/math-simple/2019-07-13-Poisson.html#defining-poisson-distribution",
-    "href": "posts/math-simple/2019-07-13-Poisson.html#defining-poisson-distribution",
-    "title": "Poisson as Binormial Distribution",
-    "section": "Defining Poisson Distribution",
-    "text": "Defining Poisson Distribution\n사실, 푸아송 분포 직관적으로 잘 안 와 닿는다. 정의부터 먼저 살펴보자. 한글 위키피디어에서 가져왔다.\n푸아송 분포(Poisson distribution)는 확률론에서 단위 시간 안에 어떤 사건이 몇 번 발생할 것인지를 표현하는 이산 확률 분포이다. 일단 정의에서 알 수 있는 것:\n\n푸아송이라는 사람이 만들었다.\n단위 시간 안에 발생하는 사건이 중요하다.\n이산 확률 분포다.\n\n수학적인 정의는 일단 생략하자. 뒤에서 다시 만나게 될 테니까. 정의만 봐서는 이해가 쉽지 않은 분포다. 직관적인 방식으로 푸아송 분포의 정의를 끌어낼 수는 없을까?\n\n\n정확하게 언급하자면 분포의 정의라기보다는 분포의 확률 질량 함수 혹은 확률 밀도 함수라고 적는 게 맞을 것이다. 하지만 편의상 특별한 언급이 없는 경우 분포의 정의를 이런 의미로 사용하도록 하자."
-  },
-  {
-    "objectID": "posts/math-simple/2019-07-13-Poisson.html#poisson-as-binary",
-    "href": "posts/math-simple/2019-07-13-Poisson.html#poisson-as-binary",
-    "title": "Poisson as Binormial Distribution",
-    "section": "Poisson as Binary",
-    "text": "Poisson as Binary\n잠시 이항 분포를 떠올려보자. 아마도 모든 확률 관련 수업에서 제일 처음 배우는 분포가 아닐까 한다. 이항 분포란, 1회 시행 시 발생할 확률이 \\(p\\;\\)인 어떤 사건을 \\(n\\) 번 시행할 때 해당 사건이 \\(k\\) 번 발생할 확률의 분포를 나타낸다. 개별적으로 존재하는 사건이니까 당연히 이산 확률 분포에 속한다. 수학적으로는 아래와 같다.\n\\[\nB(k;  n,p)  =  {n \\choose k}  p^k(1-p)^{n-k}\n\\]\n위 정의를 말로 풀어보자. n번 시행 중에 사건이 발생한 경우 \\(k\\) 개를 뽑는다. 즉, 이런 경우가 \\(n\\) 번 중에서 얼마나 발생할 수 있는지 따진다. 그리고 해당 경우의 수가 발생할 확률을 곱해준 것이다.\n이항 분포를 ’시간’의 맥락으로 한번 바꿔보자. 하루 동안 내 사이트에 방문객이 한 명 찾아올 확률을 0.1이라고 하자. 28일 동안 10 명의 방문자가 찾아올 확률은? 이항 분포의 맥락에서 생각한다면, \\(B(10; 28, 0.1)\\)로 나타낼 수 있다. 그런데 이 모델링 어딘가 찜찜하다.\n이항 분포의 모델링은 하루 동안 사이트 방문객이 한 명일 확률에 기대고 있다. 그런데 하루에 방문객이 두 명 이상이라면? 하루에 방문객이 한 명 씩만 온다는 가정이 비현실적이지 않나?\n두 명 이상의 방문자를 수용하려면 이항 분포의 모형을 어떻게 수정해야 할까? 가장 손쉬운 방법은 단위 시간을 바꾸는 것이다. 단위 시간을 하루가 아니라 시간으로 바꿔보자. 하루는 24시간이고 매 시간 동일한 정도로 이용자가 방문한다면, 시간당 1명이 방문할 확률은 0.1/24이 된다. 낮은 확률이지만 이러한 가정에서 하루에 두 명 이상도 방문할 수 있게 된다."
-  },
-  {
-    "objectID": "posts/math-simple/2019-07-13-Poisson.html#deriving-poisson",
-    "href": "posts/math-simple/2019-07-13-Poisson.html#deriving-poisson",
-    "title": "Poisson as Binormial Distribution",
-    "section": "Deriving Poisson",
-    "text": "Deriving Poisson\n이항 분포와 달리 푸아송 분포에서 파라미터는 한 개다. 푸아송 분포의 파라미터 \\(\\lambda\\)는 단위 시간 당 평균 발생 횟수를 뜻한다. 비율(rate)이라고도 부른다.\n\\(\\lambda\\)가 ’파라미터’라는 의미는 무엇일까? 과거의 데이터로부터 혹은 어떤 방법으로든 푸아송 분포를 정의하는 시점에서 알려진 혹은 정의된 사실이라는 의미다. 즉, 우리가 관심을 두고 있는 기간 내에 평균적인 방문자 수가 주어진다는 뜻이다.\n기간 내에 특정 순간 동안 어느 정도의 방문자가 올지 미리 알 수 없다. 방문자가 없다가 어느 순간 10명이 몰려올 수도 있다. 일정한 간격으로 한 명씩 10 명이 올 수도 있다. 매번 시행 때마다 해당 사건이 발생할 확률을 모형화하는 이항분포를 시간의 맥락으로 바꾸면 이렇게 뭔가 어색해 보인다.\n이항 분포를 통해 푸아송 분포를 표현하는 방법은 없을까? 어떤 패턴으로 방문자가 올지 알 수 없다면, 이항 분포의 기준이 되는 시행(시점)을 최대한 잘게 쪼개면 어떨까? 이항 분포에서 평균은 \\(np\\;\\) 다. 즉, 이항 분포의 맥락에서 보면 푸아송 분포의 파라미터 \\(\\lambda = n p\\;\\)다. \\(\\lambda\\)가 고정되어 있다면 \\(n\\)을 무한대로 갈 때 \\(p\\)는 적절한 방식으로 0으로 접근한다고 가정해도 무방하다. 정리하면 푸아송 분포를 이항 분포에서 도출하기 위한 전략은 다음과 같다.\n\n\\(n\\)과 \\(p\\)를 \\(\\lambda\\) 파라미터 하나로 바꾼다.\n\\(n\\)이 무한대로 갈 때 이항 분포의 확률 밀도 함수의 극한값을 도출한다.\n\n\\[\n\\begin{aligned}\n\\lim_{n \\to \\infty} B(k; n, p) = & \\lim_{n \\to \\infty}  {n \\choose k }  p^k(1-p)^{n-k} \\\\\n= & \\lim_{n \\to \\infty}  \\dfrac{n!}{k!(n-k)!}(\\dfrac{\\lambda}{n})^k  (1-\\dfrac{\\lambda}{n})^{n-k}  \\\\\n= & \\lim_{n \\to \\infty}  \\underbrace{\\left[  \\dfrac{n!}{(n-k)!  n^k} \\right]}_{(가)}  \\left[  \\dfrac{\\lambda^k}{k!}  (1-\\dfrac{\\lambda}{n})^{n}  \\right]  \\underbrace{\\left[  (1-\\dfrac{\\lambda}{n})^{-k}\\right]}_{(나)}  \\\\\n= &  1\\left[  \\dfrac{\\lambda^k}{k!}  e^{-\\lambda}\\right] 1 \\\\\n= & f(k; \\lambda)\n\\end{aligned}\n\\]\n푸아송 분포 확률 질량 함수 \\(f(k; \\lambda)\\) 앞 뒤로 붙은 극한값 (가)와 (나)에 관해 사족을 덧붙여보자. 먼저 (가)는 아래와 같다.\n\\[\n  \\lim_{n \\to \\infty} \\dfrac{n!}{(n-k)!  n^k} =  \\lim_{n \\to \\infty}  \\dfrac{n(n-1)\\dotsb(n-(k-1))}{n^k}  = 1\n\\]\n분자와 분모 모두 가장 높은 \\(n\\)의 차수는 \\(k\\)이고, 그 계수가 모두 1이므로 극한값은 1이다. (나)의 극한값은 쉽게 알 수 있으니 생략하자.\n이항 분포의 확률 혹은 확률 질량 함수의 극한값이 바로 푸아송 분포의 그것이다! 이거 참 재미있는 연결 고리가 아닌가! 사실 푸아송 분포의 정의를 그냥 들여다봐서는 그다지 직관적인 이해를 얻기는 쉽지 않다. 이렇게 이항 분포에서 출발하는 것이 직관적으로 이해하는 데 도움이 된다."
-  },
-  {
-    "objectID": "posts/math-simple/2019-07-18-dot-product.html",
-    "href": "posts/math-simple/2019-07-18-dot-product.html",
-    "title": "Dot Product with Geometry",
-    "section": "",
-    "text": "닷 프로덕트 혹은 내적을 기하적으로 이해하면 여러모로 편리하고 기억에도 잘 남는다."
-  },
-  {
-    "objectID": "posts/math-simple/2019-07-18-dot-product.html#definition",
-    "href": "posts/math-simple/2019-07-18-dot-product.html#definition",
-    "title": "Dot Product with Geometry",
+    "objectID": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#definition",
+    "href": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#definition",
+    "title": "Eigenvalues and Eigenvectors",
     "section": "Definition",
-    "text": "Definition\ndot product는 내적이라고도 번역하지만 여기서는 닷 프로덕트로 쓰기로 하겠다. 먼저 정의부터 살펴보자.\n\\[\n\\mathbf{u}=\\left[u_{1}, {u}_{2}, \\ldots, {u}_{n}\\right] \\in {\\mathbb R}^n\n\\] \\[\n\\mathbf{v}=\\left[{v}_{1}, {v}_{2}, \\ldots, {v}_{n}\\right] \\in {\\mathbb R}^n\n\\] \\[\n\\mathbf{u} \\cdot \\mathbf{v} = \\sum_{n} u_i v_i\n\\]\n쉽게 말해서 닷 프로덕트는 차원이 같은 두 개의 인풋 벡터를 하나의 스칼라로 바꿔주는 일종의 함수로 이해할 수 있다. 두 개의 벡터를 서로 연관 짓는데 이를 해당 벡터의 길이라는 정보로 압축한다고 보면 얼추 맞을 듯 싶다. 하나의 숫자로 요약된다는 뜻에서 스칼라 프로덕트라고도 불린다. 그림으로 나타내면 아래와 같다.\n\n\nFrom Definition to Geometry\n닷 프로덕트에 관한 설명은 정의에서 바로 코사인 법칙으로 넘어간다. 하지만 뭔가 분명하지 않다. 이걸 조금 더 풀어보자.\n\n위 그림은 \\(2 \\times 2\\) 벡터의 닷 프로덕트를 각 요소로 분해한 것이다. 이중에서 \\(\\dfrac{\\pi}{2}\\) 각을 이루고 있는 벡터는 서로 곱하면 0이 된다. 따라서 닷 프로덕트 계산에서는 \\(a_x b_x\\)와 \\(a_y b_y\\)가 남게 된다.\n\n닷 프로덕트란 길이만 문제가 되므로 두 벡터를 한 방향으로 정렬하자.이렇게 되면, 파란색 높이가 \\(0\\)이 된다. 따라서 위 그림과 같은 코사인 법칙이 쉽게 도출된다.\n\n\nSymmetry\n\\(\\mathbf{v}\\) 벡터를 \\(\\mathbf u\\) 벡터 위에, 즉 이 벡터를 스크린 삼아 직각으로 쏜 프로젝션 벡터(\\(\\mathrm{Proj}_{\\mathbf u}{\\mathbf v}\\))의 길이와 \\(\\mathbf u\\) 길이를 곱하면 그것이 \\(\\mathbf u\\)와 \\(\\mathbf v\\)의 닷 프로덕트가 된다. 어느 벡터로 프로젝션 하는지는 관계가 없다. 즉,\n\\[\n{\\mathbf v} \\cdot {\\mathbf u} = \\Vert \\mathbf u \\Vert \\Vert {\\rm Proj}_{\\mathbf u} {\\mathbf v} \\Vert =  \\Vert \\mathbf u \\Vert (\\Vert \\mathbf v \\Vert \\cos\\theta)\n\\] \\[\n{\\mathbf u} \\cdot {\\mathbf v} = \\Vert \\mathbf v \\Vert \\Vert {\\rm Proj}_{\\mathbf v} {\\mathbf u} \\Vert = \\Vert \\mathbf v \\Vert (\\Vert \\mathbf u \\Vert \\cos\\theta)\n\\]\n다시 보면, 닷 프로덕트의 정의상 \\({\\mathbf v} \\cdot {\\mathbf u} = {\\mathbf u} \\cdot {\\mathbf v}\\)인 셈이다. 닷 프로덕트는 어떻게 도출하는가? 그 기하학적인 구조는 무엇인가?"
+    "text": "Definition\n\\[\n\\underset{(n \\times n)}{\\boldsymbol{A}} \\underset{(n \\times 1)}{x} = \\lambda x, \\text{ for $x \\neq 0$}\n\\]\n벡터 \\(x(\\in {\\mathbb R}^n)\\)가 있다고 하자. \\(\\boldsymbol{A}\\)는 일종의 함수이고 이는 \\(x\\)를 변형시키게 된다. 이 변형이 그 다시 자신이 되고 벡터의 크기만 조정해주는 형태가 될 때, \\(\\lambda\\)를 아이겐밸류 그리고 그 벡터 \\(x\\)를 아이겐벡터라고 한다. 잠깐! 여기서 아이겐 벡터는 우 아이겐벡터다. 왜냐하면, 벡터가 매트릭스의 오른쪽에 곱해지기 때문이다. 우(right) 아이겐벡터를 보통 아이겐벡터라고 쓴다. 하지만 좌(left) 아이겐벡터도 있다. 일단 이 점만 지적해두도록 하자.\n\n\n좌 아이겐벡터와 우 아이겐벡터가 절묘하게 사용되는 사례는 마르코프 체인이다. 아이겐밸류 1이 존재하고, 그 아이겐벡터가 해당 상태의 극한 분포가 된다는 사실이 좌, 우 아이겐벡터를 번갈아 사용하면서 도출된다. 자세한 것은 여기를 참고하자.\n\nEigenspace\n벡터들의 집합 중에서 아래의 조건을 만족하면 이를 벡터 (부분) 공간이라고 부른다.\n\n영 벡터 \\(\\boldsymbol 0\\)가 원소이다.\n\\(x\\)가 원소일 때 \\(\\alpha x\\) (\\(\\alpha \\in \\mathbb{R})\\)도 원소다.\n\\(x\\), \\(y\\)가 원소일 때 \\(x + y\\)도 원소다.\n\n쉽게 말해서 벡터 (부분) 공간 위에서는 덧셈과 스칼라 곱셈이 정의된다. 아이겐벡터로 구성된 공간은 이런 벡터 공간이 될까?\n\n\\(A {\\boldsymbol 0} = \\lambda {\\boldsymbol 0}\\)\n\\(A(\\alpha x) = \\alpha(A x) = \\alpha (\\lambda x) = \\lambda(\\alpha x)\\)\n\\(A(x_1 + x_2) = A x_1 + A x_2 = \\lambda x_1 + \\lambda x_2 = \\lambda(x_1 + x_2)\\)\n\n3번의 경우 정의대로 하나의 아이겐밸류 \\(\\lambda\\)에 대해서 두 개 이상의 아이겐벡터가 대응될 때에 해당한다. 아이겐벡터를 원소로 하는 공간은 벡터 부분 공간이 되며, 이를 아이겐스페이스(eigenspace)라고 부른다.\n\n\n얼핏 생각하면 이런 경우가 있나 싶을 수 있다. 가장 좋은 사례는 항등 행렬, \\({\\boldsymbol I}_n\\)이다. 이 항등행렬의 경우 아이겐밸류는 1이고, 대응 가능한 어떤 벡터도 아이겐벡터가 된다."
   },
   {
-    "objectID": "posts/math-simple/2019-07-18-dot-product.html#with-law-of-cosine",
-    "href": "posts/math-simple/2019-07-18-dot-product.html#with-law-of-cosine",
-    "title": "Dot Product with Geometry",
-    "section": "With ‘Law of Cosine’",
-    "text": "With ‘Law of Cosine’\n우선 정석부터 가보자. 코사인 법칙을 활용해서 닷 프로덕트를 도출할 수 있다.\n\n\n여기를 참고 했다.\n우선 코사인의 법칙부터 살펴보자.\n\nLaw of COS\n\n\\[\n\\lVert \\mathbf u -  \\mathbf v \\rVert^2 = \\lVert  \\mathbf  u \\rVert^2 + \\lVert   \\mathbf  v \\rVert^2 - 2\\lVert  \\mathbf  u \\rVert \\lVert   \\mathbf  v \\rVert \\cos \\theta\n\\]\n\n노름(norm, 길이)에 대해서는 대칭과 쌍방선형이 유지되기 때문에 아래와 같이 쓸 수 있다.\n\n\\[\n\\lVert  \\mathbf u -  \\mathbf v \\rVert^2 = ( \\mathbf u -  \\mathbf v) \\cdot ( \\mathbf u -  \\mathbf v ) = \\lVert \\mathbf u \\rVert^2 +  \\lVert \\mathbf v \\rVert^2 - 2  (\\mathbf u \\cdot \\mathbf v)\n\\]\n따라서\n\\[\n\\mathbf u \\cdot  \\mathbf v = \\lVert \\mathbf u \\rVert \\lVert \\mathbf v \\rVert   \\cos \\theta = \\lVert \\mathbf u \\rVert   ( \\lVert \\mathbf v \\rVert \\cos \\theta) = \\lVert \\mathbf u \\rVert \\rVert \\text{Proj}_{\\mathbf u} \\mathbf v \\lVert\n\\]\n한편 반대로 \\(\\mathbf u\\)에서 \\(\\mathbf v\\)로 프로젝션하는 경우를 생각해 볼 수도 있겠다.\n\\[\n\\mathbf u \\cdot  \\mathbf v = \\lVert \\mathbf u \\rVert \\lVert \\mathbf v \\rVert   \\cos \\theta = \\lVert \\mathbf v \\rVert   ( \\lVert \\mathbf u \\rVert \\cos \\theta) = \\lVert \\mathbf v \\rVert \\rVert \\text{Proj}_{\\mathbf v} \\mathbf u \\lVert\n\\]"
+    "objectID": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#determinant-and-eigenvalues",
+    "href": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#determinant-and-eigenvalues",
+    "title": "Eigenvalues and Eigenvectors",
+    "section": "Determinant and Eigenvalues",
+    "text": "Determinant and Eigenvalues\n아이겐밸류의 아이겐벡터를 구하는 과정은 다음과 같다.\n\\[\n|(\\boldsymbol{A} - \\lambda I)|  = 0\n\\]\n즉, 임의의아이겐밸류, 아이겐벡터 정의에서 \\(\\boldsymbol 0\\) 벡터가 아닌 매트릭스 \\(x\\)를 \\(\\boldsymbol 0\\) 벡터로 만들기 위해서는 위의 행렬식 값이 0이어야 한다. 행렬식이 \\(\\lambda\\)의 \\(n\\) 차 방정식이고, \\(n\\)차 방정식의 근이 각각 아이겐밸류가 된다. 즉,\n\\[\n|(\\boldsymbol{A} - \\lambda {\\boldsymbol I})|  = (\\lambda_1 - \\lambda) \\cdot  (\\lambda_2 - \\lambda) \\dotsb  (\\lambda_n - \\lambda)\n\\]\n위의 식에서 두가지 사실을 알 수 있다.\n\n$ $의 행렬식은 아이겐밸류의 곱과 같다. 즉, \\(\\lambda = 0\\)을 넣으면 이 결과를 쉽게 얻을 수 있다.\n가역행렬(invertible matrix)이 될 조건, 즉 역행렬이 존재할 조건은 행렬식의 값이 0이 아닌 경우다. 1에 따르면 이는 모든 아이겐밸류의 값이 0이 아닌 조건과 동치다.\n\n\nTranspose\n원래 행렬의 행렬식과 전치행렬의 행렬식은 같다. 이를 아이겐밸류 계산에 응용해보자.\n\\[\n|\\boldsymbol{A}^T - \\lambda {\\boldsymbol I}| = |(\\boldsymbol{A}-\\lambda {\\boldsymbol I})^T| = |\\boldsymbol{A}-\\lambda {\\boldsymbol I}|\n\\]\n즉, 원래 행렬 \\(\\boldsymbol{A}\\)와 전치 행렬 \\(\\boldsymbol{A}^T\\)는 같은 아이겐밸류를 갖는다."
   },
   {
-    "objectID": "posts/math-simple/2019-07-18-dot-product.html#applications",
-    "href": "posts/math-simple/2019-07-18-dot-product.html#applications",
-    "title": "Dot Product with Geometry",
-    "section": "Applications",
-    "text": "Applications\n\nCosine similarity\n두 개의 벡터가 얼마나 유사한지를 나타내는 지표로 코사인 유사도라는 게 있다. 위에서 보듯이 두 개의 벡터(\\(\\mathbf v, \\mathbf u\\))가 이루는 각 \\(\\theta\\)의 코사인 값은 다음과 같다.\n\\[\n\\cos \\theta = \\dfrac{\\mathbf u \\cdot \\mathbf v}{\\lVert \\mathbf u \\rVert \\lVert \\mathbf v \\rVert}\n\\]\n두 벡터가 가까울수록 코사인 값이 1에 가깝게 될 것이고, 멀수록 -1에 가깝게 될 것이다.\n\n\nHyperplane\n닷 프로덕트를 이해하고 있으면 기하학 문제를 쉽게 풀 수 있는 게 많다. 가장 좋은 예가 초평면(hyperplane)이다. 예를 들어 3차원 공간에서 점 \\(\\mathbf{x}^0 = (x_1^0, x_2^0, x_3^0)\\)를 지나면서 벡터 \\(\\mathbf{p} = (p_1, p_2, p_3)\\)에 수직인 평면을 찾고 있다고 하자. 복잡해보이지만 닷 프로덕트를 활용하면 쉽게 풀린다. 즉,\n\\[\n\\mathbf{p} \\cdot (\\mathbf{x} - \\mathbf{x}^0) = 0\n\\]\n평면 \\(\\mathbf x\\)가 \\(\\mathbf{x}^0\\)를 지나는 것은 분명하다. 이 평면이 \\(\\mathbf{p}\\)에 수직이라는 것은 두 벡터의 닷 프로덕트가 0이 되면 된다."
+    "objectID": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#diagonalization",
+    "href": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#diagonalization",
+    "title": "Eigenvalues and Eigenvectors",
+    "section": "Diagonalization",
+    "text": "Diagonalization\n아이겐밸류와 아이겐벡터가 가장 많이 사용되는 경우는 행렬의 대각화이다. 여기서 대각화란, 정방 행렬의 대각에 위치한 원소, \\(a_{ii}\\)를 제외한 나머지 원소가 모두 0인 행렬, 즉 대각 행렬을 품는 변형을 의미한다. 대각 행렬은 여러가지로 쓸모가 많다. 특히 행렬의 \\(k\\) 제곱이 필요한 경우 대각행렬은 그냥 해당 대각원소의 \\(k\\) 제곱과 동일해진다. 행렬의 대각화를 살펴보자.\n\\[\ny = \\boldsymbol{A} x\n\\]\n기본적으로 행렬은 함수다. 즉, 벡터 \\(x\\)를 투입(input)으로 보면 이를 선형 결합을 통해서 다른 어떤 산출(output) 벡터로 보내는 것이다. 일단 설명의 편의를 위해서 \\(x\\)가 2차원 벡터라고 두고 설명해보자. 즉,\n\\[x =\n\\begin{bmatrix}  \nx_1 \\\\  \nx_2\n\\end{bmatrix}.\n\\]\n\\(\\boldsymbol{A}\\)에 의해 변형된 결과를 아이겐벡터 \\(v_1\\)과 \\(v_2\\)를 통해서 표현할 수 있다고 가정하자. \\(v_1\\), \\(v_2\\)를 통해 \\(x\\), \\(y\\)를 표현하면 다음과 같다.\n\\[\n\\begin{aligned}\nx & = w_1 v_1 + w_2 v_2 \\\\\ny & = z_1 v_1 + z_2 v_2\n\\end{aligned}\n\\]\n이때, \\(w_\\cdot\\), \\(z_\\cdot\\)은 스칼라 값임에 유의하자. 이를 매트릭스로 표시하면 다음과 같다.\n\\[\nx =\n\\boldsymbol{Q}\n\\begin{bmatrix}  \nw_1 \\\\  \nw_2\n\\end{bmatrix},~\ny =\n\\boldsymbol{Q}\n\\begin{bmatrix}  \nz_1 \\\\  \nz_2\n\\end{bmatrix}, \\text{where}\n\\] \\[\n\\boldsymbol{Q} =\n\\begin{bmatrix}  \nv_1, v_2\n\\end{bmatrix}\n\\]\n\\(v_i' v_i = 1(i = 1,2)\\) 이고, \\(v_1 \\cdot v_2 = 0\\) 이라고 가정하자. 즉, \\(Q\\)가 직교행렬이라고 가정하자.\n\\[\n\\begin{aligned}\n\\boldsymbol{Q}z & = \\boldsymbol{A} \\boldsymbol{Q} w \\\\\nz & = \\boldsymbol{Q}^{-1} \\boldsymbol{A} \\boldsymbol{Q} w \\\\\nz & = \\boldsymbol{Q}^T \\boldsymbol{A} \\boldsymbol{Q} w\n\\end{aligned}\n\\]\n직교행렬의 경우 \\(\\boldsymbol{Q}^{-1} = \\boldsymbol{Q}^T\\)가 성립한다. 이때\n\n\n직교행렬의 경우 \\(\\boldsymbol{Q}^T \\boldsymbol{Q} = \\boldsymbol{Q} \\boldsymbol{Q}^T = {\\boldsymbol I}\\)가 성립한다. 따라서 \\(\\boldsymbol{Q}^{-1} = \\boldsymbol{Q}^T\\)\n\\[\n\\boldsymbol{A} \\boldsymbol{Q} = [A v_1, A v_2] = [\\lambda_1 v_1, \\lambda_2 v_2] = [v_1, v_2]\n\\begin{bmatrix}  \n  \\lambda_1 & 0 \\\\  \n  0 & \\lambda_2\n\\end{bmatrix} = \\boldsymbol{Q} \\boldsymbol{\\lambda}.\n\\]\n따라서,\n\\[\nz = \\boldsymbol{Q}^T \\boldsymbol{Q} \\boldsymbol{\\lambda} w\n\\]\n여기서 대각화의 핵심은\n\\[\n\\boldsymbol{Q}^T \\boldsymbol{A} \\boldsymbol{Q} = \\boldsymbol{\\lambda}\\text{ or }\\boldsymbol{A} = \\boldsymbol{Q}\\boldsymbol{\\lambda}\\boldsymbol{Q}^T\n\\]\n즉, 어떤 매트릭스의 아이겐벡터가 서로 직교하면 이를 통해 직교행렬 \\(\\boldsymbol{Q}\\)를 얻을 수 있다. 이를 원래 매트릭스의 좌우로 곱하면 아이겐밸류를 대각원소로 갖는 대각행렬을 얻을 수 있다.\n\nGeneralization\n일반화 해보자. 대각화는 다음과 같다.\n\\[\n\\boldsymbol{AQ} = \\boldsymbol{A} [x_1, \\dotsc, x_n] = [\\lambda_1 x_1, \\dotsc, \\lambda_n x_n] = [x_1, \\dotsc, x_n]\n\\begin{bmatrix}\n\\lambda_1& \\dotsc & 0  \\\\\n\\vdots& \\ddots& \\vdots \\\\\n0& \\dotsc& \\lambda_n\n\\end{bmatrix} = \\boldsymbol{Q} \\boldsymbol{\\lambda}\n\\]\n행렬의 인수분해(factorization)은 다음을 의미한다.\n\\[\n\\boldsymbol{A} = \\boldsymbol{Q} \\boldsymbol{\\lambda} \\boldsymbol{Q}^{-1}\n\\]"
   },
   {
-    "objectID": "posts/math-simple/2019-07-18-dot-product.html#appendix-geometrically",
-    "href": "posts/math-simple/2019-07-18-dot-product.html#appendix-geometrically",
-    "title": "Dot Product with Geometry",
-    "section": "Appendix: Geometrically",
-    "text": "Appendix: Geometrically\n기하적으로 도출하는 보다 복잡한 방법도 있다. 이해를 돕기 위해서 2차원 벡터공간으로 한정해서 논의하겠다. \\(n\\) 차원으로 확대하는 것이 수학적으로 어렵지는 않다.\n\n\n보다 상세한 내용은 여기를 참고하라.\n일단 \\(\\mathbf u\\)가 길이 1로 표준화된 벡터라고 정의를 살짝 바꾸겠다. 즉, 새로운 \\(\\mathbf u\\)는 \\(\\rVert \\mathbf u \\lVert\\)로 \\(\\mathbf u\\)를 나눈 벡터다. 아래 그림처럼 이 벡터를 향해서 2차원 평면의 기저를 구성하는 \\((1,0)(\\equiv i)\\)과 \\((0,1)(\\equiv j)\\)에서 벡터로 프로젝션을 해보자.\n이렇게 프로젝션을 하면 프로젝션된 지점의 \\(x\\) 좌표는 공교롭게도 원점에서부터 해당 프로젝션된 지점까지의 벡터의 길이가 된다. \\(y\\)에 대해서도 마찬가지다.\n\n\n이제 (1,1)에서 벡터 \\(\\mathbf u\\)로 프로젝션을 해보자. (1,1)은 각각 두 개의 기저를 1의 가중치로 선형결합한 벡터다. 이 벡터의 프로젝션의 길이는 어떻게 구성될까? 그림에서 보듯이 \\(u_x + u_y\\)가 된다. 이를 일반적인 논리로 확장해보자. 어떤 임의의 벡터 \\(\\mathbf v(=(x,y))\\)가 존재할 때 해당 벡터는 각각 두 개의 기저의 선형 결합으로 이해할 수 있다.\n\n따라서 \\(\\mathbf v\\) 벡터를 \\(\\mathbf u\\)로 프로젝션한 길이는 다음과 같다.\n\\[\n\\underset{\\mathbf u 프로젝션}{\\left[\\begin{array}{ll}{u_{x}} & { u_{y}}\\end{array}\\right]}\\left[\\begin{array}{l}{x} \\\\ {y}\\end{array}\\right]= u_{x} \\cdot x + u_{y} \\cdot y = \\mathbf u \\cdot \\mathbf v\n\\]\n벡터를 기저의 선형결합을 통해 나타낼 수 있듯이, 벡터의 프로젝션의 길이 역시 비슷한 방식의 선형결합을 동원해서 나타낼 수 있다. 앞서 \\(\\mathbf u\\)가 표준화된 벡터라고 했다. 따라서 원래대로 돌려 놓으면 닷 프로덕트는 프로젝션된 지점까지의 벡터의 거리와 해당 벡터의 길이의 곱이 된다. 즉,\n\\[\n\\mathbf u \\cdot \\mathbf v = \\rVert \\mathbf u \\lVert \\rVert \\text{Proj}_{\\mathbf u} \\mathbf v \\lVert\n\\]"
+    "objectID": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#diagonalizable",
+    "href": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#diagonalizable",
+    "title": "Eigenvalues and Eigenvectors",
+    "section": "Diagonalizable",
+    "text": "Diagonalizable\n쉽게 생각하자. 우선 \\(Q^{-1}\\)이 존재해야 한다. 즉, \\(Q\\)가 비특이 행렬이어야 한다. \\(Q\\)가 비특이 행렬이 되기 위한 조건들은 일단 행렬 대각화를 위한 필요 조건이다.\n그런데 \\(Q\\)는 아이겐벡터들로 구성된 행렬이다. 따라서 \\(Q\\)가 비특이 행렬이 되기 위해서는 해당 아이겐밸류들이 모두 다르거나, 중복된 아이겐밸류가 있다면 아이겐벡터의 선형 독립이 성립해야 한다. 아이겐밸류가 모두 다르면, 즉 각기 다른 아이겐백터가 존재하면, 대각화가 가능하다. 만일 아이겐밸류가 중복이라면, 경우에 따라서 다르다.\n\nSymmetric matrix\n행렬이 대칭이면 \\(Q\\)에 더 좋은 특성이 생긴다.\n\n\\(\\boldsymbol A\\) 의 아이겐밸류는 모두 실수이다.\n\\(Q\\)는 직교행렬이다. 즉, \\(Q^T = Q^{-1}\\) 가 성립한다.\n\n이를 종합하면 아래와 같다.\n\\[\n\\boldsymbol{A} = \\boldsymbol{Q} \\boldsymbol{\\lambda} \\boldsymbol{Q}^{-1} =  \\boldsymbol{Q} \\boldsymbol{\\lambda} \\boldsymbol{Q}^{T}\n\\]\n\n\nGraphic interpretation with vector space\n앞서의 식을 다시 음미해보자.\n\\[\nAQ = A[x_1, \\dotsc, x_n]\n\\]\n\\(A x_i\\)는 \\(A\\)라는 일종의 함수에 의해 선형 변형된 벡터를 나타낸다. 이러한 벡터를 모아 놓은 것이 \\(AQ\\)이다. 이는 벡터 (서브) 스페이스를 형성한다.\n\\[\nQ \\lambda = [x_1, \\dotsc, x_n] \\begin{bmatrix}\n\\lambda_1& \\dotsc & 0  \\\\\n\\vdots& \\ddots& \\vdots \\\\\n0& \\dotsc& \\lambda_n\n\\end{bmatrix}\n\\]\n이것 역시 벡터 (서브) 스페이스를 형성한다. 여기서 서브 스페이스의 축은 아이겐벡터가 되고, 그 크기를 좌우하는 것은 아이겐벡터가 된다. 이렇게 살펴보면, 왜 아이겐벡터-아이겐밸류가 선형 변환 함수 \\(A\\)의 축과 크기를 바꾸는 것인지 이해할 수 있다.\n\nPCA의 예를 들어보자. \\(x-y\\) 축 위에 찍힌 점들에 대해서 변동성(분산-공분산 행렬)이 큰 방향으로 축을 바꾸면 어떻게 될까? 위에서 보는 PCA의 새로운 축은 아이겐벡터를 중심으로 재정렬한 상태를 나타낸다. 이 축에 할당된 변동성의 크기는 각각 축의 아이겐밸류가 된다."
   },
   {
     "objectID": "posts/regression/2019-10-25-understanding-regression.html",
@@ -964,5 +810,159 @@
     "title": "Revisiting Log-Linear Regression Model",
     "section": "Interpretation",
     "text": "Interpretation\n위 지수 함수의 그림을 보자. \\(x\\)가 커짐에 따라서 도함수의 기울기가 커진다는 점을 알 수 있다. 특정 \\(x\\) 구역에서 회귀 계수를 구하면 이 도함수의 기울기와 비슷해질 것이고, 이는 이 도함수를 기울기로 근사한 직선이 실제 \\(y_i\\)값 보다는 작게 될 것이다. 즉, 변화율 측정 단위로서 \\(\\beta\\)는 실제 변화율보다 작게 된다.\n만일 \\(\\beta = 0.3\\)이라고 하자. 실제 \\(\\%\\Delta y\\)를 구해보면,\n\\[\n\\%\\Delta y = \\exp(\\beta) - 1 = 0.35\n\\]\n약 5% 정도 과소 평가 되었음을 알 수 있다. 이 크기의 의미나 중요성은 분석자가 선택할 문제다."
+  },
+  {
+    "objectID": "posts/git/2022-04-27-happy-giting.html",
+    "href": "posts/git/2022-04-27-happy-giting.html",
+    "title": "Happy Git-ing!",
+    "section": "",
+    "text": "Note\n\n\n\n이 포스팅은 깃 혹은 깃허브에 관한 일반적인 해설이나 이용법이 아닙니다. 깃 혹은 깃허브를 어느 정도 활용하고 있다고 할 때 가려움을 긁어주는 용도로 작성된 글입니다."
+  },
+  {
+    "objectID": "posts/git/2022-04-27-happy-giting.html#tl-dr",
+    "href": "posts/git/2022-04-27-happy-giting.html#tl-dr",
+    "title": "Happy Git-ing!",
+    "section": "tl; dr",
+    "text": "tl; dr\n\n깃과 깃허브를 OS를 아우르면서 써보자."
+  },
+  {
+    "objectID": "posts/git/2022-04-27-happy-giting.html#common-tools",
+    "href": "posts/git/2022-04-27-happy-giting.html#common-tools",
+    "title": "Happy Git-ing!",
+    "section": "Common Tools",
+    "text": "Common Tools\n이상적으로 말하면 git을 쓸 때 터미널(CLI)을 통해 쓰면 좋다. 하지만 우리는 인간이고 터미널은 잊기 쉽고 이 때문에 고통받을 수 있다. 그래서 UI를 갖춘 틀이 있으면 좋다.\n아마도 깃을 쓴다면 저장소로 깃랩이나 깃헙을 같이 쓸 것이다. 나는 깃헙을 쓰고 있으므로 깃헙을 중심으로 설명하겠다.\n깃헙 데스크탑플랫폼을 가리지 않고 깃헙을 같이 쓸 수 있는 앱이 있다. 플랫폼 별로 다운로드 받아서 쓰면 된다. 리포지터리(리포)를 생성하고 클론하고 하는 작업이 모두 UI 내에서 가능해서 제법 편리하다. 자세한 사용법은 생략한다."
+  },
+  {
+    "objectID": "posts/git/2022-04-27-happy-giting.html#그래도-터미널을-써야-한다면",
+    "href": "posts/git/2022-04-27-happy-giting.html#그래도-터미널을-써야-한다면",
+    "title": "Happy Git-ing!",
+    "section": "그래도 터미널을 써야 한다면?",
+    "text": "그래도 터미널을 써야 한다면?\n그래도 터미널에서 직접 깃을 써야 할 때가 있다. 이때부터 문제가 다소 복잡해진다. 깃의 원격 저장소를 세팅해야 하는데, 깃헙을 쓴다면 인증도 해야한다. 이걸 뭔가 편리하게 할 수 없을까?\n\ngh CLI\n이러한 불편을 해소하기 위해서 github에서 만든 툴이 gh CLI다. 이 녀석도 플랫폼별로 제공된다. 한마디로 말해서 터미널에서 깃헙을 제어하고 여러가지 작업을 할 수 있게 만든 툴이다. 다른 명령어들도 유용하지만 제일 유용한 것은 인증에 관련된 것이다.\n$ gh auth login  \n현재 깃헙에서 터미널에서 id/password를 통한 로그인을 막고 있다. 저장소 주소를 origin에 박고 id/password로 로그인 힐 수 없다. 위 명령어를 실행하면 조건에 따라서 로그인 절차를 상세하게 안내해준다. 그대로 따라서 로그인 하면 큰 불편함을 느끼지 않을 것이다."
+  },
+  {
+    "objectID": "posts/git/2022-04-27-happy-giting.html#os-별-설치",
+    "href": "posts/git/2022-04-27-happy-giting.html#os-별-설치",
+    "title": "Happy Git-ing!",
+    "section": "OS 별 설치",
+    "text": "OS 별 설치\n앞에 소개했던 github desktop은 그 자체로서 온전하게 운용된다. 다시 말해 이 앱 자체가 외부의 다른 앱에 의존하지 않기 때문에 앱 내에서 git을 쓰는 이상 이 녀석만 깔면 된다. gh CLI의 경우에는 OS에 깃이 깔려 있어야 한다.\n\nLinux, Macos\n두 OS 모두 깃이 기본으로 깔려 있다. 따라서 gh CLI를 깔아서 잘 쓰면 된다.\n\n\nWindows 10\n원도10의 경우는 고려해야 할 사항이 몇 가지 있다. 윈도우용 깃을 다운받아서 깔아도 되지만 그것보다는 Powershell을 통해서 윈도 패키지 매니저인 winget을 이용해 설치하면 좋다.\n$ winget install -e --id Git.Git\n이렇게 깃을 설치한 후 gh auth login을 통해서 로그인을 수행하면 git의 원격 저장소 설정이 잘 이루어진다.\n\nWSL\nWSL은 Windows 10 안에서 돌고 있는 가상 머신이고 엄밀한 관점에서는 별도의 기계다. 다른 Ubuntu와 마찬가지로 깃이 기본으로 깔려 있다. 따라서 외부 저장소에 대한 인증이 필요하다.\n상식적으로는 gh CLI를 통해서 가능할 것 같은데 그렇지 않다. 이에 대한 해결책은 여기 나와 았다. 쉽게 말해서 윈도의 자격 증명을 가져오는 방식이다. 따라서 윈도에 깃과 깃허브에 관한 설정이 이미 완료되어 있어야 한다.\n$ git config --global credential.helper \"/mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe\""
+  },
+  {
+    "objectID": "posts/git/2020-03-05-using-git-w10.html",
+    "href": "posts/git/2020-03-05-using-git-w10.html",
+    "title": "Using Git ‘Smoothly’ in Windows 10",
+    "section": "",
+    "text": "Note\n\n\n\n윈도에서 깃을 쓸 때 이렇게 불편하게 쓰지 않아도 된다."
+  },
+  {
+    "objectID": "posts/git/2020-03-05-using-git-w10.html#why",
+    "href": "posts/git/2020-03-05-using-git-w10.html#why",
+    "title": "Using Git ‘Smoothly’ in Windows 10",
+    "section": "Why",
+    "text": "Why\n단언컨대 git은 곧 문과생도 알아야 할 필수 도구가 될 것이다. 버전 관리가 절실해지는 그리고 코딩이 학제를 넘어선 필수처럼 인정되는, 그런 세상에서 컴퓨터를 끼고 있으면서 git의 사용을 피하기는 힘들 듯 싶다. git에 관한 포스트는 아니니 여기까지 하자.\nmacos나 linux 계열을 쓸 때는 git에 관해서 크게 고민하지 않아도 된다. 터미널 켜고, CLI(Command Line Interface)로 쓰면 그만이다. 이렇게 쓰는 것이 윈도에서는 쉽지 않다. 물론 윈도에서 WSL로 리눅스를 지원하기는 한다. 하지만 그냥 메인 os 위에 얹어 쓰는 게 편할 때가 있다."
+  },
+  {
+    "objectID": "posts/git/2020-03-05-using-git-w10.html#what",
+    "href": "posts/git/2020-03-05-using-git-w10.html#what",
+    "title": "Using Git ‘Smoothly’ in Windows 10",
+    "section": "What",
+    "text": "What\n우리는 아래 두 개의 소프트웨어를 쓸 것이다.\n\nGit for Windows\nCmder\n\n\nGit for Windows\n웬만하면 64비트로 깔자. 그리고 중간에 여러 가지 선택지에 관해서 질문한다. 커맨드라인은 어떤 것으로 쓸 것인지 등등. 원래 git이 linux에 뿌리를 두고 있는 만큼 윈도의 디폴트 명령창보다는 Bash를 쓰는 편이 좋다. ls 등의 명령어를 자유롭게 쓸 수 있어서 꽤 편하다. 윈도용 git은 특화된 git-bash를 제공하니, 이 녀석을 쓰면 좋을 듯 싶다.\n\n\nCmder\n“커맨더”라고 읽으면 된다. git은 이미 깔았으므로 쓰면 된다. 다만 좀 더 편리한 환경에서 CLI를 쓰기 위해서 Cmder를 깔아보도록 하자. 이 녀석은 별도의 인스톨 없이 쓸 수 있다. git을 포함한 무거운 버전과 git이 빠진 미니 버전이 있다. 어차피 우리는 별도로 깃을 깔았으니, 미니 버전을 다운받으면 되겠다. 다운 받은 후 아무 위치에나 두어도 된다. 어차피 exe 파일만 사용할 것이기 때문이다. 다만, 관리가 편하도록 나는 아래의 위치에 두었다.\nUsers\\[your id]\\cmder_mini\\\n최초 실행하면 윈도우가 경고를 날린다. 이래 그림에서 형광색이 칠해진 부분을 클릭하고 프로그램을 허용해준다. 이후 몇 번의 경고성 질문이 더 날아온다. 전부 “허용”해주면 되겠다.\n{: style=“textalign:center;” width=“500”}\n그리고 cmder 실행 파일 위에서 좌 클릭해서, 속성 > 호환성 > 관리자 권한으로 이 프로그램을 실행을 체크해두는 편을 권한다. 혹시 dock에 cmder를 박아둔 상태라면 Shift 키와 함께 좌 클릭을 하면 속성을 선택할 수 있다."
+  },
+  {
+    "objectID": "posts/git/2020-03-05-using-git-w10.html#how",
+    "href": "posts/git/2020-03-05-using-git-w10.html#how",
+    "title": "Using Git ‘Smoothly’ in Windows 10",
+    "section": "How",
+    "text": "How\n깃을 편하게 쓰기 위해서 Cmder의 설정을 약간 바꿔주겠다. 우선 아래의 그림처럼 맨 위 메뉴의 삼선을 클릭하면 Cmder의 세팅으로 갈 수 있다.\n{: style=“textalign:center;” width=“500”}\n엄청나게 많은 설정들이 있다. 창을 투명으로 만든다든가, 텍스트의 폰트를 바꾼다든가, 하는 것들이 가능하다. 여기서는 git bash를 쓰는 설정만 간단하게 설명하도록 하자.\n{: style=“textalign:center;” width=“500”}\n그림에서 보듯이 startup > task를 선택한다. 선택 가능한 CLI 중에서 {Bash:: Git bash}를 선택한다. 이 녀석을 디폴트 CLI로 설정한다. 시작 디렉토리를 지정하고 싶다면 아래 Startup dir...을 선택해 바꿔주면 된다."
+  },
+  {
+    "objectID": "posts/git/2020-03-05-using-git-w10.html#finally",
+    "href": "posts/git/2020-03-05-using-git-w10.html#finally",
+    "title": "Using Git ‘Smoothly’ in Windows 10",
+    "section": "Finally?",
+    "text": "Finally?\n아래 그림에서 보듯이 윈도 명령 창에서는 먹지 않는 ls 등의 명령어가 잘 먹고, git도 편안하게 사용할 수 있다.\n{: style=“textalign:center;” width=“500”}"
+  },
+  {
+    "objectID": "posts/git/2020-03-05-using-git-w10.html#seriously",
+    "href": "posts/git/2020-03-05-using-git-w10.html#seriously",
+    "title": "Using Git ‘Smoothly’ in Windows 10",
+    "section": "Seriously!",
+    "text": "Seriously!\n여기까지 좋은데, git-bash에서 python을 쓰시는 분들이라면 python을 제대로 띄울 수 없다. 해결책은 간단하다. 아래와 같이 실행하면 된다.1\n매번 이럴게 winpty로 띄울 수는 없으니 .bashrc에 넣도록 하자.\n$ echo \"alias python='winpty python.exe'\" >> ~/.bashrc\n넣은 뒤에 터미널을 재실행하거나 source ~/.bashrc를 실행해주면 된다."
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-18-dot-product.html",
+    "href": "posts/math-simple/2019-07-18-dot-product.html",
+    "title": "Dot Product with Geometry",
+    "section": "",
+    "text": "닷 프로덕트 혹은 내적을 기하적으로 이해하면 여러모로 편리하고 기억에도 잘 남는다."
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-18-dot-product.html#definition",
+    "href": "posts/math-simple/2019-07-18-dot-product.html#definition",
+    "title": "Dot Product with Geometry",
+    "section": "Definition",
+    "text": "Definition\ndot product는 내적이라고도 번역하지만 여기서는 닷 프로덕트로 쓰기로 하겠다. 먼저 정의부터 살펴보자.\n\\[\n\\mathbf{u}=\\left[u_{1}, {u}_{2}, \\ldots, {u}_{n}\\right] \\in {\\mathbb R}^n\n\\] \\[\n\\mathbf{v}=\\left[{v}_{1}, {v}_{2}, \\ldots, {v}_{n}\\right] \\in {\\mathbb R}^n\n\\] \\[\n\\mathbf{u} \\cdot \\mathbf{v} = \\sum_{n} u_i v_i\n\\]\n쉽게 말해서 닷 프로덕트는 차원이 같은 두 개의 인풋 벡터를 하나의 스칼라로 바꿔주는 일종의 함수로 이해할 수 있다. 두 개의 벡터를 서로 연관 짓는데 이를 해당 벡터의 길이라는 정보로 압축한다고 보면 얼추 맞을 듯 싶다. 하나의 숫자로 요약된다는 뜻에서 스칼라 프로덕트라고도 불린다. 그림으로 나타내면 아래와 같다.\n\n\nFrom Definition to Geometry\n닷 프로덕트에 관한 설명은 정의에서 바로 코사인 법칙으로 넘어간다. 하지만 뭔가 분명하지 않다. 이걸 조금 더 풀어보자.\n\n위 그림은 \\(2 \\times 2\\) 벡터의 닷 프로덕트를 각 요소로 분해한 것이다. 이중에서 \\(\\dfrac{\\pi}{2}\\) 각을 이루고 있는 벡터는 서로 곱하면 0이 된다. 따라서 닷 프로덕트 계산에서는 \\(a_x b_x\\)와 \\(a_y b_y\\)가 남게 된다.\n\n닷 프로덕트란 길이만 문제가 되므로 두 벡터를 한 방향으로 정렬하자.이렇게 되면, 파란색 높이가 \\(0\\)이 된다. 따라서 위 그림과 같은 코사인 법칙이 쉽게 도출된다.\n\n\nSymmetry\n\\(\\mathbf{v}\\) 벡터를 \\(\\mathbf u\\) 벡터 위에, 즉 이 벡터를 스크린 삼아 직각으로 쏜 프로젝션 벡터(\\(\\mathrm{Proj}_{\\mathbf u}{\\mathbf v}\\))의 길이와 \\(\\mathbf u\\) 길이를 곱하면 그것이 \\(\\mathbf u\\)와 \\(\\mathbf v\\)의 닷 프로덕트가 된다. 어느 벡터로 프로젝션 하는지는 관계가 없다. 즉,\n\\[\n{\\mathbf v} \\cdot {\\mathbf u} = \\Vert \\mathbf u \\Vert \\Vert {\\rm Proj}_{\\mathbf u} {\\mathbf v} \\Vert =  \\Vert \\mathbf u \\Vert (\\Vert \\mathbf v \\Vert \\cos\\theta)\n\\] \\[\n{\\mathbf u} \\cdot {\\mathbf v} = \\Vert \\mathbf v \\Vert \\Vert {\\rm Proj}_{\\mathbf v} {\\mathbf u} \\Vert = \\Vert \\mathbf v \\Vert (\\Vert \\mathbf u \\Vert \\cos\\theta)\n\\]\n다시 보면, 닷 프로덕트의 정의상 \\({\\mathbf v} \\cdot {\\mathbf u} = {\\mathbf u} \\cdot {\\mathbf v}\\)인 셈이다. 닷 프로덕트는 어떻게 도출하는가? 그 기하학적인 구조는 무엇인가?"
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-18-dot-product.html#with-law-of-cosine",
+    "href": "posts/math-simple/2019-07-18-dot-product.html#with-law-of-cosine",
+    "title": "Dot Product with Geometry",
+    "section": "With ‘Law of Cosine’",
+    "text": "With ‘Law of Cosine’\n우선 정석부터 가보자. 코사인 법칙을 활용해서 닷 프로덕트를 도출할 수 있다.\n\n\n여기를 참고 했다.\n우선 코사인의 법칙부터 살펴보자.\n\nLaw of COS\n\n\\[\n\\lVert \\mathbf u -  \\mathbf v \\rVert^2 = \\lVert  \\mathbf  u \\rVert^2 + \\lVert   \\mathbf  v \\rVert^2 - 2\\lVert  \\mathbf  u \\rVert \\lVert   \\mathbf  v \\rVert \\cos \\theta\n\\]\n\n노름(norm, 길이)에 대해서는 대칭과 쌍방선형이 유지되기 때문에 아래와 같이 쓸 수 있다.\n\n\\[\n\\lVert  \\mathbf u -  \\mathbf v \\rVert^2 = ( \\mathbf u -  \\mathbf v) \\cdot ( \\mathbf u -  \\mathbf v ) = \\lVert \\mathbf u \\rVert^2 +  \\lVert \\mathbf v \\rVert^2 - 2  (\\mathbf u \\cdot \\mathbf v)\n\\]\n따라서\n\\[\n\\mathbf u \\cdot  \\mathbf v = \\lVert \\mathbf u \\rVert \\lVert \\mathbf v \\rVert   \\cos \\theta = \\lVert \\mathbf u \\rVert   ( \\lVert \\mathbf v \\rVert \\cos \\theta) = \\lVert \\mathbf u \\rVert \\rVert \\text{Proj}_{\\mathbf u} \\mathbf v \\lVert\n\\]\n한편 반대로 \\(\\mathbf u\\)에서 \\(\\mathbf v\\)로 프로젝션하는 경우를 생각해 볼 수도 있겠다.\n\\[\n\\mathbf u \\cdot  \\mathbf v = \\lVert \\mathbf u \\rVert \\lVert \\mathbf v \\rVert   \\cos \\theta = \\lVert \\mathbf v \\rVert   ( \\lVert \\mathbf u \\rVert \\cos \\theta) = \\lVert \\mathbf v \\rVert \\rVert \\text{Proj}_{\\mathbf v} \\mathbf u \\lVert\n\\]"
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-18-dot-product.html#applications",
+    "href": "posts/math-simple/2019-07-18-dot-product.html#applications",
+    "title": "Dot Product with Geometry",
+    "section": "Applications",
+    "text": "Applications\n\nCosine similarity\n두 개의 벡터가 얼마나 유사한지를 나타내는 지표로 코사인 유사도라는 게 있다. 위에서 보듯이 두 개의 벡터(\\(\\mathbf v, \\mathbf u\\))가 이루는 각 \\(\\theta\\)의 코사인 값은 다음과 같다.\n\\[\n\\cos \\theta = \\dfrac{\\mathbf u \\cdot \\mathbf v}{\\lVert \\mathbf u \\rVert \\lVert \\mathbf v \\rVert}\n\\]\n두 벡터가 가까울수록 코사인 값이 1에 가깝게 될 것이고, 멀수록 -1에 가깝게 될 것이다.\n\n\nHyperplane\n닷 프로덕트를 이해하고 있으면 기하학 문제를 쉽게 풀 수 있는 게 많다. 가장 좋은 예가 초평면(hyperplane)이다. 예를 들어 3차원 공간에서 점 \\(\\mathbf{x}^0 = (x_1^0, x_2^0, x_3^0)\\)를 지나면서 벡터 \\(\\mathbf{p} = (p_1, p_2, p_3)\\)에 수직인 평면을 찾고 있다고 하자. 복잡해보이지만 닷 프로덕트를 활용하면 쉽게 풀린다. 즉,\n\\[\n\\mathbf{p} \\cdot (\\mathbf{x} - \\mathbf{x}^0) = 0\n\\]\n평면 \\(\\mathbf x\\)가 \\(\\mathbf{x}^0\\)를 지나는 것은 분명하다. 이 평면이 \\(\\mathbf{p}\\)에 수직이라는 것은 두 벡터의 닷 프로덕트가 0이 되면 된다."
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-18-dot-product.html#appendix-geometrically",
+    "href": "posts/math-simple/2019-07-18-dot-product.html#appendix-geometrically",
+    "title": "Dot Product with Geometry",
+    "section": "Appendix: Geometrically",
+    "text": "Appendix: Geometrically\n기하적으로 도출하는 보다 복잡한 방법도 있다. 이해를 돕기 위해서 2차원 벡터공간으로 한정해서 논의하겠다. \\(n\\) 차원으로 확대하는 것이 수학적으로 어렵지는 않다.\n\n\n보다 상세한 내용은 여기를 참고하라.\n일단 \\(\\mathbf u\\)가 길이 1로 표준화된 벡터라고 정의를 살짝 바꾸겠다. 즉, 새로운 \\(\\mathbf u\\)는 \\(\\rVert \\mathbf u \\lVert\\)로 \\(\\mathbf u\\)를 나눈 벡터다. 아래 그림처럼 이 벡터를 향해서 2차원 평면의 기저를 구성하는 \\((1,0)(\\equiv i)\\)과 \\((0,1)(\\equiv j)\\)에서 벡터로 프로젝션을 해보자.\n이렇게 프로젝션을 하면 프로젝션된 지점의 \\(x\\) 좌표는 공교롭게도 원점에서부터 해당 프로젝션된 지점까지의 벡터의 길이가 된다. \\(y\\)에 대해서도 마찬가지다.\n\n\n이제 (1,1)에서 벡터 \\(\\mathbf u\\)로 프로젝션을 해보자. (1,1)은 각각 두 개의 기저를 1의 가중치로 선형결합한 벡터다. 이 벡터의 프로젝션의 길이는 어떻게 구성될까? 그림에서 보듯이 \\(u_x + u_y\\)가 된다. 이를 일반적인 논리로 확장해보자. 어떤 임의의 벡터 \\(\\mathbf v(=(x,y))\\)가 존재할 때 해당 벡터는 각각 두 개의 기저의 선형 결합으로 이해할 수 있다.\n\n따라서 \\(\\mathbf v\\) 벡터를 \\(\\mathbf u\\)로 프로젝션한 길이는 다음과 같다.\n\\[\n\\underset{\\mathbf u 프로젝션}{\\left[\\begin{array}{ll}{u_{x}} & { u_{y}}\\end{array}\\right]}\\left[\\begin{array}{l}{x} \\\\ {y}\\end{array}\\right]= u_{x} \\cdot x + u_{y} \\cdot y = \\mathbf u \\cdot \\mathbf v\n\\]\n벡터를 기저의 선형결합을 통해 나타낼 수 있듯이, 벡터의 프로젝션의 길이 역시 비슷한 방식의 선형결합을 동원해서 나타낼 수 있다. 앞서 \\(\\mathbf u\\)가 표준화된 벡터라고 했다. 따라서 원래대로 돌려 놓으면 닷 프로덕트는 프로젝션된 지점까지의 벡터의 거리와 해당 벡터의 길이의 곱이 된다. 즉,\n\\[\n\\mathbf u \\cdot \\mathbf v = \\rVert \\mathbf u \\lVert \\rVert \\text{Proj}_{\\mathbf u} \\mathbf v \\lVert\n\\]"
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-13-Poisson.html",
+    "href": "posts/math-simple/2019-07-13-Poisson.html",
+    "title": "Poisson as Binormial Distribution",
+    "section": "",
+    "text": "푸아송 분포는 이항 분포를 주어진 시간(기간) 안에 발생하는 평균 발생 횟수로 다시 모델링한 분포다.\n이항 분포의 평균은 \\(\\lambda = n p\\)이고, 이항 분포에 \\(p = \\frac{\\lambda}{n}\\)을 다시 넣은 후 \\(n \\to \\infty\\) 극한값을 얻은 결과가 푸아송 분포다."
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-13-Poisson.html#defining-poisson-distribution",
+    "href": "posts/math-simple/2019-07-13-Poisson.html#defining-poisson-distribution",
+    "title": "Poisson as Binormial Distribution",
+    "section": "Defining Poisson Distribution",
+    "text": "Defining Poisson Distribution\n사실, 푸아송 분포 직관적으로 잘 안 와 닿는다. 정의부터 먼저 살펴보자. 한글 위키피디어에서 가져왔다.\n푸아송 분포(Poisson distribution)는 확률론에서 단위 시간 안에 어떤 사건이 몇 번 발생할 것인지를 표현하는 이산 확률 분포이다. 일단 정의에서 알 수 있는 것:\n\n푸아송이라는 사람이 만들었다.\n단위 시간 안에 발생하는 사건이 중요하다.\n이산 확률 분포다.\n\n수학적인 정의는 일단 생략하자. 뒤에서 다시 만나게 될 테니까. 정의만 봐서는 이해가 쉽지 않은 분포다. 직관적인 방식으로 푸아송 분포의 정의를 끌어낼 수는 없을까?\n\n\n정확하게 언급하자면 분포의 정의라기보다는 분포의 확률 질량 함수 혹은 확률 밀도 함수라고 적는 게 맞을 것이다. 하지만 편의상 특별한 언급이 없는 경우 분포의 정의를 이런 의미로 사용하도록 하자."
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-13-Poisson.html#poisson-as-binary",
+    "href": "posts/math-simple/2019-07-13-Poisson.html#poisson-as-binary",
+    "title": "Poisson as Binormial Distribution",
+    "section": "Poisson as Binary",
+    "text": "Poisson as Binary\n잠시 이항 분포를 떠올려보자. 아마도 모든 확률 관련 수업에서 제일 처음 배우는 분포가 아닐까 한다. 이항 분포란, 1회 시행 시 발생할 확률이 \\(p\\;\\)인 어떤 사건을 \\(n\\) 번 시행할 때 해당 사건이 \\(k\\) 번 발생할 확률의 분포를 나타낸다. 개별적으로 존재하는 사건이니까 당연히 이산 확률 분포에 속한다. 수학적으로는 아래와 같다.\n\\[\nB(k;  n,p)  =  {n \\choose k}  p^k(1-p)^{n-k}\n\\]\n위 정의를 말로 풀어보자. n번 시행 중에 사건이 발생한 경우 \\(k\\) 개를 뽑는다. 즉, 이런 경우가 \\(n\\) 번 중에서 얼마나 발생할 수 있는지 따진다. 그리고 해당 경우의 수가 발생할 확률을 곱해준 것이다.\n이항 분포를 ’시간’의 맥락으로 한번 바꿔보자. 하루 동안 내 사이트에 방문객이 한 명 찾아올 확률을 0.1이라고 하자. 28일 동안 10 명의 방문자가 찾아올 확률은? 이항 분포의 맥락에서 생각한다면, \\(B(10; 28, 0.1)\\)로 나타낼 수 있다. 그런데 이 모델링 어딘가 찜찜하다.\n이항 분포의 모델링은 하루 동안 사이트 방문객이 한 명일 확률에 기대고 있다. 그런데 하루에 방문객이 두 명 이상이라면? 하루에 방문객이 한 명 씩만 온다는 가정이 비현실적이지 않나?\n두 명 이상의 방문자를 수용하려면 이항 분포의 모형을 어떻게 수정해야 할까? 가장 손쉬운 방법은 단위 시간을 바꾸는 것이다. 단위 시간을 하루가 아니라 시간으로 바꿔보자. 하루는 24시간이고 매 시간 동일한 정도로 이용자가 방문한다면, 시간당 1명이 방문할 확률은 0.1/24이 된다. 낮은 확률이지만 이러한 가정에서 하루에 두 명 이상도 방문할 수 있게 된다."
+  },
+  {
+    "objectID": "posts/math-simple/2019-07-13-Poisson.html#deriving-poisson",
+    "href": "posts/math-simple/2019-07-13-Poisson.html#deriving-poisson",
+    "title": "Poisson as Binormial Distribution",
+    "section": "Deriving Poisson",
+    "text": "Deriving Poisson\n이항 분포와 달리 푸아송 분포에서 파라미터는 한 개다. 푸아송 분포의 파라미터 \\(\\lambda\\)는 단위 시간 당 평균 발생 횟수를 뜻한다. 비율(rate)이라고도 부른다.\n\\(\\lambda\\)가 ’파라미터’라는 의미는 무엇일까? 과거의 데이터로부터 혹은 어떤 방법으로든 푸아송 분포를 정의하는 시점에서 알려진 혹은 정의된 사실이라는 의미다. 즉, 우리가 관심을 두고 있는 기간 내에 평균적인 방문자 수가 주어진다는 뜻이다.\n기간 내에 특정 순간 동안 어느 정도의 방문자가 올지 미리 알 수 없다. 방문자가 없다가 어느 순간 10명이 몰려올 수도 있다. 일정한 간격으로 한 명씩 10 명이 올 수도 있다. 매번 시행 때마다 해당 사건이 발생할 확률을 모형화하는 이항분포를 시간의 맥락으로 바꾸면 이렇게 뭔가 어색해 보인다.\n이항 분포를 통해 푸아송 분포를 표현하는 방법은 없을까? 어떤 패턴으로 방문자가 올지 알 수 없다면, 이항 분포의 기준이 되는 시행(시점)을 최대한 잘게 쪼개면 어떨까? 이항 분포에서 평균은 \\(np\\;\\) 다. 즉, 이항 분포의 맥락에서 보면 푸아송 분포의 파라미터 \\(\\lambda = n p\\;\\)다. \\(\\lambda\\)가 고정되어 있다면 \\(n\\)을 무한대로 갈 때 \\(p\\)는 적절한 방식으로 0으로 접근한다고 가정해도 무방하다. 정리하면 푸아송 분포를 이항 분포에서 도출하기 위한 전략은 다음과 같다.\n\n\\(n\\)과 \\(p\\)를 \\(\\lambda\\) 파라미터 하나로 바꾼다.\n\\(n\\)이 무한대로 갈 때 이항 분포의 확률 밀도 함수의 극한값을 도출한다.\n\n\\[\n\\begin{aligned}\n\\lim_{n \\to \\infty} B(k; n, p) = & \\lim_{n \\to \\infty}  {n \\choose k }  p^k(1-p)^{n-k} \\\\\n= & \\lim_{n \\to \\infty}  \\dfrac{n!}{k!(n-k)!}(\\dfrac{\\lambda}{n})^k  (1-\\dfrac{\\lambda}{n})^{n-k}  \\\\\n= & \\lim_{n \\to \\infty}  \\underbrace{\\left[  \\dfrac{n!}{(n-k)!  n^k} \\right]}_{(가)}  \\left[  \\dfrac{\\lambda^k}{k!}  (1-\\dfrac{\\lambda}{n})^{n}  \\right]  \\underbrace{\\left[  (1-\\dfrac{\\lambda}{n})^{-k}\\right]}_{(나)}  \\\\\n= &  1\\left[  \\dfrac{\\lambda^k}{k!}  e^{-\\lambda}\\right] 1 \\\\\n= & f(k; \\lambda)\n\\end{aligned}\n\\]\n푸아송 분포 확률 질량 함수 \\(f(k; \\lambda)\\) 앞 뒤로 붙은 극한값 (가)와 (나)에 관해 사족을 덧붙여보자. 먼저 (가)는 아래와 같다.\n\\[\n  \\lim_{n \\to \\infty} \\dfrac{n!}{(n-k)!  n^k} =  \\lim_{n \\to \\infty}  \\dfrac{n(n-1)\\dotsb(n-(k-1))}{n^k}  = 1\n\\]\n분자와 분모 모두 가장 높은 \\(n\\)의 차수는 \\(k\\)이고, 그 계수가 모두 1이므로 극한값은 1이다. (나)의 극한값은 쉽게 알 수 있으니 생략하자.\n이항 분포의 확률 혹은 확률 질량 함수의 극한값이 바로 푸아송 분포의 그것이다! 이거 참 재미있는 연결 고리가 아닌가! 사실 푸아송 분포의 정의를 그냥 들여다봐서는 그다지 직관적인 이해를 얻기는 쉽지 않다. 이렇게 이항 분포에서 출발하는 것이 직관적으로 이해하는 데 도움이 된다."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "lost_in_economics",
+    "section": "",
+    "text": "git\n\n\n\n\n모든 플랫폼에서 git과 github 잘 쓰기\n\n\n\n\n\n\nApr 27, 2022\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n브라우저에서 python을 돌린다굽쇼?\n\n\n\n\n\n\nNov 19, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncontainer\n\n\n\n\nDocker Desktop 없이 WSL에서 Podman으로 콘테이너를 써보자\n\n\n\n\n\n\nSep 13, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncontainer\n\n\n\n\n빌드할 때 Jupyter의 한글 문제도 같이 해결하자!\n\n\n\n\n\n\nMay 9, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\nPython, Julia, R을 하나의 도구로 코딩하자.\n\n\n\n\n\n\nFeb 2, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n아이겐 공간을 이해하자.\n\n\n\n\n\n\nJan 18, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n아이겐 공간을 이해보자.\n\n\n\n\n\n\nJan 10, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n두서 없이 정리\n\n\n\n\n\n\nJan 8, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\nMatrix as Linear Transformation\n\n\n\n\n\n\nJan 7, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n벡터 공간의 기하적 특성\n\n\n\n\n\n\nJan 6, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n벡터 공간의 기하적 특성\n\n\n\n\n\n\nJan 5, 2021\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n프로젝션과 거리 측정에 관해 알아보자.\n\n\n\n\n\n\nDec 16, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nregression\n\n\n\n\n베타를 어떻게 해석할까?\n\n\n\n\n\n\nNov 11, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n코드 셰어링, 이제 걱정 끝\n\n\n\n\n\n\nOct 27, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n\\(\\rm\\LaTeX\\)을 다시 써볼까?\n\n\n\n\n\n\nOct 24, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n윈도 터미널 잘 쓰기\n\n\n\n\n\n\nSep 26, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncontainer\n\n\n\n\n컨테이너 안에서도 한글을 써보자\n\n\n\n\n\n\nSep 24, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncontainer\n\n\n\n\n문과생이 도커를 쓰는 법\n\n\n\n\n\n\nSep 23, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\npython 만으로 웹 앱을 만들어보자\n\n\n\n\n\n\nMar 9, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncomputer-tool\n\n\n\n\n깃헙 위에 블로그를 보다 쉽게 만들어볼까?\n\n\n\n\n\n\nMar 7, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ngit\n\n\n\n\n윈도 10에서 git 잘 쓰기\n\n\n\n\n\n\nMar 5, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\neconomics\n\n\n\n\n미국 대졸자와 비대졸자의 투자 행태에 따른 부의 불평등\n\n\n\n\n\n\nJan 22, 2020\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nlinear-algebra\n\n\n\n\n고유치와 고유벡터에 관해 알아보자.\n\n\n\n\n\n\nDec 3, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nregression\n\n\n\n\n로지스틱 회귀를 이해해봅시다!\n\n\n\n\n\n\nNov 10, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nregression\n\n\n\n\n회귀분석, 기하학적으로 한 방에 깨우치기\n\n\n\n\n\n\nOct 25, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nmath-simple\n\n\n\n\n기하학적으로 내적을 살펴보자.\n\n\n\n\n\n\nJul 18, 2019\n\n\nJS HUHH\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nmath-simple\n\n\n\n\n이항 분포의 관점에서 푸아송 분포 이해하기\n\n\n\n\n\n\nJul 13, 2019\n\n\nJS HUHH\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Junsok Huhh",
+    "section": "",
+    "text": "C.V.\nlong | short\n\n\nHistory of lostineconomics.com\n\nv2 built with fastpages\nv1 built with markdown on github\nv0 built with BlogDown on github"
   }
 ]
