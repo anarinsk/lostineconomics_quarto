@@ -168,4 +168,4 @@ $$
 보통 homogenous라는 말이 들어가면 $Ax = 0$과 같은 형태의 연립방정식을 의미 의미한다. 
 :::
 
-![](https://www.cs.utexas.edu/users/flame/laff/alaff-beta/images/Chapter04/FundamentalSpaces.png){ style="margin: auto; display: block; border:1.5px solid #021a40; width:80%;"}
+![](https://www.cs.utexas.edu/users/flame/laff/alaff-beta/images/Chapter04/FundamentalSpaces.png){ style="margin: auto; display: block; border:1.5px solid #021a40; width:70%;"}
