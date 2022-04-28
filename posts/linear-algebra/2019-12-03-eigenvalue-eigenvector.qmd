@@ -1,11 +1,11 @@
 ---
-layout: post
-toc: true
-comments: true
 title: Eigenvalues and Eigenvectors
 description: 고유치와 고유벡터에 관해 알아보자. 
-categories: [math, matrix-theory]
-
+author: "JS HUHH"
+date: "12/03/2019"
+image: "https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg"
+categories: [linear-algebra]
+#margin-header: subscribe.html
 ---
 
 ## tl;dr 
@@ -38,9 +38,11 @@ $$
 \underset{(n \times n)}{\boldsymbol{A}} \underset{(n \times 1)}{x} = \lambda x, \text{ for $x \neq 0$}
 $$
 
-벡터 $x(\in {\mathbb R}^n)$가 있다고 하자. $\boldsymbol{A}$는 일종의 함수이고 이는 $x$를 변형시키게 된다. 이 변형이 그 다시 자신이 되고 벡터의 크기만 조정해주는 형태가 될 때, $\lambda$를 아이겐밸류 그리고 그 벡터 $x$를 아이겐벡터라고 한다. 잠깐! 여기서 아이겐 벡터는 우 아이겐벡터다. 왜냐하면, 벡터가 매트릭스의 오른쪽에 곱해지기 때문이다. 우(right) 아이겐벡터를 보통 아이겐벡터라고 쓴다. 하지만 좌(left) 아이겐벡터도 있다. 일단 이 점만 지적해두도록 하자.[^1]
+벡터 $x(\in {\mathbb R}^n)$가 있다고 하자. $\boldsymbol{A}$는 일종의 함수이고 이는 $x$를 변형시키게 된다. 이 변형이 그 다시 자신이 되고 벡터의 크기만 조정해주는 형태가 될 때, $\lambda$를 아이겐밸류 그리고 그 벡터 $x$를 아이겐벡터라고 한다. 잠깐! 여기서 아이겐 벡터는 우 아이겐벡터다. 왜냐하면, 벡터가 매트릭스의 오른쪽에 곱해지기 때문이다. 우(right) 아이겐벡터를 보통 아이겐벡터라고 쓴다. 하지만 좌(left) 아이겐벡터도 있다. 일단 이 점만 지적해두도록 하자.
 
-[^1]: 좌 아이겐벡터와 우 아이겐벡터가 절묘하게 사용되는 사례는 마르코프 체인이다. 아이겐밸류 1이 존재하고, 그 아이겐벡터가 해당 상태의 극한 분포가 된다는 사실이 좌, 우 아이겐벡터를 번갈아 사용하면서 도출된다. 자세한 것은 [여기](https://anarinsk.github.io/lie-pf1/)를 참고하자. 
+:::{.column-margin}
+좌 아이겐벡터와 우 아이겐벡터가 절묘하게 사용되는 사례는 마르코프 체인이다. 아이겐밸류 1이 존재하고, 그 아이겐벡터가 해당 상태의 극한 분포가 된다는 사실이 좌, 우 아이겐벡터를 번갈아 사용하면서 도출된다. 자세한 것은 [여기](https://anarinsk.github.io/lie-pf1/)를 참고하자. 
+:::
 
 ### Eigenspace 
 
@@ -56,9 +58,11 @@ $$
 2. $A(\alpha x) = \alpha(A x) = \alpha (\lambda x) = \lambda(\alpha x)$
 3. $A(x_1 + x_2) = A x_1 + A x_2 = \lambda x_1 + \lambda x_2 = \lambda(x_1 + x_2)$
 
-3번의 경우 정의대로 하나의 아이겐밸류 $\lambda$에 대해서 두 개 이상의 아이겐벡터가 대응될 때에 해당한다.[^3] 아이겐벡터를 원소로 하는 공간은  벡터 부분 공간이 되며, 이를 아이겐스페이스(eigenspace)라고 부른다. 
+3번의 경우 정의대로 하나의 아이겐밸류 $\lambda$에 대해서 두 개 이상의 아이겐벡터가 대응될 때에 해당한다. 아이겐벡터를 원소로 하는 공간은  벡터 부분 공간이 되며, 이를 아이겐스페이스(eigenspace)라고 부른다. 
 
-[^3]: 얼핏 생각하면 이런 경우가 있나 싶을 수 있다. 가장 좋은 사례는 항등 행렬, ${\boldsymbol I}_n$이다. 이 항등행렬의 경우 아이겐밸류는 1이고, 대응 가능한 어떤 벡터도 아이겐벡터가 된다. 
+:::{.column-margin}
+얼핏 생각하면 이런 경우가 있나 싶을 수 있다. 가장 좋은 사례는 항등 행렬, ${\boldsymbol I}_n$이다. 이 항등행렬의 경우 아이겐밸류는 1이고, 대응 가능한 어떤 벡터도 아이겐벡터가 된다. 
+:::
 
 ## Determinant and Eigenvalues
 
@@ -149,9 +153,11 @@ z & = \boldsymbol{Q}^T \boldsymbol{A} \boldsymbol{Q} w
 \end{aligned}
 $$
 
-직교행렬의 경우 $\boldsymbol{Q}^{-1} = \boldsymbol{Q}^T$가 성립한다.[^2] 이때
+직교행렬의 경우 $\boldsymbol{Q}^{-1} = \boldsymbol{Q}^T$가 성립한다. 이때
 
-[^2]: 직교행렬의 경우 $\boldsymbol{Q}^T \boldsymbol{Q} = \boldsymbol{Q} \boldsymbol{Q}^T = {\boldsymbol I}$가 성립한다. 따라서 $\boldsymbol{Q}^{-1} = \boldsymbol{Q}^T$
+:::{.column-margin}
+직교행렬의 경우 $\boldsymbol{Q}^T \boldsymbol{Q} = \boldsymbol{Q} \boldsymbol{Q}^T = {\boldsymbol I}$가 성립한다. 따라서 $\boldsymbol{Q}^{-1} = \boldsymbol{Q}^T$
+:::
 
 $$
 \boldsymbol{A} \boldsymbol{Q} = [A v_1, A v_2] = [\lambda_1 v_1, \lambda_2 v_2] = [v_1, v_2] 
@@ -233,11 +239,6 @@ $$
 
 이것 역시 벡터 (서브) 스페이스를 형성한다. 여기서 서브 스페이스의 축은 아이겐벡터가 되고, 그 크기를 좌우하는 것은 아이겐벡터가 된다. 이렇게 살펴보면, 왜 아이겐벡터-아이겐밸류가 선형 변환 함수 $A$의 축과 크기를 바꾸는 것인지 이해할 수 있다. 
 
- ![](https://i.stack.imgur.com/JZF5m.gif){: style="textalign:center; " width="550"}  
+ ![](https://i.stack.imgur.com/JZF5m.gif){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;" }
 
 PCA의 예를 들어보자. $x-y$ 축 위에 찍힌 점들에 대해서 변동성(분산-공분산 행렬)이 큰 방향으로 축을 바꾸면 어떻게 될까? 위에서 보는 PCA의 새로운 축은 아이겐벡터를 중심으로 재정렬한 상태를 나타낸다. 이 축에 할당된 변동성의 크기는 각각 축의 아이겐밸류가 된다. 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NzQ0NDc5Niw1MjE1MTgzMTgsNzU2MD
-Y2NzUwLC0zMzMzODU5NCw1NTM5NjE2MDIsLTIxMTE5OTI5OTZd
-fQ==
--->

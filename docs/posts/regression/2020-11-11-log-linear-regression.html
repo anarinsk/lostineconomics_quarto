@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.312">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JS HUHH">
+<meta name="dcterms.date" content="2020-11-11">
+<meta name="description" content="베타를 어떻게 해석할까?">
+
+<title>lostineconomics.com - Revisiting Log-Linear Regression Model</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link id="quarto-text-highlighting-styles" href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">lostineconomics.com</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Junsok Huhh</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/anarinsk"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/anarinsk"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Revisiting Log-Linear Regression Model</h1>
+                          <div class="quarto-categories">
+                <div class="quarto-category">regression</div>
+              </div>
+                  </div>
+  </div>
+    
+  <div>
+    <div class="description">
+      베타를 어떻게 해석할까?
+    </div>
+  </div>
+
+
+
+
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>JS HUHH </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 11, 2020</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
+
+
+
+<p>당연히 알고 있다고 생각하지만 모르는 게 생각보다 많다. 회귀 분석에서 로그-리니어 모델, 즉 종속 변수에 로그를 취하고 독립 변수가 선형인 모델을 어떻게 이해해야 할까? 찬찬히 따져보자.</p>
+<section id="the-math" class="level2">
+<h2 class="anchored" data-anchor-id="the-math">The Math</h2>
+<p>편의상 독립 변수와 종속 변수 모두 스칼라 값이라고 하자.</p>
+<p><span class="math display">\[
+\ln y_i = \beta x_i + \varepsilon_i
+\]</span></p>
+<p>양변을 미분해보자. 오차항은 정의상 <span class="math inline">\(x_i\)</span>와 무관해야 하므로,</p>
+<p><span class="math display">\[
+\dfrac{d y_i}{y_i} = \beta d x_i
+\]</span> <span class="math display">\[
+\dfrac{d y_i / y_i}{d x_i} = \beta
+\]</span></p>
+<p>이렇게 보면 <span class="math inline">\(\beta\)</span> 값은 <span class="math inline">\(x_i\)</span>가 순간적으로 변함에 따라서 변화하는 <span class="math inline">\(y_i\)</span>의 % 변화를 나타낸다. 일단 기본적으로 주의해야 할 것! 위 값은 국지적 미분 값이다. 즉, 특정한 <span class="math inline">\(x_i\)</span>에서의 미분 값이다. 즉, 엄밀하게 쓰면,</p>
+<p><span class="math display">\[
+\dfrac{d y_i / y_i}{d x_i} \bigg|_{x_i = x_0} = \beta
+\]</span></p>
+<p>회귀분석에서 구하는 <span class="math inline">\(\beta\)</span>와 의 위 식에서 얻는 <span class="math inline">\(\beta\)</span>는 동일할 수가 없다. 왜나하면, <span class="math inline">\(y_i\)</span>는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
+<p><img src="https://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid">{ style=“margin: auto; display: block; border:1.5px solid #021a40; width: 60%; }</p>
+</section>
+<section id="the-coefficient" class="level2">
+<h2 class="anchored" data-anchor-id="the-coefficient">The Coefficient</h2>
+<p>회귀 분석으로 돌아오자. 독립 변수 <span class="math inline">\(y_i\)</span>에 <span class="math inline">\(\ln\)</span>을 취해서 변형을 취했다. 그 의미를 풀어보자.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\Delta \ln y_i &amp; = \ln y_1 - \ln y_0 \\
+&amp; = \ln(\frac{y_1}{y_0}) \\
+&amp; = \ln(\frac{y_0 + \Delta y}{y_0}) \\
+&amp; = \ln(1+\frac{\Delta y}{y_0})
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\ln(1+\frac{\Delta y}{y_0})\)</span>를 보자. <span class="math inline">\(z=0\)</span> 근처에서 <span class="math inline">\(\ln (1+z) \approx z\)</span>가 성립한다.</p>
+<p><span class="math display">\[
+\Delta \ln y_i =  \ln(1+\frac{\Delta y}{y_0}) \approx \dfrac{\Delta y}{y_0} = \% \Delta y = \beta \Delta x
+\]</span></p>
+<p>이 경우 수학적인 해석을 거의 그대로 가져올 수 있다. 다만, <span class="math inline">\(\frac{\Delta y}{y_0}\)</span>가 0 근처에 있어야 한다. 이는 <span class="math inline">\(y\)</span>의 변화율이 크지 않은 경우에 해당한다.</p>
+<p>위와 같은 회귀식을 추정해 <span class="math inline">\(\beta\)</span>를 보고할 때 “<span class="math inline">\(x\)</span>가 1단위 변화할 때”라는 표현을 쓴다. 즉, <span class="math inline">\(\Delta x = 1\)</span>로 둔다는 뜻이다.</p>
+<p><span class="math display">\[
+\Delta \ln y_i \approx \dfrac{\Delta y}{y_0} = \% \Delta y = \beta
+\]</span></p>
+<p>결국 <span class="math inline">\(\beta\)</span>의 값이 0 주변에 있다면 이 값은 <span class="math inline">\(x_i\)</span>가 1단위 변화할 때 <span class="math inline">\(y_i\)</span>의 변화율에 미치는 영향”으로 해석할 수 있다.</p>
+</section>
+<section id="exact-math-for-the-percent-change" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="exact-math-for-the-percent-change">Exact Math for the Percent Change</h2>
+<p>근사값을 쓰지 말고 % 변화율을 정확하게 계산해보자. 물론 이 값이 필요한 경우에 해당한다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\% \Delta y_i &amp; \equiv \dfrac{y_1 - y_0}{y_0} \\
+&amp; = \dfrac{y_1}{y_0} - 1 \\
+&amp; = \exp(\ln (\dfrac{y_1}{y_0})) - 1 \\
+&amp; = \exp(x_1 \beta - x_0 \beta + \varepsilon_1 - \varepsilon_0) - 1 \\
+&amp; = \exp(\Delta x \beta + \Delta \varepsilon) - 1
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\ln(1+\frac{\Delta y}{y_0})\)</span>를 보자. <span class="math inline">\(z=0\)</span> 근처에서 <span class="math inline">\(\ln (1+z) \approx z\)</span>가 성립한다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="math inline">\(z=0\)</span> 근방에서 테일러 급수를 1차까지 근사하면 저 값을 얻을 수 있다. <span class="math inline">\(z=0\)</span> 인근에서 근사하는 이유는 <span class="math inline">\(z=0\)</span> 근처에서 <span class="math inline">\(\frac{(z-0)^k}{k!}\)</span> for <span class="math inline">\(k=2,3,\dotsc\)</span>과 같은 고차 항의 크기가 점점 줄어들기 때문이다.</p>
+</div></div><p><span class="math inline">\(\Delta \varepsilon =0\)</span>를 가정하고 <span class="math inline">\(\Delta x =1\)</span>로 두면, 위 식으로 <span class="math inline">\(y_i\)</span>의 % 변화율을 계산할 수 있다.</p>
+</section>
+<section id="interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
+<p>위 지수 함수의 그림을 보자. <span class="math inline">\(x\)</span>가 커짐에 따라서 도함수의 기울기가 커진다는 점을 알 수 있다. 특정 <span class="math inline">\(x\)</span> 구역에서 회귀 계수를 구하면 이 도함수의 기울기와 비슷해질 것이고, 이는 이 도함수를 기울기로 근사한 직선이 실제 <span class="math inline">\(y_i\)</span>값 보다는 작게 될 것이다. 즉, 변화율 측정 단위로서 <span class="math inline">\(\beta\)</span>는 실제 변화율보다 작게 된다.</p>
+<p>만일 <span class="math inline">\(\beta = 0.3\)</span>이라고 하자. 실제 <span class="math inline">\(\%\Delta y\)</span>를 구해보면,</p>
+<p><span class="math display">\[
+\%\Delta y = \exp(\beta) - 1 = 0.35
+\]</span></p>
+<p>약 5% 정도 과소 평가 되었음을 알 수 있다. 이 크기의 의미나 중요성은 분석자가 선택할 문제다.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
