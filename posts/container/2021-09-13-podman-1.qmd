@@ -3,7 +3,7 @@ title:  Enter the Podman!
 description: Docker Desktop 없이  WSL에서 Podman으로 콘테이너를 써보자
 author: "JS HUHH"
 date: "09/13/2021"
-image: "image.jpg"
+image: "https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp"
 categories: [container]
 #margin-header: subscribe.html
 ---

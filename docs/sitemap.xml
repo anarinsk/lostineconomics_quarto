@@ -30,19 +30,19 @@
   </url>
   <url>
     <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-23-docker-humble-practice.html</loc>
-    <lastmod>2022-04-28T22:12:47.293Z</lastmod>
+    <lastmod>2022-04-28T23:56:05.651Z</lastmod>
   </url>
   <url>
     <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</loc>
-    <lastmod>2022-04-28T22:12:47.862Z</lastmod>
+    <lastmod>2022-04-28T23:56:05.967Z</lastmod>
   </url>
   <url>
     <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html</loc>
-    <lastmod>2022-04-28T22:12:48.314Z</lastmod>
+    <lastmod>2022-04-28T23:56:06.445Z</lastmod>
   </url>
   <url>
     <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</loc>
-    <lastmod>2022-04-28T22:12:48.887Z</lastmod>
+    <lastmod>2022-04-28T23:56:07.897Z</lastmod>
   </url>
   <url>
     <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/economics/2020-01-22-Wealth-divided.html</loc>
@@ -110,10 +110,14 @@
   </url>
   <url>
     <loc>https://anarinsk.github.io/lostineconomics_quarto/index.html</loc>
-    <lastmod>2022-04-28T22:12:54.414Z</lastmod>
+    <lastmod>2022-04-28T23:56:09.563Z</lastmod>
   </url>
   <url>
     <loc>https://anarinsk.github.io/lostineconomics_quarto/about.html</loc>
     <lastmod>2022-04-28T22:12:54.733Z</lastmod>
+  </url>
+  <url>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/container/k8s-personally.html</loc>
+    <lastmod>2022-04-28T23:50:29.432Z</lastmod>
   </url>
 </urlset>

@@ -3,7 +3,7 @@ title:  Docker 컨테이너 + 한글 폰트
 description: 컨테이너 안에서도 한글을 써보자 
 author: "JS HUHH"
 date: "09/24/2020"
-image: "https://developers.redhat.com/sites/default/files/styles/article_feature/public/blog/2014/05/homepage-docker-logo.png?itok=zx0e-vcP"
+image: "https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp"
 categories: [container]
 #margin-header: subscribe.html
 ---
