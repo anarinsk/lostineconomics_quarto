@@ -1,11 +1,11 @@
 ---
-toc: false
-layout: post
-comments: true
 title: Perron-Frobenius Theorem, part 1
-description: 페론-프로베니우스의 정리, 핵심 정리
-categories: [math,  matrix-theory]
-
+description: 페론-프로베니우스 정리 살펴보기  
+author: "JS HUHH"
+date: "12/11/2019"
+image: "https://d2r55xnwy6nx47.cloudfront.net/uploads/2021/03/Perfect-Number_2880_Lede.jpg"
+categories: [math-of]
+#margin-header: subscribe.html
 ---
 
 ## tl;dr 
@@ -147,13 +147,15 @@ $$
 
 ### Proof 
 
-만일 1 이외의 아이겐밸류 $\hat \lambda > 1$가 존재한다고 하자. 이제 어떤 열 벡터 $x$에 속하는 최대값을 $x_{\max}$라고 하자. 이때 $P x$의 결과 생산되는 열 벡터의 각 원소는 $x_i$ for $i = 1, 2, \dotsc, n$의 컨벡스 결합이다.[^2] 따라서 $Px = x^c$에 속한 어떤 원소 $x_i^c$도 $x_{\max}$ 보다 클 수 없다. 즉, 
+만일 1 이외의 아이겐밸류 $\hat \lambda > 1$가 존재한다고 하자. 이제 어떤 열 벡터 $x$에 속하는 최대값을 $x_{\max}$라고 하자. 이때 $P x$의 결과 생산되는 열 벡터의 각 원소는 $x_i$ for $i = 1, 2, \dotsc, n$의 컨벡스 결합이다. 따라서 $Px = x^c$에 속한 어떤 원소 $x_i^c$도 $x_{\max}$ 보다 클 수 없다. 즉, 
 
 $$
 x^c_i \leq x_{\max} 
 $$
 
-[^2]: $p_{i1} x^c_1 + p_{i2} x^c_2 + \dotsb + p_{in} x^c_n$ with $p_{i1} + p_{i2} + \dotsc + p_{in} =1$ for $i = 1, 2, \dotsc, n$
+:::{.column-margin}
+$p_{i1} x^c_1 + p_{i2} x^c_2 + \dotsb + p_{in} x^c_n$ with $p_{i1} + p_{i2} + \dotsc + p_{in} =1$ for $i = 1, 2, \dotsc, n$
+:::
 
 그런데 $P x = \hat \lambda x$가 성립하고 $\hat \lambda >1$이기 때문에, $x_{\max} \hat \lambda > x_{\max}$가 성립해야 한다. 즉 모순이다. 따라서 $\lambda \leq 1$이고, $\lambda_{\rm pf} = 1$이다. 
 
@@ -197,9 +199,11 @@ $$
 
 ## Limiting Behavior of Markov Chain 
 
-마르코프 체인은 어떻게 $\pi^*$로 수렴하게 될까? 확률 행렬 $P$의 아이겐밸류 $1 = \lambda_1 > \lambda_2 \geq \dotsc \geq \lambda_n > 0$, 각각에 대응하는 아이겐벡터를 $v_1, v_2, \dotsc, v_n$이라고 하자. 아이겐벡터가 각각 선형독립이라고 가정하자. 이때 아이겐벡터로 구성된 행렬 $Q$는 가역이다. $\pi^T_t  = Q y_t$ 로 나타낼 수 있다. 즉 $Q$의 선형결합을 통해 $n$ 차원의 임의의 벡터를 표현할 수 있다. $\pi$가 열 벡터이기 떄문에 이를 행 벡터로 바꿨다는 점에 유의하자.[^3] 한편, 
+마르코프 체인은 어떻게 $\pi^*$로 수렴하게 될까? 확률 행렬 $P$의 아이겐밸류 $1 = \lambda_1 > \lambda_2 \geq \dotsc \geq \lambda_n > 0$, 각각에 대응하는 아이겐벡터를 $v_1, v_2, \dotsc, v_n$이라고 하자. 아이겐벡터가 각각 선형독립이라고 가정하자. 이때 아이겐벡터로 구성된 행렬 $Q$는 가역이다. $\pi^T_t  = Q y_t$ 로 나타낼 수 있다. 즉 $Q$의 선형결합을 통해 $n$ 차원의 임의의 벡터를 표현할 수 있다. $\pi$가 열 벡터이기 떄문에 이를 행 벡터로 바꿨다는 점에 유의하자. 한편, 
 
-[^3]: 사실 기존의 $\pi$가 좌 아이겐벡터였다면 여기서는 이를 우 아이겐벡터로 바꾼 것이다. 물론, 확률 행렬 역시 $P^T$가 되어야 한다. 
+:::{.column-margin}
+사실 기존의 $\pi$가 좌 아이겐벡터였다면 여기서는 이를 우 아이겐벡터로 바꾼 것이다. 물론, 확률 행렬 역시 $P^T$가 되어야 한다. 
+:::
 
 $$
 \begin{aligned}
@@ -212,10 +216,12 @@ $$
 
 두 가지를 상기하자. 
 
-1. 행렬 $A$와 전치 행렬 $A^T$는 동일한 아이겐밸류를 지니게 된다.[^1]
+1. 행렬 $A$와 전치 행렬 $A^T$는 동일한 아이겐밸류를 지니게 된다.
 2. D는 아이겐밸류로 구성된 대각행렬이다. 편의상 크기 순서대로 나열되어 있다고 하자. 
 
+:::{.column-margin}
 [^1]: $\det(A^T−\lambda I) = \det((A−\lambda I)^T)=\det(A−\lambda I)$
+:::
 
 앞서 본 바에 따라서 $\lambda_1 =1$이다. 
 
@@ -294,9 +300,11 @@ $$
 k = {\rm gcd} \{ n > 0~|~{\rm Pr}(X_n = i | X_0 = i) > 0 \}
 $$
 
-gcd란 greatest common divisor, 즉 최대공약수를 의미한다. 만일 해당 상태로 $\{ 6, 8, 12, \dotsc \}$ 번에 돌아갈 확률이 양이라면, gcd는 2가 된다.[^4]
+gcd란 greatest common divisor, 즉 최대공약수를 의미한다. 만일 해당 상태로 $\{ 6, 8, 12, \dotsc \}$ 번에 돌아갈 확률이 양이라면, gcd는 2가 된다.
 
-[^4]: 확률 행렬의 원소가 0, 1로만 되어 있지 않아도 주기 행렬이 될 수 있다는 사실에 유의하자. 
+:::{.column-margin}
+확률 행렬의 원소가 0, 1로만 되어 있지 않아도 주기 행렬이 될 수 있다는 사실에 유의하자. 
+:::
 
 이때 $k > 1$이면 주기 행렬이고 $k=1$이면 비주기 행렬이다. $k=1$의 의미는 무엇일까? $t$ 기에 상태 $s$에 있을 때, $t+1$ 기에 역시 $s$에 있을 확률이 양이라는 뜻이다. 그리고 확률 행렬을 구성하는 모든 상태에 주기성이 없을 때, 이러한 확률 행렬을 비주기 행렬이라고 한다. 
 
@@ -373,8 +381,3 @@ P^n & =
 $$
 
 따라서 $\lim_{n \to \infty} P^n$은 수렴하지 않는다. 앞서 계산한 극한 분포는 두 극단의 평균일 뿐이다. 이때 극한 분포 역시 존재하지 않는다. 
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzk1MjcwNTIsLTExOTY2ODc0NjksMj
-Y3Nzk3NTY4LDIxMjE1OTk2N119
--->
