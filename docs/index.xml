@@ -188,7 +188,7 @@ Note
 <item>
   <title>Python in the Browser</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2021-11-19-python-in-github.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-11-19-python-in-github.html</link>
   <description><![CDATA[ 
 
 
@@ -214,7 +214,7 @@ Note
 <h2 class="anchored" data-anchor-id="dev-모드-진입">dev 모드 진입</h2>
 <p>github를 dev 모드로 돌린다. 웹 브라우저 리포지터리 창에서 <code>.</code> 버튼을 누르거나 <code>.dev</code> 주소로 접근하면 된다. 익숙한 vs code 화면에 보일 것이다.</p>
 <p>이제 아래 왼쪽 탭 화면에서 extension을 찾으면 된다. 아래 그림처럼 생겼다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/code.visualstudio.com/assets/docs/editor/extension-marketplace/extensions-view-icon.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 10%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/code.visualstudio.com/assets/docs/editor/extension-marketplace/extensions-view-icon.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 10%;"></p>
 </section>
 <section id="extension-설치" class="level2">
 <h2 class="anchored" data-anchor-id="extension-설치">extension 설치</h2>
@@ -234,7 +234,7 @@ Note
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2021-11-19-python-in-github.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-11-19-python-in-github.html</guid>
   <pubDate>Thu, 18 Nov 2021 15:00:00 GMT</pubDate>
   <media:content url="https://pyodide.org/en/stable/_static/pyodide-logo.png" medium="image" type="image/png"/>
 </item>
@@ -626,7 +626,7 @@ Note
 <item>
   <title>All into VS Code</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2021-02-02-all-vs-code.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-02-02-all-vs-code.html</link>
   <description><![CDATA[ 
 
 
@@ -666,7 +666,7 @@ Note
 </section>
 <section id="핵심" class="level2">
 <h2 class="anchored" data-anchor-id="핵심">핵심</h2>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <ul>
 <li>VS Code의 익스텐션 <code>Remote-Container</code> 컨테이너 접속 기능을 활용해 <code>datascience-notebook</code> 컨테이너 접속한다.
 <ul>
@@ -765,16 +765,16 @@ Note
 <li><code>ipynb</code>를 확장자로 해서 노트북을 쓰고 싶다면, 그냥 만들어 쓰면 된다!</li>
 <li>VS Code에 Jupyter 확장이 있기 때문에 보통의 웹 브라우저에서 쓰는 Jupyter 노트북과 거의 동일한 기능을 제공한다. 웹 노트북에서와 마찬가지로 파이썬, 줄리아, R의 커널을 선택하면 된다 (아래 그림의 오른쪽 상단 박스). jupyterlab과 거의 비슷한 인터페이스를 지니고 있다. 오히려 주피터에 비해 복잡하지 않아서 좋다고 느낄지도 모르겠다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 </section>
 <section id="setting-for-remote-connection" class="level2">
 <h2 class="anchored" data-anchor-id="setting-for-remote-connection">Setting for Remote Connection</h2>
 <p>앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 좋다면 아래와 같이 하면 된다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>만일 위와 같은 화면에 Remote Exlorer에서 뜨지 않는다면 컨테이너가 부착되지 않는 것이다. 컨테이너를 부착하면 된다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li><code>Extension</code> &gt; <code>REMOTE EXPLORER</code> &gt; <code>DETAILS</code> 탭에서 가운데 설정 모양이 “Open Container Configuration File”이다.</li>
 <li>옆 에디터 창에 json 형식의 설정이 뜬뜬다. 여기서 관련 extension 등의 설정을 지정할 수 있다. 이렇게 설정을 해두면 해당 컨테이너를 부착할 때 설정한 대로 자동으로 옵션들이 적용된다. 매우 편리하다.</li>
@@ -798,7 +798,7 @@ Note
 <span id="cb5-17">        <span class="dt" style="color: #AD0000;">"r.rterm.linux"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/opt/conda/bin/radian"</span></span>
 <span id="cb5-18">    <span class="fu" style="color: #4758AB;">}</span></span>
 <span id="cb5-19"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <ul>
 <li><code>File</code> &gt; <code>Perefences</code> &gt; <code>Settings</code>에서도 설정에 접근할 수 있다.</li>
 <li>VS Code의 설정은 두가지 축을 지닌다. 하나는 설정 전체를 담은 json 파일이다. 왼쪽 <code>&gt;</code> 표시된 항목에서처럼 카테고리 별로 구별되어 쉽게 접근할 수 있다. 이 하나의 설정을 위 그림에서 보듯이 User, Remote(컨네이터), Workspace 별로 별도로 지정해 활용할 수도 있다.</li>
@@ -809,7 +809,7 @@ Note
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2021-02-02-all-vs-code.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-02-02-all-vs-code.html</guid>
   <pubDate>Mon, 01 Feb 2021 15:00:00 GMT</pubDate>
   <media:content url="https://velog.velcdn.com/images/jeongjae96/post/0db5fc06-a8bb-4970-bf6c-3b5a69ebe940/vs%20code.png" medium="image" type="image/png"/>
 </item>
@@ -1679,7 +1679,7 @@ MjEyMzEwM119
 <item>
   <title>Viva, Binder!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-10-27-viva-binder.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-27-viva-binder.html</link>
   <description><![CDATA[ 
 
 
@@ -1693,7 +1693,7 @@ MjEyMzEwM119
 <section id="turn-a-git-repo-into" class="level2">
 <h2 class="anchored" data-anchor-id="turn-a-git-repo-into">Turn a Git repo into!</h2>
 <p>서비스 참 시원시원하다. 로그인도 필요 없다. 깃헙 레포에 있는 코드를 받아서 가상 머신 위에 해당 결과를 구현해준다. R, Python, Julia를 지원한다. 세 언어 모두 기본 베이스로 Jupyter허브를 활용한다. 간편한 연동을 위해서는 깃헙 리포를 public으로 설정해야 한다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/binder_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 70%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/binder_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 70%;"></p>
 <ul>
 <li><code>GitHub</code>: 깃헙 주소를 넣는다.</li>
 <li><code>Git branch, tag or commit</code>: 관련된 깃 브렌치, 태그, 커밋 등을 넣는다.</li>
@@ -1706,8 +1706,8 @@ MjEyMzEwM119
 </ul></li>
 </ul>
 <p>아래 공유를 위한 주소도 떠 있으니 공유를 할 때는 해당 주소만 던져주면 된다. 이제 <kbd>launch</kbd> 버튼을 누르자. 상당히 오랜 시간 동안 뭔가가 설치된다. 설치되는 내용을 보면 소프트웨어 구동에 필요한 개별 이미지를 빌드한 후 이를 클라우드에 띄워 구동한다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <p>장점은 충분히 많다. 코드가 제대로 구현되는지 확인하는 수준이거나 코드를 가끔 짧은 시간 동안 실행해야 하는 정도라면 더 이상 바랄 게 없다. 단점이라면 도커 이미지를 빌드하고 녀석을 푸시해 실행할 때까지 시간이 좀 걸린다는 것인데, 뭐 이 정도 시간 비용 쯤이야!</p>
 
 
@@ -1715,14 +1715,14 @@ MjEyMzEwM119
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-10-27-viva-binder.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-27-viva-binder.html</guid>
   <pubDate>Mon, 26 Oct 2020 15:00:00 GMT</pubDate>
   <media:content url="https://mybinder.org/static/logo.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
   <title>\(\rm\LaTeX\) in Modern Ways</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-10-24-classy-latex.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-24-classy-latex.html</link>
   <description><![CDATA[ 
 
 
@@ -1806,19 +1806,19 @@ MjEyMzEwM119
 <span id="cb8-9"><span class="ex" style="color: null;">tlmgr</span> update <span class="at" style="color: #657422;">--all</span></span></code></pre></div>
 <p>상태를 초기화하고 한글을 까는 명령어들을 모아둔 것이다. 실행 중인 도커 내에서 해당 디렉토리로 이동해서 <code>./install_kotex.sh</code>로 명령을 실행하자.</p>
 <p>이제 VS Code로 가자. 필요한 Extension은 앞서 살펴본 Latex workshop과 더불어 <a href="https://code.visualstudio.com/docs/remote/remote-overview">Remote-Container</a>를 설치하자. 이 녀석을 설치하면 WSL 내에서 돌아가는 컨테이너 안에도 VS Code를 통해 바로 접속할 수 있다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - 아래 <code>&gt;&lt;</code>으로 된 부분을 클릭하면 상단에 메뉴가 뜬다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - “attach to running container”를 실행해서 실행중인 도커 콘테이너를 부착한다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_3.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - 아래 <code>&gt;&lt;</code>으로 된 부분을 클릭하면 상단에 메뉴가 뜬다.</p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - “attach to running container”를 실행해서 실행중인 도커 콘테이너를 부착한다.</p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_3.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>부착하면 새 창이 뜨면서 아래 녹색 창이 콘테이너 부착되었음을 알려준다.</li>
 <li>콘테이너 내부에 Latex Workshop 확장(extension)을 설치해야 한다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_4.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_4.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>설치 후 해당 Extension의 설정을 고쳐주자.</li>
 <li>위에 찾기창에서 디폴트로 떠 있는 내용 뒤에 “pdf” 치면 pdf에 관련된 설정만 필터링된다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>위 항목을 찾아서 적당한 포워딩 포트를 넣어준다.</li>
 <li>포트가 잘 포워딩 된다면, 아래와 같이 VS Code에서 PDF 뷰어를 활성화할 수 있다.</li>
@@ -1834,7 +1834,7 @@ MjEyMzEwM119
 <section id="container-setting" class="level4">
 <h4 class="anchored" data-anchor-id="container-setting">Container Setting</h4>
 <p>콘테이너에서 해당 포트가 잘 포워딩되고 있는지 확인하자.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>옆에 원으로 표시해 둔 곳은 <code>Remote-Container</code> 확장으로 바로 가는 단축 아이콘이다.</li>
 <li>위 그림처럼 35556 포트를 통해 잘 포워딩되고 있음을 알 수 있다.
@@ -1843,7 +1843,7 @@ MjEyMzEwM119
 </ul></li>
 </ul>
 <p>이제 VS Code에서 텍 파일을 열고 문서를 작성하고 컴파일하면 된다. Latex Workshop이 설치되어 있다면, <code>.tex</code> 파일에 알아서 반응하니 걱정 마시라.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_6.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_6.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 </section>
 </section>
 </section>
@@ -1865,14 +1865,14 @@ MjEyMzEwM119
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-10-24-classy-latex.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-24-classy-latex.html</guid>
   <pubDate>Fri, 23 Oct 2020 15:00:00 GMT</pubDate>
   <media:content url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/LaTeX_project_logo_bird.svg/1920px-LaTeX_project_logo_bird.svg.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>The Best Terminal App for Windows</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-09-26-windows-terminal.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-09-26-windows-terminal.html</link>
   <description><![CDATA[ 
 
 
@@ -1886,8 +1886,8 @@ MjEyMzEwM119
 <section id="설정" class="level2">
 <h2 class="anchored" data-anchor-id="설정">설정</h2>
 <p>VS Code도 그렇고 윈도 터미널도 그렇고 설정이 <code>settings.json</code> 파일로 되어 있다. GUI가 아니라서 처음엔 어색할 수 있겠지만, 쓰다보면 이게 훨씬 편하다는 것을 알게 될 것이다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/window-terminal/wt_1.png" class="img-fluid">{: style=“textalign:center;” width=“500”}<br>
-<img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/window-terminal/wt_2.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/window-terminal/wt_1.png" class="img-fluid">{: style=“textalign:center;” width=“500”}<br>
+<img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/window-terminal/wt_2.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
 <section id="테마" class="level3">
 <h3 class="anchored" data-anchor-id="테마">테마</h3>
 <p>엄청나게 다양한 테마를 손쉽게 구현할 수 있다.</p>
@@ -1919,7 +1919,7 @@ MjEyMzEwM119
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-09-26-windows-terminal.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-09-26-windows-terminal.html</guid>
   <pubDate>Fri, 25 Sep 2020 15:00:00 GMT</pubDate>
   <media:content url="https://upload.wikimedia.org/wikipedia/commons/0/01/Windows_Terminal_Logo_256x256.png" medium="image" type="image/png"/>
 </item>

@@ -1,20 +1,10 @@
 ---
-title: wsl 2, a walk-thru
-description:  wsl 2의 열기를 느껴보아요~
-author: "JS HUHH"
-date: "04/09/2020"
-image: "https://d2r55xnwy6nx47.cloudfront.net/uploads/2021/03/Perfect-Number_2880_Lede.jpg"
-categories: [math-of]
-#margin-header: subscribe.html
----
-
----
 layout: post
 toc: false
 comments: true
 title:  wsl 2, a walk-thru
 description:  wsl 2의 열기를 느껴보아요~ 
-categories: [windows, wsl]
+categories: [wsl]
 
 ---
 
