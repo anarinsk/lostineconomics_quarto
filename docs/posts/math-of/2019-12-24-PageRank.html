@@ -61,7 +61,7 @@ ul.task-list{list-style: none;}
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -141,9 +141,11 @@ ul.task-list{list-style: none;}
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
@@ -229,7 +231,7 @@ p = [\dfrac{1}{3}, \dfrac{1}{3} , \dfrac{1}{3} , 0, 0 ] \text{~or~} p = [0, 0, 0
 <p>확률 행렬이 비기약 행렬(reducible matrix)이면, 웹 페이지에 관해서 유일한 극한 분포를 찾을 수 없다. 시작이 어디인지에 따라서 전혀 다른 극한 분포를 얻게 된다. 위의 예에서 만일 1,2,3 사이트에서 시작했다면 첫번째 극한 분포를, 4,5 사이트에서 출발했다면 두번째 극한 분포를 얻게 될 것이다.</p>
 </section>
 </section>
-<section id="pagerank-score-as-share" class="level2">
+<section id="pagerank-score-as-share" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="pagerank-score-as-share">PageRank score as share</h2>
 <p>마르코프 체인을 다루는 분석에서 이런 경우는 종종 생길 수 있다. 이를 해결하는 가장 쉬운 방법은 어떤 상태에 고착되어 벗어날 수 없을 때, 벗어날 수 있는 어떤 기제를 마련해주는 것이다. 예를 들어, 플레이어가 일정한 확률로 실수를 하게 허용한다거나 하는 이론적인 장치가 많이 활용된다.</p>
 <p>페이지랭크 역시 비슷한 해법을 모델에 넣었다. 링크가 없더라도 일정한 확률로 다른 모든 링크로 넘어갈 확률을 임의로 부여하는 것이다. 이를 반영한 페이지랭크의 정의는 아래와 같다.</p>
@@ -248,10 +250,10 @@ p_{t+1} = \overbrace{\left( \dfrac{1-d}{n} \boldsymbol{1}_n + d L M^{-1} \right)
 <p><span class="math inline">\(\boldsymbol{1}_n\)</span>은 모든 원소가 1인 <span class="math inline">\(n \times n\)</span> 행렬이다. <span class="math inline">\((*)\)</span>은 기약 행렬(irreducible matrix)이고, <span class="math inline">\(d&gt;0\)</span>이 만족하면 비주기 행렬(aperiodic matrix)이 된다. 특정한 사이트 <span class="math inline">\(i\)</span>에서 다른 사이트로 갈 확률이 모두 양수가 되기 때문이다.</p>
 <p>이 경우 <span class="math inline">\((*)\)</span>을 확률 행렬로 지니는 마르코프 체인은 극한 분포 <span class="math inline">\(p^*\)</span>를 지니게 된다. 마르코프 체인의 논리에 따라서 <span class="math inline">\(p^*\)</span>는 초기값 혹은 웹사이트의 초기 지분 <span class="math inline">\(p_0\)</span>와 무관하다.</p>
 <p>이 극한 분포 <span class="math inline">\(p^*\)</span>가 바로 페이지랭크다! 마르코프 체인의 관점에서 페이지랭크란 페론-프로베니우스 정리에 따라서 아이겐밸류 <span class="math inline">\(1\)</span>에 해당하는 좌 아이겐벡터를 찾는 과정이다. 물론 구글이 구사하는 실제의 알고리즘은 여기 적은 내용보다 훨씬 복잡하고 정교하다. 다만 그 핵심이 마르코프 체인이라는 사실을 기억해두자.</p>
-<div class="{column-margin}">
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p><a href="https://anarinsk.github.io/lie-pf1/">https://anarinsk.github.io/lie-pf1/</a>을 참고하라.</p>
-</div>
-<p>극한 분포가 페이지랭크가 된다는 의미는 무엇일까? 마르코프 체인에서 극한 분포란 무작위로 상태를 옮겨가는 것이 무한이 반복되었을 때 도달하게 되는 분포다. 이는 충분히 긴 장기에 각 상태가 지니게 되는 ‘지분’(share)으로 이해할 수 있다.</p>
+</div></div><p>극한 분포가 페이지랭크가 된다는 의미는 무엇일까? 마르코프 체인에서 극한 분포란 무작위로 상태를 옮겨가는 것이 무한이 반복되었을 때 도달하게 되는 분포다. 이는 충분히 긴 장기에 각 상태가 지니게 되는 ‘지분’(share)으로 이해할 수 있다.</p>
 <p>이러한 마르코프 체인에 기반을 둔 해석은 웹 사이트에도 잘 들어 맞는다. 그럴까? 개인의 입장에서는 그렇지 않다. 적어도 나는 그렇다. 구글에서 검색어를 친 뒤 검색 결과를 보면서 필요한 것을 찾아서 클릭, 클릭하기 때문이다.</p>
 <p>하지만 내가 누른 검색어를 친 사람이 많다면 어떨까? 특정 검색어에 관해서 수많은 웹 서퍼가 존재하고 이들이 각자의 취향대로 페이지를 옮겨다닌다면? 전체적으로 이는 특정 사이트에서 다른 사이트로 무작위로 이동한다는 마르코프 체인의 가정과 크게 다르지 않을 수 있겠다. 이러한 상태에서 각 사이트가 차지하는 ‘지분’ 혹은 점유율이 해당 웹사이트가 전체 웹 풍경에서 누리는 ’중요성’이 될 것이다.</p>
 <p>아울러 앞서 페이지랭크의 정의가 동어반복처럼 느껴졌던 이유도 이제 알 수 있다. 이는 장기에 도달하게 되는 일종의 수렴 상태인 셈이다. 이렇게 마르코프 체인과 페이지랭크가 연결된다!</p>
