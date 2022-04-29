@@ -1,11 +1,11 @@
 ---
-layout: post
-toc: true
-comments: true
 title: Math Behind PCA
 description: PCA의 수학적 이해 
-categories: [math, machine-learning]
-
+author: "JS HUHH"
+date: "05/17/2019"
+image: "https://d2r55xnwy6nx47.cloudfront.net/uploads/2021/03/Perfect-Number_2880_Lede.jpg"
+categories: [math-of]
+#margin-header: subscribe.html
 ---
 
 ## tl; dr
@@ -136,11 +136,17 @@ $$
 \end{aligned}
 $$
 
-1계 조건을 다시 보자.[^4] $\Sigma w = \lambda w$ 조건이 흥미롭다. 1계 조건이 정확하게 아이겐밸류(eigenvalue, 고유값)와 아이겐벡터(eigenvector, 고유벡터)를 구하는 방법이다. 어떤 매트릭스가 있을 때 해당 매트릭스의 분산-공분산 행렬의 아이겐밸류와 아이겐벡터를 구하면 그 아이겐밸류와 벡터가 바로 MSE를 최적화해주는 값이 된다. 이때 $w$는 아이겐벡터이며 $\lambda$는 아이겐밸류가 된다.  아이겐밸류는 아래 식에서 보듯이 분산이다.[^2]
+1계 조건을 다시 보자.
 
-[^4]: 사실 여기 적은 1계 조건은 엄밀하지 않다. 이해를 돕기 위해서 여러가지를 퉁쳤는데, 최적화의 결과는 동일하다. 보다 상세한 도출은 [여기](https://stats.stackexchange.com/questions/10251/what-is-the-objective-function-of-pca)를 참고하시기 바란다. 
+:::{.column-margin}
+ 사실 여기 적은 1계 조건은 엄밀하지 않다. 이해를 돕기 위해서 여러가지를 퉁쳤는데, 최적화의 결과는 동일하다. 보다 상세한 도출은 [여기](https://stats.stackexchange.com/questions/10251/what-is-the-objective-function-of-pca)를 참고하시기 바란다. 
+:::
 
-[^2]: 흥미로운 일치를 확인하셨는지? 제약 하 극대화에서 라그랑쥬 승수와 아이겐밸류를 나타내는 수학 기호가 모두 $\lambda$다. 약간 소름 돋는 대목이다. 일치는 여기서 끝나지 않는다. 라그랑쥬 승수는 제약 하의 극대화에서 잠재 가격(shadow price)로 불리기도 한다. 이는 해당 조건이 제약하는 자원의 잠재적인 가치를 나타낸다. 이는 분산이 클수록 MSE가 작다는 PCA의 목적 함수의 해석과 일치한다. 
+$\Sigma w = \lambda w$ 조건이 흥미롭다. 1계 조건이 정확하게 아이겐밸류(eigenvalue, 고유값)와 아이겐벡터(eigenvector, 고유벡터)를 구하는 방법이다. 어떤 매트릭스가 있을 때 해당 매트릭스의 분산-공분산 행렬의 아이겐밸류와 아이겐벡터를 구하면 그 아이겐밸류와 벡터가 바로 MSE를 최적화해주는 값이 된다. 이때 $w$는 아이겐벡터이며 $\lambda$는 아이겐밸류가 된다.  아이겐밸류는 아래 식에서 보듯이 분산이다.
+
+:::{.column-margin}
+흥미로운 일치를 확인하셨는지? 제약 하 극대화에서 라그랑쥬 승수와 아이겐밸류를 나타내는 수학 기호가 모두 $\lambda$다. 약간 소름 돋는 대목이다. 일치는 여기서 끝나지 않는다. 라그랑쥬 승수는 제약 하의 극대화에서 잠재 가격(shadow price)로 불리기도 한다. 이는 해당 조건이 제약하는 자원의 잠재적인 가치를 나타낸다. 이는 분산이 클수록 MSE가 작다는 PCA의 목적 함수의 해석과 일치한다. 
+:::
 
 $$
 \operatorname{Var}(X w) = w^{\mathrm T} \Sigma w =  w^{\mathrm T} (\lambda w)  = \lambda w \cdot w = \lambda
@@ -171,26 +177,28 @@ For $i, j \in \{ 1, 2, \dotsc, k\}~\text{with}~i \ne j, w^i \cdot w^j = 0$, and 
 
 여러개의 프로젝션 스크린 벡터들이 존재할 경우 해당 벡터들이 서로 직교하면 분산값의 합을 최대화하는 것과 MSE를 최소화하는 것이 같은 의미를 지닌다. 이 조건이 분산-공분산 행렬의 속성을 통해 성립한다. 
 
-분산-공분산 행렬의 이 특징이 PCA의 흥미로운 점 하나를 드러난다. 2 차원 평면에서 사 분면을 떠올려보자. 사 분면을 구성하는 $x$, $y$ 축은 서로 직교한다. 2 차원 평면 위에 어떤 관찰에 대해서 PCA를 했다고 하자. PCA의 스크린으로 두 개를 사용했고, 해당 스크린이 아이겐벡터라면 이 두 벡터는 서로 직교한다. 즉, 원래 직교했던 두 축에서 직교하는 다른 두 축으로 좌표의 기준을 이동하는 개념이다. 즉 PCA는 분산을 가장 크게 하는 방식으로 좌표축을 이동하는 방법이라고 이해하면 좋겠다. PCA에 관한 소개에서 아래의 그림처럼 축을 돌린 예시가 자주 등장하는 까닭이기도 하겠다.[^5]
+분산-공분산 행렬의 이 특징이 PCA의 흥미로운 점 하나를 드러난다. 2 차원 평면에서 사 분면을 떠올려보자. 사 분면을 구성하는 $x$, $y$ 축은 서로 직교한다. 2 차원 평면 위에 어떤 관찰에 대해서 PCA를 했다고 하자. PCA의 스크린으로 두 개를 사용했고, 해당 스크린이 아이겐벡터라면 이 두 벡터는 서로 직교한다. 즉, 원래 직교했던 두 축에서 직교하는 다른 두 축으로 좌표의 기준을 이동하는 개념이다. 즉 PCA는 분산을 가장 크게 하는 방식으로 좌표축을 이동하는 방법이라고 이해하면 좋겠다. PCA에 관한 소개에서 아래의 그림처럼 축을 돌린 예시가 자주 등장하는 까닭이기도 하겠다.
 
-[^5]: 하나 주의할 점이 있다. 이 그림은 차원 회전에 관한 것이지 차원 축소에 관한 것이 아니다. 즉, 변이가 잘 드러나도록 축을 회전할 수 있다는 예시다. 축소는 다른 문제인데, 아래 본문의 내용에서 보듯이 축을 돌려 변이를 상당 부분 설명했다면 변이의 설명력이 낮은 축들을 제거할 수 있다는 것이 차원 축소다. 
+:::{.column-margin}
+하나 주의할 점이 있다. 이 그림은 차원 회전에 관한 것이지 차원 축소에 관한 것이 아니다. 즉, 변이가 잘 드러나도록 축을 회전할 수 있다는 예시다. 축소는 다른 문제인데, 아래 본문의 내용에서 보듯이 축을 돌려 변이를 상당 부분 설명했다면 변이의 설명력이 낮은 축들을 제거할 수 있다는 것이 차원 축소다. 
+:::
 
-<p align="center"><kbd>
-  <img src="https://github.com/anarinsk/lie-math_pca/blob/master/assets/imgs/pca_example.png?raw=true" width="500">
-</kbd></p>
+[](https://github.com/anarinsk/lie-math_pca/blob/master/assets/imgs/pca_example.png?raw=true)
 
 #### Positive-definite 
 
-$\Sigma$는 준양정행렬(positive semi-definite) 행렬이다.[^1] 즉, 
+$\Sigma$는 준양정행렬(positive semi-definite) 행렬이다. 즉, 
 
 $$
 x^T \Sigma x \geq 0 ~\text{for any $x$.}
 $$
 
-[^1]: 증명은 몹시 간단하다. $w^T \Sigma w$ 라고 하자. 
+:::{.column-margin}
+증명은 몹시 간단하다. $w^T \Sigma w$ 라고 하자. 
 $$
 w^T X^T X w = \underset{\text{닷 프로덕트}}{ (Xw)^T (Xw) } \geq 0
 $$
+:::
 
 이 경우 모든 아이겐밸류의 값은 음수가 되지 않는다. 앞서 아이겐밸류가 분산이 된다는 사실을 보았다. 아이겐밸류가 음수가 될 수 없고 따라서 분산이 될 수 있다. 
 
@@ -220,9 +228,11 @@ $$
 
 ## 마침내 차원 축소 
 
-이제 마침내 차원 축소를 다룰 수 있다!  앞서 MSE 최소화 문제에서 보았듯이 분산이 클수록 좋다. 임의의 갯수로 주성분을 취한다고 할 때 의 기준은 분산이 큰 순서이고  분산은 아이겐밸류와 같다. $l(<k)$ 개의 주성분을 취할 때 취할 때 아이겐밸류가 큰 순서대로 취하면 되겠다.[^3] 
+이제 마침내 차원 축소를 다룰 수 있다!  앞서 MSE 최소화 문제에서 보았듯이 분산이 클수록 좋다. 임의의 갯수로 주성분을 취한다고 할 때 의 기준은 분산이 큰 순서이고  분산은 아이겐밸류와 같다. $l(<k)$ 개의 주성분을 취할 때 취할 때 아이겐밸류가 큰 순서대로 취하면 되겠다. 
 
-[^3]: 주성분의 갯수를 취하는 방법은 PCA에 관한 튜토리얼에서 항상 등장하는 주제이니 구글링을 해서 확인하시면 되겠다. 
+:::{.column-margin}
+주성분의 갯수를 취하는 방법은 PCA에 관한 튜토리얼에서 항상 등장하는 주제이니 구글링을 해서 확인하시면 되겠다. 
+:::
 
 ## Key Questions 
 
@@ -247,7 +257,3 @@ $$
 이 글은 아래 자료를 바탕으로 만들었습니다. 
 
 [https://www.stat.cmu.edu/~cshalizi/350/lectures/10/lecture-10.pdf](https://www.stat.cmu.edu/~cshalizi/350/lectures/10/lecture-10.pdf)
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDAyMjMzMzEsLTY2NzA3Mzg1MV19
--->

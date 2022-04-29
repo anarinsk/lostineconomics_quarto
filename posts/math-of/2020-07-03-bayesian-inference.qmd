@@ -1,14 +1,14 @@
 ---
-layout: post
-toc: false
-comments: true
-title:  Bayesian Inference with MCMC
+title: Bayesian Inference with MCMC
 description:  MCMC 기억 되살리기
-categories: [statistics, bayesian]
-
+author: "JS HUHH"
+date: "07/03/2020"
+image: "https://d2r55xnwy6nx47.cloudfront.net/uploads/2021/03/Perfect-Number_2880_Lede.jpg"
+categories: [math-of]
+#margin-header: subscribe.html
 ---
 
-## For what
+## tl; dr
 
 - 베이지언 추론에 관해서 수박 겉핥기로 살펴본다. 
 - MCMC의 기본 논리를 정리한다. 
@@ -52,7 +52,7 @@ $$
 
 대소문자를 구별해서 쓴 것에 유의하자.  소문자 $p$는 확률 분포, 즉 확률 밀도 함수(pmf) 혹은 확률 질량 함수(pdf)를 뜻한다. 대문자 $P$는 확률이다.  
 
-![]({{ site.baseurl }}/images/mcmc/fig_1.png){: style="textalign:center; " width="500"}
+![](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/mcmc/fig_1.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;" }
 
 위 그림을 보자. 사전 분포는 우도에 따라서 재평가 되면서 사후 분포를 만들어 낸다. 우도(때로는 가능도라고 표현하기도 한다)에 관해서 조금 더 살펴보자. 
 
@@ -291,7 +291,7 @@ print (f"Efficiency = {naccept/niters}")
 	- 임의의 theta 값을 정규 분포값에서 생성해낸다. 	 
 	- metropolis 알고리듬에 따라서 이 값과 최초의 theta 혹은 바로 전에 생성된 theta, 두 값을 평가한다. 평가는 극도로 단순한 방식으로 진행된다. 각기 다음 상태로 넘어갈 확률은 전기의 파라미터에만 의존한다. 
 
-![]({{ site.baseurl }}/images/mcmc/fig_2.png){: style="textalign:center; " width="500"}
+![](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/mcmc/fig_2.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;" }
 
 위 시각화의 코드는 다음과 같다. 
 
@@ -308,16 +308,4 @@ plt.legend(loc='best');
 
 그림에서 보듯이 MCMC가 사후 확률을 잘 따라가고 있다. MCMC는 정말로 잘 수렴할까? 즉, 이론대로 어떤 파라미터에서 출발하더라도 비슷한 분포로 수렴할까? 분포의 수렴은 수치적으로는 따지기 쉽지 않은 개념이다. 느낌만 보도록 하자. 아래에서 보면, 초기값이 관계 없이 모든 값에서 사후 분포에 수렴하는 것을 확인할 수 있다. 즉, $x$ 축에 표시된 반복 횟수가 일정 수준을 넘어서면 모든 마르코프 연쇄가 사후 분포 범위 안에서 움직이고 있다. 
 
-![]({{ site.baseurl }}/images/mcmc/fig_3.png){: style="textalign:center; " width="500"}
-
-
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODgwODYyNTUsLTExODgzMjU3NDEsMT
-U5NDgyMzQyOCwtMTM1MjEzMDIyLC00MjE4ODk0MzgsMzg0ODkz
-OTAwLC0xODM2NDI3Mjk0LDI2MjUzNzQ3NCwtMjE5NzgyMTYsMj
-A1NTM4MjI3OCwyMDU4ODUzNzczLC0xNDQyMDMzMjkzLC05MjYz
-MjAwMDEsLTMyOTUwMjQwNiwtMTIyMDc3MzU2NCwtMjA3NTUyNz
-AxMiwzNTE2MTk1NzAsODYzNDYwNzc0LC0xNTc0MjE1MDczLDE1
-MzgzMjU4XX0=
--->
+![](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/mcmc/fig_3.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;" }

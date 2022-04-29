@@ -1,11 +1,11 @@
 ---
-layout: post
-toc: true
-comments: true
 title: Mathematics of Support Vector Machine
-description: SVM의 수학  
-categories: [math, machine-learning]
-
+description:  SVM의 수학  
+author: "JS HUHH"
+date: "05/06/2019"
+image: "https://d2r55xnwy6nx47.cloudfront.net/uploads/2021/03/Perfect-Number_2880_Lede.jpg"
+categories: [math-of]
+#margin-header: subscribe.html
 ---
 
 ## Key Questions 
@@ -43,9 +43,7 @@ $$
 
 그림으로 나타내보자. 
 
-<p align="center"><kbd>
-  <img src="https://github.com/anarinsk/public-images/blob/master/svm/alpha_delta.png?raw=true" width="450">
-</kbd></p>
+![](https://github.com/anarinsk/public-images/blob/master/svm/alpha_delta.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;" }
 
 이는 다음과 같이 삼각함수로 표시할 수 있다. 
 $$
@@ -56,9 +54,7 @@ $$
 
 내적은 **벡터 연산**의 일종으로, 이는 두 벡터를 스칼라 값으로 바꿔주는 일종의 함수다. 
 
-<p align="center"><kbd>
-  <img src="https://github.com/anarinsk/public-images/blob/master/svm/beta.png?raw=True" width="450">
-</kbd></p>
+![](https://github.com/anarinsk/public-images/blob/master/svm/beta.png?raw=True){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;" }
 
 $$
 \begin{aligned}
@@ -77,9 +73,7 @@ $$
 
 #### Hyperplane 
 
-<p align="center"><kbd>
-  <img src="https://cdn-images-1.medium.com/freeze/max/1000/1*q7Tr-GNbm5HM7T3d1HR-Uw.png" width="450">
-</kbd></p>
+![](https://cdn-images-1.medium.com/freeze/max/1000/1*q7Tr-GNbm5HM7T3d1HR-Uw.png){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;" }
 
 $n$ 차원  공간을 가를 수 있는 해당 공간의 차원보다 하나 낮은 수학적 관계라고 풀어서 쓸 수 있다. 
 	
@@ -108,13 +102,13 @@ $$
 
 그림으로 보다 직관적으로 이해해보자. 
 
-<p align="center"><kbd>
-  <img src="https://github.com/anarinsk/public-images/blob/master/svm/svm_1.png?raw=true" width="450">
-</kbd></p>
+![](https://github.com/anarinsk/public-images/blob/master/svm/svm_1.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;" }
 
-어떤 원점을 기준으로  training example까지의 벡터를 ${\bf x}_i$라고 하자. 이때 둘을 가르는 하이퍼플레인이 있을 때 이와 직교하는 벡터 (orthogonal vector) $\mathbf{w} $를 생각해보자. 왜 orthogonal해야 하는가? 잠시 후 그 이유를 알 수 있다. 하이퍼플레인은 기본적으로는 두 벡터 사이의 닷 프로덕트다[^1]. 닷 프로덕트를 그림으로 나타낼 수 있는 방법은 이를 projection으로 생각해보는 것이다. 
+어떤 원점을 기준으로  training example까지의 벡터를 ${\bf x}_i$라고 하자. 이때 둘을 가르는 하이퍼플레인이 있을 때 이와 직교하는 벡터 (orthogonal vector) $\mathbf{w} $를 생각해보자. 왜 orthogonal해야 하는가? 잠시 후 그 이유를 알 수 있다. 하이퍼플레인은 기본적으로는 두 벡터 사이의 닷 프로덕트다. 닷 프로덕트를 그림으로 나타낼 수 있는 방법은 이를 projection으로 생각해보는 것이다. 
 
-[^1]: 내적이라고 번역되기도 하지만 여기서는 그냥 '닷 프로덕트'라고 쓰리고 하겠다. 
+:::{.column-margin}
+내적이라고 번역되기도 하지만 여기서는 그냥 '닷 프로덕트'라고 쓰리고 하겠다. 
+:::
 
 즉, ${\bf x}_i$를 $\mathbf{w} $로 프로젝션을 한다면(projection of ${\bf x}_i$ on $\mathbf{w} $), 이는 
 
@@ -136,13 +130,13 @@ $$
 
 앞서 분류기에서 해당 값이 0보다 크면 $y_i ( \mathbf{w} \cdot {\bf x}_ i + b) - 1 \geq 0$가 성립한다. 반면, 해당 값이 0보다 작으면 음수를 곱하는 것이 되어 부등호가 바뀌게 되고, 이 경우 역시 위의 식이 성립한다. 
 
-<p align="center"><kbd>
-  <img src="https://github.com/anarinsk/public-images/blob/master/svm/svm_2.png?raw=true" width="450">
-</kbd></p>
+![](https://github.com/anarinsk/public-images/blob/master/svm/svm_2.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;" }
 
-이제 $\cos \theta$를 벡터 ${\bf x}_{\rm svr} - {\bf x} _{\rm svl}$와 $\mathbf{w}$가 이루는 각이라고 생각하자. 이때 $\mathbf{w}$는 하이퍼플레인과 orthogonal하며 적절한 training sample 즉, 적절한 하나의  서포트 벡터를 지난다. 이때 $\cos \theta$는 다음과 같이 쉽게 정의된다.[^2]
+이제 $\cos \theta$를 벡터 ${\bf x}_{\rm svr} - {\bf x} _{\rm svl}$와 $\mathbf{w}$가 이루는 각이라고 생각하자. 이때 $\mathbf{w}$는 하이퍼플레인과 orthogonal하며 적절한 training sample 즉, 적절한 하나의  서포트 벡터를 지난다. 이때 $\cos \theta$는 다음과 같이 쉽게 정의된다.
 
-[^2]: 벡터의 방향에 대해서 약간 갸우뚱하는 분들이 있을지 모르겠다. $\cos \theta$를 제대로 정의하기 위해서는 $-({\bf x}_{\rm svr} - {\bf x}_{\rm svl})$, $- \mathbf{w}$라고 쓰는 것이 맞을 것이다. 하지만, 둘의 닷 프로덕트를 구하면 서로 상쇄되어 아래 적은 것과 동일하다. 
+:::{.column-margin}
+벡터의 방향에 대해서 약간 갸우뚱하는 분들이 있을지 모르겠다. $\cos \theta$를 제대로 정의하기 위해서는 $-({\bf x}_{\rm svr} - {\bf x}_{\rm svl})$, $- \mathbf{w}$라고 쓰는 것이 맞을 것이다. 하지만, 둘의 닷 프로덕트를 구하면 서로 상쇄되어 아래 적은 것과 동일하다. 
+:::
 
 $$\cos \theta = \dfrac{({\bf x} _ {\rm svr} - {\bf x} _ {\rm svl}) \cdot \bf w}{\Vert {\bf x} _ {\rm svr} - {\bf x} _ {\rm svl} \Vert \Vert \mathbf{w} \Vert}$$
 
@@ -348,17 +342,6 @@ $$
 ## Resource 
 
 이 자료는 아래 내용을 바탕으로 만들어졌습니다. 
-﻿
-* Basic: [LINK](https://shuzhanfan.github.io/2018/05/understanding-mathematics-behind-support-vector-machines/)
-* Illustration: [LINK](https://towardsdatascience.com/understanding-support-vector-machine-part-1-lagrange-multipliers-5c24a52ffc5e)
- 
 
-
-
-
-
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyMjExMjk4NSwtMTgxMjcyNDA3MSwtOD
-gxNTE4NzddfQ==
--->
+- Basic: [LINK](https://shuzhanfan.github.io/2018/05/understanding-mathematics-behind-support-vector-machines/)
+- Illustration: [LINK](https://towardsdatascience.com/understanding-support-vector-machine-part-1-lagrange-multipliers-5c24a52ffc5e)

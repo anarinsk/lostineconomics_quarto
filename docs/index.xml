@@ -2158,166 +2158,243 @@ sudo fc-cache -fv</code></pre>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
-  <title>Streamlit + Heroku</title>
+  <title>Bayesian Inference with MCMC</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-03-09-Streamlit-Heroku.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/math-of/2020-07-03-bayesian-inference.html</link>
   <description><![CDATA[ 
 
 
 
 
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>현재는 streamlit에서 꽤 좋은 조건으로 자체 클라우드를 운영한다. 특별한 이유가 없는 이상 여기 소개한 것과 같이 Heroku를 쓰는 것은 불필요하다.</p>
-</div>
-</div>
-<section id="들어가며" class="level2">
-<h2 class="anchored" data-anchor-id="들어가며">들어가며</h2>
-<p>구슬이 서 말이라도 꿰어야 보배다. 당연하다. 데이터 분석은</p>
+<section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">tl; dr</h2>
 <ul>
-<li>스마트한 노가다</li>
-<li>갈고 닦은 모델링</li>
-<li>환상적인 시각화</li>
+<li>베이지언 추론에 관해서 수박 겉핥기로 살펴본다.</li>
+<li>MCMC의 기본 논리를 정리한다.</li>
 </ul>
-<p>의 삼위 일체다. 물론 이 모든 과정에 화룡점정은 “전달”이다. 이 세 개를 어떻게 묶어서 전달하느냐에 따라서 분석을 받아들이는 그 사람의 판단이 달라진다. 어떻게 하면 잘 전달하는 것일까?</p>
-<p>지구상의 많은 인구가 손 안에 컴퓨터를 하나씩 들고 다니는 시대다. 안타깝게도 PC에서 많이 쓰던 PDF는 모바일에 적절하지 않다. 문서의 확대, 축소가 동적이지 않기 때문이다. 아울러 새로운 정보를 계속 주고 받을 수 있다는 점을 생각하면 결국은 ‘웹’, html이 데이터 분석을 전달하는 새로운 합의점이 되지 않을까 싶다. 아니 이미 그런 시대다.</p>
 </section>
-<section id="streamlit" class="level2">
-<h2 class="anchored" data-anchor-id="streamlit">Streamlit</h2>
-<p>Python은 이제 자타가 공인하는 데이터 사이언스의 주요 도구다. Python에는 이미 좋은 웹 개발 도구들이 있다. Django, Flask가 그렇다. 하지만 역시 나 같은 문송한 자들이 쓰기는 쉽지 않다. 아마도 네트워크 관련 지식이나 웹 관련 지식에 익숙하지 않은 탓이다. 그냥 pandas, numpy 정도만 배울 용이가 있는 사람들에게는 넘기 쉽지 않은 장벽이다. 어쩌면 닭잡고 싶은데 소잡는 칼을 휘두르는 법을 배워야 해서 그럴지도 모르겠다.</p>
-<p>이런 웹 개발 프레임워크들은 “데이터 혹은 그 시각화를 인터랙티브하게 공유한다,”라는 기본 목적에 비추어보면 살짝 과한 면도 있다. 비슷한 필요를 느낀 사람들이 많았는지 작년에 Streamlit라는 반가운 프로젝트가 등장했다.</p>
-<p>R에는 이미 Shiny라는 비슷한 프로젝트가 있다. R의 기능을 활용해 데이터를 처리하고 별도의 웹 개발 없이 R의 기능을 그대로 시각화로 구현할 수 있는 툴이다. Python에도 비슷한 기능을 구현하는 시도는 많았으나 어딘가 불편했다. Streamlit는 이런 2%의 부족함을 꽤 잘 해결했다. 어떤 면에서는 Shiny보다도 쓰기가 편리한 듯도 싶다. 다만 잃는 것도 있다. Shiny의 ’미감’에는 미치지 못하고 기능도 살짝 부족하다. 하지만 통상적인 데이터 탐색 및 시각화의 용도로는 충분하다.</p>
-<section id="workflow" class="level3">
-<h3 class="anchored" data-anchor-id="workflow">Workflow</h3>
-<p>여기서 Streamlit를 자세히 설명하지는 않겠다. Python을 써보면 사람이면 예제를 쉽게 따라해보면 된다. 페이지의 설명대로 아래 명령만 실행해봐도 느낌을 한번에 받을 수 있다. 아래와 같이 설치하고 <code>hello</code>를 띄울 수 있다.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;">$</span> pip install streamlit </span>
-<span id="cb1-2"><span class="ex" style="color: null;">$</span> steamlit hello</span></code></pre></div>
-<p>대략의 워크플로우는 아래와 같다.</p>
-<ol type="1">
-<li>Python으로 작업한다.</li>
-<li>Streamlit로 interactive하게 처리될 부분을 간단히 설계한다.</li>
-<li>터미널에서 <code>streamlit run [앱이름].py</code></li>
-</ol>
-<p>각자의 컴퓨터, 즉 로컬에서 실행하면 알아서 브라우저 앱이 뜬다. 디자인이 다소 허접해보일 수 있지만, 미니멀을 좋아하는 사람이라면 ’본질’에 집중할 수 있는 점을 칭찬할 것이다. R의 Shiny와 마찬가지로 어지간한 Python 비주얼 라이브러리(matplotlib, Vega, Plotly 등등)는 모두 구현이 가능하다.</p>
+<section id="bayes-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="bayes-theorem">Bayes’ theorem</h2>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0AP(A%5Clvert%20B)%20&amp;%20=%20%5Cdfrac%7BP(B%5Clvert%20A)%20P(A)%7D%7BP(B)%7D%20%5C%5C%0A&amp;%20=%20%5Cunderbrace%7B%5Cleft(%20%5Cdfrac%7BP(B%5Clvert%20A)%7D%7BP(B)%7D%20%5Cright)%7D_%7B%5Crm%20updating%7D%20%20%5Coverbrace%7BP(A)%7D%5E%7B%5Crm%20base%7D%0A%5Cend%7Baligned%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?P(A)">는 prior, 즉 사전 확률이다. 즉, <img src="https://latex.codecogs.com/png.latex?A">의 발생 확률에 관한 사전적인 기대 혹은 지식이다. 때로는 기저 확률이라고도 부른다. 이 지식을 <img src="https://latex.codecogs.com/png.latex?B">라는 증거(evidence)를 통해서 업데이트하는 것이 베이즈 정리다. 이때 업데이트하는 <img src="https://latex.codecogs.com/png.latex?(%20)"> 부분이다.</p>
+<p>베이즈 정리의 흔한 하지만 언제나 재미있는 사례를 위 식을 통해 다시 들여다보자. 어떤 질병의 정탐(true positive) 확률, 즉 검사의 양성 판정이 곧 발병을 의미할 확률이 매우 높다고 하자. 이때 어떤 사람이 양성 판정을 받았다면, 이 사람은 매우 높은 확률로 해당 질병에 감염된 것일까? 말장난 이것 같지만, 직관적으로는 그럴 것 같다.</p>
+<p>해당 질병에 걸릴 확률 자체가 낮다면, 즉 기저 확률이 낮다면, 질병에서 양성 반응이 나왔다는 사실만으로는 해당 질병에 정탐 확률 만큼 높게 감염되었다고 보기 어렵다. 정탐 확률은 베이즈 정리에서 업데이팅 파트를 의미하고, 해당 질병에 걸릴 확률은 기저 확률에 해당한다. 기저가 매우 낮다면, updating 부분이 높아도 사후 확률은 그렇게까지 높지 않을 수 있다.</p>
+<p>베이즈 “착각”은 흔하게 발생한다. 우리가 흔히 접하는 확률은 정탐 확률이다. 즉 99% 정확도라고 하면 질병이 있을 때 이를 탐지할 확률 (<img src="https://latex.codecogs.com/png.latex?P(B%20%5Clvert%20A)">)이다. 위에서 듯이, 이는 양성 결과를 받을 때 병에 걸렸을 확률과는 다르다.</p>
 </section>
-</section>
-<section id="how-to-deploy-to-web" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-deploy-to-web">How to deploy to web…</h2>
-<p>로컬에서 Steamlit를 이용해 그럴 듯한 앱을 만들었다. 이제 이 녀석을 어떻게 배포할까? 즉 이걸 남들에게 어떻게 보여줄까?</p>
-<p>일단 배포를 위해서는 전용 웹 서비스가 있어야 한다. AWS의 무료 티어를 활용해서 배포할 수도 있지만 세팅이 간단하지는 않다. 솔직히 말하면 이 마저 귀찮고 살짝 겁난다. 이런 사람들이 쉽게 쓸 수 있는 서비스가 salesforce에서 제공하는 Heroku다. 원래 Ruby로 제작된 웹 앱만 서비스 했으나, 최근 쓰임새가 늘어나면서 다양한 랭귀지를 지원하고 있다. 당연히 Python도 포함된다. 작업의 전체적인 개념은 다음과 같다.</p>
-<ol type="1">
-<li>Heroku 계정 생성</li>
-<li>CLI 설치</li>
-<li>Streamlit 앱 제작</li>
-<li>Heroku 빌드를 위한 파일 생성</li>
-<li>Streamlit 작업 디렉토리를 Heroku로 push</li>
-<li>Push와 동시에 웹 빌드 및 자동 배포</li>
-</ol>
-<p>필요한 과정을 간략하게 살펴보자.</p>
-<section id="heroku-계정-생성-및-cli-설치" class="level3">
-<h3 class="anchored" data-anchor-id="heroku-계정-생성-및-cli-설치">Heroku 계정 생성 및 CLI 설치</h3>
-<p>홈페이지에 들어가서 가입하면 된다. CLI, 즉 터미널 툴은 왜 필요할까? 터미널에서 작업을 하면 좀 더 편하다. CLI를 설치해야 제대로 Heroku를 사용할 수 있다. 아래와 같이 터미널에서 로그인을 한다.</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;">$</span> heroku login </span></code></pre></div>
-</section>
-<section id="앱-디렉토리에-깃-생성" class="level3">
-<h3 class="anchored" data-anchor-id="앱-디렉토리에-깃-생성">앱 디렉토리에 깃 생성</h3>
-<p>git을 통해 heroku를 관리하는 게 편하다. git을 쓸 줄 모른다면, 야매로라도 얼른 배우고 오시라. git으로 작업을 브랜치에서 commit 한 후 heroku로 푸시하는 것으로 일종의 작은 CI/CD가 달성된다.</p>
-</section>
-<section id="빌드를-위한-파일-생성" class="level3">
-<h3 class="anchored" data-anchor-id="빌드를-위한-파일-생성">빌드를 위한 파일 생성</h3>
-<p>Heroku로 제작한 Streamlit 앱을 푸시하면 자동으로 빌드가 진행된다. 이를 위해서 제작한 앱의 최상위 디렉토리에 아래의 파일을 넣어주자.</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="ex" style="color: null;">project</span> </span>
-<span id="cb3-2"><span class="ex" style="color: null;">├──</span> app.py <span class="er" style="color: #AD0000;">(</span><span class="ex" style="color: null;">제작한</span> 앱<span class="kw" style="color: #003B4F;">)</span></span>
-<span id="cb3-3"><span class="ex" style="color: null;">├──</span> requirements.txt  </span>
-<span id="cb3-4"><span class="ex" style="color: null;">├──</span> setup.sh  </span>
-<span id="cb3-5"><span class="ex" style="color: null;">└──</span> Procfile</span></code></pre></div>
-<section id="requirements.txt" class="level4">
-<h4 class="anchored" data-anchor-id="requirements.txt">requirements.txt</h4>
-<p>설치해야 하는 Python 패키지를 지정해준다. 아래의 예와 같다.</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb4-1"> numpy==1.16.4 </span>
-<span id="cb4-2"> streamlit==0.52.1 </span>
-<span id="cb4-3"> seaborn==0.9.0 </span>
-<span id="cb4-4"> pandas==0.25.1 </span>
-<span id="cb4-5"> matplotlib==3.1.1 </span>
-<span id="cb4-6"> scikit_learn==0.22</span></code></pre></div>
-<p>이 파일을 자동으로 생성하는 <a href="https://github.com/bndr/pipreqs">pipreqs</a>를 이용해도 된다.</p>
-</section>
-<section id="setup.sh" class="level4">
-<h4 class="anchored" data-anchor-id="setup.sh">setup.sh</h4>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><span class="fu" style="color: #4758AB;">mkdir</span> <span class="at" style="color: #657422;">-p</span> ~/.streamlit/</span>
-<span id="cb5-2"></span>
-<span id="cb5-3"><span class="bu" style="color: null;">echo</span> <span class="st" style="color: #20794D;">"</span><span class="dt" style="color: #AD0000;">\</span></span>
-<span id="cb5-4"><span class="st" style="color: #20794D;">[general]\n</span><span class="dt" style="color: #AD0000;">\</span></span>
-<span id="cb5-5"><span class="st" style="color: #20794D;">email = </span><span class="dt" style="color: #AD0000;">\"</span><span class="st" style="color: #20794D;">your-email@domain.com</span><span class="dt" style="color: #AD0000;">\"</span><span class="st" style="color: #20794D;">\n</span><span class="dt" style="color: #AD0000;">\</span></span>
-<span id="cb5-6"><span class="st" style="color: #20794D;">"</span> <span class="op" style="color: #5E5E5E;">&gt;</span> ~/.streamlit/credentials.toml</span>
-<span id="cb5-7"></span>
-<span id="cb5-8"><span class="bu" style="color: null;">echo</span> <span class="st" style="color: #20794D;">"</span><span class="dt" style="color: #AD0000;">\</span></span>
-<span id="cb5-9"><span class="st" style="color: #20794D;">[server]\n</span><span class="dt" style="color: #AD0000;">\</span></span>
-<span id="cb5-10"><span class="st" style="color: #20794D;">headless = true\n</span><span class="dt" style="color: #AD0000;">\</span></span>
-<span id="cb5-11"><span class="st" style="color: #20794D;">enableCORS=false\n</span><span class="dt" style="color: #AD0000;">\</span></span>
-<span id="cb5-12"><span class="st" style="color: #20794D;">port = </span><span class="va" style="color: #111111;">$PORT</span><span class="st" style="color: #20794D;">\n</span><span class="dt" style="color: #AD0000;">\</span></span>
-<span id="cb5-13"><span class="st" style="color: #20794D;">"</span> <span class="op" style="color: #5E5E5E;">&gt;</span> ~/.streamlit/config.toml</span></code></pre></div>
-<p>sh 명령을 실행할 내용을 담고 있다.</p>
-</section>
-<section id="procfile" class="level4">
-<h4 class="anchored" data-anchor-id="procfile">Procfile</h4>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="ex" style="color: null;">web:</span> sh setup.sh <span class="kw" style="color: #003B4F;">&amp;&amp;</span> <span class="ex" style="color: null;">streamlit</span> run app.py</span></code></pre></div>
-<p>sh 명령을 실행하고 streamlit를 띄우는 명령어를 담고 있다.</p>
-</section>
-<section id="runtime.txt" class="level4">
-<h4 class="anchored" data-anchor-id="runtime.txt">runtime.txt</h4>
-<p>특정 Python 버전이 필요하다면 이 파일을 추가할 수 있다. 파일 안에 담긴 내용은 아래와 같다.</p>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><span class="ex" style="color: null;">python-3.7.3</span></span></code></pre></div>
-</section>
-</section>
-<section id="create-and-just-push" class="level3">
-<h3 class="anchored" data-anchor-id="create-and-just-push">Create and Just push</h3>
-<p>이제 heroku로 나갈 앱을 만들고 보내면 끝이다. master에서 작업했다면 아래와 같이 명령어를 실행하면 된다.</p>
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><span class="ex" style="color: null;">$</span> heroku create</span>
-<span id="cb8-2"><span class="ex" style="color: null;">$</span> git push heroku master</span></code></pre></div>
-</section>
-</section>
-<section id="protips" class="level2">
-<h2 class="anchored" data-anchor-id="protips">Protips</h2>
-<section id="한글이-안나와요" class="level3">
-<h3 class="anchored" data-anchor-id="한글이-안나와요">한글이 안나와요~</h3>
-<p>streamlit는 웹에서 즉 브라우저 위에서 돌아가기 때문에 한글이 잘 나오는 것이 정상이다. 문제는 Python 내에서 그래프에 한글을 렌더링할 경우 이것이 제대로 표현되지 않는다는 것이다. 보통 matplotlib과 같은 패키지들을 써본 사람이라면 해당 내용을 한번 검색해본 기억이 있을 것이다. 대략 로컬에서는 폰트를 찾은 후 이를 matplotlib이 쓸 수 있도록 인식시켜주는 것으로 간단히 끝난다.</p>
-<p>왜 Heroku에서는 이것이 안될까? 간단하다. Heroku는 외부의 웹서버이고 그 웹 서버에 한글 폰트가 없는 것이다. 웹 서버에 한글 폰트를 심어주면 될 것이다. 하지만 어떻게 심을까? 간단하다. 작업 중인 앱의 루트 디렉토리에 다음과 같은 시스템 디렉토리를 하나 생성한다.</p>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><span class="ex" style="color: null;">/.fonts</span> </span></code></pre></div>
-<p>이 디렉토리 안에 필요한 한글 폰트를 넣으면 된다. 그러면 해당 앱이 Heroku로 푸시되었을 때 시스템 폰트로 디렉토리 안의 폰트들이 잘 등록된다.</p>
-</section>
-</section>
-<section id="예제" class="level2">
-<h2 class="anchored" data-anchor-id="예제">예제</h2>
-<p><a href="https://morning-depths-10545.herokuapp.com/">https://morning-depths-10545.herokuapp.com/</a></p>
+<section id="bayesian-inference" class="level2">
+<h2 class="anchored" data-anchor-id="bayesian-inference">Bayesian inference</h2>
 <ul>
-<li>앱 안에 비교적 자세한 설명을 달아 두었으니 별도의 과정은 생략하도록 하겠다.</li>
+<li>추정이란 모집단에서 얻은 샘플을 통해서 모집단 분포의 특성(파라미터)를 추측하는 과정이다. 추정을 위해서 필요한 것은 ’분포’다. 베이즈 정리에 기반해 사후 분포를 구하는 방법은 아래와 같다.</li>
 </ul>
-<p>데이터 정리 등의 지저분한 코드는 생략하고 위 Heroku 앱을 구현하는 데 동원된 코드는 다음과 같다.</p>
-<p><a href="https://github.com/anarinsk/adp-st-kap_1">https://github.com/anarinsk/adp-st-kap_1</a></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0Ap(%5Ctheta%5Clvert%20data)%20=%20%5Cdfrac%7Bp(data%20%5Clvert%20%5Ctheta)%20p(%5Ctheta)%7D%7BP(data)%7D%20=%20%5Cdfrac%7B%20%5Coverbrace%7B%20%7B%5Cmathcal%20L%7D%20(%5Ctheta%5Clvert%20data)%7D%5E%7B%5Crm%20Likelihood%7D%20%20%5Coverbrace%7Bp(%5Ctheta)%7D%5E%7B%5Crm%20prior%7D%7D%7B%20%5Cunderbrace%7BP(data)%7D_%7B%5Crm%20evidence%7D%20%7D%0A%5Cend%7Baligned%7D%0A"></p>
+<p>각각 나누어 살펴보자.</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?P(data)">: evidence, 데이터를 관찰할 확률을 뜻한다.</li>
+<li><img src="https://latex.codecogs.com/png.latex?p(data%5Clvert%20%5Ctheta)%20=%20%7B%5Cmathcal%20L%7D(%5Ctheta%5Clvert%20data)">: Likelihood, 관찰된 데이터의 ‘우도’ 혹은 가능도를 나타낸다.</li>
+<li><img src="https://latex.codecogs.com/png.latex?p(%5Ctheta)">: prior, 데이터를 포함하지 않은 파라미터의 사전 분포를 뜻한다.</li>
+<li>파라미터 공간은 n 차원 벡터다. <img src="https://latex.codecogs.com/png.latex?%5Ctheta%20%5Cin%20%5Cmathbb%20R%5En">, <img src="https://latex.codecogs.com/png.latex?%5Ctheta%20=%20(%5Ctheta_1,%20%5Ctheta_2,%20%5Cdotsc,%20%5Ctheta_n)">.</li>
+</ul>
+<p>식의 분자는 모두 파리미터 <img src="https://latex.codecogs.com/png.latex?%5Ctheta">의 함수다. 분모는 상수다. 뒤에 다시 설명하겠지만, <img src="https://latex.codecogs.com/png.latex?p(%5Ctheta%20%5Clvert%20data)">를 <img src="https://latex.codecogs.com/png.latex?%5Ctheta">에 대해서 최적화한다면, 분자만 고려하면 된다.</p>
+<p>대소문자를 구별해서 쓴 것에 유의하자. 소문자 <img src="https://latex.codecogs.com/png.latex?p">는 확률 분포, 즉 확률 밀도 함수(pmf) 혹은 확률 질량 함수(pdf)를 뜻한다. 대문자 <img src="https://latex.codecogs.com/png.latex?P">는 확률이다.</p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/math-of/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/mcmc/fig_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p>위 그림을 보자. 사전 분포는 우도에 따라서 재평가 되면서 사후 분포를 만들어 낸다. 우도(때로는 가능도라고 표현하기도 한다)에 관해서 조금 더 살펴보자.</p>
 </section>
-<section id="참고자료" class="level2">
-<h2 class="anchored" data-anchor-id="참고자료">참고자료</h2>
-<p><a href="https://github.com/Taxuspt/heroku_streamlit_nginx">https://github.com/Taxuspt/heroku_streamlit_nginx</a></p>
-<p><a href="https://towardsdatascience.com/quickly-build-and-deploy-an-application-with-streamlit-988ca08c7e83">https://towardsdatascience.com/quickly-build-and-deploy-an-application-with-streamlit-988ca08c7e83</a></p>
-<p><a href="https://blog.jcharistech.com/2019/10/24/how-to-deploy-your-streamlit-apps-to-heroku/">https://blog.jcharistech.com/2019/10/24/how-to-deploy-your-streamlit-apps-to-heroku/</a></p>
+<section id="something-about-likelihood" class="level2">
+<h2 class="anchored" data-anchor-id="something-about-likelihood">Something about likelihood</h2>
+<p>관찰된 <img src="https://latex.codecogs.com/png.latex?data"> 아래에서 이 결과가 가능한 ’정도’를 파리미터의 함수로 나타낸 것, 정도로 이해하면 좋다. 우도를 의미할 때 ’확률’이라는 표현을 쓰지 않은 것이 좋다. 왜 그럴까?</p>
+<section id="probability-vs-likelihood" class="level3">
+<h3 class="anchored" data-anchor-id="probability-vs-likelihood">Probability vs Likelihood</h3>
+<section id="이산-분포에서-확률-우도" class="level4">
+<h4 class="anchored" data-anchor-id="이산-분포에서-확률-우도">이산 분포에서 확률 = 우도?</h4>
+<p>이산 분포에서는 특정한 파라미터에서 1개의 데이터를 관찰할 때 확률과 우도가 같다. 이는 probability mass function(pmf)이 그 값을 관찰할 확률과 같기 때문이다. 하지만 우도를 구할 때 <img src="https://latex.codecogs.com/png.latex?data">가 꼭 하나 여야 할까? 이는 어떤 데이터를 보고 업데이트하는지에 달려 있다.</p>
+<p>예를 들어보자. 동전을 던져서 HH를 관찰했다고 하자. 동전의 앞면이 나올 확률이 <img src="https://latex.codecogs.com/png.latex?p">라고 하고 독립 시행이라면, 이는 <img src="https://latex.codecogs.com/png.latex?p%5E2">가 이 관찰 결과의 ’우도’이다. 물론 이는 HH라는 결과를 얻을 확률이기도 하다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP(HH%5Clvert%20p=0.5)%20=%200.5%5E2%0A"></p>
+<p>이렇게 표현해보자. 이는 HH가 관찰되었을 때 <img src="https://latex.codecogs.com/png.latex?p=0.5">라는 파라미터의 가능도가 <img src="https://latex.codecogs.com/png.latex?0.5%5E2">라는 뜻이다. 즉,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%7BL%7D%20(p=0.5%20%5Clvert%20%20HH)%20=%200.5%5E2%0A"></p>
+<p>사족이지만, HH가 관찰되었을 때 <img src="https://latex.codecogs.com/png.latex?p=0.5">일 확률이 <img src="https://latex.codecogs.com/png.latex?0.25">이라는 말은 아니다. 즉,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%7BL%7D%20(p=0.5%20%5Clvert%20%20HH)%20%5Cneq%20P%20(p=0.5%20%5Clvert%20%20HH)%0A"></p>
+</section>
+<section id="연속-분포에서-확률-neq-우도" class="level4">
+<h4 class="anchored" data-anchor-id="연속-분포에서-확률-neq-우도">연속 분포에서 확률 <img src="https://latex.codecogs.com/png.latex?%5Cneq"> 우도?</h4>
+<p>연속 분포에서 우도는 probability density function(pdf)과 같다고 설명되어 있는 경우가 있다. 이 말은 맞기도 하고 아니기도 하다. <img src="https://latex.codecogs.com/png.latex?data">의 관찰 수가 1개라면 이 말은 맞다. 하지만, 이산 분포의 경우와 같이 2개 이상일 때는 pdf와 우도가 같다고 말할 수 없다. 최우추정법에서 pmf 혹은 pdf가 곱해진 형태를 떠올리면 이해가 조금 쉬울 수 있겠다.</p>
+</section>
+<section id="우도는-pmf-혹은-pdf일까" class="level4">
+<h4 class="anchored" data-anchor-id="우도는-pmf-혹은-pdf일까">우도는 pmf 혹은 pdf일까?</h4>
+<p>관찰이 1개라면 앞서 보았듯이 우도는 pmf 그리고 pdf가 된다. pdf가 된다는 것은 무슨 의미일까? 파라미터 공간 전체에 대해서 합하면 혹은 적분하면 1이 되어야 한다. 그래서 pdf다. 그런데 일반적으로 우도를 적분을 한다고 해서 1이 되지 않는다. 앞서 보았던 예로 가보자.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_0%5E1%20p%5E%7B1/2%7D%20dp%20%5Cneq%201%0A"></p>
+<p>그렇다면 사후 분포 <img src="https://latex.codecogs.com/png.latex?P(%5Ctheta%5Clvert%20data)">는 혹은 pmf인가 pdf인가? 그렇다. <img src="https://latex.codecogs.com/png.latex?%5Cint_%5Ctheta%20P(%5Ctheta%5Clvert%20data)%20d%20%5Ctheta">를 구하면 1이다.</p>
+</section>
+</section>
+<section id="how-to-infer" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-infer">How to infer</h3>
+<ul>
+<li>베이즈 추론에서 아래의 표현을 많이 접하게 된다.</li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0Ap(%5Ctheta%5Clvert%20data)%20=%20%5Cdfrac%7B%5Cmathcal%20L(data%20%5Clvert%20%20%5Ctheta)%20p(%5Ctheta)%7D%7BP(data)%7D%20%5Cpropto%20%7B%5Cmathcal%20L%7D(%5Ctheta%5Clvert%20data)%20p(%5Ctheta)%0A%5Cend%7Baligned%7D%0A"></p>
+<p>왜 온전한 <img src="https://latex.codecogs.com/png.latex?p(%5Ctheta%5Clvert%20data)">를 구하지 않고 분모를 제외하려고 할까?</p>
+<p>이유는 두 가지다. 첫째, 베이즈 추론에서 우리의 목적함수는 <img src="https://latex.codecogs.com/png.latex?p(%5Ctheta%5Clvert%20data)">다. 즉, 이 값을 극대화해주는 <img src="https://latex.codecogs.com/png.latex?%5Ctheta">를 찾는 것이 목적이다. 이렇게 보면, MLE와 사실상 같은 방법이라고 할 수 있다. 분모의 <img src="https://latex.codecogs.com/png.latex?P(data)">에는 <img src="https://latex.codecogs.com/png.latex?%5Ctheta">가 없다. 즉, 목적함수를 극대화하는 파리미터를 찾는 데 분모는 영향을 주지 않는다.</p>
+<p>둘째 <img src="https://latex.codecogs.com/png.latex?P(data)">는 계산하기가 만만치 않다. 많은 경우는 아예 불가능하다. 예를 들어 <img src="https://latex.codecogs.com/png.latex?%5Ctheta">가 다차원이라면 적분이 아예 불가능할 수 있다. MCMC에서 이 문제를 다시 볼 것이다.</p>
+<p>어쨌든 해당 목적 함수의 최적화를 통해 찾은 파라미터를 MAP(Maximum A Posteriori)라고 부른다. MAP은 posterior의 mode(최빈값)이기도 하다. MAP은 <img src="https://latex.codecogs.com/png.latex?p(%5Ctheta%5Clvert%20data)">는 분포에서 가장 높은 봉우리를 지니는 파라미터를 찾는 것인데, 이는 해당 값이 가장 많이 나오는 값이라는 뜻이기도 하다.</p>
+</section>
+<section id="map-vs-mle" class="level3">
+<h3 class="anchored" data-anchor-id="map-vs-mle">MAP vs MLE</h3>
+<p>만일 prior에 해당하는 모든 파라미터 공간에서 적절한 <img src="https://latex.codecogs.com/png.latex?k">에 대해서 <img src="https://latex.codecogs.com/png.latex?p(%5Ctheta)%20=%20k">로 둔다면, 즉 prior에 관해 특별한 가정을 하지 않는다면, 이는 MLE와 동일한 값이 될 것이다. 모든 파라미터 공간에 대해서 동일한 사전 분포를 부여한 형태가 MLE라고 이해하면 되겠다. MLE <img src="https://latex.codecogs.com/png.latex?%5Csubset"> MAP</p>
+</section>
+</section>
+<section id="mcmc" class="level2">
+<h2 class="anchored" data-anchor-id="mcmc">MCMC!</h2>
+<section id="why" class="level3">
+<h3 class="anchored" data-anchor-id="why">Why?</h3>
+<p>MCMC는 Markov Chain Monte Carlo Simulation의 약어다. 둘을 각자 하나씩 뜯어보기 전에, 왜 MCMC라는 걸 고민하게 되었을까? 이유는 간단하다. 앞서 베이즈 추론에서 보았지만, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20L%20(%5Ctheta%5Clvert%20data)%20p(%5Ctheta)">는 쉽게 구할 수 있다.</p>
+<ul>
+<li>사전 분포 <img src="https://latex.codecogs.com/png.latex?p(%5Ctheta)">는 내 마음대로 정하면 되는 것이다.</li>
+<li>여기에 <img src="https://latex.codecogs.com/png.latex?data">, 즉 관찰을 부어 넣으면 우도가 된다.</li>
+</ul>
+<p>MAP 혹은 MLE 형태의 ’추정치’만을 얻고 싶었다면 여기서 더 고민할 게 없다. 하지만 추정치를 얻었다면 검정을 해야 한다. 베이즈 추론의 강점은 파라미터를 직접 추정하고 이 추정치가 참일 확률을 직접 계산할 수 있다는 데 있다. 빈도주의 추론처럼 빙빙 돌리지 않는 것이 베이즈 추론의 강점이다. 그런데 이것을 하려면 <img src="https://latex.codecogs.com/png.latex?%5Ctheta">의 분포가 필요하다…</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP(data)%20=%20%5Cint_%7B%5Ctheta%7D%20%20%7B%5Cmathcal%20L%7D(%5Ctheta%5Clvert%20data)%20p(%5Ctheta)%20d%20%5Ctheta%0A"></p>
+<p>문제는 위 식의 적분, 특히 <img src="https://latex.codecogs.com/png.latex?p(%5Ctheta)"> 분포를 포함한 적분이 쉽지 않다는 데 있다. Prior가 계산 가능한 수준이라고 해도 <img src="https://latex.codecogs.com/png.latex?%5Ctheta">가 <img src="https://latex.codecogs.com/png.latex?n"> 차원의 벡터일 수 있다. 이를 정확하게 계산해서 해석 해(analytic solutions)를 얻는 것은 대체로 가능하지 않다.</p>
+</section>
+<section id="first-mc-monte-carlo" class="level3">
+<h3 class="anchored" data-anchor-id="first-mc-monte-carlo">First MC: Monte Carlo</h3>
+<p>사실 이럴 때 동원할 수 있는 방법이 몬테카를로 시뮬레이션이다. 해석 해를 구할 수 없지만 어떤 파라미터 포인트 <img src="https://latex.codecogs.com/png.latex?%5Ctheta_i"> 를 넣으면 <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20L(%5Ctheta_i%5Clvert%20data)(=p(data%5Clvert%20%5Ctheta_i))">는 알 수 있다. <img src="https://latex.codecogs.com/png.latex?%5Ctheta_i%20%5Cin%20%5Ctheta">를 충분히 많이 뽑아서 평균을 내면 <img src="https://latex.codecogs.com/png.latex?P(data)">가 되지 않을까?</p>
+<p>이해를 돕기 위해서 일변수 함수로 다시 표현해보자. 어떤 함수 <img src="https://latex.codecogs.com/png.latex?f(x)">를 계산할 수 있고 <img src="https://latex.codecogs.com/png.latex?p(x)">를 샘플링할 수 있다고 하자. 우리가 구하고 싶은 것은 아래의 적분 값이다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint%20f(x)%20p(x)%20dx%0A"></p>
+<p>해석 해가 불가능해도 샘플링이 가능하면 해석 해의 근사치를 얻을 수 있다. 즉, 적당히 많은 수, 즉 <img src="https://latex.codecogs.com/png.latex?N"> 개의 <img src="https://latex.codecogs.com/png.latex?X_i">를 샘플링해서 <img src="https://latex.codecogs.com/png.latex?f(X_i)">를 얻어 평균값을 구하면 된다. 즉,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint%20f(x)%20p(x)%20dx%20%5Capprox%20%5Csum_%7Bi=1%7D%5E%7BN%7D%20%5Cdfrac%7Bf(X_i)%7D%7BN%7D%0A"></p>
+<p>여기서 잠깐! 식의 오른 쪽에 <img src="https://latex.codecogs.com/png.latex?p(x)">가 사라졌다는 점을 주목해서 보자. 왜 일까? <img src="https://latex.codecogs.com/png.latex?X_i">를 샘플링했다는 것, 즉 <img src="https://latex.codecogs.com/png.latex?p(x)">가 샘플링 가능했다는 것은 왼쪽 적분 식에서 <img src="https://latex.codecogs.com/png.latex?p(x)">의 분포를 고려해서 <img src="https://latex.codecogs.com/png.latex?X_i">를 뽑았다는 이야기다. 즉, 분포에 맞게 <img src="https://latex.codecogs.com/png.latex?X_i">가 뽑혔다는 것은 <img src="https://latex.codecogs.com/png.latex?X_i">가 많이 분포한 영역에서 많이 뽑히고 적게 분포한 영역에서 적게 뽑힌 것이다. 따라서 <img src="https://latex.codecogs.com/png.latex?f(X_i)">의 단순 평균으로 적분 값은 근사할 수 있게 된다.</p>
+</section>
+<section id="second-mc-markov-chain" class="level3">
+<h3 class="anchored" data-anchor-id="second-mc-markov-chain">Second MC: Markov Chain</h3>
+<p>몬테카를로에서 끝났다면 그래도 편했을 것이다. 샘플링을 할 수 있다면, 하자! 샘플링이 ‘충분히’ 쉬울까? 파라미터의 차원이 3개만되도, 샘플링을 위해이 탐사해야 하는 파리미터의 공간이 많이 커진다. 이런 상황에서 샘플링을 하는 것 자체가 어렵게 된다.</p>
+<p>샘플링을 잘 하기 위해서는 이를 위한 전략이 필요하다. 관찰이 많이 될 것 같은 파라미터 공간 주변에서는 많이 뽑고, 별로 없을 것 같은 공간 주변에서는 적당히 뽑은 후 빨리 빠져나올 수 있어야 한다. 이런 좋은 샘플링 전략의 그럴듯한 근거를 제시하는 것이 또다른 MC, 마르코프 연쇄이다.</p>
+<p>마르코프 연쇄가 왜 이런 전략을 제공할까?</p>
+<ul>
+<li>마르코프 연쇄는 간단하다. 바로 전기의 상태가 다음 기의 상태를 결정하는 최소 기억의 구조를 지니고 있다. 그래서 전략을 만들기 쉽다.</li>
+<li>마르코프 연쇄의 가장 좋은 특징: 몇 가지 조건이 충족되면 파라미터 공간 위의 ‘수렴’ 분포가 존재하며 이 분포가 고유(unique)하다. 게다가 이 수렴 분포는 초기 값에도 의존하지 않는다.</li>
+<li>마르코프 연쇄를 통해 충분히 많은 수의 샘플링을 거치면 그때까지 획득된 결과를 파라미터 공간에 관한 분포의 근사치로 간주할 수 있다.</li>
+</ul>
+<p>이렇게 얻은 수렴 분포가 <img src="https://latex.codecogs.com/png.latex?p(data)">의 분포와 일치하면, 끝이다. 해당 샘플링의 결과가 우리가 알고 싶은 분포의 쓸만한 근사치가 된다.</p>
+</section>
+</section>
+<section id="magic-of-mcmc" class="level2">
+<h2 class="anchored" data-anchor-id="magic-of-mcmc">Magic of MCMC</h2>
+<p>MCMC에서 몬테카를로 부분은 그리 놀랄 게 없다. 자연스럽다. 깜놀할 부분은 마르코프 연쇄 부분이다. 파라미터의 분포를 수렴 분포로 지니는 이행 확률 혹 마르코프 연쇄의 밀도 함수를 우리는 알지 못한다. 이 상태에서 어떻게 파라미터의 분포의 근사치를 얻을 수 있다는 말인가? MCMC의 핵심은 이 수렴분포로 접근하게 만드는 효과적인 이행확률을 만들어내는 데 있다.</p>
+<p>해법은 임의의 적절한 밀도 함수가 파리미터의 분포를 따를 수 있도록 규칙을 부여해주는 것이다. 이 역할을 수행하는 것이 Metropolis 알고리듬, M-H(Metropolis-Hastings) 알고리듬이다. 다행스럽게도 이 규칙들이 복잡하지 않고 간단하다. 이것이 마법이다! 이렇게 임의로 만들어진 밀도 함수가 원하는 파라미터의 분포를 유일한 수렴 분포로 지니기 위해서는 마르코프 연쇄의 어떤 속성들을 지니고 있어야 한다. 이는 이른바 detailed balance 조건을 통해 보장된다. 즉,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cpi(x)%20T(y%5Clvert%20x)%20=%20%5Cpi(y)%20T(x%5Clvert%20y)%0A"></p>
+<p>이를 앞서 적은 식의 맥락에서 다시 풀어보자.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ap(%5Ctheta%5Ei%5Clvert%20data)%20p(%5Ctheta%5Ej%5Clvert%20%5Ctheta%5Ei)%20=%20p(%5Ctheta%5Ej%5Clvert%20data)%20p(%5Ctheta%5Ei%5Clvert%20%5Ctheta%5Ej).%0A"></p>
+<p>여기서 <img src="https://latex.codecogs.com/png.latex?%5Ctheta%5Ek">는 마르코프 연쇄 위에서 얻은 <img src="https://latex.codecogs.com/png.latex?%5Ctheta">의 수열을 뜻한다. 정리하면 파라미터의 사후 분포를 수렴 분포로 지니는 마르코프 연쇄의 어떤 밀도 함수(이행 행렬)를 구성하고, 이 밀도 함수가 detailed balance를 만족시키면 되겠다.</p>
+<section id="metropolis-algorithm" class="level3">
+<h3 class="anchored" data-anchor-id="metropolis-algorithm">Metropolis algorithm</h3>
+<ul>
+<li>이행 행렬로 임의의 밀도 함수 <img src="https://latex.codecogs.com/png.latex?Q(%5Ctheta%5Ei%20%5Clvert%20%5Ctheta%5E%7Bi-1%7D)">를 정하자. 이를 밀도함수로 받아들일지 여부를 아래와 같은 확률로 결정한다. 이를 수용확률이라고 부른다.</li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ar%20=%20%5Cmin%20%5Cleft(%20%5Cdfrac%7B%5Cpi(%5Ctheta%5Ei)%7D%7B%5Cpi(%5Ctheta%5E%7Bi-1%7D)%7D,%201%20%5Cright)%0A"></p>
+<ul>
+<li>즉, 이전값(<img src="https://latex.codecogs.com/png.latex?%5Ctheta%5E%7Bi-1%7D">)보다 새로운 값(<img src="https://latex.codecogs.com/png.latex?%5Ctheta%5Ei">)이 더 큰 확률을 주면, 이 밀도함수를 1의 확률로 받아 들인다. 반면 그렇지 않으면 확률의 크기에 따라서 이를 수용한다. 이제 <img src="https://latex.codecogs.com/png.latex?%5Ctheta%5E%7Bi-1%7D%20=%20%5Ctheta%5Ea">에서 <img src="https://latex.codecogs.com/png.latex?%5Ctheta%5Ei%20=%20%5Ctheta%5Eb">, 즉 <img src="https://latex.codecogs.com/png.latex?%5Ctheta%5Ea%20%5Cto%20%5Ctheta%5Eb"> 로 이행할 확률을 구해보자. 만일 <img src="https://latex.codecogs.com/png.latex?%5Cpi(%5Ctheta%5Ea%5Clvert%20data)%20%5Cleq%20%5Cpi(%5Ctheta%5Eb%5Clvert%20data)">라고 해보자.</li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0AP(%5Ctheta%5Ei%20=%20%5Ctheta%5Eb%20%5Clvert%20%20%5Ctheta%5E%7Bi-1%7D%20=%20%5Ctheta%5Ea)%20%20&amp;%20=%20%5Cunderbrace%7B%5Cpi(%5Ctheta%5Ea%20%5Clvert%20%20data)%7D_%7B(%5Cast)%7D%20%5Coverbrace%7BQ(%5Ctheta%5Eb%20%5Clvert%20%20%5Ctheta%5Ea)%20%5Cmin%20%5Cleft(%20%5Cdfrac%7B%5Cpi(%5Ctheta%5Eb%5Clvert%20data)%7D%7B%5Cpi(%5Ctheta_%7Ba%7D%5Clvert%20data)%7D%7B%5Cpi(%5Ctheta%5E%7Ba%7D)%7D,%201%20%5Cright)%7D%5E%7B(%5Cast%5Cast)%7D%20%5C%5C%0A&amp;%20=%20%5Cpi(%5Ctheta%5Ea%5Clvert%20data)%20Q(%5Ctheta%5Eb%5Clvert%20%5Ctheta%5Ea)%20%5Ccdot%201%0A%5Cend%7Baligned%7D%0A"></p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cpi(%5Ctheta%5Ea)">, 즉 <img src="https://latex.codecogs.com/png.latex?(%5Cast)"> 그냥 prior를 통해 쉽게 구할 수 있다. <img src="https://latex.codecogs.com/png.latex?(%5Cast%5Cast)"> 역시 어렵지 않게 구할 수 있다.</li>
+</ul>
+<p>이번에는 detailed balance를 살펴보기 위해서 반대로 <img src="https://latex.codecogs.com/png.latex?%5Ctheta%5Eb%20%5Cto%20%5Ctheta%5Ea">를 구해보자.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0AP(%5Ctheta%5Ei%20=%20%5Ctheta%5Ea%20%5Clvert%20%20%5Ctheta%5E%7Bi-1%7D%20=%20%5Ctheta%5Eb)%20%20&amp;%20=%20%5Cpi(%5Ctheta%5Eb%5Clvert%20data)%20Q(%5Ctheta%5Ea%5Clvert%20%5Ctheta%5Eb)%20%5Cmin%20%5Cleft(%20%5Cdfrac%7B%5Cpi(%5Ctheta%5Ea%5Clvert%20data)%7D%7B%5Cpi(%5Ctheta%5Eb%5Clvert%20data)%7D,%201%20%5Cright)%20%5C%5C%0A&amp;%20=%20%5Cpi(%5Ctheta%5Eb%5Clvert%20data)%20Q(%5Ctheta%5Eb%5Clvert%20%5Ctheta%5Ea)%20%5Ccdot%20%5Cdfrac%7B%5Cpi(%5Ctheta%5Ea%5Clvert%20data)%7D%7B%5Cpi(%5Ctheta%5Eb%5Clvert%20data)%7D%20%5C%5C%0A&amp;%20=%20Q(%5Ctheta%5Ea%5Clvert%20%5Ctheta%5Eb)%20%20%5Cpi(%5Ctheta%5Ea%5Clvert%20data)%0A%5Cend%7Baligned%7D%0A"></p>
+<ul>
+<li>메트로폴리스 알고리듬의 가정 중 하나는 이행 행렬이 대칭이라는 것이다. 즉, <img src="https://latex.codecogs.com/png.latex?Q(%5Ctheta%5Eb%5Clvert%20%5Ctheta%5Ea)%20=%20Q(%5Ctheta%5Ea%5Clvert%20%5Ctheta%5Eb)">. 따라서 detailed balance가 성립한다. <img src="https://latex.codecogs.com/png.latex?%5Cpi(%5Ctheta%5Ea%5Clvert%20data)%20%3E%20%5Cpi(%5Ctheta%5Eb%5Clvert%20data)">인 경우에 대해서도 비슷하게 도출할 수 있다.</li>
+</ul>
+</section>
+<section id="metropolis-hastings-algorithm" class="level3">
+<h3 class="anchored" data-anchor-id="metropolis-hastings-algorithm">Metropolis-Hastings algorithm</h3>
+<ul>
+<li>M-H 알고리듬은 임의의 밀도 함수, 즉 <img src="https://latex.codecogs.com/png.latex?Q(%5Ccdot)">가 대칭이라는 제약도 풀어버린 것이다. 수용 확률 <img src="https://latex.codecogs.com/png.latex?r"> 이 다음과 같이 정의된다.</li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ar%20=%20%5Cmin%20%5Cleft(%20%5Cdfrac%7B%5Cdfrac%7B%5Cpi(%5Ctheta%5Ei%20%5Clvert%20%20data)%7D%7BQ(%5Ctheta%5Ei%5Clvert%20%5Ctheta%5E%7Bi-1%7D)%7D%20%7D%7B%5Cdfrac%7B%5Cpi(%5Ctheta%5E%7Bi-1%7D%20%5Clvert%20%20data)%7D%7BQ(%5Ctheta%5E%7Bi-1%7D%5Clvert%20%5Ctheta%5Ei)%7D%20%7D,%201%20%5Cright)%0A"></p>
+<ul>
+<li>Metropolis 알고리듬의 사례에 제시된 바를 따라가보면 대칭이라는 조건 없이 detailed balance를 만족한다는 사실을 쉽게 계산해볼 수 있다.</li>
+</ul>
+</section>
+</section>
+<section id="toy-code" class="level2">
+<h2 class="anchored" data-anchor-id="toy-code">Toy code</h2>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;"># Computation</span></span>
+<span id="cb1-2"><span class="im" style="color: #00769E;">import</span> scipy <span class="im" style="color: #00769E;">as</span> sp </span>
+<span id="cb1-3"><span class="im" style="color: #00769E;">import</span> scipy.stats <span class="im" style="color: #00769E;">as</span> st </span>
+<span id="cb1-4"><span class="im" style="color: #00769E;">import</span> numpy <span class="im" style="color: #00769E;">as</span> np </span>
+<span id="cb1-5"><span class="co" style="color: #5E5E5E;"># Vis </span></span>
+<span id="cb1-6"><span class="im" style="color: #00769E;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;">as</span> plt </span>
+<span id="cb1-7"><span class="im" style="color: #00769E;">import</span> seaborn <span class="im" style="color: #00769E;">as</span> sns </span>
+<span id="cb1-8"></span>
+<span id="cb1-9"><span class="co" style="color: #5E5E5E;"># Definition </span></span>
+<span id="cb1-10">thetas <span class="op" style="color: #5E5E5E;">=</span> np.linspace(<span class="dv" style="color: #AD0000;">0</span>, <span class="dv" style="color: #AD0000;">1</span>, <span class="dv" style="color: #AD0000;">200</span>)</span>
+<span id="cb1-11">prior <span class="op" style="color: #5E5E5E;">=</span> st.beta(a, b)</span>
+<span id="cb1-12">post <span class="op" style="color: #5E5E5E;">=</span> prior.pdf(thetas) <span class="op" style="color: #5E5E5E;">*</span> st.binom(n, thetas).pmf(h)</span>
+<span id="cb1-13">post <span class="op" style="color: #5E5E5E;">/=</span> (post.<span class="bu" style="color: null;">sum</span>() <span class="op" style="color: #5E5E5E;">/</span> <span class="bu" style="color: null;">len</span>(thetas))</span>
+<span id="cb1-14"></span>
+<span id="cb1-15"><span class="co" style="color: #5E5E5E;"># Func for metropolis algorithm </span></span>
+<span id="cb1-16"><span class="kw" style="color: #003B4F;">def</span> target(lik, prior, n, h, theta):</span>
+<span id="cb1-17">    <span class="cf" style="color: #003B4F;">if</span> theta <span class="op" style="color: #5E5E5E;">&lt;</span> <span class="dv" style="color: #AD0000;">0</span> <span class="kw" style="color: #003B4F;">or</span> theta <span class="op" style="color: #5E5E5E;">&gt;</span> <span class="dv" style="color: #AD0000;">1</span>:</span>
+<span id="cb1-18">        <span class="cf" style="color: #003B4F;">return</span> <span class="dv" style="color: #AD0000;">0</span></span>
+<span id="cb1-19">    <span class="cf" style="color: #003B4F;">else</span>:</span>
+<span id="cb1-20">        <span class="cf" style="color: #003B4F;">return</span> lik(n, theta).pmf(h)<span class="op" style="color: #5E5E5E;">*</span>prior.pdf(theta)</span>
+<span id="cb1-21"></span>
+<span id="cb1-22"><span class="co" style="color: #5E5E5E;"># Parameters </span></span>
+<span id="cb1-23">n <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">100</span></span>
+<span id="cb1-24">h <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">61</span></span>
+<span id="cb1-25">a <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">10</span></span>
+<span id="cb1-26">b <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">10</span></span>
+<span id="cb1-27">lik <span class="op" style="color: #5E5E5E;">=</span> st.binom</span>
+<span id="cb1-28">prior <span class="op" style="color: #5E5E5E;">=</span> st.beta(a, b)</span>
+<span id="cb1-29">sigma <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.3</span></span>
+<span id="cb1-30">naccept <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">0</span></span>
+<span id="cb1-31">theta <span class="op" style="color: #5E5E5E;">=</span> <span class="fl" style="color: #AD0000;">0.1</span></span>
+<span id="cb1-32">niters <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">10000</span></span>
+<span id="cb1-33">samples <span class="op" style="color: #5E5E5E;">=</span> np.zeros(niters<span class="op" style="color: #5E5E5E;">+</span><span class="dv" style="color: #AD0000;">1</span>)</span>
+<span id="cb1-34">samples[<span class="dv" style="color: #AD0000;">0</span>] <span class="op" style="color: #5E5E5E;">=</span> theta</span>
+<span id="cb1-35"></span>
+<span id="cb1-36"><span class="co" style="color: #5E5E5E;"># Iteraton </span></span>
+<span id="cb1-37"><span class="cf" style="color: #003B4F;">for</span> i <span class="kw" style="color: #003B4F;">in</span> <span class="bu" style="color: null;">range</span>(niters):</span>
+<span id="cb1-38">    theta_p <span class="op" style="color: #5E5E5E;">=</span> theta <span class="op" style="color: #5E5E5E;">+</span> st.norm(<span class="dv" style="color: #AD0000;">0</span>, sigma).rvs()</span>
+<span id="cb1-39">    rho <span class="op" style="color: #5E5E5E;">=</span> <span class="bu" style="color: null;">min</span>(<span class="dv" style="color: #AD0000;">1</span>, target(lik, prior, n, h, theta_p)<span class="op" style="color: #5E5E5E;">/</span>target(lik, prior, n, h, theta ))</span>
+<span id="cb1-40">    u <span class="op" style="color: #5E5E5E;">=</span> np.random.uniform()</span>
+<span id="cb1-41">    <span class="cf" style="color: #003B4F;">if</span> u <span class="op" style="color: #5E5E5E;">&lt;</span> rho:</span>
+<span id="cb1-42">        naccept <span class="op" style="color: #5E5E5E;">+=</span> <span class="dv" style="color: #AD0000;">1</span></span>
+<span id="cb1-43">        theta <span class="op" style="color: #5E5E5E;">=</span> theta_p</span>
+<span id="cb1-44">    samples[i<span class="op" style="color: #5E5E5E;">+</span><span class="dv" style="color: #AD0000;">1</span>] <span class="op" style="color: #5E5E5E;">=</span> theta</span>
+<span id="cb1-45">nmcmc <span class="op" style="color: #5E5E5E;">=</span> <span class="bu" style="color: null;">len</span>(samples)<span class="op" style="color: #5E5E5E;">//</span><span class="dv" style="color: #AD0000;">2</span></span>
+<span id="cb1-46"><span class="bu" style="color: null;">print</span> (<span class="ss" style="color: #20794D;">f"Efficiency = </span><span class="sc" style="color: #5E5E5E;">{</span>naccept<span class="op" style="color: #5E5E5E;">/</span>niters<span class="sc" style="color: #5E5E5E;">}</span><span class="ss" style="color: #20794D;">"</span>)</span></code></pre></div>
+<p>코드에 관한 설명은 간략하게 하겠다. 코드의 출처는 <a href="https://people.duke.edu/~ccc14/sta-663/MCMC.html">여기</a>를 참고하라. 진행은 다음과 같다. 이 코드는 다음과 같은 베타 분포, <img src="https://latex.codecogs.com/png.latex?%5Cbeta(a,%20b)">를 사전 확률로 지닌다. 사후 확률은 사전 확률의 pdf와 이항 분포 <img src="https://latex.codecogs.com/png.latex?B(n,%20p)">의 pmf를 곱이 사후 확률의 분자가 된다. 식에서 <img src="https://latex.codecogs.com/png.latex?p%20=%20h%20/%20n">으로 두면 된다. 이때 사후 분포의 근사치를 어떻게 만들어낼 것인가?</p>
+<ul>
+<li>사전 분포 <img src="https://latex.codecogs.com/png.latex?%5Cbeta(a,%20b)">를 잡는다.</li>
+<li>우도는 이항분포의 pmf를 활용한다. 이때 <img src="https://latex.codecogs.com/png.latex?n">, <img src="https://latex.codecogs.com/png.latex?h">의 값이 필요하다.</li>
+<li>아래와 같은 실행을 10,000 번의 실행을 반복한다.
+<ul>
+<li>최초의 theta는 0.1로 둔다.</li>
+<li>임의의 theta 값을 정규 분포값에서 생성해낸다.<br>
+</li>
+<li>metropolis 알고리듬에 따라서 이 값과 최초의 theta 혹은 바로 전에 생성된 theta, 두 값을 평가한다. 평가는 극도로 단순한 방식으로 진행된다. 각기 다음 상태로 넘어갈 확률은 전기의 파라미터에만 의존한다.</li>
+</ul></li>
+</ul>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/math-of/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/mcmc/fig_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p>위 시각화의 코드는 다음과 같다.</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1">post <span class="op" style="color: #5E5E5E;">=</span> st.beta(h<span class="op" style="color: #5E5E5E;">+</span>a, n<span class="op" style="color: #5E5E5E;">-</span>h<span class="op" style="color: #5E5E5E;">+</span>b)</span>
+<span id="cb2-2"></span>
+<span id="cb2-3">plt.figure(figsize<span class="op" style="color: #5E5E5E;">=</span>(<span class="dv" style="color: #AD0000;">12</span>, <span class="dv" style="color: #AD0000;">9</span>))</span>
+<span id="cb2-4">plt.hist(samples[nmcmc:], <span class="dv" style="color: #AD0000;">40</span>, histtype<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'step'</span>, density<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>, linewidth<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">1</span>, label<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'Distribution of posterior samples'</span>)<span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb2-5">plt.hist(prior.rvs(nmcmc), <span class="dv" style="color: #AD0000;">40</span>, histtype<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'step'</span>, density<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>, linewidth<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">1</span>, label<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'Distribution of prior samples'</span>)<span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb2-6">plt.plot(thetas, post.pdf(thetas), c<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'red'</span>, linestyle<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'--'</span>, alpha<span class="op" style="color: #5E5E5E;">=</span><span class="fl" style="color: #AD0000;">0.5</span>, label<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'True posterior'</span>)</span>
+<span id="cb2-7">plt.xlim([<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">1</span>])<span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb2-8">plt.legend(loc<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'best'</span>)<span class="op" style="color: #5E5E5E;">;</span></span></code></pre></div>
+<p>그림에서 보듯이 MCMC가 사후 확률을 잘 따라가고 있다. MCMC는 정말로 잘 수렴할까? 즉, 이론대로 어떤 파라미터에서 출발하더라도 비슷한 분포로 수렴할까? 분포의 수렴은 수치적으로는 따지기 쉽지 않은 개념이다. 느낌만 보도록 하자. 아래에서 보면, 초기값이 관계 없이 모든 값에서 사후 분포에 수렴하는 것을 확인할 수 있다. 즉, <img src="https://latex.codecogs.com/png.latex?x"> 축에 표시된 반복 횟수가 일정 수준을 넘어서면 모든 마르코프 연쇄가 사후 분포 범위 안에서 움직이고 있다.</p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/math-of/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/mcmc/fig_3.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 
 
 </section>
 
  ]]></description>
-  <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tools/2020-03-09-Streamlit-Heroku.html</guid>
-  <pubDate>Sun, 08 Mar 2020 15:00:00 GMT</pubDate>
-  <media:content url="https://t3.ftcdn.net/jpg/03/67/94/46/240_F_367944626_tkPR8g1rZihc0ql5WpJhDYffS3nTfKqP.jpg" medium="image" type="image/jpeg"/>
+  <category>math-of</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/math-of/2020-07-03-bayesian-inference.html</guid>
+  <pubDate>Thu, 02 Jul 2020 15:00:00 GMT</pubDate>
+  <media:content url="https://d2r55xnwy6nx47.cloudfront.net/uploads/2021/03/Perfect-Number_2880_Lede.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>

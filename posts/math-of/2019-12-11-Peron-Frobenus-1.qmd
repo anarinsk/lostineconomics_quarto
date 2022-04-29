@@ -288,7 +288,7 @@ $$\begin{bmatrix} 1.0& 0.0& 0.0 \\0.1& 0.8& 0.1\\ 0.0& 0.2& 0.8 \end{bmatrix}$$
 
 $$\begin{bmatrix} 0& 1& 0 \\0& 0& 1\\ 1& 0& 0 \end{bmatrix}$$
 
-<p align="center"><kbd> <img src="https://python.quantecon.org/_static/lecture_specific/finite_markov/mc_aperiodicity1.png" width="400"> </kbd></p>
+![](https://python.quantecon.org/_static/lecture_specific/finite_markov/mc_aperiodicity1.png){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;" }
 
 각 상태가 일정한 간격으로 존재하게 된다. 즉, 
 

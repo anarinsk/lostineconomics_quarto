@@ -1,12 +1,13 @@
 ---
-layout: post
-toc: true
-comments: true
 title: Perron-Frobenius Theorem, part 2
-description: P-F의 정리를 활용해 투입-산출 모형을 살펴보자 
-categories: [math,  matrix-theory]
-
+description: 페론-프로베니우스 정리 살펴보기  
+author: "JS HUHH"
+date: "12/20/2019"
+image: "https://d2r55xnwy6nx47.cloudfront.net/uploads/2021/03/Perfect-Number_2880_Lede.jpg"
+categories: [math-of]
+#margin-header: subscribe.html
 ---
+
 
 ## Input-out Model 
 
@@ -176,7 +177,7 @@ $$
 
 먼저 1과 2가 동치임을 증명해보자. 
 
-### 1 &rarr; 2 
+### Sufficiency (1 &rarr; 2) 
 
 A가 생산적 행렬이며, Lemma 4에 의해서 $(I-A)^{-1}$이 존재함을 알 수 있다. 
 
@@ -212,7 +213,7 @@ $$
 (I-A)^{-1} \geq 0
 $$
 
-### 1 &larr; 2 
+### Necessity (1 &larr; 2) 
 
 $(I-A)^{-1} \geq 0$가 성립한다고 하자. 임의의 $d > 0$를 잡으면 $x = (I-A)^{-1} d \geq 0$ 가 성립한다. 이때, 
 
@@ -292,8 +293,6 @@ $$
 
 아이겐벡터는 스케일링이 가능하다. 즉, 가격 벡터는 다루기 편한 방식으로 정규화화면 된다.[^1]
 
-[^1]: 통상적인 경우 임의의 재화 하나의 가격을 1로 둔다. 이런 재화를 단위재(numeraire)라고 부른다. 
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMTE1NTc1Ml19
--->
+:::{.column-margin}
+통상적인 경우 임의의 재화 하나의 가격을 1로 둔다. 이런 재화를 단위재(numeraire)라고 부른다. 
+:::
