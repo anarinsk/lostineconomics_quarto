@@ -171,9 +171,9 @@ ul.task-list{list-style: none;}
 </ul>
 <p>이제 웹페이지 <span class="math inline">\(i\)</span>의 Broken Rank <span class="math inline">\(p_i\)</span>은 다음과 같다.</p>
 <p><span class="math display">\[
-p_i = \sum_{j \to i} \dfrac{p_j}{m_j} = \sum_{k=1}^{n}L_{ij}\dfrac{p_{j}}{m_j}
+p_i = \sum_{j \to i} \dfrac{p_j}{m_j} = \sum_{k=1}^{n}L_{ik}\dfrac{p_{k}}{m_k}
 \]</span></p>
-<p>즉, <span class="math inline">\(i\)</span> 웹사이트의 ’Broken Rank’는 <span class="math inline">\(i\)</span>로 연결된 페이지들의 Broken Rank에 의해 정해진다. 이를 계산하는 방법은 다음과 같다. 해당 페이지들의 Broken Rank가 높을수록 나의 랭크도 높아진다. 해당 페이지가 더 많은 링크를 가질수록 그 Broken Rank는 낮게 평가된다. <span class="math inline">\(m_j\)</span>로 나눠진 부분이 이를 반영한다.</p>
+<p><span class="math inline">\(i\)</span> 웹사이트의 ’Broken Rank’는 <span class="math inline">\(i\)</span>로 연결된 페이지들의 Broken Rank에 의해 정해진다. 이를 계산하는 방법은 다음과 같다. 해당 페이지들의 Broken Rank가 높을수록 나의 랭크도 높아진다. 해당 페이지가 더 많은 링크를 가질수록 그 Broken Rank는 낮게 평가된다. <span class="math inline">\(m_j\)</span>로 나눠진 부분이 이를 반영한다.</p>
 <p>여기서 왜 굳이 “broken”이라는 표현을 썼는지는 잠시 후에 나오니 조금만 기다려주시라.</p>
 <section id="broken-rank-as-matrix" class="level3">
 <h3 class="anchored" data-anchor-id="broken-rank-as-matrix">Broken rank as matrix</h3>
@@ -236,7 +236,7 @@ p = [\dfrac{1}{3}, \dfrac{1}{3} , \dfrac{1}{3} , 0, 0 ] \text{~or~} p = [0, 0, 0
 <p>마르코프 체인을 다루는 분석에서 이런 경우는 종종 생길 수 있다. 이를 해결하는 가장 쉬운 방법은 어떤 상태에 고착되어 벗어날 수 없을 때, 벗어날 수 있는 어떤 기제를 마련해주는 것이다. 예를 들어, 플레이어가 일정한 확률로 실수를 하게 허용한다거나 하는 이론적인 장치가 많이 활용된다.</p>
 <p>페이지랭크 역시 비슷한 해법을 모델에 넣었다. 링크가 없더라도 일정한 확률로 다른 모든 링크로 넘어갈 확률을 임의로 부여하는 것이다. 이를 반영한 페이지랭크의 정의는 아래와 같다.</p>
 <p><span class="math display">\[
-p_i = \overset{(A)}{\dfrac{1-d}{n}} + \overset{(B)}{\vphantom{\dfrac{1-d}{n}} d \sum_{j \to i} \dfrac{p_j}{m_j}} =  \dfrac{1-d}{n}  + d \sum_{k=1}^{n}L_{ij}\dfrac{p_{j}}{m_j}
+p_i = \overset{(A)}{(1-d)\dfrac{1}{n}} + \overset{(B)}{\vphantom{\dfrac{1-d}{n}} d \cdot \sum_{j \to i} \dfrac{p_j}{m_j}} =  \dfrac{1-d}{n}  + d \sum_{k=1}^{n}L_{ij}\dfrac{p_{j}}{m_j}
 \]</span></p>
 <p><span class="math inline">\(d\)</span>는 어떤 사이트에서 링크가 존재하는 다른 사이트로 옮겨갈 확률을 의미한다. 따라서 <span class="math inline">\((1-d)\)</span>는 링크 유무와 관계 없이 <span class="math inline">\(n\)</span> 개의 사이트 중 임의의 다른 사이트로 옮겨갈 확률이다.</p>
 <ul>
@@ -260,13 +260,9 @@ p_{t+1} = \overbrace{\left( \dfrac{1-d}{n} \boldsymbol{1}_n + d L M^{-1} \right)
 </section>
 <section id="reference" class="level2">
 <h2 class="anchored" data-anchor-id="reference">Reference</h2>
-<p><a id="page">Page, Larry</a>, “The PageRank Citation Ranking: Bringing Order to the Web,” <a href="http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf">http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf</a>. <a href="#page-ref">↩︎</a></p>
+<p>Page, Larry, “The PageRank Citation Ranking: Bringing Order to the Web,” <a href="http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf">http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf</a>. <a href="#page-ref">↩︎</a></p>
 <p>Tibshirani, Ryan, “PageRank,”<br>
 <a href="https://www.stat.cmu.edu/~ryantibs/datamining/lectures/03-pr.pdf">https://www.stat.cmu.edu/~ryantibs/datamining/lectures/03-pr.pdf</a>.</p>
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNDM4ODI2NywtNDk3NDU2ODUzLC0yMT
-I2MjIyNzU4XX0=
--->
 
 
 </section>

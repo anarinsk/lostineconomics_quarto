@@ -30,10 +30,10 @@ categories: [math-of]
 이제 웹페이지 $i$의 Broken Rank $p_i$은 다음과 같다. 
 
 $$
-p_i = \sum_{j \to i} \dfrac{p_j}{m_j} = \sum_{k=1}^{n}L_{ij}\dfrac{p_{j}}{m_j}
+p_i = \sum_{j \to i} \dfrac{p_j}{m_j} = \sum_{k=1}^{n}L_{ik}\dfrac{p_{k}}{m_k}
 $$
 
-즉, $i$ 웹사이트의 'Broken Rank'는 $i$로 연결된 페이지들의 Broken Rank에 의해 정해진다. 이를 계산하는 방법은 다음과 같다. 해당 페이지들의 Broken Rank가 높을수록 나의 랭크도 높아진다. 해당 페이지가 더 많은 링크를 가질수록 그 Broken Rank는 낮게 평가된다. $m_j$로 나눠진 부분이 이를 반영한다. 
+$i$ 웹사이트의 'Broken Rank'는 $i$로 연결된 페이지들의 Broken Rank에 의해 정해진다. 이를 계산하는 방법은 다음과 같다. 해당 페이지들의 Broken Rank가 높을수록 나의 랭크도 높아진다. 해당 페이지가 더 많은 링크를 가질수록 그 Broken Rank는 낮게 평가된다. $m_j$로 나눠진 부분이 이를 반영한다. 
 
 여기서 왜 굳이 "broken"이라는 표현을 썼는지는 잠시 후에 나오니 조금만 기다려주시라.
 
@@ -114,7 +114,7 @@ $$
 페이지랭크 역시 비슷한 해법을 모델에 넣었다. 링크가 없더라도 일정한 확률로 다른 모든 링크로 넘어갈 확률을 임의로 부여하는 것이다. 이를 반영한 페이지랭크의 정의는 아래와 같다. 
 
 $$
-p_i = \overset{(A)}{\dfrac{1-d}{n}} + \overset{(B)}{\vphantom{\dfrac{1-d}{n}} d \sum_{j \to i} \dfrac{p_j}{m_j}} =  \dfrac{1-d}{n}  + d \sum_{k=1}^{n}L_{ij}\dfrac{p_{j}}{m_j}
+p_i = \overset{(A)}{(1-d)\dfrac{1}{n}} + \overset{(B)}{\vphantom{\dfrac{1-d}{n}} d \cdot \sum_{j \to i} \dfrac{p_j}{m_j}} =  \dfrac{1-d}{n}  + d \sum_{k=1}^{n}L_{ij}\dfrac{p_{j}}{m_j}
 $$ 
 
 $d$는 어떤 사이트에서 링크가 존재하는 다른 사이트로 옮겨갈 확률을 의미한다. 따라서 $(1-d)$는 링크 유무와 관계 없이 $n$ 개의 사이트 중 임의의 다른 사이트로 옮겨갈 확률이다. 
@@ -148,12 +148,7 @@ $\boldsymbol{1}_n$은 모든 원소가 1인 $n \times n$ 행렬이다. $(*)$은 
 
 ## Reference 
 
-<a id="page">Page, Larry</a>, "The PageRank Citation Ranking: Bringing Order to the Web," [http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf](http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf). [↩︎](#page-ref)
+Page, Larry, "The PageRank Citation Ranking: Bringing Order to the Web," [http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf](http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf). [↩︎](#page-ref)
 
 Tibshirani, Ryan, "PageRank,"  
 [https://www.stat.cmu.edu/~ryantibs/datamining/lectures/03-pr.pdf](https://www.stat.cmu.edu/~ryantibs/datamining/lectures/03-pr.pdf).
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNDM4ODI2NywtNDk3NDU2ODUzLC0yMT
-I2MjIyNzU4XX0=
--->
