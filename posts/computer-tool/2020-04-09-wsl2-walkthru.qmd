@@ -3,7 +3,7 @@ title:  wsl 2, a walk-thru
 description: wsl 2의 열기를 느껴보아요!
 author: "JS HUHH"
 date: "04/09/2020"
-image: "https://t3.ftcdn.net/jpg/03/67/94/46/240_F_367944626_tkPR8g1rZihc0ql5WpJhDYffS3nTfKqP.jpg"
+image: "https://blog.kakaocdn.net/dn/r101a/btrfoS8HzZ5/7Upmj62FYdW6AFxStfFkv0/img.jpg"
 categories: [computer-tool]
 #margin-header: subscribe.html
 ---
