@@ -3,7 +3,7 @@ title:  Streamlit + Heroku
 description: python 만으로 웹 앱을 만들어보자  
 author: "JS HUHH"
 date: "03/09/2020"
-image: "https://t3.ftcdn.net/jpg/03/67/94/46/240_F_367944626_tkPR8g1rZihc0ql5WpJhDYffS3nTfKqP.jpg"
+image: "https://www.developer-tech.com/wp-content/uploads/sites/3/2021/10/windows-subsystem-for-linux-wsl-microsoft.png"
 categories: [computer-tool]
 #margin-header: subscribe.html
 ---
