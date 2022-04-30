@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/econ-simple/gdp-import.html",
       "/posts/git/2022-04-27-happy-giting.html",
       "/posts/container/k8s-personally.html",
       "/posts/computer-tool/2021-11-19-python-in-github.html",
