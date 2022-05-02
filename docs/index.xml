@@ -9,7 +9,7 @@
 <link>https://anarinsk.github.io/lostineconomics_quarto/index.html</link>
 <atom:link href="https://anarinsk.github.io/lostineconomics_quarto/index.xml" rel="self" type="application/rss+xml"/>
 <description>Another useless blog</description>
-<generator>quarto-0.9.309</generator>
+<generator>quarto-0.9.312</generator>
 <lastBuildDate>Thu, 28 Apr 2022 15:00:00 GMT</lastBuildDate>
 <item>
   <title>수입은 GDP에 영향을 주는가?</title>
@@ -63,7 +63,7 @@
 <p><img src="https://latex.codecogs.com/png.latex?%0A(C_d%20+%20I_d%20+%20G_d)%20+%20%5Coverbrace%7B(C_m%20+%20I_m%20+%20G_m)%7D%5E%7BM%7D%20+%20X%20-%20M%0A"></p>
 <p>정의상 <img src="https://latex.codecogs.com/png.latex?C_m%20+%20I_m%20+%20G_m%20=%20M">이 되기 때문에 M이 늘고 주는 것은 GDP에 아무런 영향을 주지 않는다. GDP를 측정하기 위한 회계상의 이유로 <img src="https://latex.codecogs.com/png.latex?M">이 들어간 것이지 <img src="https://latex.codecogs.com/png.latex?M">의 변화가 독자적으로 GDP를 변화시키지는 않는다.</p>
 </section>
-<section id="다른-주장" class="level2">
+<section id="다른-주장" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="다른-주장">다른 주장</h2>
 <p>Noahpinion에서 예시했듯이 이렇게 볼 수도 있을 것이다.</p>
 <blockquote class="blockquote">
@@ -73,7 +73,10 @@
 <p>미국의 GDP, 수입 증가율 변화 <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=OHlj&amp;width=670&amp;height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy"></iframe></p>
 <p>한국의 GDP, 수입 증가율 변화 <iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=OHln&amp;width=670&amp;height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowtransparency="true" loading="lazy"></iframe></p>
 <p>다음은 논리의 차원이다. 무역은 비교우위의 원리에 따라서 발생한다. 즉, 해외에서 어떤 제품을 수입했다면 그것이 국내 생산보다 경쟁력이 있기 때문이다. 중국산을 막고 이를 한국산으로 대체했다면 해당 제품을 생산하는 기업의 매출이 증가하고 이는 GDP 증가에 기여할 것이다. 하지만 해당 제품의 수입을 통해서 누리던 효율성이 사라지면서 GDP를 감소시키게 된다. GDP 증가와 감소 중 어느 쪽이 더 클지 미리 정할 수는 없다. 수입이 효율성의 논리에 의해 결정된 것이라면 인위적인 수입대체는 GDP를 감소시키게 될 것이다(자중손실).</p>
-</section>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>이는 일국의 ‘총량적인’ 차원에서 하는 이야기라는 점을 지적해두겠다. 예를 들어 무역이 고용이 미치는 영향은 경제적 후생(소비자 잉여 + 생산자 잉여)만으로 판단하기에는 보다 미묘하다. 예를 들어 중국산 철강 때문에 미국 러스트 벨트의 고용이 대체되었다고 하자. 이것이 총량적으로 효율성의 증가라고 해도, 고용과 실업 차원에서는 구성의 큰 변화가 발생한다. 적어도 경제원론 차원에서는 총량적인 효율성을 추구하고 이러한 변화에 따른 자원 배분은 어떤 주체(국가)가 임의로 달성할 수 있다고 가정하는 경향이 있다. 물론 오늘날의 보다 현실적이고 정교한 경제학은 이렇게 생각하지 않는다.</p>
+</div></div></section>
 <section id="참고" class="level2">
 <h2 class="anchored" data-anchor-id="참고">참고</h2>
 <p>Noahpinion, <a href="https://noahpinion.substack.com/p/imports-do-not-subtract-from-gdp?s=r">Imports do not subtract from GDP</a></p>
