@@ -4,14 +4,7 @@
     "href": "posts/math-of/2019-12-20-Peron-Frobenius-2.html",
     "title": "Perron-Frobenius Theorem, part 2",
     "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/math-of/2019-12-20-Peron-Frobenius-2.html#input-out-model",
-    "href": "posts/math-of/2019-12-20-Peron-Frobenius-2.html#input-out-model",
-    "title": "Perron-Frobenius Theorem, part 2",
-    "section": "Input-out Model",
-    "text": "Input-out Model\n\nModel\n투입-산출 모형을 생각해보자. \\(a_{ij}\\)는 \\(j\\) 재화 1 단위를 생산하는 데 필요한 \\(i\\) 재화의 양, 이라고 하자. 이렇게 되면, 열 벡터 \\(A_j\\)는 아래과 같다. 그 의미는 \\(j\\) 재화 1단위를 생산하는 데 필요한 \\(1, \\dotsc, n\\) 까지 필요한 재화의 양이다.\n\\[\nA_j =\n\\begin{bmatrix}\na_{1j} \\\\\n\\vdots \\\\\na_{nj}\n\\end{bmatrix}\n\\]\n여기서 두 가지를 더 가정하겠다.\n\n투입을 \\(k\\) 배로 하면, 산출도 \\(k\\) 배가 된다. 이를 규모수익불변(constant return to scale)이라고 한다.\n각 재화 생산은 다른 재화 생산에 영향을 주지 않는다.\n\n이제 \\(j\\) 재화를 \\(x_j\\) 만큼 생산하는 데 필요한 투입량은 \\(x_j A_j\\)가 된다. 생산하려는 생산량을 \\(x_1, \\dotsc, x_n\\)이라고 하면 충 투입 벡터는 아래와 같다.\n\\[\nx_1 A_1 + \\dotsc + x_n A_n = A x,~\\text{where $x = [x_1, \\cdots, x_n]^T$}\n\\]\n\n\nProductive economy\n생산물 벡터 \\(x\\)를 생산하는 데 투입 벡터 \\(Ax\\)가 필요하다면 순 생산물 벡터는 아래와 같다.\n\\[\nx - Ax = (I-A)x\n\\]\n순생산물 벡터 \\(b\\)를 얻게 위해서는 아래의 식이 성립해야 한다.\n\\[\n(I-A) x = b\n\\]\n만일 \\((I-A)\\)가 가역이라면 유일한 해 \\(x\\)가 존재하게 된다. 문제는 \\(x \\geq 0\\)를 보장할 수 있는지, 이다. 즉, 어떤 경제가 생산적이라는 정의는 아래와 같다.\n\\[\nx = (I-A)^{-1} b \\geq 0\n\\]\n\n\nProductive matrix\n원래 바실리 레온티에프 (동지?)가 제시했던 생산적인 행렬 \\(A\\)의 정의는 살짝 더 엄격하다. 원래 \\(A\\)의 정의는 다음과 같다.\n\\((I- A)x > 0\\)을 만족하는 비음의 벡터 \\(x\\)가 존재할 때, \\(A\\)를 생산적 매트릭스 혹은 레온티에프 메트릭스라고 정의한다. 이 정의는 매우 중요하다. 이후의 조건에서 결정적으로 활용되니 잘 기억해두도록 하자.\n잘 생각해보면 경제적인 의미가 있다. 뒤에 다시 나오겠지만, \\(A x\\)는 어떤 의미를 지닐까? 원하는 생산량이 \\(x\\)라면 이에 필요한 투입량이 \\(Ax\\)다. 즉, \\(x - Ax\\)란 다음 기 (목표) 산출에서 이를 위해 필요한 이번 기 투입 산출을 뺀 것이다. 이 값이 양이어야 한다는 것이다. 이 값이 음이라면 생산적이지 못한 것이다. 만일 \\(\\boldsymbol{0}\\) 벡터라면 연속적인 생산이 불가능한 상태가 된다."
+    "text": "투입-산출 모형을 생각해보자. \\(a_{ij}\\)는 \\(j\\) 재화 1 단위를 생산하는 데 필요한 \\(i\\) 재화의 양, 이라고 하자. 이렇게 되면, 열 벡터 \\(A_j\\)는 아래과 같다. 그 의미는 \\(j\\) 재화 1단위를 생산하는 데 필요한 \\(1, \\dotsc, n\\) 까지 필요한 재화의 양이다.\n\\[\nA_j =\n\\begin{bmatrix}\na_{1j} \\\\\n\\vdots \\\\\na_{nj}\n\\end{bmatrix}\n\\]\n여기서 두 가지를 더 가정하겠다.\n\n투입을 \\(k\\) 배로 하면, 산출도 \\(k\\) 배가 된다. 이를 규모수익불변(constant return to scale)이라고 한다.\n각 재화 생산은 다른 재화 생산에 영향을 주지 않는다.\n\n이제 \\(j\\) 재화를 \\(x_j\\) 만큼 생산하는 데 필요한 투입량은 \\(x_j A_j\\)가 된다. 생산하려는 생산량을 \\(x_1, \\dotsc, x_n\\)이라고 하면 충 투입 벡터는 아래와 같다.\n\\[\nx_1 A_1 + \\dotsc + x_n A_n = A x,~\\text{where $x = [x_1, \\cdots, x_n]^T$}\n\\]\n\n\n\n생산물 벡터 \\(x\\)를 생산하는 데 투입 벡터 \\(Ax\\)가 필요하다면 순 생산물 벡터는 아래와 같다.\n\\[\nx - Ax = (I-A)x\n\\]\n순생산물 벡터 \\(b\\)를 얻게 위해서는 아래의 식이 성립해야 한다.\n\\[\n(I-A) x = b\n\\]\n만일 \\((I-A)\\)가 가역이라면 유일한 해 \\(x\\)가 존재하게 된다. 문제는 \\(x \\geq 0\\)를 보장할 수 있는지, 이다. 즉, 어떤 경제가 생산적이라는 정의는 아래와 같다.\n\\[\nx = (I-A)^{-1} b \\geq 0\n\\]\n\n\n\n원래 바실리 레온티에프 (동지?)가 제시했던 생산적인 행렬 \\(A\\)의 정의는 살짝 더 엄격하다. 원래 \\(A\\)의 정의는 다음과 같다.\n\\((I- A)x > 0\\)을 만족하는 비음의 벡터 \\(x\\)가 존재할 때, \\(A\\)를 생산적 매트릭스 혹은 레온티에프 메트릭스라고 정의한다. 이 정의는 매우 중요하다. 이후의 조건에서 결정적으로 활용되니 잘 기억해두도록 하자.\n잘 생각해보면 경제적인 의미가 있다. 뒤에 다시 나오겠지만, \\(A x\\)는 어떤 의미를 지닐까? 원하는 생산량이 \\(x\\)라면 이에 필요한 투입량이 \\(Ax\\)다. 즉, \\(x - Ax\\)란 다음 기 (목표) 산출에서 이를 위해 필요한 이번 기 투입 산출을 뺀 것이다. 이 값이 양이어야 한다는 것이다. 이 값이 음이라면 생산적이지 못한 것이다. 만일 \\(\\boldsymbol{0}\\) 벡터라면 연속적인 생산이 불가능한 상태가 된다."
   },
   {
     "objectID": "posts/math-of/2019-12-20-Peron-Frobenius-2.html#hawkins-simon-condition",
@@ -39,14 +32,7 @@
     "href": "posts/math-of/2019-05-06-math-svm.html",
     "title": "Mathematics of Support Vector Machine",
     "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/math-of/2019-05-06-math-svm.html#key-questions",
-    "href": "posts/math-of/2019-05-06-math-svm.html#key-questions",
-    "title": "Mathematics of Support Vector Machine",
-    "section": "Key Questions",
-    "text": "Key Questions\n\nSupport Vector Machine (SVM)의 알고리듬을 수학적으로 어떻게 도출할 수 있을까?\n보다 직관적으로 이해할 수 있는 방법은 없을까?"
+    "text": "Support Vector Machine (SVM)의 알고리듬을 수학적으로 어떻게 도출할 수 있을까?\n보다 직관적으로 이해할 수 있는 방법은 없을까?"
   },
   {
     "objectID": "posts/math-of/2019-05-06-math-svm.html#key-synopsis",
@@ -95,14 +81,7 @@
     "href": "posts/math-of/2019-12-24-PageRank.html",
     "title": "PageRank as Markov Chain",
     "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/math-of/2019-12-24-PageRank.html#tldr",
-    "href": "posts/math-of/2019-12-24-PageRank.html#tldr",
-    "title": "PageRank as Markov Chain",
-    "section": "tl;dr",
-    "text": "tl;dr\n\n페이지와 브린이 창안한 페이지랭크 알고리듬은 수학적으로 보면 마르코프 체인의 극한 분포다."
+    "text": "페이지와 브린이 창안한 페이지랭크 알고리듬은 수학적으로 보면 마르코프 체인의 극한 분포다."
   },
   {
     "objectID": "posts/math-of/2019-12-24-PageRank.html#pagerank",
@@ -137,14 +116,7 @@
     "href": "posts/math-of/2019-12-11-Peron-Frobenus-1.html",
     "title": "Perron-Frobenius Theorem, part 1",
     "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/math-of/2019-12-11-Peron-Frobenus-1.html#tldr",
-    "href": "posts/math-of/2019-12-11-Peron-Frobenus-1.html#tldr",
-    "title": "Perron-Frobenius Theorem, part 1",
-    "section": "tl;dr",
-    "text": "tl;dr\n\n정칙 행렬(regular matrix)의 경우 페론-프로베니우스의 정리는 아이겐밸류와 아이겐벡터에 관해서 강력한 조건을 걸어준다.\n정칙 행렬의 경우 가장 큰 양의 유일한 실수 아이겐밸류가 존재하며, 이 값에 상응하는 아이겐벡터는 양이다.\n이 정리를 쓸모 있게 활용할 수 있는 사례는 마르코프 체인의 극한 분포다. 이때 가장 큰 아이겐밸류는 1이 되며, 좌 아이겐벡터와 우 아이겐벡터를 활용해 마르코프 과정의 극한 분포를 아이겐벡터로 손쉽게 구할 수 있다."
+    "text": "정칙 행렬(regular matrix)의 경우 페론-프로베니우스의 정리는 아이겐밸류와 아이겐벡터에 관해서 강력한 조건을 걸어준다.\n정칙 행렬의 경우 가장 큰 양의 유일한 실수 아이겐밸류가 존재하며, 이 값에 상응하는 아이겐벡터는 양이다.\n이 정리를 쓸모 있게 활용할 수 있는 사례는 마르코프 체인의 극한 분포다. 이때 가장 큰 아이겐밸류는 1이 되며, 좌 아이겐벡터와 우 아이겐벡터를 활용해 마르코프 과정의 극한 분포를 아이겐벡터로 손쉽게 구할 수 있다."
   },
   {
     "objectID": "posts/math-of/2019-12-11-Peron-Frobenus-1.html#definitions",
@@ -207,14 +179,7 @@
     "href": "posts/math-of/2020-07-03-bayesian-inference.html",
     "title": "Bayesian Inference with MCMC",
     "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/math-of/2020-07-03-bayesian-inference.html#tl-dr",
-    "href": "posts/math-of/2020-07-03-bayesian-inference.html#tl-dr",
-    "title": "Bayesian Inference with MCMC",
-    "section": "tl; dr",
-    "text": "tl; dr\n\n베이지언 추론에 관해서 수박 겉핥기로 살펴본다.\nMCMC의 기본 논리를 정리한다."
+    "text": "베이지언 추론에 관해서 수박 겉핥기로 살펴본다.\nMCMC의 기본 논리를 정리한다."
   },
   {
     "objectID": "posts/math-of/2020-07-03-bayesian-inference.html#bayes-theorem",
@@ -263,14 +228,7 @@
     "href": "posts/math-of/2019-05-17-math-pca.html",
     "title": "Math Behind PCA",
     "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/math-of/2019-05-17-math-pca.html#tl-dr",
-    "href": "posts/math-of/2019-05-17-math-pca.html#tl-dr",
-    "title": "Math Behind PCA",
-    "section": "tl; dr",
-    "text": "tl; dr\n\nPCA를 차원을 축소하는 방법으로 막연하게 이해하지 말자. PCA 역시 다른 방법처럼 어떤 목적 함수를 최적화하는 방법의 하나다.\nPCA는 \\(k\\) 개의 피처를 어떤 스크린 벡터 위에 쏴서 이를 단순화하겠다는 것이다. 이렇게 투영된 이미지와 원래 벡터와의 거리를 최소화하는 과정에서 분산 최대화라는 PCA의 새로운 목적 함수가 도출된다.\nPCA가 스크린으로 활용할 벡터가 하나가 아니라고 할 때, 이 여러 개의 스크린 벡터를 활용해 거리를 최소화하는 과정(즉 분산의 합을 극대화하는 과정)에서 eigenvalue와 eigenvector가 등장한다."
+    "text": "PCA를 차원을 축소하는 방법으로 막연하게 이해하지 말자. PCA 역시 다른 방법처럼 어떤 목적 함수를 최적화하는 방법의 하나다.\nPCA는 \\(k\\) 개의 피처를 어떤 스크린 벡터 위에 쏴서 이를 단순화하겠다는 것이다. 이렇게 투영된 이미지와 원래 벡터와의 거리를 최소화하는 과정에서 분산 최대화라는 PCA의 새로운 목적 함수가 도출된다.\nPCA가 스크린으로 활용할 벡터가 하나가 아니라고 할 때, 이 여러 개의 스크린 벡터를 활용해 거리를 최소화하는 과정(즉 분산의 합을 극대화하는 과정)에서 eigenvalue와 eigenvector가 등장한다."
   },
   {
     "objectID": "posts/math-of/2019-05-17-math-pca.html#pca",
@@ -326,14 +284,7 @@
     "href": "posts/econ-simple/2022-04-30-gdp-import.html",
     "title": "수입은 GDP에 영향을 주는가?",
     "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/econ-simple/2022-04-30-gdp-import.html#오해",
-    "href": "posts/econ-simple/2022-04-30-gdp-import.html#오해",
-    "title": "수입은 GDP에 영향을 주는가?",
-    "section": "오해",
-    "text": "오해\nGDP 항등식에 관한 오해는 경제 저널리즘에서 잘 생기는 오해다. 어제 뉴욕 타임스 사설에 이걸 오해한 내용이 실렸고, 트위터 등에서 여러 경제학자들이 이 사실을 지적했다. GDP 항등식에서 시작해보자. 국내총생산이라는 GDP 항등식은 아래와 같이 제시된다.\n\\[\nY = C + I + G + X - M\n\\]\n\n\n\n항목\n내용\n\n\n\n\n\\(C\\)\n국내 총소비\n\n\n\\(I\\)\n국내 총투자\n\n\n\\(G\\)\n정부 지출\n\n\n\\(X\\)\n수출\n\n\n\\(M\\)\n수입\n\n\n\n저 항등식만 보면 수입이 줄면 \\(Y\\)가 늘 것 같다. 그런데 이건 오해다. 두 가지 측면에서 생각을 해보자.\n\nGDP는 ‘국내’ 총생산이다. 즉, 1년 동안 국내에서 생산된 재화와 서비스의 총량을 측정한다. 그런데 수입품은 국내에서 생산된 것이 아니다. 따라서 빼주는 게 맞다.\n그런데 수입이 줄면 GDP가 주는 게 아닌가? 아니다. 왜냐하면 앞에 \\(C\\), \\(I\\), \\(G\\)는 각각 수입품에 관한 소비, 투자, 정부 지출을 포함하고 있기 때문이다. 즉, \\(C = C_{d} + C_{m}\\), 즉 국내에서 생산된 제품에 관한 소비(\\(C_d\\))와 해외에서 생산된 소비(\\(C_m\\))을 포함하고 있다. GDP란 국내 총생산을 측정하는 것이므로 \\(C_m\\)을 빼주는 게 맞다.\n\n즉, 식을 재구성해보면 이렇다.\n\\[\n(C_d + I_d + G_d) + \\overbrace{(C_m + I_m + G_m)}^{M} + X - M\n\\]\n정의상 \\(C_m + I_m + G_m = M\\)이 되기 때문에 M이 늘고 주는 것은 GDP에 아무런 영향을 주지 않는다. GDP를 측정하기 위한 회계상의 이유로 \\(M\\)이 들어간 것이지 \\(M\\)의 변화가 독자적으로 GDP를 변화시키지는 않는다."
+    "text": "GDP 항등식에 관한 오해는 경제 저널리즘에서 잘 생기는 오해다. 어제 뉴욕 타임스 사설에 이걸 오해한 내용이 실렸고, 트위터 등에서 여러 경제학자들이 이 사실을 지적했다. GDP 항등식에서 시작해보자. 국내총생산이라는 GDP 항등식은 아래와 같이 제시된다.\n\\[\nY = C + I + G + X - M\n\\]\n\n\n\n항목\n내용\n\n\n\n\n\\(C\\)\n국내 총소비\n\n\n\\(I\\)\n국내 총투자\n\n\n\\(G\\)\n정부 지출\n\n\n\\(X\\)\n수출\n\n\n\\(M\\)\n수입\n\n\n\n저 항등식만 보면 수입이 줄면 \\(Y\\)가 늘 것 같다. 그런데 이건 오해다. 두 가지 측면에서 생각을 해보자.\n\nGDP는 ‘국내’ 총생산이다. 즉, 1년 동안 국내에서 생산된 재화와 서비스의 총량을 측정한다. 그런데 수입품은 국내에서 생산된 것이 아니다. 따라서 빼주는 게 맞다.\n그런데 수입이 줄면 GDP가 주는 게 아닌가? 아니다. 왜냐하면 앞에 \\(C\\), \\(I\\), \\(G\\)는 각각 수입품에 관한 소비, 투자, 정부 지출을 포함하고 있기 때문이다. 즉, \\(C = C_{d} + C_{m}\\), 즉 국내에서 생산된 제품에 관한 소비(\\(C_d\\))와 해외에서 생산된 소비(\\(C_m\\))을 포함하고 있다. GDP란 국내 총생산을 측정하는 것이므로 \\(C_m\\)을 빼주는 게 맞다.\n\n즉, 식을 재구성해보면 이렇다.\n\\[\n(C_d + I_d + G_d) + \\overbrace{(C_m + I_m + G_m)}^{M} + X - M\n\\]\n정의상 \\(C_m + I_m + G_m = M\\)이 되기 때문에 M이 늘고 주는 것은 GDP에 아무런 영향을 주지 않는다. GDP를 측정하기 위한 회계상의 이유로 \\(M\\)이 들어간 것이지 \\(M\\)의 변화가 독자적으로 GDP를 변화시키지는 않는다."
   },
   {
     "objectID": "posts/econ-simple/2022-04-30-gdp-import.html#다른-주장",
@@ -348,20 +299,6 @@
     "title": "수입은 GDP에 영향을 주는가?",
     "section": "참고",
     "text": "참고\nNoahpinion, Imports do not subtract from GDP"
-  },
-  {
-    "objectID": "posts/container/2020-09-23-docker-humble-practice.html",
-    "href": "posts/container/2020-09-23-docker-humble-practice.html",
-    "title": "Docker, 소박한 사용법",
-    "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/container/2020-09-23-docker-humble-practice.html#아마도-이런-분들에게-유용할-것",
-    "href": "posts/container/2020-09-23-docker-humble-practice.html#아마도-이런-분들에게-유용할-것",
-    "title": "Docker, 소박한 사용법",
-    "section": "아마도 이런 분들에게 유용할 것",
-    "text": "아마도 이런 분들에게 유용할 것"
   },
   {
     "objectID": "posts/container/2020-09-23-docker-humble-practice.html#사전-전제",
@@ -417,7 +354,7 @@
     "href": "posts/container/2022-04-26-k8s-personally.html",
     "title": "Kubernetes As an Alternative to Docker",
     "section": "",
-    "text": "google_analytics.html"
+    "text": "Note\n\n\n\n\n이 포스팅은\n\n쿠버네티스에 관한 일반적인 해설, 설정 소개 등이 아닙니다.\n개발환경 일반을 다루지 않습니다.\n\n이 포스팅은\n\n도커-컴포즈 대신 쿠버네티스를 컨테이터 관리 툴로 사용한 경험을 기술합니다.\n데이터 관련 프로그램만 제한적으로 다룰 예정입니다."
   },
   {
     "objectID": "posts/container/2022-04-26-k8s-personally.html#alternatives",
@@ -438,14 +375,7 @@
     "href": "posts/container/2021-05-09-docker_korfont.html",
     "title": "Docker + Jupyter + 한글 폰트",
     "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/container/2021-05-09-docker_korfont.html#build도-어렵지-않다",
-    "href": "posts/container/2021-05-09-docker_korfont.html#build도-어렵지-않다",
-    "title": "Docker + Jupyter + 한글 폰트",
-    "section": "Build도 어렵지 않다!",
-    "text": "Build도 어렵지 않다!\n이 글은 이 포스팅에서 이어진다. 컨테이너를 올린 뒤 컨테이너 내 터미널에서 sh 스크립트를 실행하지 않고 한글 문제 처음부터 해결할 수 없을까?\n사실 이 포스팅을 쓰게 된 동기는 따로 있다. 글을 쓰는 시점에서 matplotlib.font_manager._rebuild()가 사라졌다! Jupyter에서 폰트 목록을 다시 생성할 다른 방법을 찾아야 했다. docker-compose로 필요한 이미지를 끌어올 때 단순히 이미지를 끌어오는 대신 특화된 형태로 build를 할 수도 있다. 이전 포스팅에서 소개한 방법에서는 build 옵션을 사용하지 않았다. 일단 Build가 꽤 거창하게 느껴졌기 때문이다. 적당한 ubuntu 버전을 끌어오고 여기에 Python, Jupyter를 깔고… 이런 빌드 과정이 꽤 험난하고 불필요해 보였다. Jupyter의 경우 데이터사이언스를 위한 잘 갖춰진 도커 이미지가 이미 있고, 이를 그대로 쓰면 큰 문제는 없다.\n문제가 생겼으니 해결책을 찾아야 한다. 특화된 이미지에 기반해서 빌드를 하면 한글 문제와 같은 특정하게 발생하는 문제를 미리 해결할 수 있지 않을까? 이후 소개하는 방법을 통해 확인한 내용은 다음과 같다. 이용 조건이 비슷하다면 참고해보시라.\n\ndocker-compose를 쓸 때 이미지를 지정하는 image 부분을 제외한 나머지는 거의 그대로 재사용이 가능하다.\nimage를 그대로 끌어오는 것이나 몇 가지 명령어를 넣어서 build를 하는 것이나 시간 상으로는 크게 차이가 없다."
+    "text": "이 글은 이 포스팅에서 이어진다. 컨테이너를 올린 뒤 컨테이너 내 터미널에서 sh 스크립트를 실행하지 않고 한글 문제 처음부터 해결할 수 없을까?\n사실 이 포스팅을 쓰게 된 동기는 따로 있다. 글을 쓰는 시점에서 matplotlib.font_manager._rebuild()가 사라졌다! Jupyter에서 폰트 목록을 다시 생성할 다른 방법을 찾아야 했다. docker-compose로 필요한 이미지를 끌어올 때 단순히 이미지를 끌어오는 대신 특화된 형태로 build를 할 수도 있다. 이전 포스팅에서 소개한 방법에서는 build 옵션을 사용하지 않았다. 일단 Build가 꽤 거창하게 느껴졌기 때문이다. 적당한 ubuntu 버전을 끌어오고 여기에 Python, Jupyter를 깔고… 이런 빌드 과정이 꽤 험난하고 불필요해 보였다. Jupyter의 경우 데이터사이언스를 위한 잘 갖춰진 도커 이미지가 이미 있고, 이를 그대로 쓰면 큰 문제는 없다.\n문제가 생겼으니 해결책을 찾아야 한다. 특화된 이미지에 기반해서 빌드를 하면 한글 문제와 같은 특정하게 발생하는 문제를 미리 해결할 수 있지 않을까? 이후 소개하는 방법을 통해 확인한 내용은 다음과 같다. 이용 조건이 비슷하다면 참고해보시라.\n\ndocker-compose를 쓸 때 이미지를 지정하는 image 부분을 제외한 나머지는 거의 그대로 재사용이 가능하다.\nimage를 그대로 끌어오는 것이나 몇 가지 명령어를 넣어서 build를 하는 것이나 시간 상으로는 크게 차이가 없다."
   },
   {
     "objectID": "posts/container/2021-05-09-docker_korfont.html#how-to-implement",
@@ -459,14 +389,7 @@
     "href": "posts/container/2020-09-24-install-hangul-in-docker.html",
     "title": "Docker 컨테이너 + 한글 폰트",
     "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/container/2020-09-24-install-hangul-in-docker.html#다른-방법",
-    "href": "posts/container/2020-09-24-install-hangul-in-docker.html#다른-방법",
-    "title": "Docker 컨테이너 + 한글 폰트",
-    "section": "다른 방법",
-    "text": "다른 방법\n이 포스팅은 도커 컨테이너 안에서 한글 문제를 해결하는 다른 방법을 제시하고 있다. 같이 참고 하시라."
+    "text": "이 포스팅은 도커 컨테이너 안에서 한글 문제를 해결하는 다른 방법을 제시하고 있다. 같이 참고 하시라."
   },
   {
     "objectID": "posts/container/2020-09-24-install-hangul-in-docker.html#왜-필요한가",
@@ -487,7 +410,7 @@
     "href": "posts/container/2021-09-13-podman-1.html",
     "title": "Enter the Podman!",
     "section": "",
-    "text": "google_analytics.html"
+    "text": "도커 데스크탑의 유료화 정책이 발표되었다. 대부분의 사용자나 회사에게는 해당 사항이 없겠지만, 오픈소스로 시작한 회사의 정책이라고 보기에는 뭔가 께름칙하다. 대안이 있는데도 굳이 고집할 필요는 없다. 여러 프로젝트가 복잡하게 의존하는, 즉 발목 잡힌 상황이 아니라면 다른 길을 찾으면 된다.\nWSL 내에서 컨테이너를 돌리고 이 서비스를 윈도우에서 웹브라우저로 끌어다 쓰는 형태가 내 일상적인 작업 환경이다. Docker Desktop이 중요한 역할을 하고 있지만 발목은 잡힐 것이 없기에 대안을 시도해보기로 했다. 사실 WSL 내에서 도커를 쓰면 약간 ’가짜’인 듯한 기분이 들 때가 있다. Docker Desktop은 WSL을 거의 완벽에 가깝게 지원한다. 그런데 구조를 뜯어보면 조금 복잡하다. Docker Desktop이 docker 엔진 활용을 위한 두 개의 자체의 컨테이너를 만들고, 이 둘이 WSL과 통신한다. 즉 도커 컨테이너가 WSL 안의 OS에서 돌고 있지 않다는 뜻이다. Windows 및 WSL 지원을 구현하기 위한 궁여지책을 사용하는 느낌이다.\ndocker 엔진 대신 나름 쓸만한 녀석이 podman이다. podman은 OCI(Open Container Initiative)의 표준을 준수하며 docker와 거의 모든 면에서 호환된다. docker의 명령어 뿐 아니라 docker에서 활용하는 이미지도 그대로 쓸 수 있다.\n\n\npodman에 관한 기술적 설명은 LINK, LINK를 참고하자.\n비유를 하자면 컨테이너를 운반하는 배가 바뀔 뿐 컨테이너 자체는 그대로 운용할 수 있다. 아울러 podman을 쓰면 앞서 말한 Docker Desktop의 복잡한 구조가 필요 없다. podman은 WSL 에 설치된 OS 안에서 운용된다. 그리고 podman은 엔진을 제외한 docker 생태계의 다른 요소들과 함께 쓸 수도 있다. 내 경우 작업 환경을 유지하는데 docker-compose가 중요한 역할을 한다. 이 녀석도 podman과도 잘 어울렸다. 각설하고 내용으로 바로 들어가보자.\n\n\n윈도에서 Docker Desktop 버전을 사용하는 대신 Docker CE 버전을 WSL-Ubuntu에 깔아서 사용할 수 있다. 이 글을 관심은 docker를 대체하는 데 있으니, 이에 관한 내용은 다루지 않는다."
   },
   {
     "objectID": "posts/container/2021-09-13-podman-1.html#assumptions",
@@ -578,14 +501,7 @@
     "href": "posts/economics/2020-01-22-Wealth-divided.html",
     "title": "The College Wealth Divide",
     "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/economics/2020-01-22-Wealth-divided.html#source",
-    "href": "posts/economics/2020-01-22-Wealth-divided.html#source",
-    "title": "The College Wealth Divide",
-    "section": "Source",
-    "text": "Source\nThe College Wealth Divide: Education and Inequality in America, 1956-2016 download Alina K. Bartscher, Moritz Kuhn, and Moritz Schularick"
+    "text": "The College Wealth Divide: Education and Inequality in America, 1956-2016 download Alina K. Bartscher, Moritz Kuhn, and Moritz Schularick"
   },
   {
     "objectID": "posts/economics/2020-01-22-Wealth-divided.html#addressing-issues",
@@ -928,14 +844,7 @@
     "href": "posts/regression/2019-10-25-understanding-regression.html",
     "title": "Understanding Regression",
     "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/regression/2019-10-25-understanding-regression.html#tldr",
-    "href": "posts/regression/2019-10-25-understanding-regression.html#tldr",
-    "title": "Understanding Regression",
-    "section": "tl;dr",
-    "text": "tl;dr\n\n회귀분석을 선형 대수를 통해서 이해하면 새로운 깨달음을 얻을 수 있다.\n회귀분석이라는 것은 PCA와 마찬가지로 차원을 ’축소’하는 방법이다. \\(n\\) 개의 관찰을 지닌 어떤 한 대상을 이보다 낮은 \\(k(<n)\\) 개의 변수로 요약하는 것이 핵심이다.\n선형대수로 보면 \\(\\mathrm R^2\\) 공식은 피타고라스 정리의 흔한 응용 사례이며, 코사인 유사도와 거의 같은 개념이다."
+    "text": "회귀분석을 선형 대수를 통해서 이해하면 새로운 깨달음을 얻을 수 있다.\n회귀분석이라는 것은 PCA와 마찬가지로 차원을 ’축소’하는 방법이다. \\(n\\) 개의 관찰을 지닌 어떤 한 대상을 이보다 낮은 \\(k(<n)\\) 개의 변수로 요약하는 것이 핵심이다.\n선형대수로 보면 \\(\\mathrm R^2\\) 공식은 피타고라스 정리의 흔한 응용 사례이며, 코사인 유사도와 거의 같은 개념이다."
   },
   {
     "objectID": "posts/regression/2019-10-25-understanding-regression.html#regression-in-vector-space",
@@ -963,14 +872,7 @@
     "href": "posts/regression/2019-11-10-understanding-logit-regression.html",
     "title": "Understanding Logit Regression",
     "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/regression/2019-11-10-understanding-logit-regression.html#tldr",
-    "href": "posts/regression/2019-11-10-understanding-logit-regression.html#tldr",
-    "title": "Understanding Logit Regression",
-    "section": "tl;dr",
-    "text": "tl;dr\n\n로짓 회귀는 우리가 알던 그 ’회귀’와는 조금 다르다.\n로짓 회귀는 아래와 같은 데이터 모형에 기반을 둔 추정법이다.\n\n\\[\n\\ln \\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})} =\\boldsymbol{x_i}\\boldsymbol{\\beta}\n\\]\n\n회귀식의 계수 \\(\\boldsymbol{\\beta}\\)를 해석할 때 주의하자. 이를 통상적인 회귀분석의 계수(한계 효과)처럼 해석하려면 별도의 계산이 필요하다."
+    "text": "로짓 회귀는 우리가 알던 그 ’회귀’와는 조금 다르다.\n로짓 회귀는 아래와 같은 데이터 모형에 기반을 둔 추정법이다.\n\n\\[\n\\ln \\dfrac{p(\\boldsymbol{x_i})}{1-p(\\boldsymbol{x_i})} =\\boldsymbol{x_i}\\boldsymbol{\\beta}\n\\]\n\n회귀식의 계수 \\(\\boldsymbol{\\beta}\\)를 해석할 때 주의하자. 이를 통상적인 회귀분석의 계수(한계 효과)처럼 해석하려면 별도의 계산이 필요하다."
   },
   {
     "objectID": "posts/regression/2019-11-10-understanding-logit-regression.html#로짓-회귀-제대로-알고-있나",
@@ -1005,7 +907,7 @@
     "href": "posts/regression/2020-11-11-log-linear-regression.html",
     "title": "Revisiting Log-Linear Regression Model",
     "section": "",
-    "text": "google_analytics.html\n당연히 알고 있다고 생각하지만 모르는 게 생각보다 많다. 회귀 분석에서 로그-리니어 모델, 즉 종속 변수에 로그를 취하고 독립 변수가 선형인 모델을 어떻게 이해해야 할까? 찬찬히 따져보자."
+    "text": "당연히 알고 있다고 생각하지만 모르는 게 생각보다 많다. 회귀 분석에서 로그-리니어 모델, 즉 종속 변수에 로그를 취하고 독립 변수가 선형인 모델을 어떻게 이해해야 할까? 찬찬히 따져보자."
   },
   {
     "objectID": "posts/regression/2020-11-11-log-linear-regression.html#the-math",
@@ -1040,7 +942,7 @@
     "href": "posts/computer-tool/2020-09-26-windows-terminal.html",
     "title": "The Best Terminal App for Windows",
     "section": "",
-    "text": "google_analytics.html\n마소가 리눅스 생태계를 품으려고 진심으로 노력하고 있다. 보통 윈도에서 터미널을 쓰려면 cmd를 쳐서 들어간다. 일단 모양이 별로일 뿐만 아니라 불편하다. 그래서 보통 서드파티에서 제작한 터미널 앱을 별도로 쓰곤 한다. 이 앱들로도 부족한 것이 없다. cmder도 높은 수준의 커스터마이즈와 뛰어난 사용성을 보장한다.\nWSL을 통해 윈도에 설치하는 리눅스의 경우 기본으로 CLI(Command Line Interface)를 활용하게 된다. 따라서 좋은 터미널 앱은 필수적이다. 간편하면서도 심미적으로도 유려한 그런 앱이 하나 있었으면 싶은데, MS는 이미 그런 앱을 제공하고 있다.\nWindows 10 기준으로, Microsoft Store에 들어가서 “terminal”을 검색해보자. “Windows Terminal”과 “Windows Terminal Preview” 두 개를 찾을 수 있다. 전자는 안정 버전이고 후자는 실험적인 기능을 구현한 버전이다. 어느 것을 써도 괜찮다.\n공식 가이드 https://docs.microsoft.com/ko-kr/windows/terminal/\n왠만한 내용은 공식 가이드에 잘 정리되어 있으므로 몇 가지 팁만 적도록 하자."
+    "text": "마소가 리눅스 생태계를 품으려고 진심으로 노력하고 있다. 보통 윈도에서 터미널을 쓰려면 cmd를 쳐서 들어간다. 일단 모양이 별로일 뿐만 아니라 불편하다. 그래서 보통 서드파티에서 제작한 터미널 앱을 별도로 쓰곤 한다. 이 앱들로도 부족한 것이 없다. cmder도 높은 수준의 커스터마이즈와 뛰어난 사용성을 보장한다.\nWSL을 통해 윈도에 설치하는 리눅스의 경우 기본으로 CLI(Command Line Interface)를 활용하게 된다. 따라서 좋은 터미널 앱은 필수적이다. 간편하면서도 심미적으로도 유려한 그런 앱이 하나 있었으면 싶은데, MS는 이미 그런 앱을 제공하고 있다.\nWindows 10 기준으로, Microsoft Store에 들어가서 “terminal”을 검색해보자. “Windows Terminal”과 “Windows Terminal Preview” 두 개를 찾을 수 있다. 전자는 안정 버전이고 후자는 실험적인 기능을 구현한 버전이다. 어느 것을 써도 괜찮다.\n공식 가이드 https://docs.microsoft.com/ko-kr/windows/terminal/\n왠만한 내용은 공식 가이드에 잘 정리되어 있으므로 몇 가지 팁만 적도록 하자."
   },
   {
     "objectID": "posts/computer-tool/2020-09-26-windows-terminal.html#설정",
@@ -1054,7 +956,7 @@
     "href": "posts/computer-tool/2021-11-19-python-in-github.html",
     "title": "Python in the Browser",
     "section": "",
-    "text": "google_analytics.html"
+    "text": "이런 상황을 생각해보자.\n\n파이썬을 갑자기 써야 한다!\n그런데 조건상 클라이언트에 깔 상황이 안 된다!\n\n이럴 때 쓸 수 있는 도구가 몇 개 있다. 대표적으로 아래 구글 코랩이 있다.\n\n구글 드라이브와 연동되는 구글 코랩\n\n그런데 많은 회사에서 구글 서비스를 막아두는 경우가 있다. 그렇다면 어떻게 할까?"
   },
   {
     "objectID": "posts/computer-tool/2021-11-19-python-in-github.html#dev-모드-진입",
@@ -1082,7 +984,7 @@
     "href": "posts/computer-tool/2020-03-07-blogging-with-fastpages.html",
     "title": "Build Your Blog on Github, Easily",
     "section": "",
-    "text": "google_analytics.html"
+    "text": "Note\n\n\n\n현재는 fastpages를 활용하고 있지 않습니다. 이유는 두 가지입니다.\n\nfastpages의 지원의 미비\n커스터마이징의 미비함"
   },
   {
     "objectID": "posts/computer-tool/2020-03-07-blogging-with-fastpages.html#tldr",
@@ -1131,7 +1033,7 @@
     "href": "posts/computer-tool/2020-10-24-classy-latex.html",
     "title": "\\(\\rm\\LaTeX\\) in Modern Ways",
     "section": "",
-    "text": "google_analytics.html\n박사 논문을 \\(\\rm\\LaTeX\\)(이하 그냥 레이텍 혹은 텍이라고 쓰겠다)으로 썼지만… 역시 안 쓰면 잊는다. 갑자기 텍을 다시 써볼까, 라는 생각이 드는 순간 갑갑하더라. 윈도를 쓰건 맥을 쓰건 용량이 적지 않고 관리가 쉽지 않은 텍라이브를 깔게 되지는 않는다. 물론 당신이 논문을 쓰고 있다면…\n이 두 가지를 놓고 해결책을 찾아봤다. 세 가지 정도 해법이 있더라."
+    "text": "박사 논문을 \\(\\rm\\LaTeX\\)(이하 그냥 레이텍 혹은 텍이라고 쓰겠다)으로 썼지만… 역시 안 쓰면 잊는다. 갑자기 텍을 다시 써볼까, 라는 생각이 드는 순간 갑갑하더라. 윈도를 쓰건 맥을 쓰건 용량이 적지 않고 관리가 쉽지 않은 텍라이브를 깔게 되지는 않는다. 물론 당신이 논문을 쓰고 있다면…\n이 두 가지를 놓고 해결책을 찾아봤다. 세 가지 정도 해법이 있더라."
   },
   {
     "objectID": "posts/computer-tool/2020-10-24-classy-latex.html#tinytex-with-r",
@@ -1166,7 +1068,7 @@
     "href": "posts/computer-tool/2020-04-09-wsl2-walkthru.html",
     "title": "wsl 2, a walk-thru",
     "section": "",
-    "text": "google_analytics.html\n격세지감이다. 적으로 삼고 아웅다웅하던 윈도가 리눅스를 두 팔로 품었다. (마치 macos에서 처럼) 윈도에서 터미널을 켜고 리눅스를 네이티브로 쓸 수 있을 것이라고 누가 생각했을까. 그런데 그런 날이 왔네. MS, 대단하다.\nWSL(Windows Subsystem for Linux)의 두 번째 버전(이하 wsl 2)은 좋다. 그냥 좋다. wsl 2을 통해 모든 리눅스의 장점을 네이티브로 누릴 수 있다. wsl 2는 이 글을 작성하는 현재 시점까지 별도로 신청해야 하는 윈도 프리뷰를 통해서 사용할 수 있다. 상반기에 예정된 2004 업데이트에 정식으로 포함될 예정이다.\n이 포스트는 그간 짬짬이 써오면서 알아왔던 내용을 한방에 정리하기 위한 용도다. 역시나 친절한 가이드, 이런 것과는 거리가 멀고 몇 달 후의 ’나놈’을 위한 것임을 밝혀둔다."
+    "text": "격세지감이다. 적으로 삼고 아웅다웅하던 윈도가 리눅스를 두 팔로 품었다. (마치 macos에서 처럼) 윈도에서 터미널을 켜고 리눅스를 네이티브로 쓸 수 있을 것이라고 누가 생각했을까. 그런데 그런 날이 왔네. MS, 대단하다.\nWSL(Windows Subsystem for Linux)의 두 번째 버전(이하 wsl 2)은 좋다. 그냥 좋다. wsl 2을 통해 모든 리눅스의 장점을 네이티브로 누릴 수 있다. wsl 2는 이 글을 작성하는 현재 시점까지 별도로 신청해야 하는 윈도 프리뷰를 통해서 사용할 수 있다. 상반기에 예정된 2004 업데이트에 정식으로 포함될 예정이다.\n이 포스트는 그간 짬짬이 써오면서 알아왔던 내용을 한방에 정리하기 위한 용도다. 역시나 친절한 가이드, 이런 것과는 거리가 멀고 몇 달 후의 ’나놈’을 위한 것임을 밝혀둔다."
   },
   {
     "objectID": "posts/computer-tool/2020-04-09-wsl2-walkthru.html#ubuntu-18.04-설치",
@@ -1215,7 +1117,7 @@
     "href": "posts/computer-tool/2020-03-09-Streamlit-Heroku.html",
     "title": "Streamlit + Heroku",
     "section": "",
-    "text": "google_analytics.html"
+    "text": "Note\n\n\n\n현재는 streamlit에서 꽤 좋은 조건으로 자체 클라우드를 운영한다. 특별한 이유가 없는 이상 여기 소개한 것과 같이 Heroku를 쓰는 것은 불필요하다."
   },
   {
     "objectID": "posts/computer-tool/2020-03-09-Streamlit-Heroku.html#들어가며",
@@ -1264,7 +1166,7 @@
     "href": "posts/computer-tool/2020-10-27-viva-binder.html",
     "title": "Viva, Binder!",
     "section": "",
-    "text": "google_analytics.html\n내가 보고 있는 것을 남이 그대로 봐야 의사 소통이 온전해지는 경우가 있다. 아마도 코드를 나누는 경우가 그렇지 않을까 싶다. 이 점에서 Github은 꽤 좋은 코드 나눔 도구다. 그런데 문제가 하나 있다. Github을 통해 배포하는 것이 패키지라면 각자 땡겨가서 쓰면 되겠지만, 특정하게 실현된 결과물이라면?\n예를 들어보자. Python으로 특정한 결과를 도출하는 코드를 짰다고 하자. 당연히 내가 작업한 환경에 의존할 것이다. 다른 환경에서 돌아갈지 아닐지 모르지만 어쨌든 의존성은 피할 수 없다. 상대를 불러서 내 컴퓨터에서 돌아가는 모습을 보여줄 수 있다면 좋겠지만 그럴 수 없는 경우가 많다. 내가 돌려본 환경을 그대로 상대가 볼 수 있게 할 수는 없는 것일까?\n당장 떠오르는 솔루션이 클라우드다. 클라우드에 소프트웨어 환경을 세팅하고 내가 테스트해본다. 원하는 상대에게 url을 주고 같은 테스트를 반복 체험하게 한다. 물론 좋다. 사실 AWS 같은 곳에 Linux 서버를 깔고 주피터 관련 패키지나 RStudio 등을 설치하기는 쉽다. AWS를 비롯해 많은 클라우드 업체에서 원스톱 서비스까지 제공한다. 그런데, 문제가 있다. 비용이 든다. 사용량이 많아서 뽕을 뽑을 수 있다면 덜 아깝겠지만 코드 공유하고 결과를 확인하는 정도가 족하다면 많이 아깝다.\n이런 용도로 활용할 수 있는 ‘무료’ 서비스가 Binder이다.\nhttps://mybinder.org"
+    "text": "내가 보고 있는 것을 남이 그대로 봐야 의사 소통이 온전해지는 경우가 있다. 아마도 코드를 나누는 경우가 그렇지 않을까 싶다. 이 점에서 Github은 꽤 좋은 코드 나눔 도구다. 그런데 문제가 하나 있다. Github을 통해 배포하는 것이 패키지라면 각자 땡겨가서 쓰면 되겠지만, 특정하게 실현된 결과물이라면?\n예를 들어보자. Python으로 특정한 결과를 도출하는 코드를 짰다고 하자. 당연히 내가 작업한 환경에 의존할 것이다. 다른 환경에서 돌아갈지 아닐지 모르지만 어쨌든 의존성은 피할 수 없다. 상대를 불러서 내 컴퓨터에서 돌아가는 모습을 보여줄 수 있다면 좋겠지만 그럴 수 없는 경우가 많다. 내가 돌려본 환경을 그대로 상대가 볼 수 있게 할 수는 없는 것일까?\n당장 떠오르는 솔루션이 클라우드다. 클라우드에 소프트웨어 환경을 세팅하고 내가 테스트해본다. 원하는 상대에게 url을 주고 같은 테스트를 반복 체험하게 한다. 물론 좋다. 사실 AWS 같은 곳에 Linux 서버를 깔고 주피터 관련 패키지나 RStudio 등을 설치하기는 쉽다. AWS를 비롯해 많은 클라우드 업체에서 원스톱 서비스까지 제공한다. 그런데, 문제가 있다. 비용이 든다. 사용량이 많아서 뽕을 뽑을 수 있다면 덜 아깝겠지만 코드 공유하고 결과를 확인하는 정도가 족하다면 많이 아깝다.\n이런 용도로 활용할 수 있는 ‘무료’ 서비스가 Binder이다.\nhttps://mybinder.org"
   },
   {
     "objectID": "posts/computer-tool/2020-10-27-viva-binder.html#turn-a-git-repo-into",
@@ -1278,7 +1180,7 @@
     "href": "posts/computer-tool/2021-02-02-all-vs-code.html",
     "title": "All into VS Code",
     "section": "",
-    "text": "google_analytics.html\n각자 언어에 맞는 IDE가 있다. 예를 들어 R에는 RStudio가 가장 잘 어울린다. 언어 별로 별도의 IDE 보다는 모든 것을 한방에 해결할 수는 없을까? 이러한 목적에 복무하는 코더를 위한 좋은 에디터들이 많이 있다. 하지만 설정이 쉽지 않고 아무래도 나 같은 문송한 존재들에게는 접근성이 떨어진다. 그리고 대체로 유료다! 이 사이에서 타협할 수 있는 제품이 없을까?\nMS에서 제공하는 무료 (만능) 에디터 VS Code는 여기서 제법 괜찮은 대안이다. 각설하고 파이썬, 줄리아, R을 VS code로 부리는 데 필요한 준비물을 살펴보자."
+    "text": "각자 언어에 맞는 IDE가 있다. 예를 들어 R에는 RStudio가 가장 잘 어울린다. 언어 별로 별도의 IDE 보다는 모든 것을 한방에 해결할 수는 없을까? 이러한 목적에 복무하는 코더를 위한 좋은 에디터들이 많이 있다. 하지만 설정이 쉽지 않고 아무래도 나 같은 문송한 존재들에게는 접근성이 떨어진다. 그리고 대체로 유료다! 이 사이에서 타협할 수 있는 제품이 없을까?\nMS에서 제공하는 무료 (만능) 에디터 VS Code는 여기서 제법 괜찮은 대안이다. 각설하고 파이썬, 줄리아, R을 VS code로 부리는 데 필요한 준비물을 살펴보자."
   },
   {
     "objectID": "posts/computer-tool/2021-02-02-all-vs-code.html#필요-조건",
@@ -1334,7 +1236,7 @@
     "href": "posts/git/2022-04-27-happy-giting.html",
     "title": "Happy Git-ing!",
     "section": "",
-    "text": "google_analytics.html"
+    "text": "Note\n\n\n\n이 포스팅은 깃 혹은 깃허브에 관한 일반적인 해설이나 이용법이 아닙니다. 깃 혹은 깃허브를 어느 정도 활용하고 있다고 할 때 가려움을 긁어주는 용도로 작성된 글입니다."
   },
   {
     "objectID": "posts/git/2022-04-27-happy-giting.html#tl-dr",
@@ -1369,7 +1271,7 @@
     "href": "posts/git/2020-03-05-using-git-w10.html",
     "title": "Using Git ‘Smoothly’ in Windows 10",
     "section": "",
-    "text": "google_analytics.html"
+    "text": "Note\n\n\n\n윈도에서 깃을 쓸 때 이렇게 불편하게 쓰지 않아도 된다."
   },
   {
     "objectID": "posts/git/2020-03-05-using-git-w10.html#why",
@@ -1411,14 +1313,7 @@
     "href": "posts/math-simple/2019-07-18-dot-product.html",
     "title": "Dot Product with Geometry",
     "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/math-simple/2019-07-18-dot-product.html#tldr",
-    "href": "posts/math-simple/2019-07-18-dot-product.html#tldr",
-    "title": "Dot Product with Geometry",
-    "section": "tl;dr",
-    "text": "tl;dr\n\n닷 프로덕트 혹은 내적을 기하적으로 이해하면 여러모로 편리하고 기억에도 잘 남는다."
+    "text": "닷 프로덕트 혹은 내적을 기하적으로 이해하면 여러모로 편리하고 기억에도 잘 남는다."
   },
   {
     "objectID": "posts/math-simple/2019-07-18-dot-product.html#definition",
@@ -1453,14 +1348,7 @@
     "href": "posts/math-simple/2019-07-13-Poisson.html",
     "title": "Poisson as Binormial Distribution",
     "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/math-simple/2019-07-13-Poisson.html#tldr",
-    "href": "posts/math-simple/2019-07-13-Poisson.html#tldr",
-    "title": "Poisson as Binormial Distribution",
-    "section": "tl;dr",
-    "text": "tl;dr\n\n푸아송 분포는 이항 분포를 주어진 시간(기간) 안에 발생하는 평균 발생 횟수로 다시 모델링한 분포다.\n이항 분포의 평균은 \\(\\lambda = n p\\)이고, 이항 분포에 \\(p = \\frac{\\lambda}{n}\\)을 다시 넣은 후 \\(n \\to \\infty\\) 극한값을 얻은 결과가 푸아송 분포다."
+    "text": "푸아송 분포는 이항 분포를 주어진 시간(기간) 안에 발생하는 평균 발생 횟수로 다시 모델링한 분포다.\n이항 분포의 평균은 \\(\\lambda = n p\\)이고, 이항 분포에 \\(p = \\frac{\\lambda}{n}\\)을 다시 넣은 후 \\(n \\to \\infty\\) 극한값을 얻은 결과가 푸아송 분포다."
   },
   {
     "objectID": "posts/math-simple/2019-07-13-Poisson.html#defining-poisson-distribution",
