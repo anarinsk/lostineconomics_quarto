@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.312">
+<meta name="generator" content="quarto-0.9.368">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -148,7 +148,7 @@ ul.task-list{list-style: none;}
 
 
 
-<section id="projection-scalar-and-vector" class="level2">
+<p>google_analytics.html</p><section id="projection-scalar-and-vector" class="level2">
 <h2 class="anchored" data-anchor-id="projection-scalar-and-vector">Projection: Scalar and Vector</h2>
 <section id="definition" class="level3">
 <h3 class="anchored" data-anchor-id="definition">Definition</h3>
@@ -202,7 +202,8 @@ a_1 = {\cos \theta}{\lVert \vec a \lVert} = \dfrac{\vec a \cdot \vec b}{\lVert\v
 0 \\
 0 \\
 \end{bmatrix}
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 M_{\Pi_x} =
 \begin{bmatrix}
 \Pi_{x}(
@@ -243,9 +244,12 @@ M_{\Pi_x} =
 <h2 class="anchored" data-anchor-id="more-definition">More Definition</h2>
 <ul>
 <li><span class="math inline">\(S \subseteq \mathbb R^n\)</span>: <span class="math inline">\(S\)</span>는 벡터 부분공간이라고 하자.</li>
-<li><span class="math inline">\(S^\perp\)</span>: <span class="math inline">\(S\)</span>와 직교 벡터들의 집합이고 이 역시 벡터 부분공간이다. <span class="math display">\[
+<li><span class="math inline">\(S^\perp\)</span>: <span class="math inline">\(S\)</span>와 직교 벡터들의 집합이고 이 역시 벡터 부분공간이다.</li>
+</ul>
+<p><span class="math display">\[
 S^\perp = \lbrace \vec w \in \mathbb R^n : \vec w \cdot s = 0~\text{for all}~ s \in S \rbrace
-\]</span></li>
+\]</span></p>
+<ul>
 <li><span class="math inline">\(\Pi_S\)</span>: 부분공간 <span class="math inline">\(S\)</span> 위로 프로젝션</li>
 <li><span class="math inline">\(\Pi_{S^\perp}\)</span>: 부분공간 <span class="math inline">\(S^\perp\)</span> 위로 프로젝션</li>
 </ul>
@@ -267,7 +271,8 @@ S^\perp = \lbrace \vec w \in \mathbb R^n : \vec w \cdot s = 0~\text{for all}~ s 
 <p>그림에서 <span class="math inline">\(\vec u\)</span>의 <span class="math inline">\(\vec v\)</span>로의 프로젝션은 앞서 살펴본 벡터 프로젝션이다. <span class="math inline">\(\vec v\)</span> 대신 <span class="math inline">\(l\)</span>로 표기된 점에 유의하자.</p>
 <p><span class="math display">\[
 l: \{ \vec v' \in \mathbb R^n \lvert \vec v' = \vec 0 + t \vec v, t \in \mathbb R \}
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 \Pi_l(\vec u) = \dfrac{\vec u \cdot \vec v}{\lVert\vec v\lVert^2} \vec v
 \]</span></p>
 <p>이제 여기서 <span class="math inline">\(\Pi_{l^{\perp}}\)</span>를 구해보자.</p>
@@ -303,7 +308,8 @@ P = \{ \vec p \in \mathbb R^n : \vec n \cdot(\vec p - \vec p_0) = 0 \}
 <p>이제 <span class="math inline">\(\Pi_{P^\perp}\)</span> 대입하면 <span class="math inline">\(\Pi_{P}\)</span>를 쉽게 구할 수 있다. 즉,</p>
 <p><span class="math display">\[
 \Pi_P(\vec u) + \Pi_{P^\perp} = \vec u
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 \Pi_P(\vec u)  = \vec u - \dfrac{\vec u \cdot \vec n}{\lVert\vec n\lVert^2}{\vec n}
 \]</span></p>
 </section>
@@ -367,7 +373,7 @@ MjEyMzEwM119
 </section>
 
 </main> <!-- /main -->
-<script type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const icon = "";
   const anchorJS = new window.AnchorJS();

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.312">
+<meta name="generator" content="quarto-0.9.368">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -148,7 +148,7 @@ ul.task-list{list-style: none;}
 
 
 
-<section id="source" class="level2">
+<p>google_analytics.html</p><section id="source" class="level2">
 <h2 class="anchored" data-anchor-id="source">Source</h2>
 <p>The College Wealth Divide: Education and Inequality in America, 1956-2016 <a href="https://www.stlouisfed.org/~/media/files/pdfs/hfs/is-college-worth-it/bartscher_kuhn_schularick_college_wealth_divide.pdf?la=en">download</a> <em>Alina K. Bartscher, Moritz Kuhn, and Moritz Schularick</em></p>
 </section>
@@ -184,8 +184,16 @@ ul.task-list{list-style: none;}
 <h3 class="anchored" data-anchor-id="decomposing-wealth-premium">Decomposing wealth premium</h3>
 <p><span class="math display">\[
 \dfrac{\overline{W}_{e,t}}{\overline{W}_{e,71}} = \dfrac{\sum^{3}_{i=1} s_{e,i,t} \overline{W}_{e,i,t}}{\overline{W}_{e,71}} = \sum^{3}_{i=1} s_{e,i,t} \dfrac{\overline{W}_{e,i,71}}{\overline{W}_{e,71}} \dfrac{\overline{W}_{e,i,t}}{\overline{W}_{e,i,71}}
-\]</span> - 변수 - <span class="math inline">\(\overline {W}_\cdot\)</span>: 해당 집단이 보유한 평균 부 - <span class="math inline">\(s_\cdot\)</span>: 해당 부 계층의 비율. - <span class="math inline">\(s_{c, 1, 81}\)</span>이라면 1981년도 c에 속한 사람들 중에서 전체 부의 계층 1에 속하는 비율을 나타낸다.</p>
+\]</span></p>
 <ul>
+<li><p>변수</p>
+<ul>
+<li><span class="math inline">\(\overline {W}_\cdot\)</span>: 해당 집단이 보유한 평균 부</li>
+<li><span class="math inline">\(s_\cdot\)</span>: 해당 부 계층의 비율.
+<ul>
+<li><span class="math inline">\(s_{c, 1, 81}\)</span>이라면 1981년도 c에 속한 사람들 중에서 전체 부의 계층 1에 속하는 비율을 나타낸다.</li>
+</ul></li>
+</ul></li>
 <li><p>인덱스</p>
 <ul>
 <li><span class="math inline">\(e = {\rm c, nc}\)</span></li>
@@ -200,14 +208,17 @@ ul.task-list{list-style: none;}
 <li><span class="math display">\[\dfrac{\overline{W}_{e,i,t}}{\overline{W}_{e,i,71}}\]</span>: 기준 연도 대비 특정 부 계층의 연도별 변화</li>
 </ul></li>
 <li><p>이 세 가지에 분해 요소 중에서 시간을 따라가지 않은 두 번째를 제외하고 나머지에 대해서 반사실(counterfactual)을 적용해보자.</p></li>
-<li><p>Counterfactual 1 <span class="math display">\[
+<li><p>Counterfactual 1</p></li>
+</ul>
+<p><span class="math display">\[
 \dfrac{\overline{W}_{x,i,t}}{\overline{W}_{x,i,71}} =
 \begin{cases}
 \dfrac{\overline{W}_{nc,i,t}}{\overline{W}_{nc,i,71}} &amp; \text{if $x = \rm{c}$} \\
 \dfrac{\overline{W}_{c,i,t}}{\overline{W}_{c,i,71}}  &amp; \text{if $x = \rm{nc}$}
 \end{cases}
-\]</span></p></li>
-<li><p>Counterfactual 2</p>
+\]</span></p>
+<ul>
+<li>Counterfactual 2
 <ul>
 <li><span class="math inline">\(s_{x,i,t}\)</span> 대신 <span class="math inline">\(s_{x,i,71}\)</span>을 적용한다. 즉, 시간이 지나면서 학력별 부 계급의 분포가 1971년도 지표에 고정되어 있었을 상황을 대입해본다. 이는 시간이 지나면서 소득 불평등의 패턴이 n, nc 사이에 차별적으로 타나났는지를 추적한다.</li>
 <li>같은 맥락에서 n와 nc의 <span class="math inline">\(s\)</span>를 바꾸는 분석도 해볼 수 있을 듯 한데, 저자들이 시도하지는 않았다.</li>
@@ -301,7 +312,7 @@ W_{it} = \alpha_0 + \underbrace{\beta_1 c_{it}}_{A} + \underbrace{\sum_{t &gt; 1
 </section>
 
 </main> <!-- /main -->
-<script type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const icon = "";
   const anchorJS = new window.AnchorJS();

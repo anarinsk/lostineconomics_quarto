@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.309">
+<meta name="generator" content="quarto-0.9.368">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -150,7 +150,7 @@ ul.task-list{list-style: none;}
 
 
 
-<p>당연히 알고 있다고 생각하지만 모르는 게 생각보다 많다. 회귀 분석에서 로그-리니어 모델, 즉 종속 변수에 로그를 취하고 독립 변수가 선형인 모델을 어떻게 이해해야 할까? 찬찬히 따져보자.</p>
+<p>google_analytics.html</p><p>당연히 알고 있다고 생각하지만 모르는 게 생각보다 많다. 회귀 분석에서 로그-리니어 모델, 즉 종속 변수에 로그를 취하고 독립 변수가 선형인 모델을 어떻게 이해해야 할까? 찬찬히 따져보자.</p>
 <section id="the-math" class="level2">
 <h2 class="anchored" data-anchor-id="the-math">The Math</h2>
 <p>편의상 독립 변수와 종속 변수 모두 스칼라 값이라고 하자.</p>
@@ -160,7 +160,8 @@ ul.task-list{list-style: none;}
 <p>양변을 미분해보자. 오차항은 정의상 <span class="math inline">\(x_i\)</span>와 무관해야 하므로,</p>
 <p><span class="math display">\[
 \dfrac{d y_i}{y_i} = \beta d x_i
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 \dfrac{d y_i / y_i}{d x_i} = \beta
 \]</span></p>
 <p>이렇게 보면 <span class="math inline">\(\beta\)</span> 값은 <span class="math inline">\(x_i\)</span>가 순간적으로 변함에 따라서 변화하는 <span class="math inline">\(y_i\)</span>의 % 변화를 나타낸다. 일단 기본적으로 주의해야 할 것! 위 값은 국지적 미분 값이다. 즉, 특정한 <span class="math inline">\(x_i\)</span>에서의 미분 값이다. 즉, 엄밀하게 쓰면,</p>
@@ -223,7 +224,7 @@ ul.task-list{list-style: none;}
 </section>
 
 </main> <!-- /main -->
-<script type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const icon = "";
   const anchorJS = new window.AnchorJS();

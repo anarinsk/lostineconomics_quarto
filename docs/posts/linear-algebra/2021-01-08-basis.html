@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.309">
+<meta name="generator" content="quarto-0.9.368">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -148,7 +148,7 @@ ul.task-list{list-style: none;}
 
 
 
-<section id="concepts-definition" class="level2">
+<p>google_analytics.html</p><section id="concepts-definition" class="level2">
 <h2 class="anchored" data-anchor-id="concepts-definition">Concepts &amp; Definition</h2>
 <p>벡터 공간 <span class="math inline">\(V\)</span>의 기저</p>
 <p><span class="math display">\[
@@ -170,12 +170,14 @@ v = v_1 \vec{e_1} + \dotsc + v_n \vec{e_n}
 <h3 class="anchored" data-anchor-id="orthonomal-basis">Orthonomal basis</h3>
 <p><span class="math display">\[
 B_{\hat{e}} = \{ \hat{e_1}, \dotsc, \hat{e_n} \} \text{~with}
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 \begin{cases}
 \hat{e_i} \cdot \hat{e_j} = 1 &amp; \text{if $i = j$} \\
 \hat{e_i} \cdot \hat{e_j} = 0 &amp; \text{if $i \neq j$}
 \end{cases}
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 (a_1, \dotsc, a_n)_{B_{\hat{e}}} = \underbrace{(\vec{a} \cdot \hat{e_i})}_{a_1} \hat{e_i} + \dotsb + (\vec{a} \cdot \hat{e_n}) \hat{e_n}
 \]</span></p>
 </section>
@@ -184,12 +186,14 @@ B_{\hat{e}} = \{ \hat{e_1}, \dotsc, \hat{e_n} \} \text{~with}
 <h2 class="anchored" data-anchor-id="orthogonal-basis">Orthogonal basis</h2>
 <p><span class="math display">\[
 B_{e} = \{ e_1, \dotsc, e_n \} \text{~with}
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 \begin{cases}
 e_i \cdot e_j \neq 0 &amp; \text{if $i = j$} \\
 e_i \cdot e_j = 0 &amp; \text{if $i \neq j$}
 \end{cases}
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 (b_1, \dotsc, b_n)_{B_e} = \underbrace{(\vec b \cdot \dfrac{e_i}{\Vert e_i \Vert})}_{b_1} e_1 + \dotsb + (\vec b \cdot \dfrac{e_i}{\Vert e_i \Vert}) e_n
 \]</span></p>
 <p><span class="math inline">\(b_i\)</span>의 값을 제대로 반영하기 위해서는 정규화된 orthorgonal basis가 필요하고, <span class="math inline">\(\frac{e_i}{\Vert e_i \Vert}\)</span>가 내적 계산에 들어간다.</p>
@@ -279,7 +283,8 @@ t_{2y}
 B_V &amp; = \{ \hat e_1, \dotsc, \hat e_n \} \\
 B_W &amp; =  \{ \hat b_1, \dotsc, \hat b_m \}
 \end{aligned}
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 \begin{aligned}
 [M_T]_{B_V} \vec v_{B_V} &amp; =
 \begin{bmatrix}
@@ -413,7 +418,7 @@ A = C B C^{-1}
 </section>
 
 </main> <!-- /main -->
-<script type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const icon = "";
   const anchorJS = new window.AnchorJS();

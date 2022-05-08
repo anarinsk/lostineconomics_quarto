@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.309">
+<meta name="generator" content="quarto-0.9.368">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -148,7 +148,7 @@ ul.task-list{list-style: none;}
 
 
 
-<section id="why" class="level2">
+<p>google_analytics.html</p><section id="why" class="level2">
 <h2 class="anchored" data-anchor-id="why">Why?</h2>
 <p>아이겐밸류, 아이겐벡터는 중요하다. 어디서나 튀어나온다. 그래서 친숙하지만 나는 이걸 제대로 알고 있는 것일까? 이번 포스팅에서는 아이겐 공간의 관점에서 이 문제를 살펴볼 예정이다.</p>
 <p>사실 아이겐 공간은 <span class="math inline">\(n \times n\)</span> 매트릭스의 숨은 구조(뼈대)와 같다. 아이겐밸류를 구하는 식을 떠올려보자.</p>
@@ -232,7 +232,8 @@ Q^{-1} = \phantom{}_{B_\lambda}[1]_{B_S}
 <p>이 관점에서 보면 행렬의 대각화가 새롭게 보인다.</p>
 <p><span class="math display">\[
 [\vec w]_{B_S} = \phantom{}_{B_S}[A]_{B_S} [\vec v]_{B_S} = Q \Lambda Q^{-1}[\vec v]_{B_S}
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 Q \Lambda Q^{-1}[\vec v]_{B_S} = \underbrace{\phantom{}_{B_S}[1]_{B_\lambda}}_{Q}\phantom{}_{B_\lambda}[\Lambda]_{B_\lambda}\overbrace{\phantom{}_{B_\lambda}[1]_{B_S}}^{Q^{-1}}[\vec v]_{B_S}
 \]</span></p>
 <p>행렬의 대각화란 일정한 변환 혹은 매트릭스를 아이겐 공간을 통해 다시 해석하는 과정이다. 즉, <span class="math inline">\(B_S \to B_\lambda \to B_S\)</span>의 과정을 거친다.</p>
@@ -242,13 +243,15 @@ Q \Lambda Q^{-1}[\vec v]_{B_S} = \underbrace{\phantom{}_{B_S}[1]_{B_\lambda}}_{Q
 <p>대각화를 통해서 아이겐밸류의 중요한 특성 두 가지를 다시 음미해보자.</p>
 <p><span class="math display">\[
 {\rm det}(A) = \vert A \vert = \prod_{i} \lambda_i
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 {\rm Tr}(A) = \sum_{i} a_{ii} = \sum_{i} \lambda_i
 \]</span></p>
 <p>논리는 아래와 같이 간단하다.</p>
 <p><span class="math display">\[
 \vert A \vert = \vert Q \Lambda Q^{-1} \vert =  \vert Q \vert \vert \Lambda \vert \vert Q^{-1} \vert = \vert Q \vert \vert Q^{-1} \vert \vert \Lambda \vert = \dfrac{\vert Q \vert}{\vert Q^{} \vert} \vert \Lambda \vert = \vert \Lambda \vert
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 {\rm Tr}(Q \Lambda Q^{-1}) = {\rm Tr}(\Lambda Q Q^{-1}) = {\rm Tr}(\Lambda 1) = {\rm Tr}(\Lambda) = \sum_{i} \lambda_i
 \]</span></p>
 <p>두 가지 속성은 <span class="math inline">\({\rm det}(A) = \vert A \vert = \prod_{i} \lambda_i\)</span>는 대각화가 가능한 경우 뿐 아니라 일반적으로 성립한다. 첫번째 속성만 살펴보자. 특성방정식을 생각해보면, <span class="math inline">\(\vert A - \lambda I \vert = 0\)</span>이다. 즉,</p>
@@ -266,7 +269,8 @@ p(\lambda)  = &amp; {\rm det} (A - \lambda I) \\
 <p>매트릭스 <span class="math inline">\(A\)</span>가 노멀이라면, 이는 <span class="math inline">\(A^T A = A A^T\)</span>를 만족하는 경우를 뜻한다. 모든 노멀 매트릭스는 대각화가 가능하고 아울러 <span class="math inline">\(Q\)</span>를 직교 행렬(orthgonal matrix or orthonormal matrix) <span class="math inline">\(O\)</span> 로 택할 수 있다. 이는 <span class="math inline">\(Q^{-1}\)</span>의 계산이 간단해진다는 뜻이다. 즉,</p>
 <p><span class="math display">\[
 OO^T = I = O^T O
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 O^TO =
 \begin{bmatrix}
 -- &amp; \hat e_1 &amp; -- \\
@@ -374,7 +378,7 @@ e_n &amp; = v_n - \sum_{i=1}^{n-1} \Pi_{e_i}(v_n)
 </section>
 
 </main> <!-- /main -->
-<script type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const icon = "";
   const anchorJS = new window.AnchorJS();

@@ -2,6 +2,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap'); */
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import url("https://cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-ligature-subset.css");
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'NanumSquare' !important;
@@ -24,5 +25,6 @@ p {
 }
 
 .sourceCode {
-  font-size: 90%;
+  font-family: 'D2Coding', monospace !important;
+  font-size: 95%;
 }

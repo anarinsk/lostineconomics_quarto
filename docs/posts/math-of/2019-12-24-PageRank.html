@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.312">
+<meta name="generator" content="quarto-0.9.368">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -150,7 +150,7 @@ ul.task-list{list-style: none;}
 
 
 
-<section id="tldr" class="level2">
+<p>google_analytics.html</p><section id="tldr" class="level2">
 <h2 class="anchored" data-anchor-id="tldr">tl;dr</h2>
 <ul>
 <li>페이지와 브린이 창안한 페이지랭크 알고리듬은 수학적으로 보면 마르코프 체인의 극한 분포다.</li>
@@ -180,14 +180,16 @@ p_i = \sum_{j \to i} \dfrac{p_j}{m_j} = \sum_{k=1}^{n}L_{ik}\dfrac{p_{k}}{m_k}
 <p>Broken rank를 매트릭스로 표현해보자.</p>
 <p><span class="math display">\[
 p = [p_1, \dotsc, p_n]^T
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 L =
 \begin{bmatrix}
 L_{11}&amp; \dotsc&amp; L_{1n} \\
 \vdots&amp; \ddots&amp; \vdots \\
 L_{n1}&amp; \dotsc&amp; L_{nn}
 \end{bmatrix}
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 M =
 \begin{bmatrix}
 m_{1}&amp; \dotsc&amp; 0 \\
@@ -268,7 +270,7 @@ p_{t+1} = \overbrace{\left( \dfrac{1-d}{n} \boldsymbol{1}_n + d L M^{-1} \right)
 </section>
 
 </main> <!-- /main -->
-<script type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const icon = "";
   const anchorJS = new window.AnchorJS();

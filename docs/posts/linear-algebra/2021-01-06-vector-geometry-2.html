@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.309">
+<meta name="generator" content="quarto-0.9.368">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -148,17 +148,18 @@ ul.task-list{list-style: none;}
 
 
 
-<section id="vector-space" class="level2">
+<p>google_analytics.html</p><section id="vector-space" class="level2">
 <h2 class="anchored" data-anchor-id="vector-space">Vector Space</h2>
 <p>먼저 벡터 스페이스를 살펴보기 위해서 몇 가지 정의부터 보자.</p>
 <ul>
 <li><span class="math inline">\(V\)</span> is vector space</li>
 <li><span class="math inline">\(\vec v \in V\)</span></li>
 <li><span class="math inline">\(W\)</span> is vector subspace <span class="math inline">\(W \subseteq V\)</span></li>
-<li>span: 벡터의 선형 결합을 통해 생성되는 벡터 집합 <span class="math display">\[
-\text{span}(\vec v_1, \dotsc, \vec v_n) = \{\vec v | \vec v = \alpha_1 \vec v_1 + \dotsb + \alpha_n \vec v_n, \alpha_i \in \mathbb R \}
-\]</span></li>
+<li>span: 벡터의 선형 결합을 통해 생성되는 벡터 집합</li>
 </ul>
+<p><span class="math display">\[
+\text{span}(\vec v_1, \dotsc, \vec v_n) = \{\vec v | \vec v = \alpha_1 \vec v_1 + \dotsb + \alpha_n \vec v_n, \alpha_i \in \mathbb R \}
+\]</span></p>
 <p>행렬 <span class="math inline">\(M \in \mathbb R^{m \times n}\)</span>이 있다고 할 때</p>
 <ul>
 <li><span class="math inline">\(\mathcal R(M) \subseteq \mathbb R^n\)</span>: <span class="math inline">\(M\)</span>의 로우 스페이스, 즉 <span class="math inline">\(M\)</span>의 행들의 모든 가능한 선형 결합이 나타내는 벡터 공간</li>
@@ -173,9 +174,12 @@ ul.task-list{list-style: none;}
 \mathcal C (M) \overset{\rm def}{=} \{ \vec w \in \mathbb R^m | \vec w = M v \text{ for some } \vec v \in \mathbb R^n \}
 \]</span></p>
 <ul>
-<li><span class="math inline">\(\mathcal N(M) \subseteq \mathbb R^n\)</span>: <span class="math inline">\(M\)</span>의 널 스페이스. 즉, 오른쪽에 곱해졌을 때 <span class="math inline">\(\vec 0_{m}\)</span>이 되는 벡터의 집합 <span class="math display">\[
+<li><span class="math inline">\(\mathcal N(M) \subseteq \mathbb R^n\)</span>: <span class="math inline">\(M\)</span>의 널 스페이스. 즉, 오른쪽에 곱해졌을 때 <span class="math inline">\(\vec 0_{m}\)</span>이 되는 벡터의 집합</li>
+</ul>
+<p><span class="math display">\[
 \mathcal N(M) \overset{\rm def}{=} \{ \vec v \in \mathbb R^n | M \vec v = \vec 0 \}
-\]</span></li>
+\]</span></p>
+<ul>
 <li><span class="math inline">\(\mathcal N(M^T) \subseteq \mathbb R^n\)</span>: <span class="math inline">\(M\)</span>의 좌 널 스페이스. 즉, 왼쪽에 곱해졌을 때 <span class="math inline">\(\vec 0_{n}\)</span>이 되는 벡터의 집합</li>
 </ul>
 <p><span class="math display">\[
@@ -252,7 +256,8 @@ M \vec x = \vec b
 <p>이제, <span class="math inline">\(\mathcal N(M)\)</span>의 원소는 <span class="math inline">\(\mathbb R^n\)</span>에 속한다. 이와 직교하는 공간은 어떤 공간일까? 좌 벡터 공간일까? 우 벡터 공간일까? 쉽게 생각하자. 직교 하기 위해서는 서로 차원이 같아야 한다. 우 벡터 공간은 <span class="math inline">\(\mathbb R^m\)</span>에 속한다. 따라서 직교한다면 좌 벡터 공간과 한다. 확인해보자. <span class="math inline">\(M \vec v_n = \vec 0_m\)</span> where <span class="math inline">\(\vec v_n \in \mathcal N(M)\)</span> 가 성립한다. 이제 양번에 <span class="math inline">\(\vec a^T\)</span>를 곱해보자.</p>
 <p><span class="math display">\[
 \underbrace{(M^T \vec a)^T}_{\text{left space}} \vec v_n = \vec a^T M\vec v_n = \vec a^T \vec 0_m = 0
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 \mathcal R(M) \oplus \mathcal N(M) = \mathbb R^n
 \]</span></p>
 <p>한편 같은 논리로</p>
@@ -280,7 +285,7 @@ Ax_c = A(x_r + x_n) &amp; \rightarrow \mathcal C(M)
 </section>
 
 </main> <!-- /main -->
-<script type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const icon = "";
   const anchorJS = new window.AnchorJS();

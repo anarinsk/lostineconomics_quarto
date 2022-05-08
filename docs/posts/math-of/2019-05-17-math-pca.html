@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.312">
+<meta name="generator" content="quarto-0.9.368">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -150,7 +150,7 @@ ul.task-list{list-style: none;}
 
 
 
-<section id="tl-dr" class="level2">
+<p>google_analytics.html</p><section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">tl; dr</h2>
 <ul>
 <li>PCA를 차원을 축소하는 방법으로 막연하게 이해하지 말자. PCA 역시 다른 방법처럼 어떤 목적 함수를 최적화하는 방법의 하나다.</li>
@@ -175,7 +175,8 @@ ul.task-list{list-style: none;}
 \operatorname{Proj}_{w}(x_i) = \dfrac{w}{\Vert w \Vert} \cdot x_i = w \cdot x_ i
 \]</span></p>
 <p>이 스칼라 프로젝션의 벡터 <span class="math inline">\(w\)</span> 위의 이미지, 즉 벡터 프로젝션은 <span class="math inline">\((w \cdot x_i) \dfrac{w}{\Vert w \Vert}\)</span>이다. <span class="math inline">\(\Vert w \Vert = 1\)</span>이므로 결국 벡터 프로젝션은 <span class="math inline">\((w \cdot x_i) w\)</span>가 된다.</p>
-<p>이 프로젝션 스칼라 값 혹은 프로젝션 벡터의 기댓값은 아래와 같이 0이 된다. <span class="math display">\[
+<p>이 프로젝션 스칼라 값 혹은 프로젝션 벡터의 기댓값은 아래와 같이 0이 된다.</p>
+<p><span class="math display">\[
 \dfrac{1}{n} \sum^n_{i=1} (w \cdot x_i) = \left( \dfrac{1}{n} \sum_{i=1}^n x_i \right)\cdot w = \boldsymbol{0} \cdot w = 0
 \]</span></p>
 <p>벡터 <span class="math inline">\(x_i\)</span>와 이 프로젝션 벡터 사이의 유클리드 거리를 구해보자.</p>
@@ -217,7 +218,8 @@ ul.task-list{list-style: none;}
 {\vdots} &amp; {\vdots} &amp; {\ddots} &amp; {\vdots} \\
 {x_n^1} &amp; {x_n^2} &amp; {\cdots} &amp; {x_n^k}
 \end{bmatrix}
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 \begin{aligned}
 \dfrac{1}{n-1} \underset{(k \times n) (n \times k)}{X^{T} X} =
 \begin{bmatrix}
@@ -226,7 +228,8 @@ ul.task-list{list-style: none;}
 \text{cov}(x^k, x^1) &amp; \text{cov}(x^k, x^2) &amp; \cdots &amp; \text{cov}(x^k, x^k)
 \end{bmatrix} = \Sigma, \text{~where}
 \end{aligned}
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 \text{cov}(x^i, x^j) = \dfrac{1}{n-1}\sum_{k=1}^{n} x^i_k x^j_k
 \]</span></p>
 </section>
@@ -297,7 +300,8 @@ x^T \Sigma x \geq 0 ~\text{for any $x$.}
 \]</span></p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>증명은 몹시 간단하다. <span class="math inline">\(w^T \Sigma w\)</span> 라고 하자. <span class="math display">\[
+<p>증명은 몹시 간단하다. <span class="math inline">\(w^T \Sigma w\)</span> 라고 하자.</p>
+<p><span class="math display">\[
 w^T X^T X w = \underset{\text{닷 프로덕트}}{ (Xw)^T (Xw) } \geq 0
 \]</span></p>
 </div></div><p>이 경우 모든 아이겐밸류의 값은 음수가 되지 않는다. 앞서 아이겐밸류가 분산이 된다는 사실을 보았다. 아이겐밸류가 음수가 될 수 없고 따라서 분산이 될 수 있다.</p>
@@ -358,7 +362,7 @@ w^T X^T X w = \underset{\text{닷 프로덕트}}{ (Xw)^T (Xw) } \geq 0
 </section>
 
 </main> <!-- /main -->
-<script type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const icon = "";
   const anchorJS = new window.AnchorJS();
