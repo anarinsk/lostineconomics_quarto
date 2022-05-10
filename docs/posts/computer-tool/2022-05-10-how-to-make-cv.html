@@ -327,7 +327,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="media" class="level3">
 <h3 class="anchored" data-anchor-id="media"><code>media</code></h3>
-<p>이 디렉토리에는 일종의 디자인 설정이 들어가 있다. 다른 css는 원래 그대로이다. 자신의 원하는 특화된 설정이 필요하면 별도의 파일을 만들고 이를 앞서 본 <code>cv.html</code>에서 읽어오면 된다. 내가 사용하는 <code>style.css</code>의 내용 중에서 중요한 내용 몇 가지만 지적해두자.</p>
+<p>이 디렉토리에는 일종의 디자인 설정이 들어 있다. 스타일 두 개가 각각 screen, print의 css 파일을 갖고 있다. 자신의 원하는 특화된 설정이 필요하면 별도의 파일을 만들고 이를 앞서 본 <code>cv.html</code>에서 읽어오면 된다. 내가 사용하는 <code>styles.css</code>의 내용 중에서 중요한 내용 몇 가지만 보고 가자.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* css styles */</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">/* @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&amp;display=swap'); */</span></span>
@@ -350,13 +350,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>p {</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-family</span>: <span class="st">'pretendard'</span>  <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-size</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-weight</span>: <span class="dv">400</span><span class="op">;</span></span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-family</span>: <span class="st">'pretendard'</span>  <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-size</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-weight</span>: <span class="dv">400</span><span class="op">;</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li><code>@import</code> | 한글 폰트를 로딩 하는 과정이다. 원래 리포에 한글 폰트가 없기 때문에 한글을 쓰기 위해서는 별도의 폰트 로딩이 필요하다. 여기서는 제목으로는 나눔스퀘어를 본문으로는 프리텐다드를 사용했다.</li>
+<li><code>@import</code> | 한글 폰트를 로딩 하는 과정이다. 원래 리포에 한글 폰트가 없기 때문에 한글을 쓰기 위해서는 별도의 폰트 로딩이 필요하다. 여기서는 제목으로는 ’나눔스퀘어’를 본문으로는 ’프리텐다드’를 사용했다.</li>
 <li>나머지 부분은 각 성분의 폰트와 크기 등을 필요에 맞게 적절하게 조정한 부분이다.</li>
 </ul>
 </section>
