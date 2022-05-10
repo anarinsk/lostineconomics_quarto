@@ -1,5 +1,5 @@
 ---
-title:  How to make manageable C.V.
+title:  How to make a manageable C.V.
 description: markdown으로 이력서를 만들어보자.
 author: "JS HUHH"
 date: "05/10/2022"
