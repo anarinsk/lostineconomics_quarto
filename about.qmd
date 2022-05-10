@@ -27,7 +27,7 @@ Hi, I'm Junsok Huhh. If you are interested in me, check my c.v. and contact. The
 
 
 ### C.V. 
-[junsok Huhh](https://anarinsk.github.io/markdown-cv/)
+[Brief](https://anarinsk.github.io/markdown-cv/) | [Long](https://anarinsk.github.io/markdown-cv-long/)
 
 ### History of lostineconomics.com 
 - [v3](https://anarinsk.github.io/quarto/) built with [Quarto](https://quarto.org/)
