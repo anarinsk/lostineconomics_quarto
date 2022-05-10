@@ -124,7 +124,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -166,9 +166,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -214,57 +216,65 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   gtag('js', new Date());
 
   gtag('config', 'G-JNRF3S74Z4');
-</script><p>How to make manageable C.V. 이력서를 markdown으로 만들어보자.</p>
-<section id="why" class="level1">
+</script><section id="why" class="level1">
 <h1>Why?</h1>
-<p>이력서를 만드는 방법은 다양하다. 정해진 포맷이 있다면 채워 넣으면 될 일이지만, 그렇지 않은 경우 여러가지 선택지를 고민하게 된다. 아카데미에 있는 분이라면 <span class="math inline">\(\rm \LaTeX\)</span>으로 만드는 데 익숙할 것이다. 요즘은 Notion으로도 근사한 이력서를 만들 수 있다. 이력서 제작에 중요한 가치는 아마 아래의 두 가지일 것이다.</p>
+<p>이력서를 만드는 방법은 다양하다. 정해진 포맷이 있다면 채워 넣으면 될 일이지만, 그렇지 않은 경우 여러가지 선택지를 고민하게 된다. 아카데미에 있는 분이라면 <span class="math inline">\(\rm \LaTeX\)</span>으로 이력서를 만드는 데 익숙할 것이다. 요즘은 Notion(노션)으로도 꽤 근사한 이력서를 만들 수 있다. 이력서 제작에 중요한 가치는 아마 아래의 세 가지가 아닐까 싶다.</p>
 <ol type="1">
 <li>최적의 정보 전달</li>
 <li>시각적인 심미성</li>
 <li>관리의 편의</li>
 </ol>
-<p>내 경우는 2는 제외하도록 하겠다. 최소주의를 표방하기 때문에 되도록 텍스트를 잘 배치하는 것이 내 관심의 거의 전부다. 그리고 시각적인 심미성은 디자이너의 안목을 따른다. 즉 이미 있는 템플릿을 활용한다는 뜻이다. 템플릿을 따를 경우 1 역시 비슷하게 해결된다. 그렇다면 모든 관심은 3에 집중된다.</p>
+<p>일단 2는 제외하도록 하겠다. 미감이 부족한 나는 최소주의를 지향한다. 되도록 텍스트를 잘 배치하는 것이 내게 최선이다. 시각적인 심미성은 이미 있는 템플릿에 맡기도록 하자. 템플릿을 따를 경우 1 역시 비슷하게 해결된다. 그렇다면 관심은 3에 집중된다.</p>
 </section>
-<section id="도구-그것이-문제로다" class="level1">
+<section id="도구-그것이-문제로다" class="level1 page-columns page-full">
 <h1>도구 그것이 문제로다</h1>
-<section id="노션은-왜-사랑-받을까" class="level2">
+<section id="노션은-왜-사랑-받을까" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="노션은-왜-사랑-받을까">노션은 왜 사랑 받을까?</h2>
-<p>3의 문제를 조금 더 뜯어보자. 자세히 보면 관리의 편의성은 다시 두 개로 나눌 수 있다. 하나는 이력의 변경 및 수정을 쉽게 할 수 있는지, 즉 문서의 이력 관리의 문제다. 다른 하나는 이렇게 만들어진 이력서를 잘 배포할 수 있는지에 문제다.</p>
-<p>배포의 경우 과거에는 큰 문제가 없었다. 일정의 포맷의 문서 파일이면 충분했고 PDF라는 선택지로 충분했다. 하지만 요즘은 많은 정보를 웹 또는 모바일 웹으로 접한다. 이에 맞추려면 html로 배포하는 것이 적당하고 별도의 파일이 아니라 내 이력서의 html을 호스팅해주는 적절한 서비스가 있는 것이 좋다. 최근 노션이 이력서 배포의 도구로 각광받는 이유가 여기 있을 것 같다. WYSWYG으로 다양한 형태의 편집을 지원하며 이를 바로 웹으로 배포할 수 있다. 나름 좋은 선택지라고 생각한다.</p>
-</section>
+<p>3의 문제를 조금 더 뜯어보자. 자세히 보면 관리의 편의성은 다시 두 개로 나눌 수 있다. 하나는 이력의 변경 및 수정을 쉽게 할 수 있는지, 즉 문서의 이력 관리의 문제다. 다른 하나는 이렇게 만들어진 이력서를 잘 배포할 수 있는지에 달려 있다.</p>
+<p>배포의 경우 과거에는 큰 문제가 없었다. 일정의 포맷의 문서 파일이면 충분했고 PDF라는 선택지로 충분했다. 하지만 요즘은 많은 정보를 웹 또는 모바일 웹으로 접한다. 이에 맞추려면 html로 배포하는 것이 적당하고 별도의 첨부 파일이 아니라 내 html 이력서를 호스팅해주는 적절한 서비스가 있는 것이 좋다. 노션이 이력서 배포의 도구로 최근 각광받는 이유가 여기 있을 것 같다. WYSWYG으로 다양한 형태의 편집을 지원하며 이를 바로 웹으로 배포할 수 있다. 나름 좋은 선택지라고 생각한다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>WYSWYG = What You See is What You Get, 즉 별도의 컴파일 없이 변화된 내용이 어떻게 구현되는지를 바로 볼 수 있는 형태의 소프트웨어 구현 방식을 지칭한다. 쉽게 워드, 아래아 한글을 생각하면 된다.</p>
+</div></div></section>
 <section id="pdf라면-rm-latex" class="level2">
 <h2 class="anchored" data-anchor-id="pdf라면-rm-latex">PDF라면 <span class="math inline">\(\rm \LaTeX\)</span>!</h2>
-<p>한편, 정형화되고 멋진 PDF 문서를 만들어 내는 데에는 <span class="math inline">\(\rm \LaTeX\)</span>만한 것이 없다. 아카데미에서 주로 사용하는 도구로서 논문 이력 관리를 bib<span class="math inline">\(\TeX\)</span>으로 하고 있다면 제법 편리하게 쓸 수 있다.</p>
-<p>다만 <span class="math inline">\(\rm \LaTeX\)</span>은 진입 장벽이 너무 높다. 일반적인 용도로 쓰기에는 버겁고 게다가 비효율적이다(느리다). 게다가 <span class="math inline">\(\rm \LaTeX\)</span> 문서로는 애초에 html 포맷을 생성하기가 쉽지 않다.</p>
+<p>정형화되고 멋진 PDF 문서를 만들어 내는 데에는 <span class="math inline">\(\rm \LaTeX\)</span>만한 것이 없다. 아카데미에서 주로 사용하는 도구로서 논문 이력 관리를 bib<span class="math inline">\(\TeX\)</span>으로 하고 있다면 제법 편리하고 멋진 이력서를 얻을 수 있다.</p>
+<p>다만 <span class="math inline">\(\rm \LaTeX\)</span>은 진입 장벽이 꽤 높다. 일반적인 용도로 쓰기에는 버겁고 게다가 비효율적이다(느리다). 게다가 <span class="math inline">\(\rm \LaTeX\)</span> 기반 문서로는 그럴 듯한 html 파일을 생성하기가 쉽지 않다.</p>
 </section>
 <section id="markdown은-어떨까" class="level2">
 <h2 class="anchored" data-anchor-id="markdown은-어떨까">Markdown은 어떨까?</h2>
-<p>html, <span class="math inline">\(\rm \LaTeX\)</span>과 같은 스트립트 도구와 노션과 같은 WYSWYG의 장점을 적절하게 결합한 것이 markdown이라고 생각한다. 나는 거의 모든 문서를 마크다운으로 쓰고 있다. <code>.md</code>파일은 다른 포맷으로 쉽게 변환된다. 따라서 이력서 역시 md로 보면서 만든 후에 이를 html로 변환하고 이를 웹 어딘가로 호스팅할 수 있다면 관리에 있어서는 가장 편한 도구가 아닐까 싶다.</p>
-<p>내 경우는 아니지만, md가 html로 변환되면서 html 및 css를 활용해서 원하는 만큼 디자인을 손볼 수 있다. 웹을 다루는 기술만 있다면 충분한 커스터마이즈가 가능하다. 이 글은 이런 능력자를 위한 것이 아니다. 최소주의를 지향하면서 게으르게 만들어 낼 수 있는 관리 가능한 이력서 제작이 목표라는 점 다시 강조한다.</p>
+<p>html, <span class="math inline">\(\rm \LaTeX\)</span>과 같은 스트립트 도구와 노션과 같은 WYSWYG의 장점을 적절하게 결합한 것이 markdown이라고 나는 생각한다. 나는 거의 모든 문서를 마크다운으로 쓰고 있다.</p>
+<p><code>.md</code>파일은 다른 포맷으로 쉽게 변환된다. 따라서 이력서 역시 md로 직접 보면서 만든 후에 이를 html로 변환하고 이를 웹에서 호스팅할 수 있다면, 적어도 관리에 있어서는 가장 편한 도구가 아닐까?</p>
+<p>md가 html로 변환되기 때문에 html 및 css의 기술을 활용해서 원하는 만큼 디자인을 손볼 수도 있다. 웹을 다루는 기술만 있다면 충분한 수준의 커스터마이즈가 가능하다.</p>
+<p>이 글은 그런 능력자를 위한 것이 아니다. 심미의 최소주의를 지향하면서 게으르게 만들어 낼 수 있는 그리고 무엇보다도 관리 가능한 이력서 제작이 이 포스팅의 목적이다.</p>
 </section>
 </section>
-<section id="tools" class="level1">
+<section id="tools" class="level1 page-columns page-full">
 <h1>Tools</h1>
-<p>우리의 목표는 md를 통해 쓸 만한 이력서를 만들고, 이 이력서를 웹에 호스팅해서 쉽게 접근할 수 있게 만드는 것이다. 이를 위해 두가지가 필요하다.</p>
+<p>우리의 목표는 md를 통해 쓸 만한 이력서를 만들고, 이 이력서를 웹에 호스팅해서 쉽게 접근할 수 있게 만드는 것이다. 이를 위해 두 가지가 필요하다.</p>
 <ol type="1">
 <li>md를 편집할 수 있는 도구</li>
 <li>github</li>
 </ol>
-<p>편집 도구의 경우 각자에게 맞는 에디터를 쓰면 된다. WYSWYG을 얼추 구현하기 위해서는 VS Code를 써도 되고, md의 경우 편리한 웹 에디터들도 많이 있다.</p>
-<section id="github" class="level2">
+<p>편집 도구의 경우 각자에게 맞는 에디터를 쓰면 된다. WYSWYG을 편리하게 구현하기 위해서는 VS Code를 쓰면 좋다. 마크다운의 경우 편리한 웹 에디터들도 많이 있다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>대표적으로 <a href="https://stackedit.io/">https://stackedit.io/</a></p>
+</div></div><section id="github" class="level2">
 <h2 class="anchored" data-anchor-id="github">Github</h2>
-<p>깃허브(이하 깃헙)은 소스를 온라인으로 보관하고 이에 기반해 깃 기반의 (공동) 작업을 구현하는 서비스다. 깃헙에 붙여 있는 편리한 기능의 하나가 스태틱 웹을 배포해주는 것이다. 쉽게 말해서 정적인 웹페이지를 호출한 사용자의 브라우저에 띄워주는 것이다. 주소 체계 역시 직관적이이서 이용하는 입장에서는 이만한 도구가 드물다.</p>
-<p>깃헙의 html 배포 서비스를 이용하는 방법은 자세한 방법은 여기를 참고하자. 리포의 루트에 <code>index.html</code>을 떨궈 놓고 깃헙 페이지를 활성화해두면 해당 주소를 호출받았을 때 이 녀석을 웹 브라우저에 띄워준다. 다만 이렇게 작업할 경우는 html까지 내가 만들어야 한다. md에서 html을 만드는 일이 결코 어려운 작업은 아니지만 이 또한 귀찮고 약간의 거슬리는 점들이 있는 것은 사실이다.</p>
-<p>깃헙은 자체 블로그 툴로 jekyll을 활용하고 있다. 리포에 변경이 생겼을 때 github actions 라는 녀석이 작동해서 변화된 md 파일을 디자인 포맷에 맞게 html로 변경한다. 이 jekyll을 활용하면 나는 그냥 md만 고치면 html 변환부터 호스팅까지 모든 일을 깃헙이 맡는다.</p>
+<p>깃허브(이하 깃헙)은 소스를 온라인으로 보관하고 이에 기반해 깃 기반의 (공동) 작업을 구현하는 서비스다. 깃헙에 붙여 있는 편리한 기능의 하나가 스태틱 웹을 배포해주는 것헙 페이지다. 쉽게 말해서 정적인 웹페이지를 호출한 사용자의 브라우저에 해당 페이지를 띄워주는 것이다. 주소 체계 역시 직관적이이서 이용하는 입장에서는 이 정도의 좋은 도구가 드물다. (게다가 무료!)</p>
+<p>깃헙의 html 배포 서비스를 이용하는 자세한 방법은 <a href="https://pages.github.com/">여기</a>를 참고하자.</p>
+<p>간략하게 설명하면 이렇다. 리포의 루트에 <code>index.html</code>을 떨궈 놓고 깃헙 페이지를 활성화하면 특정 주소의 url을 호출받았을 때 이 <code>index.html</code>을 웹 브라우저에 띄워준다. 다만 이렇게 작업할 경우는 html까지 내가 만들어야 한다. md에서 html을 만드는 일이 어려운 작업은 아니지만 이 또한 귀찮고 약간의 거슬리는 점들이 있다.</p>
+<p>깃헙은 자체 블로그/웹페이지 툴로 jekyll을 활용하고 있다. 리포에 변경이 생겼을 때 github actions 라는 녀석이 작동해서 변화된 md 파일을 디자인 포맷에 맞게 html로 변경해 하당 파일을 호스팅할 수 있는 상태로 만든다. 이 jekyll을 활용하면 사용자는 그냥 md, 즉 내용만 고치고 html 변환부터 호스팅까지 모든 일을 깃헙이 맡는다.</p>
 </section>
 </section>
 <section id="a-walk-through" class="level1">
 <h1>A Walk-through</h1>
 <section id="fork" class="level2">
 <h2 class="anchored" data-anchor-id="fork">Fork</h2>
-<p>나는 아래 리포를 참고했다. 일단 해당 리포를 나의 리포로 포크하도록 하자. 리포에 설명이 잘 되어 있어서 대부분은 생략해도 되겠다. 시작할 때 깃헙 페이지의 브랜치를 <code>master</code>로 바꾸는 것을 잊지 말자. 디폴트 상태에서는 <code>gh-pages</code>라는 브랜치의 내용, 즉 아래 리포의 README.md가 웹으로 호스팅된다.</p>
+<p>나는 아래 링크의 리포를 참고했다. 일단 해당 리포를 나의 리포로 포크하도록 하자. 이 리포에 설명이 잘 되어 있어서 대부분은 생략해도 되겠다. 시작할 때 깃헙 페이지의 브랜치를 <code>master</code>로 바꾸는 것을 잊지 말자. 디폴트 상태에서는 <code>gh-pages</code>라는 브랜치의 내용, 즉 아래 리포의 README.md가 웹으로 호스팅된다.</p>
 <p><a href="https://github.com/elipapa/markdown-cv">elipapa/markdown-cv: a simple template to write your CV in a readable markdown file and use CSS to publish/print it.</a></p>
-<p>문서에 설명이 되어 있듯이, 빌드는 깃헙 액션스를 이용해도 되고, 아니면 로컬에 jekyll을 깔아서 해도 된다. 게으름을 지향하는 나의 목적상 후자는 제외했다.</p>
+<p>문서는 깔끔하게 잘 되어 있다. html의 빌드는 깃헙 액션스를 이용해도 되고, 로컬에 jekyll을 깔아서 해도 된다. 게으름을 지향하는 나는 깃헙 액션스를 이용할 것이다.</p>
 </section>
 <section id="modification" class="level2">
 <h2 class="anchored" data-anchor-id="modification">Modification</h2>
@@ -295,7 +305,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="layoutcv.html" class="level3">
 <h3 class="anchored" data-anchor-id="layoutcv.html"><code>_layout/cv.html</code></h3>
-<p>이 파일은 이력서 html 파일을 생성할 때 바탕이 되는 일종의 템플릿이다. <code>index.md</code> 파일의 내용이 html 안에 들어간다고 보면 된다. html을 커스터마이즈하고 싶다면 해당 파일의 <code>&lt;head&gt;</code> 태그에 뭔가를 넣어야 한다.</p>
+<p>이 파일은 이력서 html 파일을 생성할 때 바탕이 되는 일종의 템플릿이다. <code>index.md</code> 파일의 내용이 html 안에 들어간다고 보면 된다. html을 커스터마이즈하고 싶다면 해당 파일의 <code>&lt;head&gt;...&lt;/head&gt;</code> 태그 사이에 필요한 내용을 넣어야 한다.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span>  <span class="er">href</span><span class="ot">=</span><span class="st">"media/styles.css"</span>  <span class="er">type</span><span class="ot">=</span><span class="st">"text/css"</span>  <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span>  <span class="er">media</span><span class="ot">=</span><span class="st">"screen"</span><span class="kw">&gt;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span>  <span class="er">href</span><span class="ot">=</span><span class="st">"media/styles.css"</span>  <span class="er">type</span><span class="ot">=</span><span class="st">"text/css"</span>  <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span>  <span class="er">media</span><span class="ot">=</span><span class="st">"print"</span><span class="kw">&gt;</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -312,7 +322,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="ot">src=</span><span class="st">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"</span><span class="kw">&gt;&lt;/script&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li><code>&lt;link...</code> | 이 두 줄은 커스텀 디자인을 담고 있는 특화된 css 파일을 삽입하기 위한 용도이다. 해당 파일의 이름은 <code>styles.css</code>이다.</li>
-<li><code>&lt;!-- mathjax...</code> | 원래 리포에 <span class="math inline">\(\rm \LaTeX\)</span> 기호 출력을 위한 준비가 되어 있지 않다. mathjax는 자바 스크립트로 웹에서 <span class="math inline">\(\rm \LaTeX\)</span> 출력 관련을 담당한다.</li>
+<li><code>&lt;!-- mathjax...</code> | 원래 리포에 <span class="math inline">\(\rm \LaTeX\)</span> 기호 출력을 위한 준비가 되어 있지 않다. mathjax는 자바 스크립트(js)로 웹에서 <span class="math inline">\(\rm \LaTeX\)</span> 출력 관련을 담당한다. math engine으로 mathjax 이외에 katex과 같이 더 빠른 js를 쓸 수 있지만, 이력서에서 텍을 과도하게 쓸 이유가 없다면 mathjax로 충분하다.</li>
 </ul>
 </section>
 <section id="media" class="level3">
