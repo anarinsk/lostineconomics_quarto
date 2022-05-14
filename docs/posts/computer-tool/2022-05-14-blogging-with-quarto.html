@@ -224,7 +224,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   gtag('config', 'G-JNRF3S74Z4');
 </script><section id="why" class="level1 page-columns page-full">
 <h1>Why</h1>
-<p>상용 블로그를 쓰긴 권한다. 블로깅 툴은 관리가 편한 게 제일 좋다. 다만 사용 툴은 몇 가지 제약이 있다.</p>
+<p>블로깅 툴은 관리가 편한 게 제일 좋다. 다만 사용 툴은 몇 가지 제약이 있다.</p>
 <ul>
 <li><span class="math inline">\(\LaTeX\)</span> 수식의 제너레이션이 쉽지 않다.</li>
 <li>생각보다 깔끔한 툴이 별로 없다.</li>
@@ -320,7 +320,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="customization" class="level1">
 <h1>Customization</h1>
-<p><code>_quarto.yml</code>의 설정으로 별도의 <code>.css</code> 파일을 설정할 수 있다. 취향에 따라서 몇 가지 커스터마이즈가 도움이 될 수 있다.</p>
+<section id="styles.css" class="level2">
+<h2 class="anchored" data-anchor-id="styles.css"><code>styles.css</code></h2>
+<p>앞서 언급했듯이 <code>_quarto.yml</code>에서 별도의 <code>.css</code> 파일을 설정할 수 있다. 취향에 따라서 원하는 만큼 커스터마이즈를 할 수 있다. 내 경우는 아래 두 가지 요소를 조정했다.</p>
 <ul>
 <li>한글의 경우 기본 폰트 이외 추가 폰트를 쓰고 싶을 때</li>
 <li>각 구성 요소별로 크기를 조정하고 싶을 때</li>
@@ -374,9 +376,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>@import</code> | 폰트를 로딩한다.</li>
 <li>나머지는 디자인 관련 설정이다.</li>
 </ul>
+</section>
 <section id="디렉토리-관리" class="level2">
 <h2 class="anchored" data-anchor-id="디렉토리-관리">디렉토리 관리</h2>
-<p><code>posts/</code> 내 별도의 디렉토리를 만들어 포스팅을 구별할 수도 있다. 다만, 포스팅 <code>.qmd</code>을 작성할 때 별도의 <code>.html</code>을 삽입했다면, 해당 <code>.html</code>을 각 디렉토리마다 넣어줘야 한다.</p>
+<p><code>posts/</code> 내 별도의 디렉토리를 만들어 포스팅을 구별할 수도 있다. 다만, 포스팅 <code>.qmd</code>을 작성할 때 별도의 <code>.html</code>을 삽입했다면, 해당 <code>.html</code>을 각 디렉토리마다 넣어줘야 한다. 예를 들어 google analytics의 html을 포함시켰다면 해당 파일을 각 디렉토리 별로 넣어주자.</p>
 
 
 </section>

@@ -3,14 +3,14 @@ title: Blogging with Quarto
 description: Quarto로 블로그를
 author: "JS HUHH"
 date: "05/14/2022"
-image: "https://blogsspreadspot.com/wp-content/uploads/2021/11/blog.jpg"
+image: "goodecon.jpeg"
 categories: [computer-tool]
 
 ---
 
 # Why 
 
-상용 블로그를 쓰긴 권한다. 블로깅 툴은 관리가 편한 게 제일 좋다. 다만 사용 툴은 몇 가지 제약이 있다. 
+블로깅 툴은 관리가 편한 게 제일 좋다. 다만 사용 툴은 몇 가지 제약이 있다. 
 
 -  $\LaTeX$ 수식의 제너레이션이 쉽지 않다. 
 - 생각보다 깔끔한 툴이 별로 없다. 
@@ -93,7 +93,9 @@ $ quarto preview
 
 # Customization 
 
-`_quarto.yml`의 설정으로 별도의 `.css` 파일을 설정할 수 있다. 취향에 따라서 몇 가지 커스터마이즈가 도움이 될 수 있다. 
+## `styles.css`
+
+앞서 언급했듯이 `_quarto.yml`에서 별도의 `.css` 파일을 설정할 수 있다. 취향에 따라서 원하는 만큼 커스터마이즈를 할 수 있다. 내 경우는 아래 두 가지 요소를 조정했다. 
 
 - 한글의 경우 기본 폰트 이외 추가 폰트를 쓰고 싶을 때 
 - 각 구성 요소별로 크기를 조정하고 싶을 때 
@@ -151,4 +153,4 @@ p {
 
 ## 디렉토리 관리 
 
-`posts/` 내 별도의 디렉토리를 만들어 포스팅을 구별할 수도 있다. 다만, 포스팅 `.qmd`을 작성할 때 별도의 `.html`을 삽입했다면, 해당 `.html`을 각 디렉토리마다 넣어줘야 한다. 
+`posts/` 내 별도의 디렉토리를 만들어 포스팅을 구별할 수도 있다. 다만, 포스팅 `.qmd`을 작성할 때 별도의 `.html`을 삽입했다면, 해당 `.html`을 각 디렉토리마다 넣어줘야 한다. 예를 들어 google analytics의 html을 포함시켰다면 해당 파일을 각 디렉토리 별로 넣어주자. 

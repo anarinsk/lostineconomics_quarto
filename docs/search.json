@@ -1488,7 +1488,7 @@
     "href": "posts/computer-tool/2022-05-14-blogging-with-quarto.html",
     "title": "Blogging with Quarto",
     "section": "",
-    "text": "상용 블로그를 쓰긴 권한다. 블로깅 툴은 관리가 편한 게 제일 좋다. 다만 사용 툴은 몇 가지 제약이 있다.\n\n\\(\\LaTeX\\) 수식의 제너레이션이 쉽지 않다.\n생각보다 깔끔한 툴이 별로 없다.\n왠지 모를 종속된 느낌적 느낌\n\n별도의 서버를 호스팅해서 워드프레스 같은 툴을 깔아서 쓸 용기는 부족하니 적당한 선에서 타협이 필요하다. 이 요구를 딱 맞는 것이 github(깃헙)의 스태틱 웹 서비스 Github Pages다. 스테틱 웹이란 html 페이지를 호출한 브라우저에 html을 띄워주는 단순한 서비스를 의미한다. 내가 작성한 포스팅을 html로 생성하는 일관된 방법만 있다면 스태틱이라는 사실 자체가 문제는 아니다. 페이지를 생성하는 약간의 귀찮음이 더해지는 정도라고 보면 될 것이다.\n\n\n깃헙 페이지스는 스태틱 페이지를 생성하고 관리하는 프레임워크 Jekyll을 품고 있다. 일정한 구조에 맞춰서 콘텐츠를 떨구면 알아서 블로그를 생성한다. 경우에 따라서는 생각보다 편리한 기능이다."
+    "text": "블로깅 툴은 관리가 편한 게 제일 좋다. 다만 사용 툴은 몇 가지 제약이 있다.\n\n\\(\\LaTeX\\) 수식의 제너레이션이 쉽지 않다.\n생각보다 깔끔한 툴이 별로 없다.\n왠지 모를 종속된 느낌적 느낌\n\n별도의 서버를 호스팅해서 워드프레스 같은 툴을 깔아서 쓸 용기는 부족하니 적당한 선에서 타협이 필요하다. 이 요구를 딱 맞는 것이 github(깃헙)의 스태틱 웹 서비스 Github Pages다. 스테틱 웹이란 html 페이지를 호출한 브라우저에 html을 띄워주는 단순한 서비스를 의미한다. 내가 작성한 포스팅을 html로 생성하는 일관된 방법만 있다면 스태틱이라는 사실 자체가 문제는 아니다. 페이지를 생성하는 약간의 귀찮음이 더해지는 정도라고 보면 될 것이다.\n\n\n깃헙 페이지스는 스태틱 페이지를 생성하고 관리하는 프레임워크 Jekyll을 품고 있다. 일정한 구조에 맞춰서 콘텐츠를 떨구면 알아서 블로그를 생성한다. 경우에 따라서는 생각보다 편리한 기능이다."
   },
   {
     "objectID": "posts/computer-tool/2022-05-14-blogging-with-quarto.html#history-of-lostineconomics.com",
@@ -1530,6 +1530,13 @@
     "href": "posts/computer-tool/2022-05-14-blogging-with-quarto.html#디렉토리-관리",
     "title": "Blogging with Quarto",
     "section": "디렉토리 관리",
-    "text": "디렉토리 관리\nposts/ 내 별도의 디렉토리를 만들어 포스팅을 구별할 수도 있다. 다만, 포스팅 .qmd을 작성할 때 별도의 .html을 삽입했다면, 해당 .html을 각 디렉토리마다 넣어줘야 한다."
+    "text": "디렉토리 관리\nposts/ 내 별도의 디렉토리를 만들어 포스팅을 구별할 수도 있다. 다만, 포스팅 .qmd을 작성할 때 별도의 .html을 삽입했다면, 해당 .html을 각 디렉토리마다 넣어줘야 한다. 예를 들어 google analytics의 html을 포함시켰다면 해당 파일을 각 디렉토리 별로 넣어주자."
+  },
+  {
+    "objectID": "posts/computer-tool/2022-05-14-blogging-with-quarto.html#styles.css",
+    "href": "posts/computer-tool/2022-05-14-blogging-with-quarto.html#styles.css",
+    "title": "Blogging with Quarto",
+    "section": "styles.css",
+    "text": "styles.css\n앞서 언급했듯이 _quarto.yml에서 별도의 .css 파일을 설정할 수 있다. 취향에 따라서 원하는 만큼 커스터마이즈를 할 수 있다. 내 경우는 아래 두 가지 요소를 조정했다.\n\n한글의 경우 기본 폰트 이외 추가 폰트를 쓰고 싶을 때\n각 구성 요소별로 크기를 조정하고 싶을 때\n\n/* css styles */\n@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');\n@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');\n@import url(\"https://cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-ligature-subset.css\");\n\nh1, h2, h3, h4, h5, h6 {\n    font-family: 'NanumSquare' !important;\n    font-weight : 600;\n  }\n\nh1 {\n    font-size: 155%\n}\n\nh2 {\n  font-size: 135%\n}\n\nh3 {\n  font-size: 115%\n}\n\nh4, h5, h6 {\n  font-size: 100%\n}\n\nul, li, ol{\n    font-family: 'pretendard' !important;\n    font-size:100%;\n   }\n\np {\n    font-family: 'pretendard' !important;\n    font-size: 95%;\n    font-weight: 400; \n}\n\n.category {\n  font-size: 90%;\n}\n\n.sourceCode {\n  font-family: 'D2Coding', monospace !important;\n  font-size: 95%;\n}\n\n@import | 폰트를 로딩한다.\n나머지는 디자인 관련 설정이다."
   }
 ]
