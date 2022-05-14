@@ -19,6 +19,6 @@ website:
 format:
   html:
     theme:
-        light: cosmo
-        dark: darkly
+        light: [cosmo, theme.scss]
+        dark: [cosmo, theme-dark.scss]
     css: styles.css
