@@ -10,7 +10,186 @@
 <atom:link href="https://anarinsk.github.io/lostineconomics_quarto/index.xml" rel="self" type="application/rss+xml"/>
 <description>Another useless blog</description>
 <generator>quarto-0.9.399</generator>
-<lastBuildDate>Mon, 09 May 2022 15:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 13 May 2022 15:00:00 GMT</lastBuildDate>
+<item>
+  <title>Blogging with Quarto</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-14-blogging-with-quarto.html</link>
+  <description><![CDATA[ 
+
+
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="why" class="level1 page-columns page-full">
+<h1>Why</h1>
+<p>상용 블로그를 쓰긴 권한다. 블로깅 툴은 관리가 편한 게 제일 좋다. 다만 사용 툴은 몇 가지 제약이 있다.</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5CLaTeX"> 수식의 제너레이션이 쉽지 않다.</li>
+<li>생각보다 깔끔한 툴이 별로 없다.</li>
+<li>왠지 모를 종속된 느낌적 느낌</li>
+</ul>
+<p>별도의 서버를 호스팅해서 워드프레스 같은 툴을 깔아서 쓸 용기는 부족하니 적당한 선에서 타협이 필요하다. 이 요구를 딱 맞는 것이 github(깃헙)의 스태틱 웹 서비스 Github Pages다. 스테틱 웹이란 html 페이지를 호출한 브라우저에 html을 띄워주는 단순한 서비스를 의미한다. 내가 작성한 포스팅을 html로 생성하는 일관된 방법만 있다면 스태틱이라는 사실 자체가 문제는 아니다. 페이지를 생성하는 약간의 귀찮음이 더해지는 정도라고 보면 될 것이다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>깃헙 페이지스는 스태틱 페이지를 생성하고 관리하는 프레임워크 Jekyll을 품고 있다. 일정한 구조에 맞춰서 콘텐츠를 떨구면 알아서 블로그를 생성한다. 경우에 따라서는 생각보다 편리한 기능이다.</p>
+</div></div></section>
+<section id="tools" class="level1">
+<h1>Tools</h1>
+<section id="history-of-lostineconomics.com" class="level2">
+<h2 class="anchored" data-anchor-id="history-of-lostineconomics.com">History of lostineconomics.com</h2>
+<p>스태틱 웹을 이용할 수 있게 해주는 도구는 대체로 다른 도구에 종속되어 있다. 이 블로그의 최초 버전은 RStudio에서 제공하는 Blogdown이라는 도구를 활용했다. 작동하는 방식은 여느 스태틱 웹을 생성하는 툴과 비슷하다. 사용하기에 부족함이 없지만, R에 특화된 도구에 종속되어 있다는 것이 마음에 걸렸다.</p>
+<p>두번째 버전에서는 ’꼼수’를 써 봤다. 깃헙의 각 리포지토리(리포)별로 html 호스팅이 가능하니까 포스팅별로 특화된 포스팅 페이지를 만들고 해당 페이지의 링크를 지닌 페이지를 블로그의 홈으로 만들었다. 포스팅이 별도의 깃헙 리포로 된 구조 때문에 글이 늘어가면 관리가 쉽지 않게 된다.</p>
+<p>세번째 버전은 fastpages를 활용했다. fastpages는 깃헙 액션스의 빌드 기능을 활용한다. 사용자는 <code>.md</code>로 콘텐츠를 전달하고 나머지 빌드는 모두 깃헙 위에서 이루어진다. 별도의 로컬 프로세스가 없다는 점에서 편리한 접근이지만, 디자인 활용이 제한적이고 프로젝트의 지원이 시원치 않아 보였다. 자세한 내용은 <a href="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-03-07-blogging-with-fastpages.html">여기</a>를 참고하자.</p>
+</section>
+<section id="quarto" class="level2">
+<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
+<p>프로젝트의 홈에 따르면 Quarto는 과학적 문서 작성을 위한 독립된 도구다. 앞서 소개한 BlogDown과 같은 툴이 특정 도구에 의존한다면 이 녀석은 Jupyter, VS Code, RStudio 등 여느 에디터와 함께 쓸 수 있다. Quarto 프로젝트는 아직 초기지만 상당한 기대와 지지를 받고 있다. 이 프로젝트의 장점은 아래와 같다.</p>
+<ul>
+<li>마크 다운 기반의 문서 작성, 스태틱 웹 도구 그리고 계산 기반 문서 작성 도구의 기능을 부족하지 않게 두루 갖추고 있다.</li>
+<li>각종 기능에 관한 문서화가 체계적으로 잘 되어 있다.</li>
+<li>CLI 기반이라서 도구 의존성이 낮다.</li>
+</ul>
+<p>프로젝트가 초기여서 안정성이 떨어지는 경우가 있고, 구글링을 통해 필요한 정보를 충분히 얻을 수 없는 단점이 있다. 시간이 지나면 해결될 것으로 생각한다.</p>
+</section>
+</section>
+<section id="application" class="level1">
+<h1>Application</h1>
+<p><a href="https://quarto.org/">Quarto</a>를 이용해 기존 fastpages 기반 블로그를 대체해보자. 기존 블로그 포스팅은 어떻게 가져올 수 있을까? 포스팅의 양이 많지 않을 경우 반복 작업을 해도 되고, 필요하면 간단한 스크립트를 통해서 일괄해서 바꿀 수 있다.</p>
+<section id="github-리포-생성" class="level2">
+<h2 class="anchored" data-anchor-id="github-리포-생성">Github 리포 생성</h2>
+<p>깃헙 페이지스를 활용할 깃헙 리포를 생성하자. 그리고 이 녀석을 로컬로 클론해두면 준비가 끝난다. 아래의 사항을 주의하자.</p>
+<ul>
+<li>리포의 종류는 private이 아닌 public이어야 한다. 그래야 블로그가 서빙된다.</li>
+<li>깃헙 페이지스 기능을 활성화 해두자.</li>
+</ul>
+</section>
+<section id="블로그-페이지-생성" class="level2">
+<h2 class="anchored" data-anchor-id="블로그-페이지-생성">블로그 페이지 생성</h2>
+<p><a href="https://quarto.org/docs/websites/website-blog.html#blog-projects">Quarto - Creating a Blog</a></p>
+<p>먼저 전체적인 블로그의 구조를 생성해야 한다.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;">?</span> quarto create-project YOUR-BLOG-DIR <span class="at" style="color: #657422;">--type</span> website:blog</span></code></pre></div>
+<p><code>YOUR-BLOG-DIR</code> 은 앞서 지정한 깃허브 리포의 디렉토리에 해당한다. 나머지는 그대로 쓰면 된다. 이 명령을 실행하면 해당 디렉토리에 블로그를 서비스하기 위해 필요한 파일들이 생성된다.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">File</th>
+<th style="text-align: left;">Desc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">_quarto.yml</td>
+<td style="text-align: left;">블로그 설정 yml</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://quarto.org/docs/websites/website-blog.html#home-page">index.qmd</a></td>
+<td style="text-align: left;">index.html 설정</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://quarto.org/docs/websites/website-blog.html#about-page">about.qmd</a></td>
+<td style="text-align: left;">about 페이지 내용</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://quarto.org/docs/websites/website-blog.html#posts-directory">posts/</a></td>
+<td style="text-align: left;">포스팅이 담길 디렉토리</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">styles.css</td>
+<td style="text-align: left;">개별 스타일 css</td>
+</tr>
+</tbody>
+</table>
+<p>posts 디렉토리에 <code>.qmd</code> 확장자를 지닌 포스팅 파일을 넣는다. 나머지 파일들에 관한 설명은 공식 문서에 잘 되어 있다.</p>
+<ul>
+<li><code>_quarto.yml</code>은 기본 설정된 항목을 필요에 따라서 고쳐도 충분하다. 보다 많은 설정이 필요하다면 <a href="https://github.com/quarto-dev/quarto-web/blob/main/_quarto.yml">여기</a> 내용을 참고하자.</li>
+<li>나머지 설정은 위 표에 링크된 내용을 참고하면 된다.</li>
+</ul>
+</section>
+<section id="렌더링" class="level2">
+<h2 class="anchored" data-anchor-id="렌더링">렌더링</h2>
+<ul>
+<li>페이지 준비와 설정이 잘 되었으면 렌더링을 하면 된다.</li>
+</ul>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;">$</span> quarto render </span>
+<span id="cb2-2"><span class="ex" style="color: null;">$</span> quarto preview </span></code></pre></div>
+<p><code>render</code> 명령어는 페이지를 렌더링하고 <code>preview</code>는 페이지를 미리 보여준다. VS Code의 Quarto extension을 쓰면 해당 과정을 편리하게 진행할 수 있다.</p>
+</section>
+</section>
+<section id="customization" class="level1">
+<h1>Customization</h1>
+<p><code>_quarto.yml</code>의 설정으로 별도의 <code>.css</code> 파일을 설정할 수 있다. 취향에 따라서 몇 가지 커스터마이즈가 도움이 될 수 있다.</p>
+<ul>
+<li>한글의 경우 기본 폰트 이외 추가 폰트를 쓰고 싶을 때</li>
+<li>각 구성 요소별로 크기를 조정하고 싶을 때</li>
+</ul>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb3-1"><span class="co" style="color: #5E5E5E;">/* css styles */</span></span>
+<span id="cb3-2"><span class="im" style="color: #00769E;">@import</span> <span class="fu" style="color: #4758AB;">url(</span><span class="st" style="color: #20794D;">'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'</span><span class="fu" style="color: #4758AB;">)</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb3-3"><span class="im" style="color: #00769E;">@import</span> <span class="fu" style="color: #4758AB;">url(</span><span class="st" style="color: #20794D;">'https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css'</span><span class="fu" style="color: #4758AB;">)</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb3-4"><span class="im" style="color: #00769E;">@import</span> <span class="fu" style="color: #4758AB;">url(</span><span class="st" style="color: #20794D;">"https://cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-ligature-subset.css"</span><span class="fu" style="color: #4758AB;">)</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb3-5"></span>
+<span id="cb3-6">h1<span class="op" style="color: #5E5E5E;">,</span> h2<span class="op" style="color: #5E5E5E;">,</span> h3<span class="op" style="color: #5E5E5E;">,</span> h4<span class="op" style="color: #5E5E5E;">,</span> h5<span class="op" style="color: #5E5E5E;">,</span> h6 {</span>
+<span id="cb3-7">    <span class="kw" style="color: #003B4F;">font-family</span>: <span class="st" style="color: #20794D;">'NanumSquare'</span> <span class="at" style="color: #657422;">!important</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb3-8">    <span class="kw" style="color: #003B4F;">font-weight</span> : <span class="dv" style="color: #AD0000;">600</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb3-9">  }</span>
+<span id="cb3-10"></span>
+<span id="cb3-11">h1 {</span>
+<span id="cb3-12">    <span class="kw" style="color: #003B4F;">font-size</span>: <span class="dv" style="color: #AD0000;">155</span><span class="dt" style="color: #AD0000;">%</span></span>
+<span id="cb3-13">}</span>
+<span id="cb3-14"></span>
+<span id="cb3-15">h2 {</span>
+<span id="cb3-16">  <span class="kw" style="color: #003B4F;">font-size</span>: <span class="dv" style="color: #AD0000;">135</span><span class="dt" style="color: #AD0000;">%</span></span>
+<span id="cb3-17">}</span>
+<span id="cb3-18"></span>
+<span id="cb3-19">h3 {</span>
+<span id="cb3-20">  <span class="kw" style="color: #003B4F;">font-size</span>: <span class="dv" style="color: #AD0000;">115</span><span class="dt" style="color: #AD0000;">%</span></span>
+<span id="cb3-21">}</span>
+<span id="cb3-22"></span>
+<span id="cb3-23">h4<span class="op" style="color: #5E5E5E;">,</span> h5<span class="op" style="color: #5E5E5E;">,</span> h6 {</span>
+<span id="cb3-24">  <span class="kw" style="color: #003B4F;">font-size</span>: <span class="dv" style="color: #AD0000;">100</span><span class="dt" style="color: #AD0000;">%</span></span>
+<span id="cb3-25">}</span>
+<span id="cb3-26"></span>
+<span id="cb3-27">ul<span class="op" style="color: #5E5E5E;">,</span> li<span class="op" style="color: #5E5E5E;">,</span> ol{</span>
+<span id="cb3-28">    <span class="kw" style="color: #003B4F;">font-family</span>: <span class="st" style="color: #20794D;">'pretendard'</span> <span class="at" style="color: #657422;">!important</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb3-29">    <span class="kw" style="color: #003B4F;">font-size</span>:<span class="dv" style="color: #AD0000;">100</span><span class="dt" style="color: #AD0000;">%</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb3-30">   }</span>
+<span id="cb3-31"></span>
+<span id="cb3-32">p {</span>
+<span id="cb3-33">    <span class="kw" style="color: #003B4F;">font-family</span>: <span class="st" style="color: #20794D;">'pretendard'</span> <span class="at" style="color: #657422;">!important</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb3-34">    <span class="kw" style="color: #003B4F;">font-size</span>: <span class="dv" style="color: #AD0000;">95</span><span class="dt" style="color: #AD0000;">%</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb3-35">    <span class="kw" style="color: #003B4F;">font-weight</span>: <span class="dv" style="color: #AD0000;">400</span><span class="op" style="color: #5E5E5E;">;</span> </span>
+<span id="cb3-36">}</span>
+<span id="cb3-37"></span>
+<span id="cb3-38"><span class="fu" style="color: #4758AB;">.category</span> {</span>
+<span id="cb3-39">  <span class="kw" style="color: #003B4F;">font-size</span>: <span class="dv" style="color: #AD0000;">90</span><span class="dt" style="color: #AD0000;">%</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb3-40">}</span>
+<span id="cb3-41"></span>
+<span id="cb3-42"><span class="fu" style="color: #4758AB;">.sourceCode</span> {</span>
+<span id="cb3-43">  <span class="kw" style="color: #003B4F;">font-family</span>: <span class="st" style="color: #20794D;">'D2Coding'</span><span class="op" style="color: #5E5E5E;">,</span> <span class="dv" style="color: #AD0000;">monospace</span> <span class="at" style="color: #657422;">!important</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb3-44">  <span class="kw" style="color: #003B4F;">font-size</span>: <span class="dv" style="color: #AD0000;">95</span><span class="dt" style="color: #AD0000;">%</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb3-45">}</span></code></pre></div>
+<ul>
+<li><code>@import</code> | 폰트를 로딩한다.</li>
+<li>나머지는 디자인 관련 설정이다.</li>
+</ul>
+<section id="디렉토리-관리" class="level2">
+<h2 class="anchored" data-anchor-id="디렉토리-관리">디렉토리 관리</h2>
+<p><code>posts/</code> 내 별도의 디렉토리를 만들어 포스팅을 구별할 수도 있다. 다만, 포스팅 <code>.qmd</code>을 작성할 때 별도의 <code>.html</code>을 삽입했다면, 해당 <code>.html</code>을 각 디렉토리마다 넣어줘야 한다.</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>computer-tool</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-14-blogging-with-quarto.html</guid>
+  <pubDate>Fri, 13 May 2022 15:00:00 GMT</pubDate>
+  <media:content url="https://blogsspreadspot.com/wp-content/uploads/2021/11/blog.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>How to make a manageable C.V.</title>
   <dc:creator>JS HUHH</dc:creator>
@@ -2192,70 +2371,6 @@ MjEyMzEwM119
   <pubDate>Fri, 25 Sep 2020 15:00:00 GMT</pubDate>
   <media:content url="https://upload.wikimedia.org/wikipedia/commons/0/01/Windows_Terminal_Logo_256x256.png" medium="image" type="image/png"/>
 </item>
-<item>
-  <title>Docker 컨테이너 + 한글 폰트</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html</link>
-  <description><![CDATA[ 
-
-
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><section id="다른-방법" class="level2">
-<h2 class="anchored" data-anchor-id="다른-방법">다른 방법</h2>
-<p>이 <a href="https://anarinsk.github.io/lostineconomics-v2-1/docker/data-science/2020/09/24/install-hangul-in-docker.html">포스팅</a>은 도커 컨테이너 안에서 한글 문제를 해결하는 다른 방법을 제시하고 있다. 같이 참고 하시라.</p>
-</section>
-<section id="왜-필요한가" class="level2">
-<h2 class="anchored" data-anchor-id="왜-필요한가">왜 필요한가?</h2>
-<p>Jupyter 등에서 matplotlib을 쓸 때 라벨이 한글일 경우, 대부분 한글 출력에 문제를 겪게 된다. ㅁㅁㅁ형태로 출력되는데, 파이썬 환경에서 한글 폰트가 인식되지 않게 때문이다. 일반적인 환경이라면 웹 검색으로 찾을 수 있는 <a href="https://financedata.github.io/posts/matplotlib-hangul-for-windows-anaconda.html">가이드</a>를 통해 해결할 수 있다.</p>
-<p>그런데 도커 환경을 쓴다면 이런 가이드가 별 소용이 없다. 도커는 아래 그림과 같이 ’host os - 도커 - 컨테이너’의 구조로 돌아간다. 컨테이너(App x)가 각기 독자적인 os를 지니고 있기 때문에 해당 os에서 한글을 인식시켜줘야 특정 컨테이너 환경 안에서 한글을 쓸 수 있게 된다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/container/https:/www.docker.com/sites/default/files/d8/styles/large/public/2018-11/container-what-is-container.png?itok=vle7kjDj" class="img-fluid"></p>
-</section>
-<section id="simple-solution" class="level2">
-<h2 class="anchored" data-anchor-id="simple-solution">Simple Solution</h2>
-<p>방법은 간단하다. 컨테이너 환경 os에 직접 한글을 설치해주면 된다. 해당 os 내의 bash 혹은 상응하는 CLI에 들어가서 필요한 명령(스크립트)들을 실행하면 된다. 해당 명령들을 별도의 bash 스크립트로 만들고 필요한 경우 녀석들을 한방에 돌리면 살짝 더 편리할 것이다. 아래는 나눔 계열 폰트를 설치하는 스크립트다. 파일 이름을 <code>install_nanum.sh</code>로 하자.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="co" style="color: #5E5E5E;">#!/bin/sh</span></span>
-<span id="cb1-2"></span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;">sudo</span> sed <span class="at" style="color: #657422;">-i</span> <span class="st" style="color: #20794D;">'s/archive.ubuntu.com/ftp.daumkakao.com/g'</span> /etc/apt/sources.list</span>
-<span id="cb1-4"><span class="fu" style="color: #4758AB;">sudo</span> apt-get update </span>
-<span id="cb1-5"><span class="fu" style="color: #4758AB;">sudo</span> apt-get install <span class="at" style="color: #657422;">-y</span> fonts-nanum<span class="pp" style="color: #AD0000;">*</span></span>
-<span id="cb1-6"><span class="fu" style="color: #4758AB;">sudo</span> fc-cache <span class="at" style="color: #657422;">-fv</span></span></code></pre></div>
-<p>나머지는 대체로 자명한 명령어다. 첫행의 sed는 ftp 주소를 국내로 바꿔주는 것이다. 업데이트 시 걸리는 시간을 단축하기 위해 사용했다. 터미널에서 스크립트 파일이 있는 디렉토리로 이동한 후 bash 스크립트를 실행하면 된다. bash 스크립트는 도커를 쓸 때 유용하다. 초기에 갖춰져야 하는 세팅이 있을 경우 스크립트로 만들어두고 도커 이미지를 새로 올렸을 때 실행해주면 되겠다. 약간 귀찮지만 못 견딜 정도는 아니다.</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="op" style="color: #5E5E5E;">&gt;</span> ./install_nanum.sh <span class="ex" style="color: null;">⏎</span></span></code></pre></div>
-<p>윈도에서 파일을 편집할 경우 <code>^M</code>이 달라 붙어 문제가 생기는 경우가 있다. OS의 개행 문자가 달라서 생기는 문제다. docker 내부 터미널에서 <code>vim</code>, <code>nano</code> 등으로 파일을 열어 해당 부분을 지우고 다시 저장하면 된다.</p>
-<p>이제 도커 컨테이너 안의 이용한 주피터 노트북에서 다음과 같이 실행하면 나눔고딕 폰트를 쓸 수 있게 된다.</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="op" style="color: #5E5E5E;">!</span>.<span class="op" style="color: #5E5E5E;">/</span>install_nanum.sh</span>
-<span id="cb3-2"><span class="im" style="color: #00769E;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;">as</span> plt</span>
-<span id="cb3-3"><span class="im" style="color: #00769E;">import</span> matplotlib <span class="im" style="color: #00769E;">as</span> mpl</span>
-<span id="cb3-4"><span class="im" style="color: #00769E;">from</span> matplotlib <span class="im" style="color: #00769E;">import</span> rc, font_manager</span>
-<span id="cb3-5">font_fname <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'/usr/share/fonts/truetype/nanum/NanumGothic.ttf'</span></span>
-<span id="cb3-6">prop <span class="op" style="color: #5E5E5E;">=</span> font_manager.FontProperties(fname<span class="op" style="color: #5E5E5E;">=</span>font_fname)</span>
-<span id="cb3-7">mpl.rcParams[<span class="st" style="color: #20794D;">'font.family'</span>] <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'NanumGothic'</span></span>
-<span id="cb3-8">mpl.rcParams[<span class="st" style="color: #20794D;">'axes.unicode_minus'</span>]  <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">False</span></span>
-<span id="cb3-9">font_manager._rebuild()</span></code></pre></div>
-<p>첫줄은 Jupyter 안에서 스크립트를 실행하는 명령어다. 혹시 잘 보이지 않으면, 커널을 한번 리프레시 해주면 된다. 다른 폰트를 설정하고 싶다면 비슷하게 응용해 활용하면 되겠다.</p>
-<section id="updated" class="level3">
-<h3 class="anchored" data-anchor-id="updated">Updated</h3>
-<p>2021년 5월 8일 기준으로 <code>font_manager</code>에서 <code>_rebuild()</code> 모듈이 없어졌더라. 현재 시점으로는 보이지 않았다. <code>install_nanum.sh</code>에서 <code>sudo rm -fr ~/.cache/matplotlib</code>를 추가로 하나 더 실행해주자. 캐시에 저장된 matplotlib의 폰트 리스트를 지워버리면 최초 실행될 때 자동으로 폰트 리스트를 빌드한다. 이때 설치한 일련의 나눔 폰트가 폰트 리스트에 잡힌다.</p>
-<p>Docker 컨테이너 내에 설치된 폰트를 확인하고 싶다면, 아래를 참고하라.</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">font_list <span class="op" style="color: #5E5E5E;">=</span> font_manager.findSystemFonts(fontpaths<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">None</span>, fontext<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'ttf'</span>)</span>
-<span id="cb4-2">font_list</span></code></pre></div>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>container</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html</guid>
-  <pubDate>Wed, 23 Sep 2020 15:00:00 GMT</pubDate>
-  <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
-</item>
 </channel>
 </rss>
 </span><span class="op" style="color: #5E5E5E;">,</span><span class="st" style="color: #20794D;">'
@@ -4329,70 +4444,6 @@ MjEyMzEwM119
   <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-09-26-windows-terminal.html</guid>
   <pubDate>Fri, 25 Sep 2020 15:00:00 GMT</pubDate>
   <media:content url="https://upload.wikimedia.org/wikipedia/commons/0/01/Windows_Terminal_Logo_256x256.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Docker 컨테이너 + 한글 폰트</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html</link>
-  <description><![CDATA[ 
-
-
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><section id="다른-방법" class="level2">
-<h2 class="anchored" data-anchor-id="다른-방법">다른 방법</h2>
-<p>이 <a href="https://anarinsk.github.io/lostineconomics-v2-1/docker/data-science/2020/09/24/install-hangul-in-docker.html">포스팅</a>은 도커 컨테이너 안에서 한글 문제를 해결하는 다른 방법을 제시하고 있다. 같이 참고 하시라.</p>
-</section>
-<section id="왜-필요한가" class="level2">
-<h2 class="anchored" data-anchor-id="왜-필요한가">왜 필요한가?</h2>
-<p>Jupyter 등에서 matplotlib을 쓸 때 라벨이 한글일 경우, 대부분 한글 출력에 문제를 겪게 된다. ㅁㅁㅁ형태로 출력되는데, 파이썬 환경에서 한글 폰트가 인식되지 않게 때문이다. 일반적인 환경이라면 웹 검색으로 찾을 수 있는 <a href="https://financedata.github.io/posts/matplotlib-hangul-for-windows-anaconda.html">가이드</a>를 통해 해결할 수 있다.</p>
-<p>그런데 도커 환경을 쓴다면 이런 가이드가 별 소용이 없다. 도커는 아래 그림과 같이 ’host os - 도커 - 컨테이너’의 구조로 돌아간다. 컨테이너(App x)가 각기 독자적인 os를 지니고 있기 때문에 해당 os에서 한글을 인식시켜줘야 특정 컨테이너 환경 안에서 한글을 쓸 수 있게 된다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/container/https:/www.docker.com/sites/default/files/d8/styles/large/public/2018-11/container-what-is-container.png?itok=vle7kjDj" class="img-fluid"></p>
-</section>
-<section id="simple-solution" class="level2">
-<h2 class="anchored" data-anchor-id="simple-solution">Simple Solution</h2>
-<p>방법은 간단하다. 컨테이너 환경 os에 직접 한글을 설치해주면 된다. 해당 os 내의 bash 혹은 상응하는 CLI에 들어가서 필요한 명령(스크립트)들을 실행하면 된다. 해당 명령들을 별도의 bash 스크립트로 만들고 필요한 경우 녀석들을 한방에 돌리면 살짝 더 편리할 것이다. 아래는 나눔 계열 폰트를 설치하는 스크립트다. 파일 이름을 <code>install_nanum.sh</code>로 하자.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="co" style="color: #5E5E5E;">#!/bin/sh</span></span>
-<span id="cb1-2"></span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;">sudo</span> sed <span class="at" style="color: #657422;">-i</span> <span class="st" style="color: #20794D;">'s/archive.ubuntu.com/ftp.daumkakao.com/g'</span> /etc/apt/sources.list</span>
-<span id="cb1-4"><span class="fu" style="color: #4758AB;">sudo</span> apt-get update </span>
-<span id="cb1-5"><span class="fu" style="color: #4758AB;">sudo</span> apt-get install <span class="at" style="color: #657422;">-y</span> fonts-nanum<span class="pp" style="color: #AD0000;">*</span></span>
-<span id="cb1-6"><span class="fu" style="color: #4758AB;">sudo</span> fc-cache <span class="at" style="color: #657422;">-fv</span></span></code></pre></div>
-<p>나머지는 대체로 자명한 명령어다. 첫행의 sed는 ftp 주소를 국내로 바꿔주는 것이다. 업데이트 시 걸리는 시간을 단축하기 위해 사용했다. 터미널에서 스크립트 파일이 있는 디렉토리로 이동한 후 bash 스크립트를 실행하면 된다. bash 스크립트는 도커를 쓸 때 유용하다. 초기에 갖춰져야 하는 세팅이 있을 경우 스크립트로 만들어두고 도커 이미지를 새로 올렸을 때 실행해주면 되겠다. 약간 귀찮지만 못 견딜 정도는 아니다.</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="op" style="color: #5E5E5E;">&gt;</span> ./install_nanum.sh <span class="ex" style="color: null;">⏎</span></span></code></pre></div>
-<p>윈도에서 파일을 편집할 경우 <code>^M</code>이 달라 붙어 문제가 생기는 경우가 있다. OS의 개행 문자가 달라서 생기는 문제다. docker 내부 터미널에서 <code>vim</code>, <code>nano</code> 등으로 파일을 열어 해당 부분을 지우고 다시 저장하면 된다.</p>
-<p>이제 도커 컨테이너 안의 이용한 주피터 노트북에서 다음과 같이 실행하면 나눔고딕 폰트를 쓸 수 있게 된다.</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="op" style="color: #5E5E5E;">!</span>.<span class="op" style="color: #5E5E5E;">/</span>install_nanum.sh</span>
-<span id="cb3-2"><span class="im" style="color: #00769E;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;">as</span> plt</span>
-<span id="cb3-3"><span class="im" style="color: #00769E;">import</span> matplotlib <span class="im" style="color: #00769E;">as</span> mpl</span>
-<span id="cb3-4"><span class="im" style="color: #00769E;">from</span> matplotlib <span class="im" style="color: #00769E;">import</span> rc, font_manager</span>
-<span id="cb3-5">font_fname <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'/usr/share/fonts/truetype/nanum/NanumGothic.ttf'</span></span>
-<span id="cb3-6">prop <span class="op" style="color: #5E5E5E;">=</span> font_manager.FontProperties(fname<span class="op" style="color: #5E5E5E;">=</span>font_fname)</span>
-<span id="cb3-7">mpl.rcParams[<span class="st" style="color: #20794D;">'font.family'</span>] <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'NanumGothic'</span></span>
-<span id="cb3-8">mpl.rcParams[<span class="st" style="color: #20794D;">'axes.unicode_minus'</span>]  <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">False</span></span>
-<span id="cb3-9">font_manager._rebuild()</span></code></pre></div>
-<p>첫줄은 Jupyter 안에서 스크립트를 실행하는 명령어다. 혹시 잘 보이지 않으면, 커널을 한번 리프레시 해주면 된다. 다른 폰트를 설정하고 싶다면 비슷하게 응용해 활용하면 되겠다.</p>
-<section id="updated" class="level3">
-<h3 class="anchored" data-anchor-id="updated">Updated</h3>
-<p>2021년 5월 8일 기준으로 <code>font_manager</code>에서 <code>_rebuild()</code> 모듈이 없어졌더라. 현재 시점으로는 보이지 않았다. <code>install_nanum.sh</code>에서 <code>sudo rm -fr ~/.cache/matplotlib</code>를 추가로 하나 더 실행해주자. 캐시에 저장된 matplotlib의 폰트 리스트를 지워버리면 최초 실행될 때 자동으로 폰트 리스트를 빌드한다. 이때 설치한 일련의 나눔 폰트가 폰트 리스트에 잡힌다.</p>
-<p>Docker 컨테이너 내에 설치된 폰트를 확인하고 싶다면, 아래를 참고하라.</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">font_list <span class="op" style="color: #5E5E5E;">=</span> font_manager.findSystemFonts(fontpaths<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">None</span>, fontext<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'ttf'</span>)</span>
-<span id="cb4-2">font_list</span></code></pre></div>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>container</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html</guid>
-  <pubDate>Wed, 23 Sep 2020 15:00:00 GMT</pubDate>
-  <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 </channel>
 </rss>
@@ -6532,70 +6583,6 @@ MjEyMzEwM119
   <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-09-26-windows-terminal.html</guid>
   <pubDate>Fri, 25 Sep 2020 15:00:00 GMT</pubDate>
   <media:content url="https://upload.wikimedia.org/wikipedia/commons/0/01/Windows_Terminal_Logo_256x256.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Docker 컨테이너 + 한글 폰트</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html</link>
-  <description><![CDATA[ 
-
-
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><section id="다른-방법" class="level2">
-<h2 class="anchored" data-anchor-id="다른-방법">다른 방법</h2>
-<p>이 <a href="https://anarinsk.github.io/lostineconomics-v2-1/docker/data-science/2020/09/24/install-hangul-in-docker.html">포스팅</a>은 도커 컨테이너 안에서 한글 문제를 해결하는 다른 방법을 제시하고 있다. 같이 참고 하시라.</p>
-</section>
-<section id="왜-필요한가" class="level2">
-<h2 class="anchored" data-anchor-id="왜-필요한가">왜 필요한가?</h2>
-<p>Jupyter 등에서 matplotlib을 쓸 때 라벨이 한글일 경우, 대부분 한글 출력에 문제를 겪게 된다. ㅁㅁㅁ형태로 출력되는데, 파이썬 환경에서 한글 폰트가 인식되지 않게 때문이다. 일반적인 환경이라면 웹 검색으로 찾을 수 있는 <a href="https://financedata.github.io/posts/matplotlib-hangul-for-windows-anaconda.html">가이드</a>를 통해 해결할 수 있다.</p>
-<p>그런데 도커 환경을 쓴다면 이런 가이드가 별 소용이 없다. 도커는 아래 그림과 같이 ’host os - 도커 - 컨테이너’의 구조로 돌아간다. 컨테이너(App x)가 각기 독자적인 os를 지니고 있기 때문에 해당 os에서 한글을 인식시켜줘야 특정 컨테이너 환경 안에서 한글을 쓸 수 있게 된다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/container/https:/www.docker.com/sites/default/files/d8/styles/large/public/2018-11/container-what-is-container.png?itok=vle7kjDj" class="img-fluid"></p>
-</section>
-<section id="simple-solution" class="level2">
-<h2 class="anchored" data-anchor-id="simple-solution">Simple Solution</h2>
-<p>방법은 간단하다. 컨테이너 환경 os에 직접 한글을 설치해주면 된다. 해당 os 내의 bash 혹은 상응하는 CLI에 들어가서 필요한 명령(스크립트)들을 실행하면 된다. 해당 명령들을 별도의 bash 스크립트로 만들고 필요한 경우 녀석들을 한방에 돌리면 살짝 더 편리할 것이다. 아래는 나눔 계열 폰트를 설치하는 스크립트다. 파일 이름을 <code>install_nanum.sh</code>로 하자.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="co" style="color: #5E5E5E;">#!/bin/sh</span></span>
-<span id="cb1-2"></span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;">sudo</span> sed <span class="at" style="color: #657422;">-i</span> <span class="st" style="color: #20794D;">'s/archive.ubuntu.com/ftp.daumkakao.com/g'</span> /etc/apt/sources.list</span>
-<span id="cb1-4"><span class="fu" style="color: #4758AB;">sudo</span> apt-get update </span>
-<span id="cb1-5"><span class="fu" style="color: #4758AB;">sudo</span> apt-get install <span class="at" style="color: #657422;">-y</span> fonts-nanum<span class="pp" style="color: #AD0000;">*</span></span>
-<span id="cb1-6"><span class="fu" style="color: #4758AB;">sudo</span> fc-cache <span class="at" style="color: #657422;">-fv</span></span></code></pre></div>
-<p>나머지는 대체로 자명한 명령어다. 첫행의 sed는 ftp 주소를 국내로 바꿔주는 것이다. 업데이트 시 걸리는 시간을 단축하기 위해 사용했다. 터미널에서 스크립트 파일이 있는 디렉토리로 이동한 후 bash 스크립트를 실행하면 된다. bash 스크립트는 도커를 쓸 때 유용하다. 초기에 갖춰져야 하는 세팅이 있을 경우 스크립트로 만들어두고 도커 이미지를 새로 올렸을 때 실행해주면 되겠다. 약간 귀찮지만 못 견딜 정도는 아니다.</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="op" style="color: #5E5E5E;">&gt;</span> ./install_nanum.sh <span class="ex" style="color: null;">⏎</span></span></code></pre></div>
-<p>윈도에서 파일을 편집할 경우 <code>^M</code>이 달라 붙어 문제가 생기는 경우가 있다. OS의 개행 문자가 달라서 생기는 문제다. docker 내부 터미널에서 <code>vim</code>, <code>nano</code> 등으로 파일을 열어 해당 부분을 지우고 다시 저장하면 된다.</p>
-<p>이제 도커 컨테이너 안의 이용한 주피터 노트북에서 다음과 같이 실행하면 나눔고딕 폰트를 쓸 수 있게 된다.</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="op" style="color: #5E5E5E;">!</span>.<span class="op" style="color: #5E5E5E;">/</span>install_nanum.sh</span>
-<span id="cb3-2"><span class="im" style="color: #00769E;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;">as</span> plt</span>
-<span id="cb3-3"><span class="im" style="color: #00769E;">import</span> matplotlib <span class="im" style="color: #00769E;">as</span> mpl</span>
-<span id="cb3-4"><span class="im" style="color: #00769E;">from</span> matplotlib <span class="im" style="color: #00769E;">import</span> rc, font_manager</span>
-<span id="cb3-5">font_fname <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'/usr/share/fonts/truetype/nanum/NanumGothic.ttf'</span></span>
-<span id="cb3-6">prop <span class="op" style="color: #5E5E5E;">=</span> font_manager.FontProperties(fname<span class="op" style="color: #5E5E5E;">=</span>font_fname)</span>
-<span id="cb3-7">mpl.rcParams[<span class="st" style="color: #20794D;">'font.family'</span>] <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'NanumGothic'</span></span>
-<span id="cb3-8">mpl.rcParams[<span class="st" style="color: #20794D;">'axes.unicode_minus'</span>]  <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">False</span></span>
-<span id="cb3-9">font_manager._rebuild()</span></code></pre></div>
-<p>첫줄은 Jupyter 안에서 스크립트를 실행하는 명령어다. 혹시 잘 보이지 않으면, 커널을 한번 리프레시 해주면 된다. 다른 폰트를 설정하고 싶다면 비슷하게 응용해 활용하면 되겠다.</p>
-<section id="updated" class="level3">
-<h3 class="anchored" data-anchor-id="updated">Updated</h3>
-<p>2021년 5월 8일 기준으로 <code>font_manager</code>에서 <code>_rebuild()</code> 모듈이 없어졌더라. 현재 시점으로는 보이지 않았다. <code>install_nanum.sh</code>에서 <code>sudo rm -fr ~/.cache/matplotlib</code>를 추가로 하나 더 실행해주자. 캐시에 저장된 matplotlib의 폰트 리스트를 지워버리면 최초 실행될 때 자동으로 폰트 리스트를 빌드한다. 이때 설치한 일련의 나눔 폰트가 폰트 리스트에 잡힌다.</p>
-<p>Docker 컨테이너 내에 설치된 폰트를 확인하고 싶다면, 아래를 참고하라.</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">font_list <span class="op" style="color: #5E5E5E;">=</span> font_manager.findSystemFonts(fontpaths<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">None</span>, fontext<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'ttf'</span>)</span>
-<span id="cb4-2">font_list</span></code></pre></div>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>container</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html</guid>
-  <pubDate>Wed, 23 Sep 2020 15:00:00 GMT</pubDate>
-  <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 </channel>
 </rss>
