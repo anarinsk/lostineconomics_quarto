@@ -9,7 +9,7 @@
 <link>https://anarinsk.github.io/lostineconomics_quarto/index.html</link>
 <atom:link href="https://anarinsk.github.io/lostineconomics_quarto/index.xml" rel="self" type="application/rss+xml"/>
 <description>Another useless blog</description>
-<generator>quarto-0.9.368</generator>
+<generator>quarto-0.9.399</generator>
 <lastBuildDate>Mon, 09 May 2022 15:00:00 GMT</lastBuildDate>
 <item>
   <title>How to make a manageable C.V.</title>
@@ -27,40 +27,38 @@
   gtag('config', 'G-JNRF3S74Z4');
 </script><section id="why" class="level1">
 <h1>Why?</h1>
-<p>이력서를 만드는 방법은 다양하다. 정해진 포맷이 있다면 채워 넣으면 될 일이지만, 그렇지 않은 경우 여러가지 선택지를 고민하게 된다. 아카데미에 있는 분이라면 <img src="https://latex.codecogs.com/png.latex?%5Crm%20%5CLaTeX">으로 이력서를 만드는 데 익숙할 것이다. 요즘은 Notion(노션)으로도 꽤 근사한 이력서를 만들 수 있다. 이력서 제작에 중요한 가치는 아마 아래의 세 가지가 아닐까 싶다.</p>
+<p>이력서를 만드는 방법은 다양하다. 정해진 포맷이 있다면 채워 넣으면 될 일이지만, 그렇지 않은 경우 여러가지 선택지를 고민하게 된다. 아카데미에 있는 분이라면 <img src="https://latex.codecogs.com/png.latex?%5Crm%20%5CLaTeX">으로 이력서를 만드는 데 익숙할 것이다. 요즘은 Notion(노션)으로도 꽤 근사한 이력서를 만들 수 있다.</p>
+<p>이력서 제작에 중요한 가치는 아마 아래의 세 가지가 아닐까 싶다.</p>
 <ol type="1">
 <li>최적의 정보 전달</li>
 <li>시각적인 심미성</li>
 <li>관리의 편의</li>
 </ol>
-<p>일단 2는 제외하도록 하겠다. 미감이 부족한 나는 최소주의를 지향한다. 되도록 텍스트를 잘 배치하는 것이 내게 최선이다. 시각적인 심미성은 이미 있는 템플릿에 맡기도록 하자. 템플릿을 따를 경우 1 역시 비슷하게 해결된다. 그렇다면 관심은 3에 집중된다.</p>
+<p>일단 2는 제외하도록 하겠다. 미감이 부족한 나는 최소주의를 지향한다. 즉, 좋은 템플릿을 선택해서 텍스트를 잘 배치하는 정도를 고민하는 게 내게 최선이다. 템플릿을 따를 경우 1 역시 고민이 크게 줄어든다. 그렇다면 관심은 3에 집중된다.</p>
 </section>
 <section id="도구-그것이-문제로다" class="level1 page-columns page-full">
 <h1>도구 그것이 문제로다</h1>
 <section id="노션은-왜-사랑-받을까" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="노션은-왜-사랑-받을까">노션은 왜 사랑 받을까?</h2>
-<p>3의 문제를 조금 더 뜯어보자. 자세히 보면 관리의 편의성은 다시 두 개로 나눌 수 있다. 하나는 이력의 변경 및 수정을 쉽게 할 수 있는지, 즉 문서의 이력 관리의 문제다. 다른 하나는 이렇게 만들어진 이력서를 잘 배포할 수 있는지에 달려 있다.</p>
-<p>배포의 경우 과거에는 큰 문제가 없었다. 일정의 포맷의 문서 파일이면 충분했고 PDF라는 선택지로 충분했다. 하지만 요즘은 많은 정보를 웹 또는 모바일 웹으로 접한다. 이에 맞추려면 html로 배포하는 것이 적당하고 별도의 첨부 파일이 아니라 내 html 이력서를 호스팅해주는 적절한 서비스가 있는 것이 좋다. 노션이 이력서 배포의 도구로 최근 각광받는 이유가 여기 있을 것 같다. WYSWYG으로 다양한 형태의 편집을 지원하며 이를 바로 웹으로 배포할 수 있다. 나름 좋은 선택지라고 생각한다.</p>
+<p>3의 문제를 조금 더 뜯어보자. 자세히 보면 관리의 편의성은 다시 두 개로 나눌 수 있다. 하나는 이력의 변경 및 수정을 쉽게 할 수 있는지, 즉 이력서 관리의 문제다. 다른 하나는 이렇게 만들어진 이력서를 잘 배포할 수 있는지에 관한 것이다.</p>
+<p>배포의 경우 과거에는 큰 문제가 없었다. 일정한 포맷의 문서 파일이면 충분했고, 대체로 PDF라는 선택지로 충분했다. 하지만 요즘은 많은 정보를 웹 또는 모바일 웹으로 접한다. 이에 맞추려면 html로 배포하는 것이 적당하다. 그리고 별도의 첨부 파일이 아니라 html 이력서를 호스팅해주는 적절한 서비스를 택하는 것이 좋다. 노션이 이력서 배포의 도구로 최근 각광받는 이유가 여기에 있다. 노션은 WYSWYG으로 다양한 형태의 편집을 지원하며 이를 바로 웹으로 배포할 수 있게 해준다. 이 점에서 노션은 좋은 선택지다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>WYSWYG = What You See is What You Get, 즉 별도의 컴파일 없이 변화된 내용이 어떻게 구현되는지를 바로 볼 수 있는 형태의 소프트웨어 구현 방식을 지칭한다. 쉽게 워드, 아래아 한글을 생각하면 된다.</p>
 </div></div></section>
 <section id="pdf라면-rm-latex" class="level2">
 <h2 class="anchored" data-anchor-id="pdf라면-rm-latex">PDF라면 <img src="https://latex.codecogs.com/png.latex?%5Crm%20%5CLaTeX">!</h2>
-<p>정형화되고 멋진 PDF 문서를 만들어 내는 데에는 <img src="https://latex.codecogs.com/png.latex?%5Crm%20%5CLaTeX">만한 것이 없다. 아카데미에서 주로 사용하는 도구로서 논문 이력 관리를 bib<img src="https://latex.codecogs.com/png.latex?%5Crm%20TeX">으로 하고 있다면 제법 편리하고 멋진 이력서를 얻을 수 있다.</p>
-<p>다만 <img src="https://latex.codecogs.com/png.latex?%5Crm%20%5CLaTeX">은 진입 장벽이 꽤 높다. 일반적인 용도로 쓰기에는 버겁고 게다가 비효율적이다(느리다). 게다가 <img src="https://latex.codecogs.com/png.latex?%5Crm%20%5CLaTeX"> 기반 문서로는 그럴 듯한 html 파일을 생성하기가 쉽지 않다.</p>
+<p>정형화되고 디자인이 멋진 PDF 문서를 만들어 내는 데에는 <img src="https://latex.codecogs.com/png.latex?%5Crm%20%5CLaTeX">만한 것이 없다. 아카데미에서 주로 사용하는 도구로서 논문 이력 관리를 bib<img src="https://latex.codecogs.com/png.latex?%5Crm%20TeX">으로 하고 있다면 제법 편리하고 멋진 이력서를 얻을 수 있다. 다만 <img src="https://latex.codecogs.com/png.latex?%5Crm%20%5CLaTeX">은 진입 장벽이 꽤 높다. 일반적인 용도로 쓰기에는 버겁고 게다가 비효율적이다(느리다). 게다가 <img src="https://latex.codecogs.com/png.latex?%5Crm%20%5CLaTeX"> 기반 문서로는 그럴 듯한 html 파일을 생성하기가 쉽지 않다.</p>
 </section>
 <section id="markdown은-어떨까" class="level2">
 <h2 class="anchored" data-anchor-id="markdown은-어떨까">Markdown은 어떨까?</h2>
-<p>html, <img src="https://latex.codecogs.com/png.latex?%5Crm%20%5CLaTeX">과 같은 스트립트 도구와 노션과 같은 WYSWYG의 장점을 적절하게 결합한 것이 markdown이라고 나는 생각한다. 나는 거의 모든 문서를 마크다운으로 쓰고 있다.</p>
-<p><code>.md</code>파일은 다른 포맷으로 쉽게 변환된다. 따라서 이력서 역시 md로 직접 보면서 만든 후에 이를 html로 변환하고 이를 웹에서 호스팅할 수 있다면, 적어도 관리에 있어서는 가장 편한 도구가 아닐까?</p>
-<p>md가 html로 변환되기 때문에 html 및 css의 기술을 활용해서 원하는 만큼 디자인을 손볼 수도 있다. 웹을 다루는 기술만 있다면 충분한 수준의 커스터마이즈가 가능하다.</p>
-<p>이 글은 그런 능력자를 위한 것이 아니다. 심미의 최소주의를 지향하면서 게으르게 만들어 낼 수 있는 그리고 무엇보다도 관리 가능한 이력서 제작이 이 포스팅의 목적이다.</p>
+<p>html, <img src="https://latex.codecogs.com/png.latex?%5Crm%20%5CLaTeX">과 같은 스크립트 도구와 노션과 같은 WYSWYG의 장점을 적절하게 결합한 것이 markdown이다. 나는 거의 모든 문서를 마크다운으로 쓰고 있다. 아울러 마크다운의 <code>.md</code> 파일은 다른 포맷(<code>.tex</code>, <code>.html</code>, <code>.docx</code> 등)으로 쉽게 변환된다. 이력서 역시 마크다운으로 직접 보면서 만든 후에 이를 html로 변환하고 이를 웹에서 호스팅할 수 있다면, 적어도 관리에 있어서는 가장 편한 작업 흐름이 되지 않을까?</p>
+<p>md가 html로 변환되기 때문에 html 및 css의 기술을 활용할 수 있다면 원하는 만큼 디자인을 손볼 수도 있다. 즉, 웹을 다루는 기술만 있다면 마크다운으로 충분한 수준의 커스터마이즈를 이뤄낼 수 있다. 물론 이 글은 그런 능력자를 위한 것이 아니다. 심미적 최소주의를 지향하면서 게으르게 만들어 낼 수 있는 그리고 관리 가능성을 최우선에 두는 이력서 제작이 이 포스팅의 목적이다.</p>
 </section>
 </section>
 <section id="tools" class="level1 page-columns page-full">
 <h1>Tools</h1>
-<p>우리의 목표는 md를 통해 쓸 만한 이력서를 만들고, 이 이력서를 웹에 호스팅해서 쉽게 접근할 수 있게 만드는 것이다. 이를 위해 두 가지가 필요하다.</p>
+<p>우리의 목표는 마크다운을 통해 쓸 만한 이력서를 만들고 이 이력서를 웹에 호스팅해서 쉽게 접근할 수 있게 만드는 것이다. 이를 위해 아래 두 가지가 필요하다.</p>
 <ol type="1">
 <li>md를 편집할 수 있는 도구</li>
 <li>github</li>
@@ -85,8 +83,8 @@
 <p><a href="https://github.com/elipapa/markdown-cv">elipapa/markdown-cv: a simple template to write your CV in a readable markdown file and use CSS to publish/print it.</a></p>
 <p>문서는 깔끔하게 잘 되어 있다. html의 빌드는 깃헙 액션스를 이용해도 되고, 로컬에 jekyll을 깔아서 해도 된다. 게으름을 지향하는 나는 깃헙 액션스를 이용할 것이다.</p>
 </section>
-<section id="modification" class="level2">
-<h2 class="anchored" data-anchor-id="modification">Modification</h2>
+<section id="customization" class="level2">
+<h2 class="anchored" data-anchor-id="customization">Customization</h2>
 <p>문서의 디렉토리에서 바뀌야 할 것을 살펴보자.</p>
 <ul>
 <li><code>_config.yml</code></li>
