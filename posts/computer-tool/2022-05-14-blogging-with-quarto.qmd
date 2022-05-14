@@ -163,4 +163,4 @@ p {
 
 ## 기타 
 
-원본에서 조금 더 손 본 부분은 이 블로그의 깃헙 리포 [anarinsk/lostineconomics_quarto](https://github.com/anarinsk/lostineconomics_quarto)에서 직접 확인기를 바란다. 
+원본에서 조금 더 손 본 부분은 이 블로그의 깃헙 리포 [anarinsk/lostineconomics_quarto](https://github.com/anarinsk/lostineconomics_quarto)에서 직접 확인하기를 바란다. 
