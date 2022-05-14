@@ -1,6 +1,6 @@
 ---
 title: "Junsok Huhh"
-image: profile.png
+image: profile.jpg
 about:
   template: solana
   links:
