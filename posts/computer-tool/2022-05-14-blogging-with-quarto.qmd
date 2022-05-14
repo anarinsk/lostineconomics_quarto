@@ -160,3 +160,7 @@ p {
 ## 디렉토리 관리 
 
 `posts/` 내 별도의 디렉토리를 만들어 포스팅을 구별할 수도 있다. 다만, 포스팅 `.qmd`을 작성할 때 별도의 `.html`을 삽입했다면, 해당 `.html`을 각 디렉토리마다 넣어줘야 한다. 예를 들어 google analytics의 html을 포함시켰다면 해당 파일을 각 디렉토리 별로 넣어주자. 
+
+## 기타 
+
+원래에서 조금 더 손 본 부분은 이 페이지의 깃헙 리포 [anarinsk/lostineconomics_quarto](https://github.com/anarinsk/lostineconomics_quarto)에서 직접 보면 된다. 

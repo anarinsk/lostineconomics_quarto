@@ -1538,5 +1538,12 @@
     "title": "Blogging with Quarto",
     "section": "styles.css",
     "text": "styles.css\n앞서 언급했듯이 _quarto.yml에서 별도의 .css 파일을 설정할 수 있다. 취향에 따라서 원하는 만큼 커스터마이즈를 할 수 있다. 내 경우는 아래 두 가지 요소를 조정했다.\n\n한글의 경우 기본 폰트 이외 추가 폰트를 쓰고 싶을 때\n각 구성 요소별로 크기를 조정하고 싶을 때\n\n/* css styles */\n@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');\n@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');\n@import url(\"https://cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-ligature-subset.css\");\n\nh1, h2, h3, h4, h5, h6 {\n    font-family: 'NanumSquare' !important;\n    font-weight : 600;\n  }\n\nh1 {\n    font-size: 155%\n}\n\nh2 {\n  font-size: 135%\n}\n\nh3 {\n  font-size: 115%\n}\n\nh4, h5, h6 {\n  font-size: 100%\n}\n\nul, li, ol{\n    font-family: 'pretendard' !important;\n    font-size: 100%;\n   }\n\np {\n    font-family: 'pretendard' !important;\n    font-size: 95%;\n    font-weight: 400; \n}\n\n.category {\n  font-size: 90%;\n}\n\n.sourceCode {\n  font-family: 'D2Coding', monospace !important;\n  font-size: 95%;\n}\n\n@import... | 폰트를 로딩한다. 이 블로그에는 프리텐다드, 나눔스퀘어, D3코딩 글꼴이 활용되었다.\n\n나머지는 디자인 관련 설정이다. 아주 간단한 css 설정으로 잘 보면 의미를 하는 데에는 큰 어려움이 없을 것이다."
+  },
+  {
+    "objectID": "posts/computer-tool/2022-05-14-blogging-with-quarto.html#기타",
+    "href": "posts/computer-tool/2022-05-14-blogging-with-quarto.html#기타",
+    "title": "Blogging with Quarto",
+    "section": "기타",
+    "text": "기타\n원래에서 조금 더 손 본 부분은 이 페이지의 깃헙 리포 anarinsk/lostineconomics_quarto에서 직접 보면 된다."
   }
 ]
