@@ -180,8 +180,9 @@
 <span id="cb3-44">  <span class="kw" style="color: #003B4F;">font-size</span>: <span class="dv" style="color: #AD0000;">95</span><span class="dt" style="color: #AD0000;">%</span><span class="op" style="color: #5E5E5E;">;</span></span>
 <span id="cb3-45">}</span></code></pre></div>
 <ul>
-<li><code>@import</code> | 폰트를 로딩한다.</li>
-<li>나머지는 디자인 관련 설정이다.</li>
+<li><code>@import...</code> | 폰트를 로딩한다. 이 블로그에는 프리텐다드, 나눔스퀘어, D3코딩 글꼴이 활용되었다.<br>
+</li>
+<li>나머지는 디자인 관련 설정이다. 아주 간단한 css 설정으로 잘 보면 의미를 하는 데에는 큰 어려움이 없을 것이다.</li>
 </ul>
 </section>
 <section id="디렉토리-관리" class="level2">
