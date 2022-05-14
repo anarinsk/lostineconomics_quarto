@@ -3,7 +3,7 @@ title:  수입은 GDP에 영향을 주는가?
 description: GDP 항등식을 오해하지 말자  
 author: "JS HUHH"
 date: "04/29/2022"
-image: "https://www.aeaweb.org/content/file?id=13305"
+image: "goodecon.jpg"
 categories: [economics, econ-simple]
 #margin-header: subscribe.html
 ---
