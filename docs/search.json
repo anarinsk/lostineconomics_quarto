@@ -1502,7 +1502,7 @@
     "href": "posts/computer-tool/2022-05-14-blogging-with-quarto.html#quarto",
     "title": "Blogging with Quarto",
     "section": "Quarto",
-    "text": "Quarto\n프로젝트의 홈에 따르면 Quarto는 ’과학 문서(scientific document)’의 작성을 위해 고안된 의존성을 최소화한 도구다. 앞서 소개한 BlogDown과 같은 툴이 RStudio와 같은 특정 도구에 의존한다면 이 녀석은 Jupyter, VS Code, RStudio 및 여느 범용 에디터와도 함께 쓸 수 있다.\nQuarto 프로젝트는 아직 초기지만 상당한 기대와 지지를 받고 있다. 이 프로젝트의 장점은 아래와 같다.\n\n마크 다운 기반의 문서 작성, 스태틱 웹 도구 그리고 계산 기반 문서 작성 도구의 기능을 부족하지 않게 두루 갖추고 있다.\n각종 기능에 관한 문서화가 체계적으로 잘 되어 있다.\nCLI 기반이라서 도구 의존성이 낮다.\n\n프로젝트가 초기여서 안정성이 떨어지는 경우가 있고, 아직 쓰는 사람이 많지 않아 구글링을 통해 필요한 정보를 충분히 얻기 힘든 경우가 있다. 이러한 불편함은 시간이 흐르면 빠르게 해결될 것으로 생각한다. 아울러 Quarto가 머지 않아 jekyll과 같이 github의 기본 빌드 옵션이 되기를 바라본다."
+    "text": "Quarto\n프로젝트의 홈에 따르면 Quarto는 ’과학 문서(scientific document)’의 작성을 위해 고안된 의존성을 최소화한 도구다. 앞서 소개한 BlogDown과 같은 툴이 RStudio와 같은 특정 도구에 의존한다면 이 녀석은 Jupyter, VS Code, RStudio 및 여느 범용 에디터와도 함께 쓸 수 있다.\nQuarto 프로젝트는 아직 초기지만 상당한 기대와 지지를 받고 있다. 이 프로젝트의 장점은 아래와 같다.\n\n마크 다운 기반의 문서 작성, 스태틱 웹 도구 그리고 계산 기반 문서 작성 도구의 기능을 부족하지 않게 두루 갖추고 있다.\n각종 기능에 관한 문서화가 체계적으로 잘 되어 있다.\nCLI 기반이라서 도구 의존성이 낮다.\n\n프로젝트가 초기여서 안정성이 떨어지는 경우가 있고, 아직 쓰는 사람이 많지 않아 구글링을 통해 필요한 정보를 충분히 얻기 힘든 경우가 있다. 이러한 불편함은 시간이 흐르면 빠르게 해결될 것으로 생각한다. 아울러 Quarto가 머지 않아 jekyll과 같이 github의 기본 빌드 옵션이 되기를 바라보자."
   },
   {
     "objectID": "posts/computer-tool/2022-05-14-blogging-with-quarto.html#github-리포-생성",
