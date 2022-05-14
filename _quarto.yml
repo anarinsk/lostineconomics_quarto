@@ -5,6 +5,7 @@ website:
   title: "lostineconomics.com"
   site-url: "https://anarinsk.github.io/lostineconomics_quarto"
   description: "Another useless blog"
+  favicon: "favicon.ico"
   navbar:
     right:
       - about.qmd
