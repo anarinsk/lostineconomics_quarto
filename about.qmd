@@ -21,7 +21,7 @@ about:
 허준석 Junsok Huhh | Ph.D. in Economics.<br/> 
 Currently works as a data scientist (Pangyo, South Korea).
 
-안녕하세요. 허준석의 블로그입니다. 쓸데 없고 목적 없는 블로그입니다. 뭐라도 도움이 되면 좋겠습니다. 이 블로그는 세번째 버전입니다. 이전 블로그의 역사는 아래 "Page history"에서 확인하실 수 있습니다. 블로그의 이름 "lost in economics"는 현재 저 자신의 처지를 나타냅니다. 경제학에서 길을 잃었지만 여전히 그 안에 빠져 있습니다. 블로그는 [Quarto](https://quarto.org)로 제작되었고, 페이지 호스팅은 [Github Pages](https://pages.github.com/)를 이용하고 있습니다.
+안녕하세요. 허준석의 블로그입니다. 쓸데 없고 목적 없는 블로그입니다. 뭐라도 도움이 되면 좋겠습니다. 이 블로그는 세번째 버전입니다. 이전 블로그의 역사는 아래 "History of lostineconomics.com"에서 확인하실 수 있습니다. 블로그의 이름 "lost in economics"는 현재 저 자신의 처지를 나타냅니다. 경제학에서 길을 잃었지만 여전히 그 안에 빠져 있습니다. 블로그는 [Quarto](https://quarto.org)로 제작되었고, 페이지 호스팅은 [Github Pages](https://pages.github.com/)를 이용하고 있습니다.
 
 Hi, I'm Junsok Huhh. If you are interested in me, check my c.v. and contact. The blog name, "lost in economics" has double-edge meaning. In one way, I lost my way in economics, but I am still finding a way in it. This blog is serviced with [Quarto](https://quarto.org/) and [Github Pages](https://pages.github.com/).
 
