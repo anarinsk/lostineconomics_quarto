@@ -2,7 +2,7 @@
 title: "Junsok Huhh"
 image: profile.jpg
 about:
-  template: solana
+  template: trestles
   links:
     - icon: twitter
       text: Twitter
@@ -30,7 +30,7 @@ Hi, I'm Junsok Huhh. If you are interested in me, check my c.v. and contact. The
 [Brief](https://anarinsk.github.io/markdown-cv/) | [Long](https://anarinsk.github.io/markdown-cv-long/)
 
 ### History of lostineconomics.com 
-- [v3](https://anarinsk.github.io/quarto/) built with [Quarto](https://quarto.org/) on github
-- [v2](https://anarinsk.github.io/lostineconomics-v2-1/) built with [fastpages](https://github.com/fastai/fastpages) on github
-- [v1](https://anarinsk.github.io/) built with markdown on github 
-- [v0](https://lostineconomics.netlify.com/) built with [BlogDown](https://bookdown.org/yihui/blogdown) on github 
+- [v3](https://anarinsk.github.io/quarto/) built with [Quarto](https://quarto.org/) and [Github Pages](https://pages.github.com/)
+- [v2](https://anarinsk.github.io/lostineconomics-v2-1/) built with [fastpages](https://github.com/fastai/fastpages) and [Github Pages](https://pages.github.com/)
+- [v1](https://anarinsk.github.io/) built with markdown and [Github](https://www.github.com/)
+- [v0](https://lostineconomics.netlify.com/) built with [BlogDown](https://bookdown.org/yihui/blogdown) and [Github Pages](https://pages.github.com/)

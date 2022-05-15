@@ -1,5 +1,5 @@
 ---
-title: Blogging with Quarto 
+title: Blogging with Quarto
 description: Quarto로 블로그를
 author: "JS HUHH"
 date: "05/14/2022"
