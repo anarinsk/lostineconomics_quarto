@@ -36,7 +36,7 @@ categories: [computer-tool]
 fastpages 활용은 [여기](https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-03-07-blogging-with-fastpages.html)를 참고하자. 
 :::
 
-## Quarto 
+## [Quarto](https://quarto.org/)
 
 이 프로젝트의 홈에 따르면 Quarto는 '과학 문서(scientific document)'의 작성을 위해 고안된 의존성을 최소화한 도구다. 앞서 소개한 BlogDown과 같은 툴이 RStudio와 같은 특정 도구에 의존한다면 이 녀석은 Jupyter, VS Code, RStudio 및 여느 범용 에디터와도 함께 쓸 수 있다. 
 
@@ -54,7 +54,7 @@ Quarto 프로젝트는 아직 초기지만 상당한 기대와 지지를 받고 
 
 # Application 
 
-[Quarto](https://quarto.org/)를 이용해 기존 fastpages 기반 블로그를 대체해보자. 기존 블로그 포스팅은 어떻게 가져올 수 있을까? 포스팅의 양이 많지 않을 경우 반복 작업을 해도 되고, 필요하면 간단한 스크립트를 통해서 일괄해서 바꿀 수 있다.  
+이제 Quarto를 이용해 기존 fastpages 기반 블로그를 대체해보자. 기존 블로그 포스팅은 어떻게 가져올 수 있을까? 포스팅의 양이 많지 않을 경우 반복 작업을 해도 되고, 필요하면 간단한 스크립트를 통해서 일괄해서 바꿀 수 있다.  
 
 ## Github 리포 생성 
 

@@ -115,7 +115,7 @@
 <p>fastpages 활용은 <a href="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-03-07-blogging-with-fastpages.html">여기</a>를 참고하자.</p>
 </div></div></section>
 <section id="quarto" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
+<h2 class="anchored" data-anchor-id="quarto"><a href="https://quarto.org/">Quarto</a></h2>
 <p>이 프로젝트의 홈에 따르면 Quarto는 ’과학 문서(scientific document)’의 작성을 위해 고안된 의존성을 최소화한 도구다. 앞서 소개한 BlogDown과 같은 툴이 RStudio와 같은 특정 도구에 의존한다면 이 녀석은 Jupyter, VS Code, RStudio 및 여느 범용 에디터와도 함께 쓸 수 있다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -131,7 +131,7 @@
 </section>
 <section id="application" class="level1">
 <h1>Application</h1>
-<p><a href="https://quarto.org/">Quarto</a>를 이용해 기존 fastpages 기반 블로그를 대체해보자. 기존 블로그 포스팅은 어떻게 가져올 수 있을까? 포스팅의 양이 많지 않을 경우 반복 작업을 해도 되고, 필요하면 간단한 스크립트를 통해서 일괄해서 바꿀 수 있다.</p>
+<p>이제 Quarto를 이용해 기존 fastpages 기반 블로그를 대체해보자. 기존 블로그 포스팅은 어떻게 가져올 수 있을까? 포스팅의 양이 많지 않을 경우 반복 작업을 해도 되고, 필요하면 간단한 스크립트를 통해서 일괄해서 바꿀 수 있다.</p>
 <section id="github-리포-생성" class="level2">
 <h2 class="anchored" data-anchor-id="github-리포-생성">Github 리포 생성</h2>
 <p>깃헙 페이지스를 활용할 깃헙 리포를 생성하자. 그리고 이 녀석을 로컬로 클론해두면 준비가 끝난다. 아래의 사항을 주의하자.</p>
