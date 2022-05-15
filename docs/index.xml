@@ -10,7 +10,74 @@
 <atom:link href="https://anarinsk.github.io/lostineconomics_quarto/index.xml" rel="self" type="application/rss+xml"/>
 <description>Another useless blog</description>
 <generator>quarto-0.9.399</generator>
-<lastBuildDate>Fri, 13 May 2022 15:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 15 May 2022 15:00:00 GMT</lastBuildDate>
+<item>
+  <title>Trilemma, Lately</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/economics/2022-05-16-trilemma.html</link>
+  <description><![CDATA[ 
+
+
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="거시-경제의-트릴레마" class="level1 page-columns page-full">
+<h1>거시 경제의 트릴레마</h1>
+<p>트릴레마(trilemma)는 두 개의 모순된 선택을 지니는 딜레마의 확장 버전이다. 세 개의 선택지 중에서 두 개는 조합이 가능하지만 그로 인해서 하나의 가치를 포기해야만 하는 상황을 의미한다.</p>
+<p>트릴레마 중에서 가장 많이 알려진 것은 거시 경제의 트릴레마다.</p>
+<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; border:1.5px solid #021a40; width: 70%;">
+<figure class="figure">
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/economics/http:/www.voxeu.org/sites/default/files/bordo%20fig1%202%20apr.png" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
+<p>위 그림에서 보듯이 ‘자본 이동 capital mobility’, ‘고정 환율제 fixed exchange rate’, ’통화 정책의 자율성 monetary autonomy’이 트릴레마를 이룬다. 세 가지 모두 일국의 거시 경제에 도움이 된다. 그림에 예시가 되어 있으니 이해에 도움이 될 것이다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><a href="https://voxeu.org/article/trilemmas-capital-flows-and-domestic-and-international-order">Trilemmas in capital flows, and domestic and international order | VOX, CEPR Policy Portal (voxeu.org)</a> 글에는 거시 경제의 트릴레마 이외에 관련 트렐레마가 몇 가지 더 소개되어 있다.</p>
+</div></div><p>시대적 조건에 따라서는 트릴레마의 강도가 미묘하게 변화하기도 한다. 예를 들어 보자. 오늘날 금융 자본주의에서는 자본 이동이 가하는 압박이 상당하다. 이런 환경에서 고정환율제를 택하건 변동환율제를 택하건 간에 자본 이동이 일국의 독자적인 거시경제 정책을 제약하는 경우가 많다.</p>
+<p>브레튼우즈 체제는 자본이동을 제약한 대신 고정환율제와 독자적인 거시경제 정책을 택한 조합이다. 현대 중국의 경우 약간의 독자적인 금융정책을 가장 우선에 두면서 약간의 고정환율제의 요소를 지니고 있다. 대신 자본이동에 관한 통제는 철저하다.</p>
+<p>트릴레마를 구성할 때 중요한 것은 무엇일까? 딜레마를 이루는 요소를 잘 선정해야 한다. 트릴레마를 이룰 수 없는 녀석들을 트릴레마라고 주장한다면 반지성적으로 보일 뿐이다. 트렐레마는 그것이 현실 혹은 역사를 잘 설명할 때 유용성을 지닌다. 위에서 보듯이, 개별 국가의 거시경제 정책 없이 금본위제 기반의 빠른 금융의 세계화가 19세기 중후반은 삼각형의 왼쪽에 해당한다. 2차 대전 이후 브레튼우즈 체제는 고정환율제, 개별 국가의 독자적인 거시경제 운용의 정책의 프레임이었고 대신 국제간 자본이동은 상당 수준으로 제한되었다.</p>
+<p>위 삼각형에는 없지만 트릴레마의 사례를 극적으로 보여주는 것이 영국의 중앙은행인 영란은행과 조지 소로스 간의 환율 전쟁이다. 파운드-마르크의 밴드 내 고정환율제를 구축했던 영국에서 외환 보유고가 충분하지 않음을 감지한 헤지 펀드는 영국의 외환 선물 시장에서 파운드를 던지고 외화를 퍼내기 시작했다. 이는 파운드가 압력을 이기지 못하고 평가 절하를 할 수밖에 없으며, 이 경우 파운드 선물을 판매한(숏 포지션) 헤지 펀드는 큰 돈을 벌게 될 것이기 때문이다. 실제로 발생한 일은 이와 얼추 비슷하다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>물론 일국의 법정 통화를 향한 이런 공격이 항상 성공하는 것은 아니다. 오히려 실패할 경우가 더 많다. 조지 소로스의 퀀텀 펀드를 비롯해 몇 개의 헤지 펀드가 달러에 고정된 홍콩 달러에 대해서 비슷한 공격을 가했으나 중국 정부의 자본시장 통제와 이자율 인상 등의 조치로 인해 성공을 거두지 못했다.</p>
+</div></div></section>
+<section id="스테이블-코인의-트릴레마" class="level1 page-columns page-full">
+<h1>스테이블 코인의 트릴레마</h1>
+<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; border:1.5px solid #021a40; width: 70%;">
+<figure class="figure">
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/economics/https:/voxeu.org/sites/default/files/image/FromMay2014/ganesh13mayfig1.png" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><a href="https://voxeu.org/article/algorithmic-stablecoins-and-devaluation-risk">Algorithmic stablecoins and devaluation risk | VOX, CEPR Policy Portal (voxeu.org)</a> 글에는 루나와 테라USD의 원리 및 최근의 상황이 잘 요약되어 있다.</p>
+</div></div><p>스테이블 코인의 트렐리마가 흥미로운 이유는 무엇일까? 최근의 여러가지 사태도 있지만, 전체적인 도식이 위 거시경제의 트릴레마와 많이 닮았다. 스테이블 코인이란 일종의 고정환율제다. 위 ’영란 은행 대 소로스’의 일화에서 보았듯이 스테이블 코인의 가치가 유지되기 힘들다는 의구심이 발생하는 순간 해당 코인은 유사한 투기적인 공격에 노출될 수 있다.</p>
+<p>스테이블 코인 테라 USD의 경우 테더(Tether)처럼 현실 법화(legal tender)에 묶인 게 아니라 비트코인에 묶여 있었다. 비트코인 자체의 가격 변화가 심하다면 안정적(stable)이라는 수식어가 무색한 상황이 얼마든지 생길 수 있다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>그렇다면 USD에 묶는 혹은 다른 법화에 묶는 스테이블 코인은 괜찮을까? 현실의 법화는 국가 혹은 지역 공동체의 법에 의해 지불, 보증, 부채 이행을 보장받는 화폐다. 그리고 이 화폐는 국가 혹은 여타 법적 존재가 최종 대부자로 자리매김하고 있다. 이 화폐에 기반한 상업 활동 및 금융 활동과는 별개로 이에 기반한 화폐 체계는 최종 대부자라는 법화의 공공재에 무임승차 하는 것과 비슷하다. 탈중앙화를 핵심 가치로 중앙은행의 타락을 거부한 암호 화폐가 돌고 돌아서 결국 중앙은행에 의존하게 되는 것 역시 아이러니하다.</p>
+</div></div><p>스테이블 코인의 트릴레마를 해결하는 방법은 무엇일까? 트릴레마를 응용한다면 탈중앙화-자본 효율을 추구하는 알고리즘 기반의 이점을 포기하는 방향이 있다. 충분한 수준의 법화 보유고 확보하거나(삼각형의 오른쪽) 혹은 스마트 컨트랙트를 통해서 특정한 조건에서 충분한 수준의 보유고를 확보하거나(삼각형의 왼쪽) 해야 한다.</p>
+<p>다만 스마트 컨트랙트를 통해서 고정 교환비라는 제약 아래 투기적 공격을 막아내기에 충분한 담보 비율을 사전적으로 알 수 있는지는 분명하지 않다. 이 상황이 불비 정보(incomplete information)의 상황이라면 현재 지니고 있는 정보를 통해 미래의 모든 상황을 충분히 파악하기 힘들다. 이때 미래의 사태를 대응하기 위한 장치를 스마트 컨트랙트에 미리 넣을 수 있을까?</p>
+
+
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>특정한 시점에 레짐 체인지를 통해서 일시적으로 중앙화의 해법을 택한다는 식의 메타 룰을 스마트 컨트랙트에 넣을 수 있는 것인지 잘 모르겠다. 만일 그렇다고 해도 해당 상황에서 누가 통제를 할지 이 통제를 위한 정당성은 어떻게 준비할 수 있는지 등등은 나에게는 여전히 의문이다.</p>
+</div></div></section>
+
+ ]]></description>
+  <category>economics</category>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/economics/2022-05-16-trilemma.html</guid>
+  <pubDate>Sun, 15 May 2022 15:00:00 GMT</pubDate>
+  <media:content url="https://anarinsk.github.io/lostineconomics_quarto//posts/economics/goodecon.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Blogging with Quarto</title>
   <dc:creator>JS HUHH</dc:creator>
@@ -2325,65 +2392,6 @@ MjEyMzEwM119
   <pubDate>Fri, 23 Oct 2020 15:00:00 GMT</pubDate>
   <media:content url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/LaTeX_project_logo_bird.svg/1920px-LaTeX_project_logo_bird.svg.png" medium="image" type="image/png"/>
 </item>
-<item>
-  <title>The Best Terminal App for Windows</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-09-26-windows-terminal.html</link>
-  <description><![CDATA[ 
-
-
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><p>마소가 리눅스 생태계를 품으려고 진심으로 노력하고 있다. 보통 윈도에서 터미널을 쓰려면 cmd를 쳐서 들어간다. 일단 모양이 별로일 뿐만 아니라 불편하다. 그래서 보통 서드파티에서 제작한 터미널 앱을 별도로 쓰곤 한다. 이 앱들로도 부족한 것이 없다. <a href="https://cmder.net/">cmder</a>도 높은 수준의 커스터마이즈와 뛰어난 사용성을 보장한다.</p>
-<p>WSL을 통해 윈도에 설치하는 리눅스의 경우 기본으로 CLI(Command Line Interface)를 활용하게 된다. 따라서 좋은 터미널 앱은 필수적이다. 간편하면서도 심미적으로도 유려한 그런 앱이 하나 있었으면 싶은데, MS는 이미 그런 앱을 제공하고 있다.</p>
-<p>Windows 10 기준으로, Microsoft Store에 들어가서 “terminal”을 검색해보자. “Windows Terminal”과 “Windows Terminal Preview” 두 개를 찾을 수 있다. 전자는 안정 버전이고 후자는 실험적인 기능을 구현한 버전이다. 어느 것을 써도 괜찮다.</p>
-<p>공식 가이드 <a href="https://docs.microsoft.com/ko-kr/windows/terminal/">https://docs.microsoft.com/ko-kr/windows/terminal/</a></p>
-<p>왠만한 내용은 공식 가이드에 잘 정리되어 있으므로 몇 가지 팁만 적도록 하자.</p>
-<section id="설정" class="level2">
-<h2 class="anchored" data-anchor-id="설정">설정</h2>
-<p>VS Code도 그렇고 윈도 터미널도 그렇고 설정이 <code>settings.json</code> 파일로 되어 있다. GUI가 아니라서 처음엔 어색할 수 있겠지만, 쓰다보면 이게 훨씬 편하다는 것을 알게 될 것이다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/window-terminal/wt_1.png" class="img-fluid">{: style=“textalign:center;” width=“500”}<br>
-<img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/window-terminal/wt_2.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
-<section id="테마" class="level3">
-<h3 class="anchored" data-anchor-id="테마">테마</h3>
-<p>엄청나게 다양한 테마를 손쉽게 구현할 수 있다.</p>
-<p><a href="https://windowsterminalthemes.dev/">https://windowsterminalthemes.dev/</a></p>
-<p>원하는 테마를 바꿔가며 확인할 수 있다. 마음에 드는 녀석을 “Get theme” 버튼을 눌러 클립보드에 복사하도록 하자. 녀석을 어디에 붙여 넣어야 할까?</p>
-<p><code>settings.json</code> 파일을 자세히 보면, 아래 <code>"schemes":</code>라는 항목이 있다. 여기에 클립보드에서 복사한 내용을 <code>{}</code> 안에 붙여 넣도록 하자. 그리고 설정 파일의 위로 이동하면 <code>"profiles"</code> - <code>"defaults"</code>라는 항목이 보일 것이다. 여기에는 터미널 앱을 띄웠을 때 어떤 세팅으로 시작할 것인지를 넣을 수 있다. 여러가지 항목을 넣을 수 있는데, 이중 <code>colorScheme</code> 항목에 방금 붙여 넣은 테마의 이름을 넣어주면 된다. 저장을 하면 테마가 바로 적용되며, 뭔가 문제가 있을 경우에는 에러가 뜬다. 이 경우 설정 파일을 다시 고치면 된다. 내가 사용중인 default는 아래와 같다.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><span class="er" style="color: #AD0000;">"defaults":</span></span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb1-3">    <span class="dt" style="color: #AD0000;">"fontFace"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"D2Coding"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-4">    <span class="dt" style="color: #AD0000;">"fontSize"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="dv" style="color: #AD0000;">10</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-5">    <span class="dt" style="color: #AD0000;">"historySize"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="dv" style="color: #AD0000;">9001</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-6">    <span class="dt" style="color: #AD0000;">"colorScheme"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"Monokai Vivid"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-7">    <span class="dt" style="color: #AD0000;">"cursorColor"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"#FFFFFF"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-8">    <span class="dt" style="color: #AD0000;">"cursorShape"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"vintage"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-9">    <span class="dt" style="color: #AD0000;">"padding"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"2, 2, 0, 0"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-10">    <span class="dt" style="color: #AD0000;">"snapOnInput"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="kw" style="color: #003B4F;">true</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-11">    <span class="dt" style="color: #AD0000;">"useAcrylic"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="kw" style="color: #003B4F;">true</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-12">    <span class="dt" style="color: #AD0000;">"acrylicOpacity"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="fl" style="color: #AD0000;">0.95</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-13">    <span class="dt" style="color: #AD0000;">"antialiasingMode"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"cleartype"</span></span>
-<span id="cb1-14">    <span class="er" style="color: #AD0000;">//</span> <span class="er" style="color: #AD0000;">Put</span> <span class="er" style="color: #AD0000;">settings</span> <span class="er" style="color: #AD0000;">here</span> <span class="er" style="color: #AD0000;">that</span> <span class="er" style="color: #AD0000;">you</span> <span class="er" style="color: #AD0000;">want</span> <span class="er" style="color: #AD0000;">to</span> <span class="er" style="color: #AD0000;">apply</span> <span class="er" style="color: #AD0000;">to</span> <span class="er" style="color: #AD0000;">all</span> <span class="er" style="color: #AD0000;">profiles</span></span>
-<span id="cb1-15"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
-<ul>
-<li>폰트는 D2Coding을 썼다. 폰트 크기 등등은 쭉 생략하고, 안티얼라이어싱 모드로 cleartype을 쓴 정도가 특징이다. 폰트는 한글 폰트를 써야 한글이 잘 나온다는 점만 기억하자.</li>
-</ul>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-09-26-windows-terminal.html</guid>
-  <pubDate>Fri, 25 Sep 2020 15:00:00 GMT</pubDate>
-  <media:content url="https://upload.wikimedia.org/wikipedia/commons/0/01/Windows_Terminal_Logo_256x256.png" medium="image" type="image/png"/>
-</item>
 </channel>
 </rss>
 </span><span class="op" style="color: #5E5E5E;">,</span><span class="st" style="color: #20794D;">'
@@ -4398,65 +4406,6 @@ MjEyMzEwM119
   <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-24-classy-latex.html</guid>
   <pubDate>Fri, 23 Oct 2020 15:00:00 GMT</pubDate>
   <media:content url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/LaTeX_project_logo_bird.svg/1920px-LaTeX_project_logo_bird.svg.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>The Best Terminal App for Windows</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-09-26-windows-terminal.html</link>
-  <description><![CDATA[ 
-
-
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><p>마소가 리눅스 생태계를 품으려고 진심으로 노력하고 있다. 보통 윈도에서 터미널을 쓰려면 cmd를 쳐서 들어간다. 일단 모양이 별로일 뿐만 아니라 불편하다. 그래서 보통 서드파티에서 제작한 터미널 앱을 별도로 쓰곤 한다. 이 앱들로도 부족한 것이 없다. <a href="https://cmder.net/">cmder</a>도 높은 수준의 커스터마이즈와 뛰어난 사용성을 보장한다.</p>
-<p>WSL을 통해 윈도에 설치하는 리눅스의 경우 기본으로 CLI(Command Line Interface)를 활용하게 된다. 따라서 좋은 터미널 앱은 필수적이다. 간편하면서도 심미적으로도 유려한 그런 앱이 하나 있었으면 싶은데, MS는 이미 그런 앱을 제공하고 있다.</p>
-<p>Windows 10 기준으로, Microsoft Store에 들어가서 “terminal”을 검색해보자. “Windows Terminal”과 “Windows Terminal Preview” 두 개를 찾을 수 있다. 전자는 안정 버전이고 후자는 실험적인 기능을 구현한 버전이다. 어느 것을 써도 괜찮다.</p>
-<p>공식 가이드 <a href="https://docs.microsoft.com/ko-kr/windows/terminal/">https://docs.microsoft.com/ko-kr/windows/terminal/</a></p>
-<p>왠만한 내용은 공식 가이드에 잘 정리되어 있으므로 몇 가지 팁만 적도록 하자.</p>
-<section id="설정" class="level2">
-<h2 class="anchored" data-anchor-id="설정">설정</h2>
-<p>VS Code도 그렇고 윈도 터미널도 그렇고 설정이 <code>settings.json</code> 파일로 되어 있다. GUI가 아니라서 처음엔 어색할 수 있겠지만, 쓰다보면 이게 훨씬 편하다는 것을 알게 될 것이다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/window-terminal/wt_1.png" class="img-fluid">{: style=“textalign:center;” width=“500”}<br>
-<img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/window-terminal/wt_2.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
-<section id="테마" class="level3">
-<h3 class="anchored" data-anchor-id="테마">테마</h3>
-<p>엄청나게 다양한 테마를 손쉽게 구현할 수 있다.</p>
-<p><a href="https://windowsterminalthemes.dev/">https://windowsterminalthemes.dev/</a></p>
-<p>원하는 테마를 바꿔가며 확인할 수 있다. 마음에 드는 녀석을 “Get theme” 버튼을 눌러 클립보드에 복사하도록 하자. 녀석을 어디에 붙여 넣어야 할까?</p>
-<p><code>settings.json</code> 파일을 자세히 보면, 아래 <code>"schemes":</code>라는 항목이 있다. 여기에 클립보드에서 복사한 내용을 <code>{}</code> 안에 붙여 넣도록 하자. 그리고 설정 파일의 위로 이동하면 <code>"profiles"</code> - <code>"defaults"</code>라는 항목이 보일 것이다. 여기에는 터미널 앱을 띄웠을 때 어떤 세팅으로 시작할 것인지를 넣을 수 있다. 여러가지 항목을 넣을 수 있는데, 이중 <code>colorScheme</code> 항목에 방금 붙여 넣은 테마의 이름을 넣어주면 된다. 저장을 하면 테마가 바로 적용되며, 뭔가 문제가 있을 경우에는 에러가 뜬다. 이 경우 설정 파일을 다시 고치면 된다. 내가 사용중인 default는 아래와 같다.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><span class="er" style="color: #AD0000;">"defaults":</span></span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb1-3">    <span class="dt" style="color: #AD0000;">"fontFace"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"D2Coding"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-4">    <span class="dt" style="color: #AD0000;">"fontSize"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="dv" style="color: #AD0000;">10</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-5">    <span class="dt" style="color: #AD0000;">"historySize"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="dv" style="color: #AD0000;">9001</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-6">    <span class="dt" style="color: #AD0000;">"colorScheme"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"Monokai Vivid"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-7">    <span class="dt" style="color: #AD0000;">"cursorColor"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"#FFFFFF"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-8">    <span class="dt" style="color: #AD0000;">"cursorShape"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"vintage"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-9">    <span class="dt" style="color: #AD0000;">"padding"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"2, 2, 0, 0"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-10">    <span class="dt" style="color: #AD0000;">"snapOnInput"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="kw" style="color: #003B4F;">true</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-11">    <span class="dt" style="color: #AD0000;">"useAcrylic"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="kw" style="color: #003B4F;">true</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-12">    <span class="dt" style="color: #AD0000;">"acrylicOpacity"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="fl" style="color: #AD0000;">0.95</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-13">    <span class="dt" style="color: #AD0000;">"antialiasingMode"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"cleartype"</span></span>
-<span id="cb1-14">    <span class="er" style="color: #AD0000;">//</span> <span class="er" style="color: #AD0000;">Put</span> <span class="er" style="color: #AD0000;">settings</span> <span class="er" style="color: #AD0000;">here</span> <span class="er" style="color: #AD0000;">that</span> <span class="er" style="color: #AD0000;">you</span> <span class="er" style="color: #AD0000;">want</span> <span class="er" style="color: #AD0000;">to</span> <span class="er" style="color: #AD0000;">apply</span> <span class="er" style="color: #AD0000;">to</span> <span class="er" style="color: #AD0000;">all</span> <span class="er" style="color: #AD0000;">profiles</span></span>
-<span id="cb1-15"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
-<ul>
-<li>폰트는 D2Coding을 썼다. 폰트 크기 등등은 쭉 생략하고, 안티얼라이어싱 모드로 cleartype을 쓴 정도가 특징이다. 폰트는 한글 폰트를 써야 한글이 잘 나온다는 점만 기억하자.</li>
-</ul>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-09-26-windows-terminal.html</guid>
-  <pubDate>Fri, 25 Sep 2020 15:00:00 GMT</pubDate>
-  <media:content url="https://upload.wikimedia.org/wikipedia/commons/0/01/Windows_Terminal_Logo_256x256.png" medium="image" type="image/png"/>
 </item>
 </channel>
 </rss>
@@ -6537,65 +6486,6 @@ MjEyMzEwM119
   <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-24-classy-latex.html</guid>
   <pubDate>Fri, 23 Oct 2020 15:00:00 GMT</pubDate>
   <media:content url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/LaTeX_project_logo_bird.svg/1920px-LaTeX_project_logo_bird.svg.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>The Best Terminal App for Windows</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-09-26-windows-terminal.html</link>
-  <description><![CDATA[ 
-
-
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><p>마소가 리눅스 생태계를 품으려고 진심으로 노력하고 있다. 보통 윈도에서 터미널을 쓰려면 cmd를 쳐서 들어간다. 일단 모양이 별로일 뿐만 아니라 불편하다. 그래서 보통 서드파티에서 제작한 터미널 앱을 별도로 쓰곤 한다. 이 앱들로도 부족한 것이 없다. <a href="https://cmder.net/">cmder</a>도 높은 수준의 커스터마이즈와 뛰어난 사용성을 보장한다.</p>
-<p>WSL을 통해 윈도에 설치하는 리눅스의 경우 기본으로 CLI(Command Line Interface)를 활용하게 된다. 따라서 좋은 터미널 앱은 필수적이다. 간편하면서도 심미적으로도 유려한 그런 앱이 하나 있었으면 싶은데, MS는 이미 그런 앱을 제공하고 있다.</p>
-<p>Windows 10 기준으로, Microsoft Store에 들어가서 “terminal”을 검색해보자. “Windows Terminal”과 “Windows Terminal Preview” 두 개를 찾을 수 있다. 전자는 안정 버전이고 후자는 실험적인 기능을 구현한 버전이다. 어느 것을 써도 괜찮다.</p>
-<p>공식 가이드 <a href="https://docs.microsoft.com/ko-kr/windows/terminal/">https://docs.microsoft.com/ko-kr/windows/terminal/</a></p>
-<p>왠만한 내용은 공식 가이드에 잘 정리되어 있으므로 몇 가지 팁만 적도록 하자.</p>
-<section id="설정" class="level2">
-<h2 class="anchored" data-anchor-id="설정">설정</h2>
-<p>VS Code도 그렇고 윈도 터미널도 그렇고 설정이 <code>settings.json</code> 파일로 되어 있다. GUI가 아니라서 처음엔 어색할 수 있겠지만, 쓰다보면 이게 훨씬 편하다는 것을 알게 될 것이다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/window-terminal/wt_1.png" class="img-fluid">{: style=“textalign:center;” width=“500”}<br>
-<img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/window-terminal/wt_2.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
-<section id="테마" class="level3">
-<h3 class="anchored" data-anchor-id="테마">테마</h3>
-<p>엄청나게 다양한 테마를 손쉽게 구현할 수 있다.</p>
-<p><a href="https://windowsterminalthemes.dev/">https://windowsterminalthemes.dev/</a></p>
-<p>원하는 테마를 바꿔가며 확인할 수 있다. 마음에 드는 녀석을 “Get theme” 버튼을 눌러 클립보드에 복사하도록 하자. 녀석을 어디에 붙여 넣어야 할까?</p>
-<p><code>settings.json</code> 파일을 자세히 보면, 아래 <code>"schemes":</code>라는 항목이 있다. 여기에 클립보드에서 복사한 내용을 <code>{}</code> 안에 붙여 넣도록 하자. 그리고 설정 파일의 위로 이동하면 <code>"profiles"</code> - <code>"defaults"</code>라는 항목이 보일 것이다. 여기에는 터미널 앱을 띄웠을 때 어떤 세팅으로 시작할 것인지를 넣을 수 있다. 여러가지 항목을 넣을 수 있는데, 이중 <code>colorScheme</code> 항목에 방금 붙여 넣은 테마의 이름을 넣어주면 된다. 저장을 하면 테마가 바로 적용되며, 뭔가 문제가 있을 경우에는 에러가 뜬다. 이 경우 설정 파일을 다시 고치면 된다. 내가 사용중인 default는 아래와 같다.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><span class="er" style="color: #AD0000;">"defaults":</span></span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;">{</span></span>
-<span id="cb1-3">    <span class="dt" style="color: #AD0000;">"fontFace"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"D2Coding"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-4">    <span class="dt" style="color: #AD0000;">"fontSize"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="dv" style="color: #AD0000;">10</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-5">    <span class="dt" style="color: #AD0000;">"historySize"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="dv" style="color: #AD0000;">9001</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-6">    <span class="dt" style="color: #AD0000;">"colorScheme"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"Monokai Vivid"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-7">    <span class="dt" style="color: #AD0000;">"cursorColor"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"#FFFFFF"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-8">    <span class="dt" style="color: #AD0000;">"cursorShape"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"vintage"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-9">    <span class="dt" style="color: #AD0000;">"padding"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"2, 2, 0, 0"</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-10">    <span class="dt" style="color: #AD0000;">"snapOnInput"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="kw" style="color: #003B4F;">true</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-11">    <span class="dt" style="color: #AD0000;">"useAcrylic"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="kw" style="color: #003B4F;">true</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-12">    <span class="dt" style="color: #AD0000;">"acrylicOpacity"</span> <span class="fu" style="color: #4758AB;">:</span> <span class="fl" style="color: #AD0000;">0.95</span><span class="fu" style="color: #4758AB;">,</span></span>
-<span id="cb1-13">    <span class="dt" style="color: #AD0000;">"antialiasingMode"</span><span class="fu" style="color: #4758AB;">:</span><span class="st" style="color: #20794D;">"cleartype"</span></span>
-<span id="cb1-14">    <span class="er" style="color: #AD0000;">//</span> <span class="er" style="color: #AD0000;">Put</span> <span class="er" style="color: #AD0000;">settings</span> <span class="er" style="color: #AD0000;">here</span> <span class="er" style="color: #AD0000;">that</span> <span class="er" style="color: #AD0000;">you</span> <span class="er" style="color: #AD0000;">want</span> <span class="er" style="color: #AD0000;">to</span> <span class="er" style="color: #AD0000;">apply</span> <span class="er" style="color: #AD0000;">to</span> <span class="er" style="color: #AD0000;">all</span> <span class="er" style="color: #AD0000;">profiles</span></span>
-<span id="cb1-15"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
-<ul>
-<li>폰트는 D2Coding을 썼다. 폰트 크기 등등은 쭉 생략하고, 안티얼라이어싱 모드로 cleartype을 쓴 정도가 특징이다. 폰트는 한글 폰트를 써야 한글이 잘 나온다는 점만 기억하자.</li>
-</ul>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-09-26-windows-terminal.html</guid>
-  <pubDate>Fri, 25 Sep 2020 15:00:00 GMT</pubDate>
-  <media:content url="https://upload.wikimedia.org/wikipedia/commons/0/01/Windows_Terminal_Logo_256x256.png" medium="image" type="image/png"/>
 </item>
 </channel>
 </rss>
