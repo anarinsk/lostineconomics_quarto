@@ -36,11 +36,12 @@ categories: [economics]
 # 스테이블 코인의 트릴레마 
 
 ![스테이블 코인의 트릴레마](https://voxeu.org/sites/default/files/image/FromMay2014/ganesh13mayfig1.png){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 70%;" }
-<br>
+
 :::{.column-margin}
 [Algorithmic stablecoins and devaluation risk | VOX, CEPR Policy Portal (voxeu.org)](https://voxeu.org/article/algorithmic-stablecoins-and-devaluation-risk) 글에는 루나와 테라USD의 원리 및 최근의 상황이 잘 요약되어 있다. 
 :::
 
+<br>
 스테이블 코인의 트렐리마가 흥미로운 이유는 무엇일까? 최근의 여러가지 사태도 있지만, 전체적인 도식이 위 거시경제의 트릴레마와 많이 닮았다. 스테이블 코인이란 일종의 고정환율제다. 위 '영란 은행 대 소로스'의 일화에서 보았듯이 스테이블 코인의 가치가 유지되기 힘들다는 의구심이 발생하는 순간 해당 코인은 유사한 투기적인 공격에 노출될 수 있다. 
 
 스테이블 코인 테라 USD의 경우 테더(Tether)처럼 현실 법화(legal tender)에 묶인 게 아니라 비트코인에 묶여 있었다. 비트코인 자체의 가격 변화가 심하다면 안정적(stable)이라는 수식어가 무색한 상황이 얼마든지 생길 수 있다. 
