@@ -45,7 +45,7 @@
 <p>위 삼각형에는 없지만 트릴레마의 사례를 극적으로 보여주는 것이 영국의 중앙은행인 영란은행과 조지 소로스 간의 환율 전쟁이다. 파운드-마르크의 밴드 내 고정환율제를 구축했던 영국에서 외환 보유고가 충분하지 않음을 감지한 헤지 펀드는 영국의 외환 선물 시장에서 파운드를 던지고 외화를 퍼내기 시작했다. 이는 파운드가 압력을 이기지 못하고 평가 절하를 할 수밖에 없으며, 이 경우 파운드 선물을 판매한(숏 포지션) 헤지 펀드는 큰 돈을 벌게 될 것이기 때문이다. 실제로 발생한 일은 이와 얼추 비슷하다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>물론 일국의 법정 통화를 향한 이런 공격이 항상 성공하는 것은 아니다. 오히려 실패할 경우가 더 많다. 조지 소로스의 퀀텀 펀드를 비롯해 몇 개의 헤지 펀드가 달러에 고정된 홍콩 달러에 대해서 비슷한 공격을 가했으나 중국 정부의 자본시장 통제와 이자율 인상 등의 조치로 인해 성공을 거두지 못했다.</p>
+<p>일국의 법정 통화를 향한 이런 공격이 항상 성공하는 것은 아니다. 조지 소로스의 퀀텀 펀드를 비롯해 몇 개의 헤지 펀드가 달러에 고정된 홍콩 달러에 대해서 치밀한 분석을 거쳐 비슷한 공격을 가했지만, 중국 정부의 자본시장 통제와 이자율 인상 등의 조치로 인해 성공을 거두지 못했다.</p>
 </div></div></section>
 <section id="스테이블-코인의-트릴레마" class="level1 page-columns page-full">
 <h1>스테이블 코인의 트릴레마</h1>
@@ -62,7 +62,7 @@
 <p>스테이블 코인 테라 USD의 경우 테더(Tether)처럼 현실 법화(legal tender)에 묶인 게 아니라 비트코인에 묶여 있었다. 비트코인 자체의 가격 변화가 심하다면 안정적(stable)이라는 수식어가 무색한 상황이 얼마든지 생길 수 있다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>그렇다면 USD에 묶는 혹은 다른 법화에 묶는 스테이블 코인은 괜찮을까? 현실의 법화는 국가 혹은 지역 공동체의 법에 의해 지불, 보증, 부채 이행을 보장받는 화폐다. 그리고 이 화폐는 국가 혹은 여타 법적 존재가 최종 대부자로 자리매김하고 있다. 이 화폐에 기반한 상업 활동 및 금융 활동과는 별개로 이에 기반한 화폐 체계는 최종 대부자라는 법화의 공공재에 무임승차 하는 것과 비슷하다. 탈중앙화를 핵심 가치로 중앙은행의 타락을 거부한 암호 화폐가 돌고 돌아서 결국 중앙은행에 의존하게 되는 것 역시 아이러니하다.</p>
+<p>그렇다면 USD에 혹은 다른 법화에 묶는 스테이블 코인은 괜찮을까? 현실의 법화는 국가 혹은 지역 공동체의 법에 의해 지불, 보증, 부채 이행을 보장받는 화폐다. 그리고 이 화폐는 국가 혹은 여타 법적 존재가 최종 대부자로 자리매김하고 있다. 이 화폐에 기반한 상업 활동 및 금융 활동과는 별개로 이에 기반한 화폐 체계는 최종 대부자라는 법화의 공공재에 무임승차 하는 것과 비슷하다. 탈중앙화를 핵심 가치로 중앙은행의 타락을 거부한 암호 화폐가 돌고 돌아서 결국 중앙은행에 의존하게 되는 것 역시 아이러니하다.</p>
 </div></div><p>스테이블 코인의 트릴레마를 해결하는 방법은 무엇일까? 트릴레마를 응용한다면 탈중앙화-자본 효율을 추구하는 알고리즘 기반의 이점을 포기하는 방향이 있다. 충분한 수준의 법화 보유고 확보하거나(삼각형의 오른쪽) 혹은 스마트 컨트랙트를 통해서 특정한 조건에서 충분한 수준의 보유고를 확보하거나(삼각형의 왼쪽) 해야 한다.</p>
 <p>다만 스마트 컨트랙트를 통해서 고정 교환비라는 제약 아래 투기적 공격을 막아내기에 충분한 담보 비율을 사전적으로 알 수 있는지는 분명하지 않다. 이 상황이 불비 정보(incomplete information)의 상황이라면 현재 지니고 있는 정보를 통해 미래의 모든 상황을 충분히 파악하기 힘들다. 이때 미래의 사태를 대응하기 위한 장치를 스마트 컨트랙트에 미리 넣을 수 있을까?</p>
 <p>특정한 시점에 레짐 체인지를 통해서 일시적으로 중앙화의 해법을 택한다는 식의 메타 룰을 스마트 컨트랙트에 넣을 수 있는 것인지 잘 모르겠다. 만일 그렇다고 해도 해당 상황에서 누가 통제를 할지 이 통제를 위한 정당성은 어떻게 준비할 수 있는지 등등은 나에게는 여전히 의문이다.</p>
@@ -2150,7 +2150,7 @@ MjEyMzEwM119
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%20/%20y_i%7D%7Bd%20x_i%7D%20=%20%5Cbeta%0A"></p>
 <p>이렇게 보면 <img src="https://latex.codecogs.com/png.latex?%5Cbeta"> 값은 <img src="https://latex.codecogs.com/png.latex?x_i">가 순간적으로 변함에 따라서 변화하는 <img src="https://latex.codecogs.com/png.latex?y_i">의 % 변화를 나타낸다. 일단 기본적으로 주의해야 할 것! 위 값은 국지적 미분 값이다. 즉, 특정한 <img src="https://latex.codecogs.com/png.latex?x_i">에서의 미분 값이다. 즉, 엄밀하게 쓰면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%20/%20y_i%7D%7Bd%20x_i%7D%20%5Cbigg%7C_%7Bx_i%20=%20x_0%7D%20=%20%5Cbeta%0A"></p>
-<p>회귀분석에서 구하는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">와 의 위 식에서 얻는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">는 동일할 수가 없다. 왜나하면, <img src="https://latex.codecogs.com/png.latex?y_i">는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
+<p>회귀분석에서 구하는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">와 위에서 얻은 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">는 동일할 수가 없다. 왜나하면, <img src="https://latex.codecogs.com/png.latex?y_i">는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
 <p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 </section>
 <section id="the-coefficient" class="level2">
@@ -2168,7 +2168,6 @@ MjEyMzEwM119
 <h2 class="anchored" data-anchor-id="exact-math-for-the-percent-change">Exact Math for the Percent Change</h2>
 <p>근사값을 쓰지 말고 % 변화율을 정확하게 계산해보자. 물론 이 값이 필요한 경우에 해당한다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5C%25%20%5CDelta%20y_i%20&amp;%20%5Cequiv%20%5Cdfrac%7By_1%20-%20y_0%7D%7By_0%7D%20%5C%5C%0A&amp;%20=%20%5Cdfrac%7By_1%7D%7By_0%7D%20-%201%20%5C%5C%0A&amp;%20=%20%5Cexp(%5Cln%20(%5Cdfrac%7By_1%7D%7By_0%7D))%20-%201%20%5C%5C%0A&amp;%20=%20%5Cexp(x_1%20%5Cbeta%20-%20x_0%20%5Cbeta%20+%20%5Cvarepsilon_1%20-%20%5Cvarepsilon_0)%20-%201%20%5C%5C%0A&amp;%20=%20%5Cexp(%5CDelta%20x%20%5Cbeta%20+%20%5CDelta%20%5Cvarepsilon)%20-%201%0A%5Cend%7Baligned%7D%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cln(1+%5Cfrac%7B%5CDelta%20y%7D%7By_0%7D)">를 보자. <img src="https://latex.codecogs.com/png.latex?z=0"> 근처에서 <img src="https://latex.codecogs.com/png.latex?%5Cln%20(1+z)%20%5Capprox%20z">가 성립한다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><img src="https://latex.codecogs.com/png.latex?z=0"> 근방에서 테일러 급수를 1차까지 근사하면 저 값을 얻을 수 있다. <img src="https://latex.codecogs.com/png.latex?z=0"> 인근에서 근사하는 이유는 <img src="https://latex.codecogs.com/png.latex?z=0"> 근처에서 <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B(z-0)%5Ek%7D%7Bk!%7D"> for <img src="https://latex.codecogs.com/png.latex?k=2,3,%5Cdotsc">과 같은 고차 항의 크기가 점점 줄어들기 때문이다.</p>
@@ -4165,7 +4164,7 @@ MjEyMzEwM119
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%20/%20y_i%7D%7Bd%20x_i%7D%20=%20%5Cbeta%0A"></p>
 <p>이렇게 보면 <img src="https://latex.codecogs.com/png.latex?%5Cbeta"> 값은 <img src="https://latex.codecogs.com/png.latex?x_i">가 순간적으로 변함에 따라서 변화하는 <img src="https://latex.codecogs.com/png.latex?y_i">의 % 변화를 나타낸다. 일단 기본적으로 주의해야 할 것! 위 값은 국지적 미분 값이다. 즉, 특정한 <img src="https://latex.codecogs.com/png.latex?x_i">에서의 미분 값이다. 즉, 엄밀하게 쓰면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%20/%20y_i%7D%7Bd%20x_i%7D%20%5Cbigg%7C_%7Bx_i%20=%20x_0%7D%20=%20%5Cbeta%0A"></p>
-<p>회귀분석에서 구하는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">와 의 위 식에서 얻는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">는 동일할 수가 없다. 왜나하면, <img src="https://latex.codecogs.com/png.latex?y_i">는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
+<p>회귀분석에서 구하는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">와 위에서 얻은 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">는 동일할 수가 없다. 왜나하면, <img src="https://latex.codecogs.com/png.latex?y_i">는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
 <p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 </section>
 <section id="the-coefficient" class="level2">
@@ -4183,7 +4182,6 @@ MjEyMzEwM119
 <h2 class="anchored" data-anchor-id="exact-math-for-the-percent-change">Exact Math for the Percent Change</h2>
 <p>근사값을 쓰지 말고 % 변화율을 정확하게 계산해보자. 물론 이 값이 필요한 경우에 해당한다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5C%25%20%5CDelta%20y_i%20&amp;%20%5Cequiv%20%5Cdfrac%7By_1%20-%20y_0%7D%7By_0%7D%20%5C%5C%0A&amp;%20=%20%5Cdfrac%7By_1%7D%7By_0%7D%20-%201%20%5C%5C%0A&amp;%20=%20%5Cexp(%5Cln%20(%5Cdfrac%7By_1%7D%7By_0%7D))%20-%201%20%5C%5C%0A&amp;%20=%20%5Cexp(x_1%20%5Cbeta%20-%20x_0%20%5Cbeta%20+%20%5Cvarepsilon_1%20-%20%5Cvarepsilon_0)%20-%201%20%5C%5C%0A&amp;%20=%20%5Cexp(%5CDelta%20x%20%5Cbeta%20+%20%5CDelta%20%5Cvarepsilon)%20-%201%0A%5Cend%7Baligned%7D%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cln(1+%5Cfrac%7B%5CDelta%20y%7D%7By_0%7D)">를 보자. <img src="https://latex.codecogs.com/png.latex?z=0"> 근처에서 <img src="https://latex.codecogs.com/png.latex?%5Cln%20(1+z)%20%5Capprox%20z">가 성립한다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><img src="https://latex.codecogs.com/png.latex?z=0"> 근방에서 테일러 급수를 1차까지 근사하면 저 값을 얻을 수 있다. <img src="https://latex.codecogs.com/png.latex?z=0"> 인근에서 근사하는 이유는 <img src="https://latex.codecogs.com/png.latex?z=0"> 근처에서 <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B(z-0)%5Ek%7D%7Bk!%7D"> for <img src="https://latex.codecogs.com/png.latex?k=2,3,%5Cdotsc">과 같은 고차 항의 크기가 점점 줄어들기 때문이다.</p>
@@ -6245,7 +6243,7 @@ MjEyMzEwM119
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%20/%20y_i%7D%7Bd%20x_i%7D%20=%20%5Cbeta%0A"></p>
 <p>이렇게 보면 <img src="https://latex.codecogs.com/png.latex?%5Cbeta"> 값은 <img src="https://latex.codecogs.com/png.latex?x_i">가 순간적으로 변함에 따라서 변화하는 <img src="https://latex.codecogs.com/png.latex?y_i">의 % 변화를 나타낸다. 일단 기본적으로 주의해야 할 것! 위 값은 국지적 미분 값이다. 즉, 특정한 <img src="https://latex.codecogs.com/png.latex?x_i">에서의 미분 값이다. 즉, 엄밀하게 쓰면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%20/%20y_i%7D%7Bd%20x_i%7D%20%5Cbigg%7C_%7Bx_i%20=%20x_0%7D%20=%20%5Cbeta%0A"></p>
-<p>회귀분석에서 구하는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">와 의 위 식에서 얻는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">는 동일할 수가 없다. 왜나하면, <img src="https://latex.codecogs.com/png.latex?y_i">는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
+<p>회귀분석에서 구하는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">와 위에서 얻은 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">는 동일할 수가 없다. 왜나하면, <img src="https://latex.codecogs.com/png.latex?y_i">는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
 <p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 </section>
 <section id="the-coefficient" class="level2">
@@ -6263,7 +6261,6 @@ MjEyMzEwM119
 <h2 class="anchored" data-anchor-id="exact-math-for-the-percent-change">Exact Math for the Percent Change</h2>
 <p>근사값을 쓰지 말고 % 변화율을 정확하게 계산해보자. 물론 이 값이 필요한 경우에 해당한다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5C%25%20%5CDelta%20y_i%20&amp;%20%5Cequiv%20%5Cdfrac%7By_1%20-%20y_0%7D%7By_0%7D%20%5C%5C%0A&amp;%20=%20%5Cdfrac%7By_1%7D%7By_0%7D%20-%201%20%5C%5C%0A&amp;%20=%20%5Cexp(%5Cln%20(%5Cdfrac%7By_1%7D%7By_0%7D))%20-%201%20%5C%5C%0A&amp;%20=%20%5Cexp(x_1%20%5Cbeta%20-%20x_0%20%5Cbeta%20+%20%5Cvarepsilon_1%20-%20%5Cvarepsilon_0)%20-%201%20%5C%5C%0A&amp;%20=%20%5Cexp(%5CDelta%20x%20%5Cbeta%20+%20%5CDelta%20%5Cvarepsilon)%20-%201%0A%5Cend%7Baligned%7D%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cln(1+%5Cfrac%7B%5CDelta%20y%7D%7By_0%7D)">를 보자. <img src="https://latex.codecogs.com/png.latex?z=0"> 근처에서 <img src="https://latex.codecogs.com/png.latex?%5Cln%20(1+z)%20%5Capprox%20z">가 성립한다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><img src="https://latex.codecogs.com/png.latex?z=0"> 근방에서 테일러 급수를 1차까지 근사하면 저 값을 얻을 수 있다. <img src="https://latex.codecogs.com/png.latex?z=0"> 인근에서 근사하는 이유는 <img src="https://latex.codecogs.com/png.latex?z=0"> 근처에서 <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B(z-0)%5Ek%7D%7Bk!%7D"> for <img src="https://latex.codecogs.com/png.latex?k=2,3,%5Cdotsc">과 같은 고차 항의 크기가 점점 줄어들기 때문이다.</p>
