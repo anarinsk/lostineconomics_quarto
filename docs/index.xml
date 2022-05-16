@@ -143,7 +143,7 @@
 <section id="블로그-페이지-생성" class="level2">
 <h2 class="anchored" data-anchor-id="블로그-페이지-생성">블로그 페이지 생성</h2>
 <p><a href="https://quarto.org/docs/websites/website-blog.html#blog-projects">Quarto - Creating a Blog</a></p>
-<p>먼저 전체적인 블로그의 구조를 생성해야 한다.</p>
+<p>먼저 전체적인 블로그의 구조를 생성해야 한다. 터미날에서 아래와 같이 입력하자.</p>
 <div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;">?</span> quarto create-project YOUR-BLOG-DIR <span class="at" style="color: #657422;">--type</span> website:blog</span></code></pre></div>
 <p><code>YOUR-BLOG-DIR</code> 은 앞서 지정한 깃허브 리포의 디렉토리에 해당한다. 나머지는 그대로 쓰면 된다. 이 명령을 실행하면 해당 디렉토리에 블로그를 서비스하기 위해 필요한 파일들이 생성된다.</p>
 <table class="table">
@@ -189,7 +189,7 @@
 </ul>
 <div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;">$</span> quarto render </span>
 <span id="cb2-2"><span class="ex" style="color: null;">$</span> quarto preview </span></code></pre></div>
-<p><code>render</code> 명령어는 페이지를 렌더링하고 <code>preview</code>는 페이지를 미리 보여준다. VS Code의 Quarto extension을 쓰면 해당 과정을 편리하게 진행할 수 있다.</p>
+<p><code>render</code> 명령어는 페이지를 렌더링하고 <code>preview</code>는 페이지를 미리 보여준다. <a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">VS Code의 Quarto extension</a>을 쓰면 해당 과정을 편리하게 진행할 수 있다.</p>
 <p>다시 강조한다. Quarto는 스태틱 웹에 기반한 도구다. 새로운 포스팅을 포함하여 새로운 변경 사항이 로컬에서 발생했다면, 이를 render한 후 이 녀석을 깃헙 리포에 동기화 해야 최종적으로 웹 블로그에 반영된다. 렌더링을 잊지 말자.</p>
 </section>
 </section>

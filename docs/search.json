@@ -1516,7 +1516,7 @@
     "href": "posts/computer-tool/2022-05-14-blogging-with-quarto.html#블로그-페이지-생성",
     "title": "Blogging with Quarto",
     "section": "블로그 페이지 생성",
-    "text": "블로그 페이지 생성\nQuarto - Creating a Blog\n먼저 전체적인 블로그의 구조를 생성해야 한다.\n? quarto create-project YOUR-BLOG-DIR --type website:blog\nYOUR-BLOG-DIR 은 앞서 지정한 깃허브 리포의 디렉토리에 해당한다. 나머지는 그대로 쓰면 된다. 이 명령을 실행하면 해당 디렉토리에 블로그를 서비스하기 위해 필요한 파일들이 생성된다.\n\n\n\nFile\nDesc\n\n\n\n\n_quarto.yml\n블로그 설정 yml\n\n\nindex.qmd\nindex.html 설정\n\n\nabout.qmd\nabout 페이지 내용\n\n\nposts/\n포스팅이 담길 디렉토리\n\n\nstyles.css\n개별 스타일 css\n\n\n\nposts 디렉토리에 .qmd 확장자를 지닌 포스팅 파일을 넣는다. 나머지 파일들에 관한 설명은 공식 문서에 잘 되어 있다.\n\n_quarto.yml은 기본 설정된 항목을 필요에 따라서 고쳐도 충분하다. 보다 많은 설정이 필요하다면 여기 내용을 참고하자.\n나머지 설정은 위 표에 링크된 내용을 참고하면 된다."
+    "text": "블로그 페이지 생성\nQuarto - Creating a Blog\n먼저 전체적인 블로그의 구조를 생성해야 한다. 터미날에서 아래와 같이 입력하자.\n? quarto create-project YOUR-BLOG-DIR --type website:blog\nYOUR-BLOG-DIR 은 앞서 지정한 깃허브 리포의 디렉토리에 해당한다. 나머지는 그대로 쓰면 된다. 이 명령을 실행하면 해당 디렉토리에 블로그를 서비스하기 위해 필요한 파일들이 생성된다.\n\n\n\nFile\nDesc\n\n\n\n\n_quarto.yml\n블로그 설정 yml\n\n\nindex.qmd\nindex.html 설정\n\n\nabout.qmd\nabout 페이지 내용\n\n\nposts/\n포스팅이 담길 디렉토리\n\n\nstyles.css\n개별 스타일 css\n\n\n\nposts 디렉토리에 .qmd 확장자를 지닌 포스팅 파일을 넣는다. 나머지 파일들에 관한 설명은 공식 문서에 잘 되어 있다.\n\n_quarto.yml은 기본 설정된 항목을 필요에 따라서 고쳐도 충분하다. 보다 많은 설정이 필요하다면 여기 내용을 참고하자.\n나머지 설정은 위 표에 링크된 내용을 참고하면 된다."
   },
   {
     "objectID": "posts/computer-tool/2022-05-14-blogging-with-quarto.html#렌더링",
