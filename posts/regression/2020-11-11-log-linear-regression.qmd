@@ -1,6 +1,6 @@
 ---
 title: Revisiting Log-Linear Regression Model 
-description: 베타를 어떻게 해석할까? 
+description: 로그 선형 모델의 베타를 어떻게 볼까? 
 author: "JS HUHH"
 date: "11/11/2020"
 image: "https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png"
@@ -34,7 +34,7 @@ $$
 \dfrac{d y_i / y_i}{d x_i} \bigg|_{x_i = x_0} = \beta
 $$
 
-회귀분석에서 구하는 $\beta$와 의 위 식에서 얻는 $\beta$는 동일할 수가 없다. 왜나하면, $y_i$는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자. 
+회귀분석에서 구하는 $\beta$와 위에서 얻은 $\beta$는 동일할 수가 없다. 왜나하면, $y_i$는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자. 
 
  ![](https://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;" }
 
@@ -80,8 +80,6 @@ $$
 & = \exp(\Delta x \beta + \Delta \varepsilon) - 1
 \end{aligned}
 $$
-
-$\ln(1+\frac{\Delta y}{y_0})$를 보자. $z=0$ 근처에서 $\ln (1+z) \approx z$가 성립한다.
 
 :::{.column-margin}
 $z=0$ 근방에서 테일러 급수를 1차까지 근사하면 저 값을 얻을 수 있다. $z=0$ 인근에서 근사하는 이유는 $z=0$ 근처에서 $\frac{(z-0)^k}{k!}$ for $k=2,3,\dotsc$과 같은 고차 항의 크기가 점점 줄어들기 때문이다. 

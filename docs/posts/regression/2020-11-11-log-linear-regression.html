@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.368">
+<meta name="generator" content="quarto-0.9.407">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="JS HUHH">
 <meta name="dcterms.date" content="2020-11-11">
-<meta name="description" content="베타를 어떻게 해석할까?">
+<meta name="description" content="로그 선형 모델의 베타를 어떻게 볼까?">
 
 <title>lostineconomics.com - Revisiting Log-Linear Regression Model</title>
 <style>
@@ -27,15 +27,18 @@ ul.task-list{list-style: none;}
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<link href="../../favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link id="quarto-text-highlighting-styles" href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<link class="quarto-color-scheme" id="quarto-text-highlighting-styles" href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+<link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" id="quarto-text-highlighting-styles" href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link class="quarto-color-scheme" href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="../../site_libs/bootstrap/bootstrap-dark.min.css">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -94,6 +97,9 @@ ul.task-list{list-style: none;}
  </a>
   </li>  
 </ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -119,7 +125,7 @@ ul.task-list{list-style: none;}
 
 <div>
   <div class="description">
-    베타를 어떻게 해석할까?
+    로그 선형 모델의 베타를 어떻게 볼까?
   </div>
 </div>
 
@@ -171,7 +177,7 @@ ul.task-list{list-style: none;}
 <p><span class="math display">\[
 \dfrac{d y_i / y_i}{d x_i} \bigg|_{x_i = x_0} = \beta
 \]</span></p>
-<p>회귀분석에서 구하는 <span class="math inline">\(\beta\)</span>와 의 위 식에서 얻는 <span class="math inline">\(\beta\)</span>는 동일할 수가 없다. 왜나하면, <span class="math inline">\(y_i\)</span>는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
+<p>회귀분석에서 구하는 <span class="math inline">\(\beta\)</span>와 위에서 얻은 <span class="math inline">\(\beta\)</span>는 동일할 수가 없다. 왜나하면, <span class="math inline">\(y_i\)</span>는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
 <p><img src="https://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 </section>
 <section id="the-coefficient" class="level2">
@@ -208,7 +214,6 @@ ul.task-list{list-style: none;}
 &amp; = \exp(\Delta x \beta + \Delta \varepsilon) - 1
 \end{aligned}
 \]</span></p>
-<p><span class="math inline">\(\ln(1+\frac{\Delta y}{y_0})\)</span>를 보자. <span class="math inline">\(z=0\)</span> 근처에서 <span class="math inline">\(\ln (1+z) \approx z\)</span>가 성립한다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><span class="math inline">\(z=0\)</span> 근방에서 테일러 급수를 1차까지 근사하면 저 값을 얻을 수 있다. <span class="math inline">\(z=0\)</span> 인근에서 근사하는 이유는 <span class="math inline">\(z=0\)</span> 근처에서 <span class="math inline">\(\frac{(z-0)^k}{k!}\)</span> for <span class="math inline">\(k=2,3,\dotsc\)</span>과 같은 고차 항의 크기가 점점 줄어들기 때문이다.</p>
@@ -229,6 +234,103 @@ ul.task-list{list-style: none;}
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+    } else {
+      disableStylesheet(alternateStylesheets);
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
