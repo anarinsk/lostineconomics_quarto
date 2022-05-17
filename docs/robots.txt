@@ -1,1 +1,1 @@
-Sitemap: https://anarinsk.github.io/lostineconomics_quarto/sitemap.xml
+Sitemap: http://www.lostineconomics.com/sitemap.xml

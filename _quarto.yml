@@ -3,7 +3,7 @@ project:
   output-dir: docs
 website:
   title: "lostineconomics.com"
-  site-url: "https://anarinsk.github.io/lostineconomics_quarto"
+  site-url: http://www.lostineconomics.com
   description: "Another useless blog"
   favicon: "favicon.ico"
   navbar:

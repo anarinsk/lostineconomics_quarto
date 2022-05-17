@@ -3,9 +3,10 @@ title:  Python in the Browser
 description: 브라우저에서 python을 돌린다굽쇼? 
 author: "JS HUHH"
 date: "11/19/2021"
-image: "https://pyodide.org/en/stable/_static/pyodide-logo.png"
+image: "https://irydium.dev/logos/pyodide.png"
 categories: [computer-tool]
 #margin-header: subscribe.html
+
 ---
 
 # Python이 갑자기 필요하다면? 
