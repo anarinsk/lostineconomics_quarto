@@ -1,167 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://www.lostineconomics.com/index.html</loc>
-    <lastmod>2022-05-17T00:47:08.202Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/math-of/2019-12-20-Peron-Frobenius-2.html</loc>
+    <lastmod>2022-05-08T10:52:33.366Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/computer-tool/2020-03-07-blogging-with-fastpages.html</loc>
-    <lastmod>2022-05-17T00:46:38.056Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/math-of/2019-05-06-math-svm.html</loc>
+    <lastmod>2022-05-08T10:52:33.802Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/computer-tool/2020-03-09-Streamlit-Heroku.html</loc>
-    <lastmod>2022-05-17T00:46:38.929Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/math-of/2019-12-24-PageRank.html</loc>
+    <lastmod>2022-05-08T10:52:34.152Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/computer-tool/2020-04-09-wsl2-walkthru.html</loc>
-    <lastmod>2022-05-17T00:46:39.613Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/math-of/2019-12-11-Peron-Frobenus-1.html</loc>
+    <lastmod>2022-05-08T10:52:34.592Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/computer-tool/2020-09-26-windows-terminal.html</loc>
-    <lastmod>2022-05-17T00:46:40.285Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/math-of/2020-07-03-bayesian-inference.html</loc>
+    <lastmod>2022-05-08T10:52:35.042Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/computer-tool/2020-10-24-classy-latex.html</loc>
-    <lastmod>2022-05-17T00:46:41.154Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/math-of/2019-05-17-math-pca.html</loc>
+    <lastmod>2022-05-08T10:52:35.427Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/computer-tool/2020-10-27-viva-binder.html</loc>
-    <lastmod>2022-05-17T00:46:41.769Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/econ-simple/2022-04-30-gdp-import.html</loc>
+    <lastmod>2022-05-16T04:59:00.414Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/computer-tool/2021-02-02-all-vs-code.html</loc>
-    <lastmod>2022-05-17T00:46:42.630Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-23-docker-humble-practice.html</loc>
+    <lastmod>2022-05-08T10:52:36.203Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/computer-tool/2021-11-19-python-in-github.html</loc>
-    <lastmod>2022-05-17T00:46:43.253Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2022-04-26-k8s-personally.html</loc>
+    <lastmod>2022-05-16T04:58:59.795Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/computer-tool/2022-05-10-how-to-make-cv.html</loc>
-    <lastmod>2022-05-17T00:46:44.104Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</loc>
+    <lastmod>2022-05-08T10:52:36.858Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/computer-tool/2022-05-14-blogging-with-quarto.html</loc>
-    <lastmod>2022-05-17T00:46:44.798Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html</loc>
+    <lastmod>2022-05-09T01:56:41.103Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/container/2020-09-23-docker-humble-practice.html</loc>
-    <lastmod>2022-05-17T00:46:45.707Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</loc>
+    <lastmod>2022-05-08T10:52:37.736Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/container/2020-09-24-install-hangul-in-docker.html</loc>
-    <lastmod>2022-05-17T00:46:46.382Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/economics/2020-01-22-Wealth-divided.html</loc>
+    <lastmod>2022-05-16T04:59:01.083Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/container/2021-05-09-docker_korfont.html</loc>
-    <lastmod>2022-05-17T00:46:47.068Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-18-Eigenspace-2.html</loc>
+    <lastmod>2022-05-08T10:52:38.321Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/container/2021-09-13-podman-1.html</loc>
-    <lastmod>2022-05-17T00:46:47.971Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-05-vector-geometry-1.html</loc>
+    <lastmod>2022-05-08T10:52:38.655Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/container/2022-04-26-k8s-personally.html</loc>
-    <lastmod>2022-05-17T00:46:48.646Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</loc>
+    <lastmod>2022-05-08T10:52:38.955Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/econ-simple/2022-04-30-gdp-import.html</loc>
-    <lastmod>2022-05-17T00:46:49.300Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2020-12-16-measuring-distance.html</loc>
+    <lastmod>2022-05-08T10:52:39.268Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/economics/2020-01-22-Wealth-divided.html</loc>
-    <lastmod>2022-05-17T00:46:50.219Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-06-vector-geometry-2.html</loc>
+    <lastmod>2022-05-08T10:52:39.621Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/economics/2022-05-16-trilemma.html</loc>
-    <lastmod>2022-05-17T00:46:50.944Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-08-basis.html</loc>
+    <lastmod>2022-05-08T10:52:39.962Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/git/2020-03-05-using-git-w10.html</loc>
-    <lastmod>2022-05-17T00:46:51.614Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-10-Eigenspace-1.html</loc>
+    <lastmod>2022-05-08T10:52:40.264Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/git/2022-04-27-happy-giting.html</loc>
-    <lastmod>2022-05-17T00:46:52.238Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html</loc>
+    <lastmod>2022-05-08T10:52:40.558Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html</loc>
-    <lastmod>2022-05-17T00:46:52.911Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-10-25-understanding-regression.html</loc>
+    <lastmod>2022-05-08T10:52:40.950Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/linear-algebra/2020-12-16-measuring-distance.html</loc>
-    <lastmod>2022-05-17T00:46:53.605Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-11-10-understanding-logit-regression.html</loc>
+    <lastmod>2022-05-08T10:52:41.328Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/linear-algebra/2021-01-05-vector-geometry-1.html</loc>
-    <lastmod>2022-05-17T00:46:54.244Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2020-11-11-log-linear-regression.html</loc>
+    <lastmod>2022-05-16T09:09:49.047Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/linear-algebra/2021-01-06-vector-geometry-2.html</loc>
-    <lastmod>2022-05-17T00:46:54.942Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-09-26-windows-terminal.html</loc>
+    <lastmod>2022-05-08T10:52:41.824Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</loc>
-    <lastmod>2022-05-17T00:46:55.593Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-11-19-python-in-github.html</loc>
+    <lastmod>2022-05-08T10:52:42.148Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/linear-algebra/2021-01-08-basis.html</loc>
-    <lastmod>2022-05-17T00:46:56.256Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-03-07-blogging-with-fastpages.html</loc>
+    <lastmod>2022-05-08T10:52:42.707Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/linear-algebra/2021-01-10-Eigenspace-1.html</loc>
-    <lastmod>2022-05-17T00:46:56.933Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-24-classy-latex.html</loc>
+    <lastmod>2022-05-08T10:52:43.197Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/linear-algebra/2021-01-18-Eigenspace-2.html</loc>
-    <lastmod>2022-05-17T00:46:57.581Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-04-09-wsl2-walkthru.html</loc>
+    <lastmod>2022-05-08T10:52:43.490Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/machine-learning/2020-04-19-classification-metrics.html</loc>
-    <lastmod>2022-05-17T00:46:58.208Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-03-09-Streamlit-Heroku.html</loc>
+    <lastmod>2022-05-08T10:52:44.046Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/math-of/2019-05-06-math-svm.html</loc>
-    <lastmod>2022-05-17T00:46:58.919Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-27-viva-binder.html</loc>
+    <lastmod>2022-05-08T10:52:44.356Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/math-of/2019-05-17-math-pca.html</loc>
-    <lastmod>2022-05-17T00:46:59.611Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-02-02-all-vs-code.html</loc>
+    <lastmod>2022-05-08T10:52:44.870Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/math-of/2019-12-11-Peron-Frobenus-1.html</loc>
-    <lastmod>2022-05-17T00:47:00.374Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</loc>
+    <lastmod>2022-05-15T01:45:10.820Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/math-of/2019-12-20-Peron-Frobenius-2.html</loc>
-    <lastmod>2022-05-17T00:47:01.067Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2020-03-05-using-git-w10.html</loc>
+    <lastmod>2022-05-08T10:52:45.528Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/math-of/2019-12-24-PageRank.html</loc>
-    <lastmod>2022-05-17T00:47:01.740Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/2019-07-18-dot-product.html</loc>
+    <lastmod>2022-05-08T10:52:45.814Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/math-of/2020-07-03-bayesian-inference.html</loc>
-    <lastmod>2022-05-17T00:47:02.478Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/2019-07-13-Poisson.html</loc>
+    <lastmod>2022-05-08T10:52:46.139Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/math-simple/2019-07-13-Poisson.html</loc>
-    <lastmod>2022-05-17T00:47:03.110Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/index.html</loc>
+    <lastmod>2022-05-16T09:09:49.740Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/math-simple/2019-07-18-dot-product.html</loc>
-    <lastmod>2022-05-17T00:47:03.767Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/about.html</loc>
+    <lastmod>2022-05-16T01:58:58.987Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/regression/2019-10-25-understanding-regression.html</loc>
-    <lastmod>2022-05-17T00:47:04.455Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/cvs/short.html</loc>
+    <lastmod>2022-05-08T10:52:47.482Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/regression/2019-11-10-understanding-logit-regression.html</loc>
-    <lastmod>2022-05-17T00:47:05.166Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/cvs/long.html</loc>
+    <lastmod>2022-05-09T01:58:20.590Z</lastmod>
   </url>
   <url>
-    <loc>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</loc>
-    <lastmod>2022-05-17T00:47:05.796Z</lastmod>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-10-how-to-make-cv.html</loc>
+    <lastmod>2022-05-16T04:58:58.475Z</lastmod>
+  </url>
+  <url>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/machine-learning/2020-04-19-classification metrics.html</loc>
+    <lastmod>2022-05-12T03:28:03.261Z</lastmod>
+  </url>
+  <url>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/machine-learning/2020-04-19-classification-metrics.html</loc>
+    <lastmod>2022-05-14T00:30:30.061Z</lastmod>
+  </url>
+  <url>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-14-blogging-with-quarto.html</loc>
+    <lastmod>2022-05-16T04:58:59.151Z</lastmod>
+  </url>
+  <url>
+    <loc>https://anarinsk.github.io/lostineconomics_quarto/posts/economics/2022-05-16-trilemma.html</loc>
+    <lastmod>2022-05-16T09:09:48.740Z</lastmod>
   </url>
 </urlset>
