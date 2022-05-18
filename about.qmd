@@ -1,6 +1,6 @@
 ---
 title: "Junsok Huhh"
-image: profile-2.jpeg
+image: "profile-2.jpeg"
 about:
   template: trestles
   links:
