@@ -1510,5 +1510,12 @@
     "title": "Revisiting Log-Linear Regression Model",
     "section": "Interpretation",
     "text": "Interpretation\n위 지수 함수의 그림을 보자. \\(x\\)가 커짐에 따라서 도함수의 기울기가 커진다는 점을 알 수 있다. 특정 \\(x\\) 구역에서 회귀 계수를 구하면 이 도함수의 기울기와 비슷해질 것이고, 이는 이 도함수를 기울기로 근사한 직선이 실제 \\(y_i\\)값 보다는 작게 될 것이다. 즉, 변화율 측정 단위로서 \\(\\beta\\)는 실제 변화율보다 작게 된다.\n만일 \\(\\beta = 0.3\\)이라고 하자. 실제 \\(\\%\\Delta y\\)를 구해보면,\n\\[\n\\%\\Delta y = \\exp(\\beta) - 1 = 0.35\n\\]\n약 5% 정도 과소 평가 되었음을 알 수 있다. 이 크기의 의미나 중요성은 분석자가 선택할 문제다."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Junsok Huhh",
+    "section": "",
+    "text": "C.V.\nBrief | Long\n\n\nHistory of lostineconomics.com\n\nv3 built with Quarto and Github Pages\nv2 built with fastpages and Github Pages\nv1 built with markdown and Github\nv0 built with BlogDown and Github Pages"
   }
 ]
