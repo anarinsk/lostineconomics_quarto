@@ -7,7 +7,7 @@ image: "goodecon.jpg"
 categories: [economics]
 #margin-header: subscribe.html
 ---
-# 거시 경제의 트릴레마 
+## 거시 경제의 트릴레마 
 
 트릴레마(trilemma)는 두 개의 모순된 선택을 지니는 딜레마의 확장 버전이다. 세 개의 선택지 중에서 두 개는 조합이 가능하지만 그로 인해서 하나의 가치를 포기해야만 하는 상황을 의미한다. 
 
@@ -34,7 +34,7 @@ categories: [economics]
 일국의 법정 통화를 향한 이런 공격이 항상 성공하는 것은 아니다. 조지 소로스의 퀀텀 펀드를 비롯해 몇 개의 헤지 펀드가 달러에 고정된 홍콩 달러에 대해서 치밀한 분석을 거쳐 비슷한 공격을 가했지만, 중국 정부의 자본시장 통제와 이자율 인상 등의 조치로 인해 성공을 거두지 못했다. 
 ::: 
 
-# 스테이블 코인의 트릴레마 
+## 스테이블 코인의 트릴레마 
 
 ![스테이블 코인의 트릴레마](https://voxeu.org/sites/default/files/image/FromMay2014/ganesh13mayfig1.png){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 70%;" }
 
