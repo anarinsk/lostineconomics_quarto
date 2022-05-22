@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>lostineconomics.com</title>
-<link>https://anarinsk.github.io/lostineconomics_quarto/index.html</link>
-<atom:link href="https://anarinsk.github.io/lostineconomics_quarto/index.xml" rel="self" type="application/rss+xml"/>
+<link>http://www.lostineconomics.com/index.html</link>
+<atom:link href="http://www.lostineconomics.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>Another useless blog</description>
-<generator>quarto-0.9.407</generator>
+<generator>quarto-0.9.436</generator>
 <lastBuildDate>Sun, 15 May 2022 15:00:00 GMT</lastBuildDate>
 <item>
   <title>Trilemma, Lately</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/economics/2022-05-16-trilemma.html</link>
+  <link>http://www.lostineconomics.com/posts/economics/2022-05-16-trilemma.html</link>
   <description><![CDATA[ 
 
 
@@ -31,7 +31,7 @@
 <p>트릴레마 중에서 가장 많이 알려진 것은 거시 경제의 트릴레마다.</p>
 <div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; border:1.5px solid #021a40; width: 70%; background:#FFFFFF; ">
 <figure class="figure">
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/economics/http:/www.voxeu.org/sites/default/files/bordo%20fig1%202%20apr.png" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/economics/http:/www.voxeu.org/sites/default/files/bordo%20fig1%202%20apr.png" class="img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -42,7 +42,7 @@
 </div></div><p>시대적 조건에 따라서는 트릴레마의 강도가 미묘하게 변화하기도 한다. 예를 들어 보자. 오늘날 금융 자본주의에서는 자본 이동이 가하는 압박이 상당하다. 이런 환경에서 고정환율제를 택하건 변동환율제를 택하건 간에 자본 이동이 일국의 독자적인 거시경제 정책을 제약하는 경우가 많다.</p>
 <p>브레튼우즈 체제는 자본이동을 제약한 대신 고정환율제와 독자적인 거시경제 정책을 택한 조합이다. 현대 중국의 경우 약간의 독자적인 금융정책을 가장 우선에 두면서 약간의 고정환율제의 요소를 지니고 있다. 대신 자본이동에 관한 통제는 철저하다.</p>
 <p>트릴레마를 구성할 때 중요한 것은 무엇일까? 딜레마를 이루는 요소를 잘 선정해야 한다. 트릴레마를 이룰 수 없는 녀석들을 트릴레마라고 주장한다면 반지성적으로 보일 뿐이다. 트렐레마는 그것이 현실 혹은 역사를 잘 설명할 때 유용성을 지닌다. 위에서 보듯이, 개별 국가의 거시경제 정책 없이 금본위제 기반의 빠른 금융의 세계화가 19세기 중후반은 삼각형의 왼쪽에 해당한다. 2차 대전 이후 브레튼우즈 체제는 고정환율제, 개별 국가의 독자적인 거시경제 운용의 정책의 프레임이었고 대신 국제간 자본이동은 상당 수준으로 제한되었다.</p>
-<p>위 삼각형에는 없지만 트릴레마의 사례를 극적으로 보여주는 것이 영국의 중앙은행인 영란은행과 조지 소로스 간의 환율 전쟁이다. 파운드-마르크의 밴드 내 고정환율제를 구축했던 영국에서 외환 보유고가 충분하지 않음을 감지한 헤지 펀드는 영국의 외환 선물 시장에서 파운드를 던지고 외화를 퍼내기 시작했다. 이는 파운드가 압력을 이기지 못하고 평가 절하를 할 수밖에 없으며, 이 경우 파운드 선물을 판매한(숏 포지션) 헤지 펀드는 큰 돈을 벌게 될 것이기 때문이다. 실제로 발생한 일은 이와 얼추 비슷하다.</p>
+<p>위 삼각형에는 없지만 트릴레마의 사례를 극적으로 보여주는 것이 1990년 영국의 중앙은행인 영란은행과 조지 소로스 간의 환율 전쟁이다. 파운드-마르크의 밴드 내 고정환율제를 구축했던 영국에서 외환 보유고가 충분하지 않음을 감지한 헤지 펀드는 영국의 외환 선물 시장에서 파운드를 던지고 외화를 퍼내기 시작했다. 이는 파운드가 압력을 이기지 못하고 평가 절하를 할 수밖에 없으며, 이 경우 파운드 선물을 판매한(숏 포지션) 헤지 펀드는 큰 돈을 벌게 될 것이기 때문이다. 실제로 발생한 일은 이와 얼추 비슷하다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>일국의 법정 통화를 향한 이런 공격이 항상 성공하는 것은 아니다. 조지 소로스의 퀀텀 펀드를 비롯해 몇 개의 헤지 펀드가 달러에 고정된 홍콩 달러에 대해서 치밀한 분석을 거쳐 비슷한 공격을 가했지만, 중국 정부의 자본시장 통제와 이자율 인상 등의 조치로 인해 성공을 거두지 못했다.</p>
@@ -51,7 +51,7 @@
 <h1>스테이블 코인의 트릴레마</h1>
 <div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; border:1.5px solid #021a40; width: 70%;">
 <figure class="figure">
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/economics/https:/voxeu.org/sites/default/files/image/FromMay2014/ganesh13mayfig1.png" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/economics/https:/voxeu.org/sites/default/files/image/FromMay2014/ganesh13mayfig1.png" class="img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -72,14 +72,14 @@
 
  ]]></description>
   <category>economics</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/economics/2022-05-16-trilemma.html</guid>
+  <guid>http://www.lostineconomics.com/posts/economics/2022-05-16-trilemma.html</guid>
   <pubDate>Sun, 15 May 2022 15:00:00 GMT</pubDate>
-  <media:content url="https://anarinsk.github.io/lostineconomics_quarto//posts/economics/goodecon.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="http://www.lostineconomics.com//posts/economics/goodecon.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Blogging with Quarto</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-14-blogging-with-quarto.html</link>
+  <link>http://www.lostineconomics.com/posts/computer-tool/2022-05-14-blogging-with-quarto.html</link>
   <description><![CDATA[ 
 
 
@@ -267,14 +267,14 @@
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-14-blogging-with-quarto.html</guid>
+  <guid>http://www.lostineconomics.com/posts/computer-tool/2022-05-14-blogging-with-quarto.html</guid>
   <pubDate>Fri, 13 May 2022 15:00:00 GMT</pubDate>
   <media:content url="https://pulverer.si.edu/sites/default/files/styles/essay_large/public/image_assets/Fig1_Japanese%20bookmaking_05.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>How to make a manageable C.V.</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-10-how-to-make-cv.html</link>
+  <link>http://www.lostineconomics.com/posts/computer-tool/2022-05-10-how-to-make-cv.html</link>
   <description><![CDATA[ 
 
 
@@ -382,14 +382,14 @@
 <span id="cb3-7"><span class="dt" style="color: #AD0000;">tex2jax</span><span class="op" style="color: #5E5E5E;">:</span> {</span>
 <span id="cb3-8"><span class="dt" style="color: #AD0000;">inlineMath</span><span class="op" style="color: #5E5E5E;">:</span> [ [<span class="st" style="color: #20794D;">'
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-10-how-to-make-cv.html</guid>
+  <guid>http://www.lostineconomics.com/posts/computer-tool/2022-05-10-how-to-make-cv.html</guid>
   <pubDate>Mon, 09 May 2022 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.ourcodeworld.com/public-media/articles/articleocw-5755472112ab3.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>수입은 GDP에 영향을 주는가?</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/econ-simple/2022-04-30-gdp-import.html</link>
+  <link>http://www.lostineconomics.com/posts/econ-simple/2022-04-30-gdp-import.html</link>
   <description><![CDATA[ 
 
 
@@ -467,14 +467,14 @@
  ]]></description>
   <category>economics</category>
   <category>econ-simple</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/econ-simple/2022-04-30-gdp-import.html</guid>
+  <guid>http://www.lostineconomics.com/posts/econ-simple/2022-04-30-gdp-import.html</guid>
   <pubDate>Thu, 28 Apr 2022 15:00:00 GMT</pubDate>
-  <media:content url="https://anarinsk.github.io/lostineconomics_quarto//posts/econ-simple/goodecon.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="http://www.lostineconomics.com//posts/econ-simple/goodecon.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Happy Git-ing!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</link>
+  <link>http://www.lostineconomics.com/posts/git/2022-04-27-happy-giting.html</link>
   <description><![CDATA[ 
 
 
@@ -545,14 +545,14 @@ Note
 
  ]]></description>
   <category>git</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</guid>
+  <guid>http://www.lostineconomics.com/posts/git/2022-04-27-happy-giting.html</guid>
   <pubDate>Tue, 26 Apr 2022 15:00:00 GMT</pubDate>
   <media:content url="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmxcpJ%2Fbtq9IDonGa1%2FLGoNFr3kBHT3tm8QnIwjrK%2Fimg.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Kubernetes As an Alternative to Docker</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2022-04-26-k8s-personally.html</link>
+  <link>http://www.lostineconomics.com/posts/container/2022-04-26-k8s-personally.html</link>
   <description><![CDATA[ 
 
 
@@ -651,14 +651,14 @@ Note
 
  ]]></description>
   <category>container</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2022-04-26-k8s-personally.html</guid>
+  <guid>http://www.lostineconomics.com/posts/container/2022-04-26-k8s-personally.html</guid>
   <pubDate>Mon, 25 Apr 2022 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Python in the Browser</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-11-19-python-in-github.html</link>
+  <link>http://www.lostineconomics.com/posts/computer-tool/2021-11-19-python-in-github.html</link>
   <description><![CDATA[ 
 
 
@@ -689,7 +689,7 @@ Note
 <h2 class="anchored" data-anchor-id="dev-모드-진입">dev 모드 진입</h2>
 <p>github를 dev 모드로 돌린다. 웹 브라우저 리포지터리 창에서 <code>.</code> 버튼을 누르거나 <code>.dev</code> 주소로 접근하면 된다. 익숙한 vs code 화면에 보일 것이다.</p>
 <p>이제 아래 왼쪽 탭 화면에서 extension을 찾으면 된다. 아래 그림처럼 생겼다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/code.visualstudio.com/assets/docs/editor/extension-marketplace/extensions-view-icon.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 10%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/code.visualstudio.com/assets/docs/editor/extension-marketplace/extensions-view-icon.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 10%;"></p>
 </section>
 <section id="extension-설치" class="level2">
 <h2 class="anchored" data-anchor-id="extension-설치">extension 설치</h2>
@@ -709,14 +709,14 @@ Note
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-11-19-python-in-github.html</guid>
+  <guid>http://www.lostineconomics.com/posts/computer-tool/2021-11-19-python-in-github.html</guid>
   <pubDate>Thu, 18 Nov 2021 15:00:00 GMT</pubDate>
-  <media:content url="https://pyodide.org/en/stable/_static/pyodide-logo.png" medium="image" type="image/png"/>
+  <media:content url="https://irydium.dev/logos/pyodide.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Enter the Podman!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</link>
+  <link>http://www.lostineconomics.com/posts/container/2021-09-13-podman-1.html</link>
   <description><![CDATA[ 
 
 
@@ -992,14 +992,14 @@ Note
 
  ]]></description>
   <category>container</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</guid>
+  <guid>http://www.lostineconomics.com/posts/container/2021-09-13-podman-1.html</guid>
   <pubDate>Sun, 12 Sep 2021 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Docker + Jupyter + 한글 폰트</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</link>
+  <link>http://www.lostineconomics.com/posts/container/2021-05-09-docker_korfont.html</link>
   <description><![CDATA[ 
 
 
@@ -1104,14 +1104,14 @@ Note
 
  ]]></description>
   <category>container</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</guid>
+  <guid>http://www.lostineconomics.com/posts/container/2021-05-09-docker_korfont.html</guid>
   <pubDate>Sat, 08 May 2021 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>All into VS Code</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-02-02-all-vs-code.html</link>
+  <link>http://www.lostineconomics.com/posts/computer-tool/2021-02-02-all-vs-code.html</link>
   <description><![CDATA[ 
 
 
@@ -1156,7 +1156,7 @@ Note
 </section>
 <section id="핵심" class="level2">
 <h2 class="anchored" data-anchor-id="핵심">핵심</h2>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <ul>
 <li>VS Code의 익스텐션 <code>Remote-Container</code> 컨테이너 접속 기능을 활용해 <code>datascience-notebook</code> 컨테이너 접속한다.
 <ul>
@@ -1255,16 +1255,16 @@ Note
 <li><code>ipynb</code>를 확장자로 해서 노트북을 쓰고 싶다면, 그냥 만들어 쓰면 된다!</li>
 <li>VS Code에 Jupyter 확장이 있기 때문에 보통의 웹 브라우저에서 쓰는 Jupyter 노트북과 거의 동일한 기능을 제공한다. 웹 노트북에서와 마찬가지로 파이썬, 줄리아, R의 커널을 선택하면 된다 (아래 그림의 오른쪽 상단 박스). jupyterlab과 거의 비슷한 인터페이스를 지니고 있다. 오히려 주피터에 비해 복잡하지 않아서 좋다고 느낄지도 모르겠다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 </section>
 <section id="setting-for-remote-connection" class="level2">
 <h2 class="anchored" data-anchor-id="setting-for-remote-connection">Setting for Remote Connection</h2>
 <p>앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 좋다면 아래와 같이 하면 된다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>만일 위와 같은 화면에 Remote Exlorer에서 뜨지 않는다면 컨테이너가 부착되지 않는 것이다. 컨테이너를 부착하면 된다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li><code>Extension</code> &gt; <code>REMOTE EXPLORER</code> &gt; <code>DETAILS</code> 탭에서 가운데 설정 모양이 “Open Container Configuration File”이다.</li>
 <li>옆 에디터 창에 json 형식의 설정이 뜬뜬다. 여기서 관련 extension 등의 설정을 지정할 수 있다. 이렇게 설정을 해두면 해당 컨테이너를 부착할 때 설정한 대로 자동으로 옵션들이 적용된다. 매우 편리하다.</li>
@@ -1288,7 +1288,7 @@ Note
 <span id="cb5-17">        <span class="dt" style="color: #AD0000;">"r.rterm.linux"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/opt/conda/bin/radian"</span></span>
 <span id="cb5-18">    <span class="fu" style="color: #4758AB;">}</span></span>
 <span id="cb5-19"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <ul>
 <li><code>File</code> &gt; <code>Perefences</code> &gt; <code>Settings</code>에서도 설정에 접근할 수 있다.</li>
 <li>VS Code의 설정은 두가지 축을 지닌다. 하나는 설정 전체를 담은 json 파일이다. 왼쪽 <code>&gt;</code> 표시된 항목에서처럼 카테고리 별로 구별되어 쉽게 접근할 수 있다. 이 하나의 설정을 위 그림에서 보듯이 User, Remote(컨네이터), Workspace 별로 별도로 지정해 활용할 수도 있다.</li>
@@ -1299,14 +1299,14 @@ Note
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-02-02-all-vs-code.html</guid>
+  <guid>http://www.lostineconomics.com/posts/computer-tool/2021-02-02-all-vs-code.html</guid>
   <pubDate>Mon, 01 Feb 2021 15:00:00 GMT</pubDate>
   <media:content url="https://velog.velcdn.com/images/jeongjae96/post/0db5fc06-a8bb-4970-bf6c-3b5a69ebe940/vs%20code.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Eigenspace, part 2</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-18-Eigenspace-2.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-18-Eigenspace-2.html</link>
   <description><![CDATA[ 
 
 
@@ -1402,14 +1402,14 @@ Note
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-18-Eigenspace-2.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-18-Eigenspace-2.html</guid>
   <pubDate>Sun, 17 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Eigenspace, part 1</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-10-Eigenspace-1.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-10-Eigenspace-1.html</link>
   <description><![CDATA[ 
 
 
@@ -1523,13 +1523,13 @@ Note
 </ul>
 <div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;">
 <figure class="figure">
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
 <p><br> 위의 그림에서 보듯이 <img src="https://latex.codecogs.com/png.latex?v_2">는 <img src="https://latex.codecogs.com/png.latex?v_1"> 프로젝션된 벡터와 이와 직교하는 <img src="https://latex.codecogs.com/png.latex?e_2">와의 합으로 계산할 수 있다. 따라서 <img src="https://latex.codecogs.com/png.latex?e_2%20=%20v_2%20-%20%5CPi_%7Be_1%7D(v_2)">가 성립한다. 벡터의 빼기 관점에서 생각해보면 어떨까? <img src="https://latex.codecogs.com/png.latex?v_2">와 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7Be_1%7D(v_2)">의 차이가 <img src="https://latex.codecogs.com/png.latex?e_2">다. 벡터는 방향과 크기로 정의된다는 점을 다시 기억하자. 같은 방식으로 아래 그림에서 보듯이 더 많은 축과 직교하는 벡터들을 구성할 수 있다.</p>
 <p>이후 <img src="https://latex.codecogs.com/png.latex?%5Chat%20e_i%20=%20%5Cdfrac%7Be_i%7D%7B%5CVert%20e_i%20%5CVert%7D">로 <img src="https://latex.codecogs.com/png.latex?e_i">를 표준화하면 된다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Av%20=%20%7B%5Crm%20proj%7D_%7Bu_1%7D%20(v)%20+%20%7B%5Crm%20proj%7D_%7Bu_2%7D(v)%20+%20w%0A"></p>
 <p>즉, 원래 벡터(<img src="https://latex.codecogs.com/png.latex?v">)에서 이미 확립된 직교 벡터에서 <img src="https://latex.codecogs.com/png.latex?v">로 쏜 프로젝션 벡터를 빼주면 원하는 새로운 직교 벡터를 얻을 수 있다. 따라서</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0Ae_3%20&amp;%20=%20v_3%20-%20%5CPi_%7Be_1%7D(v_3)%20-%20%5CPi_%7Be_2%7D(v_3)%20%5C%5C%0A&amp;~~~%5Cvdots%20%5C%5C%0Ae_n%20&amp;%20=%20v_n%20-%20%5Csum_%7Bi=1%7D%5E%7Bn-1%7D%20%5CPi_%7Be_i%7D(v_n)%0A%5Cend%7Baligned%7D%0A"></p>
@@ -1560,14 +1560,14 @@ Note
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-10-Eigenspace-1.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-10-Eigenspace-1.html</guid>
   <pubDate>Sat, 09 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Basis</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-08-basis.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-08-basis.html</link>
   <description><![CDATA[ 
 
 
@@ -1675,7 +1675,7 @@ Note
 <p>아래 그림에서 보듯이, <img src="https://latex.codecogs.com/png.latex?Ax">라는 변환과 <img src="https://latex.codecogs.com/png.latex?B%5Bx%5D_%7B%5Cmathcal%20B%7D">라는 변환은 좌표계만 다를 뿐 동일한 변환이다. <img src="https://latex.codecogs.com/png.latex?C%20B%20C%5E%7B-1%7D">의 기저의 변화를 살펴보면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cunderbrace%7Bu%20%5Crightarrow%20%5Cmathcal%20B%7D_%7BC%5E%7B-1%7D%7D%20&amp;%20%5Ccdots%20B%20%5Ccdots%20%5Cunderbrace%7B%5Cmathcal%20B%20%5Crightarrow%20u%7D_%7BC%7D%20%5C%5C%0A&amp;%20%5Ccdots%20A%20%5Ccdots%0A%5Cend%7Baligned%7D%0A"></p>
 <p>로 나타낼 수 있다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="img-fluid" alt="enter image description here">{ style=“margin: auto; display: block; border:1.5px solid #021a40; width=60%; }</p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="img-fluid" alt="enter image description here">{ style=“margin: auto; display: block; border:1.5px solid #021a40; width=60%; }</p>
 <p>Similar matrix인 <img src="https://latex.codecogs.com/png.latex?A">과 <img src="https://latex.codecogs.com/png.latex?B"> 사이에서 다음과 같은 관계가 성립한다.</p>
 <ol type="1">
 <li><img src="https://latex.codecogs.com/png.latex?%7B%5Crm%20Tr%7D(A)%20=%20%7B%5Crm%20Tr%7D(B)"></li>
@@ -1689,21 +1689,21 @@ Note
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-08-basis.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-08-basis.html</guid>
   <pubDate>Thu, 07 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Matrix as Linear Transformation</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</link>
   <description><![CDATA[ 
 
 
 
 <p>google_analytics.html</p><div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;">
 <figure class="figure">
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func.png?raw=true" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func.png?raw=true" class="img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -1721,7 +1721,7 @@ Note
 <li><img src="https://latex.codecogs.com/png.latex?T(%5Cvec%20v)%20=%20%5Cvec%20w">. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20%5Cin%20V">를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w%20%5Cin%20W">로 변환하는 것을 나타낸다.</li>
 </ul></li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func_fig.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func_fig.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <p><br> 함수와 마찬가지로 위의 선형 변환에서 치역(Im(<img src="https://latex.codecogs.com/png.latex?T">))와 커널(스칼라 함수에서는 <img src="https://latex.codecogs.com/png.latex?f(x)%20=%200">의 해)이 정의된다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%7B%5Crm%20Im%7D(T)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20w%20%5Cin%20W%20%7C%20%5Cvec%20w%20=%20T(%5Cvec%20v)%20%5Ctext%7B%20for%20some%20%7D%20%5Cvec%20v%20%5C%7D%20%5Csubseteq%20W%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%7B%5Crm%20Ker%7D(T)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20v%20%5Cin%20V%20%7C%20T(%5Cvec%20v)%20=%20%5Cvec%200%20%5C%7D%20%5Csubseteq%20V%0A"></p>
@@ -1742,7 +1742,7 @@ Note
 <section id="linearity" class="level2">
 <h2 class="anchored" data-anchor-id="linearity">Linearity</h2>
 <p>선형의 의미는 무엇일까? 기하적으로 선을 다룬다는 뜻이 아니다. 선형의 의미는 함수적인 의미다. 아래 그림을 보자.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/linearity.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/linearity.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <p>즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AT(%5Calpha_1%20%5Cvec%20v_1%20+%20%5Calpha_2%20%5Cvec%20v_2)%20=%20%5Calpha_1%20T(%5Cvec%20v_1)%20+%20%5Calpha_2%20T(%5Cvec%20v_2)%20=%20%5Calpha_1%20%5Cvec%20w_1%20+%20%5Calpha_2%20%5Cvec%20w_2%0A"></p>
 </section>
@@ -1761,7 +1761,7 @@ Note
 </section>
 <section id="surjective-and-injective" class="level3">
 <h3 class="anchored" data-anchor-id="surjective-and-injective">Surjective and Injective</h3>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/sur_inj.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/sur_inj.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <p>함수에서 전사 함수와 단사 함수의 개념을 그대로 적용할 수 있다. 선형 변환 혹은 행렬도 함수다.</p>
 <p>만일, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_1%20%5Cneq%20%5Cvec%20v_2">이고 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_1,%20%5Cvec%20v_2%20%5Cin%20%5Cmathcal%20R(M_T)">라면 이는 선형 변환의 정의에 따라서 서로 다른 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w">로 매핑된다. 따라서 만일 단사 변환이 되려면, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M_T)%20=%20%5C%7B%20%5Cvec%200%20%5C%7D">만 성립하면 된다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AAy%20-%20Az%20=%20A(y-z)%0A"></p>
@@ -1776,14 +1776,14 @@ Note
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</guid>
   <pubDate>Wed, 06 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Vector Geometrically, part 2</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-06-vector-geometry-2.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-06-vector-geometry-2.html</link>
   <description><![CDATA[ 
 
 
@@ -1879,21 +1879,21 @@ Note
 <div class="{column-margin}">
 <p>보통 homogenous라는 말이 들어가면 <img src="https://latex.codecogs.com/png.latex?Ax%20=%200">과 같은 형태의 연립방정식을 의미 의미한다.</p>
 </div>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/www.cs.utexas.edu/users/flame/laff/alaff-beta/images/Chapter04/FundamentalSpaces.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:70%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/www.cs.utexas.edu/users/flame/laff/alaff-beta/images/Chapter04/FundamentalSpaces.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:70%;"></p>
 
 
 </section>
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-06-vector-geometry-2.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-06-vector-geometry-2.html</guid>
   <pubDate>Tue, 05 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Vector Geometrically, part 1</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-05-vector-geometry-1.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-05-vector-geometry-1.html</link>
   <description><![CDATA[ 
 
 
@@ -1919,7 +1919,7 @@ Note
 <li>점은 공간에서 위치를 지니고 있다. 점의 특성은 위치 뿐이다.</li>
 <li>벡터는 크기와 방향을 지니고 있다. 벡터는 공간에서 위치를 지니고 있지 않다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/position-vector-1627294113.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/position-vector-1627294113.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
 <p>점과 벡터를 연결해보자. 위 그림에서 원점 <img src="https://latex.codecogs.com/png.latex?O">를 기준으로 하면 <img src="https://latex.codecogs.com/png.latex?P">, <img src="https://latex.codecogs.com/png.latex?Q">가 정의될 것이다. 이때 <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOP%7D">, <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOQ%7D">는 벡터가 된다. 이제 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">를 <img src="https://latex.codecogs.com/png.latex?P">에서 <img src="https://latex.codecogs.com/png.latex?Q">로 가는 벡터라고 정의하자. 이는</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20v%20=%20Q%20-%20P%0A"></p>
 <p>앞서 정의한 콘셉트에서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20=%20(v_x,%20v_y,%20v_z)">에서 <img src="https://latex.codecogs.com/png.latex?v_k">는 포인트의 위치가 아니라 해당 축으로 움직이는(향하는) 크기를 나타낸다는 점을 다시 음미하시기를!</p>
@@ -1931,7 +1931,7 @@ Note
 <li>Parametric equation:</li>
 </ul>
 <p><img src="https://latex.codecogs.com/png.latex?%0Al%20:%20%5Clbrace%20p_0%20+%20t%20%5Cvec%20v,%20t%20%5Cin%20%5Cmathbb%20R%20%5Crbrace%0A"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/www.maths.usyd.edu.au/u/MOW/vectors/images/v120x.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/www.maths.usyd.edu.au/u/MOW/vectors/images/v120x.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
 <p>위의 그림을 보면서 식을 도출해보자. 포인트 <img src="https://latex.codecogs.com/png.latex?p_0">를 (원점 기준) 벡터로 나타내면 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20r_0">가 된다. 그리고 <img src="https://latex.codecogs.com/png.latex?P"> 점을 벡터로 나타내면 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20r">이 된다. 벡터 <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bp_0%20p%7D">와 수평인 벡터를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">라고 하자. 이 두 가지 사실을 조합하면 다음과 같다.</p>
 <ol type="1">
 <li><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bp_0%20p%7D%20=%20%5Coverrightarrow%7Bo%20p%7D%20-%20%5Coverrightarrow%7Bo%20p_0%7D%20=%20%5Cvec%20r%20-%20%5Cvec%20r_0"></li>
@@ -1964,7 +1964,7 @@ Note
 </section>
 <section id="normal-vector" class="level3">
 <h3 class="anchored" data-anchor-id="normal-vector">Normal vector</h3>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/http:/mathonline.wdfiles.com/local--files/point-normal-form-of-a-plane/Screen%20Shot%202014-06-14%20at%207.02.06%20AM.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/http:/mathonline.wdfiles.com/local--files/point-normal-form-of-a-plane/Screen%20Shot%202014-06-14%20at%207.02.06%20AM.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
 <p>노멀 벡터는 아래 평면(plane) 혹은 벡터과 직교하는 성분의 벡터다. 이 녀석을 어떻게 구할까? 평면 <img src="https://latex.codecogs.com/png.latex?P">의 parametric 식을 보자. 2차원 플레인을 구성하는 두 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w">가 있다. 노멀 벡터는 이 두 성분 모두와 직교하는 성분의 벡터이다. 이는 바로 크로스 프로덕트의 정의를 그대로 따른다. 평면위의 어떤 세 점 <img src="https://latex.codecogs.com/png.latex?p,%20q,%20r">이 있다고 하자. 평면 위에 존재하는 벡터 두 개를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20=%20q%20-%20p">, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w%20=%20r%20-%20p">과 같이 만들자. 이 벡터와 직교하는 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20n">은 다음과 같다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20n%20%20=%20%5Cvec%20v%20%5Ctimes%20%5Cvec%20w%20=%20(q-p)%20%5Ctimes%20(r-p)%0A"></p>
 </section>
@@ -1978,14 +1978,14 @@ Note
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-05-vector-geometry-1.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-05-vector-geometry-1.html</guid>
   <pubDate>Mon, 04 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Projection and Distance</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2020-12-16-measuring-distance.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2020-12-16-measuring-distance.html</link>
   <description><![CDATA[ 
 
 
@@ -1995,7 +1995,7 @@ Note
 <section id="definition" class="level3">
 <h3 class="anchored" data-anchor-id="definition">Definition</h3>
 <p>다음과 같은 두 개의 벡터, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20a">, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20b">를 일단 떠올려보자.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/9/98/Projection_and_rejection.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/9/98/Projection_and_rejection.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>스칼라 프로젝션 <img src="https://latex.codecogs.com/png.latex?a_1">의 정의는 다음과 같다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Aa_1%20=%7B%5Ccos%20%5Ctheta%7D%7B%5ClVert%20%5Cvec%20a%20%5ClVert%7D%20=%20%5ClVert%20%5Cvec%20a_1%20%5ClVert%0A"></p>
 <p>각 <img src="https://latex.codecogs.com/png.latex?%5Ctheta">에 관해서 다음과 같이 정의할 수 있다. 혹시 리마인드가 필요하면 포스팅 <a href="https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/2019-07-18-dot-product.html">dot product</a>를 참고하라.</p>
@@ -2047,7 +2047,7 @@ Note
 </ul>
 <section id="projection-onto-line" class="level3">
 <h3 class="anchored" data-anchor-id="projection-onto-line">Projection onto line</h3>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>그림에서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20u">의 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">로의 프로젝션은 앞서 살펴본 벡터 프로젝션이다. <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v"> 대신 <img src="https://latex.codecogs.com/png.latex?l">로 표기된 점에 유의하자.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Al:%20%5C%7B%20%5Cvec%20v'%20%5Cin%20%5Cmathbb%20R%5En%20%5Clvert%20%5Cvec%20v'%20=%20%5Cvec%200%20+%20t%20%5Cvec%20v,%20t%20%5Cin%20%5Cmathbb%20R%20%5C%7D%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5CPi_l(%5Cvec%20u)%20=%20%5Cdfrac%7B%5Cvec%20u%20%5Ccdot%20%5Cvec%20v%7D%7B%5ClVert%5Cvec%20v%5ClVert%5E2%7D%20%5Cvec%20v%0A"></p>
@@ -2061,14 +2061,14 @@ Note
 </section>
 <section id="projection-onto-plane" class="level3">
 <h3 class="anchored" data-anchor-id="projection-onto-plane">Projection onto plane</h3>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>평면 위로의 프로젝션을 생각해보자. 기본적인 원리는 동일하다. 이에 앞서 평면을 벡터로 표현하는 방법에 대해 알아보자. 가장 편리한 방법은 노멀 벡터를 활용하는 것이다. 즉, 평면 위의 점 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20%7Bp_0%7D">를 지나는 <img src="https://latex.codecogs.com/png.latex?P">는 다음과 같이 정의할 수 있다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AP%20=%20%5C%7B%20%5Cvec%20p%20%5Cin%20%5Cmathbb%20R%5En%20:%20%5Cvec%20n%20%5Ccdot(%5Cvec%20p%20-%20%5Cvec%20p_0)%20=%200%20%5C%7D%0A"></p>
 <p>여기서 노멀 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20n">은 프로젝션된 지점에서 평면과 직교하는 성분을 나타낸다. 3차원의 경우 노멜 벡터는 3차원 공간에서 해당 평면이 놓인 모습을 결정한다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20u%20=%20%5CPi_P(%5Cvec%20u)%20+%20%5CPi_%7BP%5E%5Cperp%7D(%5Cvec%20u)%0A"></p>
 <p>그림에서 보듯이 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20u">에서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20n">으로의 프로젝션은 앞서 보았던 벡터에서 벡터로의 프로젝션이다. 따라서 앞서 구한 공식을 그대로 활용하자. 즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5CPi_%7BP%5E%5Cperp%7D(%5Cvec%20u)%20=%20%5Cdfrac%7B%5Cvec%20u%20%5Ccdot%20%5Cvec%20n%7D%7B%5ClVert%5Cvec%20n%5ClVert%7D%5Cdfrac%7B%5Cvec%20n%7D%7B%5ClVert%20%5Cvec%20n%20%5ClVert%7D%0A"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj_2a.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj_2a.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>벡터는 점과 달리 상대적인 위치로 정의된다. 벡터 연산은 그런 맥락에서 이루어진다. <img src="https://latex.codecogs.com/png.latex?%5CPi_%7BP%5E%5Cperp%7D">를 위 그림처럼 이동해 보자. 이렇게 보면 벡터 프로젝션이 자연스럽다. P에서의 위치는 변하지 않고 노멀 벡터 쪽으로만 변화하므로 벡터 자체는 이동 전 벡터와 이동 후 벡터가 동일하다. 즉, <img src="https://latex.codecogs.com/png.latex?%5CPi_%7BP%5E%5Cperp%7D">를 왼쪽으로 이동시킨 벡터에 대한 프로젝션과 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7BP%5E%5Cperp%7D">이 같다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5CPi_%7BP%5E%5Cperp%7D%20=%20%5Cdfrac%7B%5Cvec%20u%20%5Ccdot%20%5Cvec%20n%7D%7B%5ClVert%5Cvec%20n%5ClVert%5E2%7D%7B%5Cvec%20n%7D%0A"></p>
 <p>이제 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7BP%5E%5Cperp%7D"> 대입하면 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7BP%7D">를 쉽게 구할 수 있다. 즉,</p>
@@ -2080,15 +2080,15 @@ Note
 <h2 class="anchored" data-anchor-id="distance-in-vector-space">Distance in Vector Space</h2>
 <p>프로젝션은 거리를 측정할 때 유용하다. 먼저 원점(굳이 원점일 필요는 없다)과 해당 벡터 공간을 지나는 선 사이의 거리를 구해보자.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Al:%20%5C%7B%20%5Cvec%20p%20%5Cin%20%5Cmathbb%20R%5En%20%7C%20%5Cvec%20p%20=%20%5Cmathbf%20%7Bp%7D_0%20+%20t%20%5Cvec%20v,%20t%20%5Cin%20%5Cmathbb%20R%20%5C%7D%0A"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>위 그림에서 원점과 <img src="https://latex.codecogs.com/png.latex?l">의 거리는 어떻게 나타낼 수 있을까? <img src="https://latex.codecogs.com/png.latex?l">이 지나가는 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20p_0">를 그대로 두고, <img src="https://latex.codecogs.com/png.latex?l">이 원점을 지나가도록 이동해보자. 즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Al_0%20=%20%5C%7B%20%20%5Cvec%20p%20%5Cin%20%5Cmathbb%20R%5En%20%7C%20%5Cvec%20p%20=%20%5Cmathbf%20%7B0%7D%20+%20t%20%5Cvec%20v,%20t%20%5Cin%20%5Cmathbb%20R%20%5C%7D%0A"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>이제 이 벡터과 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20p_0"> 사이의 거리를 구하면 된다 .이는 앞서 제시한 벡터 프로젝션의 수직 벡터의 길이와 같다. 즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Ad(l,%20%5Cvec%200)%20=%20d(%5Cvec%20p_0,%20l_0)%20=%20%5ClVert%20%5Cmathbf%20p_0%20-%20%5Cdfrac%7B%5Cmathbf%20p_0%20%5Ccdot%20%5Cvec%20v%7D%7B%5ClVert%20%5Cvec%20v%5ClVert%5E2%7D%5Cvec%20v%20%5ClVert%0A"></p>
 <p>이제 아래와 같은 평면과 원점의 거리를 측정해보자.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AP%20=%20%5C%7B%20%5Cvec%20p%20%5Cin%20%5Cmathbb%20R%5En%20:%20%5Cvec%20n%20%5Ccdot(%5Cvec%20p%20-%20%5Cvec%20%7Bp%7D_0)%20=%200%20%5C%7D%0A"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/plane.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/plane.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>원점을 지나도록 평면을 이동시키고 평면의 노멀 벡터가 정의된 <img src="https://latex.codecogs.com/png.latex?p_0">와 원점을 지나는 평면 <img src="https://latex.codecogs.com/png.latex?P_0"> 사이의 거리를 측정하면 된다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AP_0%20=%20%5C%7B%20%5Cvec%20p%20%5Cin%20%5Cmathbb%20R%5En%20:%20%5Cvec%20n%20%5Ccdot(%5Cvec%20p%20-%20%5Cvec%20%7B0%7D)%20=%200%20%5C%7D%0A"></p>
 <p>이 둘 사이의 거리는 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7BP%5E%5Cperp%7D">의 거리와 같다. 즉,</p>
@@ -2097,7 +2097,7 @@ Note
 </section>
 <section id="application-regression-coefficient" class="level2">
 <h2 class="anchored" data-anchor-id="application-regression-coefficient">Application: Regression Coefficient</h2>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>앞서 소개했던 회귀 분석에 관한 포스팅 <a href="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-10-25-understanding-regression.html">Understanding Regression</a>을 다시 보자. Origin–Observed Y–Fitted <img src="https://latex.codecogs.com/png.latex?%5Chat%20Y">이 만드는 삼각형을 보자. 직각 삼각형이다. 여기서 잔차에 해당하는 <img src="https://latex.codecogs.com/png.latex?e">는 <img src="https://latex.codecogs.com/png.latex?X">의 컬럼 스페이스와 항상 직교한다. 즉, <img src="https://latex.codecogs.com/png.latex?X'%20e%20=%200">이 성립한다. 그리고 <img src="https://latex.codecogs.com/png.latex?%5Chat%20Y%20=%20X%20%5Chat%5Cbeta">이므로</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AX'(Y%20-%20%5Chat%20Y)%20%20=%20X'(Y%20-%20X%20%5Chat%5Cbeta)%20=%200%0A"></p>
 <p>이를 노멀 방정식이라고 부른다. 앞서 평면과 직교하는 벡터를 노멀 벡터라고 불렀는데, 둘은 일맥상통한다.</p>
@@ -2122,14 +2122,14 @@ MjEyMzEwM119
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2020-12-16-measuring-distance.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2020-12-16-measuring-distance.html</guid>
   <pubDate>Tue, 15 Dec 2020 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Revisiting Log-Linear Regression Model</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2020-11-11-log-linear-regression.html</link>
+  <link>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</link>
   <description><![CDATA[ 
 
 
@@ -2151,7 +2151,7 @@ MjEyMzEwM119
 <p>이렇게 보면 <img src="https://latex.codecogs.com/png.latex?%5Cbeta"> 값은 <img src="https://latex.codecogs.com/png.latex?x_i">가 순간적으로 변함에 따라서 변화하는 <img src="https://latex.codecogs.com/png.latex?y_i">의 % 변화를 나타낸다. 일단 기본적으로 주의해야 할 것! 위 값은 국지적 미분 값이다. 즉, 특정한 <img src="https://latex.codecogs.com/png.latex?x_i">에서의 미분 값이다. 즉, 엄밀하게 쓰면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%20/%20y_i%7D%7Bd%20x_i%7D%20%5Cbigg%7C_%7Bx_i%20=%20x_0%7D%20=%20%5Cbeta%0A"></p>
 <p>회귀분석에서 구하는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">와 위에서 얻은 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">는 동일할 수가 없다. 왜나하면, <img src="https://latex.codecogs.com/png.latex?y_i">는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/regression/https:/dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 </section>
 <section id="the-coefficient" class="level2">
 <h2 class="anchored" data-anchor-id="the-coefficient">The Coefficient</h2>
@@ -2185,14 +2185,14 @@ MjEyMzEwM119
 
  ]]></description>
   <category>regression</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2020-11-11-log-linear-regression.html</guid>
+  <guid>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</guid>
   <pubDate>Tue, 10 Nov 2020 15:00:00 GMT</pubDate>
   <media:content url="https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Viva, Binder!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-27-viva-binder.html</link>
+  <link>http://www.lostineconomics.com/posts/computer-tool/2020-10-27-viva-binder.html</link>
   <description><![CDATA[ 
 
 
@@ -2211,7 +2211,7 @@ MjEyMzEwM119
 <section id="turn-a-git-repo-into" class="level2">
 <h2 class="anchored" data-anchor-id="turn-a-git-repo-into">Turn a Git repo into!</h2>
 <p>서비스 참 시원시원하다. 로그인도 필요 없다. 깃헙 레포에 있는 코드를 받아서 가상 머신 위에 해당 결과를 구현해준다. R, Python, Julia를 지원한다. 세 언어 모두 기본 베이스로 Jupyter허브를 활용한다. 간편한 연동을 위해서는 깃헙 리포를 public으로 설정해야 한다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/binder_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 70%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/binder_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 70%;"></p>
 <ul>
 <li><code>GitHub</code>: 깃헙 주소를 넣는다.</li>
 <li><code>Git branch, tag or commit</code>: 관련된 깃 브렌치, 태그, 커밋 등을 넣는다.</li>
@@ -2224,8 +2224,8 @@ MjEyMzEwM119
 </ul></li>
 </ul>
 <p>아래 공유를 위한 주소도 떠 있으니 공유를 할 때는 해당 주소만 던져주면 된다. 이제 <kbd>launch</kbd> 버튼을 누르자. 상당히 오랜 시간 동안 뭔가가 설치된다. 설치되는 내용을 보면 소프트웨어 구동에 필요한 개별 이미지를 빌드한 후 이를 클라우드에 띄워 구동한다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <p>장점은 충분히 많다. 코드가 제대로 구현되는지 확인하는 수준이거나 코드를 가끔 짧은 시간 동안 실행해야 하는 정도라면 더 이상 바랄 게 없다. 단점이라면 도커 이미지를 빌드하고 녀석을 푸시해 실행할 때까지 시간이 좀 걸린다는 것인데, 뭐 이 정도 시간 비용 쯤이야!</p>
 
 
@@ -2233,14 +2233,14 @@ MjEyMzEwM119
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-27-viva-binder.html</guid>
+  <guid>http://www.lostineconomics.com/posts/computer-tool/2020-10-27-viva-binder.html</guid>
   <pubDate>Mon, 26 Oct 2020 15:00:00 GMT</pubDate>
   <media:content url="https://mybinder.org/static/logo.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
   <title>\(\rm\LaTeX\) in Modern Ways</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-24-classy-latex.html</link>
+  <link>http://www.lostineconomics.com/posts/computer-tool/2020-10-24-classy-latex.html</link>
   <description><![CDATA[ 
 
 
@@ -2329,19 +2329,19 @@ MjEyMzEwM119
 <span id="cb8-9"><span class="ex" style="color: null;">tlmgr</span> update <span class="at" style="color: #657422;">--all</span></span></code></pre></div>
 <p>상태를 초기화하고 한글을 까는 명령어들을 모아둔 것이다. 실행 중인 도커 내에서 해당 디렉토리로 이동해서 <code>./install_kotex.sh</code>로 명령을 실행하자.</p>
 <p>이제 VS Code로 가자. 필요한 Extension은 앞서 살펴본 Latex workshop과 더불어 <a href="https://code.visualstudio.com/docs/remote/remote-overview">Remote-Container</a>를 설치하자. 이 녀석을 설치하면 WSL 내에서 돌아가는 컨테이너 안에도 VS Code를 통해 바로 접속할 수 있다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - 아래 <code>&gt;&lt;</code>으로 된 부분을 클릭하면 상단에 메뉴가 뜬다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - “attach to running container”를 실행해서 실행중인 도커 콘테이너를 부착한다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_3.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - 아래 <code>&gt;&lt;</code>으로 된 부분을 클릭하면 상단에 메뉴가 뜬다.</p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - “attach to running container”를 실행해서 실행중인 도커 콘테이너를 부착한다.</p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_3.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>부착하면 새 창이 뜨면서 아래 녹색 창이 콘테이너 부착되었음을 알려준다.</li>
 <li>콘테이너 내부에 Latex Workshop 확장(extension)을 설치해야 한다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_4.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_4.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>설치 후 해당 Extension의 설정을 고쳐주자.</li>
 <li>위에 찾기창에서 디폴트로 떠 있는 내용 뒤에 “pdf” 치면 pdf에 관련된 설정만 필터링된다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>위 항목을 찾아서 적당한 포워딩 포트를 넣어준다.</li>
 <li>포트가 잘 포워딩 된다면, 아래와 같이 VS Code에서 PDF 뷰어를 활성화할 수 있다.</li>
@@ -2357,7 +2357,7 @@ MjEyMzEwM119
 <section id="container-setting" class="level4">
 <h4 class="anchored" data-anchor-id="container-setting">Container Setting</h4>
 <p>콘테이너에서 해당 포트가 잘 포워딩되고 있는지 확인하자.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>옆에 원으로 표시해 둔 곳은 <code>Remote-Container</code> 확장으로 바로 가는 단축 아이콘이다.</li>
 <li>위 그림처럼 35556 포트를 통해 잘 포워딩되고 있음을 알 수 있다.
@@ -2366,7 +2366,7 @@ MjEyMzEwM119
 </ul></li>
 </ul>
 <p>이제 VS Code에서 텍 파일을 열고 문서를 작성하고 컴파일하면 된다. Latex Workshop이 설치되어 있다면, <code>.tex</code> 파일에 알아서 반응하니 걱정 마시라.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_6.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_6.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 </section>
 </section>
 </section>
@@ -2388,7 +2388,7 @@ MjEyMzEwM119
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-24-classy-latex.html</guid>
+  <guid>http://www.lostineconomics.com/posts/computer-tool/2020-10-24-classy-latex.html</guid>
   <pubDate>Fri, 23 Oct 2020 15:00:00 GMT</pubDate>
   <media:content url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/LaTeX_project_logo_bird.svg/1920px-LaTeX_project_logo_bird.svg.png" medium="image" type="image/png"/>
 </item>
@@ -2396,14 +2396,14 @@ MjEyMzEwM119
 </rss>
 </span><span class="op" style="color: #5E5E5E;">,</span><span class="st" style="color: #20794D;">'
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-10-how-to-make-cv.html</guid>
+  <guid>http://www.lostineconomics.com/posts/computer-tool/2022-05-10-how-to-make-cv.html</guid>
   <pubDate>Mon, 09 May 2022 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.ourcodeworld.com/public-media/articles/articleocw-5755472112ab3.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>수입은 GDP에 영향을 주는가?</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/econ-simple/2022-04-30-gdp-import.html</link>
+  <link>http://www.lostineconomics.com/posts/econ-simple/2022-04-30-gdp-import.html</link>
   <description><![CDATA[ 
 
 
@@ -2481,14 +2481,14 @@ MjEyMzEwM119
  ]]></description>
   <category>economics</category>
   <category>econ-simple</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/econ-simple/2022-04-30-gdp-import.html</guid>
+  <guid>http://www.lostineconomics.com/posts/econ-simple/2022-04-30-gdp-import.html</guid>
   <pubDate>Thu, 28 Apr 2022 15:00:00 GMT</pubDate>
-  <media:content url="https://anarinsk.github.io/lostineconomics_quarto//posts/econ-simple/goodecon.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="http://www.lostineconomics.com//posts/econ-simple/goodecon.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Happy Git-ing!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</link>
+  <link>http://www.lostineconomics.com/posts/git/2022-04-27-happy-giting.html</link>
   <description><![CDATA[ 
 
 
@@ -2559,14 +2559,14 @@ Note
 
  ]]></description>
   <category>git</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</guid>
+  <guid>http://www.lostineconomics.com/posts/git/2022-04-27-happy-giting.html</guid>
   <pubDate>Tue, 26 Apr 2022 15:00:00 GMT</pubDate>
   <media:content url="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmxcpJ%2Fbtq9IDonGa1%2FLGoNFr3kBHT3tm8QnIwjrK%2Fimg.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Kubernetes As an Alternative to Docker</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2022-04-26-k8s-personally.html</link>
+  <link>http://www.lostineconomics.com/posts/container/2022-04-26-k8s-personally.html</link>
   <description><![CDATA[ 
 
 
@@ -2665,14 +2665,14 @@ Note
 
  ]]></description>
   <category>container</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2022-04-26-k8s-personally.html</guid>
+  <guid>http://www.lostineconomics.com/posts/container/2022-04-26-k8s-personally.html</guid>
   <pubDate>Mon, 25 Apr 2022 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Python in the Browser</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-11-19-python-in-github.html</link>
+  <link>http://www.lostineconomics.com/posts/computer-tool/2021-11-19-python-in-github.html</link>
   <description><![CDATA[ 
 
 
@@ -2703,7 +2703,7 @@ Note
 <h2 class="anchored" data-anchor-id="dev-모드-진입">dev 모드 진입</h2>
 <p>github를 dev 모드로 돌린다. 웹 브라우저 리포지터리 창에서 <code>.</code> 버튼을 누르거나 <code>.dev</code> 주소로 접근하면 된다. 익숙한 vs code 화면에 보일 것이다.</p>
 <p>이제 아래 왼쪽 탭 화면에서 extension을 찾으면 된다. 아래 그림처럼 생겼다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/code.visualstudio.com/assets/docs/editor/extension-marketplace/extensions-view-icon.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 10%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/code.visualstudio.com/assets/docs/editor/extension-marketplace/extensions-view-icon.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 10%;"></p>
 </section>
 <section id="extension-설치" class="level2">
 <h2 class="anchored" data-anchor-id="extension-설치">extension 설치</h2>
@@ -2723,14 +2723,14 @@ Note
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-11-19-python-in-github.html</guid>
+  <guid>http://www.lostineconomics.com/posts/computer-tool/2021-11-19-python-in-github.html</guid>
   <pubDate>Thu, 18 Nov 2021 15:00:00 GMT</pubDate>
-  <media:content url="https://pyodide.org/en/stable/_static/pyodide-logo.png" medium="image" type="image/png"/>
+  <media:content url="https://irydium.dev/logos/pyodide.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Enter the Podman!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</link>
+  <link>http://www.lostineconomics.com/posts/container/2021-09-13-podman-1.html</link>
   <description><![CDATA[ 
 
 
@@ -3006,14 +3006,14 @@ Note
 
  ]]></description>
   <category>container</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</guid>
+  <guid>http://www.lostineconomics.com/posts/container/2021-09-13-podman-1.html</guid>
   <pubDate>Sun, 12 Sep 2021 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Docker + Jupyter + 한글 폰트</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</link>
+  <link>http://www.lostineconomics.com/posts/container/2021-05-09-docker_korfont.html</link>
   <description><![CDATA[ 
 
 
@@ -3118,14 +3118,14 @@ Note
 
  ]]></description>
   <category>container</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</guid>
+  <guid>http://www.lostineconomics.com/posts/container/2021-05-09-docker_korfont.html</guid>
   <pubDate>Sat, 08 May 2021 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>All into VS Code</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-02-02-all-vs-code.html</link>
+  <link>http://www.lostineconomics.com/posts/computer-tool/2021-02-02-all-vs-code.html</link>
   <description><![CDATA[ 
 
 
@@ -3170,7 +3170,7 @@ Note
 </section>
 <section id="핵심" class="level2">
 <h2 class="anchored" data-anchor-id="핵심">핵심</h2>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <ul>
 <li>VS Code의 익스텐션 <code>Remote-Container</code> 컨테이너 접속 기능을 활용해 <code>datascience-notebook</code> 컨테이너 접속한다.
 <ul>
@@ -3269,16 +3269,16 @@ Note
 <li><code>ipynb</code>를 확장자로 해서 노트북을 쓰고 싶다면, 그냥 만들어 쓰면 된다!</li>
 <li>VS Code에 Jupyter 확장이 있기 때문에 보통의 웹 브라우저에서 쓰는 Jupyter 노트북과 거의 동일한 기능을 제공한다. 웹 노트북에서와 마찬가지로 파이썬, 줄리아, R의 커널을 선택하면 된다 (아래 그림의 오른쪽 상단 박스). jupyterlab과 거의 비슷한 인터페이스를 지니고 있다. 오히려 주피터에 비해 복잡하지 않아서 좋다고 느낄지도 모르겠다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 </section>
 <section id="setting-for-remote-connection" class="level2">
 <h2 class="anchored" data-anchor-id="setting-for-remote-connection">Setting for Remote Connection</h2>
 <p>앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 좋다면 아래와 같이 하면 된다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>만일 위와 같은 화면에 Remote Exlorer에서 뜨지 않는다면 컨테이너가 부착되지 않는 것이다. 컨테이너를 부착하면 된다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li><code>Extension</code> &gt; <code>REMOTE EXPLORER</code> &gt; <code>DETAILS</code> 탭에서 가운데 설정 모양이 “Open Container Configuration File”이다.</li>
 <li>옆 에디터 창에 json 형식의 설정이 뜬뜬다. 여기서 관련 extension 등의 설정을 지정할 수 있다. 이렇게 설정을 해두면 해당 컨테이너를 부착할 때 설정한 대로 자동으로 옵션들이 적용된다. 매우 편리하다.</li>
@@ -3302,7 +3302,7 @@ Note
 <span id="cb5-17">        <span class="dt" style="color: #AD0000;">"r.rterm.linux"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/opt/conda/bin/radian"</span></span>
 <span id="cb5-18">    <span class="fu" style="color: #4758AB;">}</span></span>
 <span id="cb5-19"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <ul>
 <li><code>File</code> &gt; <code>Perefences</code> &gt; <code>Settings</code>에서도 설정에 접근할 수 있다.</li>
 <li>VS Code의 설정은 두가지 축을 지닌다. 하나는 설정 전체를 담은 json 파일이다. 왼쪽 <code>&gt;</code> 표시된 항목에서처럼 카테고리 별로 구별되어 쉽게 접근할 수 있다. 이 하나의 설정을 위 그림에서 보듯이 User, Remote(컨네이터), Workspace 별로 별도로 지정해 활용할 수도 있다.</li>
@@ -3313,14 +3313,14 @@ Note
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-02-02-all-vs-code.html</guid>
+  <guid>http://www.lostineconomics.com/posts/computer-tool/2021-02-02-all-vs-code.html</guid>
   <pubDate>Mon, 01 Feb 2021 15:00:00 GMT</pubDate>
   <media:content url="https://velog.velcdn.com/images/jeongjae96/post/0db5fc06-a8bb-4970-bf6c-3b5a69ebe940/vs%20code.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Eigenspace, part 2</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-18-Eigenspace-2.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-18-Eigenspace-2.html</link>
   <description><![CDATA[ 
 
 
@@ -3416,14 +3416,14 @@ Note
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-18-Eigenspace-2.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-18-Eigenspace-2.html</guid>
   <pubDate>Sun, 17 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Eigenspace, part 1</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-10-Eigenspace-1.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-10-Eigenspace-1.html</link>
   <description><![CDATA[ 
 
 
@@ -3537,13 +3537,13 @@ Note
 </ul>
 <div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;">
 <figure class="figure">
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
 <p><br> 위의 그림에서 보듯이 <img src="https://latex.codecogs.com/png.latex?v_2">는 <img src="https://latex.codecogs.com/png.latex?v_1"> 프로젝션된 벡터와 이와 직교하는 <img src="https://latex.codecogs.com/png.latex?e_2">와의 합으로 계산할 수 있다. 따라서 <img src="https://latex.codecogs.com/png.latex?e_2%20=%20v_2%20-%20%5CPi_%7Be_1%7D(v_2)">가 성립한다. 벡터의 빼기 관점에서 생각해보면 어떨까? <img src="https://latex.codecogs.com/png.latex?v_2">와 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7Be_1%7D(v_2)">의 차이가 <img src="https://latex.codecogs.com/png.latex?e_2">다. 벡터는 방향과 크기로 정의된다는 점을 다시 기억하자. 같은 방식으로 아래 그림에서 보듯이 더 많은 축과 직교하는 벡터들을 구성할 수 있다.</p>
 <p>이후 <img src="https://latex.codecogs.com/png.latex?%5Chat%20e_i%20=%20%5Cdfrac%7Be_i%7D%7B%5CVert%20e_i%20%5CVert%7D">로 <img src="https://latex.codecogs.com/png.latex?e_i">를 표준화하면 된다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Av%20=%20%7B%5Crm%20proj%7D_%7Bu_1%7D%20(v)%20+%20%7B%5Crm%20proj%7D_%7Bu_2%7D(v)%20+%20w%0A"></p>
 <p>즉, 원래 벡터(<img src="https://latex.codecogs.com/png.latex?v">)에서 이미 확립된 직교 벡터에서 <img src="https://latex.codecogs.com/png.latex?v">로 쏜 프로젝션 벡터를 빼주면 원하는 새로운 직교 벡터를 얻을 수 있다. 따라서</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0Ae_3%20&amp;%20=%20v_3%20-%20%5CPi_%7Be_1%7D(v_3)%20-%20%5CPi_%7Be_2%7D(v_3)%20%5C%5C%0A&amp;~~~%5Cvdots%20%5C%5C%0Ae_n%20&amp;%20=%20v_n%20-%20%5Csum_%7Bi=1%7D%5E%7Bn-1%7D%20%5CPi_%7Be_i%7D(v_n)%0A%5Cend%7Baligned%7D%0A"></p>
@@ -3574,14 +3574,14 @@ Note
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-10-Eigenspace-1.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-10-Eigenspace-1.html</guid>
   <pubDate>Sat, 09 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Basis</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-08-basis.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-08-basis.html</link>
   <description><![CDATA[ 
 
 
@@ -3689,7 +3689,7 @@ Note
 <p>아래 그림에서 보듯이, <img src="https://latex.codecogs.com/png.latex?Ax">라는 변환과 <img src="https://latex.codecogs.com/png.latex?B%5Bx%5D_%7B%5Cmathcal%20B%7D">라는 변환은 좌표계만 다를 뿐 동일한 변환이다. <img src="https://latex.codecogs.com/png.latex?C%20B%20C%5E%7B-1%7D">의 기저의 변화를 살펴보면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cunderbrace%7Bu%20%5Crightarrow%20%5Cmathcal%20B%7D_%7BC%5E%7B-1%7D%7D%20&amp;%20%5Ccdots%20B%20%5Ccdots%20%5Cunderbrace%7B%5Cmathcal%20B%20%5Crightarrow%20u%7D_%7BC%7D%20%5C%5C%0A&amp;%20%5Ccdots%20A%20%5Ccdots%0A%5Cend%7Baligned%7D%0A"></p>
 <p>로 나타낼 수 있다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="img-fluid" alt="enter image description here">{ style=“margin: auto; display: block; border:1.5px solid #021a40; width=60%; }</p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="img-fluid" alt="enter image description here">{ style=“margin: auto; display: block; border:1.5px solid #021a40; width=60%; }</p>
 <p>Similar matrix인 <img src="https://latex.codecogs.com/png.latex?A">과 <img src="https://latex.codecogs.com/png.latex?B"> 사이에서 다음과 같은 관계가 성립한다.</p>
 <ol type="1">
 <li><img src="https://latex.codecogs.com/png.latex?%7B%5Crm%20Tr%7D(A)%20=%20%7B%5Crm%20Tr%7D(B)"></li>
@@ -3703,21 +3703,21 @@ Note
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-08-basis.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-08-basis.html</guid>
   <pubDate>Thu, 07 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Matrix as Linear Transformation</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</link>
   <description><![CDATA[ 
 
 
 
 <p>google_analytics.html</p><div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;">
 <figure class="figure">
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func.png?raw=true" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func.png?raw=true" class="img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -3735,7 +3735,7 @@ Note
 <li><img src="https://latex.codecogs.com/png.latex?T(%5Cvec%20v)%20=%20%5Cvec%20w">. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20%5Cin%20V">를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w%20%5Cin%20W">로 변환하는 것을 나타낸다.</li>
 </ul></li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func_fig.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func_fig.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <p><br> 함수와 마찬가지로 위의 선형 변환에서 치역(Im(<img src="https://latex.codecogs.com/png.latex?T">))와 커널(스칼라 함수에서는 <img src="https://latex.codecogs.com/png.latex?f(x)%20=%200">의 해)이 정의된다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%7B%5Crm%20Im%7D(T)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20w%20%5Cin%20W%20%7C%20%5Cvec%20w%20=%20T(%5Cvec%20v)%20%5Ctext%7B%20for%20some%20%7D%20%5Cvec%20v%20%5C%7D%20%5Csubseteq%20W%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%7B%5Crm%20Ker%7D(T)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20v%20%5Cin%20V%20%7C%20T(%5Cvec%20v)%20=%20%5Cvec%200%20%5C%7D%20%5Csubseteq%20V%0A"></p>
@@ -3756,7 +3756,7 @@ Note
 <section id="linearity" class="level2">
 <h2 class="anchored" data-anchor-id="linearity">Linearity</h2>
 <p>선형의 의미는 무엇일까? 기하적으로 선을 다룬다는 뜻이 아니다. 선형의 의미는 함수적인 의미다. 아래 그림을 보자.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/linearity.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/linearity.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <p>즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AT(%5Calpha_1%20%5Cvec%20v_1%20+%20%5Calpha_2%20%5Cvec%20v_2)%20=%20%5Calpha_1%20T(%5Cvec%20v_1)%20+%20%5Calpha_2%20T(%5Cvec%20v_2)%20=%20%5Calpha_1%20%5Cvec%20w_1%20+%20%5Calpha_2%20%5Cvec%20w_2%0A"></p>
 </section>
@@ -3775,7 +3775,7 @@ Note
 </section>
 <section id="surjective-and-injective" class="level3">
 <h3 class="anchored" data-anchor-id="surjective-and-injective">Surjective and Injective</h3>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/sur_inj.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/sur_inj.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <p>함수에서 전사 함수와 단사 함수의 개념을 그대로 적용할 수 있다. 선형 변환 혹은 행렬도 함수다.</p>
 <p>만일, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_1%20%5Cneq%20%5Cvec%20v_2">이고 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_1,%20%5Cvec%20v_2%20%5Cin%20%5Cmathcal%20R(M_T)">라면 이는 선형 변환의 정의에 따라서 서로 다른 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w">로 매핑된다. 따라서 만일 단사 변환이 되려면, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M_T)%20=%20%5C%7B%20%5Cvec%200%20%5C%7D">만 성립하면 된다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AAy%20-%20Az%20=%20A(y-z)%0A"></p>
@@ -3790,14 +3790,14 @@ Note
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</guid>
   <pubDate>Wed, 06 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Vector Geometrically, part 2</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-06-vector-geometry-2.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-06-vector-geometry-2.html</link>
   <description><![CDATA[ 
 
 
@@ -3893,21 +3893,21 @@ Note
 <div class="{column-margin}">
 <p>보통 homogenous라는 말이 들어가면 <img src="https://latex.codecogs.com/png.latex?Ax%20=%200">과 같은 형태의 연립방정식을 의미 의미한다.</p>
 </div>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/www.cs.utexas.edu/users/flame/laff/alaff-beta/images/Chapter04/FundamentalSpaces.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:70%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/www.cs.utexas.edu/users/flame/laff/alaff-beta/images/Chapter04/FundamentalSpaces.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:70%;"></p>
 
 
 </section>
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-06-vector-geometry-2.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-06-vector-geometry-2.html</guid>
   <pubDate>Tue, 05 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Vector Geometrically, part 1</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-05-vector-geometry-1.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-05-vector-geometry-1.html</link>
   <description><![CDATA[ 
 
 
@@ -3933,7 +3933,7 @@ Note
 <li>점은 공간에서 위치를 지니고 있다. 점의 특성은 위치 뿐이다.</li>
 <li>벡터는 크기와 방향을 지니고 있다. 벡터는 공간에서 위치를 지니고 있지 않다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/position-vector-1627294113.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/position-vector-1627294113.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
 <p>점과 벡터를 연결해보자. 위 그림에서 원점 <img src="https://latex.codecogs.com/png.latex?O">를 기준으로 하면 <img src="https://latex.codecogs.com/png.latex?P">, <img src="https://latex.codecogs.com/png.latex?Q">가 정의될 것이다. 이때 <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOP%7D">, <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOQ%7D">는 벡터가 된다. 이제 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">를 <img src="https://latex.codecogs.com/png.latex?P">에서 <img src="https://latex.codecogs.com/png.latex?Q">로 가는 벡터라고 정의하자. 이는</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20v%20=%20Q%20-%20P%0A"></p>
 <p>앞서 정의한 콘셉트에서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20=%20(v_x,%20v_y,%20v_z)">에서 <img src="https://latex.codecogs.com/png.latex?v_k">는 포인트의 위치가 아니라 해당 축으로 움직이는(향하는) 크기를 나타낸다는 점을 다시 음미하시기를!</p>
@@ -3945,7 +3945,7 @@ Note
 <li>Parametric equation:</li>
 </ul>
 <p><img src="https://latex.codecogs.com/png.latex?%0Al%20:%20%5Clbrace%20p_0%20+%20t%20%5Cvec%20v,%20t%20%5Cin%20%5Cmathbb%20R%20%5Crbrace%0A"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/www.maths.usyd.edu.au/u/MOW/vectors/images/v120x.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/www.maths.usyd.edu.au/u/MOW/vectors/images/v120x.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
 <p>위의 그림을 보면서 식을 도출해보자. 포인트 <img src="https://latex.codecogs.com/png.latex?p_0">를 (원점 기준) 벡터로 나타내면 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20r_0">가 된다. 그리고 <img src="https://latex.codecogs.com/png.latex?P"> 점을 벡터로 나타내면 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20r">이 된다. 벡터 <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bp_0%20p%7D">와 수평인 벡터를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">라고 하자. 이 두 가지 사실을 조합하면 다음과 같다.</p>
 <ol type="1">
 <li><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bp_0%20p%7D%20=%20%5Coverrightarrow%7Bo%20p%7D%20-%20%5Coverrightarrow%7Bo%20p_0%7D%20=%20%5Cvec%20r%20-%20%5Cvec%20r_0"></li>
@@ -3978,7 +3978,7 @@ Note
 </section>
 <section id="normal-vector" class="level3">
 <h3 class="anchored" data-anchor-id="normal-vector">Normal vector</h3>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/http:/mathonline.wdfiles.com/local--files/point-normal-form-of-a-plane/Screen%20Shot%202014-06-14%20at%207.02.06%20AM.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/http:/mathonline.wdfiles.com/local--files/point-normal-form-of-a-plane/Screen%20Shot%202014-06-14%20at%207.02.06%20AM.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
 <p>노멀 벡터는 아래 평면(plane) 혹은 벡터과 직교하는 성분의 벡터다. 이 녀석을 어떻게 구할까? 평면 <img src="https://latex.codecogs.com/png.latex?P">의 parametric 식을 보자. 2차원 플레인을 구성하는 두 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w">가 있다. 노멀 벡터는 이 두 성분 모두와 직교하는 성분의 벡터이다. 이는 바로 크로스 프로덕트의 정의를 그대로 따른다. 평면위의 어떤 세 점 <img src="https://latex.codecogs.com/png.latex?p,%20q,%20r">이 있다고 하자. 평면 위에 존재하는 벡터 두 개를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20=%20q%20-%20p">, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w%20=%20r%20-%20p">과 같이 만들자. 이 벡터와 직교하는 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20n">은 다음과 같다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20n%20%20=%20%5Cvec%20v%20%5Ctimes%20%5Cvec%20w%20=%20(q-p)%20%5Ctimes%20(r-p)%0A"></p>
 </section>
@@ -3992,14 +3992,14 @@ Note
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-05-vector-geometry-1.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-05-vector-geometry-1.html</guid>
   <pubDate>Mon, 04 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Projection and Distance</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2020-12-16-measuring-distance.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2020-12-16-measuring-distance.html</link>
   <description><![CDATA[ 
 
 
@@ -4009,7 +4009,7 @@ Note
 <section id="definition" class="level3">
 <h3 class="anchored" data-anchor-id="definition">Definition</h3>
 <p>다음과 같은 두 개의 벡터, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20a">, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20b">를 일단 떠올려보자.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/9/98/Projection_and_rejection.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/9/98/Projection_and_rejection.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>스칼라 프로젝션 <img src="https://latex.codecogs.com/png.latex?a_1">의 정의는 다음과 같다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Aa_1%20=%7B%5Ccos%20%5Ctheta%7D%7B%5ClVert%20%5Cvec%20a%20%5ClVert%7D%20=%20%5ClVert%20%5Cvec%20a_1%20%5ClVert%0A"></p>
 <p>각 <img src="https://latex.codecogs.com/png.latex?%5Ctheta">에 관해서 다음과 같이 정의할 수 있다. 혹시 리마인드가 필요하면 포스팅 <a href="https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/2019-07-18-dot-product.html">dot product</a>를 참고하라.</p>
@@ -4061,7 +4061,7 @@ Note
 </ul>
 <section id="projection-onto-line" class="level3">
 <h3 class="anchored" data-anchor-id="projection-onto-line">Projection onto line</h3>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>그림에서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20u">의 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">로의 프로젝션은 앞서 살펴본 벡터 프로젝션이다. <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v"> 대신 <img src="https://latex.codecogs.com/png.latex?l">로 표기된 점에 유의하자.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Al:%20%5C%7B%20%5Cvec%20v'%20%5Cin%20%5Cmathbb%20R%5En%20%5Clvert%20%5Cvec%20v'%20=%20%5Cvec%200%20+%20t%20%5Cvec%20v,%20t%20%5Cin%20%5Cmathbb%20R%20%5C%7D%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5CPi_l(%5Cvec%20u)%20=%20%5Cdfrac%7B%5Cvec%20u%20%5Ccdot%20%5Cvec%20v%7D%7B%5ClVert%5Cvec%20v%5ClVert%5E2%7D%20%5Cvec%20v%0A"></p>
@@ -4075,14 +4075,14 @@ Note
 </section>
 <section id="projection-onto-plane" class="level3">
 <h3 class="anchored" data-anchor-id="projection-onto-plane">Projection onto plane</h3>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>평면 위로의 프로젝션을 생각해보자. 기본적인 원리는 동일하다. 이에 앞서 평면을 벡터로 표현하는 방법에 대해 알아보자. 가장 편리한 방법은 노멀 벡터를 활용하는 것이다. 즉, 평면 위의 점 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20%7Bp_0%7D">를 지나는 <img src="https://latex.codecogs.com/png.latex?P">는 다음과 같이 정의할 수 있다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AP%20=%20%5C%7B%20%5Cvec%20p%20%5Cin%20%5Cmathbb%20R%5En%20:%20%5Cvec%20n%20%5Ccdot(%5Cvec%20p%20-%20%5Cvec%20p_0)%20=%200%20%5C%7D%0A"></p>
 <p>여기서 노멀 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20n">은 프로젝션된 지점에서 평면과 직교하는 성분을 나타낸다. 3차원의 경우 노멜 벡터는 3차원 공간에서 해당 평면이 놓인 모습을 결정한다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20u%20=%20%5CPi_P(%5Cvec%20u)%20+%20%5CPi_%7BP%5E%5Cperp%7D(%5Cvec%20u)%0A"></p>
 <p>그림에서 보듯이 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20u">에서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20n">으로의 프로젝션은 앞서 보았던 벡터에서 벡터로의 프로젝션이다. 따라서 앞서 구한 공식을 그대로 활용하자. 즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5CPi_%7BP%5E%5Cperp%7D(%5Cvec%20u)%20=%20%5Cdfrac%7B%5Cvec%20u%20%5Ccdot%20%5Cvec%20n%7D%7B%5ClVert%5Cvec%20n%5ClVert%7D%5Cdfrac%7B%5Cvec%20n%7D%7B%5ClVert%20%5Cvec%20n%20%5ClVert%7D%0A"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj_2a.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj_2a.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>벡터는 점과 달리 상대적인 위치로 정의된다. 벡터 연산은 그런 맥락에서 이루어진다. <img src="https://latex.codecogs.com/png.latex?%5CPi_%7BP%5E%5Cperp%7D">를 위 그림처럼 이동해 보자. 이렇게 보면 벡터 프로젝션이 자연스럽다. P에서의 위치는 변하지 않고 노멀 벡터 쪽으로만 변화하므로 벡터 자체는 이동 전 벡터와 이동 후 벡터가 동일하다. 즉, <img src="https://latex.codecogs.com/png.latex?%5CPi_%7BP%5E%5Cperp%7D">를 왼쪽으로 이동시킨 벡터에 대한 프로젝션과 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7BP%5E%5Cperp%7D">이 같다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5CPi_%7BP%5E%5Cperp%7D%20=%20%5Cdfrac%7B%5Cvec%20u%20%5Ccdot%20%5Cvec%20n%7D%7B%5ClVert%5Cvec%20n%5ClVert%5E2%7D%7B%5Cvec%20n%7D%0A"></p>
 <p>이제 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7BP%5E%5Cperp%7D"> 대입하면 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7BP%7D">를 쉽게 구할 수 있다. 즉,</p>
@@ -4094,15 +4094,15 @@ Note
 <h2 class="anchored" data-anchor-id="distance-in-vector-space">Distance in Vector Space</h2>
 <p>프로젝션은 거리를 측정할 때 유용하다. 먼저 원점(굳이 원점일 필요는 없다)과 해당 벡터 공간을 지나는 선 사이의 거리를 구해보자.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Al:%20%5C%7B%20%5Cvec%20p%20%5Cin%20%5Cmathbb%20R%5En%20%7C%20%5Cvec%20p%20=%20%5Cmathbf%20%7Bp%7D_0%20+%20t%20%5Cvec%20v,%20t%20%5Cin%20%5Cmathbb%20R%20%5C%7D%0A"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>위 그림에서 원점과 <img src="https://latex.codecogs.com/png.latex?l">의 거리는 어떻게 나타낼 수 있을까? <img src="https://latex.codecogs.com/png.latex?l">이 지나가는 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20p_0">를 그대로 두고, <img src="https://latex.codecogs.com/png.latex?l">이 원점을 지나가도록 이동해보자. 즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Al_0%20=%20%5C%7B%20%20%5Cvec%20p%20%5Cin%20%5Cmathbb%20R%5En%20%7C%20%5Cvec%20p%20=%20%5Cmathbf%20%7B0%7D%20+%20t%20%5Cvec%20v,%20t%20%5Cin%20%5Cmathbb%20R%20%5C%7D%0A"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>이제 이 벡터과 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20p_0"> 사이의 거리를 구하면 된다 .이는 앞서 제시한 벡터 프로젝션의 수직 벡터의 길이와 같다. 즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Ad(l,%20%5Cvec%200)%20=%20d(%5Cvec%20p_0,%20l_0)%20=%20%5ClVert%20%5Cmathbf%20p_0%20-%20%5Cdfrac%7B%5Cmathbf%20p_0%20%5Ccdot%20%5Cvec%20v%7D%7B%5ClVert%20%5Cvec%20v%5ClVert%5E2%7D%5Cvec%20v%20%5ClVert%0A"></p>
 <p>이제 아래와 같은 평면과 원점의 거리를 측정해보자.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AP%20=%20%5C%7B%20%5Cvec%20p%20%5Cin%20%5Cmathbb%20R%5En%20:%20%5Cvec%20n%20%5Ccdot(%5Cvec%20p%20-%20%5Cvec%20%7Bp%7D_0)%20=%200%20%5C%7D%0A"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/plane.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/plane.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>원점을 지나도록 평면을 이동시키고 평면의 노멀 벡터가 정의된 <img src="https://latex.codecogs.com/png.latex?p_0">와 원점을 지나는 평면 <img src="https://latex.codecogs.com/png.latex?P_0"> 사이의 거리를 측정하면 된다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AP_0%20=%20%5C%7B%20%5Cvec%20p%20%5Cin%20%5Cmathbb%20R%5En%20:%20%5Cvec%20n%20%5Ccdot(%5Cvec%20p%20-%20%5Cvec%20%7B0%7D)%20=%200%20%5C%7D%0A"></p>
 <p>이 둘 사이의 거리는 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7BP%5E%5Cperp%7D">의 거리와 같다. 즉,</p>
@@ -4111,7 +4111,7 @@ Note
 </section>
 <section id="application-regression-coefficient" class="level2">
 <h2 class="anchored" data-anchor-id="application-regression-coefficient">Application: Regression Coefficient</h2>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>앞서 소개했던 회귀 분석에 관한 포스팅 <a href="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-10-25-understanding-regression.html">Understanding Regression</a>을 다시 보자. Origin–Observed Y–Fitted <img src="https://latex.codecogs.com/png.latex?%5Chat%20Y">이 만드는 삼각형을 보자. 직각 삼각형이다. 여기서 잔차에 해당하는 <img src="https://latex.codecogs.com/png.latex?e">는 <img src="https://latex.codecogs.com/png.latex?X">의 컬럼 스페이스와 항상 직교한다. 즉, <img src="https://latex.codecogs.com/png.latex?X'%20e%20=%200">이 성립한다. 그리고 <img src="https://latex.codecogs.com/png.latex?%5Chat%20Y%20=%20X%20%5Chat%5Cbeta">이므로</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AX'(Y%20-%20%5Chat%20Y)%20%20=%20X'(Y%20-%20X%20%5Chat%5Cbeta)%20=%200%0A"></p>
 <p>이를 노멀 방정식이라고 부른다. 앞서 평면과 직교하는 벡터를 노멀 벡터라고 불렀는데, 둘은 일맥상통한다.</p>
@@ -4136,14 +4136,14 @@ MjEyMzEwM119
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2020-12-16-measuring-distance.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2020-12-16-measuring-distance.html</guid>
   <pubDate>Tue, 15 Dec 2020 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Revisiting Log-Linear Regression Model</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2020-11-11-log-linear-regression.html</link>
+  <link>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</link>
   <description><![CDATA[ 
 
 
@@ -4165,7 +4165,7 @@ MjEyMzEwM119
 <p>이렇게 보면 <img src="https://latex.codecogs.com/png.latex?%5Cbeta"> 값은 <img src="https://latex.codecogs.com/png.latex?x_i">가 순간적으로 변함에 따라서 변화하는 <img src="https://latex.codecogs.com/png.latex?y_i">의 % 변화를 나타낸다. 일단 기본적으로 주의해야 할 것! 위 값은 국지적 미분 값이다. 즉, 특정한 <img src="https://latex.codecogs.com/png.latex?x_i">에서의 미분 값이다. 즉, 엄밀하게 쓰면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%20/%20y_i%7D%7Bd%20x_i%7D%20%5Cbigg%7C_%7Bx_i%20=%20x_0%7D%20=%20%5Cbeta%0A"></p>
 <p>회귀분석에서 구하는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">와 위에서 얻은 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">는 동일할 수가 없다. 왜나하면, <img src="https://latex.codecogs.com/png.latex?y_i">는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/regression/https:/dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 </section>
 <section id="the-coefficient" class="level2">
 <h2 class="anchored" data-anchor-id="the-coefficient">The Coefficient</h2>
@@ -4199,14 +4199,14 @@ MjEyMzEwM119
 
  ]]></description>
   <category>regression</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2020-11-11-log-linear-regression.html</guid>
+  <guid>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</guid>
   <pubDate>Tue, 10 Nov 2020 15:00:00 GMT</pubDate>
   <media:content url="https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Viva, Binder!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-27-viva-binder.html</link>
+  <link>http://www.lostineconomics.com/posts/computer-tool/2020-10-27-viva-binder.html</link>
   <description><![CDATA[ 
 
 
@@ -4225,7 +4225,7 @@ MjEyMzEwM119
 <section id="turn-a-git-repo-into" class="level2">
 <h2 class="anchored" data-anchor-id="turn-a-git-repo-into">Turn a Git repo into!</h2>
 <p>서비스 참 시원시원하다. 로그인도 필요 없다. 깃헙 레포에 있는 코드를 받아서 가상 머신 위에 해당 결과를 구현해준다. R, Python, Julia를 지원한다. 세 언어 모두 기본 베이스로 Jupyter허브를 활용한다. 간편한 연동을 위해서는 깃헙 리포를 public으로 설정해야 한다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/binder_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 70%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/binder_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 70%;"></p>
 <ul>
 <li><code>GitHub</code>: 깃헙 주소를 넣는다.</li>
 <li><code>Git branch, tag or commit</code>: 관련된 깃 브렌치, 태그, 커밋 등을 넣는다.</li>
@@ -4238,8 +4238,8 @@ MjEyMzEwM119
 </ul></li>
 </ul>
 <p>아래 공유를 위한 주소도 떠 있으니 공유를 할 때는 해당 주소만 던져주면 된다. 이제 <kbd>launch</kbd> 버튼을 누르자. 상당히 오랜 시간 동안 뭔가가 설치된다. 설치되는 내용을 보면 소프트웨어 구동에 필요한 개별 이미지를 빌드한 후 이를 클라우드에 띄워 구동한다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <p>장점은 충분히 많다. 코드가 제대로 구현되는지 확인하는 수준이거나 코드를 가끔 짧은 시간 동안 실행해야 하는 정도라면 더 이상 바랄 게 없다. 단점이라면 도커 이미지를 빌드하고 녀석을 푸시해 실행할 때까지 시간이 좀 걸린다는 것인데, 뭐 이 정도 시간 비용 쯤이야!</p>
 
 
@@ -4247,14 +4247,14 @@ MjEyMzEwM119
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-27-viva-binder.html</guid>
+  <guid>http://www.lostineconomics.com/posts/computer-tool/2020-10-27-viva-binder.html</guid>
   <pubDate>Mon, 26 Oct 2020 15:00:00 GMT</pubDate>
   <media:content url="https://mybinder.org/static/logo.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
   <title>\(\rm\LaTeX\) in Modern Ways</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-24-classy-latex.html</link>
+  <link>http://www.lostineconomics.com/posts/computer-tool/2020-10-24-classy-latex.html</link>
   <description><![CDATA[ 
 
 
@@ -4343,19 +4343,19 @@ MjEyMzEwM119
 <span id="cb8-9"><span class="ex" style="color: null;">tlmgr</span> update <span class="at" style="color: #657422;">--all</span></span></code></pre></div>
 <p>상태를 초기화하고 한글을 까는 명령어들을 모아둔 것이다. 실행 중인 도커 내에서 해당 디렉토리로 이동해서 <code>./install_kotex.sh</code>로 명령을 실행하자.</p>
 <p>이제 VS Code로 가자. 필요한 Extension은 앞서 살펴본 Latex workshop과 더불어 <a href="https://code.visualstudio.com/docs/remote/remote-overview">Remote-Container</a>를 설치하자. 이 녀석을 설치하면 WSL 내에서 돌아가는 컨테이너 안에도 VS Code를 통해 바로 접속할 수 있다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - 아래 <code>&gt;&lt;</code>으로 된 부분을 클릭하면 상단에 메뉴가 뜬다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - “attach to running container”를 실행해서 실행중인 도커 콘테이너를 부착한다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_3.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - 아래 <code>&gt;&lt;</code>으로 된 부분을 클릭하면 상단에 메뉴가 뜬다.</p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - “attach to running container”를 실행해서 실행중인 도커 콘테이너를 부착한다.</p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_3.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>부착하면 새 창이 뜨면서 아래 녹색 창이 콘테이너 부착되었음을 알려준다.</li>
 <li>콘테이너 내부에 Latex Workshop 확장(extension)을 설치해야 한다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_4.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_4.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>설치 후 해당 Extension의 설정을 고쳐주자.</li>
 <li>위에 찾기창에서 디폴트로 떠 있는 내용 뒤에 “pdf” 치면 pdf에 관련된 설정만 필터링된다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>위 항목을 찾아서 적당한 포워딩 포트를 넣어준다.</li>
 <li>포트가 잘 포워딩 된다면, 아래와 같이 VS Code에서 PDF 뷰어를 활성화할 수 있다.</li>
@@ -4371,7 +4371,7 @@ MjEyMzEwM119
 <section id="container-setting" class="level4">
 <h4 class="anchored" data-anchor-id="container-setting">Container Setting</h4>
 <p>콘테이너에서 해당 포트가 잘 포워딩되고 있는지 확인하자.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>옆에 원으로 표시해 둔 곳은 <code>Remote-Container</code> 확장으로 바로 가는 단축 아이콘이다.</li>
 <li>위 그림처럼 35556 포트를 통해 잘 포워딩되고 있음을 알 수 있다.
@@ -4380,7 +4380,7 @@ MjEyMzEwM119
 </ul></li>
 </ul>
 <p>이제 VS Code에서 텍 파일을 열고 문서를 작성하고 컴파일하면 된다. Latex Workshop이 설치되어 있다면, <code>.tex</code> 파일에 알아서 반응하니 걱정 마시라.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_6.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_6.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 </section>
 </section>
 </section>
@@ -4402,7 +4402,7 @@ MjEyMzEwM119
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-24-classy-latex.html</guid>
+  <guid>http://www.lostineconomics.com/posts/computer-tool/2020-10-24-classy-latex.html</guid>
   <pubDate>Fri, 23 Oct 2020 15:00:00 GMT</pubDate>
   <media:content url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/LaTeX_project_logo_bird.svg/1920px-LaTeX_project_logo_bird.svg.png" medium="image" type="image/png"/>
 </item>
@@ -4475,14 +4475,14 @@ MjEyMzEwM119
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-10-how-to-make-cv.html</guid>
+  <guid>http://www.lostineconomics.com/posts/computer-tool/2022-05-10-how-to-make-cv.html</guid>
   <pubDate>Mon, 09 May 2022 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.ourcodeworld.com/public-media/articles/articleocw-5755472112ab3.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>수입은 GDP에 영향을 주는가?</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/econ-simple/2022-04-30-gdp-import.html</link>
+  <link>http://www.lostineconomics.com/posts/econ-simple/2022-04-30-gdp-import.html</link>
   <description><![CDATA[ 
 
 
@@ -4560,14 +4560,14 @@ MjEyMzEwM119
  ]]></description>
   <category>economics</category>
   <category>econ-simple</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/econ-simple/2022-04-30-gdp-import.html</guid>
+  <guid>http://www.lostineconomics.com/posts/econ-simple/2022-04-30-gdp-import.html</guid>
   <pubDate>Thu, 28 Apr 2022 15:00:00 GMT</pubDate>
-  <media:content url="https://anarinsk.github.io/lostineconomics_quarto//posts/econ-simple/goodecon.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="http://www.lostineconomics.com//posts/econ-simple/goodecon.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Happy Git-ing!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</link>
+  <link>http://www.lostineconomics.com/posts/git/2022-04-27-happy-giting.html</link>
   <description><![CDATA[ 
 
 
@@ -4638,14 +4638,14 @@ Note
 
  ]]></description>
   <category>git</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</guid>
+  <guid>http://www.lostineconomics.com/posts/git/2022-04-27-happy-giting.html</guid>
   <pubDate>Tue, 26 Apr 2022 15:00:00 GMT</pubDate>
   <media:content url="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmxcpJ%2Fbtq9IDonGa1%2FLGoNFr3kBHT3tm8QnIwjrK%2Fimg.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Kubernetes As an Alternative to Docker</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2022-04-26-k8s-personally.html</link>
+  <link>http://www.lostineconomics.com/posts/container/2022-04-26-k8s-personally.html</link>
   <description><![CDATA[ 
 
 
@@ -4744,14 +4744,14 @@ Note
 
  ]]></description>
   <category>container</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2022-04-26-k8s-personally.html</guid>
+  <guid>http://www.lostineconomics.com/posts/container/2022-04-26-k8s-personally.html</guid>
   <pubDate>Mon, 25 Apr 2022 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Python in the Browser</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-11-19-python-in-github.html</link>
+  <link>http://www.lostineconomics.com/posts/computer-tool/2021-11-19-python-in-github.html</link>
   <description><![CDATA[ 
 
 
@@ -4782,7 +4782,7 @@ Note
 <h2 class="anchored" data-anchor-id="dev-모드-진입">dev 모드 진입</h2>
 <p>github를 dev 모드로 돌린다. 웹 브라우저 리포지터리 창에서 <code>.</code> 버튼을 누르거나 <code>.dev</code> 주소로 접근하면 된다. 익숙한 vs code 화면에 보일 것이다.</p>
 <p>이제 아래 왼쪽 탭 화면에서 extension을 찾으면 된다. 아래 그림처럼 생겼다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/code.visualstudio.com/assets/docs/editor/extension-marketplace/extensions-view-icon.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 10%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/code.visualstudio.com/assets/docs/editor/extension-marketplace/extensions-view-icon.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 10%;"></p>
 </section>
 <section id="extension-설치" class="level2">
 <h2 class="anchored" data-anchor-id="extension-설치">extension 설치</h2>
@@ -4802,14 +4802,14 @@ Note
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-11-19-python-in-github.html</guid>
+  <guid>http://www.lostineconomics.com/posts/computer-tool/2021-11-19-python-in-github.html</guid>
   <pubDate>Thu, 18 Nov 2021 15:00:00 GMT</pubDate>
-  <media:content url="https://pyodide.org/en/stable/_static/pyodide-logo.png" medium="image" type="image/png"/>
+  <media:content url="https://irydium.dev/logos/pyodide.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Enter the Podman!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</link>
+  <link>http://www.lostineconomics.com/posts/container/2021-09-13-podman-1.html</link>
   <description><![CDATA[ 
 
 
@@ -5085,14 +5085,14 @@ Note
 
  ]]></description>
   <category>container</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</guid>
+  <guid>http://www.lostineconomics.com/posts/container/2021-09-13-podman-1.html</guid>
   <pubDate>Sun, 12 Sep 2021 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Docker + Jupyter + 한글 폰트</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</link>
+  <link>http://www.lostineconomics.com/posts/container/2021-05-09-docker_korfont.html</link>
   <description><![CDATA[ 
 
 
@@ -5197,14 +5197,14 @@ Note
 
  ]]></description>
   <category>container</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</guid>
+  <guid>http://www.lostineconomics.com/posts/container/2021-05-09-docker_korfont.html</guid>
   <pubDate>Sat, 08 May 2021 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>All into VS Code</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-02-02-all-vs-code.html</link>
+  <link>http://www.lostineconomics.com/posts/computer-tool/2021-02-02-all-vs-code.html</link>
   <description><![CDATA[ 
 
 
@@ -5249,7 +5249,7 @@ Note
 </section>
 <section id="핵심" class="level2">
 <h2 class="anchored" data-anchor-id="핵심">핵심</h2>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <ul>
 <li>VS Code의 익스텐션 <code>Remote-Container</code> 컨테이너 접속 기능을 활용해 <code>datascience-notebook</code> 컨테이너 접속한다.
 <ul>
@@ -5348,16 +5348,16 @@ Note
 <li><code>ipynb</code>를 확장자로 해서 노트북을 쓰고 싶다면, 그냥 만들어 쓰면 된다!</li>
 <li>VS Code에 Jupyter 확장이 있기 때문에 보통의 웹 브라우저에서 쓰는 Jupyter 노트북과 거의 동일한 기능을 제공한다. 웹 노트북에서와 마찬가지로 파이썬, 줄리아, R의 커널을 선택하면 된다 (아래 그림의 오른쪽 상단 박스). jupyterlab과 거의 비슷한 인터페이스를 지니고 있다. 오히려 주피터에 비해 복잡하지 않아서 좋다고 느낄지도 모르겠다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 </section>
 <section id="setting-for-remote-connection" class="level2">
 <h2 class="anchored" data-anchor-id="setting-for-remote-connection">Setting for Remote Connection</h2>
 <p>앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 좋다면 아래와 같이 하면 된다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>만일 위와 같은 화면에 Remote Exlorer에서 뜨지 않는다면 컨테이너가 부착되지 않는 것이다. 컨테이너를 부착하면 된다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li><code>Extension</code> &gt; <code>REMOTE EXPLORER</code> &gt; <code>DETAILS</code> 탭에서 가운데 설정 모양이 “Open Container Configuration File”이다.</li>
 <li>옆 에디터 창에 json 형식의 설정이 뜬뜬다. 여기서 관련 extension 등의 설정을 지정할 수 있다. 이렇게 설정을 해두면 해당 컨테이너를 부착할 때 설정한 대로 자동으로 옵션들이 적용된다. 매우 편리하다.</li>
@@ -5381,7 +5381,7 @@ Note
 <span id="cb5-17">        <span class="dt" style="color: #AD0000;">"r.rterm.linux"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/opt/conda/bin/radian"</span></span>
 <span id="cb5-18">    <span class="fu" style="color: #4758AB;">}</span></span>
 <span id="cb5-19"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <ul>
 <li><code>File</code> &gt; <code>Perefences</code> &gt; <code>Settings</code>에서도 설정에 접근할 수 있다.</li>
 <li>VS Code의 설정은 두가지 축을 지닌다. 하나는 설정 전체를 담은 json 파일이다. 왼쪽 <code>&gt;</code> 표시된 항목에서처럼 카테고리 별로 구별되어 쉽게 접근할 수 있다. 이 하나의 설정을 위 그림에서 보듯이 User, Remote(컨네이터), Workspace 별로 별도로 지정해 활용할 수도 있다.</li>
@@ -5392,14 +5392,14 @@ Note
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-02-02-all-vs-code.html</guid>
+  <guid>http://www.lostineconomics.com/posts/computer-tool/2021-02-02-all-vs-code.html</guid>
   <pubDate>Mon, 01 Feb 2021 15:00:00 GMT</pubDate>
   <media:content url="https://velog.velcdn.com/images/jeongjae96/post/0db5fc06-a8bb-4970-bf6c-3b5a69ebe940/vs%20code.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Eigenspace, part 2</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-18-Eigenspace-2.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-18-Eigenspace-2.html</link>
   <description><![CDATA[ 
 
 
@@ -5495,14 +5495,14 @@ Note
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-18-Eigenspace-2.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-18-Eigenspace-2.html</guid>
   <pubDate>Sun, 17 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Eigenspace, part 1</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-10-Eigenspace-1.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-10-Eigenspace-1.html</link>
   <description><![CDATA[ 
 
 
@@ -5616,13 +5616,13 @@ Note
 </ul>
 <div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;">
 <figure class="figure">
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
 <p><br> 위의 그림에서 보듯이 <img src="https://latex.codecogs.com/png.latex?v_2">는 <img src="https://latex.codecogs.com/png.latex?v_1"> 프로젝션된 벡터와 이와 직교하는 <img src="https://latex.codecogs.com/png.latex?e_2">와의 합으로 계산할 수 있다. 따라서 <img src="https://latex.codecogs.com/png.latex?e_2%20=%20v_2%20-%20%5CPi_%7Be_1%7D(v_2)">가 성립한다. 벡터의 빼기 관점에서 생각해보면 어떨까? <img src="https://latex.codecogs.com/png.latex?v_2">와 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7Be_1%7D(v_2)">의 차이가 <img src="https://latex.codecogs.com/png.latex?e_2">다. 벡터는 방향과 크기로 정의된다는 점을 다시 기억하자. 같은 방식으로 아래 그림에서 보듯이 더 많은 축과 직교하는 벡터들을 구성할 수 있다.</p>
 <p>이후 <img src="https://latex.codecogs.com/png.latex?%5Chat%20e_i%20=%20%5Cdfrac%7Be_i%7D%7B%5CVert%20e_i%20%5CVert%7D">로 <img src="https://latex.codecogs.com/png.latex?e_i">를 표준화하면 된다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Av%20=%20%7B%5Crm%20proj%7D_%7Bu_1%7D%20(v)%20+%20%7B%5Crm%20proj%7D_%7Bu_2%7D(v)%20+%20w%0A"></p>
 <p>즉, 원래 벡터(<img src="https://latex.codecogs.com/png.latex?v">)에서 이미 확립된 직교 벡터에서 <img src="https://latex.codecogs.com/png.latex?v">로 쏜 프로젝션 벡터를 빼주면 원하는 새로운 직교 벡터를 얻을 수 있다. 따라서</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0Ae_3%20&amp;%20=%20v_3%20-%20%5CPi_%7Be_1%7D(v_3)%20-%20%5CPi_%7Be_2%7D(v_3)%20%5C%5C%0A&amp;~~~%5Cvdots%20%5C%5C%0Ae_n%20&amp;%20=%20v_n%20-%20%5Csum_%7Bi=1%7D%5E%7Bn-1%7D%20%5CPi_%7Be_i%7D(v_n)%0A%5Cend%7Baligned%7D%0A"></p>
@@ -5653,14 +5653,14 @@ Note
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-10-Eigenspace-1.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-10-Eigenspace-1.html</guid>
   <pubDate>Sat, 09 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Basis</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-08-basis.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-08-basis.html</link>
   <description><![CDATA[ 
 
 
@@ -5768,7 +5768,7 @@ Note
 <p>아래 그림에서 보듯이, <img src="https://latex.codecogs.com/png.latex?Ax">라는 변환과 <img src="https://latex.codecogs.com/png.latex?B%5Bx%5D_%7B%5Cmathcal%20B%7D">라는 변환은 좌표계만 다를 뿐 동일한 변환이다. <img src="https://latex.codecogs.com/png.latex?C%20B%20C%5E%7B-1%7D">의 기저의 변화를 살펴보면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cunderbrace%7Bu%20%5Crightarrow%20%5Cmathcal%20B%7D_%7BC%5E%7B-1%7D%7D%20&amp;%20%5Ccdots%20B%20%5Ccdots%20%5Cunderbrace%7B%5Cmathcal%20B%20%5Crightarrow%20u%7D_%7BC%7D%20%5C%5C%0A&amp;%20%5Ccdots%20A%20%5Ccdots%0A%5Cend%7Baligned%7D%0A"></p>
 <p>로 나타낼 수 있다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="img-fluid" alt="enter image description here">{ style=“margin: auto; display: block; border:1.5px solid #021a40; width=60%; }</p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="img-fluid" alt="enter image description here">{ style=“margin: auto; display: block; border:1.5px solid #021a40; width=60%; }</p>
 <p>Similar matrix인 <img src="https://latex.codecogs.com/png.latex?A">과 <img src="https://latex.codecogs.com/png.latex?B"> 사이에서 다음과 같은 관계가 성립한다.</p>
 <ol type="1">
 <li><img src="https://latex.codecogs.com/png.latex?%7B%5Crm%20Tr%7D(A)%20=%20%7B%5Crm%20Tr%7D(B)"></li>
@@ -5782,21 +5782,21 @@ Note
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-08-basis.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-08-basis.html</guid>
   <pubDate>Thu, 07 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Matrix as Linear Transformation</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</link>
   <description><![CDATA[ 
 
 
 
 <p>google_analytics.html</p><div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;">
 <figure class="figure">
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func.png?raw=true" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func.png?raw=true" class="img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -5814,7 +5814,7 @@ Note
 <li><img src="https://latex.codecogs.com/png.latex?T(%5Cvec%20v)%20=%20%5Cvec%20w">. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20%5Cin%20V">를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w%20%5Cin%20W">로 변환하는 것을 나타낸다.</li>
 </ul></li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func_fig.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func_fig.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <p><br> 함수와 마찬가지로 위의 선형 변환에서 치역(Im(<img src="https://latex.codecogs.com/png.latex?T">))와 커널(스칼라 함수에서는 <img src="https://latex.codecogs.com/png.latex?f(x)%20=%200">의 해)이 정의된다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%7B%5Crm%20Im%7D(T)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20w%20%5Cin%20W%20%7C%20%5Cvec%20w%20=%20T(%5Cvec%20v)%20%5Ctext%7B%20for%20some%20%7D%20%5Cvec%20v%20%5C%7D%20%5Csubseteq%20W%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%7B%5Crm%20Ker%7D(T)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20v%20%5Cin%20V%20%7C%20T(%5Cvec%20v)%20=%20%5Cvec%200%20%5C%7D%20%5Csubseteq%20V%0A"></p>
@@ -5835,7 +5835,7 @@ Note
 <section id="linearity" class="level2">
 <h2 class="anchored" data-anchor-id="linearity">Linearity</h2>
 <p>선형의 의미는 무엇일까? 기하적으로 선을 다룬다는 뜻이 아니다. 선형의 의미는 함수적인 의미다. 아래 그림을 보자.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/linearity.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/linearity.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <p>즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AT(%5Calpha_1%20%5Cvec%20v_1%20+%20%5Calpha_2%20%5Cvec%20v_2)%20=%20%5Calpha_1%20T(%5Cvec%20v_1)%20+%20%5Calpha_2%20T(%5Cvec%20v_2)%20=%20%5Calpha_1%20%5Cvec%20w_1%20+%20%5Calpha_2%20%5Cvec%20w_2%0A"></p>
 </section>
@@ -5854,7 +5854,7 @@ Note
 </section>
 <section id="surjective-and-injective" class="level3">
 <h3 class="anchored" data-anchor-id="surjective-and-injective">Surjective and Injective</h3>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/sur_inj.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/sur_inj.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <p>함수에서 전사 함수와 단사 함수의 개념을 그대로 적용할 수 있다. 선형 변환 혹은 행렬도 함수다.</p>
 <p>만일, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_1%20%5Cneq%20%5Cvec%20v_2">이고 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_1,%20%5Cvec%20v_2%20%5Cin%20%5Cmathcal%20R(M_T)">라면 이는 선형 변환의 정의에 따라서 서로 다른 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w">로 매핑된다. 따라서 만일 단사 변환이 되려면, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M_T)%20=%20%5C%7B%20%5Cvec%200%20%5C%7D">만 성립하면 된다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AAy%20-%20Az%20=%20A(y-z)%0A"></p>
@@ -5869,14 +5869,14 @@ Note
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</guid>
   <pubDate>Wed, 06 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Vector Geometrically, part 2</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-06-vector-geometry-2.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-06-vector-geometry-2.html</link>
   <description><![CDATA[ 
 
 
@@ -5972,21 +5972,21 @@ Note
 <div class="{column-margin}">
 <p>보통 homogenous라는 말이 들어가면 <img src="https://latex.codecogs.com/png.latex?Ax%20=%200">과 같은 형태의 연립방정식을 의미 의미한다.</p>
 </div>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/www.cs.utexas.edu/users/flame/laff/alaff-beta/images/Chapter04/FundamentalSpaces.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:70%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/www.cs.utexas.edu/users/flame/laff/alaff-beta/images/Chapter04/FundamentalSpaces.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:70%;"></p>
 
 
 </section>
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-06-vector-geometry-2.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-06-vector-geometry-2.html</guid>
   <pubDate>Tue, 05 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Vector Geometrically, part 1</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-05-vector-geometry-1.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-05-vector-geometry-1.html</link>
   <description><![CDATA[ 
 
 
@@ -6012,7 +6012,7 @@ Note
 <li>점은 공간에서 위치를 지니고 있다. 점의 특성은 위치 뿐이다.</li>
 <li>벡터는 크기와 방향을 지니고 있다. 벡터는 공간에서 위치를 지니고 있지 않다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/position-vector-1627294113.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/position-vector-1627294113.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
 <p>점과 벡터를 연결해보자. 위 그림에서 원점 <img src="https://latex.codecogs.com/png.latex?O">를 기준으로 하면 <img src="https://latex.codecogs.com/png.latex?P">, <img src="https://latex.codecogs.com/png.latex?Q">가 정의될 것이다. 이때 <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOP%7D">, <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOQ%7D">는 벡터가 된다. 이제 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">를 <img src="https://latex.codecogs.com/png.latex?P">에서 <img src="https://latex.codecogs.com/png.latex?Q">로 가는 벡터라고 정의하자. 이는</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20v%20=%20Q%20-%20P%0A"></p>
 <p>앞서 정의한 콘셉트에서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20=%20(v_x,%20v_y,%20v_z)">에서 <img src="https://latex.codecogs.com/png.latex?v_k">는 포인트의 위치가 아니라 해당 축으로 움직이는(향하는) 크기를 나타낸다는 점을 다시 음미하시기를!</p>
@@ -6024,7 +6024,7 @@ Note
 <li>Parametric equation:</li>
 </ul>
 <p><img src="https://latex.codecogs.com/png.latex?%0Al%20:%20%5Clbrace%20p_0%20+%20t%20%5Cvec%20v,%20t%20%5Cin%20%5Cmathbb%20R%20%5Crbrace%0A"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/www.maths.usyd.edu.au/u/MOW/vectors/images/v120x.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/www.maths.usyd.edu.au/u/MOW/vectors/images/v120x.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
 <p>위의 그림을 보면서 식을 도출해보자. 포인트 <img src="https://latex.codecogs.com/png.latex?p_0">를 (원점 기준) 벡터로 나타내면 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20r_0">가 된다. 그리고 <img src="https://latex.codecogs.com/png.latex?P"> 점을 벡터로 나타내면 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20r">이 된다. 벡터 <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bp_0%20p%7D">와 수평인 벡터를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">라고 하자. 이 두 가지 사실을 조합하면 다음과 같다.</p>
 <ol type="1">
 <li><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bp_0%20p%7D%20=%20%5Coverrightarrow%7Bo%20p%7D%20-%20%5Coverrightarrow%7Bo%20p_0%7D%20=%20%5Cvec%20r%20-%20%5Cvec%20r_0"></li>
@@ -6057,7 +6057,7 @@ Note
 </section>
 <section id="normal-vector" class="level3">
 <h3 class="anchored" data-anchor-id="normal-vector">Normal vector</h3>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/http:/mathonline.wdfiles.com/local--files/point-normal-form-of-a-plane/Screen%20Shot%202014-06-14%20at%207.02.06%20AM.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/http:/mathonline.wdfiles.com/local--files/point-normal-form-of-a-plane/Screen%20Shot%202014-06-14%20at%207.02.06%20AM.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
 <p>노멀 벡터는 아래 평면(plane) 혹은 벡터과 직교하는 성분의 벡터다. 이 녀석을 어떻게 구할까? 평면 <img src="https://latex.codecogs.com/png.latex?P">의 parametric 식을 보자. 2차원 플레인을 구성하는 두 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w">가 있다. 노멀 벡터는 이 두 성분 모두와 직교하는 성분의 벡터이다. 이는 바로 크로스 프로덕트의 정의를 그대로 따른다. 평면위의 어떤 세 점 <img src="https://latex.codecogs.com/png.latex?p,%20q,%20r">이 있다고 하자. 평면 위에 존재하는 벡터 두 개를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20=%20q%20-%20p">, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w%20=%20r%20-%20p">과 같이 만들자. 이 벡터와 직교하는 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20n">은 다음과 같다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20n%20%20=%20%5Cvec%20v%20%5Ctimes%20%5Cvec%20w%20=%20(q-p)%20%5Ctimes%20(r-p)%0A"></p>
 </section>
@@ -6071,14 +6071,14 @@ Note
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-05-vector-geometry-1.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-05-vector-geometry-1.html</guid>
   <pubDate>Mon, 04 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Projection and Distance</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2020-12-16-measuring-distance.html</link>
+  <link>http://www.lostineconomics.com/posts/linear-algebra/2020-12-16-measuring-distance.html</link>
   <description><![CDATA[ 
 
 
@@ -6088,7 +6088,7 @@ Note
 <section id="definition" class="level3">
 <h3 class="anchored" data-anchor-id="definition">Definition</h3>
 <p>다음과 같은 두 개의 벡터, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20a">, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20b">를 일단 떠올려보자.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/9/98/Projection_and_rejection.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/9/98/Projection_and_rejection.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>스칼라 프로젝션 <img src="https://latex.codecogs.com/png.latex?a_1">의 정의는 다음과 같다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Aa_1%20=%7B%5Ccos%20%5Ctheta%7D%7B%5ClVert%20%5Cvec%20a%20%5ClVert%7D%20=%20%5ClVert%20%5Cvec%20a_1%20%5ClVert%0A"></p>
 <p>각 <img src="https://latex.codecogs.com/png.latex?%5Ctheta">에 관해서 다음과 같이 정의할 수 있다. 혹시 리마인드가 필요하면 포스팅 <a href="https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/2019-07-18-dot-product.html">dot product</a>를 참고하라.</p>
@@ -6140,7 +6140,7 @@ Note
 </ul>
 <section id="projection-onto-line" class="level3">
 <h3 class="anchored" data-anchor-id="projection-onto-line">Projection onto line</h3>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>그림에서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20u">의 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">로의 프로젝션은 앞서 살펴본 벡터 프로젝션이다. <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v"> 대신 <img src="https://latex.codecogs.com/png.latex?l">로 표기된 점에 유의하자.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Al:%20%5C%7B%20%5Cvec%20v'%20%5Cin%20%5Cmathbb%20R%5En%20%5Clvert%20%5Cvec%20v'%20=%20%5Cvec%200%20+%20t%20%5Cvec%20v,%20t%20%5Cin%20%5Cmathbb%20R%20%5C%7D%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5CPi_l(%5Cvec%20u)%20=%20%5Cdfrac%7B%5Cvec%20u%20%5Ccdot%20%5Cvec%20v%7D%7B%5ClVert%5Cvec%20v%5ClVert%5E2%7D%20%5Cvec%20v%0A"></p>
@@ -6154,14 +6154,14 @@ Note
 </section>
 <section id="projection-onto-plane" class="level3">
 <h3 class="anchored" data-anchor-id="projection-onto-plane">Projection onto plane</h3>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>평면 위로의 프로젝션을 생각해보자. 기본적인 원리는 동일하다. 이에 앞서 평면을 벡터로 표현하는 방법에 대해 알아보자. 가장 편리한 방법은 노멀 벡터를 활용하는 것이다. 즉, 평면 위의 점 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20%7Bp_0%7D">를 지나는 <img src="https://latex.codecogs.com/png.latex?P">는 다음과 같이 정의할 수 있다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AP%20=%20%5C%7B%20%5Cvec%20p%20%5Cin%20%5Cmathbb%20R%5En%20:%20%5Cvec%20n%20%5Ccdot(%5Cvec%20p%20-%20%5Cvec%20p_0)%20=%200%20%5C%7D%0A"></p>
 <p>여기서 노멀 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20n">은 프로젝션된 지점에서 평면과 직교하는 성분을 나타낸다. 3차원의 경우 노멜 벡터는 3차원 공간에서 해당 평면이 놓인 모습을 결정한다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20u%20=%20%5CPi_P(%5Cvec%20u)%20+%20%5CPi_%7BP%5E%5Cperp%7D(%5Cvec%20u)%0A"></p>
 <p>그림에서 보듯이 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20u">에서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20n">으로의 프로젝션은 앞서 보았던 벡터에서 벡터로의 프로젝션이다. 따라서 앞서 구한 공식을 그대로 활용하자. 즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5CPi_%7BP%5E%5Cperp%7D(%5Cvec%20u)%20=%20%5Cdfrac%7B%5Cvec%20u%20%5Ccdot%20%5Cvec%20n%7D%7B%5ClVert%5Cvec%20n%5ClVert%7D%5Cdfrac%7B%5Cvec%20n%7D%7B%5ClVert%20%5Cvec%20n%20%5ClVert%7D%0A"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj_2a.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj_2a.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>벡터는 점과 달리 상대적인 위치로 정의된다. 벡터 연산은 그런 맥락에서 이루어진다. <img src="https://latex.codecogs.com/png.latex?%5CPi_%7BP%5E%5Cperp%7D">를 위 그림처럼 이동해 보자. 이렇게 보면 벡터 프로젝션이 자연스럽다. P에서의 위치는 변하지 않고 노멀 벡터 쪽으로만 변화하므로 벡터 자체는 이동 전 벡터와 이동 후 벡터가 동일하다. 즉, <img src="https://latex.codecogs.com/png.latex?%5CPi_%7BP%5E%5Cperp%7D">를 왼쪽으로 이동시킨 벡터에 대한 프로젝션과 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7BP%5E%5Cperp%7D">이 같다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5CPi_%7BP%5E%5Cperp%7D%20=%20%5Cdfrac%7B%5Cvec%20u%20%5Ccdot%20%5Cvec%20n%7D%7B%5ClVert%5Cvec%20n%5ClVert%5E2%7D%7B%5Cvec%20n%7D%0A"></p>
 <p>이제 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7BP%5E%5Cperp%7D"> 대입하면 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7BP%7D">를 쉽게 구할 수 있다. 즉,</p>
@@ -6173,15 +6173,15 @@ Note
 <h2 class="anchored" data-anchor-id="distance-in-vector-space">Distance in Vector Space</h2>
 <p>프로젝션은 거리를 측정할 때 유용하다. 먼저 원점(굳이 원점일 필요는 없다)과 해당 벡터 공간을 지나는 선 사이의 거리를 구해보자.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Al:%20%5C%7B%20%5Cvec%20p%20%5Cin%20%5Cmathbb%20R%5En%20%7C%20%5Cvec%20p%20=%20%5Cmathbf%20%7Bp%7D_0%20+%20t%20%5Cvec%20v,%20t%20%5Cin%20%5Cmathbb%20R%20%5C%7D%0A"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>위 그림에서 원점과 <img src="https://latex.codecogs.com/png.latex?l">의 거리는 어떻게 나타낼 수 있을까? <img src="https://latex.codecogs.com/png.latex?l">이 지나가는 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20p_0">를 그대로 두고, <img src="https://latex.codecogs.com/png.latex?l">이 원점을 지나가도록 이동해보자. 즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Al_0%20=%20%5C%7B%20%20%5Cvec%20p%20%5Cin%20%5Cmathbb%20R%5En%20%7C%20%5Cvec%20p%20=%20%5Cmathbf%20%7B0%7D%20+%20t%20%5Cvec%20v,%20t%20%5Cin%20%5Cmathbb%20R%20%5C%7D%0A"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>이제 이 벡터과 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20p_0"> 사이의 거리를 구하면 된다 .이는 앞서 제시한 벡터 프로젝션의 수직 벡터의 길이와 같다. 즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0Ad(l,%20%5Cvec%200)%20=%20d(%5Cvec%20p_0,%20l_0)%20=%20%5ClVert%20%5Cmathbf%20p_0%20-%20%5Cdfrac%7B%5Cmathbf%20p_0%20%5Ccdot%20%5Cvec%20v%7D%7B%5ClVert%20%5Cvec%20v%5ClVert%5E2%7D%5Cvec%20v%20%5ClVert%0A"></p>
 <p>이제 아래와 같은 평면과 원점의 거리를 측정해보자.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AP%20=%20%5C%7B%20%5Cvec%20p%20%5Cin%20%5Cmathbb%20R%5En%20:%20%5Cvec%20n%20%5Ccdot(%5Cvec%20p%20-%20%5Cvec%20%7Bp%7D_0)%20=%200%20%5C%7D%0A"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/plane.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/plane.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>원점을 지나도록 평면을 이동시키고 평면의 노멀 벡터가 정의된 <img src="https://latex.codecogs.com/png.latex?p_0">와 원점을 지나는 평면 <img src="https://latex.codecogs.com/png.latex?P_0"> 사이의 거리를 측정하면 된다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AP_0%20=%20%5C%7B%20%5Cvec%20p%20%5Cin%20%5Cmathbb%20R%5En%20:%20%5Cvec%20n%20%5Ccdot(%5Cvec%20p%20-%20%5Cvec%20%7B0%7D)%20=%200%20%5C%7D%0A"></p>
 <p>이 둘 사이의 거리는 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7BP%5E%5Cperp%7D">의 거리와 같다. 즉,</p>
@@ -6190,7 +6190,7 @@ Note
 </section>
 <section id="application-regression-coefficient" class="level2">
 <h2 class="anchored" data-anchor-id="application-regression-coefficient">Application: Regression Coefficient</h2>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/https:/github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:60%"></p>
 <p>앞서 소개했던 회귀 분석에 관한 포스팅 <a href="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-10-25-understanding-regression.html">Understanding Regression</a>을 다시 보자. Origin–Observed Y–Fitted <img src="https://latex.codecogs.com/png.latex?%5Chat%20Y">이 만드는 삼각형을 보자. 직각 삼각형이다. 여기서 잔차에 해당하는 <img src="https://latex.codecogs.com/png.latex?e">는 <img src="https://latex.codecogs.com/png.latex?X">의 컬럼 스페이스와 항상 직교한다. 즉, <img src="https://latex.codecogs.com/png.latex?X'%20e%20=%200">이 성립한다. 그리고 <img src="https://latex.codecogs.com/png.latex?%5Chat%20Y%20=%20X%20%5Chat%5Cbeta">이므로</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AX'(Y%20-%20%5Chat%20Y)%20%20=%20X'(Y%20-%20X%20%5Chat%5Cbeta)%20=%200%0A"></p>
 <p>이를 노멀 방정식이라고 부른다. 앞서 평면과 직교하는 벡터를 노멀 벡터라고 불렀는데, 둘은 일맥상통한다.</p>
@@ -6215,14 +6215,14 @@ MjEyMzEwM119
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2020-12-16-measuring-distance.html</guid>
+  <guid>http://www.lostineconomics.com/posts/linear-algebra/2020-12-16-measuring-distance.html</guid>
   <pubDate>Tue, 15 Dec 2020 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Revisiting Log-Linear Regression Model</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2020-11-11-log-linear-regression.html</link>
+  <link>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</link>
   <description><![CDATA[ 
 
 
@@ -6244,7 +6244,7 @@ MjEyMzEwM119
 <p>이렇게 보면 <img src="https://latex.codecogs.com/png.latex?%5Cbeta"> 값은 <img src="https://latex.codecogs.com/png.latex?x_i">가 순간적으로 변함에 따라서 변화하는 <img src="https://latex.codecogs.com/png.latex?y_i">의 % 변화를 나타낸다. 일단 기본적으로 주의해야 할 것! 위 값은 국지적 미분 값이다. 즉, 특정한 <img src="https://latex.codecogs.com/png.latex?x_i">에서의 미분 값이다. 즉, 엄밀하게 쓰면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%20/%20y_i%7D%7Bd%20x_i%7D%20%5Cbigg%7C_%7Bx_i%20=%20x_0%7D%20=%20%5Cbeta%0A"></p>
 <p>회귀분석에서 구하는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">와 위에서 얻은 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">는 동일할 수가 없다. 왜나하면, <img src="https://latex.codecogs.com/png.latex?y_i">는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/regression/https:/dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 </section>
 <section id="the-coefficient" class="level2">
 <h2 class="anchored" data-anchor-id="the-coefficient">The Coefficient</h2>
@@ -6278,14 +6278,14 @@ MjEyMzEwM119
 
  ]]></description>
   <category>regression</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2020-11-11-log-linear-regression.html</guid>
+  <guid>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</guid>
   <pubDate>Tue, 10 Nov 2020 15:00:00 GMT</pubDate>
   <media:content url="https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Viva, Binder!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-27-viva-binder.html</link>
+  <link>http://www.lostineconomics.com/posts/computer-tool/2020-10-27-viva-binder.html</link>
   <description><![CDATA[ 
 
 
@@ -6304,7 +6304,7 @@ MjEyMzEwM119
 <section id="turn-a-git-repo-into" class="level2">
 <h2 class="anchored" data-anchor-id="turn-a-git-repo-into">Turn a Git repo into!</h2>
 <p>서비스 참 시원시원하다. 로그인도 필요 없다. 깃헙 레포에 있는 코드를 받아서 가상 머신 위에 해당 결과를 구현해준다. R, Python, Julia를 지원한다. 세 언어 모두 기본 베이스로 Jupyter허브를 활용한다. 간편한 연동을 위해서는 깃헙 리포를 public으로 설정해야 한다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/binder_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 70%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/binder_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 70%;"></p>
 <ul>
 <li><code>GitHub</code>: 깃헙 주소를 넣는다.</li>
 <li><code>Git branch, tag or commit</code>: 관련된 깃 브렌치, 태그, 커밋 등을 넣는다.</li>
@@ -6317,8 +6317,8 @@ MjEyMzEwM119
 </ul></li>
 </ul>
 <p>아래 공유를 위한 주소도 떠 있으니 공유를 할 때는 해당 주소만 던져주면 된다. 이제 <kbd>launch</kbd> 버튼을 누르자. 상당히 오랜 시간 동안 뭔가가 설치된다. 설치되는 내용을 보면 소프트웨어 구동에 필요한 개별 이미지를 빌드한 후 이를 클라우드에 띄워 구동한다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <p>장점은 충분히 많다. 코드가 제대로 구현되는지 확인하는 수준이거나 코드를 가끔 짧은 시간 동안 실행해야 하는 정도라면 더 이상 바랄 게 없다. 단점이라면 도커 이미지를 빌드하고 녀석을 푸시해 실행할 때까지 시간이 좀 걸린다는 것인데, 뭐 이 정도 시간 비용 쯤이야!</p>
 
 
@@ -6326,14 +6326,14 @@ MjEyMzEwM119
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-27-viva-binder.html</guid>
+  <guid>http://www.lostineconomics.com/posts/computer-tool/2020-10-27-viva-binder.html</guid>
   <pubDate>Mon, 26 Oct 2020 15:00:00 GMT</pubDate>
   <media:content url="https://mybinder.org/static/logo.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
   <title>\(\rm\LaTeX\) in Modern Ways</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-24-classy-latex.html</link>
+  <link>http://www.lostineconomics.com/posts/computer-tool/2020-10-24-classy-latex.html</link>
   <description><![CDATA[ 
 
 
@@ -6422,19 +6422,19 @@ MjEyMzEwM119
 <span id="cb8-9"><span class="ex" style="color: null;">tlmgr</span> update <span class="at" style="color: #657422;">--all</span></span></code></pre></div>
 <p>상태를 초기화하고 한글을 까는 명령어들을 모아둔 것이다. 실행 중인 도커 내에서 해당 디렉토리로 이동해서 <code>./install_kotex.sh</code>로 명령을 실행하자.</p>
 <p>이제 VS Code로 가자. 필요한 Extension은 앞서 살펴본 Latex workshop과 더불어 <a href="https://code.visualstudio.com/docs/remote/remote-overview">Remote-Container</a>를 설치하자. 이 녀석을 설치하면 WSL 내에서 돌아가는 컨테이너 안에도 VS Code를 통해 바로 접속할 수 있다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - 아래 <code>&gt;&lt;</code>으로 된 부분을 클릭하면 상단에 메뉴가 뜬다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - “attach to running container”를 실행해서 실행중인 도커 콘테이너를 부착한다.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_3.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - 아래 <code>&gt;&lt;</code>으로 된 부분을 클릭하면 상단에 메뉴가 뜬다.</p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - “attach to running container”를 실행해서 실행중인 도커 콘테이너를 부착한다.</p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_3.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>부착하면 새 창이 뜨면서 아래 녹색 창이 콘테이너 부착되었음을 알려준다.</li>
 <li>콘테이너 내부에 Latex Workshop 확장(extension)을 설치해야 한다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_4.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_4.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>설치 후 해당 Extension의 설정을 고쳐주자.</li>
 <li>위에 찾기창에서 디폴트로 떠 있는 내용 뒤에 “pdf” 치면 pdf에 관련된 설정만 필터링된다.</li>
 </ul>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>위 항목을 찾아서 적당한 포워딩 포트를 넣어준다.</li>
 <li>포트가 잘 포워딩 된다면, 아래와 같이 VS Code에서 PDF 뷰어를 활성화할 수 있다.</li>
@@ -6450,7 +6450,7 @@ MjEyMzEwM119
 <section id="container-setting" class="level4">
 <h4 class="anchored" data-anchor-id="container-setting">Container Setting</h4>
 <p>콘테이너에서 해당 포트가 잘 포워딩되고 있는지 확인하자.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <ul>
 <li>옆에 원으로 표시해 둔 곳은 <code>Remote-Container</code> 확장으로 바로 가는 단축 아이콘이다.</li>
 <li>위 그림처럼 35556 포트를 통해 잘 포워딩되고 있음을 알 수 있다.
@@ -6459,7 +6459,7 @@ MjEyMzEwM119
 </ul></li>
 </ul>
 <p>이제 VS Code에서 텍 파일을 열고 문서를 작성하고 컴파일하면 된다. Latex Workshop이 설치되어 있다면, <code>.tex</code> 파일에 알아서 반응하니 걱정 마시라.</p>
-<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_6.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_6.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 </section>
 </section>
 </section>
@@ -6481,7 +6481,7 @@ MjEyMzEwM119
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-24-classy-latex.html</guid>
+  <guid>http://www.lostineconomics.com/posts/computer-tool/2020-10-24-classy-latex.html</guid>
   <pubDate>Fri, 23 Oct 2020 15:00:00 GMT</pubDate>
   <media:content url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/LaTeX_project_logo_bird.svg/1920px-LaTeX_project_logo_bird.svg.png" medium="image" type="image/png"/>
 </item>
