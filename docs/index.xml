@@ -1680,8 +1680,13 @@ Note
 <p>아래 그림에서 보듯이, <img src="https://latex.codecogs.com/png.latex?Ax">라는 변환과 <img src="https://latex.codecogs.com/png.latex?B%5Bx%5D_%7B%5Cmathcal%20B%7D">라는 변환은 좌표계만 다를 뿐 동일한 변환이다. <img src="https://latex.codecogs.com/png.latex?C%20B%20C%5E%7B-1%7D">의 기저의 변화를 살펴보면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cunderbrace%7Bu%20%5Crightarrow%20%5Cmathcal%20B%7D_%7BC%5E%7B-1%7D%7D%20&amp;%20%5Ccdots%20B%20%5Ccdots%20%5Cunderbrace%7B%5Cmathcal%20B%20%5Crightarrow%20u%7D_%7BC%7D%20%5C%5C%0A&amp;%20%5Ccdots%20A%20%5Ccdots%0A%5Cend%7Baligned%7D%0A"></p>
 <p>로 나타낼 수 있다.</p>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="img-fluid" alt="enter image description here">{ style=“margin: auto; display: block; border:1.5px solid #021a40; width=60%; }</p>
-<p>Similar matrix인 <img src="https://latex.codecogs.com/png.latex?A">과 <img src="https://latex.codecogs.com/png.latex?B"> 사이에서 다음과 같은 관계가 성립한다.</p>
+<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width=60%;">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
+<p><br> Similar matrix인 <img src="https://latex.codecogs.com/png.latex?A">과 <img src="https://latex.codecogs.com/png.latex?B"> 사이에서 다음과 같은 관계가 성립한다.</p>
 <ol type="1">
 <li><img src="https://latex.codecogs.com/png.latex?%7B%5Crm%20Tr%7D(A)%20=%20%7B%5Crm%20Tr%7D(B)"></li>
 <li><img src="https://latex.codecogs.com/png.latex?%7B%5Crm%20det%7D(A)%20=%20%7B%5Crm%20det%7D(B)"></li>
@@ -3704,8 +3709,13 @@ Note
 <p>아래 그림에서 보듯이, <img src="https://latex.codecogs.com/png.latex?Ax">라는 변환과 <img src="https://latex.codecogs.com/png.latex?B%5Bx%5D_%7B%5Cmathcal%20B%7D">라는 변환은 좌표계만 다를 뿐 동일한 변환이다. <img src="https://latex.codecogs.com/png.latex?C%20B%20C%5E%7B-1%7D">의 기저의 변화를 살펴보면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cunderbrace%7Bu%20%5Crightarrow%20%5Cmathcal%20B%7D_%7BC%5E%7B-1%7D%7D%20&amp;%20%5Ccdots%20B%20%5Ccdots%20%5Cunderbrace%7B%5Cmathcal%20B%20%5Crightarrow%20u%7D_%7BC%7D%20%5C%5C%0A&amp;%20%5Ccdots%20A%20%5Ccdots%0A%5Cend%7Baligned%7D%0A"></p>
 <p>로 나타낼 수 있다.</p>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="img-fluid" alt="enter image description here">{ style=“margin: auto; display: block; border:1.5px solid #021a40; width=60%; }</p>
-<p>Similar matrix인 <img src="https://latex.codecogs.com/png.latex?A">과 <img src="https://latex.codecogs.com/png.latex?B"> 사이에서 다음과 같은 관계가 성립한다.</p>
+<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width=60%;">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
+<p><br> Similar matrix인 <img src="https://latex.codecogs.com/png.latex?A">과 <img src="https://latex.codecogs.com/png.latex?B"> 사이에서 다음과 같은 관계가 성립한다.</p>
 <ol type="1">
 <li><img src="https://latex.codecogs.com/png.latex?%7B%5Crm%20Tr%7D(A)%20=%20%7B%5Crm%20Tr%7D(B)"></li>
 <li><img src="https://latex.codecogs.com/png.latex?%7B%5Crm%20det%7D(A)%20=%20%7B%5Crm%20det%7D(B)"></li>
@@ -5793,8 +5803,13 @@ Note
 <p>아래 그림에서 보듯이, <img src="https://latex.codecogs.com/png.latex?Ax">라는 변환과 <img src="https://latex.codecogs.com/png.latex?B%5Bx%5D_%7B%5Cmathcal%20B%7D">라는 변환은 좌표계만 다를 뿐 동일한 변환이다. <img src="https://latex.codecogs.com/png.latex?C%20B%20C%5E%7B-1%7D">의 기저의 변화를 살펴보면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cunderbrace%7Bu%20%5Crightarrow%20%5Cmathcal%20B%7D_%7BC%5E%7B-1%7D%7D%20&amp;%20%5Ccdots%20B%20%5Ccdots%20%5Cunderbrace%7B%5Cmathcal%20B%20%5Crightarrow%20u%7D_%7BC%7D%20%5C%5C%0A&amp;%20%5Ccdots%20A%20%5Ccdots%0A%5Cend%7Baligned%7D%0A"></p>
 <p>로 나타낼 수 있다.</p>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="img-fluid" alt="enter image description here">{ style=“margin: auto; display: block; border:1.5px solid #021a40; width=60%; }</p>
-<p>Similar matrix인 <img src="https://latex.codecogs.com/png.latex?A">과 <img src="https://latex.codecogs.com/png.latex?B"> 사이에서 다음과 같은 관계가 성립한다.</p>
+<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width=60%;">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
+<p><br> Similar matrix인 <img src="https://latex.codecogs.com/png.latex?A">과 <img src="https://latex.codecogs.com/png.latex?B"> 사이에서 다음과 같은 관계가 성립한다.</p>
 <ol type="1">
 <li><img src="https://latex.codecogs.com/png.latex?%7B%5Crm%20Tr%7D(A)%20=%20%7B%5Crm%20Tr%7D(B)"></li>
 <li><img src="https://latex.codecogs.com/png.latex?%7B%5Crm%20det%7D(A)%20=%20%7B%5Crm%20det%7D(B)"></li>
