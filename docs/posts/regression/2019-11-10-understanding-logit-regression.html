@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.436">
+<meta name="generator" content="quarto-0.9.415">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -130,6 +130,8 @@ ul.task-list{list-style: none;}
 </div>
 
 
+
+
 <div class="quarto-title-meta">
 
     <div>
@@ -254,7 +256,7 @@ ul.task-list{list-style: none;}
 </section>
 <section id="어떤-경우-ols는-곤란한가" class="level3">
 <h3 class="anchored" data-anchor-id="어떤-경우-ols는-곤란한가">어떤 경우 OLS는 곤란한가?</h3>
-<p><img src="https://miro.medium.com/max/1280/0*gKOV65tvGfY8SMem.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://miro.medium.com/max/1280/0*gKOV65tvGfY8SMem.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
 <p>regressor가 하나인 상황을 가정하고 위의 그림을 보자. regressand가 0, 1인 상태로 그대로 회귀분석을 하면 그림의 왼쪽 같이 나온다. 이 상태에서는 뭐가 문제일까? 회귀식의 기울기를 구할 수 있으니 된 것 아니냐? 문제가 있다. 앞서 0과 1은 값 그 자체로 의미를 지니지 않는다고 말했다. 그런데 이를 그대로 값으로 바꿔서 회귀분석을 해도 좋은 것일까? 그러기에는 뭔가 찜찜하다. 게다가 <span class="math inline">\(x\)</span> 값에 따라서 회귀식의 예측치가 <span class="math inline">\([0,1]\)</span>을 벗어날 수 있다. 임의로 계단 함수를 다시 얹어서 OLS(통상적인 최소자승법이라는 의미에서 Ordinary Least Squares라고 흔히 부른다)를 구제할 수도 있겠다. 즉,</p>
 <p><span class="math display">\[
 s(\beta x) =
@@ -301,9 +303,14 @@ p(\boldsymbol{x_i}) &amp; = \dfrac{1}{e^{-\boldsymbol{x_i}\boldsymbol{\beta}} + 
 <p>앞서 본 그림의 오른쪽과 같은 형태의 로지스틱 함수가 도출된다. 요컨대, 로지스틱 함수는 regressor를 해당 사건이 발생할 확률과 연결시키는 장치다. 이렇게 보면 로지스틱 회귀는 이른바 일반 선형 모형(Generalized Linear Model)의 한 사례다. 일반 선형 모형이란 종속 변수, 즉 식의 왼쪽이 어려가지 이유에서 실수 값이 아닌 제한된 값 혹은 범주 값을 지닐 때 이를 여러가지 방법을 통해 실수로 바꾸는 방식으로 추정을 하는 방법이다. 지금까지 살펴본 방법이 그 사례의 하나다.</p>
 </section>
 </section>
-<section id="link-function" class="level2">
+<section id="link-function" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="link-function">Link function</h2>
-<p>말이 나온 김에 링크 함수에 대해서 살펴보고 가자. 위에서 보듯이, 사실 회귀 분석이란 실수의 범위를 지니는 좌변을 역시 변수의 선형결합을 통해 이루어진 우변으로 설명하려는 것이다. 그런데 만일 좌변의 영역이 실수 전체가 아니라면? - 절단 자료 (truncated): 지속 시간의 경우 0보다 큰 실수가 된다. - 범주형 자료: 이 경우는 수료 표현이 힘들다. - 정수형 자료</p>
+<p>말이 나온 김에 링크 함수에 대해서 살펴보고 가자. 위에서 보듯이, 사실 회귀 분석이란 실수의 범위를 지니는 좌변을 역시 변수의 선형결합을 통해 이루어진 우변으로 설명하려는 것이다. 그런데 만일 좌변의 영역이 실수 전체가 아니라면? 예를 들면 아래와 같다.</p>
+<ul>
+<li>절단 자료 (truncated): 지속 시간의 경우 0보다 큰 실수가 된다.</li>
+<li>범주형 자료: 이 경우는 수료 표현이 힘들다.</li>
+<li>정수형 자료</li>
+</ul>
 <p>이럴 때는 어떻게 해야 할까? 회귀 분석의 틀을 벗어나지 않으면서 가장 간단한 해결책은 좌변을 바꾸는 것이다. 좌변은 어떻게 바꿔야 할까? 우선 좌변에 올 것의 조건부 평균을 다음과 같이 두자.</p>
 <p><span class="math display">\[
 \mathrm E (y_i | \boldsymbol x_i) =\mu_i
@@ -321,15 +328,17 @@ g(\mu_i) = \eta_i = \boldsymbol x_i^T \beta
 p(\boldsymbol{x_i}) = \dfrac{1}{e^{-\boldsymbol{x_i}\boldsymbol{\beta}} + 1}
 \]</span></p>
 <p>이는 평균 함수(mean function)이라고 부른다. 로짓 회귀의 경우는 이산 변수를 활용하기 때문에 확률 질량 함수가 곧 확률이 된다는 점을 기억해두자.</p>
-<section id="three-steps" class="level3">
+<section id="three-steps" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="three-steps">Three steps</h3>
 <p>위 과정이 세 가지 단계를 거쳤다는 점을 쉽게 알 수 있을 것이다.</p>
 <p><span class="math display">\[
 y_i \xrightarrow{\rm prob.~function} \mu_i \xrightarrow{\rm link~function} \eta_i = \boldsymbol x_i \beta
 \]</span></p>
-<p>원래 관찰값 <span class="math inline">\(y_i\)</span>는 모형에 관한 가정을 통해서 확률 (질량/밀도) 함수를 통해 <span class="math inline">\(\mu_i\)</span> 값으로 변형된다. 이 값은 다시 연결 함수를 통해서 선형 회귀가 가능한 형태로 변형된다. 이제 <span class="math inline">\(y_i\)</span>에 관해서 어떤 가정을 하는지에 따라서 다양한 형태의 <span class="math inline">\(\mu_i\)</span>를 얻게 된다는 점을 알 수 있을 것이다.</p>
-<p>문제는 어떻게 연결 함수를 찾을 수 있을까 인데, 이는 여기서 다룰 범위를 벗어난다. <a href="https://www.stat.cmu.edu/~ryantibs/advmethods/notes/glm.pdf">이 글</a>을 참고하자.</p>
-</section>
+<p>원래 관찰값 <span class="math inline">\(y_i\)</span>는 모형에 관한 가정을 통해서 확률 (질량/밀도) 함수를 통해 (일조의 확률값) <span class="math inline">\(\mu_i\)</span> 로 변형된다. 이는 다시 연결 함수를 통해서 선형 회귀가 가능한 형태로 변형된다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="math inline">\(y_i\)</span>가 어떤 특성을 지니는지에 따라서 다양한 형태의 <span class="math inline">\(\mu_i\)</span>가 가능하고, 여기에 적절한 연결 함수를 적용해야 한다. 이는 논의 범위를 벗어난다. <a href="https://www.stat.cmu.edu/~ryantibs/advmethods/notes/glm.pdf">이 글</a>을 참고하자.</p>
+</div></div></section>
 </section>
 <section id="계수는-어떻게-구하나" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="계수는-어떻게-구하나">계수는 어떻게 구하나?</h2>
