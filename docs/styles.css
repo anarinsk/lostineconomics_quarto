@@ -44,3 +44,14 @@ p {
   font-family: 'D2Coding', monospace !important;
   font-size: 95%;
 }
+
+.figure{
+  border:1.5px silver solid; 
+  margin: auto; display: block; 
+  padding: 5px;
+  text-align: left; 
+}
+
+.figure-caption {
+  font-size:80%;
+}
