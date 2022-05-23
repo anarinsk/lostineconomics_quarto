@@ -47,7 +47,6 @@ p {
 
 .figure{
   border:1.5px silver solid; 
-  margin: auto; display: block; 
   padding: 5px;
   text-align: left; 
 }
