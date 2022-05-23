@@ -18,8 +18,8 @@ categories: [regression]
 
 여기서 회귀분석을 해설할 생각은 없다. 이미 너무나 많은 그리고 매우 훌륭한 내용들이 책, 웹, 강의로 넘쳐날테니까. 이 글의 용도는 그림 하나로 지나치기 쉬운 회귀분석의 '핵심'을 살피는 것이다. [crossvalidated](https://stats.stackexchange.com/questions/123651/geometric-interpretation-of-multiple-correlation-coefficient-r-and-coefficient)에서 아래 그림을 보는 순간 일종의 '돈오돈수'가 강림했다. (이렇게 이해하면 쉬웠을 것을...) 
 
-![](https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;" }
-
+![벡터 스페이스에 바라본 회귀 분석](https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true){ style="margin: auto; display: block; width: 60%;" }
+<br>
 먼저 우리에게 익숙한 회귀분석 모델을 매트릭스로 적어보자. 
 
 $$
@@ -32,7 +32,7 @@ $$
 흔히 $\mathbf Y$를 종속변수, $\mathbf X$를 독립변수로 부르기도 한다. 하지만 이러한 이름에는 혼란의 여지가 있다. 여기서는 regressor, regressand라는 영어 표현을 그대로 쓰도록 하겠다. 
 :::
 
-![](https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;" }
+![독립변수 1개인 회귀 분석](https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true){ style="margin: auto; display: block; width: 60%;" }
 
 위 그림은 1개의 regressor가 존재할 때 이것과 regressand를 그대로 2차원 평면에 관찰 수만큼 찍은 것이다. 첫번째 그림에서 "Observed Y"는 점 하나가 $n$ 개의 regressand를 모두 포괄한다. $\mathbf{Y} \in {\mathbb R}^{n}$ 벡터, 즉 $n$ 차원 벡터이고, 이것이 회귀식 좌변의 관찰값 $n$ 개를 표현한다. 
 
@@ -40,7 +40,7 @@ $$
 
 이렇게 생각하면 좋겠다. $x_i \in {\mathbb R}^{n}$ 벡터가 $k(<n)$ 개 있다고 하자. 이는 $n$ 보다 차원이 낮기 때문에 기하학적으로는 $n$ 차원 공간에서 초평면(hyperplane)으로 나타날 것이다. 위 그림에서 컬럼 스페이스가 평면으로 표현되는 것은 이러한 취지다. 3차원 벡터의 열 공간이 생성하는 초평면을 예시하면 아래와 같다. 
 
-![](https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;" }
+![2차원 컬럼 스페이스](https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg){ style="margin: auto; display: block; width: 60%;" }
 
 col $\mathbf X$의 최대 차원, 즉 $\mathbf X$의 랭크(위수)는 무엇일까? 회귀분석에서는 대체로 $n > k$가 일반적이고 이런 상황에서 $\mathbf X$의 랭크는 $k$를 넘을 수 없다. 다시 말하면, $\mathbf X$가 생성하는(span)하는 컬럼 스페이스의 차원의 크기가 $k$를 넘을 수 없다. 그리고 잘 된 회귀분석이라면 ${\rm rank}(\mathbf X) = k$를 만족한다. 
 
@@ -90,7 +90,7 @@ $$
 
 아래 그림을 참고하자. 
 
-![](https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/regression-vector_comb.png?raw=true){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;" }
+![잔차의 의미](https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/regression-vector_comb.png?raw=true){ style="margin: auto; display: block; width: 60%;" }
 
 ## R squared as Pythagorean Theorem 
 

@@ -1,5 +1,5 @@
 ---
-title: Revisiting Log-Linear Regression Model 
+title: Understanding Log-Linear Regression Model 
 description: 로그 선형 모델의 베타를 어떻게 볼까? 
 author: "JS HUHH"
 date: "11/11/2020"
@@ -36,7 +36,7 @@ $$
 
 회귀분석에서 구하는 $\beta$와 위에서 얻은 $\beta$는 동일할 수가 없다. 왜나하면, $y_i$는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자. 
 
- ![](https://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;" }
+ ![지수 함수의 접선의 기울기](https://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif){ style="margin: auto; display: block; width: 70%;" }
 
 ## The Coefficient 
 

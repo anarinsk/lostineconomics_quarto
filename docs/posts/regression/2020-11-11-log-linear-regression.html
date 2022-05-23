@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2020-11-11">
 <meta name="description" content="로그 선형 모델의 베타를 어떻게 볼까?">
 
-<title>lostineconomics.com - Revisiting Log-Linear Regression Model</title>
+<title>lostineconomics.com - Understanding Log-Linear Regression Model</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -117,7 +117,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Revisiting Log-Linear Regression Model</h1>
+<h1 class="title">Understanding Log-Linear Regression Model</h1>
   <div class="quarto-categories">
     <div class="quarto-category">regression</div>
   </div>
@@ -176,7 +176,12 @@ ul.task-list{list-style: none;}
 \dfrac{d y_i / y_i}{d x_i} \bigg|_{x_i = x_0} = \beta
 \]</span></p>
 <p>회귀분석에서 구하는 <span class="math inline">\(\beta\)</span>와 위에서 얻은 <span class="math inline">\(\beta\)</span>는 동일할 수가 없다. 왜나하면, <span class="math inline">\(y_i\)</span>는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
-<p><img src="https://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width: 70%;">
+<figure class="figure">
+<p><img src="https://dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">지수 함수의 접선의 기울기</figcaption><p></p>
+</figure>
+</div>
 </section>
 <section id="the-coefficient" class="level2">
 <h2 class="anchored" data-anchor-id="the-coefficient">The Coefficient</h2>

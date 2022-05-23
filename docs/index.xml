@@ -2132,7 +2132,7 @@ MjEyMzEwM119
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Revisiting Log-Linear Regression Model</title>
+  <title>Understanding Log-Linear Regression Model</title>
   <dc:creator>JS HUHH</dc:creator>
   <link>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</link>
   <description><![CDATA[ 
@@ -2156,7 +2156,12 @@ MjEyMzEwM119
 <p>이렇게 보면 <img src="https://latex.codecogs.com/png.latex?%5Cbeta"> 값은 <img src="https://latex.codecogs.com/png.latex?x_i">가 순간적으로 변함에 따라서 변화하는 <img src="https://latex.codecogs.com/png.latex?y_i">의 % 변화를 나타낸다. 일단 기본적으로 주의해야 할 것! 위 값은 국지적 미분 값이다. 즉, 특정한 <img src="https://latex.codecogs.com/png.latex?x_i">에서의 미분 값이다. 즉, 엄밀하게 쓰면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%20/%20y_i%7D%7Bd%20x_i%7D%20%5Cbigg%7C_%7Bx_i%20=%20x_0%7D%20=%20%5Cbeta%0A"></p>
 <p>회귀분석에서 구하는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">와 위에서 얻은 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">는 동일할 수가 없다. 왜나하면, <img src="https://latex.codecogs.com/png.latex?y_i">는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width: 70%;">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/regression/https:/dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 </section>
 <section id="the-coefficient" class="level2">
 <h2 class="anchored" data-anchor-id="the-coefficient">The Coefficient</h2>
@@ -4151,7 +4156,7 @@ MjEyMzEwM119
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Revisiting Log-Linear Regression Model</title>
+  <title>Understanding Log-Linear Regression Model</title>
   <dc:creator>JS HUHH</dc:creator>
   <link>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</link>
   <description><![CDATA[ 
@@ -4175,7 +4180,12 @@ MjEyMzEwM119
 <p>이렇게 보면 <img src="https://latex.codecogs.com/png.latex?%5Cbeta"> 값은 <img src="https://latex.codecogs.com/png.latex?x_i">가 순간적으로 변함에 따라서 변화하는 <img src="https://latex.codecogs.com/png.latex?y_i">의 % 변화를 나타낸다. 일단 기본적으로 주의해야 할 것! 위 값은 국지적 미분 값이다. 즉, 특정한 <img src="https://latex.codecogs.com/png.latex?x_i">에서의 미분 값이다. 즉, 엄밀하게 쓰면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%20/%20y_i%7D%7Bd%20x_i%7D%20%5Cbigg%7C_%7Bx_i%20=%20x_0%7D%20=%20%5Cbeta%0A"></p>
 <p>회귀분석에서 구하는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">와 위에서 얻은 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">는 동일할 수가 없다. 왜나하면, <img src="https://latex.codecogs.com/png.latex?y_i">는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width: 70%;">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/regression/https:/dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 </section>
 <section id="the-coefficient" class="level2">
 <h2 class="anchored" data-anchor-id="the-coefficient">The Coefficient</h2>
@@ -6235,7 +6245,7 @@ MjEyMzEwM119
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Revisiting Log-Linear Regression Model</title>
+  <title>Understanding Log-Linear Regression Model</title>
   <dc:creator>JS HUHH</dc:creator>
   <link>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</link>
   <description><![CDATA[ 
@@ -6259,7 +6269,12 @@ MjEyMzEwM119
 <p>이렇게 보면 <img src="https://latex.codecogs.com/png.latex?%5Cbeta"> 값은 <img src="https://latex.codecogs.com/png.latex?x_i">가 순간적으로 변함에 따라서 변화하는 <img src="https://latex.codecogs.com/png.latex?y_i">의 % 변화를 나타낸다. 일단 기본적으로 주의해야 할 것! 위 값은 국지적 미분 값이다. 즉, 특정한 <img src="https://latex.codecogs.com/png.latex?x_i">에서의 미분 값이다. 즉, 엄밀하게 쓰면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%20/%20y_i%7D%7Bd%20x_i%7D%20%5Cbigg%7C_%7Bx_i%20=%20x_0%7D%20=%20%5Cbeta%0A"></p>
 <p>회귀분석에서 구하는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">와 위에서 얻은 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">는 동일할 수가 없다. 왜나하면, <img src="https://latex.codecogs.com/png.latex?y_i">는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width: 70%;">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/regression/https:/dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 </section>
 <section id="the-coefficient" class="level2">
 <h2 class="anchored" data-anchor-id="the-coefficient">The Coefficient</h2>
