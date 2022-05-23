@@ -22,7 +22,7 @@ categories: [computer-tool]
 
 서비스 참 시원시원하다. 로그인도 필요 없다. 깃헙 레포에 있는 코드를 받아서 가상 머신 위에 해당 결과를 구현해준다. R, Python, Julia를 지원한다. 세 언어 모두 기본 베이스로 Jupyter허브를 활용한다. 간편한 연동을 위해서는 깃헙 리포를 public으로 설정해야 한다. 
 
- ![](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/binder_1.png){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 70%;" }
+ ![](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/binder_1.png){ style="margin: auto; display: block; width: 70%;" }
 
 - `GitHub`: 깃헙 주소를 넣는다. 
 - `Git branch, tag or commit`: 관련된 깃 브렌치, 태그, 커밋 등을 넣는다. 
@@ -32,9 +32,9 @@ categories: [computer-tool]
 
 아래 공유를 위한 주소도 떠 있으니 공유를 할 때는 해당 주소만 던져주면 된다. 이제 <kbd>launch</kbd> 버튼을 누르자. 상당히 오랜 시간 동안 뭔가가 설치된다. 설치되는 내용을 보면 소프트웨어 구동에 필요한 개별 이미지를 빌드한 후 이를 클라우드에 띄워 구동한다. 
 
- ![](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_7.png){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;" }
+ ![](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_7.png){ style="margin: auto; display: block; width: 80%;" }
  
- ![](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_5.png){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;" }
+ ![](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_5.png){ style="margin: auto; display: block; width: 80%;" }
  
 장점은 충분히 많다. 코드가 제대로 구현되는지 확인하는 수준이거나 코드를 가끔 짧은 시간 동안 실행해야 하는 정도라면 더 이상 바랄 게 없다. 단점이라면 도커 이미지를 빌드하고 녀석을 푸시해 실행할 때까지 시간이 좀 걸린다는 것인데, 뭐 이 정도 시간 비용 쯤이야! 
 
