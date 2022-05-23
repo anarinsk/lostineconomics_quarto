@@ -1521,7 +1521,7 @@ Note
 <li><img src="https://latex.codecogs.com/png.latex?e_1%20=%20v_1"></li>
 <li><img src="https://latex.codecogs.com/png.latex?e_2%20=%20v_2%20-%20%5CPi_%7Be_1%7D(v_2)"></li>
 </ul>
-<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;">
+<div class="quarto-figure quarto-figure-center" style="width: 80%;">
 <figure class="figure">
 <p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="img-fluid figure-img"></p>
 <p></p><p></p>
@@ -1529,7 +1529,12 @@ Note
 </div>
 <p><br> 위의 그림에서 보듯이 <img src="https://latex.codecogs.com/png.latex?v_2">는 <img src="https://latex.codecogs.com/png.latex?v_1"> 프로젝션된 벡터와 이와 직교하는 <img src="https://latex.codecogs.com/png.latex?e_2">와의 합으로 계산할 수 있다. 따라서 <img src="https://latex.codecogs.com/png.latex?e_2%20=%20v_2%20-%20%5CPi_%7Be_1%7D(v_2)">가 성립한다. 벡터의 빼기 관점에서 생각해보면 어떨까? <img src="https://latex.codecogs.com/png.latex?v_2">와 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7Be_1%7D(v_2)">의 차이가 <img src="https://latex.codecogs.com/png.latex?e_2">다. 벡터는 방향과 크기로 정의된다는 점을 다시 기억하자. 같은 방식으로 아래 그림에서 보듯이 더 많은 축과 직교하는 벡터들을 구성할 수 있다.</p>
 <p>이후 <img src="https://latex.codecogs.com/png.latex?%5Chat%20e_i%20=%20%5Cdfrac%7Be_i%7D%7B%5CVert%20e_i%20%5CVert%7D">로 <img src="https://latex.codecogs.com/png.latex?e_i">를 표준화하면 된다.</p>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<div class="quarto-figure quarto-figure-center" style="width: 80%;">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <p><img src="https://latex.codecogs.com/png.latex?%0Av%20=%20%7B%5Crm%20proj%7D_%7Bu_1%7D%20(v)%20+%20%7B%5Crm%20proj%7D_%7Bu_2%7D(v)%20+%20w%0A"></p>
 <p>즉, 원래 벡터(<img src="https://latex.codecogs.com/png.latex?v">)에서 이미 확립된 직교 벡터에서 <img src="https://latex.codecogs.com/png.latex?v">로 쏜 프로젝션 벡터를 빼주면 원하는 새로운 직교 벡터를 얻을 수 있다. 따라서</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0Ae_3%20&amp;%20=%20v_3%20-%20%5CPi_%7Be_1%7D(v_3)%20-%20%5CPi_%7Be_2%7D(v_3)%20%5C%5C%0A&amp;~~~%5Cvdots%20%5C%5C%0Ae_n%20&amp;%20=%20v_n%20-%20%5Csum_%7Bi=1%7D%5E%7Bn-1%7D%20%5CPi_%7Be_i%7D(v_n)%0A%5Cend%7Baligned%7D%0A"></p>
@@ -3535,7 +3540,7 @@ Note
 <li><img src="https://latex.codecogs.com/png.latex?e_1%20=%20v_1"></li>
 <li><img src="https://latex.codecogs.com/png.latex?e_2%20=%20v_2%20-%20%5CPi_%7Be_1%7D(v_2)"></li>
 </ul>
-<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;">
+<div class="quarto-figure quarto-figure-center" style="width: 80%;">
 <figure class="figure">
 <p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="img-fluid figure-img"></p>
 <p></p><p></p>
@@ -3543,7 +3548,12 @@ Note
 </div>
 <p><br> 위의 그림에서 보듯이 <img src="https://latex.codecogs.com/png.latex?v_2">는 <img src="https://latex.codecogs.com/png.latex?v_1"> 프로젝션된 벡터와 이와 직교하는 <img src="https://latex.codecogs.com/png.latex?e_2">와의 합으로 계산할 수 있다. 따라서 <img src="https://latex.codecogs.com/png.latex?e_2%20=%20v_2%20-%20%5CPi_%7Be_1%7D(v_2)">가 성립한다. 벡터의 빼기 관점에서 생각해보면 어떨까? <img src="https://latex.codecogs.com/png.latex?v_2">와 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7Be_1%7D(v_2)">의 차이가 <img src="https://latex.codecogs.com/png.latex?e_2">다. 벡터는 방향과 크기로 정의된다는 점을 다시 기억하자. 같은 방식으로 아래 그림에서 보듯이 더 많은 축과 직교하는 벡터들을 구성할 수 있다.</p>
 <p>이후 <img src="https://latex.codecogs.com/png.latex?%5Chat%20e_i%20=%20%5Cdfrac%7Be_i%7D%7B%5CVert%20e_i%20%5CVert%7D">로 <img src="https://latex.codecogs.com/png.latex?e_i">를 표준화하면 된다.</p>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<div class="quarto-figure quarto-figure-center" style="width: 80%;">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <p><img src="https://latex.codecogs.com/png.latex?%0Av%20=%20%7B%5Crm%20proj%7D_%7Bu_1%7D%20(v)%20+%20%7B%5Crm%20proj%7D_%7Bu_2%7D(v)%20+%20w%0A"></p>
 <p>즉, 원래 벡터(<img src="https://latex.codecogs.com/png.latex?v">)에서 이미 확립된 직교 벡터에서 <img src="https://latex.codecogs.com/png.latex?v">로 쏜 프로젝션 벡터를 빼주면 원하는 새로운 직교 벡터를 얻을 수 있다. 따라서</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0Ae_3%20&amp;%20=%20v_3%20-%20%5CPi_%7Be_1%7D(v_3)%20-%20%5CPi_%7Be_2%7D(v_3)%20%5C%5C%0A&amp;~~~%5Cvdots%20%5C%5C%0Ae_n%20&amp;%20=%20v_n%20-%20%5Csum_%7Bi=1%7D%5E%7Bn-1%7D%20%5CPi_%7Be_i%7D(v_n)%0A%5Cend%7Baligned%7D%0A"></p>
@@ -5614,7 +5624,7 @@ Note
 <li><img src="https://latex.codecogs.com/png.latex?e_1%20=%20v_1"></li>
 <li><img src="https://latex.codecogs.com/png.latex?e_2%20=%20v_2%20-%20%5CPi_%7Be_1%7D(v_2)"></li>
 </ul>
-<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;">
+<div class="quarto-figure quarto-figure-center" style="width: 80%;">
 <figure class="figure">
 <p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="img-fluid figure-img"></p>
 <p></p><p></p>
@@ -5622,7 +5632,12 @@ Note
 </div>
 <p><br> 위의 그림에서 보듯이 <img src="https://latex.codecogs.com/png.latex?v_2">는 <img src="https://latex.codecogs.com/png.latex?v_1"> 프로젝션된 벡터와 이와 직교하는 <img src="https://latex.codecogs.com/png.latex?e_2">와의 합으로 계산할 수 있다. 따라서 <img src="https://latex.codecogs.com/png.latex?e_2%20=%20v_2%20-%20%5CPi_%7Be_1%7D(v_2)">가 성립한다. 벡터의 빼기 관점에서 생각해보면 어떨까? <img src="https://latex.codecogs.com/png.latex?v_2">와 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7Be_1%7D(v_2)">의 차이가 <img src="https://latex.codecogs.com/png.latex?e_2">다. 벡터는 방향과 크기로 정의된다는 점을 다시 기억하자. 같은 방식으로 아래 그림에서 보듯이 더 많은 축과 직교하는 벡터들을 구성할 수 있다.</p>
 <p>이후 <img src="https://latex.codecogs.com/png.latex?%5Chat%20e_i%20=%20%5Cdfrac%7Be_i%7D%7B%5CVert%20e_i%20%5CVert%7D">로 <img src="https://latex.codecogs.com/png.latex?e_i">를 표준화하면 된다.</p>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<div class="quarto-figure quarto-figure-center" style="width: 80%;">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <p><img src="https://latex.codecogs.com/png.latex?%0Av%20=%20%7B%5Crm%20proj%7D_%7Bu_1%7D%20(v)%20+%20%7B%5Crm%20proj%7D_%7Bu_2%7D(v)%20+%20w%0A"></p>
 <p>즉, 원래 벡터(<img src="https://latex.codecogs.com/png.latex?v">)에서 이미 확립된 직교 벡터에서 <img src="https://latex.codecogs.com/png.latex?v">로 쏜 프로젝션 벡터를 빼주면 원하는 새로운 직교 벡터를 얻을 수 있다. 따라서</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0Ae_3%20&amp;%20=%20v_3%20-%20%5CPi_%7Be_1%7D(v_3)%20-%20%5CPi_%7Be_2%7D(v_3)%20%5C%5C%0A&amp;~~~%5Cvdots%20%5C%5C%0Ae_n%20&amp;%20=%20v_n%20-%20%5Csum_%7Bi=1%7D%5E%7Bn-1%7D%20%5CPi_%7Be_i%7D(v_n)%0A%5Cend%7Baligned%7D%0A"></p>
