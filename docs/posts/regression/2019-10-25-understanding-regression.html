@@ -176,22 +176,10 @@ ul.task-list{list-style: none;}
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>흔히 <span class="math inline">\(\mathbf Y\)</span>를 종속변수, <span class="math inline">\(\mathbf X\)</span>를 독립변수로 부르기도 한다. 하지만 이러한 이름에는 혼란의 여지가 있다. 여기서는 regressor, regressand라는 영어 표현을 그대로 쓰도록 하겠다.</p>
-</div></div><div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width: 60%;">
-<figure class="figure">
-<p><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">독립변수 1개인 회귀 분석</figcaption><p></p>
-</figure>
-</div>
-<p>위 그림은 1개의 regressor가 존재할 때 이것과 regressand를 그대로 2차원 평면에 관찰 수만큼 찍은 것이다. 첫번째 그림에서 “Observed Y”는 점 하나가 <span class="math inline">\(n\)</span> 개의 regressand를 모두 포괄한다. <span class="math inline">\(\mathbf{Y} \in {\mathbb R}^{n}\)</span> 벡터, 즉 <span class="math inline">\(n\)</span> 차원 벡터이고, 이것이 회귀식 좌변의 관찰값 <span class="math inline">\(n\)</span> 개를 표현한다.</p>
+</div></div><p><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="img-fluid" style="margin: auto; display: block; width: 60%;" alt="독립변수 1개인 회귀 분석"> <br> 위 그림은 1개의 regressor가 존재할 때 이것과 regressand를 그대로 2차원 평면에 관찰 수만큼 찍은 것이다. 첫번째 그림에서 “Observed Y”는 점 하나가 <span class="math inline">\(n\)</span> 개의 regressand를 모두 포괄한다. <span class="math inline">\(\mathbf{Y} \in {\mathbb R}^{n}\)</span> 벡터, 즉 <span class="math inline">\(n\)</span> 차원 벡터이고, 이것이 회귀식 좌변의 관찰값 <span class="math inline">\(n\)</span> 개를 표현한다.</p>
 <p>이제 선형대수의 세계로 들어가보자. <span class="math inline">\(\mathbf X\)</span>의 열(column)이 각각 <span class="math inline">\(n\)</span> 개의 관찰 값을 지닌 regressor에 해당한다. 이 각각의 컬럼 <span class="math inline">\(x_i\)</span>는 <span class="math inline">\(x_i \in {\mathbb R}^{n}\)</span> 벡터이다. <span class="math inline">\(x_i\)</span> 벡터 <span class="math inline">\(k\)</span> 개가 생성할 수 있는 공간이 <span class="math inline">\(\mathbf X\)</span>의 열 공간(column space)이다. 앞으로 이를 col <span class="math inline">\(\mathbf X\)</span>로 표기하자.</p>
 <p>이렇게 생각하면 좋겠다. <span class="math inline">\(x_i \in {\mathbb R}^{n}\)</span> 벡터가 <span class="math inline">\(k(&lt;n)\)</span> 개 있다고 하자. 이는 <span class="math inline">\(n\)</span> 보다 차원이 낮기 때문에 기하학적으로는 <span class="math inline">\(n\)</span> 차원 공간에서 초평면(hyperplane)으로 나타날 것이다. 위 그림에서 컬럼 스페이스가 평면으로 표현되는 것은 이러한 취지다. 3차원 벡터의 열 공간이 생성하는 초평면을 예시하면 아래와 같다.</p>
-<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width: 60%;">
-<figure class="figure">
-<p><img src="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">2차원 컬럼 스페이스</figcaption><p></p>
-</figure>
-</div>
-<p>col <span class="math inline">\(\mathbf X\)</span>의 최대 차원, 즉 <span class="math inline">\(\mathbf X\)</span>의 랭크(위수)는 무엇일까? 회귀분석에서는 대체로 <span class="math inline">\(n &gt; k\)</span>가 일반적이고 이런 상황에서 <span class="math inline">\(\mathbf X\)</span>의 랭크는 <span class="math inline">\(k\)</span>를 넘을 수 없다. 다시 말하면, <span class="math inline">\(\mathbf X\)</span>가 생성하는(span)하는 컬럼 스페이스의 차원의 크기가 <span class="math inline">\(k\)</span>를 넘을 수 없다. 그리고 잘 된 회귀분석이라면 <span class="math inline">\({\rm rank}(\mathbf X) = k\)</span>를 만족한다.</p>
+<p><img src="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="img-fluid" style="margin: auto; display: block; width: 60%;" alt="2차원 컬럼 스페이스"> <br> col <span class="math inline">\(\mathbf X\)</span>의 최대 차원, 즉 <span class="math inline">\(\mathbf X\)</span>의 랭크(위수)는 무엇일까? 회귀분석에서는 대체로 <span class="math inline">\(n &gt; k\)</span>가 일반적이고 이런 상황에서 <span class="math inline">\(\mathbf X\)</span>의 랭크는 <span class="math inline">\(k\)</span>를 넘을 수 없다. 다시 말하면, <span class="math inline">\(\mathbf X\)</span>가 생성하는(span)하는 컬럼 스페이스의 차원의 크기가 <span class="math inline">\(k\)</span>를 넘을 수 없다. 그리고 잘 된 회귀분석이라면 <span class="math inline">\({\rm rank}(\mathbf X) = k\)</span>를 만족한다.</p>
 <p>맨 앞에 제시했던 그림을 다시 보자. 아래 색칠된 평면이 <span class="math inline">\(\mathbf X\)</span>가 생성하는 컬럼 스페이스, 즉 col <span class="math inline">\(\mathbf X\)</span>를 표현하고 있다. 몹시 특별한 경우가 아니라면 <span class="math inline">\(\mathbf Y \in {\mathbb R}^{n}\)</span> 벡터가 col <span class="math inline">\(\mathbf X\)</span>에 속할 가능성은 없다. 그렇다면 회귀분석의 필요도 애초에 없었을 것이다. col <span class="math inline">\(\mathbf X\)</span>를 통해서 <span class="math inline">\(\mathbf Y\)</span>를 완벽하게 예측할 수 있는데 무슨 걱정이 있겠는가? 대체로 우리가 마주하는 상황은 <span class="math inline">\(n\)</span> 차원 벡터를 <span class="math inline">\(k\)</span> 차원 공간에 끼워 넣기 힘든 상황이다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
