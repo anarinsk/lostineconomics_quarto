@@ -353,11 +353,42 @@ y_i \xrightarrow{\rm prob.~function} \mu_i \xrightarrow{\rm link~function} \eta_
 \]</span></p>
 <p>애초에 <span class="math inline">\(\boldsymbol \beta\)</span>을 알고 있어야, 이 식으로부터 <span class="math inline">\(p(\cdot)\)</span>을 구해낼 수 있다. 그런데 우리가 아는 회귀분석이란 <span class="math inline">\(y\)</span>와 <span class="math inline">\(\boldsymbol{\rm X}\)</span>가 주어졌을 때 하는 것 아닌가? 회귀분석의 좌변이 없기에 OLS로는 추정할 수 없다.</p>
 <p>그래서 로짓 회귀는 이름과 달리 <span class="math inline">\(\boldsymbol{\beta}\)</span>의 추정치 <span class="math inline">\(\hat{\boldsymbol\beta}\)</span>를 구하는데 OLS의 방법을 쓰지 않는다. 로짓 회귀에서는 어떻게 <span class="math inline">\(\hat{\boldsymbol\beta}\)</span>를 얻는 것일까?</p>
-<section id="확률-vs-우도" class="level3">
+<section id="확률-vs-우도" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="확률-vs-우도">확률 vs 우도</h3>
-<p>잠시 로짓 회귀의 추정을 살펴보기 전에 확률과 우도의 차이점에 관해서 알아보자. 분포와 그 분포의 파리미터를 알고 있을 때 해당 샘플이 관찰될 확률을 구할 수 있다. 거칠게 표현하면 이렇다. 연속 확률변수 <span class="math inline">\(x\)</span>가 따르는 어떤 분포가 있다고 할 때, 해당 분포의 파라미터(정규분포라면 평균과 분산이다) <span class="math inline">\(\theta\)</span>에 대해서 <span class="math inline">\(P(x_1 &lt; x &lt;x_2 | \theta)\)</span>이 확률이다. 우도(likelihood)는 무엇일까? 우도는 확률 분포의 수학적인 형태를 뒤집은 것이다. 일단 연속 확률 변수를 가정하자. 어떤 샘플이 관찰되었다고 할 때 우도란 특정 파라미터 하에서 얻게 되는 분포의 특정 확률 밀도함수를 의미한다. 연속 확률변수가 아니라 이산 확률변수라면, 확률 질량함수가 될 것이고 이 경우에는 확률과 같다. 파라미터를 변수로 잡으면 이 확률 밀도함수 혹은 질량함수가 우도가 된다.</p>
-<p>요컨대 주어진 것(conditioning)의 차이에 따라서 확률과 우도의 정의가 달라진다. 다시 정리해보자. 우도를 일종의 함수라고 할 때 그 함수의 <span class="math inline">\(x\)</span>에 해당하는 것이 파라미터다.</p>
-</section>
+<p>잠시 로짓 회귀의 추정을 살펴보기 전에 확률과 우도의 차이점에 관해서 알아보자. 분포와 그 분포의 파리미터를 알고 있을 때 해당 샘플이 관찰될 확률을 구할 수 있다. 연속 확률변수 <span class="math inline">\(x\)</span>가 따르는 어떤 분포가 있다고 할 때, 해당 분포를 요약하는 파라미터(정규분포라면 평균과 분산이다) <span class="math inline">\(\theta\)</span>에 대해서 <span class="math inline">\(P(x_1 &lt; x &lt;x_2 | \theta)\)</span>를 구한다면, 이것이 확률이다.</p>
+<p>우도(likelihood)는 무엇일까? 우도는 확률 분포의 수학적인 형태에서 관심의 대상을 바꾼 것이다. 위의 연속 확률변수의 예에서 <span class="math inline">\(P(\theta | x_1 &lt; x &lt; x_2)\)</span>가 우도가 된다. 하나의 관찰 <span class="math inline">\(x_i\)</span>에 대해서는 확률 밀도함수 <span class="math inline">\(f(\theta | x = x_i)\)</span>를 우도로 정의할 수 있다. 연속 확률변수가 아니라 이산 확률변수라면, 확률 질량함수가 될 것이고 이 경우에는 확률과 같다.</p>
+<p>요컨대 주어진 것(conditioning), 즉 무엇을 파라미터로 볼 것인지의 차이에 따라서 확률과 우도의 정의가 달라진다. 다시 정리해보자.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">명칭</th>
+<th style="text-align: center;">주어진 것</th>
+<th style="text-align: center;">변수</th>
+<th style="text-align: center;">형태</th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">확률</td>
+<td style="text-align: center;">분포의 파라미터(<span class="math inline">\(\theta\)</span>)</td>
+<td style="text-align: center;">관찰값</td>
+<td style="text-align: center;"><span class="math inline">\(P(x_1 &lt; x &lt; x_2 | \theta)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">우도</td>
+<td style="text-align: center;">관찰값</td>
+<td style="text-align: center;">분포의 파라미터(<span class="math inline">\(\theta\)</span>)</td>
+<td style="text-align: center;"><span class="math inline">\(P(\theta|x_1 &lt; x &lt; x_2)\)</span></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>연속확률 변수의 경우 하나의 관찰값에 대해서 확률은 이론적으로 정의되지 않지만, 우도는 정의된다. 이 경우 우도는 확률 밀도함수 <span class="math inline">\(f(\theta|x=x_i)\)</span>를 따르게 된다.</p>
+</div></div></section>
 <section id="최대-우도-추정maximum-likelihood-estimation" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="최대-우도-추정maximum-likelihood-estimation">최대 우도 추정(maximum likelihood estimation)</h3>
 <p>다시 문제로 돌아오자. 우리는 0, 1 즉 존재/비존재의 특징을 지니는 변수를 갖고 있다. 그리고 이 녀석은 이산 확률 분포를 따르기 때문에 우도 역시 그냥 확률이 되고, 이는 베르누이 분포를 따른다. 즉, 해당 확률이 발생할 확률 <span class="math inline">\(p\)</span>일 때 발생하면 1, 아니면 0이 된다. 베르누이 분포의 확률 질량 함수를 간단하게 표현하는 방법은 없을까?</p>
