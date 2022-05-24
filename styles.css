@@ -45,12 +45,14 @@ p {
   font-size: 95%;
 }
 
+.figure-caption {
+  font-size:80%;
+}
+
 .figure{
+  display: inline-block; 
+  margin: 0 auto;
   border:1.5px silver solid; 
   padding: 5px;
   text-align: left; 
-}
-
-.figure-caption {
-  font-size:80%;
 }
