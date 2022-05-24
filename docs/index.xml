@@ -9,7 +9,7 @@
 <link>http://www.lostineconomics.com/index.html</link>
 <atom:link href="http://www.lostineconomics.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>Another useless blog</description>
-<generator>quarto-0.9.436</generator>
+<generator>quarto-0.9.446</generator>
 <lastBuildDate>Sun, 15 May 2022 15:00:00 GMT</lastBuildDate>
 <item>
   <title>Trilemma, Lately</title>
@@ -74,7 +74,7 @@
   <category>economics</category>
   <guid>http://www.lostineconomics.com/posts/economics/2022-05-16-trilemma.html</guid>
   <pubDate>Sun, 15 May 2022 15:00:00 GMT</pubDate>
-  <media:content url="http://www.lostineconomics.com//posts/economics/goodecon.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="http://www.lostineconomics.com/posts/economics/goodecon.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Blogging with Quarto</title>
@@ -469,7 +469,7 @@
   <category>econ-simple</category>
   <guid>http://www.lostineconomics.com/posts/econ-simple/2022-04-30-gdp-import.html</guid>
   <pubDate>Thu, 28 Apr 2022 15:00:00 GMT</pubDate>
-  <media:content url="http://www.lostineconomics.com//posts/econ-simple/goodecon.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="http://www.lostineconomics.com/posts/econ-simple/goodecon.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Happy Git-ing!</title>
@@ -2498,7 +2498,7 @@ MjEyMzEwM119
   <category>econ-simple</category>
   <guid>http://www.lostineconomics.com/posts/econ-simple/2022-04-30-gdp-import.html</guid>
   <pubDate>Thu, 28 Apr 2022 15:00:00 GMT</pubDate>
-  <media:content url="http://www.lostineconomics.com//posts/econ-simple/goodecon.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="http://www.lostineconomics.com/posts/econ-simple/goodecon.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Happy Git-ing!</title>
@@ -4592,7 +4592,7 @@ MjEyMzEwM119
   <category>econ-simple</category>
   <guid>http://www.lostineconomics.com/posts/econ-simple/2022-04-30-gdp-import.html</guid>
   <pubDate>Thu, 28 Apr 2022 15:00:00 GMT</pubDate>
-  <media:content url="http://www.lostineconomics.com//posts/econ-simple/goodecon.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="http://www.lostineconomics.com/posts/econ-simple/goodecon.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Happy Git-ing!</title>
