@@ -1495,7 +1495,7 @@
     "href": "posts/computer-tool/2022-05-25-pytorch.html#pytorch-m1-gpu",
     "title": "PyTorch + WSL",
     "section": "PyTorch + M1 GPU",
-    "text": "PyTorch + M1 GPU\nm1 CPU의 경우 위 설치 페이지를 통해 쉽게 설치를 할 수 있다. 만일 GPU를 쓰고 싶다면 PyTorch 빌드 항목에서 “Preview(Nightly)”를 택하면 된다.\n\n\n자세한 내용은 이 내용을 참고하자.\n파이토치의 경우 별다른 이슈 없이 conda를 통한 설치만으로 M1의 GPU까지 활용할 수 있다."
+    "text": "PyTorch + M1 GPU\nm1 CPU의 경우 위 설치 페이지를 통해 쉽게 설치를 할 수 있다. 만일 GPU를 쓰고 싶다면 PyTorch 빌드 항목에서 “Preview(Nightly)”를 택하면 된다.\n\n\n자세한 것은 여기를 참고하자.\n파이토치의 경우 별다른 이슈 없이 conda를 통한 설치만으로 M1의 GPU까지 활용할 수 있다."
   },
   {
     "objectID": "posts/computer-tool/2022-05-25-pytorch.html#pytorch-wsl-cuda",
@@ -1509,7 +1509,7 @@
     "href": "posts/computer-tool/2022-05-25-pytorch.html#testing-code",
     "title": "PyTorch + WSL",
     "section": "Testing Code",
-    "text": "Testing Code\n모든 설치를 마쳤다면 이제 테스트를 해볼 차례다. 테스트 코드로는 간단한 신경망 정도를 돌려보면 될 것이다. 작업시 취향에 맞는 IDE를 택하면 된다. Jupyter를 깔아서 웹에서 작업해도 되고 VS 코드로 WSL에 원격 접속해서 작업해도 된다. Python 커널을 선택할 때 앞서 만들어 놓은 환경 이름을 택하면 된다.\n\nA Code for Testing\n튜토리얼\n여기 코드를 실행해주면 되겠다. 에러가 떴다면 위 설치 과정에서 뭔가 잘못된 것인데 특별히 복잡한 것은 없으니 다시 검토하면 좋겠다. 다른 부분은 생략하고 학습에 활용할 장치를 선택하는 부분만 간략하게 언급하자.\n# 학습에 사용할 CPU나 GPU 장치를 얻습니다.\ndevice = \"cuda\" if torch.cuda.is_available() else \"cpu\"\nprint(f\"Using {device} device\")\n\ndevice를 선택하는 부분은 직접 cpu 혹은 엔비디아 GPU를 쓸 경우 cuda 써줘도 된다. M1을 쓰고 있다면 mps라고 입력하면 된다."
+    "text": "Testing Code\n모든 설치를 마쳤다면 이제 테스트를 해볼 차례다. 테스트 코드로는 간단한 신경망 정도를 돌려보면 될 것이다. 작업시 취향에 맞는 IDE를 택하면 된다. Jupyter를 깔아서 웹에서 작업해도 되고 VS 코드로 WSL에 원격 접속해서 작업해도 된다. Python 커널을 선택할 때 앞서 만들어 놓은 환경 이름을 택하면 된다.\n\nA Code for Testing\n튜토리얼\n테스트로 위 튜토리얼의 코드를 실행해보자. 에러가 떴다면 위 설치 과정에서 뭔가 잘못된 것인데 특별히 복잡한 것은 없으니 다시 살펴보면 된다. 다른 부분은 생략하고 학습에 활용할 장치를 선택하는 부분만 간략하게 언급하자.\n# 학습에 사용할 CPU나 GPU 장치를 얻습니다.\ndevice = \"cuda\" if torch.cuda.is_available() else \"cpu\"\nprint(f\"Using {device} device\")\n\ndevice를 선택하는 부분은 직접 cpu 혹은 엔비디아 GPU를 쓸 경우 cuda 써줘도 된다. M1을 쓰고 있다면 mps라고 입력하면 된다."
   },
   {
     "objectID": "posts/computer-tool/2022-05-25-pytorch.html#as-good-as-it-gets",
