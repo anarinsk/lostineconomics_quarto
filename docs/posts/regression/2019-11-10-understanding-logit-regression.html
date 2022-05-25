@@ -177,7 +177,7 @@ ul.task-list{list-style: none;}
 </section>
 <section id="로짓-함수는-어떻게-등장하나" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="로짓-함수는-어떻게-등장하나">로짓 함수는 어떻게 등장하나?</h2>
-<p>로짓 회귀는 말 그대로 로지스틱 함수(logistic function)를 활용하는 회귀 분석이라는 뜻이다. 로지스틱 함수는 어디서 어떻게 등장할까? 로짓 회귀의 데이터 형식을 살펴보자. 종속 변수, 반응(response), regressand 등 다양한 형태로 불리는 식의 좌변은 0 또는 1로만 되어 있다. 어떤 상태라면 1, 그렇지 않으면 0이다. 이때 0 또는 1은 값 자체로 의미를 지니지 않는다. 이는 범주형 변수로서 True or False와 같은 이항 변수로 이해하면 좋겠다. 식의 우변에는 통상적인 독립 변수, 예측 변수(predictor), regressor가 등장한다.</p>
+<p>로짓 회귀는 말 그대로 로지스틱 함수(logistic function)를 활용하는 회귀 분석이라는 뜻이다. 로지스틱 함수는 어디서 어떻게 등장할까? 로짓 회귀의 데이터 형식을 살펴보자. 종속 변수, 반응(response), regressand 등 다양한 형태로 불리는 식의 좌변은 0 또는 1로만 되어 있다. 어떤 상태라면 1, 그렇지 않으면 0이다. 이때 0 또는 1은 값 자체로 의미를 지니지 않는다. 이는 범주형 변수로서 True or False와 같은 이항 변수로 이해하면 좋겠다. 식의 우변에는 통상적인 독립 변수, 예측 변수(predictor)가 등장한다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>생각난 김에 짬을 내 회귀식에서 좌변과 우변을 지칭하는 용어를 정리해보자. 취향에 맞춰서 쓰되 일관성만 갖추면 되겠다.</p>
@@ -346,10 +346,10 @@ y_i \xrightarrow{\rm prob.~function} \mu_i \xrightarrow{\rm link~function} \eta_
 <h2 class="anchored" data-anchor-id="계수는-어떻게-구하나">계수는 어떻게 구하나?</h2>
 <p><span class="math inline">\(\hat{\boldsymbol \beta}\)</span>은 어떻게 구할 수 있을까? 현재까지 우리에게 주어진 조건을 보자.</p>
 <ol type="1">
-<li>regressand는 0 또는 1 뿐이다.</li>
-<li>로짓 함수를 통해서 regressor를 해당 관찰의 확률과 연결시킬 수 있게 되었다.</li>
+<li>종속 변수의 관찰값은 0 또는 1이다.</li>
+<li>로짓 함수를 통해서 독립 변수를 해당 관찰의 확률과 연결시킬 수 있게 되었다.</li>
 </ol>
-<p>어차피 regressand를 실수로 바꿀 수 없는 이상 우리가 아는 선형 회귀분석을 쓸 수는 없다. 그래서 이름과 달리 우리가 아는 ‘회귀분석’, 즉 OLS를 여기서 쓸 수는 없다. 미안하다. 앞에서 거짓말 했다.</p>
+<p>어차피 종속 변수를 실수로 바꿀 수 없는 이상 우리가 아는 선형 회귀분석을 쓸 수는 없다. 그래서 이름과 달리 우리가 아는 ‘회귀분석’, 즉 OLS를 여기서 쓸 수는 없다. 미안하다. 앞에서 거짓말 했다.</p>
 <p><span class="math display">\[
 \ln \dfrac{p(\boldsymbol{x_i})}{1-p(\boldsymbol{x_i})} = \underset{1 \times k}{\phantom{\boldsymbol{\beta}}\boldsymbol{x_i}\phantom{\boldsymbol{\beta}}}\underset{k \times 1}{\boldsymbol{\beta}}, ~k = 1,  2, \dotsc, n
 \]</span></p>
@@ -421,20 +421,20 @@ p(\boldsymbol{x_i})  = \dfrac{1}{e^{-\boldsymbol{\boldsymbol{x_i}}\boldsymbol{\b
 <section id="계수의-의미는" class="level3">
 <h3 class="anchored" data-anchor-id="계수의-의미는">계수의 의미는?</h3>
 <p>보통 기계 학습의 맥락에서 로짓 회귀는 가장 원시적인 분류기(classifier)로 소개된다. 즉 <span class="math inline">\(y_i\)</span>의 속성을 예측하는 분류 장치이기 때문에 <span class="math inline">\(\hat{\boldsymbol\beta}\)</span>에 특별한 의미를 부여하지 않는다. 하지만 회귀 분석을 인과관계의 추론의 활용해 온 여타 분야에서는 <span class="math inline">\(\hat{\boldsymbol\beta}\)</span>를 어떻게 해석할 것인지는 중요한 질문이다.</p>
-<p>먼저 OLS의 경우 변수를 어떻게 변형했는지에 따라서 다르지만, 대체적으로 <span class="math inline">\(\beta_i\)</span>는 해당 regressor <span class="math inline">\(x_i\)</span>의 한계효과로 해석할 수 있다. 즉, <span class="math inline">\(x_i\)</span>가 한 단위 변할 때 이에 따른 <span class="math inline">\(y_i\)</span>의 변화량을 의미한다. 그런데, 로짓 회귀에서는 이렇게 해석할 수 없다. 앞서 보았듯이, 로짓 회귀의 추정식은 다음과 같다.</p>
+<p>먼저 OLS의 경우 변수를 어떻게 변형했는지에 따라서 다르지만, 대체적으로 <span class="math inline">\(\beta_i\)</span>는 해당 독립 변수 <span class="math inline">\(x_i\)</span>의 한계 효과(marginal effect)로 해석할 수 있다. 즉, <span class="math inline">\(x_i\)</span>가 한 단위 변할 때 이에 따른 <span class="math inline">\(y_i\)</span>의 변화량을 의미한다. 그런데, 로짓 회귀에서는 이렇게 해석할 수 없다. 앞서 보았듯이, 로짓 회귀의 추정식은 다음과 같다.</p>
 <p><span class="math display">\[
 \ln \dfrac{p(\boldsymbol{x_i})}{1-p(\boldsymbol{x_i})} = \underset{1 \times k}{\phantom{\boldsymbol{\beta}}\boldsymbol{\boldsymbol{x_i}}\phantom{\boldsymbol{\beta}}}\underset{k \times 1}{\boldsymbol{\beta}}, ~k = 1,  2, \dotsc, n
 \]</span></p>
-<p>흔히 좌변의 <span class="math inline">\(\dfrac{p(\boldsymbol{x_i})}{1-p(\boldsymbol{x_i})}\)</span>를 오즈(odds) 혹은 승산(勝計)이라고 부른다. 이때 <span class="math inline">\(\boldsymbol{\beta} = [\beta_1, \dotsc, \beta_j, \dotsc, \beta_k]\)</span>에서 <span class="math inline">\(\beta_j\)</span>는 regressor <span class="math inline">\(\boldsymbol{x_i}\)</span>에 속한 <span class="math inline">\(x_j\)</span> 한 단위가 변할 때 오즈에 미치는 영향을 뜻한다.</p>
+<p>흔히 좌변의 <span class="math inline">\(\dfrac{p(\boldsymbol{x_i})}{1-p(\boldsymbol{x_i})}\)</span>를 오즈(odds) 혹은 승산(勝計)이라고 부른다. 이때 <span class="math inline">\(\boldsymbol{\beta} = [\beta_1, \dotsc, \beta_j, \dotsc, \beta_k]\)</span>에서 <span class="math inline">\(\beta_j\)</span>는 독립 변수의 벡터 <span class="math inline">\(\boldsymbol{x_i}\)</span>에 속한 <span class="math inline">\(x_j\)</span> 한 단위가 변할 때 오즈에 미치는 영향을 뜻한다.</p>
 <p>간혹 <span class="math inline">\(\beta_i\)</span>를 좌변의 상태를 변화시킬 확률의 변화로 해석하는 경우가 있는데 그렇게 하면 안된다. <span class="math inline">\(x_i\)</span>의 변화가 상태를 0에서 1로 바꾸는 데 미치는 확률에 관심이 있다면, 아래의 두 가지에 유의하자.</p>
 <ol type="1">
 <li>OLS의 경우 회귀식 자체가 선형이기 때문에 <span class="math inline">\(\beta_i\)</span>에 관한 해석이 쉽고 단순하다. 그냥 직선의 기울기다. 그런데 로짓 회귀에서는 그렇게 분명하지 않다. 추정하려는 식 자체가 비선형이므로 한계 효과를 구하기 위한 기울기를 ‘어디서’ 구할지가 문제가 된다. 측정 위치에 따라서 기울기가 달라지기 때문이다.</li>
-<li>도출하는 방법이 크게 어렵지는 않다. 측정에는 대체로 두 가지 방식이 많이 활용된다. regressor 값에서 <span class="math inline">\(x_i\)</span>별로 확률값의 변화를 추정한 뒤 이를 평균하는 방식이다. 반대로 regressor 값의 평균에서 한번만 <span class="math inline">\(p_i\)</span>에 미치는 영향을 추정하는 방법이다. 통계 패키지가 대체로 두 방법을 모두 지원하니 필요할 경우 찾아서 값을 구하면 되겠다. 해석과 보고 시에는 역시 주의해야 한다. 만일 첫번째 방법으로 수행했다면, <span class="math inline">\(x_i\)</span>의 1단위 변화가 평균적으로 확률에 미치는 영향으로 표현하는 게 비교적 오해를 덜 살 것이다.</li>
+<li>도출하는 방법이 크게 어렵지는 않다. 측정에는 대체로 두 가지 방식이 많이 활용된다. 독립 변수 <span class="math inline">\(x_i\)</span> 관찰값 별로 확률값의 변화를 추정한 뒤 이를 평균하는 방식이다. 반대로 독립 변수 값의 평균에서 한번만 <span class="math inline">\(p_i\)</span>에 미치는 영향을 추정하는 방법이다. 통계 패키지가 대체로 두 방법을 모두 지원하니 필요할 경우 찾아서 값을 구하면 되겠다. 해석과 보고 시에는 역시 주의해야 한다. 만일 첫번째 방법으로 수행했다면, <span class="math inline">\(x_i\)</span>의 1단위 변화가 평균적으로 확률에 미치는 영향으로 표현하는 게 비교적 오해를 덜 살 것이다.</li>
 </ol>
 </section>
 <section id="계수의-수학적인-이해" class="level3">
 <h3 class="anchored" data-anchor-id="계수의-수학적인-이해">계수의 수학적인 이해</h3>
-<p>이 부분이 부담스럽다면 넘어가도 좋다. 앞서 말한 한계 효과는 <span class="math inline">\(\frac{\partial p}{\partial x_j}\)</span>이다. 즉, regressor의 한 변수<span class="math inline">\(x_j\)</span> 가 한 단위 변할 때 확률 변화를 측정한다. 즉,</p>
+<p>이 부분이 부담스럽다면 넘어가도 좋다. 앞서 말한 한계 효과는 <span class="math inline">\(\frac{\partial p}{\partial x_j}\)</span>이다. 즉, 독립 변수 벡터의 한 변수<span class="math inline">\(x_j\)</span> 가 한 단위 변할 때 확률 변화를 측정한다. 즉,</p>
 <p><span class="math display">\[
 p(\boldsymbol{x_i}) = \dfrac{1}{e^{-\boldsymbol{x_i}\boldsymbol{\beta}} + 1}
 \]</span></p>
