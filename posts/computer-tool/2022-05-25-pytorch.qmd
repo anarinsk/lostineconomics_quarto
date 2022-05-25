@@ -1,5 +1,5 @@
 ---
-title: Pytorch + WSL
+title: PyTorch + WSL
 description: 이보다 더 좋을 수 있을까? 
 author: "JS HUHH"
 date: "05/25/2022"
