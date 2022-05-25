@@ -259,7 +259,7 @@ ul.task-list{list-style: none;}
 <p></p><figcaption aria-hidden="true" class="figure-caption">로지스틱 리그레션이 필요한 순간</figcaption><p></p>
 </figure>
 </div>
-<p><br> regressor가 하나인 상황을 가정하고 위의 그림을 보자. regressand가 0, 1인 상태로 그대로 회귀분석을 하면 그림의 왼쪽 같이 나온다. 이 상태에서는 뭐가 문제일까? 회귀식의 기울기를 구할 수 있으니 된 것 아니냐? 문제가 있다. 앞서 0과 1은 값 그 자체로 의미를 지니지 않는다고 말했다. 그런데 이를 그대로 값으로 바꿔서 회귀분석을 해도 좋은 것일까? 그러기에는 뭔가 찜찜하다. 게다가 <span class="math inline">\(x\)</span> 값에 따라서 회귀식의 예측치가 <span class="math inline">\([0,1]\)</span>을 벗어날 수 있다. 임의로 계단 함수를 다시 얹어서 OLS(통상적인 최소자승법이라는 의미에서 Ordinary Least Squares라고 흔히 부른다)를 구제할 수도 있겠다. 즉,</p>
+<p><br> 독립 변수가 하나인 모형을 가정하고 위의 그림을 보자. 종속 변수가 0, 1인 상태로 그대로 회귀분석을 하면 그림의 왼쪽 같이 된다. 회귀식의 기울기를 구할 수 있으니 된 것 아니냐? 아니다. 앞서 0과 1은 값 그 자체로 의미를 지니지 않는다고 말했다. 그런데 이를 그대로 값으로 바꿔서 회귀분석을 해도 좋은 것일까? 그러기에는 어딘가 찜찜하다. 게다가 <span class="math inline">\(x\)</span> 값에 따라서 회귀식의 예측치가 <span class="math inline">\([0,1]\)</span>을 벗어날 수 있다. 임의로 계단 함수를 다시 얹어서 OLS(통상적인 최소자승법이라는 의미에서 Ordinary Least Squares라고 흔히 부른다)를 구제할 수도 있겠다. 즉,</p>
 <p><span class="math display">\[
 s(\beta x) =
 \begin{cases}
@@ -271,7 +271,7 @@ s(\beta x) =
 </section>
 <section id="범주형에서-확률로" class="level3">
 <h3 class="anchored" data-anchor-id="범주형에서-확률로">범주형에서 확률로</h3>
-<p>앞서 0 또는 1의 문제가 범주형의 문제라고 했다. 따라서 0, 1은 값 자체로는 아무 의미를 지니지 않는다. 회귀분석의 regressand가 실수값을 지닐 때 분석으로서 의미를 지닌다. 그렇다면 그렇게 바뀌보면 어떨까. 범주형 변수가 결국 상태를 나타내는 것이라면 1이라는 상태를 지닐 ’확률’을 추정하는 문제로 바꿔 생각해볼 수 있겠다. 즉,</p>
+<p>앞서 0 또는 1의 문제가 범주형의 문제라고 했다. 따라서 0, 1은 값 자체로는 아무 의미를 지니지 않는다. 회귀분석의 종속 변수가 실수값을 지닐 때 분석으로서 의미를 지닌다. 그렇다면 그렇게 바뀌보면 어떨까. 범주형 변수가 결국 상태를 나타내는 것이라면 1이라는 상태를 지닐 ’확률’을 추정하는 문제로 바꿔 생각해볼 수 있겠다. 즉,</p>
 <p><span class="math display">\[
 p(y_i = 1 | \boldsymbol{x_i}) = p(\boldsymbol{x_i})
 \]</span></p>
@@ -279,11 +279,11 @@ p(y_i = 1 | \boldsymbol{x_i}) = p(\boldsymbol{x_i})
 <p><span class="math display">\[
 \dfrac{p(\boldsymbol{x_i})}{1-p(\boldsymbol{x_i})}
 \]</span></p>
-<p>regressand를 이렇게 바꾸면 우선 가능한 값의 범위가 <span class="math inline">\([0, \infty)\)</span>로 확장된다. 여기서 음수 값을 포괄하는 방법은 없을까? 여기에 자연 로그를 적용해보자.</p>
+<p>독립 변수를 이렇게 바꾸면 우선 가능한 값의 범위가 <span class="math inline">\([0, \infty)\)</span>로 확장된다. 여기서 음수 값을 포괄하는 방법은 없을까? 여기에 자연 로그를 적용해보자.</p>
 <p><span class="math display">\[
 \ln \dfrac{p(\boldsymbol{x_i})}{1-p(\boldsymbol{x_i})}
 \]</span></p>
-<p>이렇게 되면 가능한 값의 범위가 <span class="math inline">\((-\infty, \infty)\)</span>가 된다. Regressand가 이 형태라면 선형 회귀를 적용해도 좋겠다.</p>
+<p>이렇게 되면 가능한 값의 범위가 <span class="math inline">\((-\infty, \infty)\)</span>가 된다. 독립 변수가 이 형태가 되면 보통의 선형 회귀를 적용해도 좋겠다.</p>
 <p>즉,</p>
 <p><span class="math display">\[
 \ln \dfrac{p(\boldsymbol{x_i})}{1-p(\boldsymbol{x_i})} = \underset{1 \times k}{\phantom{\boldsymbol{\beta}}\boldsymbol{\boldsymbol{x_i}} \phantom{\boldsymbol{\beta}}}\underset{k \times 1}{\boldsymbol{\beta}}, ~k = 1,  2, \dotsc, n
@@ -292,7 +292,7 @@ p(y_i = 1 | \boldsymbol{x_i}) = p(\boldsymbol{x_i})
 <p><span class="math display">\[
 \ln \dfrac{p(\boldsymbol{X})}{1-p(\boldsymbol{X})} = \underset{n \times k}{\phantom{\boldsymbol{\beta}}\boldsymbol{X}\phantom{\boldsymbol{\beta}}}\underset{k \times 1}{\boldsymbol{\beta}}
 \]</span></p>
-<p>애석하지만 이 식은 우리에게 주어진 자료로는 추정할 수 없다. 당장 좌변의 regressand를 얻으려면 관찰별로 확률값을 알아야 하는데 우리에게 주어진 값은 0 또는 1 뿐이다. 따라서 위의 식은 선형 회귀와 유사한 모형을 적용할 수 있는 방법을 찾은 것일 뿐 실제로 추정할 수 있는 식이 아니다. <span class="math inline">\(\boldsymbol{\beta}\)</span>는 어떻게 구해야 할까?</p>
+<p>애석하지만 이 식은 우리에게 주어진 자료로는 추정할 수 없다. 당장 좌변의 종속 변수를 얻으려면 관찰별로 확률값을 알아야 하는데 우리에게 주어진 관찰 값은 0 또는 1 뿐이다. 따라서 위의 식은 선형 회귀와 유사한 모형을 적용할 수 있는 방법을 찾은 것일 뿐 실제로 추정할 수 있는 식이 아니다. <span class="math inline">\(\boldsymbol{\beta}\)</span>는 어떻게 구해야 할까?</p>
 <p>이를 보기 전에 추정 모형에서 로지스틱 함수를 찾아보자. 위의 식에서 <span class="math inline">\(p(x_i)\)</span>를 구해보자.</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -302,7 +302,7 @@ p(\boldsymbol{x_i}) &amp; = \dfrac{e^{\boldsymbol{x_i}\boldsymbol{\beta}}}{1+e^{
 p(\boldsymbol{x_i}) &amp; = \dfrac{1}{e^{-\boldsymbol{x_i}\boldsymbol{\beta}} + 1}
 \end{aligned}
 \]</span></p>
-<p>앞서 본 그림의 오른쪽과 같은 형태의 로지스틱 함수가 도출된다. 요컨대, 로지스틱 함수는 regressor를 해당 사건이 발생할 확률과 연결시키는 장치다. 이렇게 보면 로지스틱 회귀는 이른바 일반 선형 모형(Generalized Linear Model)의 한 사례다. 일반 선형 모형이란 종속 변수, 즉 식의 왼쪽이 어려가지 이유에서 실수 값이 아닌 제한된 값 혹은 범주 값을 지닐 때 이를 여러가지 방법을 통해 실수로 바꾸는 방식으로 추정을 하는 방법이다. 지금까지 살펴본 방법이 그 사례의 하나다.</p>
+<p>앞서 본 그림의 오른쪽과 같은 형태의 로지스틱 함수가 도출된다. 요컨대, 로지스틱 함수는 독립 변수를 해당 사건이 발생할 확률과 연결시키는 장치다. 이렇게 보면 로지스틱 회귀는 이른바 일반 선형 모형(Generalized Linear Model)의 한 사례다. 일반 선형 모형이란 종속 변수, 즉 식의 왼쪽이 어려가지 이유에서 실수 값이 아닌 제한된 값 혹은 범주 값을 지닐 때 이를 여러가지 방법을 통해 실수로 바꾸는 방식으로 추정을 하는 방법이다. 지금까지 살펴본 방법이 그 사례의 하나다.</p>
 </section>
 </section>
 <section id="link-function" class="level2 page-columns page-full">
@@ -313,7 +313,7 @@ p(\boldsymbol{x_i}) &amp; = \dfrac{1}{e^{-\boldsymbol{x_i}\boldsymbol{\beta}} + 
 <li>범주형 자료: 이 경우는 수로 표현하려면 적절한 변형이 필요하다.</li>
 <li>정수형 자료</li>
 </ul>
-<p>이럴 때는 어떻게 해야 할까? 회귀 분석의 틀을 벗어나지 않으면서 가장 간단한 해결책은 좌변을 바꾸는 것이다. 좌변은 어떻게 바꿔야 할까? 우선 좌변에 올 것의 조건부 평균을 다음과 같이 두자.</p>
+<p>이럴 때는 어떻게 해야 할까? 회귀 분석의 틀을 벗어나지 않으면서 가장 간단한 해결책은 좌변을 바꾸는 것이다. 좌변은 어떻게 바꿔야 할까? 우선 좌변에 올 것의 조건부 평균을 다음과 같이 두자. 로지스틱 회귀에서 이 조건부 평균이 해당 상태가 될 , 즉 1의 값을 지닐 확률과 같다.</p>
 <p><span class="math display">\[
 \mathrm E (y_i | \boldsymbol x_i) =\mu_i
 \]</span></p>
@@ -336,7 +336,7 @@ p(\boldsymbol{x_i}) = \dfrac{1}{e^{-\boldsymbol{x_i}\boldsymbol{\beta}} + 1}
 <p><span class="math display">\[
 y_i \xrightarrow{\rm prob.~function} \mu_i \xrightarrow{\rm link~function} \eta_i = \boldsymbol x_i \beta
 \]</span></p>
-<p>원래 관찰값 <span class="math inline">\(y_i\)</span>는 모형에 관한 가정을 통해서 확률 (질량/밀도) 함수를 통해 (일조의 확률값) <span class="math inline">\(\mu_i\)</span> 로 변형된다. 이는 다시 연결 함수를 통해서 선형 회귀가 가능한 형태로 변형된다.</p>
+<p>원래 관찰값 <span class="math inline">\(y_i\)</span>는 모형에 관한 가정을 통해서 확률 (질량/밀도) 함수를 통해 (일종의 확률값) <span class="math inline">\(\mu_i\)</span> 로 변형된다. 이는 다시 연결 함수를 통해서 선형 회귀가 가능한 형태로 변형된다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><span class="math inline">\(y_i\)</span>가 어떤 특성을 지니는지에 따라서 다양한 형태의 <span class="math inline">\(\mu_i\)</span>가 가능하고, 여기에 적절한 연결 함수를 적용해야 한다. 이는 논의 범위를 벗어난다. <a href="https://www.stat.cmu.edu/~ryantibs/advmethods/notes/glm.pdf">이 글</a>을 참고하자.</p>
