@@ -279,7 +279,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>device <span class="op">=</span> <span class="st">"cuda"</span> <span class="cf">if</span> torch.cuda.is_available() <span class="cf">else</span> <span class="st">"cpu"</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Using </span><span class="sc">{</span>device<span class="sc">}</span><span class="ss"> device"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li><code>device</code>를 선택하는 부분은 직접 <code>cpu</code> 혹은 엔비디아 GPU를 쓸 경우 <code>cuda</code> 써줘도 된다. M1의 GPU를 쓰고 싶다면 <code>mps</code>를 쓰면 된다.</li>
+<li><code>device</code>를 선택하는 부분은
+<ul>
+<li>“cpu”: 플랫폼 별 CPU 활용</li>
+<li>“cuda”: 엔비디아 GPU</li>
+<li>“mps”: M1 GPU</li>
+</ul></li>
 </ul>
 </section>
 </section>

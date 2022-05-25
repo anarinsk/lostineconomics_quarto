@@ -1509,7 +1509,7 @@
     "href": "posts/computer-tool/2022-05-25-pytorch.html#testing-code",
     "title": "PyTorch + WSL",
     "section": "Testing Code",
-    "text": "Testing Code\n모든 설치를 마쳤다면 이제 테스트를 돌려볼 차례다. 테스트 코드로 간단한 신경망 정도를 돌려보면 될 것이다. 작업시 취향에 맞는 IDE를 택하면 된다. Jupyter를 깔아서 웹에서 작업해도 되고 VS 코드로 WSL에 원격 접속해서 작업해도 된다. 이 경우에도 Jupyter 설치는 필요하다. 필요한 요소를 VS 코드가 알려주니, 화면에 지시를 따르면 되겠다. Python 커널을 선택할 때 앞서 만들어 놓은 환경 이름을 택하는 것을 잊지 말자.\n\nA Code for Testing\n튜토리얼\n튜토리얼의 코드를 실행하면서 에러가 떴다면, 설치 과정에서 뭔가 잘못된 것이다. 특별히 복잡한 것은 없으니 다시 잘 살펴보면 된다. 다른 부분은 생략하고 학습에 활용할 장치를 선택하는 부분만 간략하게 언급하겠다.\n# 학습에 사용할 CPU나 GPU 장치를 얻습니다.\ndevice = \"cuda\" if torch.cuda.is_available() else \"cpu\"\nprint(f\"Using {device} device\")\n\ndevice를 선택하는 부분은 직접 cpu 혹은 엔비디아 GPU를 쓸 경우 cuda 써줘도 된다. M1의 GPU를 쓰고 싶다면 mps를 쓰면 된다."
+    "text": "Testing Code\n모든 설치를 마쳤다면 이제 테스트를 돌려볼 차례다. 테스트 코드로 간단한 신경망 정도를 돌려보면 될 것이다. 작업시 취향에 맞는 IDE를 택하면 된다. Jupyter를 깔아서 웹에서 작업해도 되고 VS 코드로 WSL에 원격 접속해서 작업해도 된다. 이 경우에도 Jupyter 설치는 필요하다. 필요한 요소를 VS 코드가 알려주니, 화면에 지시를 따르면 되겠다. Python 커널을 선택할 때 앞서 만들어 놓은 환경 이름을 택하는 것을 잊지 말자.\n\nA Code for Testing\n튜토리얼\n튜토리얼의 코드를 실행하면서 에러가 떴다면, 설치 과정에서 뭔가 잘못된 것이다. 특별히 복잡한 것은 없으니 다시 잘 살펴보면 된다. 다른 부분은 생략하고 학습에 활용할 장치를 선택하는 부분만 간략하게 언급하겠다.\n# 학습에 사용할 CPU나 GPU 장치를 얻습니다.\ndevice = \"cuda\" if torch.cuda.is_available() else \"cpu\"\nprint(f\"Using {device} device\")\n\ndevice를 선택하는 부분은\n\n“cpu”: 플랫폼 별 CPU 활용\n“cuda”: 엔비디아 GPU\n“mps”: M1 GPU"
   },
   {
     "objectID": "posts/computer-tool/2022-05-25-pytorch.html#as-good-as-it-gets",

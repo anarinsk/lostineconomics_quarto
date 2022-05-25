@@ -79,7 +79,10 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"Using {device} device")
 ```
 
-- `device`를 선택하는 부분은 직접 `cpu` 혹은 엔비디아 GPU를 쓸 경우 `cuda` 써줘도 된다. M1의 GPU를 쓰고 싶다면 `mps`를 쓰면 된다. 
+- `device`를 선택하는 부분은 
+    - "cpu": 플랫폼 별 CPU 활용
+    - "cuda": 엔비디아 GPU 
+    - "mps": M1 GPU 
 
 ##  As Good as It Gets
 
