@@ -31,7 +31,7 @@ draft: false
 m1 CPU의 경우 위 설치 페이지를 통해 쉽게 설치를 할 수 있다. 만일 GPU를 쓰고 싶다면 `PyTorch 빌드` 항목에서 "Preview(Nightly)"를 택하면 된다. 
 
 :::{.column-margin}
-자세한 내용은 [이 내용](https://discuss.pytorch.kr/t/apple-m1-gpu/286#preview-3)을 참고하자.
+자세한 것은 [여기](https://discuss.pytorch.kr/t/apple-m1-gpu/286#preview-3)를 참고하자.
 :::
 
 파이토치의 경우 별다른 이슈 없이 conda를 통한 설치만으로 M1의 GPU까지 활용할 수 있다. 
