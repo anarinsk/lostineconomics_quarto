@@ -97,7 +97,9 @@ $ quarto render
 $ quarto preview 
 ```
 
-`render` 명령어는 페이지를 렌더링하고 `preview`는 페이지를 미리 보여준다. [VS Code의 Quarto extension](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)을 쓰면 해당 과정을 편리하게 진행할 수 있다. 
+`render` 명령어는 페이지를 렌더링하고 `preview`는 페이지를 미리 보여준다. 
+
+[VS Code의 Quarto extension](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)을 쓰면 해당 과정을 편리하게 진행할 수 있다. VS 코드와 쓰면 좋은 이유가 하나 더 있다. 터미널에서 위 명령을 실행하면 페이지 전체를 전부 생성한다. VS 코드에서 쓰면 수정한 페이지의 내용만 골라서 생성한다. 
 
 다시 강조한다. Quarto는 스태틱 웹에 기반한 도구다. 새로운 포스팅을 포함하여 새로운 변경 사항이 로컬에서 발생했다면, 이를 render한 후 이 녀석을 깃헙 리포에 동기화 해야 최종적으로 웹 블로그에 반영된다. 렌더링을 잊지 말자.  
 

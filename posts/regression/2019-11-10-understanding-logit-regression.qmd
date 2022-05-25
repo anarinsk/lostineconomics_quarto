@@ -28,8 +28,7 @@ categories: [regression]
 
 로짓 회귀는 말 그대로 로지스틱 함수(logistic function)를 활용하는 회귀 분석이라는 뜻이다. 로지스틱 함수는 어디서 어떻게 등장할까? 로짓 회귀의 데이터 형식을 살펴보자. 종속 변수, 반응(response), regressand 등 다양한 형태로 불리는 식의 좌변은 0 또는 1로만 되어 있다. 어떤 상태라면 1, 그렇지 않으면 0이다. 이때 0 또는 1은 값 자체로 의미를 지니지 않는다. 이는 범주형 변수로서 True or False와 같은 이항 변수로 이해하면 좋겠다. 식의 우변에는 통상적인 독립 변수, 예측 변수(predictor), regressor가 등장한다. 
 
-### 덤: 잠시, 용어 정리 
-
+:::{.column-margin}
 생각난 김에 짬을 내 회귀식에서 좌변과 우변을 지칭하는 용어를 정리해보자. 취향에 맞춰서 쓰되 일관성만 갖추면 되겠다.  
 
 |좌변|우변|
@@ -49,6 +48,7 @@ categories: [regression]
 |endogenous variable|exogenous variable|
 |target|feature|
 |label|feature|
+:::
 
 ### 어떤 경우 OLS는 곤란한가? 
 

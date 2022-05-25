@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.446">
+<meta name="generator" content="quarto-0.9.449">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -175,11 +175,11 @@ ul.task-list{list-style: none;}
 <p>잘 알고 있다고 여기고 있지만 사실 잘 모르는 것이 있다. 로지스틱 회귀(logistic regression) 혹은 로짓 회귀가 그렇지 않을까? 요즘 기계 학습을 배우게 되면, 로짓 회귀는 첫 챕터에서그냥 쓱 지나치기 쉽다. 뒤에 소개될 랜덤 포레스트, SVM, 뉴럴넷 등이 더 진보된 방법으로 보이기 때문이다.</p>
 <p>로짓 회귀는 단순하면서도 강력한 방법이다. 필자는 분류(classification)의 문제에 접근할 때 로짓 회귀를 먼저 해볼 것을 권한다. 로짓 회귀에서 ’견적’이 나오면 그 질문 혹은 문제는 더 흥미로운 형태로 진화할 가능성이 높다. 반면 로짓 회귀에서 싹수가 없으면 더 복잡한 고급 방법도 소용이 없는 경우가 많다. 요컨대 로짓 회귀는 시간 낭비를 막는 일종의 ’맛보기’로서 유용하다.</p>
 </section>
-<section id="로짓-함수는-어떻게-등장하나" class="level2">
+<section id="로짓-함수는-어떻게-등장하나" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="로짓-함수는-어떻게-등장하나">로짓 함수는 어떻게 등장하나?</h2>
 <p>로짓 회귀는 말 그대로 로지스틱 함수(logistic function)를 활용하는 회귀 분석이라는 뜻이다. 로지스틱 함수는 어디서 어떻게 등장할까? 로짓 회귀의 데이터 형식을 살펴보자. 종속 변수, 반응(response), regressand 등 다양한 형태로 불리는 식의 좌변은 0 또는 1로만 되어 있다. 어떤 상태라면 1, 그렇지 않으면 0이다. 이때 0 또는 1은 값 자체로 의미를 지니지 않는다. 이는 범주형 변수로서 True or False와 같은 이항 변수로 이해하면 좋겠다. 식의 우변에는 통상적인 독립 변수, 예측 변수(predictor), regressor가 등장한다.</p>
-<section id="덤-잠시-용어-정리" class="level3">
-<h3 class="anchored" data-anchor-id="덤-잠시-용어-정리">덤: 잠시, 용어 정리</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p>생각난 김에 짬을 내 회귀식에서 좌변과 우변을 지칭하는 용어를 정리해보자. 취향에 맞춰서 쓰되 일관성만 갖추면 되겠다.</p>
 <table class="table">
 <thead>
@@ -251,8 +251,7 @@ ul.task-list{list-style: none;}
 </tr>
 </tbody>
 </table>
-</section>
-<section id="어떤-경우-ols는-곤란한가" class="level3">
+</div></div><section id="어떤-경우-ols는-곤란한가" class="level3">
 <h3 class="anchored" data-anchor-id="어떤-경우-ols는-곤란한가">어떤 경우 OLS는 곤란한가?</h3>
 <div class="quarto-figure quarto-figure-center" style="display:block; margin: 0 auto; width: 80%;">
 <figure class="figure">
