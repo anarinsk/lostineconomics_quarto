@@ -67,9 +67,9 @@ md가 html로 변환되기 때문에 html 및 css의 기술을 활용할 수 있
 
 나는 아래 링크의 리포를 참고했다. 일단 해당 리포를 나의 리포로 포크하도록 하자. 이 리포에 설명이 잘 되어 있어서 대부분은 생략해도 되겠다. 시작할 때 깃헙 페이지의 브랜치를 `master`로 바꾸는 것을 잊지 말자. 디폴트 상태에서는 `gh-pages`라는 브랜치의 내용, 즉 아래 리포의 README.md가 웹으로 호스팅된다. 
 
-[elipapa/markdown-cv: a simple template to write your CV in a readable markdown file and use CSS to publish/print it.](https://github.com/elipapa/markdown-cv)
+[elipapa/markdown-cv](https://github.com/elipapa/markdown-cv)
 
-문서는 깔끔하게 잘 되어 있다. html의 빌드는 깃헙 액션스를 이용해도 되고, 로컬에 jekyll을 깔아서 해도 된다. 게으름을 지향하는 나는 깃헙 액션스를 이용할 것이다. 
+문서는 깔끔하게 잘 되어 있다. html의 빌드는 깃헙 액션스를 이용해도 되고, 로컬에 Jekyll을 깔아서 해도 된다. 게으름을 지향하는 나는 당연히 깃헙 액션스를 선호한다! 
 
 ### Customization
 
