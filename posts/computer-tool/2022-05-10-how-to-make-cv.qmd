@@ -167,7 +167,7 @@ p {
 
 ### Push, build and deploy
 
-- 이렇게 해당 부분을 필요에 따라서 수정한 후 깃헙으로 푸시 하면 깃헙 액션스가 html을 빌드하고 해당 문서를 깃헙 페이지로 배포한다. 배포 주소는 `YOUR-GITHUB-ID.github.io/YOUR-REPO/`
+- 이렇게 해당 부분을 필요에 따라서 수정한 후 깃헙으로 푸시 하면 깃헙 액션스가 html을 빌드하고 해당 문서를 깃헙 페이지로 배포한다. 배포 주소는 `{YOUR-GITHUB-ID}.github.io/{YOUR-REPO}/`
 
 ## Bottomline 
 
