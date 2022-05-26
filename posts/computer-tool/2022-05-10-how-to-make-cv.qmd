@@ -78,7 +78,7 @@ md가 html로 변환되기 때문에 html 및 css의 기술을 활용할 수 있
 - `_config.yml`
 - `index.md`
 - `_layout/cv.html`
-- `media`
+- `media/`
 
 #### `_config.yml`
 
@@ -129,7 +129,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-
 - `<link...` | 이 두 줄은 커스텀 디자인을 담고 있는 특화된 css 파일을 삽입하기 위한 용도이다. 해당 파일의 이름은 `styles.css`이다. 
 - `<!-- mathjax...` | 원래 리포에 $\rm \LaTeX$ 기호 출력을 위한 준비가 되어 있지 않다. mathjax는 자바 스크립트(js)로 웹에서 $\rm \LaTeX$ 출력 관련을 담당한다. math engine으로 mathjax 이외에 katex과 같이 더 빠른 js를 쓸 수 있지만, 이력서에서 텍을 과도하게 쓸 이유가 없다면 mathjax로 충분하다. 
 
-#### `media` 
+#### `media/` 
 
 이 디렉토리에는 일종의 디자인 설정이 들어 있다. 스타일 두 개가 각각 screen, print의 css 파일을 갖고 있다. 자신의 원하는 특화된 설정이 필요하면 별도의 파일을 만들고 이를 앞서 본 `cv.html`에서 읽어오면 된다. 내가 사용하는 `styles.css`의 내용 중에서 중요한 내용 몇 가지만 보고 가자. 
 
