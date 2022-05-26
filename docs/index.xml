@@ -1672,7 +1672,7 @@ Note
 <h3 class="anchored" data-anchor-id="orthogonalization">Orthogonalization</h3>
 <p>일단 기억해야 할 것은 generic 기저 <img src="https://latex.codecogs.com/png.latex?%5C%7Bv_i%5C%7D">가 생성하는 벡터 공간과 <img src="https://latex.codecogs.com/png.latex?%5C%7B%20%5Chat%20e_i%20%5C%7D">가 생성하는 벡터 공간이 동일하다는 것이다. 즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7Bspan%7D(v_1,%20%5Cdotsc,%20v_n)%20=%20V%20=%20%5Ctext%7Bspan%7D(%5Chat%20e_1,%20%5Cdotsc,%20%5Chat%20e_n)%0A"></p>
-<p>그람-슈미트 알고리듬은 다음과 같다.</p>
+<p>그람-슈미트 알고리즘은 다음과 같다.</p>
 <ol type="1">
 <li>일단 orthogonal 기저를 만든다.</li>
 <li>해당 벡터를 표준화한다.</li>
@@ -3615,7 +3615,7 @@ Note
 <h3 class="anchored" data-anchor-id="orthogonalization">Orthogonalization</h3>
 <p>일단 기억해야 할 것은 generic 기저 <img src="https://latex.codecogs.com/png.latex?%5C%7Bv_i%5C%7D">가 생성하는 벡터 공간과 <img src="https://latex.codecogs.com/png.latex?%5C%7B%20%5Chat%20e_i%20%5C%7D">가 생성하는 벡터 공간이 동일하다는 것이다. 즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7Bspan%7D(v_1,%20%5Cdotsc,%20v_n)%20=%20V%20=%20%5Ctext%7Bspan%7D(%5Chat%20e_1,%20%5Cdotsc,%20%5Chat%20e_n)%0A"></p>
-<p>그람-슈미트 알고리듬은 다음과 같다.</p>
+<p>그람-슈미트 알고리즘은 다음과 같다.</p>
 <ol type="1">
 <li>일단 orthogonal 기저를 만든다.</li>
 <li>해당 벡터를 표준화한다.</li>
@@ -5623,7 +5623,7 @@ Note
 <h3 class="anchored" data-anchor-id="orthogonalization">Orthogonalization</h3>
 <p>일단 기억해야 할 것은 generic 기저 <img src="https://latex.codecogs.com/png.latex?%5C%7Bv_i%5C%7D">가 생성하는 벡터 공간과 <img src="https://latex.codecogs.com/png.latex?%5C%7B%20%5Chat%20e_i%20%5C%7D">가 생성하는 벡터 공간이 동일하다는 것이다. 즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7Bspan%7D(v_1,%20%5Cdotsc,%20v_n)%20=%20V%20=%20%5Ctext%7Bspan%7D(%5Chat%20e_1,%20%5Cdotsc,%20%5Chat%20e_n)%0A"></p>
-<p>그람-슈미트 알고리듬은 다음과 같다.</p>
+<p>그람-슈미트 알고리즘은 다음과 같다.</p>
 <ol type="1">
 <li>일단 orthogonal 기저를 만든다.</li>
 <li>해당 벡터를 표준화한다.</li>

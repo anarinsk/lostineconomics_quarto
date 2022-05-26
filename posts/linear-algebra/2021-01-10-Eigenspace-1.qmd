@@ -222,7 +222,7 @@ $$
 \text{span}(v_1, \dotsc, v_n) = V = \text{span}(\hat e_1, \dotsc, \hat e_n) 
 $$
 
-그람-슈미트 알고리듬은 다음과 같다. 
+그람-슈미트 알고리즘은 다음과 같다. 
 
 1. 일단 orthogonal 기저를 만든다. 
 2. 해당 벡터를 표준화한다. 
