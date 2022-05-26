@@ -164,8 +164,8 @@ ul.task-list{list-style: none;}
 <li>교란 요인(confounder)와 충돌 요인(collider)을 심슨의 역설과 벅슨의 역설로 연결해 생각해보자.</li>
 </ul>
 </section>
-<section id="회귀-분석에서-통제를-한다는-것" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="회귀-분석에서-통제를-한다는-것">회귀 분석에서 ’통제’를 한다는 것</h2>
+<section id="회귀-분석에서-통제한다는-것" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="회귀-분석에서-통제한다는-것">회귀 분석에서 ’통제’한다는 것</h2>
 <p>회귀 분석에서 독립 변수 혹은 설명 변수와 통제 변수의 차이는 개념적인 것이다. 즉, 내가 갖고 있는 분석의 초점 혹은 모델의 취지에 따라 결정되는 것이지 어떤 기계적인 방법이나 기준은 없다. 일단 ’통제’에 초점을 맞춰서 생각해보자. 아래와 같은 간략한 회귀 모형을 생각해보자.</p>
 <p><span class="math display">\[
 y_i = \alpha + \beta x_i + \gamma D_i + \epsilon_i
@@ -177,7 +177,9 @@ y_i = \alpha + \beta x_i + \gamma D_i + \epsilon_i
 </div></div></section>
 <section id="confounder-and-simpsons-paradox" class="level2">
 <h2 class="anchored" data-anchor-id="confounder-and-simpsons-paradox">Confounder and Simpson’s Paradox</h2>
-<p>DAG로 표현하는 인과 모델에서 교란 요인이란 독립 변수가 종속 변수를 설명하는 데 있어 영향을 주는 공통 요인을 의미한다. 이 요인을 고려하지 않는다면, <span class="math inline">\(X \to Y\)</span>가 성립하는 것처럼 보이나, <span class="math inline">\(C\)</span>를 고려하면 그 영향이 약화되거나 반대로 뒤집힐 수도 있다. 이런 점에서 교란 요인이라고 부르는데,</p>
+<p>DAG로 표현하는 인과 모델에서 교란 요인이란 독립 변수가 종속 변수를 설명하는 데 있어 영향을 주는 공통 요인을 의미한다. 이 요인을 고려하지 않으면 <span class="math inline">\(X \to Y\)</span>가 존재하는 듯 보인다. <span class="math inline">\(C\)</span>를 고려하면 <span class="math inline">\(X \to Y\)</span>의 관계는 약화되거나 사라질 수도 있다. 이런 점에서 confounder를 교란 요인이라고 부른다. <span class="math inline">\(C\)</span>가 관찰 가능하다면 직접 ’통제’를 해주면 된다. 문제는 관찰 가능하지 않은 경우인데 이 주제는 별도로 다룰 만한 테마이니 일단 넘어가도록 하자.</p>
+<p>교란 요인은 심슨의 역설과 어떻게 연결되는가? 통상적으로 심슨의 역설은 부분의 결과가 전체의 결과로 반드시 이어지지 않는 것으로 정의된다, 많이 인용되는 아래 그림이 좋은 예를 이룬다.</p>
+<p>심슨 가족 전체를 보면 우상향하는 그래프지만, 구성원 개개인은 우하향하는 그래프가 된다. 각각이 우하향한다면</p>
 
 
 </section>

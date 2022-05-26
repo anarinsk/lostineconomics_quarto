@@ -7,6 +7,11 @@ image: "goodecon.jpg"
 categories: [economics]
 #margin-header: subscribe.html
 ---
+
+## TL; DR 
+
+- 모두가 트릴레마를 넘어서고 싶어 하지만, 그럴 수는 없다. 거시 경제든 코인이든. 
+
 ## 거시 경제의 트릴레마 
 
 트릴레마(trilemma)는 두 개의 모순된 선택을 지니는 딜레마의 확장 버전이다. 세 개의 선택지 중에서 두 개는 조합이 가능하지만 그로 인해서 하나의 가치를 포기해야만 하는 상황을 의미한다. 

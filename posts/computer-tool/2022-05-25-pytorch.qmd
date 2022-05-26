@@ -8,7 +8,7 @@ categories: [computer-tool, machine-learning]
 draft: false 
 ---
 
-## tl; dr 
+## TL; DR
 
 - 파이토치를 Windows + WSL2 조합으로 설치하는 법을 간단하게 안내한다. 
 

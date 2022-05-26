@@ -8,7 +8,8 @@ categories: [regression]
 #margin-header: subscribe.html
 ---
 
-## tl;dr 
+## TL; DR
+
 - 로짓 회귀는 우리가 알던 그 '회귀'와는 조금 다르다. 
 - 로짓 회귀는 아래와 같은 데이터 모형에 기반을 둔 추정법이다. 
 

@@ -8,7 +8,7 @@ categories: [regression]
 #margin-header: subscribe.html
 ---
 
-## tl;dr 
+## TL; DR
 
 - 회귀분석을 선형 대수를 통해서 이해하면 새로운 깨달음을 얻을 수 있다. 
 - 회귀분석이라는 것은 PCA와 마찬가지로 차원을 '축소'하는 방법이다. $n$ 개의 관찰을 지닌 어떤 한 대상을 이보다 낮은 $k(<n)$ 개의 변수로 요약하는 것이 핵심이다. 

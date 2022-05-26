@@ -26,7 +26,7 @@
 
   gtag('config', 'G-JNRF3S74Z4');
 </script><section id="tl-dr" class="level2">
-<h2 class="anchored" data-anchor-id="tl-dr">tl; dr</h2>
+<h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <ul>
 <li>파이토치를 Windows + WSL2 조합으로 설치하는 법을 간단하게 안내한다.</li>
 </ul>
@@ -122,7 +122,13 @@
   gtag('js', new Date());
 
   gtag('config', 'G-JNRF3S74Z4');
-</script><section id="거시-경제의-트릴레마" class="level2 page-columns page-full">
+</script><section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
+<ul>
+<li>모두가 트릴레마를 넘어서고 싶어 하지만, 그럴 수는 없다. 거시 경제든 코인이든.</li>
+</ul>
+</section>
+<section id="거시-경제의-트릴레마" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="거시-경제의-트릴레마">거시 경제의 트릴레마</h2>
 <p>트릴레마(trilemma)는 두 개의 모순된 선택을 지니는 딜레마의 확장 버전이다. 세 개의 선택지 중에서 두 개는 조합이 가능하지만 그로 인해서 하나의 가치를 포기해야만 하는 상황을 의미한다.</p>
 <p>트릴레마 중에서 가장 많이 알려진 것은 거시 경제의 트릴레마다.</p>
@@ -187,7 +193,13 @@
   gtag('js', new Date());
 
   gtag('config', 'G-JNRF3S74Z4');
-</script><section id="why" class="level2 page-columns page-full">
+</script><section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
+<ul>
+<li>독립 블로깅 툴을 고민하고 있는 당신, Quarto로 오라.</li>
+</ul>
+</section>
+<section id="why" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="why">Why</h2>
 <p>블로깅 툴은 관리가 편한 게 제일 좋다. 다만 상용 툴에는 내 취향에 어긋나는 몇 가지 제약이 있다.</p>
 <ul>
@@ -1442,7 +1454,13 @@ Note
 
 
 
-<p>google_analytics.html</p><section id="singluar-value-decomposition" class="level2">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="singluar-value-decomposition" class="level2">
 <h2 class="anchored" data-anchor-id="singluar-value-decomposition">Singluar Value Decomposition</h2>
 <p><img src="https://latex.codecogs.com/png.latex?A%20%5Cin%20%5Cmathbb%20C%5E%7Bm%20%5Ctimes%20n%7D">을 생각해보자. 이런 조건에서 아이겐 분해를 어떻게 활용할 수 있을까? 일단 <img src="https://latex.codecogs.com/png.latex?A">를 정방행렬로 만들어주어야 할 것이고, 이에는 두 가지 방법이 있다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cunderbrace%7BA%5ET%20A%7D_%7Bn%20%5Ctimes%20n%7D,%20%5Coverbrace%7BA%20A%5ET%7D%5E%7Bm%20%5Ctimes%20m%7D%0A"></p>
@@ -3379,7 +3397,13 @@ Note
 
 
 
-<p>google_analytics.html</p><section id="singluar-value-decomposition" class="level2">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="singluar-value-decomposition" class="level2">
 <h2 class="anchored" data-anchor-id="singluar-value-decomposition">Singluar Value Decomposition</h2>
 <p><img src="https://latex.codecogs.com/png.latex?A%20%5Cin%20%5Cmathbb%20C%5E%7Bm%20%5Ctimes%20n%7D">을 생각해보자. 이런 조건에서 아이겐 분해를 어떻게 활용할 수 있을까? 일단 <img src="https://latex.codecogs.com/png.latex?A">를 정방행렬로 만들어주어야 할 것이고, 이에는 두 가지 방법이 있다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cunderbrace%7BA%5ET%20A%7D_%7Bn%20%5Ctimes%20n%7D,%20%5Coverbrace%7BA%20A%5ET%7D%5E%7Bm%20%5Ctimes%20m%7D%0A"></p>
@@ -5381,7 +5405,13 @@ Note
 
 
 
-<p>google_analytics.html</p><section id="singluar-value-decomposition" class="level2">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="singluar-value-decomposition" class="level2">
 <h2 class="anchored" data-anchor-id="singluar-value-decomposition">Singluar Value Decomposition</h2>
 <p><img src="https://latex.codecogs.com/png.latex?A%20%5Cin%20%5Cmathbb%20C%5E%7Bm%20%5Ctimes%20n%7D">을 생각해보자. 이런 조건에서 아이겐 분해를 어떻게 활용할 수 있을까? 일단 <img src="https://latex.codecogs.com/png.latex?A">를 정방행렬로 만들어주어야 할 것이고, 이에는 두 가지 방법이 있다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cunderbrace%7BA%5ET%20A%7D_%7Bn%20%5Ctimes%20n%7D,%20%5Coverbrace%7BA%20A%5ET%7D%5E%7Bm%20%5Ctimes%20m%7D%0A"></p>
