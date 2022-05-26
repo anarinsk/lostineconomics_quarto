@@ -52,7 +52,7 @@ categories: [regression]
 
 ### 어떤 경우 OLS는 곤란한가? 
 
-![로지스틱 리그레션이 필요한 순간](https://miro.medium.com/max/1280/0*gKOV65tvGfY8SMem.png){ style="display:block; margin: 0 auto; width: 80%;" }
+![로지스틱 리그레션이 필요한 순간](https://miro.medium.com/max/1280/0*gKOV65tvGfY8SMem.png){.my-figure7}
 
 <br>
 독립 변수가 하나인 모형을 가정하고 위의 그림을 보자. 종속 변수가 0, 1인 상태로 그대로 회귀분석을 하면 그림의 왼쪽 같이 된다. 회귀식의 기울기를 구할 수 있으니 된 것 아니냐? 아니다. 
