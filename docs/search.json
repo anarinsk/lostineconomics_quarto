@@ -403,7 +403,7 @@
     "href": "posts/computer-tool/2022-05-25-pytorch.html#pytorch-wsl-cuda",
     "title": "PyTorch + WSL",
     "section": "PyTorch + WSL + CUDA",
-    "text": "PyTorch + WSL + CUDA\nWSL 2가 이제 표준이 되었으니 이를 그냥 WSL로 부르도록 하자. 위 링크의 선택지에서 OS 종류를 Linux, Windows 어느 것으로 해도 설치 방식이 동일하다. 패키지 설치를 conda가 맡고 있기 때문이다. 엔비디아의 GPU를 활용하는 CUDA 버전 역시 11.3으로 선택하면 별 문제 없이 설치에 필요한 conda 명령어 셋을 보여준다.\n\nConda 환경 생성\n콘다 환경에서 그냥 쓰지 말고 필요한 환경(env)을 만들어 그 안에 쓰는 편을 권한다. 이렇게 쓰면 문제가 생겼을 때 생성된 환경만 날려버리면 그만이다.\n? conda create -n YOUR-ENV-NAME python=3.10\n? conda env list \n? conda activate YOUR-ENV-NAME\n\nconda create -n은 YOUR-ENV-NAME으로 환경을 만들라는 명령이고, python=3.10은 파이썬 3.10을 설치하라는 명령이다.\nconda env list는 현재 설치된 환경을 보여준다.\nconda activate YOUR-ENV-NAME는 해당 환경을 선택한다.\n\n이렇게 해놓고 파이토치를 설치하면 된다.\n\n\nCUDA 설정\nWSL 초기에는 CUDA 설정이 무척 까다로웠다. 최신 버전에서는 그런 문제가 없다. 엔비디아의 CUDA를 지원하는 GPU라면 최신 드라이버를 깔고 최신 버전의 WSL을 이용하면 된다. 모든 작업이 화면 뒤에서 잘 이루어진다. 편해도 너무 편하다."
+    "text": "PyTorch + WSL + CUDA\nWSL 2가 이제 표준이 되었으니 이를 그냥 WSL로 부르도록 하자. 위 링크의 선택지에서 OS 종류를 Linux, Windows 어느 것으로 해도 설치 방식이 동일하다. 패키지 설치를 conda가 맡고 있기 때문이다. 엔비디아의 GPU를 활용하는 CUDA 버전 역시 11.3으로 선택하면 별 문제 없이 설치에 필요한 conda 명령어 셋을 보여준다.\n\nConda 환경 생성\n콘다에서 환경(env)을 만들어 그 안에 쓰면 여러모로 편리하다. 혹시 문제가 생겼을 때 생성된 환경만 날려버리면 된다.\n? conda create -n YOUR-ENV-NAME python=3.10\n? conda env list \n? conda activate YOUR-ENV-NAME\n\nconda create -n은 YOUR-ENV-NAME으로 환경을 만들라는 명령이고, python=3.10은 파이썬 3.10을 설치하라는 명령이다.\nconda env list는 현재 설치된 환경을 보여준다.\nconda activate YOUR-ENV-NAME는 해당 환경을 선택한다.\n\n이렇게 해놓고 파이토치를 설치하면 된다.\n\n\nCUDA 설정\nWSL 초기에는 CUDA 설정이 무척 까다로웠다. 최신 버전에서는 그런 문제가 없다. 엔비디아의 CUDA를 지원하는 GPU라면 최신 드라이버를 깔고 최신 버전의 WSL을 이용하면 된다. 모든 작업이 화면 뒤에서 잘 이루어진다. 편해도 너무 편하다."
   },
   {
     "objectID": "posts/computer-tool/2022-05-25-pytorch.html#testing-code",

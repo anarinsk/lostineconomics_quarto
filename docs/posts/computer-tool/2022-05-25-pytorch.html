@@ -252,7 +252,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>WSL 2가 이제 표준이 되었으니 이를 그냥 WSL로 부르도록 하자. 위 링크의 선택지에서 OS 종류를 Linux, Windows 어느 것으로 해도 설치 방식이 동일하다. 패키지 설치를 conda가 맡고 있기 때문이다. 엔비디아의 GPU를 활용하는 CUDA 버전 역시 11.3으로 선택하면 별 문제 없이 설치에 필요한 conda 명령어 셋을 보여준다.</p>
 <section id="conda-환경-생성" class="level3">
 <h3 class="anchored" data-anchor-id="conda-환경-생성">Conda 환경 생성</h3>
-<p>콘다 환경에서 그냥 쓰지 말고 필요한 환경(env)을 만들어 그 안에 쓰는 편을 권한다. 이렇게 쓰면 문제가 생겼을 때 생성된 환경만 날려버리면 그만이다.</p>
+<p>콘다에서 환경(env)을 만들어 그 안에 쓰면 여러모로 편리하다. 혹시 문제가 생겼을 때 생성된 환경만 날려버리면 된다.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">?</span> conda create <span class="at">-n</span> YOUR-ENV-NAME python=3.10</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">?</span> conda env list </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">?</span> conda activate YOUR-ENV-NAME</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
