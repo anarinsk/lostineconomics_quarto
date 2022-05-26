@@ -57,7 +57,7 @@ p {
   text-align: left; 
 }
 
-.my-figure{
+.my-figure7 {
   display: inline-block; 
   margin: 0 auto;
   //border:1.5px silver solid; 
@@ -66,3 +66,24 @@ p {
   width: 70%;
   background:#FFFFFF;
 }
+
+.my-figure5 {
+  display: inline-block; 
+  margin: 0 auto;
+  //border:1.5px silver solid; 
+  padding: 5px;
+  text-align: left; 
+  width: 50%;
+  background:#FFFFFF;
+}
+
+.my-figure3 {
+  display: inline-block; 
+  margin: 0 auto;
+  //border:1.5px silver solid; 
+  padding: 5px;
+  text-align: left; 
+  width: 30%;
+  background:#FFFFFF;
+}
+

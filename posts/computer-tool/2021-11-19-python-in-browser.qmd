@@ -32,7 +32,7 @@ github를 dev 모드로 돌린다. 웹 브라우저 리포지터리 창에서 `.
 
 이제 아래 왼쪽 탭 화면에서 extension을 찾으면 된다. 아래 그림처럼 생겼다.  
 
-![](https://code.visualstudio.com/assets/docs/editor/extension-marketplace/extensions-view-icon.png){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 10%;" }
+![VS 코드 확장 버튼](extension.jpg){.my-figure3}
 
 
 ## extension 설치 
