@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.449">
+<meta name="generator" content="quarto-0.9.446">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -168,9 +168,9 @@ ul.task-list{list-style: none;}
 <section id="regression-in-vector-space" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="regression-in-vector-space">Regression in vector space</h2>
 <p>여기서 회귀분석을 해설할 생각은 없다. 이미 너무나 많은 그리고 매우 훌륭한 내용들이 책, 웹, 강의로 넘쳐날테니까. 이 글의 용도는 그림 하나로 지나치기 쉬운 회귀분석의 ’핵심’을 살피는 것이다. <a href="https://stats.stackexchange.com/questions/123651/geometric-interpretation-of-multiple-correlation-coefficient-r-and-coefficient">crossvalidated</a>에서 아래 그림을 보는 순간 일종의 ’돈오돈수’가 강림했다. (이렇게 이해하면 쉬웠을 것을…)</p>
-<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width: 60%;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="img-fluid figure-img"></p>
+<p><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
 <p></p><figcaption aria-hidden="true" class="figure-caption">벡터 스페이스에 바라본 회귀 분석</figcaption><p></p>
 </figure>
 </div>
@@ -182,18 +182,18 @@ ul.task-list{list-style: none;}
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>흔히 <span class="math inline">\(\mathbf Y\)</span>를 종속변수, <span class="math inline">\(\mathbf X\)</span>를 독립변수로 부르기도 한다. 하지만 이러한 이름에는 혼란의 여지가 있다. 여기서는 regressor, regressand라는 영어 표현을 그대로 쓰도록 하겠다.</p>
-</div></div><div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width: 60%;">
+</div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="img-fluid figure-img"></p>
+<p><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
 <p></p><figcaption aria-hidden="true" class="figure-caption">독립변수 1개인 회귀 분석</figcaption><p></p>
 </figure>
 </div>
 <p><br> 위 그림은 1개의 regressor가 존재할 때 이것과 regressand를 그대로 2차원 평면에 관찰 수만큼 찍은 것이다. 첫번째 그림에서 “Observed Y”는 점 하나가 <span class="math inline">\(n\)</span> 개의 regressand를 모두 포괄한다. <span class="math inline">\(\mathbf{Y} \in {\mathbb R}^{n}\)</span> 벡터, 즉 <span class="math inline">\(n\)</span> 차원 벡터이고, 이것이 회귀식 좌변의 관찰값 <span class="math inline">\(n\)</span> 개를 표현한다.</p>
 <p>이제 선형대수의 세계로 들어가보자. <span class="math inline">\(\mathbf X\)</span>의 열(column)이 각각 <span class="math inline">\(n\)</span> 개의 관찰 값을 지닌 regressor에 해당한다. 이 각각의 컬럼 <span class="math inline">\(x_i\)</span>는 <span class="math inline">\(x_i \in {\mathbb R}^{n}\)</span> 벡터이다. <span class="math inline">\(x_i\)</span> 벡터 <span class="math inline">\(k\)</span> 개가 생성할 수 있는 공간이 <span class="math inline">\(\mathbf X\)</span>의 열 공간(column space)이다. 앞으로 이를 col <span class="math inline">\(\mathbf X\)</span>로 표기하자.</p>
 <p>이렇게 생각하면 좋겠다. <span class="math inline">\(x_i \in {\mathbb R}^{n}\)</span> 벡터가 <span class="math inline">\(k(&lt;n)\)</span> 개 있다고 하자. 이는 <span class="math inline">\(n\)</span> 보다 차원이 낮기 때문에 기하학적으로는 <span class="math inline">\(n\)</span> 차원 공간에서 초평면(hyperplane)으로 나타날 것이다. 위 그림에서 컬럼 스페이스가 평면으로 표현되는 것은 이러한 취지다. 3차원 벡터의 열 공간이 생성하는 초평면을 예시하면 아래와 같다.</p>
-<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width: 60%;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="img-fluid figure-img"></p>
+<p><img src="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="my-figure5 img-fluid figure-img"></p>
 <p></p><figcaption aria-hidden="true" class="figure-caption">2차원 컬럼 스페이스</figcaption><p></p>
 </figure>
 </div>
@@ -233,9 +233,9 @@ x_1 \beta_1 + \dotsc + x_k \beta_k
 \end{aligned}
 \]</span></p>
 <p>아래 그림을 참고하자.</p>
-<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width: 60%;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/regression-vector_comb.png?raw=true" class="img-fluid figure-img"></p>
+<p><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/regression-vector_comb.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
 <p></p><figcaption aria-hidden="true" class="figure-caption">잔차의 의미</figcaption><p></p>
 </figure>
 </div>
