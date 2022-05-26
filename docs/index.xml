@@ -1262,7 +1262,12 @@ Note
 </section>
 <section id="핵심" class="level2">
 <h2 class="anchored" data-anchor-id="핵심">핵심</h2>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <ul>
 <li>VS Code의 익스텐션 <code>Remote-Container</code> 컨테이너 접속 기능을 활용해 <code>datascience-notebook</code> 컨테이너 접속한다.
 <ul>
@@ -1361,16 +1366,31 @@ Note
 <li><code>ipynb</code>를 확장자로 해서 노트북을 쓰고 싶다면, 그냥 만들어 쓰면 된다!</li>
 <li>VS Code에 Jupyter 확장이 있기 때문에 보통의 웹 브라우저에서 쓰는 Jupyter 노트북과 거의 동일한 기능을 제공한다. 웹 노트북에서와 마찬가지로 파이썬, 줄리아, R의 커널을 선택하면 된다 (아래 그림의 오른쪽 상단 박스). jupyterlab과 거의 비슷한 인터페이스를 지니고 있다. 오히려 주피터에 비해 복잡하지 않아서 좋다고 느낄지도 모르겠다.</li>
 </ul>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 </section>
 <section id="setting-for-remote-connection" class="level2">
 <h2 class="anchored" data-anchor-id="setting-for-remote-connection">Setting for Remote Connection</h2>
-<p>앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 좋다면 아래와 같이 하면 된다.</p>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p>앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 나을 것이다. 아래와 같이 하자.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <ul>
 <li>만일 위와 같은 화면에 Remote Exlorer에서 뜨지 않는다면 컨테이너가 부착되지 않는 것이다. 컨테이너를 부착하면 된다.</li>
 </ul>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <ul>
 <li><code>Extension</code> &gt; <code>REMOTE EXPLORER</code> &gt; <code>DETAILS</code> 탭에서 가운데 설정 모양이 “Open Container Configuration File”이다.</li>
 <li>옆 에디터 창에 json 형식의 설정이 뜬뜬다. 여기서 관련 extension 등의 설정을 지정할 수 있다. 이렇게 설정을 해두면 해당 컨테이너를 부착할 때 설정한 대로 자동으로 옵션들이 적용된다. 매우 편리하다.</li>
@@ -1394,7 +1414,12 @@ Note
 <span id="cb5-17">        <span class="dt" style="color: #AD0000;">"r.rterm.linux"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/opt/conda/bin/radian"</span></span>
 <span id="cb5-18">    <span class="fu" style="color: #4758AB;">}</span></span>
 <span id="cb5-19"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <ul>
 <li><code>File</code> &gt; <code>Perefences</code> &gt; <code>Settings</code>에서도 설정에 접근할 수 있다.</li>
 <li>VS Code의 설정은 두가지 축을 지닌다. 하나는 설정 전체를 담은 json 파일이다. 왼쪽 <code>&gt;</code> 표시된 항목에서처럼 카테고리 별로 구별되어 쉽게 접근할 수 있다. 이 하나의 설정을 위 그림에서 보듯이 User, Remote(컨네이터), Workspace 별로 별도로 지정해 활용할 수도 있다.</li>
@@ -1520,7 +1545,13 @@ Note
 
 
 
-<p>google_analytics.html</p><section id="why" class="level2">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="why" class="level2">
 <h2 class="anchored" data-anchor-id="why">Why?</h2>
 <p>아이겐밸류, 아이겐벡터는 중요하다. 어디서나 튀어나온다. 그래서 친숙하지만 나는 이걸 제대로 알고 있는 것일까? 이번 포스팅에서는 아이겐 공간의 관점에서 이 문제를 살펴볼 예정이다.</p>
 <p>사실 아이겐 공간은 <img src="https://latex.codecogs.com/png.latex?n%20%5Ctimes%20n"> 매트릭스의 숨은 구조(뼈대)와 같다. 아이겐밸류를 구하는 식을 떠올려보자.</p>
@@ -1627,17 +1658,17 @@ Note
 <li><img src="https://latex.codecogs.com/png.latex?e_1%20=%20v_1"></li>
 <li><img src="https://latex.codecogs.com/png.latex?e_2%20=%20v_2%20-%20%5CPi_%7Be_1%7D(v_2)"></li>
 </ul>
-<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width: 80%;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
 <p><br> 위의 그림에서 보듯이 <img src="https://latex.codecogs.com/png.latex?v_2">는 <img src="https://latex.codecogs.com/png.latex?v_1"> 프로젝션된 벡터와 이와 직교하는 <img src="https://latex.codecogs.com/png.latex?e_2">와의 합으로 계산할 수 있다. 따라서 <img src="https://latex.codecogs.com/png.latex?e_2%20=%20v_2%20-%20%5CPi_%7Be_1%7D(v_2)">가 성립한다. 벡터의 빼기 관점에서 생각해보면 어떨까? <img src="https://latex.codecogs.com/png.latex?v_2">와 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7Be_1%7D(v_2)">의 차이가 <img src="https://latex.codecogs.com/png.latex?e_2">다. 벡터는 방향과 크기로 정의된다는 점을 다시 기억하자. 같은 방식으로 아래 그림에서 보듯이 더 많은 축과 직교하는 벡터들을 구성할 수 있다.</p>
 <p>이후 <img src="https://latex.codecogs.com/png.latex?%5Chat%20e_i%20=%20%5Cdfrac%7Be_i%7D%7B%5CVert%20e_i%20%5CVert%7D">로 <img src="https://latex.codecogs.com/png.latex?e_i">를 표준화하면 된다.</p>
-<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width: 80%;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -1683,7 +1714,13 @@ Note
 
 
 
-<p>google_analytics.html</p><section id="concepts-definition" class="level2">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="concepts-definition" class="level2">
 <h2 class="anchored" data-anchor-id="concepts-definition">Concepts &amp; Definition</h2>
 <p>벡터 공간 <img src="https://latex.codecogs.com/png.latex?V">의 기저</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AB%20=%20%5C%7B%20%5Cvec%7Be_1%7D,%20%5Cdotsc,%20%5Cvec%7Be_n%7D%20%5C%7D%20%20%0A"></p>
@@ -1786,9 +1823,9 @@ Note
 <p>아래 그림에서 보듯이, <img src="https://latex.codecogs.com/png.latex?Ax">라는 변환과 <img src="https://latex.codecogs.com/png.latex?B%5Bx%5D_%7B%5Cmathcal%20B%7D">라는 변환은 좌표계만 다를 뿐 동일한 변환이다. <img src="https://latex.codecogs.com/png.latex?C%20B%20C%5E%7B-1%7D">의 기저의 변화를 살펴보면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cunderbrace%7Bu%20%5Crightarrow%20%5Cmathcal%20B%7D_%7BC%5E%7B-1%7D%7D%20&amp;%20%5Ccdots%20B%20%5Ccdots%20%5Cunderbrace%7B%5Cmathcal%20B%20%5Crightarrow%20u%7D_%7BC%7D%20%5C%5C%0A&amp;%20%5Ccdots%20A%20%5Ccdots%0A%5Cend%7Baligned%7D%0A"></p>
 <p>로 나타낼 수 있다.</p>
-<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width=60%;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -1817,9 +1854,15 @@ Note
 
 
 
-<p>google_analytics.html</p><div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func.png?raw=true" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -1837,7 +1880,12 @@ Note
 <li><img src="https://latex.codecogs.com/png.latex?T(%5Cvec%20v)%20=%20%5Cvec%20w">. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20%5Cin%20V">를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w%20%5Cin%20W">로 변환하는 것을 나타낸다.</li>
 </ul></li>
 </ul>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func_fig.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func_fig.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <p><br> 함수와 마찬가지로 위의 선형 변환에서 치역(Im(<img src="https://latex.codecogs.com/png.latex?T">))와 커널(스칼라 함수에서는 <img src="https://latex.codecogs.com/png.latex?f(x)%20=%200">의 해)이 정의된다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%7B%5Crm%20Im%7D(T)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20w%20%5Cin%20W%20%7C%20%5Cvec%20w%20=%20T(%5Cvec%20v)%20%5Ctext%7B%20for%20some%20%7D%20%5Cvec%20v%20%5C%7D%20%5Csubseteq%20W%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%7B%5Crm%20Ker%7D(T)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20v%20%5Cin%20V%20%7C%20T(%5Cvec%20v)%20=%20%5Cvec%200%20%5C%7D%20%5Csubseteq%20V%0A"></p>
@@ -1858,7 +1906,12 @@ Note
 <section id="linearity" class="level2">
 <h2 class="anchored" data-anchor-id="linearity">Linearity</h2>
 <p>선형의 의미는 무엇일까? 기하적으로 선을 다룬다는 뜻이 아니다. 선형의 의미는 함수적인 의미다. 아래 그림을 보자.</p>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/linearity.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/linearity.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <p>즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AT(%5Calpha_1%20%5Cvec%20v_1%20+%20%5Calpha_2%20%5Cvec%20v_2)%20=%20%5Calpha_1%20T(%5Cvec%20v_1)%20+%20%5Calpha_2%20T(%5Cvec%20v_2)%20=%20%5Calpha_1%20%5Cvec%20w_1%20+%20%5Calpha_2%20%5Cvec%20w_2%0A"></p>
 </section>
@@ -1877,7 +1930,12 @@ Note
 </section>
 <section id="surjective-and-injective" class="level3">
 <h3 class="anchored" data-anchor-id="surjective-and-injective">Surjective and Injective</h3>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/sur_inj.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/sur_inj.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <p>함수에서 전사 함수와 단사 함수의 개념을 그대로 적용할 수 있다. 선형 변환 혹은 행렬도 함수다.</p>
 <p>만일, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_1%20%5Cneq%20%5Cvec%20v_2">이고 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_1,%20%5Cvec%20v_2%20%5Cin%20%5Cmathcal%20R(M_T)">라면 이는 선형 변환의 정의에 따라서 서로 다른 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w">로 매핑된다. 따라서 만일 단사 변환이 되려면, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M_T)%20=%20%5C%7B%20%5Cvec%200%20%5C%7D">만 성립하면 된다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AAy%20-%20Az%20=%20A(y-z)%0A"></p>
@@ -3141,7 +3199,12 @@ Note
 </section>
 <section id="핵심" class="level2">
 <h2 class="anchored" data-anchor-id="핵심">핵심</h2>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <ul>
 <li>VS Code의 익스텐션 <code>Remote-Container</code> 컨테이너 접속 기능을 활용해 <code>datascience-notebook</code> 컨테이너 접속한다.
 <ul>
@@ -3240,16 +3303,31 @@ Note
 <li><code>ipynb</code>를 확장자로 해서 노트북을 쓰고 싶다면, 그냥 만들어 쓰면 된다!</li>
 <li>VS Code에 Jupyter 확장이 있기 때문에 보통의 웹 브라우저에서 쓰는 Jupyter 노트북과 거의 동일한 기능을 제공한다. 웹 노트북에서와 마찬가지로 파이썬, 줄리아, R의 커널을 선택하면 된다 (아래 그림의 오른쪽 상단 박스). jupyterlab과 거의 비슷한 인터페이스를 지니고 있다. 오히려 주피터에 비해 복잡하지 않아서 좋다고 느낄지도 모르겠다.</li>
 </ul>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 </section>
 <section id="setting-for-remote-connection" class="level2">
 <h2 class="anchored" data-anchor-id="setting-for-remote-connection">Setting for Remote Connection</h2>
-<p>앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 좋다면 아래와 같이 하면 된다.</p>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p>앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 나을 것이다. 아래와 같이 하자.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <ul>
 <li>만일 위와 같은 화면에 Remote Exlorer에서 뜨지 않는다면 컨테이너가 부착되지 않는 것이다. 컨테이너를 부착하면 된다.</li>
 </ul>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <ul>
 <li><code>Extension</code> &gt; <code>REMOTE EXPLORER</code> &gt; <code>DETAILS</code> 탭에서 가운데 설정 모양이 “Open Container Configuration File”이다.</li>
 <li>옆 에디터 창에 json 형식의 설정이 뜬뜬다. 여기서 관련 extension 등의 설정을 지정할 수 있다. 이렇게 설정을 해두면 해당 컨테이너를 부착할 때 설정한 대로 자동으로 옵션들이 적용된다. 매우 편리하다.</li>
@@ -3273,7 +3351,12 @@ Note
 <span id="cb5-17">        <span class="dt" style="color: #AD0000;">"r.rterm.linux"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/opt/conda/bin/radian"</span></span>
 <span id="cb5-18">    <span class="fu" style="color: #4758AB;">}</span></span>
 <span id="cb5-19"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <ul>
 <li><code>File</code> &gt; <code>Perefences</code> &gt; <code>Settings</code>에서도 설정에 접근할 수 있다.</li>
 <li>VS Code의 설정은 두가지 축을 지닌다. 하나는 설정 전체를 담은 json 파일이다. 왼쪽 <code>&gt;</code> 표시된 항목에서처럼 카테고리 별로 구별되어 쉽게 접근할 수 있다. 이 하나의 설정을 위 그림에서 보듯이 User, Remote(컨네이터), Workspace 별로 별도로 지정해 활용할 수도 있다.</li>
@@ -3399,7 +3482,13 @@ Note
 
 
 
-<p>google_analytics.html</p><section id="why" class="level2">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="why" class="level2">
 <h2 class="anchored" data-anchor-id="why">Why?</h2>
 <p>아이겐밸류, 아이겐벡터는 중요하다. 어디서나 튀어나온다. 그래서 친숙하지만 나는 이걸 제대로 알고 있는 것일까? 이번 포스팅에서는 아이겐 공간의 관점에서 이 문제를 살펴볼 예정이다.</p>
 <p>사실 아이겐 공간은 <img src="https://latex.codecogs.com/png.latex?n%20%5Ctimes%20n"> 매트릭스의 숨은 구조(뼈대)와 같다. 아이겐밸류를 구하는 식을 떠올려보자.</p>
@@ -3506,17 +3595,17 @@ Note
 <li><img src="https://latex.codecogs.com/png.latex?e_1%20=%20v_1"></li>
 <li><img src="https://latex.codecogs.com/png.latex?e_2%20=%20v_2%20-%20%5CPi_%7Be_1%7D(v_2)"></li>
 </ul>
-<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width: 80%;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
 <p><br> 위의 그림에서 보듯이 <img src="https://latex.codecogs.com/png.latex?v_2">는 <img src="https://latex.codecogs.com/png.latex?v_1"> 프로젝션된 벡터와 이와 직교하는 <img src="https://latex.codecogs.com/png.latex?e_2">와의 합으로 계산할 수 있다. 따라서 <img src="https://latex.codecogs.com/png.latex?e_2%20=%20v_2%20-%20%5CPi_%7Be_1%7D(v_2)">가 성립한다. 벡터의 빼기 관점에서 생각해보면 어떨까? <img src="https://latex.codecogs.com/png.latex?v_2">와 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7Be_1%7D(v_2)">의 차이가 <img src="https://latex.codecogs.com/png.latex?e_2">다. 벡터는 방향과 크기로 정의된다는 점을 다시 기억하자. 같은 방식으로 아래 그림에서 보듯이 더 많은 축과 직교하는 벡터들을 구성할 수 있다.</p>
 <p>이후 <img src="https://latex.codecogs.com/png.latex?%5Chat%20e_i%20=%20%5Cdfrac%7Be_i%7D%7B%5CVert%20e_i%20%5CVert%7D">로 <img src="https://latex.codecogs.com/png.latex?e_i">를 표준화하면 된다.</p>
-<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width: 80%;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -3562,7 +3651,13 @@ Note
 
 
 
-<p>google_analytics.html</p><section id="concepts-definition" class="level2">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="concepts-definition" class="level2">
 <h2 class="anchored" data-anchor-id="concepts-definition">Concepts &amp; Definition</h2>
 <p>벡터 공간 <img src="https://latex.codecogs.com/png.latex?V">의 기저</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AB%20=%20%5C%7B%20%5Cvec%7Be_1%7D,%20%5Cdotsc,%20%5Cvec%7Be_n%7D%20%5C%7D%20%20%0A"></p>
@@ -3665,9 +3760,9 @@ Note
 <p>아래 그림에서 보듯이, <img src="https://latex.codecogs.com/png.latex?Ax">라는 변환과 <img src="https://latex.codecogs.com/png.latex?B%5Bx%5D_%7B%5Cmathcal%20B%7D">라는 변환은 좌표계만 다를 뿐 동일한 변환이다. <img src="https://latex.codecogs.com/png.latex?C%20B%20C%5E%7B-1%7D">의 기저의 변화를 살펴보면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cunderbrace%7Bu%20%5Crightarrow%20%5Cmathcal%20B%7D_%7BC%5E%7B-1%7D%7D%20&amp;%20%5Ccdots%20B%20%5Ccdots%20%5Cunderbrace%7B%5Cmathcal%20B%20%5Crightarrow%20u%7D_%7BC%7D%20%5C%5C%0A&amp;%20%5Ccdots%20A%20%5Ccdots%0A%5Cend%7Baligned%7D%0A"></p>
 <p>로 나타낼 수 있다.</p>
-<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width=60%;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -3696,9 +3791,15 @@ Note
 
 
 
-<p>google_analytics.html</p><div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func.png?raw=true" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -3716,7 +3817,12 @@ Note
 <li><img src="https://latex.codecogs.com/png.latex?T(%5Cvec%20v)%20=%20%5Cvec%20w">. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20%5Cin%20V">를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w%20%5Cin%20W">로 변환하는 것을 나타낸다.</li>
 </ul></li>
 </ul>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func_fig.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func_fig.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <p><br> 함수와 마찬가지로 위의 선형 변환에서 치역(Im(<img src="https://latex.codecogs.com/png.latex?T">))와 커널(스칼라 함수에서는 <img src="https://latex.codecogs.com/png.latex?f(x)%20=%200">의 해)이 정의된다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%7B%5Crm%20Im%7D(T)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20w%20%5Cin%20W%20%7C%20%5Cvec%20w%20=%20T(%5Cvec%20v)%20%5Ctext%7B%20for%20some%20%7D%20%5Cvec%20v%20%5C%7D%20%5Csubseteq%20W%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%7B%5Crm%20Ker%7D(T)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20v%20%5Cin%20V%20%7C%20T(%5Cvec%20v)%20=%20%5Cvec%200%20%5C%7D%20%5Csubseteq%20V%0A"></p>
@@ -3737,7 +3843,12 @@ Note
 <section id="linearity" class="level2">
 <h2 class="anchored" data-anchor-id="linearity">Linearity</h2>
 <p>선형의 의미는 무엇일까? 기하적으로 선을 다룬다는 뜻이 아니다. 선형의 의미는 함수적인 의미다. 아래 그림을 보자.</p>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/linearity.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/linearity.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <p>즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AT(%5Calpha_1%20%5Cvec%20v_1%20+%20%5Calpha_2%20%5Cvec%20v_2)%20=%20%5Calpha_1%20T(%5Cvec%20v_1)%20+%20%5Calpha_2%20T(%5Cvec%20v_2)%20=%20%5Calpha_1%20%5Cvec%20w_1%20+%20%5Calpha_2%20%5Cvec%20w_2%0A"></p>
 </section>
@@ -3756,7 +3867,12 @@ Note
 </section>
 <section id="surjective-and-injective" class="level3">
 <h3 class="anchored" data-anchor-id="surjective-and-injective">Surjective and Injective</h3>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/sur_inj.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/sur_inj.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <p>함수에서 전사 함수와 단사 함수의 개념을 그대로 적용할 수 있다. 선형 변환 혹은 행렬도 함수다.</p>
 <p>만일, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_1%20%5Cneq%20%5Cvec%20v_2">이고 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_1,%20%5Cvec%20v_2%20%5Cin%20%5Cmathcal%20R(M_T)">라면 이는 선형 변환의 정의에 따라서 서로 다른 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w">로 매핑된다. 따라서 만일 단사 변환이 되려면, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M_T)%20=%20%5C%7B%20%5Cvec%200%20%5C%7D">만 성립하면 된다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AAy%20-%20Az%20=%20A(y-z)%0A"></p>
@@ -5085,7 +5201,12 @@ Note
 </section>
 <section id="핵심" class="level2">
 <h2 class="anchored" data-anchor-id="핵심">핵심</h2>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <ul>
 <li>VS Code의 익스텐션 <code>Remote-Container</code> 컨테이너 접속 기능을 활용해 <code>datascience-notebook</code> 컨테이너 접속한다.
 <ul>
@@ -5184,16 +5305,31 @@ Note
 <li><code>ipynb</code>를 확장자로 해서 노트북을 쓰고 싶다면, 그냥 만들어 쓰면 된다!</li>
 <li>VS Code에 Jupyter 확장이 있기 때문에 보통의 웹 브라우저에서 쓰는 Jupyter 노트북과 거의 동일한 기능을 제공한다. 웹 노트북에서와 마찬가지로 파이썬, 줄리아, R의 커널을 선택하면 된다 (아래 그림의 오른쪽 상단 박스). jupyterlab과 거의 비슷한 인터페이스를 지니고 있다. 오히려 주피터에 비해 복잡하지 않아서 좋다고 느낄지도 모르겠다.</li>
 </ul>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 </section>
 <section id="setting-for-remote-connection" class="level2">
 <h2 class="anchored" data-anchor-id="setting-for-remote-connection">Setting for Remote Connection</h2>
-<p>앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 좋다면 아래와 같이 하면 된다.</p>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p>앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 나을 것이다. 아래와 같이 하자.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <ul>
 <li>만일 위와 같은 화면에 Remote Exlorer에서 뜨지 않는다면 컨테이너가 부착되지 않는 것이다. 컨테이너를 부착하면 된다.</li>
 </ul>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <ul>
 <li><code>Extension</code> &gt; <code>REMOTE EXPLORER</code> &gt; <code>DETAILS</code> 탭에서 가운데 설정 모양이 “Open Container Configuration File”이다.</li>
 <li>옆 에디터 창에 json 형식의 설정이 뜬뜬다. 여기서 관련 extension 등의 설정을 지정할 수 있다. 이렇게 설정을 해두면 해당 컨테이너를 부착할 때 설정한 대로 자동으로 옵션들이 적용된다. 매우 편리하다.</li>
@@ -5217,7 +5353,12 @@ Note
 <span id="cb5-17">        <span class="dt" style="color: #AD0000;">"r.rterm.linux"</span><span class="fu" style="color: #4758AB;">:</span> <span class="st" style="color: #20794D;">"/opt/conda/bin/radian"</span></span>
 <span id="cb5-18">    <span class="fu" style="color: #4758AB;">}</span></span>
 <span id="cb5-19"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <ul>
 <li><code>File</code> &gt; <code>Perefences</code> &gt; <code>Settings</code>에서도 설정에 접근할 수 있다.</li>
 <li>VS Code의 설정은 두가지 축을 지닌다. 하나는 설정 전체를 담은 json 파일이다. 왼쪽 <code>&gt;</code> 표시된 항목에서처럼 카테고리 별로 구별되어 쉽게 접근할 수 있다. 이 하나의 설정을 위 그림에서 보듯이 User, Remote(컨네이터), Workspace 별로 별도로 지정해 활용할 수도 있다.</li>
@@ -5343,7 +5484,13 @@ Note
 
 
 
-<p>google_analytics.html</p><section id="why" class="level2">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="why" class="level2">
 <h2 class="anchored" data-anchor-id="why">Why?</h2>
 <p>아이겐밸류, 아이겐벡터는 중요하다. 어디서나 튀어나온다. 그래서 친숙하지만 나는 이걸 제대로 알고 있는 것일까? 이번 포스팅에서는 아이겐 공간의 관점에서 이 문제를 살펴볼 예정이다.</p>
 <p>사실 아이겐 공간은 <img src="https://latex.codecogs.com/png.latex?n%20%5Ctimes%20n"> 매트릭스의 숨은 구조(뼈대)와 같다. 아이겐밸류를 구하는 식을 떠올려보자.</p>
@@ -5450,17 +5597,17 @@ Note
 <li><img src="https://latex.codecogs.com/png.latex?e_1%20=%20v_1"></li>
 <li><img src="https://latex.codecogs.com/png.latex?e_2%20=%20v_2%20-%20%5CPi_%7Be_1%7D(v_2)"></li>
 </ul>
-<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width: 80%;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
 <p><br> 위의 그림에서 보듯이 <img src="https://latex.codecogs.com/png.latex?v_2">는 <img src="https://latex.codecogs.com/png.latex?v_1"> 프로젝션된 벡터와 이와 직교하는 <img src="https://latex.codecogs.com/png.latex?e_2">와의 합으로 계산할 수 있다. 따라서 <img src="https://latex.codecogs.com/png.latex?e_2%20=%20v_2%20-%20%5CPi_%7Be_1%7D(v_2)">가 성립한다. 벡터의 빼기 관점에서 생각해보면 어떨까? <img src="https://latex.codecogs.com/png.latex?v_2">와 <img src="https://latex.codecogs.com/png.latex?%5CPi_%7Be_1%7D(v_2)">의 차이가 <img src="https://latex.codecogs.com/png.latex?e_2">다. 벡터는 방향과 크기로 정의된다는 점을 다시 기억하자. 같은 방식으로 아래 그림에서 보듯이 더 많은 축과 직교하는 벡터들을 구성할 수 있다.</p>
 <p>이후 <img src="https://latex.codecogs.com/png.latex?%5Chat%20e_i%20=%20%5Cdfrac%7Be_i%7D%7B%5CVert%20e_i%20%5CVert%7D">로 <img src="https://latex.codecogs.com/png.latex?e_i">를 표준화하면 된다.</p>
-<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width: 80%;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -5506,7 +5653,13 @@ Note
 
 
 
-<p>google_analytics.html</p><section id="concepts-definition" class="level2">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="concepts-definition" class="level2">
 <h2 class="anchored" data-anchor-id="concepts-definition">Concepts &amp; Definition</h2>
 <p>벡터 공간 <img src="https://latex.codecogs.com/png.latex?V">의 기저</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AB%20=%20%5C%7B%20%5Cvec%7Be_1%7D,%20%5Cdotsc,%20%5Cvec%7Be_n%7D%20%5C%7D%20%20%0A"></p>
@@ -5609,9 +5762,9 @@ Note
 <p>아래 그림에서 보듯이, <img src="https://latex.codecogs.com/png.latex?Ax">라는 변환과 <img src="https://latex.codecogs.com/png.latex?B%5Bx%5D_%7B%5Cmathcal%20B%7D">라는 변환은 좌표계만 다를 뿐 동일한 변환이다. <img src="https://latex.codecogs.com/png.latex?C%20B%20C%5E%7B-1%7D">의 기저의 변화를 살펴보면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cunderbrace%7Bu%20%5Crightarrow%20%5Cmathcal%20B%7D_%7BC%5E%7B-1%7D%7D%20&amp;%20%5Ccdots%20B%20%5Ccdots%20%5Cunderbrace%7B%5Cmathcal%20B%20%5Crightarrow%20u%7D_%7BC%7D%20%5C%5C%0A&amp;%20%5Ccdots%20A%20%5Ccdots%0A%5Cend%7Baligned%7D%0A"></p>
 <p>로 나타낼 수 있다.</p>
-<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width=60%;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -5640,9 +5793,15 @@ Note
 
 
 
-<p>google_analytics.html</p><div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func.png?raw=true" class="img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -5660,7 +5819,12 @@ Note
 <li><img src="https://latex.codecogs.com/png.latex?T(%5Cvec%20v)%20=%20%5Cvec%20w">. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20%5Cin%20V">를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w%20%5Cin%20W">로 변환하는 것을 나타낸다.</li>
 </ul></li>
 </ul>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func_fig.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func_fig.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <p><br> 함수와 마찬가지로 위의 선형 변환에서 치역(Im(<img src="https://latex.codecogs.com/png.latex?T">))와 커널(스칼라 함수에서는 <img src="https://latex.codecogs.com/png.latex?f(x)%20=%200">의 해)이 정의된다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%7B%5Crm%20Im%7D(T)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20w%20%5Cin%20W%20%7C%20%5Cvec%20w%20=%20T(%5Cvec%20v)%20%5Ctext%7B%20for%20some%20%7D%20%5Cvec%20v%20%5C%7D%20%5Csubseteq%20W%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%7B%5Crm%20Ker%7D(T)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20v%20%5Cin%20V%20%7C%20T(%5Cvec%20v)%20=%20%5Cvec%200%20%5C%7D%20%5Csubseteq%20V%0A"></p>
@@ -5681,7 +5845,12 @@ Note
 <section id="linearity" class="level2">
 <h2 class="anchored" data-anchor-id="linearity">Linearity</h2>
 <p>선형의 의미는 무엇일까? 기하적으로 선을 다룬다는 뜻이 아니다. 선형의 의미는 함수적인 의미다. 아래 그림을 보자.</p>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/linearity.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/linearity.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <p>즉,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AT(%5Calpha_1%20%5Cvec%20v_1%20+%20%5Calpha_2%20%5Cvec%20v_2)%20=%20%5Calpha_1%20T(%5Cvec%20v_1)%20+%20%5Calpha_2%20T(%5Cvec%20v_2)%20=%20%5Calpha_1%20%5Cvec%20w_1%20+%20%5Calpha_2%20%5Cvec%20w_2%0A"></p>
 </section>
@@ -5700,7 +5869,12 @@ Note
 </section>
 <section id="surjective-and-injective" class="level3">
 <h3 class="anchored" data-anchor-id="surjective-and-injective">Surjective and Injective</h3>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/sur_inj.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/sur_inj.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 <p>함수에서 전사 함수와 단사 함수의 개념을 그대로 적용할 수 있다. 선형 변환 혹은 행렬도 함수다.</p>
 <p>만일, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_1%20%5Cneq%20%5Cvec%20v_2">이고 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_1,%20%5Cvec%20v_2%20%5Cin%20%5Cmathcal%20R(M_T)">라면 이는 선형 변환의 정의에 따라서 서로 다른 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w">로 매핑된다. 따라서 만일 단사 변환이 되려면, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M_T)%20=%20%5C%7B%20%5Cvec%200%20%5C%7D">만 성립하면 된다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AAy%20-%20Az%20=%20A(y-z)%0A"></p>

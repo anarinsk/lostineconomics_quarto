@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.449">
+<meta name="generator" content="quarto-0.9.446">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -149,7 +149,13 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>google_analytics.html</p><section id="why" class="level2">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="why" class="level2">
 <h2 class="anchored" data-anchor-id="why">Why?</h2>
 <p>아이겐밸류, 아이겐벡터는 중요하다. 어디서나 튀어나온다. 그래서 친숙하지만 나는 이걸 제대로 알고 있는 것일까? 이번 포스팅에서는 아이겐 공간의 관점에서 이 문제를 살펴볼 예정이다.</p>
 <p>사실 아이겐 공간은 <span class="math inline">\(n \times n\)</span> 매트릭스의 숨은 구조(뼈대)와 같다. 아이겐밸류를 구하는 식을 떠올려보자.</p>
@@ -333,17 +339,17 @@ v = \langle v, \hat e_1 \rangle  \hat e_1 + \dotsb + \langle v, \hat e_n \rangle
 <li><span class="math inline">\(e_1 = v_1\)</span></li>
 <li><span class="math inline">\(e_2 = v_2 - \Pi_{e_1}(v_2)\)</span></li>
 </ul>
-<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width: 80%;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="img-fluid figure-img"></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="my-figure7 img-fluid figure-img"></p>
 <p></p><figcaption aria-hidden="true" class="figure-caption">Gram-Schmidt 분해</figcaption><p></p>
 </figure>
 </div>
 <p><br> 위의 그림에서 보듯이 <span class="math inline">\(v_2\)</span>는 <span class="math inline">\(v_1\)</span> 프로젝션된 벡터와 이와 직교하는 <span class="math inline">\(e_2\)</span>와의 합으로 계산할 수 있다. 따라서 <span class="math inline">\(e_2 = v_2 - \Pi_{e_1}(v_2)\)</span>가 성립한다. 벡터의 빼기 관점에서 생각해보면 어떨까? <span class="math inline">\(v_2\)</span>와 <span class="math inline">\(\Pi_{e_1}(v_2)\)</span>의 차이가 <span class="math inline">\(e_2\)</span>다. 벡터는 방향과 크기로 정의된다는 점을 다시 기억하자. 같은 방식으로 아래 그림에서 보듯이 더 많은 축과 직교하는 벡터들을 구성할 수 있다.</p>
 <p>이후 <span class="math inline">\(\hat e_i = \dfrac{e_i}{\Vert e_i \Vert}\)</span>로 <span class="math inline">\(e_i\)</span>를 표준화하면 된다.</p>
-<div class="quarto-figure quarto-figure-center" style="margin: auto; display: block; width: 80%;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="img-fluid figure-img"></p>
+<p><img src="https://gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="my-figure7 img-fluid figure-img"></p>
 <p></p><figcaption aria-hidden="true" class="figure-caption">Gram-Schmidt 3차원 분해</figcaption><p></p>
 </figure>
 </div>

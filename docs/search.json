@@ -242,7 +242,7 @@
     "href": "posts/computer-tool/2021-02-02-all-vs-code.html#핵심",
     "title": "All into VS Code",
     "section": "핵심",
-    "text": "핵심\n\n\nVS Code의 익스텐션 Remote-Container 컨테이너 접속 기능을 활용해 datascience-notebook 컨테이너 접속한다.\n\n오른쪽 하단에 >< 표시된 부분을 클릭하자. 위의 그림을 볼 수 있다. 여기에서 “Remote-Containers: Attach to Running Container…”를 클릭하면 현재 돌아가고 있는 docker 컨테이너를 볼 수 있다. 미리 docker를 통해 돌려 둔 datascience 컨테이너를 선택하자.\n이 컨테이너는 안에 python, jupyterlab, R, Julia를 모두 갖고 있다. 따라서 이 녀석 하나만 도커에 올리면 된다.\n\n각각의 언어에 접근하기 위해서 필요한 VS Code Extension을 설치한다.\n\nJulia, Python의 경우 공식 확장이 있어서 그대로 쓰면 된다.\nR의 경우 비공식 확장이지만 약간의 세팅을 거치면 꽤 근사하게 사용할 수 있다."
+    "text": "핵심\n\n\n\n컨테이너 원격 접속\n\n\n\nVS Code의 익스텐션 Remote-Container 컨테이너 접속 기능을 활용해 datascience-notebook 컨테이너 접속한다.\n\n오른쪽 하단에 >< 표시된 부분을 클릭하자. 위의 그림을 볼 수 있다. 여기에서 “Remote-Containers: Attach to Running Container…”를 클릭하면 현재 돌아가고 있는 docker 컨테이너를 볼 수 있다. 미리 docker를 통해 돌려 둔 datascience 컨테이너를 선택하자.\n이 컨테이너는 안에 python, jupyterlab, R, Julia를 모두 갖고 있다. 따라서 이 녀석 하나만 도커에 올리면 된다.\n\n각각의 언어에 접근하기 위해서 필요한 VS Code Extension을 설치한다.\n\nJulia, Python의 경우 공식 확장이 있어서 그대로 쓰면 된다.\nR의 경우 비공식 확장이지만 약간의 세팅을 거치면 꽤 근사하게 사용할 수 있다."
   },
   {
     "objectID": "posts/computer-tool/2021-02-02-all-vs-code.html#for-julia",
@@ -270,14 +270,14 @@
     "href": "posts/computer-tool/2021-02-02-all-vs-code.html#jupyterlab",
     "title": "All into VS Code",
     "section": "Jupyterlab",
-    "text": "Jupyterlab\n\nipynb를 확장자로 해서 노트북을 쓰고 싶다면, 그냥 만들어 쓰면 된다!\nVS Code에 Jupyter 확장이 있기 때문에 보통의 웹 브라우저에서 쓰는 Jupyter 노트북과 거의 동일한 기능을 제공한다. 웹 노트북에서와 마찬가지로 파이썬, 줄리아, R의 커널을 선택하면 된다 (아래 그림의 오른쪽 상단 박스). jupyterlab과 거의 비슷한 인터페이스를 지니고 있다. 오히려 주피터에 비해 복잡하지 않아서 좋다고 느낄지도 모르겠다."
+    "text": "Jupyterlab\n\nipynb를 확장자로 해서 노트북을 쓰고 싶다면, 그냥 만들어 쓰면 된다!\nVS Code에 Jupyter 확장이 있기 때문에 보통의 웹 브라우저에서 쓰는 Jupyter 노트북과 거의 동일한 기능을 제공한다. 웹 노트북에서와 마찬가지로 파이썬, 줄리아, R의 커널을 선택하면 된다 (아래 그림의 오른쪽 상단 박스). jupyterlab과 거의 비슷한 인터페이스를 지니고 있다. 오히려 주피터에 비해 복잡하지 않아서 좋다고 느낄지도 모르겠다.\n\n\n\n\n주피터 노트북"
   },
   {
     "objectID": "posts/computer-tool/2021-02-02-all-vs-code.html#setting-for-remote-connection",
     "href": "posts/computer-tool/2021-02-02-all-vs-code.html#setting-for-remote-connection",
     "title": "All into VS Code",
     "section": "Setting for Remote Connection",
-    "text": "Setting for Remote Connection\n앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 좋다면 아래와 같이 하면 된다.\n\n\n만일 위와 같은 화면에 Remote Exlorer에서 뜨지 않는다면 컨테이너가 부착되지 않는 것이다. 컨테이너를 부착하면 된다.\n\n\n\nExtension > REMOTE EXPLORER > DETAILS 탭에서 가운데 설정 모양이 “Open Container Configuration File”이다.\n옆 에디터 창에 json 형식의 설정이 뜬뜬다. 여기서 관련 extension 등의 설정을 지정할 수 있다. 이렇게 설정을 해두면 해당 컨테이너를 부착할 때 설정한 대로 자동으로 옵션들이 적용된다. 매우 편리하다.\n\n{\n    \"extensions\": [\n        \"Ikuyadeu.r\",\n        \"julialang.language-julia\",\n        \"ms-python.python\",\n        \"ms-toolsai.jupyter\",\n        \"REditorSupport.r-lsp\"\n    ],\n    \"workspaceFolder\": \"/home/jovyan/github-anari\",\n    \"forwardPorts\": [\n        43463,      \n    ],\n    \"settings\": {\n        \"jupyter.alwaysTrustNotebooks\": true,\n        \"r.bracketedPaste\": true,\n        \"r.sessionWatcher\": true,\n        \"r.rterm.linux\": \"/opt/conda/bin/radian\"\n    }\n}\n\n\nFile > Perefences > Settings에서도 설정에 접근할 수 있다.\nVS Code의 설정은 두가지 축을 지닌다. 하나는 설정 전체를 담은 json 파일이다. 왼쪽 > 표시된 항목에서처럼 카테고리 별로 구별되어 쉽게 접근할 수 있다. 이 하나의 설정을 위 그림에서 보듯이 User, Remote(컨네이터), Workspace 별로 별도로 지정해 활용할 수도 있다."
+    "text": "Setting for Remote Connection\n앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 나을 것이다. 아래와 같이 하자.\n\n\n\n리모트 익스플로러\n\n\n\n만일 위와 같은 화면에 Remote Exlorer에서 뜨지 않는다면 컨테이너가 부착되지 않는 것이다. 컨테이너를 부착하면 된다.\n\n\n\n\n컨테이너 부착\n\n\n\nExtension > REMOTE EXPLORER > DETAILS 탭에서 가운데 설정 모양이 “Open Container Configuration File”이다.\n옆 에디터 창에 json 형식의 설정이 뜬뜬다. 여기서 관련 extension 등의 설정을 지정할 수 있다. 이렇게 설정을 해두면 해당 컨테이너를 부착할 때 설정한 대로 자동으로 옵션들이 적용된다. 매우 편리하다.\n\n{\n    \"extensions\": [\n        \"Ikuyadeu.r\",\n        \"julialang.language-julia\",\n        \"ms-python.python\",\n        \"ms-toolsai.jupyter\",\n        \"REditorSupport.r-lsp\"\n    ],\n    \"workspaceFolder\": \"/home/jovyan/github-anari\",\n    \"forwardPorts\": [\n        43463,      \n    ],\n    \"settings\": {\n        \"jupyter.alwaysTrustNotebooks\": true,\n        \"r.bracketedPaste\": true,\n        \"r.sessionWatcher\": true,\n        \"r.rterm.linux\": \"/opt/conda/bin/radian\"\n    }\n}\n\n\n\n리모트 워크스페이스 설정\n\n\n\nFile > Perefences > Settings에서도 설정에 접근할 수 있다.\nVS Code의 설정은 두가지 축을 지닌다. 하나는 설정 전체를 담은 json 파일이다. 왼쪽 > 표시된 항목에서처럼 카테고리 별로 구별되어 쉽게 접근할 수 있다. 이 하나의 설정을 위 그림에서 보듯이 User, Remote(컨네이터), Workspace 별로 별도로 지정해 활용할 수도 있다."
   },
   {
     "objectID": "posts/computer-tool/2021-11-19-python-in-browser.html",
@@ -921,14 +921,14 @@
     "href": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html",
     "title": "Matrix as Linear Transformation",
     "section": "",
-    "text": "google_analytics.html\n위의 내용을 이해할 수 있다면, 더 할 것이 없다. 일단 잘 봐두도록 하자. 나중에 돌아와서 음미하면 의미가 와 닿을 것이다.\n선형 변환은 특별한 형태의 함수로 이해할 수 있다. 다만 투입과 산출이 다양한 차원(벡터)을 취할 수 있다. 그리고 이 선형 변환이 매트릭스로 표현될 수 있다. 때문에 매트릭스 표현이 강력하다. 추상적인 선형 변환 함수를 구체적으로 표현하고 쉽게 계산할 수 있게 만드는 것이 매트릭스다."
+    "text": "function vs linear transformation\n위의 내용을 이해할 수 있다면, 더 할 것이 없다. 일단 잘 봐두도록 하자. 나중에 돌아와서 음미하면 의미가 와 닿을 것이다.\n선형 변환은 특별한 형태의 함수로 이해할 수 있다. 다만 투입과 산출이 다양한 차원(벡터)을 취할 수 있다. 그리고 이 선형 변환이 매트릭스로 표현될 수 있다. 때문에 매트릭스 표현이 강력하다. 추상적인 선형 변환 함수를 구체적으로 표현하고 쉽게 계산할 수 있게 만드는 것이 매트릭스다."
   },
   {
     "objectID": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html#linear-transformation",
     "href": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html#linear-transformation",
     "title": "Matrix as Linear Transformation",
     "section": "Linear Transformation",
-    "text": "Linear Transformation\n\nConcepts\n\n\\(V\\): \\(T\\)의 인풋\n\\(W\\): \\(T\\)의 아웃풋\n\\(T: V \\to W\\): \\(V\\)에서 \\(W\\)로의 선형 변환\n\n\\(T(\\vec v) = \\vec w\\). 즉, \\(\\vec v \\in V\\)를 \\(\\vec w \\in W\\)로 변환하는 것을 나타낸다.\n\n\n\n 함수와 마찬가지로 위의 선형 변환에서 치역(Im(\\(T\\)))와 커널(스칼라 함수에서는 \\(f(x) = 0\\)의 해)이 정의된다.\n\\[\n{\\rm Im}(T) \\overset{\\rm def}{=} \\{ \\vec w \\in W | \\vec w = T(\\vec v) \\text{ for some } \\vec v \\} \\subseteq W\n\\]\n\\[\n{\\rm Ker}(T) \\overset{\\rm def}{=} \\{ \\vec v \\in V | T(\\vec v) = \\vec 0 \\} \\subseteq V\n\\]"
+    "text": "Linear Transformation\n\nConcepts\n\n\\(V\\): \\(T\\)의 인풋\n\\(W\\): \\(T\\)의 아웃풋\n\\(T: V \\to W\\): \\(V\\)에서 \\(W\\)로의 선형 변환\n\n\\(T(\\vec v) = \\vec w\\). 즉, \\(\\vec v \\in V\\)를 \\(\\vec w \\in W\\)로 변환하는 것을 나타낸다.\n\n\n\n\n\n함수로서의 행렬\n\n\n 함수와 마찬가지로 위의 선형 변환에서 치역(Im(\\(T\\)))와 커널(스칼라 함수에서는 \\(f(x) = 0\\)의 해)이 정의된다.\n\\[\n{\\rm Im}(T) \\overset{\\rm def}{=} \\{ \\vec w \\in W | \\vec w = T(\\vec v) \\text{ for some } \\vec v \\} \\subseteq W\n\\]\n\\[\n{\\rm Ker}(T) \\overset{\\rm def}{=} \\{ \\vec v \\in V | T(\\vec v) = \\vec 0 \\} \\subseteq V\n\\]"
   },
   {
     "objectID": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html#matrix-representation",
@@ -942,7 +942,7 @@
     "href": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html#linearity",
     "title": "Matrix as Linear Transformation",
     "section": "Linearity",
-    "text": "Linearity\n선형의 의미는 무엇일까? 기하적으로 선을 다룬다는 뜻이 아니다. 선형의 의미는 함수적인 의미다. 아래 그림을 보자.\n\n즉,\n\\[\nT(\\alpha_1 \\vec v_1 + \\alpha_2 \\vec v_2) = \\alpha_1 T(\\vec v_1) + \\alpha_2 T(\\vec v_2) = \\alpha_1 \\vec w_1 + \\alpha_2 \\vec w_2\n\\]"
+    "text": "Linearity\n선형의 의미는 무엇일까? 기하적으로 선을 다룬다는 뜻이 아니다. 선형의 의미는 함수적인 의미다. 아래 그림을 보자.\n\n\n\n선형 매핑의 의미\n\n\n즉,\n\\[\nT(\\alpha_1 \\vec v_1 + \\alpha_2 \\vec v_2) = \\alpha_1 T(\\vec v_1) + \\alpha_2 T(\\vec v_2) = \\alpha_1 \\vec w_1 + \\alpha_2 \\vec w_2\n\\]"
   },
   {
     "objectID": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html#matrix-as-linear-transformation",
@@ -956,14 +956,14 @@
     "href": "posts/linear-algebra/2021-01-07-linear-transform-matrix.html#eat-this",
     "title": "Matrix as Linear Transformation",
     "section": "Eat This!",
-    "text": "Eat This!\n\nMapping Spaces\n선형 변환을 다시 적어보자. \\(T: V \\to W\\) where \\(V \\in \\mathbb R^n\\), \\(W \\in \\mathbb R^m\\). 즉 이 변환은 \\(n\\) 차원의 벡터를 \\(m\\) 차원으로 바꿔주는 것이다. 이 변환의 투입이 지니는 차원을 생각해보자. \\(n\\) 차원은 로우 공간이 생성하는 \\(\\mathcal R (M_T)\\)와 널 공간으로 가는 \\(\\mathcal N(M_T)\\)으로 나뉘게 된다. 그리고 이 공간은 서로 직합(direct sum) 관계다. 이를 요약하면 다음과 같다.\n\\[\nT: \\mathcal R(M_T) \\to \\mathcal C(M_T),~  \nT: \\mathcal N(M_T) \\to \\{ \\vec 0 \\}\n\\]\n즉 함수처럼 인풋 \\(\\vec v \\in \\mathcal R(M_T)\\)이 \\(\\vec w \\in \\mathcal C(M_T)\\)로 대응된다. 한편, \\(\\vec v \\in \\mathcal N(M_T)\\)는 \\(\\vec 0 \\in W\\)으로 대응된다.\n\n\nSurjective and Injective\n\n함수에서 전사 함수와 단사 함수의 개념을 그대로 적용할 수 있다. 선형 변환 혹은 행렬도 함수다.\n만일, \\(\\vec v_1 \\neq \\vec v_2\\)이고 \\(\\vec v_1, \\vec v_2 \\in \\mathcal R(M_T)\\)라면 이는 선형 변환의 정의에 따라서 서로 다른 \\(\\vec w\\)로 매핑된다. 따라서 만일 단사 변환이 되려면, \\(\\mathcal N(M_T) = \\{ \\vec 0 \\}\\)만 성립하면 된다.\n\\[\nAy - Az = A(y-z)\n\\]\n단사 변환이란 오직 \\(x = y\\)일 때만 \\(Ax = Ay\\)가 성립한다는 뜻이다. 즉 위의 식에서 \\(A(x-y) = 0\\)이 \\(x=y\\)일 때만 성립하면 된다. 즉, \\(A x = 0\\)이 \\(x=0\\)일 때만 성립하면 된다. 전사 변환의 정의는 통상적인 정의와 같다; \\({\\rm Im} (T) = \\mathbb R^m\\).\n매트릭스의 맥락에서 다시 음미해보자. 만일 전사(surjective) 변환이 되려면 \\(n \\geq m\\)이 성립해야 한다. 로우 스페이스의 차원이 컬럼 스페이스보다 커야 컬럼 스페이스 전체를 생성할 수 있다. 반면 단사(injective) 변환이 되려면 \\(n \\leq m\\)이 되어야 한다. 1-1 대응이 가능하려면 컬럼 스페이스의 크기가 로우 스페이스보다 커여 한다.\n따라서 전단사 변환이 되기 위한 조건은 \\(m=n\\)이다. 함수에서 역함수가 존재하려면 전단사 함수여야 한다. 선형 변환도 마찬가지다. 역행렬이 존재하기 위한 필요 조건은 정방 행렬, \\(m=n\\)이다.\n보다 상세한 내용은 여기를 참고하자."
+    "text": "Eat This!\n\nMapping Spaces\n선형 변환을 다시 적어보자. \\(T: V \\to W\\) where \\(V \\in \\mathbb R^n\\), \\(W \\in \\mathbb R^m\\). 즉 이 변환은 \\(n\\) 차원의 벡터를 \\(m\\) 차원으로 바꿔주는 것이다. 이 변환의 투입이 지니는 차원을 생각해보자. \\(n\\) 차원은 로우 공간이 생성하는 \\(\\mathcal R (M_T)\\)와 널 공간으로 가는 \\(\\mathcal N(M_T)\\)으로 나뉘게 된다. 그리고 이 공간은 서로 직합(direct sum) 관계다. 이를 요약하면 다음과 같다.\n\\[\nT: \\mathcal R(M_T) \\to \\mathcal C(M_T),~  \nT: \\mathcal N(M_T) \\to \\{ \\vec 0 \\}\n\\]\n즉 함수처럼 인풋 \\(\\vec v \\in \\mathcal R(M_T)\\)이 \\(\\vec w \\in \\mathcal C(M_T)\\)로 대응된다. 한편, \\(\\vec v \\in \\mathcal N(M_T)\\)는 \\(\\vec 0 \\in W\\)으로 대응된다.\n\n\nSurjective and Injective\n\n\n\n전사 함수와 단사 함수\n\n\n함수에서 전사 함수와 단사 함수의 개념을 그대로 적용할 수 있다. 선형 변환 혹은 행렬도 함수다.\n만일, \\(\\vec v_1 \\neq \\vec v_2\\)이고 \\(\\vec v_1, \\vec v_2 \\in \\mathcal R(M_T)\\)라면 이는 선형 변환의 정의에 따라서 서로 다른 \\(\\vec w\\)로 매핑된다. 따라서 만일 단사 변환이 되려면, \\(\\mathcal N(M_T) = \\{ \\vec 0 \\}\\)만 성립하면 된다.\n\\[\nAy - Az = A(y-z)\n\\]\n단사 변환이란 오직 \\(x = y\\)일 때만 \\(Ax = Ay\\)가 성립한다는 뜻이다. 즉 위의 식에서 \\(A(x-y) = 0\\)이 \\(x=y\\)일 때만 성립하면 된다. 즉, \\(A x = 0\\)이 \\(x=0\\)일 때만 성립하면 된다. 전사 변환의 정의는 통상적인 정의와 같다; \\({\\rm Im} (T) = \\mathbb R^m\\).\n매트릭스의 맥락에서 다시 음미해보자. 만일 전사(surjective) 변환이 되려면 \\(n \\geq m\\)이 성립해야 한다. 로우 스페이스의 차원이 컬럼 스페이스보다 커야 컬럼 스페이스 전체를 생성할 수 있다. 반면 단사(injective) 변환이 되려면 \\(n \\leq m\\)이 되어야 한다. 1-1 대응이 가능하려면 컬럼 스페이스의 크기가 로우 스페이스보다 커여 한다.\n따라서 전단사 변환이 되기 위한 조건은 \\(m=n\\)이다. 함수에서 역함수가 존재하려면 전단사 함수여야 한다. 선형 변환도 마찬가지다. 역행렬이 존재하기 위한 필요 조건은 정방 행렬, \\(m=n\\)이다.\n보다 상세한 내용은 여기를 참고하자."
   },
   {
     "objectID": "posts/linear-algebra/2021-01-08-basis.html",
     "href": "posts/linear-algebra/2021-01-08-basis.html",
     "title": "Basis",
     "section": "",
-    "text": "google_analytics.html"
+    "text": "벡터 공간 \\(V\\)의 기저\n\\[\nB = \\{ \\vec{e_1}, \\dotsc, \\vec{e_n} \\}  \n\\]\n는 다음의 두 특성을 만족한다.\n\n\n모든 \\(v \\in V\\)는 다음과 같이 기저의 선형 결합으로 표현된다.\n\\[\nv = v_1 \\vec{e_1} + \\dotsc + v_n \\vec{e_n}\n\\]\n\n\n\n즉, 기저를 구성하는 벡터 \\(\\vec{e_i}\\)에 불필요한 것이 없어야 한다. 즉, \\(\\vec{e}\\)를 구성하는 어떤 \\(e_i\\)도 다른 \\(e_j\\)(\\(j \\neq i\\))의 선형 결합으로 표현될 수 없다.\n\n\n\n\\[\nB_{\\hat{e}} = \\{ \\hat{e_1}, \\dotsc, \\hat{e_n} \\} \\text{~with}\n\\]\n\\[\n\\begin{cases}\n\\hat{e_i} \\cdot \\hat{e_j} = 1 & \\text{if $i = j$} \\\\\n\\hat{e_i} \\cdot \\hat{e_j} = 0 & \\text{if $i \\neq j$}\n\\end{cases}\n\\]\n\\[\n(a_1, \\dotsc, a_n)_{B_{\\hat{e}}} = \\underbrace{(\\vec{a} \\cdot \\hat{e_i})}_{a_1} \\hat{e_i} + \\dotsb + (\\vec{a} \\cdot \\hat{e_n}) \\hat{e_n}\n\\]"
   },
   {
     "objectID": "posts/linear-algebra/2021-01-08-basis.html#concepts-definition",
@@ -1005,7 +1005,7 @@
     "href": "posts/linear-algebra/2021-01-10-Eigenspace-1.html",
     "title": "Eigenspace, part 1",
     "section": "",
-    "text": "google_analytics.html"
+    "text": "아이겐밸류, 아이겐벡터는 중요하다. 어디서나 튀어나온다. 그래서 친숙하지만 나는 이걸 제대로 알고 있는 것일까? 이번 포스팅에서는 아이겐 공간의 관점에서 이 문제를 살펴볼 예정이다.\n사실 아이겐 공간은 \\(n \\times n\\) 매트릭스의 숨은 구조(뼈대)와 같다. 아이겐밸류를 구하는 식을 떠올려보자.\n\\[\nM_T \\vec x = \\lambda \\vec x\n\\]\n\\(M_T\\)라는 \\(n \\times n\\) 변환이 특정한 벡터 아래서는 스칼라 곱의 문제로 환원된다. 이런 의미에서 아이겐벡터는 \\(M_T\\)라는 매트릭스가 지닌 일종의 축이다. 이 축 위에서 변환이 다시 축으로 환원되기 때문이다. \\(M_T\\)의 원래 기저와 상관 없이, 이 아이겐벡터로 다시 기저를 구성한다고 생각해보자. 이때 아이겐밸류는 해당 축의 크기(길이)로 이해할 수 있다."
   },
   {
     "objectID": "posts/linear-algebra/2021-01-10-Eigenspace-1.html#why",

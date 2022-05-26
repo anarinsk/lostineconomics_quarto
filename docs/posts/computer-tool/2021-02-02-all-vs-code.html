@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.449">
+<meta name="generator" content="quarto-0.9.446">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -251,7 +251,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="핵심" class="level2">
 <h2 class="anchored" data-anchor-id="핵심">핵심</h2>
-<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">컨테이너 원격 접속</figcaption><p></p>
+</figure>
+</div>
 <ul>
 <li>VS Code의 익스텐션 <code>Remote-Container</code> 컨테이너 접속 기능을 활용해 <code>datascience-notebook</code> 컨테이너 접속한다.
 <ul>
@@ -350,16 +355,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>ipynb</code>를 확장자로 해서 노트북을 쓰고 싶다면, 그냥 만들어 쓰면 된다!</li>
 <li>VS Code에 Jupyter 확장이 있기 때문에 보통의 웹 브라우저에서 쓰는 Jupyter 노트북과 거의 동일한 기능을 제공한다. 웹 노트북에서와 마찬가지로 파이썬, 줄리아, R의 커널을 선택하면 된다 (아래 그림의 오른쪽 상단 박스). jupyterlab과 거의 비슷한 인터페이스를 지니고 있다. 오히려 주피터에 비해 복잡하지 않아서 좋다고 느낄지도 모르겠다.</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">주피터 노트북</figcaption><p></p>
+</figure>
+</div>
 </section>
 <section id="setting-for-remote-connection" class="level2">
 <h2 class="anchored" data-anchor-id="setting-for-remote-connection">Setting for Remote Connection</h2>
-<p>앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 좋다면 아래와 같이 하면 된다.</p>
-<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p>앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 나을 것이다. 아래와 같이 하자.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">리모트 익스플로러</figcaption><p></p>
+</figure>
+</div>
 <ul>
 <li>만일 위와 같은 화면에 Remote Exlorer에서 뜨지 않는다면 컨테이너가 부착되지 않는 것이다. 컨테이너를 부착하면 된다.</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">컨테이너 부착</figcaption><p></p>
+</figure>
+</div>
 <ul>
 <li><code>Extension</code> &gt; <code>REMOTE EXPLORER</code> &gt; <code>DETAILS</code> 탭에서 가운데 설정 모양이 “Open Container Configuration File”이다.</li>
 <li>옆 에디터 창에 json 형식의 설정이 뜬뜬다. 여기서 관련 extension 등의 설정을 지정할 수 있다. 이렇게 설정을 해두면 해당 컨테이너를 부착할 때 설정한 대로 자동으로 옵션들이 적용된다. 매우 편리하다.</li>
@@ -383,7 +403,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"r.rterm.linux"</span><span class="fu">:</span> <span class="st">"/opt/conda/bin/radian"</span></span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">리모트 워크스페이스 설정</figcaption><p></p>
+</figure>
+</div>
 <ul>
 <li><code>File</code> &gt; <code>Perefences</code> &gt; <code>Settings</code>에서도 설정에 접근할 수 있다.</li>
 <li>VS Code의 설정은 두가지 축을 지닌다. 하나는 설정 전체를 담은 json 파일이다. 왼쪽 <code>&gt;</code> 표시된 항목에서처럼 카테고리 별로 구별되어 쉽게 접근할 수 있다. 이 하나의 설정을 위 그림에서 보듯이 User, Remote(컨네이터), Workspace 별로 별도로 지정해 활용할 수도 있다.</li>

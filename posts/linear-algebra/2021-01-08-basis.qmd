@@ -315,7 +315,7 @@ $$
 
 로 나타낼 수 있다.  
 
-![기저 변환의 의미](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true){ style="margin: auto; display: block; width=60%;" }
+![기저 변환의 의미](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true){ .my-figure7 }
 
 <br>
 Similar matrix인 $A$과 $B$ 사이에서 다음과 같은 관계가 성립한다. 
