@@ -56,3 +56,13 @@ p {
   padding: 5px;
   text-align: left; 
 }
+
+.my-figure{
+  display: inline-block; 
+  margin: 0 auto;
+  //border:1.5px silver solid; 
+  padding: 5px;
+  text-align: left; 
+  width: 70%;
+  background:#FFFFFF;
+}
