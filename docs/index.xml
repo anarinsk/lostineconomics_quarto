@@ -31,7 +31,7 @@
 <li>샘플 크기가 충분하면, 통계적 검정 시 정규 분포 가정에 집착하지 말자.</li>
 </ul>
 </section>
-<section id="정규-분포는-필요한-가정인가" class="level2">
+<section id="정규-분포는-필요한-가정인가" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="정규-분포는-필요한-가정인가">정규 분포는 필요한 가정인가?</h2>
 <p>표분의 크기가 크지 않다면 불가피하게 필요한 가정이다. 검정을 위한 불가피한 조치다. 하지만 표본의 크기가 어느 정도 충분할 때도 정규 분포 가정이 필요할까?</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY%20=%20%5Calpha%20+%20%5Cbeta_1%20X_1%20+%20%5Cbeta_2%20X_2%20+%20%5Cdotsb%20+%20%5Cbeta_n%20X_n%20+%20%5Cepsilon%0A"></p>
@@ -39,7 +39,10 @@
 <p><img src="https://latex.codecogs.com/png.latex?Y%20%5Csim%20%5Crm%20N(%5Ccdot)">을 확인하면 될까? 원래의 가정은 오차항에 대한 가정이다. 앞에 여러 가지 변수의 작용으로 <img src="https://latex.codecogs.com/png.latex?Y">가 결정되므로 <img src="https://latex.codecogs.com/png.latex?Y">가 정규 분포를 따르는 것은 우연일 뿐이다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%5Chat%5Cepsilon%20=%20Y%20-%20%5Chat%7BY%7D">가 정규 분포를 따르면 될까? 이 역시 마찬가지로 정규 분포를 따르리라는 보장이 없다. <img src="https://latex.codecogs.com/png.latex?%5Chat%5Cepsilon">는 회귀 분석의 모델링 아래 도출된 <img src="https://latex.codecogs.com/png.latex?%5Cepsilon">에 관한 추정치일 뿐이다. 이것 역시 정규 분포를 따르리라는 보장이 없다.</p>
 <p>다시 기억하자. 오차항에 관한 내용은 모델링을 위한 일종의 가정이다. 가정은 대체로 검증되지 않는다. 모델링의 가정은 받아들이는 것이지 검증하는 것이 아니다.</p>
-</section>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>표본이 크지 않을 때 좋은 분석 방법을 찾는 것은 훨씬 어려운 문제다. 그런데 소 표본에서 회귀 분석은 그리 나쁜 분석 방법이 아니다.</p>
+</div></div></section>
 <section id="표본의-크기가-충분하다면" class="level2">
 <h2 class="anchored" data-anchor-id="표본의-크기가-충분하다면">표본의 크기가 충분하다면</h2>
 <p>그렇다면 가정을 받아들일 수 없다면 회귀분석에서 검정을 수행할 수 있을까? 그렇지 않다. 만일 표본의 크기가 충분히 크다면 오차항의 정규 분포 가정 없이도 검정을 수행할 수 있다.</p>
