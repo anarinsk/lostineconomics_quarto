@@ -1572,7 +1572,7 @@
     "href": "posts/stats-simple/2022-05-27-SE.html#unbiasedness-and-consistency",
     "title": "Sample Statistics and Standard Error",
     "section": "Unbiasedness and Consistency",
-    "text": "Unbiasedness and Consistency\n파라미터 \\(\\theta\\)와 추정량 \\(\\hat \\theta\\)이 있다고 하자.\n\n\n표본 \\(x_i\\)가 있다고 할 때, \\(\\hat \\theta\\)는 \\(x_i\\)를 정보를 통해 구성된다. 즉, \\(\\hat\\theta \\equiv \\hat\\theta(x_i)\\).\nUnbiased\n\\[\n\\E(\\hat \\theta) = \\theta\n\\]\n추정량의 시퀀스 \\(\\lbrace \\hat\\theta_n \\rbrace\\)이 있다고 할 때,\nConsistent\n\\[\n\\underset{n \\to \\infty}{\\rm plim}~\\hat\\theta_n = \\theta  \n\\]\n\n\n\n파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다.\n\n\n\n\nplim의 정의는 다음과 같다. 표본 크기 \\(n\\)과 임의의 양의 상수 \\(c\\)에 대하여 표본 추정량 \\(\\hat\\theta_n\\)은 \\(\\theta\\)의 일치 추정량(consistent estimator)이라고 한다.\n\\[\n\\lim_{n\\to\\infty}P[|\\hat\\theta_n - \\theta|\\geq c]=0\n\\]"
+    "text": "Unbiasedness and Consistency\n파라미터 \\(\\theta\\)와 추정량 \\(\\hat \\theta\\)이 있다고 하자.\n\n\n표본 \\(x_i\\)가 있다고 할 때, \\(\\hat \\theta\\)는 표본 \\(x_i\\)라는 정보를 통해 구성된다. 즉, \\(\\hat\\theta \\equiv \\hat\\theta(x_i)\\).\nUnbiased\n\\[\n\\E(\\hat \\theta) = \\theta\n\\]\n추정량의 시퀀스 \\(\\lbrace \\hat\\theta_n \\rbrace\\)이 있다고 할 때,\nConsistent\n\\[\n\\underset{n \\to \\infty}{\\rm plim}~\\hat\\theta_n = \\theta  \n\\]\n\n\n\n파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다.\n\n\n\n\nplim의 정의는 다음과 같다. 표본 크기 \\(n\\)과 임의의 양의 상수 \\(c\\)에 대하여 표본 추정량 \\(\\hat\\theta_n\\)은 \\(\\theta\\)의 일치 추정량(consistent estimator)이라고 한다.\n\\[\n\\lim_{n\\to\\infty}P[|\\hat\\theta_n - \\theta|\\geq c]=0\n\\]"
   },
   {
     "objectID": "posts/stats-simple/2022-05-27-SE.html#concepts",

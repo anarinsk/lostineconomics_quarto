@@ -37,7 +37,7 @@ $$
 파라미터 $\theta$와 추정량 $\hat \theta$이 있다고 하자. 
 
 :::{ .column-margin }
-표본 $x_i$가 있다고 할 때, $\hat \theta$는 $x_i$를 정보를 통해 구성된다. 즉, $\hat\theta \equiv \hat\theta(x_i)$.
+표본 $x_i$가 있다고 할 때, $\hat \theta$는 표본 $x_i$라는 정보를 통해 구성된다. 즉, $\hat\theta \equiv \hat\theta(x_i)$.
 :::
 
 **Unbiased**

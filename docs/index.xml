@@ -52,7 +52,7 @@
 <p>파라미터 <img src="https://latex.codecogs.com/png.latex?%5Ctheta">와 추정량 <img src="https://latex.codecogs.com/png.latex?%5Chat%20%5Ctheta">이 있다고 하자.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>표본 <img src="https://latex.codecogs.com/png.latex?x_i">가 있다고 할 때, <img src="https://latex.codecogs.com/png.latex?%5Chat%20%5Ctheta">는 <img src="https://latex.codecogs.com/png.latex?x_i">를 정보를 통해 구성된다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Chat%5Ctheta%20%5Cequiv%20%5Chat%5Ctheta(x_i)">.</p>
+<p>표본 <img src="https://latex.codecogs.com/png.latex?x_i">가 있다고 할 때, <img src="https://latex.codecogs.com/png.latex?%5Chat%20%5Ctheta">는 표본 <img src="https://latex.codecogs.com/png.latex?x_i">라는 정보를 통해 구성된다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Chat%5Ctheta%20%5Cequiv%20%5Chat%5Ctheta(x_i)">.</p>
 </div></div><p><strong>Unbiased</strong></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5CE(%5Chat%20%5Ctheta)%20=%20%5Ctheta%0A"></p>
 <p>추정량의 시퀀스 <img src="https://latex.codecogs.com/png.latex?%5Clbrace%20%5Chat%5Ctheta_n%20%5Crbrace">이 있다고 할 때,</p>
