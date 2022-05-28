@@ -28,7 +28,7 @@
 </script><section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <ul>
-<li>샘플 크기가 충분하면 곗 검정 시 정규 분포 가정에 얽매일 필요가 없다.</li>
+<li>샘플 크기가 충분하면, 통계적 검정 시 정규 분포 가정에 집착하지 말자.</li>
 </ul>
 </section>
 <section id="정규-분포는-필요한-가정인가" class="level2">
@@ -54,7 +54,7 @@
 <li><img src="https://latex.codecogs.com/png.latex?%5Cunderset%7B(1%20%5Ctimes%20k)%7D%7Bx%5Er_i%7D%5Cunderset%7B(k%20%5Ctimes%201)%7D%7B%5Cvphantom%7Bx%5Er_i%7D%5Chat%5Cbeta%7D%20=%20%5Chat%20y_i"></li>
 </ul>
 <p><img src="https://latex.codecogs.com/png.latex?n">이 커짐에 따라서 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_i">의 분포는 <img src="https://latex.codecogs.com/png.latex?%5Crm%20N(0,1)">를 점근적으로 닮아간다.</p>
-<p>요약하면 표본의 크기가 충분할 때 오차항의 정규 분포 가정은 잊어도 좋다. 중심 극한 정리에 따라서 필요한 가설 검정을 수행할 수 있다.</p>
+<p>요약하면 표본의 크기가 충분할 때 오차항의 정규 분포 가정은 잊어도 좋다. 중심 극한 정리에 따라서 필요한 가설 검정을 수행할 수 있다. t–값과 정규 분포에 근거한 개별 계수의 검정 그리고 F–값과 F 분포에 근거한 전체 계수의 검정이 모두 가능하다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="http://www.lostineconomics.com/posts/regression/large-sample.jpeg" class="img-fluid figure-img"></p>
