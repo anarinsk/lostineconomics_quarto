@@ -243,24 +243,30 @@ ul.task-list{list-style: none;}
 <td><span class="math inline">\(\ES{Y}_n\)</span>, <span class="math inline">\(S(Y_i)^2\)</span>, <span class="math inline">\(SE\)</span>, <span class="math inline">\(\widehat{SE}\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">표본 분산</td>
-<td>sample variance</td>
-<td>표본 통계량의 분산</td>
-<td><span class="math inline">\(S(Y_i)^2 = \frac{1}{n-1}\sum_{i=1}^n (Y_i - \ES{Y}_n)^2\)</span></td>
+<td style="text-align: center;">표본 평균</td>
+<td>sample mean</td>
+<td>표본의 평균</td>
+<td><span class="math inline">\(\ES{Y}_n = \frac{1}{n}\sum_{i=1}^n Y_i\)</span></td>
 </tr>
 <tr class="even">
+<td style="text-align: center;">표본 분산</td>
+<td>sample variance</td>
+<td>표본의 분산</td>
+<td><span class="math inline">\(S(Y_i)^2 = \frac{1}{n-1}\sum_{i=1}^n (Y_i - \ES{Y}_n)^2\)</span></td>
+</tr>
+<tr class="odd">
 <td style="text-align: center;">표준 오차</td>
 <td>standard error</td>
 <td>표본 통계량의 표준 편차</td>
 <td><span class="math inline">\(SE(\ES{Y}_n) = \frac{\sigma_Y}{\sqrt{n}}\)</span></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;">표준 오차의 추정치</td>
 <td>estimated standard error</td>
 <td>표준 오차 계산 시 <span class="math inline">\(\sigma_Y \to S(Y_i)\)</span></td>
 <td><span class="math inline">\(\widehat{SE}(\ES{Y}_n) = \frac{S(Y_i)}{\sqrt{n}}\)</span></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;">t-통계량</td>
 <td>t-statistic</td>
 <td><span class="math inline">\(t(\mu) = \frac{\ES{Y}_n - \mu}{\widehat{SE}(\ES{Y}_n)}\)</span></td>

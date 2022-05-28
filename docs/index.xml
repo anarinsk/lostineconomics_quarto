@@ -167,24 +167,30 @@
 <td><img src="https://latex.codecogs.com/png.latex?%5CES%7BY%7D_n">, <img src="https://latex.codecogs.com/png.latex?S(Y_i)%5E2">, <img src="https://latex.codecogs.com/png.latex?SE">, <img src="https://latex.codecogs.com/png.latex?%5Cwidehat%7BSE%7D"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">표본 분산</td>
-<td>sample variance</td>
-<td>표본 통계량의 분산</td>
-<td><img src="https://latex.codecogs.com/png.latex?S(Y_i)%5E2%20=%20%5Cfrac%7B1%7D%7Bn-1%7D%5Csum_%7Bi=1%7D%5En%20(Y_i%20-%20%5CES%7BY%7D_n)%5E2"></td>
+<td style="text-align: center;">표본 평균</td>
+<td>sample mean</td>
+<td>표본의 평균</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5CES%7BY%7D_n%20=%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi=1%7D%5En%20Y_i"></td>
 </tr>
 <tr class="even">
+<td style="text-align: center;">표본 분산</td>
+<td>sample variance</td>
+<td>표본의 분산</td>
+<td><img src="https://latex.codecogs.com/png.latex?S(Y_i)%5E2%20=%20%5Cfrac%7B1%7D%7Bn-1%7D%5Csum_%7Bi=1%7D%5En%20(Y_i%20-%20%5CES%7BY%7D_n)%5E2"></td>
+</tr>
+<tr class="odd">
 <td style="text-align: center;">표준 오차</td>
 <td>standard error</td>
 <td>표본 통계량의 표준 편차</td>
 <td><img src="https://latex.codecogs.com/png.latex?SE(%5CES%7BY%7D_n)%20=%20%5Cfrac%7B%5Csigma_Y%7D%7B%5Csqrt%7Bn%7D%7D"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;">표준 오차의 추정치</td>
 <td>estimated standard error</td>
 <td>표준 오차 계산 시 <img src="https://latex.codecogs.com/png.latex?%5Csigma_Y%20%5Cto%20S(Y_i)"></td>
 <td><img src="https://latex.codecogs.com/png.latex?%5Cwidehat%7BSE%7D(%5CES%7BY%7D_n)%20=%20%5Cfrac%7BS(Y_i)%7D%7B%5Csqrt%7Bn%7D%7D"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;">t-통계량</td>
 <td>t-statistic</td>
 <td><img src="https://latex.codecogs.com/png.latex?t(%5Cmu)%20=%20%5Cfrac%7B%5CES%7BY%7D_n%20-%20%5Cmu%7D%7B%5Cwidehat%7BSE%7D(%5CES%7BY%7D_n)%7D"></td>
