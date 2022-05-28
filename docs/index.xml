@@ -9,7 +9,7 @@
 <link>http://www.lostineconomics.com/index.html</link>
 <atom:link href="http://www.lostineconomics.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>Another useless blog</description>
-<generator>quarto-0.9.446</generator>
+<generator>quarto-0.9.472</generator>
 <lastBuildDate>Fri, 27 May 2022 15:00:00 GMT</lastBuildDate>
 <item>
   <title>정규 분포에 집착하지 말자.</title>
@@ -41,7 +41,7 @@
 <p>다시 기억하자. 오차항에 관한 내용은 모델링을 위한 일종의 가정이다. 가정은 대체로 검증되지 않는다. 모델링의 가정은 받아들이는 것이지 검증하는 것이 아니다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>표본이 크지 않을 때 좋은 분석 방법을 찾는 것은 훨씬 어려운 문제다. 그런데 소 표본에서 회귀 분석은 그리 나쁜 분석 방법이 아니다.</p>
+<p>표본이 크지 않을 때 즉 소 표본에 적합한 분석 방법을 찾는 것은 대 표본의 경우에 비해 까다로운 문제이다. 그런데 소 표본에서 회귀 분석은 그리 나쁜 분석 방법이 아니다.</p>
 </div></div></section>
 <section id="표본의-크기가-충분하다면" class="level2">
 <h2 class="anchored" data-anchor-id="표본의-크기가-충분하다면">표본의 크기가 충분하다면</h2>
@@ -306,7 +306,7 @@
 <li><img src="https://latex.codecogs.com/png.latex?x%5Er_i">: <img src="https://latex.codecogs.com/png.latex?X">의 <img src="https://latex.codecogs.com/png.latex?i">’th 행(row) 벡터</li>
 <li><img src="https://latex.codecogs.com/png.latex?%5Cunderset%7B(1%20%5Ctimes%20k)%7D%7Bx%5Er_i%7D%5Cunderset%7B(k%20%5Ctimes%201)%7D%7B%5Cvphantom%7Bx%5Er_i%7D%5Chat%5Cbeta%7D%20=%20%5Chat%20y_i"></li>
 </ul>
-<p>회귀 분석의 <img src="https://latex.codecogs.com/png.latex?i">’th 계수인 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_i">는 <img src="https://latex.codecogs.com/png.latex?t_i">를 통해 검정할 수 있다. <img src="https://latex.codecogs.com/png.latex?n">이 충분히 클 경우 <img src="https://latex.codecogs.com/png.latex?t_i%20%5Csim%20%5Crm%20N(0,1)">이 된다.</p>
+<p>회귀 분석의 <img src="https://latex.codecogs.com/png.latex?i">–번째 계수인 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_i">는 <img src="https://latex.codecogs.com/png.latex?t_i">를 통해 검정할 수 있다. <img src="https://latex.codecogs.com/png.latex?n">이 충분히 클 경우 <img src="https://latex.codecogs.com/png.latex?t_i%20%5Csim%20%5Crm%20N(0,1)">이 된다.</p>
 
 
 </section>

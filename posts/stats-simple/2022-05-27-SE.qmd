@@ -271,4 +271,4 @@ $$
 - $x^r_i$: $X$의 $i$'th 행(row) 벡터 
 - $\underset{(1 \times k)}{x^r_i}\underset{(k \times 1)}{\vphantom{x^r_i}\hat\beta} = \hat y_i$
 
-회귀 분석의 $i$'th 계수인 $\beta_i$는 $t_i$를 통해 검정할 수 있다. $n$이 충분히 클 경우 $t_i \sim \rm N(0,1)$이 된다. 
+회귀 분석의 $i$--번째 계수인 $\beta_i$는 $t_i$를 통해 검정할 수 있다. $n$이 충분히 클 경우 $t_i \sim \rm N(0,1)$이 된다. 
