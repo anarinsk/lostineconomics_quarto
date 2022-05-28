@@ -428,8 +428,8 @@ t_i = \dfrac{\hat \beta_i - \beta}{S \sqrt{(X^T X)_{ii}^{-1}}}
 S(y_i)^2 = \dfrac{1}{n-k} \sum_{i=1}^n (y_i -  x^r_i \hat\beta)
 \]</span></p>
 <ul>
-<li><span class="math inline">\(x^r_i\)</span>: <span class="math inline">\(X\)</span>의 <span class="math inline">\(i\)</span>’th로 벡터</li>
-<li><span class="math inline">\(\underset{(1 \times k)}{x^r_i}\underset{(k \times 1)}{\hat\beta} = \hat y_i\)</span></li>
+<li><span class="math inline">\(x^r_i\)</span>: <span class="math inline">\(X\)</span>의 <span class="math inline">\(i\)</span>’th 행(row) 벡터</li>
+<li><span class="math inline">\(\underset{(1 \times k)}{x^r_i}\underset{(k \times 1)}{\vphantom{x^r_i}\hat\beta} = \hat y_i\)</span></li>
 </ul>
 <p>회귀 분석의 <span class="math inline">\(i\)</span>’th 계수인 <span class="math inline">\(\beta_i\)</span>는 <span class="math inline">\(t_i\)</span>를 통해 검정할 수 있다. <span class="math inline">\(n\)</span>이 충분히 클 경우 <span class="math inline">\(t_i \sim \rm N(0,1)\)</span>이 된다.</p>
 

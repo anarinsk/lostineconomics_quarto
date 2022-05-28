@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/regression/2022-05-28-normality.html",
       "/posts/stats-simple/2022-05-27-SE.html",
       "/posts/computer-tool/2022-05-25-pytorch.html",
       "/posts/economics/2022-05-16-trilemma.html",

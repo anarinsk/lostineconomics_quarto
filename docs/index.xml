@@ -10,7 +10,74 @@
 <atom:link href="http://www.lostineconomics.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>Another useless blog</description>
 <generator>quarto-0.9.446</generator>
-<lastBuildDate>Thu, 26 May 2022 15:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 27 May 2022 15:00:00 GMT</lastBuildDate>
+<item>
+  <title>정규 분포에 집착하지 말자.</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>http://www.lostineconomics.com/posts/regression/2022-05-28-normality.html</link>
+  <description><![CDATA[ 
+
+
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
+<ul>
+<li>샘플 크기가 충분하면 곗 검정 시 정규 분포 가정에 얽매일 필요가 없다.</li>
+</ul>
+</section>
+<section id="정규-분포는-필요한-가정인가" class="level2">
+<h2 class="anchored" data-anchor-id="정규-분포는-필요한-가정인가">정규 분포는 필요한 가정인가?</h2>
+<p>표분의 크기가 크지 않다면 불가피하게 필요한 가정이다. 검정을 위한 불가피한 조치다. 하지만 표본의 크기가 어느 정도 충분할 때도 정규 분포 가정이 필요할까?</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AY%20=%20%5Calpha%20+%20%5Cbeta_1%20X_1%20+%20%5Cbeta_2%20X_2%20+%20%5Cdotsb%20+%20%5Cbeta_n%20X_n%20+%20%5Cepsilon%0A"></p>
+<p>원래 정규 분포 가정은 <img src="https://latex.codecogs.com/png.latex?%5Cepsilon%20%5Csim%20%5Crm%20N%20(0,%20%5Csigma%5E2)">이다. 그런데 이 가정을 어떻게 확인할 수 있을까?</p>
+<p><img src="https://latex.codecogs.com/png.latex?Y%20%5Csim%20%5Crm%20N(%5Ccdot)">을 확인하면 될까? 원래의 가정은 오차항에 대한 가정이다. 앞에 여러 가지 변수의 작용으로 <img src="https://latex.codecogs.com/png.latex?Y">가 결정되므로 <img src="https://latex.codecogs.com/png.latex?Y">가 정규 분포를 따르는 것은 우연일 뿐이다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Chat%5Cepsilon%20=%20Y%20-%20%5Chat%7BY%7D">가 정규 분포를 따르면 될까? 이 역시 마찬가지로 정규 분포를 따르리라는 보장이 없다. <img src="https://latex.codecogs.com/png.latex?%5Chat%5Cepsilon">는 회귀 분석의 모델링 아래 도출된 <img src="https://latex.codecogs.com/png.latex?%5Cepsilon">에 관한 추정치일 뿐이다. 이것 역시 정규 분포를 따르리라는 보장이 없다.</p>
+<p>다시 기억하자. 오차항에 관한 내용은 모델링을 위한 일종의 가정이다. 가정은 대체로 검증되지 않는다. 모델링의 가정은 받아들이는 것이지 검증하는 것이 아니다.</p>
+</section>
+<section id="표본의-크기가-충분하다면" class="level2">
+<h2 class="anchored" data-anchor-id="표본의-크기가-충분하다면">표본의 크기가 충분하다면</h2>
+<p>그렇다면 가정을 받아들일 수 없다면 회귀분석에서 검정을 수행할 수 있을까? 그렇지 않다. 만일 표본의 크기가 충분히 크다면 오차항의 정규 분포 가정 없이도 검정을 수행할 수 있다.</p>
+<p>회귀 분석의 계수의 표본 추정량 <img src="https://latex.codecogs.com/png.latex?%5Chat%20%5Cbeta">는 다음과 같다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%20%5Cbeta%20=%20(X%5ET%20X)%5E%7B-1%7D(X%20y)%0A"></p>
+<p>회귀 분석에서 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_i">를 검정하기 위한 t-통계량은 다음과 같이 정의된다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0At_i%20=%20%5Cdfrac%7B%5Chat%20%5Cbeta_i%20-%20%5Cbeta%7D%7BS%20%5Csqrt%7B(X%5ET%20X)_%7Bii%7D%5E%7B-1%7D%7D%7D%0A"></p>
+<p>with</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AS(y_i)%5E2%20=%20%5Cdfrac%7B1%7D%7Bn-k%7D%20%5Csum_%7Bi=1%7D%5En%20(y_i%20-%20%20x%5Er_i%20%5Chat%5Cbeta)%0A"></p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?x%5Er_i">: <img src="https://latex.codecogs.com/png.latex?X">의 <img src="https://latex.codecogs.com/png.latex?i">’th 행(row) 벡터</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cunderset%7B(1%20%5Ctimes%20k)%7D%7Bx%5Er_i%7D%5Cunderset%7B(k%20%5Ctimes%201)%7D%7B%5Cvphantom%7Bx%5Er_i%7D%5Chat%5Cbeta%7D%20=%20%5Chat%20y_i"></li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?n">이 커짐에 따라서 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_i">의 분포는 <img src="https://latex.codecogs.com/png.latex?%5Crm%20N(0,1)">를 점근적으로 닮아간다.</p>
+<p>요약하면 표본의 크기가 충분할 때 오차항의 정규 분포 가정은 잊어도 좋다. 중심 극한 정리에 따라서 필요한 가설 검정을 수행할 수 있다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/regression/large-sample.jpeg" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li><a href="https://thestatsgeek.com/2013/08/07/assumptions-for-linear-regression/">The Stats Geek</a></li>
+<li><a href="https://www.youtube.com/watch?v=dBB_atu-1QM">Large Sample Inference: 2. Asymptotic Normality</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>regression</category>
+  <guid>http://www.lostineconomics.com/posts/regression/2022-05-28-normality.html</guid>
+  <pubDate>Fri, 27 May 2022 15:00:00 GMT</pubDate>
+  <media:content url="https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png" medium="image" type="image/png"/>
+</item>
 <item>
   <title>Sample Statistics and Standard Error</title>
   <dc:creator>JS HUHH</dc:creator>
@@ -224,8 +291,8 @@
 <p>with</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AS(y_i)%5E2%20=%20%5Cdfrac%7B1%7D%7Bn-k%7D%20%5Csum_%7Bi=1%7D%5En%20(y_i%20-%20%20x%5Er_i%20%5Chat%5Cbeta)%0A"></p>
 <ul>
-<li><img src="https://latex.codecogs.com/png.latex?x%5Er_i">: <img src="https://latex.codecogs.com/png.latex?X">의 <img src="https://latex.codecogs.com/png.latex?i">’th로 벡터</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cunderset%7B(1%20%5Ctimes%20k)%7D%7Bx%5Er_i%7D%5Cunderset%7B(k%20%5Ctimes%201)%7D%7B%5Chat%5Cbeta%7D%20=%20%5Chat%20y_i"></li>
+<li><img src="https://latex.codecogs.com/png.latex?x%5Er_i">: <img src="https://latex.codecogs.com/png.latex?X">의 <img src="https://latex.codecogs.com/png.latex?i">’th 행(row) 벡터</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cunderset%7B(1%20%5Ctimes%20k)%7D%7Bx%5Er_i%7D%5Cunderset%7B(k%20%5Ctimes%201)%7D%7B%5Cvphantom%7Bx%5Er_i%7D%5Chat%5Cbeta%7D%20=%20%5Chat%20y_i"></li>
 </ul>
 <p>회귀 분석의 <img src="https://latex.codecogs.com/png.latex?i">’th 계수인 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_i">는 <img src="https://latex.codecogs.com/png.latex?t_i">를 통해 검정할 수 있다. <img src="https://latex.codecogs.com/png.latex?n">이 충분히 클 경우 <img src="https://latex.codecogs.com/png.latex?t_i%20%5Csim%20%5Crm%20N(0,1)">이 된다.</p>
 
@@ -2553,74 +2620,6 @@ MjEyMzEwM119
   <pubDate>Tue, 15 Dec 2020 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
-<item>
-  <title>Understanding Log-Linear Regression Model</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</link>
-  <description><![CDATA[ 
-
-
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><p>당연히 알고 있다고 생각하지만 모르는 게 생각보다 많다. 회귀 분석에서 로그-리니어 모델, 즉 종속 변수에 로그를 취하고 독립 변수가 선형인 모델을 어떻게 이해해야 할까? 찬찬히 따져보자.</p>
-<section id="the-math" class="level2">
-<h2 class="anchored" data-anchor-id="the-math">The Math</h2>
-<p>편의상 독립 변수와 종속 변수 모두 스칼라 값이라고 하자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cln%20y_i%20=%20%5Cbeta%20x_i%20+%20%5Cvarepsilon_i%0A"></p>
-<p>양변을 미분해보자. 오차항은 정의상 <img src="https://latex.codecogs.com/png.latex?x_i">와 무관해야 하므로,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%7D%7By_i%7D%20=%20%5Cbeta%20d%20x_i%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%20/%20y_i%7D%7Bd%20x_i%7D%20=%20%5Cbeta%0A"></p>
-<p>이렇게 보면 <img src="https://latex.codecogs.com/png.latex?%5Cbeta"> 값은 <img src="https://latex.codecogs.com/png.latex?x_i">가 순간적으로 변함에 따라서 변화하는 <img src="https://latex.codecogs.com/png.latex?y_i">의 % 변화를 나타낸다. 일단 기본적으로 주의해야 할 것! 위 값은 국지적 미분 값이다. 즉, 특정한 <img src="https://latex.codecogs.com/png.latex?x_i">에서의 미분 값이다. 즉, 엄밀하게 쓰면,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%20/%20y_i%7D%7Bd%20x_i%7D%20%5Cbigg%7C_%7Bx_i%20=%20x_0%7D%20=%20%5Cbeta%0A"></p>
-<p>회귀분석에서 구하는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">와 위에서 얻은 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">는 동일할 수가 없다. 왜나하면, <img src="https://latex.codecogs.com/png.latex?y_i">는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="my-figure5 img-fluid figure-img"></p>
-<p></p><p></p>
-</figure>
-</div>
-</section>
-<section id="the-coefficient" class="level2">
-<h2 class="anchored" data-anchor-id="the-coefficient">The Coefficient</h2>
-<p>회귀 분석으로 돌아오자. 독립 변수 <img src="https://latex.codecogs.com/png.latex?y_i">에 <img src="https://latex.codecogs.com/png.latex?%5Cln">을 취해서 변형했다. 그 의미를 풀어보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5CDelta%20%5Cln%20y_i%20&amp;%20=%20%5Cln%20y_1%20-%20%5Cln%20y_0%20%5C%5C%0A&amp;%20=%20%5Cln(%5Cfrac%7By_1%7D%7By_0%7D)%20%5C%5C%0A&amp;%20=%20%5Cln(%5Cfrac%7By_0%20+%20%5CDelta%20y%7D%7By_0%7D)%20%5C%5C%0A&amp;%20=%20%5Cln(1+%5Cfrac%7B%5CDelta%20y%7D%7By_0%7D)%0A%5Cend%7Baligned%7D%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cln(1+%5Cfrac%7B%5CDelta%20y%7D%7By_0%7D)">를 보자. <img src="https://latex.codecogs.com/png.latex?z=0"> 근처에서 <img src="https://latex.codecogs.com/png.latex?%5Cln%20(1+z)%20%5Capprox%20z">가 성립한다. 즉,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%20%5Cln%20y_i%20=%20%20%5Cln(1+%5Cfrac%7B%5CDelta%20y%7D%7By_0%7D)%20%5Capprox%20%5Cdfrac%7B%5CDelta%20y%7D%7By_0%7D%20=%20%5C%25%20%5CDelta%20y%20=%20%5Cbeta%20%5CDelta%20x%0A"></p>
-<p>이 경우 수학적인 해석을 거의 그대로 가져올 수 있다. 다만, <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B%5CDelta%20y%7D%7By_0%7D">가 0 근처에 있어야 한다. 이는 <img src="https://latex.codecogs.com/png.latex?y">의 변화율이 크지 않은 경우에 해당한다.</p>
-<p>위와 같은 회귀식을 추정해 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">를 보고할 때 “<img src="https://latex.codecogs.com/png.latex?x">가 1단위 변화할 때”라는 표현을 쓴다. 즉, <img src="https://latex.codecogs.com/png.latex?%5CDelta%20x%20=%201">로 둔다는 뜻이다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%20%5Cln%20y_i%20%5Capprox%20%5Cdfrac%7B%5CDelta%20y%7D%7By_0%7D%20=%20%5C%25%20%5CDelta%20y%20=%20%5Cbeta%0A"></p>
-<p>결국 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">의 값이 0 주변에 있다면 이 값은 <img src="https://latex.codecogs.com/png.latex?x_i">가 1단위 변화할 때 <img src="https://latex.codecogs.com/png.latex?y_i">의 변화율에 미치는 영향”으로 해석할 수 있다.</p>
-</section>
-<section id="exact-math-for-the-percent-change" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="exact-math-for-the-percent-change">Exact Math for the Percent Change</h2>
-<p>근사값을 쓰지 말고 % 변화율을 정확하게 계산해보자. 물론 이 값이 필요한 경우에 해당한다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5C%25%20%5CDelta%20y_i%20&amp;%20%5Cequiv%20%5Cdfrac%7By_1%20-%20y_0%7D%7By_0%7D%20%5C%5C%0A&amp;%20=%20%5Cdfrac%7By_1%7D%7By_0%7D%20-%201%20%5C%5C%0A&amp;%20=%20%5Cexp(%5Cln%20(%5Cdfrac%7By_1%7D%7By_0%7D))%20-%201%20%5C%5C%0A&amp;%20=%20%5Cexp(x_1%20%5Cbeta%20-%20x_0%20%5Cbeta%20+%20%5Cvarepsilon_1%20-%20%5Cvarepsilon_0)%20-%201%20%5C%5C%0A&amp;%20=%20%5Cexp(%5CDelta%20x%20%5Cbeta%20+%20%5CDelta%20%5Cvarepsilon)%20-%201%0A%5Cend%7Baligned%7D%0A"></p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p><img src="https://latex.codecogs.com/png.latex?z=0"> 근방에서 테일러 급수를 1차까지 근사하면 저 값을 얻을 수 있다. <img src="https://latex.codecogs.com/png.latex?z=0"> 인근에서 근사하는 이유는 <img src="https://latex.codecogs.com/png.latex?z=0"> 근처에서 <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B(z-0)%5Ek%7D%7Bk!%7D"> for <img src="https://latex.codecogs.com/png.latex?k=2,3,%5Cdotsc">과 같은 고차 항의 크기가 점점 줄어들기 때문이다.</p>
-</div></div><p><img src="https://latex.codecogs.com/png.latex?%5CDelta%20%5Cvarepsilon%20=0">를 가정하고 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20x%20=1">로 두면, 위 식으로 <img src="https://latex.codecogs.com/png.latex?y_i">의 % 변화율을 계산할 수 있다.</p>
-</section>
-<section id="interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
-<p>위 지수 함수의 그림을 보자. <img src="https://latex.codecogs.com/png.latex?x">가 커짐에 따라서 도함수의 기울기가 커진다는 점을 알 수 있다. 특정 <img src="https://latex.codecogs.com/png.latex?x"> 구역에서 회귀 계수를 구하면 이 도함수의 기울기와 비슷해질 것이고, 이는 이 도함수를 기울기로 근사한 직선이 실제 <img src="https://latex.codecogs.com/png.latex?y_i">값 보다는 작게 될 것이다. 즉, 변화율 측정 단위로서 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">는 실제 변화율보다 작게 된다.</p>
-<p>만일 <img src="https://latex.codecogs.com/png.latex?%5Cbeta%20=%200.3">이라고 하자. 실제 <img src="https://latex.codecogs.com/png.latex?%5C%25%5CDelta%20y">를 구해보면,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5C%25%5CDelta%20y%20=%20%5Cexp(%5Cbeta)%20-%201%20=%200.35%0A"></p>
-<p>약 5% 정도 과소 평가 되었음을 알 수 있다. 이 크기의 의미나 중요성은 분석자가 선택할 문제다.</p>
-
-
-</section>
-
- ]]></description>
-  <category>regression</category>
-  <guid>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</guid>
-  <pubDate>Tue, 10 Nov 2020 15:00:00 GMT</pubDate>
-  <media:content url="https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png" medium="image" type="image/png"/>
-</item>
 </channel>
 </rss>
 </span><span class="op" style="color: #5E5E5E;">,</span><span class="st" style="color: #20794D;">'
@@ -4447,74 +4446,6 @@ MjEyMzEwM119
   <guid>http://www.lostineconomics.com/posts/linear-algebra/2020-12-16-measuring-distance.html</guid>
   <pubDate>Tue, 15 Dec 2020 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Understanding Log-Linear Regression Model</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</link>
-  <description><![CDATA[ 
-
-
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><p>당연히 알고 있다고 생각하지만 모르는 게 생각보다 많다. 회귀 분석에서 로그-리니어 모델, 즉 종속 변수에 로그를 취하고 독립 변수가 선형인 모델을 어떻게 이해해야 할까? 찬찬히 따져보자.</p>
-<section id="the-math" class="level2">
-<h2 class="anchored" data-anchor-id="the-math">The Math</h2>
-<p>편의상 독립 변수와 종속 변수 모두 스칼라 값이라고 하자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cln%20y_i%20=%20%5Cbeta%20x_i%20+%20%5Cvarepsilon_i%0A"></p>
-<p>양변을 미분해보자. 오차항은 정의상 <img src="https://latex.codecogs.com/png.latex?x_i">와 무관해야 하므로,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%7D%7By_i%7D%20=%20%5Cbeta%20d%20x_i%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%20/%20y_i%7D%7Bd%20x_i%7D%20=%20%5Cbeta%0A"></p>
-<p>이렇게 보면 <img src="https://latex.codecogs.com/png.latex?%5Cbeta"> 값은 <img src="https://latex.codecogs.com/png.latex?x_i">가 순간적으로 변함에 따라서 변화하는 <img src="https://latex.codecogs.com/png.latex?y_i">의 % 변화를 나타낸다. 일단 기본적으로 주의해야 할 것! 위 값은 국지적 미분 값이다. 즉, 특정한 <img src="https://latex.codecogs.com/png.latex?x_i">에서의 미분 값이다. 즉, 엄밀하게 쓰면,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%20/%20y_i%7D%7Bd%20x_i%7D%20%5Cbigg%7C_%7Bx_i%20=%20x_0%7D%20=%20%5Cbeta%0A"></p>
-<p>회귀분석에서 구하는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">와 위에서 얻은 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">는 동일할 수가 없다. 왜나하면, <img src="https://latex.codecogs.com/png.latex?y_i">는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="my-figure5 img-fluid figure-img"></p>
-<p></p><p></p>
-</figure>
-</div>
-</section>
-<section id="the-coefficient" class="level2">
-<h2 class="anchored" data-anchor-id="the-coefficient">The Coefficient</h2>
-<p>회귀 분석으로 돌아오자. 독립 변수 <img src="https://latex.codecogs.com/png.latex?y_i">에 <img src="https://latex.codecogs.com/png.latex?%5Cln">을 취해서 변형했다. 그 의미를 풀어보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5CDelta%20%5Cln%20y_i%20&amp;%20=%20%5Cln%20y_1%20-%20%5Cln%20y_0%20%5C%5C%0A&amp;%20=%20%5Cln(%5Cfrac%7By_1%7D%7By_0%7D)%20%5C%5C%0A&amp;%20=%20%5Cln(%5Cfrac%7By_0%20+%20%5CDelta%20y%7D%7By_0%7D)%20%5C%5C%0A&amp;%20=%20%5Cln(1+%5Cfrac%7B%5CDelta%20y%7D%7By_0%7D)%0A%5Cend%7Baligned%7D%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cln(1+%5Cfrac%7B%5CDelta%20y%7D%7By_0%7D)">를 보자. <img src="https://latex.codecogs.com/png.latex?z=0"> 근처에서 <img src="https://latex.codecogs.com/png.latex?%5Cln%20(1+z)%20%5Capprox%20z">가 성립한다. 즉,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%20%5Cln%20y_i%20=%20%20%5Cln(1+%5Cfrac%7B%5CDelta%20y%7D%7By_0%7D)%20%5Capprox%20%5Cdfrac%7B%5CDelta%20y%7D%7By_0%7D%20=%20%5C%25%20%5CDelta%20y%20=%20%5Cbeta%20%5CDelta%20x%0A"></p>
-<p>이 경우 수학적인 해석을 거의 그대로 가져올 수 있다. 다만, <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B%5CDelta%20y%7D%7By_0%7D">가 0 근처에 있어야 한다. 이는 <img src="https://latex.codecogs.com/png.latex?y">의 변화율이 크지 않은 경우에 해당한다.</p>
-<p>위와 같은 회귀식을 추정해 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">를 보고할 때 “<img src="https://latex.codecogs.com/png.latex?x">가 1단위 변화할 때”라는 표현을 쓴다. 즉, <img src="https://latex.codecogs.com/png.latex?%5CDelta%20x%20=%201">로 둔다는 뜻이다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%20%5Cln%20y_i%20%5Capprox%20%5Cdfrac%7B%5CDelta%20y%7D%7By_0%7D%20=%20%5C%25%20%5CDelta%20y%20=%20%5Cbeta%0A"></p>
-<p>결국 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">의 값이 0 주변에 있다면 이 값은 <img src="https://latex.codecogs.com/png.latex?x_i">가 1단위 변화할 때 <img src="https://latex.codecogs.com/png.latex?y_i">의 변화율에 미치는 영향”으로 해석할 수 있다.</p>
-</section>
-<section id="exact-math-for-the-percent-change" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="exact-math-for-the-percent-change">Exact Math for the Percent Change</h2>
-<p>근사값을 쓰지 말고 % 변화율을 정확하게 계산해보자. 물론 이 값이 필요한 경우에 해당한다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5C%25%20%5CDelta%20y_i%20&amp;%20%5Cequiv%20%5Cdfrac%7By_1%20-%20y_0%7D%7By_0%7D%20%5C%5C%0A&amp;%20=%20%5Cdfrac%7By_1%7D%7By_0%7D%20-%201%20%5C%5C%0A&amp;%20=%20%5Cexp(%5Cln%20(%5Cdfrac%7By_1%7D%7By_0%7D))%20-%201%20%5C%5C%0A&amp;%20=%20%5Cexp(x_1%20%5Cbeta%20-%20x_0%20%5Cbeta%20+%20%5Cvarepsilon_1%20-%20%5Cvarepsilon_0)%20-%201%20%5C%5C%0A&amp;%20=%20%5Cexp(%5CDelta%20x%20%5Cbeta%20+%20%5CDelta%20%5Cvarepsilon)%20-%201%0A%5Cend%7Baligned%7D%0A"></p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p><img src="https://latex.codecogs.com/png.latex?z=0"> 근방에서 테일러 급수를 1차까지 근사하면 저 값을 얻을 수 있다. <img src="https://latex.codecogs.com/png.latex?z=0"> 인근에서 근사하는 이유는 <img src="https://latex.codecogs.com/png.latex?z=0"> 근처에서 <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B(z-0)%5Ek%7D%7Bk!%7D"> for <img src="https://latex.codecogs.com/png.latex?k=2,3,%5Cdotsc">과 같은 고차 항의 크기가 점점 줄어들기 때문이다.</p>
-</div></div><p><img src="https://latex.codecogs.com/png.latex?%5CDelta%20%5Cvarepsilon%20=0">를 가정하고 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20x%20=1">로 두면, 위 식으로 <img src="https://latex.codecogs.com/png.latex?y_i">의 % 변화율을 계산할 수 있다.</p>
-</section>
-<section id="interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
-<p>위 지수 함수의 그림을 보자. <img src="https://latex.codecogs.com/png.latex?x">가 커짐에 따라서 도함수의 기울기가 커진다는 점을 알 수 있다. 특정 <img src="https://latex.codecogs.com/png.latex?x"> 구역에서 회귀 계수를 구하면 이 도함수의 기울기와 비슷해질 것이고, 이는 이 도함수를 기울기로 근사한 직선이 실제 <img src="https://latex.codecogs.com/png.latex?y_i">값 보다는 작게 될 것이다. 즉, 변화율 측정 단위로서 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">는 실제 변화율보다 작게 된다.</p>
-<p>만일 <img src="https://latex.codecogs.com/png.latex?%5Cbeta%20=%200.3">이라고 하자. 실제 <img src="https://latex.codecogs.com/png.latex?%5C%25%5CDelta%20y">를 구해보면,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5C%25%5CDelta%20y%20=%20%5Cexp(%5Cbeta)%20-%201%20=%200.35%0A"></p>
-<p>약 5% 정도 과소 평가 되었음을 알 수 있다. 이 크기의 의미나 중요성은 분석자가 선택할 문제다.</p>
-
-
-</section>
-
- ]]></description>
-  <category>regression</category>
-  <guid>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</guid>
-  <pubDate>Tue, 10 Nov 2020 15:00:00 GMT</pubDate>
-  <media:content url="https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png" medium="image" type="image/png"/>
 </item>
 </channel>
 </rss>
@@ -6407,74 +6338,6 @@ MjEyMzEwM119
   <guid>http://www.lostineconomics.com/posts/linear-algebra/2020-12-16-measuring-distance.html</guid>
   <pubDate>Tue, 15 Dec 2020 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Understanding Log-Linear Regression Model</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</link>
-  <description><![CDATA[ 
-
-
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><p>당연히 알고 있다고 생각하지만 모르는 게 생각보다 많다. 회귀 분석에서 로그-리니어 모델, 즉 종속 변수에 로그를 취하고 독립 변수가 선형인 모델을 어떻게 이해해야 할까? 찬찬히 따져보자.</p>
-<section id="the-math" class="level2">
-<h2 class="anchored" data-anchor-id="the-math">The Math</h2>
-<p>편의상 독립 변수와 종속 변수 모두 스칼라 값이라고 하자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cln%20y_i%20=%20%5Cbeta%20x_i%20+%20%5Cvarepsilon_i%0A"></p>
-<p>양변을 미분해보자. 오차항은 정의상 <img src="https://latex.codecogs.com/png.latex?x_i">와 무관해야 하므로,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%7D%7By_i%7D%20=%20%5Cbeta%20d%20x_i%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%20/%20y_i%7D%7Bd%20x_i%7D%20=%20%5Cbeta%0A"></p>
-<p>이렇게 보면 <img src="https://latex.codecogs.com/png.latex?%5Cbeta"> 값은 <img src="https://latex.codecogs.com/png.latex?x_i">가 순간적으로 변함에 따라서 변화하는 <img src="https://latex.codecogs.com/png.latex?y_i">의 % 변화를 나타낸다. 일단 기본적으로 주의해야 할 것! 위 값은 국지적 미분 값이다. 즉, 특정한 <img src="https://latex.codecogs.com/png.latex?x_i">에서의 미분 값이다. 즉, 엄밀하게 쓰면,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bd%20y_i%20/%20y_i%7D%7Bd%20x_i%7D%20%5Cbigg%7C_%7Bx_i%20=%20x_0%7D%20=%20%5Cbeta%0A"></p>
-<p>회귀분석에서 구하는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">와 위에서 얻은 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">는 동일할 수가 없다. 왜나하면, <img src="https://latex.codecogs.com/png.latex?y_i">는 지수 함수라는 비선형 함수이기 때문이다. 일단 이 점을 기억해두도록 하자.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/dj1hlxw0wr920.cloudfront.net/userfiles/wyzfiles/7fd0a10d-1edf-487a-9d2a-4e52d68d181d.gif" class="my-figure5 img-fluid figure-img"></p>
-<p></p><p></p>
-</figure>
-</div>
-</section>
-<section id="the-coefficient" class="level2">
-<h2 class="anchored" data-anchor-id="the-coefficient">The Coefficient</h2>
-<p>회귀 분석으로 돌아오자. 독립 변수 <img src="https://latex.codecogs.com/png.latex?y_i">에 <img src="https://latex.codecogs.com/png.latex?%5Cln">을 취해서 변형했다. 그 의미를 풀어보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5CDelta%20%5Cln%20y_i%20&amp;%20=%20%5Cln%20y_1%20-%20%5Cln%20y_0%20%5C%5C%0A&amp;%20=%20%5Cln(%5Cfrac%7By_1%7D%7By_0%7D)%20%5C%5C%0A&amp;%20=%20%5Cln(%5Cfrac%7By_0%20+%20%5CDelta%20y%7D%7By_0%7D)%20%5C%5C%0A&amp;%20=%20%5Cln(1+%5Cfrac%7B%5CDelta%20y%7D%7By_0%7D)%0A%5Cend%7Baligned%7D%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cln(1+%5Cfrac%7B%5CDelta%20y%7D%7By_0%7D)">를 보자. <img src="https://latex.codecogs.com/png.latex?z=0"> 근처에서 <img src="https://latex.codecogs.com/png.latex?%5Cln%20(1+z)%20%5Capprox%20z">가 성립한다. 즉,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%20%5Cln%20y_i%20=%20%20%5Cln(1+%5Cfrac%7B%5CDelta%20y%7D%7By_0%7D)%20%5Capprox%20%5Cdfrac%7B%5CDelta%20y%7D%7By_0%7D%20=%20%5C%25%20%5CDelta%20y%20=%20%5Cbeta%20%5CDelta%20x%0A"></p>
-<p>이 경우 수학적인 해석을 거의 그대로 가져올 수 있다. 다만, <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B%5CDelta%20y%7D%7By_0%7D">가 0 근처에 있어야 한다. 이는 <img src="https://latex.codecogs.com/png.latex?y">의 변화율이 크지 않은 경우에 해당한다.</p>
-<p>위와 같은 회귀식을 추정해 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">를 보고할 때 “<img src="https://latex.codecogs.com/png.latex?x">가 1단위 변화할 때”라는 표현을 쓴다. 즉, <img src="https://latex.codecogs.com/png.latex?%5CDelta%20x%20=%201">로 둔다는 뜻이다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%20%5Cln%20y_i%20%5Capprox%20%5Cdfrac%7B%5CDelta%20y%7D%7By_0%7D%20=%20%5C%25%20%5CDelta%20y%20=%20%5Cbeta%0A"></p>
-<p>결국 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">의 값이 0 주변에 있다면 이 값은 <img src="https://latex.codecogs.com/png.latex?x_i">가 1단위 변화할 때 <img src="https://latex.codecogs.com/png.latex?y_i">의 변화율에 미치는 영향”으로 해석할 수 있다.</p>
-</section>
-<section id="exact-math-for-the-percent-change" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="exact-math-for-the-percent-change">Exact Math for the Percent Change</h2>
-<p>근사값을 쓰지 말고 % 변화율을 정확하게 계산해보자. 물론 이 값이 필요한 경우에 해당한다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5C%25%20%5CDelta%20y_i%20&amp;%20%5Cequiv%20%5Cdfrac%7By_1%20-%20y_0%7D%7By_0%7D%20%5C%5C%0A&amp;%20=%20%5Cdfrac%7By_1%7D%7By_0%7D%20-%201%20%5C%5C%0A&amp;%20=%20%5Cexp(%5Cln%20(%5Cdfrac%7By_1%7D%7By_0%7D))%20-%201%20%5C%5C%0A&amp;%20=%20%5Cexp(x_1%20%5Cbeta%20-%20x_0%20%5Cbeta%20+%20%5Cvarepsilon_1%20-%20%5Cvarepsilon_0)%20-%201%20%5C%5C%0A&amp;%20=%20%5Cexp(%5CDelta%20x%20%5Cbeta%20+%20%5CDelta%20%5Cvarepsilon)%20-%201%0A%5Cend%7Baligned%7D%0A"></p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p><img src="https://latex.codecogs.com/png.latex?z=0"> 근방에서 테일러 급수를 1차까지 근사하면 저 값을 얻을 수 있다. <img src="https://latex.codecogs.com/png.latex?z=0"> 인근에서 근사하는 이유는 <img src="https://latex.codecogs.com/png.latex?z=0"> 근처에서 <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B(z-0)%5Ek%7D%7Bk!%7D"> for <img src="https://latex.codecogs.com/png.latex?k=2,3,%5Cdotsc">과 같은 고차 항의 크기가 점점 줄어들기 때문이다.</p>
-</div></div><p><img src="https://latex.codecogs.com/png.latex?%5CDelta%20%5Cvarepsilon%20=0">를 가정하고 <img src="https://latex.codecogs.com/png.latex?%5CDelta%20x%20=1">로 두면, 위 식으로 <img src="https://latex.codecogs.com/png.latex?y_i">의 % 변화율을 계산할 수 있다.</p>
-</section>
-<section id="interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
-<p>위 지수 함수의 그림을 보자. <img src="https://latex.codecogs.com/png.latex?x">가 커짐에 따라서 도함수의 기울기가 커진다는 점을 알 수 있다. 특정 <img src="https://latex.codecogs.com/png.latex?x"> 구역에서 회귀 계수를 구하면 이 도함수의 기울기와 비슷해질 것이고, 이는 이 도함수를 기울기로 근사한 직선이 실제 <img src="https://latex.codecogs.com/png.latex?y_i">값 보다는 작게 될 것이다. 즉, 변화율 측정 단위로서 <img src="https://latex.codecogs.com/png.latex?%5Cbeta">는 실제 변화율보다 작게 된다.</p>
-<p>만일 <img src="https://latex.codecogs.com/png.latex?%5Cbeta%20=%200.3">이라고 하자. 실제 <img src="https://latex.codecogs.com/png.latex?%5C%25%5CDelta%20y">를 구해보면,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5C%25%5CDelta%20y%20=%20%5Cexp(%5Cbeta)%20-%201%20=%200.35%0A"></p>
-<p>약 5% 정도 과소 평가 되었음을 알 수 있다. 이 크기의 의미나 중요성은 분석자가 선택할 문제다.</p>
-
-
-</section>
-
- ]]></description>
-  <category>regression</category>
-  <guid>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</guid>
-  <pubDate>Tue, 10 Nov 2020 15:00:00 GMT</pubDate>
-  <media:content url="https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png" medium="image" type="image/png"/>
 </item>
 </channel>
 </rss>
