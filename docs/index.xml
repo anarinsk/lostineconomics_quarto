@@ -214,10 +214,10 @@
 </section>
 <section id="consistency" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="consistency">Consistency</h3>
-<p><img src="https://latex.codecogs.com/png.latex?n">이 증가하면 LLN에 따라서 <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bn%20%5Cto%20%5Cinfty%7D%20%5CES%7BY%7D_n%20=%20%5Cmu">가 성립한다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?n">이 증가하면 LLN에 따라서 <img src="https://latex.codecogs.com/png.latex?%5CES%7BY%7D_n%20%5Coverset%7BP%7D%7B%5Clongrightarrow%7D%20%5Cmu">가 성립한다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p><img src="https://latex.codecogs.com/png.latex?%5Coverset%7BP%7D%7B%5Clongrightarrow%7D">는 확률적인 수렴, 즉 probability limit을 뜻한다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Coverset%7BP%7D%7B%5Clongrightarrow%7D">는 확률적인 수렴, 즉 앞서 정의를 살펴본 probability limit을 뜻한다. LLN은 약한 버전과 강한 버전이 있다. Kolmogorov의 강한 버전의 사실 증명이 복잡하다. 약한 버전의 증명은 <a href="https://python.quantecon.org/lln_clt.html">여기</a>를 참고하자. Chebyshev 부등식과 <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bn%20%5Cto%20%5Cinfty%7D%20%5CV(%5CES%7BY%7D_n)%20=%200">을 활용한다.</p>
 </div></div></section>
 <section id="central-limit-theorem" class="level3">
 <h3 class="anchored" data-anchor-id="central-limit-theorem">Central Limit Theorem</h3>
@@ -289,14 +289,17 @@
 <div class="no-row-height column-margin column-container"><div class="">
 <p>자세한 내용은 <a href="http://www.utstat.toronto.edu/~brunner/oldclass/413f08/handouts/STA413Ch4.pdf">여기</a> 책의 해당 부분을 참고하라.</p>
 </div></div></section>
-<section id="regression-t-statistic" class="level3">
+<section id="regression-t-statistic" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="regression-t-statistic">회귀 분석의 t-통계량</h3>
 <p>회귀 분석의 계수의 표본 추정량 <img src="https://latex.codecogs.com/png.latex?%5Chat%20%5Cbeta">는 다음과 같다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%20%5Cbeta%20=%20(X%5ET%20X)%5E%7B-1%7D(X%20y)%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0At_i%20=%20%5Cdfrac%7B%5Chat%20%5Cbeta_i%20-%20%5Cbeta%7D%7BS%20%5Csqrt%7B(X%5ET%20X)_%7Bii%7D%5E%7B-1%7D%7D%7D%0A"></p>
 <p>with</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AS(y_i)%5E2%20=%20%5Cdfrac%7B1%7D%7Bn-k%7D%20%5Csum_%7Bi=1%7D%5En%20(y_i%20-%20%20x%5Er_i%20%5Chat%5Cbeta)%0A"></p>
-<ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>표기(notation) 상 약간의 혼란을 감수하자. 앞서는 샘플 크기에 따른 표기를 하첨자 <img src="https://latex.codecogs.com/png.latex?i">로 표현했다. 여기서는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_k">는 중회귀 분석의 <img src="https://latex.codecogs.com/png.latex?k">–번째 계수를 뜻한다.</p>
+</div></div><ul>
 <li><img src="https://latex.codecogs.com/png.latex?x%5Er_i">: <img src="https://latex.codecogs.com/png.latex?X">의 <img src="https://latex.codecogs.com/png.latex?i">’th 행(row) 벡터</li>
 <li><img src="https://latex.codecogs.com/png.latex?%5Cunderset%7B(1%20%5Ctimes%20k)%7D%7Bx%5Er_i%7D%5Cunderset%7B(k%20%5Ctimes%201)%7D%7B%5Cvphantom%7Bx%5Er_i%7D%5Chat%5Cbeta%7D%20=%20%5Chat%20y_i"></li>
 </ul>

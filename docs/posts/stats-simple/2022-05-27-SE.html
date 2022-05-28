@@ -292,10 +292,10 @@ ul.task-list{list-style: none;}
 </section>
 <section id="consistency" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="consistency">Consistency</h3>
-<p><span class="math inline">\(n\)</span>이 증가하면 LLN에 따라서 <span class="math inline">\(\lim_{n \to \infty} \ES{Y}_n = \mu\)</span>가 성립한다.</p>
+<p><span class="math inline">\(n\)</span>이 증가하면 LLN에 따라서 <span class="math inline">\(\ES{Y}_n \overset{P}{\longrightarrow} \mu\)</span>가 성립한다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p><span class="math inline">\(\overset{P}{\longrightarrow}\)</span>는 확률적인 수렴, 즉 probability limit을 뜻한다.</p>
+<p><span class="math inline">\(\overset{P}{\longrightarrow}\)</span>는 확률적인 수렴, 즉 앞서 정의를 살펴본 probability limit을 뜻한다. LLN은 약한 버전과 강한 버전이 있다. Kolmogorov의 강한 버전의 사실 증명이 복잡하다. 약한 버전의 증명은 <a href="https://python.quantecon.org/lln_clt.html">여기</a>를 참고하자. Chebyshev 부등식과 <span class="math inline">\(\lim_{n \to \infty} \V(\ES{Y}_n) = 0\)</span>을 활용한다.</p>
 </div></div></section>
 <section id="central-limit-theorem" class="level3">
 <h3 class="anchored" data-anchor-id="central-limit-theorem">Central Limit Theorem</h3>
@@ -420,7 +420,7 @@ S_n^2 &amp; = \dfrac{1}{n-1}\sum_{i=1}^n (X_i - \overline{X}_n) \\
 <div class="no-row-height column-margin column-container"><div class="">
 <p>자세한 내용은 <a href="http://www.utstat.toronto.edu/~brunner/oldclass/413f08/handouts/STA413Ch4.pdf">여기</a> 책의 해당 부분을 참고하라.</p>
 </div></div></section>
-<section id="regression-t-statistic" class="level3">
+<section id="regression-t-statistic" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="regression-t-statistic">회귀 분석의 t-통계량</h3>
 <p>회귀 분석의 계수의 표본 추정량 <span class="math inline">\(\hat \beta\)</span>는 다음과 같다.</p>
 <p><span class="math display">\[
@@ -433,7 +433,10 @@ t_i = \dfrac{\hat \beta_i - \beta}{S \sqrt{(X^T X)_{ii}^{-1}}}
 <p><span class="math display">\[
 S(y_i)^2 = \dfrac{1}{n-k} \sum_{i=1}^n (y_i -  x^r_i \hat\beta)
 \]</span></p>
-<ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>표기(notation) 상 약간의 혼란을 감수하자. 앞서는 샘플 크기에 따른 표기를 하첨자 <span class="math inline">\(i\)</span>로 표현했다. 여기서는 <span class="math inline">\(\beta_k\)</span>는 중회귀 분석의 <span class="math inline">\(k\)</span>–번째 계수를 뜻한다.</p>
+</div></div><ul>
 <li><span class="math inline">\(x^r_i\)</span>: <span class="math inline">\(X\)</span>의 <span class="math inline">\(i\)</span>’th 행(row) 벡터</li>
 <li><span class="math inline">\(\underset{(1 \times k)}{x^r_i}\underset{(k \times 1)}{\vphantom{x^r_i}\hat\beta} = \hat y_i\)</span></li>
 </ul>

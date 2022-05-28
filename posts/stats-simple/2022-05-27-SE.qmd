@@ -93,10 +93,10 @@ $$
 
 ### Consistency
 
-$n$이 증가하면 LLN에 따라서 $\lim_{n \to \infty} \ES{Y}_n = \mu$가 성립한다. 
+$n$이 증가하면 LLN에 따라서 $\ES{Y}_n \overset{P}{\longrightarrow} \mu$가 성립한다. 
 
 :::{ .column-margin }
-$\overset{P}{\longrightarrow}$는 확률적인 수렴, 즉 probability limit을 뜻한다. 
+$\overset{P}{\longrightarrow}$는 확률적인 수렴, 즉 앞서 정의를 살펴본 probability limit을 뜻한다. LLN은 약한 버전과 강한 버전이 있다. Kolmogorov의 강한 버전의 사실 증명이 복잡하다. 약한 버전의 증명은 [여기](https://python.quantecon.org/lln_clt.html)를 참고하자. Chebyshev 부등식과 $\lim_{n \to \infty} \V(\ES{Y}_n) = 0$을 활용한다. 
 :::
 
 ### Central Limit Theorem 
@@ -263,6 +263,10 @@ with
 $$
 S(y_i)^2 = \dfrac{1}{n-k} \sum_{i=1}^n (y_i -  x^r_i \hat\beta)
 $$
+
+:::{ .column-margin }
+표기(notation) 상 약간의 혼란을 감수하자. 앞서는 샘플 크기에 따른 표기를 하첨자 $i$로 표현했다. 여기서는 $\beta_k$는 중회귀 분석의 $k$--번째 계수를 뜻한다. 
+:::
 
 - $x^r_i$: $X$의 $i$'th 행(row) 벡터 
 - $\underset{(1 \times k)}{x^r_i}\underset{(k \times 1)}{\vphantom{x^r_i}\hat\beta} = \hat y_i$
