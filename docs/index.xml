@@ -10,7 +10,235 @@
 <atom:link href="http://www.lostineconomics.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>Another useless blog</description>
 <generator>quarto-0.9.446</generator>
-<lastBuildDate>Tue, 24 May 2022 15:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 26 May 2022 15:00:00 GMT</lastBuildDate>
+<item>
+  <title>Sample Statistics and Standard Error</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>http://www.lostineconomics.com/posts/stats-simple/2022-05-27-SE.html</link>
+  <description><![CDATA[ 
+
+
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><div class="hidden">
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdef%5CE%7B%7B%5Cmathbb%20E%7D%7D%0A%5Cdef%5CV%7B%7B%5Cmathbb%20V%7D%7D%0A%5Cdef%5CES#1%7B%5Coverline%7B#1%7D%7D%0A"></p>
+</div>
+<section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
+<ul>
+<li>기본적인 통계학 용어와 개념을 정리해 보자.</li>
+<li>기본을 자주 잊어먹는 나를 위한 개인적인 용도</li>
+</ul>
+</section>
+<section id="why" class="level2">
+<h2 class="anchored" data-anchor-id="why">Why</h2>
+<p>통계학을 들은 사람들이라면 표준 오차는 대체로 잘 아는 내용이다. 그런데 가끔 까먹는다. 개인적인 용도를 위해서 정리해둔다.</p>
+</section>
+<section id="big-ifs" class="level2">
+<h2 class="anchored" data-anchor-id="big-ifs">Big Ifs</h2>
+<ul>
+<li>알려진 파라미터는 없다.</li>
+<li>알려진 분포도 없다.</li>
+<li>표본 추출은 평균이 <img src="https://latex.codecogs.com/png.latex?%5Cmu">이고 분산이 <img src="https://latex.codecogs.com/png.latex?%5Csigma%5E2%20%3C%20%5Cinfty">인 분포에서 IID(independent and identically distributed)로 생성된다.</li>
+</ul>
+</section>
+<section id="unbiasedness-and-consistency" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="unbiasedness-and-consistency">Unbiasedness and Consistency</h2>
+<p>파라미터 <img src="https://latex.codecogs.com/png.latex?%5Ctheta">와 추정량 <img src="https://latex.codecogs.com/png.latex?%5Chat%20%5Ctheta">이 있다고 하자.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>표본 <img src="https://latex.codecogs.com/png.latex?x_i">가 있다고 할 때, <img src="https://latex.codecogs.com/png.latex?%5Chat%20%5Ctheta">는 <img src="https://latex.codecogs.com/png.latex?x_i">를 정보를 통해 구성된다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Chat%5Ctheta%20%5Cequiv%20%5Chat%5Ctheta(x_i)">.</p>
+</div></div><p><strong>Unbiased</strong></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5CE(%5Chat%20%5Ctheta)%20=%20%5Ctheta%0A"></p>
+<p>추정량의 시퀀스 <img src="https://latex.codecogs.com/png.latex?%5Clbrace%20%5Chat%5Ctheta_n%20%5Crbrace">이 있다고 할 때,</p>
+<p><strong>Consistent</strong></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cunderset%7Bn%20%5Cto%20%5Cinfty%7D%7B%5Crm%20plim%7D~%5Chat%5Ctheta_n%20=%20%5Ctheta%20%20%0A"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/stats-simple/https:/upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" class="my-figure7 img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>plim의 정의는 다음과 같다. 표본 크기 <img src="https://latex.codecogs.com/png.latex?n">과 임의의 양의 상수 <img src="https://latex.codecogs.com/png.latex?c">에 대하여 표본 추정량 <img src="https://latex.codecogs.com/png.latex?%5Chat%5Ctheta_n">은 <img src="https://latex.codecogs.com/png.latex?%5Ctheta">의 일치 추정량(consistent estimator)이라고 한다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Clim_%7Bn%5Cto%5Cinfty%7DP%5B%7C%5Chat%5Ctheta_n%20-%20%5Ctheta%7C%5Cgeq%20c%5D=0%0A"></p>
+</div></div></section>
+<section id="concepts" class="level2">
+<h2 class="anchored" data-anchor-id="concepts">Concepts</h2>
+<table class="table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">용어</th>
+<th>영어 표현</th>
+<th>정의</th>
+<th>사례 혹은 코멘트</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">모수</td>
+<td>parameter</td>
+<td>한 모집단의 고정된 특성 혹은 이를 나타내는 값</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5CE%5BY_i%5D">, 분포의 <img src="https://latex.codecogs.com/png.latex?%5Cmu">, <img src="https://latex.codecogs.com/png.latex?%5Csigma%5E2"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">표본 통계량</td>
+<td>sample statistics</td>
+<td>표본에 따라서 변화하는 값</td>
+<td><img src="https://latex.codecogs.com/png.latex?%5CES%7BY%7D_n">, <img src="https://latex.codecogs.com/png.latex?S(Y_i)%5E2">, <img src="https://latex.codecogs.com/png.latex?SE">, <img src="https://latex.codecogs.com/png.latex?%5Cwidehat%7BSE%7D"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">표본 분산</td>
+<td>sample variance</td>
+<td>표본 통계량의 분산</td>
+<td><img src="https://latex.codecogs.com/png.latex?S(Y_i)%5E2%20=%20%5Cfrac%7B1%7D%7Bn-1%7D%5Csum_%7Bi=1%7D%5En%20(Y_i%20-%20%5CES%7BY%7D_n)%5E2"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">표준 오차</td>
+<td>standard error</td>
+<td>표본 통계량의 표준 편차</td>
+<td><img src="https://latex.codecogs.com/png.latex?SE(%5CES%7BY%7D_n)%20=%20%5Cfrac%7B%5Csigma_Y%7D%7B%5Csqrt%7Bn%7D%7D"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">표준 오차의 추정치</td>
+<td>estimated standard error</td>
+<td>표준 오차 계산 시 <img src="https://latex.codecogs.com/png.latex?%5Csigma_Y%20%5Cto%20S(Y_i)"></td>
+<td><img src="https://latex.codecogs.com/png.latex?%5Cwidehat%7BSE%7D(%5CES%7BY%7D_n)%20=%20%5Cfrac%7BS(Y_i)%7D%7B%5Csqrt%7Bn%7D%7D"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">t-통계량</td>
+<td>t-statistic</td>
+<td><img src="https://latex.codecogs.com/png.latex?t(%5Cmu)%20=%20%5Cfrac%7B%5Coverline%7BY%7D-%5Cmu%7D%7B%5Cwidehat%7BSE%7D(%5Coverline%7BY%7D)%7D"></td>
+<td><img src="https://latex.codecogs.com/png.latex?n">이 커질 때 정규분포에 근접한다.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sample-mean" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="sample-mean">Sample Mean</h2>
+<p>IID 추출로 크기 <img src="https://latex.codecogs.com/png.latex?n">의 표본 <img src="https://latex.codecogs.com/png.latex?Y_1,%20%5Cdotsc,%20Y_n">을 얻었다고 하자. <img src="https://latex.codecogs.com/png.latex?Y_i">가 모평균 <img src="https://latex.codecogs.com/png.latex?%5Cmu">와 모 표준편차 <img src="https://latex.codecogs.com/png.latex?%5Csigma">를 따른다고 할 때, 표본 평균의 정의는 다음과 같다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5CES%7BY%7D_n%20=%20%5Csum_%7Bi=1%7D%5En%20Y_i.%0A"></p>
+<p>표본 평균과 달리 <img src="https://latex.codecogs.com/png.latex?Y_i">의 기댓값, 즉 모평균은 <img src="https://latex.codecogs.com/png.latex?%5CE%20(Y_i)%20%5Cequiv%20%5Cmu">라고 쓴다. 여기는 <img src="https://latex.codecogs.com/png.latex?n">이 붙지 않는다. 이는 모평균의 특성으로 일종의 고정된 (미지의) 값이다. 기댓값 <img src="https://latex.codecogs.com/png.latex?%5CE(Y_i)">를 추정하는 값으로서 표본 평균 <img src="https://latex.codecogs.com/png.latex?%5CES%7BY%7D_n">의 특징은 아래 두 개로 요약된다.</p>
+<ol type="1">
+<li><img src="https://latex.codecogs.com/png.latex?%5CE(%5CES%20Y_n)%20=%20%5Cmu"></li>
+<li><img src="https://latex.codecogs.com/png.latex?%5CV(%5CES%20Y_n)%20=%20%7B%5Csigma%5E2%7D/%7Bn%7D"></li>
+</ol>
+<section id="unbiasedness" class="level3">
+<h3 class="anchored" data-anchor-id="unbiasedness">Unbiasedness</h3>
+<p>1에서 보듯이 <img src="https://latex.codecogs.com/png.latex?%5CES%7BY%7D_n">은 불편 추정량이다.</p>
+</section>
+<section id="consistency" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="consistency">Consistency</h3>
+<p>2에 따라서 <img src="https://latex.codecogs.com/png.latex?n">이 증가함에 따라서 <img src="https://latex.codecogs.com/png.latex?%5CV(%5Ccdot)">가 임의의 작은 수가 되기 때문에 <img src="https://latex.codecogs.com/png.latex?%5CES%7BY%7D_n%20%5Coverset%7BP%7D%7B%5Clongrightarrow%7D%20%5Cmu"></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="https://latex.codecogs.com/png.latex?%5Coverset%7BP%7D%7B%5Clongrightarrow%7D">는 확률적인 수렴, 즉 probability limit을 뜻한다.</p>
+</div></div></section>
+<section id="central-limit-theorem" class="level3">
+<h3 class="anchored" data-anchor-id="central-limit-theorem">Central Limit Theorem</h3>
+<p><img src="https://latex.codecogs.com/png.latex?%0AZ_n%20=%20%5Clim_%7Bn%20%5Cto%20%5Cinfty%7D%20%5Cdfrac%7B%5CES%7BY%7D_n%20-%20%5Cmu%7D%7B%5Cfrac%7B%5Csigma%7D%7B%5Csqrt%7Bn%7D%7D%7D%20%5Csim%20%5Crm%20N(0,1)%0A"></p>
+</section>
+</section>
+<section id="sample-variance" class="level2">
+<h2 class="anchored" data-anchor-id="sample-variance">Sample Variance</h2>
+<p>얼른 생각할 수 있는 <img src="https://latex.codecogs.com/png.latex?%5Csigma">의 추정량은 표본 분산 <img src="https://latex.codecogs.com/png.latex?S_n">는 다음과 같다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AS%5E2_n%20=%20%5Cdfrac%7B1%7D%7Bn-1%7D%20%5Csum_%7Bi=1%7D%5E%7Bn%7D%20(Y_i%20-%20%5CES%7BY%7D_n)%5E2%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?S%5E2_n">은 불편 추정량이고 일치 추정량이다. <img src="https://latex.codecogs.com/png.latex?n">이 충분히 크다면 불편 추정량 여부는 중요하지 않다. <img src="https://latex.codecogs.com/png.latex?%5Cdfrac%7B1%7D%7B10000%7D">과 <img src="https://latex.codecogs.com/png.latex?%5Cdfrac%7B1%7D%7B9999%7D">의 차이가 큰 의미가 있을까? <img src="https://latex.codecogs.com/png.latex?(n-1)"> 대신 <img src="https://latex.codecogs.com/png.latex?n">이 들어간 표본 추정량과 일치성을 유지한다.</p>
+</section>
+<section id="standard-error" class="level2">
+<h2 class="anchored" data-anchor-id="standard-error">Standard Error</h2>
+<p>어떤 통계량의 표준 오차(standard error: SE)는 표본 통계량의 표준 편차를 뜻한다. 표본 통계량 <img src="https://latex.codecogs.com/png.latex?%5CES%7BY%7D_n">의 표준 편차 <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7B%5CV(%5CES%7BY%7D_n)%7D">을 의미한다. <img src="https://latex.codecogs.com/png.latex?%5Csigma%5E2%20%3C%20%5Cinfty">를 가정할 때,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5CE(%5CES%7BY%7D_n%20-%20%5Cmu)%5E2%20=%20%5CE%20(%5Cdfrac%7B%5Csum(Y_i%20-%5Cmu)%7D%7Bn%7D)%5E2%20=%20%5Cdfrac%7B1%7D%7Bn%5E2%7D%20n%20%5Csigma%5E2%20=%20%5Cdfrac%7B%5Csigma%5E2%7D%7Bn%7D%0A"></p>
+<p>표준오차 <img src="https://latex.codecogs.com/png.latex?SE">는 다음과 같다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0ASE%20=%20%5Cdfrac%7B%5Csigma%7D%7B%5Csqrt%7Bn%7D%7D%0A"></p>
+<p>이를 대입하면 <img src="https://latex.codecogs.com/png.latex?SE">의 추정량 <img src="https://latex.codecogs.com/png.latex?%5Cwidehat%7BSE%7D">는 다음과 같다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cwidehat%7BSE%7D%20=%20%5Cdfrac%7BS_n%7D%7B%5Csqrt%7Bn%7D%7D%0A"></p>
+</section>
+<section id="asymptotically-normal" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="asymptotically-normal">Asymptotically Normal</h2>
+<p>t-통계량이 정규 분포에 근사하는 이유는 무엇일까?</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0At(%5Cmu)%20=%20%5Cfrac%7B%5Coverline%7BY%7D-%5Cmu%7D%7B%5Cwidehat%7BSE%7D(%5Coverline%7BY%7D)%7D%0A"></p>
+<p>우선 t-통계량의 분자와 분모를 살펴보면, 각각 <img src="https://latex.codecogs.com/png.latex?n">이 커질 때 분자와 분모는 모두 0으로 수렴한다. 이 비율이 정규분포에 수렴하는 게 되는 이유는 중심극한 정리를 이용해 증명할 수 있다. 일단 결론만 기억하도록 하자. <img src="https://latex.codecogs.com/png.latex?t">는 표본 크기 <img src="https://latex.codecogs.com/png.latex?n">이 증가하면서 표준 정규 분포에 근사하게 된다. 이를 점근적 정규 분포(asymptotically normal)라고 칭한다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/stats-simple/https:/ars.els-cdn.com/content/image/3-s2.0-B0123693985001729-gr2.gif" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
+<p>다시 말하면, <img src="https://latex.codecogs.com/png.latex?%5CES%7BY%7D_n">은 평균이 <img src="https://latex.codecogs.com/png.latex?%5Cmu">이고 표준편차가 <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B%5Csigma%7D%7B%5Csqrt%7Bn%7D%7D">인 정규 분포에 근사하게 된다. 따라서 <img src="https://latex.codecogs.com/png.latex?n">이 계속 커지면 결국 <img src="https://latex.codecogs.com/png.latex?%5Cmu">로 집중된다. t-통계량은 대 표본(large sample)의 통계적 검정에 핵심을 이룬다. 원래 자료가 어느 분포에서 나왔는지와 관계없이 표본 통계량은 정규 분포를 따르게 되고, 이를 통해 가설 검정을 수행할 수 있다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>회귀 분석의 검정 또한 t-통계량에 근거한다. 여기를 참고하도록 하자.</p>
+</div></div><p>t-통계량을 활용할 때 각별하게 주의해야 한다. 이 값의 크기는 검정을 위한 통계학적 증거일 뿐이다. t-통계량의 형태에서 보듯이 분자가 충분히 크거나 혹은 분모가 충분히 작을 때 이 값이 커진다. 이는 신뢰 구간에 대해서도 마찬가지다. 신뢰 구간은 표준 오차에 반영되어 있는 통계적 정밀성에 의해 결정되지 우리가 발견하고자 하는 관계의 강도에 의해서 결정되지 않는다. 즉, t-통계량 및 신뢰 구간의 크기를 보고 해당 독립 변수가 종속 변수에 미치는 효과의 강도로 오해하면 곤란하다.</p>
+</section>
+<section id="more" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="more">More</h2>
+<p>이하의 내용은 딱히 필요하지는 않다. 관심이 있는 경우는 살펴보면 좋겠다.</p>
+<section id="s2-n-1" class="level3">
+<h3 class="anchored" data-anchor-id="s2-n-1"><img src="https://latex.codecogs.com/png.latex?S%5E2">을 <img src="https://latex.codecogs.com/png.latex?(n-1)">로 나누는 이유</h3>
+<p><img src="https://latex.codecogs.com/png.latex?S%5E2">의 분모에 왜 <img src="https://latex.codecogs.com/png.latex?(n-1)">이 들어갈까? 불편 추정량을 얻기 위해서다. 불편 추정량이란 해당 통계치의 기댓값이 모수가 되는 추정량을 의미한다. 직접 <img src="https://latex.codecogs.com/png.latex?S%5E2">의 기댓값을 구해보자. 먼저,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Csigma%5E2%20=%20%7B%5Crm%20Var%7D(x_i)%20&amp;%20=%20%5Cmathbb%20E%5B(x_i%20-%20%5Cmu)%5E2%5D%20%5C%5C%0A&amp;%20=%20%5Cmathbb%20E%20%5Bx_i%5E2%20-%202%20x_i%20%5Cmu%20+%20%5Cmu%5E2%5D%20%5C%5C%0A&amp;%20=%20%5Cmathbb%20E(x_i%5E2)%20-%202%5Cmu%20E(x_i)%20+%20%5Cmu%5E2%20%5C%5C%0A&amp;%20=%20%20%5Cmathbb%20E(x_i%5E2)%20-%20%5Cmu%5E2%0A%5Cend%7Baligned%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20E(x_i%5E2)%20=%20%5Csigma%5E2%20+%20%5Cmu%5E2"> 임을 기억해두자.</p>
+<p>이제 <img src="https://latex.codecogs.com/png.latex?S%5E2">의 기댓값을 구해보자. 분자 먼저 계산하자.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cmathbb%20E%5B%5Csum(x_i%20-%20%5Coverline%7Bx%7D)%5E2%5D%20&amp;%20=%20%5Cmathbb%20E%5B%5Csum%20(x_i%5E2%20-%202%20x_i%20%5Coverline%7Bx%7D%20+%20%5Coverline%7Bx%7D%5E2)%5D%20%5C%5C%0A&amp;%20=%20%5Cmathbb%20E%5B%5Csum%20x_i%5E2%20-%20n%202%20%5Coverline%7Bx%7D%20%5Ccdot%20%5Coverline%7Bx%7D%20+%20n%20%5Coverline%7Bx%7D%5E2%5D%20%5C%5C%0A&amp;%20=%20%5Cmathbb%20E%5B%5Csum%20x_i%5E2%20-%20n%20%5Coverline%7Bx%7D%5E2)%5D%20%5C%5C%0A&amp;%20=%20%5Csum%20%5Cmathbb%20E(x_i%5E2)%20-%20n%20%5Cmathbb%20E(%5Coverline%7Bx%7D%5E2)%0A%5Cend%7Baligned%7D%0A"></p>
+<p>합해지는 부분의 각각을 따져보자.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Csum%20%5Cmathbb%20E(x_i%5E2)%20=%20n%20(%5Csigma%5E2%20+%20%5Cmu%5E2)%0A%5Cend%7Baligned%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cmathbb%20E(%5Coverline%7Bx%7D%5E2)%20&amp;%20=%20%5Cmathbb%20E%5B(%5Cdfrac%7Bx_1%20+%20x_2%20+%20%5Cdotsb%20+%20x_n%7D%7Bn%7D)%5E2%5D%20%5C%5C%0A%5Cend%7Baligned%7D%0A"></p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20E%5B(%5Cdfrac%7Bx_1%20+%20x_2%20+%20%5Cdotsb%20+%20x_n%7D%7Bn%7D)%5E2%5D">의 분자를 계산하면 된다. 먼저 각 <img src="https://latex.codecogs.com/png.latex?x_i">의 제곱이 <img src="https://latex.codecogs.com/png.latex?n">개 나온다. 다음으로 각각 <img src="https://latex.codecogs.com/png.latex?x_i">가 독립적으로 추출되었으므로 <img src="https://latex.codecogs.com/png.latex?i%20%5Cneq%20j">일 때 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20E(x_i%20x_j)%20=%20%5Cmathbb%20E(x_i)%20%5Cmathbb%20E(x_j)%20=%20%5Cmu%5E2">이 된다. <img src="https://latex.codecogs.com/png.latex?n"> 개 중에서 2개를 순서에 관계없이 뽑게 된다. 즉,</li>
+</ul>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cmathbb%20E%5B(x_1%20+%20x_2%20+%20%5Cdotsb%20+%20x_n)%5E2%5D%20%20&amp;%20=%20n%20(%5Csigma%5E2%20+%20%5Cmu%5E2)%20+%202%20%5Cdfrac%7Bn(n-1)%7D%7B2!%7D%20%5Cmu%5E2%20%5C%5C%0A&amp;%20=%20n%20%5Csigma%5E2%20+%20n%5E2%20%5Cmu%5E2%0A%5Cend%7Baligned%7D%0A"></p>
+<p>따라서,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathbb%20E(%5Coverline%7Bx%7D%5E2)%20%20=%20%5Cdfrac%7B%5Csigma%5E2%7D%7Bn%7D%20+%20%5Cmu%5E2%0A"></p>
+<p>이제 각각을 넣어 계산을 완료하자.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cmathbb%20E%5B%5Csum(x_i%20-%20%5Coverline%7Bx%7D)%5E2%5D%20&amp;%20=%20%5Csum%20%5Cmathbb%20E(x_i%5E2)%20-%20n%20%5Cmathbb%20E(%5Coverline%7Bx%7D%5E2)%20%5C%5C%0A&amp;%20=%20n%20%5Csigma%5E2%20+%20n%20%5Cmu%5E2%20-%20%5Csigma%5E2%20-%20n%20%5Cmu%5E2%20%5C%5C%0A&amp;%20=%20(n-1)%20%5Csigma%5E2%0A%5Cend%7Baligned%7D%0A"></p>
+<p>따라서 불편 추정량이 되기 위해서는 <img src="https://latex.codecogs.com/png.latex?S%5E2">의 분모에 <img src="https://latex.codecogs.com/png.latex?n-1">이 필요하다.</p>
+</section>
+<section id="s2-consistent" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="s2-consistent"><img src="https://latex.codecogs.com/png.latex?S%5E2_n">의 일치성</h3>
+<p><img src="https://latex.codecogs.com/png.latex?S%5E2">의 일치성을 증명하는 데 필요한 내용을 알아보자. 엄밀한 증명은 생략하고 간략하게 아이디어만 적도록 하겠다. <img src="https://latex.codecogs.com/png.latex?%5Csigma%20%3C%20%5Cinfty">를 가정하자. 이때</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0AS_n%5E2%20&amp;%20=%20%5Cdfrac%7B1%7D%7Bn-1%7D%5Csum_%7Bi=1%7D%5En%20(X_i%20-%20%5Coverline%7BX%7D_n)%20%5C%5C%0A&amp;%20=%20%5Cdfrac%7Bn%7D%7Bn-1%7D(%5Cdfrac%7B%5Csum%20X_i%5E2%7D%7Bn%7D%20-%20%5Coverline%20X_n)%20%5C%5C%0A&amp;%20%5Cstackrel%7BP%7D%7B%5Clongrightarrow%7D%201%5Ccdot(%5CE(X%5E2)-%5Cmu%5E2)%20=%20%5Csigma%5E2%0A%5Cend%7Baligned%7D%0A"></p>
+<p>위에서 보듯이 <img src="https://latex.codecogs.com/png.latex?S%5E2_n">이든 <img src="https://latex.codecogs.com/png.latex?%5Cdfrac%7B1%7D%7Bn%7D%5Csum_%7Bi=1%7D%5En%20(X_i%20-%20%5Coverline%7BX%7D_n)">이든 둘 다 일치 추정량이라는 것을 쉽게 알 수 있다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>자세한 내용은 <a href="http://www.utstat.toronto.edu/~brunner/oldclass/413f08/handouts/STA413Ch4.pdf">여기</a> 책의 해당 부분을 참고하라.</p>
+</div></div></section>
+<section id="regression-t-statistic" class="level3">
+<h3 class="anchored" data-anchor-id="regression-t-statistic">회귀 분석의 t-통계량</h3>
+<p>회귀 분석의 계수의 표본 추정량 <img src="https://latex.codecogs.com/png.latex?%5Chat%20%5Cbeta">는 다음과 같다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%20%5Cbeta%20=%20(X%5ET%20X)%5E%7B-1%7D(X%20y)%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0At_i%20=%20%5Cdfrac%7B%5Chat%20%5Cbeta_i%20-%20%5Cbeta%7D%7BS%20%5Csqrt%7B(X%5ET%20X)_%7Bii%7D%5E%7B-1%7D%7D%7D%0A"></p>
+<p>with</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AS(y_i)%5E2%20=%20%5Cdfrac%7B1%7D%7Bn-k%7D%20%5Csum_%7Bi=1%7D%5En%20(y_i%20-%20%20x%5Er_i%20%5Chat%5Cbeta)%0A"></p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?x%5Er_i">: <img src="https://latex.codecogs.com/png.latex?X">의 <img src="https://latex.codecogs.com/png.latex?i">’th로 벡터</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cunderset%7B(1%20%5Ctimes%20k)%7D%7Bx%5Er_i%7D%5Cunderset%7B(k%20%5Ctimes%201)%7D%7B%5Chat%5Cbeta%7D%20=%20%5Chat%20y_i"></li>
+</ul>
+<p>회귀 분석의 <img src="https://latex.codecogs.com/png.latex?i">’th 계수인 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_i">는 <img src="https://latex.codecogs.com/png.latex?t_i">를 통해 검정할 수 있다. <img src="https://latex.codecogs.com/png.latex?n">이 충분히 클 경우 <img src="https://latex.codecogs.com/png.latex?t_i%20%5Csim%20%5Crm%20N(0,1)">이 된다.</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>statistics</category>
+  <category>stats-simple</category>
+  <guid>http://www.lostineconomics.com/posts/stats-simple/2022-05-27-SE.html</guid>
+  <pubDate>Thu, 26 May 2022 15:00:00 GMT</pubDate>
+  <media:content url="https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" medium="image" type="image/svg+xml"/>
+</item>
 <item>
   <title>PyTorch + WSL</title>
   <dc:creator>JS HUHH</dc:creator>
@@ -2392,54 +2620,6 @@ MjEyMzEwM119
   <pubDate>Tue, 10 Nov 2020 15:00:00 GMT</pubDate>
   <media:content url="https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png" medium="image" type="image/png"/>
 </item>
-<item>
-  <title>Viva, Binder!</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/computer-tool/2020-10-27-viva-binder.html</link>
-  <description><![CDATA[ 
-
-
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><p>내가 보고 있는 것을 남이 그대로 봐야 의사 소통이 온전해지는 경우가 있다. 아마도 코드를 나누는 경우가 그렇지 않을까 싶다. 이 점에서 Github은 꽤 좋은 코드 나눔 도구다. 그런데 문제가 하나 있다. Github을 통해 배포하는 것이 패키지라면 각자 땡겨가서 쓰면 되겠지만, 특정하게 실현된 결과물이라면?</p>
-<p>예를 들어보자. Python으로 특정한 결과를 도출하는 코드를 짰다고 하자. 당연히 내가 작업한 환경에 의존할 것이다. 다른 환경에서 돌아갈지 아닐지 모르지만 어쨌든 의존성은 피할 수 없다. 상대를 불러서 내 컴퓨터에서 돌아가는 모습을 보여줄 수 있다면 좋겠지만 그럴 수 없는 경우가 많다. 내가 돌려본 환경을 그대로 상대가 볼 수 있게 할 수는 없는 것일까?</p>
-<p>당장 떠오르는 솔루션이 클라우드다. 클라우드에 소프트웨어 환경을 세팅하고 내가 테스트해본다. 원하는 상대에게 url을 주고 같은 테스트를 반복 체험하게 한다. 물론 좋다. 사실 AWS 같은 곳에 Linux 서버를 깔고 주피터 관련 패키지나 RStudio 등을 설치하기는 쉽다. AWS를 비롯해 많은 클라우드 업체에서 원스톱 서비스까지 제공한다. 그런데, 문제가 있다. 비용이 든다. 사용량이 많아서 뽕을 뽑을 수 있다면 덜 아깝겠지만 코드 공유하고 결과를 확인하는 정도가 족하다면 많이 아깝다.</p>
-<p>이런 용도로 활용할 수 있는 ‘무료’ 서비스가 Binder이다.</p>
-<p><a href="https://mybinder.org/">https://mybinder.org</a></p>
-<section id="turn-a-git-repo-into" class="level2">
-<h2 class="anchored" data-anchor-id="turn-a-git-repo-into">Turn a Git repo into!</h2>
-<p>서비스 참 시원시원하다. 로그인도 필요 없다. 깃헙 레포에 있는 코드를 받아서 가상 머신 위에 해당 결과를 구현해준다. R, Python, Julia를 지원한다. 세 언어 모두 기본 베이스로 Jupyter허브를 활용한다. 간편한 연동을 위해서는 깃헙 리포를 public으로 설정해야 한다.</p>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/binder_1.png" class="img-fluid" style="margin: auto; display: block; width: 70%;"></p>
-<ul>
-<li><code>GitHub</code>: 깃헙 주소를 넣는다.</li>
-<li><code>Git branch, tag or commit</code>: 관련된 깃 브렌치, 태그, 커밋 등을 넣는다.</li>
-<li><code>Path to a notebook file</code>: <code>ipynb</code> 파일이 깃 내에 서브 디렉토리에 있다면 여기서 노트북 파일의 위치등을 지정해주면 된다.
-<ul>
-<li>RStudio나 Shiny를 쓰고 싶다면, “File” 대신 “URL”로 바꾸고 <code>rstudio</code>, <code>shiny</code> 등을 지정해주면 된다.
-<ul>
-<li>R의 경우 <code>r-2020-10-26</code> 식으로 날짜가 적힌 <code>runtime.txt</code> 파일 그리고 패키지를 미리 인스톨하는 <code>install.R</code> 파일 두 개를 준비하면 된다.</li>
-</ul></li>
-</ul></li>
-</ul>
-<p>아래 공유를 위한 주소도 떠 있으니 공유를 할 때는 해당 주소만 던져주면 된다. 이제 <kbd>launch</kbd> 버튼을 누르자. 상당히 오랜 시간 동안 뭔가가 설치된다. 설치되는 내용을 보면 소프트웨어 구동에 필요한 개별 이미지를 빌드한 후 이를 클라우드에 띄워 구동한다.</p>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_7.png" class="img-fluid" style="margin: auto; display: block; width: 80%;"></p>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_5.png" class="img-fluid" style="margin: auto; display: block; width: 80%;"></p>
-<p>장점은 충분히 많다. 코드가 제대로 구현되는지 확인하는 수준이거나 코드를 가끔 짧은 시간 동안 실행해야 하는 정도라면 더 이상 바랄 게 없다. 단점이라면 도커 이미지를 빌드하고 녀석을 푸시해 실행할 때까지 시간이 좀 걸린다는 것인데, 뭐 이 정도 시간 비용 쯤이야!</p>
-
-
-</section>
-
- ]]></description>
-  <category>computer-tool</category>
-  <guid>http://www.lostineconomics.com/posts/computer-tool/2020-10-27-viva-binder.html</guid>
-  <pubDate>Mon, 26 Oct 2020 15:00:00 GMT</pubDate>
-  <media:content url="https://mybinder.org/static/logo.svg" medium="image" type="image/svg+xml"/>
-</item>
 </channel>
 </rss>
 </span><span class="op" style="color: #5E5E5E;">,</span><span class="st" style="color: #20794D;">'
@@ -4334,54 +4514,6 @@ MjEyMzEwM119
   <guid>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</guid>
   <pubDate>Tue, 10 Nov 2020 15:00:00 GMT</pubDate>
   <media:content url="https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Viva, Binder!</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/computer-tool/2020-10-27-viva-binder.html</link>
-  <description><![CDATA[ 
-
-
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><p>내가 보고 있는 것을 남이 그대로 봐야 의사 소통이 온전해지는 경우가 있다. 아마도 코드를 나누는 경우가 그렇지 않을까 싶다. 이 점에서 Github은 꽤 좋은 코드 나눔 도구다. 그런데 문제가 하나 있다. Github을 통해 배포하는 것이 패키지라면 각자 땡겨가서 쓰면 되겠지만, 특정하게 실현된 결과물이라면?</p>
-<p>예를 들어보자. Python으로 특정한 결과를 도출하는 코드를 짰다고 하자. 당연히 내가 작업한 환경에 의존할 것이다. 다른 환경에서 돌아갈지 아닐지 모르지만 어쨌든 의존성은 피할 수 없다. 상대를 불러서 내 컴퓨터에서 돌아가는 모습을 보여줄 수 있다면 좋겠지만 그럴 수 없는 경우가 많다. 내가 돌려본 환경을 그대로 상대가 볼 수 있게 할 수는 없는 것일까?</p>
-<p>당장 떠오르는 솔루션이 클라우드다. 클라우드에 소프트웨어 환경을 세팅하고 내가 테스트해본다. 원하는 상대에게 url을 주고 같은 테스트를 반복 체험하게 한다. 물론 좋다. 사실 AWS 같은 곳에 Linux 서버를 깔고 주피터 관련 패키지나 RStudio 등을 설치하기는 쉽다. AWS를 비롯해 많은 클라우드 업체에서 원스톱 서비스까지 제공한다. 그런데, 문제가 있다. 비용이 든다. 사용량이 많아서 뽕을 뽑을 수 있다면 덜 아깝겠지만 코드 공유하고 결과를 확인하는 정도가 족하다면 많이 아깝다.</p>
-<p>이런 용도로 활용할 수 있는 ‘무료’ 서비스가 Binder이다.</p>
-<p><a href="https://mybinder.org/">https://mybinder.org</a></p>
-<section id="turn-a-git-repo-into" class="level2">
-<h2 class="anchored" data-anchor-id="turn-a-git-repo-into">Turn a Git repo into!</h2>
-<p>서비스 참 시원시원하다. 로그인도 필요 없다. 깃헙 레포에 있는 코드를 받아서 가상 머신 위에 해당 결과를 구현해준다. R, Python, Julia를 지원한다. 세 언어 모두 기본 베이스로 Jupyter허브를 활용한다. 간편한 연동을 위해서는 깃헙 리포를 public으로 설정해야 한다.</p>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/binder_1.png" class="img-fluid" style="margin: auto; display: block; width: 70%;"></p>
-<ul>
-<li><code>GitHub</code>: 깃헙 주소를 넣는다.</li>
-<li><code>Git branch, tag or commit</code>: 관련된 깃 브렌치, 태그, 커밋 등을 넣는다.</li>
-<li><code>Path to a notebook file</code>: <code>ipynb</code> 파일이 깃 내에 서브 디렉토리에 있다면 여기서 노트북 파일의 위치등을 지정해주면 된다.
-<ul>
-<li>RStudio나 Shiny를 쓰고 싶다면, “File” 대신 “URL”로 바꾸고 <code>rstudio</code>, <code>shiny</code> 등을 지정해주면 된다.
-<ul>
-<li>R의 경우 <code>r-2020-10-26</code> 식으로 날짜가 적힌 <code>runtime.txt</code> 파일 그리고 패키지를 미리 인스톨하는 <code>install.R</code> 파일 두 개를 준비하면 된다.</li>
-</ul></li>
-</ul></li>
-</ul>
-<p>아래 공유를 위한 주소도 떠 있으니 공유를 할 때는 해당 주소만 던져주면 된다. 이제 <kbd>launch</kbd> 버튼을 누르자. 상당히 오랜 시간 동안 뭔가가 설치된다. 설치되는 내용을 보면 소프트웨어 구동에 필요한 개별 이미지를 빌드한 후 이를 클라우드에 띄워 구동한다.</p>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_7.png" class="img-fluid" style="margin: auto; display: block; width: 80%;"></p>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_5.png" class="img-fluid" style="margin: auto; display: block; width: 80%;"></p>
-<p>장점은 충분히 많다. 코드가 제대로 구현되는지 확인하는 수준이거나 코드를 가끔 짧은 시간 동안 실행해야 하는 정도라면 더 이상 바랄 게 없다. 단점이라면 도커 이미지를 빌드하고 녀석을 푸시해 실행할 때까지 시간이 좀 걸린다는 것인데, 뭐 이 정도 시간 비용 쯤이야!</p>
-
-
-</section>
-
- ]]></description>
-  <category>computer-tool</category>
-  <guid>http://www.lostineconomics.com/posts/computer-tool/2020-10-27-viva-binder.html</guid>
-  <pubDate>Mon, 26 Oct 2020 15:00:00 GMT</pubDate>
-  <media:content url="https://mybinder.org/static/logo.svg" medium="image" type="image/svg+xml"/>
 </item>
 </channel>
 </rss>
@@ -6342,54 +6474,6 @@ MjEyMzEwM119
   <guid>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</guid>
   <pubDate>Tue, 10 Nov 2020 15:00:00 GMT</pubDate>
   <media:content url="https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Viva, Binder!</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/computer-tool/2020-10-27-viva-binder.html</link>
-  <description><![CDATA[ 
-
-
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><p>내가 보고 있는 것을 남이 그대로 봐야 의사 소통이 온전해지는 경우가 있다. 아마도 코드를 나누는 경우가 그렇지 않을까 싶다. 이 점에서 Github은 꽤 좋은 코드 나눔 도구다. 그런데 문제가 하나 있다. Github을 통해 배포하는 것이 패키지라면 각자 땡겨가서 쓰면 되겠지만, 특정하게 실현된 결과물이라면?</p>
-<p>예를 들어보자. Python으로 특정한 결과를 도출하는 코드를 짰다고 하자. 당연히 내가 작업한 환경에 의존할 것이다. 다른 환경에서 돌아갈지 아닐지 모르지만 어쨌든 의존성은 피할 수 없다. 상대를 불러서 내 컴퓨터에서 돌아가는 모습을 보여줄 수 있다면 좋겠지만 그럴 수 없는 경우가 많다. 내가 돌려본 환경을 그대로 상대가 볼 수 있게 할 수는 없는 것일까?</p>
-<p>당장 떠오르는 솔루션이 클라우드다. 클라우드에 소프트웨어 환경을 세팅하고 내가 테스트해본다. 원하는 상대에게 url을 주고 같은 테스트를 반복 체험하게 한다. 물론 좋다. 사실 AWS 같은 곳에 Linux 서버를 깔고 주피터 관련 패키지나 RStudio 등을 설치하기는 쉽다. AWS를 비롯해 많은 클라우드 업체에서 원스톱 서비스까지 제공한다. 그런데, 문제가 있다. 비용이 든다. 사용량이 많아서 뽕을 뽑을 수 있다면 덜 아깝겠지만 코드 공유하고 결과를 확인하는 정도가 족하다면 많이 아깝다.</p>
-<p>이런 용도로 활용할 수 있는 ‘무료’ 서비스가 Binder이다.</p>
-<p><a href="https://mybinder.org/">https://mybinder.org</a></p>
-<section id="turn-a-git-repo-into" class="level2">
-<h2 class="anchored" data-anchor-id="turn-a-git-repo-into">Turn a Git repo into!</h2>
-<p>서비스 참 시원시원하다. 로그인도 필요 없다. 깃헙 레포에 있는 코드를 받아서 가상 머신 위에 해당 결과를 구현해준다. R, Python, Julia를 지원한다. 세 언어 모두 기본 베이스로 Jupyter허브를 활용한다. 간편한 연동을 위해서는 깃헙 리포를 public으로 설정해야 한다.</p>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/binder_1.png" class="img-fluid" style="margin: auto; display: block; width: 70%;"></p>
-<ul>
-<li><code>GitHub</code>: 깃헙 주소를 넣는다.</li>
-<li><code>Git branch, tag or commit</code>: 관련된 깃 브렌치, 태그, 커밋 등을 넣는다.</li>
-<li><code>Path to a notebook file</code>: <code>ipynb</code> 파일이 깃 내에 서브 디렉토리에 있다면 여기서 노트북 파일의 위치등을 지정해주면 된다.
-<ul>
-<li>RStudio나 Shiny를 쓰고 싶다면, “File” 대신 “URL”로 바꾸고 <code>rstudio</code>, <code>shiny</code> 등을 지정해주면 된다.
-<ul>
-<li>R의 경우 <code>r-2020-10-26</code> 식으로 날짜가 적힌 <code>runtime.txt</code> 파일 그리고 패키지를 미리 인스톨하는 <code>install.R</code> 파일 두 개를 준비하면 된다.</li>
-</ul></li>
-</ul></li>
-</ul>
-<p>아래 공유를 위한 주소도 떠 있으니 공유를 할 때는 해당 주소만 던져주면 된다. 이제 <kbd>launch</kbd> 버튼을 누르자. 상당히 오랜 시간 동안 뭔가가 설치된다. 설치되는 내용을 보면 소프트웨어 구동에 필요한 개별 이미지를 빌드한 후 이를 클라우드에 띄워 구동한다.</p>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_7.png" class="img-fluid" style="margin: auto; display: block; width: 80%;"></p>
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_5.png" class="img-fluid" style="margin: auto; display: block; width: 80%;"></p>
-<p>장점은 충분히 많다. 코드가 제대로 구현되는지 확인하는 수준이거나 코드를 가끔 짧은 시간 동안 실행해야 하는 정도라면 더 이상 바랄 게 없다. 단점이라면 도커 이미지를 빌드하고 녀석을 푸시해 실행할 때까지 시간이 좀 걸린다는 것인데, 뭐 이 정도 시간 비용 쯤이야!</p>
-
-
-</section>
-
- ]]></description>
-  <category>computer-tool</category>
-  <guid>http://www.lostineconomics.com/posts/computer-tool/2020-10-27-viva-binder.html</guid>
-  <pubDate>Mon, 26 Oct 2020 15:00:00 GMT</pubDate>
-  <media:content url="https://mybinder.org/static/logo.svg" medium="image" type="image/svg+xml"/>
 </item>
 </channel>
 </rss>
