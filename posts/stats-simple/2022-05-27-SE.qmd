@@ -93,7 +93,7 @@ $$
 
 ### Consistency
 
-2에 따라서 $n$이 증가함에 따라서 $\V(\cdot)$가 임의의 작은 수가 되기 때문에 $\ES{Y}_n \overset{P}{\longrightarrow} \mu$
+$n$이 증가하면 LLN에 따라서 $\lim_{n \to \infty} \ES{Y}_n = \mu$가 성립한다. 
 
 :::{ .column-margin }
 $\overset{P}{\longrightarrow}$는 확률적인 수렴, 즉 probability limit을 뜻한다. 

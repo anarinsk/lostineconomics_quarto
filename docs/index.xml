@@ -214,7 +214,7 @@
 </section>
 <section id="consistency" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="consistency">Consistency</h3>
-<p>2에 따라서 <img src="https://latex.codecogs.com/png.latex?n">이 증가함에 따라서 <img src="https://latex.codecogs.com/png.latex?%5CV(%5Ccdot)">가 임의의 작은 수가 되기 때문에 <img src="https://latex.codecogs.com/png.latex?%5CES%7BY%7D_n%20%5Coverset%7BP%7D%7B%5Clongrightarrow%7D%20%5Cmu"></p>
+<p><img src="https://latex.codecogs.com/png.latex?n">이 증가하면 LLN에 따라서 <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bn%20%5Cto%20%5Cinfty%7D%20%5CES%7BY%7D_n%20=%20%5Cmu">가 성립한다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><img src="https://latex.codecogs.com/png.latex?%5Coverset%7BP%7D%7B%5Clongrightarrow%7D">는 확률적인 수렴, 즉 probability limit을 뜻한다.</p>
