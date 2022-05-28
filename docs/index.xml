@@ -120,7 +120,7 @@
 <tr class="even">
 <td style="text-align: center;">t-통계량</td>
 <td>t-statistic</td>
-<td><img src="https://latex.codecogs.com/png.latex?t(%5Cmu)%20=%20%5Cfrac%7B%5Coverline%7BY%7D-%5Cmu%7D%7B%5Cwidehat%7BSE%7D(%5Coverline%7BY%7D)%7D"></td>
+<td><img src="https://latex.codecogs.com/png.latex?t(%5Cmu)%20=%20%5Cfrac%7B%5CES%7BY%7D_n%20-%20%5Cmu%7D%7B%5Cwidehat%7BSE%7D(%5CES%7BY%7D_n)%7D"></td>
 <td><img src="https://latex.codecogs.com/png.latex?n">이 커질 때 정규분포에 근접한다.</td>
 </tr>
 </tbody>
