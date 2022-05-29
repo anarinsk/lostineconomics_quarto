@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.472">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JS HUHH">
+<meta name="dcterms.date" content="2022-05-26">
+<meta name="description" content="Confounder, Collider, Simpson’s and Berson’s Paradox">
+
+<title>lostineconomics.com - 전체와 부분</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">lostineconomics.com</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Junsok Huhh</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/anarinsk"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/anarinsk"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">전체와 부분</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">regression</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Confounder, Collider, Simpson’s and Berson’s Paradox
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>JS HUHH </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 26, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
+<ul>
+<li>회귀 분석에서 ’통제’한다는 것의 의미를 전체와 부분이라는 시야에서 생각해 보자.</li>
+<li>교란 요인(confounder)와 충돌 요인(collider)을 심슨의 역설과 벅스의 역설로 연결해 생각해 보자.</li>
+</ul>
+</section>
+<section id="회귀-분석에서-통제한다는-것" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="회귀-분석에서-통제한다는-것">회귀 분석에서 ’통제’한다는 것</h2>
+<p>회귀 분석에서 독립 변수 혹은 설명 변수와 통제 변수의 차이는 개념적인 것이다. 즉, 내가 갖고 있는 분석의 초점 혹은 모델의 취지에 따라 결정되는 것이지 어떤 기계적인 방법이나 기준은 없다. 일단 ’통제’에 초점을 맞춰서 생각해 보자. 아래와 같은 간략한 회귀 모형을 생각해 보자.</p>
+<p><span class="math display">\[
+y_i = \alpha + \beta x_i + \gamma D_i + \epsilon_i
+\]</span></p>
+<p><span class="math inline">\(x_i\)</span>는 설명 변수, <span class="math inline">\(D_i\)</span>는 통제 변수라고 하자. 이해를 돕기 위해서 <span class="math inline">\(D_i\)</span>는 0, 1의 값을 갖는 더미 변수다. <span class="math inline">\(D_i\)</span>를 통제한다는 것의 의미는 무엇일까? <span class="math inline">\(x_i\)</span>가 <span class="math inline">\(y\)</span>에 미치는 영향을 그냥 전체로 보지 않고 두 집단 별로 나눠서 보겠다는 것이다. 이때 최소자승법을 통해 계산되는 <span class="math inline">\(\beta\)</span>는 <span class="math inline">\(D_i\)</span>로 구별되는 집단 각각의 효과를 구한 뒤 이를 적절하게 가중 평균한 값이 된다. ’통제’란 설명 변수의 효과를 보다 정교하게 보기 위해서 관찰을 통제 변수로 구성된 집단으로 나누는 것이라고 생각하면 쉽다. 카테고리로 구별된 집단 뿐 아니라 연속 함수에 관해서도 비슷하게 이해하면 된다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>앵글 리스트와 피스 케이가 이런 맥락에서 회귀 분석의 통제가 짝짓기(matching)과 유사한 설명한 바 있다.</p>
+</div></div></section>
+<section id="confounder-and-simpsons-paradox" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="confounder-and-simpsons-paradox">Confounder and Simpson’s Paradox</h2>
+<p>먼저 심슨의 역설을 먼저 살펴보자. 아래는 웃자고 만든 그림인데 웃고 넘기기에는 아까운 중요한 통찰이 들어 있다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/12/simpsons-paradox.jpg" class="my-figure7 img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">전체를 볼 것인가 부분을 볼 것인가?</figcaption><p></p>
+</figure>
+</div>
+<p>위 그림에서 심슨가족 전체를 보면 <span class="math inline">\(x\)</span> 축 변인의 증가에 따라서 <span class="math inline">\(y\)</span> 축 변인이 증가하는 형태를 취한다. 반면, 가족 구성원 하나하나에 대해서는 반대의 관계를 취하고 있다. 심슨의 역설은 전체의 경향과 부분의 경향이 어긋나는 현상을 나타낸다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>유명한 사례 소개</p>
+</div></div><p>여기서 중요한 것은 역설 자체가 아니다. 역설의 함정에 빠지지 않고 어디에 포커스를 둘 것인지가 문제다. 만일 인구 구성의 각 그룹 별 경향을 평균적으로 살펴보는 것이 관심 사항이라면 위 그림에서 그룹 각각의 기울기를 평균한 값이 우리가 찾는 경향이다. 반대로 개별 그룹은 중요하지 않고 인구 전체가 관심사라면 개별 인구를 동일하게 보고 기울기를 찾는 게 맞다.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="cell-handler-fake-div-1">
+<p>
+<svg id="mermaid-figure-1" width="100%" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" height="89.5" style="max-width: 231.5px;" viewbox="0 0 231.5 89.5">
+<style>#mermaid-figure-1 {font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-figure-1 .error-icon{fill:#552222;}#mermaid-figure-1 .error-text{fill:#552222;stroke:#552222;}#mermaid-figure-1 .edge-thickness-normal{stroke-width:2px;}#mermaid-figure-1 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-1 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-1 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-1 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-1 .marker{fill:#333333;stroke:#333333;}#mermaid-figure-1 .marker.cross{stroke:#333333;}#mermaid-figure-1 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-1 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#mermaid-figure-1 .cluster-label text{fill:#333;}#mermaid-figure-1 .cluster-label span{color:#333;}#mermaid-figure-1 .label text,#mermaid-figure-1 span{fill:#333;color:#333;}#mermaid-figure-1 .node rect,#mermaid-figure-1 .node circle,#mermaid-figure-1 .node ellipse,#mermaid-figure-1 .node polygon,#mermaid-figure-1 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-figure-1 .node .label{text-align:center;}#mermaid-figure-1 .node.clickable{cursor:pointer;}#mermaid-figure-1 .arrowheadPath{fill:#333333;}#mermaid-figure-1 .edgePath .path{stroke:#333333;stroke-width:2.0px;}#mermaid-figure-1 .flowchart-link{stroke:#333333;fill:none;}#mermaid-figure-1 .edgeLabel{background-color:#e8e8e8;text-align:center;}#mermaid-figure-1 .edgeLabel rect{opacity:0.5;background-color:#e8e8e8;fill:#e8e8e8;}#mermaid-figure-1 .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#mermaid-figure-1 .cluster text{fill:#333;}#mermaid-figure-1 .cluster span{color:#333;}#mermaid-figure-1 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-1 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath LS-X LE-Y" id="L-X-Y" style="opacity: 1;"><path class="path" d="M135,27.25L139.16666666666666,27.25C143.33333333333334,27.25,151.66666666666666,27.25,160.47301537326334,30.094098877584212C169.27936407986002,32.938197755168424,178.55872815972,38.62639551033685,183.19841019965,41.47049438792106L187.83809223958002,44.31459326550527" marker-end="url(#arrowhead15)" style="fill:none"></path><defs><marker id="arrowhead15" viewbox="0 0 10 10" refx="9" refy="5" markerunits="strokeWidth" markerwidth="8" markerheight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-Z LE-Y" id="L-Z-Y" style="opacity: 1;"><path class="path" d="M43.661907760419965,64.43540673449473L48.30158980034997,67.27950561207895C52.941271840279974,70.12360448966315,62.22063592013999,75.81180224483158,74.23531796006999,78.65590112241578C86.25,81.5,101,81.5,115.75,81.5C130.5,81.5,145.25,81.5,157.26468203993,78.65590112241578C169.27936407986002,75.81180224483158,178.55872815972,70.12360448966315,183.19841019965,67.27950561207895L187.83809223958002,64.43540673449473" marker-end="url(#arrowhead16)" style="fill:none;stroke-width:2px;stroke-dasharray:3;"></path><defs><marker id="arrowhead16" viewbox="0 0 10 10" refx="9" refy="5" markerunits="strokeWidth" markerwidth="8" markerheight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-Z LE-X" id="L-Z-X" style="opacity: 1;"><path class="path" d="M43.661907760419965,44.31459326550527L48.30158980034997,41.47049438792106C52.941271840279974,38.62639551033685,62.22063592013999,32.938197755168424,71.02698462673666,30.094098877584212C79.83333333333333,27.25,88.16666666666667,27.25,92.33333333333333,27.25L96.5,27.25" marker-end="url(#arrowhead17)" style="fill:none;stroke-width:2px;stroke-dasharray:3;"></path><defs><marker id="arrowhead17" viewbox="0 0 10 10" refx="9" refy="5" markerunits="strokeWidth" markerwidth="8" markerheight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignobject width="0" height="0">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+<span id="L-L-X-Y" class="edgeLabel L-LS-X' L-LE-Y"></span>
+</div>
+</foreignobject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignobject width="0" height="0">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+<span id="L-L-Z-Y" class="edgeLabel L-LS-Z' L-LE-Y"></span>
+</div>
+</foreignobject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignobject width="0" height="0">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+<span id="L-L-Z-X" class="edgeLabel L-LS-Z' L-LE-X"></span>
+</div>
+</foreignobject></g></g></g><g class="nodes"><g class="node default" id="flowchart-X-6" transform="translate(115.75,27.25)" style="opacity: 1;"><circle x="-14.453125" y="-19.25" r="19.25" class="label-container"></circle><g class="label" transform="translate(0,0)"><g transform="translate(-4.453125,-9.25)"><foreignobject width="8.90625" height="18.5">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+X
+</div>
+</foreignobject></g></g></g><g class="node default" id="flowchart-Y-7" transform="translate(204.25,54.375)" style="opacity: 1;"><circle x="-14.5625" y="-19.25" r="19.25" class="label-container"></circle><g class="label" transform="translate(0,0)"><g transform="translate(-4.5625,-9.25)"><foreignobject width="9.125" height="18.5">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+Y
+</div>
+</foreignobject></g></g></g><g class="node default" id="flowchart-Z-8" transform="translate(27.25,54.375)" style="opacity: 1;"><circle x="-14.40234375" y="-19.25" r="19.25" class="label-container"></circle><g class="label" transform="translate(0,0)"><g transform="translate(-4.40234375,-9.25)"><foreignobject width="8.8046875" height="18.5">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+Z
+</div>
+</foreignobject></g></g></g></g></g></g>
+</svg>
+</p>
+</div>
+</div>
+</div>
+<p>심슨의 역설은 DAG를 통한 인과 추론에서 교란 요인(confounder)에 해당한다. X –&gt; Y가 현재 우리가 관찰하는 사실이다. 예를 들어, 교육 수준이 높을수록 졸업 후 취업 시 임금이 높다. 하지만 이는 교육 수준과 졸업 모두에게 영향을 미치는 제3의 요인을 고려하지 않는 것이다. 교육 수준과 임금 모두에게 영향을 주는 숨은 변인, 예를 들어 능력치가 있다고 하자. 이 능력치는 교육 수준과 임금 모두에게 영향을 준다.</p>
+<p>능력치를 그룹화해서 비교할 수 있다고 치자. 이는 위의 심슨 가족 그림에서 가족별로 그룹을 나누는 것에 해당한다. 이때 능력치를 고려하면, 교육은 오히려 졸업 후 임금을 낮출 수도 있다. 따라서 Z라는 변수를 명백하게 고려하면 교육은 임금에 양의 영향이 아니라 음의 영향을 준다.</p>
+</section>
+<section id="collider-and-bersons-paradox" class="level2">
+<h2 class="anchored" data-anchor-id="collider-and-bersons-paradox">Collider and Berson’s Paradox</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://brilliant-staff-media.s3-us-west-2.amazonaws.com/tiffany-wang/1Mvt8RPtlU.png" class="my-figure7 img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">전체를 볼 것인가 부분을 볼 것인가?</figcaption><p></p>
+</figure>
+</div>
+<p>이번에는 벅슨의 역설을 살펴볼 차례다. 보통 수능 점수와 대학 성적은 별 관련이 없고 심지어 역의 상관성이 있다는 이야기를 접할 때가 있다. 이것은 맞는 주장인가? 이런 종류의 주장은 대체로 전체를 가정한다. 수능 점수와 대학 성적이 별로 상관이 없으니 수능은 인간의 능력을 판단하는 지표로 별로 유용하지 않다. 대체로 이야기가 이렇게 흐르기 마련이다.</p>
+<p>그런데 위의 그림에서 보듯이 이러한 경향은 보편적인 주장이 아니라 특정한 집단 내에서만 타당한 주장이다. 위 그림에서는 내가 관찰하는 집단에 대해서 일종의 자기 선택이 일어난 경우에 해당한다. 내가 속한 밴드의 집단보다 수능 점수와 대학 성적이 모두 낮은 집단은 내가 속한 관찰 집단과는 다른 집단에 속한다. 반면 내가 속한 밴드보다 수능 점수도 높고 대학 성적도 우월한 집단도 마찬가지다.</p>
+<p>벅슨의 역설은 심슨의 역설과 동일하지만 반대의 측면을 지적한다. 전체 대해서 존재하는 경향성이 그룹으로 쪼개서 보면 반대가 되거나 사라지는 경우를 의미한다.</p>
+<p>벅슨의 역설에 해당하는 인과 추론의 DAG 사례가 충돌 요인(collider)이다. 변수를 고려하지 않았다면 전체에 관해서 온전한 주장이 성립했을 것이지만, 해당 변수를 고려해 그룹을 나누게 되면 오히려 잘못된 관계를 추정하게 된다.</p>
+</section>
+<section id="중요한-것은-질문과-문제-설정" class="level2">
+<h2 class="anchored" data-anchor-id="중요한-것은-질문과-문제-설정">중요한 것은 질문과 문제 설정</h2>
+<p>이렇게 보면 심슨의 역설이든 벅슨의 역설이든 어떤 절대적인 규칙을 알려주는 것이 아니다. 오히려 중요한 것은 관심을 두는 실증의 대상이 어떤 것인지에 관한 것이다. 관심을 두는 관계가 전체에 관한 질문이라면 collider를 조심하는 것이 좋다. 반면 해당 관계를 고려할 때 집단을 나누는 것이 핵심이라면 confounder에 주의해야 한다.</p>
+<p>이제 회귀 분석에서 통제한다는 것의 의미를 다시 풀어보자. 중 회귀 분석의 모델링의 관점에서 보면 통제를 하는 것과 관계를 파악하고자 하는 핵심 관계 간의 차이는 없다. 다만 연구의 방향에 따라서 통제는 관계를 파악하고자 하는 핵심 관계에 영향을 주지 않아야 한다. 즉 통제 변수에 따라서 관찰이 집단으로 나눠어지더라도 확인하고 싶은 핵심 관계가 변해서는 안된다. 통제 변수로 넣어야 하는지 말아야 하는지를 따질 때에는 confounder가 되는지 collider가 되는지를 모두 고려해야 한다.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+    } else {
+      disableStylesheet(alternateStylesheets);
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
