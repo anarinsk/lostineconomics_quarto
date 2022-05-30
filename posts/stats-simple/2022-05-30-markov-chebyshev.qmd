@@ -1,0 +1,71 @@
+---
+title:  Markov and Chebyshev Inequalities
+description: ""
+author: "JS HUHH"
+date: "05/30/2022"
+image: "https://miro.medium.com/max/700/1*nTJ--dA1aeiJUBTCsBqvLg.jpeg"
+categories: [stats-simple]
+draft: true
+---
+
+::: {.hidden}
+$$
+ \def\E{{\mathbb E}}
+ \def\V{{\mathbb V}}
+ \def\ES#1{\overline{#1}}
+$$
+:::
+
+
+## TL; DR 
+
+- 마르코프 부등식과 체비쇼프 부등식 정리한다. 
+- 대수의 법칙을 증명할 때 유용하다. 
+
+## Markov Inequality
+
+$$
+P(X \geq t) \leq \dfrac{\E(X)}{t}
+$$
+
+## Chebyshev Inequality
+
+$$
+P(\vert X - \mu \vert \geq k ) \leq \dfrac{\sigma}{k^2}
+$$
+
+## 어디에 써먹나? 
+
+약한 버전의 LLN을 증명할 때 체비쇼프의 부등식을 쓴다. 만일 $X_1, X_2, \dotsc, X_n$이 IID를 따르고 $\E (X_i^2) < \infty$라고 가정하자. 이때, 확률 극한의 정의를 따라, 표본 통계량 $\ES{X}_n$가 임의의 양수 $\epsilon$에 대해서 다음을 증명하면 대수의 법칙이 성립한다. 
+
+$$
+\lim_{n \to \infty} P(\vert \ES{X}_n - \mu \vert \geq \epsilon) = 0
+$$
+
+### 증명 
+
+체비쇼프 부등식을 그대로 써보자. 
+
+$$
+P(\vert \ES{X}_n - \mu \vert \geq \epsilon ) \leq \dfrac{\E\lbrack(\ES{X}_n-\mu)^2\rbrack}{\epsilon^2}
+$$
+
+$$
+\begin{aligned}
+\mathbb E \lbrack(\bar{X}_n - \mu)^2\rbrack = & \mathbb E \Big\lbrace \Big\lbrack \dfrac{1}{n^2}\sum_{i=1}^{n}(X_i - \mu) ^2\Big\rbrack\Big\rbrace \\
+= & \dfrac{1}{n^2} \sum_{i=1}^n \sum_{j=1}^n \mathbb E (X_i - \mu)(X_j - \mu) \\
+= & \dfrac{1}{n^2} \sum_{i=1}^{n}\mathbb E (X_i - \mu)^2 \\
+= & \dfrac{\sigma^2}{n}
+\end{aligned}
+$$
+
+위의 결과를 이용하면, 
+
+$$
+P(\vert \ES{X}_n - \mu \vert \geq \epsilon ) \leq \dfrac{\sigma^2}{n \epsilon^2}
+$$
+
+## Proof of Markov Inequality
+
+
+
