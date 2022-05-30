@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/stats-simple/2022-05-30-markov-chebyshev.html",
       "/posts/regression/2022-05-28-normality.html",
       "/posts/stats-simple/2022-05-27-SE.html",
       "/posts/regression/2022-05-26-total-and-parts.html",

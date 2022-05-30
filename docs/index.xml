@@ -10,7 +10,79 @@
 <atom:link href="http://www.lostineconomics.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>Another useless blog</description>
 <generator>quarto-0.9.472</generator>
-<lastBuildDate>Fri, 27 May 2022 15:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 29 May 2022 15:00:00 GMT</lastBuildDate>
+<item>
+  <title>Markov and Chebyshev Inequalities</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>http://www.lostineconomics.com/posts/stats-simple/2022-05-30-markov-chebyshev.html</link>
+  <description><![CDATA[ 
+
+
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><div class="hidden">
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdef%5CE%7B%7B%5Cmathbb%20E%7D%7D%0A%5Cdef%5CV%7B%7B%5Cmathbb%20V%7D%7D%0A%5Cdef%5CES#1%7B%5Coverline%7B#1%7D%7D%0A"></p>
+</div>
+<section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
+<ul>
+<li>마르코프 부등식과 체비쇼프 부등식 정리한다.</li>
+<li>대수의 법칙을 증명할 때 유용하다.</li>
+</ul>
+</section>
+<section id="markov-inequality" class="level2">
+<h2 class="anchored" data-anchor-id="markov-inequality">Markov Inequality</h2>
+<p>For <img src="https://latex.codecogs.com/png.latex?X%20%5Cin%20%5Cmathbb%20R%5E+">,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP(X%20%5Cgeq%20t)%20%5Cleq%20%5Cdfrac%7B%5CE(X)%7D%7Bt%7D%0A"></p>
+</section>
+<section id="chebyshev-inequality" class="level2">
+<h2 class="anchored" data-anchor-id="chebyshev-inequality">Chebyshev Inequality</h2>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP(%5Cvert%20X%20-%20%5Cmu%20%5Cvert%20%5Cgeq%20k%20)%20%5Cleq%20%5Cdfrac%7B%5Csigma%7D%7Bk%5E2%7D%0A"></p>
+</section>
+<section id="어디에-써먹나" class="level2">
+<h2 class="anchored" data-anchor-id="어디에-써먹나">어디에 써먹나?</h2>
+<p>약한 버전의 LLN을 증명할 때 체비쇼프의 부등식을 쓴다. 만일 <img src="https://latex.codecogs.com/png.latex?X_1,%20X_2,%20%5Cdotsc,%20X_n">이 IID를 따르고 <img src="https://latex.codecogs.com/png.latex?%5CE%20(X_i%5E2)%20%3C%20%5Cinfty">라고 가정하자. 이때, 확률 극한의 정의를 따라, 표본 통계량 <img src="https://latex.codecogs.com/png.latex?%5CES%7BX%7D_n">가 임의의 양수 <img src="https://latex.codecogs.com/png.latex?%5Cepsilon">에 대해서 다음을 증명하면 대수의 법칙이 성립한다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Clim_%7Bn%20%5Cto%20%5Cinfty%7D%20P(%5Cvert%20%5CES%7BX%7D_n%20-%20%5Cmu%20%5Cvert%20%5Cgeq%20%5Cepsilon)%20=%200%0A"></p>
+<section id="증명" class="level3">
+<h3 class="anchored" data-anchor-id="증명">증명</h3>
+<p>체비쇼프 부등식을 그대로 써보자.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP(%5Cvert%20%5CES%7BX%7D_n%20-%20%5Cmu%20%5Cvert%20%5Cgeq%20%5Cepsilon%20)%20%5Cleq%20%5Cdfrac%7B%5CE%5Clbrack(%5CES%7BX%7D_n-%5Cmu)%5E2%5Crbrack%7D%7B%5Cepsilon%5E2%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cmathbb%20E%20%5Clbrack(%5Cbar%7BX%7D_n%20-%20%5Cmu)%5E2%5Crbrack%20=%20&amp;%20%5Cmathbb%20E%20%5CBig%5Clbrace%20%5CBig%5Clbrack%20%5Cdfrac%7B1%7D%7Bn%5E2%7D%5Csum_%7Bi=1%7D%5E%7Bn%7D(X_i%20-%20%5Cmu)%20%5E2%5CBig%5Crbrack%5CBig%5Crbrace%20%5C%5C%0A=%20&amp;%20%5Cdfrac%7B1%7D%7Bn%5E2%7D%20%5Csum_%7Bi=1%7D%5En%20%5Csum_%7Bj=1%7D%5En%20%5Cmathbb%20E%20(X_i%20-%20%5Cmu)(X_j%20-%20%5Cmu)%20%5C%5C%0A=%20&amp;%20%5Cdfrac%7B1%7D%7Bn%5E2%7D%20%5Csum_%7Bi=1%7D%5E%7Bn%7D%5Cmathbb%20E%20(X_i%20-%20%5Cmu)%5E2%20%5C%5C%0A=%20&amp;%20%5Cdfrac%7B%5Csigma%5E2%7D%7Bn%7D%0A%5Cend%7Baligned%7D%0A"></p>
+<p>위의 결과를 이용하면,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP(%5Cvert%20%5CES%7BX%7D_n%20-%20%5Cmu%20%5Cvert%20%5Cgeq%20%5Cepsilon%20)%20%5Cleq%20%5Cdfrac%7B%5Csigma%5E2%7D%7Bn%20%5Cepsilon%5E2%7D%0A"></p>
+</section>
+</section>
+<section id="proof-of-chebshev-inequality" class="level2">
+<h2 class="anchored" data-anchor-id="proof-of-chebshev-inequality">Proof of Chebshev Inequality</h2>
+<p><img src="https://latex.codecogs.com/png.latex?P(%5Cvert%20X%20-%20%5Cmu%20%5Cvert%20%5Cgeq%20k%20)%20=%20P%5Clbrack%20(X%20-%20%5Cmu)%5E2%20%5Cgeq%20k%20%5Crbrack">가 성립한다.</p>
+<p>마르코프 부등식에 의하여,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP%5Clbrack%20(X%20-%20%5Cmu)%5E2%20%5Cgeq%20k%20%5Crbrack%20%5Cleq%20%5Cdfrac%7B%5CE%20%5Clbrack%20(x-%5Cmu)%5E2%20%5Crbrack%7D%7Bk%5E2%7D%20=%20%5Cdfrac%7B%5Csigma%5E2%7D%7Bk%5E2%7D%0A"></p>
+<p>따라서</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP(%5Cvert%20X%20-%20%5Cmu%20%5Cvert%20%5Cgeq%20k%20)%20%5Cleq%20%5Cdfrac%7B%5Csigma%7D%7Bk%5E2%7D%0A"></p>
+</section>
+<section id="proof-of-markov-inequality" class="level2">
+<h2 class="anchored" data-anchor-id="proof-of-markov-inequality">Proof of Markov Inequality</h2>
+<p>이산 확률변수와 연속 확률변수 모두에 대해서 증명을 해야 한다. 이산을 잘 이해하면 연속의 경우로 확장 가능하다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5CE%20(X)%20=%20%5Csum_%7Bx=0%7D%5E%7B%5Cinfty%7D%20x%20P(X=x)%0A"></p>
+<p>임의의 상수 <img src="https://latex.codecogs.com/png.latex?t">에 대해서,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5CE(X)%20&amp;%20=%20%5Csum_%7Bx=0%7D%5E%7Bt-1%7D%20x%20P(X=x)%20+%20%5Csum_%7Bx=t%7D%5E%7B%5Cinfty%7D%20x%20P(X=x)%20%5C%5C%0A&amp;%20%5Cgeq%20%5Csum_%7Bx=t%7D%5E%7B%5Cinfty%7D%20x%20P(X=x)%20%5C%5C%0A&amp;%20%5Cgeq%20%5Csum_%7Bx=t%7D%5E%7B%5Cinfty%7D%20t%20P(X=x)%20%5C%5C%0A&amp;%20=%20t%20%5Csum_%7Bx=t%7D%5E%7B%5Cinfty%7D%20P(X=x)%20%5C%5C%0A&amp;%20=%20t%20P(X%20%5Cgeq%20t)%0A%5Cend%7Baligned%7D%0A"></p>
+<p>따라서,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP(X%20%5Cgeq%20t)%20%5Cleq%20%5Cdfrac%7B%5CE(X)%7D%7Bt%7D%0A"></p>
+
+
+</section>
+
+ ]]></description>
+  <category>stats-simple</category>
+  <guid>http://www.lostineconomics.com/posts/stats-simple/2022-05-30-markov-chebyshev.html</guid>
+  <pubDate>Sun, 29 May 2022 15:00:00 GMT</pubDate>
+  <media:content url="https://miro.medium.com/max/700/1*nTJ--dA1aeiJUBTCsBqvLg.jpeg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>정규 분포에 집착하지 말자.</title>
   <dc:creator>JS HUHH</dc:creator>
@@ -2519,104 +2591,6 @@ Note
   <pubDate>Tue, 05 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
-<item>
-  <title>Vector Geometrically, part 1</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-05-vector-geometry-1.html</link>
-  <description><![CDATA[ 
-
-
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><section id="tl-dr" class="level2">
-<h2 class="anchored" data-anchor-id="tl-dr">tl; dr</h2>
-<ul>
-<li>벡터와 포인트를 오가는 방법을 배우자.</li>
-</ul>
-</section>
-<section id="concepts" class="level2">
-<h2 class="anchored" data-anchor-id="concepts">Concepts</h2>
-<p>편의상 3차원 공간으로 예시하도록 한다. <img src="https://latex.codecogs.com/png.latex?n"> 차원으로 확장은 쉽게 된다.</p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?p%20=%20(p_x,%20p_y,%20p_z)">: <img src="https://latex.codecogs.com/png.latex?p%20%5Cin%20%5Cmathbb%20R%5E3"> is a point</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20=%20(v_x,%20v_y,%20v_z)">: <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20%5Cin%20%5Cmathbb%20R%5E3"> is a vector</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5Chat%20v%20=%20%5Cfrac%7Bv%7D%7B%5ClVert%20v%20%5ClVert%7D">: Unit vector</li>
-</ul>
-<section id="first-thing-first" class="level3">
-<h3 class="anchored" data-anchor-id="first-thing-first">First thing first</h3>
-<p>점과 벡터의 차이를 다시 새기고 가자.</p>
-<ul>
-<li>점은 공간에서 위치를 지니고 있다. 점의 특성은 위치 뿐이다.</li>
-<li>벡터는 크기와 방향을 지니고 있다. 벡터는 공간에서 위치를 지니고 있지 않다.</li>
-</ul>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/position-vector-1627294113.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
-<p>점과 벡터를 연결해보자. 위 그림에서 원점 <img src="https://latex.codecogs.com/png.latex?O">를 기준으로 하면 <img src="https://latex.codecogs.com/png.latex?P">, <img src="https://latex.codecogs.com/png.latex?Q">가 정의될 것이다. 이때 <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOP%7D">, <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOQ%7D">는 벡터가 된다. 이제 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">를 <img src="https://latex.codecogs.com/png.latex?P">에서 <img src="https://latex.codecogs.com/png.latex?Q">로 가는 벡터라고 정의하자. 이는</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20v%20=%20Q%20-%20P%0A"></p>
-<p>앞서 정의한 콘셉트에서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20=%20(v_x,%20v_y,%20v_z)">에서 <img src="https://latex.codecogs.com/png.latex?v_k">는 포인트의 위치가 아니라 해당 축으로 움직이는(향하는) 크기를 나타낸다는 점을 다시 음미하시기를!</p>
-</section>
-<section id="vector" class="level3">
-<h3 class="anchored" data-anchor-id="vector">Vector</h3>
-<p><img src="https://latex.codecogs.com/png.latex?p_0">를 지나는 무한의 1차원 벡터는 다음과 같이 정의된다.</p>
-<ul>
-<li>Parametric equation:</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0Al%20:%20%5Clbrace%20p_0%20+%20t%20%5Cvec%20v,%20t%20%5Cin%20%5Cmathbb%20R%20%5Crbrace%0A"></p>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/www.maths.usyd.edu.au/u/MOW/vectors/images/v120x.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
-<p>위의 그림을 보면서 식을 도출해보자. 포인트 <img src="https://latex.codecogs.com/png.latex?p_0">를 (원점 기준) 벡터로 나타내면 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20r_0">가 된다. 그리고 <img src="https://latex.codecogs.com/png.latex?P"> 점을 벡터로 나타내면 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20r">이 된다. 벡터 <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bp_0%20p%7D">와 수평인 벡터를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">라고 하자. 이 두 가지 사실을 조합하면 다음과 같다.</p>
-<ol type="1">
-<li><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bp_0%20p%7D%20=%20%5Coverrightarrow%7Bo%20p%7D%20-%20%5Coverrightarrow%7Bo%20p_0%7D%20=%20%5Cvec%20r%20-%20%5Cvec%20r_0"></li>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cvec%20r%20-%20%5Cvec%20r_0%20=%20t%20v"></li>
-</ol>
-<p>위 결과에 따라서 파라메트릭 식이 도출된다.</p>
-<ul>
-<li>Cartesian(symetric) equation:</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0Al:%20%5Clbrace%20%5Cdfrac%7Bx%20-%20p_%7B0x%7D%7D%7Bv_x%7D%20=%20%5Cdfrac%7By%20-%20p_%7B0y%7D%7D%7Bv_y%7D%20%20=%20%20%5Cdfrac%7Bz%20-%20p_%7B0z%7D%7D%7Bv_z%7D%20%5Crbrace%0A"></p>
-<p>앞서 파리메트릭 표현에서 임의 <img src="https://latex.codecogs.com/png.latex?P">의 좌표 <img src="https://latex.codecogs.com/png.latex?(x,%20y,%20z)">는 다음과 같다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20r%20=%20(x,%20y,%20z)%20=%20(%20p_%7B0x%7D%20+%20t%20v_x,%20p_%7B0y%7D%20+%20t%20v_y,%20p_%7B0z%7D%20+%20t%20v_z%20)%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bx%20-%20p_%7B0x%7D%7D%7Bv_x%7D%20=%20%5Cdfrac%7Bx%20-%20p_%7B0y%7D%7D%7Bv_y%7D%20=%20%5Cdfrac%7Bx%20-%20p_%7B0z%7D%7D%7Bv_z%7D%20=%20t%0A"></p>
-</section>
-<section id="plane" class="level3">
-<h3 class="anchored" data-anchor-id="plane">Plane</h3>
-<p><img src="https://latex.codecogs.com/png.latex?p_0">를 지나는 무한 평면 P는 다음과 같이 정의된다. 평면을 표현하기 위해서는 벡터 두 개( <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v,%20%5Cvec%20w"> )가 필요하다.</p>
-<ul>
-<li>General equation</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0AP:%20%5Clbrace%20Ax%20+%20By%20+%20Cz%20=%20D%20%5Crbrace%0A"></p>
-<ul>
-<li>Parametric equation</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0AP%20:%20%5Clbrace%20p_0%20+%20s%20%5Cvec%20v%20+%20t%20%5Cvec%20w~%5Ctext%7Bwhere%7D~s,t%20%5Cin%20%5Cmathbb%20R%20%5Crbrace%0A"></p>
-<ul>
-<li>Geometric equation</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0AP%20:%20%5Clbrace%20(x,%20y,%20z)%20%5Cin%20%5Cmathbb%20R%5E3%20%7C%20%5Cvec%20n%20%5Ccdot%20%5B(x,y,z)%20-%20p_0%5D%20=%200%20%5Crbrace%20%5Ctext%7B~with%20normal%20vector%20$%5Cvec%20n$%7D%0A"></p>
-</section>
-<section id="normal-vector" class="level3">
-<h3 class="anchored" data-anchor-id="normal-vector">Normal vector</h3>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/http:/mathonline.wdfiles.com/local--files/point-normal-form-of-a-plane/Screen%20Shot%202014-06-14%20at%207.02.06%20AM.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
-<p>노멀 벡터는 아래 평면(plane) 혹은 벡터과 직교하는 성분의 벡터다. 이 녀석을 어떻게 구할까? 평면 <img src="https://latex.codecogs.com/png.latex?P">의 parametric 식을 보자. 2차원 플레인을 구성하는 두 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w">가 있다. 노멀 벡터는 이 두 성분 모두와 직교하는 성분의 벡터이다. 이는 바로 크로스 프로덕트의 정의를 그대로 따른다. 평면위의 어떤 세 점 <img src="https://latex.codecogs.com/png.latex?p,%20q,%20r">이 있다고 하자. 평면 위에 존재하는 벡터 두 개를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20=%20q%20-%20p">, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w%20=%20r%20-%20p">과 같이 만들자. 이 벡터와 직교하는 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20n">은 다음과 같다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20n%20%20=%20%5Cvec%20v%20%5Ctimes%20%5Cvec%20w%20=%20(q-p)%20%5Ctimes%20(r-p)%0A"></p>
-</section>
-</section>
-<section id="distance" class="level2">
-<h2 class="anchored" data-anchor-id="distance">Distance</h2>
-<p>거리 역시 세 가지로 나누어 이해해보자. 점과 점 사이의 유클리드 거리는 생략하겠다. 벡터와 점의 거리는 어떻게 구할까? 플레인과 점의 거리는 어떻게 구할까? <a href="https://anarinsk.github.io/lostineconomics-v2-1/math/matrix-theory/2020/12/16/Projection.html">이 포스팅</a>을 참고하라.</p>
-
-
-</section>
-
- ]]></description>
-  <category>linear-algebra</category>
-  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-05-vector-geometry-1.html</guid>
-  <pubDate>Mon, 04 Jan 2021 15:00:00 GMT</pubDate>
-  <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
-</item>
 </channel>
 </rss>
 </span><span class="op" style="color: #5E5E5E;">,</span><span class="st" style="color: #20794D;">'
@@ -4212,104 +4186,6 @@ Note
   <category>linear-algebra</category>
   <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-06-vector-geometry-2.html</guid>
   <pubDate>Tue, 05 Jan 2021 15:00:00 GMT</pubDate>
-  <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Vector Geometrically, part 1</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-05-vector-geometry-1.html</link>
-  <description><![CDATA[ 
-
-
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><section id="tl-dr" class="level2">
-<h2 class="anchored" data-anchor-id="tl-dr">tl; dr</h2>
-<ul>
-<li>벡터와 포인트를 오가는 방법을 배우자.</li>
-</ul>
-</section>
-<section id="concepts" class="level2">
-<h2 class="anchored" data-anchor-id="concepts">Concepts</h2>
-<p>편의상 3차원 공간으로 예시하도록 한다. <img src="https://latex.codecogs.com/png.latex?n"> 차원으로 확장은 쉽게 된다.</p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?p%20=%20(p_x,%20p_y,%20p_z)">: <img src="https://latex.codecogs.com/png.latex?p%20%5Cin%20%5Cmathbb%20R%5E3"> is a point</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20=%20(v_x,%20v_y,%20v_z)">: <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20%5Cin%20%5Cmathbb%20R%5E3"> is a vector</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5Chat%20v%20=%20%5Cfrac%7Bv%7D%7B%5ClVert%20v%20%5ClVert%7D">: Unit vector</li>
-</ul>
-<section id="first-thing-first" class="level3">
-<h3 class="anchored" data-anchor-id="first-thing-first">First thing first</h3>
-<p>점과 벡터의 차이를 다시 새기고 가자.</p>
-<ul>
-<li>점은 공간에서 위치를 지니고 있다. 점의 특성은 위치 뿐이다.</li>
-<li>벡터는 크기와 방향을 지니고 있다. 벡터는 공간에서 위치를 지니고 있지 않다.</li>
-</ul>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/position-vector-1627294113.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
-<p>점과 벡터를 연결해보자. 위 그림에서 원점 <img src="https://latex.codecogs.com/png.latex?O">를 기준으로 하면 <img src="https://latex.codecogs.com/png.latex?P">, <img src="https://latex.codecogs.com/png.latex?Q">가 정의될 것이다. 이때 <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOP%7D">, <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOQ%7D">는 벡터가 된다. 이제 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">를 <img src="https://latex.codecogs.com/png.latex?P">에서 <img src="https://latex.codecogs.com/png.latex?Q">로 가는 벡터라고 정의하자. 이는</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20v%20=%20Q%20-%20P%0A"></p>
-<p>앞서 정의한 콘셉트에서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20=%20(v_x,%20v_y,%20v_z)">에서 <img src="https://latex.codecogs.com/png.latex?v_k">는 포인트의 위치가 아니라 해당 축으로 움직이는(향하는) 크기를 나타낸다는 점을 다시 음미하시기를!</p>
-</section>
-<section id="vector" class="level3">
-<h3 class="anchored" data-anchor-id="vector">Vector</h3>
-<p><img src="https://latex.codecogs.com/png.latex?p_0">를 지나는 무한의 1차원 벡터는 다음과 같이 정의된다.</p>
-<ul>
-<li>Parametric equation:</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0Al%20:%20%5Clbrace%20p_0%20+%20t%20%5Cvec%20v,%20t%20%5Cin%20%5Cmathbb%20R%20%5Crbrace%0A"></p>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/www.maths.usyd.edu.au/u/MOW/vectors/images/v120x.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
-<p>위의 그림을 보면서 식을 도출해보자. 포인트 <img src="https://latex.codecogs.com/png.latex?p_0">를 (원점 기준) 벡터로 나타내면 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20r_0">가 된다. 그리고 <img src="https://latex.codecogs.com/png.latex?P"> 점을 벡터로 나타내면 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20r">이 된다. 벡터 <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bp_0%20p%7D">와 수평인 벡터를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">라고 하자. 이 두 가지 사실을 조합하면 다음과 같다.</p>
-<ol type="1">
-<li><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bp_0%20p%7D%20=%20%5Coverrightarrow%7Bo%20p%7D%20-%20%5Coverrightarrow%7Bo%20p_0%7D%20=%20%5Cvec%20r%20-%20%5Cvec%20r_0"></li>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cvec%20r%20-%20%5Cvec%20r_0%20=%20t%20v"></li>
-</ol>
-<p>위 결과에 따라서 파라메트릭 식이 도출된다.</p>
-<ul>
-<li>Cartesian(symetric) equation:</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0Al:%20%5Clbrace%20%5Cdfrac%7Bx%20-%20p_%7B0x%7D%7D%7Bv_x%7D%20=%20%5Cdfrac%7By%20-%20p_%7B0y%7D%7D%7Bv_y%7D%20%20=%20%20%5Cdfrac%7Bz%20-%20p_%7B0z%7D%7D%7Bv_z%7D%20%5Crbrace%0A"></p>
-<p>앞서 파리메트릭 표현에서 임의 <img src="https://latex.codecogs.com/png.latex?P">의 좌표 <img src="https://latex.codecogs.com/png.latex?(x,%20y,%20z)">는 다음과 같다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20r%20=%20(x,%20y,%20z)%20=%20(%20p_%7B0x%7D%20+%20t%20v_x,%20p_%7B0y%7D%20+%20t%20v_y,%20p_%7B0z%7D%20+%20t%20v_z%20)%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bx%20-%20p_%7B0x%7D%7D%7Bv_x%7D%20=%20%5Cdfrac%7Bx%20-%20p_%7B0y%7D%7D%7Bv_y%7D%20=%20%5Cdfrac%7Bx%20-%20p_%7B0z%7D%7D%7Bv_z%7D%20=%20t%0A"></p>
-</section>
-<section id="plane" class="level3">
-<h3 class="anchored" data-anchor-id="plane">Plane</h3>
-<p><img src="https://latex.codecogs.com/png.latex?p_0">를 지나는 무한 평면 P는 다음과 같이 정의된다. 평면을 표현하기 위해서는 벡터 두 개( <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v,%20%5Cvec%20w"> )가 필요하다.</p>
-<ul>
-<li>General equation</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0AP:%20%5Clbrace%20Ax%20+%20By%20+%20Cz%20=%20D%20%5Crbrace%0A"></p>
-<ul>
-<li>Parametric equation</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0AP%20:%20%5Clbrace%20p_0%20+%20s%20%5Cvec%20v%20+%20t%20%5Cvec%20w~%5Ctext%7Bwhere%7D~s,t%20%5Cin%20%5Cmathbb%20R%20%5Crbrace%0A"></p>
-<ul>
-<li>Geometric equation</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0AP%20:%20%5Clbrace%20(x,%20y,%20z)%20%5Cin%20%5Cmathbb%20R%5E3%20%7C%20%5Cvec%20n%20%5Ccdot%20%5B(x,y,z)%20-%20p_0%5D%20=%200%20%5Crbrace%20%5Ctext%7B~with%20normal%20vector%20$%5Cvec%20n$%7D%0A"></p>
-</section>
-<section id="normal-vector" class="level3">
-<h3 class="anchored" data-anchor-id="normal-vector">Normal vector</h3>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/http:/mathonline.wdfiles.com/local--files/point-normal-form-of-a-plane/Screen%20Shot%202014-06-14%20at%207.02.06%20AM.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
-<p>노멀 벡터는 아래 평면(plane) 혹은 벡터과 직교하는 성분의 벡터다. 이 녀석을 어떻게 구할까? 평면 <img src="https://latex.codecogs.com/png.latex?P">의 parametric 식을 보자. 2차원 플레인을 구성하는 두 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w">가 있다. 노멀 벡터는 이 두 성분 모두와 직교하는 성분의 벡터이다. 이는 바로 크로스 프로덕트의 정의를 그대로 따른다. 평면위의 어떤 세 점 <img src="https://latex.codecogs.com/png.latex?p,%20q,%20r">이 있다고 하자. 평면 위에 존재하는 벡터 두 개를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20=%20q%20-%20p">, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w%20=%20r%20-%20p">과 같이 만들자. 이 벡터와 직교하는 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20n">은 다음과 같다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20n%20%20=%20%5Cvec%20v%20%5Ctimes%20%5Cvec%20w%20=%20(q-p)%20%5Ctimes%20(r-p)%0A"></p>
-</section>
-</section>
-<section id="distance" class="level2">
-<h2 class="anchored" data-anchor-id="distance">Distance</h2>
-<p>거리 역시 세 가지로 나누어 이해해보자. 점과 점 사이의 유클리드 거리는 생략하겠다. 벡터와 점의 거리는 어떻게 구할까? 플레인과 점의 거리는 어떻게 구할까? <a href="https://anarinsk.github.io/lostineconomics-v2-1/math/matrix-theory/2020/12/16/Projection.html">이 포스팅</a>을 참고하라.</p>
-
-
-</section>
-
- ]]></description>
-  <category>linear-algebra</category>
-  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-05-vector-geometry-1.html</guid>
-  <pubDate>Mon, 04 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
@@ -5972,104 +5848,6 @@ Note
   <category>linear-algebra</category>
   <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-06-vector-geometry-2.html</guid>
   <pubDate>Tue, 05 Jan 2021 15:00:00 GMT</pubDate>
-  <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Vector Geometrically, part 1</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-05-vector-geometry-1.html</link>
-  <description><![CDATA[ 
-
-
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><section id="tl-dr" class="level2">
-<h2 class="anchored" data-anchor-id="tl-dr">tl; dr</h2>
-<ul>
-<li>벡터와 포인트를 오가는 방법을 배우자.</li>
-</ul>
-</section>
-<section id="concepts" class="level2">
-<h2 class="anchored" data-anchor-id="concepts">Concepts</h2>
-<p>편의상 3차원 공간으로 예시하도록 한다. <img src="https://latex.codecogs.com/png.latex?n"> 차원으로 확장은 쉽게 된다.</p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?p%20=%20(p_x,%20p_y,%20p_z)">: <img src="https://latex.codecogs.com/png.latex?p%20%5Cin%20%5Cmathbb%20R%5E3"> is a point</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20=%20(v_x,%20v_y,%20v_z)">: <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20%5Cin%20%5Cmathbb%20R%5E3"> is a vector</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5Chat%20v%20=%20%5Cfrac%7Bv%7D%7B%5ClVert%20v%20%5ClVert%7D">: Unit vector</li>
-</ul>
-<section id="first-thing-first" class="level3">
-<h3 class="anchored" data-anchor-id="first-thing-first">First thing first</h3>
-<p>점과 벡터의 차이를 다시 새기고 가자.</p>
-<ul>
-<li>점은 공간에서 위치를 지니고 있다. 점의 특성은 위치 뿐이다.</li>
-<li>벡터는 크기와 방향을 지니고 있다. 벡터는 공간에서 위치를 지니고 있지 않다.</li>
-</ul>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/position-vector-1627294113.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
-<p>점과 벡터를 연결해보자. 위 그림에서 원점 <img src="https://latex.codecogs.com/png.latex?O">를 기준으로 하면 <img src="https://latex.codecogs.com/png.latex?P">, <img src="https://latex.codecogs.com/png.latex?Q">가 정의될 것이다. 이때 <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOP%7D">, <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOQ%7D">는 벡터가 된다. 이제 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">를 <img src="https://latex.codecogs.com/png.latex?P">에서 <img src="https://latex.codecogs.com/png.latex?Q">로 가는 벡터라고 정의하자. 이는</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20v%20=%20Q%20-%20P%0A"></p>
-<p>앞서 정의한 콘셉트에서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20=%20(v_x,%20v_y,%20v_z)">에서 <img src="https://latex.codecogs.com/png.latex?v_k">는 포인트의 위치가 아니라 해당 축으로 움직이는(향하는) 크기를 나타낸다는 점을 다시 음미하시기를!</p>
-</section>
-<section id="vector" class="level3">
-<h3 class="anchored" data-anchor-id="vector">Vector</h3>
-<p><img src="https://latex.codecogs.com/png.latex?p_0">를 지나는 무한의 1차원 벡터는 다음과 같이 정의된다.</p>
-<ul>
-<li>Parametric equation:</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0Al%20:%20%5Clbrace%20p_0%20+%20t%20%5Cvec%20v,%20t%20%5Cin%20%5Cmathbb%20R%20%5Crbrace%0A"></p>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/www.maths.usyd.edu.au/u/MOW/vectors/images/v120x.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
-<p>위의 그림을 보면서 식을 도출해보자. 포인트 <img src="https://latex.codecogs.com/png.latex?p_0">를 (원점 기준) 벡터로 나타내면 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20r_0">가 된다. 그리고 <img src="https://latex.codecogs.com/png.latex?P"> 점을 벡터로 나타내면 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20r">이 된다. 벡터 <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bp_0%20p%7D">와 수평인 벡터를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">라고 하자. 이 두 가지 사실을 조합하면 다음과 같다.</p>
-<ol type="1">
-<li><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bp_0%20p%7D%20=%20%5Coverrightarrow%7Bo%20p%7D%20-%20%5Coverrightarrow%7Bo%20p_0%7D%20=%20%5Cvec%20r%20-%20%5Cvec%20r_0"></li>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cvec%20r%20-%20%5Cvec%20r_0%20=%20t%20v"></li>
-</ol>
-<p>위 결과에 따라서 파라메트릭 식이 도출된다.</p>
-<ul>
-<li>Cartesian(symetric) equation:</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0Al:%20%5Clbrace%20%5Cdfrac%7Bx%20-%20p_%7B0x%7D%7D%7Bv_x%7D%20=%20%5Cdfrac%7By%20-%20p_%7B0y%7D%7D%7Bv_y%7D%20%20=%20%20%5Cdfrac%7Bz%20-%20p_%7B0z%7D%7D%7Bv_z%7D%20%5Crbrace%0A"></p>
-<p>앞서 파리메트릭 표현에서 임의 <img src="https://latex.codecogs.com/png.latex?P">의 좌표 <img src="https://latex.codecogs.com/png.latex?(x,%20y,%20z)">는 다음과 같다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20r%20=%20(x,%20y,%20z)%20=%20(%20p_%7B0x%7D%20+%20t%20v_x,%20p_%7B0y%7D%20+%20t%20v_y,%20p_%7B0z%7D%20+%20t%20v_z%20)%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cdfrac%7Bx%20-%20p_%7B0x%7D%7D%7Bv_x%7D%20=%20%5Cdfrac%7Bx%20-%20p_%7B0y%7D%7D%7Bv_y%7D%20=%20%5Cdfrac%7Bx%20-%20p_%7B0z%7D%7D%7Bv_z%7D%20=%20t%0A"></p>
-</section>
-<section id="plane" class="level3">
-<h3 class="anchored" data-anchor-id="plane">Plane</h3>
-<p><img src="https://latex.codecogs.com/png.latex?p_0">를 지나는 무한 평면 P는 다음과 같이 정의된다. 평면을 표현하기 위해서는 벡터 두 개( <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v,%20%5Cvec%20w"> )가 필요하다.</p>
-<ul>
-<li>General equation</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0AP:%20%5Clbrace%20Ax%20+%20By%20+%20Cz%20=%20D%20%5Crbrace%0A"></p>
-<ul>
-<li>Parametric equation</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0AP%20:%20%5Clbrace%20p_0%20+%20s%20%5Cvec%20v%20+%20t%20%5Cvec%20w~%5Ctext%7Bwhere%7D~s,t%20%5Cin%20%5Cmathbb%20R%20%5Crbrace%0A"></p>
-<ul>
-<li>Geometric equation</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0AP%20:%20%5Clbrace%20(x,%20y,%20z)%20%5Cin%20%5Cmathbb%20R%5E3%20%7C%20%5Cvec%20n%20%5Ccdot%20%5B(x,y,z)%20-%20p_0%5D%20=%200%20%5Crbrace%20%5Ctext%7B~with%20normal%20vector%20$%5Cvec%20n$%7D%0A"></p>
-</section>
-<section id="normal-vector" class="level3">
-<h3 class="anchored" data-anchor-id="normal-vector">Normal vector</h3>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/http:/mathonline.wdfiles.com/local--files/point-normal-form-of-a-plane/Screen%20Shot%202014-06-14%20at%207.02.06%20AM.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
-<p>노멀 벡터는 아래 평면(plane) 혹은 벡터과 직교하는 성분의 벡터다. 이 녀석을 어떻게 구할까? 평면 <img src="https://latex.codecogs.com/png.latex?P">의 parametric 식을 보자. 2차원 플레인을 구성하는 두 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v">, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w">가 있다. 노멀 벡터는 이 두 성분 모두와 직교하는 성분의 벡터이다. 이는 바로 크로스 프로덕트의 정의를 그대로 따른다. 평면위의 어떤 세 점 <img src="https://latex.codecogs.com/png.latex?p,%20q,%20r">이 있다고 하자. 평면 위에 존재하는 벡터 두 개를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20=%20q%20-%20p">, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20w%20=%20r%20-%20p">과 같이 만들자. 이 벡터와 직교하는 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20n">은 다음과 같다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20n%20%20=%20%5Cvec%20v%20%5Ctimes%20%5Cvec%20w%20=%20(q-p)%20%5Ctimes%20(r-p)%0A"></p>
-</section>
-</section>
-<section id="distance" class="level2">
-<h2 class="anchored" data-anchor-id="distance">Distance</h2>
-<p>거리 역시 세 가지로 나누어 이해해보자. 점과 점 사이의 유클리드 거리는 생략하겠다. 벡터와 점의 거리는 어떻게 구할까? 플레인과 점의 거리는 어떻게 구할까? <a href="https://anarinsk.github.io/lostineconomics-v2-1/math/matrix-theory/2020/12/16/Projection.html">이 포스팅</a>을 참고하라.</p>
-
-
-</section>
-
- ]]></description>
-  <category>linear-algebra</category>
-  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-05-vector-geometry-1.html</guid>
-  <pubDate>Mon, 04 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>

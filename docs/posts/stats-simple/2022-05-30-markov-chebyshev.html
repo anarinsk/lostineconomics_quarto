@@ -165,6 +165,7 @@ ul.task-list{list-style: none;}
 </section>
 <section id="markov-inequality" class="level2">
 <h2 class="anchored" data-anchor-id="markov-inequality">Markov Inequality</h2>
+<p>For <span class="math inline">\(X \in \mathbb R^+\)</span>,</p>
 <p><span class="math display">\[
 P(X \geq t) \leq \dfrac{\E(X)}{t}
 \]</span></p>
@@ -201,8 +202,38 @@ P(\vert \ES{X}_n - \mu \vert \geq \epsilon ) \leq \dfrac{\sigma^2}{n \epsilon^2}
 \]</span></p>
 </section>
 </section>
+<section id="proof-of-chebshev-inequality" class="level2">
+<h2 class="anchored" data-anchor-id="proof-of-chebshev-inequality">Proof of Chebshev Inequality</h2>
+<p><span class="math inline">\(P(\vert X - \mu \vert \geq k ) = P\lbrack (X - \mu)^2 \geq k \rbrack\)</span>가 성립한다.</p>
+<p>마르코프 부등식에 의하여,</p>
+<p><span class="math display">\[
+P\lbrack (X - \mu)^2 \geq k \rbrack \leq \dfrac{\E \lbrack (x-\mu)^2 \rbrack}{k^2} = \dfrac{\sigma^2}{k^2}
+\]</span></p>
+<p>따라서</p>
+<p><span class="math display">\[
+P(\vert X - \mu \vert \geq k ) \leq \dfrac{\sigma}{k^2}
+\]</span></p>
+</section>
 <section id="proof-of-markov-inequality" class="level2">
 <h2 class="anchored" data-anchor-id="proof-of-markov-inequality">Proof of Markov Inequality</h2>
+<p>이산 확률변수와 연속 확률변수 모두에 대해서 증명을 해야 한다. 이산을 잘 이해하면 연속의 경우로 확장 가능하다.</p>
+<p><span class="math display">\[
+\E (X) = \sum_{x=0}^{\infty} x P(X=x)
+\]</span></p>
+<p>임의의 상수 <span class="math inline">\(t\)</span>에 대해서,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\E(X) &amp; = \sum_{x=0}^{t-1} x P(X=x) + \sum_{x=t}^{\infty} x P(X=x) \\
+&amp; \geq \sum_{x=t}^{\infty} x P(X=x) \\
+&amp; \geq \sum_{x=t}^{\infty} t P(X=x) \\
+&amp; = t \sum_{x=t}^{\infty} P(X=x) \\
+&amp; = t P(X \geq t)
+\end{aligned}
+\]</span></p>
+<p>따라서,</p>
+<p><span class="math display">\[
+P(X \geq t) \leq \dfrac{\E(X)}{t}
+\]</span></p>
 
 
 </section>
