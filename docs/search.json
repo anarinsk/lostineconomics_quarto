@@ -315,6 +315,13 @@
     "text": "Markdown으로 관리 가능한 이력서를 빌드해보자."
   },
   {
+    "objectID": "posts/computer-tool/2022-05-10-how-to-make-cv.html#why",
+    "href": "posts/computer-tool/2022-05-10-how-to-make-cv.html#why",
+    "title": "How to make a manageable C.V.",
+    "section": "Why?",
+    "text": "Why?\n이력서를 만드는 방법은 다양하다. 정해진 포맷이 있다면 채워 넣으면 될 일이지만, 그렇지 않은 경우 여러가지 선택지를 고민하게 된다. 아카데미에 있는 분이라면 \\(\\rm \\LaTeX\\)으로 이력서를 만드는 데 익숙할 것이다. 요즘은 Notion(노션)으로도 꽤 근사한 이력서를 만들 수 있다.\n이력서 제작에 중요한 가치는 아마 아래의 세 가지가 아닐까 싶다.\n\n최적의 정보 전달\n시각적인 심미성\n관리의 편의\n\n일단 2는 제외하도록 하겠다. 미감이 부족한 나는 최소주의를 지향한다. 즉, 좋은 템플릿을 선택해서 텍스트를 잘 배치하는 정도를 고민하는 게 내게 최선이다. 템플릿을 따를 경우 1 역시 고민이 크게 줄어든다. 그렇다면 관심은 3에 집중된다."
+  },
+  {
     "objectID": "posts/computer-tool/2022-05-10-how-to-make-cv.html#도구-그것이-문제로다",
     "href": "posts/computer-tool/2022-05-10-how-to-make-cv.html#도구-그것이-문제로다",
     "title": "How to make a manageable C.V.",
@@ -348,6 +355,13 @@
     "title": "Blogging with Quarto",
     "section": "",
     "text": "독립 블로깅 툴을 고민하고 있는 당신, Quarto로 오라."
+  },
+  {
+    "objectID": "posts/computer-tool/2022-05-14-blogging-with-quarto.html#why",
+    "href": "posts/computer-tool/2022-05-14-blogging-with-quarto.html#why",
+    "title": "Blogging with Quarto",
+    "section": "Why",
+    "text": "Why\n블로깅 툴은 관리가 편한 게 제일 좋다. 다만 상용 툴에는 내 취향에 어긋나는 몇 가지 제약이 있다.\n\n\\(\\rm \\LaTeX\\) 수식의 생성이 쉽지 않다.\n생각보다 깔끔한 툴이 별로 없다.\n왠지 모를 종속된 느낌적 느낌\n\n별도의 서버를 호스팅해서 워드프레스 같은 툴을 깔아서 쓸 용기는 부족하니 적당한 선에서 타협이 필요하다. 이 요구를 딱 맞는 것이 github(깃헙)의 스태틱 웹 서비스 Github Pages다. 스테틱 웹이란 html 페이지를 호출한 브라우저에 html을 띄워주는 단순한 서비스를 의미한다. 내가 작성한 포스팅을 html로 생성하는 일관된 방법만 있다면 스태틱이라는 사실 자체가 문제는 아니다. 페이지를 생성하는 약간의 귀찮음이 더해지는 정도라고 보면 될 것이다.\n\n\n깃헙 페이지스는 스태틱 페이지를 생성하고 관리하는 프레임워크 Jekyll을 품고 있다. 일정한 구조에 맞춰서 콘텐츠를 떨구면 알아서 블로그를 생성한다. 경우에 따라서는 생각보다 편리한 기능이다."
   },
   {
     "objectID": "posts/computer-tool/2022-05-14-blogging-with-quarto.html#tools",
@@ -686,6 +700,13 @@
     "text": "모두가 트릴레마를 넘어서고 싶어 하지만, 그럴 수는 없다. 거시 경제든 코인이든."
   },
   {
+    "objectID": "posts/economics/2022-05-16-trilemma.html#거시-경제의-트릴레마",
+    "href": "posts/economics/2022-05-16-trilemma.html#거시-경제의-트릴레마",
+    "title": "Trilemma, Lately",
+    "section": "거시 경제의 트릴레마",
+    "text": "거시 경제의 트릴레마\n트릴레마(trilemma)는 두 개의 모순된 선택을 지니는 딜레마의 확장 버전이다. 세 개의 선택지 중에서 두 개는 조합이 가능하지만 그로 인해서 하나의 가치를 포기해야만 하는 상황을 의미한다.\n트릴레마 중에서 가장 많이 알려진 것은 거시 경제의 트릴레마다.\n\n\n\n거시경제의 트릴레마\n\n\n 위 그림에서 보듯이 ‘자본 이동 capital mobility’, ‘고정 환율제 fixed exchange rate’, ’통화 정책의 자율성 monetary autonomy’이 트릴레마를 이룬다. 세 가지 모두 일국의 거시 경제에 도움이 된다. 그림에 예시가 되어 있으니 이해에 도움이 될 것이다.\n\n\nTrilemmas in capital flows, and domestic and international order | VOX, CEPR Policy Portal (voxeu.org) 글에는 거시 경제의 트릴레마 이외에 관련 트렐레마가 몇 가지 더 소개되어 있다.\n시대적 조건에 따라서는 트릴레마의 강도가 미묘하게 변화하기도 한다. 예를 들어 보자. 오늘날 금융 자본주의에서는 자본 이동이 가하는 압박이 상당하다. 이런 환경에서 고정환율제를 택하건 변동환율제를 택하건 간에 자본 이동이 일국의 독자적인 거시경제 정책을 제약하는 경우가 많다.\n브레튼우즈 체제는 자본이동을 제약한 대신 고정환율제와 독자적인 거시경제 정책을 택한 조합이다. 현대 중국의 경우 약간의 독자적인 금융정책을 가장 우선에 두면서 약간의 고정환율제의 요소를 지니고 있다. 대신 자본이동에 관한 통제는 철저하다.\n트릴레마를 구성할 때 중요한 것은 무엇일까? 딜레마를 이루는 요소를 잘 선정해야 한다. 트릴레마를 이룰 수 없는 녀석들을 트릴레마라고 주장한다면 반지성적으로 보일 뿐이다. 트렐레마는 그것이 현실 혹은 역사를 잘 설명할 때 유용성을 지닌다. 위에서 보듯이, 개별 국가의 거시경제 정책 없이 금본위제 기반의 빠른 금융의 세계화가 19세기 중후반은 삼각형의 왼쪽에 해당한다. 2차 대전 이후 브레튼우즈 체제는 고정환율제, 개별 국가의 독자적인 거시경제 운용의 정책의 프레임이었고 대신 국제간 자본이동은 상당 수준으로 제한되었다.\n위 삼각형에는 없지만 트릴레마의 사례를 극적으로 보여주는 것이 1990년 영국의 중앙은행인 영란은행과 조지 소로스 간의 환율 전쟁이다. 파운드-마르크의 밴드 내 고정환율제를 구축했던 영국에서 외환 보유고가 충분하지 않음을 감지한 헤지 펀드는 영국의 외환 선물 시장에서 파운드를 던지고 외화를 퍼내기 시작했다. 이는 파운드가 압력을 이기지 못하고 평가 절하를 할 수밖에 없으며, 이 경우 파운드 선물을 판매한(숏 포지션) 헤지 펀드는 큰 돈을 벌게 될 것이기 때문이다. 실제로 발생한 일은 이와 얼추 비슷하다.\n\n\n일국의 법정 통화를 향한 이런 공격이 항상 성공하는 것은 아니다. 조지 소로스의 퀀텀 펀드를 비롯해 몇 개의 헤지 펀드가 달러에 고정된 홍콩 달러에 대해서 치밀한 분석을 거쳐 비슷한 공격을 가했지만, 중국 정부의 자본시장 통제와 이자율 인상 등의 조치로 인해 성공을 거두지 못했다."
+  },
+  {
     "objectID": "posts/economics/2022-05-16-trilemma.html#스테이블-코인의-트릴레마",
     "href": "posts/economics/2022-05-16-trilemma.html#스테이블-코인의-트릴레마",
     "title": "Trilemma, Lately",
@@ -774,14 +795,7 @@
     "href": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html",
     "title": "Eigenvalues and Eigenvectors",
     "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#tldr",
-    "href": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#tldr",
-    "title": "Eigenvalues and Eigenvectors",
-    "section": "tl;dr",
-    "text": "tl;dr\n\n행렬 대각화를 이루는 방법 중 하나는 아이겐벡터와 아이겐밸류를 재구성하는 것이다.\n대각화가 가능한 행렬 \\(A\\)가 있고, 그 아이겐벡터를 열 벡터로 하는 행렬을 \\(Q\\)라고 하면\n\n\\[\n\\begin{aligned}\nA Q & = A[x_1, \\dotsc, x_n] \\\\\n& = [\\lambda_1 x_1, \\cdots, \\lambda_n x_n] \\\\\n&= Q \\boldsymbol{\\lambda}\n\\end{aligned}\n\\]\n\\[\nAQ Q^{-1} = A = Q \\boldsymbol{\\lambda}Q^{-1}\n\\]\n\n대각화가 가능하기 위해서는 우선 행렬 \\(Q\\)가 비특이(non-singular) 행렬이어야 한다. \\(Q\\)는 아이겐벡터의 조합이기 때문에 서로 다른 아이겐밸류를 지니거나 혹은 아이겐벡터의 선형독립이 성립해야 한다.\n대칭 행렬의 경우 모든 아이겐밸류가 실수이고, \\(Q\\)는 직교 행렬(orthogonal matrix)이 된다. 이 경우\n\n\\[\nA = Q\\boldsymbol{\\lambda}Q^T\n\\]"
+    "text": "행렬 대각화를 이루는 방법 중 하나는 아이겐벡터와 아이겐밸류를 재구성하는 것이다.\n대각화가 가능한 행렬 \\(A\\)가 있고, 그 아이겐벡터를 열 벡터로 하는 행렬을 \\(Q\\)라고 하면\n\n\\[\n\\begin{aligned}\nA Q & = A[x_1, \\dotsc, x_n] \\\\\n& = [\\lambda_1 x_1, \\cdots, \\lambda_n x_n] \\\\\n&= Q \\boldsymbol{\\lambda}\n\\end{aligned}\n\\]\n\\[\nAQ Q^{-1} = A = Q \\boldsymbol{\\lambda}Q^{-1}\n\\]\n\n대각화가 가능하기 위해서는 우선 행렬 \\(Q\\)가 비특이(non-singular) 행렬이어야 한다. \\(Q\\)는 아이겐벡터의 조합이기 때문에 서로 다른 아이겐밸류를 지니거나 혹은 아이겐벡터의 선형독립이 성립해야 한다.\n대칭 행렬의 경우 모든 아이겐밸류가 실수이고, \\(Q\\)는 직교 행렬(orthogonal matrix)이 된다. 이 경우\n\n\\[\nA = Q\\boldsymbol{\\lambda}Q^T\n\\]"
   },
   {
     "objectID": "posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html#definition",
@@ -816,14 +830,7 @@
     "href": "posts/linear-algebra/2020-12-16-measuring-distance.html",
     "title": "Projection and Distance",
     "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/linear-algebra/2020-12-16-measuring-distance.html#projection-scalar-and-vector",
-    "href": "posts/linear-algebra/2020-12-16-measuring-distance.html#projection-scalar-and-vector",
-    "title": "Projection and Distance",
-    "section": "Projection: Scalar and Vector",
-    "text": "Projection: Scalar and Vector\n\nDefinition\n다음과 같은 두 개의 벡터, \\(\\vec a\\), \\(\\vec b\\)를 일단 떠올려보자.\n\n스칼라 프로젝션 \\(a_1\\)의 정의는 다음과 같다.\n\\[\na_1 ={\\cos \\theta}{\\lVert \\vec a \\lVert} = \\lVert \\vec a_1 \\lVert\n\\]\n각 \\(\\theta\\)에 관해서 다음과 같이 정의할 수 있다. 혹시 리마인드가 필요하면 포스팅 dot product를 참고하라.\n\\[\n\\cos \\theta = \\dfrac{\\vec a \\cdot \\vec b}{\\lVert \\vec a \\lVert \\lVert \\vec b \\lVert}\n\\]\n그리고\n\\[\n\\hat b = \\dfrac{\\vec b}{\\lVert \\vec b \\lVert}\n\\]\n라고 할 때,\n\\[\na_1 = {\\cos \\theta}{\\lVert \\vec a \\lVert} = \\dfrac{\\vec a \\cdot \\vec b}{\\lVert\\vec b\\lVert} = \\vec a \\cdot \\hat b\n\\]\n쉽게 말해서, \\(\\vec a\\) 벡터와 정규화된 \\(\\vec b\\)의 닷프로덕트라고 생각하면 된다.\n\n\nVector projection\n스칼라 프로젝션의 크기로 \\(\\vec b\\)의 벡터를 만든 것이 벡터 프로젝션이다. \\(\\vec a\\)를 \\(\\vec b\\) 위로 프로젝션한 벡터 \\(\\Pi_{\\vec b} (\\vec a)\\)는 다음과 같다. 스칼라 프로젝션의 크기 만큼 \\(\\vec b\\) 성분을 지녀야 한다. 따라서 \\(\\vec b\\)는 정규화된 \\(\\hat b\\)를 써야 한다.\n\\[\n\\vec a_1 = \\Pi_{\\vec b} (\\vec a) = a_1 \\hat b = \\dfrac{\\vec a \\cdot \\vec b}{\\lVert\\vec b\\lVert} \\dfrac{\\vec b}{\\lVert\\vec b\\lVert}\n\\]\n말로 풀어보자. \\(\\vec b\\)와 같은 방향성을 지니는 벡터를 \\(\\vec a\\)와 \\(\\vec b\\) 간의 스칼라 프로젝션의 크기로 만들어주는 것이 벡터 프로젝션이다. 영상을 화면 위로 쏘는 행위를 떠올려보자. 이때 스크린에 해당하는 것이 \\(\\hat b\\)이고 여기에 투영되는 상이 \\(\\vec a\\)이다.\n\n\nProjection as outer product\n\\(x\\)축 위로 프로젝션을 생각해보자. 이 역시 선형 변환이다. 기저를 생각하면 아래와 같다.\n\\[\n\\Pi_{x}(\n\\begin{bmatrix}\n1 \\\\\n0 \\\\\n\\end{bmatrix}) =\n\\begin{bmatrix}\n1 \\\\\n0 \\\\\n\\end{bmatrix}, ~\n\\Pi_{x}(\n\\begin{bmatrix}\n0 \\\\\n1 \\\\\n\\end{bmatrix}) =\n\\begin{bmatrix}\n0 \\\\\n0 \\\\\n\\end{bmatrix}\n\\]\n\\[\nM_{\\Pi_x} =\n\\begin{bmatrix}\n\\Pi_{x}(\n\\begin{bmatrix}\n1 \\\\\n0 \\\\\n\\end{bmatrix}),~\n\\Pi_{x}(\n\\begin{bmatrix}\n0 \\\\\n1 \\\\\n\\end{bmatrix})\n\\end{bmatrix} =\n\\begin{bmatrix}\n1 & 0 \\\\\n0 & 0\n\\end{bmatrix}\n\\]\n\\(M_{\\Pi_x}\\)를 외적의 관점에서 표현해보자.\n\\[\n\\begin{aligned}\n\\Pi_{x}(\\vec v) & = (\\hat i \\cdot \\vec v) \\hat i = \\hat i (\\hat i \\cdot \\vec v) = \\hat i (\\hat i^T \\vec v) = (\\hat i \\hat i^T)\\vec v \\\\\n& =\n\\begin{bmatrix}\n1 & 0 \\\\\n0 & 0\n\\end{bmatrix} \\vec v = M_{\\Pi_x} \\vec v\n\\end{aligned}\n\\]\n이 결과를 일반적인 벡터 \\(\\vec b\\)에도 확장할 수 있다. \\(\\vec b\\)로의 프로젝션을 구현하기 위해서는 표준화된 벡터 \\(\\hat b\\)를 먼저 구해야 한다. 그리고 해당 벡터로 아웃터 프로덕트(외적)를 구한다.\n\\[\n\\hat b = \\dfrac{\\vec b}{\\Vert b \\Vert},~M_{\\Pi_{\\hat b}} \\vec a = \\hat b \\hat b^T \\vec a  \n\\]\n\\(\\vec a\\)를 인풋 벡터로 이해하면 이를 \\(\\vec b\\)의 프로젝션 위치로 옮기는 선형 변환이 \\(\\Pi_{\\hat b}\\)에 해당한다."
+    "text": "다음과 같은 두 개의 벡터, \\(\\vec a\\), \\(\\vec b\\)를 일단 떠올려보자.\n\n스칼라 프로젝션 \\(a_1\\)의 정의는 다음과 같다.\n\\[\na_1 ={\\cos \\theta}{\\lVert \\vec a \\lVert} = \\lVert \\vec a_1 \\lVert\n\\]\n각 \\(\\theta\\)에 관해서 다음과 같이 정의할 수 있다. 혹시 리마인드가 필요하면 포스팅 dot product를 참고하라.\n\\[\n\\cos \\theta = \\dfrac{\\vec a \\cdot \\vec b}{\\lVert \\vec a \\lVert \\lVert \\vec b \\lVert}\n\\]\n그리고\n\\[\n\\hat b = \\dfrac{\\vec b}{\\lVert \\vec b \\lVert}\n\\]\n라고 할 때,\n\\[\na_1 = {\\cos \\theta}{\\lVert \\vec a \\lVert} = \\dfrac{\\vec a \\cdot \\vec b}{\\lVert\\vec b\\lVert} = \\vec a \\cdot \\hat b\n\\]\n쉽게 말해서, \\(\\vec a\\) 벡터와 정규화된 \\(\\vec b\\)의 닷프로덕트라고 생각하면 된다.\n\n\n\n스칼라 프로젝션의 크기로 \\(\\vec b\\)의 벡터를 만든 것이 벡터 프로젝션이다. \\(\\vec a\\)를 \\(\\vec b\\) 위로 프로젝션한 벡터 \\(\\Pi_{\\vec b} (\\vec a)\\)는 다음과 같다. 스칼라 프로젝션의 크기 만큼 \\(\\vec b\\) 성분을 지녀야 한다. 따라서 \\(\\vec b\\)는 정규화된 \\(\\hat b\\)를 써야 한다.\n\\[\n\\vec a_1 = \\Pi_{\\vec b} (\\vec a) = a_1 \\hat b = \\dfrac{\\vec a \\cdot \\vec b}{\\lVert\\vec b\\lVert} \\dfrac{\\vec b}{\\lVert\\vec b\\lVert}\n\\]\n말로 풀어보자. \\(\\vec b\\)와 같은 방향성을 지니는 벡터를 \\(\\vec a\\)와 \\(\\vec b\\) 간의 스칼라 프로젝션의 크기로 만들어주는 것이 벡터 프로젝션이다. 영상을 화면 위로 쏘는 행위를 떠올려보자. 이때 스크린에 해당하는 것이 \\(\\hat b\\)이고 여기에 투영되는 상이 \\(\\vec a\\)이다.\n\n\n\n\\(x\\)축 위로 프로젝션을 생각해보자. 이 역시 선형 변환이다. 기저를 생각하면 아래와 같다.\n\\[\n\\Pi_{x}(\n\\begin{bmatrix}\n1 \\\\\n0 \\\\\n\\end{bmatrix}) =\n\\begin{bmatrix}\n1 \\\\\n0 \\\\\n\\end{bmatrix}, ~\n\\Pi_{x}(\n\\begin{bmatrix}\n0 \\\\\n1 \\\\\n\\end{bmatrix}) =\n\\begin{bmatrix}\n0 \\\\\n0 \\\\\n\\end{bmatrix}\n\\]\n\\[\nM_{\\Pi_x} =\n\\begin{bmatrix}\n\\Pi_{x}(\n\\begin{bmatrix}\n1 \\\\\n0 \\\\\n\\end{bmatrix}),~\n\\Pi_{x}(\n\\begin{bmatrix}\n0 \\\\\n1 \\\\\n\\end{bmatrix})\n\\end{bmatrix} =\n\\begin{bmatrix}\n1 & 0 \\\\\n0 & 0\n\\end{bmatrix}\n\\]\n\\(M_{\\Pi_x}\\)를 외적의 관점에서 표현해보자.\n\\[\n\\begin{aligned}\n\\Pi_{x}(\\vec v) & = (\\hat i \\cdot \\vec v) \\hat i = \\hat i (\\hat i \\cdot \\vec v) = \\hat i (\\hat i^T \\vec v) = (\\hat i \\hat i^T)\\vec v \\\\\n& =\n\\begin{bmatrix}\n1 & 0 \\\\\n0 & 0\n\\end{bmatrix} \\vec v = M_{\\Pi_x} \\vec v\n\\end{aligned}\n\\]\n이 결과를 일반적인 벡터 \\(\\vec b\\)에도 확장할 수 있다. \\(\\vec b\\)로의 프로젝션을 구현하기 위해서는 표준화된 벡터 \\(\\hat b\\)를 먼저 구해야 한다. 그리고 해당 벡터로 아웃터 프로덕트(외적)를 구한다.\n\\[\n\\hat b = \\dfrac{\\vec b}{\\Vert b \\Vert},~M_{\\Pi_{\\hat b}} \\vec a = \\hat b \\hat b^T \\vec a  \n\\]\n\\(\\vec a\\)를 인풋 벡터로 이해하면 이를 \\(\\vec b\\)의 프로젝션 위치로 옮기는 선형 변환이 \\(\\Pi_{\\hat b}\\)에 해당한다."
   },
   {
     "objectID": "posts/linear-algebra/2020-12-16-measuring-distance.html#more-definition",
@@ -858,14 +865,7 @@
     "href": "posts/linear-algebra/2021-01-05-vector-geometry-1.html",
     "title": "Vector Geometrically, part 1",
     "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/linear-algebra/2021-01-05-vector-geometry-1.html#tl-dr",
-    "href": "posts/linear-algebra/2021-01-05-vector-geometry-1.html#tl-dr",
-    "title": "Vector Geometrically, part 1",
-    "section": "tl; dr",
-    "text": "tl; dr\n\n벡터와 포인트를 오가는 방법을 배우자."
+    "text": "벡터와 포인트를 오가는 방법을 배우자."
   },
   {
     "objectID": "posts/linear-algebra/2021-01-05-vector-geometry-1.html#concepts",
@@ -886,14 +886,7 @@
     "href": "posts/linear-algebra/2021-01-06-vector-geometry-2.html",
     "title": "Vector Geometrically, part 2",
     "section": "",
-    "text": "google_analytics.html"
-  },
-  {
-    "objectID": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#vector-space",
-    "href": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#vector-space",
-    "title": "Vector Geometrically, part 2",
-    "section": "Vector Space",
-    "text": "Vector Space\n먼저 벡터 스페이스를 살펴보기 위해서 몇 가지 정의부터 보자.\n\n\\(V\\) is vector space\n\\(\\vec v \\in V\\)\n\\(W\\) is vector subspace \\(W \\subseteq V\\)\nspan: 벡터의 선형 결합을 통해 생성되는 벡터 집합\n\n\\[\n\\text{span}(\\vec v_1, \\dotsc, \\vec v_n) = \\{\\vec v | \\vec v = \\alpha_1 \\vec v_1 + \\dotsb + \\alpha_n \\vec v_n, \\alpha_i \\in \\mathbb R \\}\n\\]\n행렬 \\(M \\in \\mathbb R^{m \\times n}\\)이 있다고 할 때\n\n\\(\\mathcal R(M) \\subseteq \\mathbb R^n\\): \\(M\\)의 로우 스페이스, 즉 \\(M\\)의 행들의 모든 가능한 선형 결합이 나타내는 벡터 공간\n\n\\[\n\\mathcal R (M) \\overset{\\rm def}{=} \\{ \\vec v \\in \\mathbb R^n | \\vec v = \\vec w^T M \\text{ for some } \\vec w \\in \\mathbb R^m \\}\n\\]\n\n\\(\\mathcal C(M) \\subseteq \\mathbb R^m\\): \\(M\\)의 컬럼 스페이스, 즉 \\(M\\)의 열들의 모든 가능한 선형 결합이 나타내는 벡터 공간\n\n\\[\n\\mathcal C (M) \\overset{\\rm def}{=} \\{ \\vec w \\in \\mathbb R^m | \\vec w = M v \\text{ for some } \\vec v \\in \\mathbb R^n \\}\n\\]\n\n\\(\\mathcal N(M) \\subseteq \\mathbb R^n\\): \\(M\\)의 널 스페이스. 즉, 오른쪽에 곱해졌을 때 \\(\\vec 0_{m}\\)이 되는 벡터의 집합\n\n\\[\n\\mathcal N(M) \\overset{\\rm def}{=} \\{ \\vec v \\in \\mathbb R^n | M \\vec v = \\vec 0 \\}\n\\]\n\n\\(\\mathcal N(M^T) \\subseteq \\mathbb R^n\\): \\(M\\)의 좌 널 스페이스. 즉, 왼쪽에 곱해졌을 때 \\(\\vec 0_{n}\\)이 되는 벡터의 집합\n\n\\[\n\\mathcal N(M^T) \\overset{\\rm def}{=} \\{ \\vec w \\in \\mathbb R^m | \\vec w^T M  = \\vec 0^T \\}\n\\]\n혹은\n\\[\n\\mathcal N(M^T) \\overset{\\rm def}{=} \\{ \\vec w \\in \\mathbb R^m | M^T \\vec w = \\vec 0 \\}\n\\]\n\\(M\\)의 랭크는 컬럼 스페이스의 차원 그리고 로우 스페이스의 차원과 같다.\n\\[\nr(M) = \\dim(\\mathcal R (M)) = \\dim(\\mathcal C(M))\n\\]"
+    "text": "먼저 벡터 스페이스를 살펴보기 위해서 몇 가지 정의부터 보자.\n\n\\(V\\) is vector space\n\\(\\vec v \\in V\\)\n\\(W\\) is vector subspace \\(W \\subseteq V\\)\nspan: 벡터의 선형 결합을 통해 생성되는 벡터 집합\n\n\\[\n\\text{span}(\\vec v_1, \\dotsc, \\vec v_n) = \\{\\vec v | \\vec v = \\alpha_1 \\vec v_1 + \\dotsb + \\alpha_n \\vec v_n, \\alpha_i \\in \\mathbb R \\}\n\\]\n행렬 \\(M \\in \\mathbb R^{m \\times n}\\)이 있다고 할 때\n\n\\(\\mathcal R(M) \\subseteq \\mathbb R^n\\): \\(M\\)의 로우 스페이스, 즉 \\(M\\)의 행들의 모든 가능한 선형 결합이 나타내는 벡터 공간\n\n\\[\n\\mathcal R (M) \\overset{\\rm def}{=} \\{ \\vec v \\in \\mathbb R^n | \\vec v = \\vec w^T M \\text{ for some } \\vec w \\in \\mathbb R^m \\}\n\\]\n\n\\(\\mathcal C(M) \\subseteq \\mathbb R^m\\): \\(M\\)의 컬럼 스페이스, 즉 \\(M\\)의 열들의 모든 가능한 선형 결합이 나타내는 벡터 공간\n\n\\[\n\\mathcal C (M) \\overset{\\rm def}{=} \\{ \\vec w \\in \\mathbb R^m | \\vec w = M v \\text{ for some } \\vec v \\in \\mathbb R^n \\}\n\\]\n\n\\(\\mathcal N(M) \\subseteq \\mathbb R^n\\): \\(M\\)의 널 스페이스. 즉, 오른쪽에 곱해졌을 때 \\(\\vec 0_{m}\\)이 되는 벡터의 집합\n\n\\[\n\\mathcal N(M) \\overset{\\rm def}{=} \\{ \\vec v \\in \\mathbb R^n | M \\vec v = \\vec 0 \\}\n\\]\n\n\\(\\mathcal N(M^T) \\subseteq \\mathbb R^n\\): \\(M\\)의 좌 널 스페이스. 즉, 왼쪽에 곱해졌을 때 \\(\\vec 0_{n}\\)이 되는 벡터의 집합\n\n\\[\n\\mathcal N(M^T) \\overset{\\rm def}{=} \\{ \\vec w \\in \\mathbb R^m | \\vec w^T M  = \\vec 0^T \\}\n\\]\n혹은\n\\[\n\\mathcal N(M^T) \\overset{\\rm def}{=} \\{ \\vec w \\in \\mathbb R^m | M^T \\vec w = \\vec 0 \\}\n\\]\n\\(M\\)의 랭크는 컬럼 스페이스의 차원 그리고 로우 스페이스의 차원과 같다.\n\\[\nr(M) = \\dim(\\mathcal R (M)) = \\dim(\\mathcal C(M))\n\\]"
   },
   {
     "objectID": "posts/linear-algebra/2021-01-06-vector-geometry-2.html#checklist",
@@ -966,13 +959,6 @@
     "text": "벡터 공간 \\(V\\)의 기저\n\\[\nB = \\{ \\vec{e_1}, \\dotsc, \\vec{e_n} \\}  \n\\]\n는 다음의 두 특성을 만족한다.\n\n\n모든 \\(v \\in V\\)는 다음과 같이 기저의 선형 결합으로 표현된다.\n\\[\nv = v_1 \\vec{e_1} + \\dotsc + v_n \\vec{e_n}\n\\]\n\n\n\n즉, 기저를 구성하는 벡터 \\(\\vec{e_i}\\)에 불필요한 것이 없어야 한다. 즉, \\(\\vec{e}\\)를 구성하는 어떤 \\(e_i\\)도 다른 \\(e_j\\)(\\(j \\neq i\\))의 선형 결합으로 표현될 수 없다.\n\n\n\n\\[\nB_{\\hat{e}} = \\{ \\hat{e_1}, \\dotsc, \\hat{e_n} \\} \\text{~with}\n\\]\n\\[\n\\begin{cases}\n\\hat{e_i} \\cdot \\hat{e_j} = 1 & \\text{if $i = j$} \\\\\n\\hat{e_i} \\cdot \\hat{e_j} = 0 & \\text{if $i \\neq j$}\n\\end{cases}\n\\]\n\\[\n(a_1, \\dotsc, a_n)_{B_{\\hat{e}}} = \\underbrace{(\\vec{a} \\cdot \\hat{e_i})}_{a_1} \\hat{e_i} + \\dotsb + (\\vec{a} \\cdot \\hat{e_n}) \\hat{e_n}\n\\]"
   },
   {
-    "objectID": "posts/linear-algebra/2021-01-08-basis.html#concepts-definition",
-    "href": "posts/linear-algebra/2021-01-08-basis.html#concepts-definition",
-    "title": "Basis",
-    "section": "Concepts & Definition",
-    "text": "Concepts & Definition\n벡터 공간 \\(V\\)의 기저\n\\[\nB = \\{ \\vec{e_1}, \\dotsc, \\vec{e_n} \\}  \n\\]\n는 다음의 두 특성을 만족한다.\n\nSpanning property\n모든 \\(v \\in V\\)는 다음과 같이 기저의 선형 결합으로 표현된다.\n\\[\nv = v_1 \\vec{e_1} + \\dotsc + v_n \\vec{e_n}\n\\]\n\n\nLinear Independence property\n즉, 기저를 구성하는 벡터 \\(\\vec{e_i}\\)에 불필요한 것이 없어야 한다. 즉, \\(\\vec{e}\\)를 구성하는 어떤 \\(e_i\\)도 다른 \\(e_j\\)(\\(j \\neq i\\))의 선형 결합으로 표현될 수 없다.\n\n\nOrthonomal basis\n\\[\nB_{\\hat{e}} = \\{ \\hat{e_1}, \\dotsc, \\hat{e_n} \\} \\text{~with}\n\\]\n\\[\n\\begin{cases}\n\\hat{e_i} \\cdot \\hat{e_j} = 1 & \\text{if $i = j$} \\\\\n\\hat{e_i} \\cdot \\hat{e_j} = 0 & \\text{if $i \\neq j$}\n\\end{cases}\n\\]\n\\[\n(a_1, \\dotsc, a_n)_{B_{\\hat{e}}} = \\underbrace{(\\vec{a} \\cdot \\hat{e_i})}_{a_1} \\hat{e_i} + \\dotsb + (\\vec{a} \\cdot \\hat{e_n}) \\hat{e_n}\n\\]"
-  },
-  {
     "objectID": "posts/linear-algebra/2021-01-08-basis.html#orthogonal-basis",
     "href": "posts/linear-algebra/2021-01-08-basis.html#orthogonal-basis",
     "title": "Basis",
@@ -1008,13 +994,6 @@
     "text": "아이겐밸류, 아이겐벡터는 중요하다. 어디서나 튀어나온다. 그래서 친숙하지만 나는 이걸 제대로 알고 있는 것일까? 이번 포스팅에서는 아이겐 공간의 관점에서 이 문제를 살펴볼 예정이다.\n사실 아이겐 공간은 \\(n \\times n\\) 매트릭스의 숨은 구조(뼈대)와 같다. 아이겐밸류를 구하는 식을 떠올려보자.\n\\[\nM_T \\vec x = \\lambda \\vec x\n\\]\n\\(M_T\\)라는 \\(n \\times n\\) 변환이 특정한 벡터 아래서는 스칼라 곱의 문제로 환원된다. 이런 의미에서 아이겐벡터는 \\(M_T\\)라는 매트릭스가 지닌 일종의 축이다. 이 축 위에서 변환이 다시 축으로 환원되기 때문이다. \\(M_T\\)의 원래 기저와 상관 없이, 이 아이겐벡터로 다시 기저를 구성한다고 생각해보자. 이때 아이겐밸류는 해당 축의 크기(길이)로 이해할 수 있다."
   },
   {
-    "objectID": "posts/linear-algebra/2021-01-10-Eigenspace-1.html#why",
-    "href": "posts/linear-algebra/2021-01-10-Eigenspace-1.html#why",
-    "title": "Eigenspace, part 1",
-    "section": "Why?",
-    "text": "Why?\n아이겐밸류, 아이겐벡터는 중요하다. 어디서나 튀어나온다. 그래서 친숙하지만 나는 이걸 제대로 알고 있는 것일까? 이번 포스팅에서는 아이겐 공간의 관점에서 이 문제를 살펴볼 예정이다.\n사실 아이겐 공간은 \\(n \\times n\\) 매트릭스의 숨은 구조(뼈대)와 같다. 아이겐밸류를 구하는 식을 떠올려보자.\n\\[\nM_T \\vec x = \\lambda \\vec x\n\\]\n\\(M_T\\)라는 \\(n \\times n\\) 변환이 특정한 벡터 아래서는 스칼라 곱의 문제로 환원된다. 이런 의미에서 아이겐벡터는 \\(M_T\\)라는 매트릭스가 지닌 일종의 축이다. 이 축 위에서 변환이 다시 축으로 환원되기 때문이다. \\(M_T\\)의 원래 기저와 상관 없이, 이 아이겐벡터로 다시 기저를 구성한다고 생각해보자. 이때 아이겐밸류는 해당 축의 크기(길이)로 이해할 수 있다."
-  },
-  {
     "objectID": "posts/linear-algebra/2021-01-10-Eigenspace-1.html#eigenspace",
     "href": "posts/linear-algebra/2021-01-10-Eigenspace-1.html#eigenspace",
     "title": "Eigenspace, part 1",
@@ -1048,13 +1027,6 @@
     "title": "Eigenspace, part 2",
     "section": "",
     "text": "\\(A \\in \\mathbb C^{m \\times n}\\)을 생각해보자. 이런 조건에서 아이겐 분해를 어떻게 활용할 수 있을까? 일단 \\(A\\)를 정방행렬로 만들어주어야 할 것이고, 이에는 두 가지 방법이 있다.\n\\[\n\\underbrace{A^T A}_{n \\times n}, \\overbrace{A A^T}^{m \\times m}\n\\]\n아울러, \\((A^T A)^T = A^T A\\), \\((AA^T)^T = A A^T\\)가 성립하기 때문에 두 매트릭스 모두 normal 매트릭스다. 따라서 아래와 같은 개념화가 가능하다.\n\\[\nA =\n\\underbrace{\n\\begin{bmatrix}\n\\vert & \\dotsb & \\vert \\\\\nu_1 & \\dotsb & u_m \\\\\n\\vert & \\dotsb & \\vert \\\\\n\\end{bmatrix}}_{m \\times m}\n\\overbrace{\n\\begin{bmatrix}\n\\sigma_1 & 0 & \\dotsb \\\\\n0 & \\sigma_2 & \\dotsb \\\\\n0 & 0 & \\dotsb \\\\\n\\end{bmatrix}}^{m \\times n}\n\\underbrace{\n\\begin{bmatrix}\n-- & v_1^T & -- \\\\\n-- & \\vdots & -- \\\\\n-- & v_n^T & -- \\\\\n\\end{bmatrix}}_{n \\times n} =\nU \\Sigma V^T\n\\]\n\\(U\\)를 통해 분해되는 부분을과 \\(V\\)를 통해 분해되는 부분을 다음과 같이 나타내보자.\n\\[\n\\begin{aligned}\nA A^T & = U \\Lambda_l U^T \\\\\nA^T A & = V \\Lambda_r V^T \\\\\n\\end{aligned}\n\\]\n소문자의 \\(l\\)와 \\(r\\)은 각각 left, right를 뜻한다. \\(U\\)와 \\(V^T\\)를 명시적으로 적어보자.\n\\[\nU =\n\\begin{bmatrix}\n\\vert & \\dotsb & \\vert \\\\\nu_1 & \\dotsb & u_m \\\\\n\\vert & \\dotsb & \\vert \\\\\n\\end{bmatrix}, \\text{~where}\n\\{ (\\lambda_i, u_i) = \\text{eigenvects}(A A^T) \\}\n\\]\n\\[\nV =\n\\begin{bmatrix}\n-- & v_1^T & -- \\\\\n-- & \\vdots & -- \\\\\n-- & v_n^T & -- \\\\\n\\end{bmatrix}, \\text{~where}\n\\{ (\\lambda_i, v_i) = \\text{eigenvects}(A^T A) \\}\n\\]\n이제 유사 대각행렬 \\(\\Sigma\\)를 보자. 이 행렬은 \\(m \\times n\\) 형태다.\n\\[\n\\sigma_i = \\sqrt{\\lambda_i}, \\text{ where } \\lambda_i = \\text{eigenvals}(A A^T) = \\text{eigenvals}(A^T A)\n\\]\n\n\n기저를 바꾸는 관점에서 다시 음미해보자.\n\\[\n\\vec y = A \\vec x = U \\Sigma V^T \\vec x\n\\]\n\n\\(V^T \\vec x\\): \\(V^T = \\phantom{}\\_{B\\_{SVD}}[1]\\_{B_S}\\). 즉, \\(B_{SVD} \\leftarrow B_S\\)를 수행한다.\n\\(\\Sigma\\): 유사 대각행렬을 곱해 각 기저의 크기를 조절한다.\n\\(U\\): \\(U = \\phantom{}\\_{B_{S}}[1]\\_{B\\_{SVD}}\\): \\(B_{S} \\leftarrow B_{SVD}\\)\n\n즉, \\(B_S \\leftarrow B_{SVD} \\leftarrow B_S\\)를 수행한다.\n\n\n\n외적의 관점에서 이해하는 것도 흥미롭다. 일단 외적에 관해서 간단히 살펴보자. 벡터 \\(u \\in \\mathbb R^m\\), \\(v \\in \\mathbb R^n\\)이 있다고 할 때,\n\\[\nu v^T \\in \\mathbb R^{m \\times n}\n\\]\n외적의 rank는 어떻게 될까? 1이다. 직관적으로는 이해가 안될 수 있다.\n\\[\n{\\rm rank} (AB) \\leq \\min({\\rm rank}(A), {\\rm rank} (B)) =  1\n\\]\nSVD 식을 다시 조립해보자. 일단 \\(m \\geq n\\)을 가정하자.\n\\[\nU \\Sigma =\n\\begin{bmatrix}\n\\vert & \\dotsb & \\vert \\\\\nu_1 & \\dotsb & u_m \\\\\n\\vert & \\dotsb & \\vert \\\\\n\\end{bmatrix}\n\\begin{bmatrix}\n\\sigma_1 & 0 & \\dotsb \\\\\n0 & \\sigma_2 & \\dotsb \\\\\n0 & 0 & \\dotsb \\\\\n\\end{bmatrix}\n\\]\n\\[\n\\begin{aligned}\nA & = U \\Sigma V^T \\\\\n& =\n\\underbrace{\n\\begin{bmatrix}\n\\sigma_1 u_1, \\dotsb,  \\sigma_n u_n, \\dotsc,  0 u_m\n\\end{bmatrix}}_{U \\Sigma}\n\\begin{bmatrix}\n-- & v_1^T & -- \\\\\n-- & \\vdots & -- \\\\\n-- & v_n^T & -- \\\\\n\\end{bmatrix} \\\\\n& =  \\sigma_1 u_1 v_1^T + \\dotsb + \\sigma_n u_n v_n^T + \\dotsb + 0 u_m v_m^T\n\\end{aligned}\n\\]\n\\(u_i v_i^T\\)는 각각 1의 rank를 지니고 앞에 곱해진 singular value의 기저로 이해할 수 있다. 해당 기저들의 선형 결합으로 매트릭스 \\(A\\)를 다시 분해할 수 있다.\n\n\n\n이렇게 대각화를 할 때 어떤 이득이 있을까? 앞서 유사 행렬을 활용하면 행렬의 곱이 간단해진다는 점을 보았다. SVD에도 비슷한 이점이 있다. 이 외에 SVD를 써서 할 수 있는 중요한 이득이 있다. 계산량을 줄이는 것이다.\n\\(M \\in \\mathbb R^{1000 \\times 2000}\\)의 변환이 있다고 하자. 이 변환의 싱귤러 밸류들 많아야 1000개가 나올 것이다. 만일 이 1000개 중에서 3개를 제외하고 나머지 값이 0에 가깝다고 하자.\n\\(M\\)이라는 변환의 근사값을 구하고 싶다면, 0에 가까운 값을 모두 0으로 둔다. 이렇게 바꾸면,\n\\[\nM \\approx \\hat M = \\hat U \\hat \\Sigma \\hat V^T\n\\]\n\n\\(\\hat U \\in \\mathbb R^{1000 \\times 3}\\)\n\\(\\hat \\Sigma \\in \\mathbb R^{3 \\times 3}\\)\n\\(\\hat V^T \\in \\mathbb R^{3 \\times 2000}\\)\n\n이렇게 근사값을 구하면 계산량이 많이 줄어들 것이다. \\(M\\)와 \\(\\hat M\\) 사이의 힐베르트-슈미트 거리를 구하면,\n\\[\n\\Vert M - \\hat M \\Vert_{\\rm HS} = \\sqrt{\\sum_{i=4}^{1000} \\sigma_i^2}\n\\]\n이 값이 크지 않다면, \\(M \\approx \\hat M\\)으로 간주할 수 있다. 실제로 이미지 압축 등에서 많이 사용되는 방법이다."
-  },
-  {
-    "objectID": "posts/linear-algebra/2021-01-18-Eigenspace-2.html#singluar-value-decomposition",
-    "href": "posts/linear-algebra/2021-01-18-Eigenspace-2.html#singluar-value-decomposition",
-    "title": "Eigenspace, part 2",
-    "section": "Singluar Value Decomposition",
-    "text": "Singluar Value Decomposition\n\\(A \\in \\mathbb C^{m \\times n}\\)을 생각해보자. 이런 조건에서 아이겐 분해를 어떻게 활용할 수 있을까? 일단 \\(A\\)를 정방행렬로 만들어주어야 할 것이고, 이에는 두 가지 방법이 있다.\n\\[\n\\underbrace{A^T A}_{n \\times n}, \\overbrace{A A^T}^{m \\times m}\n\\]\n아울러, \\((A^T A)^T = A^T A\\), \\((AA^T)^T = A A^T\\)가 성립하기 때문에 두 매트릭스 모두 normal 매트릭스다. 따라서 아래와 같은 개념화가 가능하다.\n\\[\nA =\n\\underbrace{\n\\begin{bmatrix}\n\\vert & \\dotsb & \\vert \\\\\nu_1 & \\dotsb & u_m \\\\\n\\vert & \\dotsb & \\vert \\\\\n\\end{bmatrix}}_{m \\times m}\n\\overbrace{\n\\begin{bmatrix}\n\\sigma_1 & 0 & \\dotsb \\\\\n0 & \\sigma_2 & \\dotsb \\\\\n0 & 0 & \\dotsb \\\\\n\\end{bmatrix}}^{m \\times n}\n\\underbrace{\n\\begin{bmatrix}\n-- & v_1^T & -- \\\\\n-- & \\vdots & -- \\\\\n-- & v_n^T & -- \\\\\n\\end{bmatrix}}_{n \\times n} =\nU \\Sigma V^T\n\\]\n\\(U\\)를 통해 분해되는 부분을과 \\(V\\)를 통해 분해되는 부분을 다음과 같이 나타내보자.\n\\[\n\\begin{aligned}\nA A^T & = U \\Lambda_l U^T \\\\\nA^T A & = V \\Lambda_r V^T \\\\\n\\end{aligned}\n\\]\n소문자의 \\(l\\)와 \\(r\\)은 각각 left, right를 뜻한다. \\(U\\)와 \\(V^T\\)를 명시적으로 적어보자.\n\\[\nU =\n\\begin{bmatrix}\n\\vert & \\dotsb & \\vert \\\\\nu_1 & \\dotsb & u_m \\\\\n\\vert & \\dotsb & \\vert \\\\\n\\end{bmatrix}, \\text{~where}\n\\{ (\\lambda_i, u_i) = \\text{eigenvects}(A A^T) \\}\n\\]\n\\[\nV =\n\\begin{bmatrix}\n-- & v_1^T & -- \\\\\n-- & \\vdots & -- \\\\\n-- & v_n^T & -- \\\\\n\\end{bmatrix}, \\text{~where}\n\\{ (\\lambda_i, v_i) = \\text{eigenvects}(A^T A) \\}\n\\]\n이제 유사 대각행렬 \\(\\Sigma\\)를 보자. 이 행렬은 \\(m \\times n\\) 형태다.\n\\[\n\\sigma_i = \\sqrt{\\lambda_i}, \\text{ where } \\lambda_i = \\text{eigenvals}(A A^T) = \\text{eigenvals}(A^T A)\n\\]\n\nChange-of-basis\n기저를 바꾸는 관점에서 다시 음미해보자.\n\\[\n\\vec y = A \\vec x = U \\Sigma V^T \\vec x\n\\]\n\n\\(V^T \\vec x\\): \\(V^T = \\phantom{}\\_{B\\_{SVD}}[1]\\_{B_S}\\). 즉, \\(B_{SVD} \\leftarrow B_S\\)를 수행한다.\n\\(\\Sigma\\): 유사 대각행렬을 곱해 각 기저의 크기를 조절한다.\n\\(U\\): \\(U = \\phantom{}\\_{B_{S}}[1]\\_{B\\_{SVD}}\\): \\(B_{S} \\leftarrow B_{SVD}\\)\n\n즉, \\(B_S \\leftarrow B_{SVD} \\leftarrow B_S\\)를 수행한다.\n\n\nOuter product\n외적의 관점에서 이해하는 것도 흥미롭다. 일단 외적에 관해서 간단히 살펴보자. 벡터 \\(u \\in \\mathbb R^m\\), \\(v \\in \\mathbb R^n\\)이 있다고 할 때,\n\\[\nu v^T \\in \\mathbb R^{m \\times n}\n\\]\n외적의 rank는 어떻게 될까? 1이다. 직관적으로는 이해가 안될 수 있다.\n\\[\n{\\rm rank} (AB) \\leq \\min({\\rm rank}(A), {\\rm rank} (B)) =  1\n\\]\nSVD 식을 다시 조립해보자. 일단 \\(m \\geq n\\)을 가정하자.\n\\[\nU \\Sigma =\n\\begin{bmatrix}\n\\vert & \\dotsb & \\vert \\\\\nu_1 & \\dotsb & u_m \\\\\n\\vert & \\dotsb & \\vert \\\\\n\\end{bmatrix}\n\\begin{bmatrix}\n\\sigma_1 & 0 & \\dotsb \\\\\n0 & \\sigma_2 & \\dotsb \\\\\n0 & 0 & \\dotsb \\\\\n\\end{bmatrix}\n\\]\n\\[\n\\begin{aligned}\nA & = U \\Sigma V^T \\\\\n& =\n\\underbrace{\n\\begin{bmatrix}\n\\sigma_1 u_1, \\dotsb,  \\sigma_n u_n, \\dotsc,  0 u_m\n\\end{bmatrix}}_{U \\Sigma}\n\\begin{bmatrix}\n-- & v_1^T & -- \\\\\n-- & \\vdots & -- \\\\\n-- & v_n^T & -- \\\\\n\\end{bmatrix} \\\\\n& =  \\sigma_1 u_1 v_1^T + \\dotsb + \\sigma_n u_n v_n^T + \\dotsb + 0 u_m v_m^T\n\\end{aligned}\n\\]\n\\(u_i v_i^T\\)는 각각 1의 rank를 지니고 앞에 곱해진 singular value의 기저로 이해할 수 있다. 해당 기저들의 선형 결합으로 매트릭스 \\(A\\)를 다시 분해할 수 있다.\n\n\nAn application\n이렇게 대각화를 할 때 어떤 이득이 있을까? 앞서 유사 행렬을 활용하면 행렬의 곱이 간단해진다는 점을 보았다. SVD에도 비슷한 이점이 있다. 이 외에 SVD를 써서 할 수 있는 중요한 이득이 있다. 계산량을 줄이는 것이다.\n\\(M \\in \\mathbb R^{1000 \\times 2000}\\)의 변환이 있다고 하자. 이 변환의 싱귤러 밸류들 많아야 1000개가 나올 것이다. 만일 이 1000개 중에서 3개를 제외하고 나머지 값이 0에 가깝다고 하자.\n\\(M\\)이라는 변환의 근사값을 구하고 싶다면, 0에 가까운 값을 모두 0으로 둔다. 이렇게 바꾸면,\n\\[\nM \\approx \\hat M = \\hat U \\hat \\Sigma \\hat V^T\n\\]\n\n\\(\\hat U \\in \\mathbb R^{1000 \\times 3}\\)\n\\(\\hat \\Sigma \\in \\mathbb R^{3 \\times 3}\\)\n\\(\\hat V^T \\in \\mathbb R^{3 \\times 2000}\\)\n\n이렇게 근사값을 구하면 계산량이 많이 줄어들 것이다. \\(M\\)와 \\(\\hat M\\) 사이의 힐베르트-슈미트 거리를 구하면,\n\\[\n\\Vert M - \\hat M \\Vert_{\\rm HS} = \\sqrt{\\sum_{i=4}^{1000} \\sigma_i^2}\n\\]\n이 값이 크지 않다면, \\(M \\approx \\hat M\\)으로 간주할 수 있다. 실제로 이미지 압축 등에서 많이 사용되는 방법이다."
   },
   {
     "objectID": "posts/linear-algebra/2021-01-18-Eigenspace-2.html#lu",
@@ -1519,25 +1491,67 @@
     "text": "Interpretation\n위 지수 함수의 그림을 보자. \\(x\\)가 커짐에 따라서 도함수의 기울기가 커진다는 점을 알 수 있다. 특정 \\(x\\) 구역에서 회귀 계수를 구하면 이 도함수의 기울기와 비슷해질 것이고, 이는 이 도함수를 기울기로 근사한 직선이 실제 \\(y_i\\)값 보다는 작게 될 것이다. 즉, 변화율 측정 단위로서 \\(\\beta\\)는 실제 변화율보다 작게 된다.\n만일 \\(\\beta = 0.3\\)이라고 하자. 실제 \\(\\%\\Delta y\\)를 구해보면,\n\\[\n\\%\\Delta y = \\exp(\\beta) - 1 = 0.35\n\\]\n약 5% 정도 과소 평가 되었음을 알 수 있다. 이 크기의 의미나 중요성은 분석자가 선택할 문제다."
   },
   {
-    "objectID": "posts/computer-tool/2022-05-14-blogging-with-quarto.html#why",
-    "href": "posts/computer-tool/2022-05-14-blogging-with-quarto.html#why",
-    "title": "Blogging with Quarto",
-    "section": "Why",
-    "text": "Why\n블로깅 툴은 관리가 편한 게 제일 좋다. 다만 상용 툴에는 내 취향에 어긋나는 몇 가지 제약이 있다.\n\n\\(\\rm \\LaTeX\\) 수식의 생성이 쉽지 않다.\n생각보다 깔끔한 툴이 별로 없다.\n왠지 모를 종속된 느낌적 느낌\n\n별도의 서버를 호스팅해서 워드프레스 같은 툴을 깔아서 쓸 용기는 부족하니 적당한 선에서 타협이 필요하다. 이 요구를 딱 맞는 것이 github(깃헙)의 스태틱 웹 서비스 Github Pages다. 스테틱 웹이란 html 페이지를 호출한 브라우저에 html을 띄워주는 단순한 서비스를 의미한다. 내가 작성한 포스팅을 html로 생성하는 일관된 방법만 있다면 스태틱이라는 사실 자체가 문제는 아니다. 페이지를 생성하는 약간의 귀찮음이 더해지는 정도라고 보면 될 것이다.\n\n\n깃헙 페이지스는 스태틱 페이지를 생성하고 관리하는 프레임워크 Jekyll을 품고 있다. 일정한 구조에 맞춰서 콘텐츠를 떨구면 알아서 블로그를 생성한다. 경우에 따라서는 생각보다 편리한 기능이다."
+    "objectID": "posts/regression/2022-05-26-total-and-parts.html",
+    "href": "posts/regression/2022-05-26-total-and-parts.html",
+    "title": "전체와 부분",
+    "section": "",
+    "text": "회귀 분석에서 ’통제’한다는 것의 의미를 전체와 부분이라는 시야에서 다시 음미해 보자.\n교란 요인(confounder)와 충돌 요인(collider)을 심슨의 역설과 벅슨의 역설로 연결해 생각해 보자."
   },
   {
-    "objectID": "posts/economics/2022-05-16-trilemma.html#거시-경제의-트릴레마",
-    "href": "posts/economics/2022-05-16-trilemma.html#거시-경제의-트릴레마",
-    "title": "Trilemma, Lately",
-    "section": "거시 경제의 트릴레마",
-    "text": "거시 경제의 트릴레마\n트릴레마(trilemma)는 두 개의 모순된 선택을 지니는 딜레마의 확장 버전이다. 세 개의 선택지 중에서 두 개는 조합이 가능하지만 그로 인해서 하나의 가치를 포기해야만 하는 상황을 의미한다.\n트릴레마 중에서 가장 많이 알려진 것은 거시 경제의 트릴레마다.\n\n\n\n거시경제의 트릴레마\n\n\n 위 그림에서 보듯이 ‘자본 이동 capital mobility’, ‘고정 환율제 fixed exchange rate’, ’통화 정책의 자율성 monetary autonomy’이 트릴레마를 이룬다. 세 가지 모두 일국의 거시 경제에 도움이 된다. 그림에 예시가 되어 있으니 이해에 도움이 될 것이다.\n\n\nTrilemmas in capital flows, and domestic and international order | VOX, CEPR Policy Portal (voxeu.org) 글에는 거시 경제의 트릴레마 이외에 관련 트렐레마가 몇 가지 더 소개되어 있다.\n시대적 조건에 따라서는 트릴레마의 강도가 미묘하게 변화하기도 한다. 예를 들어 보자. 오늘날 금융 자본주의에서는 자본 이동이 가하는 압박이 상당하다. 이런 환경에서 고정환율제를 택하건 변동환율제를 택하건 간에 자본 이동이 일국의 독자적인 거시경제 정책을 제약하는 경우가 많다.\n브레튼우즈 체제는 자본이동을 제약한 대신 고정환율제와 독자적인 거시경제 정책을 택한 조합이다. 현대 중국의 경우 약간의 독자적인 금융정책을 가장 우선에 두면서 약간의 고정환율제의 요소를 지니고 있다. 대신 자본이동에 관한 통제는 철저하다.\n트릴레마를 구성할 때 중요한 것은 무엇일까? 딜레마를 이루는 요소를 잘 선정해야 한다. 트릴레마를 이룰 수 없는 녀석들을 트릴레마라고 주장한다면 반지성적으로 보일 뿐이다. 트렐레마는 그것이 현실 혹은 역사를 잘 설명할 때 유용성을 지닌다. 위에서 보듯이, 개별 국가의 거시경제 정책 없이 금본위제 기반의 빠른 금융의 세계화가 19세기 중후반은 삼각형의 왼쪽에 해당한다. 2차 대전 이후 브레튼우즈 체제는 고정환율제, 개별 국가의 독자적인 거시경제 운용의 정책의 프레임이었고 대신 국제간 자본이동은 상당 수준으로 제한되었다.\n위 삼각형에는 없지만 트릴레마의 사례를 극적으로 보여주는 것이 1990년 영국의 중앙은행인 영란은행과 조지 소로스 간의 환율 전쟁이다. 파운드-마르크의 밴드 내 고정환율제를 구축했던 영국에서 외환 보유고가 충분하지 않음을 감지한 헤지 펀드는 영국의 외환 선물 시장에서 파운드를 던지고 외화를 퍼내기 시작했다. 이는 파운드가 압력을 이기지 못하고 평가 절하를 할 수밖에 없으며, 이 경우 파운드 선물을 판매한(숏 포지션) 헤지 펀드는 큰 돈을 벌게 될 것이기 때문이다. 실제로 발생한 일은 이와 얼추 비슷하다.\n\n\n일국의 법정 통화를 향한 이런 공격이 항상 성공하는 것은 아니다. 조지 소로스의 퀀텀 펀드를 비롯해 몇 개의 헤지 펀드가 달러에 고정된 홍콩 달러에 대해서 치밀한 분석을 거쳐 비슷한 공격을 가했지만, 중국 정부의 자본시장 통제와 이자율 인상 등의 조치로 인해 성공을 거두지 못했다."
+    "objectID": "posts/regression/2022-05-26-total-and-parts.html#회귀-분석에서-통제한다는-것",
+    "href": "posts/regression/2022-05-26-total-and-parts.html#회귀-분석에서-통제한다는-것",
+    "title": "전체와 부분",
+    "section": "회귀 분석에서 ’통제’한다는 것",
+    "text": "회귀 분석에서 ’통제’한다는 것\n회귀 분석에서 독립 변수 혹은 설명 변수와 통제 변수의 차이는 개념적인 것이다. 즉, 내가 갖고 있는 분석의 초점 혹은 모델의 취지에 따라 결정되는 것이지 어떤 기계적인 방법이나 기준은 없다. 일단 ’통제’에 초점을 맞춰서 생각해 보자. 아래와 같은 간략한 회귀 모형을 생각해 보자.\n\\[\ny_i = \\alpha + \\beta x_i + \\gamma D_i + \\epsilon_i\n\\]\n\\(x_i\\)는 설명 변수, \\(D_i\\)는 통제 변수라고 하자. 이해를 돕기 위해서 \\(D_i\\)는 0, 1의 값을 갖는 더미 변수다. \\(D_i\\)를 통제한다는 것의 의미는 무엇일까? \\(x_i\\)가 \\(y\\)에 미치는 영향을 그냥 전체로 보지 않고 두 집단 별로 나눠서 보겠다는 것이다. 이때 최소자승법을 통해 계산되는 \\(\\beta\\)는 \\(D_i\\)로 구별되는 집단 각각의 효과를 구한 뒤 이를 적절하게 가중 평균한 값이 된다. ’통제’란 설명 변수의 효과를 보다 정교하게 보기 위해서 관찰을 통제 변수로 구성된 집단으로 나누는 것이라고 생각하면 쉽다. 카테고리로 구별된 집단뿐 아니라 연속 함수에 관해서도 비슷하게 이해하면 된다.\n\n\nAngrist와 Pischke가 이런 맥락에서 회귀 분석이 자동화된 짝짓기(matching) 기계라고 설명한 바 있다."
   },
   {
-    "objectID": "posts/computer-tool/2022-05-10-how-to-make-cv.html#why",
-    "href": "posts/computer-tool/2022-05-10-how-to-make-cv.html#why",
-    "title": "How to make a manageable C.V.",
-    "section": "Why?",
-    "text": "Why?\n이력서를 만드는 방법은 다양하다. 정해진 포맷이 있다면 채워 넣으면 될 일이지만, 그렇지 않은 경우 여러가지 선택지를 고민하게 된다. 아카데미에 있는 분이라면 \\(\\rm \\LaTeX\\)으로 이력서를 만드는 데 익숙할 것이다. 요즘은 Notion(노션)으로도 꽤 근사한 이력서를 만들 수 있다.\n이력서 제작에 중요한 가치는 아마 아래의 세 가지가 아닐까 싶다.\n\n최적의 정보 전달\n시각적인 심미성\n관리의 편의\n\n일단 2는 제외하도록 하겠다. 미감이 부족한 나는 최소주의를 지향한다. 즉, 좋은 템플릿을 선택해서 텍스트를 잘 배치하는 정도를 고민하는 게 내게 최선이다. 템플릿을 따를 경우 1 역시 고민이 크게 줄어든다. 그렇다면 관심은 3에 집중된다."
+    "objectID": "posts/regression/2022-05-26-total-and-parts.html#confounder-and-simpsons-paradox",
+    "href": "posts/regression/2022-05-26-total-and-parts.html#confounder-and-simpsons-paradox",
+    "title": "전체와 부분",
+    "section": "Confounder and Simpson’s Paradox",
+    "text": "Confounder and Simpson’s Paradox\n먼저 심슨의 역설을 먼저 살펴보자. 아래는 웃자고 만든 그림인데 웃고 넘기기에는 아까운 중요한 통찰이 들어 있다.\n\n\n\n전체를 볼 것인가 부분을 볼 것인가?\n\n\n위 그림에서 심슨가족 전체를 보면 \\(x\\) 축 변인의 증가에 따라서 \\(y\\) 축 변인이 증가하는 형태를 취한다. 반면, 가족 구성원 하나하나에 대해서는 반대의 관계를 취하고 있다. 심슨의 역설은 전체의 경향과 부분의 경향이 어긋나는 현상을 나타낸다. 조금 더 진지한 사례는 아래의 그림과 같다.\n\n\n\n심슨의 역설\n\n\n\n\n심슨의 역설에 흥미로운 사례는 미국 대학 입학의 남녀 학생 비율이다. 전체로 보면 남학생의 입학 비율이 여학생의 입학 비율보다 높았다. 그런데 개별 학과를 보면 여학생의 입학 비율이 대체로 남학생의 입학 비율보다 높았다. 서로 상반되는 듯 보이는 이 결과는 관심의 대상이 비율인데 반해서 학과 단위에서 작용하는 지원자들의 행태를 반영하지 못한 데 따른 것이다. 사례로는 여기와 여기를 참고하자.\n여기서 중요한 것은 역설 자체가 아니다. 역설의 함정에 빠지지 않고 어디에 포커스를 둘 것인지가 문제다. 만일 인구 구성의 각 그룹 별 경향을 평균적으로 살펴보는 것이 관심 사항이라면 위 그림에서 그룹 각각의 기울기를 평균한 값이 우리가 찾는 경향이다. 반대로 개별 그룹은 중요하지 않고 인구 전체가 관심사라면 개별 인구를 동일하게 보고 기울기를 찾는 게 맞다.\n\n\n\nDAG로 본 confounder & collider\n\n\n심슨의 역설은 DAG(Directed Acyclic Graph)를 통한 인과 추론에서 교란 요인(confounder)에 해당한다. A –> Z가 현재 우리가 관찰하는 사실이다. 예를 들어, 교육 수준이 높을수록 졸업 후 취업 시 임금이 높다. 하지만 이는 교육 수준과 임금 모두에게 영향을 미치는 제3의 요인을 고려하지 않는 것일지도 모른다. 교육 수준과 임금 모두에게 영향을 주는 미처 파악하지 못한 변인, 예를 들어 능력치(C)가 있다고 하자. 이 능력치는 교육 수준과 임금 모두에게 영향을 준다.\n이 능력치를 그룹화해서 비교하는 게 가능하다고 가정하자. 이는 위의 심슨 가족 그림에서 가족별로 각 그룹을 나누는 것에 해당한다. 이렇게 능력치를 고려하면 교육은 오히려 졸업 후 임금을 낮출 수도 있다. C(능력치)라는 변수를 명백하게 고려하면 A(교육 수준)가 Z(임금)에 미치는 영향의 크기가 변할 수 있다. 예컨대, C를 고려하지 않았을 때 존재하던 A–>Z의 효과가 사라지거나 기대했던 것과 반대의 효과를 지닐 수도 있다.\n\n그래도 심슨의 역설이 잘 이해가 되지 않는다면…\n벡터를 통해 그래프로 설명하는 사례가 직관적으로 잘 와닿고 이해하기도 좋다.\n\n\n\n붉은 벡터 1,2가 파란 벡터 1,2 보다 각각 더 높은 비율(벡터의 각도)를 지니고 있다. 그럼에도 둘을 결합했을 경우 파란 벡터가 더 높은 비율을 지니게 된다."
+  },
+  {
+    "objectID": "posts/regression/2022-05-26-total-and-parts.html#collider-and-bersons-paradox",
+    "href": "posts/regression/2022-05-26-total-and-parts.html#collider-and-bersons-paradox",
+    "title": "전체와 부분",
+    "section": "Collider and Berson’s Paradox",
+    "text": "Collider and Berson’s Paradox\n\n\n\n전체를 볼 것인가 부분을 볼 것인가?\n\n\n이번에는 벅슨의 역설을 살펴볼 차례다. 보통 수능 점수와 대학 성적은 별 관련이 없고 심지어 역의 상관성이 있다는 이야기를 접할 때가 있다. 이것은 맞는 주장인가? 이런 종류의 주장은 대체로 전체를 가정한다. 수능 점수와 대학 성적이 별로 상관이 없으니 수능은 인간의 능력을 판단하는 지표로 별로 유용하지 않다. 대체로 이야기가 이렇게 흐르기 마련이다.\n그런데 위의 그림에서 보듯이 이러한 경향은 보편적인 주장이 아니라 특정한 집단 내에서만 타당한 주장이다. 위 그림에서는 내가 관찰하는 집단에 대해서 일종의 자기 선택이 일어난 경우에 해당한다. 내가 속한 밴드의 집단보다 수능 점수와 대학 성적이 모두 낮은 집단은 내가 속한 관찰 집단과는 다른 집단에 속한다. 반면 내가 속한 밴드보다 수능 점수도 높고 대학 성적도 우월한 집단도 마찬가지다.\n벅슨의 역설은 심슨의 역설과 동일하지만 반대의 측면을 지적한다. 전체 대해서 존재하는 경향성이 그룹으로 쪼개서 보면 반대가 되거나 사라지는 경우를 의미한다.\n벅슨의 역설에 해당하는 인과 추론의 DAG 사례가 충돌 요인(collider)이다. 변수를 고려하지 않았다면 전체에 관해서 온전한 주장이 성립했을 것이지만, 해당 변수를 고려해 그룹을 나누게 되면 오히려 잘못된 관계를 추정하게 된다.\n\n\n벅슨의 역설은 통제하지 않아야 할 변수를 통제할 때 발생하기도 하지만 많은 경우 표본 자체를 살피지 않은 데에서 생기기도 한다. 예를 들어 아래 그림을 보자.\n\n보통 배우가 되려면 재능과 외모 둘 중 하나는 갖추어야 한다고들 한다. 이 말 자체는 맞지만 이를 확대 해석해서 외모와 재능이 역의 상관성이 있다고 주장하는 경우가 있다. 이는 모집단 전체(모든 사람)에 대해서 타당한 말일까? 배우라는 집단으로 제한해보면 외모와 재능이 모두 미달되는 사람들은 배우가 아닌 다른 직업을 찾았을 가능성이 높다. 외모와 재능을 사분면으로 나눌 때 3 사분면에 위치한 사람들이 사라진 배우라는 집단에 대해서는 음의 상관성이 관찰되는 것처럼 보인다."
+  },
+  {
+    "objectID": "posts/regression/2022-05-26-total-and-parts.html#중요한-것은-질문과-문제-설정",
+    "href": "posts/regression/2022-05-26-total-and-parts.html#중요한-것은-질문과-문제-설정",
+    "title": "전체와 부분",
+    "section": "중요한 것은 질문과 문제 설정",
+    "text": "중요한 것은 질문과 문제 설정\n이렇게 보면 심슨의 역설이든 벅슨의 역설이든 어떤 절대적인 규칙을 알려주는 것이 아니다. 관심을 두는 실증의 효과가 어떻게 작용하는 효과인가라는 질문이 먼저이다. 연구가 전체에 관한 특성을 묻는 질문이라면 충돌 요인(collider)이 변수에 없는지 살펴봐야 한다. 반면 집단을 나누는 것이 효과를 살펴보는 데 중요하다면 교란 요인(confounder)에 주의해야 한다. 충돌 요인이든 교란 요인이든 둘 다 실증 연구를 오도할 수 있지만 방해하는 수준이 다르다.\n이제 회귀 분석에서 통제한다는 것의 의미를 다시 정리해 보자. 회귀 분석의 모델링의 관점에서 보면 통제 변수와 설명 변수 간에 차이가 없다. 연구자의 의도에 비춰 볼 때 통제 변수는 설명 변수에 의도하지 않은 영향이 포함되는 것을 막아 준다. 앞서 말했듯이 회귀 분석은 통제 변수에 따라서 관찰을 여러 그룹으로 나누고 이에 따라서 설명 변수의 효과를 자동으로 계산하는 기계이다. 무엇인가를 통제하지 못했다는 것은 이 설명 변수에 그 효과까지 함께 포함되는 것을 의미한다. 이런 상황에서 발생할 수 있는 사례 중 하나가 심슨의 역설이다. 반면, 넣지 말아야 할 변수를 넣는다는 것은 설명 변수의 효과를 과장하는 결과를 낳는다. 그리고 특정한 인구 집단 혹은 경우에 발생한 일을 일반화해 주장하게 되는 것은 벅슨의 역설이다.\n이렇게 보면 심슨의 역설과 벅슨의 역설은 회귀 분석에서 모델링의 중요성 혹은 적절한 중도를 지키는 것이 얼마나 어려운지를 잘 보여준다. 회귀 분석의 길은 앵글 리스트와 피스커 선생이 말했듯이 진정 “도”의 길이었던 것이다!"
+  },
+  {
+    "objectID": "posts/regression/2022-05-28-normality.html",
+    "href": "posts/regression/2022-05-28-normality.html",
+    "title": "정규 분포에 집착하지 말자.",
+    "section": "",
+    "text": "샘플 크기가 충분하면, 통계적 검정 시 정규 분포 가정에 집착하지 말자."
+  },
+  {
+    "objectID": "posts/regression/2022-05-28-normality.html#정규-분포는-필요한-가정인가",
+    "href": "posts/regression/2022-05-28-normality.html#정규-분포는-필요한-가정인가",
+    "title": "정규 분포에 집착하지 말자.",
+    "section": "정규 분포는 필요한 가정인가?",
+    "text": "정규 분포는 필요한 가정인가?\n표분의 크기가 크지 않다면 불가피하게 필요한 가정이다. 검정을 위한 불가피한 조치다. 하지만 표본의 크기가 어느 정도 충분할 때도 정규 분포 가정이 필요할까?\n\\[\nY_i = \\alpha + \\beta_1 X_{1i} + \\beta_2 X_{2i} + \\dotsb + \\beta_n X_{ni} + \\epsilon_i\n\\]\n원래 정규 분포 가정은 \\(\\epsilon_i \\sim \\rm N (0, \\sigma^2)\\)이다. 그런데 이 가정을 어떻게 확인할 수 있을까?\n\\(Y_i \\sim \\rm N(\\cdot)\\)을 확인하면 될까? 원래의 가정은 오차항에 대한 가정이다. 앞에 여러 가지 변수의 작용으로 \\(Y\\)가 결정되므로 \\(Y\\)가 정규 분포를 따르는 것은 우연일 뿐이다.\n\\(\\hat\\epsilon_i = Y_i - \\hat{Y}_i\\)가 정규 분포를 따르면 될까? 이 역시 마찬가지로 정규 분포를 따르리라는 보장이 없다. \\(\\hat\\epsilon_i\\)는 회귀 분석의 모델링 아래 도출된 \\(\\epsilon_i\\)에 관한 추정치일 뿐이다. 이것 역시 정규 분포를 따르리라는 보장이 없다.\n다시 기억하자. 오차항에 관한 내용은 모델링을 위한 일종의 가정이다. 가정은 대체로 검증되지 않는다. 모델링의 가정은 받아들이는 것이지 검증하는 것이 아니다.\n\n\n표본이 크지 않을 때 즉 소 표본에 적합한 분석 방법을 찾는 것은 대 표본의 경우에 비해 까다로운 문제이다. 그런데 소 표본에서 회귀 분석은 그리 나쁜 분석 방법이 아니다."
+  },
+  {
+    "objectID": "posts/regression/2022-05-28-normality.html#표본의-크기가-충분하다면",
+    "href": "posts/regression/2022-05-28-normality.html#표본의-크기가-충분하다면",
+    "title": "정규 분포에 집착하지 말자.",
+    "section": "표본의 크기가 충분하다면",
+    "text": "표본의 크기가 충분하다면\n그렇다면 가정을 받아들일 수 없다면 회귀분석에서 검정을 수행할 수 있을까? 그렇지 않다. 만일 표본의 크기가 충분히 크다면 오차항의 정규 분포 가정 없이도 검정을 수행할 수 있다.\n회귀 분석의 계수의 표본 추정량 \\(\\hat \\beta\\)는 다음과 같다.\n\\[\n\\hat \\beta = (X^T X)^{-1}(X y)\n\\]\n회귀 분석에서 \\(\\beta_i\\)를 검정하기 위한 t-통계량은 다음과 같이 정의된다.\n\\[\nt_i = \\dfrac{\\hat \\beta_i - \\beta}{S \\sqrt{(X^T X)_{ii}^{-1}}}\n\\]\nwith\n\\[\nS(y_i)^2 = \\dfrac{1}{n-k} \\sum_{i=1}^n (y_i -  x^r_i \\hat\\beta)\n\\]\n\n\\(x^r_i\\): \\(X\\)의 \\(i\\)’th 행(row) 벡터\n\\(\\underset{(1 \\times k)}{x^r_i}\\underset{(k \\times 1)}{\\vphantom{x^r_i}\\hat\\beta} = \\hat y_i\\)\n\n\\(n\\)이 커짐에 따라서 \\(\\beta_i\\)의 분포는 \\(\\rm N(0,1)\\)를 점근적으로 닮아간다.\n요약하면 표본의 크기가 충분할 때 오차항의 정규 분포 가정은 잊어도 좋다. 중심 극한 정리에 따라서 필요한 가설 검정을 수행할 수 있다. t–값과 정규 분포에 근거한 개별 계수의 검정 그리고 F–값과 F 분포에 근거한 전체 계수의 검정이 모두 가능하다.\n\n\n\n표본의 크기가 커질수록 정규 분포에 근접한다."
+  },
+  {
+    "objectID": "posts/regression/2022-05-28-normality.html#references",
+    "href": "posts/regression/2022-05-28-normality.html#references",
+    "title": "정규 분포에 집착하지 말자.",
+    "section": "References",
+    "text": "References\n\nThe Stats Geek\nLarge Sample Inference: 2. Asymptotic Normality"
   },
   {
     "objectID": "posts/stats-simple/2022-05-27-SE.html",
@@ -1615,68 +1629,5 @@
     "title": "Sample Statistics and Standard Error",
     "section": "More",
     "text": "More\n이하의 내용은 딱히 필요하지는 않다. 관심이 있는 경우는 살펴보면 좋겠다.\n\n\\(S^2\\)을 \\((n-1)\\)로 나누는 이유\n\\(S^2\\)의 분모에 왜 \\((n-1)\\)이 들어갈까? 불편 추정량을 얻기 위해서다. 불편 추정량이란 해당 통계치의 기댓값이 모수가 되는 추정량을 의미한다. 직접 \\(S^2\\)의 기댓값을 구해보자. 먼저,\n\\[\n\\begin{aligned}\n\\sigma^2 = {\\rm Var}(x_i) & = \\mathbb E[(x_i - \\mu)^2] \\\\\n& = \\mathbb E [x_i^2 - 2 x_i \\mu + \\mu^2] \\\\\n& = \\mathbb E(x_i^2) - 2\\mu E(x_i) + \\mu^2 \\\\\n& =  \\mathbb E(x_i^2) - \\mu^2\n\\end{aligned}\n\\]\n\\(\\mathbb E(x_i^2) = \\sigma^2 + \\mu^2\\) 임을 기억해두자.\n이제 \\(S^2\\)의 기댓값을 구해보자. 분자 먼저 계산하자.\n\\[\n\\begin{aligned}\n\\mathbb E[\\sum(x_i - \\overline{x})^2] & = \\mathbb E[\\sum (x_i^2 - 2 x_i \\overline{x} + \\overline{x}^2)] \\\\\n& = \\mathbb E[\\sum x_i^2 - n 2 \\overline{x} \\cdot \\overline{x} + n \\overline{x}^2] \\\\\n& = \\mathbb E[\\sum x_i^2 - n \\overline{x}^2)] \\\\\n& = \\sum \\mathbb E(x_i^2) - n \\mathbb E(\\overline{x}^2)\n\\end{aligned}\n\\]\n합해지는 부분의 각각을 따져보자.\n\\[\n\\begin{aligned}\n\\sum \\mathbb E(x_i^2) = n (\\sigma^2 + \\mu^2)\n\\end{aligned}\n\\]\n\\[\n\\begin{aligned}\n\\mathbb E(\\overline{x}^2) & = \\mathbb E[(\\dfrac{x_1 + x_2 + \\dotsb + x_n}{n})^2] \\\\\n\\end{aligned}\n\\]\n\n\\(\\mathbb E[(\\dfrac{x_1 + x_2 + \\dotsb + x_n}{n})^2]\\)의 분자를 계산하면 된다. 먼저 각 \\(x_i\\)의 제곱이 \\(n\\)개 나온다. 다음으로 각각 \\(x_i\\)가 독립적으로 추출되었으므로 \\(i \\neq j\\)일 때 \\(\\mathbb E(x_i x_j) = \\mathbb E(x_i) \\mathbb E(x_j) = \\mu^2\\)이 된다. \\(n\\) 개 중에서 2개를 순서에 관계없이 뽑게 된다. 즉,\n\n\\[\n\\begin{aligned}\n\\mathbb E[(x_1 + x_2 + \\dotsb + x_n)^2]  & = n (\\sigma^2 + \\mu^2) + 2 \\dfrac{n(n-1)}{2!} \\mu^2 \\\\\n& = n \\sigma^2 + n^2 \\mu^2\n\\end{aligned}\n\\]\n따라서,\n\\[\n\\mathbb E(\\overline{x}^2)  = \\dfrac{\\sigma^2}{n} + \\mu^2\n\\]\n이제 각각을 넣어 계산을 완료하자.\n\\[\n\\begin{aligned}\n\\mathbb E[\\sum(x_i - \\overline{x})^2] & = \\sum \\mathbb E(x_i^2) - n \\mathbb E(\\overline{x}^2) \\\\\n& = n \\sigma^2 + n \\mu^2 - \\sigma^2 - n \\mu^2 \\\\\n& = (n-1) \\sigma^2\n\\end{aligned}\n\\]\n따라서 불편 추정량이 되기 위해서는 \\(S^2\\)의 분모에 \\(n-1\\)이 필요하다.\n\n\n\\(S^2_n\\)의 일치성\n\\(S^2\\)의 일치성을 증명하는 데 필요한 내용을 알아보자. 엄밀한 증명은 생략하고 간략하게 아이디어만 적도록 하겠다. \\(\\sigma < \\infty\\)를 가정하자. 이때\n\\[\n\\begin{aligned}\nS_n^2 & = \\dfrac{1}{n-1}\\sum_{i=1}^n (X_i - \\overline{X}_n) \\\\\n& = \\dfrac{n}{n-1}(\\dfrac{\\sum X_i^2}{n} - \\overline X_n) \\\\\n& \\stackrel{P}{\\longrightarrow} 1\\cdot(\\E(X^2)-\\mu^2) = \\sigma^2\n\\end{aligned}\n\\]\n위에서 보듯이 \\(S^2_n\\)이든 \\(\\dfrac{1}{n}\\sum_{i=1}^n (X_i - \\overline{X}_n)\\)이든 둘 다 일치 추정량이라는 것을 쉽게 알 수 있다.\n\n\n자세한 내용은 여기 책의 해당 부분을 참고하라.\n\n\n회귀 분석의 t-통계량\n회귀 분석의 계수의 표본 추정량 \\(\\hat \\beta\\)는 다음과 같다.\n\\[\n\\hat \\beta = (X^T X)^{-1}(X y)\n\\]\n\\[\nt_i = \\dfrac{\\hat \\beta_i - \\beta}{S \\sqrt{(X^T X)_{ii}^{-1}}}\n\\]\nwith\n\\[\nS(y_i)^2 = \\dfrac{1}{n-k} \\sum_{i=1}^n (y_i -  x^r_i \\hat\\beta)\n\\]\n\n\n표기(notation) 상 약간의 혼란을 감수하자. 앞서는 샘플 크기에 따른 표기를 하첨자 \\(i\\)로 표현했다. 여기서는 \\(\\beta_k\\)는 중회귀 분석의 \\(k\\)–번째 계수를 뜻한다.\n\n\\(x^r_i\\): \\(X\\)의 \\(i\\)’th 행(row) 벡터\n\\(\\underset{(1 \\times k)}{x^r_i}\\underset{(k \\times 1)}{\\vphantom{x^r_i}\\hat\\beta} = \\hat y_i\\)\n\n회귀 분석의 \\(i\\)–번째 계수인 \\(\\beta_i\\)는 \\(t_i\\)를 통해 검정할 수 있다. \\(n\\)이 충분히 클 경우 \\(t_i \\sim \\rm N(0,1)\\)이 된다."
-  },
-  {
-    "objectID": "posts/regression/2022-05-28-normality.html",
-    "href": "posts/regression/2022-05-28-normality.html",
-    "title": "정규 분포에 집착하지 말자.",
-    "section": "",
-    "text": "샘플 크기가 충분하면, 통계적 검정 시 정규 분포 가정에 집착하지 말자."
-  },
-  {
-    "objectID": "posts/regression/2022-05-28-normality.html#정규-분포는-필요한-가정인가",
-    "href": "posts/regression/2022-05-28-normality.html#정규-분포는-필요한-가정인가",
-    "title": "정규 분포에 집착하지 말자.",
-    "section": "정규 분포는 필요한 가정인가?",
-    "text": "정규 분포는 필요한 가정인가?\n표분의 크기가 크지 않다면 불가피하게 필요한 가정이다. 검정을 위한 불가피한 조치다. 하지만 표본의 크기가 어느 정도 충분할 때도 정규 분포 가정이 필요할까?\n\\[\nY_i = \\alpha + \\beta_1 X_{1i} + \\beta_2 X_{2i} + \\dotsb + \\beta_n X_{ni} + \\epsilon_i\n\\]\n원래 정규 분포 가정은 \\(\\epsilon_i \\sim \\rm N (0, \\sigma^2)\\)이다. 그런데 이 가정을 어떻게 확인할 수 있을까?\n\\(Y_i \\sim \\rm N(\\cdot)\\)을 확인하면 될까? 원래의 가정은 오차항에 대한 가정이다. 앞에 여러 가지 변수의 작용으로 \\(Y\\)가 결정되므로 \\(Y\\)가 정규 분포를 따르는 것은 우연일 뿐이다.\n\\(\\hat\\epsilon_i = Y_i - \\hat{Y}_i\\)가 정규 분포를 따르면 될까? 이 역시 마찬가지로 정규 분포를 따르리라는 보장이 없다. \\(\\hat\\epsilon_i\\)는 회귀 분석의 모델링 아래 도출된 \\(\\epsilon_i\\)에 관한 추정치일 뿐이다. 이것 역시 정규 분포를 따르리라는 보장이 없다.\n다시 기억하자. 오차항에 관한 내용은 모델링을 위한 일종의 가정이다. 가정은 대체로 검증되지 않는다. 모델링의 가정은 받아들이는 것이지 검증하는 것이 아니다.\n\n\n표본이 크지 않을 때 즉 소 표본에 적합한 분석 방법을 찾는 것은 대 표본의 경우에 비해 까다로운 문제이다. 그런데 소 표본에서 회귀 분석은 그리 나쁜 분석 방법이 아니다."
-  },
-  {
-    "objectID": "posts/regression/2022-05-28-normality.html#표본의-크기가-충분하다면",
-    "href": "posts/regression/2022-05-28-normality.html#표본의-크기가-충분하다면",
-    "title": "정규 분포에 집착하지 말자.",
-    "section": "표본의 크기가 충분하다면",
-    "text": "표본의 크기가 충분하다면\n그렇다면 가정을 받아들일 수 없다면 회귀분석에서 검정을 수행할 수 있을까? 그렇지 않다. 만일 표본의 크기가 충분히 크다면 오차항의 정규 분포 가정 없이도 검정을 수행할 수 있다.\n회귀 분석의 계수의 표본 추정량 \\(\\hat \\beta\\)는 다음과 같다.\n\\[\n\\hat \\beta = (X^T X)^{-1}(X y)\n\\]\n회귀 분석에서 \\(\\beta_i\\)를 검정하기 위한 t-통계량은 다음과 같이 정의된다.\n\\[\nt_i = \\dfrac{\\hat \\beta_i - \\beta}{S \\sqrt{(X^T X)_{ii}^{-1}}}\n\\]\nwith\n\\[\nS(y_i)^2 = \\dfrac{1}{n-k} \\sum_{i=1}^n (y_i -  x^r_i \\hat\\beta)\n\\]\n\n\\(x^r_i\\): \\(X\\)의 \\(i\\)’th 행(row) 벡터\n\\(\\underset{(1 \\times k)}{x^r_i}\\underset{(k \\times 1)}{\\vphantom{x^r_i}\\hat\\beta} = \\hat y_i\\)\n\n\\(n\\)이 커짐에 따라서 \\(\\beta_i\\)의 분포는 \\(\\rm N(0,1)\\)를 점근적으로 닮아간다.\n요약하면 표본의 크기가 충분할 때 오차항의 정규 분포 가정은 잊어도 좋다. 중심 극한 정리에 따라서 필요한 가설 검정을 수행할 수 있다. t–값과 정규 분포에 근거한 개별 계수의 검정 그리고 F–값과 F 분포에 근거한 전체 계수의 검정이 모두 가능하다.\n\n\n\n표본의 크기가 커질수록 정규 분포에 근접한다."
-  },
-  {
-    "objectID": "posts/regression/2022-05-28-normality.html#references",
-    "href": "posts/regression/2022-05-28-normality.html#references",
-    "title": "정규 분포에 집착하지 말자.",
-    "section": "References",
-    "text": "References\n\nThe Stats Geek\nLarge Sample Inference: 2. Asymptotic Normality"
-  },
-  {
-    "objectID": "posts/regression/2022-05-26-total-and-parts.html",
-    "href": "posts/regression/2022-05-26-total-and-parts.html",
-    "title": "전체와 부분",
-    "section": "",
-    "text": "회귀 분석에서 ’통제’한다는 것의 의미를 전체와 부분이라는 시야에서 다시 음미해 보자.\n교란 요인(confounder)와 충돌 요인(collider)을 심슨의 역설과 벅슨의 역설로 연결해 생각해 보자."
-  },
-  {
-    "objectID": "posts/regression/2022-05-26-total-and-parts.html#회귀-분석에서-통제한다는-것",
-    "href": "posts/regression/2022-05-26-total-and-parts.html#회귀-분석에서-통제한다는-것",
-    "title": "전체와 부분",
-    "section": "회귀 분석에서 ’통제’한다는 것",
-    "text": "회귀 분석에서 ’통제’한다는 것\n회귀 분석에서 독립 변수 혹은 설명 변수와 통제 변수의 차이는 개념적인 것이다. 즉, 내가 갖고 있는 분석의 초점 혹은 모델의 취지에 따라 결정되는 것이지 어떤 기계적인 방법이나 기준은 없다. 일단 ’통제’에 초점을 맞춰서 생각해 보자. 아래와 같은 간략한 회귀 모형을 생각해 보자.\n\\[\ny_i = \\alpha + \\beta x_i + \\gamma D_i + \\epsilon_i\n\\]\n\\(x_i\\)는 설명 변수, \\(D_i\\)는 통제 변수라고 하자. 이해를 돕기 위해서 \\(D_i\\)는 0, 1의 값을 갖는 더미 변수다. \\(D_i\\)를 통제한다는 것의 의미는 무엇일까? \\(x_i\\)가 \\(y\\)에 미치는 영향을 그냥 전체로 보지 않고 두 집단 별로 나눠서 보겠다는 것이다. 이때 최소자승법을 통해 계산되는 \\(\\beta\\)는 \\(D_i\\)로 구별되는 집단 각각의 효과를 구한 뒤 이를 적절하게 가중 평균한 값이 된다. ’통제’란 설명 변수의 효과를 보다 정교하게 보기 위해서 관찰을 통제 변수로 구성된 집단으로 나누는 것이라고 생각하면 쉽다. 카테고리로 구별된 집단뿐 아니라 연속 함수에 관해서도 비슷하게 이해하면 된다.\n\n\nAngrist와 Pischke가 이런 맥락에서 회귀 분석이 자동화된 짝짓기(matching) 기계라고 설명한 바 있다."
-  },
-  {
-    "objectID": "posts/regression/2022-05-26-total-and-parts.html#confounder-and-simpsons-paradox",
-    "href": "posts/regression/2022-05-26-total-and-parts.html#confounder-and-simpsons-paradox",
-    "title": "전체와 부분",
-    "section": "Confounder and Simpson’s Paradox",
-    "text": "Confounder and Simpson’s Paradox\n먼저 심슨의 역설을 먼저 살펴보자. 아래는 웃자고 만든 그림인데 웃고 넘기기에는 아까운 중요한 통찰이 들어 있다.\n\n\n\n전체를 볼 것인가 부분을 볼 것인가?\n\n\n위 그림에서 심슨가족 전체를 보면 \\(x\\) 축 변인의 증가에 따라서 \\(y\\) 축 변인이 증가하는 형태를 취한다. 반면, 가족 구성원 하나하나에 대해서는 반대의 관계를 취하고 있다. 심슨의 역설은 전체의 경향과 부분의 경향이 어긋나는 현상을 나타낸다. 조금 더 진지한 사례는 아래의 그림과 같다.\n\n\n\n심슨의 역설\n\n\n\n\n심슨의 역설에 흥미로운 사례는 미국 대학 입학의 남녀 학생 비율이다. 전체로 보면 남학생의 입학 비율이 여학생의 입학 비율보다 높았다. 그런데 개별 학과를 보면 여학생의 입학 비율이 대체로 남학생의 입학 비율보다 높았다. 서로 상반되는 듯 보이는 이 결과는 관심의 대상이 비율인데 반해서 학과 단위에서 작용하는 지원자들의 행태를 반영하지 못한 데 따른 것이다. 사례로는 여기와 여기를 참고하자.\n여기서 중요한 것은 역설 자체가 아니다. 역설의 함정에 빠지지 않고 어디에 포커스를 둘 것인지가 문제다. 만일 인구 구성의 각 그룹 별 경향을 평균적으로 살펴보는 것이 관심 사항이라면 위 그림에서 그룹 각각의 기울기를 평균한 값이 우리가 찾는 경향이다. 반대로 개별 그룹은 중요하지 않고 인구 전체가 관심사라면 개별 인구를 동일하게 보고 기울기를 찾는 게 맞다.\n\n\n\nDAG로 본 confounder & collider\n\n\n심슨의 역설은 DAG(Directed Acyclic Graph)를 통한 인과 추론에서 교란 요인(confounder)에 해당한다. A –> Z가 현재 우리가 관찰하는 사실이다. 예를 들어, 교육 수준이 높을수록 졸업 후 취업 시 임금이 높다. 하지만 이는 교육 수준과 임금 모두에게 영향을 미치는 제3의 요인을 고려하지 않는 것일지도 모른다. 교육 수준과 임금 모두에게 영향을 주는 미처 파악하지 못한 변인, 예를 들어 능력치(C)가 있다고 하자. 이 능력치는 교육 수준과 임금 모두에게 영향을 준다.\n이 능력치를 그룹화해서 비교하는 게 가능하다고 가정하자. 이는 위의 심슨 가족 그림에서 가족별로 각 그룹을 나누는 것에 해당한다. 이렇게 능력치를 고려하면 교육은 오히려 졸업 후 임금을 낮출 수도 있다. C(능력치)라는 변수를 명백하게 고려하면 A(교육 수준)가 Z(임금)에 미치는 영향의 크기가 변할 수 있다. 예컨대, C를 고려하지 않았을 때 존재하던 A–>Z의 효과가 사라지거나 기대했던 것과 반대의 효과를 지닐 수도 있다.\n\n그래도 심슨의 역설이 잘 이해가 되지 않는다면…\n벡터를 통해 그래프로 설명하는 사례가 직관적으로 잘 와닿고 이해하기도 좋다.\n\n\n\n붉은 벡터 1,2가 파란 벡터 1,2 보다 각각 더 높은 비율(벡터의 각도)를 지니고 있다. 그럼에도 둘을 결합했을 경우 파란 벡터가 더 높은 비율을 지니게 된다."
-  },
-  {
-    "objectID": "posts/regression/2022-05-26-total-and-parts.html#collider-and-bersons-paradox",
-    "href": "posts/regression/2022-05-26-total-and-parts.html#collider-and-bersons-paradox",
-    "title": "전체와 부분",
-    "section": "Collider and Berson’s Paradox",
-    "text": "Collider and Berson’s Paradox\n\n\n\n전체를 볼 것인가 부분을 볼 것인가?\n\n\n이번에는 벅슨의 역설을 살펴볼 차례다. 보통 수능 점수와 대학 성적은 별 관련이 없고 심지어 역의 상관성이 있다는 이야기를 접할 때가 있다. 이것은 맞는 주장인가? 이런 종류의 주장은 대체로 전체를 가정한다. 수능 점수와 대학 성적이 별로 상관이 없으니 수능은 인간의 능력을 판단하는 지표로 별로 유용하지 않다. 대체로 이야기가 이렇게 흐르기 마련이다.\n그런데 위의 그림에서 보듯이 이러한 경향은 보편적인 주장이 아니라 특정한 집단 내에서만 타당한 주장이다. 위 그림에서는 내가 관찰하는 집단에 대해서 일종의 자기 선택이 일어난 경우에 해당한다. 내가 속한 밴드의 집단보다 수능 점수와 대학 성적이 모두 낮은 집단은 내가 속한 관찰 집단과는 다른 집단에 속한다. 반면 내가 속한 밴드보다 수능 점수도 높고 대학 성적도 우월한 집단도 마찬가지다.\n벅슨의 역설은 심슨의 역설과 동일하지만 반대의 측면을 지적한다. 전체 대해서 존재하는 경향성이 그룹으로 쪼개서 보면 반대가 되거나 사라지는 경우를 의미한다.\n벅슨의 역설에 해당하는 인과 추론의 DAG 사례가 충돌 요인(collider)이다. 변수를 고려하지 않았다면 전체에 관해서 온전한 주장이 성립했을 것이지만, 해당 변수를 고려해 그룹을 나누게 되면 오히려 잘못된 관계를 추정하게 된다.\n\n\n벅슨의 역설은 통제하지 않아야 할 변수를 통제할 때 발생하기도 하지만 많은 경우 표본 자체를 살피지 않은 데에서 생기기도 한다. 예를 들어 아래 그림을 보자.\n\n보통 배우가 되려면 재능과 외모 둘 중 하나는 갖추어야 한다고들 한다. 이 말 자체는 맞지만 이를 확대 해석해서 외모와 재능이 역의 상관성이 있다고 주장하는 경우가 있다. 이는 모집단 전체(모든 사람)에 대해서 타당한 말일까? 배우라는 집단으로 제한해보면 외모와 재능이 모두 미달되는 사람들은 배우가 아닌 다른 직업을 찾았을 가능성이 높다. 외모와 재능을 사분면으로 나눌 때 3 사분면에 위치한 사람들이 사라진 배우라는 집단에 대해서는 음의 상관성이 관찰되는 것처럼 보인다."
-  },
-  {
-    "objectID": "posts/regression/2022-05-26-total-and-parts.html#중요한-것은-질문과-문제-설정",
-    "href": "posts/regression/2022-05-26-total-and-parts.html#중요한-것은-질문과-문제-설정",
-    "title": "전체와 부분",
-    "section": "중요한 것은 질문과 문제 설정",
-    "text": "중요한 것은 질문과 문제 설정\n이렇게 보면 심슨의 역설이든 벅슨의 역설이든 어떤 절대적인 규칙을 알려주는 것이 아니다. 관심을 두는 실증의 효과가 어떻게 작용하는 효과인가라는 질문이 먼저이다. 연구가 전체에 관한 특성을 묻는 질문이라면 충돌 요인(collider)이 변수에 없는지 살펴봐야 한다. 반면 집단을 나누는 것이 효과를 살펴보는 데 중요하다면 교란 요인(confounder)에 주의해야 한다. 충돌 요인이든 교란 요인이든 둘 다 실증 연구를 오도할 수 있지만 방해하는 수준이 다르다.\n이제 회귀 분석에서 통제한다는 것의 의미를 다시 정리해 보자. 회귀 분석의 모델링의 관점에서 보면 통제 변수와 설명 변수 간에 차이가 없다. 연구자의 의도에 비춰 볼 때 통제 변수는 설명 변수에 의도하지 않은 영향이 포함되는 것을 막아 준다. 앞서 말했듯이 회귀 분석은 통제 변수에 따라서 관찰을 여러 그룹으로 나누고 이에 따라서 설명 변수의 효과를 자동으로 계산하는 기계이다. 무엇인가를 통제하지 못했다는 것은 이 설명 변수에 그 효과까지 함께 포함되는 것을 의미한다. 이런 상황에서 발생할 수 있는 사례 중 하나가 심슨의 역설이다. 반면, 넣지 말아야 할 변수를 넣는다는 것은 설명 변수의 효과를 과장하는 결과를 낳는다. 그리고 특정한 인구 집단 혹은 경우에 발생한 일을 일반화해 주장하게 되는 것은 벅슨의 역설이다.\n이렇게 보면 심슨의 역설과 벅슨의 역설은 회귀 분석에서 모델링의 중요성 혹은 적절한 중도를 지키는 것이 얼마나 어려운지를 잘 보여준다. 회귀 분석의 길은 앵글 리스트와 피스커 선생이 말했듯이 진정 “도”의 길이었던 것이다!"
   }
 ]
