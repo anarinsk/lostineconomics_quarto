@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.483">
+<meta name="generator" content="quarto-0.9.472">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -43,25 +43,25 @@ ul.task-list{list-style: none;}
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
-<script src="..\..\site_libs\quarto-nav\quarto-nav.js"></script>
-<script src="..\..\site_libs\quarto-nav\headroom.min.js"></script>
-<script src="..\..\site_libs\clipboard\clipboard.min.js"></script>
-<script src="..\..\site_libs\quarto-search\autocomplete.umd.js"></script>
-<script src="..\..\site_libs\quarto-search\fuse.min.js"></script>
-<script src="..\..\site_libs\quarto-search\quarto-search.js"></script>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../favicon.ico" rel="icon">
-<script src="..\..\site_libs\quarto-html\quarto.js"></script>
-<script src="..\..\site_libs\quarto-html\popper.min.js"></script>
-<script src="..\..\site_libs\quarto-html\tippy.umd.min.js"></script>
-<script src="..\..\site_libs\quarto-html\anchor.min.js"></script>
-<link href="..\..\site_libs\quarto-html\tippy.css" rel="stylesheet">
-<link href="..\..\site_libs\quarto-html\quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="..\..\site_libs\quarto-html\quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="..\..\site_libs\bootstrap\bootstrap.min.js"></script>
-<link href="..\..\site_libs\bootstrap\bootstrap-icons.css" rel="stylesheet">
-<link href="..\..\site_libs\bootstrap\bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme">
-<link href="..\..\site_libs\bootstrap\bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate">
 </head>
 
 <body class="nav-fixed">
@@ -170,7 +170,7 @@ ul.task-list{list-style: none;}
 <p><span class="math display">\[
 y_i = \alpha + \beta x_i + \gamma D_i + \epsilon_i
 \]</span></p>
-<p><span class="math inline">\(x_i\)</span>는 설명 변수, <span class="math inline">\(D_i\)</span>는 통제 변수라고 하자. 이해를 돕기 위해서 <span class="math inline">\(D_i\)</span>는 0, 1의 값을 갖는 더미 변수다. <span class="math inline">\(D_i\)</span>를 통제한다는 것의 의미는 무엇일까? <span class="math inline">\(x_i\)</span>가 <span class="math inline">\(y\)</span>에 미치는 영향을 그냥 전체로 보지 않고 두 집단 별로 나눠서 보겠다는 것이다. 이때 최소자승법을 통해 계산되는 <span class="math inline">\(\beta\)</span>는 <span class="math inline">\(D_i\)</span>로 구별되는 집단 각각의 효과를 구한 뒤 이를 적절하게 가중 평균한 값이 된다. ’통제’란 설명 변수의 효과를 보다 정교하게 보기 위해서 관찰을 통제 변수로 구성된 집단으로 나누는 것이라고 생각하면 쉽다. 카테고리로 구별된 집단뿐 아니라 연속 함수에 관해서도 비슷하게 이해하면 된다.</p>
+<p><span class="math inline">\(x_i\)</span>는 설명 변수, <span class="math inline">\(D_i\)</span>는 통제 변수라고 하자. 이해를 돕기 위해서 <span class="math inline">\(D_i\)</span>는 0, 1의 값을 갖는 더미 변수다. <span class="math inline">\(D_i\)</span>를 통제한다는 것의 의미는 무엇일까? <span class="math inline">\(x_i\)</span>가 <span class="math inline">\(y_i\)</span>에 미치는 영향을 그냥 전체로 보지 않고 두 집단 별로 나눠서 보겠다는 것이다. 이때 최소자승법을 통해 계산되는 <span class="math inline">\(\beta\)</span>는 <span class="math inline">\(D_i\)</span>로 구별되는 집단 각각의 효과를 구한 뒤 이를 적절하게 가중 평균한 값이 된다. ’통제’란 설명 변수의 효과를 보다 정교하게 보기 위해서 관찰을 통제 변수로 구성된 집단으로 나누는 것이라고 생각하면 쉽다. 카테고리로 구별된 집단뿐 아니라 연속 함수에 관해서도 비슷하게 이해하면 된다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Angrist와 Pischke가 이런 맥락에서 회귀 분석이 자동화된 짝짓기(matching) 기계라고 설명한 바 있다.</p>

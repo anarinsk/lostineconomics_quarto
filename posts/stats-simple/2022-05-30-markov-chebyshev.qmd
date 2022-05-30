@@ -5,7 +5,7 @@ author: "JS HUHH"
 date: "05/30/2022"
 image: "https://miro.medium.com/max/700/1*nTJ--dA1aeiJUBTCsBqvLg.jpeg"
 categories: [stats-simple]
-draft: true
+draft: false
 ---
 
 ::: {.hidden}
@@ -24,6 +24,7 @@ $$
 
 ## Markov Inequality
 
+For $X \in \mathbb R^+$, 
 $$
 P(X \geq t) \leq \dfrac{\E(X)}{t}
 $$
@@ -65,7 +66,44 @@ $$
 P(\vert \ES{X}_n - \mu \vert \geq \epsilon ) \leq \dfrac{\sigma^2}{n \epsilon^2}
 $$
 
+## Proof of Chebshev Inequality
+
+$P(\vert X - \mu \vert \geq k ) = P\lbrack (X - \mu)^2 \geq k \rbrack$가 성립한다. 
+
+마르코프 부등식에 의하여, 
+
+$$
+P\lbrack (X - \mu)^2 \geq k \rbrack \leq \dfrac{\E \lbrack (x-\mu)^2 \rbrack}{k^2} = \dfrac{\sigma^2}{k^2}
+$$
+
+따라서 
+
+$$
+P(\vert X - \mu \vert \geq k ) \leq \dfrac{\sigma}{k^2}
+$$
+
 ## Proof of Markov Inequality
 
+이산 확률변수와 연속 확률변수 모두에 대해서 증명을 해야 한다. 이산을 잘 이해하면 연속의 경우로 확장 가능하다. 
 
+$$
+\E (X) = \sum_{x=0}^{\infty} x P(X=x)
+$$
 
+임의의 상수 $t$에 대해서, 
+
+$$
+\begin{aligned}
+\E(X) & = \sum_{x=0}^{t-1} x P(X=x) + \sum_{x=t}^{\infty} x P(X=x) \\
+& \geq \sum_{x=t}^{\infty} x P(X=x) \\
+& \geq \sum_{x=t}^{\infty} t P(X=x) \\
+& = t \sum_{x=t}^{\infty} P(X=x) \\
+& = t P(X \geq t)
+\end{aligned}
+$$
+
+따라서, 
+
+$$
+P(X \geq t) \leq \dfrac{\E(X)}{t}
+$$
