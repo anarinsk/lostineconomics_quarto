@@ -6,7 +6,7 @@
   </url>
   <url>
     <loc>http://www.lostineconomics.com/index.html</loc>
-    <lastmod>2022-05-29T19:58:11.487Z</lastmod>
+    <lastmod>2022-05-30T00:45:13.508Z</lastmod>
   </url>
   <url>
     <loc>http://www.lostineconomics.com/posts/computer-tool/2020-03-07-blogging-with-fastpages.html</loc>
@@ -34,7 +34,7 @@
   </url>
   <url>
     <loc>http://www.lostineconomics.com/posts/computer-tool/2021-02-02-all-vs-code.html</loc>
-    <lastmod>2022-05-26T11:08:13.484Z</lastmod>
+    <lastmod>2022-05-29T23:41:40.461Z</lastmod>
   </url>
   <url>
     <loc>http://www.lostineconomics.com/posts/computer-tool/2021-11-19-python-in-browser.html</loc>
@@ -42,15 +42,15 @@
   </url>
   <url>
     <loc>http://www.lostineconomics.com/posts/computer-tool/2022-05-10-how-to-make-cv.html</loc>
-    <lastmod>2022-05-26T21:39:54.455Z</lastmod>
+    <lastmod>2022-05-29T23:41:41.534Z</lastmod>
   </url>
   <url>
     <loc>http://www.lostineconomics.com/posts/computer-tool/2022-05-14-blogging-with-quarto.html</loc>
-    <lastmod>2022-05-26T21:34:18.817Z</lastmod>
+    <lastmod>2022-05-29T23:41:42.389Z</lastmod>
   </url>
   <url>
     <loc>http://www.lostineconomics.com/posts/computer-tool/2022-05-25-pytorch.html</loc>
-    <lastmod>2022-05-26T21:32:45.538Z</lastmod>
+    <lastmod>2022-05-29T23:41:43.216Z</lastmod>
   </url>
   <url>
     <loc>http://www.lostineconomics.com/posts/container/2020-09-23-docker-humble-practice.html</loc>
@@ -82,7 +82,7 @@
   </url>
   <url>
     <loc>http://www.lostineconomics.com/posts/economics/2022-05-16-trilemma.html</loc>
-    <lastmod>2022-05-26T21:35:36.144Z</lastmod>
+    <lastmod>2022-05-29T23:41:44.048Z</lastmod>
   </url>
   <url>
     <loc>http://www.lostineconomics.com/posts/git/2020-03-05-using-git-w10.html</loc>
@@ -110,15 +110,15 @@
   </url>
   <url>
     <loc>http://www.lostineconomics.com/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</loc>
-    <lastmod>2022-05-26T11:17:47.806Z</lastmod>
+    <lastmod>2022-05-29T23:41:44.846Z</lastmod>
   </url>
   <url>
     <loc>http://www.lostineconomics.com/posts/linear-algebra/2021-01-08-basis.html</loc>
-    <lastmod>2022-05-26T11:58:14.590Z</lastmod>
+    <lastmod>2022-05-29T23:41:45.673Z</lastmod>
   </url>
   <url>
     <loc>http://www.lostineconomics.com/posts/linear-algebra/2021-01-10-Eigenspace-1.html</loc>
-    <lastmod>2022-05-26T21:42:16.347Z</lastmod>
+    <lastmod>2022-05-29T23:41:46.531Z</lastmod>
   </url>
   <url>
     <loc>http://www.lostineconomics.com/posts/linear-algebra/2021-01-18-Eigenspace-2.html</loc>
@@ -162,11 +162,11 @@
   </url>
   <url>
     <loc>http://www.lostineconomics.com/posts/regression/2019-10-25-understanding-regression.html</loc>
-    <lastmod>2022-05-26T21:36:31.781Z</lastmod>
+    <lastmod>2022-05-29T23:41:47.395Z</lastmod>
   </url>
   <url>
     <loc>http://www.lostineconomics.com/posts/regression/2019-11-10-understanding-logit-regression.html</loc>
-    <lastmod>2022-05-26T21:36:38.662Z</lastmod>
+    <lastmod>2022-05-29T23:41:48.310Z</lastmod>
   </url>
   <url>
     <loc>http://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</loc>
@@ -174,10 +174,14 @@
   </url>
   <url>
     <loc>http://www.lostineconomics.com/posts/stats-simple/2022-05-27-SE.html</loc>
-    <lastmod>2022-05-29T00:34:22.147Z</lastmod>
+    <lastmod>2022-05-29T23:41:49.935Z</lastmod>
   </url>
   <url>
     <loc>http://www.lostineconomics.com/posts/regression/2022-05-28-normality.html</loc>
-    <lastmod>2022-05-29T12:35:59.420Z</lastmod>
+    <lastmod>2022-05-30T00:20:57.898Z</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lostineconomics.com/posts/regression/2022-05-26-total-and-parts.html</loc>
+    <lastmod>2022-05-30T00:45:15.407Z</lastmod>
   </url>
 </urlset>
