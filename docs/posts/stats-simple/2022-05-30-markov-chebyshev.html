@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.472">
+<meta name="generator" content="quarto-0.9.483">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -42,25 +42,25 @@ ul.task-list{list-style: none;}
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<script src="..\..\site_libs\quarto-nav\quarto-nav.js"></script>
+<script src="..\..\site_libs\quarto-nav\headroom.min.js"></script>
+<script src="..\..\site_libs\clipboard\clipboard.min.js"></script>
+<script src="..\..\site_libs\quarto-search\autocomplete.umd.js"></script>
+<script src="..\..\site_libs\quarto-search\fuse.min.js"></script>
+<script src="..\..\site_libs\quarto-search\quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../favicon.ico" rel="icon">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate">
+<script src="..\..\site_libs\quarto-html\quarto.js"></script>
+<script src="..\..\site_libs\quarto-html\popper.min.js"></script>
+<script src="..\..\site_libs\quarto-html\tippy.umd.min.js"></script>
+<script src="..\..\site_libs\quarto-html\anchor.min.js"></script>
+<link href="..\..\site_libs\quarto-html\tippy.css" rel="stylesheet">
+<link href="..\..\site_libs\quarto-html\quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="..\..\site_libs\quarto-html\quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="..\..\site_libs\bootstrap\bootstrap.min.js"></script>
+<link href="..\..\site_libs\bootstrap\bootstrap-icons.css" rel="stylesheet">
+<link href="..\..\site_libs\bootstrap\bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme">
+<link href="..\..\site_libs\bootstrap\bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -173,12 +173,12 @@ P(X \geq t) \leq \dfrac{\E(X)}{t}
 <section id="chebyshev-inequality" class="level2">
 <h2 class="anchored" data-anchor-id="chebyshev-inequality">Chebyshev Inequality</h2>
 <p><span class="math display">\[
-P(\vert X - \mu \vert \geq k ) \leq \dfrac{\sigma}{k^2}
+P(\vert X - \mu \vert \geq k) \leq \dfrac{\sigma^2}{k^2}
 \]</span></p>
 </section>
 <section id="어디에-써먹나" class="level2">
 <h2 class="anchored" data-anchor-id="어디에-써먹나">어디에 써먹나?</h2>
-<p>약한 버전의 LLN을 증명할 때 체비쇼프의 부등식을 쓴다. 만일 <span class="math inline">\(X_1, X_2, \dotsc, X_n\)</span>이 IID를 따르고 <span class="math inline">\(\E (X_i^2) &lt; \infty\)</span>라고 가정하자. 이때, 확률 극한의 정의를 따라, 표본 통계량 <span class="math inline">\(\ES{X}_n\)</span>가 임의의 양수 <span class="math inline">\(\epsilon\)</span>에 대해서 다음을 증명하면 대수의 법칙이 성립한다.</p>
+<p>약한 버전의 LLN을 증명할 때 체비 쇼프의 부등식을 쓴다. 만일 <span class="math inline">\(X_1, X_2, \dotsc, X_n\)</span>이 IID를 따르고 <span class="math inline">\(\E (X_i^2) &lt; \infty\)</span>라고 가정하자. 이때, 확률 극한의 정의를 따라, 표본 통계량 <span class="math inline">\(\ES{X}_n\)</span>가 임의의 양수 <span class="math inline">\(\epsilon\)</span>에 대해서 다음을 증명하면 대수의 법칙이 성립한다.</p>
 <p><span class="math display">\[
 \lim_{n \to \infty} P(\vert \ES{X}_n - \mu \vert \geq \epsilon) = 0
 \]</span></p>
@@ -186,7 +186,7 @@ P(\vert X - \mu \vert \geq k ) \leq \dfrac{\sigma}{k^2}
 <h3 class="anchored" data-anchor-id="증명">증명</h3>
 <p>체비쇼프 부등식을 그대로 써보자.</p>
 <p><span class="math display">\[
-P(\vert \ES{X}_n - \mu \vert \geq \epsilon ) \leq \dfrac{\E\lbrack(\ES{X}_n-\mu)^2\rbrack}{\epsilon^2}
+P(\vert \ES{X}_n - \mu \vert \geq \epsilon) \leq \dfrac{\E\lbrack(\ES{X}_n-\mu)^2\rbrack}{\epsilon^2}
 \]</span></p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -198,20 +198,20 @@ P(\vert \ES{X}_n - \mu \vert \geq \epsilon ) \leq \dfrac{\E\lbrack(\ES{X}_n-\mu)
 \]</span></p>
 <p>위의 결과를 이용하면,</p>
 <p><span class="math display">\[
-P(\vert \ES{X}_n - \mu \vert \geq \epsilon ) \leq \dfrac{\sigma^2}{n \epsilon^2}
+P(\vert \ES{X}_n - \mu \vert \geq \epsilon) \leq \dfrac{\sigma^2}{n \epsilon^2}
 \]</span></p>
 </section>
 </section>
 <section id="proof-of-chebshev-inequality" class="level2">
 <h2 class="anchored" data-anchor-id="proof-of-chebshev-inequality">Proof of Chebshev Inequality</h2>
-<p><span class="math inline">\(P(\vert X - \mu \vert \geq k ) = P\lbrack (X - \mu)^2 \geq k \rbrack\)</span>가 성립한다.</p>
+<p><span class="math inline">\(P(\vert X - \mu \vert \geq k) = P\lbrack (X - \mu)^2 \geq k^2 \rbrack\)</span>가 성립한다.</p>
 <p>마르코프 부등식에 의하여,</p>
 <p><span class="math display">\[
-P\lbrack (X - \mu)^2 \geq k \rbrack \leq \dfrac{\E \lbrack (x-\mu)^2 \rbrack}{k^2} = \dfrac{\sigma^2}{k^2}
+P\lbrack (X - \mu)^2 \geq k^2 \rbrack \leq \dfrac{\E \lbrack (x-\mu)^2 \rbrack}{k^2} = \dfrac{\sigma^2}{k^2}
 \]</span></p>
 <p>따라서</p>
 <p><span class="math display">\[
-P(\vert X - \mu \vert \geq k ) \leq \dfrac{\sigma}{k^2}
+P(\vert X - \mu \vert \geq k) \leq \dfrac{\sigma^2}{k^2}
 \]</span></p>
 </section>
 <section id="proof-of-markov-inequality" class="level2">
