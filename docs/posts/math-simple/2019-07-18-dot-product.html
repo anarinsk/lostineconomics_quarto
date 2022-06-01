@@ -202,7 +202,7 @@ ul.task-list{list-style: none;}
 </section>
 <section id="symmetry" class="level3">
 <h3 class="anchored" data-anchor-id="symmetry">Symmetry</h3>
-<p><span class="math inline">\(\mathbf{v}\)</span> 벡터를 <span class="math inline">\(\mathbf u\)</span> 벡터 위에, 즉 이 벡터를 스크린 삼아 직각으로 쏜 프로젝션 벡터(<span class="math inline">\(\mathrm{Proj}_{\mathbf u}{\mathbf v}\)</span>)의 길이와 <span class="math inline">\(\mathbf u\)</span> 길이를 곱하면 그것이 <span class="math inline">\(\mathbf u\)</span>와 <span class="math inline">\(\mathbf v\)</span>의 닷 프로덕트가 된다. 어느 벡터로 프로젝션 하는지는 관계가 없다. 즉,</p>
+<p><span class="math inline">\(\mathbf{v}\)</span> 벡터를 <span class="math inline">\(\mathbf u\)</span> 벡터 위에, 즉 <span class="math inline">\(\mathbf u\)</span> 벡터를 스크린로 삼아 직각으로 쏜 <span class="math inline">\(\mathbf v\)</span>의 프로젝션 벡터 <span class="math inline">\(\mathrm{Proj}_{\mathbf u} {\mathbf v}\)</span>의 길이와 <span class="math inline">\(\mathbf u\)</span> 길이를 곱하면 그것이 <span class="math inline">\(\mathbf u\)</span>와 <span class="math inline">\(\mathbf v\)</span>의 닷 프로덕트가 된다. 어느 벡터로 프로젝션 하는지는 관계가 없다. 즉,</p>
 <p><span class="math display">\[
 {\mathbf v} \cdot {\mathbf u} = \Vert \mathbf u \Vert \Vert {\rm Proj}_{\mathbf u} {\mathbf v} \Vert =  \Vert \mathbf u \Vert (\Vert \mathbf v \Vert \cos\theta)
 \]</span></p>
@@ -214,17 +214,14 @@ ul.task-list{list-style: none;}
 </section>
 <section id="with-law-of-cosine" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="with-law-of-cosine">With ‘Law of Cosine’</h2>
-<p>우선 정석부터 가보자. 코사인 법칙을 활용해서 닷 프로덕트를 도출할 수 있다.</p>
+<p>코사인 법칙을 활용해서 닷 프로덕트를 도출할 수 있다. 맨 처음 그림에서 보듯이 벡터 <span class="math inline">\(\mathbf u - \mathbf v\)</span>와 <span class="math inline">\(\mathbf u\)</span>, <span class="math inline">\(\mathbf v\)</span>는 삼각형을 이룬다. 따라서 코사인 법칙에 따라서 아래와 같이 적을 수 있다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><a href="https://math.stackexchange.com/questions/116133/how-to-understand-dot-product-is-the-angles-cosine">여기</a>를 참고 했다. <a href="https://en.wikipedia.org/wiki/Law_of_cosines">Law of Cosine</a>도 참고하자.</p>
-</div></div><p>우선 코사인의 법칙부터 살펴보자. 맨 처음 그림에서 보듯이 벡터 <span class="math inline">\(\mathbf u - \mathbf v\)</span>와 <span class="math inline">\(\mathbf u\)</span>, <span class="math inline">\(\mathbf v\)</span>는 삼각형을 이룬다. 따라서 코사인 법칙에 따라서 아래와 같이 적을 수 있다.</p>
-<p><span class="math display">\[
+</div></div><p><span class="math display">\[
 \lVert \mathbf u -  \mathbf v \rVert^2 = \lVert  \mathbf  u \rVert^2 + \lVert   \mathbf  v \rVert^2 - 2\lVert  \mathbf  u \rVert \lVert   \mathbf  v \rVert \cos \theta
 \]</span></p>
-<ul>
-<li>노름(norm, 길이)에 대해서는 대칭과 쌍방선형이 유지되기 때문에 아래와 같이 쓸 수 있다.</li>
-</ul>
+<p>노름(norm, 길이)에 대해서는 대칭과 쌍방선형이 유지되기 때문에 아래와 같이 쓸 수 있다.</p>
 <p><span class="math display">\[
 \lVert  \mathbf u -  \mathbf v \rVert^2 = ( \mathbf u -  \mathbf v) \cdot ( \mathbf u -  \mathbf v ) = \lVert \mathbf u \rVert^2 +  \lVert \mathbf v \rVert^2 - 2  (\mathbf u \cdot \mathbf v)
 \]</span></p>
@@ -236,6 +233,7 @@ ul.task-list{list-style: none;}
 <p><span class="math display">\[
 \mathbf u \cdot  \mathbf v = \lVert \mathbf u \rVert \lVert \mathbf v \rVert   \cos \theta = \lVert \mathbf v \rVert   ( \lVert \mathbf u \rVert \cos \theta) = \lVert \mathbf v \rVert \rVert \text{Proj}_{\mathbf v} \mathbf u \lVert
 \]</span></p>
+<p>닷 프로덕트로 둘 중 어느 쪽을 써도 좋다.</p>
 </section>
 <section id="applications" class="level2">
 <h2 class="anchored" data-anchor-id="applications">Applications</h2>
@@ -245,7 +243,7 @@ ul.task-list{list-style: none;}
 <p><span class="math display">\[
 \cos \theta = \dfrac{\mathbf u \cdot \mathbf v}{\lVert \mathbf u \rVert \lVert \mathbf v \rVert}
 \]</span></p>
-<p>두 벡터가 가까울수록 코사인 값이 1에 가깝게 될 것이고, 멀수록 -1에 가깝게 될 것이다.</p>
+<p>두 벡터가 가까울수록 코사인 값이 1에 가깝게 될 것이고, 멀수록 -1에 가깝게 될 것이다. 이른바 코사인 유사도는 이 값의 크기를 따른다. 벡터로 표현된 두 대상 사이의 유클리드 거리와 무관하게 지향하는 방향에 따른 유사도를 측정할 때 이 값을 쓴다.</p>
 </section>
 <section id="hyperplane" class="level3">
 <h3 class="anchored" data-anchor-id="hyperplane">Hyperplane</h3>
