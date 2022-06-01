@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.472">
+<meta name="generator" content="quarto-0.9.491">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -157,8 +157,8 @@ ul.task-list{list-style: none;}
   gtag('js', new Date());
 
   gtag('config', 'G-JNRF3S74Z4');
-</script><section id="tldr" class="level2">
-<h2 class="anchored" data-anchor-id="tldr">tl;dr</h2>
+</script><section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <ul>
 <li>닷 프로덕트 혹은 내적을 기하적으로 이해하면 여러모로 편리하고 기억에도 잘 남는다.</li>
 </ul>
@@ -176,13 +176,28 @@ ul.task-list{list-style: none;}
 \mathbf{u} \cdot \mathbf{v} = \sum_{n} u_i v_i
 \]</span></p>
 <p>쉽게 말해서 닷 프로덕트는 차원이 같은 두 개의 인풋 벡터를 하나의 스칼라로 바꿔주는 일종의 함수로 이해할 수 있다. 두 개의 벡터를 서로 연관 짓는데 이를 해당 벡터의 길이라는 정보로 압축한다고 보면 얼추 맞을 듯 싶다. 하나의 숫자로 요약된다는 뜻에서 스칼라 프로덕트라고도 불린다. 그림으로 나타내면 아래와 같다.</p>
-<p><img src="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/perpendicularprojection.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/perpendicularprojection.jpg?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption"><span class="math inline">\(\mathbf v\)</span>를 <span class="math inline">\(\mathbf u\)</span>로 프로젝션한다. <span class="math inline">\(\mathbf u\)</span>는 스크린, <span class="math inline">\(\mathbf v\)</span>는 투영체라고 생각하면 좋다.</figcaption><p></p>
+</figure>
+</div>
 <section id="from-definition-to-geometry" class="level3">
 <h3 class="anchored" data-anchor-id="from-definition-to-geometry">From Definition to Geometry</h3>
 <p>닷 프로덕트에 관한 설명은 정의에서 바로 코사인 법칙으로 넘어간다. 하지만 뭔가 분명하지 않다. 이걸 조금 더 풀어보자.</p>
-<p><img src="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_components.png.webp" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_components.png.webp" class="my-figure7 img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">닷 프로덕트, 내적의 계산법</figcaption><p></p>
+</figure>
+</div>
 <p>위 그림은 <span class="math inline">\(2 \times 2\)</span> 벡터의 닷 프로덕트를 각 요소로 분해한 것이다. 이중에서 <span class="math inline">\(\dfrac{\pi}{2}\)</span> 각을 이루고 있는 벡터는 서로 곱하면 0이 된다. 따라서 닷 프로덕트 계산에서는 <span class="math inline">\(a_x b_x\)</span>와 <span class="math inline">\(a_y b_y\)</span>가 남게 된다.</p>
-<p><img src="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_rotation.png.webp" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_rotation.png.webp" class="my-figure7 img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption"><span class="math inline">\(\cos\theta\)</span> 그리고 닷 프로덕트</figcaption><p></p>
+</figure>
+</div>
 <p>닷 프로덕트란 길이만 문제가 되므로 두 벡터를 한 방향으로 정렬하자.이렇게 되면, 파란색 높이가 <span class="math inline">\(0\)</span>이 된다. 따라서 위 그림과 같은 코사인 법칙이 쉽게 도출된다.</p>
 </section>
 <section id="symmetry" class="level3">
@@ -242,7 +257,12 @@ ul.task-list{list-style: none;}
 \mathbf{p} \cdot (\mathbf{x} - \mathbf{x}^0) = 0
 \]</span></p>
 <p>평면 <span class="math inline">\(\mathbf x\)</span>가 <span class="math inline">\(\mathbf{x}^0\)</span>를 지나는 것은 분명하다. 이 평면이 <span class="math inline">\(\mathbf{p}\)</span>에 수직이라는 것은 두 벡터의 닷 프로덕트가 0이 되면 된다.</p>
-<p><img src="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/hyperplane.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/hyperplane.jpg?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">하이퍼플레인</figcaption><p></p>
+</figure>
+</div>
 </section>
 </section>
 <section id="appendix-geometrically" class="level2 page-columns page-full">

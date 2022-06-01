@@ -9,7 +9,7 @@
 <link>http://www.lostineconomics.com/index.html</link>
 <atom:link href="http://www.lostineconomics.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>Another useless blog</description>
-<generator>quarto-0.9.472</generator>
+<generator>quarto-0.9.491</generator>
 <lastBuildDate>Sun, 29 May 2022 15:00:00 GMT</lastBuildDate>
 <item>
   <title>Markov and Chebyshev Inequalities</title>
