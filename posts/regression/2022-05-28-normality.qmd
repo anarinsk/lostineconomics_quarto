@@ -71,9 +71,9 @@ $\sqrt{n}(\beta_i - \beta) \overset{d}{\longrightarrow} \rm N (0, \sigma_i)$
 
 ![표본의 크기가 커질수록 정규 분포에 근접한다.](http://player.slideplayer.com/76/12695720/slides/slide_3.jpg){.my-figure7}
 
+![시뮬레이션 결과. 보다 자세한 내용은 [여기](https://github.com/dfsnow/clt)를 참고하자.](https://raw.githubusercontent.com/dfsnow/clt/master/gifs/exp.gif)
+
 ## References
 
-- [The Stats Geek](https://thestatsgeek.com/2013/08/07/assumptions-for-linear-regression/)
+- [The Stats Geek](https://thestatsgeek.com/2013/08/07/assumptions-for-linear-regression/){.my-figure7}
 - [Large Sample Inference: 2. Asymptotic Normality](https://www.youtube.com/watch? v=dBB_atu-1QM)
-
-

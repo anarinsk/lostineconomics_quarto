@@ -142,11 +142,17 @@
 <p></p><p></p>
 </figure>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="http://www.lostineconomics.com/posts/regression/https:/raw.githubusercontent.com/dfsnow/clt/master/gifs/exp.gif" class="img-fluid figure-img"></p>
+<p></p><p></p>
+</figure>
+</div>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <ul>
-<li><a href="https://thestatsgeek.com/2013/08/07/assumptions-for-linear-regression/">The Stats Geek</a></li>
+<li><a href="https://thestatsgeek.com/2013/08/07/assumptions-for-linear-regression/" class="my-figure7">The Stats Geek</a></li>
 <li><a href="https://www.youtube.com/watch?%20v=dBB_atu-1QM">Large Sample Inference: 2. Asymptotic Normality</a></li>
 </ul>
 
