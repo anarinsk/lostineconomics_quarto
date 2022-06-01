@@ -45,6 +45,11 @@ $$
 
 닷 프로덕트란 길이만 문제가 되므로 두 벡터를 한 방향으로 정렬하자.이렇게 되면, 파란색 높이가 $0$이 된다. 따라서 위 그림과 같은 코사인 법칙이 쉽게 도출된다. 
 
+:::{ .column-margin }
+그림에서 보듯이 벡터를 회전해도 닷 프로덕트의 크기가 변하지 않을까? 
+[여기](https://math.stackexchange.com/posts/947928/revisions)서 보듯이 임의의 각도 $\theta$로 회전해도 닷 프로덕트의 크기는 변하지 않는다. 
+:::
+
 ### Symmetry
 
 $\mathbf{v}$ 벡터를 $\mathbf u$ 벡터 위에, 즉 $\mathbf u$ 벡터를 스크린로 삼아 직각으로 쏜 $\mathbf v$의 프로젝션 벡터 $\mathrm{Proj}_{\mathbf u} {\mathbf v}$의 길이와 $\mathbf u$ 길이를 곱하면 그것이 $\mathbf u$와 $\mathbf v$의 닷 프로덕트가 된다. 어느 벡터로 프로젝션 하는지는 관계가 없다. 즉, 
