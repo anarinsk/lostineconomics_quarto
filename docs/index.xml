@@ -42,7 +42,7 @@
 </section>
 <section id="chebyshev-inequality" class="level2">
 <h2 class="anchored" data-anchor-id="chebyshev-inequality">Chebyshev Inequality</h2>
-<p><img src="https://latex.codecogs.com/png.latex?%0AP(%5Cvert%20X%20-%20%5Cmu%20%5Cvert%20%5Cgeq%20k%20)%20%5Cleq%20%5Cdfrac%7B%5Csigma%7D%7Bk%5E2%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP(%5Cvert%20X%20-%20%5Cmu%20%5Cvert%20%5Cgeq%20k)%20%5Cleq%20%5Cdfrac%7B%5Csigma%5E2%7D%7Bk%5E2%7D%0A"></p>
 </section>
 <section id="어디에-써먹나" class="level2">
 <h2 class="anchored" data-anchor-id="어디에-써먹나">어디에 써먹나?</h2>
@@ -51,19 +51,19 @@
 <section id="증명" class="level3">
 <h3 class="anchored" data-anchor-id="증명">증명</h3>
 <p>체비쇼프 부등식을 그대로 써보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AP(%5Cvert%20%5CES%7BX%7D_n%20-%20%5Cmu%20%5Cvert%20%5Cgeq%20%5Cepsilon%20)%20%5Cleq%20%5Cdfrac%7B%5CE%5Clbrack(%5CES%7BX%7D_n-%5Cmu)%5E2%5Crbrack%7D%7B%5Cepsilon%5E2%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP(%5Cvert%20%5CES%7BX%7D_n%20-%20%5Cmu%20%5Cvert%20%5Cgeq%20%5Cepsilon)%20%5Cleq%20%5Cdfrac%7B%5CE%5Clbrack(%5CES%7BX%7D_n-%5Cmu)%5E2%5Crbrack%7D%7B%5Cepsilon%5E2%7D%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cmathbb%20E%20%5Clbrack(%5Cbar%7BX%7D_n%20-%20%5Cmu)%5E2%5Crbrack%20=%20&amp;%20%5Cmathbb%20E%20%5CBig%5Clbrace%20%5CBig%5Clbrack%20%5Cdfrac%7B1%7D%7Bn%5E2%7D%5Csum_%7Bi=1%7D%5E%7Bn%7D(X_i%20-%20%5Cmu)%20%5E2%5CBig%5Crbrack%5CBig%5Crbrace%20%5C%5C%0A=%20&amp;%20%5Cdfrac%7B1%7D%7Bn%5E2%7D%20%5Csum_%7Bi=1%7D%5En%20%5Csum_%7Bj=1%7D%5En%20%5Cmathbb%20E%20(X_i%20-%20%5Cmu)(X_j%20-%20%5Cmu)%20%5C%5C%0A=%20&amp;%20%5Cdfrac%7B1%7D%7Bn%5E2%7D%20%5Csum_%7Bi=1%7D%5E%7Bn%7D%5Cmathbb%20E%20(X_i%20-%20%5Cmu)%5E2%20%5C%5C%0A=%20&amp;%20%5Cdfrac%7B%5Csigma%5E2%7D%7Bn%7D%0A%5Cend%7Baligned%7D%0A"></p>
 <p>위의 결과를 이용하면,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AP(%5Cvert%20%5CES%7BX%7D_n%20-%20%5Cmu%20%5Cvert%20%5Cgeq%20%5Cepsilon%20)%20%5Cleq%20%5Cdfrac%7B%5Csigma%5E2%7D%7Bn%20%5Cepsilon%5E2%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP(%5Cvert%20%5CES%7BX%7D_n%20-%20%5Cmu%20%5Cvert%20%5Cgeq%20%5Cepsilon)%20%5Cleq%20%5Cdfrac%7B%5Csigma%5E2%7D%7Bn%20%5Cepsilon%5E2%7D%0A"></p>
 </section>
 </section>
 <section id="proof-of-chebshev-inequality" class="level2">
 <h2 class="anchored" data-anchor-id="proof-of-chebshev-inequality">Proof of Chebshev Inequality</h2>
-<p><img src="https://latex.codecogs.com/png.latex?P(%5Cvert%20X%20-%20%5Cmu%20%5Cvert%20%5Cgeq%20k%20)%20=%20P%5Clbrack%20(X%20-%20%5Cmu)%5E2%20%5Cgeq%20k%20%5Crbrack">가 성립한다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?P(%5Cvert%20X%20-%20%5Cmu%20%5Cvert%20%5Cgeq%20k)%20=%20P%5Clbrack%20(X%20-%20%5Cmu)%5E2%20%5Cgeq%20k%5E2%20%5Crbrack">가 성립한다.</p>
 <p>마르코프 부등식에 의하여,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AP%5Clbrack%20(X%20-%20%5Cmu)%5E2%20%5Cgeq%20k%20%5Crbrack%20%5Cleq%20%5Cdfrac%7B%5CE%20%5Clbrack%20(x-%5Cmu)%5E2%20%5Crbrack%7D%7Bk%5E2%7D%20=%20%5Cdfrac%7B%5Csigma%5E2%7D%7Bk%5E2%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP%5Clbrack%20(X%20-%20%5Cmu)%5E2%20%5Cgeq%20k%5E2%20%5Crbrack%20%5Cleq%20%5Cdfrac%7B%5CE%20%5Clbrack%20(x-%5Cmu)%5E2%20%5Crbrack%7D%7Bk%5E2%7D%20=%20%5Cdfrac%7B%5Csigma%5E2%7D%7Bk%5E2%7D%0A"></p>
 <p>따라서</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AP(%5Cvert%20X%20-%20%5Cmu%20%5Cvert%20%5Cgeq%20k%20)%20%5Cleq%20%5Cdfrac%7B%5Csigma%7D%7Bk%5E2%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP(%5Cvert%20X%20-%20%5Cmu%20%5Cvert%20%5Cgeq%20k)%20%5Cleq%20%5Cdfrac%7B%5Csigma%5E2%7D%7Bk%5E2%7D%0A"></p>
 </section>
 <section id="proof-of-markov-inequality" class="level2">
 <h2 class="anchored" data-anchor-id="proof-of-markov-inequality">Proof of Markov Inequality</h2>
@@ -81,7 +81,7 @@
   <category>stats-simple</category>
   <guid>http://www.lostineconomics.com/posts/stats-simple/2022-05-30-markov-chebyshev.html</guid>
   <pubDate>Sun, 29 May 2022 15:00:00 GMT</pubDate>
-  <media:content url="https://miro.medium.com/max/700/1*nTJ--dA1aeiJUBTCsBqvLg.jpeg" medium="image" type="image/jpeg"/>
+  <media:content url="https://www.voxco.com/wp-content/uploads/2021/09/Inferential-Statistics1.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>정규 분포에 집착하지 말자.</title>
@@ -108,7 +108,7 @@
 <p>표분의 크기가 크지 않다면 불가피하게 필요한 가정이다. 검정을 위한 불가피한 조치다. 하지만 표본의 크기가 어느 정도 충분할 때도 정규 분포 가정이 필요할까?</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_i%20=%20%5Calpha%20+%20%5Cbeta_1%20X_%7B1i%7D%20+%20%5Cbeta_2%20X_%7B2i%7D%20+%20%5Cdotsb%20+%20%5Cbeta_n%20X_%7Bni%7D%20+%20%5Cepsilon_i%0A"></p>
 <p>원래 정규 분포 가정은 <img src="https://latex.codecogs.com/png.latex?%5Cepsilon_i%20%5Csim%20%5Crm%20N%20(0,%20%5Csigma%5E2)">이다. 그런데 이 가정을 어떻게 확인할 수 있을까?</p>
-<p><img src="https://latex.codecogs.com/png.latex?Y_i%20%5Csim%20%5Crm%20N(%5Ccdot)">을 확인하면 될까? 원래의 가정은 오차항에 대한 가정이다. 앞에 여러 가지 변수의 작용으로 <img src="https://latex.codecogs.com/png.latex?Y">가 결정되므로 <img src="https://latex.codecogs.com/png.latex?Y">가 정규 분포를 따르는 것은 우연일 뿐이다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?Y_i%20%5Csim%20%5Crm%20N(%5Ccdot)">을 확인하면 될까? 원래의 가정은 오차항에 대한 가정이다. 앞에 여러 가지 변수의 작용으로 <img src="https://latex.codecogs.com/png.latex?Y_i">가 결정되므로 <img src="https://latex.codecogs.com/png.latex?Y_i">가 정규 분포를 따르는 것은 우연일 뿐이다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%5Chat%5Cepsilon_i%20=%20Y_i%20-%20%5Chat%7BY%7D_i">가 정규 분포를 따르면 될까? 이 역시 마찬가지로 정규 분포를 따르리라는 보장이 없다. <img src="https://latex.codecogs.com/png.latex?%5Chat%5Cepsilon_i">는 회귀 분석의 모델링 아래 도출된 <img src="https://latex.codecogs.com/png.latex?%5Cepsilon_i">에 관한 추정치일 뿐이다. 이것 역시 정규 분포를 따르리라는 보장이 없다.</p>
 <p>다시 기억하자. 오차항에 관한 내용은 모델링을 위한 일종의 가정이다. 가정은 대체로 검증되지 않는다. 모델링의 가정은 받아들이는 것이지 검증하는 것이 아니다.</p>
 
@@ -373,7 +373,7 @@
 <p><img src="https://latex.codecogs.com/png.latex?%0AS(y_i)%5E2%20=%20%5Cdfrac%7B1%7D%7Bn-k%7D%20%5Csum_%7Bi=1%7D%5En%20(y_i%20-%20%20x%5Er_i%20%5Chat%5Cbeta)%0A"></p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>표기(notation) 상 약간의 혼란을 감수하자. 앞서는 샘플 크기에 따른 표기를 하첨자 <img src="https://latex.codecogs.com/png.latex?i">로 표현했다. 여기서는 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_k">는 중회귀 분석의 <img src="https://latex.codecogs.com/png.latex?k">–번째 계수를 뜻한다.</p>
+<p>여기서 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_k">는 중회귀 분석의 <img src="https://latex.codecogs.com/png.latex?k">–번째 계수를 뜻한다.</p>
 </div></div><ul>
 <li><img src="https://latex.codecogs.com/png.latex?x%5Er_i">: <img src="https://latex.codecogs.com/png.latex?X">의 <img src="https://latex.codecogs.com/png.latex?i">’th 행(row) 벡터</li>
 <li><img src="https://latex.codecogs.com/png.latex?%5Cunderset%7B(1%20%5Ctimes%20k)%7D%7Bx%5Er_i%7D%5Cunderset%7B(k%20%5Ctimes%201)%7D%7B%5Cvphantom%7Bx%5Er_i%7D%5Chat%5Cbeta%7D%20=%20%5Chat%20y_i"></li>
@@ -469,7 +469,7 @@
 <p>벡터를 통해 그래프로 설명하는 사례가 직관적으로 잘 와닿고 이해하기도 좋다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Simpsons-vector.svg/430px-Simpsons-vector.svg.png?20180610180117" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/regression/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Simpsons-vector.svg/430px-Simpsons-vector.svg.png?20180610180117" class="my-figure5 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -479,7 +479,7 @@
 <h2 class="anchored" data-anchor-id="collider-and-bersons-paradox">Collider and Berson’s Paradox</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/brilliant-staff-media.s3-us-west-2.amazonaws.com/tiffany-wang/1Mvt8RPtlU.png" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/regression/https:/brilliant-staff-media.s3-us-west-2.amazonaws.com/tiffany-wang/1Mvt8RPtlU.png" class="my-figure5 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
