@@ -115,9 +115,9 @@
 <div class="no-row-height column-margin column-container"><div class="">
 <p>표본이 크지 않을 때 즉 소 표본에 적합한 분석 방법을 찾는 것은 대 표본의 경우에 비해 까다로운 문제이다. 그런데 소 표본에서 회귀 분석은 그리 나쁜 분석 방법이 아니다.</p>
 </div></div></section>
-<section id="표본의-크기가-충분하다면" class="level2">
+<section id="표본의-크기가-충분하다면" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="표본의-크기가-충분하다면">표본의 크기가 충분하다면</h2>
-<p>그렇다면 가정을 받아들일 수 없다면 회귀분석에서 검정을 수행할 수 있을까? 그렇지 않다. 만일 표본의 크기가 충분히 크다면 오차항의 정규 분포 가정 없이도 검정을 수행할 수 있다.</p>
+<p>그렇다면 가정을 받아들일 수 없다면 회귀분석에서 검정을 수행할 수 있을까? 그렇지 않다. 만일 표본의 크기가 충분히 크다면 오차 항의 정규 분포 가정 없이도 검정을 수행할 수 있다.</p>
 <p>회귀 분석의 계수의 표본 추정량 <img src="https://latex.codecogs.com/png.latex?%5Chat%20%5Cbeta">는 다음과 같다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%20%5Cbeta%20=%20(X%5ET%20X)%5E%7B-1%7D(X%20y)%0A"></p>
 <p>회귀 분석에서 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_i">를 검정하기 위한 t-통계량은 다음과 같이 정의된다.</p>
@@ -128,11 +128,17 @@
 <li><img src="https://latex.codecogs.com/png.latex?x%5Er_i">: <img src="https://latex.codecogs.com/png.latex?X">의 <img src="https://latex.codecogs.com/png.latex?i">’th 행(row) 벡터</li>
 <li><img src="https://latex.codecogs.com/png.latex?%5Cunderset%7B(1%20%5Ctimes%20k)%7D%7Bx%5Er_i%7D%5Cunderset%7B(k%20%5Ctimes%201)%7D%7B%5Cvphantom%7Bx%5Er_i%7D%5Chat%5Cbeta%7D%20=%20%5Chat%20y_i"></li>
 </ul>
-<p><img src="https://latex.codecogs.com/png.latex?n">이 커짐에 따라서 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_i">의 분포는 <img src="https://latex.codecogs.com/png.latex?%5Crm%20N(0,1)">를 점근적으로 닮아간다.</p>
-<p>요약하면 표본의 크기가 충분할 때 오차항의 정규 분포 가정은 잊어도 좋다. 중심 극한 정리에 따라서 필요한 가설 검정을 수행할 수 있다. t–값과 정규 분포에 근거한 개별 계수의 검정 그리고 F–값과 F 분포에 근거한 전체 계수의 검정이 모두 가능하다.</p>
-<div class="quarto-figure quarto-figure-center">
+<p><img src="https://latex.codecogs.com/png.latex?n">이 커짐에 따라서 <img src="https://latex.codecogs.com/png.latex?t_i">의 분포는 <img src="https://latex.codecogs.com/png.latex?%5Crm%20N(0,1)">를 접근적으로 닮아간다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="https://latex.codecogs.com/png.latex?%5Csqrt%7Bn%7D(%5Cbeta_i%20-%20%5Cbeta)%20%5Coverset%7Bd%7D%7B%5Clongrightarrow%7D%20%5Crm%20N%20(0,%20%5Csigma_i)"></p>
+</div></div><p>요약하면 표본의 크기가 충분할 때 오차 항의 정규 분포 가정은 잊어도 좋다. 중심 극한 정리에 따라서 필요한 가설 검정을 수행할 수 있다. t–값과 정규 분포에 근거한 개별 계수의 검정 그리고 F–값과 F 분포에 근거한 전체 계수의 검정이 모두 가능하다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>표본의 크기가 얼마나 크면 될까? <a href="https://www.jclinepi.com/article/S0895-4356(17)%2030485-7">Schmidt and Finan</a>의 연구에 따르면 회귀 모형의 경우 변수 당 대략 10개 이상의 관찰이 필요하다. 아래 그림에서 보듯이 대충 표본 평균의 크기가 30개 이상이면 CLT을 적용할 수 있다.</p>
+</div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/regression/large-sample.jpeg" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="http://www.lostineconomics.com/posts/regression/http:/player.slideplayer.com/76/12695720/slides/slide_3.jpg" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -141,7 +147,7 @@
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <ul>
 <li><a href="https://thestatsgeek.com/2013/08/07/assumptions-for-linear-regression/">The Stats Geek</a></li>
-<li><a href="https://www.youtube.com/watch?v=dBB_atu-1QM">Large Sample Inference: 2. Asymptotic Normality</a></li>
+<li><a href="https://www.youtube.com/watch?%20v=dBB_atu-1QM">Large Sample Inference: 2. Asymptotic Normality</a></li>
 </ul>
 
 
@@ -151,7 +157,7 @@
   <category>regression</category>
   <guid>http://www.lostineconomics.com/posts/regression/2022-05-28-normality.html</guid>
   <pubDate>Fri, 27 May 2022 15:00:00 GMT</pubDate>
-  <media:content url="http://www.lostineconomics.com/posts/regression/large-sample.jpeg" medium="image" type="image/jpeg"/>
+  <media:content url="http://player.slideplayer.com/76/12695720/slides/slide_3.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Sample Statistics and Standard Error</title>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.472">
+<meta name="generator" content="quarto-0.9.491">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -177,9 +177,9 @@ Y_i = \alpha + \beta_1 X_{1i} + \beta_2 X_{2i} + \dotsb + \beta_n X_{ni} + \epsi
 <div class="no-row-height column-margin column-container"><div class="">
 <p>표본이 크지 않을 때 즉 소 표본에 적합한 분석 방법을 찾는 것은 대 표본의 경우에 비해 까다로운 문제이다. 그런데 소 표본에서 회귀 분석은 그리 나쁜 분석 방법이 아니다.</p>
 </div></div></section>
-<section id="표본의-크기가-충분하다면" class="level2">
+<section id="표본의-크기가-충분하다면" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="표본의-크기가-충분하다면">표본의 크기가 충분하다면</h2>
-<p>그렇다면 가정을 받아들일 수 없다면 회귀분석에서 검정을 수행할 수 있을까? 그렇지 않다. 만일 표본의 크기가 충분히 크다면 오차항의 정규 분포 가정 없이도 검정을 수행할 수 있다.</p>
+<p>그렇다면 가정을 받아들일 수 없다면 회귀분석에서 검정을 수행할 수 있을까? 그렇지 않다. 만일 표본의 크기가 충분히 크다면 오차 항의 정규 분포 가정 없이도 검정을 수행할 수 있다.</p>
 <p>회귀 분석의 계수의 표본 추정량 <span class="math inline">\(\hat \beta\)</span>는 다음과 같다.</p>
 <p><span class="math display">\[
 \hat \beta = (X^T X)^{-1}(X y)
@@ -196,11 +196,17 @@ S(y_i)^2 = \dfrac{1}{n-k} \sum_{i=1}^n (y_i -  x^r_i \hat\beta)
 <li><span class="math inline">\(x^r_i\)</span>: <span class="math inline">\(X\)</span>의 <span class="math inline">\(i\)</span>’th 행(row) 벡터</li>
 <li><span class="math inline">\(\underset{(1 \times k)}{x^r_i}\underset{(k \times 1)}{\vphantom{x^r_i}\hat\beta} = \hat y_i\)</span></li>
 </ul>
-<p><span class="math inline">\(n\)</span>이 커짐에 따라서 <span class="math inline">\(\beta_i\)</span>의 분포는 <span class="math inline">\(\rm N(0,1)\)</span>를 점근적으로 닮아간다.</p>
-<p>요약하면 표본의 크기가 충분할 때 오차항의 정규 분포 가정은 잊어도 좋다. 중심 극한 정리에 따라서 필요한 가설 검정을 수행할 수 있다. t–값과 정규 분포에 근거한 개별 계수의 검정 그리고 F–값과 F 분포에 근거한 전체 계수의 검정이 모두 가능하다.</p>
-<div class="quarto-figure quarto-figure-center">
+<p><span class="math inline">\(n\)</span>이 커짐에 따라서 <span class="math inline">\(t_i\)</span>의 분포는 <span class="math inline">\(\rm N(0,1)\)</span>를 접근적으로 닮아간다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="math inline">\(\sqrt{n}(\beta_i - \beta) \overset{d}{\longrightarrow} \rm N (0, \sigma_i)\)</span></p>
+</div></div><p>요약하면 표본의 크기가 충분할 때 오차 항의 정규 분포 가정은 잊어도 좋다. 중심 극한 정리에 따라서 필요한 가설 검정을 수행할 수 있다. t–값과 정규 분포에 근거한 개별 계수의 검정 그리고 F–값과 F 분포에 근거한 전체 계수의 검정이 모두 가능하다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>표본의 크기가 얼마나 크면 될까? <a href="https://www.jclinepi.com/article/S0895-4356(17)%2030485-7">Schmidt and Finan</a>의 연구에 따르면 회귀 모형의 경우 변수 당 대략 10개 이상의 관찰이 필요하다. 아래 그림에서 보듯이 대충 표본 평균의 크기가 30개 이상이면 CLT을 적용할 수 있다.</p>
+</div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="large-sample.jpeg" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="http://player.slideplayer.com/76/12695720/slides/slide_3.jpg" class="my-figure7 img-fluid figure-img"></p>
 <p></p><figcaption aria-hidden="true" class="figure-caption">표본의 크기가 커질수록 정규 분포에 근접한다.</figcaption><p></p>
 </figure>
 </div>
@@ -209,7 +215,7 @@ S(y_i)^2 = \dfrac{1}{n-k} \sum_{i=1}^n (y_i -  x^r_i \hat\beta)
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <ul>
 <li><a href="https://thestatsgeek.com/2013/08/07/assumptions-for-linear-regression/">The Stats Geek</a></li>
-<li><a href="https://www.youtube.com/watch?v=dBB_atu-1QM">Large Sample Inference: 2. Asymptotic Normality</a></li>
+<li><a href="https://www.youtube.com/watch?%20v=dBB_atu-1QM">Large Sample Inference: 2. Asymptotic Normality</a></li>
 </ul>
 
 
