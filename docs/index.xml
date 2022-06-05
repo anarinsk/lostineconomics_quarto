@@ -32,7 +32,7 @@
 <div class="no-row-height column-margin column-container"><div class="">
 <p>데이터는 <a href="https://towardsdatascience.com/the-curious-case-of-simpsons-paradox-6f178548d7e8">여기</a>서 갖고 왔다</p>
 <p><img src="http://www.lostineconomics.com/posts/regression/https:/user-images.githubusercontent.com/39834789/86522451-84949f00-be38-11ea-9555-6409579f3b58.png" class="img-fluid"></p>
-</div></div><p><code>culmen</code>은 펭귄의 부리인데, <code>length</code>는 앞으로 튀어나온 길이를 <code>depth</code>는 부리의 높이를 의미한다. 아래 데이터는 펭귄의 세 가지 종족, 성별 등을 별도로 기록하고 있다. 이제 심슨 역설의 전형적인 사례를 보도록 하자.</p>
+</div></div><p><code>culmen</code>은 새의 부리를 뜻한다. 옆 그림에서 보듯이 <code>length</code>는 부리의 앞으로 튀어나온 길이를, <code>depth</code>는 부리의 높이를 의미한다. 아래 데이터는 펭귄의 세 가지 종족, 성별 등을 별도로 기록하고 있다. 이제 심슨 역설의 전형적인 사례를 펭귄 부리의 길이와 높이를 통해 살펴보도록 하자.</p>
 <div class="cell" data-execution_count="6">
 <details>
 <summary>Code</summary>
