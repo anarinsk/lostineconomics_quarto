@@ -9,8 +9,153 @@
 <link>http://www.lostineconomics.com/index.html</link>
 <atom:link href="http://www.lostineconomics.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>Another useless blog</description>
-<generator>quarto-0.9.491</generator>
-<lastBuildDate>Sun, 29 May 2022 15:00:00 GMT</lastBuildDate>
+<generator>quarto-0.9.512</generator>
+<lastBuildDate>Sat, 25 Jun 2022 15:00:00 GMT</lastBuildDate>
+<item>
+  <title>Simpson’s Paradox with Regression</title>
+  <dc:creator>JS HUHH</dc:creator>
+  <link>http://www.lostineconomics.com/posts/regression/2022-06-04-simpson-paradox-regression.html</link>
+  <description><![CDATA[ 
+
+
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="회귀-분석으로-보는-심슨의-역설" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="회귀-분석으로-보는-심슨의-역설">회귀 분석으로 보는 심슨의 역설</h2>
+<p>심슨의 역설을 보통은 회귀 분석으로 설명하지 않는다. 그런데 회귀 분석으로 보면 보다 명확하다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>데이터는 <a href="https://towardsdatascience.com/the-curious-case-of-simpsons-paradox-6f178548d7e8">여기</a>서 갖고 왔다</p>
+<p><img src="http://www.lostineconomics.com/posts/regression/https:/user-images.githubusercontent.com/39834789/86522451-84949f00-be38-11ea-9555-6409579f3b58.png" class="img-fluid"></p>
+</div></div><p><code>culmen</code>은 펭귄의 부리인데, <code>length</code>는 앞으로 튀어나온 길이를 <code>depth</code>는 부리의 높이를 의미한다. 아래 데이터는 펭귄의 세 가지 종족, 성별 등을 별도로 기록하고 있다. 이제 심슨 역설의 전형적인 사례를 보도록 하자.</p>
+<div class="cell" data-execution_count="2">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;"># Basic packages</span></span>
+<span id="cb1-2"><span class="im" style="color: #00769E;">import</span> pandas <span class="im" style="color: #00769E;">as</span> pd </span>
+<span id="cb1-3"><span class="im" style="color: #00769E;">import</span> numpy <span class="im" style="color: #00769E;">as</span> np</span>
+<span id="cb1-4"><span class="im" style="color: #00769E;">import</span> pandas <span class="im" style="color: #00769E;">as</span> pd</span>
+<span id="cb1-5"><span class="im" style="color: #00769E;">import</span> seaborn <span class="im" style="color: #00769E;">as</span> sns</span>
+<span id="cb1-6"><span class="im" style="color: #00769E;">from</span> scipy <span class="im" style="color: #00769E;">import</span> stats</span>
+<span id="cb1-7"><span class="im" style="color: #00769E;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;">as</span> plt</span>
+<span id="cb1-8"><span class="co" style="color: #5E5E5E;"># Stats models </span></span>
+<span id="cb1-9"><span class="im" style="color: #00769E;">import</span> statsmodels.formula.api <span class="im" style="color: #00769E;">as</span> sm</span>
+<span id="cb1-10"><span class="im" style="color: #00769E;">import</span> statsmodels.stats.sandwich_covariance <span class="im" style="color: #00769E;">as</span> sw</span>
+<span id="cb1-11"><span class="im" style="color: #00769E;">import</span> statsmodels <span class="im" style="color: #00769E;">as</span> statsmodels</span>
+<span id="cb1-12"><span class="im" style="color: #00769E;">from</span> linearmodels <span class="im" style="color: #00769E;">import</span> PanelOLS, FamaMacBeth</span>
+<span id="cb1-13"><span class="op" style="color: #5E5E5E;">%</span>matplotlib inline</span>
+<span id="cb1-14"></span>
+<span id="cb1-15">csv_addr <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"data/penguins_size.csv"</span></span>
+<span id="cb1-16"><span class="co" style="color: #5E5E5E;">#plt.rcParams['figure.figsize'] = 12, 10</span></span>
+<span id="cb1-17">plt.style.use(<span class="st" style="color: #20794D;">"fivethirtyeight"</span>)<span class="co" style="color: #5E5E5E;"># for pretty graphs</span></span>
+<span id="cb1-18">df  <span class="op" style="color: #5E5E5E;">=</span> pd.read_csv(<span class="st" style="color: #20794D;">'data/penguins_size.csv'</span>)</span>
+<span id="cb1-19">df.head()</span>
+<span id="cb1-20">df.info()</span>
+<span id="cb1-21">df <span class="op" style="color: #5E5E5E;">=</span> df.dropna()</span>
+<span id="cb1-22">df.info()</span></code></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 344 entries, 0 to 343
+Data columns (total 7 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   species            344 non-null    object 
+ 1   island             344 non-null    object 
+ 2   culmen_length_mm   342 non-null    float64
+ 3   culmen_depth_mm    342 non-null    float64
+ 4   flipper_length_mm  342 non-null    float64
+ 5   body_mass_g        342 non-null    float64
+ 6   sex                334 non-null    object 
+dtypes: float64(4), object(3)
+memory usage: 18.9+ KB
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+Int64Index: 334 entries, 0 to 343
+Data columns (total 7 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   species            334 non-null    object 
+ 1   island             334 non-null    object 
+ 2   culmen_length_mm   334 non-null    float64
+ 3   culmen_depth_mm    334 non-null    float64
+ 4   flipper_length_mm  334 non-null    float64
+ 5   body_mass_g        334 non-null    float64
+ 6   sex                334 non-null    object 
+dtypes: float64(4), object(3)
+memory usage: 20.9+ KB</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="4">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"></span>
+<span id="cb3-2">plt.rcParams[<span class="st" style="color: #20794D;">'figure.figsize'</span>] <span class="op" style="color: #5E5E5E;">=</span> [<span class="dv" style="color: #AD0000;">12</span>, <span class="dv" style="color: #AD0000;">6</span>]</span>
+<span id="cb3-3">fig, (ax1, ax2) <span class="op" style="color: #5E5E5E;">=</span> plt.subplots(ncols<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">2</span>, sharey<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)</span>
+<span id="cb3-4">sns.regplot(x <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'culmen_length_mm'</span>,y <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'culmen_depth_mm'</span>, data <span class="op" style="color: #5E5E5E;">=</span> df, ax<span class="op" style="color: #5E5E5E;">=</span>ax1)</span>
+<span id="cb3-5">r <span class="op" style="color: #5E5E5E;">=</span> stats.pearsonr(df[<span class="st" style="color: #20794D;">'culmen_length_mm'</span>], df[<span class="st" style="color: #20794D;">'culmen_depth_mm'</span>])[<span class="dv" style="color: #AD0000;">0</span>]</span>
+<span id="cb3-6">ax1.text(<span class="fl" style="color: #AD0000;">.03</span>, <span class="dv" style="color: #AD0000;">1</span>, <span class="st" style="color: #20794D;">'r=</span><span class="sc" style="color: #5E5E5E;">{:.3f}</span><span class="st" style="color: #20794D;">'</span>.<span class="bu" style="color: null;">format</span>(r), transform<span class="op" style="color: #5E5E5E;">=</span>ax1.transAxes)</span>
+<span id="cb3-7">colors <span class="op" style="color: #5E5E5E;">=</span> [<span class="st" style="color: #20794D;">'darkorange'</span>, <span class="st" style="color: #20794D;">'royalblue'</span>, <span class="st" style="color: #20794D;">'#555555'</span>]</span>
+<span id="cb3-8">markers <span class="op" style="color: #5E5E5E;">=</span> [<span class="st" style="color: #20794D;">'.'</span>, <span class="st" style="color: #20794D;">'+'</span>, <span class="st" style="color: #20794D;">'x'</span>]</span>
+<span id="cb3-9"><span class="co" style="color: #5E5E5E;">#graph = sns.lmplot(x='x_value', y='y_value', hue='water_value', data=df, fit_reg=False)</span></span>
+<span id="cb3-10"><span class="co" style="color: #5E5E5E;">#Use regplot to plot the regression line for the whole points</span></span>
+<span id="cb3-11"><span class="co" style="color: #5E5E5E;">#sns.regplot(x='x_value', y='y_value', data=df, scatter=False, ax=graph.axes[0, 0]))</span></span>
+<span id="cb3-12"><span class="cf" style="color: #003B4F;">for</span> i, value <span class="kw" style="color: #003B4F;">in</span> <span class="bu" style="color: null;">enumerate</span>(df[<span class="st" style="color: #20794D;">'species'</span>].unique()):</span>
+<span id="cb3-13">    ax2 <span class="op" style="color: #5E5E5E;">=</span> sns.regplot(x<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"culmen_length_mm"</span>, y<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"culmen_depth_mm"</span>, ax<span class="op" style="color: #5E5E5E;">=</span>ax2,</span>
+<span id="cb3-14">                     color<span class="op" style="color: #5E5E5E;">=</span>colors[i],</span>
+<span id="cb3-15">                     <span class="co" style="color: #5E5E5E;">#marker=markers[i],                      </span></span>
+<span id="cb3-16">                     data<span class="op" style="color: #5E5E5E;">=</span>df[df[<span class="st" style="color: #20794D;">'species'</span>] <span class="op" style="color: #5E5E5E;">==</span> value],</span>
+<span id="cb3-17">                     label<span class="op" style="color: #5E5E5E;">=</span>value)</span>
+<span id="cb3-18">ax2.legend(loc<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'best'</span>)<span class="op" style="color: #5E5E5E;">;</span></span></code></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="http://www.lostineconomics.com/posts/regression/2022-06-04-simpson-paradox-regression_files/figure-html/cell-3-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>왼쪽 그림에서 보듯이 종족 구분 없이 펭귄 부리의 길이와 높이를 보면 서로 음의 상관성을 지니고 있는 듯 보인다. 그런데 이를 종족 별로 구별해서 살펴보면 오히려 길이와 높이는 양의 상관성을 지니고 있다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="http://www.lostineconomics.com/posts/regression/https:/user-images.githubusercontent.com/39834789/86522450-7f375480-be38-11ea-9437-9fd2a382aa7b.png" class="img-fluid"></p>
+</div></div><div class="cell" data-execution_count="20">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">ols1 <span class="op" style="color: #5E5E5E;">=</span> sm.ols(formula<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"culmen_depth_mm ~ culmen_length_mm"</span>, data<span class="op" style="color: #5E5E5E;">=</span>df).fit(use_t<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)</span>
+<span id="cb4-2">ols2 <span class="op" style="color: #5E5E5E;">=</span> sm.ols(formula<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"culmen_depth_mm ~ species + culmen_length_mm"</span>, data<span class="op" style="color: #5E5E5E;">=</span>df).fit(use_t<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)</span>
+<span id="cb4-3"><span class="co" style="color: #5E5E5E;">#ols1.summary()</span></span>
+<span id="cb4-4"><span class="co" style="color: #5E5E5E;">#ols2.summary()</span></span>
+<span id="cb4-5"></span>
+<span id="cb4-6"><span class="im" style="color: #00769E;">from</span> stargazer.stargazer <span class="im" style="color: #00769E;">import</span> Stargazer</span>
+<span id="cb4-7">stargazer <span class="op" style="color: #5E5E5E;">=</span> Stargazer([ols1, ols2])</span>
+<span id="cb4-8">stargazer</span></code></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="20">
+
+<table style="text-align:center"><tbody><tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td colspan="2"><em>Dependent variable:culmen_depth_mm</em></td></tr><tr><td style="text-align:left"></td></tr><tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td></tr><tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Intercept</td><td>20.786<sup>***</sup></td><td>10.619<sup>***</sup></td></tr><tr><td style="text-align:left"></td><td>(0.854)</td><td>(0.691)</td></tr><tr><td style="text-align:left">culmen_length_mm</td><td>-0.082<sup>***</sup></td><td>0.199<sup>***</sup></td></tr><tr><td style="text-align:left"></td><td>(0.019)</td><td>(0.018)</td></tr><tr><td style="text-align:left">species[T.Chinstrap]</td><td></td><td>-1.919<sup>***</sup></td></tr><tr><td style="text-align:left"></td><td></td><td>(0.226)</td></tr><tr><td style="text-align:left">species[T.Gentoo]</td><td></td><td>-5.080<sup>***</sup></td></tr><tr><td style="text-align:left"></td><td></td><td>(0.194)</td></tr><tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align: left">Observations</td><td>334</td><td>334</td></tr><tr><td style="text-align: left">R<sup>2</sup></td><td>0.052</td><td>0.766</td></tr><tr><td style="text-align: left">Adjusted R<sup>2</sup></td><td>0.049</td><td>0.764</td></tr><tr><td style="text-align: left">Residual Std. Error</td><td>1.919 (df=332)</td><td>0.956 (df=330)</td></tr><tr><td style="text-align: left">F Statistic</td><td>18.313<sup>***</sup> (df=1; 332)</td><td>360.759<sup>***</sup> (df=3; 330)</td></tr><tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align: left">Note:</td>
+ <td colspan="2" style="text-align: right">
+  <sup>*</sup>p&lt;0.1;
+  <sup>**</sup>p&lt;0.05;
+  <sup>***</sup>p&lt;0.01
+ </td></tr></tbody></table>
+</div>
+</div>
+<p>회귀 분석에서 종족을 통제한 경우와 그렇지 않은 경우의 <code>culmen_length_mm</code>(부리의 길이)의 계수를 비교해보자. 종족을 통제하지 않은 경우 계수는 음수를 지닌다. 반면 종족을 통제한 경우는 각각 종족의 구분해 각각의 절편과 해당 종족 내의 부리의 길이와 높이의 관계를 계산하게 된다. 보듯이 계수는 음수에서 양수로 바뀌어 있다.</p>
+
+
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>나머지 계수의 의미는 기본이 되는 Adelie 종족을 기준으로 다른 두 개의 종족의 절편이 얼마나 떨어져 있는지를 보여준다.</p>
+</div></div></section>
+
+ ]]></description>
+  <category>regression</category>
+  <guid>http://www.lostineconomics.com/posts/regression/2022-06-04-simpson-paradox-regression.html</guid>
+  <pubDate>Sat, 25 Jun 2022 15:00:00 GMT</pubDate>
+  <media:content url="https://user-images.githubusercontent.com/39834789/86522451-84949f00-be38-11ea-9555-6409579f3b58.png" medium="image" type="image/png"/>
+</item>
 <item>
   <title>Markov and Chebyshev Inequalities</title>
   <dc:creator>JS HUHH</dc:creator>
@@ -2487,122 +2632,6 @@ Note
   <pubDate>Wed, 06 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
-<item>
-  <title>Vector Geometrically, part 2</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-06-vector-geometry-2.html</link>
-  <description><![CDATA[ 
-
-
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><section id="vector-space" class="level2">
-<h2 class="anchored" data-anchor-id="vector-space">Vector Space</h2>
-<p>먼저 벡터 스페이스를 살펴보기 위해서 몇 가지 정의부터 보자.</p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?V"> is vector space</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20%5Cin%20V"></li>
-<li><img src="https://latex.codecogs.com/png.latex?W"> is vector subspace <img src="https://latex.codecogs.com/png.latex?W%20%5Csubseteq%20V"></li>
-<li>span: 벡터의 선형 결합을 통해 생성되는 벡터 집합</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7Bspan%7D(%5Cvec%20v_1,%20%5Cdotsc,%20%5Cvec%20v_n)%20=%20%5C%7B%5Cvec%20v%20%7C%20%5Cvec%20v%20=%20%5Calpha_1%20%5Cvec%20v_1%20+%20%5Cdotsb%20+%20%5Calpha_n%20%5Cvec%20v_n,%20%5Calpha_i%20%5Cin%20%5Cmathbb%20R%20%5C%7D%0A"></p>
-<p>행렬 <img src="https://latex.codecogs.com/png.latex?M%20%5Cin%20%5Cmathbb%20R%5E%7Bm%20%5Ctimes%20n%7D">이 있다고 할 때</p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20R(M)%20%5Csubseteq%20%5Cmathbb%20R%5En">: <img src="https://latex.codecogs.com/png.latex?M">의 로우 스페이스, 즉 <img src="https://latex.codecogs.com/png.latex?M">의 행들의 모든 가능한 선형 결합이 나타내는 벡터 공간</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20R%20(M)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20v%20%5Cin%20%5Cmathbb%20R%5En%20%7C%20%5Cvec%20v%20=%20%5Cvec%20w%5ET%20M%20%5Ctext%7B%20for%20some%20%7D%20%5Cvec%20w%20%5Cin%20%5Cmathbb%20R%5Em%20%5C%7D%0A"></p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20C(M)%20%5Csubseteq%20%5Cmathbb%20R%5Em">: <img src="https://latex.codecogs.com/png.latex?M">의 컬럼 스페이스, 즉 <img src="https://latex.codecogs.com/png.latex?M">의 열들의 모든 가능한 선형 결합이 나타내는 벡터 공간</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20C%20(M)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20w%20%5Cin%20%5Cmathbb%20R%5Em%20%7C%20%5Cvec%20w%20=%20M%20v%20%5Ctext%7B%20for%20some%20%7D%20%5Cvec%20v%20%5Cin%20%5Cmathbb%20R%5En%20%5C%7D%0A"></p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M)%20%5Csubseteq%20%5Cmathbb%20R%5En">: <img src="https://latex.codecogs.com/png.latex?M">의 널 스페이스. 즉, 오른쪽에 곱해졌을 때 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200_%7Bm%7D">이 되는 벡터의 집합</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20N(M)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20v%20%5Cin%20%5Cmathbb%20R%5En%20%7C%20M%20%5Cvec%20v%20=%20%5Cvec%200%20%5C%7D%0A"></p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M%5ET)%20%5Csubseteq%20%5Cmathbb%20R%5En">: <img src="https://latex.codecogs.com/png.latex?M">의 좌 널 스페이스. 즉, 왼쪽에 곱해졌을 때 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200_%7Bn%7D">이 되는 벡터의 집합</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20N(M%5ET)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20w%20%5Cin%20%5Cmathbb%20R%5Em%20%7C%20%5Cvec%20w%5ET%20M%20%20=%20%5Cvec%200%5ET%20%5C%7D%0A"></p>
-<p>혹은</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20N(M%5ET)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20w%20%5Cin%20%5Cmathbb%20R%5Em%20%7C%20M%5ET%20%5Cvec%20w%20=%20%5Cvec%200%20%5C%7D%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?M">의 랭크는 컬럼 스페이스의 차원 그리고 로우 스페이스의 차원과 같다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0Ar(M)%20=%20%5Cdim(%5Cmathcal%20R%20(M))%20=%20%5Cdim(%5Cmathcal%20C(M))%0A"></p>
-</section>
-<section id="checklist" class="level2">
-<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
-<section id="zero-vector" class="level3">
-<h3 class="anchored" data-anchor-id="zero-vector">Zero vector</h3>
-<p>벡터 스페이스가 되려면 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">를 집합 내에 지니고 있어야 한다. 간단한 내용 같지만 참 중요하다. 일단 벡터 스페이스의 정의에서 <img src="https://latex.codecogs.com/png.latex?%5Calpha%20%5Cvec%20v">가 들어가기 때문에 <img src="https://latex.codecogs.com/png.latex?%5Calpha=0">의 조건에 따라서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">는 포함되어야 한다. 생각해 볼만한 대목. 벡터 서브스페이스 역시 마찬가지로 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">을 포함해야 한다. 2차원 벡터로 이야기한다면, <img src="https://latex.codecogs.com/png.latex?y%20=%202x%20+%201"> 같은 형태의 선은 벡터 (서브) 스페이스가 될 수 없다.</p>
-</section>
-<section id="subset-vs-subspace" class="level3">
-<h3 class="anchored" data-anchor-id="subset-vs-subspace">Subset vs subspace</h3>
-<p>부분집합은 원래 집합에 일정한 조건을 부여한 것이고, 이 점에서는 서브 스페이스 역시 부분 집합에 속한다. 다만 모든 부분 집합이 서브 스페이스가 되진 않는다. 이 점에서 서브 스페이스의 조건이 보다 제약적이다.</p>
-<p>다음과 같은 두 방정식의 해를 비교해보자. <img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20x%20=%20%5Cvec%20b">, <img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20x%20=%20%5Cvec%200"></p>
-<p><img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20v_1%20=%20%5Cvec%20b">와 <img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20v_2%20=%20%5Cvec%20b">를 생각해보자. <img src="https://latex.codecogs.com/png.latex?A(%5Cvec%20v_1%20+%20%5Cvec%20v_2)">는 원래의 벡터 스페이스에 들어 있는가?</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AA(%5Cvec%20v_1%20+%20%5Cvec%20v_2)%20=%202%20%5Cvec%20b%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cvec%20b%20=%20%5Cvec%200">가 아니라면, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_1%20+%20%5Cvec%20v_2">는 해가 될 수 없다. 조금 더 자세하게 표현해보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20v%20=%20%5Cvec%20b">의 해 공간은 다음과 같은 완전해의 집합이다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5C%7B%20%5Cvec%20c%20+%20%5Cvec%20v_n%5C%7D%20%5Ctext%7B%20where%20%7D%5Cvec%20v_n%20%5Cin%20%5Cmathcal%20N%20(A)%0A"></p>
-<p>즉, 해 공간은 특수해(particular solution) <img src="https://latex.codecogs.com/png.latex?%5Cvec%20c">와 널 스페이스에 속한 벡터의 합으로 구성된다. 해 공간의 원소 하나를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x_1%20=%20%5Cvec%20c%20+%20%5Cvec%20v_1">이라고 하고 다른 하나를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x_2%20=%20%5Cvec%20c%20+%20%5Cvec%20v_2">라고 하자. 이 둘을 더하면, <img src="https://latex.codecogs.com/png.latex?2%20%5Cvec%20c%20+%20%5Cvec%20v_1%20+%20%5Cvec%20v_2">가 된다. 이것이 해 공간 안에 있어야 하는데, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20c%20%5Cneq%200">이면 성립하지 않는다.</p>
-<p>한편 <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M)">은 자연스럽게 벡터 공간을 이룬다. 더한 것도 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">에 있고, 스칼라 곱 역시 마찬가지다. 참고로 아래에서 보겠지만, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20R(M)">, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20C(M)">, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M)">, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M%5ET)">를 네 개의 근본 서브 스페이스라고 부른다. 네 개는 밀접한 연관을 지니고 있다.</p>
-</section>
-<section id="solutions" class="level3">
-<h3 class="anchored" data-anchor-id="solutions">Solutions</h3>
-<p>이 기회에 해의 종류를 한번 살펴보고 넘어가자.</p>
-<ol type="1">
-<li>Particular solution (특수해): RREF에서 free variables를 모두 0으로 두고 찾은 해를 뜻한다.</li>
-<li>Homogenous soution (일반해): 일반해는 널 스페이스에 속하는 해를 뜻한다. 즉, <img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20x%20=%200">을 만족시키는 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x">를 의미한다.</li>
-<li>Complete solution (완전해): 완전해란 특수해와 일반해를 더한 형태이다. 즉, <img src="https://latex.codecogs.com/png.latex?x_c%20=%20x_p%20+%20c_h"></li>
-</ol>
-<p>이제 각각의 의미를 음미해보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AA%20%5Cvec%20x%20=%20A%20x_c%20=%20A(x_p%20+%20x_h)%20=%20A%20x_p%20+%20A%20x_h%20=%20A%20x_p%20+%20%5Cvec%200_%7Bm%7D%0A"></p>
-<p>보다 자세한 사례는 <a href="https://m.blog.naver.com/crm06217/221674223212">여기</a>를 참고하라. 약간의 직관적인 설명만 곁들이겠다. 특수해는 딱 그 위치에 있어야 하는 벡터다. 즉 free variable이 어떤 값이 오건 간에 이 벡터의 값은 고정되어 있다. 반면 일반해는 널 스페이스에 속한다. 앞서 널 스페이스는 부분 공간이라고 말했다. 이는 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">를 중심으로 각각 벡터가 지나가야 한다는 뜻이다. 따라서 free variable의 경우 하나를 구하기 위해서 나머지를 0으로 두고 구해야 한다. 그리고 이렇게 구해진 vector에 곱해지는 스칼라 값이 free variable에 해당한다.</p>
-</section>
-</section>
-<section id="system-of-linear-equations" class="level2">
-<h2 class="anchored" data-anchor-id="system-of-linear-equations">System of Linear Equations</h2>
-<p>다음 방정식의 해 공간을 생각해보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AM%20%5Cvec%20x%20=%20%5Cvec%20b%0A"></p>
-<p>먼저 <img src="https://latex.codecogs.com/png.latex?M">의 널 스페이스를 생각해보자. 여기 속한 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x">는 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5En"> 집합에 속한다. 정의상 <img src="https://latex.codecogs.com/png.latex?M%20%5Cvec%20x%20=%200">이므로 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x">를 어떤 해에 더하면 이 값 역시 해가 된다. 따라서, <img src="https://latex.codecogs.com/png.latex?M%20%5Cvec%20x%20=%20%5Cvec%20b">를 만족하는 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x%20=%20%5Cvec%20c">라고 하자. 이를 특수 해라고 부른다. 여기에 널 스페이스에 속한 임의의 원소를 더하면 완전해가 된다. 즉,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20x%20=%20%5Cvec%20c%20+%20%5Ctext%7Bspan%7D(%5Cvec%20v_1,%20%5Cdotsc,%20%5Cvec%20v_k)%20%5Ctext%7B%20where%20%7D%20%5Ctext%7Bspan%7D(%5Cvec%20v_1,%20%5Cdotsc,%20%5Cvec%20v_k)%20=%20%5Cmathcal%20N(M)%0A"></p>
-<section id="rref-method" class="level3">
-<h3 class="anchored" data-anchor-id="rref-method">RREF method</h3>
-<p>연립방정식의 해를 구하는 가장 기초적인 방법, 즉 RREF, 기약 행사다리꼴 행렬을 만드는 과정이 이에 부합한다. 즉, <img src="https://latex.codecogs.com/png.latex?%5BM%20%5Clvert%20%5Cvec%20b%5D">를 RREF로 만들면, <img src="https://latex.codecogs.com/png.latex?%5B%5Ctext%7Brref%7D(M)%20%5Cvert%20%5Cvec%20c%5D">의 형태가 된다. 이때, <img src="https://latex.codecogs.com/png.latex?%5Ctext%7Brref%7D(M)">는 <img src="https://latex.codecogs.com/png.latex?k"> 개의 자유 변수를 <img src="https://latex.codecogs.com/png.latex?n-k"> 개의 특수 해를 지니게 된다. 자유 변수에서 널 스페이스에 속하는 일반해를 얻을 수 있다.</p>
-</section>
-</section>
-<section id="two-transformation" class="level2">
-<h2 class="anchored" data-anchor-id="two-transformation">Two Transformation</h2>
-<p><img src="https://latex.codecogs.com/png.latex?M%20%5Cin%20%5Cmathbb%20R%5E%7Bm%20%5Ctimes%20n%7D">이 편리한 이유는 <img src="https://latex.codecogs.com/png.latex?M">이 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x%20%5Cin%20%5Cmathbb%20R%5En">을 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20y%20%5Cin%20%5Cmathbb%20R%5Em">으로 바꾸는 선형 변환 모두를 표현할 수 있기 때문이다. 그렇다면, <img src="https://latex.codecogs.com/png.latex?M%5ET">는 어떨까? 이는 같은 맥락에서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20a%20%5Cin%20%5Cmathbb%20R%5Em">을 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20b%20%5Cin%20%5Cmathbb%20R%5En">으로 바꾸는 선형 변환을 표현한다. 즉,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20a%5ET%20M%20=%20%5Cvec%20b%0A"></p>
-<p>이는 <img src="https://latex.codecogs.com/png.latex?M%5ET%20%5Cvec%20a=%20%5Cvec%20b%5ET">가 된다. 즉, <img src="https://latex.codecogs.com/png.latex?M%5ET">는 <img src="https://latex.codecogs.com/png.latex?M">의 좌 벡터 공간의 집합을 표현한다. 마찬가지로 <img src="https://latex.codecogs.com/png.latex?M">은 <img src="https://latex.codecogs.com/png.latex?M">의 우 벡터 공간의 집합을 표현한다. <img src="https://latex.codecogs.com/png.latex?M">의 좌 벡터 공간이 바로 로우 공간이고 우 벡터 공간이 컬럼 공간이다.</p>
-<p>이제, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M)">의 원소는 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5En">에 속한다. 이와 직교하는 공간은 어떤 공간일까? 좌 벡터 공간일까? 우 벡터 공간일까? 쉽게 생각하자. 직교 하기 위해서는 서로 차원이 같아야 한다. 우 벡터 공간은 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5Em">에 속한다. 따라서 직교한다면 좌 벡터 공간과 한다. 확인해보자. <img src="https://latex.codecogs.com/png.latex?M%20%5Cvec%20v_n%20=%20%5Cvec%200_m"> where <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_n%20%5Cin%20%5Cmathcal%20N(M)"> 가 성립한다. 이제 양번에 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20a%5ET">를 곱해보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cunderbrace%7B(M%5ET%20%5Cvec%20a)%5ET%7D_%7B%5Ctext%7Bleft%20space%7D%7D%20%5Cvec%20v_n%20=%20%5Cvec%20a%5ET%20M%5Cvec%20v_n%20=%20%5Cvec%20a%5ET%20%5Cvec%200_m%20=%200%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20R(M)%20%5Coplus%20%5Cmathcal%20N(M)%20=%20%5Cmathbb%20R%5En%0A"></p>
-<p>한편 같은 논리로</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20C(M)%20%5Coplus%20%5Cmathcal%20N(M%5ET)%20=%20%5Cmathbb%20R%5Em%0A"></p>
-<p>앞서 보았듯이 <img src="https://latex.codecogs.com/png.latex?%7B%5Crm%20rank%7D%20(M)%20=%5Cdim(%5Cmathcal%20R(M))%20=%20%5Cdim(%5Cmathcal%20C(M))">다. <img src="https://latex.codecogs.com/png.latex?%5Cdim(%5Cmathcal%20N(M))%20=%20%7B%5Crm%20nullity%7D%20(M)">이라고 하면,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%7B%5Crm%20rank%7D%20(M)%20+%20%7B%5Crm%20nullity%7D%20(M)%20=%20n%20=%20%5Cdim(%5Cmathbb%20R%5En)%0A"></p>
-<p>이 모든 걸 그림 하나로 정리하면 다음과 같다! 아래 보듯이 특수해(particular solution) <img src="https://latex.codecogs.com/png.latex?x_r">은 로우 스페이스에서 생성되는 해이다. 일반해(homogeneous solution) <img src="https://latex.codecogs.com/png.latex?x_n">은 널 스페이스에서 생성되는 해다. 이 둘을 합치면 완전해(complete solution)가 된다. 아래 그림에서 보듯이</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0AAx_r%20&amp;%20%5Crightarrow%20%5Cmathcal%20C(M)%20%5C%5C%0AAx_n%20&amp;%20%5Crightarrow%20%5Cmathcal%20N(M)%20%5C%5C%0AAx_c%20=%20A(x_r%20+%20x_n)%20&amp;%20%5Crightarrow%20%5Cmathcal%20C(M)%0A%5Cend%7Baligned%7D%0A"></p>
-<div class="{column-margin}">
-<p>보통 homogenous라는 말이 들어가면 <img src="https://latex.codecogs.com/png.latex?Ax%20=%200">과 같은 형태의 연립방정식을 의미 의미한다.</p>
-</div>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/www.cs.utexas.edu/users/flame/laff/alaff-beta/images/Chapter04/FundamentalSpaces.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:70%;"></p>
-
-
-</section>
-
- ]]></description>
-  <category>linear-algebra</category>
-  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-06-vector-geometry-2.html</guid>
-  <pubDate>Tue, 05 Jan 2021 15:00:00 GMT</pubDate>
-  <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
-</item>
 </channel>
 </rss>
 </span><span class="op" style="color: #5E5E5E;">,</span><span class="st" style="color: #20794D;">'
@@ -4082,122 +4111,6 @@ Note
   <category>linear-algebra</category>
   <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</guid>
   <pubDate>Wed, 06 Jan 2021 15:00:00 GMT</pubDate>
-  <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Vector Geometrically, part 2</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-06-vector-geometry-2.html</link>
-  <description><![CDATA[ 
-
-
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><section id="vector-space" class="level2">
-<h2 class="anchored" data-anchor-id="vector-space">Vector Space</h2>
-<p>먼저 벡터 스페이스를 살펴보기 위해서 몇 가지 정의부터 보자.</p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?V"> is vector space</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20%5Cin%20V"></li>
-<li><img src="https://latex.codecogs.com/png.latex?W"> is vector subspace <img src="https://latex.codecogs.com/png.latex?W%20%5Csubseteq%20V"></li>
-<li>span: 벡터의 선형 결합을 통해 생성되는 벡터 집합</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7Bspan%7D(%5Cvec%20v_1,%20%5Cdotsc,%20%5Cvec%20v_n)%20=%20%5C%7B%5Cvec%20v%20%7C%20%5Cvec%20v%20=%20%5Calpha_1%20%5Cvec%20v_1%20+%20%5Cdotsb%20+%20%5Calpha_n%20%5Cvec%20v_n,%20%5Calpha_i%20%5Cin%20%5Cmathbb%20R%20%5C%7D%0A"></p>
-<p>행렬 <img src="https://latex.codecogs.com/png.latex?M%20%5Cin%20%5Cmathbb%20R%5E%7Bm%20%5Ctimes%20n%7D">이 있다고 할 때</p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20R(M)%20%5Csubseteq%20%5Cmathbb%20R%5En">: <img src="https://latex.codecogs.com/png.latex?M">의 로우 스페이스, 즉 <img src="https://latex.codecogs.com/png.latex?M">의 행들의 모든 가능한 선형 결합이 나타내는 벡터 공간</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20R%20(M)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20v%20%5Cin%20%5Cmathbb%20R%5En%20%7C%20%5Cvec%20v%20=%20%5Cvec%20w%5ET%20M%20%5Ctext%7B%20for%20some%20%7D%20%5Cvec%20w%20%5Cin%20%5Cmathbb%20R%5Em%20%5C%7D%0A"></p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20C(M)%20%5Csubseteq%20%5Cmathbb%20R%5Em">: <img src="https://latex.codecogs.com/png.latex?M">의 컬럼 스페이스, 즉 <img src="https://latex.codecogs.com/png.latex?M">의 열들의 모든 가능한 선형 결합이 나타내는 벡터 공간</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20C%20(M)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20w%20%5Cin%20%5Cmathbb%20R%5Em%20%7C%20%5Cvec%20w%20=%20M%20v%20%5Ctext%7B%20for%20some%20%7D%20%5Cvec%20v%20%5Cin%20%5Cmathbb%20R%5En%20%5C%7D%0A"></p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M)%20%5Csubseteq%20%5Cmathbb%20R%5En">: <img src="https://latex.codecogs.com/png.latex?M">의 널 스페이스. 즉, 오른쪽에 곱해졌을 때 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200_%7Bm%7D">이 되는 벡터의 집합</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20N(M)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20v%20%5Cin%20%5Cmathbb%20R%5En%20%7C%20M%20%5Cvec%20v%20=%20%5Cvec%200%20%5C%7D%0A"></p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M%5ET)%20%5Csubseteq%20%5Cmathbb%20R%5En">: <img src="https://latex.codecogs.com/png.latex?M">의 좌 널 스페이스. 즉, 왼쪽에 곱해졌을 때 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200_%7Bn%7D">이 되는 벡터의 집합</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20N(M%5ET)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20w%20%5Cin%20%5Cmathbb%20R%5Em%20%7C%20%5Cvec%20w%5ET%20M%20%20=%20%5Cvec%200%5ET%20%5C%7D%0A"></p>
-<p>혹은</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20N(M%5ET)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20w%20%5Cin%20%5Cmathbb%20R%5Em%20%7C%20M%5ET%20%5Cvec%20w%20=%20%5Cvec%200%20%5C%7D%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?M">의 랭크는 컬럼 스페이스의 차원 그리고 로우 스페이스의 차원과 같다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0Ar(M)%20=%20%5Cdim(%5Cmathcal%20R%20(M))%20=%20%5Cdim(%5Cmathcal%20C(M))%0A"></p>
-</section>
-<section id="checklist" class="level2">
-<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
-<section id="zero-vector" class="level3">
-<h3 class="anchored" data-anchor-id="zero-vector">Zero vector</h3>
-<p>벡터 스페이스가 되려면 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">를 집합 내에 지니고 있어야 한다. 간단한 내용 같지만 참 중요하다. 일단 벡터 스페이스의 정의에서 <img src="https://latex.codecogs.com/png.latex?%5Calpha%20%5Cvec%20v">가 들어가기 때문에 <img src="https://latex.codecogs.com/png.latex?%5Calpha=0">의 조건에 따라서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">는 포함되어야 한다. 생각해 볼만한 대목. 벡터 서브스페이스 역시 마찬가지로 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">을 포함해야 한다. 2차원 벡터로 이야기한다면, <img src="https://latex.codecogs.com/png.latex?y%20=%202x%20+%201"> 같은 형태의 선은 벡터 (서브) 스페이스가 될 수 없다.</p>
-</section>
-<section id="subset-vs-subspace" class="level3">
-<h3 class="anchored" data-anchor-id="subset-vs-subspace">Subset vs subspace</h3>
-<p>부분집합은 원래 집합에 일정한 조건을 부여한 것이고, 이 점에서는 서브 스페이스 역시 부분 집합에 속한다. 다만 모든 부분 집합이 서브 스페이스가 되진 않는다. 이 점에서 서브 스페이스의 조건이 보다 제약적이다.</p>
-<p>다음과 같은 두 방정식의 해를 비교해보자. <img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20x%20=%20%5Cvec%20b">, <img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20x%20=%20%5Cvec%200"></p>
-<p><img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20v_1%20=%20%5Cvec%20b">와 <img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20v_2%20=%20%5Cvec%20b">를 생각해보자. <img src="https://latex.codecogs.com/png.latex?A(%5Cvec%20v_1%20+%20%5Cvec%20v_2)">는 원래의 벡터 스페이스에 들어 있는가?</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AA(%5Cvec%20v_1%20+%20%5Cvec%20v_2)%20=%202%20%5Cvec%20b%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cvec%20b%20=%20%5Cvec%200">가 아니라면, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_1%20+%20%5Cvec%20v_2">는 해가 될 수 없다. 조금 더 자세하게 표현해보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20v%20=%20%5Cvec%20b">의 해 공간은 다음과 같은 완전해의 집합이다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5C%7B%20%5Cvec%20c%20+%20%5Cvec%20v_n%5C%7D%20%5Ctext%7B%20where%20%7D%5Cvec%20v_n%20%5Cin%20%5Cmathcal%20N%20(A)%0A"></p>
-<p>즉, 해 공간은 특수해(particular solution) <img src="https://latex.codecogs.com/png.latex?%5Cvec%20c">와 널 스페이스에 속한 벡터의 합으로 구성된다. 해 공간의 원소 하나를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x_1%20=%20%5Cvec%20c%20+%20%5Cvec%20v_1">이라고 하고 다른 하나를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x_2%20=%20%5Cvec%20c%20+%20%5Cvec%20v_2">라고 하자. 이 둘을 더하면, <img src="https://latex.codecogs.com/png.latex?2%20%5Cvec%20c%20+%20%5Cvec%20v_1%20+%20%5Cvec%20v_2">가 된다. 이것이 해 공간 안에 있어야 하는데, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20c%20%5Cneq%200">이면 성립하지 않는다.</p>
-<p>한편 <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M)">은 자연스럽게 벡터 공간을 이룬다. 더한 것도 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">에 있고, 스칼라 곱 역시 마찬가지다. 참고로 아래에서 보겠지만, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20R(M)">, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20C(M)">, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M)">, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M%5ET)">를 네 개의 근본 서브 스페이스라고 부른다. 네 개는 밀접한 연관을 지니고 있다.</p>
-</section>
-<section id="solutions" class="level3">
-<h3 class="anchored" data-anchor-id="solutions">Solutions</h3>
-<p>이 기회에 해의 종류를 한번 살펴보고 넘어가자.</p>
-<ol type="1">
-<li>Particular solution (특수해): RREF에서 free variables를 모두 0으로 두고 찾은 해를 뜻한다.</li>
-<li>Homogenous soution (일반해): 일반해는 널 스페이스에 속하는 해를 뜻한다. 즉, <img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20x%20=%200">을 만족시키는 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x">를 의미한다.</li>
-<li>Complete solution (완전해): 완전해란 특수해와 일반해를 더한 형태이다. 즉, <img src="https://latex.codecogs.com/png.latex?x_c%20=%20x_p%20+%20c_h"></li>
-</ol>
-<p>이제 각각의 의미를 음미해보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AA%20%5Cvec%20x%20=%20A%20x_c%20=%20A(x_p%20+%20x_h)%20=%20A%20x_p%20+%20A%20x_h%20=%20A%20x_p%20+%20%5Cvec%200_%7Bm%7D%0A"></p>
-<p>보다 자세한 사례는 <a href="https://m.blog.naver.com/crm06217/221674223212">여기</a>를 참고하라. 약간의 직관적인 설명만 곁들이겠다. 특수해는 딱 그 위치에 있어야 하는 벡터다. 즉 free variable이 어떤 값이 오건 간에 이 벡터의 값은 고정되어 있다. 반면 일반해는 널 스페이스에 속한다. 앞서 널 스페이스는 부분 공간이라고 말했다. 이는 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">를 중심으로 각각 벡터가 지나가야 한다는 뜻이다. 따라서 free variable의 경우 하나를 구하기 위해서 나머지를 0으로 두고 구해야 한다. 그리고 이렇게 구해진 vector에 곱해지는 스칼라 값이 free variable에 해당한다.</p>
-</section>
-</section>
-<section id="system-of-linear-equations" class="level2">
-<h2 class="anchored" data-anchor-id="system-of-linear-equations">System of Linear Equations</h2>
-<p>다음 방정식의 해 공간을 생각해보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AM%20%5Cvec%20x%20=%20%5Cvec%20b%0A"></p>
-<p>먼저 <img src="https://latex.codecogs.com/png.latex?M">의 널 스페이스를 생각해보자. 여기 속한 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x">는 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5En"> 집합에 속한다. 정의상 <img src="https://latex.codecogs.com/png.latex?M%20%5Cvec%20x%20=%200">이므로 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x">를 어떤 해에 더하면 이 값 역시 해가 된다. 따라서, <img src="https://latex.codecogs.com/png.latex?M%20%5Cvec%20x%20=%20%5Cvec%20b">를 만족하는 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x%20=%20%5Cvec%20c">라고 하자. 이를 특수 해라고 부른다. 여기에 널 스페이스에 속한 임의의 원소를 더하면 완전해가 된다. 즉,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20x%20=%20%5Cvec%20c%20+%20%5Ctext%7Bspan%7D(%5Cvec%20v_1,%20%5Cdotsc,%20%5Cvec%20v_k)%20%5Ctext%7B%20where%20%7D%20%5Ctext%7Bspan%7D(%5Cvec%20v_1,%20%5Cdotsc,%20%5Cvec%20v_k)%20=%20%5Cmathcal%20N(M)%0A"></p>
-<section id="rref-method" class="level3">
-<h3 class="anchored" data-anchor-id="rref-method">RREF method</h3>
-<p>연립방정식의 해를 구하는 가장 기초적인 방법, 즉 RREF, 기약 행사다리꼴 행렬을 만드는 과정이 이에 부합한다. 즉, <img src="https://latex.codecogs.com/png.latex?%5BM%20%5Clvert%20%5Cvec%20b%5D">를 RREF로 만들면, <img src="https://latex.codecogs.com/png.latex?%5B%5Ctext%7Brref%7D(M)%20%5Cvert%20%5Cvec%20c%5D">의 형태가 된다. 이때, <img src="https://latex.codecogs.com/png.latex?%5Ctext%7Brref%7D(M)">는 <img src="https://latex.codecogs.com/png.latex?k"> 개의 자유 변수를 <img src="https://latex.codecogs.com/png.latex?n-k"> 개의 특수 해를 지니게 된다. 자유 변수에서 널 스페이스에 속하는 일반해를 얻을 수 있다.</p>
-</section>
-</section>
-<section id="two-transformation" class="level2">
-<h2 class="anchored" data-anchor-id="two-transformation">Two Transformation</h2>
-<p><img src="https://latex.codecogs.com/png.latex?M%20%5Cin%20%5Cmathbb%20R%5E%7Bm%20%5Ctimes%20n%7D">이 편리한 이유는 <img src="https://latex.codecogs.com/png.latex?M">이 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x%20%5Cin%20%5Cmathbb%20R%5En">을 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20y%20%5Cin%20%5Cmathbb%20R%5Em">으로 바꾸는 선형 변환 모두를 표현할 수 있기 때문이다. 그렇다면, <img src="https://latex.codecogs.com/png.latex?M%5ET">는 어떨까? 이는 같은 맥락에서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20a%20%5Cin%20%5Cmathbb%20R%5Em">을 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20b%20%5Cin%20%5Cmathbb%20R%5En">으로 바꾸는 선형 변환을 표현한다. 즉,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20a%5ET%20M%20=%20%5Cvec%20b%0A"></p>
-<p>이는 <img src="https://latex.codecogs.com/png.latex?M%5ET%20%5Cvec%20a=%20%5Cvec%20b%5ET">가 된다. 즉, <img src="https://latex.codecogs.com/png.latex?M%5ET">는 <img src="https://latex.codecogs.com/png.latex?M">의 좌 벡터 공간의 집합을 표현한다. 마찬가지로 <img src="https://latex.codecogs.com/png.latex?M">은 <img src="https://latex.codecogs.com/png.latex?M">의 우 벡터 공간의 집합을 표현한다. <img src="https://latex.codecogs.com/png.latex?M">의 좌 벡터 공간이 바로 로우 공간이고 우 벡터 공간이 컬럼 공간이다.</p>
-<p>이제, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M)">의 원소는 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5En">에 속한다. 이와 직교하는 공간은 어떤 공간일까? 좌 벡터 공간일까? 우 벡터 공간일까? 쉽게 생각하자. 직교 하기 위해서는 서로 차원이 같아야 한다. 우 벡터 공간은 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5Em">에 속한다. 따라서 직교한다면 좌 벡터 공간과 한다. 확인해보자. <img src="https://latex.codecogs.com/png.latex?M%20%5Cvec%20v_n%20=%20%5Cvec%200_m"> where <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_n%20%5Cin%20%5Cmathcal%20N(M)"> 가 성립한다. 이제 양번에 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20a%5ET">를 곱해보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cunderbrace%7B(M%5ET%20%5Cvec%20a)%5ET%7D_%7B%5Ctext%7Bleft%20space%7D%7D%20%5Cvec%20v_n%20=%20%5Cvec%20a%5ET%20M%5Cvec%20v_n%20=%20%5Cvec%20a%5ET%20%5Cvec%200_m%20=%200%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20R(M)%20%5Coplus%20%5Cmathcal%20N(M)%20=%20%5Cmathbb%20R%5En%0A"></p>
-<p>한편 같은 논리로</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20C(M)%20%5Coplus%20%5Cmathcal%20N(M%5ET)%20=%20%5Cmathbb%20R%5Em%0A"></p>
-<p>앞서 보았듯이 <img src="https://latex.codecogs.com/png.latex?%7B%5Crm%20rank%7D%20(M)%20=%5Cdim(%5Cmathcal%20R(M))%20=%20%5Cdim(%5Cmathcal%20C(M))">다. <img src="https://latex.codecogs.com/png.latex?%5Cdim(%5Cmathcal%20N(M))%20=%20%7B%5Crm%20nullity%7D%20(M)">이라고 하면,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%7B%5Crm%20rank%7D%20(M)%20+%20%7B%5Crm%20nullity%7D%20(M)%20=%20n%20=%20%5Cdim(%5Cmathbb%20R%5En)%0A"></p>
-<p>이 모든 걸 그림 하나로 정리하면 다음과 같다! 아래 보듯이 특수해(particular solution) <img src="https://latex.codecogs.com/png.latex?x_r">은 로우 스페이스에서 생성되는 해이다. 일반해(homogeneous solution) <img src="https://latex.codecogs.com/png.latex?x_n">은 널 스페이스에서 생성되는 해다. 이 둘을 합치면 완전해(complete solution)가 된다. 아래 그림에서 보듯이</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0AAx_r%20&amp;%20%5Crightarrow%20%5Cmathcal%20C(M)%20%5C%5C%0AAx_n%20&amp;%20%5Crightarrow%20%5Cmathcal%20N(M)%20%5C%5C%0AAx_c%20=%20A(x_r%20+%20x_n)%20&amp;%20%5Crightarrow%20%5Cmathcal%20C(M)%0A%5Cend%7Baligned%7D%0A"></p>
-<div class="{column-margin}">
-<p>보통 homogenous라는 말이 들어가면 <img src="https://latex.codecogs.com/png.latex?Ax%20=%200">과 같은 형태의 연립방정식을 의미 의미한다.</p>
-</div>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/www.cs.utexas.edu/users/flame/laff/alaff-beta/images/Chapter04/FundamentalSpaces.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:70%;"></p>
-
-
-</section>
-
- ]]></description>
-  <category>linear-algebra</category>
-  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-06-vector-geometry-2.html</guid>
-  <pubDate>Tue, 05 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
@@ -5744,122 +5657,6 @@ Note
   <category>linear-algebra</category>
   <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</guid>
   <pubDate>Wed, 06 Jan 2021 15:00:00 GMT</pubDate>
-  <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Vector Geometrically, part 2</title>
-  <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-06-vector-geometry-2.html</link>
-  <description><![CDATA[ 
-
-
-
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><section id="vector-space" class="level2">
-<h2 class="anchored" data-anchor-id="vector-space">Vector Space</h2>
-<p>먼저 벡터 스페이스를 살펴보기 위해서 몇 가지 정의부터 보자.</p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?V"> is vector space</li>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cvec%20v%20%5Cin%20V"></li>
-<li><img src="https://latex.codecogs.com/png.latex?W"> is vector subspace <img src="https://latex.codecogs.com/png.latex?W%20%5Csubseteq%20V"></li>
-<li>span: 벡터의 선형 결합을 통해 생성되는 벡터 집합</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7Bspan%7D(%5Cvec%20v_1,%20%5Cdotsc,%20%5Cvec%20v_n)%20=%20%5C%7B%5Cvec%20v%20%7C%20%5Cvec%20v%20=%20%5Calpha_1%20%5Cvec%20v_1%20+%20%5Cdotsb%20+%20%5Calpha_n%20%5Cvec%20v_n,%20%5Calpha_i%20%5Cin%20%5Cmathbb%20R%20%5C%7D%0A"></p>
-<p>행렬 <img src="https://latex.codecogs.com/png.latex?M%20%5Cin%20%5Cmathbb%20R%5E%7Bm%20%5Ctimes%20n%7D">이 있다고 할 때</p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20R(M)%20%5Csubseteq%20%5Cmathbb%20R%5En">: <img src="https://latex.codecogs.com/png.latex?M">의 로우 스페이스, 즉 <img src="https://latex.codecogs.com/png.latex?M">의 행들의 모든 가능한 선형 결합이 나타내는 벡터 공간</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20R%20(M)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20v%20%5Cin%20%5Cmathbb%20R%5En%20%7C%20%5Cvec%20v%20=%20%5Cvec%20w%5ET%20M%20%5Ctext%7B%20for%20some%20%7D%20%5Cvec%20w%20%5Cin%20%5Cmathbb%20R%5Em%20%5C%7D%0A"></p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20C(M)%20%5Csubseteq%20%5Cmathbb%20R%5Em">: <img src="https://latex.codecogs.com/png.latex?M">의 컬럼 스페이스, 즉 <img src="https://latex.codecogs.com/png.latex?M">의 열들의 모든 가능한 선형 결합이 나타내는 벡터 공간</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20C%20(M)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20w%20%5Cin%20%5Cmathbb%20R%5Em%20%7C%20%5Cvec%20w%20=%20M%20v%20%5Ctext%7B%20for%20some%20%7D%20%5Cvec%20v%20%5Cin%20%5Cmathbb%20R%5En%20%5C%7D%0A"></p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M)%20%5Csubseteq%20%5Cmathbb%20R%5En">: <img src="https://latex.codecogs.com/png.latex?M">의 널 스페이스. 즉, 오른쪽에 곱해졌을 때 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200_%7Bm%7D">이 되는 벡터의 집합</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20N(M)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20v%20%5Cin%20%5Cmathbb%20R%5En%20%7C%20M%20%5Cvec%20v%20=%20%5Cvec%200%20%5C%7D%0A"></p>
-<ul>
-<li><img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M%5ET)%20%5Csubseteq%20%5Cmathbb%20R%5En">: <img src="https://latex.codecogs.com/png.latex?M">의 좌 널 스페이스. 즉, 왼쪽에 곱해졌을 때 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200_%7Bn%7D">이 되는 벡터의 집합</li>
-</ul>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20N(M%5ET)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20w%20%5Cin%20%5Cmathbb%20R%5Em%20%7C%20%5Cvec%20w%5ET%20M%20%20=%20%5Cvec%200%5ET%20%5C%7D%0A"></p>
-<p>혹은</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20N(M%5ET)%20%5Coverset%7B%5Crm%20def%7D%7B=%7D%20%5C%7B%20%5Cvec%20w%20%5Cin%20%5Cmathbb%20R%5Em%20%7C%20M%5ET%20%5Cvec%20w%20=%20%5Cvec%200%20%5C%7D%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?M">의 랭크는 컬럼 스페이스의 차원 그리고 로우 스페이스의 차원과 같다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0Ar(M)%20=%20%5Cdim(%5Cmathcal%20R%20(M))%20=%20%5Cdim(%5Cmathcal%20C(M))%0A"></p>
-</section>
-<section id="checklist" class="level2">
-<h2 class="anchored" data-anchor-id="checklist">Checklist</h2>
-<section id="zero-vector" class="level3">
-<h3 class="anchored" data-anchor-id="zero-vector">Zero vector</h3>
-<p>벡터 스페이스가 되려면 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">를 집합 내에 지니고 있어야 한다. 간단한 내용 같지만 참 중요하다. 일단 벡터 스페이스의 정의에서 <img src="https://latex.codecogs.com/png.latex?%5Calpha%20%5Cvec%20v">가 들어가기 때문에 <img src="https://latex.codecogs.com/png.latex?%5Calpha=0">의 조건에 따라서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">는 포함되어야 한다. 생각해 볼만한 대목. 벡터 서브스페이스 역시 마찬가지로 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">을 포함해야 한다. 2차원 벡터로 이야기한다면, <img src="https://latex.codecogs.com/png.latex?y%20=%202x%20+%201"> 같은 형태의 선은 벡터 (서브) 스페이스가 될 수 없다.</p>
-</section>
-<section id="subset-vs-subspace" class="level3">
-<h3 class="anchored" data-anchor-id="subset-vs-subspace">Subset vs subspace</h3>
-<p>부분집합은 원래 집합에 일정한 조건을 부여한 것이고, 이 점에서는 서브 스페이스 역시 부분 집합에 속한다. 다만 모든 부분 집합이 서브 스페이스가 되진 않는다. 이 점에서 서브 스페이스의 조건이 보다 제약적이다.</p>
-<p>다음과 같은 두 방정식의 해를 비교해보자. <img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20x%20=%20%5Cvec%20b">, <img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20x%20=%20%5Cvec%200"></p>
-<p><img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20v_1%20=%20%5Cvec%20b">와 <img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20v_2%20=%20%5Cvec%20b">를 생각해보자. <img src="https://latex.codecogs.com/png.latex?A(%5Cvec%20v_1%20+%20%5Cvec%20v_2)">는 원래의 벡터 스페이스에 들어 있는가?</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AA(%5Cvec%20v_1%20+%20%5Cvec%20v_2)%20=%202%20%5Cvec%20b%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cvec%20b%20=%20%5Cvec%200">가 아니라면, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_1%20+%20%5Cvec%20v_2">는 해가 될 수 없다. 조금 더 자세하게 표현해보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20v%20=%20%5Cvec%20b">의 해 공간은 다음과 같은 완전해의 집합이다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5C%7B%20%5Cvec%20c%20+%20%5Cvec%20v_n%5C%7D%20%5Ctext%7B%20where%20%7D%5Cvec%20v_n%20%5Cin%20%5Cmathcal%20N%20(A)%0A"></p>
-<p>즉, 해 공간은 특수해(particular solution) <img src="https://latex.codecogs.com/png.latex?%5Cvec%20c">와 널 스페이스에 속한 벡터의 합으로 구성된다. 해 공간의 원소 하나를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x_1%20=%20%5Cvec%20c%20+%20%5Cvec%20v_1">이라고 하고 다른 하나를 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x_2%20=%20%5Cvec%20c%20+%20%5Cvec%20v_2">라고 하자. 이 둘을 더하면, <img src="https://latex.codecogs.com/png.latex?2%20%5Cvec%20c%20+%20%5Cvec%20v_1%20+%20%5Cvec%20v_2">가 된다. 이것이 해 공간 안에 있어야 하는데, <img src="https://latex.codecogs.com/png.latex?%5Cvec%20c%20%5Cneq%200">이면 성립하지 않는다.</p>
-<p>한편 <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M)">은 자연스럽게 벡터 공간을 이룬다. 더한 것도 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">에 있고, 스칼라 곱 역시 마찬가지다. 참고로 아래에서 보겠지만, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20R(M)">, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20C(M)">, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M)">, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M%5ET)">를 네 개의 근본 서브 스페이스라고 부른다. 네 개는 밀접한 연관을 지니고 있다.</p>
-</section>
-<section id="solutions" class="level3">
-<h3 class="anchored" data-anchor-id="solutions">Solutions</h3>
-<p>이 기회에 해의 종류를 한번 살펴보고 넘어가자.</p>
-<ol type="1">
-<li>Particular solution (특수해): RREF에서 free variables를 모두 0으로 두고 찾은 해를 뜻한다.</li>
-<li>Homogenous soution (일반해): 일반해는 널 스페이스에 속하는 해를 뜻한다. 즉, <img src="https://latex.codecogs.com/png.latex?A%20%5Cvec%20x%20=%200">을 만족시키는 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x">를 의미한다.</li>
-<li>Complete solution (완전해): 완전해란 특수해와 일반해를 더한 형태이다. 즉, <img src="https://latex.codecogs.com/png.latex?x_c%20=%20x_p%20+%20c_h"></li>
-</ol>
-<p>이제 각각의 의미를 음미해보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AA%20%5Cvec%20x%20=%20A%20x_c%20=%20A(x_p%20+%20x_h)%20=%20A%20x_p%20+%20A%20x_h%20=%20A%20x_p%20+%20%5Cvec%200_%7Bm%7D%0A"></p>
-<p>보다 자세한 사례는 <a href="https://m.blog.naver.com/crm06217/221674223212">여기</a>를 참고하라. 약간의 직관적인 설명만 곁들이겠다. 특수해는 딱 그 위치에 있어야 하는 벡터다. 즉 free variable이 어떤 값이 오건 간에 이 벡터의 값은 고정되어 있다. 반면 일반해는 널 스페이스에 속한다. 앞서 널 스페이스는 부분 공간이라고 말했다. 이는 <img src="https://latex.codecogs.com/png.latex?%5Cvec%200">를 중심으로 각각 벡터가 지나가야 한다는 뜻이다. 따라서 free variable의 경우 하나를 구하기 위해서 나머지를 0으로 두고 구해야 한다. 그리고 이렇게 구해진 vector에 곱해지는 스칼라 값이 free variable에 해당한다.</p>
-</section>
-</section>
-<section id="system-of-linear-equations" class="level2">
-<h2 class="anchored" data-anchor-id="system-of-linear-equations">System of Linear Equations</h2>
-<p>다음 방정식의 해 공간을 생각해보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AM%20%5Cvec%20x%20=%20%5Cvec%20b%0A"></p>
-<p>먼저 <img src="https://latex.codecogs.com/png.latex?M">의 널 스페이스를 생각해보자. 여기 속한 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x">는 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5En"> 집합에 속한다. 정의상 <img src="https://latex.codecogs.com/png.latex?M%20%5Cvec%20x%20=%200">이므로 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x">를 어떤 해에 더하면 이 값 역시 해가 된다. 따라서, <img src="https://latex.codecogs.com/png.latex?M%20%5Cvec%20x%20=%20%5Cvec%20b">를 만족하는 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x%20=%20%5Cvec%20c">라고 하자. 이를 특수 해라고 부른다. 여기에 널 스페이스에 속한 임의의 원소를 더하면 완전해가 된다. 즉,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20x%20=%20%5Cvec%20c%20+%20%5Ctext%7Bspan%7D(%5Cvec%20v_1,%20%5Cdotsc,%20%5Cvec%20v_k)%20%5Ctext%7B%20where%20%7D%20%5Ctext%7Bspan%7D(%5Cvec%20v_1,%20%5Cdotsc,%20%5Cvec%20v_k)%20=%20%5Cmathcal%20N(M)%0A"></p>
-<section id="rref-method" class="level3">
-<h3 class="anchored" data-anchor-id="rref-method">RREF method</h3>
-<p>연립방정식의 해를 구하는 가장 기초적인 방법, 즉 RREF, 기약 행사다리꼴 행렬을 만드는 과정이 이에 부합한다. 즉, <img src="https://latex.codecogs.com/png.latex?%5BM%20%5Clvert%20%5Cvec%20b%5D">를 RREF로 만들면, <img src="https://latex.codecogs.com/png.latex?%5B%5Ctext%7Brref%7D(M)%20%5Cvert%20%5Cvec%20c%5D">의 형태가 된다. 이때, <img src="https://latex.codecogs.com/png.latex?%5Ctext%7Brref%7D(M)">는 <img src="https://latex.codecogs.com/png.latex?k"> 개의 자유 변수를 <img src="https://latex.codecogs.com/png.latex?n-k"> 개의 특수 해를 지니게 된다. 자유 변수에서 널 스페이스에 속하는 일반해를 얻을 수 있다.</p>
-</section>
-</section>
-<section id="two-transformation" class="level2">
-<h2 class="anchored" data-anchor-id="two-transformation">Two Transformation</h2>
-<p><img src="https://latex.codecogs.com/png.latex?M%20%5Cin%20%5Cmathbb%20R%5E%7Bm%20%5Ctimes%20n%7D">이 편리한 이유는 <img src="https://latex.codecogs.com/png.latex?M">이 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20x%20%5Cin%20%5Cmathbb%20R%5En">을 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20y%20%5Cin%20%5Cmathbb%20R%5Em">으로 바꾸는 선형 변환 모두를 표현할 수 있기 때문이다. 그렇다면, <img src="https://latex.codecogs.com/png.latex?M%5ET">는 어떨까? 이는 같은 맥락에서 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20a%20%5Cin%20%5Cmathbb%20R%5Em">을 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20b%20%5Cin%20%5Cmathbb%20R%5En">으로 바꾸는 선형 변환을 표현한다. 즉,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvec%20a%5ET%20M%20=%20%5Cvec%20b%0A"></p>
-<p>이는 <img src="https://latex.codecogs.com/png.latex?M%5ET%20%5Cvec%20a=%20%5Cvec%20b%5ET">가 된다. 즉, <img src="https://latex.codecogs.com/png.latex?M%5ET">는 <img src="https://latex.codecogs.com/png.latex?M">의 좌 벡터 공간의 집합을 표현한다. 마찬가지로 <img src="https://latex.codecogs.com/png.latex?M">은 <img src="https://latex.codecogs.com/png.latex?M">의 우 벡터 공간의 집합을 표현한다. <img src="https://latex.codecogs.com/png.latex?M">의 좌 벡터 공간이 바로 로우 공간이고 우 벡터 공간이 컬럼 공간이다.</p>
-<p>이제, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20N(M)">의 원소는 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5En">에 속한다. 이와 직교하는 공간은 어떤 공간일까? 좌 벡터 공간일까? 우 벡터 공간일까? 쉽게 생각하자. 직교 하기 위해서는 서로 차원이 같아야 한다. 우 벡터 공간은 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5Em">에 속한다. 따라서 직교한다면 좌 벡터 공간과 한다. 확인해보자. <img src="https://latex.codecogs.com/png.latex?M%20%5Cvec%20v_n%20=%20%5Cvec%200_m"> where <img src="https://latex.codecogs.com/png.latex?%5Cvec%20v_n%20%5Cin%20%5Cmathcal%20N(M)"> 가 성립한다. 이제 양번에 <img src="https://latex.codecogs.com/png.latex?%5Cvec%20a%5ET">를 곱해보자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cunderbrace%7B(M%5ET%20%5Cvec%20a)%5ET%7D_%7B%5Ctext%7Bleft%20space%7D%7D%20%5Cvec%20v_n%20=%20%5Cvec%20a%5ET%20M%5Cvec%20v_n%20=%20%5Cvec%20a%5ET%20%5Cvec%200_m%20=%200%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20R(M)%20%5Coplus%20%5Cmathcal%20N(M)%20=%20%5Cmathbb%20R%5En%0A"></p>
-<p>한편 같은 논리로</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathcal%20C(M)%20%5Coplus%20%5Cmathcal%20N(M%5ET)%20=%20%5Cmathbb%20R%5Em%0A"></p>
-<p>앞서 보았듯이 <img src="https://latex.codecogs.com/png.latex?%7B%5Crm%20rank%7D%20(M)%20=%5Cdim(%5Cmathcal%20R(M))%20=%20%5Cdim(%5Cmathcal%20C(M))">다. <img src="https://latex.codecogs.com/png.latex?%5Cdim(%5Cmathcal%20N(M))%20=%20%7B%5Crm%20nullity%7D%20(M)">이라고 하면,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%7B%5Crm%20rank%7D%20(M)%20+%20%7B%5Crm%20nullity%7D%20(M)%20=%20n%20=%20%5Cdim(%5Cmathbb%20R%5En)%0A"></p>
-<p>이 모든 걸 그림 하나로 정리하면 다음과 같다! 아래 보듯이 특수해(particular solution) <img src="https://latex.codecogs.com/png.latex?x_r">은 로우 스페이스에서 생성되는 해이다. 일반해(homogeneous solution) <img src="https://latex.codecogs.com/png.latex?x_n">은 널 스페이스에서 생성되는 해다. 이 둘을 합치면 완전해(complete solution)가 된다. 아래 그림에서 보듯이</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0AAx_r%20&amp;%20%5Crightarrow%20%5Cmathcal%20C(M)%20%5C%5C%0AAx_n%20&amp;%20%5Crightarrow%20%5Cmathcal%20N(M)%20%5C%5C%0AAx_c%20=%20A(x_r%20+%20x_n)%20&amp;%20%5Crightarrow%20%5Cmathcal%20C(M)%0A%5Cend%7Baligned%7D%0A"></p>
-<div class="{column-margin}">
-<p>보통 homogenous라는 말이 들어가면 <img src="https://latex.codecogs.com/png.latex?Ax%20=%200">과 같은 형태의 연립방정식을 의미 의미한다.</p>
-</div>
-<p><img src="http://www.lostineconomics.com/posts/linear-algebra/https:/www.cs.utexas.edu/users/flame/laff/alaff-beta/images/Chapter04/FundamentalSpaces.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width:70%;"></p>
-
-
-</section>
-
- ]]></description>
-  <category>linear-algebra</category>
-  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-06-vector-geometry-2.html</guid>
-  <pubDate>Tue, 05 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
