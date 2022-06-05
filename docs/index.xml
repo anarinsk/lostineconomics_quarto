@@ -152,6 +152,7 @@ memory usage: 20.9+ KB</code></pre>
 
  ]]></description>
   <category>regression</category>
+  <category>stats-simple</category>
   <guid>http://www.lostineconomics.com/posts/regression/2022-06-04-simpson-paradox-regression.html</guid>
   <pubDate>Sat, 25 Jun 2022 15:00:00 GMT</pubDate>
   <media:content url="https://user-images.githubusercontent.com/39834789/86522451-84949f00-be38-11ea-9555-6409579f3b58.png" medium="image" type="image/png"/>
