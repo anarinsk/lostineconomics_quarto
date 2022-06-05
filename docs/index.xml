@@ -141,6 +141,7 @@ memory usage: 20.9+ KB</code></pre>
 <li><img src="https://latex.codecogs.com/png.latex?D_%7B1i%7D">: 종족이 <code>Chinstrap</code>일 경우 1 이외는 0</li>
 <li><img src="https://latex.codecogs.com/png.latex?D_%7B2i%7D">: 종족이 <code>Gentoo</code>일 경우 1이외는 0</li>
 </ul>
+<p>식 (3)은 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_i">가 그룹별로 달라지는지 여부를 교호작용 항목을 통해 확인했다. (3)이 보여주듯이 그룹별로 <img src="https://latex.codecogs.com/png.latex?%5Cbeta_i">는 통계적으로 유의미한 차이가 없다.</p>
 </div></div></section>
 
  ]]></description>
