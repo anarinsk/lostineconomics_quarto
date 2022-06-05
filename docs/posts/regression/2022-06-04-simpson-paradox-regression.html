@@ -331,15 +331,13 @@ memory usage: 20.9+ KB</code></pre>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>나머지 계수의 의미는 기본이 되는 Adelie 종족을 기준으로 다른 두 개의 종족의 절편이 얼마나 떨어져 있는지를 보여준다. 회귀식을 적어보면 다음과 같다.</p>
-<ol type="1">
-<li><span class="math inline">\(y_i = \alpha_i + \beta x_i\)</span></li>
-<li><span class="math inline">\(y_i = \alpha_i + \beta x_i + D_{1i} + D_{2i}\)</span></li>
-</ol>
+<p>식 (1) <span class="math inline">\(y_i = \alpha_i + \beta x_i\)</span></p>
+<p>식 (2) <span class="math inline">\(y_i = \alpha_i + \beta x_i + D_{1i} + D_{2i}\)</span></p>
 <ul>
 <li><span class="math inline">\(y_i\)</span>: <code>culmen_depth_mm</code> 부리의 높이</li>
 <li><span class="math inline">\(x_i\)</span>: <code>culmen_length_mm</code> 부리의 길이</li>
-<li><span class="math inline">\(D_{1i}\)</span>: 종족이 <code>Chinstrap</code>일 경우 1</li>
-<li><span class="math inline">\(D_{2i}\)</span>: 종족이 <code>Gentoo</code>ㅇ,ㅣㄹ</li>
+<li><span class="math inline">\(D_{1i}\)</span>: 종족이 <code>Chinstrap</code>일 경우 1 이외는 0</li>
+<li><span class="math inline">\(D_{2i}\)</span>: 종족이 <code>Gentoo</code>일 경우 1이외는 0</li>
 </ul>
 </div></div></section>
 

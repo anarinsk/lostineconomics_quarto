@@ -131,15 +131,13 @@ memory usage: 20.9+ KB</code></pre>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>나머지 계수의 의미는 기본이 되는 Adelie 종족을 기준으로 다른 두 개의 종족의 절편이 얼마나 떨어져 있는지를 보여준다. 회귀식을 적어보면 다음과 같다.</p>
-<ol type="1">
-<li><img src="https://latex.codecogs.com/png.latex?y_i%20=%20%5Calpha_i%20+%20%5Cbeta%20x_i"></li>
-<li><img src="https://latex.codecogs.com/png.latex?y_i%20=%20%5Calpha_i%20+%20%5Cbeta%20x_i%20+%20D_%7B1i%7D%20+%20D_%7B2i%7D"></li>
-</ol>
+<p>식 (1) <img src="https://latex.codecogs.com/png.latex?y_i%20=%20%5Calpha_i%20+%20%5Cbeta%20x_i"></p>
+<p>식 (2) <img src="https://latex.codecogs.com/png.latex?y_i%20=%20%5Calpha_i%20+%20%5Cbeta%20x_i%20+%20D_%7B1i%7D%20+%20D_%7B2i%7D"></p>
 <ul>
 <li><img src="https://latex.codecogs.com/png.latex?y_i">: <code>culmen_depth_mm</code> 부리의 높이</li>
 <li><img src="https://latex.codecogs.com/png.latex?x_i">: <code>culmen_length_mm</code> 부리의 길이</li>
-<li><img src="https://latex.codecogs.com/png.latex?D_%7B1i%7D">: 종족이 <code>Chinstrap</code>일 경우 1</li>
-<li><img src="https://latex.codecogs.com/png.latex?D_%7B2i%7D">: 종족이 <code>Gentoo</code>ㅇ,ㅣㄹ</li>
+<li><img src="https://latex.codecogs.com/png.latex?D_%7B1i%7D">: 종족이 <code>Chinstrap</code>일 경우 1 이외는 0</li>
+<li><img src="https://latex.codecogs.com/png.latex?D_%7B2i%7D">: 종족이 <code>Gentoo</code>일 경우 1이외는 0</li>
 </ul>
 </div></div></section>
 
