@@ -232,7 +232,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>데이터는 <a href="https://towardsdatascience.com/the-curious-case-of-simpsons-paradox-6f178548d7e8">여기</a>서 갖고 왔다</p>
 <p><img src="https://user-images.githubusercontent.com/39834789/86522451-84949f00-be38-11ea-9555-6409579f3b58.png" class="img-fluid"></p>
 </div></div><p><code>culmen</code>은 펭귄의 부리인데, <code>length</code>는 앞으로 튀어나온 길이를 <code>depth</code>는 부리의 높이를 의미한다. 아래 데이터는 펭귄의 세 가지 종족, 성별 등을 별도로 기록하고 있다. 이제 심슨 역설의 전형적인 사례를 보도록 하자.</p>
-<div class="cell" data-execution_count="2">
+<div class="cell" data-execution_count="6">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic packages</span></span>
@@ -252,27 +252,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>csv_addr <span class="op">=</span> <span class="st">"data/penguins_size.csv"</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">"fivethirtyeight"</span>)<span class="co"># for pretty graphs</span></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>df  <span class="op">=</span> pd.read_csv(<span class="st">'data/penguins_size.csv'</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>df.head()</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>df.info()</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>df.head()<span class="op">;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">#df.info();</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.dropna()</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>df.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
-RangeIndex: 344 entries, 0 to 343
-Data columns (total 7 columns):
- #   Column             Non-Null Count  Dtype  
----  ------             --------------  -----  
- 0   species            344 non-null    object 
- 1   island             344 non-null    object 
- 2   culmen_length_mm   342 non-null    float64
- 3   culmen_depth_mm    342 non-null    float64
- 4   flipper_length_mm  342 non-null    float64
- 5   body_mass_g        342 non-null    float64
- 6   sex                334 non-null    object 
-dtypes: float64(4), object(3)
-memory usage: 18.9+ KB
-&lt;class 'pandas.core.frame.DataFrame'&gt;
 Int64Index: 334 entries, 0 to 343
 Data columns (total 7 columns):
  #   Column             Non-Null Count  Dtype  
