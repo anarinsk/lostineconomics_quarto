@@ -126,6 +126,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -324,12 +325,22 @@ memory usage: 20.9+ KB</code></pre>
  </td></tr></tbody></table>
 </div>
 </div>
-<p>회귀 분석에서 종족을 통제한 경우와 그렇지 않은 경우의 <code>culmen_length_mm</code>(부리의 길이)의 계수를 비교해보자. 종족을 통제하지 않은 경우 계수는 음수를 지닌다. 반면 종족을 통제한 경우는 각각 종족의 구분해 각각의 절편과 해당 종족 내의 부리의 길이와 높이의 관계를 계산하게 된다. 보듯이 계수는 음수에서 양수로 바뀌어 있다.</p>
+<p>회귀 분석에서 종족을 통제한 경우와 그렇지 않은 경우의 <code>culmen_length_mm</code>(부리의 길이)의 계수를 비교해보자. (1)은 종족을 통제하지 않은 회귀식으로 <code>culmen_length_mm</code>의 계수는 음수이다. 반면 종족을 통제한 (2)의 회귀식은 종족의 구분해 각 절편과 해당 종족 내의 부리의 길이와 높이의 관계를 계산해 이를 적절하게 가중 평균한 값이 <code>culmen_length_mm</code>의 계수가 된다. 회귀 테이블에서 보듯이 <code>culmen_length_mm</code>의 계수는 음수에서 양수로 바뀌어 있다.</p>
 
 
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>나머지 계수의 의미는 기본이 되는 Adelie 종족을 기준으로 다른 두 개의 종족의 절편이 얼마나 떨어져 있는지를 보여준다.</p>
+<p>나머지 계수의 의미는 기본이 되는 Adelie 종족을 기준으로 다른 두 개의 종족의 절편이 얼마나 떨어져 있는지를 보여준다. 회귀식을 적어보면 다음과 같다.</p>
+<ol type="1">
+<li><span class="math inline">\(y_i = \alpha_i + \beta x_i\)</span></li>
+<li><span class="math inline">\(y_i = \alpha_i + \beta x_i + D_{1i} + D_{2i}\)</span></li>
+</ol>
+<ul>
+<li><span class="math inline">\(y_i\)</span>: <code>culmen_depth_mm</code> 부리의 높이</li>
+<li><span class="math inline">\(x_i\)</span>: <code>culmen_length_mm</code> 부리의 길이</li>
+<li><span class="math inline">\(D_{1i}\)</span>: 종족이 <code>Chinstrap</code>일 경우 1</li>
+<li><span class="math inline">\(D_{2i}\)</span>: 종족이 <code>Gentoo</code>ㅇ,ㅣㄹ</li>
+</ul>
 </div></div></section>
 
 </main> <!-- /main -->

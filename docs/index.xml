@@ -125,12 +125,22 @@ memory usage: 20.9+ KB</code></pre>
  </td></tr></tbody></table>
 </div>
 </div>
-<p>회귀 분석에서 종족을 통제한 경우와 그렇지 않은 경우의 <code>culmen_length_mm</code>(부리의 길이)의 계수를 비교해보자. 종족을 통제하지 않은 경우 계수는 음수를 지닌다. 반면 종족을 통제한 경우는 각각 종족의 구분해 각각의 절편과 해당 종족 내의 부리의 길이와 높이의 관계를 계산하게 된다. 보듯이 계수는 음수에서 양수로 바뀌어 있다.</p>
+<p>회귀 분석에서 종족을 통제한 경우와 그렇지 않은 경우의 <code>culmen_length_mm</code>(부리의 길이)의 계수를 비교해보자. (1)은 종족을 통제하지 않은 회귀식으로 <code>culmen_length_mm</code>의 계수는 음수이다. 반면 종족을 통제한 (2)의 회귀식은 종족의 구분해 각 절편과 해당 종족 내의 부리의 길이와 높이의 관계를 계산해 이를 적절하게 가중 평균한 값이 <code>culmen_length_mm</code>의 계수가 된다. 회귀 테이블에서 보듯이 <code>culmen_length_mm</code>의 계수는 음수에서 양수로 바뀌어 있다.</p>
 
 
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>나머지 계수의 의미는 기본이 되는 Adelie 종족을 기준으로 다른 두 개의 종족의 절편이 얼마나 떨어져 있는지를 보여준다.</p>
+<p>나머지 계수의 의미는 기본이 되는 Adelie 종족을 기준으로 다른 두 개의 종족의 절편이 얼마나 떨어져 있는지를 보여준다. 회귀식을 적어보면 다음과 같다.</p>
+<ol type="1">
+<li><img src="https://latex.codecogs.com/png.latex?y_i%20=%20%5Calpha_i%20+%20%5Cbeta%20x_i"></li>
+<li><img src="https://latex.codecogs.com/png.latex?y_i%20=%20%5Calpha_i%20+%20%5Cbeta%20x_i%20+%20D_%7B1i%7D%20+%20D_%7B2i%7D"></li>
+</ol>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?y_i">: <code>culmen_depth_mm</code> 부리의 높이</li>
+<li><img src="https://latex.codecogs.com/png.latex?x_i">: <code>culmen_length_mm</code> 부리의 길이</li>
+<li><img src="https://latex.codecogs.com/png.latex?D_%7B1i%7D">: 종족이 <code>Chinstrap</code>일 경우 1</li>
+<li><img src="https://latex.codecogs.com/png.latex?D_%7B2i%7D">: 종족이 <code>Gentoo</code>ㅇ,ㅣㄹ</li>
+</ul>
 </div></div></section>
 
  ]]></description>
