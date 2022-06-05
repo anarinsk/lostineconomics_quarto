@@ -51,13 +51,12 @@
 <span id="cb1-13"><span class="op" style="color: #5E5E5E;">%</span>matplotlib inline</span>
 <span id="cb1-14"></span>
 <span id="cb1-15">csv_addr <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"data/penguins_size.csv"</span></span>
-<span id="cb1-16"><span class="co" style="color: #5E5E5E;">#plt.rcParams['figure.figsize'] = 12, 10</span></span>
-<span id="cb1-17">plt.style.use(<span class="st" style="color: #20794D;">"fivethirtyeight"</span>)<span class="co" style="color: #5E5E5E;"># for pretty graphs</span></span>
-<span id="cb1-18">df  <span class="op" style="color: #5E5E5E;">=</span> pd.read_csv(<span class="st" style="color: #20794D;">'data/penguins_size.csv'</span>)</span>
-<span id="cb1-19">df.head()</span>
-<span id="cb1-20">df.info()</span>
-<span id="cb1-21">df <span class="op" style="color: #5E5E5E;">=</span> df.dropna()</span>
-<span id="cb1-22">df.info()</span></code></pre></div>
+<span id="cb1-16">plt.style.use(<span class="st" style="color: #20794D;">"fivethirtyeight"</span>)<span class="co" style="color: #5E5E5E;"># for pretty graphs</span></span>
+<span id="cb1-17">df  <span class="op" style="color: #5E5E5E;">=</span> pd.read_csv(<span class="st" style="color: #20794D;">'data/penguins_size.csv'</span>)</span>
+<span id="cb1-18">df.head()</span>
+<span id="cb1-19">df.info()</span>
+<span id="cb1-20">df <span class="op" style="color: #5E5E5E;">=</span> df.dropna()</span>
+<span id="cb1-21">df.info()</span></code></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -101,16 +100,14 @@ memory usage: 20.9+ KB</code></pre>
 <span id="cb3-6">ax1.text(<span class="fl" style="color: #AD0000;">.03</span>, <span class="dv" style="color: #AD0000;">1</span>, <span class="st" style="color: #20794D;">'r=</span><span class="sc" style="color: #5E5E5E;">{:.3f}</span><span class="st" style="color: #20794D;">'</span>.<span class="bu" style="color: null;">format</span>(r), transform<span class="op" style="color: #5E5E5E;">=</span>ax1.transAxes)</span>
 <span id="cb3-7">colors <span class="op" style="color: #5E5E5E;">=</span> [<span class="st" style="color: #20794D;">'darkorange'</span>, <span class="st" style="color: #20794D;">'royalblue'</span>, <span class="st" style="color: #20794D;">'#555555'</span>]</span>
 <span id="cb3-8">markers <span class="op" style="color: #5E5E5E;">=</span> [<span class="st" style="color: #20794D;">'.'</span>, <span class="st" style="color: #20794D;">'+'</span>, <span class="st" style="color: #20794D;">'x'</span>]</span>
-<span id="cb3-9"><span class="co" style="color: #5E5E5E;">#graph = sns.lmplot(x='x_value', y='y_value', hue='water_value', data=df, fit_reg=False)</span></span>
-<span id="cb3-10"><span class="co" style="color: #5E5E5E;">#Use regplot to plot the regression line for the whole points</span></span>
-<span id="cb3-11"><span class="co" style="color: #5E5E5E;">#sns.regplot(x='x_value', y='y_value', data=df, scatter=False, ax=graph.axes[0, 0]))</span></span>
-<span id="cb3-12"><span class="cf" style="color: #003B4F;">for</span> i, value <span class="kw" style="color: #003B4F;">in</span> <span class="bu" style="color: null;">enumerate</span>(df[<span class="st" style="color: #20794D;">'species'</span>].unique()):</span>
-<span id="cb3-13">    ax2 <span class="op" style="color: #5E5E5E;">=</span> sns.regplot(x<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"culmen_length_mm"</span>, y<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"culmen_depth_mm"</span>, ax<span class="op" style="color: #5E5E5E;">=</span>ax2,</span>
-<span id="cb3-14">                     color<span class="op" style="color: #5E5E5E;">=</span>colors[i],</span>
-<span id="cb3-15">                     <span class="co" style="color: #5E5E5E;">#marker=markers[i],                      </span></span>
-<span id="cb3-16">                     data<span class="op" style="color: #5E5E5E;">=</span>df[df[<span class="st" style="color: #20794D;">'species'</span>] <span class="op" style="color: #5E5E5E;">==</span> value],</span>
-<span id="cb3-17">                     label<span class="op" style="color: #5E5E5E;">=</span>value)</span>
-<span id="cb3-18">ax2.legend(loc<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'best'</span>)<span class="op" style="color: #5E5E5E;">;</span></span></code></pre></div>
+<span id="cb3-9"><span class="co" style="color: #5E5E5E;">#</span></span>
+<span id="cb3-10"><span class="cf" style="color: #003B4F;">for</span> i, value <span class="kw" style="color: #003B4F;">in</span> <span class="bu" style="color: null;">enumerate</span>(df[<span class="st" style="color: #20794D;">'species'</span>].unique()):</span>
+<span id="cb3-11">    ax2 <span class="op" style="color: #5E5E5E;">=</span> sns.regplot(x<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"culmen_length_mm"</span>, y<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"culmen_depth_mm"</span>, ax<span class="op" style="color: #5E5E5E;">=</span>ax2,</span>
+<span id="cb3-12">                     color<span class="op" style="color: #5E5E5E;">=</span>colors[i],</span>
+<span id="cb3-13">                     <span class="co" style="color: #5E5E5E;">#marker=markers[i],                      </span></span>
+<span id="cb3-14">                     data<span class="op" style="color: #5E5E5E;">=</span>df[df[<span class="st" style="color: #20794D;">'species'</span>] <span class="op" style="color: #5E5E5E;">==</span> value],</span>
+<span id="cb3-15">                     label<span class="op" style="color: #5E5E5E;">=</span>value)</span>
+<span id="cb3-16">ax2.legend(loc<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'best'</span>)<span class="op" style="color: #5E5E5E;">;</span></span></code></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <p><img src="http://www.lostineconomics.com/posts/regression/2022-06-04-simpson-paradox-regression_files/figure-html/cell-3-output-1.png" class="img-fluid"></p>
