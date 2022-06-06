@@ -59,13 +59,13 @@
 <span id="cb1-12"><span class="im" style="color: #00769E;">import</span> statsmodels <span class="im" style="color: #00769E;">as</span> statsmodels</span></code></pre></div>
 </details>
 </div>
-<div class="cell" data-execution_count="437">
+<div class="cell" data-execution_count="496">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="kw" style="color: #003B4F;">def</span> generate_unit_df(pack_of_cigar, n, sd<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">1</span>, covid_threshold<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">2</span>, cigar_threshold<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">6</span>):</span>
 <span id="cb2-2"></span>
-<span id="cb2-3">    mean_of_severity_covid <span class="op" style="color: #5E5E5E;">=</span> pack_of_cigar <span class="op" style="color: #5E5E5E;">*</span> <span class="fl" style="color: #AD0000;">0.2</span></span>
-<span id="cb2-4">    mean_of_severity_cigar <span class="op" style="color: #5E5E5E;">=</span> pack_of_cigar <span class="op" style="color: #5E5E5E;">*</span> <span class="fl" style="color: #AD0000;">0.9</span></span>
+<span id="cb2-3">    mean_of_severity_covid <span class="op" style="color: #5E5E5E;">=</span> pack_of_cigar <span class="op" style="color: #5E5E5E;">*</span> <span class="fl" style="color: #AD0000;">0.3</span></span>
+<span id="cb2-4">    mean_of_severity_cigar <span class="op" style="color: #5E5E5E;">=</span> pack_of_cigar <span class="op" style="color: #5E5E5E;">*</span> <span class="fl" style="color: #AD0000;">1.4</span></span>
 <span id="cb2-5"></span>
 <span id="cb2-6">    df <span class="op" style="color: #5E5E5E;">=</span> pd.DataFrame(</span>
 <span id="cb2-7">        {   </span>
@@ -84,22 +84,27 @@
 <span id="cb2-20">    )</span>
 <span id="cb2-21"></span>
 <span id="cb2-22">    df <span class="op" style="color: #5E5E5E;">=</span> df.query(</span>
-<span id="cb2-23">            <span class="st" style="color: #20794D;">"(`covid_severity` &lt;= 3)"</span></span>
+<span id="cb2-23">            <span class="st" style="color: #20794D;">"(`covid_severity` &lt;= 3.5)"</span></span>
 <span id="cb2-24">        )</span>
 <span id="cb2-25">    df <span class="op" style="color: #5E5E5E;">=</span> df.query(</span>
 <span id="cb2-26">            <span class="st" style="color: #20794D;">"(`is_hospitalized` == 'Yes') | (`is_hospitalized` == 'No' &amp; `is_observed` &lt;= 0.2)"</span>  </span>
 <span id="cb2-27">    )</span>
 <span id="cb2-28"></span>
-<span id="cb2-29">    <span class="cf" style="color: #003B4F;">return</span> df </span>
-<span id="cb2-30">    </span>
-<span id="cb2-31">res <span class="op" style="color: #5E5E5E;">=</span> pd.DataFrame()</span>
+<span id="cb2-29">    df <span class="op" style="color: #5E5E5E;">=</span> df.query(</span>
+<span id="cb2-30">            <span class="st" style="color: #20794D;">"(`is_hospitalized` == 'No' &amp; `is_observed` &lt;= 0.2) | (is_observed &lt;= 0.5)"</span></span>
+<span id="cb2-31">    )</span>
 <span id="cb2-32"></span>
-<span id="cb2-33"><span class="cf" style="color: #003B4F;">for</span> pack <span class="kw" style="color: #003B4F;">in</span> <span class="bu" style="color: null;">range</span>(<span class="dv" style="color: #AD0000;">0</span>, <span class="dv" style="color: #AD0000;">10</span>):</span>
-<span id="cb2-34">    res <span class="op" style="color: #5E5E5E;">=</span> pd.concat([res, generate_unit_df(pack, <span class="dv" style="color: #AD0000;">100</span>)])</span></code></pre></div>
+<span id="cb2-33">    <span class="cf" style="color: #003B4F;">return</span> df </span>
+<span id="cb2-34">    </span>
+<span id="cb2-35">res <span class="op" style="color: #5E5E5E;">=</span> pd.DataFrame()</span>
+<span id="cb2-36"></span>
+<span id="cb2-37"><span class="cf" style="color: #003B4F;">for</span> pack <span class="kw" style="color: #003B4F;">in</span> np.linspace(<span class="dv" style="color: #AD0000;">0</span>, <span class="dv" style="color: #AD0000;">6</span>, <span class="dv" style="color: #AD0000;">60</span>):</span>
+<span id="cb2-38">    n <span class="op" style="color: #5E5E5E;">=</span> <span class="bu" style="color: null;">int</span>(np.random.uniform(<span class="dv" style="color: #AD0000;">20</span>, <span class="dv" style="color: #AD0000;">40</span>, <span class="dv" style="color: #AD0000;">1</span>)[<span class="dv" style="color: #AD0000;">0</span>])</span>
+<span id="cb2-39">    res <span class="op" style="color: #5E5E5E;">=</span> pd.concat([res, generate_unit_df(pack,n)])</span></code></pre></div>
 </details>
 </div>
 <p>위의 플롯에 따라서 가상의 데이터를 생성했다. 코로나19 중증도는 흡연의 정도에 양의 영향을 받는다. 그리고 흡연의 정도는 별도로 건강에 악영향을 준다. 따라서 코로나19 중증도, 흡연의 정도 모두 해당 환자가 입원할 가능성을 결정하게 된다.</p>
-<div class="cell" data-execution_count="447">
+<div class="cell" data-execution_count="500">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">palette <span class="op" style="color: #5E5E5E;">=</span> sns.color_palette(<span class="st" style="color: #20794D;">"dark"</span>)</span>
@@ -108,13 +113,13 @@
 <span id="cb3-4">plt.rcParams[<span class="st" style="color: #20794D;">'figure.figsize'</span>] <span class="op" style="color: #5E5E5E;">=</span> [<span class="dv" style="color: #AD0000;">12</span>, <span class="dv" style="color: #AD0000;">5</span>]</span>
 <span id="cb3-5">plt.style.use(<span class="st" style="color: #20794D;">"fivethirtyeight"</span>)<span class="co" style="color: #5E5E5E;"># for pretty graphs</span></span>
 <span id="cb3-6">fig, (ax1, ax2) <span class="op" style="color: #5E5E5E;">=</span> plt.subplots(ncols<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">2</span>, sharey<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)</span>
-<span id="cb3-7">sns.regplot(x <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'pack_of_cigar'</span>,y <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'covid_severity'</span>, data <span class="op" style="color: #5E5E5E;">=</span> res, ax<span class="op" style="color: #5E5E5E;">=</span>ax1, color<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'grey'</span>)</span>
+<span id="cb3-7">sns.regplot(x <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'pack_of_cigar'</span>,y <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'covid_severity'</span>, data <span class="op" style="color: #5E5E5E;">=</span> res, ax<span class="op" style="color: #5E5E5E;">=</span>ax1, color<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'grey'</span>,scatter_kws<span class="op" style="color: #5E5E5E;">=</span>{<span class="st" style="color: #20794D;">'alpha'</span>: <span class="fl" style="color: #AD0000;">0.4</span>})</span>
 <span id="cb3-8"><span class="co" style="color: #5E5E5E;">#</span></span>
 <span id="cb3-9"><span class="cf" style="color: #003B4F;">for</span> i, value <span class="kw" style="color: #003B4F;">in</span> <span class="bu" style="color: null;">enumerate</span>(res[<span class="st" style="color: #20794D;">'is_hospitalized'</span>].unique()):</span>
 <span id="cb3-10">    ax2 <span class="op" style="color: #5E5E5E;">=</span> sns.regplot(x<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"pack_of_cigar"</span>, y<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"covid_severity"</span>,</span>
 <span id="cb3-11">                     <span class="co" style="color: #5E5E5E;">#color=colors[value],</span></span>
 <span id="cb3-12">                     <span class="co" style="color: #5E5E5E;">#marker=markers[i],      </span></span>
-<span id="cb3-13">                     scatter_kws<span class="op" style="color: #5E5E5E;">=</span>{<span class="st" style="color: #20794D;">'alpha'</span>: <span class="fl" style="color: #AD0000;">0.4</span> <span class="cf" style="color: #003B4F;">if</span> value <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"Yes"</span> <span class="cf" style="color: #003B4F;">else</span> <span class="fl" style="color: #AD0000;">0.2</span>},        </span>
+<span id="cb3-13">                     scatter_kws<span class="op" style="color: #5E5E5E;">=</span>{<span class="st" style="color: #20794D;">'alpha'</span>: <span class="fl" style="color: #AD0000;">0.3</span> <span class="cf" style="color: #003B4F;">if</span> value <span class="op" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"Yes"</span> <span class="cf" style="color: #003B4F;">else</span> <span class="fl" style="color: #AD0000;">0.15</span>},        </span>
 <span id="cb3-14">                     data<span class="op" style="color: #5E5E5E;">=</span>res[res[<span class="st" style="color: #20794D;">'is_hospitalized'</span>] <span class="op" style="color: #5E5E5E;">==</span> value],</span>
 <span id="cb3-15">                     label<span class="op" style="color: #5E5E5E;">=</span>value, </span>
 <span id="cb3-16">                     ax <span class="op" style="color: #5E5E5E;">=</span> ax2)</span>
@@ -131,7 +136,7 @@
 </div>
 </div>
 <p>위의 왼쪽 그래프에서 보듯이 잘 추출된 표본 전체에 대해서는 흡연의 정도와 코로나19의 중증도 사이에 양의 관계가 잘 보인다. 그런데, 만일 충돌 요인인 입원 여부를 고려하면 어떨까? 오른쪽 그림에서 보듯이 병원에 입원한 환자에 대해서는 음의 상관성이 관찰된다. 왜 이럴까? 병원의 입원하는 요인에는 코로나19의 중증도 이외에도 흡연 여부가 있다. 흡연을 많이 할수록 코로나와 관계 없이 그 자체로 입원할 가능성이 높아지고 코로나19 중증도에 대해서 이들의 경우 다양한 상태를 지니게 된다.</p>
-<div class="cell" data-execution_count="436">
+<div class="cell" data-execution_count="501">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">ols1 <span class="op" style="color: #5E5E5E;">=</span> sm.ols(formula<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"covid_severity ~ pack_of_cigar"</span>, data<span class="op" style="color: #5E5E5E;">=</span>res).fit(use_t<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)</span>
@@ -144,9 +149,9 @@
 <span id="cb4-8">stargazer <span class="op" style="color: #5E5E5E;">=</span> Stargazer([ols1, ols2, ols3])</span>
 <span id="cb4-9">stargazer</span></code></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="436">
+<div class="cell-output cell-output-display" data-execution_count="501">
 
-<table style="text-align:center"><tbody><tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td colspan="3"><em>Dependent variable:covid_severity</em></td></tr><tr><td style="text-align:left"></td></tr><tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td><td>(3)</td></tr><tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Intercept</td><td>0.805<sup>***</sup></td><td>0.746<sup>***</sup></td><td>2.477<sup>***</sup></td></tr><tr><td style="text-align:left"></td><td>(0.097)</td><td>(0.087)</td><td>(0.169)</td></tr><tr><td style="text-align:left">is_hospitalized[T.Yes]</td><td></td><td>1.220<sup>***</sup></td><td></td></tr><tr><td style="text-align:left"></td><td></td><td>(0.117)</td><td></td></tr><tr><td style="text-align:left">pack_of_cigar</td><td>0.098<sup>***</sup></td><td>-0.040<sup>**</sup></td><td>-0.111<sup>***</sup></td></tr><tr><td style="text-align:left"></td><td>(0.015)</td><td>(0.019)</td><td>(0.023)</td></tr><tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align: left">Observations</td><td>447</td><td>447</td><td>325</td></tr><tr><td style="text-align: left">R<sup>2</sup></td><td>0.091</td><td>0.270</td><td>0.069</td></tr><tr><td style="text-align: left">Adjusted R<sup>2</sup></td><td>0.089</td><td>0.267</td><td>0.066</td></tr><tr><td style="text-align: left">Residual Std. Error</td><td>0.867 (df=445)</td><td>0.777 (df=444)</td><td>0.791 (df=323)</td></tr><tr><td style="text-align: left">F Statistic</td><td>44.340<sup>***</sup> (df=1; 445)</td><td>82.204<sup>***</sup> (df=2; 444)</td><td>24.077<sup>***</sup> (df=1; 323)</td></tr><tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align: left">Note:</td>
+<table style="text-align:center"><tbody><tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td colspan="3"><em>Dependent variable:covid_severity</em></td></tr><tr><td style="text-align:left"></td></tr><tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td><td>(3)</td></tr><tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Intercept</td><td>0.505<sup>***</sup></td><td>0.725<sup>***</sup></td><td>2.697<sup>***</sup></td></tr><tr><td style="text-align:left"></td><td>(0.090)</td><td>(0.084)</td><td>(0.230)</td></tr><tr><td style="text-align:left">is_hospitalized[T.Yes]</td><td></td><td>1.226<sup>***</sup></td><td></td></tr><tr><td style="text-align:left"></td><td></td><td>(0.115)</td><td></td></tr><tr><td style="text-align:left">pack_of_cigar</td><td>0.199<sup>***</sup></td><td>-0.067<sup>**</sup></td><td>-0.225<sup>***</sup></td></tr><tr><td style="text-align:left"></td><td>(0.022)</td><td>(0.032)</td><td>(0.047)</td></tr><tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align: left">Observations</td><td>533</td><td>533</td><td>325</td></tr><tr><td style="text-align: left">R<sup>2</sup></td><td>0.131</td><td>0.284</td><td>0.065</td></tr><tr><td style="text-align: left">Adjusted R<sup>2</sup></td><td>0.129</td><td>0.281</td><td>0.062</td></tr><tr><td style="text-align: left">Residual Std. Error</td><td>0.899 (df=531)</td><td>0.816 (df=530)</td><td>0.913 (df=323)</td></tr><tr><td style="text-align: left">F Statistic</td><td>79.714<sup>***</sup> (df=1; 531)</td><td>105.007<sup>***</sup> (df=2; 530)</td><td>22.455<sup>***</sup> (df=1; 323)</td></tr><tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align: left">Note:</td>
  <td colspan="3" style="text-align: right">
   <sup>*</sup>p&lt;0.1;
   <sup>**</sup>p&lt;0.05;
@@ -157,7 +162,10 @@
 <p>회귀 분석에서 이러한 결과를 그대로 확인할 수 있다. 위 분석에서 현실에 가장 근접한 분석은 (1)이다. 만일 입원 여부를 통제하게 될 경우(식 (2))는 흡연의 정도가 코로나19의 중증도에 미치는 영향을 왜곡하게 된다. 벅슨의 역설의 극단적인 버전은 입원한 환자만 표본으로 삼아 분석을 실시하는 경우이다. 이 경우 (3)에서 보듯이 흡연의 정도와 코로나19 중증도의 정도가 가장 많이 왜곡된다.</p>
 
 
-</section>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5E2"> 값을 무조건 분석의 성과 지표로 삼으면 안되는 이유도 확인하고 지나가자. 충돌 요인 변수를 포함시킴으로써 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5E2">은 증가한다. 설명 변수가 늘어날수록 설명 변수의 차원이 높아지게 되므로 벡터 공간에서 잔차의 길이가 줄어들게 된다. 이는 동어 반복에 가깝다. 위에서 보듯이 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5E2">가 줄었으니 분석력이 더 높아진 것일까?</p>
+</div></div></section>
 
  ]]></description>
   <category>regression</category>
