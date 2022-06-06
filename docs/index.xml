@@ -104,7 +104,7 @@
 </details>
 </div>
 <p>위의 플롯에 따라서 가상의 데이터를 생성했다. 코로나19 중증도는 흡연의 정도에 양의 영향을 받는다. 그리고 흡연의 정도는 별도로 건강에 악영향을 준다. 따라서 코로나19 중증도, 흡연의 정도 모두 해당 환자가 입원할 가능성을 결정하게 된다.</p>
-<div class="cell" data-execution_count="500">
+<div class="cell" data-execution_count="502">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">palette <span class="op" style="color: #5E5E5E;">=</span> sns.color_palette(<span class="st" style="color: #20794D;">"dark"</span>)</span>
@@ -164,7 +164,7 @@
 
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p><img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5E2"> 값을 무조건 분석의 성과 지표로 삼으면 안되는 이유도 확인하고 지나가자. 충돌 요인 변수를 포함시킴으로써 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5E2">은 증가한다. 설명 변수가 늘어날수록 설명 변수의 차원이 높아지게 되므로 벡터 공간에서 잔차의 길이가 줄어들게 된다. 이는 동어 반복에 가깝다. 위에서 보듯이 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5E2">가 줄었으니 분석력이 더 높아진 것일까?</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cmathrm%20R%5E2"> 값을 무조건 분석의 성과 지표로 삼으면 안되는 이유도 확인하고 지나가자. 충돌 요인 변수를 포함시킴으로써 <img src="https://latex.codecogs.com/png.latex?%5Cmathrm%20R%5E2">은 증가한다. 설명 변수가 늘어날수록 설명 변수의 차원이 높아지게 되므로 벡터 공간에서 잔차의 길이가 줄어들게 된다. 이는 동어 반복에 가깝다. 위에서 보듯이 <img src="https://latex.codecogs.com/png.latex?%5Cmathrm%20R%5E2">가 줄었으니 분석력이 더 높아진 것일까?</p>
 </div></div></section>
 
  ]]></description>

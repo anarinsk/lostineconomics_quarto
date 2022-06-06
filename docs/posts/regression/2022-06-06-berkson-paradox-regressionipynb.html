@@ -304,7 +304,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </details>
 </div>
 <p>위의 플롯에 따라서 가상의 데이터를 생성했다. 코로나19 중증도는 흡연의 정도에 양의 영향을 받는다. 그리고 흡연의 정도는 별도로 건강에 악영향을 준다. 따라서 코로나19 중증도, 흡연의 정도 모두 해당 환자가 입원할 가능성을 결정하게 된다.</p>
-<div class="cell" data-execution_count="500">
+<div class="cell" data-execution_count="502">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>palette <span class="op">=</span> sns.color_palette(<span class="st">"dark"</span>)</span>
@@ -330,7 +330,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="2022-06-06-berkson-paradox-regressionipynb_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">충돌 요인은 어떻게 작용하는가? <code>pack_of_cigar</code>는 흡연의 정도를 <code>covid_severity</code>는 코로나 19 중증도를 나타낸다.</figcaption><p></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">충돌 요인은 어떻게 작용하는가? <code>pack_of_cigar</code>는 흡연의 정도를 <code>covid_severity</code>는 코로나 19</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -364,7 +364,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p><span class="math inline">\(\mathbb R^2\)</span> 값을 무조건 분석의 성과 지표로 삼으면 안되는 이유도 확인하고 지나가자. 충돌 요인 변수를 포함시킴으로써 <span class="math inline">\(\mathbb R^2\)</span>은 증가한다. 설명 변수가 늘어날수록 설명 변수의 차원이 높아지게 되므로 벡터 공간에서 잔차의 길이가 줄어들게 된다. 이는 동어 반복에 가깝다. 위에서 보듯이 <span class="math inline">\(\mathbb R^2\)</span>가 줄었으니 분석력이 더 높아진 것일까?</p>
+<p><span class="math inline">\(\mathrm R^2\)</span> 값을 무조건 분석의 성과 지표로 삼으면 안되는 이유도 확인하고 지나가자. 충돌 요인 변수를 포함시킴으로써 <span class="math inline">\(\mathrm R^2\)</span>은 증가한다. 설명 변수가 늘어날수록 설명 변수의 차원이 높아지게 되므로 벡터 공간에서 잔차의 길이가 줄어들게 된다. 이는 동어 반복에 가깝다. 위에서 보듯이 <span class="math inline">\(\mathrm R^2\)</span>가 줄었으니 분석력이 더 높아진 것일까?</p>
 </div></div></section>
 
 </main> <!-- /main -->
