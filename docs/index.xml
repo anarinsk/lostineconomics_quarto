@@ -196,7 +196,7 @@
 <p>데이터는 <a href="https://towardsdatascience.com/the-curious-case-of-simpsons-paradox-6f178548d7e8">여기</a>서 갖고 왔다</p>
 <p><img src="http://www.lostineconomics.com/posts/regression/https:/user-images.githubusercontent.com/39834789/86522451-84949f00-be38-11ea-9555-6409579f3b58.png" class="img-fluid" style="background:#FFFFFF;"></p>
 </div></div><p><code>culmen</code>은 새의 부리를 뜻한다. 옆 그림에서 보듯이 <code>length</code>는 부리의 앞으로 튀어나온 길이를, <code>depth</code>는 부리의 높이를 의미한다. 아래 데이터는 펭귄의 세 가지 종족, 성별 등을 별도로 기록하고 있다. 이제 심슨 역설의 전형적인 사례를 펭귄 부리의 길이와 높이를 통해 살펴보도록 하자.</p>
-<div class="cell" data-execution_count="1">
+<div class="cell" data-execution_count="2">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;"># Basic packages</span></span>
@@ -208,30 +208,41 @@
 <span id="cb1-7"><span class="im" style="color: #00769E;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;">as</span> plt</span>
 <span id="cb1-8"><span class="co" style="color: #5E5E5E;"># Stats models </span></span>
 <span id="cb1-9"><span class="im" style="color: #00769E;">import</span> statsmodels.formula.api <span class="im" style="color: #00769E;">as</span> sm</span>
-<span id="cb1-10"><span class="im" style="color: #00769E;">import</span> statsmodels.stats.sandwich_covariance <span class="im" style="color: #00769E;">as</span> sw</span>
-<span id="cb1-11"><span class="im" style="color: #00769E;">import</span> statsmodels <span class="im" style="color: #00769E;">as</span> statsmodels</span>
-<span id="cb1-12"><span class="im" style="color: #00769E;">from</span> linearmodels <span class="im" style="color: #00769E;">import</span> PanelOLS, FamaMacBeth</span>
-<span id="cb1-13"><span class="op" style="color: #5E5E5E;">%</span>matplotlib inline</span>
-<span id="cb1-14"></span>
-<span id="cb1-15">csv_addr <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"data/penguins_size.csv"</span></span>
-<span id="cb1-16">plt.style.use(<span class="st" style="color: #20794D;">"fivethirtyeight"</span>)<span class="co" style="color: #5E5E5E;"># for pretty graphs</span></span>
-<span id="cb1-17">df  <span class="op" style="color: #5E5E5E;">=</span> pd.read_csv(<span class="st" style="color: #20794D;">'data/penguins_size.csv'</span>)</span>
-<span id="cb1-18">df.head()<span class="op" style="color: #5E5E5E;">;</span></span>
-<span id="cb1-19"><span class="co" style="color: #5E5E5E;">#df.info();</span></span>
-<span id="cb1-20">df <span class="op" style="color: #5E5E5E;">=</span> df.dropna()</span>
-<span id="cb1-21">df.info()</span></code></pre></div>
+<span id="cb1-10"><span class="im" style="color: #00769E;">import</span> statsmodels <span class="im" style="color: #00769E;">as</span> statsmodels</span>
+<span id="cb1-11"><span class="op" style="color: #5E5E5E;">%</span>matplotlib inline</span>
+<span id="cb1-12"></span>
+<span id="cb1-13">csv_addr <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"data/penguins_size.csv"</span></span>
+<span id="cb1-14">plt.style.use(<span class="st" style="color: #20794D;">"fivethirtyeight"</span>)<span class="co" style="color: #5E5E5E;"># for pretty graphs</span></span>
+<span id="cb1-15">df  <span class="op" style="color: #5E5E5E;">=</span> pd.read_csv(<span class="st" style="color: #20794D;">'data/penguins_size.csv'</span>)</span>
+<span id="cb1-16">df.head()<span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb1-17"><span class="co" style="color: #5E5E5E;">#df.info();</span></span>
+<span id="cb1-18">df <span class="op" style="color: #5E5E5E;">=</span> df.dropna()</span>
+<span id="cb1-19">df.info()</span></code></pre></div>
 </details>
-<div class="cell-output cell-output-error">
-<pre><code>ModuleNotFoundError: No module named 'seaborn'</code></pre>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+Int64Index: 334 entries, 0 to 343
+Data columns (total 7 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   species            334 non-null    object 
+ 1   island             334 non-null    object 
+ 2   culmen_length_mm   334 non-null    float64
+ 3   culmen_depth_mm    334 non-null    float64
+ 4   flipper_length_mm  334 non-null    float64
+ 5   body_mass_g        334 non-null    float64
+ 6   sex                334 non-null    object 
+dtypes: float64(4), object(3)
+memory usage: 20.9+ KB</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="4">
+<div class="cell" data-execution_count="3">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"></span>
 <span id="cb3-2">plt.rcParams[<span class="st" style="color: #20794D;">'figure.figsize'</span>] <span class="op" style="color: #5E5E5E;">=</span> [<span class="dv" style="color: #AD0000;">12</span>, <span class="dv" style="color: #AD0000;">6</span>]</span>
 <span id="cb3-3">fig, (ax1, ax2) <span class="op" style="color: #5E5E5E;">=</span> plt.subplots(ncols<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">2</span>, sharey<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)</span>
-<span id="cb3-4">sns.regplot(x <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'culmen_length_mm'</span>,y <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'culmen_depth_mm'</span>, data <span class="op" style="color: #5E5E5E;">=</span> df, ax<span class="op" style="color: #5E5E5E;">=</span>ax1)</span>
+<span id="cb3-4">sns.regplot(x <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'culmen_length_mm'</span>,y <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">'culmen_depth_mm'</span>, data <span class="op" style="color: #5E5E5E;">=</span> df, scatter_kws<span class="op" style="color: #5E5E5E;">=</span>{<span class="st" style="color: #20794D;">'alpha'</span>: <span class="fl" style="color: #AD0000;">0.4</span>}, ax<span class="op" style="color: #5E5E5E;">=</span>ax1)</span>
 <span id="cb3-5">r <span class="op" style="color: #5E5E5E;">=</span> stats.pearsonr(df[<span class="st" style="color: #20794D;">'culmen_length_mm'</span>], df[<span class="st" style="color: #20794D;">'culmen_depth_mm'</span>])[<span class="dv" style="color: #AD0000;">0</span>]</span>
 <span id="cb3-6">ax1.text(<span class="fl" style="color: #AD0000;">.03</span>, <span class="dv" style="color: #AD0000;">1</span>, <span class="st" style="color: #20794D;">'r=</span><span class="sc" style="color: #5E5E5E;">{:.3f}</span><span class="st" style="color: #20794D;">'</span>.<span class="bu" style="color: null;">format</span>(r), transform<span class="op" style="color: #5E5E5E;">=</span>ax1.transAxes)</span>
 <span id="cb3-7">colors <span class="op" style="color: #5E5E5E;">=</span> [<span class="st" style="color: #20794D;">'darkorange'</span>, <span class="st" style="color: #20794D;">'royalblue'</span>, <span class="st" style="color: #20794D;">'#555555'</span>]</span>
@@ -239,11 +250,12 @@
 <span id="cb3-9"><span class="co" style="color: #5E5E5E;">#</span></span>
 <span id="cb3-10"><span class="cf" style="color: #003B4F;">for</span> i, value <span class="kw" style="color: #003B4F;">in</span> <span class="bu" style="color: null;">enumerate</span>(df[<span class="st" style="color: #20794D;">'species'</span>].unique()):</span>
 <span id="cb3-11">    ax2 <span class="op" style="color: #5E5E5E;">=</span> sns.regplot(x<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"culmen_length_mm"</span>, y<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"culmen_depth_mm"</span>, ax<span class="op" style="color: #5E5E5E;">=</span>ax2,</span>
-<span id="cb3-12">                     color<span class="op" style="color: #5E5E5E;">=</span>colors[i],</span>
-<span id="cb3-13">                     <span class="co" style="color: #5E5E5E;">#marker=markers[i],                      </span></span>
-<span id="cb3-14">                     data<span class="op" style="color: #5E5E5E;">=</span>df[df[<span class="st" style="color: #20794D;">'species'</span>] <span class="op" style="color: #5E5E5E;">==</span> value],</span>
-<span id="cb3-15">                     label<span class="op" style="color: #5E5E5E;">=</span>value)</span>
-<span id="cb3-16">ax2.legend(loc<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'best'</span>)<span class="op" style="color: #5E5E5E;">;</span></span></code></pre></div>
+<span id="cb3-12">                      scatter_kws<span class="op" style="color: #5E5E5E;">=</span>{<span class="st" style="color: #20794D;">'alpha'</span>: <span class="fl" style="color: #AD0000;">0.4</span>},</span>
+<span id="cb3-13">                     color<span class="op" style="color: #5E5E5E;">=</span>colors[i],</span>
+<span id="cb3-14">                     <span class="co" style="color: #5E5E5E;">#marker=markers[i],                      </span></span>
+<span id="cb3-15">                     data<span class="op" style="color: #5E5E5E;">=</span>df[df[<span class="st" style="color: #20794D;">'species'</span>] <span class="op" style="color: #5E5E5E;">==</span> value],</span>
+<span id="cb3-16">                     label<span class="op" style="color: #5E5E5E;">=</span>value)</span>
+<span id="cb3-17">ax2.legend(loc<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'best'</span>)<span class="op" style="color: #5E5E5E;">;</span></span></code></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <p><img src="http://www.lostineconomics.com/posts/regression/2022-06-04-simpson-paradox-regression_files/figure-html/cell-3-output-1.png" class="img-fluid"></p>
