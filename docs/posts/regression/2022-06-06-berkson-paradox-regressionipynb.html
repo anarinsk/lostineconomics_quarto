@@ -229,6 +229,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="플롯" class="level2">
 <h2 class="anchored" data-anchor-id="플롯">플롯</h2>
 <p>여기 적는 내용은 스토리텔링이지만 또 단순한 스토리텔링은 아니다. 코로나19와 흡연의 관계를 조사하기로 한 연구자가 있다고 하자. 그는 입원 병원의 자료를 살펴보고 놀라운 결론을 얻었다. 흡연하는 사람일수록 코로나 증세가 덜 심하다는 관계를 파악했다. 인과 관계인지 상관 관계인지는 더 조사가 필요하겠지만, 일반적인 통념과 반대되는 결론을 얻게 된 것이다. 이러한 추론을 맞는 것일까? 먼저 아래의 인과 다이어그램을 보자.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://miro.medium.com/max/1400/1*_YSCycwMY90nltgg-qMEWw.png" class="figure5 img-fluid figure-img"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">입원 여부는 충돌 요인(collider)가 된다.</figcaption><p></p>
+</figure>
+</div>
 <p>담배를 많이 피울수록 혹은 그래왔을수록 코로나19 이외의 요인으로도 병원이 입원할 가능성이 높아진다. 또한 코로나 증세가 심할수록 병원에 입원할 가능성이 높아진다. 이 경우 병원에 입원한다는 것은 두 요인(흡연의 정도, 코로나19 중증도)에 영향을 받는 충돌 요인이 된다. 따라서 이를 통제할 경우 흡연의 정도와 코로나19의 중증도 사이의 관계가 왜곡된다. 이러한 취지로 데이터를 생성해보도록 하자.</p>
 <div class="cell" data-execution_count="90">
 <details>
@@ -286,13 +292,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    res <span class="op">=</span> pd.concat([res, generate_unit_df(pack, <span class="dv">100</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>플롯에 따라서 가상의 데이터를 생성했다. 코로나19의 중증도는 흡연의 정도에 양의 영향을 받는다. 그리고 흡연의 정도는 별도로 건강에 악영향을 준다. 따라서 코로나의 중증도, 흡연의 정도 모두 해당 환자가 입원할 가능성을 결정한다.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://miro.medium.com/max/1400/1*_YSCycwMY90nltgg-qMEWw.png" class="figure5 img-fluid figure-img"></p>
-<p></p><figcaption aria-hidden="true" class="figure-caption">입원 여부는 충돌 요인(collider)가 된다.</figcaption><p></p>
-</figure>
-</div>
+<p>위의 플롯에 따라서 가상의 데이터를 생성했다. 코로나19 중증도는 흡연의 정도에 양의 영향을 받는다. 그리고 흡연의 정도는 별도로 건강에 악영향을 준다. 따라서 코로나19 중증도, 흡연의 정도 모두 해당 환자가 입원할 가능성을 결정하게 된다.</p>
 <div class="cell" data-execution_count="435">
 <details>
 <summary>Code</summary>
