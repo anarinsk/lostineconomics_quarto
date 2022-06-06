@@ -260,7 +260,7 @@ memory usage: 20.9+ KB</code></pre>
 <p><img src="http://www.lostineconomics.com/posts/regression/2022-06-04-simpson-paradox-regression_files/figure-html/cell-3-output-1.png" class="img-fluid"></p>
 </div>
 </div>
-<p>왼쪽 그림에서 보듯이 종족 구분 없이 펭귄 부리의 길이와 높이를 보면 서로 음의 상관성을 지니고 있는 듯 보인다. 그런데 이를 종족 별로 구별해서 살펴보면 오히려 길이와 높이는 양의 상관성을 지니고 있다.</p>
+<p>왼쪽 그림에서 보듯이 종 구분 없이 펭귄 부리의 길이와 높이를 보면 서로 음의 상관성을 지니고 있는 듯 보인다. 그런데 이를 종별로 구별해서 살펴보면 오히려 길이와 높이는 양의 상관성을 지니고 있다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><img src="http://www.lostineconomics.com/posts/regression/https:/user-images.githubusercontent.com/39834789/86522450-7f375480-be38-11ea-9437-9fd2a382aa7b.png" class="img-fluid" style="background:#FFFFFF;"></p>
@@ -288,7 +288,7 @@ memory usage: 20.9+ KB</code></pre>
  </td></tr></tbody></table>
 </div>
 </div>
-<p>회귀 분석에서 종족을 통제한 경우와 그렇지 않은 경우의 <code>culmen_length_mm</code>(부리의 길이)의 계수를 비교해보자. (1)은 종족을 통제하지 않은 회귀식으로 <code>culmen_length_mm</code>의 계수는 음수이다. 반면 종족을 통제한 (2)의 회귀식은 종족의 구분해 각 절편과 해당 종족 내의 부리의 길이와 높이의 관계를 계산해 이를 적절하게 가중 평균한 값이 <code>culmen_length_mm</code>의 계수가 된다. 회귀 테이블에서 보듯이 <code>culmen_length_mm</code>의 계수는 음수에서 양수로 바뀌어 있다.</p>
+<p>회귀 분석에서 종을 통제한 경우와 그렇지 않은 경우의 <code>culmen_length_mm</code>(부리의 길이)의 계수를 비교해보자. (1)은 종족을 통제하지 않은 회귀식으로 <code>culmen_length_mm</code>의 계수는 음수이다. 반면 종족을 통제한 (2)의 회귀식은 종족의 구분해 각 절편과 해당 종족 내의 부리의 길이와 높이의 관계를 계산해 이를 적절하게 가중 평균한 값이 <code>culmen_length_mm</code>의 계수가 된다. 회귀 테이블에서 보듯이 <code>culmen_length_mm</code>의 계수는 음수에서 양수로 바뀌어 있다.</p>
 
 
 
