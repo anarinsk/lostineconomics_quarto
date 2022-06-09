@@ -1712,6 +1712,27 @@
     "href": "posts/regression/2020-11-11-log-linear-regression.html#왜-로그로-변환할까",
     "title": "Understanding Log-Linear Regression Model",
     "section": "왜 로그로 변환할까?",
-    "text": "왜 로그로 변환할까?\n교과서나 자료를 찾아보면 \\(y_i\\)를 log 변환하는 이유가 \\(y_i\\)의 분포를 정규분포에 가깝게 만들어주기 때문이라는 내용이 있다. 소 표본을 다루는 경우라면 오차항의 정규 분포를 가정하기 때문에 타당한 이야기일 수도 있다.\n대 표본이라면 굳이 이렇게 이해할 필요는 없다. 단순하게 말해서 로그로 변환했을 때 더 잘 적합되기 때문이다. log는 곱셈을 덧셈으로 폴어주는 역할을 한다. 위에서 보듯이 \\(y_i = e^{\\alpha \\beta x_i}\\)의 경우 함수 형태가 \\(e^\\alpha\\)와 \\(e^{\\beta x_i}\\)의 곱으로 구성되어 있고, 이 녀석을 회귀 분석으로 추정하는 것은 적합하지 않다. 이때 \\(\\log y_i\\)는 식을 선형으로 풀어주면 회귀 분석으로 다루기 좋은 녀석으로 바뀐다.\n\n\n\n비선형의 함수 형태를 선형으로 바꿔보자."
+    "text": "왜 로그로 변환할까?\n교과서나 자료를 찾아보면 \\(y_i\\)를 log 변환하는 이유가 \\(y_i\\)의 분포를 정규분포에 가깝게 만들어주기 때문이라는 내용이 있다. 소 표본을 다루는 경우라면 오차 항의 정규 분포를 가정하기 때문에 타당한 이야기일 수도 있다.\n대 표본이라면 굳이 이렇게 이해할 필요는 없다. 단순하게 말해서 로그로 변환했을 때 더 잘 적합되기 때문이다. log는 곱셈을 덧셈으로 폴어주는 역할을 한다. 위에서 보듯이 \\(y_i = e^{\\alpha \\beta x_i}\\)의 경우 함수 형태가 \\(e^\\alpha\\)와 \\(e^{\\beta x_i}\\)의 곱으로 구성되어 있고, 이 녀석을 회귀 분석으로 추정하는 것은 적합하지 않다. 이때 \\(\\log y_i\\)는 식을 선형으로 풀어주면 회귀 분석으로 다루기 좋은 녀석으로 바뀐다.\n\n\n\n비선형의 함수 형태를 선형으로 바꿔보자."
+  },
+  {
+    "objectID": "posts/regression/2020-11-11-log-linear-regression.html#근삿값으로-본-계수의-의미",
+    "href": "posts/regression/2020-11-11-log-linear-regression.html#근삿값으로-본-계수의-의미",
+    "title": "Understanding Log-Linear Regression Model",
+    "section": "근삿값으로 본 계수의 의미",
+    "text": "근삿값으로 본 계수의 의미\n편의상 독립 변수와 종속 변수 모두 스칼라 값이라고 하자.\n\\[\n\\ln y_i = \\alpha + \\beta x_i + \\varepsilon_i\n\\]\n독립 변수 \\(y_i\\)에 \\(\\ln\\)을 취해서 변형했다. 그 의미를 풀어보자.\n\\[\n\\begin{aligned}\n\\Delta \\ln y_i & = \\ln y_1 - \\ln y_0 \\\\\n& = \\ln(\\frac{y_1}{y_0}) \\\\\n& = \\ln(\\frac{y_0 + \\Delta y}{y_0}) \\\\\n& = \\ln(1+\\frac{\\Delta y}{y_0})\n\\end{aligned}\n\\]\n\\(\\ln(1+\\frac{\\Delta y}{y_0})\\)를 보자. \\(z=0\\) 근처에서 \\(\\ln (1+z) \\approx z\\)가 성립한다. 즉,\n\\[\n\\Delta \\ln y_i =  \\ln(1+\\frac{\\Delta y}{y_0}) \\approx \\dfrac{\\Delta y}{y_0} = \\% \\Delta y = \\beta \\Delta x\n\\]\n이 경우 수학적인 해석을 거의 그대로 가져올 수 있다. 다만, \\(\\frac{\\Delta y}{y_0}\\)가 0 근처에 있어야 한다. 이는 \\(y\\)의 변화율이 크지 않은 경우에 해당한다.\n위와 같은 회귀식을 추정해 \\(\\beta\\)를 보고할 때 “\\(x\\)가 1단위 변화할 때”라는 표현을 쓴다. 즉, \\(\\Delta x = 1\\)로 둔다는 뜻이다.\n\\[\n\\Delta \\ln y_i \\approx \\dfrac{\\Delta y}{y_0} = \\% \\Delta y = \\beta\n\\]\n결국 \\(\\beta\\)의 값이 0 주변에 있다면 이 값은 \\(x_i\\)가 1단위 변화할 때 \\(y_i\\)의 변화율에 미치는 영향”으로 해석할 수 있다."
+  },
+  {
+    "objectID": "posts/regression/2020-11-11-log-linear-regression.html#변화율을-정확하게-계산해-보자",
+    "href": "posts/regression/2020-11-11-log-linear-regression.html#변화율을-정확하게-계산해-보자",
+    "title": "Understanding Log-Linear Regression Model",
+    "section": "변화율을 정확하게 계산해 보자",
+    "text": "변화율을 정확하게 계산해 보자\n근삿값을 쓰지 말고 % 변화율을 정확하게 계산해 보자. 물론 이 값이 필요한 경우에 해당한다.\n\\[\n\\begin{aligned}\n\\% \\Delta y_i & \\equiv \\dfrac{y_1 - y_0}{y_0} \\\\\n& = \\dfrac{y_1}{y_0} - 1 \\\\\n& = \\exp(\\ln (\\dfrac{y_1}{y_0})) - 1 \\\\\n& = \\exp(x_1 \\beta - x_0 \\beta + \\varepsilon_1 - \\varepsilon_0) - 1 \\\\\n& = \\exp(\\Delta x \\beta + \\Delta \\varepsilon) - 1\n\\end{aligned}\n\\]\n\n\n\\(z=0\\) 근방에서 테일러급수를 1차까지 근사하면 저 값을 얻을 수 있다. \\(z=0\\) 인근에서 근사하는 이유는 \\(z=0\\) 근처에서 \\(\\frac{(z-0)^k}{k!}\\) for \\(k=2,3, \\dotsc\\)과 같은 고차 항의 크기가 점점 줄어들기 때문이다.\n\\(\\Delta \\varepsilon =0\\)를 가정하고 \\(\\Delta x =1\\)로 두면, 위 식으로 \\(y_i\\)의 % 변화율을 계산할 수 있다."
+  },
+  {
+    "objectID": "posts/regression/2020-11-11-log-linear-regression.html#계수의-해석",
+    "href": "posts/regression/2020-11-11-log-linear-regression.html#계수의-해석",
+    "title": "Understanding Log-Linear Regression Model",
+    "section": "계수의 해석",
+    "text": "계수의 해석\n지수 함수 \\(e^x\\)의 그래프를 생각해 보자. \\(x\\)가 커짐에 따라서 도함수의 기울기가 커진다는 점을 알 수 있다. 0위의 전개에서 보듯이 \\(\\frac{\\Delta y}{y_0} \\approx 0\\)일 때 \\(\\beta\\)는 실재 값에 근접한다. \\(\\frac{\\Delta y}{y_0} \\approx 0\\)의 가정이란 \\(y\\)의 증가율이 크지 않다는 의미이다. 예를 들어보자. 만일 \\(\\beta = 0.3\\)이라고 하자. 실제 \\(\\%\\Delta y\\)를 구해보면,\n\\[\n\\%\\Delta y = \\exp(\\beta) - 1 = 0.35\n\\]\n약 5% 정도 과소평가되었음을 알 수 있다. 이 크기의 의미나 중요성은 분석자가 선택할 문제다. 다만 \\(\\beta\\)가 너무 크게 나왔다면, 실재 값과의 오차가 꽤 될 수 있음에 유의하자."
   }
 ]
