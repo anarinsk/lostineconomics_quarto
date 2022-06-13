@@ -8,6 +8,12 @@ categories: [container]
 #margin-header: subscribe.html
 ---
 
+:::{ .callout-tip }
+## koreanize-matplotlib
+
+matplotlib에서 한글을 쓸 때 문제가 없도록 하는 패키지가 등장했다. 개발자 분에게 무한 감사를 표하면서 [repo](https://github.com/ychoi-kr/koreanize-matplotlib)를 깔아 쓰도록 하자. 
+:::
+
 ## Build도 어렵지 않다! 
 
 이 글은 [이 포스팅](https://anarinsk.github.io/lostineconomics-v2-1/docker/data-science/2020/09/24/install-hangul-in-docker.html)에서 이어진다. 컨테이너를 올린 뒤 컨테이너 내 터미널에서 sh 스크립트를 실행하지 않고 한글 문제 처음부터 해결할 수 없을까? 
