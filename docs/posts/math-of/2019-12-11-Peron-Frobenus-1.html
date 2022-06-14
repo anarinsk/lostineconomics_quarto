@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.512">
+<meta name="generator" content="quarto-0.9.573">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -257,12 +257,13 @@ p_{11}&amp; p_{12}&amp; \dotsc&amp; p_{1n} \\
 p_{21}&amp; p_{22}&amp; \dotsc&amp; p_{2n}  \\
 \vdots &amp;\vdots&amp;\ddots&amp;\vdots \\
 p_{n1}&amp; p_{n2}&amp; \dotsc&amp; p_{nn}
-\end{bmatrix}\]</span></p>
+\end{bmatrix}
+\]</span></p>
 <p><span class="math inline">\(P\)</span>의 각 행의 합은 1이 된다는 점을 새겨두자. <span class="math inline">\(t\)</span> 기에 <span class="math inline">\(i\)</span> 상태에 있었다면, <span class="math inline">\((t+1)\)</span> 기에는 <span class="math inline">\(1, 2, \dotsc, n\)</span> 중 어느 하나로는 상태를 변경해야 한다.</p>
 <p>행 벡터 <span class="math inline">\(p_t \in \mathbb{R}^n\)</span> 를 <span class="math inline">\(X_t\)</span>의 분포라고 하자.</p>
-<p>$$</p>
-<p>{(p_t^T)}_i = {}(X_t = i)</p>
-<p>$$</p>
+<p><span class="math display">\[
+{(p_t^T)}_i = {\rm Prob}(X_t = i)
+\]</span></p>
 <p>를 의미한다. 즉, <span class="math inline">\(t\)</span> 기에 <span class="math inline">\(i\)</span> 상태가 실현될 혹은 존재할 확률이다. <span class="math inline">\((t+1)\)</span> 기의 확률 분포를 벡터로 표현하면 다음과 같다. <span class="math inline">\(p_{t+1} = p_t P\)</span>.</p>
 <p>확률 행렬를 활용해서 마르코프 체인의 문제를 어떻게 풀까? 일단 적당한 형태의 확률 행렬 <span class="math inline">\(P\)</span>가 있다고 하자. 즉 <span class="math inline">\(P\)</span>는 비음이고 <span class="math inline">\(P^k &gt; 0\)</span>이 성립한다(즉, <span class="math inline">\(P\)</span>는 정칙 행렬). <span class="math inline">\(P\)</span>에 페론-프로베니우스의 정리를 적용할 수 있다! 즉,</p>
 <ul>
@@ -279,13 +280,13 @@ p_{n1}&amp; p_{n2}&amp; \dotsc&amp; p_{nn}
 <section id="eigenvalue-1-exists" class="level3">
 <h3 class="anchored" data-anchor-id="eigenvalue-1-exists">Eigenvalue 1 exists!</h3>
 <p>1의 아이겐밸류가 존재한다. 어떻게 알 수 있을까?</p>
-<p>$$</p>
-<p>P {}_n = (1){}_n</p>
-<p>$$</p>
+<p><span class="math display">\[
+P {\boldsymbol 1}_n = (1){\boldsymbol 1}_n
+\]</span></p>
 <p>확률 행렬 <span class="math inline">\(P\)</span>에 대해서 모든 원소가 1인 <span class="math inline">\(n\)</span> 차원의 열 벡터 <span class="math inline">\({\boldsymbol 1}_n\)</span>에 관해서 위의 식이 당연히 성립한다. 즉, 확률 행렬 <span class="math inline">\(P\)</span>의 우 아이겐벡터는 <span class="math inline">\({\boldsymbol 1}_n\)</span>이고 그때의 아이겐밸류는 <span class="math inline">\(1\)</span>이다. 그러면 아이겐밸류 1에 해당하는 좌 아이겐벡터 <span class="math inline">\(\pi\)</span> 가 존재한다고 하자. 이를 적으면 다음과 같다.</p>
-<p>$$</p>
-<p>P = (1)</p>
-<p>$$</p>
+<p><span class="math display">\[
+\pi P = \pi (1)
+\]</span></p>
 <p>앞서 페론-프로베니우스의 정리에 따라서 아이겐밸류 1에 해당하는 유일한 좌 아이겐벡터 <span class="math inline">\(\pi\)</span>가 존재한다. 이 좌 아이겐벡터는 당연히 아이겐벡터의 특성을 지니고 있다. 즉, 어떤 상태 <span class="math inline">\(\pi\)</span>에서 한번의 확률 과정을 거치더라도 여전히 그 상태에 머물러 있게 된다.</p>
 </section>
 <section id="is-the-largest-eigenvalue" class="level3">
@@ -295,9 +296,9 @@ p_{n1}&amp; p_{n2}&amp; \dotsc&amp; p_{nn}
 <section id="proof" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="proof">Proof</h3>
 <p>만일 1 이외의 아이겐밸류 <span class="math inline">\(\hat \lambda &gt; 1\)</span>가 존재한다고 하자. 이제 어떤 열 벡터 <span class="math inline">\(x\)</span>에 속하는 최대값을 <span class="math inline">\(x_{\max}\)</span>라고 하자. 이때 <span class="math inline">\(P x\)</span>의 결과 생산되는 열 벡터의 각 원소는 <span class="math inline">\(x_i\)</span> for <span class="math inline">\(i = 1, 2, \dotsc, n\)</span>의 컨벡스 결합이다. 따라서 <span class="math inline">\(Px = x^c\)</span>에 속한 어떤 원소 <span class="math inline">\(x_i^c\)</span>도 <span class="math inline">\(x_{\max}\)</span> 보다 클 수 없다. 즉,</p>
-<p>$$</p>
-<p>x^c_i x_{}</p>
-<p>$$</p>
+<p><span class="math display">\[
+x^c_i \leq x_{\max}
+\]</span></p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><span class="math inline">\(p_{i1} x^c_1 + p_{i2} x^c_2 + \dotsb + p_{in} x^c_n\)</span> with <span class="math inline">\(p_{i1} + p_{i2} + \dotsc + p_{in} =1\)</span> for <span class="math inline">\(i = 1, 2, \dotsc, n\)</span></p>
@@ -314,26 +315,26 @@ p_{n1}&amp; p_{n2}&amp; \dotsc&amp; p_{nn}
 <section id="definition-of-limiting-distribution" class="level3">
 <h3 class="anchored" data-anchor-id="definition-of-limiting-distribution">Definition of limiting distribution</h3>
 <p>확률 분포 <span class="math inline">\(\pi = [\pi_0, \pi_1, \pi_2, \dotsc, \pi_k]\)</span>는 아래 조건을 만족할 때 마르코프 체인 <span class="math inline">\(P_n\)</span>의 극한 분포라고 부른다. 만일</p>
-<p>$$</p>
-<p><em>j = </em>{n } P(X_n = j | X_0 = i) ,~i, j S</p>
-<p>$$</p>
+<p><span class="math display">\[
+\pi_j = \lim_{n \to \infty} P(X_n = j | X_0 = i) ,~\forall i, j \in S
+\]</span></p>
 <p>이고</p>
-<p>$$</p>
-<p>_{j S} _j = 1.</p>
-<p>$$</p>
+<p><span class="math display">\[
+\sum_{j \in S} \pi_j = 1.
+\]</span></p>
 <p>몇 가지 점만 확인해보자.</p>
 <ul>
 <li>극한 분포는 초기 상태에 의존하지 않는다.</li>
 <li>만일 극한 분포가 존재한다면, 아래 같은 식이 성립한다.</li>
 </ul>
-<p>$$</p>
-_{n } P^n =
-<span class="math display">\[\begin{bmatrix}
+<p><span class="math display">\[
+\lim_{n \to \infty} P^n =
+\begin{bmatrix}
 \pi \\
 \vdots \\
 \pi
-\end{bmatrix}\]</span>
-<p>$$</p>
+\end{bmatrix}
+\]</span></p>
 </section>
 </section>
 <section id="limiting-behavior-of-markov-chain" class="level2 page-columns page-full">
@@ -342,50 +343,49 @@ _{n } P^n =
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>사실 기존의 <span class="math inline">\(\pi\)</span>가 좌 아이겐벡터였다면 여기서는 이를 우 아이겐벡터로 바꾼 것이다. 물론, 확률 행렬 역시 <span class="math inline">\(P^T\)</span>가 되어야 한다.</p>
-</div></div><p>$$</p>
-<span class="math display">\[\begin{aligned}
+</div></div><p><span class="math display">\[
+\begin{aligned}
 \pi_{t+1}^T &amp; = P^T \pi_t^T \\
 Q y_{t+1} &amp; = P^T Q_{t} y_t \\
 Q^{-1} Q y_{t+1} &amp; = Q^{-1}P^T Q_{t} y_t \\
 y_{t+1} &amp; = D y_t
-\end{aligned}\]</span>
-<p>$$</p>
+\end{aligned}
+\]</span></p>
 <p>두 가지를 상기하자.</p>
 <ol type="1">
 <li>행렬 <span class="math inline">\(A\)</span>와 전치 행렬 <span class="math inline">\(A^T\)</span>는 동일한 아이겐밸류를 지니게 된다.</li>
 <li>D는 아이겐밸류로 구성된 대각행렬이다. 편의상 크기 순서대로 나열되어 있다고 하자.</li>
 </ol>
-<p>:::{.column-margin} [^1]: <span class="math inline">\(\det(A^T−\lambda I) = \det((A−\lambda I)^T)=\det(A−\lambda I)\)</span> :::</p>
-<p>앞서 본 바에 따라서 <span class="math inline">\(\lambda_1 =1\)</span>이다.</p>
-<p>$$</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="math inline">\(\det(A^T−\lambda I) = \det((A−\lambda I)^T)=\det(A−\lambda I)\)</span></p>
+</div></div><p>앞서 본 바에 따라서 <span class="math inline">\(\lambda_1 =1\)</span>이다.</p>
+<p><span class="math display">\[
 y_t =
-<span class="math display">\[\begin{bmatrix}
+\begin{bmatrix}
 \lambda_1&amp; \dotsc&amp; 0 \\
 \vdots&amp; \ddots&amp; \vdots \\
 0&amp; \dotsc&amp; \lambda_n
-\end{bmatrix}\]</span>
-<p>y_{t-1}.</p>
-<p>$$</p>
+\end{bmatrix} y_{t-1}.
+\]</span></p>
 <p>이 차분방정식의 해는 아래와 같다.</p>
-<p>$$</p>
+<p><span class="math display">\[
 y_t =
-<span class="math display">\[\begin{bmatrix}
+\begin{bmatrix}
 \lambda_1&amp; \dotsc&amp; 0 \\
 \vdots&amp; \ddots&amp;\vdots \\
 0&amp; \dotsc&amp; \lambda_n
-\end{bmatrix}\]</span>
-^t y_{0} =
-<span class="math display">\[\begin{bmatrix}
+\end{bmatrix}^t y_{0} =
+\begin{bmatrix}
 \lambda_1^t&amp; \dotsc&amp; 0 \\
 \vdots&amp; \ddots&amp; \vdots \\
 0&amp; \dotsc&amp; \lambda_n^t
-\end{bmatrix}\]</span>
-<p>y_0</p>
-<p>$$</p>
+\end{bmatrix} y_0
+\]</span></p>
 <p><span class="math inline">\(y_0 = [c_1, \dotsc, c_n]^T\)</span>라고 두면, <span class="math inline">\(y_t = [c_1 \lambda_1^t, \dotsc, c_1 \lambda_n^t]^T\)</span>가 된다.</p>
-<p>$$</p>
-<p>_t^T Q y_t = c_1 _1^t v_1 + + c_1 _n^t v_n.</p>
-<p>$$</p>
+<p><span class="math display">\[
+\pi_t^T \equiv Q y_t = c_1 \lambda_1^t v_1 +  \dotsb + c_1 \lambda_n^t v_n.
+\]</span></p>
 <p>이제 <span class="math inline">\(t \to \infty\)</span>를 적용해보자. <span class="math inline">\(\lambda_i &lt; \lambda_1 = 1\)</span> for <span class="math inline">\(i = 2, 3, \dotsc, n\)</span>이므로, <span class="math inline">\(\pi_{\infty}^T = c_1 v_1\)</span>가 된다. <span class="math inline">\(v_1\)</span>이 표준화된 확률 분포 벡터이므로 <span class="math inline">\(c_1 =1\)</span>이어야 한다.</p>
 </section>
 <section id="appendix-irreducibility-and-aperiodicity" class="level2 page-columns page-full">
@@ -395,9 +395,9 @@ y_t =
 <h3 class="anchored" data-anchor-id="irreducible-matrix">Irreducible matrix</h3>
 <p>기약성의 정의는 아래와 같다.</p>
 <p><span class="math inline">\(P\)</span>가 확률 행렬이라고 할 때, 상태 <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>에 대해서 양의 실수 <span class="math inline">\(j\)</span>, <span class="math inline">\(k\)</span>가 존재하면, 두 상태는 서로 교류할 수 있다고 칭한다.</p>
-<p>$$</p>
-<p>P^j (x, y) &gt; 0<del></del>P^k(y,x) &gt; 0</p>
-<p>$$</p>
+<p><span class="math display">\[
+P^j (x, y) &gt; 0~~\text{and}~~P^k(y,x) &gt; 0
+\]</span></p>
 <p>이 정의의 의미는 무엇일까? 일정한 상태를 거치면 <span class="math inline">\(x \to y\)</span> 그리고 <span class="math inline">\(y \to x\)</span>로 옮기는 것이 확률적으로 가능하다는 뜻이다. 기약성이란 모든 상태가 교류할 수 있는 상태를 뜻한다. 다시 말하면 어떤 상태에 들어가서 여기서 빠져나올 수 없는 경우가 발생한 가능성이 없을 때 기약성이 성립한다.</p>
 <section id="irreducible" class="level4">
 <h4 class="anchored" data-anchor-id="irreducible">Irreducible</h4>
@@ -418,9 +418,9 @@ y_t =
 <li>1번, 2번, 3번 상태는 <span class="math inline">\(\{ k, k+3, k+6, \dotsc \}\)</span> 번째에 존재하게 된다.</li>
 </ul>
 <p>주기성(periodicity)의 수학적인 정의는 다음과 같다.</p>
-<p>$$</p>
-<p>k = {} { n &gt; 0<sub>|</sub>{}(X_n = i | X_0 = i) &gt; 0 }</p>
-<p>$$</p>
+<p><span class="math display">\[
+k = {\rm gcd} \{ n &gt; 0~|~{\rm Pr}(X_n = i | X_0 = i) &gt; 0 \}
+\]</span></p>
 <p>gcd란 greatest common divisor, 즉 최대공약수를 의미한다. 만일 해당 상태로 <span class="math inline">\(\{ 6, 8, 12, \dotsc \}\)</span> 번에 돌아갈 확률이 양이라면, gcd는 2가 된다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -438,9 +438,9 @@ y_t =
 <h4 class="anchored" data-anchor-id="a-b">A → B</h4>
 <p><strong>Irreducible</strong></p>
 <p>정칙 행렬이면 <span class="math inline">\(P^k &gt; 0\)</span>이다. <span class="math inline">\(P^{k+1}\)</span>의 <span class="math inline">\(i\)</span> 행 <span class="math inline">\(j\)</span> 열의 원소는 다음과 같다.</p>
-<p>$$</p>
-<p>p_{ij}^{k+1} = <em>{t=1}^{n} p</em>{it} p_{tj}^k &gt; 0</p>
-<p>$$</p>
+<p><span class="math display">\[
+p_{ij}^{k+1} = \sum_{t=1}^{n} p_{it} p_{tj}^k &gt; 0
+\]</span></p>
 <p>위의 식이 성립하는 이유는 정칙 행렬의 경우 적어도 하나의 <span class="math inline">\(t\)</span>에 관해서 <span class="math inline">\(p_{it} &gt; 0\)</span>이 성립해야 한다. 만일 이것이 성립하지 않으면 정칙 행렬이 될 수 없다. 즉, <span class="math inline">\(P^{k+1} &gt;0\)</span>이고, <span class="math inline">\(P^{k+2}, P^{k+3}, \dotsc\)</span>모두 양이다.</p>
 <p><strong>Aperiodic</strong></p>
 <p><span class="math inline">\(\{k ,k+1, k+2, \dotsc\}\)</span>의 gcd는 1이다.</p>
@@ -456,25 +456,25 @@ y_t =
 <p>만일 확률 행렬이 기약이면 이때 비주기성 여부를 어떻게 확인할까? 행렬이 기약 행렬이라면, 해당 행렬을 구성하는 하나의 상태만 비주기성을 지니면 전체 행렬이 비주기성을 지닌다. 증명은 조금만 생각해보시라.</p>
 <p><strong>Why Aperiodicity?</strong></p>
 <p>극한 분포 존재에 비주기성은 왜 필요할까? 만일 이 조건이 성립하지 않으면 극한 분포로 계산된 것이 사실은 극한 분포라고 할 수 없게 된다. 즉,</p>
-<p>$$</p>
-_{n } P^n
-<span class="math display">\[\begin{bmatrix}
+<p><span class="math display">\[
+\lim_{n \to \infty} P^n  \neq
+\begin{bmatrix}
 \pi \\
 \vdots \\
 \pi
-\end{bmatrix}\]</span>
-<p>.</p>
-<p>$$</p>
+\end{bmatrix}.
+\]</span></p>
 <p>예를 들어보자. 상태 2개이고 확률 행렬이 아래와 같다고 하자.</p>
-<p>$$</p>
+<p><span class="math display">\[
 P =
-<span class="math display">\[\begin{bmatrix}
+\begin{bmatrix}
 0 &amp;1 \\
 1 &amp; 0
-\end{bmatrix}\]</span>
-<p>$$ 극한 분포를 계산하면 <span class="math inline">\([\dfrac{1}{2}, \dfrac{1}{2}]\)</span>이 나온다. 상태 1에서 출발했다면, 상태 1이 <span class="math inline">\(\{2, 4, 6\}\)</span> 번에 나타나게 되고, 이때 gcd는 2가 된다. 이때 확률 행렬의 곱을 살펴보면 아래와 같다. <span class="math inline">\(k = 1, 2,\cdots\)</span>에 대해서</p>
-<p>$$</p>
-<span class="math display">\[\begin{aligned}
+\end{bmatrix}
+\]</span></p>
+<p>극한 분포를 계산하면 <span class="math inline">\([\dfrac{1}{2}, \dfrac{1}{2}]\)</span>이 나온다. 상태 1에서 출발했다면, 상태 1이 <span class="math inline">\(\{2, 4, 6\}\)</span> 번에 나타나게 되고, 이때 gcd는 2가 된다. 이때 확률 행렬의 곱을 살펴보면 아래와 같다. <span class="math inline">\(k = 1, 2,\cdots\)</span>에 대해서</p>
+<p><span class="math display">\[
+\begin{aligned}
 P^n &amp; =
 \begin{bmatrix}
 0 &amp; 1 \\
@@ -485,8 +485,8 @@ P^n &amp; =
 1 &amp; 0 \\
 0 &amp; 1
 \end{bmatrix},~\text{for}~n = 2k
-\end{aligned}\]</span>
-<p>$$</p>
+\end{aligned}
+\]</span></p>
 <p>따라서 <span class="math inline">\(\lim_{n \to \infty} P^n\)</span>은 수렴하지 않는다. 앞서 계산한 극한 분포는 두 극단의 평균일 뿐이다. 이때 극한 분포 역시 존재하지 않는다.</p>
 
 

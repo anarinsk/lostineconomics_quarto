@@ -100,7 +100,8 @@ p_{11}& p_{12}& \dotsc& p_{1n} \\
 p_{21}& p_{22}& \dotsc& p_{2n}  \\ 
  \vdots &\vdots&\ddots&\vdots \\
 p_{n1}& p_{n2}& \dotsc& p_{nn} 
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 
 $P$의 각 행의 합은 1이 된다는 점을 새겨두자. $t$ 기에 $i$ 상태에 있었다면, $(t+1)$ 기에는 $1, 2, \dotsc, n$ 중 어느 하나로는 상태를 변경해야 한다. 
 
@@ -219,8 +220,8 @@ $$
 1. 행렬 $A$와 전치 행렬 $A^T$는 동일한 아이겐밸류를 지니게 된다.
 2. D는 아이겐밸류로 구성된 대각행렬이다. 편의상 크기 순서대로 나열되어 있다고 하자. 
 
-:::{.column-margin}
-[^1]: $\det(A^T−\lambda I) = \det((A−\lambda I)^T)=\det(A−\lambda I)$
+:::{ .column-margin }
+$\det(A^T−\lambda I) = \det((A−\lambda I)^T)=\det(A−\lambda I)$
 :::
 
 앞서 본 바에 따라서 $\lambda_1 =1$이다. 
