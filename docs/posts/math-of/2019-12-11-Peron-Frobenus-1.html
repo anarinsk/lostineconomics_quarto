@@ -157,8 +157,8 @@ ul.task-list{list-style: none;}
   gtag('js', new Date());
 
   gtag('config', 'G-JNRF3S74Z4');
-</script><section id="tldr" class="level2">
-<h2 class="anchored" data-anchor-id="tldr">tl;dr</h2>
+</script><section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <ul>
 <li>정칙 행렬(regular matrix)의 경우 페론-프로베니우스의 정리는 아이겐밸류와 아이겐벡터에 관해서 강력한 조건을 걸어준다.</li>
 <li>정칙 행렬의 경우 가장 큰 양의 유일한 실수 아이겐밸류가 존재하며, 이 값에 상응하는 아이겐벡터는 양이다.</li>
@@ -171,19 +171,22 @@ ul.task-list{list-style: none;}
 <h3 class="anchored" data-anchor-id="positive-nonnegative">positive, nonnegative</h3>
 <ul>
 <li>양(positive): 행렬의 모든 원소가 양의 값을 지닐 때</li>
-<li>비음(nonnegative): 행렬의 모든 원소가 비음일 때, 가 원래 정의다. 하지만 여기서는 non-negative and non-zero의 의미로 사용한다. 즉, 모든 원소가 비음이면서 행렬 혹은 벡터 자체가 <span class="math inline">\(\mathbf 0\)</span>이 아니다.</li>
+<li>비음(nonnegative): 행렬의 모든 원소가 비음일 때, 가 원래 정의다. 하지만 여기서는 non-negative and non-zero의 의미로 사용한다. 즉, 모든 원소가 비음이면서 행렬 혹은 벡터는 <span class="math inline">\(\mathbf 0\)</span>이 아니다.
+<ul>
+<li><span class="math inline">\(z \geq 0\)</span> with <span class="math inline">\(z \neq 0\)</span></li>
+</ul></li>
 </ul>
 <p>벡터 <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>가 있을 때 <span class="math inline">\(x &gt; y\)</span>는 <span class="math inline">\((x-y)\)</span>가 양이라는 뜻이다. 앞으로 벡터와 행렬에 대해서 <span class="math inline">\(&gt;\)</span> 그리고 <span class="math inline">\(\geq\)</span>는 모두 원소-단위(element-wise)를 뜻한다.</p>
 </section>
 </section>
 <section id="basic-facts" class="level2">
 <h2 class="anchored" data-anchor-id="basic-facts">Basic facts</h2>
+<p>For <span class="math inline">\(z \geq 0\)</span>,</p>
 <ul>
-<li>If <span class="math inline">\(A \geq 0\)</span> and <span class="math inline">\(z \geq 0\)</span>, then <span class="math inline">\(A z \geq 0\)</span></li>
-<li>If <span class="math inline">\(A&gt;0\)</span> and <span class="math inline">\(z \geq 0\)</span>, then <span class="math inline">\(A z &gt; 0\)</span>.
+<li>If <span class="math inline">\(A \geq 0\)</span> then <span class="math inline">\(A z \geq 0\)</span>.</li>
+<li>If <span class="math inline">\(A&gt;0\)</span> then <span class="math inline">\(A z &gt; 0\)</span>.
 <ul>
-<li>역도 성립한다. 즉,</li>
-<li>whenever <span class="math inline">\(z \geq 0\)</span> with <span class="math inline">\(z \neq 0\)</span> and <span class="math inline">\(A z &gt; 0\)</span>, then <span class="math inline">\(A &gt;0\)</span></li>
+<li>역도 성립한다. 즉, if <span class="math inline">\(Az &gt;(\geq)\;0\)</span>, then <span class="math inline">\(A &gt;(\geq)\;0\)</span></li>
 </ul></li>
 <li>If <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(x \neq 0\)</span>, <span class="math inline">\(\pi = (\frac{1}{\boldsymbol{1}^T x}) x\)</span>와 같은 표준화된 형태를 확률 분포로 활용할 수 있다.
 <ul>
@@ -193,36 +196,35 @@ ul.task-list{list-style: none;}
 </section>
 <section id="regular-nonnegative-matrices" class="level2">
 <h2 class="anchored" data-anchor-id="regular-nonnegative-matrices">Regular nonnegative matrices</h2>
-<p><span class="math inline">\(A \in \mathbb{R}^{n \times n}\)</span> 그리고 <span class="math inline">\(A \geq 0\)</span>를 가정하자. <span class="math inline">\(A\)</span>는 다음의 조건을 만족할 때 정칙 행렬(regular matrix)이라고 한다. 1보다 큰 정수 <span class="math inline">\(k\)</span>에 대해서 <span class="math inline">\(A^k &gt; 0\)</span>를 만족한다.</p>
-<section id="for-graph-matrices" class="level3">
-<h3 class="anchored" data-anchor-id="for-graph-matrices">For graph matrices</h3>
-<p>노드들 간의 그래프 관계를 가장 쉽게 나타낼 수 있는 것이 행렬이다. 즉, <span class="math inline">\(i, j \in \{ 1, 2, \dotsc, n \}\)</span> 일 때, <span class="math inline">\(A_{ij}&gt;0\)</span>이면 <span class="math inline">\(i \to j\)</span>의 엣지를 그릴 수 있음을 나타낸다. 이때 <span class="math inline">\((A^k)_{ij} &gt; 0\)</span>와 동치는 <span class="math inline">\(j \to i\)</span> 로 연결되는 길이 <span class="math inline">\(k\)</span>의 경로가 존재함을 의미한다.</p>
-<p>이때 <span class="math inline">\(A\)</span>가 정칙 행렬이 의미는 무엇일까? 이는 모든 노드에서 다른 어떤 노드로 이동하는 임의의 <span class="math inline">\(k\)</span> 길이의 경로가 항상 존재한다는 뜻이다.</p>
+<p><span class="math inline">\(A \in \mathbb{R}^{n \times n}\)</span> 그리고 <span class="math inline">\(A \geq 0\)</span>를 가정하자. <span class="math inline">\(A\)</span>는 다음의 조건을 만족할 때 정칙 행렬(regular matrix)이라고 한다; 1보다 큰 정수 <span class="math inline">\(k\)</span>에 대해서 <span class="math inline">\(A^k &gt; 0\)</span>를 만족한다.</p>
+<section id="a-matrix-for-a-graph" class="level3">
+<h3 class="anchored" data-anchor-id="a-matrix-for-a-graph">A matrix for a graph</h3>
+<p>노드들 간의 그래프 관계를 가장 쉽게 나타낼 수 있는 것이 행렬이다. 즉, <span class="math inline">\(i, j \in \{ 1, 2, \dotsc, n \}\)</span> 일 때, <span class="math inline">\(A_{ij}&gt;0\)</span>이면 <span class="math inline">\(i \to j\)</span>의 엣지를 그릴 수 있음을 나타낸다. 이때 <span class="math inline">\((A^k)_{ij} &gt; 0\)</span>와 동치는 <span class="math inline">\(i\)</span> 노드와 <span class="math inline">\(j\)</span> 노드를 연결하는 길이 <span class="math inline">\(k\)</span>의 경로가 존재함을 의미한다. 이때 <span class="math inline">\(A\)</span>가 정칙 행렬이라는 가정의 의미는 무엇일까? 이는 모든 노드에서 다른 어떤 노드로 이동하는 임의의 <span class="math inline">\(k\)</span> 길이의 경로가 항상 존재한다는 뜻이다.</p>
 </section>
 <section id="examples" class="level3">
 <h3 class="anchored" data-anchor-id="examples">Examples</h3>
-<section id="not-regular" class="level4">
-<h4 class="anchored" data-anchor-id="not-regular">Not regular</h4>
+<section id="not-regular-비정칙" class="level4">
+<h4 class="anchored" data-anchor-id="not-regular-비정칙">Not regular 비정칙</h4>
 <p><span class="math display">\[\begin{bmatrix} 1&amp; 1 \\0&amp; 1 \end{bmatrix}\]</span></p>
 <p><span class="math display">\[\begin{bmatrix} 0&amp; 1 \\1&amp; 0 \end{bmatrix}\]</span></p>
 </section>
-<section id="regular" class="level4">
-<h4 class="anchored" data-anchor-id="regular">Regular</h4>
+<section id="regular-정칙" class="level4">
+<h4 class="anchored" data-anchor-id="regular-정칙">Regular 정칙</h4>
 <p><span class="math display">\[\begin{bmatrix} 1&amp; 1&amp; 0 \\0&amp; 0&amp; 1\\ 1&amp;0&amp;0 \end{bmatrix}\]</span></p>
 <ul>
 <li>정칙 행렬이 아닌 경우에는 <span class="math inline">\(A^k(k \geq 1)\)</span>을 하더라도 같은 자리에 0이 남게 된다.</li>
-<li><span class="math inline">\(A\)</span>가 레귤러 행렬이라면 <span class="math inline">\(A \geq 0\)</span>이더라도 <span class="math inline">\(A^k &gt; 0\)</span>가 된다.</li>
+<li><span class="math inline">\(A\)</span>가 정칙 행렬이라면 <span class="math inline">\(A \geq 0\)</span>이더라도 <span class="math inline">\(A^k &gt; 0\)</span>가 된다.</li>
 </ul>
 </section>
 </section>
 </section>
 <section id="perron-frobenius-theorem" class="level2">
 <h2 class="anchored" data-anchor-id="perron-frobenius-theorem">Perron-Frobenius theorem</h2>
-<p>증명은 일단 생략하자. 그리 어렵지 않지만 페론-프로베니우스 정리 내용이 중요하기 때문에 이에 집중하겠다.</p>
+<p>증명은 일단 생략하자. 그리 어렵지 않지만 페론-프로베니우스 정리 자체가 중요하기 때문에 이에 집중하겠다.</p>
 </section>
 <section id="for-regular-matrices" class="level2">
 <h2 class="anchored" data-anchor-id="for-regular-matrices">For regular matrices</h2>
-<p><span class="math inline">\(A \geq 0\)</span>이고 <span class="math inline">\(A\)</span>가 레귤러 행렬이면 아래를 모두 만족한다.</p>
+<p><span class="math inline">\(A \geq 0\)</span>이고 <span class="math inline">\(A\)</span>가 정칙 행렬이면 아래를 모두 만족한다.</p>
 <ul>
 <li>아이겐밸류 <span class="math inline">\(\lambda_{\rm pf}\)</span>는 실수이며 양이다.</li>
 <li>좌 아이겐벡터와 우 아이겐벡터 모두 양이다.</li>
@@ -286,7 +288,7 @@ P {\boldsymbol 1}_n = (1){\boldsymbol 1}_n
 <p><span class="math display">\[
 \pi P = \pi (1)
 \]</span></p>
-<p>앞서 페론-프로베니우스의 정리에 따라서 아이겐밸류 1에 해당하는 유일한 좌 아이겐벡터 <span class="math inline">\(\pi\)</span>가 존재한다. 이 좌 아이겐벡터는 당연히 아이겐벡터의 특성을 지니고 있다. 즉, 어떤 상태 <span class="math inline">\(\pi\)</span>에서 한번의 확률 과정을 거치더라도 여전히 그 상태에 머물러 있게 된다.</p>
+<p>만일 <span class="math inline">\(1\)</span>이 아이겐밸류 중에서 가장 큰 값이라면, 페론-프로베니우스의 정리에 따라서 아이겐밸류 1에 해당하는 유일한 좌 아이겐벡터 <span class="math inline">\(\pi\)</span>가 존재한다. 이 좌 아이겐벡터는 아이겐벡터의 특성을 지니고 있다. 즉, 어떤 상태 <span class="math inline">\(\pi\)</span>에서 한번의 확률 과정을 거치더라도 여전히 그 상태에 머물러 있게 된다. <span class="math inline">\(\pi\)</span>는 일종의 균형 상태로 해석할 수 있다.</p>
 </section>
 <section id="is-the-largest-eigenvalue" class="level3">
 <h3 class="anchored" data-anchor-id="is-the-largest-eigenvalue">1 is the largest eigenvalue!</h3>
@@ -301,16 +303,18 @@ x^c_i \leq x_{\max}
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><span class="math inline">\(p_{i1} x^c_1 + p_{i2} x^c_2 + \dotsb + p_{in} x^c_n\)</span> with <span class="math inline">\(p_{i1} + p_{i2} + \dotsc + p_{in} =1\)</span> for <span class="math inline">\(i = 1, 2, \dotsc, n\)</span></p>
-</div></div><p>그런데 <span class="math inline">\(P x = \hat \lambda x\)</span>가 성립하고 <span class="math inline">\(\hat \lambda &gt;1\)</span>이기 때문에, <span class="math inline">\(x_{\max} \hat \lambda &gt; x_{\max}\)</span>가 성립해야 한다. 즉 모순이다. 따라서 <span class="math inline">\(\lambda \leq 1\)</span>이고, <span class="math inline">\(\lambda_{\rm pf} = 1\)</span>이다.</p>
+</div></div><p>그런데 <span class="math inline">\(P x = \hat \lambda x\)</span>가 성립하고 <span class="math inline">\(\hat \lambda &gt;1\)</span>이기 때문에, <span class="math inline">\(x_{\max} \hat \lambda &gt; x_{\max}\)</span>가 성립해야 한다. 즉 모순이다. 귀류법에 따라서 <span class="math inline">\(\lambda \leq 1\)</span>이고, 이때 아이겐밸류의 최대값은 1이다. 즉, 페론-프로베니우스의 근 <span class="math inline">\(\lambda_{\rm pf} = 1\)</span>이다.</p>
 <p>확률 행렬 <span class="math inline">\(P\)</span>, 아이겐밸류 1에 상응하는 좌 아이겐벡터 <span class="math inline">\(\pi^*\)</span>라고 하자. 페론-프로베니우스의 정리 활용하면 아래와 같다.</p>
 <ul>
 <li>좌 아이겐벡터 <span class="math inline">\(\pi^*\)</span>는 유일하고, 모든 원소는 실수이며 양이다.</li>
 <li>이를 적절하게 스케일링하면 분포가 된다.</li>
-<li>마르코프 체인의 초기 상태와 무관하게 확률 과정은 이 분포로 수렴한다.</li>
+<li>마르코프 체인의 초기 상태와 무관하게 확률 과정을 반복할수록 이 분포에 수렴한다.</li>
 </ul>
 <p>보통 마르코프 체인을 설명할 때 좌 아이겐밸류와 우 아이겐밸류를 구별하지 않는 경우가 있다. 이는 여러모로 손해다. 위에서 보듯이, 수렴 분포를 증명하는 과정에서 유용하게 활용된다.</p>
-<p><span class="math inline">\(P\)</span>의 정의를 확인하고, 위와 같이 정의한 경우라면 1에 대응하는 좌 아이겐벡터가 극한수렴 분포가 된다. 반대로, 확률 행렬을 <span class="math inline">\(P^T\)</span>로 정의했다면 우 아이겐벡터가 극한 분포다.</p>
-</section>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>행의 합을 1로 할지, 열의 합을 1로 할지는 이행 확률을 어떻게 정의할지 나름이다. <span class="math inline">\(P\)</span>의 정의를 확인하고, 위와 같이 정의한 경우라면 1에 대응하는 좌 아이겐벡터가 극한 수렴 분포가 된다. 반대로, 확률 행렬을 <span class="math inline">\(P^T\)</span>로 정의했다면 우 아이겐벡터가 극한 분포이다.</p>
+</div></div></section>
 <section id="definition-of-limiting-distribution" class="level3">
 <h3 class="anchored" data-anchor-id="definition-of-limiting-distribution">Definition of limiting distribution</h3>
 <p>확률 분포 <span class="math inline">\(\pi = [\pi_0, \pi_1, \pi_2, \dotsc, \pi_k]\)</span>는 아래 조건을 만족할 때 마르코프 체인 <span class="math inline">\(P_n\)</span>의 극한 분포라고 부른다. 만일</p>
