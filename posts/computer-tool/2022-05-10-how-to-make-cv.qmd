@@ -91,6 +91,7 @@ markdown: kramdown
 style: davewhipp
 ```
 손 댈 것이 많지는 않다. 
+
 - `style` | 이력서의 디자인 형식을 나타는 일종의 접두어다. 
 	- style 항목은 media 내에 있는 css 파일의 접두 단위를 지정하면 된다. 위 리포의 경우 davewhipp, jkhealy 두 개가 들어 있다. css를 잘 다룰 수 있다면 필요에 따라서 커스터마이즈를 하면 된다. 
 
