@@ -16,6 +16,8 @@ categories: [git]
 ## tl; dr 
 
 - 깃과 깃허브를 OS를 아우르면서 써보자. 
+- [깃헙 데스크탑](https://desktop.github.com), [gh CLI](https://cli.github.com/) 활용하자. 
+- WSL에서 쓰기 위해서는 별도의 처방이 필요하다. 
 
 ## Common Tools 
 

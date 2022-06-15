@@ -1558,7 +1558,7 @@
     "href": "posts/git/2022-04-27-happy-giting.html#tl-dr",
     "title": "Happy Git-ing!",
     "section": "tl; dr",
-    "text": "tl; dr\n\n깃과 깃허브를 OS를 아우르면서 써보자."
+    "text": "tl; dr\n\n깃과 깃허브를 OS를 아우르면서 써보자.\n깃헙 데스크탑, gh CLI 활용하자.\nWSL에서 쓰기 위해서는 별도의 처방이 필요하다."
   },
   {
     "objectID": "posts/git/2022-04-27-happy-giting.html#common-tools",
