@@ -1444,6 +1444,8 @@ Note
 <h2 class="anchored" data-anchor-id="tl-dr">tl; dr</h2>
 <ul>
 <li>깃과 깃허브를 OS를 아우르면서 써보자.</li>
+<li><a href="https://desktop.github.com">깃헙 데스크탑</a>, <a href="https://cli.github.com/">gh CLI</a> 활용하자.</li>
+<li>WSL에서 쓰기 위해서는 별도의 처방이 필요하다.</li>
 </ul>
 </section>
 <section id="common-tools" class="level2">
@@ -2830,6 +2832,8 @@ Note
 <h2 class="anchored" data-anchor-id="tl-dr">tl; dr</h2>
 <ul>
 <li>깃과 깃허브를 OS를 아우르면서 써보자.</li>
+<li><a href="https://desktop.github.com">깃헙 데스크탑</a>, <a href="https://cli.github.com/">gh CLI</a> 활용하자.</li>
+<li>WSL에서 쓰기 위해서는 별도의 처방이 필요하다.</li>
 </ul>
 </section>
 <section id="common-tools" class="level2">
@@ -4281,6 +4285,8 @@ Note
 <h2 class="anchored" data-anchor-id="tl-dr">tl; dr</h2>
 <ul>
 <li>깃과 깃허브를 OS를 아우르면서 써보자.</li>
+<li><a href="https://desktop.github.com">깃헙 데스크탑</a>, <a href="https://cli.github.com/">gh CLI</a> 활용하자.</li>
+<li>WSL에서 쓰기 위해서는 별도의 처방이 필요하다.</li>
 </ul>
 </section>
 <section id="common-tools" class="level2">

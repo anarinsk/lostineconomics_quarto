@@ -19,8 +19,7 @@ categories: [math-of]
 ### positive, nonnegative 
 
 * 양(positive): 행렬의 모든 원소가 양의 값을 지닐 때 
-* 비음(nonnegative): 행렬의 모든 원소가 비음일 때, 가 원래 정의다. 하지만 여기서는 non-negative and non-zero의 의미로 사용한다. 즉, 모든 원소가 비음이면서 행렬 혹은 벡터는 $\mathbf 0$이 아니다. 
-	- $z \geq 0$ with $z \neq 0$
+* 비음(nonnegative): 행렬의 모든 원소가 비음일 때, 가 원래 정의다. 하지만 여기서는 "non-negative and non-zero"의 의미로 사용한다. 즉, 모든 원소가 비음이면서 행렬 혹은 벡터는 $\mathbf 0$이 아니다. 즉, $z \geq 0$ with $z \neq 0$.
 
 벡터 $x$, $y$가 있을 때 $x > y$는 $(x-y)$가 양이라는 뜻이다. 앞으로 벡터와 행렬에 대해서 $>$ 그리고 $\geq$는 모두 원소-단위(element-wise)를 뜻한다. 
 
@@ -201,7 +200,9 @@ $$
 
 ## Limiting Behavior of Markov Chain 
 
-마르코프 체인은 어떻게 $\pi^*$로 수렴하게 될까? 확률 행렬 $P$의 아이겐밸류 $1 = \lambda_1 > \lambda_2 \geq \dotsc \geq \lambda_n > 0$, 각각에 대응하는 아이겐벡터를 $v_1, v_2, \dotsc, v_n$이라고 하자. 아이겐벡터가 각각 선형독립이라고 가정하자. 이때 아이겐벡터로 구성된 행렬 $Q$는 가역이다. $\pi^T_t  = Q y_t$ 로 나타낼 수 있다. 즉 $Q$의 선형결합을 통해 $n$ 차원의 임의의 벡터를 표현할 수 있다. $\pi$가 열 벡터이기 때문에 이를 행 벡터로 바꿨다는 점에 유의하자. 한편, 
+마르코프 체인은 어떻게 $\pi^*$로 수렴하게 될까? 확률 행렬 $P$의 아이겐밸류 $1 = \lambda_1 > \lambda_2 \geq \dotsc \geq \lambda_n > 0$, 각각에 대응하는 아이겐벡터를 $v_1, v_2, \dotsc, v_n$이라고 하자. 아이겐벡터가 각각 선형독립이라고 가정하자. 이때 아이겐벡터로 구성된 $Q$는 가역(invertible) 행렬이다. 
+
+$\pi^T_t  = Q y_t$ 로 나타낼 수 있다. 즉 $Q$의 선형결합을 통해 $n$ 차원의 임의의 벡터를 표현할 수 있다. $\pi$가 열 벡터이기 때문에 이를 행 벡터로 바꿨다는 점에 유의하자. 한편, 
 
 :::{.column-margin}
 사실 기존의 $\pi$가 좌 아이겐벡터였다면 여기서는 이를 우 아이겐벡터로 바꾼 것이다. 물론, 확률 행렬 역시 $P^T$가 되어야 한다. 
@@ -252,8 +253,7 @@ y_t =
 \end{bmatrix} y_0
 $$
 
-$y_0 = [c_1, \dotsc, c_n]^T$라고 두면, $y_t = [c_1 \lambda_1^t, \dotsc, c_1 \lambda_n^t]^T$가 된다. 
-
+$y_0 = [c_1, \dotsc, c_n]^T$라고 두면, $y_t = [c_1 \lambda_1^t, \dotsc, c_1 \lambda_n^t]^T$가 된다. $Q = [v_1, \dotsc, v_n]$가 아이겐벡터 $v_i$로 구성된 매트릭스라고 할 때, 
 $$
 \pi_t^T \equiv Q y_t = c_1 \lambda_1^t v_1 +  \dotsb + c_1 \lambda_n^t v_n.
 $$
