@@ -65,7 +65,7 @@ ul.task-list{list-style: none;}
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -110,9 +110,11 @@ ul.task-list{list-style: none;}
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -253,7 +255,7 @@ M_{\Pi_x} =
 <p><span class="math inline">\(\vec a\)</span>를 인풋 벡터로 이해하면 이를 <span class="math inline">\(\vec b\)</span>의 프로젝션 위치로 옮기는 선형 변환이 <span class="math inline">\(\Pi_{\hat b}\)</span>에 해당한다.</p>
 </section>
 </section>
-<section id="more-definition" class="level2">
+<section id="more-definition" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="more-definition">More Definition</h2>
 <ul>
 <li><span class="math inline">\(S \subseteq \mathbb R^n\)</span>: <span class="math inline">\(S\)</span>는 벡터 부분 공간이라고 하자.</li>
@@ -299,7 +301,7 @@ l: \{ \vec v' \in \mathbb R^n \lvert \vec v' = \vec 0 + t \vec v, t \in \mathbb 
 \]</span></p>
 <p><span class="math inline">\(\vec u\)</span>라는 벡터가 두 개의 직교하는 성분의 결합을 통해 표현될 수 있다는 것을 알 수 있다.</p>
 </section>
-<section id="projection-onto-plane" class="level3">
+<section id="projection-onto-plane" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="projection-onto-plane">Projection onto plane</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -308,7 +310,19 @@ l: \{ \vec v' \in \mathbb R^n \lvert \vec v' = \vec 0 + t \vec v, t \in \mathbb 
 </figure>
 </div>
 <p>평면 위로의 프로젝션을 생각해 보자. 기본적인 원리는 동일하다. 이에 앞서 평면을 벡터로 표현하는 방법에 대해 알아보자. 가장 편리한 방법은 노멀 벡터를 활용하는 것이다. 즉, 평면 위의 점 <span class="math inline">\(\vec {p_0}\)</span>를 지나는 <span class="math inline">\(P\)</span>는 다음과 같이 정의할 수 있다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>노멀 벡터에 대해서 간략하게 복습하고 가자. 3차원 공간을 예로 들겠다. 각 공간의 축을 <span class="math inline">\(x, y, z\)</span>라고 할 때, 이 공간에 놓인 2차원 평면의 방정식을 <span class="math inline">\(2x - y + z = 0\)</span>이라고 두자. 이를 매트릭스로 쓰면 다음과 같다.</p>
 <p><span class="math display">\[
+[2, -1, 1]
+\begin{bmatrix}
+x  \\
+y \\
+z
+\end{bmatrix} = 0
+\]</span></p>
+<p>열 벡터 <span class="math inline">\([2,-1, 1]^\rm T\)</span>가 노멀 벡터 <span class="math inline">\(\vec n\)</span>에 해당한다.</p>
+</div></div><p><span class="math display">\[
 P = \{ \vec p \in \mathbb R^n : \vec n \cdot(\vec p - \vec p_0) = 0 \}
 \]</span></p>
 <p>여기서 노멀 벡터 <span class="math inline">\(\vec n\)</span>은 프로젝션 된 지점에서 평면과 직교하는 성분을 나타낸다. 3차원의 경우 노멀 벡터는 3차원 공간에서 해당 평면이 놓인 모습을 결정한다.</p>
