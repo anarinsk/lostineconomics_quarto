@@ -178,7 +178,7 @@
   <category>stats-simple</category>
   <guid>http://www.lostineconomics.com/posts/regression/2022-06-06-berkson-paradox-regressionipynb.html</guid>
   <pubDate>Sun, 05 Jun 2022 15:00:00 GMT</pubDate>
-  <media:content url="https://miro.medium.com/max/1400/1*_YSCycwMY90nltgg-qMEWw.png" medium="image" type="image/png"/>
+  <media:content url="https://pbs.twimg.com/media/Df4EV9wU8AAYYH_.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Simpson’s Paradox with Regression</title>
@@ -196,12 +196,12 @@
   gtag('config', 'G-JNRF3S74Z4');
 </script><section id="회귀-분석으로-보는-심슨의-역설" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="회귀-분석으로-보는-심슨의-역설">회귀 분석으로 보는 심슨의 역설</h2>
-<p>심슨의 역설을 보통은 회귀 분석으로 설명하지 않는다. 그런데 회귀 분석으로 보면 보다 명확하다.</p>
+<p>심슨의 역설을 보통은 회귀 분석으로 설명하지 않는다. 그런데 회귀 분석으로 보면 보다 명확하다. 심슨 역설의 전형적인 사례를 펭귄 부리의 길이와 높이를 통해 살펴보도록 하자.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>데이터는 <a href="https://towardsdatascience.com/the-curious-case-of-simpsons-paradox-6f178548d7e8">여기</a>서 갖고 왔다</p>
 <p><img src="http://www.lostineconomics.com/posts/regression/https:/user-images.githubusercontent.com/39834789/86522451-84949f00-be38-11ea-9555-6409579f3b58.png" class="img-fluid" style="background:#FFFFFF;"></p>
-</div></div><p><code>culmen</code>은 새의 부리를 뜻한다. 옆 그림에서 보듯이 <code>length</code>는 부리의 앞으로 튀어나온 길이를, <code>depth</code>는 부리의 높이를 의미한다. 아래 데이터는 펭귄의 세 가지 종족, 성별 등을 별도로 기록하고 있다. 이제 심슨 역설의 전형적인 사례를 펭귄 부리의 길이와 높이를 통해 살펴보도록 하자.</p>
+</div></div><p><code>culmen</code>은 새의 부리를 뜻한다. 옆 그림에서 보듯이 <code>length</code>는 부리의 앞으로 튀어나온 길이를, <code>depth</code>는 부리의 높이를 의미한다. 아래 데이터는 펭귄의 세 가지 종족, 성별 등을 별도로 기록하고 있다.</p>
 <div class="cell" data-execution_count="2">
 <details>
 <summary>Code</summary>
@@ -354,7 +354,7 @@ memory usage: 20.9+ KB</code></pre>
 </section>
 <section id="어디에-써먹나" class="level2">
 <h2 class="anchored" data-anchor-id="어디에-써먹나">어디에 써먹나?</h2>
-<p>약한 버전의 LLN을 증명할 때 체비쇼프의 부등식을 쓴다. 만일 <img src="https://latex.codecogs.com/png.latex?X_1,%20X_2,%20%5Cdotsc,%20X_n">이 IID를 따르고 <img src="https://latex.codecogs.com/png.latex?%5CE%20(X_i%5E2)%20%3C%20%5Cinfty">라고 가정하자. 이때, 확률 극한의 정의를 따라, 표본 통계량 <img src="https://latex.codecogs.com/png.latex?%5CES%7BX%7D_n">가 임의의 양수 <img src="https://latex.codecogs.com/png.latex?%5Cepsilon">에 대해서 다음을 증명하면 대수의 법칙이 성립한다.</p>
+<p>약한 버전의 LLN(대수의 법칙)을 증명할 때 체비쇼프의 부등식을 쓴다. 만일 <img src="https://latex.codecogs.com/png.latex?X_1,%20X_2,%20%5Cdotsc,%20X_n">이 IID를 따르고 <img src="https://latex.codecogs.com/png.latex?%5CE%20(X_i%5E2)%20%3C%20%5Cinfty">라고 가정하자. 이때, 확률 극한의 정의를 따라, 표본 통계량 <img src="https://latex.codecogs.com/png.latex?%5CES%7BX%7D_n">가 임의의 양수 <img src="https://latex.codecogs.com/png.latex?%5Cepsilon">에 대해서 다음을 증명하면 대수의 법칙이 성립한다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Clim_%7Bn%20%5Cto%20%5Cinfty%7D%20P(%5Cvert%20%5CES%7BX%7D_n%20-%20%5Cmu%20%5Cvert%20%5Cgeq%20%5Cepsilon)%20=%200%0A"></p>
 <section id="증명" class="level3">
 <h3 class="anchored" data-anchor-id="증명">증명</h3>
@@ -413,18 +413,18 @@ memory usage: 20.9+ KB</code></pre>
 </section>
 <section id="정규-분포는-필요한-가정인가" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="정규-분포는-필요한-가정인가">정규 분포는 필요한 가정인가?</h2>
-<p>표분의 크기가 크지 않다면 불가피하게 필요한 가정이다. 검정을 위한 불가피한 조치다. 하지만 표본의 크기가 어느 정도 충분할 때도 정규 분포 가정이 필요할까?</p>
+<p>표분의 크기가 크지 않다면 가설 검정을 위해 (정규) 분포 가정이 필요하다. 하지만 표본의 크기가 어느 정도 이상일 때도 가설 검정을 위해 정규 분포 가정이 필요할까? 아래와 같은 다중 회귀 분석 모형을 보자.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_i%20=%20%5Calpha%20+%20%5Cbeta_1%20X_%7B1i%7D%20+%20%5Cbeta_2%20X_%7B2i%7D%20+%20%5Cdotsb%20+%20%5Cbeta_n%20X_%7Bni%7D%20+%20%5Cepsilon_i%0A"></p>
-<p>원래 정규 분포 가정은 <img src="https://latex.codecogs.com/png.latex?%5Cepsilon_i%20%5Csim%20%5Crm%20N%20(0,%20%5Csigma%5E2)">이다. 그런데 이 가정을 어떻게 확인할 수 있을까?</p>
-<p><img src="https://latex.codecogs.com/png.latex?Y_i%20%5Csim%20%5Crm%20N(%5Ccdot)">을 확인하면 될까? 원래의 가정은 오차항에 대한 가정이다. 앞에 여러 가지 변수의 작용으로 <img src="https://latex.codecogs.com/png.latex?Y_i">가 결정되므로 <img src="https://latex.codecogs.com/png.latex?Y_i">가 정규 분포를 따르는 것은 우연일 뿐이다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Chat%5Cepsilon_i%20=%20Y_i%20-%20%5Chat%7BY%7D_i">가 정규 분포를 따르면 될까? 이 역시 마찬가지로 정규 분포를 따르리라는 보장이 없다. <img src="https://latex.codecogs.com/png.latex?%5Chat%5Cepsilon_i">는 회귀 분석의 모델링 아래 도출된 <img src="https://latex.codecogs.com/png.latex?%5Cepsilon_i">에 관한 추정치일 뿐이다. 이것 역시 정규 분포를 따르리라는 보장이 없다.</p>
-<p>다시 기억하자. 오차항에 관한 내용은 모델링을 위한 일종의 가정이다. 가정은 대체로 검증되지 않는다. 모델링의 가정은 받아들이는 것이지 검증하는 것이 아니다.</p>
+<p>원래 정규 분포 가정은 <img src="https://latex.codecogs.com/png.latex?%5Cepsilon_i%20%5Csim%20%5Crm%20N%20(0,%20%5Csigma%5E2)">이다. 그런데 우리는 이 가정을 어떻게 확인할 수 있을까?</p>
+<p><img src="https://latex.codecogs.com/png.latex?Y_i%20%5Csim%20%5Crm%20N(%5Ccdot)">을 확인하면 될까? 원래의 가정은 오차항에 대한 가정이다. 앞에 여러 가지 변수의 작용으로 <img src="https://latex.codecogs.com/png.latex?Y_i">가 결정되므로 <img src="https://latex.codecogs.com/png.latex?Y_i">가 정규 분포를 따르는 것이 <img src="https://latex.codecogs.com/png.latex?%5Cepsilon_i">가 정규분포를 따르는 것의 충분 조건이 되지 않는다. 반면 <img src="https://latex.codecogs.com/png.latex?%5Cepsilon_i">가 정규 분포를 따른다고 해서 반드시 <img src="https://latex.codecogs.com/png.latex?Y_i">가 정규 분포를 따른다고 볼 수도 없다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Chat%5Cepsilon_i%20=%20Y_i%20-%20%5Chat%7BY%7D_i">가 정규 분포를 따르면 될까? 이 역시 마찬가지로 <img src="https://latex.codecogs.com/png.latex?%5Cepsilon_i">가 정규 분포를 따르리라는 보장이 없다. <img src="https://latex.codecogs.com/png.latex?%5Chat%5Cepsilon_i">는 회귀 분석의 모델링 아래 도출된 <img src="https://latex.codecogs.com/png.latex?%5Cepsilon_i">에 관한 추정치일 뿐이다. 추정치가 정규 분포를 따른다고 해서 원래 대상이 꼭 그렇다고 볼 수 있을까?</p>
+<p>오차항에 관한 내용은 모델링을 위한 일종의 가정이다. 모델링의 가정은 받아들이는 것이지 검증하는 것이 아니다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>표본이 크지 않을 때 즉 소 표본에 적합한 분석 방법을 찾는 것은 대 표본의 경우에 비해 까다로운 문제이다. 그런데 소 표본에서 회귀 분석은 그리 나쁜 분석 방법이 아니다.</p>
 </div></div></section>
-<section id="표본의-크기가-충분하다면" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="표본의-크기가-충분하다면">표본의 크기가 충분하다면</h2>
+<section id="표본의-크기가-충분히-크다면" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="표본의-크기가-충분히-크다면">표본의 크기가 충분히 크다면</h2>
 <p>그렇다면 가정을 받아들일 수 없다면 회귀분석에서 검정을 수행할 수 있을까? 그렇지 않다. 만일 표본의 크기가 충분히 크다면 오차 항의 정규 분포 가정 없이도 검정을 수행할 수 있다.</p>
 <p>회귀 분석의 계수의 표본 추정량 <img src="https://latex.codecogs.com/png.latex?%5Chat%20%5Cbeta">는 다음과 같다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%20%5Cbeta%20=%20(X%5ET%20X)%5E%7B-1%7D(X%20y)%0A"></p>
@@ -436,14 +436,14 @@ memory usage: 20.9+ KB</code></pre>
 <li><img src="https://latex.codecogs.com/png.latex?x%5Er_i">: <img src="https://latex.codecogs.com/png.latex?X">의 <img src="https://latex.codecogs.com/png.latex?i">’th 행(row) 벡터</li>
 <li><img src="https://latex.codecogs.com/png.latex?%5Cunderset%7B(1%20%5Ctimes%20k)%7D%7Bx%5Er_i%7D%5Cunderset%7B(k%20%5Ctimes%201)%7D%7B%5Cvphantom%7Bx%5Er_i%7D%5Chat%5Cbeta%7D%20=%20%5Chat%20y_i"></li>
 </ul>
-<p><img src="https://latex.codecogs.com/png.latex?n">이 커짐에 따라서 <img src="https://latex.codecogs.com/png.latex?t_i">의 분포는 <img src="https://latex.codecogs.com/png.latex?%5Crm%20N(0,1)">를 접근적으로 닮아간다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?n">이 커짐에 따라서 <img src="https://latex.codecogs.com/png.latex?t_i">의 분포는 <img src="https://latex.codecogs.com/png.latex?%5Crm%20N(0,1)">를 접근적으로 닮아간다! 이것이 중심극한 정리가 가설 검정에서 중요한 이유이다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><img src="https://latex.codecogs.com/png.latex?%5Csqrt%7Bn%7D(%5Cbeta_i%20-%20%5Cbeta)%20%5Coverset%7Bd%7D%7B%5Clongrightarrow%7D%20%5Crm%20N%20(0,%20%5Csigma_i)"></p>
-</div></div><p>요약하면 표본의 크기가 충분할 때 오차 항의 정규 분포 가정은 잊어도 좋다. 중심 극한 정리에 따라서 필요한 가설 검정을 수행할 수 있다. t–값과 정규 분포에 근거한 개별 계수의 검정 그리고 F–값과 F 분포에 근거한 전체 계수의 검정이 모두 가능하다.</p>
+</div></div><p>요약하면 표본의 크기가 충분할 때 오차 항의 정규 분포 가정은 잊어도 좋다. 이 가정이 없어도 중심 극한 정리에 따라서 필요한 가설 검정을 수행할 수 있다. t–값과 표준 정규 분포에 근거한 개별 계수의 검정 그리고 F–값과 F 분포에 근거한 전체 계수의 검정이 모두 가능하다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>표본의 크기가 얼마나 크면 될까? <a href="https://www.jclinepi.com/article/S0895-4356(17)%2030485-7">Schmidt and Finan</a>의 연구에 따르면 회귀 모형의 경우 변수 당 대략 10개 이상의 관찰이 필요하다. 아래 그림에서 보듯이 대충 표본 평균의 크기가 30개 이상이면 CLT을 적용할 수 있다.</p>
+<p>표본의 크기가 얼마나 크면 될까? <a href="https://www.jclinepi.com/article/S0895-4356(17)%2030485-7">Schmidt and Finan</a>의 연구에 따르면 회귀 모형의 경우 변수 당 대략 10개 이상의 관찰이 필요하다. 옆 그림에서 보듯이 모평균을 추정하는 문제에서 표본 평균의 크기가 30개 이상이면 CLT을 적용할 수 있다.</p>
 </div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="http://www.lostineconomics.com/posts/regression/http:/player.slideplayer.com/76/12695720/slides/slide_3.jpg" class="my-figure7 img-fluid figure-img"></p>
@@ -803,15 +803,15 @@ memory usage: 20.9+ KB</code></pre>
 <p></p><p></p>
 </figure>
 </div>
-<p>이번에는 벅슨의 역설을 살펴볼 차례다. 보통 수능 점수와 대학 성적은 별 관련이 없고 심지어 역의 상관성이 있다는 이야기를 접할 때가 있다. 이것은 맞는 주장인가? 이런 종류의 주장은 대체로 전체를 가정한다. 수능 점수와 대학 성적이 별로 상관이 없으니 수능은 인간의 능력을 판단하는 지표로 별로 유용하지 않다. 대체로 이야기가 이렇게 흐르기 마련이다.</p>
-<p>그런데 위의 그림에서 보듯이 이러한 경향은 보편적인 주장이 아니라 특정한 집단 내에서만 타당한 주장이다. 위 그림에서는 내가 관찰하는 집단에 대해서 일종의 자기 선택이 일어난 경우에 해당한다. 내가 속한 밴드의 집단보다 수능 점수와 대학 성적이 모두 낮은 집단은 내가 속한 관찰 집단과는 다른 집단에 속한다. 반면 내가 속한 밴드보다 수능 점수도 높고 대학 성적도 우월한 집단도 마찬가지다.</p>
+<p>이번에는 벅슨의 역설을 살펴볼 차례다. 보통 수능 점수와 대학 성적은 별 관련이 없고 심지어 역의 상관성이 있다는 이야기를 접할 때가 있다. 이것은 맞는 주장인가? 이런 종류의 주장은 대체로 전체를 가정한다. ‘수능 점수와 대학 성적이 별로 상관이 없으니, 수능은 인간의 능력을 판단하는 지표로 별로 유용하지 않아.’ 이야기가 이렇게 흐르기 마련이다.</p>
+<p>위의 그림에서 보듯이 이러한 경향은 보편적인 주장이 아니라 특정한 집단 내에서만 타당한 주장이다. 위 그림에서는 내가 관찰하는 집단에 대해서 일종의 자기 선택이 일어난 경우에 해당한다. 내가 속한 밴드의 집단보다 수능 점수와 대학 성적이 모두 낮은 집단은 내가 속한 관찰 집단과는 다른 집단에 속한다. 반면 내가 속한 밴드보다 수능 점수도 높고 대학 성적도 우월한 집단도 마찬가지다.</p>
 <p>벅슨의 역설은 심슨의 역설과 동일하지만 반대의 측면을 지적한다. 전체 대해서 존재하는 경향성이 그룹으로 쪼개서 보면 반대가 되거나 사라지는 경우를 의미한다.</p>
 <p>벅슨의 역설에 해당하는 인과 추론의 DAG 사례가 충돌 요인(collider)이다. 변수를 고려하지 않았다면 전체에 관해서 온전한 주장이 성립했을 것이지만, 해당 변수를 고려해 그룹을 나누게 되면 오히려 잘못된 관계를 추정하게 된다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>벅슨의 역설은 통제하지 않아야 할 변수를 통제할 때 발생하기도 하지만 많은 경우 표본 자체를 살피지 않은 데에서 생기기도 한다. 예를 들어 아래 그림을 보자.</p>
 <p><img src="http://www.lostineconomics.com/posts/regression/https:/mixtape.scunning.com/causal_inference_mixtape_files/figure-html/moviestar-dag-1.png" class="img-fluid"></p>
-<p>보통 배우가 되려면 재능과 외모 둘 중 하나는 갖추어야 한다고들 한다. 이 말 자체는 맞지만 이를 확대 해석해서 외모와 재능이 역의 상관성이 있다고 주장하는 경우가 있다. 이는 모집단 전체(모든 사람)에 대해서 타당한 말일까? 배우라는 집단으로 제한해보면 외모와 재능이 모두 미달되는 사람들은 배우가 아닌 다른 직업을 찾았을 가능성이 높다. 외모와 재능을 사분면으로 나눌 때 3 사분면에 위치한 사람들이 사라진 배우라는 집단에 대해서는 음의 상관성이 관찰되는 것처럼 보인다.</p>
+<p>보통 배우가 되려면 연기 재능과 외모 둘 중 하나는 갖추어야 한다고들 한다. 이 말 자체는 맞지만 이를 확대 해석해서 외모와 연기 재능이 역의 상관성이 있다고 주장하는 경우가 있다. 이는 모집단 전체(모든 사람)에 대해서 타당한 말일까? 배우라는 집단으로 제한해보면 외모와 재능이 모두 미달되는 사람들은 배우가 아닌 다른 직업을 찾았을 가능성이 높다. 외모와 재능을 사분면으로 나눌 때 3 사분면에 위치한 사람들이 사라진 배우라는 집단에 대해서는 음의 상관성이 관찰되는 것처럼 보인다.</p>
 </div></div></section>
 <section id="중요한-것은-질문과-문제-설정" class="level2">
 <h2 class="anchored" data-anchor-id="중요한-것은-질문과-문제-설정">중요한 것은 질문과 문제 설정</h2>
@@ -1531,7 +1531,7 @@ Note
 </ul>
 </div>
 </div>
-<section id="alternatives" class="level2">
+<section id="alternatives" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="alternatives">Alternatives</h2>
 <p>도커의 대안을 좀 검토해보기로 하겠다.</p>
 <section id="why" class="level3">
@@ -1545,16 +1545,19 @@ Note
 <section id="nerdctl" class="level3">
 <h3 class="anchored" data-anchor-id="nerdctl">nerdctl</h3>
 <p>우선 도커를 대체하기 위해서는 도커의 컨테이너 엔진 자체의 대안을 찾아야 한다. 다행스럽게 Cotainerd 표준 기반의 <a href="https://github.com/containerd/nerdctl">nerdctl</a>이라는 녀석이 있다. 이 서비스는 도커의 명령어와 거의 완벽하게 호환되면서도 도커-컴포즈의 기능까지 구현한다. <a href="https://kubernetes.io/docs/setup/">여기</a>에서 확인하듯이 도커 및 도커-콤포즈의 거의 모든 명령어가 호환되며 모든 OS를 가리지 않고 쓸 수 있다.</p>
-<p>nerdctl로 거의 모든 것이 해결될 것 같았으나 아쉽게도 그렇지는 않다. 도커 이미지를 쌓아둔 저장소(도커 레지스트리) 도커 허브에 있는 이미지 중 일부는 nerdctl과 제대로 작동하지 않는 녀석들이 있다. 원래 이미지 자체가 도커에 특화된 것이 아닐까 추측해보지만, 이런 내용을 다 따져가며 사용하는 것도 까다로운 일이다.</p>
+<p>nerdctl로 거의 모든 것이 해결될 것 같았으나 아쉽게도 그렇지는 않다. 도커 이미지를 쌓아둔 저장소(도커 레지스트리) 도커 허브에 있는 이미지 중 일부는 nerdctl과 제대로 작동하지 않는 녀석들이 있다. 원래 이미지 자체가 도커에 특화된 것이 아닐까 추측해보지만, 이런 내용을 다 따져가며 사용하는 것도 까다로운 일이다. 그래도 도커의 거의 모든 기능을 nerdctl로 대체할 수 있다는 점에서 nerdctl은 유용한 도구이다.</p>
 </section>
-<section id="kuberntes" class="level3">
+<section id="kuberntes" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="kuberntes">Kuberntes</h3>
 <p>다음으로 컨테이너 오케스트레이션 도구인 쿠버네티스에 눈을 돌렸다. 사실 쿠버네티스를 이 용도로 쓰는 것은 닭 잡는데 소 잡는 칼을 쓰는 격이다. 쿠버네티스를 배운다는 개인적인 동기 부여를 제외한다면, 이 번거로운 것을 꼭 써야 하나? 윈도에서는 설치도 간단치 않았다.</p>
 <p>그때 Rancher Desktop을 알게 되었다. 리눅스 배포판을 만드는 회사인 SUSE에서 내 놓은 경량화된 쿠버네티스(K3s) 앱인데, 이 녀석이 아주 쓸만 했다. 원래는 nerdctl을 좀 편하게 써볼까 하는 용도로 설치했는데 사용성이 좋았다.</p>
-<ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Rancher Desktop을 설치하면 플랫폼에 관계 없이 nerdctl이 설치된다.</p>
+</div></div><ul>
 <li><p>사용자 경험이 Docker Desktop과 비슷하다. 사용자는 OS별로 설치하면 OS별 커맨드라인 툴에 명령어들을 잘 사용할 수 있다. Windows(파워셀), WSL2, M1 기반의 macos에서 거의 동일한 경험을 제공한다.</p></li>
 <li><p>경량화된 쿠버네티스가 들어 있어서 minikube를 별도로 설치하지 않고 데스크탑에서 쉽게 쿠버네티스를 활용할 수 있다. 부팅 후에도 원래 올려 놓은 쿠버네티스 설정을 유지하고 있어서 개인용 PC에서 쓰기에도 적합하다.</p></li>
-<li><p>간력하지만 GUI를 갖추고 있다.</p></li>
+<li><p>간력하지만 필요한 GUI를 갖추고 있다.</p></li>
 </ul>
 </section>
 </section>
@@ -2920,7 +2923,7 @@ Note
 </ul>
 </div>
 </div>
-<section id="alternatives" class="level2">
+<section id="alternatives" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="alternatives">Alternatives</h2>
 <p>도커의 대안을 좀 검토해보기로 하겠다.</p>
 <section id="why" class="level3">
@@ -2934,16 +2937,19 @@ Note
 <section id="nerdctl" class="level3">
 <h3 class="anchored" data-anchor-id="nerdctl">nerdctl</h3>
 <p>우선 도커를 대체하기 위해서는 도커의 컨테이너 엔진 자체의 대안을 찾아야 한다. 다행스럽게 Cotainerd 표준 기반의 <a href="https://github.com/containerd/nerdctl">nerdctl</a>이라는 녀석이 있다. 이 서비스는 도커의 명령어와 거의 완벽하게 호환되면서도 도커-컴포즈의 기능까지 구현한다. <a href="https://kubernetes.io/docs/setup/">여기</a>에서 확인하듯이 도커 및 도커-콤포즈의 거의 모든 명령어가 호환되며 모든 OS를 가리지 않고 쓸 수 있다.</p>
-<p>nerdctl로 거의 모든 것이 해결될 것 같았으나 아쉽게도 그렇지는 않다. 도커 이미지를 쌓아둔 저장소(도커 레지스트리) 도커 허브에 있는 이미지 중 일부는 nerdctl과 제대로 작동하지 않는 녀석들이 있다. 원래 이미지 자체가 도커에 특화된 것이 아닐까 추측해보지만, 이런 내용을 다 따져가며 사용하는 것도 까다로운 일이다.</p>
+<p>nerdctl로 거의 모든 것이 해결될 것 같았으나 아쉽게도 그렇지는 않다. 도커 이미지를 쌓아둔 저장소(도커 레지스트리) 도커 허브에 있는 이미지 중 일부는 nerdctl과 제대로 작동하지 않는 녀석들이 있다. 원래 이미지 자체가 도커에 특화된 것이 아닐까 추측해보지만, 이런 내용을 다 따져가며 사용하는 것도 까다로운 일이다. 그래도 도커의 거의 모든 기능을 nerdctl로 대체할 수 있다는 점에서 nerdctl은 유용한 도구이다.</p>
 </section>
-<section id="kuberntes" class="level3">
+<section id="kuberntes" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="kuberntes">Kuberntes</h3>
 <p>다음으로 컨테이너 오케스트레이션 도구인 쿠버네티스에 눈을 돌렸다. 사실 쿠버네티스를 이 용도로 쓰는 것은 닭 잡는데 소 잡는 칼을 쓰는 격이다. 쿠버네티스를 배운다는 개인적인 동기 부여를 제외한다면, 이 번거로운 것을 꼭 써야 하나? 윈도에서는 설치도 간단치 않았다.</p>
 <p>그때 Rancher Desktop을 알게 되었다. 리눅스 배포판을 만드는 회사인 SUSE에서 내 놓은 경량화된 쿠버네티스(K3s) 앱인데, 이 녀석이 아주 쓸만 했다. 원래는 nerdctl을 좀 편하게 써볼까 하는 용도로 설치했는데 사용성이 좋았다.</p>
-<ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Rancher Desktop을 설치하면 플랫폼에 관계 없이 nerdctl이 설치된다.</p>
+</div></div><ul>
 <li><p>사용자 경험이 Docker Desktop과 비슷하다. 사용자는 OS별로 설치하면 OS별 커맨드라인 툴에 명령어들을 잘 사용할 수 있다. Windows(파워셀), WSL2, M1 기반의 macos에서 거의 동일한 경험을 제공한다.</p></li>
 <li><p>경량화된 쿠버네티스가 들어 있어서 minikube를 별도로 설치하지 않고 데스크탑에서 쉽게 쿠버네티스를 활용할 수 있다. 부팅 후에도 원래 올려 놓은 쿠버네티스 설정을 유지하고 있어서 개인용 PC에서 쓰기에도 적합하다.</p></li>
-<li><p>간력하지만 GUI를 갖추고 있다.</p></li>
+<li><p>간력하지만 필요한 GUI를 갖추고 있다.</p></li>
 </ul>
 </section>
 </section>
@@ -4374,7 +4380,7 @@ Note
 </ul>
 </div>
 </div>
-<section id="alternatives" class="level2">
+<section id="alternatives" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="alternatives">Alternatives</h2>
 <p>도커의 대안을 좀 검토해보기로 하겠다.</p>
 <section id="why" class="level3">
@@ -4388,16 +4394,19 @@ Note
 <section id="nerdctl" class="level3">
 <h3 class="anchored" data-anchor-id="nerdctl">nerdctl</h3>
 <p>우선 도커를 대체하기 위해서는 도커의 컨테이너 엔진 자체의 대안을 찾아야 한다. 다행스럽게 Cotainerd 표준 기반의 <a href="https://github.com/containerd/nerdctl">nerdctl</a>이라는 녀석이 있다. 이 서비스는 도커의 명령어와 거의 완벽하게 호환되면서도 도커-컴포즈의 기능까지 구현한다. <a href="https://kubernetes.io/docs/setup/">여기</a>에서 확인하듯이 도커 및 도커-콤포즈의 거의 모든 명령어가 호환되며 모든 OS를 가리지 않고 쓸 수 있다.</p>
-<p>nerdctl로 거의 모든 것이 해결될 것 같았으나 아쉽게도 그렇지는 않다. 도커 이미지를 쌓아둔 저장소(도커 레지스트리) 도커 허브에 있는 이미지 중 일부는 nerdctl과 제대로 작동하지 않는 녀석들이 있다. 원래 이미지 자체가 도커에 특화된 것이 아닐까 추측해보지만, 이런 내용을 다 따져가며 사용하는 것도 까다로운 일이다.</p>
+<p>nerdctl로 거의 모든 것이 해결될 것 같았으나 아쉽게도 그렇지는 않다. 도커 이미지를 쌓아둔 저장소(도커 레지스트리) 도커 허브에 있는 이미지 중 일부는 nerdctl과 제대로 작동하지 않는 녀석들이 있다. 원래 이미지 자체가 도커에 특화된 것이 아닐까 추측해보지만, 이런 내용을 다 따져가며 사용하는 것도 까다로운 일이다. 그래도 도커의 거의 모든 기능을 nerdctl로 대체할 수 있다는 점에서 nerdctl은 유용한 도구이다.</p>
 </section>
-<section id="kuberntes" class="level3">
+<section id="kuberntes" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="kuberntes">Kuberntes</h3>
 <p>다음으로 컨테이너 오케스트레이션 도구인 쿠버네티스에 눈을 돌렸다. 사실 쿠버네티스를 이 용도로 쓰는 것은 닭 잡는데 소 잡는 칼을 쓰는 격이다. 쿠버네티스를 배운다는 개인적인 동기 부여를 제외한다면, 이 번거로운 것을 꼭 써야 하나? 윈도에서는 설치도 간단치 않았다.</p>
 <p>그때 Rancher Desktop을 알게 되었다. 리눅스 배포판을 만드는 회사인 SUSE에서 내 놓은 경량화된 쿠버네티스(K3s) 앱인데, 이 녀석이 아주 쓸만 했다. 원래는 nerdctl을 좀 편하게 써볼까 하는 용도로 설치했는데 사용성이 좋았다.</p>
-<ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Rancher Desktop을 설치하면 플랫폼에 관계 없이 nerdctl이 설치된다.</p>
+</div></div><ul>
 <li><p>사용자 경험이 Docker Desktop과 비슷하다. 사용자는 OS별로 설치하면 OS별 커맨드라인 툴에 명령어들을 잘 사용할 수 있다. Windows(파워셀), WSL2, M1 기반의 macos에서 거의 동일한 경험을 제공한다.</p></li>
 <li><p>경량화된 쿠버네티스가 들어 있어서 minikube를 별도로 설치하지 않고 데스크탑에서 쉽게 쿠버네티스를 활용할 수 있다. 부팅 후에도 원래 올려 놓은 쿠버네티스 설정을 유지하고 있어서 개인용 PC에서 쓰기에도 적합하다.</p></li>
-<li><p>간력하지만 GUI를 갖추고 있다.</p></li>
+<li><p>간력하지만 필요한 GUI를 갖추고 있다.</p></li>
 </ul>
 </section>
 </section>
