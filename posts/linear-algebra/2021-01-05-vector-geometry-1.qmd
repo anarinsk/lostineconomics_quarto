@@ -27,7 +27,7 @@ categories: [linear-algebra]
 - 점은 공간에서 위치를 지니고 있다. 점의 특성은 위치 뿐이다. 
 - 벡터는 크기와 방향을 지니고 있다. 벡터는 공간에서 위치를 지니고 있지 않다. 
 
-![](https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/position-vector-1627294113.png){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;" }
+![점은 위치만을 지니고 벡터는 방향성과 크기를 지닌다.](https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/position-vector-1627294113.png){ .my-figure5 }
 
 점과 벡터를 연결해보자. 위 그림에서 원점 $O$를 기준으로 하면 $P$, $Q$가 정의될 것이다. 이때 $\overrightarrow{OP}$, $\overrightarrow{OQ}$는 벡터가 된다. 이제 $\vec v$를 $P$에서 $Q$로 가는 벡터라고 정의하자. 이는 
 
@@ -47,7 +47,7 @@ $$
 l : \lbrace p_0 + t \vec v, t \in \mathbb R \rbrace
 $$
 
-![점에서 벡터를 생성해보자.](https://www.maths.usyd.edu.au/u/MOW/vectors/images/v120x.gif){ .my-figure7 }
+![점에서 벡터를 생성해보자.](https://www.maths.usyd.edu.au/u/MOW/vectors/images/v120x.gif){ .my-figure5 }
 
 위의 그림을 보면서 식을 도출해보자. 포인트 $P_0$를 (원점 기준) 벡터로 나타내면 $\vec r_0$가 된다. 그리고 $P$ 점을 벡터로 나타내면 $\vec r$이 된다. 벡터 $\overrightarrow{P_0\, P}$와 수평인 벡터를 $\vec v$라고 하자. 이 두 가지 사실을 조합하면 다음과 같다. 
 
