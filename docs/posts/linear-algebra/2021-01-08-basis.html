@@ -65,7 +65,7 @@ ul.task-list{list-style: none;}
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -110,9 +110,11 @@ ul.task-list{list-style: none;}
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -286,11 +288,14 @@ t_{2y}
 \]</span></p>
 </section>
 </section>
-<section id="change-of-basis" class="level2">
+<section id="change-of-basis" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="change-of-basis">Change of Basis</h2>
 <p>한 벡터의 기저를 다른 기저로 바꾸는 것을 생각해보자. 일반적으로는 <span class="math inline">\(T: V \to W\)</span> 역시 <span class="math inline">\(B_V\)</span>에서 <span class="math inline">\(B_W\)</span>로 기저를 바꾸는 것이다. 차원이 바뀐다면 기저 역시 바뀌어야 한다.</p>
 <p>기저 변환(change-of-basis)은 매트릭스를 이해하는 매우 중요한 방식이다. 이를 통해 역시 매트릭스 표현에 도달할 수 있다. 선형 번환 <span class="math inline">\(T: V \to W\)</span>가 있다고 하자.</p>
-<p><span class="math display">\[
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>표기법 상 룰을 하나 정하도록 하자. <span class="math inline">\(\phantom{}_{B_W}{M_T}_{B_V}\)</span>이라고 쓰는 이는 매트릭스 전후로 투입과 산출 벡터를 표기해주는 것이다. 죽, <span class="math inline">\(M_T\)</span>의 투입은 <span class="math inline">\({B_V}\)</span> 이고 산출은 <span class="math inline">\(B_W\)</span>이다.</p>
+</div></div><p><span class="math display">\[
 \begin{aligned}
 B_V &amp; = \{ \hat e_1, \dotsc, \hat e_n \} \\
 B_W &amp; =  \{ \hat b_1, \dotsc, \hat b_m \}
@@ -298,7 +303,7 @@ B_W &amp; =  \{ \hat b_1, \dotsc, \hat b_m \}
 \]</span></p>
 <p><span class="math display">\[
 \begin{aligned}
-[M_T]_{B_V} \vec v_{B_V} &amp; =
+\phantom{}_{B_W}{\lbrack M \rbrack}_{B_V} \vec v_{B_V} &amp; =
 \begin{bmatrix}
 \vert &amp; \vert &amp; \vert \\
 T(\hat e_1) &amp; \dotsc &amp; T(\hat e_n) \\
@@ -326,7 +331,7 @@ c_{m1}
 \]</span></p>
 <p>이를 모든 행에 대해서 적용하면, 다음과 같다.</p>
 <p><span class="math display">\[
-\phantom{}_{B_W}M_{B_V} =
+\phantom{}_{B_W}\lbrack M \rbrack_{B_V} =
 \vphantom{
 \begin{bmatrix}
 \\
@@ -405,9 +410,9 @@ A = C B C^{-1}
 <p><span class="math inline">\(A\)</span>과 <span class="math inline">\(B\)</span>은 서로 닮은 꼴의 매트릭스다. 위 식을 만족하는 매트릭스 <span class="math inline">\(A\)</span>과 <span class="math inline">\(B\)</span>을 similar matrix라고 정의한다. 우선 두 매트릭스가 서로 닮은 꼴일 때에는 <span class="math inline">\(n \geq 1\)</span>에 대해서 <span class="math inline">\(A^n = C B^n C^{-1}\)</span>이 성립한다. 이는 아이겐 분해에서 보듯이 <span class="math inline">\(B\)</span>가 어떤 매트릭스냐에 따라서 계산 상 편리함을 줄 수 있다. 만일 <span class="math inline">\(B\)</span>가 대각 행렬이라면 행렬의 <span class="math inline">\(n\)</span>은 대각 원소의 <span class="math inline">\(n\)</span> 승만 수행하면 된다.</p>
 <p><span class="math inline">\(C\)</span>가 역행렬을 지니기 때문에 <span class="math inline">\(C\)</span>의 컬럼은 <span class="math inline">\(\mathbb R^n\)</span>의 기저가 된다. 이렇게 보면 <span class="math inline">\(C\)</span>는 change-of-basis와 같은 맥락에서 이해할 수 있다. 즉, 앞서 살펴 본 기저를 바꾸는 행렬과 동일한 행렬이다. <span class="math inline">\(A x\)</span>라는 변환을 이 맥락에서 다시 이해해보자. 여기서 <span class="math inline">\(\mathcal B\)</span>는 표준 기저(<span class="math inline">\(\hat e_i\)</span>)로 이해하면 된다.</p>
 <ol type="1">
-<li><p><span class="math inline">\(C^{-1} x\)</span>는 <span class="math inline">\([x]\_{u}\)</span>의 기저를 <span class="math inline">\([x]\_{\mathcal B}\)</span>로 바꾸는 것이다. 즉, <span class="math inline">\(\phantom{}\_{\mathcal B}1\_u\)</span></p></li>
-<li><p>이 바뀐 기저에서 <span class="math inline">\(B\)</span>이라는 변환을 수행한다. 즉, <span class="math inline">\(\phantom{}\_{\mathcal B}B\_\mathcal B\)</span></p></li>
-<li><p><span class="math inline">\(C\)</span>는 곱해 다시 통상적인 기저로 돌아오게 된다. 즉, <span class="math inline">\(\phantom{}\_{u}1\_\mathcal B\)</span></p></li>
+<li><p><span class="math inline">\(C^{-1} x\)</span>는 <span class="math inline">\(\lbrack x \rbrack_{u}\)</span>의 기저를 <span class="math inline">\([x]_{\mathcal B}\)</span>로 바꾸는 것이다. 즉, <span class="math inline">\(\phantom{}_{\mathcal B}\lbrack 1 \rbrack_u\)</span></p></li>
+<li><p>이 바뀐 기저에서 <span class="math inline">\(B\)</span>이라는 변환을 수행한다. 즉, <span class="math inline">\(\phantom{}_{\mathcal B} \lbrack B \rbrack_{\mathcal B}\)</span></p></li>
+<li><p><span class="math inline">\(C\)</span>는 곱해 다시 통상적인 기저로 돌아오게 된다. 즉, <span class="math inline">\(\phantom{}_{u}{\lbrack 1 \rbrack}_{\mathcal B}\)</span></p></li>
 </ol>
 <p>아래 그림에서 보듯이, <span class="math inline">\(Ax\)</span>라는 변환과 <span class="math inline">\(B[x]_{\mathcal B}\)</span>라는 변환은 좌표계만 다를 뿐 동일한 변환이다. <span class="math inline">\(C B C^{-1}\)</span>의 기저의 변화를 살펴보면,</p>
 <p><span class="math display">\[
