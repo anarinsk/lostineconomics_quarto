@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.573">
+<meta name="generator" content="quarto-0.9.598">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -65,7 +65,7 @@ ul.task-list{list-style: none;}
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -110,9 +110,11 @@ ul.task-list{list-style: none;}
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -240,17 +242,47 @@ T(\hat e_1) &amp; \cdots &amp; T(\hat e_n) \\
 \end{aligned}
 \]</span></p>
 </section>
-<section id="eat-this" class="level2">
+<section id="eat-this" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="eat-this">Eat This!</h2>
-<section id="mapping-spaces" class="level3">
+<section id="mapping-spaces" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="mapping-spaces">Mapping Spaces</h3>
-<p>선형 변환을 다시 적어보자. <span class="math inline">\(T: V \to W\)</span> where <span class="math inline">\(V \in \mathbb R^n\)</span>, <span class="math inline">\(W \in \mathbb R^m\)</span>. 즉 이 변환은 <span class="math inline">\(n\)</span> 차원의 벡터를 <span class="math inline">\(m\)</span> 차원으로 바꿔주는 것이다. 이 변환의 투입이 지니는 차원을 생각해보자. <span class="math inline">\(n\)</span> 차원은 로우 공간이 생성하는 <span class="math inline">\(\mathcal R (M_T)\)</span>와 널 공간으로 가는 <span class="math inline">\(\mathcal N(M)\)</span>으로 나뉘게 된다. 그리고 이 공간은 서로 직합(direct sum) 관계다. 이를 요약하면 다음과 같다.</p>
+<p>선형 변환을 다시 적어보자. <span class="math inline">\(T: V \to W\)</span> where <span class="math inline">\({\rm dim}(W) = m\)</span>, <span class="math inline">\({\rm dim}(V) = n\)</span>. 변환 <span class="math inline">\(T\)</span>는 <span class="math inline">\(n\)</span> 차원의 투입 벡터를 <span class="math inline">\(m\)</span> 차원의 산출 벡터로 바꿔주는 것이다. 우리가 관심이 있는 것은 <span class="math inline">\({\rm dim}(W) \times {\rm dim}(V)\)</span> 의 차원을 지니는 매트릭스 <span class="math inline">\(M_T\)</span>이다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>변환임을 강조하기 위해서 <span class="math inline">\(M\)</span>에 하첨자 <span class="math inline">\(T\)</span>를 붙였다.</p>
+</div></div><p>먼저 <span class="math inline">\(T\)</span>의 산출부터 따져보자. 산출은 <span class="math inline">\(M_T\)</span>의 열 벡터의 가능한 모든 조합으로 구성된다. 즉, <span class="math inline">\(T\)</span>의 치역 <span class="math inline">\({\rm Im}(T)\)</span>는 <span class="math inline">\(M_T\)</span>의 컬럼 스페이스다. 즉,</p>
 <p><span class="math display">\[
-T: \mathcal R(M_T) \to \mathcal C(M),~  
+{\rm Im} (T) = \lbrace \vec w \in W | \vec w = T(\vec v), ~ \text{for some} ~ \vec v \in V \rbrace = \mathcal C(M_T)
+\]</span></p>
+<p>한편 변환 <span class="math inline">\(T\)</span>의 커널(kernel)은 <span class="math inline">\(M_T\)</span>의 널 스페이스를 의미한다. 즉,</p>
+<p><span class="math display">\[
+{\rm Ker} (T) = \lbrace \vec v \in V | T(\vec v) = \vec 0_{m} \rbrace = \lbrace \vec v \in V | T(\vec v) = M_T \vec v = \vec 0_m \rbrace = \mathcal N(M_T)
+\]</span></p>
+<p>이 변환의 투입이 지니는 차원을 생각해보자. <span class="math inline">\(n\)</span> 차원은 로우 공간이 생성하는 <span class="math inline">\(\mathcal R (M_T)\)</span>와 널 공간으로 가는 <span class="math inline">\(\mathcal N(M_T)\)</span>으로 나뉘게 된다. 그리고 이 공간은 서로 orthogonal direct sum 관계다. 투입해 해당하는 <span class="math inline">\(V\)</span>의 공간은 다음과 같이 표기할 수 있다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>direct sum의 의미에 대해서 먼저 살펴보자. 만일 <span class="math inline">\(V\)</span> 라는 벡터 스페이스가 서로 선형 독립인 서브 스페이스 <span class="math inline">\(V_1, V_2, \dotsc, V_k\)</span>를 통해 생성된다고 하자. 이를 표기하면,</p>
+<p><span class="math display">\[
+W = {\rm span}(V_1, V_2, \dotsc, V_k)
+\]</span></p>
+<p>로 쓸 수 있다. 이때 <span class="math inline">\(V_i\)</span>가 <span class="math inline">\(V\)</span>의 서브 스페이스인 경우 이를 direct sum으로 표기한다.</p>
+<p><span class="math display">\[
+W = V_1 \oplus V_2 \oplus \dotsb \oplus V_k
+\]</span></p>
+<p>이때 <span class="math inline">\(V_i, V_j\)</span> for <span class="math inline">\(i, j \in \lbrace 1, 2, \dotsc, k \rbrace\)</span>가 서로 orthogonal한 것이 orthogonal direct usm이다.</p>
+</div></div><p><span class="math display">\[
+V = \mathcal R (M_T) \oplus \mathcal N (M_T)
+\]</span></p>
+<p>앞서의 내용을 두 식으로 압축하면 아래와 같다.</p>
+<p><span class="math display">\[
+T: \mathcal R(M_T) \to \mathcal C(M_T),~  
 T: \mathcal N(M) \to \{ \vec 0 \}
 \]</span></p>
-<p>즉 함수처럼 인풋 <span class="math inline">\(\vec v \in \mathcal R(M_T)\)</span>이 <span class="math inline">\(\vec w \in \mathcal C(M)\)</span>로 대응된다. 한편, <span class="math inline">\(\vec v \in \mathcal N(M_T)\)</span>는 <span class="math inline">\(\vec 0_{m} \in W\)</span>으로 대응된다.</p>
-</section>
+<p>함수처럼 투입 <span class="math inline">\(\vec v \in \mathbb R^n\)</span>을 생성하는 정의역(domain)은 <span class="math inline">\(\mathcal R(M_T)\)</span>의 선형 결합, 즉 <span class="math inline">\(1 \times n\)</span>의 벡터 <span class="math inline">\(m\)</span> 개를 선형 결합한 공간으로 이뤄져 있다. 한편 산출 <span class="math inline">\(\vec w \in \mathbb R^m\)</span>을 생성하는 치역(range)은 <span class="math inline">\(\mathcal C(M_T)\)</span>의 선형 걸합이다. 한편, 투입 <span class="math inline">\(\vec v \in \mathcal N(M_T)\)</span>는 변환을 거쳐서 <span class="math inline">\(M_T {\,}\vec v = \vec 0_{m} \in W\)</span>로 대응된다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>흔히 매트릭스 <span class="math inline">\(M_T\)</span>에서 <span class="math inline">\(m \times n\)</span>이 크기일 때 앞의 <span class="math inline">\(m\)</span>을 투입 부분의 차원이라고 착각하기 쉽다. 이는 최종 결과물을 떠올리면 쉽니. <span class="math inline">\(M_t{\,}x = y\)</span>일 떄 산출 벡터 <span class="math inline">\(y\)</span>는 <span class="math inline">\({\rm dim} (y) = m\)</span>이다. 혼동하지 말자.</p>
+</div></div></section>
 <section id="surjective-and-injective" class="level3">
 <h3 class="anchored" data-anchor-id="surjective-and-injective">Surjective and Injective</h3>
 <div class="quarto-figure quarto-figure-center">
