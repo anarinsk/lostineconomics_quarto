@@ -287,13 +287,13 @@ $$
 
 ### Transformation with change-of-basis 
 
-이제 $\phantom{}\_B[M\_T]\_B$ 가 주어져 있다고 하자. 이를 $\phantom{}\_{B^{\prime}}[M^T]\_{B^{\prime}}\phantom{}$로 어떻게 교체할 수 있을까? 개념적으로는 이럴 것이다. 
+이제 $\phantom{}_B \lbrack M_T \rbrack_B$ 가 주어져 있다고 하자. 이를 $\phantom{}_{B^{\prime}}\lbrack M_T \rbrack_{B^{\prime}}\phantom{}$로 어떻게 교체할 수 있을까? 개념적으로는 이럴 것이다. 
 
 $$
-\phantom{}_{B^{\prime}}{[M^T]}_{B^{\prime}} = \underbrace{\phantom{}_{B^{\prime}}{[1]}_{B}}_{B^\prime \leftarrow B}\phantom{}_{B}{[M^T]}_{B}\overbrace{\phantom{}_{B}{[1]}_{B^{\prime}}}^{B \leftarrow B^\prime}
+\phantom{}_{B^{\prime}}{[M_T]}_{B^{\prime}} = \underbrace{\phantom{}_{B^{\prime}}{[1]}_{B}}_{B^\prime \leftarrow B}\phantom{}_{B}{[M_T]}_{B}\overbrace{\phantom{}_{B}{[1]}_{B^{\prime}}}^{B \leftarrow B^\prime}
 $$
 
-$\phantom{}\_{B^{\prime}}{[1]}\_{B}$과 $\phantom{}\_{B}{[1]}\_{B^{\prime}}$이 서로 역행렬의 관계이 있음을 기억해두자. 
+$\phantom{}_{B^{\prime}}{\lbrack 1 \rbrack}_{B}$과 $\phantom{}_{B}{\lbrack 1 \rbrack}_{B^{\prime}}$이 서로 역변환 관계임을 기억해두자. 
 
 ## Similar Matrix
 

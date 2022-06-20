@@ -2582,8 +2582,8 @@ koreanize-matplotlib
   gtag('js', new Date());
 
   gtag('config', 'G-JNRF3S74Z4');
-</script><section id="concepts-definition" class="level2">
-<h2 class="anchored" data-anchor-id="concepts-definition">Concepts &amp; Definition</h2>
+</script><section id="two-propoerties-of-basis" class="level2">
+<h2 class="anchored" data-anchor-id="two-propoerties-of-basis">Two Propoerties of Basis</h2>
 <p>벡터 공간 <img src="https://latex.codecogs.com/png.latex?V">의 기저</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AB%20=%20%5C%7B%20%5Cvec%7Be_1%7D,%20%5Cdotsc,%20%5Cvec%7Be_n%7D%20%5C%7D%20%20%0A"></p>
 <p>는 다음의 두 특성을 만족한다.</p>
@@ -2596,22 +2596,26 @@ koreanize-matplotlib
 <h3 class="anchored" data-anchor-id="linear-independence-property">Linear Independence property</h3>
 <p>즉, 기저를 구성하는 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%7Be_i%7D">에 불필요한 것이 없어야 한다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cvec%7Be%7D">를 구성하는 어떤 <img src="https://latex.codecogs.com/png.latex?e_i">도 다른 <img src="https://latex.codecogs.com/png.latex?e_j">(<img src="https://latex.codecogs.com/png.latex?j%20%5Cneq%20i">)의 선형 결합으로 표현될 수 없다.</p>
 </section>
+</section>
+<section id="two-bases" class="level2">
+<h2 class="anchored" data-anchor-id="two-bases">Two bases</h2>
+<p>계속 등장하게 될 두 개의 기저를 살펴보자.</p>
 <section id="orthonomal-basis" class="level3">
 <h3 class="anchored" data-anchor-id="orthonomal-basis">Orthonomal basis</h3>
 <p><img src="https://latex.codecogs.com/png.latex?%0AB_%7B%5Chat%7Be%7D%7D%20=%20%5C%7B%20%5Chat%7Be_1%7D,%20%5Cdotsc,%20%5Chat%7Be_n%7D%20%5C%7D%20%5Ctext%7B~with%7D%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A%5Chat%7Be_i%7D%20%5Ccdot%20%5Chat%7Be_j%7D%20=%201%20&amp;%20%5Ctext%7Bif%20$i%20=%20j$%7D%20%5C%5C%0A%5Chat%7Be_i%7D%20%5Ccdot%20%5Chat%7Be_j%7D%20=%200%20&amp;%20%5Ctext%7Bif%20$i%20%5Cneq%20j$%7D%0A%5Cend%7Bcases%7D%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A(a_1,%20%5Cdotsc,%20a_n)_%7BB_%7B%5Chat%7Be%7D%7D%7D%20=%20%5Cunderbrace%7B(%5Cvec%7Ba%7D%20%5Ccdot%20%5Chat%7Be_i%7D)%7D_%7Ba_1%7D%20%5Chat%7Be_i%7D%20+%20%5Cdotsb%20+%20(%5Cvec%7Ba%7D%20%5Ccdot%20%5Chat%7Be_n%7D)%20%5Chat%7Be_n%7D%0A"></p>
 </section>
-</section>
-<section id="orthogonal-basis" class="level2">
-<h2 class="anchored" data-anchor-id="orthogonal-basis">Orthogonal basis</h2>
+<section id="orthogonal-basis" class="level3">
+<h3 class="anchored" data-anchor-id="orthogonal-basis">Orthogonal basis</h3>
 <p><img src="https://latex.codecogs.com/png.latex?%0AB_%7Be%7D%20=%20%5C%7B%20e_1,%20%5Cdotsc,%20e_n%20%5C%7D%20%5Ctext%7B~with%7D%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0Ae_i%20%5Ccdot%20e_j%20%5Cneq%200%20&amp;%20%5Ctext%7Bif%20$i%20=%20j$%7D%20%5C%5C%0Ae_i%20%5Ccdot%20e_j%20=%200%20&amp;%20%5Ctext%7Bif%20$i%20%5Cneq%20j$%7D%0A%5Cend%7Bcases%7D%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A(b_1,%20%5Cdotsc,%20b_n)_%7BB_e%7D%20=%20%5Cunderbrace%7B(%5Cvec%20b%20%5Ccdot%20%5Cdfrac%7Be_i%7D%7B%5CVert%20e_i%20%5CVert%7D)%7D_%7Bb_1%7D%20e_1%20+%20%5Cdotsb%20+%20(%5Cvec%20b%20%5Ccdot%20%5Cdfrac%7Be_i%7D%7B%5CVert%20e_i%20%5CVert%7D)%20e_n%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?b_i">의 값을 제대로 반영하기 위해서는 정규화된 orthorgonal basis가 필요하고, <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Be_i%7D%7B%5CVert%20e_i%20%5CVert%7D">가 내적 계산에 들어간다.</p>
 </section>
-<section id="take-this" class="level2">
-<h2 class="anchored" data-anchor-id="take-this">Take This!</h2>
+</section>
+<section id="eat-this" class="level2">
+<h2 class="anchored" data-anchor-id="eat-this">Eat This!</h2>
 <section id="generic-basis" class="level3">
 <h3 class="anchored" data-anchor-id="generic-basis">Generic basis</h3>
 <p>서로 직교하지 않는 기저,</p>
@@ -2634,16 +2638,19 @@ koreanize-matplotlib
 <p><img src="https://latex.codecogs.com/png.latex?%0AA%20%5Cvec%20m%20=%20%5Cvec%20t%20~%5CLeftrightarrow~%0A%5Cbegin%7Bbmatrix%7D%0Av_%7B1x%7D%20&amp;%20v_%7B1y%7D%20&amp;%200%20&amp;%200%20%5C%5C%0Av_%7B1x%7D%20&amp;%20v_%7B1y%7D%20&amp;%200%20&amp;%200%20%5C%5C%0A0%20&amp;%200%20&amp;%20v_%7B2x%7D%20&amp;%20v_%7B2y%7D%20%5C%5C%0A0%20&amp;%200%20&amp;%20v_%7B2x%7D%20&amp;%20v_%7B2y%7D%20%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Am_%7B11%7D%20%5C%5C%0Am_%7B12%7D%20%5C%5C%0Am_%7B21%7D%20%5C%5C%0Am_%7B22%7D%20%5C%5C%0A%5Cend%7Bbmatrix%7D%20=%0A%5Cbegin%7Bbmatrix%7D%0At_%7B1x%7D%20%5C%5C%0At_%7B1y%7D%20%5C%5C%0At_%7B2x%7D%20%5C%5C%0At_%7B2y%7D%0A%5Cend%7Bbmatrix%7D%0A"></p>
 </section>
 </section>
-<section id="change-of-basis" class="level2">
+<section id="change-of-basis" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="change-of-basis">Change of Basis</h2>
-<p>한 벡터의 기저를 다른 기저로 바꾸는 것을 생각해보자. 일반적으로는 <img src="https://latex.codecogs.com/png.latex?T:%20V%20%5Cto%20W"> 역시 <img src="https://latex.codecogs.com/png.latex?B_V">에서 <img src="https://latex.codecogs.com/png.latex?B_W">로 기저를 바꾸는 것이다. 차원이 바뀐다면 기저 역시 바뀐다.</p>
+<p>한 벡터의 기저를 다른 기저로 바꾸는 것을 생각해보자. 일반적으로는 <img src="https://latex.codecogs.com/png.latex?T:%20V%20%5Cto%20W"> 역시 <img src="https://latex.codecogs.com/png.latex?B_V">에서 <img src="https://latex.codecogs.com/png.latex?B_W">로 기저를 바꾸는 것이다. 차원이 바뀐다면 기저 역시 바뀌어야 한다.</p>
 <p>기저 변환(change-of-basis)은 매트릭스를 이해하는 매우 중요한 방식이다. 이를 통해 역시 매트릭스 표현에 도달할 수 있다. 선형 번환 <img src="https://latex.codecogs.com/png.latex?T:%20V%20%5Cto%20W">가 있다고 하자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0AB_V%20&amp;%20=%20%5C%7B%20%5Chat%20e_1,%20%5Cdotsc,%20%5Chat%20e_n%20%5C%7D%20%5C%5C%0AB_W%20&amp;%20=%20%20%5C%7B%20%5Chat%20b_1,%20%5Cdotsc,%20%5Chat%20b_m%20%5C%7D%0A%5Cend%7Baligned%7D%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5BM_T%5D_%7BB_V%7D%20%5Cvec%20v_%7BB_V%7D%20&amp;%20=%0A%5Cbegin%7Bbmatrix%7D%0A%5Cvert%20&amp;%20%5Cvert%20&amp;%20%5Cvert%20%5C%5C%0AT(%5Chat%20e_1)%20&amp;%20%5Cdotsc%20&amp;%20T(%5Chat%20e_n)%20%5C%5C%0A%5Cvert%20&amp;%20%5Cvert%20&amp;%20%5Cvert%20%5C%5C%0A%5Cend%7Bbmatrix%7D_%7BB_V%7D%0A%5Cbegin%7Bbmatrix%7D%0Av_1%20%5C%5C%0A%5Cvdots%20%5C%5C%0Av_n%20%5C%5C%0A%5Cend%7Bbmatrix%7D_%7BB_V%7D%20%5C%5C%0A&amp;%20=%20T(%5Chat%20e_1)%20v_1%20+%20%5Cdotsb%20+%20T(%5Chat%20e_n)%20v_n%20%5C%5C%0A&amp;%20=%20T(v_1%20%5Chat%20e_1%20+%20%5Cdotsb%20+%20v_n%20%5Chat%20e_n)%20%5C%5C%0A&amp;%20%20=%20T(%5Cvec%20v)%20%5C%5C%0A&amp;%20=%20%5Cvec%20w_%7BB_W%7D%0A%5Cend%7Baligned%7D%0A"></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>표기법 상 룰을 하나 정하도록 하자. <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7BB_W%7D%7BM_T%7D_%7BB_V%7D">이라고 쓰는 이는 매트릭스 전후로 투입과 산출 벡터를 표기해주는 것이다. 죽, <img src="https://latex.codecogs.com/png.latex?M_T">의 투입은 <img src="https://latex.codecogs.com/png.latex?%7BB_V%7D"> 이고 산출은 <img src="https://latex.codecogs.com/png.latex?B_W">이다.</p>
+</div></div><p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0AB_V%20&amp;%20=%20%5C%7B%20%5Chat%20e_1,%20%5Cdotsc,%20%5Chat%20e_n%20%5C%7D%20%5C%5C%0AB_W%20&amp;%20=%20%20%5C%7B%20%5Chat%20b_1,%20%5Cdotsc,%20%5Chat%20b_m%20%5C%7D%0A%5Cend%7Baligned%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cphantom%7B%7D_%7BB_W%7D%7B%5Clbrack%20M%20%5Crbrack%7D_%7BB_V%7D%20%5Cvec%20v_%7BB_V%7D%20&amp;%20=%0A%5Cbegin%7Bbmatrix%7D%0A%5Cvert%20&amp;%20%5Cvert%20&amp;%20%5Cvert%20%5C%5C%0AT(%5Chat%20e_1)%20&amp;%20%5Cdotsc%20&amp;%20T(%5Chat%20e_n)%20%5C%5C%0A%5Cvert%20&amp;%20%5Cvert%20&amp;%20%5Cvert%20%5C%5C%0A%5Cend%7Bbmatrix%7D_%7BB_V%7D%0A%5Cbegin%7Bbmatrix%7D%0Av_1%20%5C%5C%0A%5Cvdots%20%5C%5C%0Av_n%20%5C%5C%0A%5Cend%7Bbmatrix%7D_%7BB_V%7D%20%5C%5C%0A&amp;%20=%20T(%5Chat%20e_1)%20v_1%20+%20%5Cdotsb%20+%20T(%5Chat%20e_n)%20v_n%20%5C%5C%0A&amp;%20=%20T(v_1%20%5Chat%20e_1%20+%20%5Cdotsb%20+%20v_n%20%5Chat%20e_n)%20%5C%5C%0A&amp;%20%20=%20T(%5Cvec%20v)%20%5C%5C%0A&amp;%20=%20%5Cvec%20w_%7BB_W%7D%0A%5Cend%7Baligned%7D%0A"></p>
 <p>이제 <img src="https://latex.codecogs.com/png.latex?T(%5Chat%20e_1)"> 하나만 구체적으로 풀어보자. <img src="https://latex.codecogs.com/png.latex?T">를 통해서 기저는 <img src="https://latex.codecogs.com/png.latex?B_V">에서 <img src="https://latex.codecogs.com/png.latex?B_W">로 바뀐다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AT(%5Chat%20e_1)%20=%0A%5Cbegin%7Bbmatrix%7D%0Ac_%7B11%7D%20%5C%5C%0A%5Cvdots%20%5C%5C%0Ac_%7Bm1%7D%0A%5Cend%7Bbmatrix%7D_%7BB_W%7D%20=%20c_%7B11%7D%20%5Chat%20b_1%20+%20%5Cdotsb%20+%20c_%7Bm1%7D%20%5Chat%20b_m%0A"></p>
 <p>이를 모든 행에 대해서 적용하면, 다음과 같다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphantom%7B%7D_%7BB_W%7DM_%7BB_V%7D%20=%0A%5Cvphantom%7B%0A%5Cbegin%7Bbmatrix%7D%0A%5C%5C%0A%5C%5C%0A%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%7D_%7BB_W%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_%7B11%7D%20&amp;%20%5Ccdots%20&amp;%20c_%7B1n%7D%20%5C%5C%0A&amp;%5Ccdots&amp;%5C%5C%0Ac_%7Bm1%7D%20%20&amp;%20%5Ccdots%20&amp;%20c_%7Bmn%7D%20%5C%5C%0A%5Cend%7Bbmatrix%7D_%7BB_V%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphantom%7B%7D_%7BB_W%7D%5Clbrack%20M%20%5Crbrack_%7BB_V%7D%20=%0A%5Cvphantom%7B%0A%5Cbegin%7Bbmatrix%7D%0A%5C%5C%0A%5C%5C%0A%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%7D_%7BB_W%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_%7B11%7D%20&amp;%20%5Ccdots%20&amp;%20c_%7B1n%7D%20%5C%5C%0A&amp;%5Ccdots&amp;%5C%5C%0Ac_%7Bm1%7D%20%20&amp;%20%5Ccdots%20&amp;%20c_%7Bmn%7D%20%5C%5C%0A%5Cend%7Bbmatrix%7D_%7BB_V%7D%0A"></p>
 <p>정리하면 다음과 같다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5BT(%5Cvec%20v)%5D_%7BB_W%7D%20=%20%5Cphantom%7B%7D_%7BB_W%7D%20%5BM_T%5D_%7BB_V%7D%20%5B%5Cvec%20v%5D_%7BB_V%7D%0A"></p>
 <section id="change-of-basis-1" class="level3">
@@ -2666,9 +2673,9 @@ koreanize-matplotlib
 </section>
 <section id="transformation-with-change-of-basis" class="level3">
 <h3 class="anchored" data-anchor-id="transformation-with-change-of-basis">Transformation with change-of-basis</h3>
-<p>이제 <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_B%5BM%5C_T%5D%5C_B"> 가 주어져 있다고 하자. 이를 <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_%7BB%5E%7B%5Cprime%7D%7D%5BM%5ET%5D%5C_%7BB%5E%7B%5Cprime%7D%7D%5Cphantom%7B%7D">로 어떻게 교체할 수 있을까? 개념적으로는 이럴 것이다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphantom%7B%7D_%7BB%5E%7B%5Cprime%7D%7D%7B%5BM%5ET%5D%7D_%7BB%5E%7B%5Cprime%7D%7D%20=%20%5Cunderbrace%7B%5Cphantom%7B%7D_%7BB%5E%7B%5Cprime%7D%7D%7B%5B1%5D%7D_%7BB%7D%7D_%7BB%5E%5Cprime%20%5Cleftarrow%20B%7D%5Cphantom%7B%7D_%7BB%7D%7B%5BM%5ET%5D%7D_%7BB%7D%5Coverbrace%7B%5Cphantom%7B%7D_%7BB%7D%7B%5B1%5D%7D_%7BB%5E%7B%5Cprime%7D%7D%7D%5E%7BB%20%5Cleftarrow%20B%5E%5Cprime%7D%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_%7BB%5E%7B%5Cprime%7D%7D%7B%5B1%5D%7D%5C_%7BB%7D">과 <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_%7BB%7D%7B%5B1%5D%7D%5C_%7BB%5E%7B%5Cprime%7D%7D">이 서로 역행렬의 관계이 있음을 기억해두자.</p>
+<p>이제 <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_B%20%5Clbrack%20M_T%20%5Crbrack_B"> 가 주어져 있다고 하자. 이를 <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7BB%5E%7B%5Cprime%7D%7D%5Clbrack%20M_T%20%5Crbrack_%7BB%5E%7B%5Cprime%7D%7D%5Cphantom%7B%7D">로 어떻게 교체할 수 있을까? 개념적으로는 이럴 것이다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphantom%7B%7D_%7BB%5E%7B%5Cprime%7D%7D%7B%5BM_T%5D%7D_%7BB%5E%7B%5Cprime%7D%7D%20=%20%5Cunderbrace%7B%5Cphantom%7B%7D_%7BB%5E%7B%5Cprime%7D%7D%7B%5B1%5D%7D_%7BB%7D%7D_%7BB%5E%5Cprime%20%5Cleftarrow%20B%7D%5Cphantom%7B%7D_%7BB%7D%7B%5BM_T%5D%7D_%7BB%7D%5Coverbrace%7B%5Cphantom%7B%7D_%7BB%7D%7B%5B1%5D%7D_%7BB%5E%7B%5Cprime%7D%7D%7D%5E%7BB%20%5Cleftarrow%20B%5E%5Cprime%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7BB%5E%7B%5Cprime%7D%7D%7B%5Clbrack%201%20%5Crbrack%7D_%7BB%7D">과 <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7BB%7D%7B%5Clbrack%201%20%5Crbrack%7D_%7BB%5E%7B%5Cprime%7D%7D">이 서로 역변환 관계임을 기억해두자.</p>
 </section>
 </section>
 <section id="similar-matrix" class="level2">
@@ -2678,9 +2685,9 @@ koreanize-matplotlib
 <p><img src="https://latex.codecogs.com/png.latex?A">과 <img src="https://latex.codecogs.com/png.latex?B">은 서로 닮은 꼴의 매트릭스다. 위 식을 만족하는 매트릭스 <img src="https://latex.codecogs.com/png.latex?A">과 <img src="https://latex.codecogs.com/png.latex?B">을 similar matrix라고 정의한다. 우선 두 매트릭스가 서로 닮은 꼴일 때에는 <img src="https://latex.codecogs.com/png.latex?n%20%5Cgeq%201">에 대해서 <img src="https://latex.codecogs.com/png.latex?A%5En%20=%20C%20B%5En%20C%5E%7B-1%7D">이 성립한다. 이는 아이겐 분해에서 보듯이 <img src="https://latex.codecogs.com/png.latex?B">가 어떤 매트릭스냐에 따라서 계산 상 편리함을 줄 수 있다. 만일 <img src="https://latex.codecogs.com/png.latex?B">가 대각 행렬이라면 행렬의 <img src="https://latex.codecogs.com/png.latex?n">은 대각 원소의 <img src="https://latex.codecogs.com/png.latex?n"> 승만 수행하면 된다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?C">가 역행렬을 지니기 때문에 <img src="https://latex.codecogs.com/png.latex?C">의 컬럼은 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5En">의 기저가 된다. 이렇게 보면 <img src="https://latex.codecogs.com/png.latex?C">는 change-of-basis와 같은 맥락에서 이해할 수 있다. 즉, 앞서 살펴 본 기저를 바꾸는 행렬과 동일한 행렬이다. <img src="https://latex.codecogs.com/png.latex?A%20x">라는 변환을 이 맥락에서 다시 이해해보자. 여기서 <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20B">는 표준 기저(<img src="https://latex.codecogs.com/png.latex?%5Chat%20e_i">)로 이해하면 된다.</p>
 <ol type="1">
-<li><p><img src="https://latex.codecogs.com/png.latex?C%5E%7B-1%7D%20x">는 <img src="https://latex.codecogs.com/png.latex?%5Bx%5D%5C_%7Bu%7D">의 기저를 <img src="https://latex.codecogs.com/png.latex?%5Bx%5D%5C_%7B%5Cmathcal%20B%7D">로 바꾸는 것이다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_%7B%5Cmathcal%20B%7D1%5C_u"></p></li>
-<li><p>이 바뀐 기저에서 <img src="https://latex.codecogs.com/png.latex?B">이라는 변환을 수행한다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_%7B%5Cmathcal%20B%7DB%5C_%5Cmathcal%20B"></p></li>
-<li><p><img src="https://latex.codecogs.com/png.latex?C">는 곱해 다시 통상적인 기저로 돌아오게 된다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_%7Bu%7D1%5C_%5Cmathcal%20B"></p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?C%5E%7B-1%7D%20x">는 <img src="https://latex.codecogs.com/png.latex?%5Clbrack%20x%20%5Crbrack_%7Bu%7D">의 기저를 <img src="https://latex.codecogs.com/png.latex?%5Bx%5D_%7B%5Cmathcal%20B%7D">로 바꾸는 것이다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7B%5Cmathcal%20B%7D%5Clbrack%201%20%5Crbrack_u"></p></li>
+<li><p>이 바뀐 기저에서 <img src="https://latex.codecogs.com/png.latex?B">이라는 변환을 수행한다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7B%5Cmathcal%20B%7D%20%5Clbrack%20B%20%5Crbrack_%7B%5Cmathcal%20B%7D"></p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?C">는 곱해 다시 통상적인 기저로 돌아오게 된다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7Bu%7D%7B%5Clbrack%201%20%5Crbrack%7D_%7B%5Cmathcal%20B%7D"></p></li>
 </ol>
 <p>아래 그림에서 보듯이, <img src="https://latex.codecogs.com/png.latex?Ax">라는 변환과 <img src="https://latex.codecogs.com/png.latex?B%5Bx%5D_%7B%5Cmathcal%20B%7D">라는 변환은 좌표계만 다를 뿐 동일한 변환이다. <img src="https://latex.codecogs.com/png.latex?C%20B%20C%5E%7B-1%7D">의 기저의 변화를 살펴보면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cunderbrace%7Bu%20%5Crightarrow%20%5Cmathcal%20B%7D_%7BC%5E%7B-1%7D%7D%20&amp;%20%5Ccdots%20B%20%5Ccdots%20%5Cunderbrace%7B%5Cmathcal%20B%20%5Crightarrow%20u%7D_%7BC%7D%20%5C%5C%0A&amp;%20%5Ccdots%20A%20%5Ccdots%0A%5Cend%7Baligned%7D%0A"></p>
@@ -3974,8 +3981,8 @@ koreanize-matplotlib
   gtag('js', new Date());
 
   gtag('config', 'G-JNRF3S74Z4');
-</script><section id="concepts-definition" class="level2">
-<h2 class="anchored" data-anchor-id="concepts-definition">Concepts &amp; Definition</h2>
+</script><section id="two-propoerties-of-basis" class="level2">
+<h2 class="anchored" data-anchor-id="two-propoerties-of-basis">Two Propoerties of Basis</h2>
 <p>벡터 공간 <img src="https://latex.codecogs.com/png.latex?V">의 기저</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AB%20=%20%5C%7B%20%5Cvec%7Be_1%7D,%20%5Cdotsc,%20%5Cvec%7Be_n%7D%20%5C%7D%20%20%0A"></p>
 <p>는 다음의 두 특성을 만족한다.</p>
@@ -3988,22 +3995,26 @@ koreanize-matplotlib
 <h3 class="anchored" data-anchor-id="linear-independence-property">Linear Independence property</h3>
 <p>즉, 기저를 구성하는 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%7Be_i%7D">에 불필요한 것이 없어야 한다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cvec%7Be%7D">를 구성하는 어떤 <img src="https://latex.codecogs.com/png.latex?e_i">도 다른 <img src="https://latex.codecogs.com/png.latex?e_j">(<img src="https://latex.codecogs.com/png.latex?j%20%5Cneq%20i">)의 선형 결합으로 표현될 수 없다.</p>
 </section>
+</section>
+<section id="two-bases" class="level2">
+<h2 class="anchored" data-anchor-id="two-bases">Two bases</h2>
+<p>계속 등장하게 될 두 개의 기저를 살펴보자.</p>
 <section id="orthonomal-basis" class="level3">
 <h3 class="anchored" data-anchor-id="orthonomal-basis">Orthonomal basis</h3>
 <p><img src="https://latex.codecogs.com/png.latex?%0AB_%7B%5Chat%7Be%7D%7D%20=%20%5C%7B%20%5Chat%7Be_1%7D,%20%5Cdotsc,%20%5Chat%7Be_n%7D%20%5C%7D%20%5Ctext%7B~with%7D%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A%5Chat%7Be_i%7D%20%5Ccdot%20%5Chat%7Be_j%7D%20=%201%20&amp;%20%5Ctext%7Bif%20$i%20=%20j$%7D%20%5C%5C%0A%5Chat%7Be_i%7D%20%5Ccdot%20%5Chat%7Be_j%7D%20=%200%20&amp;%20%5Ctext%7Bif%20$i%20%5Cneq%20j$%7D%0A%5Cend%7Bcases%7D%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A(a_1,%20%5Cdotsc,%20a_n)_%7BB_%7B%5Chat%7Be%7D%7D%7D%20=%20%5Cunderbrace%7B(%5Cvec%7Ba%7D%20%5Ccdot%20%5Chat%7Be_i%7D)%7D_%7Ba_1%7D%20%5Chat%7Be_i%7D%20+%20%5Cdotsb%20+%20(%5Cvec%7Ba%7D%20%5Ccdot%20%5Chat%7Be_n%7D)%20%5Chat%7Be_n%7D%0A"></p>
 </section>
-</section>
-<section id="orthogonal-basis" class="level2">
-<h2 class="anchored" data-anchor-id="orthogonal-basis">Orthogonal basis</h2>
+<section id="orthogonal-basis" class="level3">
+<h3 class="anchored" data-anchor-id="orthogonal-basis">Orthogonal basis</h3>
 <p><img src="https://latex.codecogs.com/png.latex?%0AB_%7Be%7D%20=%20%5C%7B%20e_1,%20%5Cdotsc,%20e_n%20%5C%7D%20%5Ctext%7B~with%7D%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0Ae_i%20%5Ccdot%20e_j%20%5Cneq%200%20&amp;%20%5Ctext%7Bif%20$i%20=%20j$%7D%20%5C%5C%0Ae_i%20%5Ccdot%20e_j%20=%200%20&amp;%20%5Ctext%7Bif%20$i%20%5Cneq%20j$%7D%0A%5Cend%7Bcases%7D%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A(b_1,%20%5Cdotsc,%20b_n)_%7BB_e%7D%20=%20%5Cunderbrace%7B(%5Cvec%20b%20%5Ccdot%20%5Cdfrac%7Be_i%7D%7B%5CVert%20e_i%20%5CVert%7D)%7D_%7Bb_1%7D%20e_1%20+%20%5Cdotsb%20+%20(%5Cvec%20b%20%5Ccdot%20%5Cdfrac%7Be_i%7D%7B%5CVert%20e_i%20%5CVert%7D)%20e_n%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?b_i">의 값을 제대로 반영하기 위해서는 정규화된 orthorgonal basis가 필요하고, <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Be_i%7D%7B%5CVert%20e_i%20%5CVert%7D">가 내적 계산에 들어간다.</p>
 </section>
-<section id="take-this" class="level2">
-<h2 class="anchored" data-anchor-id="take-this">Take This!</h2>
+</section>
+<section id="eat-this" class="level2">
+<h2 class="anchored" data-anchor-id="eat-this">Eat This!</h2>
 <section id="generic-basis" class="level3">
 <h3 class="anchored" data-anchor-id="generic-basis">Generic basis</h3>
 <p>서로 직교하지 않는 기저,</p>
@@ -4026,16 +4037,19 @@ koreanize-matplotlib
 <p><img src="https://latex.codecogs.com/png.latex?%0AA%20%5Cvec%20m%20=%20%5Cvec%20t%20~%5CLeftrightarrow~%0A%5Cbegin%7Bbmatrix%7D%0Av_%7B1x%7D%20&amp;%20v_%7B1y%7D%20&amp;%200%20&amp;%200%20%5C%5C%0Av_%7B1x%7D%20&amp;%20v_%7B1y%7D%20&amp;%200%20&amp;%200%20%5C%5C%0A0%20&amp;%200%20&amp;%20v_%7B2x%7D%20&amp;%20v_%7B2y%7D%20%5C%5C%0A0%20&amp;%200%20&amp;%20v_%7B2x%7D%20&amp;%20v_%7B2y%7D%20%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Am_%7B11%7D%20%5C%5C%0Am_%7B12%7D%20%5C%5C%0Am_%7B21%7D%20%5C%5C%0Am_%7B22%7D%20%5C%5C%0A%5Cend%7Bbmatrix%7D%20=%0A%5Cbegin%7Bbmatrix%7D%0At_%7B1x%7D%20%5C%5C%0At_%7B1y%7D%20%5C%5C%0At_%7B2x%7D%20%5C%5C%0At_%7B2y%7D%0A%5Cend%7Bbmatrix%7D%0A"></p>
 </section>
 </section>
-<section id="change-of-basis" class="level2">
+<section id="change-of-basis" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="change-of-basis">Change of Basis</h2>
-<p>한 벡터의 기저를 다른 기저로 바꾸는 것을 생각해보자. 일반적으로는 <img src="https://latex.codecogs.com/png.latex?T:%20V%20%5Cto%20W"> 역시 <img src="https://latex.codecogs.com/png.latex?B_V">에서 <img src="https://latex.codecogs.com/png.latex?B_W">로 기저를 바꾸는 것이다. 차원이 바뀐다면 기저 역시 바뀐다.</p>
+<p>한 벡터의 기저를 다른 기저로 바꾸는 것을 생각해보자. 일반적으로는 <img src="https://latex.codecogs.com/png.latex?T:%20V%20%5Cto%20W"> 역시 <img src="https://latex.codecogs.com/png.latex?B_V">에서 <img src="https://latex.codecogs.com/png.latex?B_W">로 기저를 바꾸는 것이다. 차원이 바뀐다면 기저 역시 바뀌어야 한다.</p>
 <p>기저 변환(change-of-basis)은 매트릭스를 이해하는 매우 중요한 방식이다. 이를 통해 역시 매트릭스 표현에 도달할 수 있다. 선형 번환 <img src="https://latex.codecogs.com/png.latex?T:%20V%20%5Cto%20W">가 있다고 하자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0AB_V%20&amp;%20=%20%5C%7B%20%5Chat%20e_1,%20%5Cdotsc,%20%5Chat%20e_n%20%5C%7D%20%5C%5C%0AB_W%20&amp;%20=%20%20%5C%7B%20%5Chat%20b_1,%20%5Cdotsc,%20%5Chat%20b_m%20%5C%7D%0A%5Cend%7Baligned%7D%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5BM_T%5D_%7BB_V%7D%20%5Cvec%20v_%7BB_V%7D%20&amp;%20=%0A%5Cbegin%7Bbmatrix%7D%0A%5Cvert%20&amp;%20%5Cvert%20&amp;%20%5Cvert%20%5C%5C%0AT(%5Chat%20e_1)%20&amp;%20%5Cdotsc%20&amp;%20T(%5Chat%20e_n)%20%5C%5C%0A%5Cvert%20&amp;%20%5Cvert%20&amp;%20%5Cvert%20%5C%5C%0A%5Cend%7Bbmatrix%7D_%7BB_V%7D%0A%5Cbegin%7Bbmatrix%7D%0Av_1%20%5C%5C%0A%5Cvdots%20%5C%5C%0Av_n%20%5C%5C%0A%5Cend%7Bbmatrix%7D_%7BB_V%7D%20%5C%5C%0A&amp;%20=%20T(%5Chat%20e_1)%20v_1%20+%20%5Cdotsb%20+%20T(%5Chat%20e_n)%20v_n%20%5C%5C%0A&amp;%20=%20T(v_1%20%5Chat%20e_1%20+%20%5Cdotsb%20+%20v_n%20%5Chat%20e_n)%20%5C%5C%0A&amp;%20%20=%20T(%5Cvec%20v)%20%5C%5C%0A&amp;%20=%20%5Cvec%20w_%7BB_W%7D%0A%5Cend%7Baligned%7D%0A"></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>표기법 상 룰을 하나 정하도록 하자. <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7BB_W%7D%7BM_T%7D_%7BB_V%7D">이라고 쓰는 이는 매트릭스 전후로 투입과 산출 벡터를 표기해주는 것이다. 죽, <img src="https://latex.codecogs.com/png.latex?M_T">의 투입은 <img src="https://latex.codecogs.com/png.latex?%7BB_V%7D"> 이고 산출은 <img src="https://latex.codecogs.com/png.latex?B_W">이다.</p>
+</div></div><p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0AB_V%20&amp;%20=%20%5C%7B%20%5Chat%20e_1,%20%5Cdotsc,%20%5Chat%20e_n%20%5C%7D%20%5C%5C%0AB_W%20&amp;%20=%20%20%5C%7B%20%5Chat%20b_1,%20%5Cdotsc,%20%5Chat%20b_m%20%5C%7D%0A%5Cend%7Baligned%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cphantom%7B%7D_%7BB_W%7D%7B%5Clbrack%20M%20%5Crbrack%7D_%7BB_V%7D%20%5Cvec%20v_%7BB_V%7D%20&amp;%20=%0A%5Cbegin%7Bbmatrix%7D%0A%5Cvert%20&amp;%20%5Cvert%20&amp;%20%5Cvert%20%5C%5C%0AT(%5Chat%20e_1)%20&amp;%20%5Cdotsc%20&amp;%20T(%5Chat%20e_n)%20%5C%5C%0A%5Cvert%20&amp;%20%5Cvert%20&amp;%20%5Cvert%20%5C%5C%0A%5Cend%7Bbmatrix%7D_%7BB_V%7D%0A%5Cbegin%7Bbmatrix%7D%0Av_1%20%5C%5C%0A%5Cvdots%20%5C%5C%0Av_n%20%5C%5C%0A%5Cend%7Bbmatrix%7D_%7BB_V%7D%20%5C%5C%0A&amp;%20=%20T(%5Chat%20e_1)%20v_1%20+%20%5Cdotsb%20+%20T(%5Chat%20e_n)%20v_n%20%5C%5C%0A&amp;%20=%20T(v_1%20%5Chat%20e_1%20+%20%5Cdotsb%20+%20v_n%20%5Chat%20e_n)%20%5C%5C%0A&amp;%20%20=%20T(%5Cvec%20v)%20%5C%5C%0A&amp;%20=%20%5Cvec%20w_%7BB_W%7D%0A%5Cend%7Baligned%7D%0A"></p>
 <p>이제 <img src="https://latex.codecogs.com/png.latex?T(%5Chat%20e_1)"> 하나만 구체적으로 풀어보자. <img src="https://latex.codecogs.com/png.latex?T">를 통해서 기저는 <img src="https://latex.codecogs.com/png.latex?B_V">에서 <img src="https://latex.codecogs.com/png.latex?B_W">로 바뀐다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AT(%5Chat%20e_1)%20=%0A%5Cbegin%7Bbmatrix%7D%0Ac_%7B11%7D%20%5C%5C%0A%5Cvdots%20%5C%5C%0Ac_%7Bm1%7D%0A%5Cend%7Bbmatrix%7D_%7BB_W%7D%20=%20c_%7B11%7D%20%5Chat%20b_1%20+%20%5Cdotsb%20+%20c_%7Bm1%7D%20%5Chat%20b_m%0A"></p>
 <p>이를 모든 행에 대해서 적용하면, 다음과 같다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphantom%7B%7D_%7BB_W%7DM_%7BB_V%7D%20=%0A%5Cvphantom%7B%0A%5Cbegin%7Bbmatrix%7D%0A%5C%5C%0A%5C%5C%0A%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%7D_%7BB_W%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_%7B11%7D%20&amp;%20%5Ccdots%20&amp;%20c_%7B1n%7D%20%5C%5C%0A&amp;%5Ccdots&amp;%5C%5C%0Ac_%7Bm1%7D%20%20&amp;%20%5Ccdots%20&amp;%20c_%7Bmn%7D%20%5C%5C%0A%5Cend%7Bbmatrix%7D_%7BB_V%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphantom%7B%7D_%7BB_W%7D%5Clbrack%20M%20%5Crbrack_%7BB_V%7D%20=%0A%5Cvphantom%7B%0A%5Cbegin%7Bbmatrix%7D%0A%5C%5C%0A%5C%5C%0A%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%7D_%7BB_W%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_%7B11%7D%20&amp;%20%5Ccdots%20&amp;%20c_%7B1n%7D%20%5C%5C%0A&amp;%5Ccdots&amp;%5C%5C%0Ac_%7Bm1%7D%20%20&amp;%20%5Ccdots%20&amp;%20c_%7Bmn%7D%20%5C%5C%0A%5Cend%7Bbmatrix%7D_%7BB_V%7D%0A"></p>
 <p>정리하면 다음과 같다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5BT(%5Cvec%20v)%5D_%7BB_W%7D%20=%20%5Cphantom%7B%7D_%7BB_W%7D%20%5BM_T%5D_%7BB_V%7D%20%5B%5Cvec%20v%5D_%7BB_V%7D%0A"></p>
 <section id="change-of-basis-1" class="level3">
@@ -4058,9 +4072,9 @@ koreanize-matplotlib
 </section>
 <section id="transformation-with-change-of-basis" class="level3">
 <h3 class="anchored" data-anchor-id="transformation-with-change-of-basis">Transformation with change-of-basis</h3>
-<p>이제 <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_B%5BM%5C_T%5D%5C_B"> 가 주어져 있다고 하자. 이를 <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_%7BB%5E%7B%5Cprime%7D%7D%5BM%5ET%5D%5C_%7BB%5E%7B%5Cprime%7D%7D%5Cphantom%7B%7D">로 어떻게 교체할 수 있을까? 개념적으로는 이럴 것이다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphantom%7B%7D_%7BB%5E%7B%5Cprime%7D%7D%7B%5BM%5ET%5D%7D_%7BB%5E%7B%5Cprime%7D%7D%20=%20%5Cunderbrace%7B%5Cphantom%7B%7D_%7BB%5E%7B%5Cprime%7D%7D%7B%5B1%5D%7D_%7BB%7D%7D_%7BB%5E%5Cprime%20%5Cleftarrow%20B%7D%5Cphantom%7B%7D_%7BB%7D%7B%5BM%5ET%5D%7D_%7BB%7D%5Coverbrace%7B%5Cphantom%7B%7D_%7BB%7D%7B%5B1%5D%7D_%7BB%5E%7B%5Cprime%7D%7D%7D%5E%7BB%20%5Cleftarrow%20B%5E%5Cprime%7D%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_%7BB%5E%7B%5Cprime%7D%7D%7B%5B1%5D%7D%5C_%7BB%7D">과 <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_%7BB%7D%7B%5B1%5D%7D%5C_%7BB%5E%7B%5Cprime%7D%7D">이 서로 역행렬의 관계이 있음을 기억해두자.</p>
+<p>이제 <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_B%20%5Clbrack%20M_T%20%5Crbrack_B"> 가 주어져 있다고 하자. 이를 <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7BB%5E%7B%5Cprime%7D%7D%5Clbrack%20M_T%20%5Crbrack_%7BB%5E%7B%5Cprime%7D%7D%5Cphantom%7B%7D">로 어떻게 교체할 수 있을까? 개념적으로는 이럴 것이다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphantom%7B%7D_%7BB%5E%7B%5Cprime%7D%7D%7B%5BM_T%5D%7D_%7BB%5E%7B%5Cprime%7D%7D%20=%20%5Cunderbrace%7B%5Cphantom%7B%7D_%7BB%5E%7B%5Cprime%7D%7D%7B%5B1%5D%7D_%7BB%7D%7D_%7BB%5E%5Cprime%20%5Cleftarrow%20B%7D%5Cphantom%7B%7D_%7BB%7D%7B%5BM_T%5D%7D_%7BB%7D%5Coverbrace%7B%5Cphantom%7B%7D_%7BB%7D%7B%5B1%5D%7D_%7BB%5E%7B%5Cprime%7D%7D%7D%5E%7BB%20%5Cleftarrow%20B%5E%5Cprime%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7BB%5E%7B%5Cprime%7D%7D%7B%5Clbrack%201%20%5Crbrack%7D_%7BB%7D">과 <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7BB%7D%7B%5Clbrack%201%20%5Crbrack%7D_%7BB%5E%7B%5Cprime%7D%7D">이 서로 역변환 관계임을 기억해두자.</p>
 </section>
 </section>
 <section id="similar-matrix" class="level2">
@@ -4070,9 +4084,9 @@ koreanize-matplotlib
 <p><img src="https://latex.codecogs.com/png.latex?A">과 <img src="https://latex.codecogs.com/png.latex?B">은 서로 닮은 꼴의 매트릭스다. 위 식을 만족하는 매트릭스 <img src="https://latex.codecogs.com/png.latex?A">과 <img src="https://latex.codecogs.com/png.latex?B">을 similar matrix라고 정의한다. 우선 두 매트릭스가 서로 닮은 꼴일 때에는 <img src="https://latex.codecogs.com/png.latex?n%20%5Cgeq%201">에 대해서 <img src="https://latex.codecogs.com/png.latex?A%5En%20=%20C%20B%5En%20C%5E%7B-1%7D">이 성립한다. 이는 아이겐 분해에서 보듯이 <img src="https://latex.codecogs.com/png.latex?B">가 어떤 매트릭스냐에 따라서 계산 상 편리함을 줄 수 있다. 만일 <img src="https://latex.codecogs.com/png.latex?B">가 대각 행렬이라면 행렬의 <img src="https://latex.codecogs.com/png.latex?n">은 대각 원소의 <img src="https://latex.codecogs.com/png.latex?n"> 승만 수행하면 된다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?C">가 역행렬을 지니기 때문에 <img src="https://latex.codecogs.com/png.latex?C">의 컬럼은 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5En">의 기저가 된다. 이렇게 보면 <img src="https://latex.codecogs.com/png.latex?C">는 change-of-basis와 같은 맥락에서 이해할 수 있다. 즉, 앞서 살펴 본 기저를 바꾸는 행렬과 동일한 행렬이다. <img src="https://latex.codecogs.com/png.latex?A%20x">라는 변환을 이 맥락에서 다시 이해해보자. 여기서 <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20B">는 표준 기저(<img src="https://latex.codecogs.com/png.latex?%5Chat%20e_i">)로 이해하면 된다.</p>
 <ol type="1">
-<li><p><img src="https://latex.codecogs.com/png.latex?C%5E%7B-1%7D%20x">는 <img src="https://latex.codecogs.com/png.latex?%5Bx%5D%5C_%7Bu%7D">의 기저를 <img src="https://latex.codecogs.com/png.latex?%5Bx%5D%5C_%7B%5Cmathcal%20B%7D">로 바꾸는 것이다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_%7B%5Cmathcal%20B%7D1%5C_u"></p></li>
-<li><p>이 바뀐 기저에서 <img src="https://latex.codecogs.com/png.latex?B">이라는 변환을 수행한다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_%7B%5Cmathcal%20B%7DB%5C_%5Cmathcal%20B"></p></li>
-<li><p><img src="https://latex.codecogs.com/png.latex?C">는 곱해 다시 통상적인 기저로 돌아오게 된다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_%7Bu%7D1%5C_%5Cmathcal%20B"></p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?C%5E%7B-1%7D%20x">는 <img src="https://latex.codecogs.com/png.latex?%5Clbrack%20x%20%5Crbrack_%7Bu%7D">의 기저를 <img src="https://latex.codecogs.com/png.latex?%5Bx%5D_%7B%5Cmathcal%20B%7D">로 바꾸는 것이다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7B%5Cmathcal%20B%7D%5Clbrack%201%20%5Crbrack_u"></p></li>
+<li><p>이 바뀐 기저에서 <img src="https://latex.codecogs.com/png.latex?B">이라는 변환을 수행한다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7B%5Cmathcal%20B%7D%20%5Clbrack%20B%20%5Crbrack_%7B%5Cmathcal%20B%7D"></p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?C">는 곱해 다시 통상적인 기저로 돌아오게 된다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7Bu%7D%7B%5Clbrack%201%20%5Crbrack%7D_%7B%5Cmathcal%20B%7D"></p></li>
 </ol>
 <p>아래 그림에서 보듯이, <img src="https://latex.codecogs.com/png.latex?Ax">라는 변환과 <img src="https://latex.codecogs.com/png.latex?B%5Bx%5D_%7B%5Cmathcal%20B%7D">라는 변환은 좌표계만 다를 뿐 동일한 변환이다. <img src="https://latex.codecogs.com/png.latex?C%20B%20C%5E%7B-1%7D">의 기저의 변화를 살펴보면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cunderbrace%7Bu%20%5Crightarrow%20%5Cmathcal%20B%7D_%7BC%5E%7B-1%7D%7D%20&amp;%20%5Ccdots%20B%20%5Ccdots%20%5Cunderbrace%7B%5Cmathcal%20B%20%5Crightarrow%20u%7D_%7BC%7D%20%5C%5C%0A&amp;%20%5Ccdots%20A%20%5Ccdots%0A%5Cend%7Baligned%7D%0A"></p>
@@ -5431,8 +5445,8 @@ koreanize-matplotlib
   gtag('js', new Date());
 
   gtag('config', 'G-JNRF3S74Z4');
-</script><section id="concepts-definition" class="level2">
-<h2 class="anchored" data-anchor-id="concepts-definition">Concepts &amp; Definition</h2>
+</script><section id="two-propoerties-of-basis" class="level2">
+<h2 class="anchored" data-anchor-id="two-propoerties-of-basis">Two Propoerties of Basis</h2>
 <p>벡터 공간 <img src="https://latex.codecogs.com/png.latex?V">의 기저</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AB%20=%20%5C%7B%20%5Cvec%7Be_1%7D,%20%5Cdotsc,%20%5Cvec%7Be_n%7D%20%5C%7D%20%20%0A"></p>
 <p>는 다음의 두 특성을 만족한다.</p>
@@ -5445,22 +5459,26 @@ koreanize-matplotlib
 <h3 class="anchored" data-anchor-id="linear-independence-property">Linear Independence property</h3>
 <p>즉, 기저를 구성하는 벡터 <img src="https://latex.codecogs.com/png.latex?%5Cvec%7Be_i%7D">에 불필요한 것이 없어야 한다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cvec%7Be%7D">를 구성하는 어떤 <img src="https://latex.codecogs.com/png.latex?e_i">도 다른 <img src="https://latex.codecogs.com/png.latex?e_j">(<img src="https://latex.codecogs.com/png.latex?j%20%5Cneq%20i">)의 선형 결합으로 표현될 수 없다.</p>
 </section>
+</section>
+<section id="two-bases" class="level2">
+<h2 class="anchored" data-anchor-id="two-bases">Two bases</h2>
+<p>계속 등장하게 될 두 개의 기저를 살펴보자.</p>
 <section id="orthonomal-basis" class="level3">
 <h3 class="anchored" data-anchor-id="orthonomal-basis">Orthonomal basis</h3>
 <p><img src="https://latex.codecogs.com/png.latex?%0AB_%7B%5Chat%7Be%7D%7D%20=%20%5C%7B%20%5Chat%7Be_1%7D,%20%5Cdotsc,%20%5Chat%7Be_n%7D%20%5C%7D%20%5Ctext%7B~with%7D%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A%5Chat%7Be_i%7D%20%5Ccdot%20%5Chat%7Be_j%7D%20=%201%20&amp;%20%5Ctext%7Bif%20$i%20=%20j$%7D%20%5C%5C%0A%5Chat%7Be_i%7D%20%5Ccdot%20%5Chat%7Be_j%7D%20=%200%20&amp;%20%5Ctext%7Bif%20$i%20%5Cneq%20j$%7D%0A%5Cend%7Bcases%7D%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A(a_1,%20%5Cdotsc,%20a_n)_%7BB_%7B%5Chat%7Be%7D%7D%7D%20=%20%5Cunderbrace%7B(%5Cvec%7Ba%7D%20%5Ccdot%20%5Chat%7Be_i%7D)%7D_%7Ba_1%7D%20%5Chat%7Be_i%7D%20+%20%5Cdotsb%20+%20(%5Cvec%7Ba%7D%20%5Ccdot%20%5Chat%7Be_n%7D)%20%5Chat%7Be_n%7D%0A"></p>
 </section>
-</section>
-<section id="orthogonal-basis" class="level2">
-<h2 class="anchored" data-anchor-id="orthogonal-basis">Orthogonal basis</h2>
+<section id="orthogonal-basis" class="level3">
+<h3 class="anchored" data-anchor-id="orthogonal-basis">Orthogonal basis</h3>
 <p><img src="https://latex.codecogs.com/png.latex?%0AB_%7Be%7D%20=%20%5C%7B%20e_1,%20%5Cdotsc,%20e_n%20%5C%7D%20%5Ctext%7B~with%7D%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0Ae_i%20%5Ccdot%20e_j%20%5Cneq%200%20&amp;%20%5Ctext%7Bif%20$i%20=%20j$%7D%20%5C%5C%0Ae_i%20%5Ccdot%20e_j%20=%200%20&amp;%20%5Ctext%7Bif%20$i%20%5Cneq%20j$%7D%0A%5Cend%7Bcases%7D%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A(b_1,%20%5Cdotsc,%20b_n)_%7BB_e%7D%20=%20%5Cunderbrace%7B(%5Cvec%20b%20%5Ccdot%20%5Cdfrac%7Be_i%7D%7B%5CVert%20e_i%20%5CVert%7D)%7D_%7Bb_1%7D%20e_1%20+%20%5Cdotsb%20+%20(%5Cvec%20b%20%5Ccdot%20%5Cdfrac%7Be_i%7D%7B%5CVert%20e_i%20%5CVert%7D)%20e_n%0A"></p>
 <p><img src="https://latex.codecogs.com/png.latex?b_i">의 값을 제대로 반영하기 위해서는 정규화된 orthorgonal basis가 필요하고, <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Be_i%7D%7B%5CVert%20e_i%20%5CVert%7D">가 내적 계산에 들어간다.</p>
 </section>
-<section id="take-this" class="level2">
-<h2 class="anchored" data-anchor-id="take-this">Take This!</h2>
+</section>
+<section id="eat-this" class="level2">
+<h2 class="anchored" data-anchor-id="eat-this">Eat This!</h2>
 <section id="generic-basis" class="level3">
 <h3 class="anchored" data-anchor-id="generic-basis">Generic basis</h3>
 <p>서로 직교하지 않는 기저,</p>
@@ -5483,16 +5501,19 @@ koreanize-matplotlib
 <p><img src="https://latex.codecogs.com/png.latex?%0AA%20%5Cvec%20m%20=%20%5Cvec%20t%20~%5CLeftrightarrow~%0A%5Cbegin%7Bbmatrix%7D%0Av_%7B1x%7D%20&amp;%20v_%7B1y%7D%20&amp;%200%20&amp;%200%20%5C%5C%0Av_%7B1x%7D%20&amp;%20v_%7B1y%7D%20&amp;%200%20&amp;%200%20%5C%5C%0A0%20&amp;%200%20&amp;%20v_%7B2x%7D%20&amp;%20v_%7B2y%7D%20%5C%5C%0A0%20&amp;%200%20&amp;%20v_%7B2x%7D%20&amp;%20v_%7B2y%7D%20%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0Am_%7B11%7D%20%5C%5C%0Am_%7B12%7D%20%5C%5C%0Am_%7B21%7D%20%5C%5C%0Am_%7B22%7D%20%5C%5C%0A%5Cend%7Bbmatrix%7D%20=%0A%5Cbegin%7Bbmatrix%7D%0At_%7B1x%7D%20%5C%5C%0At_%7B1y%7D%20%5C%5C%0At_%7B2x%7D%20%5C%5C%0At_%7B2y%7D%0A%5Cend%7Bbmatrix%7D%0A"></p>
 </section>
 </section>
-<section id="change-of-basis" class="level2">
+<section id="change-of-basis" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="change-of-basis">Change of Basis</h2>
-<p>한 벡터의 기저를 다른 기저로 바꾸는 것을 생각해보자. 일반적으로는 <img src="https://latex.codecogs.com/png.latex?T:%20V%20%5Cto%20W"> 역시 <img src="https://latex.codecogs.com/png.latex?B_V">에서 <img src="https://latex.codecogs.com/png.latex?B_W">로 기저를 바꾸는 것이다. 차원이 바뀐다면 기저 역시 바뀐다.</p>
+<p>한 벡터의 기저를 다른 기저로 바꾸는 것을 생각해보자. 일반적으로는 <img src="https://latex.codecogs.com/png.latex?T:%20V%20%5Cto%20W"> 역시 <img src="https://latex.codecogs.com/png.latex?B_V">에서 <img src="https://latex.codecogs.com/png.latex?B_W">로 기저를 바꾸는 것이다. 차원이 바뀐다면 기저 역시 바뀌어야 한다.</p>
 <p>기저 변환(change-of-basis)은 매트릭스를 이해하는 매우 중요한 방식이다. 이를 통해 역시 매트릭스 표현에 도달할 수 있다. 선형 번환 <img src="https://latex.codecogs.com/png.latex?T:%20V%20%5Cto%20W">가 있다고 하자.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0AB_V%20&amp;%20=%20%5C%7B%20%5Chat%20e_1,%20%5Cdotsc,%20%5Chat%20e_n%20%5C%7D%20%5C%5C%0AB_W%20&amp;%20=%20%20%5C%7B%20%5Chat%20b_1,%20%5Cdotsc,%20%5Chat%20b_m%20%5C%7D%0A%5Cend%7Baligned%7D%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5BM_T%5D_%7BB_V%7D%20%5Cvec%20v_%7BB_V%7D%20&amp;%20=%0A%5Cbegin%7Bbmatrix%7D%0A%5Cvert%20&amp;%20%5Cvert%20&amp;%20%5Cvert%20%5C%5C%0AT(%5Chat%20e_1)%20&amp;%20%5Cdotsc%20&amp;%20T(%5Chat%20e_n)%20%5C%5C%0A%5Cvert%20&amp;%20%5Cvert%20&amp;%20%5Cvert%20%5C%5C%0A%5Cend%7Bbmatrix%7D_%7BB_V%7D%0A%5Cbegin%7Bbmatrix%7D%0Av_1%20%5C%5C%0A%5Cvdots%20%5C%5C%0Av_n%20%5C%5C%0A%5Cend%7Bbmatrix%7D_%7BB_V%7D%20%5C%5C%0A&amp;%20=%20T(%5Chat%20e_1)%20v_1%20+%20%5Cdotsb%20+%20T(%5Chat%20e_n)%20v_n%20%5C%5C%0A&amp;%20=%20T(v_1%20%5Chat%20e_1%20+%20%5Cdotsb%20+%20v_n%20%5Chat%20e_n)%20%5C%5C%0A&amp;%20%20=%20T(%5Cvec%20v)%20%5C%5C%0A&amp;%20=%20%5Cvec%20w_%7BB_W%7D%0A%5Cend%7Baligned%7D%0A"></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>표기법 상 룰을 하나 정하도록 하자. <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7BB_W%7D%7BM_T%7D_%7BB_V%7D">이라고 쓰는 이는 매트릭스 전후로 투입과 산출 벡터를 표기해주는 것이다. 죽, <img src="https://latex.codecogs.com/png.latex?M_T">의 투입은 <img src="https://latex.codecogs.com/png.latex?%7BB_V%7D"> 이고 산출은 <img src="https://latex.codecogs.com/png.latex?B_W">이다.</p>
+</div></div><p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0AB_V%20&amp;%20=%20%5C%7B%20%5Chat%20e_1,%20%5Cdotsc,%20%5Chat%20e_n%20%5C%7D%20%5C%5C%0AB_W%20&amp;%20=%20%20%5C%7B%20%5Chat%20b_1,%20%5Cdotsc,%20%5Chat%20b_m%20%5C%7D%0A%5Cend%7Baligned%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cphantom%7B%7D_%7BB_W%7D%7B%5Clbrack%20M%20%5Crbrack%7D_%7BB_V%7D%20%5Cvec%20v_%7BB_V%7D%20&amp;%20=%0A%5Cbegin%7Bbmatrix%7D%0A%5Cvert%20&amp;%20%5Cvert%20&amp;%20%5Cvert%20%5C%5C%0AT(%5Chat%20e_1)%20&amp;%20%5Cdotsc%20&amp;%20T(%5Chat%20e_n)%20%5C%5C%0A%5Cvert%20&amp;%20%5Cvert%20&amp;%20%5Cvert%20%5C%5C%0A%5Cend%7Bbmatrix%7D_%7BB_V%7D%0A%5Cbegin%7Bbmatrix%7D%0Av_1%20%5C%5C%0A%5Cvdots%20%5C%5C%0Av_n%20%5C%5C%0A%5Cend%7Bbmatrix%7D_%7BB_V%7D%20%5C%5C%0A&amp;%20=%20T(%5Chat%20e_1)%20v_1%20+%20%5Cdotsb%20+%20T(%5Chat%20e_n)%20v_n%20%5C%5C%0A&amp;%20=%20T(v_1%20%5Chat%20e_1%20+%20%5Cdotsb%20+%20v_n%20%5Chat%20e_n)%20%5C%5C%0A&amp;%20%20=%20T(%5Cvec%20v)%20%5C%5C%0A&amp;%20=%20%5Cvec%20w_%7BB_W%7D%0A%5Cend%7Baligned%7D%0A"></p>
 <p>이제 <img src="https://latex.codecogs.com/png.latex?T(%5Chat%20e_1)"> 하나만 구체적으로 풀어보자. <img src="https://latex.codecogs.com/png.latex?T">를 통해서 기저는 <img src="https://latex.codecogs.com/png.latex?B_V">에서 <img src="https://latex.codecogs.com/png.latex?B_W">로 바뀐다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AT(%5Chat%20e_1)%20=%0A%5Cbegin%7Bbmatrix%7D%0Ac_%7B11%7D%20%5C%5C%0A%5Cvdots%20%5C%5C%0Ac_%7Bm1%7D%0A%5Cend%7Bbmatrix%7D_%7BB_W%7D%20=%20c_%7B11%7D%20%5Chat%20b_1%20+%20%5Cdotsb%20+%20c_%7Bm1%7D%20%5Chat%20b_m%0A"></p>
 <p>이를 모든 행에 대해서 적용하면, 다음과 같다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphantom%7B%7D_%7BB_W%7DM_%7BB_V%7D%20=%0A%5Cvphantom%7B%0A%5Cbegin%7Bbmatrix%7D%0A%5C%5C%0A%5C%5C%0A%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%7D_%7BB_W%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_%7B11%7D%20&amp;%20%5Ccdots%20&amp;%20c_%7B1n%7D%20%5C%5C%0A&amp;%5Ccdots&amp;%5C%5C%0Ac_%7Bm1%7D%20%20&amp;%20%5Ccdots%20&amp;%20c_%7Bmn%7D%20%5C%5C%0A%5Cend%7Bbmatrix%7D_%7BB_V%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphantom%7B%7D_%7BB_W%7D%5Clbrack%20M%20%5Crbrack_%7BB_V%7D%20=%0A%5Cvphantom%7B%0A%5Cbegin%7Bbmatrix%7D%0A%5C%5C%0A%5C%5C%0A%5C%5C%0A%5Cend%7Bbmatrix%7D%0A%7D_%7BB_W%7D%0A%5Cbegin%7Bbmatrix%7D%0Ac_%7B11%7D%20&amp;%20%5Ccdots%20&amp;%20c_%7B1n%7D%20%5C%5C%0A&amp;%5Ccdots&amp;%5C%5C%0Ac_%7Bm1%7D%20%20&amp;%20%5Ccdots%20&amp;%20c_%7Bmn%7D%20%5C%5C%0A%5Cend%7Bbmatrix%7D_%7BB_V%7D%0A"></p>
 <p>정리하면 다음과 같다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5BT(%5Cvec%20v)%5D_%7BB_W%7D%20=%20%5Cphantom%7B%7D_%7BB_W%7D%20%5BM_T%5D_%7BB_V%7D%20%5B%5Cvec%20v%5D_%7BB_V%7D%0A"></p>
 <section id="change-of-basis-1" class="level3">
@@ -5515,9 +5536,9 @@ koreanize-matplotlib
 </section>
 <section id="transformation-with-change-of-basis" class="level3">
 <h3 class="anchored" data-anchor-id="transformation-with-change-of-basis">Transformation with change-of-basis</h3>
-<p>이제 <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_B%5BM%5C_T%5D%5C_B"> 가 주어져 있다고 하자. 이를 <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_%7BB%5E%7B%5Cprime%7D%7D%5BM%5ET%5D%5C_%7BB%5E%7B%5Cprime%7D%7D%5Cphantom%7B%7D">로 어떻게 교체할 수 있을까? 개념적으로는 이럴 것이다.</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphantom%7B%7D_%7BB%5E%7B%5Cprime%7D%7D%7B%5BM%5ET%5D%7D_%7BB%5E%7B%5Cprime%7D%7D%20=%20%5Cunderbrace%7B%5Cphantom%7B%7D_%7BB%5E%7B%5Cprime%7D%7D%7B%5B1%5D%7D_%7BB%7D%7D_%7BB%5E%5Cprime%20%5Cleftarrow%20B%7D%5Cphantom%7B%7D_%7BB%7D%7B%5BM%5ET%5D%7D_%7BB%7D%5Coverbrace%7B%5Cphantom%7B%7D_%7BB%7D%7B%5B1%5D%7D_%7BB%5E%7B%5Cprime%7D%7D%7D%5E%7BB%20%5Cleftarrow%20B%5E%5Cprime%7D%0A"></p>
-<p><img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_%7BB%5E%7B%5Cprime%7D%7D%7B%5B1%5D%7D%5C_%7BB%7D">과 <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_%7BB%7D%7B%5B1%5D%7D%5C_%7BB%5E%7B%5Cprime%7D%7D">이 서로 역행렬의 관계이 있음을 기억해두자.</p>
+<p>이제 <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_B%20%5Clbrack%20M_T%20%5Crbrack_B"> 가 주어져 있다고 하자. 이를 <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7BB%5E%7B%5Cprime%7D%7D%5Clbrack%20M_T%20%5Crbrack_%7BB%5E%7B%5Cprime%7D%7D%5Cphantom%7B%7D">로 어떻게 교체할 수 있을까? 개념적으로는 이럴 것이다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphantom%7B%7D_%7BB%5E%7B%5Cprime%7D%7D%7B%5BM_T%5D%7D_%7BB%5E%7B%5Cprime%7D%7D%20=%20%5Cunderbrace%7B%5Cphantom%7B%7D_%7BB%5E%7B%5Cprime%7D%7D%7B%5B1%5D%7D_%7BB%7D%7D_%7BB%5E%5Cprime%20%5Cleftarrow%20B%7D%5Cphantom%7B%7D_%7BB%7D%7B%5BM_T%5D%7D_%7BB%7D%5Coverbrace%7B%5Cphantom%7B%7D_%7BB%7D%7B%5B1%5D%7D_%7BB%5E%7B%5Cprime%7D%7D%7D%5E%7BB%20%5Cleftarrow%20B%5E%5Cprime%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7BB%5E%7B%5Cprime%7D%7D%7B%5Clbrack%201%20%5Crbrack%7D_%7BB%7D">과 <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7BB%7D%7B%5Clbrack%201%20%5Crbrack%7D_%7BB%5E%7B%5Cprime%7D%7D">이 서로 역변환 관계임을 기억해두자.</p>
 </section>
 </section>
 <section id="similar-matrix" class="level2">
@@ -5527,9 +5548,9 @@ koreanize-matplotlib
 <p><img src="https://latex.codecogs.com/png.latex?A">과 <img src="https://latex.codecogs.com/png.latex?B">은 서로 닮은 꼴의 매트릭스다. 위 식을 만족하는 매트릭스 <img src="https://latex.codecogs.com/png.latex?A">과 <img src="https://latex.codecogs.com/png.latex?B">을 similar matrix라고 정의한다. 우선 두 매트릭스가 서로 닮은 꼴일 때에는 <img src="https://latex.codecogs.com/png.latex?n%20%5Cgeq%201">에 대해서 <img src="https://latex.codecogs.com/png.latex?A%5En%20=%20C%20B%5En%20C%5E%7B-1%7D">이 성립한다. 이는 아이겐 분해에서 보듯이 <img src="https://latex.codecogs.com/png.latex?B">가 어떤 매트릭스냐에 따라서 계산 상 편리함을 줄 수 있다. 만일 <img src="https://latex.codecogs.com/png.latex?B">가 대각 행렬이라면 행렬의 <img src="https://latex.codecogs.com/png.latex?n">은 대각 원소의 <img src="https://latex.codecogs.com/png.latex?n"> 승만 수행하면 된다.</p>
 <p><img src="https://latex.codecogs.com/png.latex?C">가 역행렬을 지니기 때문에 <img src="https://latex.codecogs.com/png.latex?C">의 컬럼은 <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%20R%5En">의 기저가 된다. 이렇게 보면 <img src="https://latex.codecogs.com/png.latex?C">는 change-of-basis와 같은 맥락에서 이해할 수 있다. 즉, 앞서 살펴 본 기저를 바꾸는 행렬과 동일한 행렬이다. <img src="https://latex.codecogs.com/png.latex?A%20x">라는 변환을 이 맥락에서 다시 이해해보자. 여기서 <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%20B">는 표준 기저(<img src="https://latex.codecogs.com/png.latex?%5Chat%20e_i">)로 이해하면 된다.</p>
 <ol type="1">
-<li><p><img src="https://latex.codecogs.com/png.latex?C%5E%7B-1%7D%20x">는 <img src="https://latex.codecogs.com/png.latex?%5Bx%5D%5C_%7Bu%7D">의 기저를 <img src="https://latex.codecogs.com/png.latex?%5Bx%5D%5C_%7B%5Cmathcal%20B%7D">로 바꾸는 것이다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_%7B%5Cmathcal%20B%7D1%5C_u"></p></li>
-<li><p>이 바뀐 기저에서 <img src="https://latex.codecogs.com/png.latex?B">이라는 변환을 수행한다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_%7B%5Cmathcal%20B%7DB%5C_%5Cmathcal%20B"></p></li>
-<li><p><img src="https://latex.codecogs.com/png.latex?C">는 곱해 다시 통상적인 기저로 돌아오게 된다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D%5C_%7Bu%7D1%5C_%5Cmathcal%20B"></p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?C%5E%7B-1%7D%20x">는 <img src="https://latex.codecogs.com/png.latex?%5Clbrack%20x%20%5Crbrack_%7Bu%7D">의 기저를 <img src="https://latex.codecogs.com/png.latex?%5Bx%5D_%7B%5Cmathcal%20B%7D">로 바꾸는 것이다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7B%5Cmathcal%20B%7D%5Clbrack%201%20%5Crbrack_u"></p></li>
+<li><p>이 바뀐 기저에서 <img src="https://latex.codecogs.com/png.latex?B">이라는 변환을 수행한다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7B%5Cmathcal%20B%7D%20%5Clbrack%20B%20%5Crbrack_%7B%5Cmathcal%20B%7D"></p></li>
+<li><p><img src="https://latex.codecogs.com/png.latex?C">는 곱해 다시 통상적인 기저로 돌아오게 된다. 즉, <img src="https://latex.codecogs.com/png.latex?%5Cphantom%7B%7D_%7Bu%7D%7B%5Clbrack%201%20%5Crbrack%7D_%7B%5Cmathcal%20B%7D"></p></li>
 </ol>
 <p>아래 그림에서 보듯이, <img src="https://latex.codecogs.com/png.latex?Ax">라는 변환과 <img src="https://latex.codecogs.com/png.latex?B%5Bx%5D_%7B%5Cmathcal%20B%7D">라는 변환은 좌표계만 다를 뿐 동일한 변환이다. <img src="https://latex.codecogs.com/png.latex?C%20B%20C%5E%7B-1%7D">의 기저의 변화를 살펴보면,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cunderbrace%7Bu%20%5Crightarrow%20%5Cmathcal%20B%7D_%7BC%5E%7B-1%7D%7D%20&amp;%20%5Ccdots%20B%20%5Ccdots%20%5Cunderbrace%7B%5Cmathcal%20B%20%5Crightarrow%20u%7D_%7BC%7D%20%5C%5C%0A&amp;%20%5Ccdots%20A%20%5Ccdots%0A%5Cend%7Baligned%7D%0A"></p>
