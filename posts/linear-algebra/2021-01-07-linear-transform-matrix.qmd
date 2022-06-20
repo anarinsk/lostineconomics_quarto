@@ -84,7 +84,7 @@ T(\vec v)  &=  T(v_1{\hat e_1} + \dotsb + v_n{\hat e_n} ) \\
 T(\hat e_1) & \cdots & T(\hat e_n) \\
 \vert & \vert & \vert
 \end{bmatrix} \vec v \\
-& = M_T \vec v
+& = M_T {\,} \vec v
 \end{aligned}
 $$
 

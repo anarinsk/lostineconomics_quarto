@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.512">
+<meta name="generator" content="quarto-0.9.598">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -156,8 +156,8 @@ ul.task-list{list-style: none;}
   gtag('js', new Date());
 
   gtag('config', 'G-JNRF3S74Z4');
-</script><section id="concepts-definition" class="level2">
-<h2 class="anchored" data-anchor-id="concepts-definition">Concepts &amp; Definition</h2>
+</script><section id="two-propoerties-of-basis" class="level2">
+<h2 class="anchored" data-anchor-id="two-propoerties-of-basis">Two Propoerties of Basis</h2>
 <p>벡터 공간 <span class="math inline">\(V\)</span>의 기저</p>
 <p><span class="math display">\[
 B = \{ \vec{e_1}, \dotsc, \vec{e_n} \}  
@@ -174,6 +174,10 @@ v = v_1 \vec{e_1} + \dotsc + v_n \vec{e_n}
 <h3 class="anchored" data-anchor-id="linear-independence-property">Linear Independence property</h3>
 <p>즉, 기저를 구성하는 벡터 <span class="math inline">\(\vec{e_i}\)</span>에 불필요한 것이 없어야 한다. 즉, <span class="math inline">\(\vec{e}\)</span>를 구성하는 어떤 <span class="math inline">\(e_i\)</span>도 다른 <span class="math inline">\(e_j\)</span>(<span class="math inline">\(j \neq i\)</span>)의 선형 결합으로 표현될 수 없다.</p>
 </section>
+</section>
+<section id="two-bases" class="level2">
+<h2 class="anchored" data-anchor-id="two-bases">Two bases</h2>
+<p>계속 등장하게 될 두 개의 기저를 살펴보자.</p>
 <section id="orthonomal-basis" class="level3">
 <h3 class="anchored" data-anchor-id="orthonomal-basis">Orthonomal basis</h3>
 <p><span class="math display">\[
@@ -189,9 +193,8 @@ B_{\hat{e}} = \{ \hat{e_1}, \dotsc, \hat{e_n} \} \text{~with}
 (a_1, \dotsc, a_n)_{B_{\hat{e}}} = \underbrace{(\vec{a} \cdot \hat{e_i})}_{a_1} \hat{e_i} + \dotsb + (\vec{a} \cdot \hat{e_n}) \hat{e_n}
 \]</span></p>
 </section>
-</section>
-<section id="orthogonal-basis" class="level2">
-<h2 class="anchored" data-anchor-id="orthogonal-basis">Orthogonal basis</h2>
+<section id="orthogonal-basis" class="level3">
+<h3 class="anchored" data-anchor-id="orthogonal-basis">Orthogonal basis</h3>
 <p><span class="math display">\[
 B_{e} = \{ e_1, \dotsc, e_n \} \text{~with}
 \]</span></p>
@@ -206,8 +209,9 @@ e_i \cdot e_j = 0 &amp; \text{if $i \neq j$}
 \]</span></p>
 <p><span class="math inline">\(b_i\)</span>의 값을 제대로 반영하기 위해서는 정규화된 orthorgonal basis가 필요하고, <span class="math inline">\(\frac{e_i}{\Vert e_i \Vert}\)</span>가 내적 계산에 들어간다.</p>
 </section>
-<section id="take-this" class="level2">
-<h2 class="anchored" data-anchor-id="take-this">Take This!</h2>
+</section>
+<section id="eat-this" class="level2">
+<h2 class="anchored" data-anchor-id="eat-this">Eat This!</h2>
 <section id="generic-basis" class="level3">
 <h3 class="anchored" data-anchor-id="generic-basis">Generic basis</h3>
 <p>서로 직교하지 않는 기저,</p>
@@ -284,7 +288,7 @@ t_{2y}
 </section>
 <section id="change-of-basis" class="level2">
 <h2 class="anchored" data-anchor-id="change-of-basis">Change of Basis</h2>
-<p>한 벡터의 기저를 다른 기저로 바꾸는 것을 생각해보자. 일반적으로는 <span class="math inline">\(T: V \to W\)</span> 역시 <span class="math inline">\(B_V\)</span>에서 <span class="math inline">\(B_W\)</span>로 기저를 바꾸는 것이다. 차원이 바뀐다면 기저 역시 바뀐다.</p>
+<p>한 벡터의 기저를 다른 기저로 바꾸는 것을 생각해보자. 일반적으로는 <span class="math inline">\(T: V \to W\)</span> 역시 <span class="math inline">\(B_V\)</span>에서 <span class="math inline">\(B_W\)</span>로 기저를 바꾸는 것이다. 차원이 바뀐다면 기저 역시 바뀌어야 한다.</p>
 <p>기저 변환(change-of-basis)은 매트릭스를 이해하는 매우 중요한 방식이다. 이를 통해 역시 매트릭스 표현에 도달할 수 있다. 선형 번환 <span class="math inline">\(T: V \to W\)</span>가 있다고 하자.</p>
 <p><span class="math display">\[
 \begin{aligned}

@@ -8,7 +8,7 @@ categories: [linear-algebra]
 #margin-header: subscribe.html
 ---
 
-## Concepts & Definition 
+## Two Propoerties of Basis 
 
 벡터 공간 $V$의 기저 
 
@@ -30,6 +30,10 @@ $$
 
 즉, 기저를 구성하는 벡터 $\vec{e_i}$에 불필요한 것이 없어야 한다. 즉, $\vec{e}$를 구성하는 어떤 $e_i$도 다른 $e_j$($j \neq i$)의 선형 결합으로 표현될 수 없다. 
 
+## Two bases 
+
+계속 등장하게 될 두 개의 기저를 살펴보자. 
+
 ### Orthonomal basis 
 
 $$
@@ -47,7 +51,7 @@ $$
 (a_1, \dotsc, a_n)_{B_{\hat{e}}} = \underbrace{(\vec{a} \cdot \hat{e_i})}_{a_1} \hat{e_i} + \dotsb + (\vec{a} \cdot \hat{e_n}) \hat{e_n}
 $$
 
-## Orthogonal basis 
+### Orthogonal basis 
 
 $$
 B_{e} = \{ e_1, \dotsc, e_n \} \text{~with}
@@ -66,7 +70,7 @@ $$
 
 $b_i$의 값을 제대로 반영하기 위해서는 정규화된 orthorgonal basis가 필요하고, $\frac{e_i}{\Vert e_i \Vert}$가 내적 계산에 들어간다. 
 
-## Take This! 
+## Eat This! 
 
 ### Generic basis 
 
@@ -156,7 +160,7 @@ $$
 
 ## Change of Basis 
 
-한 벡터의 기저를 다른 기저로 바꾸는 것을 생각해보자. 일반적으로는 $T: V \to W$ 역시 $B_V$에서 $B_W$로 기저를 바꾸는 것이다. 차원이 바뀐다면 기저 역시 바뀐다. 
+한 벡터의 기저를 다른 기저로 바꾸는 것을 생각해보자. 일반적으로는 $T: V \to W$ 역시 $B_V$에서 $B_W$로 기저를 바꾸는 것이다. 차원이 바뀐다면 기저 역시 바뀌어야 한다. 
 
 기저 변환(change-of-basis)은 매트릭스를 이해하는 매우 중요한 방식이다. 이를 통해 역시 매트릭스 표현에 도달할 수 있다. 선형 번환 $T: V \to W$가 있다고 하자. 
 
