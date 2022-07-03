@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/math-simple/2022-07-03-ansys-candor-theorem.html",
       "/posts/regression/2022-06-06-berkson-paradox-regressionipynb.html",
       "/posts/regression/2022-06-04-simpson-paradox-regression.html",
       "/posts/stats-simple/2022-05-30-markov-chebyshev.html",
