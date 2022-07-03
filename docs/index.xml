@@ -33,7 +33,7 @@
 <h2 class="anchored" data-anchor-id="proof">Proof</h2>
 <section id="part-1" class="level3">
 <h3 class="anchored" data-anchor-id="part-1">Part 1</h3>
-<p>일단 <img src="https://latex.codecogs.com/png.latex?E%20%5Cpreccurlyeq%20%5Cmathcal%20P%20(E)">는 쉽게 증명할 수 있다. <img src="https://latex.codecogs.com/png.latex?e%20%5Cin%20E">에 대해서 <img src="https://latex.codecogs.com/png.latex?f:%20e%20%5Cto%20%5Clbrace%20e%20%5Crbrace">는 반드시 존재하고 이는 일 대응한 수를 이룬다. 이제 <img src="https://latex.codecogs.com/png.latex?E%20%5Cnot%5Capprox%20%5Cmathcal%20P%20(E)">임을 증명하면 <img src="https://latex.codecogs.com/png.latex?E%20%5Cprec%20%5Cmathcal%20P%20(E)">가 증명된다.</p>
+<p>일단 <img src="https://latex.codecogs.com/png.latex?E%20%5Cpreccurlyeq%20%5Cmathcal%20P%20(E)">는 쉽게 증명할 수 있다. <img src="https://latex.codecogs.com/png.latex?e%20%5Cin%20E">에 대해서 <img src="https://latex.codecogs.com/png.latex?f:%20e%20%5Cto%20%5Clbrace%20e%20%5Crbrace">는 반드시 존재하고 이는 일대일함수(injective/one-to-one function)를 이룬다. 이제 <img src="https://latex.codecogs.com/png.latex?E%20%5Cnot%5Capprox%20%5Cmathcal%20P%20(E)">임을 증명하면 <img src="https://latex.codecogs.com/png.latex?E%20%5Cprec%20%5Cmathcal%20P%20(E)">가 증명된다.</p>
 </section>
 <section id="part-2" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="part-2">Part 2</h3>
@@ -47,17 +47,19 @@
 <section id="part3" class="level3">
 <h3 class="anchored" data-anchor-id="part3">Part3</h3>
 <section id="y-in-phiy" class="level4">
-<h4 class="anchored" data-anchor-id="y-in-phiy"><img src="https://latex.codecogs.com/png.latex?y%20%5Cin%20%5Cphi(y)"></h4>
-<p>이 가정이 맞다면, 집합 <img src="https://latex.codecogs.com/png.latex?B">의 정의에 따라서 <img src="https://latex.codecogs.com/png.latex?y%20%5Cnotin%20%5Cphi(y)">여야 한다. 따라서 모순이다.</p>
+<h4 class="anchored" data-anchor-id="y-in-phiy">1. <img src="https://latex.codecogs.com/png.latex?y%20%5Cin%20%5Cphi(y)"></h4>
+<p>이 가정이 맞다면 집합 <img src="https://latex.codecogs.com/png.latex?B">의 정의에 따라서 <img src="https://latex.codecogs.com/png.latex?y%20%5Cnotin%20%5Cphi(y)">여야 한다. 이는 모순이다.</p>
 </section>
 <section id="y-notin-phiy" class="level4">
-<h4 class="anchored" data-anchor-id="y-notin-phiy"><img src="https://latex.codecogs.com/png.latex?y%20%5Cnotin%20%5Cphi(y)"></h4>
-<p>이 가정이 맞다면, 집합 <img src="https://latex.codecogs.com/png.latex?B">의 정의에 따라서 <img src="https://latex.codecogs.com/png.latex?y%20%5Cin%20%5Cphi(y)">가 되어야 한다. 이 역시 모순이다.</p>
+<h4 class="anchored" data-anchor-id="y-notin-phiy">2. <img src="https://latex.codecogs.com/png.latex?y%20%5Cnotin%20%5Cphi(y)"></h4>
+<p>이 가정이 맞다면 집합 <img src="https://latex.codecogs.com/png.latex?B">의 정의에 따라서 <img src="https://latex.codecogs.com/png.latex?y%20%5Cin%20%5Cphi(y)">가 되어야 한다. 이 역시 모순이다.</p>
 </section>
 </section>
 <section id="finally" class="level3">
 <h3 class="anchored" data-anchor-id="finally">Finally</h3>
-<p>따라서 일대일대응 <img src="https://latex.codecogs.com/png.latex?%5Cphi(%5Ccdot)">은 존재하지 않는다. 즉, <img src="https://latex.codecogs.com/png.latex?E%20%5Cprec%20%5Cmathcal%20P%20(E)">.</p>
+<p>따라서 일대일대응을 이루는 함수 <img src="https://latex.codecogs.com/png.latex?%5Cphi(%5Ccdot)">은 존재하지 않는다. 즉, <img src="https://latex.codecogs.com/png.latex?E%20%5Cprec%20%5Cmathcal%20P%20(E)">.</p>
+<p>이에 따르면 더 큰 무한 집합을 무한히 생성할 수 있다.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AE%20%5Cprec%20%5Cmathcal%20P%20(E)%20%5Cprec%20%5Cmathcal%20P%20(%20%5Cmathcal%20P%20(E)%20)%20%5Cprec%20%5Cdotsb%0A"></p>
 
 
 </section>

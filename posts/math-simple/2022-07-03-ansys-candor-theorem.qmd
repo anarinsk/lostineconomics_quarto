@@ -16,7 +16,7 @@ categories: [math-simple]
 ## Proof 
 
 ### Part 1 
-일단 $E \preccurlyeq \mathcal P (E)$는 쉽게 증명할 수 있다. $e \in E$에 대해서 $f: e \to \lbrace e \rbrace$는 반드시 존재하고 이는 일 대응한 수를 이룬다. 이제 $E \not\approx \mathcal P (E)$임을 증명하면 $E \prec \mathcal P (E)$가 증명된다. 
+일단 $E \preccurlyeq \mathcal P (E)$는 쉽게 증명할 수 있다. $e \in E$에 대해서 $f: e \to \lbrace e \rbrace$는 반드시 존재하고 이는 일대일함수(injective/one-to-one function)를 이룬다. 이제 $E \not\approx \mathcal P (E)$임을 증명하면 $E \prec \mathcal P (E)$가 증명된다. 
 
 ### Part 2
 귀류법을 활용한다. 만일 $E \approx \mathcal P (E)$(두 집합의 크기가 같다)이라고 가정하자. 이는 일대일대응 $\phi: E \to \mathcal P (E)$가 존재한다는 뜻이다. 
@@ -33,15 +33,22 @@ $B \subseteq E$이다. 따라서 $\phi$에 따라서 $B$에 매핑되는 원소 
 
 ### Part3 
 
-#### $y \in \phi(y)$
+#### 1. $y \in \phi(y)$
 
-이 가정이 맞다면, 집합 $B$의 정의에 따라서 $y \notin \phi(y)$여야 한다. 따라서 모순이다. 
+이 가정이 맞다면 집합 $B$의 정의에 따라서 $y \notin \phi(y)$여야 한다. 이는 모순이다. 
 
-#### $y \notin \phi(y)$
-이 가정이 맞다면, 집합 $B$의 정의에 따라서 $y \in \phi(y)$가 되어야 한다. 이 역시 모순이다. 
+#### 2. $y \notin \phi(y)$
+
+이 가정이 맞다면 집합 $B$의 정의에 따라서 $y \in \phi(y)$가 되어야 한다. 이 역시 모순이다. 
 
 ### Finally 
 
-따라서 일대일대응 $\phi(\cdot)$은 존재하지 않는다. 즉, $E \prec \mathcal P (E)$. 
+따라서 일대일대응을 이루는 함수 $\phi(\cdot)$은 존재하지 않는다. 즉, $E \prec \mathcal P (E)$. 
+
+이에 따르면 더 큰 무한 집합을 무한히 생성할 수 있다. 
+
+$$
+E \prec \mathcal P (E) \prec \mathcal P ( \mathcal P (E) ) \prec \dotsb 
+$$
 
 
