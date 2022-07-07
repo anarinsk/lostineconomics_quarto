@@ -1817,7 +1817,7 @@
     "href": "posts/computer-tool/2022-07-07-pt-with-quarto.html#pt-도구-그것이-문제로다.",
     "title": "Presentation with Reveal.js",
     "section": "PT 도구 그것이 문제로다.",
-    "text": "PT 도구 그것이 문제로다.\nMarkdown으로 PT까지 멋지게 해결하고 싶은 것은 자연스러운 욕구다. 이미 RMarkdown을 쓰면 이를 구현할 수 있다. Reveal.js와 같은 웹 기반 툴을 쓰면 파워포인트, 키노트가 부럽지 않은 초 깔끔한 PT를 별다른 수고 없이 만들 수 있다.\n게다가 \\(\\rm\\LaTeX\\)을 써야 하는 사람이라면 Reveal.js를 통해 느리고 불편한 Beamer를 온전하게 대체할 수 있다! 문제는 Reveal.js를 Markdown처럼 쉽게 쓸 수 없다는 것이다. Markdown에 Reveal.js를 얹을 수 있다면 그야말로 금상첨화이다.\nQuarto + Reveal.js의 장점을 나열해보자.\n\nMarkdown의 문법을 거의 그대로 쓸 수 있다.\n\\(\\rm\\LaTeX\\) 수식을 그대로 쓸 수 있다.\n깔끔하지만 다채로운 슬라이드를 구현할 수 있다.\nGithub과 같은 웹 도구를 활용하면 결과물을 쉽게 공유할 수 있다.\n\n이제 시작해보자."
+    "text": "PT 도구 그것이 문제로다.\nMarkdown으로 PT까지 멋지게 해결하고 싶은 것은 자연스러운 욕구다. 이미 RMarkdown을 쓰면 이를 구현할 수 있다. Reveal.js와 같은 웹 기반 툴을 쓰면 파워포인트, 키노트가 부럽지 않은 초 깔끔한 PT를 별다른 수고 없이 만들 수 있다.\n게다가 \\(\\rm\\LaTeX\\)을 써야 하는 사람이라면 Reveal.js를 통해 느리고 불편한 Beamer를 온전하게 대체할 수 있다! 문제는 Reveal.js를 Markdown처럼 쉽게 쓸 수 없다는 것이다. Markdown에 Reveal.js를 얹을 수 있다면 그야말로 금상첨화이다.\nQuarto + Reveal.js의 장점을 나열해보자.\n\nMarkdown의 문법을 거의 그대로 쓸 수 있다.\n\\(\\rm\\LaTeX\\) 수식을 그대로 쓸 수 있다.\n깔끔하지만 다채로운 슬라이드를 구현할 수 있다.\n코드 및 결과물을 그대로 활용할 수 있다.\nGithub과 같은 웹 도구를 활용하면 결과물을 쉽게 공유할 수 있다.\n\n이제 시작해보자."
   },
   {
     "objectID": "posts/computer-tool/2022-07-07-pt-with-quarto.html#출발선",
