@@ -194,7 +194,7 @@
   </url>
   <url>
     <loc>http://www.lostineconomics.com/index.html</loc>
-    <lastmod>2022-07-05T12:45:25.968Z</lastmod>
+    <lastmod>2022-07-07T10:31:51.426Z</lastmod>
   </url>
   <url>
     <loc>http://www.lostineconomics.com/about.html</loc>
@@ -207,5 +207,9 @@
   <url>
     <loc>http://www.lostineconomics.com/posts/math-simple/2022-07-03-ansys-candor-theorem.html</loc>
     <lastmod>2022-07-05T12:45:27.753Z</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lostineconomics.com/posts/computer-tool/2022-07-07-pt-with-quarto.html</loc>
+    <lastmod>2022-07-07T10:31:50.306Z</lastmod>
   </url>
 </urlset>
