@@ -14,11 +14,9 @@ draft: false
 
 ## PT 도구 그것이 문제로다. 
 
-Markdown으로 PT까지 멋지게 해결하고 싶은 것은 자연스러운 욕구다. 이미 RMarkdown을 쓰면 이를 구현할 수 있다. Reveal.js와 같은 웹 기반 툴을 쓰면 파워포인트, 키노트가 부럽지 않은 초 깔끔한 PT를 별다른 수고 없이 만들 수 있다. 
+Markdown으로 PT까지 멋지게 해결하고 싶은 것은 자연스러운 욕구다. RMarkdown을 쓰면 이를 구현할 수 있다. 마크다운 위에서 웹 기반 PT를 구현하는 녀석이 Reveal.js다. 이 녀석을 쓰면, 파워포인트나 키노트가 부럽지 않은 수준의 깔끔한 PT를 별다른 수고 없이 만들 수 있다. 문제는 Reveal.js를 Markdown처럼 쉽게 쓸 수 없다는 것이다. Markdown과  Reveal.js의 장점을 합칠 수 있다면 그야말로 금상첨화! Quarto를 VS Code 위에서 쓰면 Markdown과 Reveal.js를 함께 부릴 수 있다.  
 
-게다가 $\rm\LaTeX$을 써야 하는 사람이라면 Reveal.js를 통해 느리고 불편한 Beamer를 온전하게 대체할 수 있다! 문제는 Reveal.js를 Markdown처럼 쉽게 쓸 수 없다는 것이다. Markdown에 Reveal.js를 얹을 수 있다면 그야말로 금상첨화이다. 
-
-Quarto + Reveal.js의 장점을 나열해보자. 
+Quarto + Reveal.js의 장점을 다시 나열하면 아래와 같다. 
 
 1. Markdown의 문법을 거의 그대로 쓸 수 있다. 
 2. $\rm\LaTeX$ 수식을 그대로 쓸 수 있다. 
@@ -26,7 +24,7 @@ Quarto + Reveal.js의 장점을 나열해보자.
 4. 코드 및 결과물을 그대로 활용할 수 있다. 
 5. Github과 같은 웹 도구를 활용하면 결과물을 쉽게 공유할 수 있다. 
 
-이제 시작해보자. 
+이제 시작해 보자. 
 
 ## 출발선 
 
@@ -38,7 +36,7 @@ Quarto + Reveal.js의 장점을 나열해보자.
 
 ## 거의 완벽한 레퍼런스 
 
-Quarto의 문서화는 거의 완벽하다. [Quarto + Reveal.js](https://quarto.org/docs/presentations/revealjs/)도 예외는 아니다. 링크의 내용을 따라서 쓰면 된다. Markdown 문법과도 크게 다르지 않으니 진입 장벽이 낮다. 몇 가지 주의할 사항만 확인해보자. 
+Quarto의 문서화는 거의 완벽하다. [Quarto + Reveal.js](https://quarto.org/docs/presentations/revealjs/)도 예외는 아니다. 링크의 내용을 따라서 쓰면 된다. Markdown 문법과도 크게 다르지 않으니 진입 장벽이 낮다. 몇 가지 주의할 사항만 확인해 보자. 
 
 ### `YAML`
 
@@ -63,9 +61,9 @@ format:
         #self-contained: true
 ```
 
-대체로 항목이 자명하기 떄문에 별도의 설명은 하지 않곘다. reveal.js의 각종 옵션을 지정해줄 수 있는데, 지원하는 항목은 [여기](https://tutorial.quarto.org/docs/reference/formats/presentations/revealjs.html)에서 확인할 수 있다. 
+대체로 항목이 자명하기 때문에 별도의 설명은 하지 않겠다. reveal.js의 각종 옵션을 지정해 줄 수 있는데, 지원하는 항목은 [여기](https://tutorial.quarto.org/docs/reference/formats/presentations/revealjs.html)에서 확인할 수 있다. 
 
-#### 눈여겨 볼 항목 
+#### 눈여겨볼 항목 
 
 - `theme`: reveal.js의 [테마](https://revealjs.com/themes/)다. 복잡하게 생각하지 말고 간단한 거 쓰다. 
 - `transition`: 슬라이드 혹은 항목 등장의 시각적인 전환 효과를 지정한다. 
@@ -78,7 +76,7 @@ format:
 기본을 그대로 써도 된다. 영문과 한글 폰트의 괴리 등의 고질적인 이유 때문에 시각적으로 조금 더 만족스러운 결과를 얻고 싶다면, 특화된 css 파일 하나를 설정하도록 하자. 
 
 ```css
-/* @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2? family=Nanum+Gothic&display=swap'); */
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 @import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
 @import url("https://cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-ligature-subset.css");
@@ -107,7 +105,7 @@ format:
 }
 
 .reveal code{
-  font-family: 'D2Coding', monospace !important;
+  font-family: 'D2Coding', monospace ! important;
   font-size: 95%;
 }
 ```
@@ -117,7 +115,7 @@ format:
 
 ## Working Example 
 
-직접 몇 가지 기능을 구현해서 만들어 봤다. 내용 없이 형식을 구현하는데 집중한 예제이니 참작해주시라. 
+직접 몇 가지 기능을 구현해서 만들어 봤다. 내용 없이 형식을 구현하는데 집중한 예제이니 참작해 주시라. 
 
 [Completely Useless Quarto-Reveal.js](https://anarinsk.github.io/learn_quarto-revealjs/#/title-slide)
 
