@@ -123,7 +123,7 @@ format:
 
 ## Working Example 
 
-직접 몇 가지 기능을 구현해서 만들어 봤다. 내용 없이 형식을 구현하는데 집중한 예제이니 참작해 주시라. 
+시험 삼아서 Reveal.js의 몇 가지 기능을 Quarto로 구현해 보았다. 내용 없이 형식을 구현하는데 집중한 사례이니 참작해 주시라. 
 
 - 예제: [Completely Useless Quarto-Reveal.js](https://anarinsk.github.io/learn_quarto-revealjs/#/title-slide)
 - 코드: [anarinsk/learn_quarto-revealjs](https://github.com/anarinsk/learn_quarto-revealjs)
