@@ -48,9 +48,10 @@ Quarto의 문서화는 거의 완벽하다. [Quarto + Reveal.js](https://quarto.
 
 ### `YAML`
 
-Markdown 문서에 Reveal.js의 기능을 붙이기 위해 문서 앞에 YAML 문을 붙인다. 예제를 소개하면 아래와 같다. 
+Markdown 문서에 Reveal.js의 기능을 붙이기 위해 문서 앞에 YAML 문을 붙인다. 문서의 앞에 붙는 YAML의 예제는 아래와 같다. 
 
 ```yaml 
+---
 title: "This Is a Testflight"
 subtitle: "Completely useless presentation"
 author: "[anarinsk](https://github.com/anarinsk/learn_quarto-revealjs/)"
@@ -67,6 +68,7 @@ format:
         logo: "logo2.png"
         footer: "This is FOOTER!"
         #self-contained: true
+---
 ```
 
 대체로 항목이 자명하기 때문에 별도의 설명은 하지 않겠다. reveal.js의 각종 옵션을 지정해 줄 수 있는데, 지원하는 항목은 [여기](https://tutorial.quarto.org/docs/reference/formats/presentations/revealjs.html)에서 확인할 수 있다. 
@@ -81,7 +83,7 @@ format:
 
 ### Customization 
 
-기본을 그대로 써도 된다. 영문과 한글 폰트의 괴리 등의 고질적인 이유 때문에 시각적으로 조금 더 만족스러운 결과를 얻고 싶다면, 특화된 css 파일 하나를 설정하도록 하자. 
+Quarto + Reveal.js의 기본 설정을 그대로 써도 된다. 다만 영문과 한글 폰트의 괴리 등의 미묘한 대목이 걸린다면, 특화된 css 파일을 통해 볃도로 설정을 바꾸면 된다. [Working Example](#Wokring-Example)에 소개된 예제의 css 파일을 살펴보자. 
 
 ```css
 /* @import url('https://fonts.googleapis.com/css2? family=Nanum+Gothic&display=swap'); */
