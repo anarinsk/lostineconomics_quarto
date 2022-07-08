@@ -29,7 +29,7 @@ RStudio가 제공하는 Rmarkdown을 통해 Reveal.js와 마크다운을 함께 
 5. Github과 같은 웹 도구를 활용하면 결과물을 html로 쉽게 공유할 수 있다. 
 
 :::{ .column-margin }
-Quarto가 pandoc을 백엔드로 쓰기 때문에 문서의 거의 포맷으로 생성이 가능하다. Beamer의 `.tex`도 옮길 수 있다. html이 특별한 이유는 플랫폼을 불문하고 문서를 원래 의도 그대로 잘 전달할 수 있기 때문이다. 
+Quarto가 pandoc을 백엔드로 쓰기 때문에 qmd 문서를 거의 포맷(docx, pdf, html, tex, pptx 등)으로 변환할 수 있다. html이 특별한 이유는 플랫폼을 불문하고 문서를 원래 의도 그대로 잘 전달할 수 있기 때문이다. 
 :::
 
 이제 시작해 보자. 
