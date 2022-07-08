@@ -83,7 +83,7 @@ format:
 
 ### Customization 
 
-Quarto + Reveal.js의 기본 설정을 그대로 써도 된다. 다만 영문과 한글 폰트의 괴리 등의 미묘한 대목이 걸린다면, 특화된 css 파일을 통해 볃도로 설정을 바꾸면 된다. [Working Example](#Wokring-Example)에 소개된 예제의 css 파일을 살펴보자. 
+Quarto + Reveal.js의 기본 설정을 그대로 써도 된다. 다만 영문과 한글 폰트의 괴리 등의 미묘한 대목이 걸린다면, 특화된 css 파일을 통해 볃도로 설정을 바꾸면 된다. [Working Example](#working-example)에 소개된 예제의 css 파일을 살펴보자. 
 
 ```css
 /* @import url('https://fonts.googleapis.com/css2? family=Nanum+Gothic&display=swap'); */
