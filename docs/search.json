@@ -1810,7 +1810,7 @@
     "href": "posts/computer-tool/2022-07-07-pt-with-quarto.html",
     "title": "Presentation with Reveal.js",
     "section": "",
-    "text": "Quarto를 쓰면 Markdown으로 편하게 PT를 만들 수 있다."
+    "text": "Quarto를 쓰면 Markdown으로 편하게 PT 문서를 만들 수 있다."
   },
   {
     "objectID": "posts/computer-tool/2022-07-07-pt-with-quarto.html#pt-도구-그것이-문제로다.",
@@ -1838,6 +1838,6 @@
     "href": "posts/computer-tool/2022-07-07-pt-with-quarto.html#working-example",
     "title": "Presentation with Reveal.js",
     "section": "Working Example",
-    "text": "Working Example\n시험 삼아서 Reveal.js의 몇 가지 기능을 Quarto로 구현해 보았다. 내용 없이 형식을 구현하는데 집중한 사례이니 참작해 주시라.\n\n예제: Completely Useless Quarto-Reveal.js\n코드: anarinsk/learn_quarto-revealjs"
+    "text": "Working Example\n시험 삼아서 Reveal.js의 몇 가지 기능을 Quarto로 구현해 보았다. 내용 없이 형식을 구현하는데 집중한 사례이니 참작해 주시라.\n\n예시: Completely Useless Quarto-Reveal.js\n코드: anarinsk/learn_quarto-revealjs"
   }
 ]

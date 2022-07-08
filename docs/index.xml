@@ -28,7 +28,7 @@
 </script><section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <ul>
-<li>Quarto를 쓰면 Markdown으로 편하게 PT를 만들 수 있다.</li>
+<li>Quarto를 쓰면 Markdown으로 편하게 PT 문서를 만들 수 있다.</li>
 </ul>
 </section>
 <section id="pt-도구-그것이-문제로다." class="level2 page-columns page-full">
@@ -43,9 +43,12 @@
 <li><img src="https://latex.codecogs.com/png.latex?%5Crm%5CLaTeX"> 수식을 그대로 쓸 수 있다.</li>
 <li>깔끔하지만 다채로운 슬라이드를 구현할 수 있다.</li>
 <li>코드 및 결과물을 그대로 활용할 수 있다.</li>
-<li>Github과 같은 웹 도구를 활용하면 결과물을 쉽게 공유할 수 있다.</li>
+<li>Github과 같은 웹 도구를 활용하면 결과물을 html로 쉽게 공유할 수 있다.</li>
 </ol>
-<p>이제 시작해 보자.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Quarto가 pandoc을 백엔드로 쓰기 때문에 qmd 문서를 거의 포맷(docx, pdf, html, tex, pptx 등)으로 변환할 수 있다. html이 특별한 이유는 플랫폼을 불문하고 문서를 원래 의도 그대로 잘 전달할 수 있기 때문이다.</p>
+</div></div><p>이제 시작해 보자.</p>
 </section>
 <section id="출발선" class="level2">
 <h2 class="anchored" data-anchor-id="출발선">출발선</h2>
@@ -61,23 +64,25 @@
 <p>Quarto의 문서화는 거의 완벽하다. <a href="https://quarto.org/docs/presentations/revealjs/">Quarto + Reveal.js</a>도 예외는 아니다. 링크의 내용을 따라서 쓰면 된다. Markdown 문법과도 크게 다르지 않으니 진입 장벽이 낮다. 몇 가지 주의할 사항만 확인해 보자.</p>
 <section id="yaml" class="level3">
 <h3 class="anchored" data-anchor-id="yaml"><code>YAML</code></h3>
-<p>Markdown 문서에 Reveal.js의 기능을 붙이기 위해 문서 앞에 YAML 문을 붙인다. 예제를 소개하면 아래와 같다.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="fu" style="color: #4758AB;">title</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"This Is a Testflight"</span></span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;">subtitle</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"Completely useless presentation"</span></span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;">author</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"[anarinsk](https://github.com/anarinsk/learn_quarto-revealjs/)"</span></span>
-<span id="cb1-4"><span class="fu" style="color: #4758AB;">date</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"2022-07-07"</span></span>
-<span id="cb1-5"><span class="fu" style="color: #4758AB;">format</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span></span>
-<span id="cb1-6"><span class="at" style="color: #657422;">    </span><span class="fu" style="color: #4758AB;">revealjs</span><span class="kw" style="color: #003B4F;">:</span></span>
-<span id="cb1-7"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">incremental</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="ch" style="color: #20794D;">true</span><span class="at" style="color: #657422;">   </span></span>
-<span id="cb1-8"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">theme</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> black</span></span>
-<span id="cb1-9"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">css</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"index.css"</span></span>
-<span id="cb1-10"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">transition</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> concave</span></span>
-<span id="cb1-11"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">background-transition</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> fade</span></span>
-<span id="cb1-12"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">smaller</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="ch" style="color: #20794D;">false</span></span>
-<span id="cb1-13"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">scrollable</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="ch" style="color: #20794D;">true</span></span>
-<span id="cb1-14"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">logo</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"logo2.png"</span></span>
-<span id="cb1-15"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">footer</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"This is FOOTER!"</span></span>
-<span id="cb1-16"><span class="co" style="color: #5E5E5E;">        #self-contained: true</span></span></code></pre></div>
+<p>Markdown 문서에 Reveal.js의 기능을 붙이기 위해 문서 앞에 YAML 문을 붙인다. 문서의 앞에 붙는 YAML의 예제는 아래와 같다.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="pp" style="color: #AD0000;">---</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;">title</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"This Is a Testflight"</span></span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;">subtitle</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"Completely useless presentation"</span></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;">author</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"[anarinsk](https://github.com/anarinsk/learn_quarto-revealjs/)"</span></span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;">date</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"2022-07-07"</span></span>
+<span id="cb1-6"><span class="fu" style="color: #4758AB;">format</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span></span>
+<span id="cb1-7"><span class="at" style="color: #657422;">    </span><span class="fu" style="color: #4758AB;">revealjs</span><span class="kw" style="color: #003B4F;">:</span></span>
+<span id="cb1-8"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">incremental</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="ch" style="color: #20794D;">true</span><span class="at" style="color: #657422;">   </span></span>
+<span id="cb1-9"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">theme</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> black</span></span>
+<span id="cb1-10"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">css</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"index.css"</span></span>
+<span id="cb1-11"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">transition</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> concave</span></span>
+<span id="cb1-12"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">background-transition</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> fade</span></span>
+<span id="cb1-13"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">smaller</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="ch" style="color: #20794D;">false</span></span>
+<span id="cb1-14"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">scrollable</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="ch" style="color: #20794D;">true</span></span>
+<span id="cb1-15"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">logo</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"logo2.png"</span></span>
+<span id="cb1-16"><span class="at" style="color: #657422;">        </span><span class="fu" style="color: #4758AB;">footer</span><span class="kw" style="color: #003B4F;">:</span><span class="at" style="color: #657422;"> </span><span class="st" style="color: #20794D;">"This is FOOTER!"</span></span>
+<span id="cb1-17"><span class="co" style="color: #5E5E5E;">        #self-contained: true</span></span>
+<span id="cb1-18"><span class="pp" style="color: #AD0000;">---</span></span></code></pre></div>
 <p>대체로 항목이 자명하기 때문에 별도의 설명은 하지 않겠다. reveal.js의 각종 옵션을 지정해 줄 수 있는데, 지원하는 항목은 <a href="https://tutorial.quarto.org/docs/reference/formats/presentations/revealjs.html">여기</a>에서 확인할 수 있다.</p>
 <section id="눈여겨볼-항목" class="level4">
 <h4 class="anchored" data-anchor-id="눈여겨볼-항목">눈여겨볼 항목</h4>
@@ -91,7 +96,7 @@
 </section>
 <section id="customization" class="level3">
 <h3 class="anchored" data-anchor-id="customization">Customization</h3>
-<p>기본을 그대로 써도 된다. 영문과 한글 폰트의 괴리 등의 고질적인 이유 때문에 시각적으로 조금 더 만족스러운 결과를 얻고 싶다면, 특화된 css 파일 하나를 설정하도록 하자.</p>
+<p>Quarto + Reveal.js의 기본 설정을 그대로 써도 된다. 다만 영문과 한글 폰트의 괴리 등의 미묘한 대목이 걸린다면, 특화된 css 파일을 통해 볃도로 설정을 바꾸면 된다. Working Example에 소개된 예제의 css 파일을 살펴보자.</p>
 <div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb2-1"><span class="co" style="color: #5E5E5E;">/* @import url('https://fonts.googleapis.com/css2? family=Nanum+Gothic&amp;display=swap'); */</span></span>
 <span id="cb2-2"><span class="im" style="color: #00769E;">@import</span> <span class="fu" style="color: #4758AB;">url(</span><span class="st" style="color: #20794D;">'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'</span><span class="fu" style="color: #4758AB;">)</span><span class="op" style="color: #5E5E5E;">;</span></span>
 <span id="cb2-3"><span class="im" style="color: #00769E;">@import</span> <span class="fu" style="color: #4758AB;">url(</span><span class="st" style="color: #20794D;">'https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css'</span><span class="fu" style="color: #4758AB;">)</span><span class="op" style="color: #5E5E5E;">;</span></span>
@@ -132,8 +137,11 @@
 </section>
 <section id="working-example" class="level2">
 <h2 class="anchored" data-anchor-id="working-example">Working Example</h2>
-<p>직접 몇 가지 기능을 구현해서 만들어 봤다. 내용 없이 형식을 구현하는데 집중한 예제이니 참작해 주시라.</p>
-<p><a href="https://anarinsk.github.io/learn_quarto-revealjs/#/title-slide">Completely Useless Quarto-Reveal.js</a></p>
+<p>시험 삼아서 Reveal.js의 몇 가지 기능을 Quarto로 구현해 보았다. 내용 없이 형식을 구현하는데 집중한 사례이니 참작해 주시라.</p>
+<ul>
+<li>예시: <a href="https://anarinsk.github.io/learn_quarto-revealjs/#/title-slide">Completely Useless Quarto-Reveal.js</a></li>
+<li>코드: <a href="https://github.com/anarinsk/learn_quarto-revealjs">anarinsk/learn_quarto-revealjs</a></li>
+</ul>
 
 
 </section>
