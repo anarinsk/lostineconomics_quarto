@@ -9,7 +9,7 @@
 <link>http://www.lostineconomics.com/index.html</link>
 <atom:link href="http://www.lostineconomics.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>Another useless blog</description>
-<generator>quarto-0.9.640</generator>
+<generator>quarto-1.0.16</generator>
 <lastBuildDate>Wed, 06 Jul 2022 15:00:00 GMT</lastBuildDate>
 <item>
   <title>Presentation with Reveal.js</title>
@@ -87,7 +87,7 @@
 <section id="눈여겨볼-항목" class="level4">
 <h4 class="anchored" data-anchor-id="눈여겨볼-항목">눈여겨볼 항목</h4>
 <ul>
-<li><code>theme</code>: reveal.js의 <a href="https://revealjs.com/themes/">테마</a>다. 복잡하게 생각하지 말고 간단한 거 쓰다.</li>
+<li><code>theme</code>: reveal.js의 <a href="https://revealjs.com/themes/">테마</a>다. 복잡하게 생각하지 말고 간단한 거 쓰자.</li>
 <li><code>transition</code>: 슬라이드 혹은 항목 등장의 시각적인 전환 효과를 지정한다.</li>
 <li><code>background-transition</code>: 배경 효과를 지정한다.</li>
 <li><code>css</code>: 특화를 위한 css 파일을 지정한다.</li>
