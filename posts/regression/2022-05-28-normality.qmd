@@ -51,13 +51,13 @@ $$
 with 
 
 $$
-S(y_i)^2 = \dfrac{1}{n-k} \sum_{i=1}^n (y_i -  x^r_i \hat\beta)
+S(y_i) = \sqrt{\dfrac{1}{n-k} \sum_{i=1}^n (y_i -  \hat y_i)^2}
 $$
 
-- $x^r_i$: $X$의 $i$'th 행(row) 벡터 
-- $\underset{(1 \times k)}{x^r_i}\underset{(k \times 1)}{\vphantom{x^r_i}\hat\beta} = \hat y_i$
+- $\hat y_i = \underset{(1 \times k)}{x^r_i}\underset{(k \times 1)}{\vphantom{x^r_i}\hat\beta}$,  $x^r_i$: $X$의 $i$'th 행(row) 벡터 
 
-$n$이 커짐에 따라서 $t_i$의 분포는 $\rm N(0,1)$를 접근적으로 닮아간다! 이것이 중심극한 정리가 가설 검정에서 중요한 이유이다. 
+
+$n$이 커짐에 따라서 $t_i$의 분포는 $\rm N(0,1)$에 점점 다가간다. 이것이 중심극한 정리가 가설 검정에서 중요한 이유이다. 
 
 :::{ .column-margin }
 $\sqrt{n}(\beta_i - \beta) \overset{d}{\longrightarrow} \rm N (0, \sigma_i)$ 직관적으로 설명하면 $t_i$의 분자와 분모 모두 0으로 수렴한다. 이때 분자와 분모의 수렴이 일정한 분포, 정규 분포로 수렴한다는 것이 중심 극한 정리이다. 
