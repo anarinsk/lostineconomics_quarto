@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.18">
+<meta name="generator" content="quarto-1.0.16">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -172,7 +172,7 @@ Y_i = \alpha + \beta_1 X_{1i} + \beta_2 X_{2i} + \dotsb + \beta_n X_{ni} + \epsi
 \]</span></p>
 <p>원래 정규 분포 가정은 <span class="math inline">\(\epsilon_i \sim \rm N (0, \sigma^2)\)</span>이다. 그런데 우리는 이 가정을 어떻게 확인할 수 있을까?</p>
 <p><span class="math inline">\(Y_i \sim \rm N(\cdot)\)</span>을 확인하면 될까? 원래의 가정은 오차항에 대한 가정이다. 앞에 여러 가지 변수의 작용으로 <span class="math inline">\(Y_i\)</span>가 결정되므로 <span class="math inline">\(Y_i\)</span>가 정규 분포를 따르는 것이 <span class="math inline">\(\epsilon_i\)</span>가 정규분포를 따르는 것의 충분 조건이 되지 않는다. 반면 <span class="math inline">\(\epsilon_i\)</span>가 정규 분포를 따른다고 해서 반드시 <span class="math inline">\(Y_i\)</span>가 정규 분포를 따른다고 볼 수도 없다.</p>
-<p><span class="math inline">\(\hat\epsilon_i = Y_i - \hat{Y}_i\)</span>가 정규 분포를 따르면 될까? 이 역시 마찬가지로 <span class="math inline">\(\epsilon_i\)</span>가 정규 분포를 따르리라는 보장이 없다. <span class="math inline">\(\hat\epsilon_i\)</span>는 회귀 분석의 모델링 아래 도출된 <span class="math inline">\(\epsilon_i\)</span>에 관한 추정치일 뿐이다. 추정치가 정규 분포를 따른다고 해서 원래 대상이 꼭 그렇다고 볼 수 있을까?</p>
+<p><span class="math inline">\(\hat\epsilon_i = Y_i - \hat{Y}_i\)</span>가 정규 분포를 따르면 될까? 이 역시 <span class="math inline">\(\hat\epsilon_i\)</span>이 정규 분포를 따른다고 해서 <span class="math inline">\(\epsilon_i\)</span>가 정규 분포를 따르리라고 볼 수 없다. <span class="math inline">\(\hat\epsilon_i\)</span>는 회귀 분석의 모델링 아래 도출된 <span class="math inline">\(\epsilon_i\)</span>에 관한 추정치일 뿐이다. 추정치가 정규 분포를 따른다고 해서 원래 대상도 같은 성질을 지닐까?</p>
 <p>오차항에 관한 내용은 모델링을 위한 일종의 가정이다. 모델링의 가정은 받아들이는 것이지 검증하는 것이 아니다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -180,8 +180,8 @@ Y_i = \alpha + \beta_1 X_{1i} + \beta_2 X_{2i} + \dotsb + \beta_n X_{ni} + \epsi
 </div></div></section>
 <section id="표본의-크기가-충분히-크다면" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="표본의-크기가-충분히-크다면">표본의 크기가 충분히 크다면</h2>
-<p>그렇다면 가정을 받아들일 수 없다면 회귀분석에서 검정을 수행할 수 있을까? 그렇지 않다. 만일 표본의 크기가 충분히 크다면 오차 항의 정규 분포 가정 없이도 검정을 수행할 수 있다.</p>
-<p>회귀 분석의 계수의 표본 추정량 <span class="math inline">\(\hat \beta\)</span>는 다음과 같다.</p>
+<p>만일 가정을 받아들일 수 없다면 회귀분석에서 검정을 수행할 수 없을까? 그렇지 않다는 걸 우리는 이미 잘 알고 있다. 만일 표본의 크기가 충분히 크다면 오차 항의 정규 분포 가정 없이도 가설 검정을 할 수 있다.</p>
+<p>행렬을 활용해 나타낸 회귀 분석의 계수의 표본 추정량 <span class="math inline">\(\hat \beta\)</span>는 다음과 같다.</p>
 <p><span class="math display">\[
 \hat \beta = (X^T X)^{-1}(X y)
 \]</span></p>
@@ -193,9 +193,7 @@ t_i = \dfrac{\hat \beta_i - \beta}{S \sqrt{(X^T X)_{ii}^{-1}}}
 <p><span class="math display">\[
 S(y_i) = \sqrt{\dfrac{1}{n-k} \sum_{i=1}^n (y_i -  \hat y_i)^2}
 \]</span></p>
-<ul>
-<li><span class="math inline">\(\hat y_i = \underset{(1 \times k)}{x^r_i}\underset{(k \times 1)}{\vphantom{x^r_i}\hat\beta}\)</span>, <span class="math inline">\(x^r_i\)</span>: <span class="math inline">\(X\)</span>의 <span class="math inline">\(i\)</span>’th 행(row) 벡터</li>
-</ul>
+<p>여기서 <span class="math inline">\(\hat y_i = \underset{(1 \times k)}{x^r_i}\underset{(k \times 1)}{\vphantom{x^r_i}\hat\beta}\)</span>이고, <span class="math inline">\(x^r_i\)</span>은 <span class="math inline">\(X\)</span>의 <span class="math inline">\(i\)</span>’th 행(row) 벡터를 나타낸다.</p>
 <p><span class="math inline">\(n\)</span>이 커짐에 따라서 <span class="math inline">\(t_i\)</span>의 분포는 <span class="math inline">\(\rm N(0,1)\)</span>에 점점 다가간다. 이것이 중심극한 정리가 가설 검정에서 중요한 이유이다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -207,9 +205,10 @@ S(y_i) = \sqrt{\dfrac{1}{n-k} \sum_{i=1}^n (y_i -  \hat y_i)^2}
 </div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="http://player.slideplayer.com/76/12695720/slides/slide_3.jpg" class="my-figure7 img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">표본의 크기가 커질수록 정규 분포에 근접한다.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">표본의 크기가 커질수록 표본 통계량의 분포는 정규 분포에 근접한다.</figcaption><p></p>
 </figure>
 </div>
+<p>위 그림에서 보듯이 가설 검정에서 모집단의 분포는 우리의 관심사가 아니다. 우리의 관심사는 표본 통계량이고, 이 표본 통계량이 얼마나 믿을만지를 가설 검정을 통해 파악한다. 후자를 가능하게 하는 것이 대 표본의 표본 통계량에 대해 성립하는 중심 극한 정리인 셈이다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://raw.githubusercontent.com/dfsnow/clt/master/gifs/binom.gif" class="my-figure7 img-fluid figure-img"></p>
