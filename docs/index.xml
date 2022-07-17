@@ -1433,10 +1433,10 @@ memory usage: 20.9+ KB</code></pre>
 <section id="노션은-왜-사랑-받을까" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="노션은-왜-사랑-받을까">노션은 왜 사랑 받을까?</h3>
 <p>3의 문제를 조금 더 뜯어보자. 관리의 편의성은 두 개로 나눌 수 있다. 하나는 이력의 변경 및 수정을 쉽게 할 수 있는지, 즉 이력서 관리의 문제다. 다른 하나는 이렇게 만들어진 이력서를 잘 배포할 수 있는지에 관한 것이다.</p>
-<p>배포의 경우 과거에는 큰 문제가 없었다. PDF 등 일정한 포맷의 문서 파일이면 충분했다. 하지만 요즘은 많은 정보를 웹 또는 모바일 웹으로 접한다. 이에 부응하려면 html로 배포하는 것이 좋다. 첨부 파일이 아니라 html 이력서를 의도에 맞게 호스팅해주는 적절한 서비스가 있다면 더 좋을 것이다. 노션이 이력서 배포의 도구로 최근 각광받는 이유가 여기에 있다. 노션을 사용하면 WYSWYG으로 다양한 형태의 편집을 지원하고 작성된 내용을 바로 웹으로 배포할 수 있다. 이 점에서 노션은 좋은 선택지다.</p>
+<p>배포의 경우 과거에는 큰 문제가 없었다. PDF 등 일정한 포맷의 문서 파일이면 충분했다. 하지만 요즘은 많은 정보를 웹 또는 모바일 웹으로 접한다. 이에 부응하려면 html로 배포하는 것이 좋다. 첨부 파일이 아니라 html 이력서를 의도에 맞게 호스팅해주는 적절한 서비스가 있다면 더 좋을 것이다. 노션이 이력서 배포의 도구로 최근 각광받는 이유가 여기에 있다. 노션을 사용하면 WYSIWYM으로 다양한 형태의 편집을 지원하고 작성된 내용을 바로 웹으로 배포할 수 있다. 이 점에서 노션은 좋은 선택지다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>WYSWYG = What You See is What You Get, 즉 별도의 컴파일 없이 변화된 내용이 어떻게 구현되는지를 바로 볼 수 있는 형태의 소프트웨어 구현 방식을 지칭한다. 쉽게 워드, 아래아 한글을 생각하면 된다.</p>
+<p>WYSIWYM = What You See Is What You Mean, 즉 별도의 컴파일 없이 변화된 내용이 어떻게 구현되는지를 바로 볼 수 있는 형태의 소프트웨어 구현 방식을 지칭한다. 쉽게 워드, 아래아 한글을 생각하면 된다.</p>
 </div></div></section>
 <section id="pdf라면-rm-latex" class="level3">
 <h3 class="anchored" data-anchor-id="pdf라면-rm-latex">PDF라면 <img src="https://latex.codecogs.com/png.latex?%5Crm%20%5CLaTeX">!</h3>
@@ -1444,7 +1444,7 @@ memory usage: 20.9+ KB</code></pre>
 </section>
 <section id="markdown은-어떨까" class="level3">
 <h3 class="anchored" data-anchor-id="markdown은-어떨까">Markdown은 어떨까?</h3>
-<p>html, <img src="https://latex.codecogs.com/png.latex?%5Crm%20%5CLaTeX">과 같은 스크립트 도구와 노션과 같은 WYSWYG의 장점을 적절하게 결합한 것이 markdown이다. 나는 거의 모든 문서를 마크다운으로 쓰고 있다. 아울러 마크다운의 <code>.md</code> 파일은 pandoc을 통해 다른 포맷(<code>.tex</code>, <code>.html</code>, <code>.docx</code> 등)으로 쉽게 변환된다. 이력서 역시 마크다운으로 직접 보면서 만든 후에 이를 html로 변환하고 이를 웹에서 호스팅할 수 있다면, 작성과 관리라는 두 장점을 모두 취할 수 있는 편리한 작업 흐름이 되지 않을까?</p>
+<p>html, <img src="https://latex.codecogs.com/png.latex?%5Crm%20%5CLaTeX">과 같은 스크립트 도구와 노션과 같은 WYSIWYM의 장점을 적절하게 결합한 것이 markdown이다. 나는 거의 모든 문서를 마크다운으로 쓰고 있다. 아울러 마크다운의 <code>.md</code> 파일은 pandoc을 통해 다른 포맷(<code>.tex</code>, <code>.html</code>, <code>.docx</code> 등)으로 쉽게 변환된다. 이력서 역시 마크다운으로 직접 보면서 만든 후에 이를 html로 변환하고 이를 웹에서 호스팅할 수 있다면, 작성과 관리라는 두 장점을 모두 취할 수 있는 편리한 작업 흐름이 되지 않을까?</p>
 <p>md가 html로 변환되기 때문에 html 및 css의 기술을 활용할 수 있다면 원하는 만큼 디자인을 손볼 수도 있다. 즉, 웹을 다루는 기술만 있다면 마크다운으로 충분한 수준의 커스터마이즈를 이뤄낼 수 있다. 물론 이 글은 그런 능력자를 위한 것이 아니다. 심미적 최소주의를 지향하면서 게으르게 만들어 낼 수 있는 그리고 관리 가능성을 최우선에 두는 이력서 제작이 이 포스팅의 목적이다.</p>
 </section>
 </section>
