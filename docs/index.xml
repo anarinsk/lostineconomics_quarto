@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>lostineconomics.com</title>
-<link>http://www.lostineconomics.com/index.html</link>
-<atom:link href="http://www.lostineconomics.com/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://anarinsk.github.io/lostineconomics_quarto/index.html</link>
+<atom:link href="https://anarinsk.github.io/lostineconomics_quarto/index.xml" rel="self" type="application/rss+xml"/>
 <description>Another useless blog</description>
 <generator>quarto-1.0.18</generator>
 <lastBuildDate>Wed, 06 Jul 2022 15:00:00 GMT</lastBuildDate>
 <item>
   <title>Presentation with Reveal.js</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/computer-tool/2022-07-07-pt-with-quarto.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-07-07-pt-with-quarto.html</link>
   <description><![CDATA[ 
 
 
@@ -148,14 +148,14 @@
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>http://www.lostineconomics.com/posts/computer-tool/2022-07-07-pt-with-quarto.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-07-07-pt-with-quarto.html</guid>
   <pubDate>Wed, 06 Jul 2022 15:00:00 GMT</pubDate>
   <media:content url="https://revealjs.com/images/logo/reveal-black-text.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
   <title>Cantor’s Theorem</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/math-simple/2022-07-03-ansys-candor-theorem.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/2022-07-03-ansys-candor-theorem.html</link>
   <description><![CDATA[ 
 
 
@@ -208,14 +208,14 @@
 
  ]]></description>
   <category>math-simple</category>
-  <guid>http://www.lostineconomics.com/posts/math-simple/2022-07-03-ansys-candor-theorem.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/2022-07-03-ansys-candor-theorem.html</guid>
   <pubDate>Sat, 02 Jul 2022 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/o6jb2hRLbHfdLAgCESuMjh-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Berkson’s Paradox with Regression</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/regression/2022-06-06-berkson-paradox-regressionipynb.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2022-06-06-berkson-paradox-regressionipynb.html</link>
   <description><![CDATA[ 
 
 
@@ -238,7 +238,7 @@
 <p><a href="https://www.nature.com/articles/s41467-020-19478-2">이 연구</a>는 코로나19 인식에 있어서 충돌 요인의 문제를 다양하게 지적하고 있다.</p>
 </div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/miro.medium.com/max/1400/1*_YSCycwMY90nltgg-qMEWw.png" class="figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/miro.medium.com/max/1400/1*_YSCycwMY90nltgg-qMEWw.png" class="figure7 img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">입원 여부는 충돌 요인(collider)이 된다.</figcaption><p></p>
 </figure>
 </div>
@@ -325,7 +325,7 @@
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/regression/2022-06-06-berkson-paradox-regressionipynb_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2022-06-06-berkson-paradox-regressionipynb_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">충돌 요인은 어떻게 작용하는가? <code>pack_of_cigar</code>는 흡연의 정도를 <code>covid_severity</code>는 코로나19 중증도를 의미한다.</figcaption><p></p>
 </figure>
 </div>
@@ -362,7 +362,7 @@
 </div></div><p>벅슨의 역설은 생존자 편향(survivorship bias)과도 일맥상통한다. 유명한 아래의 그림을 다시 확인해보자. 살아 돌아온 비행기들이 맞은 부위는 오히려 보강이 필요하지 않은 부위다. 돌아오지 못한 비행기들은 현재 생존한 비행기들이 맞지 않은 부위 때문에 추락했을지 모른다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Survivorship-bias.svg/600px-Survivorship-bias.svg.png" class="my-figure5 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Survivorship-bias.svg/600px-Survivorship-bias.svg.png" class="my-figure5 img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Abraham Wald가 했다는 전설적인 통찰의 사실 여부는 검증된 바 없다고 한다.</figcaption><p></p>
 </figure>
 </div>
@@ -373,14 +373,14 @@
  ]]></description>
   <category>regression</category>
   <category>stats-simple</category>
-  <guid>http://www.lostineconomics.com/posts/regression/2022-06-06-berkson-paradox-regressionipynb.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2022-06-06-berkson-paradox-regressionipynb.html</guid>
   <pubDate>Sun, 05 Jun 2022 15:00:00 GMT</pubDate>
   <media:content url="https://pbs.twimg.com/media/Df4EV9wU8AAYYH_.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Simpson’s Paradox with Regression</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/regression/2022-06-04-simpson-paradox-regression.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2022-06-04-simpson-paradox-regression.html</link>
   <description><![CDATA[ 
 
 
@@ -397,7 +397,7 @@
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>데이터는 <a href="https://towardsdatascience.com/the-curious-case-of-simpsons-paradox-6f178548d7e8">여기</a>서 갖고 왔다</p>
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/user-images.githubusercontent.com/39834789/86522451-84949f00-be38-11ea-9555-6409579f3b58.png" class="img-fluid" style="background:#FFFFFF;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/user-images.githubusercontent.com/39834789/86522451-84949f00-be38-11ea-9555-6409579f3b58.png" class="img-fluid" style="background:#FFFFFF;"></p>
 </div></div><p><code>culmen</code>은 새의 부리를 뜻한다. 옆 그림에서 보듯이 <code>length</code>는 부리의 앞으로 튀어나온 길이를, <code>depth</code>는 부리의 높이를 의미한다. 아래 데이터는 펭귄의 세 가지 종족, 성별 등을 별도로 기록하고 있다.</p>
 <div class="cell" data-execution_count="2">
 <details>
@@ -461,13 +461,13 @@ memory usage: 20.9+ KB</code></pre>
 <span id="cb3-17">ax2.legend(loc<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">'best'</span>)<span class="op" style="color: #5E5E5E;">;</span></span></code></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<p><img src="http://www.lostineconomics.com/posts/regression/2022-06-04-simpson-paradox-regression_files/figure-html/cell-3-output-1.png" class="img-fluid"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2022-06-04-simpson-paradox-regression_files/figure-html/cell-3-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>왼쪽 그림에서 보듯이 종 구분 없이 펭귄 부리의 길이와 높이를 보면 서로 음의 상관성을 지니고 있는 듯 보인다. 그런데 이를 종별로 구별해서 살펴보면 오히려 길이와 높이는 양의 상관성을 지니고 있다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/user-images.githubusercontent.com/39834789/86522450-7f375480-be38-11ea-9437-9fd2a382aa7b.png" class="img-fluid" style="background:#FFFFFF;"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/user-images.githubusercontent.com/39834789/86522450-7f375480-be38-11ea-9437-9fd2a382aa7b.png" class="img-fluid" style="background:#FFFFFF;"></p>
 </div></div><div class="cell" data-execution_count="7">
 <details>
 <summary>Code</summary>
@@ -512,14 +512,14 @@ memory usage: 20.9+ KB</code></pre>
  ]]></description>
   <category>regression</category>
   <category>stats-simple</category>
-  <guid>http://www.lostineconomics.com/posts/regression/2022-06-04-simpson-paradox-regression.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2022-06-04-simpson-paradox-regression.html</guid>
   <pubDate>Sat, 04 Jun 2022 15:00:00 GMT</pubDate>
   <media:content url="https://user-images.githubusercontent.com/39834789/86522451-84949f00-be38-11ea-9555-6409579f3b58.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Markov and Chebyshev Inequalities</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/stats-simple/2022-05-30-markov-chebyshev.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/stats-simple/2022-05-30-markov-chebyshev.html</link>
   <description><![CDATA[ 
 
 
@@ -584,14 +584,14 @@ memory usage: 20.9+ KB</code></pre>
 
  ]]></description>
   <category>stats-simple</category>
-  <guid>http://www.lostineconomics.com/posts/stats-simple/2022-05-30-markov-chebyshev.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/stats-simple/2022-05-30-markov-chebyshev.html</guid>
   <pubDate>Sun, 29 May 2022 15:00:00 GMT</pubDate>
   <media:content url="https://miro.medium.com/max/1400/1*e2LIgXPudagHYON8HdRO_g.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>정규 분포에 집착하지 말자.</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/regression/2022-05-28-normality.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2022-05-28-normality.html</link>
   <description><![CDATA[ 
 
 
@@ -640,14 +640,14 @@ memory usage: 20.9+ KB</code></pre>
 <p>표본의 크기가 얼마나 크면 될까? <a href="https://www.jclinepi.com/article/S0895-4356(17)%2030485-7">Schmidt and Finan</a>의 연구에 따르면 회귀 모형의 경우 변수 당 대략 10개 이상의 관찰이 필요하다. 옆 그림에서 보듯이 모평균을 추정하는 문제에서 표본 평균의 크기가 30개 이상이면 CLT을 적용할 수 있다.</p>
 </div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/regression/http:/player.slideplayer.com/76/12695720/slides/slide_3.jpg" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/http:/player.slideplayer.com/76/12695720/slides/slide_3.jpg" class="my-figure7 img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">표본의 크기가 커질수록 표본 통계량의 분포는 정규 분포에 근접한다.</figcaption><p></p>
 </figure>
 </div>
 <p>위 그림에서 보듯이 가설 검정에서 모집단의 분포는 우리의 관심사가 아니다. 우리의 관심사는 표본 통계량이고, 이 표본 통계량이 얼마나 믿을만지를 가설 검정을 통해 파악한다. 후자를 가능하게 하는 것이 대 표본의 표본 통계량에 대해 성립하는 중심 극한 정리인 셈이다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/raw.githubusercontent.com/dfsnow/clt/master/gifs/binom.gif" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/raw.githubusercontent.com/dfsnow/clt/master/gifs/binom.gif" class="my-figure7 img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption"><img src="https://latex.codecogs.com/png.latex?p=0.75">의 베르누이 시행을 <img src="https://latex.codecogs.com/png.latex?n">에 따라서 10,000 번 시뮬레이션한 분포</figcaption><p></p>
 </figure>
 </div>
@@ -664,14 +664,14 @@ memory usage: 20.9+ KB</code></pre>
 
  ]]></description>
   <category>regression</category>
-  <guid>http://www.lostineconomics.com/posts/regression/2022-05-28-normality.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2022-05-28-normality.html</guid>
   <pubDate>Fri, 27 May 2022 15:00:00 GMT</pubDate>
   <media:content url="http://player.slideplayer.com/76/12695720/slides/slide_3.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Sample Statistics and Standard Error</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/stats-simple/2022-05-27-SE.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/stats-simple/2022-05-27-SE.html</link>
   <description><![CDATA[ 
 
 
@@ -717,7 +717,7 @@ memory usage: 20.9+ KB</code></pre>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cunderset%7Bn%20%5Cto%20%5Cinfty%7D%7B%5Crm%20plim%7D~%5Chat%5Ctheta_n%20=%20%5Ctheta%20%20%0A"></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/stats-simple/https:/upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/stats-simple/https:/upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -837,7 +837,7 @@ memory usage: 20.9+ KB</code></pre>
 <p>다시 말하면, <img src="https://latex.codecogs.com/png.latex?%5CES%7BY%7D_n">은 평균이 <img src="https://latex.codecogs.com/png.latex?%5Cmu">이고 표준편차가 <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B%5Csigma%7D%7B%5Csqrt%7Bn%7D%7D">인 정규 분포에 근사하게 된다. 따라서 표본 크기가 커짐에 따라서 t-통계량은 표준 정규 분포를 점점 닮아간다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/stats-simple/https:/miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/stats-simple/https:/miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -899,13 +899,13 @@ memory usage: 20.9+ KB</code></pre>
 <h3 class="anchored" data-anchor-id="clt-and-lln-illustrated">CLT and LLN illustrated</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/stats-simple/https:/i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-2.png" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/stats-simple/https:/i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-2.png" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/stats-simple/https:/i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-3.png" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/stats-simple/https:/i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-3.png" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -917,14 +917,14 @@ memory usage: 20.9+ KB</code></pre>
  ]]></description>
   <category>statistics</category>
   <category>stats-simple</category>
-  <guid>http://www.lostineconomics.com/posts/stats-simple/2022-05-27-SE.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/stats-simple/2022-05-27-SE.html</guid>
   <pubDate>Thu, 26 May 2022 15:00:00 GMT</pubDate>
   <media:content url="https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
   <title>전체와 부분</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/regression/2022-05-26-total-and-parts.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2022-05-26-total-and-parts.html</link>
   <description><![CDATA[ 
 
 
@@ -956,14 +956,14 @@ memory usage: 20.9+ KB</code></pre>
 <p>먼저 심슨의 역설을 먼저 살펴보자. 아래는 웃자고 만든 그림인데 웃고 넘기기에는 아까운 중요한 통찰이 들어 있다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/149695847.v2.pressablecdn.com/wp-content/uploads/2018/12/simpsons-paradox.jpg" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/149695847.v2.pressablecdn.com/wp-content/uploads/2018/12/simpsons-paradox.jpg" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
 <p>위 그림에서 심슨가족 전체를 보면 <img src="https://latex.codecogs.com/png.latex?x"> 축 변인의 증가에 따라서 <img src="https://latex.codecogs.com/png.latex?y"> 축 변인이 증가하는 형태를 취한다. 반면, 가족 구성원 하나하나에 대해서는 반대의 관계를 취하고 있다. 심슨의 역설은 전체의 경향과 부분의 경향이 어긋나는 현상을 나타낸다. 조금 더 진지한 사례는 아래의 그림과 같다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/upload.wikimedia.org/wikipedia/commons/f/fb/Simpsons_paradox_-_animation.gif?1653868287578" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/upload.wikimedia.org/wikipedia/commons/f/fb/Simpsons_paradox_-_animation.gif?1653868287578" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -973,7 +973,7 @@ memory usage: 20.9+ KB</code></pre>
 </div></div><p>여기서 중요한 것은 역설 자체가 아니다. 역설의 함정에 빠지지 않고 어디에 포커스를 둘 것인지가 문제다. 만일 인구 구성의 각 그룹 별 경향을 평균적으로 살펴보는 것이 관심 사항이라면 위 그림에서 그룹 각각의 기울기를 평균한 값이 우리가 찾는 경향이다. 반대로 개별 그룹은 중요하지 않고 인구 전체가 관심사라면 개별 인구를 동일하게 보고 기울기를 찾는 게 맞다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/slidetodoc.com/presentation_image_h/792ab2d7ce21c60c396545ec752d13fe/image-44.jpg" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/slidetodoc.com/presentation_image_h/792ab2d7ce21c60c396545ec752d13fe/image-44.jpg" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -984,7 +984,7 @@ memory usage: 20.9+ KB</code></pre>
 <p>벡터를 통해 그래프로 설명하는 사례가 직관적으로 잘 와닿고 이해하기도 좋다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Simpsons-vector.svg/430px-Simpsons-vector.svg.png?20180610180117" class="my-figure5 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Simpsons-vector.svg/430px-Simpsons-vector.svg.png?20180610180117" class="my-figure5 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -994,7 +994,7 @@ memory usage: 20.9+ KB</code></pre>
 <h2 class="anchored" data-anchor-id="collider-and-berksons-paradox">Collider and Berkson’s Paradox</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/brilliant-staff-media.s3-us-west-2.amazonaws.com/tiffany-wang/1Mvt8RPtlU.png" class="my-figure5 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/brilliant-staff-media.s3-us-west-2.amazonaws.com/tiffany-wang/1Mvt8RPtlU.png" class="my-figure5 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -1005,7 +1005,7 @@ memory usage: 20.9+ KB</code></pre>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>벅슨의 역설은 통제하지 않아야 할 변수를 통제할 때 발생하기도 하지만 많은 경우 표본 자체를 살피지 않은 데에서 생기기도 한다. 예를 들어 아래 그림을 보자.</p>
-<p><img src="http://www.lostineconomics.com/posts/regression/https:/mixtape.scunning.com/03-Directed_Acyclical_Graphs_files/figure-html/moviestar-dag-1.png" class="img-fluid"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/https:/mixtape.scunning.com/03-Directed_Acyclical_Graphs_files/figure-html/moviestar-dag-1.png" class="img-fluid"></p>
 <p>보통 배우가 되려면 연기 재능과 외모 둘 중 하나는 갖추어야 한다고들 한다. 이 말 자체는 맞지만 이를 확대 해석해서 외모와 연기 재능이 역의 상관성이 있다고 주장하는 경우가 있다. 이는 모집단 전체(모든 사람)에 대해서 타당한 말일까? 배우라는 집단으로 제한해보면 외모와 재능이 모두 미달되는 사람들은 배우가 아닌 다른 직업을 찾았을 가능성이 높다. 외모와 재능을 사분면으로 나눌 때 3 사분면에 위치한 사람들이 사라진 배우라는 집단에 대해서는 음의 상관성이 관찰되는 것처럼 보인다.</p>
 </div></div></section>
 <section id="중요한-것은-질문과-문제-설정" class="level2">
@@ -1019,14 +1019,14 @@ memory usage: 20.9+ KB</code></pre>
 
  ]]></description>
   <category>regression</category>
-  <guid>http://www.lostineconomics.com/posts/regression/2022-05-26-total-and-parts.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2022-05-26-total-and-parts.html</guid>
   <pubDate>Wed, 25 May 2022 15:00:00 GMT</pubDate>
   <media:content url="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/12/simpsons-paradox.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>PyTorch + WSL</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/computer-tool/2022-05-25-pytorch.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-25-pytorch.html</link>
   <description><![CDATA[ 
 
 
@@ -1116,14 +1116,14 @@ memory usage: 20.9+ KB</code></pre>
  ]]></description>
   <category>computer-tool</category>
   <category>machine-learning</category>
-  <guid>http://www.lostineconomics.com/posts/computer-tool/2022-05-25-pytorch.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-25-pytorch.html</guid>
   <pubDate>Tue, 24 May 2022 15:00:00 GMT</pubDate>
   <media:content url="https://miro.medium.com/max/649/1*6sV-YTdpob36egPM-yXGXA.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Trilemma, Lately</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/economics/2022-05-16-trilemma.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/economics/2022-05-16-trilemma.html</link>
   <description><![CDATA[ 
 
 
@@ -1146,7 +1146,7 @@ memory usage: 20.9+ KB</code></pre>
 <p>트릴레마 중에서 가장 많이 알려진 것은 거시 경제의 트릴레마다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/economics/http:/www.voxeu.org/sites/default/files/bordo%20fig1%202%20apr.png" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/economics/http:/www.voxeu.org/sites/default/files/bordo%20fig1%202%20apr.png" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -1166,7 +1166,7 @@ memory usage: 20.9+ KB</code></pre>
 <h2 class="anchored" data-anchor-id="스테이블-코인의-트릴레마">스테이블 코인의 트릴레마</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/economics/https:/voxeu.org/sites/default/files/image/FromMay2014/ganesh13mayfig1.png" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/economics/https:/voxeu.org/sites/default/files/image/FromMay2014/ganesh13mayfig1.png" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -1187,14 +1187,14 @@ memory usage: 20.9+ KB</code></pre>
 
  ]]></description>
   <category>economics</category>
-  <guid>http://www.lostineconomics.com/posts/economics/2022-05-16-trilemma.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/economics/2022-05-16-trilemma.html</guid>
   <pubDate>Sun, 15 May 2022 15:00:00 GMT</pubDate>
-  <media:content url="http://www.lostineconomics.com/posts/economics/goodecon.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://anarinsk.github.io/lostineconomics_quarto/posts/economics/goodecon.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Blogging with Quarto</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/computer-tool/2022-05-14-blogging-with-quarto.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-14-blogging-with-quarto.html</link>
   <description><![CDATA[ 
 
 
@@ -1392,14 +1392,14 @@ memory usage: 20.9+ KB</code></pre>
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>http://www.lostineconomics.com/posts/computer-tool/2022-05-14-blogging-with-quarto.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-14-blogging-with-quarto.html</guid>
   <pubDate>Fri, 13 May 2022 15:00:00 GMT</pubDate>
   <media:content url="https://pulverer.si.edu/sites/default/files/styles/essay_large/public/image_assets/Fig1_Japanese%20bookmaking_05.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>How to make a manageable C.V.</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/computer-tool/2022-05-10-how-to-make-cv.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-10-how-to-make-cv.html</link>
   <description><![CDATA[ 
 
 
@@ -1519,14 +1519,14 @@ memory usage: 20.9+ KB</code></pre>
 <span id="cb3-7"><span class="dt" style="color: #AD0000;">tex2jax</span><span class="op" style="color: #5E5E5E;">:</span> {</span>
 <span id="cb3-8"><span class="dt" style="color: #AD0000;">inlineMath</span><span class="op" style="color: #5E5E5E;">:</span> [ [<span class="st" style="color: #20794D;">'
   <category>computer-tool</category>
-  <guid>http://www.lostineconomics.com/posts/computer-tool/2022-05-10-how-to-make-cv.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-10-how-to-make-cv.html</guid>
   <pubDate>Mon, 09 May 2022 15:00:00 GMT</pubDate>
   <media:content url="https://opem.b-cdn.net/wp-content/uploads/2022/01/curriculum-vitae-english-example.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>수입은 GDP에 영향을 주는가?</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/econ-simple/2022-04-30-gdp-import.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/econ-simple/2022-04-30-gdp-import.html</link>
   <description><![CDATA[ 
 
 
@@ -1604,14 +1604,14 @@ memory usage: 20.9+ KB</code></pre>
  ]]></description>
   <category>economics</category>
   <category>econ-simple</category>
-  <guid>http://www.lostineconomics.com/posts/econ-simple/2022-04-30-gdp-import.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/econ-simple/2022-04-30-gdp-import.html</guid>
   <pubDate>Thu, 28 Apr 2022 15:00:00 GMT</pubDate>
-  <media:content url="http://www.lostineconomics.com/posts/econ-simple/goodecon.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://anarinsk.github.io/lostineconomics_quarto/posts/econ-simple/goodecon.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Happy Git-ing!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/git/2022-04-27-happy-giting.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</link>
   <description><![CDATA[ 
 
 
@@ -1684,14 +1684,14 @@ Note
 
  ]]></description>
   <category>git</category>
-  <guid>http://www.lostineconomics.com/posts/git/2022-04-27-happy-giting.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</guid>
   <pubDate>Tue, 26 Apr 2022 15:00:00 GMT</pubDate>
   <media:content url="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmxcpJ%2Fbtq9IDonGa1%2FLGoNFr3kBHT3tm8QnIwjrK%2Fimg.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Kubernetes As an Alternative to Docker</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/container/2022-04-26-k8s-personally.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2022-04-26-k8s-personally.html</link>
   <description><![CDATA[ 
 
 
@@ -1794,14 +1794,14 @@ Note
 
  ]]></description>
   <category>container</category>
-  <guid>http://www.lostineconomics.com/posts/container/2022-04-26-k8s-personally.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2022-04-26-k8s-personally.html</guid>
   <pubDate>Mon, 25 Apr 2022 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Python in the Browser</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/computer-tool/2021-11-19-python-in-browser.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-11-19-python-in-browser.html</link>
   <description><![CDATA[ 
 
 
@@ -1834,7 +1834,7 @@ Note
 <p>이제 아래 왼쪽 탭 화면에서 extension을 찾으면 된다. 아래 그림처럼 생겼다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/extension.jpg" class="my-figure3 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/extension.jpg" class="my-figure3 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -1857,14 +1857,14 @@ Note
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>http://www.lostineconomics.com/posts/computer-tool/2021-11-19-python-in-browser.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-11-19-python-in-browser.html</guid>
   <pubDate>Thu, 18 Nov 2021 15:00:00 GMT</pubDate>
   <media:content url="https://irydium.dev/logos/pyodide.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Enter the Podman!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/container/2021-09-13-podman-1.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</link>
   <description><![CDATA[ 
 
 
@@ -2140,14 +2140,14 @@ Note
 
  ]]></description>
   <category>container</category>
-  <guid>http://www.lostineconomics.com/posts/container/2021-09-13-podman-1.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</guid>
   <pubDate>Sun, 12 Sep 2021 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Docker + Jupyter + 한글 폰트</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/container/2021-05-09-docker_korfont.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</link>
   <description><![CDATA[ 
 
 
@@ -2265,14 +2265,14 @@ koreanize-matplotlib
 
  ]]></description>
   <category>container</category>
-  <guid>http://www.lostineconomics.com/posts/container/2021-05-09-docker_korfont.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</guid>
   <pubDate>Sat, 08 May 2021 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>All into VS Code</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/computer-tool/2021-02-02-all-vs-code.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-02-02-all-vs-code.html</link>
   <description><![CDATA[ 
 
 
@@ -2319,7 +2319,7 @@ koreanize-matplotlib
 <h2 class="anchored" data-anchor-id="핵심">핵심</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -2423,7 +2423,7 @@ koreanize-matplotlib
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -2433,7 +2433,7 @@ koreanize-matplotlib
 <p>앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 나을 것이다. 아래와 같이 하자.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -2442,7 +2442,7 @@ koreanize-matplotlib
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -2471,7 +2471,7 @@ koreanize-matplotlib
 <span id="cb5-19"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -2485,14 +2485,14 @@ koreanize-matplotlib
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>http://www.lostineconomics.com/posts/computer-tool/2021-02-02-all-vs-code.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-02-02-all-vs-code.html</guid>
   <pubDate>Mon, 01 Feb 2021 15:00:00 GMT</pubDate>
   <media:content url="https://velog.velcdn.com/images/jeongjae96/post/0db5fc06-a8bb-4970-bf6c-3b5a69ebe940/vs%20code.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Eigenspace, part 2</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-18-Eigenspace-2.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-18-Eigenspace-2.html</link>
   <description><![CDATA[ 
 
 
@@ -2594,7 +2594,7 @@ koreanize-matplotlib
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-18-Eigenspace-2.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-18-Eigenspace-2.html</guid>
   <pubDate>Sun, 17 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
@@ -2602,14 +2602,14 @@ koreanize-matplotlib
 </rss>
 </span><span class="op" style="color: #5E5E5E;">,</span><span class="st" style="color: #20794D;">'
   <category>computer-tool</category>
-  <guid>http://www.lostineconomics.com/posts/computer-tool/2022-05-10-how-to-make-cv.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-10-how-to-make-cv.html</guid>
   <pubDate>Mon, 09 May 2022 15:00:00 GMT</pubDate>
   <media:content url="https://opem.b-cdn.net/wp-content/uploads/2022/01/curriculum-vitae-english-example.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>수입은 GDP에 영향을 주는가?</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/econ-simple/2022-04-30-gdp-import.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/econ-simple/2022-04-30-gdp-import.html</link>
   <description><![CDATA[ 
 
 
@@ -2687,14 +2687,14 @@ koreanize-matplotlib
  ]]></description>
   <category>economics</category>
   <category>econ-simple</category>
-  <guid>http://www.lostineconomics.com/posts/econ-simple/2022-04-30-gdp-import.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/econ-simple/2022-04-30-gdp-import.html</guid>
   <pubDate>Thu, 28 Apr 2022 15:00:00 GMT</pubDate>
-  <media:content url="http://www.lostineconomics.com/posts/econ-simple/goodecon.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://anarinsk.github.io/lostineconomics_quarto/posts/econ-simple/goodecon.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Happy Git-ing!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/git/2022-04-27-happy-giting.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</link>
   <description><![CDATA[ 
 
 
@@ -2767,14 +2767,14 @@ Note
 
  ]]></description>
   <category>git</category>
-  <guid>http://www.lostineconomics.com/posts/git/2022-04-27-happy-giting.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</guid>
   <pubDate>Tue, 26 Apr 2022 15:00:00 GMT</pubDate>
   <media:content url="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmxcpJ%2Fbtq9IDonGa1%2FLGoNFr3kBHT3tm8QnIwjrK%2Fimg.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Kubernetes As an Alternative to Docker</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/container/2022-04-26-k8s-personally.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2022-04-26-k8s-personally.html</link>
   <description><![CDATA[ 
 
 
@@ -2877,14 +2877,14 @@ Note
 
  ]]></description>
   <category>container</category>
-  <guid>http://www.lostineconomics.com/posts/container/2022-04-26-k8s-personally.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2022-04-26-k8s-personally.html</guid>
   <pubDate>Mon, 25 Apr 2022 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Python in the Browser</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/computer-tool/2021-11-19-python-in-browser.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-11-19-python-in-browser.html</link>
   <description><![CDATA[ 
 
 
@@ -2917,7 +2917,7 @@ Note
 <p>이제 아래 왼쪽 탭 화면에서 extension을 찾으면 된다. 아래 그림처럼 생겼다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/extension.jpg" class="my-figure3 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/extension.jpg" class="my-figure3 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -2940,14 +2940,14 @@ Note
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>http://www.lostineconomics.com/posts/computer-tool/2021-11-19-python-in-browser.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-11-19-python-in-browser.html</guid>
   <pubDate>Thu, 18 Nov 2021 15:00:00 GMT</pubDate>
   <media:content url="https://irydium.dev/logos/pyodide.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Enter the Podman!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/container/2021-09-13-podman-1.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</link>
   <description><![CDATA[ 
 
 
@@ -3223,14 +3223,14 @@ Note
 
  ]]></description>
   <category>container</category>
-  <guid>http://www.lostineconomics.com/posts/container/2021-09-13-podman-1.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</guid>
   <pubDate>Sun, 12 Sep 2021 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Docker + Jupyter + 한글 폰트</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/container/2021-05-09-docker_korfont.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</link>
   <description><![CDATA[ 
 
 
@@ -3348,14 +3348,14 @@ koreanize-matplotlib
 
  ]]></description>
   <category>container</category>
-  <guid>http://www.lostineconomics.com/posts/container/2021-05-09-docker_korfont.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</guid>
   <pubDate>Sat, 08 May 2021 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>All into VS Code</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/computer-tool/2021-02-02-all-vs-code.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-02-02-all-vs-code.html</link>
   <description><![CDATA[ 
 
 
@@ -3402,7 +3402,7 @@ koreanize-matplotlib
 <h2 class="anchored" data-anchor-id="핵심">핵심</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -3506,7 +3506,7 @@ koreanize-matplotlib
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -3516,7 +3516,7 @@ koreanize-matplotlib
 <p>앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 나을 것이다. 아래와 같이 하자.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -3525,7 +3525,7 @@ koreanize-matplotlib
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -3554,7 +3554,7 @@ koreanize-matplotlib
 <span id="cb5-19"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -3568,14 +3568,14 @@ koreanize-matplotlib
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>http://www.lostineconomics.com/posts/computer-tool/2021-02-02-all-vs-code.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-02-02-all-vs-code.html</guid>
   <pubDate>Mon, 01 Feb 2021 15:00:00 GMT</pubDate>
   <media:content url="https://velog.velcdn.com/images/jeongjae96/post/0db5fc06-a8bb-4970-bf6c-3b5a69ebe940/vs%20code.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Eigenspace, part 2</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-18-Eigenspace-2.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-18-Eigenspace-2.html</link>
   <description><![CDATA[ 
 
 
@@ -3677,7 +3677,7 @@ koreanize-matplotlib
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-18-Eigenspace-2.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-18-Eigenspace-2.html</guid>
   <pubDate>Sun, 17 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
@@ -3750,14 +3750,14 @@ koreanize-matplotlib
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>http://www.lostineconomics.com/posts/computer-tool/2022-05-10-how-to-make-cv.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-10-how-to-make-cv.html</guid>
   <pubDate>Mon, 09 May 2022 15:00:00 GMT</pubDate>
   <media:content url="https://opem.b-cdn.net/wp-content/uploads/2022/01/curriculum-vitae-english-example.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>수입은 GDP에 영향을 주는가?</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/econ-simple/2022-04-30-gdp-import.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/econ-simple/2022-04-30-gdp-import.html</link>
   <description><![CDATA[ 
 
 
@@ -3835,14 +3835,14 @@ koreanize-matplotlib
  ]]></description>
   <category>economics</category>
   <category>econ-simple</category>
-  <guid>http://www.lostineconomics.com/posts/econ-simple/2022-04-30-gdp-import.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/econ-simple/2022-04-30-gdp-import.html</guid>
   <pubDate>Thu, 28 Apr 2022 15:00:00 GMT</pubDate>
-  <media:content url="http://www.lostineconomics.com/posts/econ-simple/goodecon.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://anarinsk.github.io/lostineconomics_quarto/posts/econ-simple/goodecon.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Happy Git-ing!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/git/2022-04-27-happy-giting.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</link>
   <description><![CDATA[ 
 
 
@@ -3915,14 +3915,14 @@ Note
 
  ]]></description>
   <category>git</category>
-  <guid>http://www.lostineconomics.com/posts/git/2022-04-27-happy-giting.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/git/2022-04-27-happy-giting.html</guid>
   <pubDate>Tue, 26 Apr 2022 15:00:00 GMT</pubDate>
   <media:content url="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmxcpJ%2Fbtq9IDonGa1%2FLGoNFr3kBHT3tm8QnIwjrK%2Fimg.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Kubernetes As an Alternative to Docker</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/container/2022-04-26-k8s-personally.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2022-04-26-k8s-personally.html</link>
   <description><![CDATA[ 
 
 
@@ -4025,14 +4025,14 @@ Note
 
  ]]></description>
   <category>container</category>
-  <guid>http://www.lostineconomics.com/posts/container/2022-04-26-k8s-personally.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2022-04-26-k8s-personally.html</guid>
   <pubDate>Mon, 25 Apr 2022 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Python in the Browser</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/computer-tool/2021-11-19-python-in-browser.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-11-19-python-in-browser.html</link>
   <description><![CDATA[ 
 
 
@@ -4065,7 +4065,7 @@ Note
 <p>이제 아래 왼쪽 탭 화면에서 extension을 찾으면 된다. 아래 그림처럼 생겼다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/extension.jpg" class="my-figure3 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/extension.jpg" class="my-figure3 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -4088,14 +4088,14 @@ Note
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>http://www.lostineconomics.com/posts/computer-tool/2021-11-19-python-in-browser.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-11-19-python-in-browser.html</guid>
   <pubDate>Thu, 18 Nov 2021 15:00:00 GMT</pubDate>
   <media:content url="https://irydium.dev/logos/pyodide.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Enter the Podman!</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/container/2021-09-13-podman-1.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</link>
   <description><![CDATA[ 
 
 
@@ -4371,14 +4371,14 @@ Note
 
  ]]></description>
   <category>container</category>
-  <guid>http://www.lostineconomics.com/posts/container/2021-09-13-podman-1.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-09-13-podman-1.html</guid>
   <pubDate>Sun, 12 Sep 2021 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Docker + Jupyter + 한글 폰트</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/container/2021-05-09-docker_korfont.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</link>
   <description><![CDATA[ 
 
 
@@ -4496,14 +4496,14 @@ koreanize-matplotlib
 
  ]]></description>
   <category>container</category>
-  <guid>http://www.lostineconomics.com/posts/container/2021-05-09-docker_korfont.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/container/2021-05-09-docker_korfont.html</guid>
   <pubDate>Sat, 08 May 2021 15:00:00 GMT</pubDate>
   <media:content url="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>All into VS Code</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/computer-tool/2021-02-02-all-vs-code.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-02-02-all-vs-code.html</link>
   <description><![CDATA[ 
 
 
@@ -4550,7 +4550,7 @@ koreanize-matplotlib
 <h2 class="anchored" data-anchor-id="핵심">핵심</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -4654,7 +4654,7 @@ koreanize-matplotlib
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -4664,7 +4664,7 @@ koreanize-matplotlib
 <p>앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 나을 것이다. 아래와 같이 하자.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -4673,7 +4673,7 @@ koreanize-matplotlib
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -4702,7 +4702,7 @@ koreanize-matplotlib
 <span id="cb5-19"><span class="fu" style="color: #4758AB;">}</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="http://www.lostineconomics.com/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/https:/raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
 <p></p><p></p>
 </figure>
 </div>
@@ -4716,14 +4716,14 @@ koreanize-matplotlib
 
  ]]></description>
   <category>computer-tool</category>
-  <guid>http://www.lostineconomics.com/posts/computer-tool/2021-02-02-all-vs-code.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2021-02-02-all-vs-code.html</guid>
   <pubDate>Mon, 01 Feb 2021 15:00:00 GMT</pubDate>
   <media:content url="https://velog.velcdn.com/images/jeongjae96/post/0db5fc06-a8bb-4970-bf6c-3b5a69ebe940/vs%20code.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Eigenspace, part 2</title>
   <dc:creator>JS HUHH</dc:creator>
-  <link>http://www.lostineconomics.com/posts/linear-algebra/2021-01-18-Eigenspace-2.html</link>
+  <link>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-18-Eigenspace-2.html</link>
   <description><![CDATA[ 
 
 
@@ -4825,7 +4825,7 @@ koreanize-matplotlib
 
  ]]></description>
   <category>linear-algebra</category>
-  <guid>http://www.lostineconomics.com/posts/linear-algebra/2021-01-18-Eigenspace-2.html</guid>
+  <guid>https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2021-01-18-Eigenspace-2.html</guid>
   <pubDate>Sun, 17 Jan 2021 15:00:00 GMT</pubDate>
   <media:content url="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" medium="image" type="image/jpeg"/>
 </item>
