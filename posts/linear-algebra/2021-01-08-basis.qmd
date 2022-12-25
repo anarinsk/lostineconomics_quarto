@@ -1,0 +1,335 @@
+---
+title:  Basis
+description: 두서 없이 정리
+author: "JS HUHH"
+date: "01/08/2021"
+image: "https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg"
+categories: [linear-algebra]
+#margin-header: subscribe.html
+---
+
+
+## Two Propoerties of Basis 
+
+벡터 공간 $V$의 기저 
+
+$$
+B = \{ \vec{e_1}, \dotsc, \vec{e_n} \}  
+$$
+
+는 다음의 두 특성을 만족한다. 
+
+### Spanning property 
+
+모든 $v \in V$는 다음과 같이 기저의 선형 결합으로 표현된다. 
+
+$$
+v = v_1 \vec{e_1} + \dotsc + v_n \vec{e_n}
+$$
+
+### Linear Independence property 
+
+즉, 기저를 구성하는 벡터 $\vec{e_i}$에 불필요한 것이 없어야 한다. 즉, $\vec{e}$를 구성하는 어떤 $e_i$도 다른 $e_j$($j \neq i$)의 선형 결합으로 표현될 수 없다. 
+
+## Two bases 
+
+계속 등장하게 될 두 개의 기저를 살펴보자. 
+
+### Orthonomal basis 
+
+$$
+B_{\hat{e}} = \{ \hat{e_1}, \dotsc, \hat{e_n} \} \text{~with}
+$$
+
+$$
+\begin{cases}
+\hat{e_i} \cdot \hat{e_j} = 1 & \text{if $i = j$} \\
+\hat{e_i} \cdot \hat{e_j} = 0 & \text{if $i \neq j$} 
+\end{cases}
+$$
+
+$$
+(a_1, \dotsc, a_n)_{B_{\hat{e}}} = \underbrace{(\vec{a} \cdot \hat{e_i})}_{a_1} \hat{e_i} + \dotsb + (\vec{a} \cdot \hat{e_n}) \hat{e_n}
+$$
+
+### Orthogonal basis 
+
+$$
+B_{e} = \{ e_1, \dotsc, e_n \} \text{~with}
+$$
+
+$$
+\begin{cases}
+e_i \cdot e_j \neq 0 & \text{if $i = j$} \\
+e_i \cdot e_j = 0 & \text{if $i \neq j$} 
+\end{cases}
+$$
+
+$$
+(b_1, \dotsc, b_n)_{B_e} = \underbrace{(\vec b \cdot \dfrac{e_i}{\Vert e_i \Vert})}_{b_1} e_1 + \dotsb + (\vec b \cdot \dfrac{e_i}{\Vert e_i \Vert}) e_n
+$$
+
+$b_i$의 값을 제대로 반영하기 위해서는 정규화된 orthorgonal basis가 필요하고, $\frac{e_i}{\Vert e_i \Vert}$가 내적 계산에 들어간다. 
+
+## Eat This! 
+
+### Generic basis 
+
+서로 직교하지 않는 기저, 
+
+$$
+\{ \vec f_1, \dotsc, \vec f_n \}
+$$
+
+가 있다고 하자. $\vec c$를 이 기저로 어떻게 표현할 수 있을까? 
+
+$$
+\begin{aligned}
+c_1 f_1 + \dotsb + c_n f_n = \vec c
+\end{aligned}
+$$
+
+$f_i$가 직교행렬이 아니기 때문에, $c_i$ 역시 하나씩 결정될 수 없고 동시에 결정되어야 한다. 즉, 이는 연립방정식을 푸는 문제와 같다. 즉 $n$ 개의 미지수와 $n$ 개의 방정식을 푸는 문제다. 
+
+### Example 
+
+$T: \mathbb R^2 \to \mathbb R^2$의 변환을 생각해보자. 어떤 이유에서인가 $T$를 기본 기저가 아닌 다른 기저로 표현해야 한다고 하자. 두 개의 기저를 아래와 같이 두자. 
+
+$$
+\\{ \vec v_1 = (v_{1x}, v_{1y})^T, \vec v_2 = (v_{2x}, v_{2y})^T \\}
+$$
+
+이 기저는 $T$에 의해서 다음과 같이 변형된다. 
+
+$$
+T(\vec v_1) = 
+\begin{bmatrix}
+t_{1x} \\
+t_{1y}
+\end{bmatrix},~ 
+T(\vec v_2) = 
+\begin{bmatrix}
+t_{2x} \\
+t_{2y}
+\end{bmatrix}
+$$
+
+이걸 매트릭스로 표현하면 어떻게 될까? $2 \times 2$로 이 변형이 표현될 수 있기 때문에, 
+
+$$
+M_T = 
+\begin{bmatrix}
+m_{11} & m_{12} \\
+m_{21} & m_{22} 
+\end{bmatrix}
+$$
+
+앞서 변형을 그대로 적어보자. 
+
+$$
+\begin{aligned}
+m_{11} v_{1x} + m_{12} v_{1y} & = t_{1x} \\
+m_{21} v_{1x} + m_{22} v_{1y} & = t_{1y} \\
+m_{11} v_{2x} + m_{12} v_{2y} & = t_{2x} \\
+m_{21} v_{2x} + m_{22} v_{2y} & = t_{2y} \\
+\end{aligned}
+$$
+
+여기서 미지수는 $m_{\cdot}$이다. 즉 4개의 미지수를 지니는 연립방정식이 된다. 
+
+$$
+A \vec m = \vec t ~\Leftrightarrow~
+\begin{bmatrix}
+v_{1x} & v_{1y} & 0 & 0 \\
+v_{1x} & v_{1y} & 0 & 0 \\
+0 & 0 & v_{2x} & v_{2y} \\
+0 & 0 & v_{2x} & v_{2y} \\
+\end{bmatrix} 
+\begin{bmatrix}
+m_{11} \\
+m_{12} \\
+m_{21} \\
+m_{22} \\
+\end{bmatrix} = 
+\begin{bmatrix}
+t_{1x} \\
+t_{1y} \\
+t_{2x} \\
+t_{2y}
+\end{bmatrix}
+$$
+
+## Change of Basis 
+
+한 벡터의 기저를 다른 기저로 바꾸는 것을 생각해보자. 일반적으로는 $T: V \to W$ 역시 $B_V$에서 $B_W$로 기저를 바꾸는 것이다. 차원이 바뀐다면 기저 역시 바뀌어야 한다. 
+
+기저 변환(change-of-basis)은 매트릭스를 이해하는 매우 중요한 방식이다. 이를 통해 역시 매트릭스 표현에 도달할 수 있다. 선형 번환 $T: V \to W$가 있다고 하자. 
+
+:::{ .column-margin }
+표기법 상 룰을 하나 정하도록 하자. $\phantom{}_{B_W}{M_T}_{B_V}$이라고 쓰는 이는 매트릭스 전후로 투입과 산출 벡터를 표기해주는 것이다. 죽, $M_T$의 투입은 ${B_V}$ 이고 산출은 $B_W$이다.  
+:::
+
+$$
+\begin{aligned}
+B_V & = \{ \hat e_1, \dotsc, \hat e_n \} \\
+B_W & =  \{ \hat b_1, \dotsc, \hat b_m \} 
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\phantom{}_{B_W}{\lbrack M \rbrack}_{B_V} \vec v_{B_V} & =
+\begin{bmatrix}
+\vert & \vert & \vert \\
+T(\hat e_1) & \dotsc & T(\hat e_n) \\
+\vert & \vert & \vert \\
+\end{bmatrix}_{B_V} 
+\begin{bmatrix}
+v_1 \\
+\vdots \\
+v_n \\
+\end{bmatrix}_{B_V} \\
+& = T(\hat e_1) v_1 + \dotsb + T(\hat e_n) v_n \\
+& = T(v_1 \hat e_1 + \dotsb + v_n \hat e_n) \\
+&  = T(\vec v) \\
+& = \vec w_{B_W}
+\end{aligned}
+$$
+
+이제 $T(\hat e_1)$ 하나만 구체적으로 풀어보자. $T$를 통해서 기저는 $B_V$에서 $B_W$로 바뀐다. 
+
+$$
+T(\hat e_1) = 
+\begin{bmatrix}
+c_{11} \\
+\vdots \\
+c_{m1}
+\end{bmatrix}_{B_W} = c_{11} \hat b_1 + \dotsb + c_{m1} \hat b_m
+$$
+
+이를 모든 행에 대해서 적용하면, 다음과 같다. 
+
+$$
+\phantom{}_{B_W}\lbrack M \rbrack_{B_V} = 
+\vphantom{
+\begin{bmatrix}
+\\
+\\
+\\
+\end{bmatrix}
+}_{B_W}
+\begin{bmatrix}
+c_{11} & \cdots & c_{1n} \\
+&\cdots&\\
+c_{m1}  & \cdots & c_{mn} \\
+\end{bmatrix}_{B_V} 
+$$
+
+정리하면 다음과 같다. 
+
+$$
+[T(\vec v)]_{B_W} = \phantom{}_{B_W} [M_T]_{B_V} [\vec v]_{B_V} 
+$$
+
+### Change-of-basis 
+
+이제 하나의 같은 벡터의 기저를 $B_v \to B_{v^{\prime}}$으로 바꾸는 것을 살펴보자. 즉 $T: V \to V$의 경우에 해당한다. 
+
+$$
+\vec v = (v_1, v_2, v_3)_B = v_1 \hat e_1 + v_2 \hat e_2 + v_3 \hat e_3 
+$$
+
+이제 기저를 $B \to B^\prime$으로 바꾸는 어떤 변환이 있다고 하자. 이 변환을 $\phantom{}_{B^{\prime}}[1]_B$라고 표기하자. 이 표기의 뜻은 매트릭스의 인풋(오른쪽)이 원래의 기저 $B$이고 변환을 통해 산출되는 기저를 $B^{\prime}$으로 나타낸 것이다. $1$의 의미는 벡터의 기저만 바뀌었을 뿐 동일한 벡터의 변환이라는 의미를 지닌다 즉,
+
+$$
+(v^{\prime}_1, v^{\prime}_2, v^{\prime}_3) = v^{\prime}_1 \hat e^{\prime}_1 +  + v_2 \hat e^{\prime}_2 + v_3 \hat e^{\prime}_3 = \vec v = v_1 \hat e_1 + v_2 \hat e_2 + v_3 \hat e_3 
+$$
+
+$_{B^{\prime}}1_B$을 찾기 위해서 $\hat e_1$을 $B^{\prime}$ 기저로 표현해보자. 
+
+$$
+\hat e_1 = (\hat e^{\prime}_1 \cdot \hat e_1) e^{\prime}_1 + (\hat e^{\prime}_2 \cdot \hat e_1) e^{\prime}_2 + (\hat e^{\prime}_3 \cdot \hat e_1) e^{\prime}_3 = ( \hat e^{\prime}_1 \cdot \hat e_1,  \hat e^{\prime}_2 \cdot \hat e_1 ,  \hat e^{\prime}_3 \cdot \hat e_1  )_{B^{\prime}}
+$$
+
+따라서 기저 변환을 위한 매트릭스는 다음과 같다. 
+
+$$
+\begin{bmatrix}
+e^{\prime}_1 & e^{\prime}_2 & e^{\prime}_3 
+\end{bmatrix} = 
+\begin{bmatrix}
+e^{\prime}_1 \cdot \hat e_1  & e^{\prime}_1 \cdot \hat e_2 & e^{\prime}_1 \cdot \hat e_3 \\
+e^{\prime}_2 \cdot \hat e_1  & e^{\prime}_2 \cdot \hat e_2 & e^{\prime}_2 \cdot \hat e_3 \\
+e^{\prime}_3 \cdot \hat e_1  & e^{\prime}_3 \cdot \hat e_2 & e^{\prime}_3 \cdot \hat e_3 \\ 
+\end{bmatrix} = 
+\phantom{}_{B^{\prime}}[1]_B
+$$
+
+### Back to generic bases
+
+다시 위에서 살펴보았던 날 기저(generic basis) $f$ 의 문제로 돌아와보자. $\phantom{}_S1_f$는 어떻게 구할 수 있을까? 위의 식을 참고하면 된다. $B_S = \{(1,0,0), (0,1,0), (0,0,1)\}$이라고 하자. 표기의 편의상 $B_S$ 각각을 $\hat i$, $\hat j$, $\hat k$ 라고 하자. 
+
+
+$$
+\phantom{}_S[1]_f = 
+\begin{bmatrix}
+\vec f_1 \cdot \hat i  & \vec f_2 \cdot \hat i  & \vec f_3 \cdot \hat i \\
+\vec f_1 \cdot \hat j  & \vec f_2 \cdot \hat j  & \vec f_3 \cdot \hat j \\
+\vec f_1 \cdot \hat k & \vec f_2 \cdot \hat k & \vec f_3 \cdot \hat k \\ 
+\end{bmatrix} 
+$$
+
+$\phantom{}_S[1]_f$ 매트릭스는 $B_f$ 기저의 벡터를 $B_S$ 기저의 벡터로 바꿔주는 매트릭스다. 이를 적용하면 $B_S$ 기저의 매트리스 벡터가 나온다. 
+
+$$
+\underbrace{\phantom{}_S[1]_f}_{B_S \leftarrow B_f} \vec v_{B_f} = \vec v_{B_S}
+$$
+
+### Transformation with change-of-basis 
+
+이제 $\phantom{}_B \lbrack M_T \rbrack_B$ 가 주어져 있다고 하자. 이를 $\phantom{}_{B^{\prime}}\lbrack M_T \rbrack_{B^{\prime}}\phantom{}$로 어떻게 교체할 수 있을까? 개념적으로는 이럴 것이다. 
+
+$$
+\phantom{}_{B^{\prime}}{[M_T]}_{B^{\prime}} = \underbrace{\phantom{}_{B^{\prime}}{[1]}_{B}}_{B^\prime \leftarrow B}\phantom{}_{B}{[M_T]}_{B}\overbrace{\phantom{}_{B}{[1]}_{B^{\prime}}}^{B \leftarrow B^\prime}
+$$
+
+$\phantom{}_{B^{\prime}}{\lbrack 1 \rbrack}_{B}$과 $\phantom{}_{B}{\lbrack 1 \rbrack}_{B^{\prime}}$이 서로 역변환 관계임을 기억해두자. 
+
+## Similar Matrix
+
+$B \in \mathbb R^{n \times n}$과 역행렬이 존재하는 매트릭스 $C \in \mathbb R^{n \times n}$가 있다고 하자. A은 다음과 같이 정의된다. 
+
+$$
+A = C B C^{-1}
+$$
+
+$A$과 $B$은 서로 닮은 꼴의 매트릭스다. 위 식을 만족하는 매트릭스 $A$과 $B$을 similar matrix라고 정의한다. 우선 두 매트릭스가 서로 닮은 꼴일 때에는 $n \geq 1$에 대해서 $A^n = C B^n C^{-1}$이 성립한다. 이는 아이겐 분해에서 보듯이 $B$가 어떤 매트릭스냐에 따라서 계산 상 편리함을 줄 수 있다. 만일 $B$가 대각 행렬이라면 행렬의 $n$은 대각 원소의 $n$ 승만 수행하면 된다.  
+
+$C$가 역행렬을 지니기 때문에 $C$의 컬럼은 $\mathbb R^n$의 기저가 된다. 이렇게 보면 $C$는 change-of-basis와 같은 맥락에서 이해할 수 있다. 즉, 앞서 살펴 본 기저를 바꾸는 행렬과 동일한 행렬이다. $A x$라는 변환을 이 맥락에서 다시 이해해보자. 여기서 $\mathcal B$는 표준 기저($\hat e_i$)로 이해하면 된다. 
+
+1. $C^{-1} x$는 $\lbrack x \rbrack_{u}$의 기저를 $[x]_{\mathcal B}$로 바꾸는 것이다. 즉, $\phantom{}_{\mathcal B}\lbrack 1 \rbrack_u$
+
+2. 이 바뀐 기저에서 $B$이라는 변환을 수행한다. 즉, $\phantom{}_{\mathcal B} \lbrack B \rbrack_{\mathcal B}$
+
+3. $C$는 곱해 다시 통상적인 기저로 돌아오게 된다. 즉,  $\phantom{}_{u}{\lbrack 1 \rbrack}_{\mathcal B}$
+
+아래 그림에서 보듯이, $Ax$라는 변환과 $B[x]_{\mathcal B}$라는 변환은 좌표계만 다를 뿐 동일한 변환이다. $C B C^{-1}$의 기저의 변화를 살펴보면, 
+
+$$
+\begin{aligned}
+\underbrace{u \rightarrow \mathcal B}_{C^{-1}} & \cdots B \cdots \underbrace{\mathcal B \rightarrow u}_{C} \\
+& \cdots A \cdots
+\end{aligned}
+$$
+
+로 나타낼 수 있다.  
+
+![기저 변환의 의미](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true){ .my-figure7 }
+
+<br>
+Similar matrix인 $A$과 $B$ 사이에서 다음과 같은 관계가 성립한다. 
+
+1. ${\rm Tr}(A) = {\rm Tr}(B)$
+2. ${\rm det}(A) = {\rm det}(B)$
+3. ${\rm rank}(A) = {\rm rank}(B)$
+4. ${\rm eig}(A) = {\rm eig}(B)$

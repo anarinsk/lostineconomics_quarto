@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JS HUHH">
+<meta name="dcterms.date" content="2019-05-06">
+<meta name="description" content="SVM의 수학">
+
+<title>lostineconomics.com - Mathematics of Support Vector Machine</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">lostineconomics.com</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Junsok Huhh</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/anarinsk"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/anarinsk"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Mathematics of Support Vector Machine</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">math-of</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    SVM의 수학
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>JS HUHH </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 6, 2019</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="key-questions" class="level2">
+<h2 class="anchored" data-anchor-id="key-questions">Key Questions</h2>
+<ul>
+<li>Support Vector Machine (SVM)의 알고리듬을 수학적으로 어떻게 도출할 수 있을까?</li>
+<li>보다 직관적으로 이해할 수 있는 방법은 없을까?</li>
+</ul>
+</section>
+<section id="key-synopsis" class="level2">
+<h2 class="anchored" data-anchor-id="key-synopsis">Key Synopsis</h2>
+<ul>
+<li>SVM은 기본적으로 최소화(minimize)를 한 후 이를 다시 극대화(maximize)를 하는 최대최소(maxmin) 형태의 최적화 문제이다.
+<ul>
+<li><strong>최소화</strong>: 분류(classification)의 기준이 되는 두 영역을 나누는 하이퍼플레인을 찾은 후 이 하이퍼플레인과 가장 가깝게 위치하는 두 영역의 벡터(서포트 벡터)를 찾는다.</li>
+<li><strong>최대화</strong>: 분류 기준이 되는 하이퍼플레인과 평행한 두 서포트 벡터를 지나는 하이플레인의 거리를 최대화 한다.</li>
+</ul></li>
+<li>이 maxmin 문제를 풀면 목적함수에는 training set에 속한 벡터들의 닷 프로덕트만 남게 되고, 덕분에 최적화 문제가 단순해진다.</li>
+<li>이 닷 프로덕트들로 구성된 부분을 다른 함수 형태로 바꿔서 SVM 알고리듬의 ’커널’을 유연하게 바꿀 수 있다. 이것이 커널 트릭 (Kernel trick)이다.</li>
+</ul>
+</section>
+<section id="svm-mathematically" class="level2">
+<h2 class="anchored" data-anchor-id="svm-mathematically">SVM Mathematically</h2>
+<section id="preliminary-concepts" class="level3">
+<h3 class="anchored" data-anchor-id="preliminary-concepts">Preliminary concepts</h3>
+<section id="length-of-a-vector" class="level4">
+<h4 class="anchored" data-anchor-id="length-of-a-vector">Length of a vector</h4>
+<p>벡터 <span class="math inline">\({\bf x} = (x_1, x_2, \dotsc, x_n)\)</span> 의 벡터의 길이, 즉 유클리드 노름(norm), 은 다음과 같이 정의된다.</p>
+<p><span class="math display">\[
+\Vert {\bf x} \Vert = \sqrt{x_1^2 + x_2^2 + \dotsc + x_n^2}
+\]</span></p>
+</section>
+<section id="direction-of-a-vector" class="level4">
+<h4 class="anchored" data-anchor-id="direction-of-a-vector">Direction of a vector</h4>
+<p>벡터 <span class="math inline">\(\bf x\)</span>의 방향성 <span class="math inline">\(\bf w\)</span>는 다음과 같이 정의할 수 있다.</p>
+<p><span class="math display">\[
+\mathbf{w} = \left( \dfrac{x_1}{ \Vert \bf x \Vert }, \dfrac{x_2}{ \Vert \bf x \Vert } \right)
+\]</span></p>
+<p>그림으로 나타내보자.</p>
+<p><img src="https://github.com/anarinsk/public-images/blob/master/svm/alpha_delta.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;"></p>
+<p>이는 다음과 같이 삼각함수로 표시할 수 있다.</p>
+<p><span class="math display">\[
+\mathbf{w} = \left(  \cos~\theta, \cos~\alpha  \right)
+\]</span></p>
+</section>
+<section id="dot-product-inner-product" class="level4">
+<h4 class="anchored" data-anchor-id="dot-product-inner-product">Dot product (inner product)</h4>
+<p>내적은 <strong>벡터 연산</strong>의 일종으로, 이는 두 벡터를 스칼라 값으로 바꿔주는 일종의 함수다.</p>
+<p><img src="https://github.com/anarinsk/public-images/blob/master/svm/beta.png?raw=True" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;"></p>
+<p><span class="math display">\[
+\begin{aligned}
+\cos \theta &amp; = \cos (\beta -\alpha) \\\\
+&amp; = \cos  \beta \cos \alpha + \sin \beta  \ \sin \alpha \\\\
+&amp; = \dfrac{x_1}{\Vert \rm x \Vert} \dfrac{y_1}{\Vert \rm y \Vert} + \dfrac{x_2}{\Vert \rm x \Vert} \dfrac{y_2}{\Vert \rm y \Vert} \\\\
+&amp; = \dfrac{x_1 y_1 + x_2 y_2}{\Vert \rm x \Vert \Vert \rm y \Vert}
+\end{aligned}
+\]</span></p>
+<p>이를 아래와 같이 정리할 수도 있다.</p>
+<p><span class="math display">\[
+\rm x \cdot \rm y = \Vert \rm x \Vert \Vert \rm y \Vert \cos \theta
+\]</span></p>
+</section>
+<section id="hyperplane" class="level4">
+<h4 class="anchored" data-anchor-id="hyperplane">Hyperplane</h4>
+<p><img src="https://cdn-images-1.medium.com/freeze/max/1000/1*q7Tr-GNbm5HM7T3d1HR-Uw.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;"></p>
+<p><span class="math inline">\(n\)</span> 차원 공간을 가를 수 있는 해당 공간의 차원보다 하나 낮은 수학적 관계라고 풀어서 쓸 수 있다.</p>
+<ul>
+<li>즉, <span class="math inline">\(x_1\)</span>이나 <span class="math inline">\(x_2\)</span> 중 하나만 주어지면 나머지 위치가 주어진다.<br>
+</li>
+<li>쉽게 <span class="math inline">\(y = x + 1\)</span>의 직선을 생각하면 된다. 2차원 평면에서 <span class="math inline">\(x\)</span>의 값이 주어지면 y값이 정해진다. 이 직선은 2차원 평면에 위치하지만 사실상 1차원의 속성을 지니게 된다.</li>
+</ul>
+<p><span class="math inline">\({\bf x} = (x_1, x_2)\)</span>의 벡터가 있다고 할 때, 하이퍼플레인은 벡터 <span class="math inline">\(\bf w\)</span>와 <span class="math inline">\(b\)</span>에 의해 정의된다. 즉,</p>
+<p><span class="math display">\[
+\mathbf{w} \cdot {\bf x} + b = 0
+\]</span></p>
+</section>
+<section id="classifier" class="level4">
+<h4 class="anchored" data-anchor-id="classifier">Classifier</h4>
+<p>하이퍼플레인을 기준으로 클래시파이어를 다음과 같이 정의한다. 특정한 관찰 벡터 <span class="math inline">\(\bf x\)</span>가 있다고 하자. 이때 분류 <span class="math inline">\(h\)</span>의 정의는 아래와 같다.</p>
+<p><span class="math display">\[
+h({\bf x})  =
+\begin{cases}
++1\hspace{3em} &amp; \text{if} \hspace{1em} \mathbf{w} \cdot {\bf x} + b \geq 0 \\\\
+-1 \hspace{3em} &amp; \text{if} \hspace{1em} \mathbf{w} \cdot {\bf x} + b &lt; 0
+\end{cases}
+\]</span></p>
+</section>
+</section>
+</section>
+<section id="explained-visually" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="explained-visually">Explained Visually</h2>
+<p>그림으로 보다 직관적으로 이해해보자.</p>
+<p><img src="https://github.com/anarinsk/public-images/blob/master/svm/svm_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;"></p>
+<p>어떤 원점을 기준으로 training example까지의 벡터를 <span class="math inline">\({\bf x}_i\)</span>라고 하자. 이때 둘을 가르는 하이퍼플레인이 있을 때 이와 직교하는 벡터 (orthogonal vector) $ $를 생각해보자. 왜 orthogonal해야 하는가? 잠시 후 그 이유를 알 수 있다. 하이퍼플레인은 기본적으로는 두 벡터 사이의 닷 프로덕트다. 닷 프로덕트를 그림으로 나타낼 수 있는 방법은 이를 projection으로 생각해보는 것이다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>내적이라고 번역되기도 하지만 여기서는 그냥 ’닷 프로덕트’라고 쓰리고 하겠다.</p>
+</div></div><p>즉, <span class="math inline">\({\bf x}_i\)</span>를 $ $로 프로젝션을 한다면(projection of <span class="math inline">\({\bf x}_i\)</span> on $ $), 이는</p>
+<p><span class="math display">\[
+\text{Proj}_\mathbf{w} {\bf x}_i = \dfrac{\mathbf{w} \cdot{\bf x}_i}{\Vert \bf w \Vert}
+\]</span></p>
+<p>닷 프로덕트의 부분이 시각적으로는 projection 결과 곱하기 <span class="math inline">\(\Vert \bf w \Vert\)</span>로 나타난다. 즉, <span class="math inline">\({\bf x}_i\)</span>에서 <span class="math inline">\(\bf w\)</span>를 향해 내린 선분이 프로젝션이고 이를 <span class="math inline">\(\Vert \bf w \Vert\)</span>로 스케일링 한 <span class="math inline">\(\bf w\)</span> 위에서의 길이가 닷 프로덕트를 시각적으로 나타낸 것이다. 이 프로젝션의 길이에 따라서 해당 트레이닝 샘플이 어떤 것으로 분류될지에 관해서 파악할 수 있다. <span class="math inline">\(\bf \Vert w \Vert\)</span>가 고정되어 있다고 하면, 프로젝션의 크기가 일정 숫자보다 크면 분류의 오른쪽에 작으면 분류의 왼쪽에 위치하는 것이다. 이를 아래와 같이 표시해보자.</p>
+<p><span class="math display">\[\mathbf{w} \cdot {\bf x}_{\mathrm r} + b \geq 1\]</span></p>
+<p><span class="math display">\[\mathbf{w} \cdot {\bf x}_{\mathrm l} + b \leq 1\]</span></p>
+<p>프로젝션의 길이가 일정한 기준보다 길면 오른쪽에 짧으면 왼쪽에 위치한 것으로 분류할 수 있다. 이 조건을 <span class="math inline">\(y_i\)</span>와 함께 나타내보자. 즉,</p>
+<p><span class="math display">\[
+y_i ( \mathbf{w} \cdot {\bf x}_ i + b) - 1  \geq 0
+\]</span></p>
+<p>앞서 분류기에서 해당 값이 0보다 크면 <span class="math inline">\(y_i ( \mathbf{w} \cdot {\bf x}_ i + b) - 1 \geq 0\)</span>가 성립한다. 반면, 해당 값이 0보다 작으면 음수를 곱하는 것이 되어 부등호가 바뀌게 되고, 이 경우 역시 위의 식이 성립한다.</p>
+<p><img src="https://github.com/anarinsk/public-images/blob/master/svm/svm_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;"></p>
+<p>이제 <span class="math inline">\(\cos \theta\)</span>를 벡터 <span class="math inline">\({\bf x}_{\rm svr} - {\bf x} _{\rm svl}\)</span>와 <span class="math inline">\(\mathbf{w}\)</span>가 이루는 각이라고 생각하자. 이때 <span class="math inline">\(\mathbf{w}\)</span>는 하이퍼플레인과 orthogonal하며 적절한 training sample 즉, 적절한 하나의 서포트 벡터를 지난다. 이때 <span class="math inline">\(\cos \theta\)</span>는 다음과 같이 쉽게 정의된다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>벡터의 방향에 대해서 약간 갸우뚱하는 분들이 있을지 모르겠다. <span class="math inline">\(\cos \theta\)</span>를 제대로 정의하기 위해서는 <span class="math inline">\(-({\bf x}_{\rm svr} - {\bf x}_{\rm svl})\)</span>, <span class="math inline">\(- \mathbf{w}\)</span>라고 쓰는 것이 맞을 것이다. 하지만, 둘의 닷 프로덕트를 구하면 서로 상쇄되어 아래 적은 것과 동일하다.</p>
+</div></div><p><span class="math display">\[\cos \theta = \dfrac{({\bf x} _ {\rm svr} - {\bf x} _ {\rm svl}) \cdot \bf w}{\Vert {\bf x} _ {\rm svr} - {\bf x} _ {\rm svl} \Vert \Vert \mathbf{w} \Vert}\]</span></p>
+<p>한편, 하이퍼플레인과 평행하면서 서포트 벡터를 지나가는 하이퍼플레인의 거리 <span class="math inline">\(\Delta_{\bf x}\)</span>는 다음과 같다.</p>
+<p><span class="math display">\[\dfrac{ \Delta _ {\bf x} }{\Vert {\bf x} _ {\rm svr} -  {\bf x} _ {\rm svl} \Vert } = \cos \theta = \dfrac{({\bf x} _ {\rm svr} - {\bf x} _ {\rm svl}) \cdot \bf w}{\Vert {\bf x} _ {\rm svr} - {\bf x} _ {\rm svl} \Vert \Vert \mathbf{w} \Vert}\]</span></p>
+<p>따라서</p>
+<p><span class="math display">\[\Delta _ {\bf x}  = \dfrac{({\bf x} _ {\rm svr} - {\bf x} _ {\rm svl}) \cdot \bf w}{\Vert \mathbf{w} \Vert}\]</span></p>
+<p><span class="math inline">\(y_i ( \mathbf{w} \cdot {\bf x}_ i + b) - 1 = 0\)</span>의 양변에 <span class="math inline">\(y_i\)</span>를 곱하면, <span class="math inline">\(y_i^2 ( \mathbf{w} \cdot {\bf x}_ i + b) = y_i\)</span>가 된다. <span class="math inline">\(y_i^2 =1\)</span>이므로,</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\bf x}_ {\rm svr} \cdot \mathbf{w} + b  &amp; = 1  \\
+{\bf x}_ {\rm svl}  \cdot \mathbf{w} + b  &amp; = -1
+\end{aligned}
+\]</span></p>
+<p>여기서 <span class="math inline">\(({\bf x} _ {\rm svr} - {\bf x} _ {\rm svl}) \cdot \mathbf{w} = 2\)</span>를 쉽게 도출할 수 있다. 결론적으로 두 서포트 벡터 사이의 거리를 최대화하는 문제는 <span class="math inline">\(\Vert \bf w \Vert\)</span>를 최소화하는 문제와 같다.</p>
+</section>
+<section id="optimization-for-svm" class="level2">
+<h2 class="anchored" data-anchor-id="optimization-for-svm">Optimization for SVM</h2>
+<section id="metrics-to-compare-hyperplanes" class="level3">
+<h3 class="anchored" data-anchor-id="metrics-to-compare-hyperplanes">Metrics to compare hyperplanes</h3>
+<section id="defining-functional-margin" class="level4">
+<h4 class="anchored" data-anchor-id="defining-functional-margin">Defining functional margin</h4>
+<p><span class="math inline">\(f_i = y_i(\mathbf{w} \cdot {\bf x}_i + b)\)</span>가 있다고 하자. 이때 분류가 제대로 이루어졌다면, <span class="math inline">\(f_i\)</span>의 부호는 언제나 양수다. 위의 분류의 정의에 따르면 그렇다. 데이터 셋 <span class="math inline">\(D\)</span>의 정의는 다음과 같다.</p>
+<p><span class="math display">\[
+D = \left\lbrace ({\bf x}_i, y_i) \mid {\bf x}_ i \in \mathbb R^n,~y_ i \in \lbrace -1, 1\rbrace  \right\rbrace_{i=1}^m
+\]</span></p>
+<p>펑셔널 마진(functional margin)이라고 불리는 <span class="math inline">\(F\)</span> 는 다음과 같다.</p>
+<p><span class="math display">\[
+F = \min_{i = 1, \dotsc, m} y_i( \mathbf{w} \cdot {\bf x} _i + b )
+\]</span></p>
+<p><span class="math inline">\(\mathbf{w}\)</span>와 <span class="math inline">\(b\)</span>로 정의되는 하이퍼플레인이 모든 트레이닝 셋을 잘 분류했다면, <span class="math inline">\(f_i &gt; 0\)</span>가 성립한다. 이 <span class="math inline">\(f_i\)</span> 중 가장 작은 값이 functional margin이다. 그리고 두 번째로 서로 다른 하이퍼플레인 중에서 가장 큰 <span class="math inline">\(F\)</span>를 지니는 하이퍼플레인이 최적이 하이퍼플레인이다.</p>
+<ol type="1">
+<li><span class="math inline">\(F\)</span>를 얻기 위한 과정에서 최소화 로직이 들어간다. 즉, 해당 하이퍼플레인과 가장 가깝게 위치한 관측치를 얻어내는 과정</li>
+<li>이렇게 얻어낸 <span class="math inline">\(F\)</span>들을 서로 다른 하이퍼플레인들 사이에 비교하고, 가장 큰 <span class="math inline">\(F\)</span>를 주는 하이퍼플레인을 채택한다.</li>
+</ol>
+<p>표준화를 위해서 <span class="math inline">\(\bf w\)</span>의 norm으로 <span class="math inline">\(f_i\)</span> 값을 나누고 극대화 문제를 정식화하면 아래와 같다.</p>
+</section>
+</section>
+<section id="derivation-of-svm-optimization-problem" class="level3">
+<h3 class="anchored" data-anchor-id="derivation-of-svm-optimization-problem">Derivation of SVM optimization problem</h3>
+<p>표준화를 위해서 <span class="math inline">\(\Vert \bf w \Vert\)</span>로 목적함수와 제약을 나누자.</p>
+<p><span class="math display">\[
+\max_{\mathbf{w} , b} M\hspace{1em}\text{s.t.}\hspace{1em}\gamma_i \geq M\hspace{1em}\text{for}\hspace{1em}i = 1,\dotsc, m
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+\gamma_i = y_i \left( \dfrac{\mathbf{w} }{\Vert \mathbf{w} \Vert} \cdot {\bf x}_i + \dfrac{b}{\Vert \mathbf{w} \Vert} \right)
+\]</span></p>
+<p><span class="math display">\[
+M = \min_{i=1, \dotsc, m} \gamma_i
+\]</span></p>
+<p>표준화된 펑셔널 마진을 최대화하되, 트레이닝 샘플들이 이것보다 커야 한다는 조건(최소화)이 제약으로 들어간다. 즉, 아래의 식은 최소화 제약 하에서 <span class="math inline">\(F\)</span>를 최대화한다는 이중 최적화 과정을 보여 준다.</p>
+<p><span class="math display">\[
+\max_{\mathbf{w} , b} \dfrac{F}{\Vert w \Vert}\hspace{1em}\text{s.t.}\hspace{1em}f_i \geq F \hspace{1em}\text{for}\hspace{1em}i = 1,2, \dotsc, m
+\]</span></p>
+<p>위 극대화 문제에서 모든 변수는 상대값으로 정의할 수 있으므로 <span class="math inline">\(F\)</span>를 1로 제한해도 해는 바뀌지 않는다. 그리고 아래와 같은 차례로 정식화할 수 있다.</p>
+<p><span class="math display">\[
+\max_{\mathbf{w} , b} \dfrac{1}{\Vert w \Vert}\hspace{1em}\text{s.t.}\hspace{1em}f_i \geq 1\hspace{1em}\text{for}\hspace{1em}i = 1,2, \dotsc, m
+\]</span></p>
+<p><span class="math display">\[
+\min_{\mathbf{w} , b} {\Vert w \Vert}\hspace{1em}\text{s.t.}\hspace{1em}f_i \geq 1\hspace{1em}\text{for}\hspace{1em}i = 1,2, \dotsc, m
+\]</span></p>
+<p><span class="math display">\[
+\min_{\mathbf{w} , b} \dfrac{1}{2}{\Vert w \Vert}^2\hspace{1em}\text{s.t.}\hspace{1em}f_i \geq 1\hspace{1em}\text{for}\hspace{1em}i = 1,2, \dotsc, m
+\]</span></p>
+</section>
+<section id="optimization-by-wolfe-duality" class="level3">
+<h3 class="anchored" data-anchor-id="optimization-by-wolfe-duality">Optimization by Wolfe duality</h3>
+<p>제약 하의 극대화 문제이므로 라그랑주 최적화로 바뀌서 볼 수 있다. 다음과 같이 라그랑주 방정식을 정의하자.</p>
+<p><span class="math display">\[
+{\mathcal L}(\mathbf{w} , b, {\boldsymbol \alpha}) = \frac{1}{2} \mathbf{w} \cdot \mathbf{w} - \sum_{i=1}^m \alpha_i \left [ y_i (\mathbf{w} \cdot {\bf x}  + b) -1 \right]
+\]</span></p>
+<p>여기서 벡터 <span class="math inline">\(\boldsymbol \alpha\)</span>는 라그랑주 최적화의 라그랑주 승수로 제약식을 반영하는 부분이다.<br>
+일단, <span class="math inline">\(\alpha_i\)</span>를 무시하고 두 최적화 변수인 <span class="math inline">\(\bf w\)</span>와 <span class="math inline">\(b\)</span> 에 대해서면 1계 조건을 풀면 다음과 같다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\nabla_\mathbf{w} {\mathcal L}( {\mathbf{w}, b, \boldsymbol \alpha} ) &amp; = \mathbf{w} - \sum_{i}^{m} {\alpha_i} {y_i} {x_i} = 0 \\
+\nabla_{b} {\mathcal L}({\mathbf{w}, b, \boldsymbol \alpha}) &amp; = - \sum_{i}^{m} \alpha_i y_i = 0
+\end{aligned}
+\]</span></p>
+<p>이 녀석들을 다시 라그랑주 방정식에 대입하면, <span class="math inline">\(\boldsymbol \alpha\)</span>로만 된 일종의 maximal function 혹은 라그랑주 방정식의 하한(infimum)을 만들 수 있다. Wolfe duality에 따르면, 최소화 최대화를 한 번에 푸는 것과 한 가지 문제를 먼저 푼 후 해당 결과를 목적 함수에 넣고 두 번째 문제를 순차적으로 푸는 것이 동일하다. 따라서 위의 일계 조건을 목적 함수에 넣은 목적함수는 구해보자.</p>
+<p><span class="math display">\[
+W(\boldsymbol \alpha)  = \sum_{i=1}^m \alpha_i - \dfrac{1}{2}\sum_{i=1}^{m} \sum_{j=1}^m \alpha_i \alpha_j y_i y_j {\bf x}_i \cdot {\bf y}_j
+\]</span></p>
+<p>이제 문제는 <span class="math inline">\(\boldsymbol \alpha\)</span>에 관해서 극대화 문제를 푸는 것으로 바뀐다. 즉,</p>
+<p><span class="math display">\[
+\max_{\boldsymbol \alpha} W( {\boldsymbol \alpha} )\hspace{1em}\text{s.t.}\hspace{1em}{\alpha_i} \geq 0, \sum_{i=1}^m \alpha_i { \left( y_i ( \mathbf{w} \cdot {\bf x}^* + b) -1 \right)} = 0
+\]</span></p>
+<p>제약 부분이 부등식이므로 KT(Kuhn-Tucker) 조건에 따라서 풀면 된다.</p>
+<p><span class="math display">\[
+\alpha_i \left[ y_i (\mathbf{w} \cdot {\bf x}^* + b) -1 \right] = 0
+\]</span></p>
+<p>KT 조건이란 부등식 제약을 푸는 테크닉이다. 즉, <span class="math inline">\(\alpha_i &gt;0\)</span>의 제약이 유효하다면 제약을 만족시키기 위해서는 <span class="math inline">\(y_i (\mathbf{w} \cdot {\bf x}^* + b) -1 = 0\)</span>이 만족해야 한다. 이렇게 제약이 걸리는 경우에 위치한 <span class="math inline">\(x^*\)</span>가 바로 ’서포트 벡터’다. 반면, <span class="math inline">\(\alpha_i =0\)</span>는 제약이 등호로 걸릴 필요가 없는 트레이닝 셋의 관찰들이다. 이들은 분류 하이퍼플레인까지의 길이가 서포트 벡터의 길이보다 크다.</p>
+</section>
+<section id="compute-w-and-b" class="level3">
+<h3 class="anchored" data-anchor-id="compute-w-and-b">Compute w and b</h3>
+<p><span class="math inline">\(\bf w\)</span> 의 경우 1계 조건에서 쉽게 얻을 수 있다.</p>
+<p><span class="math display">\[
+\mathbf{w} - \sum_{i=1}^m \alpha_i y_i {\bf x} _i = 0
+\]</span></p>
+<p>한편, <span class="math inline">\(b\)</span>의 경우 서포트 벡터의 경우 위에서 본 것 같이 제약 식의 등호가 성립한다. 즉, 서포트 벡터를 <span class="math inline">\(x^*\)</span>라고 할 때,</p>
+<p><span class="math display">\[
+y_i (\mathbf{w} \cdot {\bf x}^* + b) -1 = 0
+\]</span></p>
+<ul>
+<li>양변에 <span class="math inline">\(y_i\)</span>를 곱하면, <span class="math inline">\(y_i^2 = 1\)</span>이므로,</li>
+</ul>
+<p><span class="math display">\[
+b = y_i - \mathbf{w} \cdot {\bf x}^*
+\]</span></p>
+<ul>
+<li>서포트 벡터가 S개 존재할 경우라면,</li>
+</ul>
+<p><span class="math display">\[
+b = \dfrac{1}{S} \sum_{i=1}^S \left( y_i - \mathbf{w} \cdot {\bf x}^*_i \right)
+\]</span></p>
+</section>
+<section id="limitation" class="level3">
+<h3 class="anchored" data-anchor-id="limitation">Limitation</h3>
+<p>앞서 본 것을 이른바 hard margin SVM이다. 즉, 서포트 벡터 사이의 마진을 획일적으로 적용하는 분류 알고리듬이다. 하드 마진 SVM은 다음의 두가지 경우에 취약하다.</p>
+<section id="데이터에-노이즈가-있을-경우" class="level5">
+<h5 class="anchored" data-anchor-id="데이터에-노이즈가-있을-경우">데이터에 노이즈가 있을 경우</h5>
+<p>하드 마진의 큰 문제는 아웃라이어에 취약할 수 밖에 없다는 것이다. 풀어서 말하면 제약이 선형이고 그 제약이 강력하다는 데 있다. 트레이닝 데이터에 이런 저런 노이즈가 있을 경우 하드 마진은 아예 계산이 불가능할 수 있다. 이때 사용하는 기법이 soft margin SVM이다.</p>
+</section>
+<section id="데이터-자체가-선형으로-분리되지-않을-경우" class="level5">
+<h5 class="anchored" data-anchor-id="데이터-자체가-선형으로-분리되지-않을-경우">데이터 자체가 선형으로 분리되지 않을 경우</h5>
+<p>애초부터 데이터 자체가 선형을 통한 분류를 허용하지 않을 경우에는 비선형 분류를 사용할 수 있다. 이때 동원하는 테크닉이 커널 트릭 (kernel trick)이다.</p>
+</section>
+</section>
+</section>
+<section id="soft-margin-svm" class="level2">
+<h2 class="anchored" data-anchor-id="soft-margin-svm">Soft Margin SVM</h2>
+<p>제약을 약간 풀어주는 <span class="math inline">\(\zeta\)</span>를 도입하여 최적화 문제를 정식화하면 아래와 같다.</p>
+<p><span class="math display">\[
+\min_{\mathbf{w}, b, {\boldsymbol \zeta}} \dfrac{1}{2} \Vert \mathbf{w} \Vert^2 + C \sum_{i=1}^m \zeta_i~\text{s.t}~ y_i ( \mathbf{w} \cdot {\bf x}_i + b) \geq 1 - \zeta_i~\text{for}~ i = 1,2,\dotsc, m
+\]</span></p>
+<p>문제를 풀면</p>
+<p><span class="math display">\[
+\max_{\boldsymbol \alpha} \sum_{i=1}^m \alpha_i - \dfrac{1}{2} \sum_{i=1}^m \sum_{j=1}^{m} \alpha_i \alpha_j {y_i} {y_j} {\bf x}_i \cdot {\bf x}_j \hspace{1em} \text{s.t.}
+\]</span></p>
+<p><span class="math display">\[
+0 \leq \alpha_i \leq C\hspace{1em}\text{for}\hspace{1em}i=1,2,\dotsc, m
+\]</span></p>
+<p><span class="math display">\[
+\sum_{i=1}^m \alpha_i y_i = 0
+\]</span></p>
+<section id="what-is-c" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-c">What is C</h3>
+<p>정규화 파라미터인 <span class="math inline">\(C\)</span>를 어떻게 이해할까? 식 그대로 보면, <span class="math inline">\(\boldsymbol \zeta\)</span>를 얼마나 중요하게 최적화 문제에 반영할 것인지가 중요하다. 다시 말하면 이는 에러를 어떻게 볼 것인가와 연결되어 있다. 만일 <span class="math inline">\(C\)</span>가 양의 무한대 값이라면 이는 하드 마진과 동일하다. 만일 <span class="math inline">\(C=0\)</span> 이라면 <span class="math inline">\(\alpha_i=0\)</span>가 된다. 이는 사실상 선형 제약이 사라지게 되는 결과가 된다. 따라서 하이퍼플레인이 어떤 것도 분류하기 못하게 될 것이다. 즉, C는 하드 마진과 소프트 마진 사이를 적절하게 조절하는 역할을 수행한다.</p>
+</section>
+<section id="kernel-trick" class="level3">
+<h3 class="anchored" data-anchor-id="kernel-trick">Kernel Trick</h3>
+<p>마지막에 얻은 극대화 문제를 살펴보면, training set이 관련된 부분이 딱 하나 밖에 없다. <span class="math inline">\({\bf x}_i \cdot {\bf x}_j\)</span> 뿐이다. 따라서 이 부분을 유연하게 조정해줌으로써 비선형적 형태의 분류를 만들 수 있는 것이다. 앞서 봤던 하드 마진 SVM은 선형 커널을 사용한다. 즉,</p>
+<p><span class="math display">\[
+K({\bf x}_i, {\bf x}_j) = {\bf x}_i \cdot {\bf x}_j
+\]</span></p>
+<p>이런 커널만 있을 형태는 없다. 여러가지 함수를 커널로 취할 수 있을 것이다. 가장 많이 사용되는 커널은 RBF(Radial Basis Function) 혹은 가우시안이라고 한다.</p>
+<p><span class="math display">\[
+K({\bf x}_i, {\bf x}_j) = \exp \left( -\gamma \Vert {\bf x}_i - {\bf x}_j \Vert \right)
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\gamma\)</span> 값이 충분히 작으면 선형 커널과 비슷하게 작동한다.</li>
+<li><span class="math inline">\(\gamma\)</span>가 크면 서포트 벡터에게 크게 영향 받는다.</li>
+</ul>
+</section>
+</section>
+<section id="resource" class="level2">
+<h2 class="anchored" data-anchor-id="resource">Resource</h2>
+<p>이 자료는 아래 내용을 바탕으로 만들어졌습니다.</p>
+<ul>
+<li>Basic: <a href="https://shuzhanfan.github.io/2018/05/understanding-mathematics-behind-support-vector-machines/">LINK</a></li>
+<li>Illustration: <a href="https://towardsdatascience.com/understanding-support-vector-machine-part-1-lagrange-multipliers-5c24a52ffc5e">LINK</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

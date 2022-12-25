@@ -1,0 +1,54 @@
+---
+title:  Cantor's Theorem
+description: 칸토어의 정리를 증명해 보자.  
+author: "JS HUHH"
+date: "07/03/2022"
+draft: false
+image: "https://cdn.mos.cms.futurecdn.net/o6jb2hRLbHfdLAgCESuMjh-1024-80.jpg.webp"
+categories: [math-simple]
+#margin-header: subscribe.html
+---
+
+## Theorem 
+
+임의의 집합 $E$에 대해서 멱집합 $\mathcal P (E)$는 $E$보다 크다. 
+
+## Proof 
+
+### Part 1 
+일단 $E \preccurlyeq \mathcal P (E)$는 쉽게 증명할 수 있다. $e \in E$에 대해서 $f: e \to \lbrace e \rbrace$는 반드시 존재하고 이는 일대일함수(injective/one-to-one function)를 이룬다. 이제 $E \not\approx \mathcal P (E)$임을 증명하면 $E \prec \mathcal P (E)$가 증명된다. 
+
+### Part 2
+귀류법을 활용한다. 만일 $E \approx \mathcal P (E)$(두 집합의 크기가 같다)이라고 가정하자. 이는 일대일대응 $\phi: E \to \mathcal P (E)$가 존재한다는 뜻이다. 
+
+:::{.column-margin}
+단사 함수(injective)를 뜻하는 일대일 함수(one-to-one function)와 전단사함수(bijective)를 뜻하는 일대일대응(one-to-one correspondence)를 혼동하지 말자. 
+:::
+
+$$
+B = \lbrace x \in E | x \notin \phi(x) \rbrace
+$$
+
+$B \subseteq E$이다. 따라서 $\phi$에 따라서 $B$에 매핑되는 원소 $y(\in E)$가 존재한다. 즉, $B = \phi(y)$인 $y$가 존재한다.  
+
+### Part3 
+
+#### 1. $y \in \phi(y)$
+
+이 가정이 맞다면 집합 $B$의 정의에 따라서 $y \notin \phi(y)$여야 한다. 이는 모순이다. 
+
+#### 2. $y \notin \phi(y)$
+
+이 가정이 맞다면 집합 $B$의 정의에 따라서 $y \in \phi(y)$가 되어야 한다. 이 역시 모순이다. 
+
+### Finally 
+
+따라서 일대일대응을 이루는 함수 $\phi(\cdot)$은 존재하지 않는다. 즉, $E \prec \mathcal P (E)$. 
+
+이에 따르면 더 큰 무한 집합을 무한히 생성할 수 있다. 
+
+$$
+E \prec \mathcal P (E) \prec \mathcal P ( \mathcal P (E) ) \prec \dotsb 
+$$
+
+

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JS HUHH">
+<meta name="dcterms.date" content="2020-09-23">
+<meta name="description" content="문과생이 도커를 쓰는 법">
+
+<title>lostineconomics.com - Docker, 소박한 사용법</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">lostineconomics.com</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Junsok Huhh</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/anarinsk"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/anarinsk"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Docker, 소박한 사용법</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">container</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    문과생이 도커를 쓰는 법
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>JS HUHH </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 23, 2020</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="아마도-이런-분들에게-유용할-것" class="level2">
+<h2 class="anchored" data-anchor-id="아마도-이런-분들에게-유용할-것">아마도 이런 분들에게 유용할 것</h2>
+</section>
+<section id="허름한-도커-사용" class="level1">
+<h1>허름한 도커 사용</h1>
+<section id="사전-전제" class="level2">
+<h2 class="anchored" data-anchor-id="사전-전제">사전 전제</h2>
+<ul>
+<li>도커에 관해서 대충 알고 있다.</li>
+<li>도커를 써보기는 했헀다. 하지만… (막상 쓰려면…)</li>
+</ul>
+</section>
+<section id="내가-도커를-쓰는-이유" class="level2">
+<h2 class="anchored" data-anchor-id="내가-도커를-쓰는-이유">내가 도커를 쓰는 이유</h2>
+<ul>
+<li>(사실 있어 보이고 싶어서…)</li>
+<li>개발 환경의 격리고립 및 일관된 환경 공유를 위해서공유를 위한 사전 작업</li>
+<li>가끔 리눅스 환경에서만 구현할 수 있는 파이썬 패키지들이 있다.</li>
+<li>윈도에서 한번은 마주하게 되는 (지긋지긋한) 한글 인코딩 이슈에서 해방</li>
+</ul>
+</section>
+<section id="원칙" class="level2">
+<h2 class="anchored" data-anchor-id="원칙">원칙</h2>
+<p>우선 문과생이 도커(docker) 이미지를 쓰는 원칙 하나 보고 가자.</p>
+<p><strong>본인에게 특화된 이미지를 빌드하지 말고 그냥 official build를 당겨와서 쓰자!</strong></p>
+<p>도커의 장점이 개발환경의 격리다. 그렇다면 자신에게 적합한 환경을 세팅해두고 이 녀석을 끌어와 쓰면 좋지 않을까? 약간의 취향과 사용성의 차이를 감안하고 말하자면, 커스텀 이미지는 되도록 피하는게 좋다. 도커 허브에서 공식적으로 관리되고 업데이트되는 도커 이미지들이 많다. 문과생이 쓰는 환경에서 99%의 확률로 여기서 부족함이 없을 것 같다.</p>
+<p>내가 쓰는 특정 환경을 특정 시점에 이미지로 말아두었다고 치자. 당분간은 편리하게 필요할 때 끌어다 쓸 수 있을 것이다. 하지만 이렇게 ‘고정된’ 이미지를 쓸 경우 도커 이미지 안에 속한 패키지나 구성요소들을 개별적으로 업데이트 해줘야 한다. 시간이 지날수록 업데이트해야 할 항목과 갯수가 늘어나게 된다.</p>
+<p>한편 도커 허브의 공식 이미지의 경우 필요한 업데이트를 이미지 관리자가 정기적으로 수행한다. 이 이미지를 주기적으로 새로 끌어다쓰면 업데이트의 번거로움을 피할 수 있다. 물론 팀별로 통일된 환경이 필요하고 이 환경을 조직에서 관리할 수 있다면,Finding Giants in Docker</p>
+<p>도커를 써봤다면 빌드를 해봤을 것이다. 여러가지 바탕이 되는 OS나 패키지들을 끌어와서 자신에게 특화된 이미패키지를 만들어 써도 좋을 것이다.</p>
+<p>파이썬으로 코딩을 하고 주피터 환경을 쓰고 싶다면, 주피터에서 공식적으로 운영하는 도커 이미지를 쓰자. R과 RStudio를 쓰고 싶다면, 역시 rocker라는 공식적인 도커 프로젝트가 있다. 개인이 제조한 사설 이미지 보다는 이런 공식 이미지가 대체로 편안하다.</p>
+<ul>
+<li><a href="https://hub.docker.com/r/jupyter/datascience-notebook">https://hub.docker.com/r/jupyter/datascience-notebook</a></li>
+<li><a href="https://hub.docker.com/r/rocker/rstudio">https://hub.docker.com/r/rocker/rstudio</a></li>
+</ul>
+<p>이하에서는 내가 기본으로 사용하는 두 개의 도커 환경, 주피터 + 파이썬, RStudio + R을 어떻게 쓰는지 살펴 보겠다.</p>
+</section>
+<section id="미리-해야-할-것들" class="level2">
+<h2 class="anchored" data-anchor-id="미리-해야-할-것들">미리 해야 할 것들</h2>
+<section id="원도10-2004-build-이후-wsl-2-환경" class="level3">
+<h3 class="anchored" data-anchor-id="원도10-2004-build-이후-wsl-2-환경">원도10 2004 Build 이후 WSL 2 환경</h3>
+<p>WSL 2가 깔리는 윈도10 버전으로 업데이트하고 이를 설치하도록 하자. 시중에 가이드가 많으니 구글 검색 후 참고하면 되겠다.</p>
+<ul>
+<li><a href="https://docs.microsoft.com/ko-kr/windows/wsl/">MS 공식 가이드</a></li>
+</ul>
+</section>
+<section id="docker-desktop-윈도10" class="level3">
+<h3 class="anchored" data-anchor-id="docker-desktop-윈도10">Docker Desktop (윈도10)</h3>
+<p>네이티브 우분투 환경이라면 <code>sudo apt-get</code>으로 도커를 설치해서 쓰면 된다. 우리는 윈도10과 리눅스를 오가야 하므로, 이에 적합한 맞춤형 도커 버전이 좋다. 다행스럽게 도커 개발사가 WSL 2에 특화된 도커 클라이언트를 제공하고 있다. 보다 안정적인 버전인 Stable과 보다 최신 기능을 담은 버전인 Edge 모두 WSL 2 지원한다.</p>
+<ul>
+<li><a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows">Docker Desktop for WIndows</a></li>
+</ul>
+</section>
+<section id="windows-terminal" class="level3">
+<h3 class="anchored" data-anchor-id="windows-terminal">Windows Terminal</h3>
+<p>반드시 써야 하는 것은 아니다. 하지만 윈도10에서 리눅스 배포판을 윈도 터미널과 함께 쓰면 더할 나위 없이 좋다. 무엇보다도 별다른 조작 없이 우분투 등 WSL 2에 깔린 리눅스를 터미널이 잘 잡아준다. 다음으로 터미널 환경(폰트, 컬러 등등) 커스터마이즈가 쉽다.</p>
+<ul>
+<li><a href="https://docs.microsoft.com/ko-kr/windows/terminal/">MS 공식 가이드</a></li>
+</ul>
+</section>
+</section>
+<section id="내-환경" class="level2">
+<h2 class="anchored" data-anchor-id="내-환경">내 환경</h2>
+<p>이 글을 쓰는 시점에서 내가 도커를 이용하는 환경은 아래와 같다.</p>
+<ol type="1">
+<li>Windows 10 Insider Preview 20190.rs</li>
+<li>Docker Desktop Edge 2.3.7.0</li>
+<li>Windows Terminal Preview 1.3</li>
+</ol>
+<section id="comments" class="level3">
+<h3 class="anchored" data-anchor-id="comments">Comments</h3>
+<ol type="1">
+<li>윈도우10 20190.rs 버전은 인사이드 프리뷰 버전이다. 프리뷰 버전을 꼭 쓰지 않아도 된다. 202XXX 버전을 쓸 것이라면 20226 이후를 써야 한다.</li>
+<li>도커 버전은 최신 버전을 유지하는 편을 권한다. Edge가 불안하다면 Stable을 쓰면 된다.</li>
+</ol>
+</section>
+</section>
+<section id="docker-compose" class="level2">
+<h2 class="anchored" data-anchor-id="docker-compose">Docker Compose</h2>
+<p>도커를 써본 사람이라면 개별 컨테이너를 띄울 때 옵션들–예를 들어 root 권한을 줄 건지, 포트는 어떤 것을 열 것인지 등등–을 써봤을 것이다. 일상적으로 쓸 때에도 이것들을 매번 지정해서 실행해야 할까? 그렇게 해도 되겠지만 조금 불편하다. 한번 정해두고 재사용할 수 있으면 좋겠다. 이러한 용도에 적합한 것이 ’도커 콤포즈’다.</p>
+<p><code>.yml</code> 확장자의 설정 파일을 만들어 두고 녀석을 실행해서 매번 동일한 환경을 손쉽게 구축할 수 있다. 내가 쓰는 <code>.yml</code> 환경으로 간략하게 살펴보자.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="st">'3'</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">services</span><span class="kw">:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">jupyter-ds</span><span class="kw">:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">image</span><span class="kw">:</span><span class="at"> jupyter/datascience-notebook</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">user</span><span class="kw">:</span><span class="at"> root</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="kw">[</span><span class="at">WSL2 디렉토리</span><span class="kw">]</span><span class="at">:[컨테이너 디렉토리]</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="st">"8888:8888"</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="st">"8501-8510:8501-8510"</span><span class="at">   </span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">           </span><span class="kw">-</span><span class="at"> GRANT_SUDO=yes</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="at">           </span><span class="kw">-</span><span class="at"> JUPYTER_ENABLE_LAB=yes</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="at">           </span><span class="kw">-</span><span class="at"> JUPYTER_TOKEN=[내 비번]</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> jupyter</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">rstudio</span><span class="kw">:</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">image</span><span class="kw">:</span><span class="at"> rocker/verse:latest</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">        #image: rocker/verse:4.0.2</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="kw">[</span><span class="at">WSL2 디렉토리</span><span class="kw">]</span><span class="at">:[컨테이너 디렉토리]</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="st">"8787:8787"</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> ROOT=true</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> PASSWORD=[내 비번]</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> rstudio</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># End of yml</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>yml 파일에서 <code>service</code> 아래 두 개의 항목이 있다. 각각 <code>jupyter/datasicence-notebook</code>과 <code>rocker/verse</code>의 컨테이터 이미지를 의미한다. 첫번째는 데이터를 다룰 때 필요한 파이썬 라이브러리를 주피터와 묶은 이미지이고, 두번째는 R과 RStudio 그리고 tidyverse 및 문서 도구를 묶은 이미지다.</p>
+<ul>
+<li><code>image</code>: docker-hub 상의 이미지 이름을 뜻한다. <code>:</code> 뒤의 내용은 버전 혹은 여러가지 다른 형태로 묶인 이미지를 나타낸다. <code>latest</code> 최신 버전을 의미한다.</li>
+<li><code>volume</code>: WSL 2 환경의 디렉토리와 이미지 내 디렉토리를 매핑한다. 즉, X : Y라고 할 때 X는 윈도우 10의 폴더, Y는 도커 이미지 내의 폴더 이름을 뜻한다. WSL 2는 <code>/mnt</code> 내에 윈도 드라이브를 마운트한다. 따라서 윈도10 환경과 연동된다고 보면 얼추 맞다.</li>
+<li><code>ports</code>: WSL 2에서 인식하는 포트와 이미지 내에서 인식하는 포트를 매핑한다.</li>
+<li>environment: 각각 이미지에 맞는 환경을 지정할 수 있다. 이 사례에서 주피터 노트북에는 <code>sudo</code> 권한을 주고, 주피터랩 버전을 쓰며, 최초 진입시 비번은 [내 비번]을 쓰겠다고 지정한 것이다. RStudio의 경우 root 권한을 주고, 패스워드는 내 비번을 쓰겠다는 의미다.</li>
+</ul>
+<ol type="1">
+<li>통상적으로 쓰려면 <code>docker-compose.yml</code>로 이름을 지은 후 적당한 폴더에 둔다.</li>
+<li>윈도 터미널 등을 통해 Ubuntu와 같은 리눅스 배포판에 접근한다.</li>
+<li>1의 파일이 있는 디렉토리로 이동한 후,</li>
+</ol>
+<pre class="shell"><code>sudo docker-compose -f "\mnt\[YOUR-YML-DIRECTORY]" -p "[NAME-OF-PROJECT]" up -d</code></pre>
+<p>그러면 도커 컴포즈가 알아서 이미지를 끌어온 후 실행까지 할 것이다.</p>
+<p>주의사항 하나 지적하자. docker-compose를 <code>-f</code> 옵션 없이 실행하면 녀석은 HOME 디렉토리에서 해당 파일을 찾는다. WSL 기준에서 볼 때 홈 디렉토리는 윈도의 사용자-계정 디렉토리다. 해당 디렉토리에 <code>docker-compose.yml</code> 파일이 있으면 녀석으로 실행할 것이다. 이렇게 써도 문제는 없지만 yml을 계속 바꿔줘야 할 경우 이는 문제를 일으킬 수 있다. 가급적 <code>yml</code> 파일을 지정해서 활용하는 습관을 들이도록 하자.</p>
+<ul>
+<li><a href="https://docs.docker.com/compose/">도커 컴포즈 공식 가이드</a></li>
+</ul>
+</section>
+<section id="실제-사용해보자" class="level2">
+<h2 class="anchored" data-anchor-id="실제-사용해보자">실제 사용해보자</h2>
+<p>앞서 말했듯이 수 있다! 처음에는 이 개념이 환상적일 수 있다. 게다가 개인용 저장소만 만들지 않으면 도커허브에 그냥 올릴 수 있다. 하지만 이런 접근은 본인이 특화된 용도로 사용을 하거나 아니면 패키지 제조에 능숙하지 않다면 크게 권하고 싶지 않다. 당분간 별 문제가 없더라도 언젠가는 이상하게 탈이 난다.</p>
+<p>다행스럽게 도커 허브에서는 여러가지 공식적으로 관리되고 업데이트되는 도커 이미지들이 많이 올라와 있다. 문과생이라면되도록 초반에는 이런 이미지들을 취사선택해서 활용하는 편을 권장한다. 주피터든 RStudio든 모두 웹 브라우저에서 돌아간다. 이미지가 도커 컨테이터로 구동된 이후 범용 웹브라우저에서 다음과 같이 실행하자.</p>
+<ul>
+<li>Juypterlab + Python: <code>localhost:8888</code></li>
+<li>RStudio + R: <code>localhost:8787</code></li>
+</ul>
+<p>주피터야 원래부터 웹 브라우저 기반이었으니 보통 깔아 쓰는 것과 차이를 느낄 수 없다.</p>
+<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/jupyter.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p>RStudio도 그럴까? 그렇다. 원래 RStudio라는 IDE가 웹 기반으로 만들어졌기 때문에 이 역시 차이를 느낄 수 없다. 아래 화면에서 로그인을 하면 친숙한 RStudio의 화면이 뜬다.</p>
+<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/rstudio_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/rstudio_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p>해당 페이지 아이콘을 바탕화면 혹은 바로가기에 두고 쓰면 조금 편리 하겠다.</p>
+<section id="특화된-패키지-혹은-설정이-필요하다면" class="level3">
+<h3 class="anchored" data-anchor-id="특화된-패키지-혹은-설정이-필요하다면">특화된 패키지 혹은 설정이 필요하다면?</h3>
+<p>그때그때 깔면 된다. 원 도커 이미지에서 웬만해서는 더 깔 것이 없을 것이다. 필요한 경우가 있다면 bash script를 만들어 깔아주도록 하자. 해당 이미지를 내리지 않는 이상 한번 설치한 상태는 유효하다.</p>
+</section>
+<section id="도커-이미지-관리" class="level3">
+<h3 class="anchored" data-anchor-id="도커-이미지-관리">도커 이미지 관리</h3>
+<p>이미지를 업데이트하고 싶다면 어떻게 해야 할까? 정석대로 하자면, WSL 2 콘솔창에서 실행중인 컨테이너를 멈추고, 이 컨테이너의 이미지를 지워야 할 것이다. 그렇게 해도 되지만, 윈도용 도커 프로그램에서는 보다 간편한 방법을 제공한다.</p>
+<p>대시보드 상에서 컨테이너를 실행하고 멈출 수 있고 이미지도 관리할 수 있다.</p>
+<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/docker_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p>아예 해당 이미지 및 컨테이너 데이터 전체를 리셋하는 방법도 있다.</p>
+<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/docker-in-use/docker_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p>예를 들어보자. 파이썬으로 코딩을 한다면 그리고 주피터 환경을 써야 한다면 어떻게 하는 것이 좋을까? 주피터에서 공식적으로 운영하는 도커 이미지가 있다. 도커로 R을 쓰고 싶다면? 역시 rocker라는 공식적인 프로젝트가 있다. 개인이 제조한 사설 이미지보다는 이런 녀석들을 끌어다쓰는 편이 좋다.</p>
+<p>이하에서는 내가 기본으로 사용하는 두 개의 이미지를 바탕에 깔고 설명을 진행하도록 하겠다.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,292 @@
+---
+title:  Projection and Distance 
+description: 프로젝션과 거리 측정에 관해 알아보자.
+author: "JS HUHH"
+date: "12/16/2020"
+image: "https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg"
+categories: [linear-algebra]
+#margin-header: subscribe.html
+---
+
+
+## Projection: Scalar and Vector  
+
+### Definition 
+
+다음과 같은 두 개의 벡터, $\vec a$, $\vec b$를 일단 떠올려보자. 
+
+![벡터 $\mathbf a$를 벡터 $\mathbf b$로 프로젝션 할 때 스칼라 프로젝션은 $\mathbf a_1$의 길이를 벡터 프로젝션은 벡터 $\mathbf a_1$를 나타난다.](https://upload.wikimedia.org/wikipedia/commons/9/98/Projection_and_rejection.png){ .my-figure5 }
+
+스칼라 프로젝션 $a_1$의 정의는 다음과 같다. 
+
+$$
+a_1 ={\cos \theta}{\lVert \vec a \lVert} = \lVert \vec a_1 \lVert 
+$$
+
+각 $\theta$에 관해서 다음과 같이 정의할 수 있다. 혹시 리마인드가 필요하면 포스팅 [dot product](https://anarinsk.github.io/lostineconomics_quarto/posts/math-simple/2019-07-18-dot-product.html)를 참고하라. 
+
+$$
+\cos \theta = \dfrac{\vec a \cdot \vec b}{\lVert \vec a \lVert \lVert \vec b \lVert}
+$$
+
+그리고 
+
+$$
+\hat b = \dfrac{\vec b}{\lVert \vec b \lVert}
+$$
+
+라고 할 때, 
+
+$$
+a_1 = {\cos \theta}{\lVert \vec a \lVert} = \dfrac{\vec a \cdot \vec b}{\lVert\vec b\lVert} = \vec a \cdot \hat b
+$$
+
+쉽게 말해서, $\vec a$ 벡터와 정규화된 $\vec b$의 닷 프로 덕트라고 생각하면 된다. 
+
+### Vector projection 
+
+스칼라 프로젝션의 크기로 $\vec b$의 벡터를 만든 것이 벡터 프로젝션이다. $\vec a$를 $\vec b$ 위로 프로젝션 한 벡터 $\Pi_{\vec b} (\vec a)$는 다음과 같다. 스칼라 프로젝션의 크기만큼 $\vec b$ 성분을 지녀야 한다. 따라서 $\vec b$는 정규화된 $\hat b$를 써야 한다. 
+
+$$
+\vec a_1 = \Pi_{\vec b} (\vec a) = a_1 \hat b = \dfrac{\vec a \cdot \vec b}{\lVert\vec b\lVert} \dfrac{\vec b}{\lVert\vec b\lVert}
+$$
+
+말로 풀어보자. $\vec b$와 같은 방향성을 지니는 벡터를 $\vec a$와 $\vec b$ 간의 스칼라 프로젝션의 크기로 만들어주는 것이 벡터 프로젝션이다. 영상을 화면 위로 쏘는 행위를 떠올려보자. 이때 스크린에 해당하는 것이 $\hat b$이고 여기에 투영되는 상이 $\vec a$이다. 
+
+### Projection as outer product 
+
+사례를 먼저 살펴보자. $x$축 위로 프로젝션을 하랴고 한다. 
+
+$$
+\Pi_{x}(
+\begin{bmatrix}
+1 \\
+0 \\
+\end{bmatrix}) = 
+\begin{bmatrix}
+1 \\
+0 \\
+\end{bmatrix}, ~
+\Pi_{x}(
+\begin{bmatrix}
+0 \\
+1 \\
+\end{bmatrix}) = 
+\begin{bmatrix}
+0 \\
+0 \\
+\end{bmatrix}
+$$
+
+$$
+M_{\Pi_x} = 
+\begin{bmatrix}
+\Pi_{x}(
+\begin{bmatrix}
+1 \\
+0 \\
+\end{bmatrix}),~
+\Pi_{x}(
+\begin{bmatrix}
+0 \\
+1 \\
+\end{bmatrix}) 
+\end{bmatrix} = 
+\begin{bmatrix}
+1 & 0 \\
+0 & 0
+\end{bmatrix}
+$$
+
+$M_{\Pi_x}$를 외적의 관점에서 표현해 보자. 
+
+$$
+\begin{aligned}
+\Pi_{x}(\vec v) & = (\hat i \cdot \vec v) \hat i = \hat i (\hat i \cdot \vec v) = \hat i (\hat i^T \vec v) = (\hat i \hat i^T)\vec v \\
+& = 
+\begin{bmatrix}
+1 & 0 \\
+0 & 0
+\end{bmatrix} \vec v = M_{\Pi_x} \vec v
+\end{aligned}
+$$
+
+즉, 프로젝션의 스크린 벡터의 외적이 바로 프로젝션을 구현하는 변형 행렬, 즉 함수에 해당한다. 이 결과는 일반적인 벡터 $\vec b$에도 적용할 수 있다. $\vec b$로의 프로젝션을 구현하기 위해서는 표준화된 벡터 $\hat b$를 먼저 구해야 한다. 그리고 해당 벡터로 아우터 프로덕트(외적)를 구한다.  
+
+$$
+\hat b = \dfrac{\vec b}{\Vert b \Vert},~M_{\Pi_{\hat b}} \vec a = \hat b \hat b^T \vec a  
+$$  
+
+$\vec a$를 인풋 벡터로 이해하면 이를 $\vec b$의 프로젝션 위치로 옮기는 선형 변환이 $\Pi_{\hat b}$에 해당한다. 
+
+## More Definition 
+
+- $S \subseteq \mathbb R^n$: $S$는 벡터 부분 공간이라고 하자. 
+- $S^\perp$: $S$와 직교 벡터들의 집합이고 이 역시 벡터 부분 공간이다. 
+$$
+S^\perp = \lbrace \vec w \in \mathbb R^n : \vec w \cdot s = 0~\text{for all}~ s \in S \rbrace 
+$$
+- $\Pi_S$: 부분 공간 $S$ 위로 프로젝션 
+- $\Pi_{S^\perp}$: 부분 공간 $S^\perp$ 위로 프로젝션
+
+$\Pi_S$는 일종의 함수로서 다음과 같이 정의된다. 
+
+$$
+\Pi_S: \mathbb R^n \to S
+$$
+
+ $\vec x \in \mathbb R^n$의 어떤 벡터가 $\Pi_S$를 거치면 $S$에 속하지 않는 나머지 부분은 사라지게 된다. 즉, $S$라는 화면 위로 자신의 이미지를 투영한다고 보면 된다. 그래서 프로젝션이다. 
+
+몇 가지 특징은 다음과 같다. 
+
+- If ${\vec v} \in S$, then $\Pi_S(\vec v) = \vec v$
+- If $\vec w \in S^\perp$, then $\Pi_S(\vec w) = \vec 0$
+- if $\vec u = \alpha \vec v + \beta \vec w$ where $\vec v \in S$, $\vec w \in S^{\perp}$, then $\Pi_S(\vec u) = \alpha \vec v$
+- $\Pi_S(\vec v) (\Pi_S(\vec v) ) = \Pi_S(\vec v)$ (idempotent) 
+
+### Projection onto line 
+
+노멀 벡터로 표현된 상태에서 하이퍼플레인과 벡터의 거리를 측정하는 방법을 알아보자. 
+
+:::{ .column-margin }
+노멀 벡터에 대해서 간략하게 복습하고 가자. 3차원 공간을 예로 들겠다. 각 공간의 축을 $x, y, z$라고 할 때, 이 공간에 놓인 2차원 평면의 방정식을 $2x - y + z = 0$이라고 두자. 이를 매트릭스로 쓰면 다음과 같다.  
+
+$$
+[2, -1, 1] 
+\begin{bmatrix}
+x  \\
+y \\
+z
+\end{bmatrix} = 0 
+$$
+
+열 벡터 $[2,-1, 1]^\rm T$가 노멀 벡터 $\vec n$에 해당한다. 
+:::
+
+![$\vec u = \Pi_{l} (\vec u) + \Pi_{l^{\perp}} (\vec u)$](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj.png?raw=true){.my-figure7}
+
+그림에서 $\vec u$의 $\vec v$로의 프로젝션은 앞서 살펴본 벡터 프로젝션이다. $\vec v$ 대신 $l$로 표기된 점에 유의하자. 
+
+$$
+l: \{ \vec v' \in \mathbb R^n \lvert \vec v' = \vec 0 + t \vec v, t \in \mathbb R \}
+$$
+
+$$
+\Pi_l(\vec u) = \dfrac{\vec u \cdot \vec v}{\lVert\vec v\lVert^2} \vec v
+$$
+
+이제 여기서 $\Pi_{l^{\perp}}$를 구하는 방법을 알아보자. 
+
+$$
+\vec u = \Pi_{l} (\vec u) + \Pi_{l^{\perp}} (\vec u)
+$$
+
+$\vec u$라는 벡터가 두 개의 직교하는 성분의 결합을 통해 표현될 수 있다는 것을 알 수 있다.  
+
+### Projection onto plane 
+
+![$\vec u = \Pi_P(\vec u) + \Pi_{P^\perp}(\vec u)$](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection//vector_proj_2.png?raw=true){ .my-figure5 }
+
+평면 위로의 프로젝션을 생각해 보자. 기본적인 원리는 동일하다. 이에 앞서 평면을 벡터로 표현하는 방법에 대해 알아보자. 가장 편리한 방법은 노멀 벡터를 활용하는 것이다. 즉, 평면 위의 점 $\vec {p_0}$를 지나는 $P$는 다음과 같이 정의할 수 있다. 
+
+$$
+P = \{ \vec p \in \mathbb R^n : \vec n \cdot(\vec p - \vec p_0) = 0 \}
+$$
+
+여기서 노멀 벡터 $\vec n$은 프로젝션 된 지점에서 평면과 직교하는 성분을 나타낸다. 3차원의 경우 노멀 벡터는 3차원 공간에서 해당 평면이 놓인 모습을 결정한다. 
+
+$$
+\vec u = \Pi_P(\vec u) + \Pi_{P^\perp}(\vec u)
+$$
+
+ 
+![$\vec u$에서 노멀 벡터 $\vec n$으로 프로젝션했을 때 벡터 프로젝션이 바로 $\Pi_{P^\perp}(\vec u)$가 된다.](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj_2a.png?raw=true){ .my-figure5 }
+
+우리가 알고 싶은 것은 $\Pi_P(\vec u)$다. 그리고 벡터는 위치가 아니라 방향과 크기에 의해 결정되기 때문에 노멀 벡터 $\vec n$은 크기와 뱡향을 유지한다면 어디로든 옮겨도 된다. 이를 $\vec u$가 시작하는 위치로 옮겨보자. 이제 $\vec u$에서 $\vec n$으로 프로젝션을 하자. $\vec n$ 위의 벡터가 바로 $\Pi_{P^\perp}(\vec u)$가 된다. 즉,  
+
+$$
+\Pi_{P^\perp}(\vec u) = \dfrac{\vec u \cdot \vec n}{\lVert\vec n\lVert}\dfrac{\vec n}{\lVert \vec n \lVert}
+$$
+
+이제 $\Pi_{P^\perp}$ 대입하면 $\Pi_{P}$를 구할 수 있다. 즉, 
+
+$$
+\Pi_P(\vec u) + \Pi_{P^\perp}(\vec u) = \vec u 
+$$
+
+$$
+\Pi_P(\vec u)  = \vec u - \dfrac{\vec u \cdot \vec n}{\lVert\vec n\lVert^2}{\vec n}
+$$
+
+## Distance in Vector Space 
+
+### 노멀 벡터 없이 표현된 hyperplane 
+
+프로젝션은 거리를 측정할 때 유용하다. 먼저 원점(굳이 원점일 필요는 없다)과 해당 벡터 공간에 속하고 $\mathbf {p}_0$를 지나는 선 사이의 거리를 구해보자. 이때 선, 즉 하이퍼플레인은 노멀 벡터가 아니라 직접 아래와 같이 제시되어 있다고 하자. 
+
+$$
+l: \{ \vec p \in \mathbb R^n | \vec p = \mathbf {p}_0 + t \vec v, t \in \mathbb R \}
+$$
+
+![아래 그림에서 보듯이 적당한 위치에 $\mathbf p_0$가 있다고 하자.](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line.png?raw=true){ .my-figure5 }
+
+위 그림에서 원점과 $l$의 거리는 어떻게 나타낼 수 있을까? $l$이 지나가는 $\vec p_0$를 그대로 두고, $l$이 원점을 지나가도록 이동해 보자. 즉, 
+
+$$
+l_0 = \{  \vec p \in \mathbb R^n | \vec p = \mathbf {0} + t \vec v, t \in \mathbb R \}
+$$
+
+![$\mathbf{p_0} = \Pi_{l_0}(\mathbf p_0) + \Pi_{l_0^\perp}(\mathbf p_0)$](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line_2.png?raw=true){ .my-figure5 }
+
+이제 이 벡터와 $\vec p_0$ 사이의 거리를 구하면 된다. 이는 앞서 제시한 벡터 프로젝션의 수직 벡터의 길이와 같다. 즉, 
+
+$$
+{\mathbf p_0} = \Pi_{l_0}({\mathbf p_0}) + \Pi_{l_0^\perp}({\mathbf p_0} )
+$$
+
+이때 $\Pi_{l_0}(\mathbf p_0)$는 $\mathbf p_0$를 $l_0$로 프로젝션한 벡터를 나타낸다. 따라서 거리 $d(l, \vec 0)$는 다음과 같다.  
+
+$$
+d(l, \vec 0) = d(\vec p_0, l_0) = \lVert \mathbf p_0 - \dfrac{\mathbf p_0 \cdot \vec v}{\lVert \vec v\lVert^2}\vec v \lVert
+$$
+
+### 노멀 벡터로 표현된 hyperplane 
+
+아래와 같이 노멀 벡터로 표현된 평면과 원점의 거리를 측정해 보자. 
+
+$$
+P = \{ \vec p \in \mathbb R^n : \vec n \cdot(\vec p - \mathbf{p_0}) = 0 \}
+$$
+
+![현재 평면을 지나는 점 $\mathbf p_0$를 두고 평면을 원점으로 밀어보자. 이때 평면을 정의하는 노멀 벡터 $\vec n$을 표현하면 원점과 이 점을 잇는 벡터 $\vec p_0$f를 $\vec n$으로 프로젝션한 벡터의 길이가 평면과 원점의 거리가 된다.](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/plane.png?raw=true){ .my-figure5}
+
+
+원점을 지나도록 평면을 이동시키고 평면의 노멀 벡터가 정의된 $p_0$와 원점을 지나는 평면 $P_0$ 사이의 거리를 측정하면 된다. 
+
+$$
+P_0 = \{ \vec p \in \mathbb R^n : \vec n \cdot(\vec p - \vec {0}) = 0 \}
+$$
+
+이 둘 사이의 거리는 $\Pi_{P^\perp}$의 거리와 같다. 즉, $\vec p_0$가 원점과 $\mathbf p_0$를 잇는 벡터라고 할 때,  
+
+$$
+d(P, \vec 0) = d(P_0, \vec p_0) = \lVert  \dfrac{\vec p_0 \cdot \vec n}{\lVert\vec n\lVert}\dfrac{\vec n}{\lVert \vec n \lVert}\lVert = \dfrac{|\vec p_0 \cdot \vec n |}{\lVert\vec n\lVert}
+$$
+
+## Regression Coefficient  
+
+![선형대수로 본 회귀 분석](https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true){ .my-figure5 }
+
+앞서 소개했던 회귀 분석에 관한 포스팅 [Understanding Regression](https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-10-25-understanding-regression.html)을 다시 보자. Origin--Observed Y--Fitted $\hat Y$이 만드는 삼각형을 보자. 직각 삼각형이다. 여기서 잔차에 해당하는 $e$는 $X$의 칼럼 스페이스와 항상 직교한다. 즉, $X' e = 0$이 성립한다. 그리고 $\hat Y = X \hat\beta$이므로 
+
+$$
+X'(Y - \hat Y)  = X'(Y - X \hat\beta) = 0
+$$
+
+이를 노멀 방정식이라고 부른다. 앞서 평면과 직교하는 벡터를 노멀 벡터라고 불렀는데, 둘은 일맥상통한다.
+
+
+
+## References 
+
+- Ivan Savov, *No bullshit guide to linear algebra 2nd Edition*, Minireference, 2017 

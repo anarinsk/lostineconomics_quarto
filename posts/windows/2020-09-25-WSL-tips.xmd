@@ -1,0 +1,109 @@
+---
+layout: post
+toc: false
+comments: true
+title:  Tips for WSL 2
+description:  WSL 2를 쓸 때 알면 좋은 두세 가지 것들 
+categories: [wsl, ubuntu]
+
+---
+
+WSL 2를 쓴지도 꽤 오랜 시간이 지났다. 이제 실용적인 팁 몇 가지 정도는 공유해도 좋은 경험이 쌓인 듯 싶다. WSL 2를 처음 쓰는 분들이 이 글을 본다면, 다소 나마 시행착오를 줄이기를 바란다. 
+
+## 어떤 윈도 버전을 쓸까? 
+
+나는 성질이 좀 급하다. 그래서 새로운 기능이 나오면 바로 확인하려고 한다. 윈도 프리뷰 버전을 쓰면 새로운 기능을 바로 체험해볼 수 있어서 좋지만 단점도 있다. 안정성이 떨어지고 생각하지도 않았던 버그를 만나는 경우도 있다. 이럴 땐 OS를 롤백하면 된다. 윈도도 그 정도는 한다! 다만 바로 전 빌드로만 롤백되니 이 점을 주의하시라. 
+
+![]({{ site.baseurl }}/images/wsl-tips/windows_rockback.png){: style="textalign:center; " width="500"}  
+
+## Ubuntu를 언인스톨하고 싶다!
+
+무엇을 언인스톨하고 싶은지를 구분하는 게 먼저다. 우분투를 쓴다고 전제하자. WSL 2를 설치한 이후, 마이크로소프트 스토어에서 리눅스 배포판, 즉 우분투를 받아서 설치하는 게 보통이다.  
+
+만일 어떤 이유로는 WSL 2 내에서 사용중인 우분투 배포판에 문제가 생겼다고 가정하자. 기존 배포판을 날려버리고 새로 인스톨하고 싶다면? 스토어에서 내려받은 우분투 배포판을 지우면 될 것 같다. 틀렸다. 스토어에서 내려받은 프로그램은 새로운 배포판을 설정하는 용도로 활용되는 것이라서, 이 녀석을 윈도에서 지운다고 WSL 2 안에 설치된 배포판이 사라지지 않는다. 
+
+원하는 것이 WSL 내에 설치된 배포판을 지우는 것이라면, WSL이 제공하는 명령어를 이용하자. Powershell이나 Window Command에서 다음과 같이 실행하자. 
+
+```shell
+wsl --shutdown <DISTRO>
+wsl --unregister <DISTRO>  
+```
+
+위 두 명령은 각각 `<Distro>`를 내리고 등록을 취소하라는 것이다. 그리고 윈도에 설치한 Ubuntu를 실행하면 우분투 배포판의 설정을 처음부터 다시 진행한다. 최초에 실행했던 것처럼 id와 password를 등록하면 된다. 
+
+### 어떤 Ubuntu version을 쓸까? 
+
+18.04 버전이 아직도 많이 쓰이는 버전이다. 하지만 Python 작업을 많이 한다면, 파이썬 3.7이 기본으로 탑재된 20.04 버전을 권한다. 두 버전 모두 스토어에 올라와 있다. 물론 무료다. 
+
+## ftp 주소 바꾸기 
+
+Ubuntu 역시 윈도 만큼이나 많고 다양한 업데이트를 제공한다. 이때 업데이트 파일을 끌어올 ftp가 한국 밖에 있으면 시간이 오래 걸린다. 국내에서 많이 쓰이는 카카오의 ftp로 주소를 바꾸도록 하자. 아래와 같이 실행하면 된다. 
+
+```shell
+> sudo sed -i 's/archive.ubuntu.com/ftp.daumkakao.com/g' /etc/apt/sources.list ⏎
+```
+### Update packages 
+
+패키지 목록을 업데이트하고 필요한 패키지는 업그레이드하는 명령어는 아래와 같다. 많이 본 명령어일테니, 자세한 것은 생략하자. 혹시 많이 보지 못했다면 가끔 실행해주는 편이 좋겠다. 
+
+```shell
+> sudo apt-get update && sudo apt-get upgrade -y ⏎
+```
+
+## bash 대신 zsh 
+
+bash도 충분히 좋은 사용성을 제공하지만 조금 더 편리하고 모양새도 좋은 셸이 zsh이다. 먼저 아래와 같은 명령어를 통해서 zsh을 설치하고 이 녀석을 기본 셸로 지정하자. 
+
+```shell
+> sudo apt-get install zsh ⏎
+> chsh -s `which zsh`⏎
+> curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh ⏎
+```
+
+일단 로그아웃하고 다시 진입하면 zsh이 기본 셸이 되어 있을 것이다. 
+
+### zsh plugins
+
+zsh이 좋은 이유는 수많은 플러그인 때문이다. 문과생으로서 아래 세 가지 정도면 충분했다. 
+
+```shell
+> cd ${ZSH_CUSTOM1:-$ZSH/custom}/plugins ⏎
+> git clone https://github.com/djui/alias-tips.git ⏎
+> git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions ⏎
+> git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting ⏎
+```
+하일라이트, 자동완성, 단축 명령어를 알려주는 플러그인들이다. 
+
+### 플러그인 활성화 
+
+이제 zsh의 설정에서 방금 설치해준 플러그인들을 활성화해야 한다. 나노 에디터로 zsh의 설정 파일을 열어보자. 
+
+```shell
+> nano ~/.zshrc ⏎
+```
+
+설정 파일에 보면, 테마를 교체할 수도 있다. 나는 `agnoster`를 쓰고 있다. 중간에 `plugin` 부분을 찾아서 아래와 같이 고친 후 저장하고 나오면 된다.  
+
+```shell
+plugins=(git alias-tips zsh-autosuggestions zsh-syntax-highlighting)
+```
+
+`agnoster` 테마의 모습은 이렇다. 
+
+![]({{ site.baseurl }}/images/wsl-tips/zsh.png){: style="textalign:center; " width="700"}  
+
+### python symlink 
+
+사용하는 도중 파이썬이 없다는 메시지가 뜰 수 있다. 파이썬의 실행 파일의 이름이 `python3`로 되어 있기 때문이다. `python`이 `python3`를 의미한다는 뜻의 심볼링크를 만들어주도록 하자. 
+
+```shell
+> sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1 ⏎
+```
+
+
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTQ2NjA3Njg2Nyw5NzU3NjMzLC04MTUwNz
+gzODEsLTQ2MzQ3OTM5NiwtMzM3NjM1NDk4LDIwOTM0NjE4MjQs
+NjIwNDgzMjI4LDk2MDc5MDE5NywxMzUyMTM5Njg5XX0=
+-->

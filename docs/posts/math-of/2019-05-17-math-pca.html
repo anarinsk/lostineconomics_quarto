@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JS HUHH">
+<meta name="dcterms.date" content="2019-05-17">
+<meta name="description" content="PCA의 수학적 이해">
+
+<title>lostineconomics.com - Math Behind PCA</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">lostineconomics.com</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Junsok Huhh</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/anarinsk"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/anarinsk"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Math Behind PCA</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">math-of</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    PCA의 수학적 이해
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>JS HUHH </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 17, 2019</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">tl; dr</h2>
+<ul>
+<li>PCA를 차원을 축소하는 방법으로 막연하게 이해하지 말자. PCA 역시 다른 방법처럼 어떤 목적 함수를 최적화하는 방법의 하나다.</li>
+<li>PCA는 <span class="math inline">\(k\)</span> 개의 피처를 어떤 스크린 벡터 위에 쏴서 이를 단순화하겠다는 것이다. 이렇게 투영된 이미지와 원래 벡터와의 거리를 최소화하는 과정에서 분산 최대화라는 PCA의 새로운 목적 함수가 도출된다.</li>
+<li>PCA가 스크린으로 활용할 벡터가 하나가 아니라고 할 때, 이 여러 개의 스크린 벡터를 활용해 거리를 최소화하는 과정(즉 분산의 합을 극대화하는 과정)에서 eigenvalue와 eigenvector가 등장한다.</li>
+</ul>
+</section>
+<section id="pca" class="level2">
+<h2 class="anchored" data-anchor-id="pca">PCA</h2>
+<p>“차원의 저주”라는 표현이 있다. 언뜻 보면 자명한 이야기 같지만, 곰곰이 생각해보면 모호한 구석이 많다. 관찰 수는 많을수록 좋은데 차원은 관찰과 어떻게 다를까? 쉽게 생각해보자. 관찰 수란 활용할 수 있는 샘플의 수다. 이는 당연히 많을수록 좋다. (물론 미칠 듯이 많으면 새로운 문제가 발생하긴 하나, 대체로 우리는 샘플이 부족해서 문제를 겪는다) 하나의 샘플에서 관찰 가능한 변수가 7개라고 해보자. 샘플 수에 따라서는 적당해 보일 수 있다.</p>
+<p>그런데, 샘플은 100 개인데, 한 샘플에서 관찰할 수 있는 포인트가 1,000 개라고 치자. 이 데이터 셋은 10만 개의 개별 포인트를 지닌 제법 큰 데이터 셋이지만 별 쓸모는 없다. 관찰 수에 비해서 개체의 차원이 지나치게 크기 때문이다. 이럴 경우 어떻게 차원을 줄이면 좋을까? 쉽게 생각할 수 있는 방법은 1,000 개의 특징들을 좀 줄여보는 것이다. 주성분분석(Principal Component Analysis)은 이를 위해 필요한 방법이다.</p>
+</section>
+<section id="objective-function-for-pca" class="level2">
+<h2 class="anchored" data-anchor-id="objective-function-for-pca">Objective function for PCA?</h2>
+<p>대체로 많은 PCA에 관한 설명들이 원래 하고 싶은 게 무엇인지에 관해 묻지 않는다. PCA란 데이터의 특성을 압축하는 방법이라는 이야기만 할 뿐. 수학적으로 말하면 목적함수에 관한 질문이고 우리는 먼저 이 질문에 집중하겠다.</p>
+<p>대체로 통계학의 알고리듬은 목적 함수를 최적화하는 형태이다. PCA도 마찬가지다. 관찰 대상 <span class="math inline">\(i\)</span>(for <span class="math inline">\(i = 1, \dotsc, n\)</span>)에 관한 <span class="math inline">\(k\)</span> 차원의 피처 벡터 <span class="math inline">\(x_i\)</span>가 있다고 하자. <span class="math inline">\(x_i\)</span>는 <span class="math inline">\(k \times 1\)</span>의 칼럼 벡터이다. 앞으로 특별한 언급이 없는 이상 앞으로 <span class="math inline">\(x_i\)</span> 벡터는 <span class="math inline">\(n\)</span>개의 관찰에 대한 평균으로 구성된 벡터 <span class="math inline">\(\mu = [\mu^1~\mu^2~\dotsc~\mu^k]^T\)</span>를 뺀 값이라고 간주하자. 즉, <span class="math inline">\(X_i\)</span>가 평균을 빼지 않은 <span class="math inline">\(i\)</span> 라고 할 때,</p>
+<p><span class="math display">\[
+\underset{k \times 1}{x_i} = \left[\begin{array}{c}{X^1_i - \mu^1} \\ {X^2_i - \mu^2} \\ {\vdots} \\ {X^k_i - \mu^k}\end{array}\right]
+\]</span></p>
+<p>이제 해당 피쳐를 쏠 스크린으로 활용할 유닛 벡터를 <span class="math inline">\(w\)</span>라고 하자. 유닛 벡터란 <span class="math inline">\(w \cdot w = 1\)</span>를 의미한다. 여기서 스크린이라는 의미는 개별 관찰이 지니는 특징을 이 벡터로 프로젝션해서 그 특징을 요약하겠다는 것이다. 우리에게 익숙한 회귀분석 역시 <span class="math inline">\(y_i\)</span>라는 관찰을 설명변수 <span class="math inline">\(\mathbf X\)</span>가 형성하는 선형 부분공간으로 프로젝션하는 방법이다. <span class="math inline">\(x_i\)</span>를 <span class="math inline">\(w\)</span>로 스칼라 프로젝션 하면 다음과 같다.</p>
+<p><span class="math display">\[
+\operatorname{Proj}_{w}(x_i) = \dfrac{w}{\Vert w \Vert} \cdot x_i = w \cdot x_ i
+\]</span></p>
+<p>이 스칼라 프로젝션의 벡터 <span class="math inline">\(w\)</span> 위의 이미지, 즉 벡터 프로젝션은 <span class="math inline">\((w \cdot x_i) \dfrac{w}{\Vert w \Vert}\)</span>이다. <span class="math inline">\(\Vert w \Vert = 1\)</span>이므로 결국 벡터 프로젝션은 <span class="math inline">\((w \cdot x_i) w\)</span>가 된다.</p>
+<p>이 프로젝션 스칼라 값 혹은 프로젝션 벡터의 기댓값은 아래와 같이 0이 된다.</p>
+<p><span class="math display">\[
+\dfrac{1}{n} \sum^n_{i=1} (w \cdot x_i) = \left( \dfrac{1}{n} \sum_{i=1}^n x_i \right)\cdot w = \boldsymbol{0} \cdot w = 0
+\]</span></p>
+<p>벡터 <span class="math inline">\(x_i\)</span>와 이 프로젝션 벡터 사이의 유클리드 거리를 구해보자.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\Vert x_i - (w \cdot x_i) w \Vert^2 &amp; = \Vert x_i \Vert^2 - 2 (w \cdot x_i)(w \cdot x_i) +  \Vert w \Vert^2 \\
+&amp; = \Vert x_i \Vert^2 - 2 (w \cdot x_i)^2 +  1
+\end{aligned}
+\]</span></p>
+<p>모든 관찰 수 <span class="math inline">\(n\)</span>에 대해서 거리를 구해 더하면 이것이 일종의 MSE(Mean Squared Error)가 된다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathrm{MSE}(w) &amp; = \dfrac{1}{n}\sum_{i=1}^n \left( \Vert x_i \Vert^2 - 2(w \cdot x_i)^2 + 1 \right)  \\
+&amp; = \underbrace{1 +  \dfrac{1}{n}\sum_{i=1}^n \Vert x_i \Vert^2}_{(\ast)}  - 2\dfrac{1}{n}\sum_{i=1}^n  (w \cdot x_i)^2
+\end{aligned}
+\]</span></p>
+<p>MSE를 최소화하는 게 목표라고 하자. 목적함수를 최적화 하기 위해서는 <span class="math inline">\(w\)</span>를 조정할 수 있다. <span class="math inline">\((*)\)</span>는 <span class="math inline">\(w\)</span>를 포함하고 있지 않으므로 나머지 부분을 최소화하면 MSE가 극대화된다.</p>
+<p><span class="math display">\[
+\dfrac{1}{n} \sum_{i=1}^n (w \cdot x_i)^2 = \left(\dfrac{1}{n}  \sum_{i=1}^n w \cdot x_i \right)^2 + \underset{i}{\mathrm{Var}}[w \cdot x_i]
+\]</span></p>
+<p>이 식이 성립하는 이유는 일반적으로 <span class="math inline">\(\mathrm{Var}(y)= \mathrm{E}(y^2) - (\mathrm{E}(y))^2\)</span>이 성립하기 때문이다. 그리고 앞에서 보았듯이 <span class="math inline">\(\mathrm{E} (w \cdot x_i) = 0\)</span> 성립한다. 따라서 MSE를 최소화한다는 것은 <span class="math inline">\(\mathrm{Var}_i [\cdot]\)</span>을 최대화하는 것과 같게 된다. PCA에 분산에 관한 이야기가 자꾸 나오는 것은 이 때문이다.</p>
+</section>
+<section id="variance-maximization" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="variance-maximization">Variance Maximization</h2>
+<section id="variance-covariance-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="variance-covariance-matrix">Variance-covariance matrix</h3>
+<p>왜 분산이 등장하는지 그리고 왜 분산이 최대화되어야 하는지 파악했으니, 이제 이를 계산해볼 차례다. 아래 행렬 <span class="math inline">\(X\)</span>를 통해 쉽게 분산-공분산 행렬을 나타낼 수 있다. <span class="math inline">\(x_i^j\)</span> 에서 <span class="math inline">\(i (=1,2,\dotsc, n)\)</span>는 관찰을, <span class="math inline">\(j(=1,2,\dotsc,k)\)</span>는 피쳐를 나타낸다.</p>
+<p><span class="math display">\[
+\underset{n \times k}{X} =
+\begin{bmatrix}
+    {x_1}^T \\
+    {x_2}^T  \\
+    \vdots \\
+    {x_n}^T
+\end{bmatrix} =  
+\begin{bmatrix}
+{x_1^1} &amp; {x_1^2} &amp; {\cdots} &amp; {x_1^k} \\
+{x_2^1} &amp; {x_2^2} &amp; {\cdots} &amp; {x_2^k}\\
+{\vdots} &amp; {\vdots} &amp; {\ddots} &amp; {\vdots} \\
+{x_n^1} &amp; {x_n^2} &amp; {\cdots} &amp; {x_n^k}
+\end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac{1}{n-1} \underset{(k \times n) (n \times k)}{X^{T} X} =
+\begin{bmatrix}
+\text{cov}(x^1, x^1) &amp; \text{cov}(x^1, x^2) &amp; \cdots &amp; \text{cov}(x^1, x^k) \\
+\text{cov}(x^2, x^1) &amp; \text{cov}(x^2, x^2) &amp; \cdots &amp; \text{cov}(x^2, x^k) \\
+\text{cov}(x^k, x^1) &amp; \text{cov}(x^k, x^2) &amp; \cdots &amp; \text{cov}(x^k, x^k)
+\end{bmatrix} = \Sigma, \text{~where}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\text{cov}(x^i, x^j) = \dfrac{1}{n-1}\sum_{k=1}^{n} x^i_k x^j_k
+\]</span></p>
+</section>
+<section id="eigenvalue는-어떻게-등장하나" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="eigenvalue는-어떻게-등장하나">eigenvalue는 어떻게 등장하나?</h3>
+<p>임의의 단위 벡터 <span class="math inline">\(w\)</span>와 그 프로젝션을 다시 적어보자. 표기를 간단히 하기 위해서 상첨자는 생략한다. 이제 하나의 벡터가 아니라 <span class="math inline">\(X\)</span>라는 매트릭스 전체에 대해서 프로젝션을 하면 아래와 같다.</p>
+<p><span class="math display">\[\operatorname{Proj}_{w} (X) = \dfrac{X w}{\Vert w \Vert} \in {\mathbb R}^{n \times 1}\]</span></p>
+<p>이제 극대화의 목적은 이렇게 프로젝션된 이미지의 분산을 가장 크게 만드는 것이다. 앞서의 가정에 따라서 <span class="math inline">\(\mathrm{E}(X) = 0\)</span>가 성립함을 기억해두자.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathrm{Var}(X {w}) &amp;= \frac{1}{n-1}(X {w})^{T}(X {w}) \\
+&amp;=\frac{1}{n-1} {w}^{T} X^{T} X {w} =\frac{1}{n-1} {w}^{T}\left(X^{T} X\right) {w} \\
+&amp;={w}^{T}\left(\frac{X^{T} X}{n-1}\right) {w} \\
+&amp;={w}^{T} \Sigma {w}
+\end{aligned}
+\]</span></p>
+<p>그런데, <span class="math inline">\(w\)</span>는 단위벡터임으로 <span class="math inline">\(w \cdot w = 1\)</span>이다. 이를 제약 조건으로 두고 제약 하의 극대화 문제를 정식화하면 다음과 같다.</p>
+<p><span class="math display">\[
+{\mathcal L} =w^{\operatorname T} \Sigma w - \lambda (w \cdot w -1)
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\dfrac{\partial \mathcal L}{\partial w} &amp; = 0 = 2 \Sigma w - 2\lambda w \\
+\dfrac{\partial \mathcal L}{\partial \lambda} &amp; = 0 = w \cdot w - 1
+\end{aligned}
+\]</span></p>
+<p>1계 조건을 다시 보자.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>사실 여기 적은 1계 조건은 엄밀하지 않다. 이해를 돕기 위해서 여러가지를 퉁쳤는데, 최적화의 결과는 동일하다. 보다 상세한 도출은 <a href="https://stats.stackexchange.com/questions/10251/what-is-the-objective-function-of-pca">여기</a>를 참고하시기 바란다.</p>
+</div></div><p><span class="math inline">\(\Sigma w = \lambda w\)</span> 조건이 흥미롭다. 1계 조건이 정확하게 아이겐밸류(eigenvalue, 고유값)와 아이겐벡터(eigenvector, 고유벡터)를 구하는 방법이다. 어떤 매트릭스가 있을 때 해당 매트릭스의 분산-공분산 행렬의 아이겐밸류와 아이겐벡터를 구하면 그 아이겐밸류와 벡터가 바로 MSE를 최적화해주는 값이 된다. 이때 <span class="math inline">\(w\)</span>는 아이겐벡터이며 <span class="math inline">\(\lambda\)</span>는 아이겐밸류가 된다. 아이겐밸류는 아래 식에서 보듯이 분산이다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>흥미로운 일치를 확인하셨는지? 제약 하 극대화에서 라그랑쥬 승수와 아이겐밸류를 나타내는 수학 기호가 모두 <span class="math inline">\(\lambda\)</span>다. 약간 소름 돋는 대목이다. 일치는 여기서 끝나지 않는다. 라그랑쥬 승수는 제약 하의 극대화에서 잠재 가격(shadow price)로 불리기도 한다. 이는 해당 조건이 제약하는 자원의 잠재적인 가치를 나타낸다. 이는 분산이 클수록 MSE가 작다는 PCA의 목적 함수의 해석과 일치한다.</p>
+</div></div><p><span class="math display">\[
+\operatorname{Var}(X w) = w^{\mathrm T} \Sigma w =  w^{\mathrm T} (\lambda w)  = \lambda w \cdot w = \lambda
+\]</span></p>
+<p>아마도 최적화 공부를 해본 사람이라면 갸우뚱할지 모르겠다. 1계 조건은 필요 조건이다. 즉, 극대화, 극소화 모두를 그 안에 담고 있을 수 있다. 그렇다면 2계 충분 조건을 따져야 하지 않을까? 그런데, 위 식에 대해서 사실 2계 충분 조건을 따지는 것이 쉽지 않다. 다만 이 문제는 다행스럽게도 지름길이 있다. 위에서 보듯이 1계 조건을 만족하는 <span class="math inline">\(w\)</span>는 <span class="math inline">\(\Sigma\)</span>의 아이겐벡터다. 따라서 이 아이겐벡터에서만 극대값과 극소값이 존재한다. 1계 조건을 만족하는 아이겐벡터를 <span class="math inline">\(\omega\)</span>라고 하자.</p>
+<p><span class="math display">\[
+\begin{aligned}
+{\mathcal L}(\omega) &amp; =\omega^{T} \Sigma \omega - \lambda (\omega \cdot \omega -1) \\
+&amp; = \omega^T (\Sigma w - \lambda w) + \lambda \\
+&amp; = \lambda
+\end{aligned}
+\]</span></p>
+<p>즉, 1계 조건을 만족하는 값에서 목적 함수의 값은 아이겐밸류 <span class="math inline">\(\lambda\)</span>가 된다. 그리고 위에서 보았듯이 <span class="math inline">\(\lambda\)</span>는 <span class="math inline">\(Xw\)</span>의 분산이 되기 때문에 분산이 큰 값의 아이겐벡터가 목적 함수를 극대화하는 <span class="math inline">\(w\)</span>가 된다.</p>
+<p>앞서 <span class="math inline">\(\lambda\)</span>가 분산이 된다고 말했다. 잠깐, 분산이라면 항상 0보다 커야 하는데, <span class="math inline">\(\lambda\)</span>가 0보다 크다는 보장이 있는가? 이 문제를 포함하여 앞에서 정리하지 못한 몇 가지 문제를 모아서 살펴보자.</p>
+</section>
+<section id="properties-of-var-cov-matrix" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="properties-of-var-cov-matrix">Properties of var-cov matrix</h3>
+<p>분산-공분산 행렬은 아래와 같은 두 가지 특징을 지닌다.</p>
+<section id="대칭-행렬" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="대칭-행렬">대칭 행렬</h4>
+<p>우선, 분산-공분산 행렬이므로 대칭이다. 행렬이 대칭일 경우 아이겐밸류는 모두 실수이며 아이겐벡터들은 서로 직교(orthogonal)한다.</p>
+<p>For <span class="math inline">\(i, j \in \{ 1, 2, \dotsc, k\}~\text{with}~i \ne j, w^i \cdot w^j = 0\)</span>, and for <span class="math inline">\(i \in \{ 1, 2, \dotsc, k\}~, w^i \cdot w^i =1\)</span></p>
+<p>여러개의 프로젝션 스크린 벡터들이 존재할 경우 해당 벡터들이 서로 직교하면 분산값의 합을 최대화하는 것과 MSE를 최소화하는 것이 같은 의미를 지닌다. 이 조건이 분산-공분산 행렬의 속성을 통해 성립한다.</p>
+<p>분산-공분산 행렬의 이 특징이 PCA의 흥미로운 점 하나를 드러난다. 2 차원 평면에서 사 분면을 떠올려보자. 사 분면을 구성하는 <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> 축은 서로 직교한다. 2 차원 평면 위에 어떤 관찰에 대해서 PCA를 했다고 하자. PCA의 스크린으로 두 개를 사용했고, 해당 스크린이 아이겐벡터라면 이 두 벡터는 서로 직교한다. 즉, 원래 직교했던 두 축에서 직교하는 다른 두 축으로 좌표의 기준을 이동하는 개념이다. 즉 PCA는 분산을 가장 크게 하는 방식으로 좌표축을 이동하는 방법이라고 이해하면 좋겠다. PCA에 관한 소개에서 아래의 그림처럼 축을 돌린 예시가 자주 등장하는 까닭이기도 하겠다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>하나 주의할 점이 있다. 이 그림은 차원 회전에 관한 것이지 차원 축소에 관한 것이 아니다. 즉, 변이가 잘 드러나도록 축을 회전할 수 있다는 예시다. 축소는 다른 문제인데, 아래 본문의 내용에서 보듯이 축을 돌려 변이를 상당 부분 설명했다면 변이의 설명력이 낮은 축들을 제거할 수 있다는 것이 차원 축소다.</p>
+</div></div><p><a href="https://github.com/anarinsk/lie-math_pca/blob/master/assets/imgs/pca_example.png?raw=true"></a></p>
+</section>
+<section id="positive-definite" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="positive-definite">Positive-definite</h4>
+<p><span class="math inline">\(\Sigma\)</span>는 준양정행렬(positive semi-definite) 행렬이다. 즉,</p>
+<p><span class="math display">\[
+x^T \Sigma x \geq 0 ~\text{for any $x$.}
+\]</span></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>증명은 몹시 간단하다. <span class="math inline">\(w^T \Sigma w\)</span> 라고 하자.</p>
+<p><span class="math display">\[
+w^T X^T X w = \underset{\text{닷 프로덕트}}{ (Xw)^T (Xw) } \geq 0
+\]</span></p>
+</div></div><p>이 경우 모든 아이겐밸류의 값은 음수가 되지 않는다. 앞서 아이겐밸류가 분산이 된다는 사실을 보았다. 아이겐밸류가 음수가 될 수 없고 따라서 분산이 될 수 있다.</p>
+</section>
+</section>
+</section>
+<section id="principal-component" class="level2">
+<h2 class="anchored" data-anchor-id="principal-component">Principal component?</h2>
+<p>프로젝션 스크린 벡터 <span class="math inline">\(w\)</span>에 따른 극대화 문제를 풀면 아이겐밸류와 아이겐벡터를 각각 하나씩 얻게 된다. <span class="math inline">\(k\)</span> 개의 스크린 벡터 혹은 아이겐벡터가 가능하다고 할 때, 분산(아이겐밸류)이 큰 순서대로 아이겐벡터를 정렬한다고 생각해보자. 이렇게 정렬하면 프로젝션 스크린 벡터 중에서 MSE를 더 줄일 수 있는 벡터 순으로 정렬하는 셈이다. 이렇게 분산이 큰 순서대로 나열한 서로 다른 스크린벡터가 바로 주성분(pricipal component)다.</p>
+<p><span class="math inline">\(k\)</span> 개의 주성분 중에서 임의로 <span class="math inline">\(l\)</span> 개를 취한다면(이게 차원 축소가 아닐까?), MSE를 낮추기 위해서는 분산이 큰 순서대로, 즉 아이겐밸류가 큰 순서대로 주성분을 취하면 된다. 이게 PCA를 직관적으로 이해하는 방법이다.</p>
+<p>그런데 한 가지 찜찜한 점이 남는다. 주성분은 이렇게 순서대로 취할 수 있다는 것은 주성분을 결합해서 더 큰 분산을 얻을 수 없을 때만 가능하다. 예컨대, <span class="math inline">\(w_1\)</span>과 <span class="math inline">\(w_2\)</span>를 적당히 선형결합해 분산을 높일 수 있다면 분산이 큰 순서대로 아이겐벡터를 선택한다는 논의는 깨지게 된다. 이 가능성을 살펴봐야 하겠다.</p>
+<p>프로젝션의 스크린으로 동원되는 벡터가 <span class="math inline">\(w^1, w^2, \dotsc, w^k\)</span>라고 하자. 이 프로젝션을 통해 생성되는 벡터들이 이루는 부분공간은 다음과 같이 나타낼 수 있다.</p>
+<p><span class="math display">\[
+\sum_{j=1}^k \underset{\mathrm{가중치}}{( x_i \cdot w^j) } w^j
+\]</span></p>
+<p><span class="math inline">\(x_i\)</span>와 <span class="math inline">\(w^j\)</span> 모두 <span class="math inline">\(k \times 1\)</span> 벡터임을 확인하고 가자. 이 녀석과 <span class="math inline">\(x_i\)</span>의 MSE를 최소화하는 문제는 어떻게 될까? 계산이 다소 복잡하니 직관만 짚고 넘어가자.</p>
+<ol type="1">
+<li>앞서 스크린이 하나였던 경우와 마친가지로 <span class="math inline">\(x_i\)</span>와 저 값의 내적의 분산을 최대화 해야 한다.</li>
+<li>만일 <span class="math inline">\(w_\cdot\)</span>들이 서로 직교한다면, <span class="math inline">\(w_i \cdot w_j (i \neq j)\)</span>는 0이 되어 사라질 것이고, <span class="math inline">\(w_i \cdot w_i\)</span>(=1)로 구성된 텀만 만게 된다. 결국</li>
+<li>스크린을 이루는 축들과 <span class="math inline">\(x_i\)</span>의 크로스 프로덕트 값의 분산(<span class="math inline">\(\mathrm{Var} (x_i \cdot w^j)\)</span>)을 더한 값을 최대화하는 것이 MSE를 극소화 문제가 된다. 즉, 각각 <span class="math inline">\(w^j\)</span>와 <span class="math inline">\(x_i\)</span>의 닷 프로덕트의 분산을 최대화하면 된다. 즉,</li>
+</ol>
+<p><span class="math display">\[
+\underset{i}{\text{Var}}[\sum_{j=1}^k {( x_i \cdot w^j) } w^j] = \sum_{j=1}^k {\lambda^j}  
+\]</span></p>
+</section>
+<section id="마침내-차원-축소" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="마침내-차원-축소">마침내 차원 축소</h2>
+<p>이제 마침내 차원 축소를 다룰 수 있다! 앞서 MSE 최소화 문제에서 보았듯이 분산이 클수록 좋다. 임의의 갯수로 주성분을 취한다고 할 때 의 기준은 분산이 큰 순서이고 분산은 아이겐밸류와 같다. <span class="math inline">\(l(&lt;k)\)</span> 개의 주성분을 취할 때 취할 때 아이겐밸류가 큰 순서대로 취하면 되겠다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>주성분의 갯수를 취하는 방법은 PCA에 관한 튜토리얼에서 항상 등장하는 주제이니 구글링을 해서 확인하시면 되겠다.</p>
+</div></div></section>
+<section id="key-questions" class="level2">
+<h2 class="anchored" data-anchor-id="key-questions">Key Questions</h2>
+<p><strong>Q1.</strong> MSE 최소화는 무엇으로 연결되는가?</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(Xw\)</span>의 분산을 최대화하는 것이다.</p>
+</blockquote>
+<p><strong>Q2.</strong> 아이겐밸류 아이겐벡터는 어떻게 등장하는가?</p>
+<blockquote class="blockquote">
+<p><span class="math inline">\(Xw\)</span>의 분산을 <span class="math inline">\(w^T w =1\)</span>의 제약하에서 극대화할 때 1계 조건에서 등장한다.</p>
+</blockquote>
+<p><strong>Q3.</strong> 아이겐벡터와 아이겐밸류는 어떤 특징을 지니고 있는가?</p>
+<blockquote class="blockquote">
+<p>1계 조건에서 아이겐벡터와 아이겐밸류를 찾아야 하는 매트릭스는 var-cov 행렬 <span class="math inline">\(\Sigma\)</span>다. 그리고 이 행렬은 대칭행렬이며 Positive definite 행렬이다. 이 조건으로부터, 아이겐벡터들은 서로 orthogonal하고, 아이겐밸류는 모두 양수이다.</p>
+</blockquote>
+<p><strong>Q4.</strong> 결국 PCA란 무엇인가?</p>
+<blockquote class="blockquote">
+<p>분산이 큰 순서대로 <span class="math inline">\(k\)</span> 개의 주성분 중에서 임의로 <span class="math inline">\(l(&lt;k)\)</span> 개의 아이겐벡터를 선택하는 것이다. 그리고 이 아이겐벡터는 일종의 피처에 관한 가중치로 이해할 수 있다.</p>
+</blockquote>
+</section>
+<section id="resource" class="level2">
+<h2 class="anchored" data-anchor-id="resource">Resource</h2>
+<p>이 글은 아래 자료를 바탕으로 만들었습니다.</p>
+<p><a href="https://www.stat.cmu.edu/~cshalizi/350/lectures/10/lecture-10.pdf">https://www.stat.cmu.edu/~cshalizi/350/lectures/10/lecture-10.pdf</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

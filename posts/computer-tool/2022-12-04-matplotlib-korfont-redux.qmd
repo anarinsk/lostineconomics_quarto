@@ -1,0 +1,138 @@
+---
+title: matplotlib + 한글 Redux
+description: 마지막으로 정리해봅시다!
+author: "JS HUHH"
+date: "12/04/2022"
+image: "https://miro.medium.com/max/1400/1*aUSZsGFCMPNYCkQygs4aGQ.webp"
+categories: [computer-tool]
+draft: false
+format:
+  html:
+    code-fold: show
+    code-line-numbers: true
+    code-overflow: scroll
+    #fig-width: 5
+    #fig-height: 3.5
+    fig-responsive: true 
+jupyter: python3
+filters:
+   - lightbox
+lightbox: auto
+---
+
+## TL; DR
+
+- matplotlib에서 한글 사용 마지막으로 정리한다. 
+
+## Not in this Post  
+
+- 한글 폰트 설치 등의 문제는 다루지 않는다. 
+	-  OS 별 한글 폰트 설치 및 활용 [LINK](https://zephyrus1111.tistory.com/7) 
+	- (리눅스) 컨테이너 내에서 한글 폰트 설치 [LINK](https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html)
+
+## What in this Post 
+
+- matplotlib 그림 안에서 한글 활용의 최종 버전
+
+## matplotlib과 한글의 라벨링
+
+matplotlib은 표준적인 파이썬 시각화 패키지다. 아쉽게도 이 녀석이 한글과 별로 안 친하다. 그래픽 렌더링 엔진에 한글 폰트가 빠져 있어서 이를 추가로 인식을 시켜야 결과물 내에서 한글 라벨을 쓸 수 있다. 가장 간단한 해결 방법은 나눔고딕 폰트를 쓸 수 있게 해주는 패키지 [koreanize-matplotlib](https://github.com/seongminp/koreanize-matplotlib)를 쓰는 것이다. 
+
+먼저 문제부터 살펴보자. 테스트를 위해서 아래 코드에 간단한 함수 `draw_sample(fontprop)`를 작성했다. 인자 `fontprop`은 그래프 요소에 적용될 폰트 특성이다. 값이 없으면 전역적으로 설정된 내용에 따른다. 
+
+
+```{python}
+#| layout: "[-10,70,-10]"
+
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+import numpy as np
+
+# 그릴 데이터 생성 
+def draw_sample(fontprop=None): 
+    data = np.random.randint(-100, 100, 50).cumsum()
+    plt.plot(range(50), data, 'r')
+    plt.title('가격변동 추이', fontproperties=fontprop)
+    plt.ylabel('가격', fontproperties=fontprop)
+    plt.show()
+
+draw_sample()
+```
+
+위 결과에서 보듯이 한글 폰트가 없으니 출력이 제대로 되지 않는다. 이제 `koreanize-matplotlib` 패키지를 설치하고 import 후 실행해보자 
+
+```bash
+$ pip install koreanize-matplotlib 
+```
+
+```{python}
+#| layout: "[-10,70,-10]"
+import koreanize_matplotlib
+draw_sample()
+```
+
+`koreanize-matplotlib` 패키지는 나눔고딕 폰트를 자동으로 설치하고 이를 폰트로 잡아 준다. 위에 보는 것처럼 한글 출력에 문제가 없다. 
+
+## koreanize-matploitlib 이외의 대안
+
+`koreanize-matplotlib`이 간편하고 좋은 해결책이지만 다른 방법도 있다. 만일을 위해 두 가지를 더 알아보자.  
+
+## 노트북에서 한글 폰트 가져오기 
+
+앞서 링크에서 소개한 폰트 추가 방법은 시스템에 폰트를 먼저 깔고 해당 폰트를 matplotlib에 등록하는 방법이다. pyodide에서 활용할 수 있는 다른 방법은 없을까? 아래 소개할 방법은 ttf 폰트 파일을 바로 matplotlib이 쓸 수 있게 해주는 방법이다.    
+
+```{python}
+#| layout: "[-10,70,-10]"
+font_path = './font/D2Coding v.1.3.2 ligature Nerd Font Complete.ttf' # 폰트 파일의 위치에 따라서 조정
+font_callsign = 'D2 Coding Nerd'
+fe = fm.FontEntry(
+    fname=font_path,
+    name=font_callsign) # 원하는 폰트 호출 이름 설정 
+fm.fontManager.ttflist.insert(0, fe) # or simply append
+```
+
+:::{.callout-tip}
+#### Code Tips
+- `fm.FontEntry...` 한글 폰트를 matplotlib의 폰트 매니저에 바로 심어주는 명령 
+	- `font_path`: 폰트의 ttf 파일의 위치와 파일 이름을 지정한다. 각자 알맞게 조정하자.
+	- `font_callsign`: 내가 지정할 폰트의 이름, 폰트를 호출할 때 활용한다. 각자 취향대로 바꾸자. 
+:::
+
+위 방법의 장점은 폰트의 위치를 가리지 않는다는 것이다. 적당한 위치에 두고 matplotlib이 쓸 수 있도록 폰트를 인식시키는 방식이다. 폰트가 잘 인식되었는지 확인해보자.  
+
+```{python}
+print([(f.name, f.fname) for f in mpl.font_manager.fontManager.ttflist if ('D2' in f.name) | ('Nanum' in f.name) ])
+```
+
+## 활용 
+
+matplotlib에서 폰트를 활용하는 방법은 두 가지다. 하나는 폰트의 속성을 지정해놓고 해당 폰트가 활용될 때 이를 호출해서 쓰는 방법이고, 다른 하나는 전역적으로 해당 폰트를 기본 폰트로 지정하는 것이다. 
+
+### 호출해서 활용
+
+아래 결과에서 보듯이, fontprop을 통해 지정된 폰트 양식을 그래프 요소에 적용해보자. 
+
+```{python}
+#| layout: "[-10,70,-10]"
+fontprop = fm.FontProperties(fname=font_path, size=15)
+draw_sample(fontprop)
+```
+
+### 전역으로 활용
+
+폰트 속성을 전역으로 지정하고 그래프를 그려보자. 
+
+```{python}
+#| layout: "[-10,70,-10]"
+# rcParams 설정
+plt.rcParams["font.family"] = 'D2 Coding Nerd'
+plt.rcParams['font.size'] = 15.
+plt.rcParams['xtick.labelsize'] = 12.
+plt.rcParams['ytick.labelsize'] = 12.
+plt.rcParams['axes.labelsize'] = 12.
+plt.rcParams['axes.unicode_minus'] = False
+
+# 그림 그리기 
+draw_sample()
+```

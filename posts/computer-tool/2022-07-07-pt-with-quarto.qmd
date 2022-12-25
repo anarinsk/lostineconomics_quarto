@@ -1,0 +1,134 @@
+---
+title: Presentation with Reveal.js
+description: Quarto로 편하게! 
+author: "JS HUHH"
+date: "07/07/2022"
+image: "https://revealjs.com/images/logo/reveal-black-text.svg"
+categories: [computer-tool]
+draft: false
+---
+
+## TL; DR
+
+- Quarto를 쓰면 Markdown으로 편하게 PT 문서를 만들 수 있다. 
+
+## PT 도구 그것이 문제로다. 
+
+[Reveal.js](https://revealjs.com/)는 웹 기반으로 프레젠테이션 문서를 구현하는 녀석이다. 우리는 이 녀석을 써서 파워포인트나 키노트가 부럽지 않은 수준의 PT를 비교적 손쉽게 만들 수 있다. 웹 기반이니 브라우저만 있으면 문서를 볼 수 있다. 
+
+아쉬운 점이라면 Markdown처럼 (나같은 문돌이들도) 쉽게 쓸 수 있는 딱 떨어지는 저작 도구가 없다는 것이다. 만일 Reveal.js를 Markdown과 함께 쓸 수 있다면 그야말로 금상첨화일 터! 앞서 Markdown 기반 저작도구인 [Quarto](https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-05-14-blogging-with-quarto.html)를 살펴 보았다. 고맙게도 이 녀석이 VS Code 혹은 Jupyter 위에서 Markdown과 Reveal.js를 함께 부릴 수 있게 해준다. Quarto + Reveal.js의 장점을 다시 따져보자. 
+
+:::{ .column-margin }
+RStudio가 제공하는 Rmarkdown을 통해 Reveal.js와 마크다운을 함께 부릴 수 있다. 다만 도구로서 VS Code가 좀 더 보편적이라고 생각하기에 이 녀석은 다루지 않겠다. 
+:::
+
+1. Markdown의 문법을 거의 그대로 쓸 수 있다. 
+2. $\rm\LaTeX$ 수식을 그대로 쓸 수 있다. 
+3. 깔끔하지만 다채로운 슬라이드를 구현할 수 있다. 
+4. 코드 및 결과물을 그대로 활용할 수 있다. 
+5. Github과 같은 웹 도구를 활용하면 결과물을 html로 쉽게 공유할 수 있다. 
+
+:::{ .column-margin }
+Quarto가 pandoc을 백엔드로 쓰기 때문에 qmd 문서를 거의 포맷(docx, pdf, html, tex, pptx 등)으로 변환할 수 있다. html이 특별한 이유는 플랫폼을 불문하고 문서를 원래 의도 그대로 잘 전달할 수 있기 때문이다. 
+:::
+
+이제 시작해 보자. 
+
+## 출발선 
+
+아래의 도구를 설치할 수 있고 기본적인 활용이 가능하다고 가정하겠다. 
+
+- Quarto (플랫폼에 따라서 설치)
+- VS Code 
+- Quarto Extension for VS Code 
+
+## 거의 완벽한 레퍼런스 
+
+Quarto의 문서화는 거의 완벽하다. [Quarto + Reveal.js](https://quarto.org/docs/presentations/revealjs/)도 예외는 아니다. 링크의 내용을 따라서 쓰면 된다. Markdown 문법과도 크게 다르지 않으니 진입 장벽이 낮다. 몇 가지 주의할 사항만 확인해 보자. 
+
+### `YAML`
+
+Markdown 문서에 Reveal.js의 기능을 붙이기 위해 문서 앞에 YAML 문을 붙인다. 문서의 앞에 붙는 YAML의 예제는 아래와 같다. 
+
+```yaml 
+---
+title: "This Is a Testflight"
+subtitle: "Completely useless presentation"
+author: "[anarinsk](https://github.com/anarinsk/learn_quarto-revealjs/)"
+date: "2022-07-07"
+format: 
+    revealjs:
+        incremental: true   
+        theme: black
+        css: "index.css"
+        transition: concave
+        background-transition: fade
+        smaller: false
+        scrollable: true
+        logo: "logo2.png"
+        footer: "This is FOOTER!"
+        #self-contained: true
+---
+```
+
+대체로 항목이 자명하기 때문에 별도의 설명은 하지 않겠다. reveal.js의 각종 옵션을 지정해 줄 수 있는데, 지원하는 항목은 [여기](https://tutorial.quarto.org/docs/reference/formats/presentations/revealjs.html)에서 확인할 수 있다. 
+
+#### 눈여겨볼 항목 
+
+- `theme`: reveal.js의 [테마](https://revealjs.com/themes/)다. 복잡하게 생각하지 말고 간단한 거 쓰자. 
+- `transition`: 슬라이드 혹은 항목 등장의 시각적인 전환 효과를 지정한다. 
+- `background-transition`: 배경 효과를 지정한다.
+- `css`: 특화를 위한 css 파일을 지정한다. 
+
+
+### Customization 
+
+Quarto + Reveal.js의 기본 설정을 그대로 써도 된다. 다만 영문과 한글 폰트의 괴리 등의 미묘한 대목이 걸린다면, 특화된 css 파일을 통해 볃도로 설정을 바꾸면 된다. [Working Example](#working-example)에 소개된 예제의 css 파일을 살펴보자. 
+
+```css
+/* @import url('https://fonts.googleapis.com/css2? family=Nanum+Gothic&display=swap'); */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
+@import url("https://cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-ligature-subset.css");
+
+/*-- scss:rules --*/
+.reveal h1, 
+.reveal h2, 
+.reveal h3, 
+.reveal h4, 
+.reveal h5, 
+.reveal h6 {
+  font-family: 'NanumSquare' !important;
+  //text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
+}
+
+.reveal section p {
+    font-family: 'pretendard' !important;
+    font-size: 90%;
+}
+
+.reveal ul, 
+.reveal li, 
+.reveal ol{
+    font-family: 'pretendard' !important;
+    font-size: 95%;
+}
+
+.reveal code{
+  font-family: 'D2Coding', monospace ! important;
+  font-size: 95%;
+}
+```
+
+- `@import...` | 필요한 폰트 3종을 로드한다. 
+- 나머지는 지정된 요소 별로 사용할 폰트와 글자 크기 등을 지정한다. 
+
+## Working Example 
+
+시험 삼아서 Reveal.js의 몇 가지 기능을 Quarto로 구현해 보았다. 내용 없이 형식을 구현하는데 집중한 사례이니 참작해 주시라. 
+
+- 예시: [Completely Useless Quarto-Reveal.js](https://anarinsk.github.io/learn_quarto-revealjs/#/title-slide)
+- 코드: [anarinsk/learn_quarto-revealjs](https://github.com/anarinsk/learn_quarto-revealjs)
+
+
+

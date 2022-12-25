@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JS HUHH">
+<meta name="dcterms.date" content="2019-12-03">
+<meta name="description" content="고유치와 고유벡터에 관해 알아보자.">
+
+<title>lostineconomics.com - Eigenvalues and Eigenvectors</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">lostineconomics.com</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Junsok Huhh</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/anarinsk"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/anarinsk"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Eigenvalues and Eigenvectors</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">linear-algebra</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    고유치와 고유벡터에 관해 알아보자.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>JS HUHH </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 3, 2019</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
+<ul>
+<li>행렬 대각화를 이루는 방법 중 하나는 아이겐벡터와 아이겐밸류를 재구성하는 것이다.</li>
+<li>대각화가 가능한 행렬 <span class="math inline">\(A\)</span>가 있고, 그 아이겐벡터를 열 벡터로 하는 행렬을 <span class="math inline">\(Q\)</span>라고 하면</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}
+A Q &amp; = A[x_1, \dotsc, x_n] \\
+&amp; = [\lambda_1 x_1, \cdots, \lambda_n x_n] \\
+&amp;= Q \boldsymbol{\lambda}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+AQ Q^{-1} = A = Q \boldsymbol{\lambda}Q^{-1}
+\]</span></p>
+<ul>
+<li>대각화가 가능하기 위해서는 우선 행렬 <span class="math inline">\(Q\)</span>가 비특이(non-singular) 행렬이어야 한다. <span class="math inline">\(Q\)</span>는 아이겐벡터의 조합이기 때문에 서로 다른 아이겐밸류를 지니거나 혹은 아이겐벡터의 선형독립이 성립해야 한다.</li>
+<li>대칭 행렬의 경우 모든 아이겐밸류가 실수이고, <span class="math inline">\(Q\)</span>는 직교 행렬(orthogonal matrix)이 된다. 이 경우</li>
+</ul>
+<p><span class="math display">\[
+A = Q\boldsymbol{\lambda}Q^T
+\]</span></p>
+</section>
+<section id="definition" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="definition">Definition</h2>
+<p><span class="math display">\[
+\underset{(n \times n)}{\boldsymbol{A}} \underset{(n \times 1)}{x} = \lambda x, \text{ for $x \neq 0$}
+\]</span></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>고유치와 고유벡터는 아이겐밸류와 아이겐벡터로로 쓰기로 하자.</p>
+</div></div><p>벡터 <span class="math inline">\(x(\in {\mathbb R}^n)\)</span>가 있다고 하자. <span class="math inline">\(\boldsymbol{A}\)</span>는 일종의 함수이고 이는 <span class="math inline">\(x\)</span>를 변형시키게 된다. 이 변형이 그 다시 자신이 되고 벡터의 크기만 조정해주는 형태가 될 때, <span class="math inline">\(\lambda\)</span>를 아이겐밸류 그리고 그 벡터 <span class="math inline">\(x\)</span>를 아이겐벡터라고 한다. 잠깐! 여기서 아이겐 벡터는 우 아이겐벡터다. 왜냐하면, 벡터가 매트릭스의 오른쪽에 곱해지기 때문이다. 우(right) 아이겐벡터를 보통 아이겐벡터라고 쓴다. 하지만 좌(left) 아이겐벡터도 있다. 일단 이 점만 지적해두도록 하자.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>좌 아이겐벡터와 우 아이겐벡터가 절묘하게 사용되는 사례는 마르코프 체인이다. 아이겐밸류 1이 존재하고, 그 아이겐벡터가 해당 상태의 극한 분포가 된다는 사실이 좌, 우 아이겐벡터를 번갈아 사용하면서 도출된다. 자세한 것은 <a href="https://anarinsk.github.io/lostineconomics_quarto/posts/math-of/2019-12-11-Peron-Frobenus-1.html">여기</a>를 참고하자.</p>
+</div></div><section id="eigenspace" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="eigenspace">Eigenspace</h3>
+<p>벡터들의 집합 중에서 아래의 조건을 만족하면 이를 벡터 (부분) 공간이라고 부른다.</p>
+<ol type="1">
+<li>영 벡터 <span class="math inline">\(\boldsymbol 0\)</span>가 원소이다.</li>
+<li><span class="math inline">\(x\)</span>가 원소일 때 <span class="math inline">\(\alpha x\)</span> (<span class="math inline">\(\alpha \in \mathbb{R})\)</span>도 원소다.</li>
+<li><span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>가 원소일 때 <span class="math inline">\(x + y\)</span>도 원소다.</li>
+</ol>
+<p>쉽게 말해서 벡터 (부분) 공간 위에서는 덧셈과 스칼라 곱셈이 정의된다. 아이겐벡터로 구성된 공간은 이런 벡터 공간이 될까?</p>
+<ol type="1">
+<li><span class="math inline">\(A {\boldsymbol 0} = \lambda {\boldsymbol 0}\)</span></li>
+<li><span class="math inline">\(A(\alpha x) = \alpha(A x) = \alpha (\lambda x) = \lambda(\alpha x)\)</span></li>
+<li><span class="math inline">\(A(x_1 + x_2) = A x_1 + A x_2 = \lambda x_1 + \lambda x_2 = \lambda(x_1 + x_2)\)</span></li>
+</ol>
+<p>3번의 경우 정의대로 하나의 아이겐밸류 <span class="math inline">\(\lambda\)</span>에 대해서 두 개 이상의 아이겐벡터가 대응될 때에 해당한다. 아이겐벡터를 원소로 하는 공간은 벡터 부분 공간이 되며, 이를 아이겐스페이스(eigenspace)라고 부른다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>얼핏 생각하면 이런 경우가 있나 싶을 수 있다. 가장 좋은 사례는 항등 행렬, <span class="math inline">\({\boldsymbol I}_n\)</span>이다. 이 항등행렬의 경우 아이겐밸류는 1이고, 대응 가능한 어떤 벡터도 아이겐벡터가 된다.</p>
+</div></div></section>
+</section>
+<section id="determinant-and-eigenvalues" class="level2">
+<h2 class="anchored" data-anchor-id="determinant-and-eigenvalues">Determinant and Eigenvalues</h2>
+<p>아이겐밸류의 아이겐벡터를 구하는 과정은 다음과 같다.</p>
+<p><span class="math display">\[
+|(\boldsymbol{A} - \lambda I)|  = 0
+\]</span></p>
+<p>즉, 임의의 아이겐밸류, 아이겐벡터 정의에서 <span class="math inline">\(\boldsymbol 0\)</span> 벡터가 아닌 <span class="math inline">\(x\)</span>를 <span class="math inline">\(\boldsymbol 0\)</span> 벡터로 만들기 위해서는 위의 행렬식 값이 0이어야 한다. 즉 <span class="math inline">\((\boldsymbol{A} - \lambda I)\)</span>이 선형 종속이어야 한다. 이때 행렬식이 <span class="math inline">\(\lambda\)</span>의 <span class="math inline">\(n\)</span> 차 방정식이고, <span class="math inline">\(n\)</span>차 방정식의 근이 각각 아이겐밸류가 된다. 즉,</p>
+<p><span class="math display">\[
+|(\boldsymbol{A} - \lambda {\boldsymbol I})|  = (\lambda_1 - \lambda) \cdot  (\lambda_2 - \lambda) \dotsb  (\lambda_n - \lambda)
+\]</span></p>
+<p>위의 식에서 두가지 사실을 알 수 있다.</p>
+<ol type="1">
+<li><span class="math inline">\(\boldsymbol{A}\)</span>의 행렬식은 아이겐밸류의 곱과 같다. 즉, <span class="math inline">\(\lambda = 0\)</span>을 넣으면 이 결과를 쉽게 얻을 수 있다.</li>
+<li>가역행렬(invertible matrix)이 될 조건, 즉 역행렬이 존재할 조건은 행렬식의 값이 0이 아닌 경우다. 1에 따르면 이는 모든 아이겐밸류의 값이 0이 아닌 조건과 동치다.</li>
+</ol>
+<section id="transpose" class="level3">
+<h3 class="anchored" data-anchor-id="transpose">Transpose</h3>
+<p>원래 행렬의 행렬식과 전치행렬의 행렬식은 같다. 이를 아이겐밸류 계산에 응용해보자.</p>
+<p><span class="math display">\[
+|\boldsymbol{A}^T - \lambda {\boldsymbol I}| = |(\boldsymbol{A}-\lambda {\boldsymbol I})^T| = |\boldsymbol{A}-\lambda {\boldsymbol I}|
+\]</span></p>
+<p>즉, 원래 행렬 <span class="math inline">\(\boldsymbol{A}\)</span>와 전치 행렬 <span class="math inline">\(\boldsymbol{A}^T\)</span>는 같은 아이겐밸류를 갖는다.</p>
+</section>
+</section>
+<section id="diagonalization" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="diagonalization">Diagonalization</h2>
+<p>아이겐밸류와 아이겐벡터가 가장 많이 사용되는 경우는 행렬의 대각화이다. 여기서 대각화란, 정방 행렬의 대각에 위치한 원소, <span class="math inline">\(a_{ii}\)</span>를 제외한 나머지 원소가 모두 0인 행렬, 즉 대각 행렬을 품는 변형을 의미한다. 대각 행렬은 여러가지로 쓸모가 많다. 특히 행렬의 <span class="math inline">\(k\)</span> 제곱이 필요한 경우 대각행렬은 그냥 해당 대각원소의 <span class="math inline">\(k\)</span> 제곱과 동일해진다. 행렬의 대각화를 살펴보자.</p>
+<p><span class="math display">\[
+y = \boldsymbol{A} x
+\]</span></p>
+<p>기본적으로 행렬은 함수다. 즉, 벡터 <span class="math inline">\(x\)</span>를 투입(input)으로 보면 이를 선형 결합을 통해서 다른 어떤 산출(output) 벡터로 보내는 것이다. 일단 설명의 편의를 위해서 <span class="math inline">\(x\)</span>가 2차원 벡터라고 두고 설명해보자. 즉,</p>
+<p><span class="math display">\[x =
+\begin{bmatrix}  
+x_1 \\  
+x_2
+\end{bmatrix}.
+\]</span></p>
+<p><span class="math inline">\(\boldsymbol{A}\)</span>에 의해 변형된 결과를 아이겐벡터 <span class="math inline">\(v_1\)</span>과 <span class="math inline">\(v_2\)</span>를 통해서 표현할 수 있다고 가정하자. <span class="math inline">\(v_1\)</span>, <span class="math inline">\(v_2\)</span>를 통해 <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>를 표현하면 다음과 같다.</p>
+<p><span class="math display">\[
+\begin{aligned}
+x &amp; = w_1 v_1 + w_2 v_2 \\
+y &amp; = z_1 v_1 + z_2 v_2
+\end{aligned}
+\]</span></p>
+<p>이때, <span class="math inline">\(w_\cdot\)</span>, <span class="math inline">\(z_\cdot\)</span>은 스칼라 값임에 유의하자. 이를 매트릭스로 표시하면 다음과 같다.</p>
+<p><span class="math display">\[
+x =
+\boldsymbol{Q}
+\begin{bmatrix}  
+w_1 \\  
+w_2
+\end{bmatrix},~
+y =
+\boldsymbol{Q}
+\begin{bmatrix}  
+z_1 \\  
+z_2
+\end{bmatrix}, \text{where}
+\]</span></p>
+<p><span class="math display">\[
+\boldsymbol{Q} =
+\begin{bmatrix}  
+v_1, v_2
+\end{bmatrix}
+\]</span></p>
+<p><span class="math inline">\(v_i' v_i = 1(i = 1,2)\)</span> 이고, <span class="math inline">\(v_1 \cdot v_2 = 0\)</span> 이라고 가정하자. 즉, <span class="math inline">\(Q\)</span>가 직교행렬이라고 가정하자.</p>
+<p><span class="math display">\[
+\begin{aligned}
+\boldsymbol{Q}z &amp; = \boldsymbol{A} \boldsymbol{Q} w \\
+z &amp; = \boldsymbol{Q}^{-1} \boldsymbol{A} \boldsymbol{Q} w \\
+z &amp; = \boldsymbol{Q}^T \boldsymbol{A} \boldsymbol{Q} w
+\end{aligned}
+\]</span></p>
+<p>직교행렬의 경우 <span class="math inline">\(\boldsymbol{Q}^{-1} = \boldsymbol{Q}^T\)</span>가 성립한다. 이때</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>직교행렬의 경우 <span class="math inline">\(\boldsymbol{Q}^T \boldsymbol{Q} = \boldsymbol{Q} \boldsymbol{Q}^T = {\boldsymbol I}\)</span>가 성립한다. 따라서 <span class="math inline">\(\boldsymbol{Q}^{-1} = \boldsymbol{Q}^T\)</span></p>
+</div></div><p><span class="math display">\[
+\boldsymbol{A} \boldsymbol{Q} = [A v_1, A v_2] = [\lambda_1 v_1, \lambda_2 v_2] = [v_1, v_2]
+\begin{bmatrix}  
+  \lambda_1 &amp; 0 \\  
+  0 &amp; \lambda_2
+\end{bmatrix} = \boldsymbol{Q} \boldsymbol{\lambda}.
+\]</span></p>
+<p>따라서,</p>
+<p><span class="math display">\[
+z = \boldsymbol{Q}^T \boldsymbol{Q} \boldsymbol{\lambda} w
+\]</span></p>
+<p>여기서 대각화의 핵심은</p>
+<p><span class="math display">\[
+\boldsymbol{Q}^T \boldsymbol{A} \boldsymbol{Q} = \boldsymbol{\lambda}\text{ or }\boldsymbol{A} = \boldsymbol{Q}\boldsymbol{\lambda}\boldsymbol{Q}^T
+\]</span></p>
+<p>즉, 어떤 매트릭스의 아이겐벡터가 서로 직교하면 이를 통해 직교행렬 <span class="math inline">\(\boldsymbol{Q}\)</span>를 얻을 수 있다. 이를 원래 매트릭스의 좌우로 곱하면 아이겐밸류를 대각원소로 갖는 대각행렬을 얻을 수 있다.</p>
+<section id="generalization" class="level3">
+<h3 class="anchored" data-anchor-id="generalization">Generalization</h3>
+<p>일반화 해보자. 대각화는 다음과 같다.</p>
+<p><span class="math display">\[
+\boldsymbol{AQ} = \boldsymbol{A} [x_1, \dotsc, x_n] = [\lambda_1 x_1, \dotsc, \lambda_n x_n] = [x_1, \dotsc, x_n]
+\begin{bmatrix}
+\lambda_1&amp; \dotsc &amp; 0  \\
+\vdots&amp; \ddots&amp; \vdots \\
+0&amp; \dotsc&amp; \lambda_n
+\end{bmatrix} = \boldsymbol{Q} \boldsymbol{\lambda}
+\]</span></p>
+<p>행렬의 분해(factorization)은 다음을 의미한다.</p>
+<p><span class="math display">\[
+\boldsymbol{A} = \boldsymbol{Q} \boldsymbol{\lambda} \boldsymbol{Q}^{-1}
+\]</span></p>
+</section>
+</section>
+<section id="diagonalizable" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="diagonalizable">Diagonalizable</h2>
+<p>쉽게 생각하자. 우선 <span class="math inline">\(Q^{-1}\)</span>이 존재해야 한다. 즉, <span class="math inline">\(Q\)</span>가 비특이 행렬이어야 한다. <span class="math inline">\(Q\)</span>가 비특이 행렬이 되기 위한 조건들은 일단 행렬 대각화를 위한 필요 조건이다.</p>
+<p>그런데 <span class="math inline">\(Q\)</span>는 아이겐벡터들로 구성된 행렬이다. 따라서 <span class="math inline">\(Q\)</span>가 비특이 행렬이 되기 위해서는 해당 아이겐밸류들이 모두 다르거나, 중복된 아이겐밸류가 있다면 아이겐벡터의 선형 독립이 성립해야 한다. 아이겐밸류가 모두 다르면, 즉 각기 다른 아이겐백터가 존재하면, 대각화가 가능하다. 만일 아이겐밸류가 중복이라면, 경우에 따라서 다르다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>아이겐밸류가 중복인데 아이겐벡터가 서로 다를 수 있을까? 가장 좋은 예는 단위행렬이다. <span class="math inline">\(\mathbf I_n\)</span>은 1의 아이겐 밸류만을 지니며 모든 벡터 <span class="math inline">\(x\)</span>가 아이겐벡터가 된다.</p>
+</div></div><section id="symmetric-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="symmetric-matrix">Symmetric matrix</h3>
+<p>행렬이 대칭이면 <span class="math inline">\(Q\)</span>에 더 좋은 특성이 생긴다.</p>
+<ol type="1">
+<li><span class="math inline">\(\boldsymbol A\)</span> 의 아이겐밸류는 모두 실수이다.</li>
+<li><span class="math inline">\(Q\)</span>는 직교행렬이다. 즉, <span class="math inline">\(Q^T = Q^{-1}\)</span> 가 성립한다.</li>
+</ol>
+<p>이를 종합하면 아래와 같다.</p>
+<p><span class="math display">\[
+\boldsymbol{A} = \boldsymbol{Q} \boldsymbol{\lambda} \boldsymbol{Q}^{-1} =  \boldsymbol{Q} \boldsymbol{\lambda} \boldsymbol{Q}^{T}
+\]</span></p>
+</section>
+<section id="graphic-interpretation-with-vector-space" class="level3">
+<h3 class="anchored" data-anchor-id="graphic-interpretation-with-vector-space">Graphic interpretation with vector space</h3>
+<p>앞서의 식을 다시 음미해보자.</p>
+<p><span class="math display">\[
+AQ = A[x_1, \dotsc, x_n]
+\]</span></p>
+<p><span class="math inline">\(A x_i\)</span>는 <span class="math inline">\(A\)</span>라는 일종의 함수에 의해 선형 변형된 벡터를 나타낸다. 이러한 벡터를 모아 놓은 것이 <span class="math inline">\(AQ\)</span>이다. 이는 벡터 (서브) 스페이스를 형성한다.</p>
+<p><span class="math display">\[
+Q \lambda = [x_1, \dotsc, x_n] \begin{bmatrix}
+\lambda_1&amp; \dotsc &amp; 0  \\
+\vdots&amp; \ddots&amp; \vdots \\
+0&amp; \dotsc&amp; \lambda_n
+\end{bmatrix}
+\]</span></p>
+<p>이것 역시 벡터 (서브) 스페이스를 형성한다. 여기서 서브 스페이스의 축은 아이겐벡터가 되고, 그 길이를 좌우하는 것은 아이겐밸류가 된다. 이렇게 살펴보면, 왜 아이겐벡터-아이겐밸류가 선형 변환 함수 <span class="math inline">\(A\)</span>의 축과 크기를 바꾸는 것인지 이해할 수 있다.</p>
+<p><img src="https://i.stack.imgur.com/JZF5m.gif" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;"></p>
+<p>PCA의 예를 들어보자. <span class="math inline">\(x-y\)</span> 축 위에 찍힌 점들에 대해서 변동성(분산-공분산 행렬)이 큰 방향으로 축을 바꾸면 어떻게 될까? 위에서 보는 PCA의 새로운 축은 아이겐벡터의 방향을 중심으로 재정렬된 축을 나타낸다. 이 축에 할당된 변동성의 크기는 각각 축의 길이에 해당하는 아이겐밸류가 된다.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

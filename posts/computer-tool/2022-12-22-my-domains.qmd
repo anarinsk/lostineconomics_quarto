@@ -1,0 +1,139 @@
+---
+title: 보유 도메인을 GitHub Pages에 연결하자. 
+description: 도메인을 도메인 답게!
+author: "JS HUHH"
+date: "12/22/2022"
+image: "https://kinsta.com/wp-content/uploads/2018/05/what-is-dns.png"
+categories: [computer-tool]
+filters:
+   - lightbox
+lightbox: auto
+draft: false
+---
+
+## TL; DR
+
+- 도메인과 깃허브 페이지스를 연결하는 법을 알아보자. 
+
+### Not in this Post 
+
+- 도메인에 관한 상세한 지식
+- Github Pages의 일반적인 설정 방법
+
+### What in this Post 
+
+- 도메인 구입하고 깃헙 페이지스로 연결하는 법 
+
+## 도메인 구입 
+
+구입은 편한 곳에서 하시면 되겠다. 나는 [Google Domains](https://domains.google/)를 이용했다. 도메인을 산다는 것은 무엇일까? 예를 들어 이 홈페이지를 위해 구입한 도메인은 `lostineconomics.com`이다. 나는 `www.lostineconomics.com`을 산 것이 아니었다! 웹 서비스 `www`을 도메인의 하위 도메인으로 설정할 수 있지만, 구입한 것은 도메인 `lostineconomics.com`이다. 그리고 하위 도메인에는 `www`만 있는 것은 아니다. `blog.lostineconomics.com`이나 `mail.lostineconomics.com`도 설정할 수 있다. 
+
+:::{.column-margin}
+자세한 내용은 [여기](https://joonius.tistory.com/19)를 참고하자. 
+:::
+
+보통 도메인 구입처에서 DNS, 도메인네임서버 관련한 기본적인 서비스를 제공한다. 가장 기초적인 서비스는 포워딩 서비스다. 즉, `lostineconomics.com`을 호출했을 때 이를 다른 도메인으로 연결시켜주는 서비스다. 개념이 직관적이고 이용이 편리하지만, 포워딩되는 주소로 바뀌는 것이 조금 머쓱하다. 도메인 이름이 좋아서 구입했다면, 녀석이 계속 주소 창에 남아야 하지 않겠는가!  
+
+:::{.column-margin}
+여기서는 구글 도메인스의 설정을 소개한다. 대체로 많은 도메인 서비스들이 DNS 관련 설정 서비스를 제공하니 업체별로 검색하면 대체로 비슷한 역할을 수행하는 기능을 발견할 수 있을 것이다. 
+:::
+
+## GitHub에 보유 도메인 소유 증명하기 
+
+GitHub Pages는 훌륭한 스태틱 웹 서비스다. js, css 정도를 쓰는 html 문서를 전달하는 데에는 이 보다 싸고 편리한 서비스를 찾기 어려울 것이다. GitHub Pages에는 외부 도메인을 연결할 수 있다. 다만 연결을 위해 몇 가지 절차를 거쳐야 한다. 
+
+### 도메인 확인하기 1 (GitHub)
+
+먼저 연결하고자 하는 도메인이 소유자의 것이 맞는지를 확인하는 절차가 필요하다. 깃허브의 계정 `Settings` > "Code, planning, and autiomation" 섹션에 `Pages`라는 항목으로 들어가보자. 
+
+`www`를 제외하고 구입한 도메인 이름을 넣으면 아래와 같은 창이 뜬다. 1번은 도메인의 앞에 붙여줄 하위 주소 이름이고, 2번은 이를 인증할 수 있는 값이다. 이 창을 띄워 두고 도에인 구입처로 가자. 두 값은 아래 그림처럼 버튼을 통해 복사하면 된다.   
+
+::: {layout="[[-20, 60, -20]]" layout-valign="bottom"}
+![](images/verifying-domain-masked.png)
+:::
+
+자세한 내용은 [여기](https://docs.github.com/ko/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages)를 확인하자. 
+
+### 도메인 확인하기 2 (Google Domains)
+
+구글 도메인스를 비롯한 도메인 구입처는 대체로 DNS와 관련해서 다양한 서비스를 제공한다. 
+
+- 인증하려는 도메인의 DNS 설정 메뉴로 가자. 
+- `맞춤 레코드 관리` > `새 레코드 만들기`
+- 아래 그림에 각 번호에 위 GitHub 인증 메뉴의 1, 2번을 붙여 넣고 저장한다. 
+	- 1번은 "호스트 이름"이고 2번은 "데이터"다. 
+	- "유형"은 "TXT"로 설정한다. 
+	- 옆의 3600은 그대로 두면 된다. 구글 도메인스에서도 이를 권장한다. 
+
+::: {layout="[[-20, 60, -20]]" layout-valign="bottom"}
+![](images/position.png)
+:::
+
+### 도메인 확인하기 3 (GitHub)
+
+다시 `Pages` 설정 메뉴로 돌아가서 `verify`를 눌러준다. 설정되는데 다소 시간이 걸리지만 "verifyig"을 눌러 요구하다보면 인증이 된다. 앞서 도메인 서비스에서 설정한 값이 해당 DNS에 반영되고 이를 깃허브에서 끌어와 확인하면 도메인 소유 확인이 완료된다. 
+
+## GitHub Pages를 도메인에 연결하기 
+
+특정한 리포지터리의 깃허브 페이지(`{유저-ID}.github.io/{리포지터리-이름}`)를 도메인과 연결하기 위해서는 두 가지 과정이 필요하다. Google Domains에서 DNS 설정을 통해 CNAME을 설정해야 한다. CNAME이란 도메인의 이름에서 도메인의 이름으로 연결해주기 위한 설정이라고 생각하면 쉽다. 앞서와 같이 구글 도메인스의 DNS 설정으로 가자. 
+
+### 도메인 연결 1 (Google Domains)
+
+::: {layout="[[-20, 60, -20]]" layout-valign="bottom"}
+![](images/cname.png)
+:::
+
+위 그림에서 보듯이 유형을 "CNAME"으로 잡는다. 이제 구입한 도메인 앞에 접두어(하위 도메인)이 들어간다. 가장 흔하게 쓸 수 있는 것이 `www`다. 즉, `www.lostineconomics.com`을 치면 어디로 포워딩되어야 하는지를 표시하면 된다. 호스트 이름이 `www`가 되고, 데이터는 `anarinsk.github.io`가 된다. 
+
+주의할 점; 데이터에 해당 것허브 페이지스의 주소가 `/{리포시터리-이름}`까지 전부 전달되어야 할 것 같지만, 깃허브 페이지스의 최상위 페이지까지만 DNS에 전달해야 한다. 이후 과정은 연결은 GitHub Pages의 몫이다. `/`가 들어간 디렉토리는 전달할 수 없다. `{이용자-ID}.github.io`까지만 전달하면 해당 깃허브 페이지스의 디렉토리 자원과 도메인의 연결이 자동적으로 이루어진다. 
+
+해당 도메인이 깃허브 페이지까지 잘 연결되는지 보려면, 아래의 셸 명령을 활용해보자. 
+
+```shell
+$ dig www.lostineconomics.com +nostats +nocomments +nocmd
+```
+
+윈도 파워셸에는 `dig` 명령어가 없다. 설치가 가능하니 검색을 통해 적절히 방법을 찾으시라. 결과가 `{이용자-ID}.github.io`까지 잘 타고 들어가는지 확인하면 된다. 뒤에서 다루겠지만 여기서 IP 주소도 확인할 수 있는데, 이 녀석들이 설정에서 다시 활용될 수 있다. 
+
+### 도메인 연결 2 (GitHub Pages)
+
+이제 연결을 윈하는 리포지터리의 `Settings` > `Pages`로 가자. "Custom domain" 메뉴에 앞서 설정한 주소, 즉 `www.lostineconomics.com`을 입력하고 저장하면 된다. 
+
+### 정리 및 응용 
+
+흐름을 정리해보자. 도메인의 네임 서버(DNS)가 {이용자-ID}.github.io까지 타고 들어가면 깃허브 페이지스의 설정이 해당 주소를 해당 페이지스의 랜딩 페이지와 연결한다. 따라서 크게 작업 흐름을 정리해보면 다음과 같다. 
+
+1. 구글 도메인스에서 내가 원하는 도메인 이름이 것히브 페이지스 도메인(`{개별-ID}.github.io`)에 연결되도록 설정한다. 
+2. 1이 되도록 하기 위해서 깃허브에서 내가 구입한 도메인을 인증헤야 한다. 
+3. 각 리퍼지토리의 깃허브 페이지스 설정에서 1의 도메인이 해당 리포의 페이지를 호출할 수 있도록 연결한다. 
+
+도메인으로 꼭 `www`만 써야 할까? 아니다. 다른 이름도 가능하다. 예를 들어, DNS의 레코드 관리에서 호스트의 이름으로 `blog` 설정하면 이 녀석은 `blog.lostineconomics.com`을 `anrinsk.github.io`까지 연결하고, 개별 리포에서 `blog.lostineconomics.com`을 지정하면 해당 깃허브 페이지스로 다시 연결된다. 같은 도메인 주소를 갖고 있어도 앞에 호스트 네임을 바꿔서 설정하면, 여러 깃허브 페이지스로 연결할 수 있다. 
+
+## 곁눈질; `www`가 없는 호출 포위딩하기 
+
+웹페이지에 들어갈 때 `www`를 쓰지 않는 경우가 있다. 이런 경우에도 해당 페이지로 잘 안내되는 것은 최상위 도메인이 `www` 등이 붙은 하위 도메인으로 연결되기 때문이다. 이를 구현하려면 구글 도메인스 DNS 설정에서 "A" 유형을 추가하면 된다. 
+A 유형은 해당 호출을 바로 IP로 연결해준다. 해당 IP는 앞서 설정한 CNAME과 같기 때문에 원 도메인이 CNAME 도메인으로 연결된다. 
+
+앞서 `dig` 명령을 실행하면 포워딩되는 IP 주소를 확인할 수 있다. 이를 DNS 레코드 관리에서 설정해주자. 도메인 이름은 비워둔다. 유형에는 "A"를 설정하고, 데이터에는 연결되는 IP 주소를 가급적 다 적어주자.
+
+::: {layout="[[-20, 60, -20]]" layout-valign="bottom"}
+![](images/atype.png)
+:::
+
+구글 도메인의 전체적인 DNS 설정을 한번 정리해보자. 
+
+::: {layout="[[-20, 60, -20]]" layout-valign="bottom"}
+![](images/google-domains.png)
+:::
+
+|유형|기능|호스트 이름|데이터|예시| 
+|:---:|:---|:---|:---|:---|
+|A|원 도메인을 IP로 연결||IP 주소|yours.com &rarr; <br /> 185.XXX.1X8.15X|
+|TXT|도메인 소유 여부 입증|깃허브 계정 설정 제공|깃허브 계정 설정 제공||
+|CNAME|해당 DNS에서 호출되는 이름을 다른 이름으로 연결|`www`, `blog`, ...| 연결될 도메인 이름|www.yours.com &rarr; <br /> yours.github.io (호출한 리포의 페이지스로 연결)|
+
+## 참고자료 
+
+- [깃허브; 도메인 인증](https://docs.github.com/ko/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages)
+- [깃허브; 깃허브 페이지스 커스텀 도메인 설정](https://docs.github.com/ko/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)
+- [구글 도메인스; DNS 레코드 설정](https://support.google.com/domains/answer/3290350)

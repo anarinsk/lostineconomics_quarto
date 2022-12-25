@@ -1,0 +1,40 @@
+---
+title:  Viva, Binder!
+description: 코드 셰어링, 이제 걱정 끝 
+author: "JS HUHH"
+date: "10/27/2020"
+image: "https://mybinder.org/static/logo.svg"
+categories: [computer-tool]
+#margin-header: subscribe.html
+---
+
+내가 보고 있는 것을 남이 그대로 봐야 의사 소통이 온전해지는 경우가 있다. 아마도 코드를 나누는 경우가 그렇지 않을까 싶다. 이 점에서 Github은 꽤 좋은 코드 나눔 도구다. 그런데 문제가 하나 있다. Github을 통해 배포하는 것이 패키지라면 각자 땡겨가서 쓰면 되겠지만, 특정하게 실현된 결과물이라면? 
+
+예를 들어보자. Python으로 특정한 결과를 도출하는 코드를 짰다고 하자. 당연히 내가 작업한 환경에 의존할 것이다. 다른 환경에서 돌아갈지 아닐지 모르지만 어쨌든 의존성은 피할 수 없다. 상대를 불러서 내 컴퓨터에서 돌아가는 모습을 보여줄 수 있다면 좋겠지만 그럴 수 없는 경우가 많다. 내가 돌려본 환경을 그대로 상대가 볼 수 있게 할 수는 없는 것일까? 
+
+당장 떠오르는 솔루션이 클라우드다. 클라우드에 소프트웨어 환경을 세팅하고 내가 테스트해본다. 원하는 상대에게 url을 주고 같은 테스트를 반복 체험하게 한다. 물론 좋다. 사실 AWS 같은 곳에 Linux 서버를 깔고 주피터 관련 패키지나 RStudio 등을 설치하기는 쉽다. AWS를 비롯해 많은 클라우드 업체에서 원스톱 서비스까지 제공한다. 그런데, 문제가 있다. 비용이 든다. 사용량이 많아서 뽕을 뽑을 수 있다면 덜 아깝겠지만 코드 공유하고 결과를 확인하는 정도가 족하다면 많이 아깝다.
+
+이런 용도로 활용할 수 있는 '무료' 서비스가 Binder이다. 
+
+[https://mybinder.org](https://mybinder.org/)
+
+## Turn a Git repo into! 
+
+서비스 참 시원시원하다. 로그인도 필요 없다. 깃헙 레포에 있는 코드를 받아서 가상 머신 위에 해당 결과를 구현해준다. R, Python, Julia를 지원한다. 세 언어 모두 기본 베이스로 Jupyter허브를 활용한다. 간편한 연동을 위해서는 깃헙 리포를 public으로 설정해야 한다. 
+
+ ![](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/binder_1.png){ style="margin: auto; display: block; width: 70%;" }
+
+- `GitHub`: 깃헙 주소를 넣는다. 
+- `Git branch, tag or commit`: 관련된 깃 브렌치, 태그, 커밋 등을 넣는다. 
+- `Path to a notebook file`: `ipynb` 파일이 깃 내에 서브 디렉토리에 있다면 여기서 노트북 파일의 위치등을 지정해주면 된다. 
+	- RStudio나 Shiny를 쓰고 싶다면, "File" 대신 "URL"로 바꾸고 `rstudio`, `shiny` 등을 지정해주면 된다. 
+		- R의 경우 `r-2020-10-26` 식으로 날짜가 적힌 `runtime.txt` 파일 그리고 패키지를 미리 인스톨하는 `install.R` 파일 두 개를 준비하면 된다. 
+
+아래 공유를 위한 주소도 떠 있으니 공유를 할 때는 해당 주소만 던져주면 된다. 이제 <kbd>launch</kbd> 버튼을 누르자. 상당히 오랜 시간 동안 뭔가가 설치된다. 설치되는 내용을 보면 소프트웨어 구동에 필요한 개별 이미지를 빌드한 후 이를 클라우드에 띄워 구동한다. 
+
+ ![](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_7.png){ style="margin: auto; display: block; width: 80%;" }
+ 
+ ![](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/binder/gwcho_5.png){ style="margin: auto; display: block; width: 80%;" }
+ 
+장점은 충분히 많다. 코드가 제대로 구현되는지 확인하는 수준이거나 코드를 가끔 짧은 시간 동안 실행해야 하는 정도라면 더 이상 바랄 게 없다. 단점이라면 도커 이미지를 빌드하고 녀석을 푸시해 실행할 때까지 시간이 좀 걸린다는 것인데, 뭐 이 정도 시간 비용 쯤이야! 
+

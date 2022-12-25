@@ -1,0 +1,31 @@
+name: quarto-setup-render-deploy
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  quarto-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Quarto 
+        uses: quarto-dev/quarto-actions/setup@v2
+        with: 
+          tinytex: true
+      - name: Install Quarto 
+        run: |
+          quarto --version
+      - name: Render Quarto Project
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          #to: html # If set, it will be equivalent to `quarto render --to html`
+          path: source-folder # By default, the current working dir is used i.e `quarto render .`
+#       - name: Publish to GitHub Pages (and render)
+#        uses: quarto-dev/quarto-actions/publish@v2
+#        with:
+#          target: gh-pages
+

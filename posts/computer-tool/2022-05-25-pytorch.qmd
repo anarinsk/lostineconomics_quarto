@@ -1,0 +1,95 @@
+---
+title: PyTorch + WSL
+description: 이보다 더 좋을 수 있을까? 
+author: "JS HUHH"
+date: "05/25/2022"
+image: "https://miro.medium.com/max/649/1*6sV-YTdpob36egPM-yXGXA.png"
+categories: [computer-tool, machine-learning]
+draft: false 
+---
+
+## TL; DR
+
+- 파이토치를 Windows + WSL2 조합으로 설치하는 법을 간단하게 안내한다. 
+
+## PyTorch 
+
+파이토치는 기계 학습을 위한 라이브러리이다. 대체로 구글에서 만드는 제품을 선호하다보니 텐서플로를 주로 썼다. 최근 들어 텐서플로를 쓰기 싫어진 이유가 작업 환경이 복잡하고 다양해진 탓이다. 회사에서 윈도 기반 컴퓨터를, 집에서 M1 맥북을 쓰다보니 좀 통일된 작업 환경이 있었으면 싶었다. 
+텐서플로의 경우 M1에서 쓸 때 많은 제약을 받는다. M1 GPU를 이용하기 위해서 메탈 관련 설치를 하는 것이야 하드웨어의 특성상 그렇다고 쳐도 2.X 버전을 쓰지 못하는 것이나 파이썬 버전의 제약 등이 이유 없이 찜찜하더라. 이용 환경이 파편화된 느낌을 받았다. 
+
+이때 개발자 커뮤니티에서 파이토치가 좋은 평가를 받는다는 사실을 알게 되었다. 내 수준에서 기계 학습 프레임워크 간의 차이는 크게 문제가 되지 않는다. 텐서가 인풋으로 들어가는 것은 마찬가지이고 모델링 역시 크게 다를 것이 없겠다 싶어서 설치해서 써보기로 했다. 
+
+## 일관된 설치 방법 
+
+[https://pytorch.kr/get-started/locally/](https://pytorch.kr/get-started/locally/) 
+
+위 링크를 통해 설치 방법이 일관되게 안내된다. 플랫폼과 상황 별로 잘 나뉘어 있으니 원하는 대로 설정을 하면 된다. 윈도 이용자라면 윈도 네이티브보다는 WSL에 설치하는 것을 권장한다. 관리나 정신 건강 상의 이유도 있겠지만, 퍼포먼스가 체감상 조금 나은 듯 싶다. 
+
+:::{.column-margin}
+Conda 환경을 쓴다면 윈도라고 크게 다를 것은 없을 듯 싶다. 
+:::
+
+## PyTorch + M1 GPU
+
+Macos + M1의 경우라도 설치 페이지를 통해 쉽고 일관된 방식으로 설치할 수 있다. 만일 GPU를 쓰고 싶다면 `PyTorch 빌드` 항목에서 "Preview(Nightly)"를 택하면 된다. 
+
+:::{.column-margin}
+자세한 것은 [여기](https://discuss.pytorch.kr/t/apple-m1-gpu/286#preview-3)를 참고하자.
+:::
+
+파이토치의 경우 별다른 설정 없이 conda를 통해 설치하면, M1의 GPU를 활용이 가능하다. 
+
+## PyTorch + WSL + CUDA
+
+WSL 2가 이제 표준이 되었으니 이를 그냥 WSL로 부르도록 하자. 위 링크의 선택지에서 OS 종류를 Linux, Windows 어느 것으로 해도 설치 방식이 동일하다. 패키지 설치를 conda가 맡고 있기 때문이다. 엔비디아의 GPU를 활용하는 CUDA 버전 역시 11.3으로 선택하면 별 문제 없이 설치에 필요한 conda 명령어 셋을 보여준다. 
+
+### Conda 환경 생성 
+
+콘다에서 환경(env)을 만들어 그 안에 쓰면 여러모로 편리하다. 혹시 문제가 생겼을 때 생성된 환경만 날려버리면 된다. 
+
+```bash
+? conda create -n YOUR-ENV-NAME python=3.10
+? conda env list 
+? conda activate YOUR-ENV-NAME
+```
+
+- `conda create -n`은 `YOUR-ENV-NAME`으로 환경을 만들라는 명령이고, `python=3.10`은 파이썬 3.10을 설치하라는 명령이다.
+- `conda env list`는 현재 설치된 환경을 보여준다.
+- `conda activate YOUR-ENV-NAME`는 해당 환경을 선택한다.
+
+이렇게 해놓고 파이토치를 설치하면 된다. 
+
+### CUDA 설정 
+
+WSL 초기에는 CUDA 설정이 무척 까다로웠다. 최신 버전에서는 그런 문제가 없다. 엔비디아의 CUDA를 지원하는 GPU라면 최신 드라이버를 깔고 최신 버전의 WSL을 이용하면 된다. 모든 작업이 화면 뒤에서 잘 이루어진다. 편해도 너무 편하다. 
+
+## Testing Code 
+
+모든 설치를 마쳤다면 이제 테스트를 돌려볼 차례다. 테스트 코드로 간단한 신경망 정도를 돌려보면 될 것이다. 작업시 취향에 맞는 IDE를 택하면 된다. Jupyter를 깔아서 웹에서 작업해도 되고 VS 코드로 WSL에 원격 접속해서 작업해도 된다. 이 경우에도 Jupyter 설치는 필요하다. 필요한 요소를 VS 코드가 알려주니, 화면에 지시를 따르면 되겠다. 
+
+Python 커널을 선택할 때 앞서 만들어 놓은 환경에 속한 파이썬을 택해야 한다. 엉뚱한 커널과 연결되어 있으면 당연히 돌아가지 않을 수 있다. 
+
+### A code to test
+
+[튜토리얼](https://tutorials.pytorch.kr/beginner/basics/quickstart_tutorial.html)
+
+튜토리얼의 코드를 실행하면서 에러가 떴다면, 설치 과정에서 뭔가 잘못된 것이다. 특별히 복잡한 것은 없으니 다시 잘 살펴보면 된다. 다른 부분은 생략하고 학습에 활용할 장치를 선택하는 부분만 간략하게 언급하겠다. 
+
+```python
+# 학습에 사용할 CPU나 GPU 장치를 얻습니다.
+device = "cuda" if torch.cuda.is_available() else "cpu"
+print(f"Using {device} device")
+```
+
+- `device`를 선택하는 부분은 
+    - "cpu": 플랫폼 별 CPU 활용
+    - "cuda": 엔비디아 GPU 
+    - "mps": M1 GPU 
+
+##  As Good as It Gets
+
+모든 과정이 너무 순탄해서 감동이었다. 이제 다른 기계 학습 프레임워크는 못 쓸 것 같... 
+
+
+
+

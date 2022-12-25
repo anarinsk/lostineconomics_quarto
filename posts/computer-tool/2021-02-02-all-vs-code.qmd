@@ -1,0 +1,167 @@
+---
+title:  All into VS Code 
+description: Python, Julia, R을 하나의 도구로 코딩하자. 
+author: "JS HUHH"
+date: "02/02/2021"
+image: "https://velog.velcdn.com/images/jeongjae96/post/0db5fc06-a8bb-4970-bf6c-3b5a69ebe940/vs%20code.png"
+categories: [computer-tool]
+#margin-header: subscribe.html
+---
+
+
+각자 언어에 맞는 IDE가 있다. 예를 들어 R에는 RStudio가 가장 잘 어울린다. 언어 별로 별도의 IDE 보다는 모든 것을 한방에 해결할 수는 없을까? 이러한 목적에 복무하는 코더를 위한 좋은 에디터들이 많이 있다. 하지만 설정이 쉽지 않고 아무래도 나 같은 문송한 존재들에게는 접근성이 떨어진다. 그리고 대체로 유료다! 이 사이에서 타협할 수 있는 제품이 없을까? 
+
+MS에서 제공하는 무료 (만능) 에디터 VS Code는 여기서 제법 괜찮은 대안이다. 각설하고 파이썬, 줄리아, R을 VS code로 부리는 데 필요한 준비물을 살펴보자. 
+
+
+## 필요 조건 
+
+- Windows 10 with WSL 2
+- VS Code 
+  - Global extension 
+    - `Remote-Container`
+  - Container extension 
+    - Julia 
+    - Jupyter 
+    - Python 
+    - R 
+    - R LSP Client 
+    - Radian 
+- Docker Desktop 
+- jupyter/datascience-notebook:latest (from dockerhub)
+
+개별 소프트웨어를 로컬 머신에 깔아서 쓸 수도 있고, 이 경우 역시 아래를 참고해 설정하는 데 어려움이 없으리라 본다. 여기서는 
+
+* WSL 2를 통해 docker를 활성화하고 
+* jupyter 개발자가 직접 관리하는 Data Science 노트북을 끌어와 
+
+VS Code를 통해 부리는 방법을 소개한다. 위의 적은 두 가지 사항은 [이 포스팅](https://anarinsk.github.io/lostineconomics-v2-1/docker/data-science/2020/09/23/docker-humble-practice.html)을 참고하자. 간단히 결론만 요약하면 다음과 같다. 도커를 쓰면 별도의 인스톨이 필요 없고 뭔가 꼬였을 때 해당 컨테이너만 날려버리면 된다. 위에 소개한 `jupyter/datascience` 컨테이너는 다소 큰 용량이지만 잘 갖춰진 파이썬, 줄리아, R의 프리셋을 제공한다.
+
+## 핵심
+
+![컨테이너 원격 접속](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true){ .my-figure7 }
+
+- VS Code의 익스텐션 `Remote-Container` 컨테이너 접속 기능을 활용해 `datascience-notebook` 컨테이너 접속한다. 
+  - 오른쪽 하단에 `><` 표시된 부분을 클릭하자. 위의 그림을 볼 수 있다. 여기에서 "Remote-Containers: Attach to Running Container..."를 클릭하면 현재 돌아가고 있는 docker 컨테이너를 볼 수 있다. 미리 docker를 통해 돌려 둔 datascience 컨테이너를 선택하자. 
+  - 이 컨테이너는 안에 python, jupyterlab, R, Julia를 모두 갖고 있다. 따라서 이 녀석 하나만 도커에 올리면 된다. 
+- 각각의 언어에 접근하기 위해서 필요한 VS Code Extension을 설치한다. 
+  - Julia, Python의 경우 공식 확장이 있어서 그대로 쓰면 된다. 
+  - R의 경우 비공식 확장이지만 약간의 세팅을 거치면 꽤 근사하게 사용할 수 있다. 
+
+## For Julia 
+
+- 필요한 줄리아 작업 파일을 `.jl` 확장자로 만든다. 
+- VS Code가 알아서 잘 잡아서 줄리아 커널과 연결시켜준다. 
+- 간략한 실행 명령 체계를 살펴보자. 자세한 내용은 [여기](https://www.julia-vscode.org/docs/stable/userguide/runningcode/)를 참고하자. 
+  - 코드 셀 구분은 `##`
+  - CTRL + ENTER 해당 라인 실행 
+  - ALT + ENTER 코드 블럭 실행 (드래그앤드롭 선택) 
+  - SHIFT + ENTER 코드 셀 실행
+
+- 패키지 설치는 두가지로 가능하다. 
+
+  1. Julia 콘솔에서 `]`를 치면 패키지 관리 모드로 들어간다.   
+
+  ```julia
+  >(pkg) add SOMETHING
+  ```
+    
+  - 이렇게 설치할 경우는 별도로 `Pkg`를 호출하지 않도 설치가 가능하다. 
+
+  2. 아래와 같이 설치할 수도 있다.
+  
+    ```julia
+    using Pkg 
+    Pkg.add("Plots")
+    Pkg.add("PyPlot") 
+    ```
+
+- Julia는 JIT를 쓰기 때문에 패키지를 설치하고 명령을 구동하는 데 시간이 오래 걸린다. 이 과정을 작업을 시작하기 전에 미래 해두는 것이 좋다. 즉, 필요한 경우 미리 컴파일을 해놓는 것이 좋다. 
+- QuantEcon에 소개된 [사례](https://julia.quantecon.org/getting_started_julia/julia_by_example.html)를 따르자. 
+
+## For Python 
+
+- 필요한 파일을 `.py` 확장자로 만든다. 
+ 
+- 간략한 명령어 
+  - Code 블럭의 구별은 `#%%`
+  - Python은 VS Code에서 거의 완벽하고 편리하게 지원이 된다. 
+  - 별다른 설명이 필요하지 않다. 
+
+## For Rstat
+
+- 익스텐션 두 개를 깐다. 
+  - [R Support](https://marketplace.visualstudio.com/items?itemName=Ikuyadeu.r)
+  - [R LSP Client](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r-lsp)
+- 다음으로 R 내에서 LSP와 연결할 패키지를 설치한다. 
+
+```r
+remotes::install_github("REditorSupport/languageserver")
+```
+
+- 마지막으로 Rstat에서 편리하게 사용할 터미널 앱을 깐다. 파이썬으로 제작되었다. 다행스럽게도 DS 도커는 이미 파이썬을 잘 지원하기 때문에 쉽게 쓸 수 있다. 주의할 것은 Rstat 내부가 아니라 그냥 docker의 bash에 접속한 상태에서 깔아야 한다는 것이다. Radian은 텍스트 상에서 모든 정보를 편리하게 보여주기 때문에 VS Code의 부족함을 잘 메워준다. 
+
+```shell
+pip install -U radian 
+```
+
+- 이제 VS Code에서 설정 몇 가지를 바로 잡아 줘야 한다.   
+    - `File > Preferences > Settings`로 가자 
+    - 옆에 탭을 보면 `Extensions`가 있을 것이다. 여기서 `R`로 찾아가자. 
+    - Extension의 설정을 
+      - User, Remote, Workspace 등 상황에 맞게 다양하게 정할 수 있다. 
+      - 여기서는 Workspace에 하도록 하겠다. 
+        - `R: Bracketed Paste` 항목 체크 
+        - `R › Rterm: Linux`
+          - `/opt/conda/bin/radian`
+        - `R: Session Watcher` 항목 체크 
+
+- 설정 항목에서 json 파일로 한방에 해결할 수도 있다. 
+
+## Jupyterlab 
+
+- `ipynb`를 확장자로 해서 노트북을 쓰고 싶다면, 그냥 만들어 쓰면 된다!
+- VS Code에 Jupyter 확장이 있기 때문에 보통의 웹 브라우저에서 쓰는 Jupyter 노트북과 거의 동일한 기능을 제공한다. 웹 노트북에서와 마찬가지로 파이썬, 줄리아, R의 커널을 선택하면 된다 (아래 그림의 오른쪽 상단 박스). jupyterlab과 거의 비슷한 인터페이스를 지니고 있다. 오히려 주피터에 비해 복잡하지 않아서 좋다고 느낄지도 모르겠다. 
+
+![주피터 노트북](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true){ .my-figure7 }
+
+## Setting for Remote Connection 
+
+앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 나을 것이다. 아래와 같이 하자. 
+
+![리모트 익스플로러](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true){ .my-figure5 }
+
+- 만일 위와 같은 화면에 Remote Exlorer에서 뜨지 않는다면 컨테이너가 부착되지 않는 것이다. 컨테이너를 부착하면 된다. 
+
+![컨테이너 부착](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true){ .my-figure5}
+
+- `Extension` > `REMOTE EXPLORER` > `DETAILS` 탭에서 가운데 설정 모양이 "Open Container Configuration File"이다.
+- 옆 에디터 창에 json 형식의 설정이 뜬뜬다. 여기서 관련 extension 등의 설정을 지정할 수 있다. 이렇게 설정을 해두면 해당 컨테이너를 부착할 때 설정한 대로 자동으로 옵션들이 적용된다. 매우 편리하다. 
+
+```json 
+{
+	"extensions": [
+		"Ikuyadeu.r",
+		"julialang.language-julia",
+		"ms-python.python",
+		"ms-toolsai.jupyter",
+		"REditorSupport.r-lsp"
+	],
+	"workspaceFolder": "/home/jovyan/github-anari",
+	"forwardPorts": [
+		43463,		
+	],
+	"settings": {
+		"jupyter.alwaysTrustNotebooks": true,
+		"r.bracketedPaste": true,
+		"r.sessionWatcher": true,
+		"r.rterm.linux": "/opt/conda/bin/radian"
+	}
+}
+```
+
+
+![리모트 워크스페이스 설정](https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true){ .my-figure7 }
+
+- `File` > `Perefences` > `Settings`에서도 설정에 접근할 수 있다. 
+- VS Code의 설정은 두가지 축을 지닌다. 하나는 설정 전체를 담은 json 파일이다. 왼쪽 `>` 표시된 항목에서처럼 카테고리 별로 구별되어 쉽게 접근할 수 있다. 이 하나의 설정을 위 그림에서 보듯이 User, Remote(컨네이터), Workspace 별로 별도로 지정해 활용할 수도 있다. 

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JS HUHH">
+<meta name="dcterms.date" content="2021-01-05">
+<meta name="description" content="벡터 공간의 기하적 특성">
+
+<title>lostineconomics.com - Vector Geometrically, part 1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">lostineconomics.com</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Junsok Huhh</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/anarinsk"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/anarinsk"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Vector Geometrically, part 1</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">linear-algebra</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    벡터 공간의 기하적 특성
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>JS HUHH </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 5, 2021</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">tl; dr</h2>
+<ul>
+<li>벡터와 포인트를 오가는 방법을 배우자.</li>
+</ul>
+</section>
+<section id="concepts" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="concepts">Concepts</h2>
+<p>편의상 3차원 공간으로 예시하도록 한다. <span class="math inline">\(n\)</span> 차원으로 확장은 쉽게 된다.</p>
+<ul>
+<li><span class="math inline">\(p = (p_x, p_y, p_z)\)</span>: <span class="math inline">\(p \in \mathbb R^3\)</span> is a point</li>
+<li><span class="math inline">\(\vec v = (v_x, v_y, v_z)\)</span>: <span class="math inline">\(\vec v \in \mathbb R^3\)</span> is a vector</li>
+<li><span class="math inline">\(\hat v = \frac{v}{\lVert v \lVert}\)</span>: Unit vector</li>
+</ul>
+<section id="first-thing-first" class="level3">
+<h3 class="anchored" data-anchor-id="first-thing-first">First thing first</h3>
+<p>점과 벡터의 차이를 다시 새기고 가자.</p>
+<ul>
+<li>점은 공간에서 위치를 지니고 있다. 점의 특성은 위치 뿐이다.</li>
+<li>벡터는 크기와 방향을 지니고 있다. 벡터는 공간에서 위치를 지니고 있지 않다.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/position-vector-1627294113.png" class="my-figure5 img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">점은 위치만을 지니고 벡터는 방향성과 크기를 지닌다.</figcaption><p></p>
+</figure>
+</div>
+<p>점과 벡터를 연결해보자. 위 그림에서 원점 <span class="math inline">\(O\)</span>를 기준으로 하면 <span class="math inline">\(P\)</span>, <span class="math inline">\(Q\)</span>가 정의될 것이다. 이때 <span class="math inline">\(\overrightarrow{OP}\)</span>, <span class="math inline">\(\overrightarrow{OQ}\)</span>는 벡터가 된다. 이제 <span class="math inline">\(\vec v\)</span>를 <span class="math inline">\(P\)</span>에서 <span class="math inline">\(Q\)</span>로 가는 벡터라고 정의하자. 이는</p>
+<p><span class="math display">\[
+\vec v = Q - P
+\]</span></p>
+<p>앞서 정의한 콘셉트에서 <span class="math inline">\(\vec v = (v_x, v_y, v_z)\)</span>에서 <span class="math inline">\(v_k\)</span>는 포인트의 위치가 아니라 해당 축으로 움직이는(향하는) 크기를 나타낸다는 점을 다시 음미하시기를!</p>
+</section>
+<section id="vector" class="level3">
+<h3 class="anchored" data-anchor-id="vector">Vector</h3>
+<p><span class="math inline">\(p_0\)</span>를 지나는 무한의 1차원 벡터는 다음과 같이 정의된다.</p>
+<ul>
+<li>Parametric equation:</li>
+</ul>
+<p><span class="math display">\[
+l : \lbrace p_0 + t \vec v, t \in \mathbb R \rbrace
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.maths.usyd.edu.au/u/MOW/vectors/images/v120x.gif" class="my-figure5 img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">점에서 벡터를 생성해보자.</figcaption><p></p>
+</figure>
+</div>
+<p>위의 그림을 보면서 식을 도출해보자. 포인트 <span class="math inline">\(P_0\)</span>를 (원점 기준) 벡터로 나타내면 <span class="math inline">\(\vec r_0\)</span>가 된다. 그리고 <span class="math inline">\(P\)</span> 점을 벡터로 나타내면 <span class="math inline">\(\vec r\)</span>이 된다. 벡터 <span class="math inline">\(\overrightarrow{P_0\, P}\)</span>와 수평인 벡터를 <span class="math inline">\(\vec v\)</span>라고 하자. 이 두 가지 사실을 조합하면 다음과 같다.</p>
+<ol type="1">
+<li><span class="math inline">\(\overrightarrow{P_0 \, P} = \overrightarrow{O \, P} - \overrightarrow{O \, P_0} = \vec r - \vec r_0\)</span></li>
+<li><span class="math inline">\(\vec r - \vec r_0 = t v\)</span></li>
+</ol>
+<p>위 결과에 따라서 파라메트릭 식이 도출된다.</p>
+<ul>
+<li>Cartesian(symetric) equation:</li>
+</ul>
+<p><span class="math display">\[
+l: \lbrace \dfrac{x - p_{0x}}{v_x} = \dfrac{y - p_{0y}}{v_y}  =  \dfrac{z - p_{0z}}{v_z} \rbrace
+\]</span></p>
+<p>도출 과정은 아래와 같다. 앞서 파리메트릭 표현에서 임의 <span class="math inline">\(P\)</span>의 좌표 <span class="math inline">\((x, y, z)\)</span>는 다음과 같다.</p>
+<p><span class="math display">\[
+\vec r = (x, y, z) = ( p_{0x} + t v_x, p_{0y} + t v_y, p_{0z} + t v_z )
+\]</span></p>
+<p><span class="math display">\[
+\dfrac{x - p_{0x}}{v_x} = \dfrac{x - p_{0y}}{v_y} = \dfrac{x - p_{0z}}{v_z} = t
+\]</span></p>
+</section>
+<section id="plane" class="level3">
+<h3 class="anchored" data-anchor-id="plane">Plane</h3>
+<p><span class="math inline">\(p_0\)</span>를 지나는 무한 평면 P는 다음과 같이 정의된다. 평면을 평면을 표현하기 위해서는 벡터 두 개( <span class="math inline">\(\vec v, \vec w\)</span> )가 필요하다. 먼저 평면을 표현하는 가장 일반적인 방정식을 살펴보자.</p>
+<ul>
+<li>General equation: <span class="math inline">\(P: \lbrace Ax + By + Cz = D \rbrace\)</span></li>
+</ul>
+<p>이를 파라메트릭 식으로 표현하면 아래왁 같다.</p>
+<ul>
+<li>Parametric equation: <span class="math inline">\(P : \lbrace p_0 + s \vec v + t \vec w~\text{where}~s,t \in \mathbb R \rbrace\)</span></li>
+</ul>
+<p>마지막으로 기하학적으로 표현하는 방법은 아래와 같이 노멀 벡터를 활용하는 것이다.</p>
+<ul>
+<li>Geometric equation: <span class="math inline">\(P : \lbrace (x, y, z) \in \mathbb R^3 | \vec n \cdot [(x,y,z) - p_0] = 0 \rbrace \text{~with normal vector $\vec n$}\)</span></li>
+</ul>
+</section>
+<section id="normal-vector" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="normal-vector">Normal vector</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Cross_product_parallelogram.svg/960px-Cross_product_parallelogram.svg.png" class="my-figure5 img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">두 벡터의 크로스 프로덕트</figcaption><p></p>
+</figure>
+</div>
+<p>노멀 벡터는 아래 평면(plane) 혹은 벡터과 직교하는 성분의 벡터다. 이 녀석을 어떻게 구할까? 평면 <span class="math inline">\(P\)</span>의 parametric 식을 보자. 2차원 플레인을 구성하는 두 벡터 <span class="math inline">\(\vec v\)</span>, <span class="math inline">\(\vec w\)</span>가 있다. 노멀 벡터는 이 두 성분 모두와 직교하는 성분의 벡터이다. 이는 바로 크로스 프로덕트의 정의이다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>크로스 프로덕트는 두 벡터와 직교하면서 두 벡터가 생성하는 면적이 길이가 되는 벡터를 생성한다. 닷 프로덕트가 스칼라 값을 생성하는 것과 다르다는 점에 주의하자. <a href="https://en.wikipedia.org/wiki/Cross_product">위키</a>를 참고하자.</p>
+</div></div><p>평면위의 어떤 세 점 <span class="math inline">\(p, q, r\)</span>이 있다고 하자. 평면 위에 존재하는 벡터 두 개를 <span class="math inline">\(\vec v = q - p\)</span>, <span class="math inline">\(\vec w = r - p\)</span>과 같이 만들자. 이 벡터와 직교하는 벡터 <span class="math inline">\(\vec n\)</span>은 다음과 같다.</p>
+<p><span class="math display">\[
+\vec n  = \vec v \times \vec w = (q-p) \times (r-p)
+\]</span></p>
+</section>
+</section>
+<section id="distance" class="level2">
+<h2 class="anchored" data-anchor-id="distance">Distance</h2>
+<p>거리 역시 세 가지로 나누어 이해해보자. 점과 점 사이의 유클리드 거리는 생략하겠다. 벡터와 점의 거리는 어떻게 구할까? 플레인과 점의 거리는 어떻게 구할까? <a href="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2020-12-16-measuring-distance.html">이 포스팅</a>을 참고하라.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

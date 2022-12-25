@@ -1,0 +1,112 @@
+---
+title:  Markov and Chebyshev Inequalities
+description: ""
+author: "JS HUHH"
+date: "05/30/2022"
+image: "https://miro.medium.com/max/1400/1*e2LIgXPudagHYON8HdRO_g.png"
+categories: [stats-simple]
+draft: false
+---
+
+::: {.hidden}
+$$
+ \def\E{{\mathbb E}}
+ \def\V{{\mathbb V}}
+ \def\ES#1{\overline{#1}}
+$$
+:::
+
+## TL; DR 
+
+- 마르코프 부등식과 체비쇼프 부등식 정리한다. 
+- 대수의 법칙을 증명할 때 유용하다. 
+
+## Markov Inequality
+
+For $X \in \mathbb R^+$, 
+$$
+P(X \geq t) \leq \dfrac{\E(X)}{t}
+$$
+
+## Chebyshev Inequality
+
+$$
+P(\vert X - \mu \vert \geq k) \leq \dfrac{\sigma^2}{k^2}
+$$
+
+## 어디에 써먹나? 
+
+약한 버전의 LLN(대수의 법칙)을 증명할 때 체비쇼프의 부등식을 쓴다. 만일 $X_1, X_2, \dotsc, X_n$이 IID를 따르고 $\E (X_i^2) < \infty$라고 가정하자. 이때, 확률 극한의 정의를 따라, 표본 통계량 $\ES{X}_n$가 임의의 양수 $\epsilon$에 대해서 다음을 증명하면 대수의 법칙이 성립한다. 
+
+$$
+\lim_{n \to \infty} P(\vert \ES{X}_n - \mu \vert \geq \epsilon) = 0
+$$
+
+### 증명 
+
+체비쇼프 부등식을 그대로 써보자. 
+
+$$
+P(\vert \ES{X}_n - \mu \vert \geq \epsilon) \leq \dfrac{\E\lbrack(\ES{X}_n-\mu)^2\rbrack}{\epsilon^2}
+$$
+
+$$
+\begin{aligned}
+\mathbb E \lbrack(\ES{X}_n - \mu)^2\rbrack = & \mathbb E \Big\lbrace \Big\lbrack \dfrac{1}{n^2}(\sum_{i=1}^{n}(X_i - \mu))^2\Big\rbrack\Big\rbrace \\
+= & \dfrac{1}{n^2} \sum_{i=1}^n \sum_{j=1}^n \mathbb E (X_i - \mu)(X_j - \mu) \\
+= & \dfrac{1}{n^2} \sum_{i=1}^{n}\mathbb E (X_i - \mu)^2 \\
+= & \dfrac{\sigma^2}{n}
+\end{aligned}
+$$
+
+:::{.column-margin}
+보다 상세한 유도 과정은 [여기](https://hsm-edu.tistory.com/16)를 참고하라. 
+:::
+
+위의 결과를 이용하면, 
+
+$$
+P(\vert \ES{X}_n - \mu \vert \geq \epsilon) \leq \dfrac{\sigma^2}{n \epsilon^2}
+$$
+
+## Proof of Chebshev Inequality
+
+$P(\vert X - \mu \vert \geq k) = P\lbrack (X - \mu)^2 \geq k^2 \rbrack$가 성립한다. 
+
+마르코프 부등식에 의하여, 
+
+$$
+P\lbrack (X - \mu)^2 \geq k^2 \rbrack \leq \dfrac{\E \lbrack (X-\mu)^2 \rbrack}{k^2} = \dfrac{\sigma^2}{k^2}
+$$
+
+따라서 
+
+$$
+P(\vert X - \mu \vert \geq k) \leq \dfrac{\sigma^2}{k^2}
+$$
+
+## Proof of Markov Inequality
+
+이산 확률변수와 연속 확률변수 모두에 대해서 증명을 해야 한다. 이산을 잘 이해하면 연속의 경우로 확장 가능하다. 
+
+$$
+\E (X) = \sum_{x=0}^{\infty} x P(X=x)
+$$
+
+임의의 상수 $t$에 대해서, 
+
+$$
+\begin{aligned}
+\E(X) & = \sum_{x=0}^{t-1} x P(X=x) + \sum_{x=t}^{\infty} x P(X=x) \\
+& \geq \sum_{x=t}^{\infty} x P(X=x) \\
+& \geq \sum_{x=t}^{\infty} t P(X=x) \\
+& = t \sum_{x=t}^{\infty} P(X=x) \\
+& = t P(X \geq t)
+\end{aligned}
+$$
+
+따라서, 
+
+$$
+P(X \geq t) \leq \dfrac{\E(X)}{t}
+$$

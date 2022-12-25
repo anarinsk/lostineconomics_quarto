@@ -1,0 +1,113 @@
+---
+title: $\rm\LaTeX$ + VS Code
+description: Tiny$\rm\TeX$으로 모든 OS에서 쉽게!
+author: "JS HUHH"
+date: "09/25/2022"
+image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Metal_movable_type.jpg/600px-Metal_movable_type.jpg"
+categories: [computer-tool]
+filters:
+   - lightbox
+lightbox: auto
+draft: false
+---
+
+## TL; DR
+
+- Tiny$\rm\TeX$을 씁시다! 
+- [이 포스트](https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2020-10-24-classy-latex.html)의 조금 더 실용적인 접근이다. 
+
+## $\rm\LaTeX$의 추억 
+
+아카데미 종사자가 아니라면 $\rm\LaTeX$을 일상적으로 쓰지는 않을 것이다. 아카데미를 스쳐간 사람들이라면 한 때의 기억이리라. 논문을 쓸 때 좋았던 혹은 나빴단 기억이 함께 떠올랐지만, 역시 $\rm\TeX$은 아름다운 문서 조판 도구다. 얼마나 쓸지는 모르겠지만, 그래도 한번 정리해두고 넘어가자. 이 글의 목표는 다음과 같다. 
+
+1. 모든 OS에서 동일하게 쓴다.  
+2. VS Code를 에디터로 쓴다. 
+3. 텍라이브($\rm\TeX$Live)는 설치하지 않는다. 
+
+:::{ .column-margin }
+텍라이브가 설치도 까다롭고 도구도 크다. 많이 쓰지 않는 소프트웨어다보니 미러 사이트에서 파일을 당겨오는 데에도 시간이 제법 소요된다.  
+:::
+
+## Tiny$\rm\TeX$
+
+이 목표에 딱 부합하는 도구가 [Tiny$\rm\TeX$](https://yihui.org/tinytex/)이다. 원래는 R의 $\rm\LaTeX$ 활용을 위해 만들어 졌으나, 제작자가 별도의 도구로 만들어 $\rm\LaTeX$을 부리는 데 활용하기에 부족하지 않다. 
+
+<https://github.com/rstudio/tinytex-releases>
+
+위 깃헙에 여러가지 배포 버전을 만들어 두었다. `TinyTeX-0`는 텍라이브를 쓰기 위한 커맨드라인 도구 정도만을 지니고 있다. `TinyTeX-2`는 풀 버전이다. 이름과 달리 작지 않은 버전이다. 선택은 각자의 몫이겠지만, 표준 버전 `TinyTeX` 정도를 설치해도 좋을 것이다. 
+
+Linux, Macos 버전을 sh 명령어를 다운받아서 이를 실행하도록 하자. 만일 특정한 배포 판을 깔고자 한다면, 설치 전에 환경 변수를 설정하면 된다. [여기](https://github.com/rstudio/tinytex-releases#shellbatch-scripts)를 참고하자. 
+
+### Tiny$\rm\TeX$ for Windows 
+
+플랫폼이 다소 이질적인 윈도 버전의 설치만 조금 더 살펴보자. 어찌보면 윈도 버전의 설치가 제일 쉽다! 공식 가이드 대로 PS 스크립트를 통한 설치가 정석이겠지만, 아래와 같이 하는 것이 더 편하다. 
+
+1. [릴리즈 링크](https://github.com/rstudio/tinytex-releases)에서 필요한 윈도용 압축 파일을 다운로드 받는다.  
+2. 해당 파일을 `%APPDATA%/TinyTeX`에 압축을 푼다. 압축을 풀면 `TinyTeX`이 기본 디렉토리로 설정되기 떄문에 해당 파일은 `%APPDATA%`에 두고 압축을 풀면 된다.  
+3. 환경 변수에서 `%APPDATA%/TinyTeX` 패스를 추가한다. 패스를 추가하는 방법은 [여기](https://anarinsk.github.io/lostineconomics_quarto/posts/computer-tool/2022-08-13-clean-use-of-windows.html#%ED%99%98%EA%B2%BD-%EB%B3%80%EC%88%98-%EC%84%A4%EC%A0%95)를 참고한다. 
+4. 패스 인식을 위해서 재부팅 한다. 
+
+:::{.column-margin}
+`%APPDATA%`란 윈도 사용자의 홈 아래 해당 디렉토리가 위치한다는 뜻이다. 탐색기에서 찾아간다면 `C:\Users\{USER NAME}\AppData\`에 해당한다. 만일 `AppData` 폴더가 보이지 않는다면 감춘 폴더, 파일을 표시하지 않도록 설정되어 있는 것이다. 이를 바꿔주면 보일 것이다. 윈도11을 기준으로 탐색기의 "보기" 메뉴에서 표시로 가면 "숨긴 항목" 여부를 확인할 수 있다. 
+:::
+
+## 설치 확인 
+
+텍라이브 커맨드라인 도구가 잘 동작하는지 확인하면 된다. 
+
+```bash
+$ tlmgr --version
+```
+
+버전이 잘 뜬다면, 앞으로 `tlmgr` 명령을 통해서 $\rm\TeX$ 관련 패키지를 설치하고 삭제할 수 있다. `tlmgr`의 활용에 관해서는 [여기](https://tug.org/texlive/tlmgr.html)를 참고하자. 
+
+## VS Code Extension 
+
+이제 VS Code에서 $\rm\TeX$을 부리기 위한 익스텐션을 설치하자. 
+
+<https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop>
+
+익스텐션을 설치한 후 몇 가지 설정을 손보도록 하자. 어떤 컴파일 엔진을 쓰는지에 따라서 설정을 손봐야 한다. PDF$\rm\LaTeX$을 쓰는 경우만 사례로 살펴보자. 
+
+1. F1을 누른다. 
+2. `settings.json`을 검색해, 나온 파일을 클릭한다. "사용자 설정"을 열도록 하자. 
+3. 해당 json 파일을 수정한다. 아주 게으른 설정이다. pdflatex을 컴파일을 위해서 `latex-workshop-tools`, `latex-workshop.latex.recipes`를 수정한다. 찾기로 검색해서 찾으면 편리하다. 
+
+```json 
+"latex-workshop.latex.tools" : [
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error", 
+        "%DOCFILE%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "tex to pdf",
+      "tools": [
+        "pdflatex", 
+        "pdflatex"
+      ]
+    }
+  ]
+```
+
+![VS Code에 `.tex` 파일을 올렸을 때 (클릭시 확대)](https://raw.githubusercontent.com/anarinsk/lostineconomics_quarto/main/posts/computer-tool/images/vscode-tex.png)
+
+위 스크린 샷에서 보듯이 `.tex` 파일을 읽으면 확장에 관련 탭이 자동으로 추가된다. 앞서 `settings.json`에 설정한 대로 컴파일 레서피에 "tex to pdf"가 추가되어 있다. 컴파일은 해당 창 상단 오른쪽의 세모 버튼으로 할 수 있으며 PDF 보기는 돋보기 버튼을 누르면 된다. 
+
+왜 VS Code를 써야 할까? IDE를 통합적으로 활용한다는 의미도 있지만, 최근 가장 강력한 개발 보조 수단이 된 GitHub Copilot을 활용할 수 있기 때문이다. 여러 명령어를 쳐야 하는 텍 문서에서도 코파일럿의 편리함이 쏠쏠하다. 
+
+:::{ .column-margin }
+당연히 TexShop 등 여타 텍 전용 에디터를 써도 된다. 
+:::
+
+## References 
+
+[KTUG의 문서](http://wiki.ktug.org/wiki/wiki.php/%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/TinyTeX)가 잘 되어 있다. 여기서 부족하다고 느낀 대목은 이 문서를 참고하시라. 
+

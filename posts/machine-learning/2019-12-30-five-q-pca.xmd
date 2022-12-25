@@ -1,0 +1,209 @@
+---
+layout: post 
+toc: true
+comments: true
+title:  Five (Deadly!) Questions on Regression and PCA
+
+description: PCA에 관해 알고 싶은 다섯 가지  
+categories: [machine-learning]
+
+---
+
+## Question One
+
+> PCA는 Regression과 다른가요? 
+
+좋은 질문이다. 아예 둘을 다른 방법이라고 보면 속편하겠지만 한번 쯤 이 질문을 고민해봤을 것이다.  답은 같기도 하고 다르기도 하다, 되겠다. 
+
+### In common 
+
+우선 둘 다 MSE(Mean Squared Error)를 극소화하는 목적함수를 지니고 있다. 차례로 살펴보자.  
+
+#### Regression
+
+회귀분석의 목적함수와 극소화는 아래와 같다. 
+
+$$\min_{\beta} (y - X \beta)^T (y - X \beta).$$
+
+여기서 각각 행렬 및 벡터의 크기를 확인해보자. 
+
+- $y \in {\mathbb R}^n$, $X \in  {\mathbb R}^{n \times k}$, $\beta \in {\mathbb R}^k$
+ 
+개념적으로 말하면 regression은 일종의 목표 변수인 $y$와 이를 설명하기 위한 설명 변수인 regressors로 구성된 벡터 공간의  한 점 사이의 거리를 최소화하는 $\beta$를 찾는 것이다. 기하학적으로 보면 이 최소화는 $n$ 차원인 한 점에서 $y$에서 $k$ 차원인 $X$로 구성된 초평면으로 수선의 발을 내릴 경우 달성된다. 
+
+$$
+X \beta = 
+\begin{bmatrix}
+x^1 ~ \dotsc ~ x^k
+\end{bmatrix}
+\begin{bmatrix}
+\beta_1 \\
+\vdots \\
+\beta_k
+\end{bmatrix} = 
+\beta_1 x^1 + \dotsb + \beta_k x^k,
+$$
+
+where $x^j = [x_1^j, \dotsc, x_n^j]^T$ for $j = 1, \dotsc, k$. 즉 $x^j \in {\mathbb R}^n$ 벡터 $k$ 개로 이루어진 벡터 공간, 즉 $X$의 열 공간(column space)으로 $y$를 투영(project)한다는 의미이다. 이 열 공간은 $n$ 차원 안에 속한 $k$ 차원의 초평면이라는 점을 기억해두자. 아래 그림을 참고하자.[^2]
+
+[^2]: 보다 상세한 내용은 [여기](https://anarinsk.github.io/lie-regression/)를 참고하라.  
+
+<p align="center"><kbd>  <img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" width="350"></kbd></p>한편 위의 식을 연립방정식의 관점에서 바라보자. 
+
+$$
+X \beta = y
+$$
+
+$X \in {\mathbb n \times k}$의 경우 $n > k$이므로, 위 연립방정식의 해 $\beta$는 일반적으로 존재할 수 없다.  따라서 해 대신에 MSE를 극소화하는 새로운 목적 함수를 잡았다고 보면 좋다. 
+
+#### PCA 
+
+한편, PCA의 최소화는 다음의 목적 함수로 구현된다. 
+
+$$
+\begin{aligned}
+\min_{w} & \dfrac{1}{n}\sum_{i=1}^n \left( \Vert x_i \Vert^2 - 2(w \cdot x_i)^2 + 1 \right),
+\end{aligned}
+$$
+- $w \in  {\mathbb R}^{k}$, $x_i \in  {\mathbb R}^{k}$
+
+목적 함수의 괄호 부분은 아래와 같이 도출된다. 
+
+$$
+\begin{aligned}
+\Vert x_i - (w \cdot x_i) w \Vert^2 & =  
+\Vert x_i \Vert^2 - 2 (w \cdot x_i)(w \cdot x_i) +  \Vert w \Vert^2 \\
+& = \Vert x_i \Vert^2 - 2(w \cdot x_i)^2 + 1
+\end{aligned}
+$$
+
+역시 개념적으로 말하면 PCA는 $k$ 차원의 벡터가 $n$ 개 있을 때, $n$ 개의 벡터들을 길이 1의 유닛 벡터 $w( \in {\mathbb R}^{k})$로 프로젝션할 때, 그 거리 제곱의 합을 최소화하는 $w$를 찾는 것이다.
+
+### Difference 
+
+MSE를 극소화한다는 점은 같지만, 목적 함수의 형태와 목적 함수를 극대화하는 선택 변수가 다르다.  
+
+#### Objective function 
+
+회귀 분석부터 보자. 회귀 분석은 $n$ 차원의 $y$를 $k$ 차원의 컬럼 스페이스를 지닌 $X$의 컬럼 스페이스로 프로젝션하는 것이다. 이때 프로젝션되는 위치가 곧 MSE를 극소화해주는 가중치, $k$ 차원의 $\beta$가 된다. 위 그림에서 보듯이 $y$에서 X 평면의 거리를 최소화하는 방법은 평면으로 수선의 발을 내리는 것 이외에는 없다. 즉 프로젝션 자체가 거리 최소화가 된다. 
+
+이제 PCA를 보자. PCA는 $X \in {\mathbb R}^{n \times k}$가 있을 때 이를 투영할 길이 1의 또다른 벡터 $w(\in {\mathbb R}^{k})$를 찾는 것이다. PCA의 경우 타겟 변수 같은 것이 없다. 그저 $k$ 의 벡터가 $n$ 개 있을 때 이들을 투영한 거리가 최소화되도록 유닛 벡터 $w$를 잡는다. 
+
+##  Question Two 
+
+> PCA에서 아이겐밸류와 아이겐벡터는 어떻게 등장하게 되나요? 
+
+자세한 설명은 [여기](https://anarinsk.github.io/lie-math_pca/)를 참고하면 된다. 핵심만 요약해보자. 
+
+- PCA의 목적 함수를 최적화하는 벡터 $w$를 잡기 위해서 $X w$의 분산을 최대화하면 된다. 
+- 분산은 $w^T \Sigma w$가 된다. 
+- $w \cdot w =1$의 조건을 넣어 제약 아래의 극대화 조건을 찾으면 정확히 아이겐벨류와 아이겐벡터를 찾는 계산과 동일하다. 
+
+극대화 문제에서 도출되는 라그랑지 승수 $\lambda$는 아이겐밸류가 된다. 아이겐밸류 $k$ 개가 있을 때 이를 큰 순서대로 나열했다고 하자.  즉  $\lambda_1 > \lambda_2 > \dotsc > \lambda_k$. 이제 아이겐밸류가 큰 순서대로 아이겐벡터를 잡으면 MSE가 작은 순서대로 $w$를 택하는 것이 된다. 
+
+여기서 PCA가 MSE를 극소화하는 문제에서 출발했지만 왜 차원 축소의 문제로 변했는지 알 수 있다. MSE 최소화라는 목적 함수에서 볼 때 이를 달성하는 $k$ 개의 아이겐벡터 중에서 임의로 $l(<k)$ 개를 선택할 수 있게 해준다. 
+
+### Eigenvectors in PCA 
+
+PCA 분석에서 등장하는 아이겐벡터는 너무 좋은 특징을 지니고 있다. 우선, 해당 아이겐벡터는 서로 직교한다. 즉, 
+
+$$
+w^i \cdot w^j = 
+\begin{cases}
+1 & \text{for $i = j$} \\
+0 & \text{for $i \neq j$}
+\end{cases}
+$$
+
+아마도 PCA를 2차원에 도해할 경우 아래와 같은 그림을 많이 봤을 것이다. 
+
+<p align="center"><kbd>
+  <img src="https://github.com/anarinsk/lie-qa_reg_pca/blob/master/assets/imgs/PCA-2D.png?raw=true" width="350">
+</kbd></p>
+
+1개의 관찰이 2차원 벡터이므로 이 자료에서는 두 개의 주성분이 나올 것이다. 이 두 개의 주성분은 반드시 직교(orthogonal)해야 할까? 꼭 그렇다는 장담은 없다. 그런데 앞서 살펴본 MSE의 극소화 과정에서 도출되는 결과에 따라서 주성분들끼리는 반드시 직교해야 한다. 이른바 '주성분'이 대칭 행렬(분산-공분산 행렬)에서 나온 아이겐밸류이기 때문이다. 그림에서 보듯이 하나의 주성분(북동향)이 다른 주성분(북서향)보다 크다. 만일 여기서 차원축소를 한다면 첫번째 주성분을 택하게 될 것이다. 일반적으로 $n$ 개의 주성분이 있을 때 이중 $k$ 개를 택한다면, 분산이 큰 순서대로 $k$개를 택하면 된다. 
+
+### Sub-question 
+
+> PCA에서 차원 축소의 의미를 보다 구체적으로 설명해주실 수 있을까요? 
+
+이렇게 보자. 앞서 보았던 대로 $X \in {\mathbb R}^{$는 $(n \times k}$ 행렬다. 이를 행 벡터로 잘라서 보자. 즉, 
+
+$$
+X = 
+\begin{bmatrix}
+x_1 \\
+\vdots \\
+x_n 
+\end{bmatrix},~\text{where~} 
+x_i = [x^1,~\dotsc~, x^k].
+$$
+
+즉. 행 벡터는 $k$ 개의 피처를 지닌 하나의 관찰이 된다. 이제 앞서 우리가 구한 아이겐벡터를 여기에 적용해보자. 편의상 1개로 차원 축소를 한 경우를 가정하겠다. 이때 차원 축소에 활용되는 아이겐벡터는 아이겐밸류가 가장 큰 값에 해당하는 벡터 $w^1$라고 하자. $w^1 \in {\mathbb R}^{k}$이다. 이제, 
+
+$$
+X w^1 = \underset{n \times 1}{\rm{PC}^1}
+$$
+
+첫번째 PC로 변환된 $X$는 $k$ 개의 피처에서 1개의 피처로 변환된다. 만일 주성분(PC)으로 $l$ 개를 택했다면 아이겐밸류가 큰 순서대로 위와 같은 과정을 거치면 되겠다. 각 아이겐밸류와 아이겐벡터의 쌍이 $w^j$, $\lambda^j$라고 할 때, 
+
+$$
+\begin{aligned}
+X w^1 & ={\rm PC}^1 \\
+&~\vdots \\
+X w^l & ={\rm PC}^l,~\text{where $\lambda^1 > \dotsc > \lambda^l$. }
+\end{aligned}
+$$
+
+그리고 이 PC 값들을 모으면 $k$ 개에서 $l$ 개로 차원이 축소된 행렬을 얻을 수 있다. 
+
+$$
+\underset{n \times l}{ [{\rm PC}^1,~\dotsc~,{\rm PC}^l] } 
+$$
+
+
+##  Question Three 
+
+> 그림으로 보다 쉽게 볼 수는 없을까요? 
+
+그림으로 간단하게 살펴보자.[^1]
+
+[^1]:  [여기](https://shankarmsy.github.io/posts/pca-vs-lr.html)에서 가져왔다. 
+
+<p align="center"><kbd>
+  <img src="https://github.com/anarinsk/lie-qa_reg_pca/blob/master/assets/imgs/regression.png?raw=true" width="700">
+</kbd></p>
+
+먼저 회귀 분석이다. $y$를 $x$에 대해서 회귀($y \sim x$)하는 경우와 $x$를 $y$에 대해서 회귀($x \sim y$)하는 경우는 다르다. 
+
+- $y \sim x$:  벡터 $y(\in {\mathbb R}^{n})$를 $x$ 평면으로 프로젝션한다. 여기서 $y$는 관찰의 $y$ 값만을 모아서 만든 벡터다. 즉, 개별 $y$를 $\alpha + \beta x$ 벡터로 수선의 발을 내릴 때 이를 최소화하는 $\alpha$, $\beta$를 찾는 것이다. 그림에서 보라색이 나타내는 바와 같다. 
+- $x \sim y$: 벡터 $x(\in {\mathbb R}^{n})$를 $y$ 평면으로 프로젝션한다. 개별 $x$를 $\alpha + \beta y$ 벡터로 수선의 발을 내릴 때 이를 최소화하는 $\alpha$, $\beta$를 찾는 것이다. 위의 그림에서 초록색이 이를 나타낸다. 
+
+<p align="center"><kbd>
+  <img src="https://github.com/anarinsk/lie-qa_reg_pca/blob/master/assets/imgs/pca.png?raw=true" width="700">
+</kbd></p>
+
+PCA는 그림에서 보듯이 관찰에서 임의의 벡터 $w = (w_1, w_2)$로 프로젝션한다. 즉, 그림에서 분홍색이 나타내는 바와 같다. 
+
+## Question Four 
+
+> 하나는 지도 학습, 다른 하나는 비지도 학습으로 이해하면 될까요? 
+
+얼추 맞는 이야기라고 생각한다. 기계 학습에 조예가 없어서 자신있게 답하기는 힘들다. 다만 회귀 분석이 일종의 정답지($y$)를 갖고 있는 형태이기 때문에 지도 학습이 될 것이고 PCA의 경우 정답지 없이 관찰 전체를 대상으로 하기 때문에 비지도 학습으로 볼 수도 있겠다. 
+
+## Question Five 
+
+> 회귀 분석과 PCA를 섞을 수 있는 방법은 없나요? 
+
+왜 없겠는가! 이른바 PCA 회귀 분석이라는 게 있다. 지금까지 잘 따라왔다면 PCA 회귀 분석이 어떤 형태가 될지 쉽게 짐작할 수 있다. 
+
+- 행렬 $X(\in {\mathbb R}^{n \times k})$를 PCA를 통해서 $X'(\in {\mathbb R}^{n \times l})$으로 축소한다. ($l <k$)
+- $y$를 $X'$에 대해서 회귀한다("Do Regression $y$ on $X'$"). 
+
+이런 흐름으로 진행되는 것이 PCA 회귀다. 
+
+그런데 PCA 회귀는 그다지 많이 사용되지 않는다. 왜 그럴까? 보통 기계 학습에서는 회귀 분석을 예측(prediction)의 한 가지 방법으로 이해하곤 한다. 회귀 분석은 선형이기 때문에 사실 여타의 비선형 기계 학습 방법에 비해서 예측 기법으로서는 원시적인 방법이다. 하지만 회귀 분석은 높은 해석력을 지니고 있다. 만일 적절 $X$를 선정할 수 한다면, 인과관계를 해석하는 틀로서도 활용할 수도 있다. 회귀 분석에서 $\beta$를 살피고 이를 해석하는 경우가 많은 것이 이 때문이다. 그런데 PCA 회귀를 할 경우 이러한 회귀 분석의 장점이 거의 사라지고 만다. 축소된 PC를 해석하는 것이 쉽지 않기 때문이다. 
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE3NTI1OTIzMDZdfQ==
+-->

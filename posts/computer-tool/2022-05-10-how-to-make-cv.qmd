@@ -1,0 +1,182 @@
+---
+title:  How to make a manageable C.V.
+description: markdown으로 이력서를 만들어보자.
+author: "JS HUHH"
+date: "05/10/2022"
+#image: "https://cdn.ourcodeworld.com/public-media/articles/articleocw-5755472112ab3.jpg"
+image: "https://opem.b-cdn.net/wp-content/uploads/2022/01/curriculum-vitae-english-example.jpg.webp"
+categories: [computer-tool]
+
+---
+
+## TL; DR
+
+- Markdown으로 관리 가능한 이력서를 빌드해보자. 
+
+## Why?
+이력서를 만드는 방법은 다양하다. 정해진 포맷이 있다면 채워 넣으면 될 일이지만, 그렇지 않은 경우 여러가지 선택지를 고민하게 된다. 아카데미에 있는 분이라면 $\rm \LaTeX$으로 이력서를 만드는 데 익숙할 것이다. 요즘은 Notion(노션)으로도 꽤 근사한 이력서를 만들 수 있다. 
+
+이력서 제작에 중요한 가치는 아마 아래의 세 가지가 아닐까 싶다. 
+
+1. 최적의 정보 전달 
+2. 시각적인 심미성 
+3. 관리의 편의 
+
+일단 2는 제외하도록 하겠다. 미감이 부족한 나는 최소주의를 지향한다. 즉, 좋은 템플릿을 선택해서 텍스트를 잘 배치하는 정도를 고민하는 게 내게 최선이다. 템플릿을 따를 경우 1 역시 고민이 크게 줄어든다. 그렇다면 관심은 3에 집중된다. 
+
+## 도구 그것이 문제로다 
+
+### 노션은 왜 사랑 받을까? 
+3의 문제를 조금 더 뜯어보자. 관리의 편의성은 두 개로 나눌 수 있다. 하나는 이력의 변경 및 수정을 쉽게 할 수 있는지, 즉 이력서 관리의 문제다. 다른 하나는 이렇게 만들어진 이력서를 잘 배포할 수 있는지에 관한 것이다.  
+
+배포의 경우 과거에는 큰 문제가 없었다. PDF 등 일정한 포맷의 문서 파일이면 충분했다. 하지만 요즘은 많은 정보를 웹 또는 모바일 웹으로 접한다. 이에 부응하려면 html로 배포하는 것이 좋다. 첨부 파일이 아니라 html 이력서를 의도에 맞게 호스팅해주는 적절한 서비스가 있다면 더 좋을 것이다. 노션이 이력서 배포의 도구로 최근 각광받는 이유가 여기에 있다. 노션을 사용하면 WYSIWYM으로 다양한 형태의 편집을 지원하고 작성된 내용을 바로 웹으로 배포할 수 있다. 이 점에서 노션은 좋은 선택지다. 
+
+:::{.column-margin}
+WYSIWYM = What You See Is What You Mean, 즉 별도의 컴파일 없이 변화된 내용이 어떻게 구현되는지를 바로 볼 수 있는 형태의 소프트웨어 구현 방식을 지칭한다. 쉽게 워드, 아래아 한글을 생각하면 된다. 
+:::
+
+### PDF라면 $\rm \LaTeX$!
+정형화되고 디자인이 멋진 PDF 문서를 만들어 내는 데에는 $\rm \LaTeX$만한 것이 없다. 아카데미에서 주로 사용하는 도구로서 논문 이력 관리를  $\rm Bib\TeX$으로 하고 있다면 제법 편리하고 멋진 이력서를 얻을 수 있다. 다만 $\rm \LaTeX$은 진입 장벽이 꽤 높다. 일반적인 용도로 쓰기에는 버겁고 게다가 비효율적이다(느리다). 게다가 $\rm \LaTeX$ 기반 문서로는 그럴 듯한 html 파일을 생성하기가 쉽지 않다. 
+
+### Markdown은 어떨까? 
+html, $\rm \LaTeX$과 같은 스크립트 도구와 노션과 같은 WYSIWYM의 장점을 적절하게 결합한 것이 markdown이다. 나는 거의 모든 문서를 마크다운으로 쓰고 있다. 아울러 마크다운의 `.md` 파일은 pandoc을 통해 다른 포맷(`.tex`, `.html`, `.docx` 등)으로 쉽게 변환된다. 이력서 역시 마크다운으로 직접 보면서 만든 후에 이를 html로 변환하고 이를 웹에서 호스팅할 수 있다면, 작성과 관리라는 두 장점을 모두 취할 수 있는 편리한 작업 흐름이 되지 않을까?
+
+md가 html로 변환되기 때문에 html 및 css의 기술을 활용할 수 있다면 원하는 만큼 디자인을 손볼 수도 있다. 즉, 웹을 다루는 기술만 있다면 마크다운으로 충분한 수준의 커스터마이즈를 이뤄낼 수 있다. 물론 이 글은 그런 능력자를 위한 것이 아니다. 심미적 최소주의를 지향하면서 게으르게 만들어 낼 수 있는 그리고 관리 가능성을 최우선에 두는 이력서 제작이 이 포스팅의 목적이다. 
+
+## Tools 
+
+우리의 목표는 마크다운을 통해 쓸 만한 이력서를 만들고 이 이력서를 웹에 호스팅해서 쉽게 접근할 수 있게 만드는 것이다. 이를 위해 아래 두 가지가 필요하다. 
+
+1. md를 편집할 수 있는 도구 
+2. github 
+
+편집 도구의 경우 각자에게 맞는 에디터를 쓰면 된다. 특별한 선호가 없다면 VS Code를 권한다. 마크다운의 경우 편리한 웹 에디터들도 많이 있다. 
+
+:::{.column-margin}
+대표적으로 [https://stackedit.io/](https://stackedit.io/)
+:::
+
+### Github 
+깃허브(이하 깃헙)은 소스를 온라인으로 보관하고 이에 기반해 깃 기반의 (공동) 작업을 구현하는 서비스다. 깃헙에 붙여 있는 편리한 기능의 하나가 스태틱 웹을 배포해주는 것헙 페이지다. 쉽게 말해서 정적인 웹페이지를 호출한 사용자의 브라우저에 해당 페이지를 띄워주는 것이다. 주소 체계 역시 직관적이이서 이용하는 입장에서는 이 정도의 좋은 도구가 드물다. (게다가 무료!)
+
+깃헙의 html 배포 서비스를 이용하는 자세한 방법은 [여기](https://pages.github.com/)를 참고하자. 
+
+간략하게 설명하면 이렇다. 리포의 루트에 `index.html`을 떨궈 놓고 깃헙 페이지를 활성화하면 특정 주소의 url을 호출받았을 때 이 `index.html`을 웹 브라우저에 띄워준다. 다만 이렇게 작업할 경우는 html까지 내가 만들어야 한다. md에서 html을 만드는 일이 어려운 작업은 아니지만 이 또한 귀찮고 약간의 거슬리는 점들이 있다. 
+
+깃헙은 자체 블로그/웹페이지 툴로 jekyll을 활용하고 있다. 리포에 변경이 생겼을 때 github actions 라는 녀석이 작동해서 변화된 md 파일을 디자인 포맷에 맞게 html로 변경해 하당 파일을 호스팅할 수 있는 상태로 만든다. 이 jekyll을 활용하면 사용자는 그냥 md, 즉 내용만 고치고 html 변환부터 호스팅까지 모든 일을 깃헙이 맡는다. 
+
+## A Walk-through 
+
+### Fork 
+
+나는 아래 링크의 리포를 참고했다. 일단 해당 리포를 나의 리포로 포크하도록 하자. 이 리포에 설명이 잘 되어 있어서 대부분은 생략해도 되겠다. 시작할 때 깃헙 페이지의 브랜치를 `master`로 바꾸는 것을 잊지 말자. 디폴트 상태에서는 `gh-pages`라는 브랜치의 내용, 즉 아래 리포의 README.md가 웹으로 호스팅된다. 
+
+[elipapa/markdown-cv](https://github.com/elipapa/markdown-cv)
+
+문서는 깔끔하게 잘 되어 있다. html의 빌드는 깃헙 액션스를 이용해도 되고, 로컬에 Jekyll을 깔아서 해도 된다. 게으름을 지향하는 나는 당연히 깃헙 액션스를 선호한다! 
+
+### Customization
+
+문서의 디렉토리에서 바뀌야 할 것을 살펴보자. 
+
+- `_config.yml`
+- `index.md`
+- `_layout/cv.html`
+- `media/`
+
+#### `_config.yml`
+
+```yml
+markdown: kramdown
+style: davewhipp
+```
+손 댈 것이 많지는 않다. 
+
+- `style` | 이력서의 디자인 형식을 나타는 일종의 접두어다. 
+	- style 항목은 media 내에 있는 css 파일의 접두 단위를 지정하면 된다. 위 리포의 경우 davewhipp, jkhealy 두 개가 들어 있다. css를 잘 다룰 수 있다면 필요에 따라서 커스터마이즈를 하면 된다. 
+
+#### `index.md`
+
+이력서의 내용이 들어간 파일이다. 무려 아이작 뉴턴의 이력이 작성되어 있으니 이를 참고해서 적절하게 작성하면 된다. 건드리지 말아야 할 것은 헤더이다. 
+
+```yml
+---
+layout: cv
+title: Junsok Huhh's CV
+---
+```
+
+- `layout` | 그대로 두자. 
+- `title` | 문서의 타이틀이 아니라 브라우저의 제목에 표시되는 이름이다. 적절하게 바꾸면 된다. 
+
+
+#### `_layout/cv.html`
+
+이 파일은 이력서 html 파일을 생성할 때 바탕이 되는 일종의 템플릿이다. `index.md`  파일의 내용이 html 안에 들어간다고 보면 된다. html을 커스터마이즈하고 싶다면 해당 파일의 `<head>...</head>` 태그 사이에 필요한 내용을 넣어야 한다. 
+
+```html
+<link  href="media/styles.css"  type="text/css"  rel="stylesheet"  media="screen">
+<link  href="media/styles.css"  type="text/css"  rel="stylesheet"  media="print">
+
+<!-- mathjax -->
+<script  type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+processEscapes: true
+}
+});
+</script>
+<script  type="text/javascript"  async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+```
+
+- `<link...` | 이 두 줄은 커스텀 디자인을 담고 있는 특화된 css 파일을 삽입하기 위한 용도이다. 해당 파일의 이름은 `styles.css`이다. 
+- `<!-- mathjax...` | 원래 리포에 $\rm \LaTeX$ 기호 출력을 위한 준비가 되어 있지 않다. mathjax는 자바 스크립트(js)로 웹에서 $\rm \LaTeX$ 출력 관련을 담당한다. math engine으로 mathjax 이외에 katex과 같이 더 빠른 js를 쓸 수 있지만, 이력서에서 텍을 과도하게 쓸 이유가 없다면 mathjax로 충분하다. 
+
+#### `media/` 
+
+이 디렉토리에는 일종의 디자인 설정이 들어 있다. 스타일 두 개가 각각 screen, print의 css 파일을 갖고 있다. 자신의 원하는 특화된 설정이 필요하면 별도의 파일을 만들고 이를 앞서 본 `cv.html`에서 읽어오면 된다. 내가 사용하는 `styles.css`의 내용 중에서 중요한 내용 몇 가지만 보고 가자. 
+
+```css
+/* css styles */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap'); */
+@import  url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import  url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import  url("https://cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-ligature-subset.css");
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'NanumSquare'  !important;
+	font-weight : 600;
+}
+
+h1 {
+	font-size: 180%;
+}
+
+ul, li, ol, a{
+	font-family: 'pretendard'  !important;
+	font-size:95%;
+}
+
+p {
+	font-family: 'pretendard'  !important;
+	font-size: 100%;
+	font-weight: 400;
+}
+```
+
+- `@import` | 한글 폰트를 로딩 하는 과정이다. 기본 폰트 외에 특화된 한글 글꼴을 쓰기 위해서는 별도의 로딩이 필요하다. 여기서는 제목으로는 '나눔스퀘어'를 본문으로는 '프리텐다드'를 사용했다. 로딩은 CDN을 활용하는데, 약간의 시간이 필요하지만 활용에 지장을 줄 정도는 아니다. 
+- 나머지 부분은 각 성분의 폰트와 크기 등을 필요에 맞게 적절하게 조정한 부분이다. 
+
+### Push, build and deploy
+
+- 이렇게 해당 부분을 필요에 따라서 수정한 후 깃헙으로 푸시 하면 깃헙 액션스가 html을 빌드하고 해당 문서를 깃헙 페이지로 배포한다. 배포 주소는 `{깃헙아이디}.github.io/{깃헙리포}/`
+
+## Bottomline 
+
+이렇게 만들어진 내 게으른 결과물은 아래와 같다. 
+
+- 소스 | [anarinsk/markdown-cv](https://github.com/anarinsk/markdown-cv)
+- 배포된 CV | [Junsok Huhh's CV](https://anarinsk.github.io/markdown-cv/)

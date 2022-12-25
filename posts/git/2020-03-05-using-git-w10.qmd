@@ -1,0 +1,81 @@
+---
+title: Using Git ‘Smoothly’ in Windows 10
+description: 윈도 10에서 git 잘 쓰기 
+author: "JS HUHH"
+date: "03/05/2020"
+image: "https://t3.ftcdn.net/jpg/03/67/94/46/240_F_367944626_tkPR8g1rZihc0ql5WpJhDYffS3nTfKqP.jpg"
+categories: [git]
+#margin-header: subscribe.html
+---
+
+:::{.callout-note}
+윈도에서 깃을 쓸 때 이렇게 불편하게 쓰지 않아도 된다. 
+:::
+
+## Why 
+
+단언컨대 git은 곧 문과생도 알아야 할 필수 도구가 될 것이다. 버전 관리가 절실해지는 그리고 코딩이 학제를 넘어선 필수처럼 인정되는, 그런 세상에서 컴퓨터를 끼고 있으면서 git의 사용을 피하기는 힘들 듯 싶다. git에 관한 포스트는 아니니 여기까지 하자. 
+
+macos나 linux 계열을 쓸 때는 git에 관해서 크게 고민하지 않아도 된다. 터미널 켜고, CLI(Command Line Interface)로 쓰면 그만이다. 이렇게 쓰는 것이 윈도에서는 쉽지 않다. 물론 윈도에서 WSL로 리눅스를 지원하기는 한다. 하지만 그냥 메인 os 위에 얹어 쓰는 게 편할 때가 있다. 
+
+## What 
+
+우리는 아래 두 개의 소프트웨어를 쓸 것이다. 
+
+* [Git for Windows](https://git-scm.com/download/win)
+* [Cmder](https://cmder.net) 
+
+
+### Git for Windows 
+
+웬만하면 64비트로 깔자. 그리고 중간에 여러 가지 선택지에 관해서 질문한다. 커맨드라인은 어떤 것으로 쓸 것인지 등등. 원래 git이 linux에 뿌리를 두고 있는 만큼 윈도의 디폴트 명령창보다는 Bash를 쓰는 편이 좋다. `ls` 등의 명령어를 자유롭게 쓸 수 있어서 꽤 편하다. 윈도용 git은 특화된 `git-bash`를 제공하니, 이 녀석을 쓰면 좋을 듯 싶다. 
+
+### Cmder 
+
+"커맨더"라고 읽으면 된다. git은 이미 깔았으므로 쓰면 된다. 다만 좀 더 편리한 환경에서 CLI를 쓰기 위해서 Cmder를 깔아보도록 하자. 이 녀석은 별도의 인스톨 없이 쓸 수 있다. git을 포함한 무거운 버전과 git이 빠진 미니 버전이 있다. 어차피 우리는 별도로 깃을 깔았으니, 미니 버전을 다운받으면 되겠다. 다운 받은 후 아무 위치에나 두어도 된다. 어차피 exe 파일만 사용할 것이기 때문이다. 다만, 관리가 편하도록 나는 아래의 위치에 두었다.  
+
+`Users\[your id]\cmder_mini\`
+
+최초 실행하면 윈도우가 경고를 날린다. 이래 그림에서 형광색이 칠해진 부분을 클릭하고 프로그램을 허용해준다. 이후 몇 번의 경고성 질문이 더 날아온다. 전부 "허용"해주면 되겠다. 
+
+![]({{ site.baseurl }}/images/git-cmder/fig_4.png){: style="textalign:center; " width="500"}
+
+그리고 cmder 실행 파일 위에서 좌 클릭해서, `속성 > 호환성 > 관리자 권한으로 이 프로그램을 실행`을 체크해두는 편을 권한다. 혹시 dock에 cmder를 박아둔 상태라면 Shift 키와 함께 좌 클릭을 하면 `속성`을 선택할 수 있다. 
+
+## How 
+
+깃을 편하게 쓰기 위해서 Cmder의 설정을 약간 바꿔주겠다. 우선 아래의 그림처럼 맨 위 메뉴의 삼선을 클릭하면 Cmder의 세팅으로 갈 수 있다. 
+
+![]({{ site.baseurl }}/images/git-cmder/fig_1.png){: style="textalign:center; " width="500"}
+
+엄청나게 많은 설정들이 있다. 창을 투명으로 만든다든가, 텍스트의 폰트를 바꾼다든가, 하는 것들이 가능하다. 여기서는 git bash를 쓰는 설정만 간단하게 설명하도록 하자.
+
+![]({{ site.baseurl }}/images/git-cmder/fig_2.png){: style="textalign:center; " width="500"}
+
+그림에서 보듯이 `startup > task`를 선택한다. 선택 가능한 CLI 중에서 `{Bash:: Git bash}`를 선택한다. 이 녀석을 디폴트 CLI로 설정한다. 시작 디렉토리를 지정하고 싶다면 아래 `Startup dir...`을 선택해 바꿔주면 된다. 
+
+## Finally? 
+
+아래 그림에서 보듯이 윈도 명령 창에서는 먹지 않는 `ls` 등의 명령어가 잘 먹고, git도 편안하게 사용할 수 있다. 
+
+![]({{ site.baseurl }}/images/git-cmder/fig_3.png){: style="textalign:center; " width="500"}
+
+## Seriously! 
+
+여기까지 좋은데, git-bash에서 python을 쓰시는 분들이라면 python을 제대로 띄울 수 없다. 해결책은 간단하다. 아래와 같이 실행하면 된다.[^1]
+
+[^1]: 출처는 [여기](https://stackoverflow.com/questions/32597209/python-not-working-in-the-command-line-of-git-bash)다. 
+```bash
+$ winpty python.exe
+Python 3.7.6 (default, Oct  2 2018, 09:18:58)
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+```
+
+매번 이럴게 `winpty`로 띄울 수는 없으니 `.bashrc`에 넣도록 하자. 
+
+```bash
+$ echo "alias python='winpty python.exe'" >> ~/.bashrc
+```
+
+넣은 뒤에 터미널을 재실행하거나 `source ~/.bashrc`를 실행해주면 된다. 

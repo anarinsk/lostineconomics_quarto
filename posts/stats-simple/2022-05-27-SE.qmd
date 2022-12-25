@@ -1,0 +1,280 @@
+---
+title:  Sample Statistics and Standard Error
+description:  기본 용어 정리한다.
+author: "JS HUHH"
+date: "05/27/2022"
+#image: "goodecon.jpg"
+categories: [statistics, stats-simple]
+draft: false
+---
+
+::: {.hidden}
+$$
+ \def\E{{\mathbb E}}
+ \def\V{{\mathbb V}}
+ \def\ES#1{\overline{#1}}
+$$
+:::
+
+
+## TL; DR 
+
+- 기본 통계학 용어와 개념 몇 가를 정리해 보자. 
+- 자주 잊어먹는 나를 위한 개인적인 용도
+
+## Why
+
+통계학을 들은 사람들이라면 표준 오차는 대체로 잘 아는 내용이다. 그런데 가끔 까먹는다. 개인적인 용도를 위해서 관련된 앞뒤 내용 몇 가지 정리해둔다. 
+
+## Big Ifs 
+
+- 알려진 파라미터는 없다.
+- 알려진 분포도 없다. 
+- 표본 추출은 평균이 $\mu$이고 분산이 $\sigma^2 < \infty$인 분포에서 IID(independent and identically distributed)로 생성된다. 
+
+## Unbiasedness and Consistency
+
+파라미터 $\theta$와 추정량 $\hat \theta$이 있다고 하자. 
+
+:::{ .column-margin }
+표본 $x_i$가 있다고 할 때, $\hat \theta$는 표본 $x_i$라는 정보를 통해 구성된다. 즉, $\hat\theta \equiv \hat\theta(x_i)$.
+:::
+
+**Unbiased**
+$$ 
+\E(\hat \theta) = \theta
+$$
+
+추정량의 시퀀스 $\lbrace \hat\theta_n \rbrace$이 있다고 할 때, 
+
+**Consistent**
+$$
+\underset{n \to \infty}{\rm plim}~\hat\theta_n = \theta  
+$$
+
+![파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다.](https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg){ .my-figure7 }
+
+:::{ .column-margin }
+plim의 정의는 다음과 같다. 표본 크기 $n$과 임의의 양의 상수 $c$에 대하여 표본 추정량 $\hat\theta_n$은 $\theta$의 일치 추정량(consistent estimator)이라고 한다.
+
+$$
+\lim_{n\to\infty}P[|\hat\theta_n - \theta|\geq c]=0 
+$$
+:::
+
+## Concepts 
+
+|용어|영어 표현|정의|사례 혹은 코멘트|
+|:--:|--|--|--|
+|모수|parameter|한 모집단의 고정된 특성 혹은 이를 나타내는 값|$\E[Y_i]$, 분포의 $\mu$, $\sigma^2$|
+|표본 통계량|sample statistics|표본에 따라서 변화하는 값|$\ES{Y}_n$, $S(Y_i)^2$, $SE$, $\widehat{SE}$|
+|표본 평균|sample mean|표본의 평균|$\ES{Y}_n = \frac{1}{n}\sum_{i=1}^n Y_i$|
+|표본 분산|sample variance|표본의 분산|$S(Y_i)^2 = \frac{1}{n-1}\sum_{i=1}^n (Y_i - \ES{Y}_n)^2$|
+|표준 오차|standard error|표본 통계량의 표준 편차|$SE(\ES{Y}_n) = \frac{\sigma_Y}{\sqrt{n}}$|
+|표준 오차의 추정치|estimated standard error|표준 오차 계산 시 $\sigma_Y \to S(Y_i)$|$\widehat{SE}(\ES{Y}_n) = \frac{S(Y_i)}{\sqrt{n}}$|
+|t-통계량|t-statistic|$t(\mu) = \frac{\ES{Y}_n - \mu}{\widehat{SE}(\ES{Y}_n)}$|$n$이 커질 때 정규분포에 근접한다.|
+
+## Sample Mean 
+
+IID 추출로 크기 $n$의 표본 $Y_1, \dotsc, Y_n$을 얻었다고 하자. $Y_i$가 모평균 $\mu$와 모 표준편차 $\sigma$를 따른다고 할 때, 표본 평균의 정의는 다음과 같다. 
+
+$$
+\ES{Y}_n = \sum_{i=1}^n Y_i.
+$$
+
+표본 평균과 달리 $Y_i$의 기댓값, 즉 모평균은 $\E (Y_i) \equiv \mu$라고 쓴다. 여기는 $n$이 붙지 않는다. 이는 모평균의 특성으로 일종의 고정된 (미지의) 값이다. 기댓값 $\E(Y_i)$를 추정하는 값으로서 표본 평균 $\ES{Y}_n$의 특징은 아래 두 개로 요약된다. 
+
+1. $\E(\ES Y_n) = \mu$ 
+2. $\V(\ES Y_n) = {\sigma^2}/{n}$
+
+### Unbiasedness 
+
+1에서 보듯이 $\ES{Y}_n$은 불편 추정량이다. 
+
+### Consistency
+
+$n$이 증가하면 LLN에 따라서 $\ES{Y}_n \overset{P}{\longrightarrow} \mu$가 성립한다. 
+
+:::{ .column-margin }
+$\overset{P}{\longrightarrow}$는 확률적인 수렴, 즉 앞서 정의를 살펴본 probability limit을 뜻한다. LLN은 약한 버전과 강한 버전이 있다. Kolmogorov의 강한 버전의 사실 증명이 복잡하다. 약한 버전의 증명은 [여기](https://python.quantecon.org/lln_clt.html)를 참고하자. Chebyshev 부등식과 $\lim_{n \to \infty} \V(\ES{Y}_n) = 0$을 활용한다. 
+:::
+
+### Central Limit Theorem 
+
+$$
+Z_n = \lim_{n \to \infty} \dfrac{\ES{Y}_n - \mu}{\frac{\sigma}{\sqrt{n}}} \sim \rm N(0,1)
+$$
+
+## Sample Variance 
+
+얼른 생각할 수 있는 $\sigma$의 추정량은 표본 분산 $S_n$는 다음과 같다.  
+
+$$
+S^2_n = \dfrac{1}{n-1} \sum_{i=1}^{n} (Y_i - \ES{Y}_n)^2
+$$
+
+$S^2_n$은 [불편 추정량](#s2-n-1)이고 [일치 추정량](#s2-consistent)이다. $n$이 충분히 크다면 불편 추정량 여부는 중요하지 않다. $\dfrac{1}{10000}$과 $\dfrac{1}{9999}$의 차이가 큰 의미가 있을까? $(n-1)$ 대신 $n$이 들어간 표본 추정량과 일치성을 유지한다. 
+
+## Standard Error 
+
+어떤 통계량의 표준 오차(standard error: SE)는 표본 통계량의 표준 편차를 뜻한다. 표본 통계량 $\ES{Y}_n$의 표준 편차 $\sqrt{\V(\ES{Y}_n)}$을 의미한다. $\sigma^2 < \infty$를 가정할 때, 
+
+$$
+\E(\ES{Y}_n - \mu)^2 = \E (\dfrac{\sum(Y_i -\mu)}{n})^2 = \dfrac{1}{n^2} n \sigma^2 = \dfrac{\sigma^2}{n}
+$$
+
+표준오차 $SE$는 다음과 같다. 
+
+$$
+SE = \dfrac{\sigma}{\sqrt{n}}
+$$
+
+이를 대입하면 $SE$의 추정량 $\widehat{SE}$는 다음과 같다. 
+
+$$
+\widehat{SE} = \dfrac{S_n}{\sqrt{n}}
+$$
+
+
+## Asymptotically Normal 
+
+t-통계량이 정규 분포에 근사하는 이유는 무엇일까? 
+
+$$
+t(\mu) = \frac{\overline{Y}-\mu}{\widehat{SE}(\overline{Y})}
+$$
+
+우선 t-통계량의 분자와 분모를 살펴보면, 각각 $n$이 커질 때 분자와 분모는 모두 0으로 수렴한다. 이 비율이 정규분포에 수렴하는 게 되는 이유는 중심극한 정리를 이용해 증명할 수 있다. 일단 결론만 기억하도록 하자. $t$는 표본 크기 $n$이 증가하면서 표준 정규 분포에 근사하게 된다. 이를 점근적 정규 분포(asymptotically normal)라고 칭한다. 
+
+다시 말하면, $\ES{Y}_n$은 평균이 $\mu$이고 표준편차가 $\frac{\sigma}{\sqrt{n}}$인 정규 분포에 근사하게 된다. 따라서 표본 크기가 커짐에 따라서 t-통계량은 표준 정규 분포를 점점 닮아간다. 
+
+![$n$이 커질수록 $\ES{X}_n$의 분포는 표준 정규 분포에 근접한다.](https://miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg){ .my-figure7}
+
+t-통계량은 대 표본(large sample)의 통계적 검정에 핵심을 이룬다. 원래 자료가 어느 분포에서 나왔는지와 관계없이 표본에 근거한 t-통계량은 정규 분포를 따르게 되고, 이를 통해 가설 검정을 실시할 수 있다. 
+
+:::{ .column-margin }
+회귀 분석의 검정 또한 t-통계량에 근거한다. [여기](#regression-t-statistic)를 참고하도록 하자. 
+:::
+
+t-통계량의 크기는 검정을 위한 통계학적 증거일 뿐이다. 이 점을 잊지 말자. t-통계량의 형태에서 보듯이 분자가 충분히 크거나 혹은 분모가 충분히 작을 때 이 값이 커진다. 이는 신뢰 구간에 대해서도 마찬가지다. 신뢰 구간은 표준 오차에 반영되어 있는 통계적 정밀성에 의해 결정되지 우리가 발견하고자 하는 관계의 강도에 의해서 결정되지 않는다. 즉, t-통계량 및 신뢰 구간의 크기를 보고 해당 독립 변수가 종속 변수에 미치는 효과의 강도로 오해하면 곤란하다.
+
+## More
+
+이하의 내용은 딱히 필요하지는 않다. 관심이 있는 경우는 살펴보면 좋겠다. 
+
+### $S^2$을 $(n-1)$로 나누는 이유{#s2-n-1}
+
+$S^2$의 분모에 왜 $(n-1)$이 들어갈까? 불편 추정량을 얻기 위해서다. 불편 추정량이란 해당 통계치의 기댓값이 모수가 되는 추정량을 의미한다. 직접 $S^2$의 기댓값을 구해보자. 먼저, 
+
+$$
+\begin{aligned}
+\sigma^2 = {\rm Var}(x_i) & = \mathbb E[(x_i - \mu)^2] \\
+& = \mathbb E [x_i^2 - 2 x_i \mu + \mu^2] \\
+& = \mathbb E(x_i^2) - 2\mu E(x_i) + \mu^2 \\
+& =  \mathbb E(x_i^2) - \mu^2
+\end{aligned}
+$$
+
+$\mathbb E(x_i^2) = \sigma^2 + \mu^2$ 임을 기억해두자. 
+
+이제 $S^2$의 기댓값을 구해보자. 분자 먼저 계산하자. 
+
+$$
+\begin{aligned}
+\mathbb E[\sum(x_i - \overline{x})^2] & = \mathbb E[\sum (x_i^2 - 2 x_i \overline{x} + \overline{x}^2)] \\
+& = \mathbb E[\sum x_i^2 - n 2 \overline{x} \cdot \overline{x} + n \overline{x}^2] \\
+& = \mathbb E[\sum x_i^2 - n \overline{x}^2)] \\
+& = \sum \mathbb E(x_i^2) - n \mathbb E(\overline{x}^2)
+\end{aligned}
+$$
+
+합해지는 부분의 각각을 따져보자. 
+
+$$
+\begin{aligned}
+\sum \mathbb E(x_i^2) = n (\sigma^2 + \mu^2)
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\mathbb E(\overline{x}^2) & = \mathbb E[(\dfrac{x_1 + x_2 + \dotsb + x_n}{n})^2] \\
+\end{aligned}
+$$
+
+ - $\mathbb E[(\dfrac{x_1 + x_2 + \dotsb + x_n}{n})^2]$의 분자를 계산하면 된다. 먼저 각 $x_i$의 제곱이 $n$개 나온다. 다음으로 각각 $x_i$가 독립적으로 추출되었으므로 $i \neq j$일 때 $\mathbb E(x_i x_j) = \mathbb E(x_i) \mathbb E(x_j) = \mu^2$이 된다. $n$ 개 중에서 2개를 순서에 관계없이 뽑게 된다. 즉, 
+
+$$
+\begin{aligned}
+\mathbb E[(x_1 + x_2 + \dotsb + x_n)^2]  & = n (\sigma^2 + \mu^2) + 2 \dfrac{n(n-1)}{2!} \mu^2 \\
+& = n \sigma^2 + n^2 \mu^2
+\end{aligned}
+$$
+
+따라서, 
+
+$$
+\mathbb E(\overline{x}^2)  = \dfrac{\sigma^2}{n} + \mu^2 
+$$
+
+이제 각각을 넣어 계산을 완료하자. 
+
+$$
+\begin{aligned}
+\mathbb E[\sum(x_i - \overline{x})^2] & = \sum \mathbb E(x_i^2) - n \mathbb E(\overline{x}^2) \\
+& = n \sigma^2 + n \mu^2 - \sigma^2 - n \mu^2 \\
+& = (n-1) \sigma^2 
+\end{aligned}
+$$
+
+따라서 불편 추정량이 되기 위해서는 $S^2$의 분모에 $(n-1)$이 필요하다. 
+
+### $S^2_n$의 일치성{#s2-consistent}
+
+$S^2$의 일치성을 증명하는 데 필요한 내용을 알아보자. 엄밀한 증명은 생략하고 간략하게 아이디어만 적도록 하겠다. $\sigma < \infty$를 가정하자. 이때 
+
+$$
+\begin{aligned}
+S_n^2 & = \dfrac{1}{n-1}\sum_{i=1}^n (X_i - \overline{X}_n) \\
+& = \dfrac{n}{n-1}(\dfrac{\sum X_i^2}{n} - \overline X_n) \\
+& \stackrel{P}{\longrightarrow} 1\cdot(\E(X^2)-\mu^2) = \sigma^2
+\end{aligned}
+$$
+
+위에서 보듯이 $S^2_n$이든 $\dfrac{1}{n}\sum_{i=1}^n (X_i - \overline{X}_n)$이든 둘 다 일치 추정량이라는 것을 쉽게 알 수 있다. 
+
+:::{ .column-margin }
+자세한 내용은 [여기](http://www.utstat.toronto.edu/~brunner/oldclass/413f08/handouts/STA413Ch4.pdf) 책의 해당 부분을 참고하라. 
+:::
+
+### 회귀 분석의 t-통계량{#regression-t-statistic}
+
+회귀 분석의 계수의 표본 추정량 $\hat \beta$는 다음과 같다. 
+$$
+\hat \beta = (X^T X)^{-1}(X y)
+$$
+
+$$
+t_i = \dfrac{\hat \beta_i - \beta}{S \sqrt{(X^T X)_{ii}^{-1}}} 
+$$
+
+with 
+
+$$
+S(y_i)^2 = \dfrac{1}{n-k} \sum_{i=1}^n (y_i -  x^r_i \hat\beta)
+$$
+
+:::{ .column-margin }
+여기서 $\beta_k$는 중회귀 분석의 $k$--번째 계수를 뜻한다. 
+:::
+
+- $x^r_i$: $X$의 $i$'th 행(row) 벡터 
+- $\underset{(1 \times k)}{x^r_i}\underset{(k \times 1)}{\vphantom{x^r_i}\hat\beta} = \hat y_i$
+
+회귀 분석의 $i$--번째 계수인 $\beta_i$는 $t_i$를 통해 검정할 수 있다. $n$이 충분히 클 경우 $t_i \sim \rm N(0,1)$이 된다. 
+
+### CLT and LLN illustrated 
+
+![CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다.](https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-2.png){ .my-figure7 }
+
+![LLN; $n$이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 $x$ 축의 범위를 0, 1 사이로 고정했다.](https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-3.png){ .my-figure7 }

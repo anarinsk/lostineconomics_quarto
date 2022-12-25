@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JS HUHH">
+<meta name="dcterms.date" content="2022-12-04">
+<meta name="description" content="마지막으로 정리해봅시다!">
+
+<title>lostineconomics.com - matplotlib + 한글 Redux</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">lostineconomics.com</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Junsok Huhh</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/anarinsk"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/anarinsk"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">matplotlib + 한글 Redux</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">computer-tool</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    마지막으로 정리해봅시다!
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>JS HUHH </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 4, 2022</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
+<ul>
+<li>matplotlib에서 한글 사용 마지막으로 정리한다.</li>
+</ul>
+</section>
+<section id="not-in-this-post" class="level2">
+<h2 class="anchored" data-anchor-id="not-in-this-post">Not in this Post</h2>
+<ul>
+<li>한글 폰트 설치 등의 문제는 다루지 않는다.
+<ul>
+<li>OS 별 한글 폰트 설치 및 활용 <a href="https://zephyrus1111.tistory.com/7">LINK</a></li>
+<li>(리눅스) 컨테이너 내에서 한글 폰트 설치 <a href="https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html">LINK</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="what-in-this-post" class="level2">
+<h2 class="anchored" data-anchor-id="what-in-this-post">What in this Post</h2>
+<ul>
+<li>matplotlib 그림 안에서 한글 활용의 최종 버전</li>
+</ul>
+</section>
+<section id="matplotlib과-한글의-라벨링" class="level2">
+<h2 class="anchored" data-anchor-id="matplotlib과-한글의-라벨링">matplotlib과 한글의 라벨링</h2>
+<p>matplotlib은 표준적인 파이썬 시각화 패키지다. 아쉽게도 이 녀석이 한글과 별로 안 친하다. 그래픽 렌더링 엔진에 한글 폰트가 빠져 있어서 이를 추가로 인식을 시켜야 결과물 내에서 한글 라벨을 쓸 수 있다. 가장 간단한 해결 방법은 나눔고딕 폰트를 쓸 수 있게 해주는 패키지 <a href="https://github.com/seongminp/koreanize-matplotlib">koreanize-matplotlib</a>를 쓰는 것이다.</p>
+<p>먼저 문제부터 살펴보자. 테스트를 위해서 아래 코드에 간단한 함수 <code>draw_sample(fontprop)</code>를 작성했다. 인자 <code>fontprop</code>은 그래프 요소에 적용될 폰트 특성이다. 값이 없으면 전역적으로 설정된 내용에 따른다.</p>
+<div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> matplotlib <span class="im">as</span> mpl</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> matplotlib.font_manager <span class="im">as</span> fm</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-5"><a href="#cb1-5"></a></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="co"># 그릴 데이터 생성 </span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="kw">def</span> draw_sample(fontprop<span class="op">=</span><span class="va">None</span>): </span>
+<span id="cb1-8"><a href="#cb1-8"></a>    data <span class="op">=</span> np.random.randint(<span class="op">-</span><span class="dv">100</span>, <span class="dv">100</span>, <span class="dv">50</span>).cumsum()</span>
+<span id="cb1-9"><a href="#cb1-9"></a>    plt.plot(<span class="bu">range</span>(<span class="dv">50</span>), data, <span class="st">'r'</span>)</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    plt.title(<span class="st">'가격변동 추이'</span>, fontproperties<span class="op">=</span>fontprop)</span>
+<span id="cb1-11"><a href="#cb1-11"></a>    plt.ylabel(<span class="st">'가격'</span>, fontproperties<span class="op">=</span>fontprop)</span>
+<span id="cb1-12"><a href="#cb1-12"></a>    plt.show()</span>
+<span id="cb1-13"><a href="#cb1-13"></a></span>
+<span id="cb1-14"><a href="#cb1-14"></a>draw_sample()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>C:\Users\junsokhuhh\Miniconda3\envs\for-quarto\lib\site-packages\IPython\core\pylabtools.py:152: UserWarning: Glyph 44032 (\N{HANGUL SYLLABLE GA}) missing from current font.
+  fig.canvas.print_figure(bytes_io, **kw)
+C:\Users\junsokhuhh\Miniconda3\envs\for-quarto\lib\site-packages\IPython\core\pylabtools.py:152: UserWarning: Glyph 44201 (\N{HANGUL SYLLABLE GYEOG}) missing from current font.
+  fig.canvas.print_figure(bytes_io, **kw)
+C:\Users\junsokhuhh\Miniconda3\envs\for-quarto\lib\site-packages\IPython\core\pylabtools.py:152: UserWarning: Glyph 48320 (\N{HANGUL SYLLABLE BYEON}) missing from current font.
+  fig.canvas.print_figure(bytes_io, **kw)
+C:\Users\junsokhuhh\Miniconda3\envs\for-quarto\lib\site-packages\IPython\core\pylabtools.py:152: UserWarning: Glyph 46041 (\N{HANGUL SYLLABLE DONG}) missing from current font.
+  fig.canvas.print_figure(bytes_io, **kw)
+C:\Users\junsokhuhh\Miniconda3\envs\for-quarto\lib\site-packages\IPython\core\pylabtools.py:152: UserWarning: Glyph 52628 (\N{HANGUL SYLLABLE CU}) missing from current font.
+  fig.canvas.print_figure(bytes_io, **kw)
+C:\Users\junsokhuhh\Miniconda3\envs\for-quarto\lib\site-packages\IPython\core\pylabtools.py:152: UserWarning: Glyph 51060 (\N{HANGUL SYLLABLE I}) missing from current font.
+  fig.canvas.print_figure(bytes_io, **kw)</code></pre>
+</div>
+<div class="cell quarto-layout-panel" data-execution_count="1">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 77.8%;justify-content: center;">
+<figure class="figure">
+<p><a href="2022-12-04-matplotlib-korfont-redux_files/figure-html/cell-2-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="2022-12-04-matplotlib-korfont-redux_files/figure-html/cell-2-output-2.png" class="img-fluid figure-img" width="604"></a></p>
+</figure>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+<p>위 결과에서 보듯이 한글 폰트가 없으니 출력이 제대로 되지 않는다. 이제 <code>koreanize-matplotlib</code> 패키지를 설치하고 import 후 실행해보자</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">$</span> pip install koreanize-matplotlib </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> koreanize_matplotlib</span>
+<span id="cb4-2"><a href="#cb4-2"></a>draw_sample()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell quarto-layout-panel" data-execution_count="2">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 77.8%;justify-content: center;">
+<figure class="figure">
+<p><a href="2022-12-04-matplotlib-korfont-redux_files/figure-html/cell-3-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="2022-12-04-matplotlib-korfont-redux_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img" width="592"></a></p>
+</figure>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+<p><code>koreanize-matplotlib</code> 패키지는 나눔고딕 폰트를 자동으로 설치하고 이를 폰트로 잡아 준다. 위에 보는 것처럼 한글 출력에 문제가 없다.</p>
+</section>
+<section id="koreanize-matploitlib-이외의-대안" class="level2">
+<h2 class="anchored" data-anchor-id="koreanize-matploitlib-이외의-대안">koreanize-matploitlib 이외의 대안</h2>
+<p><code>koreanize-matplotlib</code>이 간편하고 좋은 해결책이지만 다른 방법도 있다. 만일을 위해 두 가지를 더 알아보자.</p>
+</section>
+<section id="노트북에서-한글-폰트-가져오기" class="level2">
+<h2 class="anchored" data-anchor-id="노트북에서-한글-폰트-가져오기">노트북에서 한글 폰트 가져오기</h2>
+<p>앞서 링크에서 소개한 폰트 추가 방법은 시스템에 폰트를 먼저 깔고 해당 폰트를 matplotlib에 등록하는 방법이다. pyodide에서 활용할 수 있는 다른 방법은 없을까? 아래 소개할 방법은 ttf 폰트 파일을 바로 matplotlib이 쓸 수 있게 해주는 방법이다.</p>
+<div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>font_path <span class="op">=</span> <span class="st">'./font/D2Coding v.1.3.2 ligature Nerd Font Complete.ttf'</span> <span class="co"># 폰트 파일의 위치에 따라서 조정</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>font_callsign <span class="op">=</span> <span class="st">'D2 Coding Nerd'</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>fe <span class="op">=</span> fm.FontEntry(</span>
+<span id="cb5-4"><a href="#cb5-4"></a>    fname<span class="op">=</span>font_path,</span>
+<span id="cb5-5"><a href="#cb5-5"></a>    name<span class="op">=</span>font_callsign) <span class="co"># 원하는 폰트 호출 이름 설정 </span></span>
+<span id="cb5-6"><a href="#cb5-6"></a>fm.fontManager.ttflist.insert(<span class="dv">0</span>, fe) <span class="co"># or simply append</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell quarto-layout-panel" data-execution_count="3">
+
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Code Tips
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><code>fm.FontEntry...</code> 한글 폰트를 matplotlib의 폰트 매니저에 바로 심어주는 명령
+<ul>
+<li><code>font_path</code>: 폰트의 ttf 파일의 위치와 파일 이름을 지정한다. 각자 알맞게 조정하자.</li>
+<li><code>font_callsign</code>: 내가 지정할 폰트의 이름, 폰트를 호출할 때 활용한다. 각자 취향대로 바꾸자.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<p>위 방법의 장점은 폰트의 위치를 가리지 않는다는 것이다. 적당한 위치에 두고 matplotlib이 쓸 수 있도록 폰트를 인식시키는 방식이다. 폰트가 잘 인식되었는지 확인해보자.</p>
+<div class="cell" data-execution_count="4">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="bu">print</span>([(f.name, f.fname) <span class="cf">for</span> f <span class="kw">in</span> mpl.font_manager.fontManager.ttflist <span class="cf">if</span> (<span class="st">'D2'</span> <span class="kw">in</span> f.name) <span class="op">|</span> (<span class="st">'Nanum'</span> <span class="kw">in</span> f.name) ])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[('D2 Coding Nerd', './font/D2Coding v.1.3.2 ligature Nerd Font Complete.ttf'), ('NanumMyeongjo', 'C:\\WINDOWS\\Fonts\\NanumMyeongjo.ttf'), ('NanumBarunpen', 'C:\\WINDOWS\\Fonts\\NanumBarunpenR.ttf'), ('NanumBarunGothic', 'C:\\Windows\\Fonts\\NanumBarunGothic.ttf'), ('NanumGothic', 'C:\\Windows\\Fonts\\NanumGothic.ttf'), ('NanumBarunGothic', 'C:\\Windows\\Fonts\\NanumBarunGothicBold.ttf'), ('NanumSquareRound', 'C:\\WINDOWS\\Fonts\\NanumSquareRoundEB.ttf'), ('NanumMyeongjo', 'C:\\Windows\\Fonts\\NanumMyeongjoBold.ttf'), ('NanumGothic', 'C:\\WINDOWS\\Fonts\\NanumGothicExtraBold.ttf'), ('NanumBarunGothic', 'C:\\WINDOWS\\Fonts\\NanumBarunGothicUltraLight.ttf'), ('Nanum Brush Script', 'C:\\Windows\\Fonts\\NanumBrush.ttf'), ('NanumBarunGothicOTF', 'C:\\Windows\\Fonts\\NanumBarunGothic.otf'), ('NanumMyeongjo', 'C:\\Windows\\Fonts\\NanumMyeongjo.ttf'), ('NanumGothic', 'C:\\Windows\\Fonts\\NanumGothicBold.ttf'), ('NanumBarunGothicOTF', 'C:\\Windows\\Fonts\\NanumBarunGothicBold.otf'), ('NanumBarunGothicOTF', 'C:\\Windows\\Fonts\\NanumBarunGothicUltraLight.otf'), ('NanumBarunGothicOTF', 'C:\\WINDOWS\\Fonts\\NanumBarunGothicBold.otf'), ('NanumSquareRound', 'C:\\WINDOWS\\Fonts\\NanumSquareRoundL.ttf'), ('NanumBarunGothicOTF', 'C:\\WINDOWS\\Fonts\\NanumBarunGothic.otf'), ('NanumSquare', 'C:\\Windows\\Fonts\\NanumSquareR.ttf'), ('Nanum Pen Script', 'C:\\Windows\\Fonts\\NanumPen.ttf'), ('NanumBarunGothicOTF', 'C:\\WINDOWS\\Fonts\\NanumBarunGothicUltraLight.otf'), ('Nanum Pen Script', 'C:\\WINDOWS\\Fonts\\NanumPen.ttf'), ('NanumGothic', 'C:\\Windows\\Fonts\\NanumGothicLight.ttf'), ('NanumBarunGothic', 'C:\\Windows\\Fonts\\NanumBarunGothicLight.ttf'), ('D2Codingligature Nerd Font', 'C:\\Users\\junsokhuhh\\AppData\\Local\\Microsoft\\Windows\\Fonts\\D2Coding v.1.3.2 ligature Nerd Font Complete.ttf'), ('NanumSquareRound', 'C:\\Windows\\Fonts\\NanumSquareRoundL.ttf'), ('NanumBarunGothic', 'C:\\Windows\\Fonts\\NanumBarunGothicUltraLight.ttf'), ('NanumSquare', 'C:\\WINDOWS\\Fonts\\NanumSquareB.ttf'), ('NanumGothic', 'C:\\Windows\\Fonts\\NanumGothicExtraBold.ttf'), ('NanumMyeongjo', 'C:\\WINDOWS\\Fonts\\NanumMyeongjoExtraBold.ttf'), ('NanumSquareRound', 'C:\\Windows\\Fonts\\NanumSquareRoundB.ttf'), ('NanumSquare', 'C:\\Windows\\Fonts\\NanumSquareL.ttf'), ('Nanum Brush Script', 'C:\\WINDOWS\\Fonts\\NanumBrush.ttf'), ('NanumMyeongjo', 'C:\\Windows\\Fonts\\NanumMyeongjoExtraBold.ttf'), ('NanumBarunpen', 'C:\\WINDOWS\\Fonts\\NanumBarunpenB.ttf'), ('NanumBarunGothic', 'C:\\WINDOWS\\Fonts\\NanumBarunGothic.ttf'), ('NanumSquareRound', 'C:\\Windows\\Fonts\\NanumSquareRoundR.ttf'), ('NanumGothic', 'C:\\WINDOWS\\Fonts\\NanumGothicLight.ttf'), ('NanumSquare', 'C:\\WINDOWS\\Fonts\\NanumSquareL.ttf'), ('NanumSquareRound', 'C:\\WINDOWS\\Fonts\\NanumSquareRoundR.ttf'), ('NanumSquareRound', 'C:\\Windows\\Fonts\\NanumSquareRoundEB.ttf'), ('NanumGothic', 'C:\\WINDOWS\\Fonts\\NanumGothic.ttf'), ('NanumGothic', 'C:\\WINDOWS\\Fonts\\NanumGothicBold.ttf'), ('NanumSquare', 'C:\\Windows\\Fonts\\NanumSquareB.ttf'), ('NanumSquare', 'C:\\Windows\\Fonts\\NanumSquareEB.ttf'), ('D2Coding Nerd Font', 'C:\\Users\\junsokhuhh\\AppData\\Local\\Microsoft\\Windows\\Fonts\\D2Coding v.1.3.2 Nerd Font Complete.ttf'), ('NanumSquareRound', 'C:\\WINDOWS\\Fonts\\NanumSquareRoundB.ttf'), ('NanumBarunGothic', 'C:\\WINDOWS\\Fonts\\NanumBarunGothicLight.ttf'), ('NanumGothicCoding', 'C:\\Users\\junsokhuhh\\AppData\\Local\\Microsoft\\Windows\\Fonts\\NanumGothicCoding-Bold.ttf'), ('NanumBarunpen', 'C:\\Windows\\Fonts\\NanumBarunpenB.ttf'), ('NanumSquare', 'C:\\WINDOWS\\Fonts\\NanumSquareR.ttf'), ('NanumGothicCoding', 'C:\\Users\\junsokhuhh\\AppData\\Local\\Microsoft\\Windows\\Fonts\\NanumGothicCoding.ttf'), ('NanumBarunGothicOTF', 'C:\\Windows\\Fonts\\NanumBarunGothicLight.otf'), ('NanumBarunpen', 'C:\\Windows\\Fonts\\NanumBarunpenR.ttf'), ('NanumBarunGothicOTF', 'C:\\WINDOWS\\Fonts\\NanumBarunGothicLight.otf'), ('NanumMyeongjo', 'C:\\WINDOWS\\Fonts\\NanumMyeongjoBold.ttf'), ('NanumSquare', 'C:\\WINDOWS\\Fonts\\NanumSquareEB.ttf'), ('NanumBarunGothic', 'C:\\WINDOWS\\Fonts\\NanumBarunGothicBold.ttf'), ('NanumGothic', 'C:\\Users\\junsokhuhh\\Miniconda3\\envs\\for-quarto\\lib\\site-packages\\koreanize_matplotlib\\fonts\\NanumGothic.ttf')]</code></pre>
+</div>
+</div>
+</section>
+<section id="활용" class="level2">
+<h2 class="anchored" data-anchor-id="활용">활용</h2>
+<p>matplotlib에서 폰트를 활용하는 방법은 두 가지다. 하나는 폰트의 속성을 지정해놓고 해당 폰트가 활용될 때 이를 호출해서 쓰는 방법이고, 다른 하나는 전역적으로 해당 폰트를 기본 폰트로 지정하는 것이다.</p>
+<section id="호출해서-활용" class="level3">
+<h3 class="anchored" data-anchor-id="호출해서-활용">호출해서 활용</h3>
+<p>아래 결과에서 보듯이, fontprop을 통해 지정된 폰트 양식을 그래프 요소에 적용해보자.</p>
+<div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>fontprop <span class="op">=</span> fm.FontProperties(fname<span class="op">=</span>font_path, size<span class="op">=</span><span class="dv">15</span>)</span>
+<span id="cb8-2"><a href="#cb8-2"></a>draw_sample(fontprop)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell quarto-layout-panel" data-execution_count="5">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 77.8%;justify-content: center;">
+<figure class="figure">
+<p><a href="2022-12-04-matplotlib-korfont-redux_files/figure-html/cell-6-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="2022-12-04-matplotlib-korfont-redux_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img" width="597"></a></p>
+</figure>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="전역으로-활용" class="level3">
+<h3 class="anchored" data-anchor-id="전역으로-활용">전역으로 활용</h3>
+<p>폰트 속성을 전역으로 지정하고 그래프를 그려보자.</p>
+<div>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># rcParams 설정</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>plt.rcParams[<span class="st">"font.family"</span>] <span class="op">=</span> <span class="st">'D2 Coding Nerd'</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>plt.rcParams[<span class="st">'font.size'</span>] <span class="op">=</span> <span class="fl">15.</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>plt.rcParams[<span class="st">'xtick.labelsize'</span>] <span class="op">=</span> <span class="fl">12.</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>plt.rcParams[<span class="st">'ytick.labelsize'</span>] <span class="op">=</span> <span class="fl">12.</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a>plt.rcParams[<span class="st">'axes.labelsize'</span>] <span class="op">=</span> <span class="fl">12.</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a>plt.rcParams[<span class="st">'axes.unicode_minus'</span>] <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a></span>
+<span id="cb9-9"><a href="#cb9-9"></a><span class="co"># 그림 그리기 </span></span>
+<span id="cb9-10"><a href="#cb9-10"></a>draw_sample()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell quarto-layout-panel" data-execution_count="6">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 77.8%;justify-content: center;">
+<figure class="figure">
+<p><a href="2022-12-04-matplotlib-korfont-redux_files/figure-html/cell-7-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="2022-12-04-matplotlib-korfont-redux_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img" width="605"></a></p>
+</figure>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","loop":true});</script>
+
+
+
+</body></html>

@@ -1,0 +1,24 @@
+project:
+  type: website
+  output-dir: docs
+website:
+  title: "lostineconomics.com"
+  site-url: https://www.lostineconomics.com/
+  description: "Another useless blog"
+  favicon: "favicon.ico"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/anarinsk
+      - icon: twitter
+        href: https://twitter.com/anarinsk
+      - icon: rss
+        href: index.xml
+  body-header: google_analytics.html
+format:
+  html:
+    theme:
+        light: [cosmo, theme.scss, anari-custom.scss]
+        dark: [cosmo, theme-dark.scss, anari-custom.scss]
+    css: styles.css

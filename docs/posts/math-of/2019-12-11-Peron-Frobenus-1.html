@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JS HUHH">
+<meta name="dcterms.date" content="2019-12-11">
+<meta name="description" content="페론-프로베니우스 정리 살펴보기">
+
+<title>lostineconomics.com - Perron-Frobenius Theorem, part 1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">lostineconomics.com</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Junsok Huhh</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/anarinsk"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/anarinsk"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Perron-Frobenius Theorem, part 1</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">math-of</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    페론-프로베니우스 정리 살펴보기
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>JS HUHH </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 11, 2019</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
+<ul>
+<li>정칙 행렬(regular matrix)의 경우 페론-프로베니우스의 정리는 아이겐밸류와 아이겐벡터에 관해서 강력한 조건을 걸어준다.</li>
+<li>정칙 행렬의 경우 가장 큰 양의 유일한 실수 아이겐밸류가 존재하며, 이 값에 상응하는 아이겐벡터는 양이다.</li>
+<li>이 정리를 쓸모 있게 활용할 수 있는 사례는 마르코프 체인의 극한 분포다. 이때 가장 큰 아이겐밸류는 1이 되며, 좌 아이겐벡터와 우 아이겐벡터를 활용해 마르코프 과정의 극한 분포를 아이겐벡터로 손쉽게 구할 수 있다.</li>
+</ul>
+</section>
+<section id="definitions" class="level2">
+<h2 class="anchored" data-anchor-id="definitions">Definitions</h2>
+<section id="positive-nonnegative" class="level3">
+<h3 class="anchored" data-anchor-id="positive-nonnegative">positive, nonnegative</h3>
+<ul>
+<li>양(positive): 행렬의 모든 원소가 양의 값을 지닐 때</li>
+<li>비음(nonnegative): 행렬의 모든 원소가 비음일 때, 가 원래 정의다. 하지만 여기서는 “non-negative and non-zero”의 의미로 사용한다. 즉, 모든 원소가 비음이면서 행렬 혹은 벡터는 <span class="math inline">\(\mathbf 0\)</span>이 아니다. 즉, <span class="math inline">\(z \geq 0\)</span> with <span class="math inline">\(z \neq 0\)</span>.</li>
+</ul>
+<p>벡터 <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>가 있을 때 <span class="math inline">\(x &gt; y\)</span>는 <span class="math inline">\((x-y)\)</span>가 양이라는 뜻이다. 앞으로 벡터와 행렬에 대해서 <span class="math inline">\(&gt;\)</span> 그리고 <span class="math inline">\(\geq\)</span>는 모두 원소-단위(element-wise)를 뜻한다.</p>
+</section>
+</section>
+<section id="basic-facts" class="level2">
+<h2 class="anchored" data-anchor-id="basic-facts">Basic facts</h2>
+<p>For <span class="math inline">\(z \geq 0\)</span>,</p>
+<ul>
+<li>If <span class="math inline">\(A \geq 0\)</span> then <span class="math inline">\(A z \geq 0\)</span>.</li>
+<li>If <span class="math inline">\(A&gt;0\)</span> then <span class="math inline">\(A z &gt; 0\)</span>.
+<ul>
+<li>역도 성립한다. 즉, if <span class="math inline">\(Az &gt;(\geq)\;0\)</span>, then <span class="math inline">\(A &gt;(\geq)\;0\)</span></li>
+</ul></li>
+<li>If <span class="math inline">\(x \geq 0\)</span> and <span class="math inline">\(x \neq 0\)</span>, <span class="math inline">\(\pi = (\frac{1}{\boldsymbol{1}^T x}) x\)</span>와 같은 표준화된 형태를 확률 분포로 활용할 수 있다.
+<ul>
+<li><span class="math inline">\(\pi\)</span> 벡터에 속하는 원소 <span class="math inline">\(i\)</span>는 <span class="math inline">\(\pi_i = \dfrac{x_i}{\sum_j x_j}\)</span>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="regular-nonnegative-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="regular-nonnegative-matrices">Regular nonnegative matrices</h2>
+<p><span class="math inline">\(A \in \mathbb{R}^{n \times n}\)</span> 그리고 <span class="math inline">\(A \geq 0\)</span>를 가정하자. <span class="math inline">\(A\)</span>는 다음의 조건을 만족할 때 정칙 행렬(regular matrix)이라고 한다; 1보다 큰 정수 <span class="math inline">\(k\)</span>에 대해서 <span class="math inline">\(A^k &gt; 0\)</span>를 만족한다.</p>
+<section id="a-matrix-for-a-graph" class="level3">
+<h3 class="anchored" data-anchor-id="a-matrix-for-a-graph">A matrix for a graph</h3>
+<p>노드들 간의 그래프 관계를 가장 쉽게 나타낼 수 있는 것이 행렬이다. 즉, <span class="math inline">\(i, j \in \{ 1, 2, \dotsc, n \}\)</span> 일 때, <span class="math inline">\(A_{ij}&gt;0\)</span>이면 <span class="math inline">\(i \to j\)</span>의 엣지를 그릴 수 있음을 나타낸다. 이때 <span class="math inline">\((A^k)_{ij} &gt; 0\)</span>와 동치는 <span class="math inline">\(i\)</span> 노드와 <span class="math inline">\(j\)</span> 노드를 연결하는 길이 <span class="math inline">\(k\)</span>의 경로가 존재함을 의미한다. 이때 <span class="math inline">\(A\)</span>가 정칙 행렬이라는 가정의 의미는 무엇일까? 이는 모든 노드에서 다른 어떤 노드로 이동하는 임의의 <span class="math inline">\(k\)</span> 길이의 경로가 항상 존재한다는 뜻이다.</p>
+</section>
+<section id="examples" class="level3">
+<h3 class="anchored" data-anchor-id="examples">Examples</h3>
+<section id="not-regular-비정칙" class="level4">
+<h4 class="anchored" data-anchor-id="not-regular-비정칙">Not regular 비정칙</h4>
+<p><span class="math display">\[\begin{bmatrix} 1&amp; 1 \\0&amp; 1 \end{bmatrix}\]</span></p>
+<p><span class="math display">\[\begin{bmatrix} 0&amp; 1 \\1&amp; 0 \end{bmatrix}\]</span></p>
+</section>
+<section id="regular-정칙" class="level4">
+<h4 class="anchored" data-anchor-id="regular-정칙">Regular 정칙</h4>
+<p><span class="math display">\[\begin{bmatrix} 1&amp; 1&amp; 0 \\0&amp; 0&amp; 1\\ 1&amp;0&amp;0 \end{bmatrix}\]</span></p>
+<ul>
+<li>정칙 행렬이 아닌 경우에는 <span class="math inline">\(A^k(k \geq 1)\)</span>을 하더라도 같은 자리에 0이 남게 된다.</li>
+<li><span class="math inline">\(A\)</span>가 정칙 행렬이라면 <span class="math inline">\(A \geq 0\)</span>이더라도 <span class="math inline">\(A^k &gt; 0\)</span>가 된다.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="perron-frobenius-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="perron-frobenius-theorem">Perron-Frobenius theorem</h2>
+<p>증명은 일단 생략하자. 그리 어렵지 않지만 페론-프로베니우스 정리 자체가 중요하기 때문에 이에 집중하겠다.</p>
+</section>
+<section id="for-regular-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="for-regular-matrices">For regular matrices</h2>
+<p><span class="math inline">\(A \geq 0\)</span>이고 <span class="math inline">\(A\)</span>가 정칙 행렬이면 아래를 모두 만족한다.</p>
+<ul>
+<li>아이겐밸류 <span class="math inline">\(\lambda_{\rm pf}\)</span>는 실수이며 양이다.</li>
+<li>좌 아이겐벡터와 우 아이겐벡터 모두 양이다.</li>
+<li>다른 모든 아이겐밸류 <span class="math inline">\(\lambda\)</span>에 대해서, <span class="math inline">\(\lvert \lambda \rvert &lt; \lambda_{\rm pf}\)</span></li>
+<li>아이겐밸류 <span class="math inline">\(\lambda_{\rm pf}\)</span>의 근은 1개다.</li>
+<li><span class="math inline">\(\lambda_{\rm pf}\)</span>의 좌 아이겐벡터, 우 아이겐벡터는 유일하다(unique).</li>
+</ul>
+<p>물론 아이겐벡터는 아이겐스페이스에 속하므로 벡터 전체에 대한 스케일링이 가능하다. <span class="math inline">\(\lambda_{\rm pf}\)</span>는 행렬 <span class="math inline">\(A\)</span>의 페론-프로베니우스의 근(혹은 PF 아이겐밸류)라고 부른다.</p>
+<section id="for-nonnegative-matrices" class="level3">
+<h3 class="anchored" data-anchor-id="for-nonnegative-matrices">For nonnegative matrices</h3>
+<p><span class="math inline">\(A \geq 0\)</span>.</p>
+<ul>
+<li>아이겐밸류 <span class="math inline">\(\lambda_{\rm pf}\)</span>는 실수이며 비음이다.</li>
+<li><span class="math inline">\(\lambda_{\rm pf}\)</span>의 좌 아이겐벡터, 우 아이겐벡터 모두 비음이다.</li>
+<li>다른 이외의 아이겐밸류가 존재한다면, 해당 아이겐밸류 <span class="math inline">\(\lambda\)</span>에 대해서, <span class="math inline">\(\lvert \lambda \rvert \leq \lambda_{\rm pf}\)</span></li>
+<li>아이겐밸류, 아이겐벡터는 유일하지 않다.</li>
+</ul>
+</section>
+</section>
+<section id="markov-chain" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="markov-chain">Markov chain</h2>
+<p>페론-프로베니우스 정리가 가장 아름답게 활용되는 사례는 마르코프 체인 모델이다. 확률 과정(stochastic process) <span class="math inline">\(X_0, X_1, \dotsc, X_n\)</span>이 아래와 같은 과정을 따른다고 하자.</p>
+<p><span class="math display">\[
+{\rm Prob}(X_{t+1} = j \vert X_t =i) = p_{ij}
+\]</span></p>
+<p>즉, 이는 <span class="math inline">\(i \to j\)</span>의 확률, 즉 <span class="math inline">\(i\)</span> 상태에서 <span class="math inline">\(j\)</span> 상태로 옮겨갈 확률을 의미한다. 마르코프 체인의 특징은 <span class="math inline">\((t+1)\)</span> 기의 상태를 결정하는 것은 오직 <span class="math inline">\(t\)</span> 기의 상태다. 즉, <span class="math inline">\(t-k\)</span> for <span class="math inline">\(k=1, \dots, t\)</span> 는 <span class="math inline">\((t+1)\)</span>의 상태를 결정하는 데 영향을 주지 않는다. <span class="math inline">\(P\)</span>는 이행 행렬(transition matrix) 혹은 확률 행렬(stochastic matrix)라고 부른다.</p>
+<p><span class="math display">\[
+P =
+\begin{bmatrix}
+p_{11}&amp; p_{12}&amp; \dotsc&amp; p_{1n} \\
+p_{21}&amp; p_{22}&amp; \dotsc&amp; p_{2n}  \\
+\vdots &amp;\vdots&amp;\ddots&amp;\vdots \\
+p_{n1}&amp; p_{n2}&amp; \dotsc&amp; p_{nn}
+\end{bmatrix}
+\]</span></p>
+<p><span class="math inline">\(P\)</span>의 각 행의 합은 1이 된다는 점을 새겨두자. <span class="math inline">\(t\)</span> 기에 <span class="math inline">\(i\)</span> 상태에 있었다면, <span class="math inline">\((t+1)\)</span> 기에는 <span class="math inline">\(1, 2, \dotsc, n\)</span> 중 어느 하나로는 상태를 변경해야 한다.</p>
+<p>행 벡터 <span class="math inline">\(p_t \in \mathbb{R}^n\)</span> 를 <span class="math inline">\(X_t\)</span>의 분포라고 하자.</p>
+<p><span class="math display">\[
+{(p_t^T)}_i = {\rm Prob}(X_t = i)
+\]</span></p>
+<p>를 의미한다. 즉, <span class="math inline">\(t\)</span> 기에 <span class="math inline">\(i\)</span> 상태가 실현될 혹은 존재할 확률이다. <span class="math inline">\((t+1)\)</span> 기의 확률 분포를 벡터로 표현하면 다음과 같다. <span class="math inline">\(p_{t+1} = p_t P\)</span>.</p>
+<p>확률 행렬를 활용해서 마르코프 체인의 문제를 어떻게 풀까? 일단 적당한 형태의 확률 행렬 <span class="math inline">\(P\)</span>가 있다고 하자. 즉 <span class="math inline">\(P\)</span>는 비음이고 <span class="math inline">\(P^k &gt; 0\)</span>이 성립한다(즉, <span class="math inline">\(P\)</span>는 정칙 행렬). <span class="math inline">\(P\)</span>에 페론-프로베니우스의 정리를 적용할 수 있다! 즉,</p>
+<ul>
+<li>아이겐밸류 <span class="math inline">\(\lambda_{\rm pf}\)</span>는 실수이고 양수이며 유일하다.</li>
+<li>좌 아이겐벡터, 우 아이겐벡터 모두 양수이고 유일하다(unique).</li>
+<li><span class="math inline">\(\lambda_{\rm pf}\)</span>를 제외한 다른 모든 아이겐밸류 <span class="math inline">\(\lambda\)</span>에 대해서, <span class="math inline">\(\lambda_i &lt; \lambda_{\rm pf}\)</span> for <span class="math inline">\(i \neq {\rm pf}\)</span>.</li>
+</ul>
+<p><span class="math inline">\(P\)</span>라는 확률 과정에 대해서 아래의 두 사실을 증명하도록 하자.</p>
+<ol type="1">
+<li>아이겐밸류 1이 존재한다.</li>
+<li>1이 가장 큰 유일한 아이겐밸류, 즉 <span class="math inline">\(\lambda_{\rm pf} = 1\)</span>.</li>
+</ol>
+<p>이것이 증명되면 마르코프 체인의 극한 분포를 찾는데, 페론-프로베니우스의 정리를 활용할 수 있다.</p>
+<section id="eigenvalue-1-exists" class="level3">
+<h3 class="anchored" data-anchor-id="eigenvalue-1-exists">Eigenvalue 1 exists!</h3>
+<p>1의 아이겐밸류가 존재한다. 어떻게 알 수 있을까?</p>
+<p><span class="math display">\[
+P {\boldsymbol 1}_n = (1){\boldsymbol 1}_n
+\]</span></p>
+<p>확률 행렬 <span class="math inline">\(P\)</span>에 대해서 모든 원소가 1인 <span class="math inline">\(n\)</span> 차원의 열 벡터 <span class="math inline">\({\boldsymbol 1}_n\)</span>에 관해서 위의 식이 당연히 성립한다. 즉, 확률 행렬 <span class="math inline">\(P\)</span>의 우 아이겐벡터는 <span class="math inline">\({\boldsymbol 1}_n\)</span>이고 그때의 아이겐밸류는 <span class="math inline">\(1\)</span>이다. 그러면 아이겐밸류 1에 해당하는 좌 아이겐벡터 <span class="math inline">\(\pi\)</span> 가 존재한다고 하자. 이를 적으면 다음과 같다.</p>
+<p><span class="math display">\[
+\pi P = \pi (1)
+\]</span></p>
+<p>만일 <span class="math inline">\(1\)</span>이 아이겐밸류 중에서 가장 큰 값이라면, 페론-프로베니우스의 정리에 따라서 아이겐밸류 1에 해당하는 유일한 좌 아이겐벡터 <span class="math inline">\(\pi\)</span>가 존재한다. 이 좌 아이겐벡터는 아이겐벡터의 특성을 지니고 있다. 즉, 어떤 상태 <span class="math inline">\(\pi\)</span>에서 한번의 확률 과정을 거치더라도 여전히 그 상태에 머물러 있게 된다. <span class="math inline">\(\pi\)</span>는 일종의 균형 상태로 해석할 수 있다.</p>
+</section>
+<section id="is-the-largest-eigenvalue" class="level3">
+<h3 class="anchored" data-anchor-id="is-the-largest-eigenvalue">1 is the largest eigenvalue!</h3>
+<p>페론-프로베니우스의 정리에 따라서 아이겐밸류 1이 가장 큰 아이겐밸류라면, 이에 상응하는 아이겐벡터 <span class="math inline">\(\pi\)</span>는 양이며 유일하다. <span class="math inline">\(\pi\)</span>는 스케일링이 가능하기 때문에 스케일링을 거치면 <span class="math inline">\(P\)</span>에 의해 표현되는 마르코프 체인 확률 과정의 무한 반복, 즉 <span class="math inline">\(P^\infty\)</span>가 수렴하는 유일한 분포가 된다. 어떻게 증명할까? 생각보다 쉽다.</p>
+</section>
+<section id="proof" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="proof">Proof</h3>
+<p>만일 1 이외의 아이겐밸류 <span class="math inline">\(\hat \lambda &gt; 1\)</span>가 존재한다고 하자. 이제 어떤 열 벡터 <span class="math inline">\(x\)</span>에 속하는 최대값을 <span class="math inline">\(x_{\max}\)</span>라고 하자. 이때 <span class="math inline">\(P x\)</span>의 결과 생산되는 열 벡터의 각 원소는 <span class="math inline">\(x_i\)</span> for <span class="math inline">\(i = 1, 2, \dotsc, n\)</span>의 컨벡스 결합이다. 따라서 <span class="math inline">\(Px = x^c\)</span>에 속한 어떤 원소 <span class="math inline">\(x_i^c\)</span>도 <span class="math inline">\(x_{\max}\)</span> 보다 클 수 없다. 즉,</p>
+<p><span class="math display">\[
+x^c_i \leq x_{\max}
+\]</span></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="math inline">\(p_{i1} x^c_1 + p_{i2} x^c_2 + \dotsb + p_{in} x^c_n\)</span> with <span class="math inline">\(p_{i1} + p_{i2} + \dotsc + p_{in} =1\)</span> for <span class="math inline">\(i = 1, 2, \dotsc, n\)</span></p>
+</div></div><p>그런데 <span class="math inline">\(P x = \hat \lambda x\)</span>가 성립하고 <span class="math inline">\(\hat \lambda &gt;1\)</span>이기 때문에, <span class="math inline">\(x_{\max} \hat \lambda &gt; x_{\max}\)</span>가 성립해야 한다. 즉 모순이다. 귀류법에 따라서 <span class="math inline">\(\lambda \leq 1\)</span>이고, 이때 아이겐밸류의 최대값은 1이다. 즉, 페론-프로베니우스의 근 <span class="math inline">\(\lambda_{\rm pf} = 1\)</span>이다.</p>
+<p>확률 행렬 <span class="math inline">\(P\)</span>, 아이겐밸류 1에 상응하는 좌 아이겐벡터 <span class="math inline">\(\pi^*\)</span>라고 하자. 페론-프로베니우스의 정리 활용하면 아래와 같다.</p>
+<ul>
+<li>좌 아이겐벡터 <span class="math inline">\(\pi^*\)</span>는 유일하고, 모든 원소는 실수이며 양이다.</li>
+<li>이를 적절하게 스케일링하면 분포가 된다.</li>
+<li>마르코프 체인의 초기 상태와 무관하게 확률 과정을 반복할수록 이 분포에 수렴한다.</li>
+</ul>
+<p>보통 마르코프 체인을 설명할 때 좌 아이겐밸류와 우 아이겐밸류를 구별하지 않는 경우가 있다. 이는 여러모로 손해다. 위에서 보듯이, 수렴 분포를 증명하는 과정에서 유용하게 활용된다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>행의 합을 1로 할지, 열의 합을 1로 할지는 이행 확률을 어떻게 정의할지 나름이다. <span class="math inline">\(P\)</span>의 정의를 확인하고, 위와 같이 정의한 경우라면 1에 대응하는 좌 아이겐벡터가 극한 수렴 분포가 된다. 반대로, 확률 행렬을 <span class="math inline">\(P^T\)</span>로 정의했다면 우 아이겐벡터가 극한 분포이다.</p>
+</div></div></section>
+<section id="definition-of-limiting-distribution" class="level3">
+<h3 class="anchored" data-anchor-id="definition-of-limiting-distribution">Definition of limiting distribution</h3>
+<p>확률 분포 <span class="math inline">\(\pi = [\pi_0, \pi_1, \pi_2, \dotsc, \pi_k]\)</span>는 아래 조건을 만족할 때 마르코프 체인 <span class="math inline">\(P_n\)</span>의 극한 분포라고 부른다. 만일</p>
+<p><span class="math display">\[
+\pi_j = \lim_{n \to \infty} P(X_n = j | X_0 = i) ,~\forall i, j \in S
+\]</span></p>
+<p>이고</p>
+<p><span class="math display">\[
+\sum_{j \in S} \pi_j = 1.
+\]</span></p>
+<p>몇 가지 점만 확인해보자.</p>
+<ul>
+<li>극한 분포는 초기 상태에 의존하지 않는다.</li>
+<li>만일 극한 분포가 존재한다면, 아래 같은 식이 성립한다.</li>
+</ul>
+<p><span class="math display">\[
+\lim_{n \to \infty} P^n =
+\begin{bmatrix}
+\pi \\
+\vdots \\
+\pi
+\end{bmatrix}
+\]</span></p>
+</section>
+</section>
+<section id="limiting-behavior-of-markov-chain" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="limiting-behavior-of-markov-chain">Limiting Behavior of Markov Chain</h2>
+<p>마르코프 체인은 어떻게 <span class="math inline">\(\pi^*\)</span>로 수렴하게 될까? 확률 행렬 <span class="math inline">\(P\)</span>의 아이겐밸류 <span class="math inline">\(1 = \lambda_1 &gt; \lambda_2 \geq \dotsc \geq \lambda_n &gt; 0\)</span>, 각각에 대응하는 아이겐벡터를 <span class="math inline">\(v_1, v_2, \dotsc, v_n\)</span>이라고 하자. 아이겐벡터가 각각 선형독립이라고 가정하자. 이때 아이겐벡터로 구성된 <span class="math inline">\(Q\)</span>는 가역(invertible) 행렬이다.</p>
+<p><span class="math inline">\(\pi^T_t = Q y_t\)</span> 로 나타낼 수 있다. 즉 <span class="math inline">\(Q\)</span>의 선형결합을 통해 <span class="math inline">\(n\)</span> 차원의 임의의 벡터를 표현할 수 있다. <span class="math inline">\(\pi\)</span>가 열 벡터이기 때문에 이를 행 벡터로 바꿨다는 점에 유의하자. 한편,</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>사실 기존의 <span class="math inline">\(\pi\)</span>가 좌 아이겐벡터였다면 여기서는 이를 우 아이겐벡터로 바꾼 것이다. 물론, 확률 행렬 역시 <span class="math inline">\(P^T\)</span>가 되어야 한다.</p>
+</div></div><p><span class="math display">\[
+\begin{aligned}
+\pi_{t+1}^T &amp; = P^T \pi_t^T \\
+Q y_{t+1} &amp; = P^T Q_{t} y_t \\
+Q^{-1} Q y_{t+1} &amp; = Q^{-1}P^T Q_{t} y_t \\
+y_{t+1} &amp; = D y_t
+\end{aligned}
+\]</span></p>
+<p>두 가지를 상기하자.</p>
+<ol type="1">
+<li>행렬 <span class="math inline">\(A\)</span>와 전치 행렬 <span class="math inline">\(A^T\)</span>는 동일한 아이겐밸류를 지니게 된다.</li>
+<li>D는 아이겐밸류로 구성된 대각행렬이다. 편의상 크기 순서대로 나열되어 있다고 하자.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="math inline">\(\det(A^T−\lambda I) = \det((A−\lambda I)^T)=\det(A−\lambda I)\)</span></p>
+</div></div><p>앞서 본 바에 따라서 <span class="math inline">\(\lambda_1 =1\)</span>이다.</p>
+<p><span class="math display">\[
+y_t =
+\begin{bmatrix}
+\lambda_1&amp; \dotsc&amp; 0 \\
+\vdots&amp; \ddots&amp; \vdots \\
+0&amp; \dotsc&amp; \lambda_n
+\end{bmatrix} y_{t-1}.
+\]</span></p>
+<p>이 차분방정식의 해는 아래와 같다.</p>
+<p><span class="math display">\[
+y_t =
+\begin{bmatrix}
+\lambda_1&amp; \dotsc&amp; 0 \\
+\vdots&amp; \ddots&amp;\vdots \\
+0&amp; \dotsc&amp; \lambda_n
+\end{bmatrix}^t y_{0} =
+\begin{bmatrix}
+\lambda_1^t&amp; \dotsc&amp; 0 \\
+\vdots&amp; \ddots&amp; \vdots \\
+0&amp; \dotsc&amp; \lambda_n^t
+\end{bmatrix} y_0
+\]</span></p>
+<p><span class="math inline">\(y_0 = [c_1, \dotsc, c_n]^T\)</span>라고 두면, <span class="math inline">\(y_t = [c_1 \lambda_1^t, \dotsc, c_1 \lambda_n^t]^T\)</span>가 된다. <span class="math inline">\(Q = [v_1, \dotsc, v_n]\)</span>가 아이겐벡터 <span class="math inline">\(v_i\)</span>로 구성된 매트릭스라고 할 때,</p>
+<p><span class="math display">\[
+\pi_t^T \equiv Q y_t = c_1 \lambda_1^t v_1 +  \dotsb + c_1 \lambda_n^t v_n.
+\]</span></p>
+<p>이제 <span class="math inline">\(t \to \infty\)</span>를 적용해보자. <span class="math inline">\(\lambda_i &lt; \lambda_1 = 1\)</span> for <span class="math inline">\(i = 2, 3, \dotsc, n\)</span>이므로, <span class="math inline">\(\pi_{\infty}^T = c_1 v_1\)</span>가 된다. <span class="math inline">\(v_1\)</span>이 표준화된 확률 분포 벡터이므로 <span class="math inline">\(c_1 =1\)</span>이어야 한다.</p>
+</section>
+<section id="appendix-irreducibility-and-aperiodicity" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="appendix-irreducibility-and-aperiodicity">Appendix: Irreducibility and Aperiodicity</h2>
+<p>마르코프 체인이 수렴하는 분포를 갖게 될 조건으로 보통 두 가지 조건, 기약성(irreducibility) 그리고 비주기성(aperiodicity)이 제시된다. 먼저 간단히 둘의 내용을 살펴보자.</p>
+<section id="irreducible-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="irreducible-matrix">Irreducible matrix</h3>
+<p>기약성의 정의는 아래와 같다.</p>
+<p><span class="math inline">\(P\)</span>가 확률 행렬이라고 할 때, 상태 <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>에 대해서 양의 실수 <span class="math inline">\(j\)</span>, <span class="math inline">\(k\)</span>가 존재하면, 두 상태는 서로 교류할 수 있다고 칭한다.</p>
+<p><span class="math display">\[
+P^j (x, y) &gt; 0~~\text{and}~~P^k(y,x) &gt; 0
+\]</span></p>
+<p>이 정의의 의미는 무엇일까? 일정한 상태를 거치면 <span class="math inline">\(x \to y\)</span> 그리고 <span class="math inline">\(y \to x\)</span>로 옮기는 것이 확률적으로 가능하다는 뜻이다. 기약성이란 모든 상태가 교류할 수 있는 상태를 뜻한다. 다시 말하면 어떤 상태에 들어가서 여기서 빠져나올 수 없는 경우가 발생한 가능성이 없을 때 기약성이 성립한다.</p>
+<section id="irreducible" class="level4">
+<h4 class="anchored" data-anchor-id="irreducible">Irreducible</h4>
+<p><span class="math display">\[\begin{bmatrix} 0.9&amp; 0.1&amp; 0.0 \\0.4&amp; 0.4&amp; 0.2\\ 0.1&amp; 0.1&amp; 0.8 \end{bmatrix}\]</span></p>
+</section>
+<section id="reducible" class="level4">
+<h4 class="anchored" data-anchor-id="reducible">Reducible</h4>
+<p><span class="math display">\[\begin{bmatrix} 1.0&amp; 0.0&amp; 0.0 \\0.1&amp; 0.8&amp; 0.1\\ 0.0&amp; 0.2&amp; 0.8 \end{bmatrix}\]</span></p>
+</section>
+</section>
+<section id="aperiodic-matrix" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="aperiodic-matrix">Aperiodic matrix</h3>
+<p>대충 말하면 마르코프 체인 위의 이동이 예측 가능한 형태로 이루어질 수 있으면 안된다. 먼저 예를 보도록 하자.</p>
+<p><span class="math display">\[\begin{bmatrix} 0&amp; 1&amp; 0 \\0&amp; 0&amp; 1\\ 1&amp; 0&amp; 0 \end{bmatrix}\]</span></p>
+<p><img src="https://python.quantecon.org/_static/lecture_specific/finite_markov/mc_aperiodicity1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p>각 상태가 일정한 간격으로 존재하게 된다. 즉,</p>
+<ul>
+<li>1번, 2번, 3번 상태는 <span class="math inline">\(\{ k, k+3, k+6, \dotsc \}\)</span> 번째에 존재하게 된다.</li>
+</ul>
+<p>주기성(periodicity)의 수학적인 정의는 다음과 같다.</p>
+<p><span class="math display">\[
+k = {\rm gcd} \{ n &gt; 0~|~{\rm Pr}(X_n = i | X_0 = i) &gt; 0 \}
+\]</span></p>
+<p>gcd란 greatest common divisor, 즉 최대공약수를 의미한다. 만일 해당 상태로 <span class="math inline">\(\{ 6, 8, 12, \dotsc \}\)</span> 번에 돌아갈 확률이 양이라면, gcd는 2가 된다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>확률 행렬의 원소가 0, 1로만 되어 있지 않아도 주기 행렬이 될 수 있다는 사실에 유의하자.</p>
+</div></div><p>이때 <span class="math inline">\(k &gt; 1\)</span>이면 주기 행렬이고 <span class="math inline">\(k=1\)</span>이면 비주기 행렬이다. <span class="math inline">\(k=1\)</span>의 의미는 무엇일까? <span class="math inline">\(t\)</span> 기에 상태 <span class="math inline">\(s\)</span>에 있을 때, <span class="math inline">\(t+1\)</span> 기에 역시 <span class="math inline">\(s\)</span>에 있을 확률이 양이라는 뜻이다. 그리고 확률 행렬을 구성하는 모든 상태에 주기성이 없을 때, 이러한 확률 행렬을 비주기 행렬이라고 한다.</p>
+</section>
+<section id="regular-matrix-vs-irreducible-and-aperiodic-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="regular-matrix-vs-irreducible-and-aperiodic-matrix">Regular matrix vs irreducible and aperiodic matrix</h3>
+<p>페론-프로베니우스 정리에 따르면 정칙 행렬일 때 극한 분포가 존재하게 된다. 정칙 행렬과 기약 행렬, 비주기 행렬 사이의 수학적 관계는 어떨까? 결론부터 말하면, 둘은 동치다. 증명은 간단하다.</p>
+<ul>
+<li>A: 정칙 행렬</li>
+<li>B: 기약 행렬이면서 비주기 행렬</li>
+</ul>
+<section id="a-b" class="level4">
+<h4 class="anchored" data-anchor-id="a-b">A → B</h4>
+<p><strong>Irreducible</strong></p>
+<p>정칙 행렬이면 <span class="math inline">\(P^k &gt; 0\)</span>이다. <span class="math inline">\(P^{k+1}\)</span>의 <span class="math inline">\(i\)</span> 행 <span class="math inline">\(j\)</span> 열의 원소는 다음과 같다.</p>
+<p><span class="math display">\[
+p_{ij}^{k+1} = \sum_{t=1}^{n} p_{it} p_{tj}^k &gt; 0
+\]</span></p>
+<p>위의 식이 성립하는 이유는 정칙 행렬의 경우 적어도 하나의 <span class="math inline">\(t\)</span>에 관해서 <span class="math inline">\(p_{it} &gt; 0\)</span>이 성립해야 한다. 만일 이것이 성립하지 않으면 정칙 행렬이 될 수 없다. 즉, <span class="math inline">\(P^{k+1} &gt;0\)</span>이고, <span class="math inline">\(P^{k+2}, P^{k+3}, \dotsc\)</span>모두 양이다.</p>
+<p><strong>Aperiodic</strong></p>
+<p><span class="math inline">\(\{k ,k+1, k+2, \dotsc\}\)</span>의 gcd는 1이다.</p>
+</section>
+<section id="a-b-1" class="level4">
+<h4 class="anchored" data-anchor-id="a-b-1">A ← B</h4>
+<p>기약 행렬이면 언제나 정칙 행렬이다.</p>
+</section>
+</section>
+<section id="comments" class="level3">
+<h3 class="anchored" data-anchor-id="comments">Comments</h3>
+<p><strong>Irreducible and aperiodic</strong></p>
+<p>만일 확률 행렬이 기약이면 이때 비주기성 여부를 어떻게 확인할까? 행렬이 기약 행렬이라면, 해당 행렬을 구성하는 하나의 상태만 비주기성을 지니면 전체 행렬이 비주기성을 지닌다. 증명은 조금만 생각해보시라.</p>
+<p><strong>Why Aperiodicity?</strong></p>
+<p>극한 분포 존재에 비주기성은 왜 필요할까? 만일 이 조건이 성립하지 않으면 극한 분포로 계산된 것이 사실은 극한 분포라고 할 수 없게 된다. 즉,</p>
+<p><span class="math display">\[
+\lim_{n \to \infty} P^n  \neq
+\begin{bmatrix}
+\pi \\
+\vdots \\
+\pi
+\end{bmatrix}.
+\]</span></p>
+<p>예를 들어보자. 상태 2개이고 확률 행렬이 아래와 같다고 하자.</p>
+<p><span class="math display">\[
+P =
+\begin{bmatrix}
+0 &amp;1 \\
+1 &amp; 0
+\end{bmatrix}
+\]</span></p>
+<p>극한 분포를 계산하면 <span class="math inline">\([\dfrac{1}{2}, \dfrac{1}{2}]\)</span>이 나온다. 상태 1에서 출발했다면, 상태 1이 <span class="math inline">\(\{2, 4, 6\}\)</span> 번에 나타나게 되고, 이때 gcd는 2가 된다. 이때 확률 행렬의 곱을 살펴보면 아래와 같다. <span class="math inline">\(k = 1, 2,\cdots\)</span>에 대해서</p>
+<p><span class="math display">\[
+\begin{aligned}
+P^n &amp; =
+\begin{bmatrix}
+0 &amp; 1 \\
+1 &amp; 0
+\end{bmatrix},~\text{for}~n = 2k-1 \\
+P^n &amp; =
+\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix},~\text{for}~n = 2k
+\end{aligned}
+\]</span></p>
+<p>따라서 <span class="math inline">\(\lim_{n \to \infty} P^n\)</span>은 수렴하지 않는다. 앞서 계산한 극한 분포는 두 극단의 평균일 뿐이다. 이때 극한 분포 역시 존재하지 않는다.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JS HUHH">
+<meta name="dcterms.date" content="2019-12-20">
+<meta name="description" content="페론-프로베니우스 정리 살펴보기">
+
+<title>lostineconomics.com - Perron-Frobenius Theorem, part 2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">lostineconomics.com</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Junsok Huhh</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/anarinsk"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/anarinsk"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Perron-Frobenius Theorem, part 2</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">math-of</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    페론-프로베니우스 정리 살펴보기
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>JS HUHH </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 20, 2019</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="input-out-model" class="level2">
+<h2 class="anchored" data-anchor-id="input-out-model">Input-out Model</h2>
+<section id="model" class="level3">
+<h3 class="anchored" data-anchor-id="model">Model</h3>
+<p>투입-산출 모형을 생각해보자. <span class="math inline">\(a_{ij}\)</span>는 <span class="math inline">\(j\)</span> 재화 1 단위를 생산하는 데 필요한 <span class="math inline">\(i\)</span> 재화의 양, 이라고 하자. 이렇게 되면, 열 벡터 <span class="math inline">\(A_j\)</span>는 아래과 같다. 그 의미는 <span class="math inline">\(j\)</span> 재화 1단위를 생산하는 데 필요한 <span class="math inline">\(1, \dotsc, n\)</span> 까지 필요한 재화의 양이다.</p>
+<p><span class="math display">\[
+A_j =
+\begin{bmatrix}
+a_{1j} \\
+\vdots \\
+a_{nj}
+\end{bmatrix}
+\]</span></p>
+<p>여기서 두 가지를 더 가정하겠다.</p>
+<ol type="1">
+<li>투입을 <span class="math inline">\(k\)</span> 배로 하면, 산출도 <span class="math inline">\(k\)</span> 배가 된다. 이를 규모수익불변(constant return to scale)이라고 한다.</li>
+<li>각 재화 생산은 다른 재화 생산에 영향을 주지 않는다.</li>
+</ol>
+<p>이제 <span class="math inline">\(j\)</span> 재화를 <span class="math inline">\(x_j\)</span> 만큼 생산하는 데 필요한 투입량은 <span class="math inline">\(x_j A_j\)</span>가 된다. 생산하려는 생산량을 <span class="math inline">\(x_1, \dotsc, x_n\)</span>이라고 하면 충 투입 벡터는 아래와 같다.</p>
+<p><span class="math display">\[
+x_1 A_1 + \dotsc + x_n A_n = A x,~\text{where $x = [x_1, \cdots, x_n]^T$}
+\]</span></p>
+</section>
+<section id="productive-economy" class="level3">
+<h3 class="anchored" data-anchor-id="productive-economy">Productive economy</h3>
+<p>생산물 벡터 <span class="math inline">\(x\)</span>를 생산하는 데 투입 벡터 <span class="math inline">\(Ax\)</span>가 필요하다면 순 생산물 벡터는 아래와 같다.</p>
+<p><span class="math display">\[
+x - Ax = (I-A)x
+\]</span></p>
+<p>순생산물 벡터 <span class="math inline">\(b\)</span>를 얻게 위해서는 아래의 식이 성립해야 한다.</p>
+<p><span class="math display">\[
+(I-A) x = b
+\]</span></p>
+<p>만일 <span class="math inline">\((I-A)\)</span>가 가역이라면 유일한 해 <span class="math inline">\(x\)</span>가 존재하게 된다. 문제는 <span class="math inline">\(x \geq 0\)</span>를 보장할 수 있는지, 이다. 즉, 어떤 경제가 생산적이라는 정의는 아래와 같다.</p>
+<p><span class="math display">\[
+x = (I-A)^{-1} b \geq 0
+\]</span></p>
+</section>
+<section id="productive-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="productive-matrix">Productive matrix</h3>
+<p>원래 바실리 레온티에프 (동지?)가 제시했던 생산적인 행렬 <span class="math inline">\(A\)</span>의 정의는 살짝 더 엄격하다. 원래 <span class="math inline">\(A\)</span>의 정의는 다음과 같다.</p>
+<p><span class="math inline">\((I- A)x &gt; 0\)</span>을 만족하는 비음의 벡터 <span class="math inline">\(x\)</span>가 존재할 때, <span class="math inline">\(A\)</span>를 생산적 매트릭스 혹은 레온티에프 메트릭스라고 정의한다. 이 정의는 매우 중요하다. 이후의 조건에서 결정적으로 활용되니 잘 기억해두도록 하자.</p>
+<p>잘 생각해보면 경제적인 의미가 있다. 뒤에 다시 나오겠지만, <span class="math inline">\(A x\)</span>는 어떤 의미를 지닐까? 원하는 생산량이 <span class="math inline">\(x\)</span>라면 이에 필요한 투입량이 <span class="math inline">\(Ax\)</span>다. 즉, <span class="math inline">\(x - Ax\)</span>란 다음 기 (목표) 산출에서 이를 위해 필요한 이번 기 투입 산출을 뺀 것이다. 이 값이 양이어야 한다는 것이다. 이 값이 음이라면 생산적이지 못한 것이다. 만일 <span class="math inline">\(\boldsymbol{0}\)</span> 벡터라면 연속적인 생산이 불가능한 상태가 된다.</p>
+</section>
+</section>
+<section id="hawkins-simon-condition" class="level2">
+<h2 class="anchored" data-anchor-id="hawkins-simon-condition">Hawkins-Simon Condition</h2>
+<p>이를 보장해주는 것이 호킨스-사이먼 조건(Hawkins-Simon condition) 이다. H-S 조건을 증명하기에 앞서 몇가지 렘마를 깔아보도록 하자. 앞으로 특별한 언급이 없는 이상 벡터와 매트릭스는 적당한 크기(차원)을 지니고 있다고 가정하겠다.</p>
+<section id="lemma-1" class="level3">
+<h3 class="anchored" data-anchor-id="lemma-1">Lemma 1</h3>
+<blockquote class="blockquote">
+<p>두 개의 벡터 <span class="math inline">\(x^1\)</span>, <span class="math inline">\(x^2\)</span>가 있다고 하자. if <span class="math inline">\(x^1 \geq x^2\)</span> and <span class="math inline">\(A \geq 0\)</span>, then <span class="math inline">\(A x_1 \geq A x_2\)</span>.</p>
+</blockquote>
+<p>증명은 간단하니 생략하도록 한다. 직접 계산해보면 된다.</p>
+</section>
+<section id="lemma-2" class="level3">
+<h3 class="anchored" data-anchor-id="lemma-2">Lemma 2</h3>
+<blockquote class="blockquote">
+<p>만일 <span class="math inline">\(A\)</span> 가 생산적 행렬이라면, <span class="math inline">\(A^s\)</span>의 모든 원소는 <span class="math inline">\(s \to \infty\)</span>에 따라서 0으로 수렴한다.</p>
+</blockquote>
+<p>증명해보자. 일단 A가 생산적 행렬이라는 조건에서, 아래와 같이 주장할 수 있다.</p>
+<p><span class="math display">\[
+x &gt; Ax \geq 0
+\]</span></p>
+<p><span class="math inline">\(A\)</span>와 <span class="math inline">\(x\)</span> 모두 비음이라는 점을 떠올리면 된다. 이것이 성립한다면, <span class="math inline">\(0 &lt; \lambda &lt; 1\)</span>의 <span class="math inline">\(\lambda\)</span>가 존재하고 이는 다음을 만족한다.</p>
+<p><span class="math display">\[
+\lambda x &gt; A x \geq 0
+\]</span></p>
+<p>여기에 다시 <span class="math inline">\(A\)</span>를 앞 곱하면 다음과 같다.</p>
+<p><span class="math display">\[
+\lambda(Ax) &gt; A^2 x \geq 0
+\]</span></p>
+<p>한편, 먼저 식에 이번에는 <span class="math inline">\(\lambda\)</span>를 곱하면, 다음과 같다.</p>
+<p><span class="math display">\[
+\lambda^2 x &gt; \lambda(Ax) \geq 0
+\]</span></p>
+<p>이제 이렇게 곱한 두 결과를 합치면, 다음과 같다.</p>
+<p><span class="math display">\[
+\lambda^2 x &gt; A^2 x \geq 0
+\]</span></p>
+<p>이를 일반화하면,</p>
+<p><span class="math display">\[
+\lambda^k x &gt; A^k x \geq 0
+\]</span></p>
+<p><span class="math inline">\(k \to \infty\)</span>에 따라서, <span class="math inline">\(\lambda^k \to 0\)</span> 가 되기 때문에</p>
+<p><span class="math display">\[
+\lim_{k \to \infty} A^k x =0
+\]</span></p>
+<p>벡터 <span class="math inline">\(A^k x\)</span>의 <span class="math inline">\(i\)</span> 번째 벡터는 다음과 같다.</p>
+<p><span class="math display">\[
+\lim_{k \to \infty} \sum_{j=1}^n a^k_{ij} x_j = 0
+\]</span></p>
+<p>이는 임의의 <span class="math inline">\(x_j \geq 0\)</span>에 대해서 항상 성립해야 한다. 따라서, <span class="math inline">\(\lim_{k \to \infty} a^k_{ij} = 0\)</span>이 성립해야 한다.</p>
+</section>
+<section id="lemma-3" class="level3">
+<h3 class="anchored" data-anchor-id="lemma-3">Lemma 3</h3>
+<blockquote class="blockquote">
+<p>만일 <span class="math inline">\(A\)</span>가 생산적 행렬이고 어떤 <span class="math inline">\(x\)</span>에 대해서 <span class="math inline">\(x \geq Ax\)</span>가 성립하면, <span class="math inline">\(x \geq 0\)</span></p>
+</blockquote>
+<p>앞서 Lemma 2와 비슷한 논리로 다음과 같이 적을 수 있다.</p>
+<p><span class="math display">\[
+x \geq Ax \geq A^2x \geq \dotsb \geq A^k x.
+\]</span></p>
+<p>즉, <span class="math inline">\(x \geq A^k x\)</span>. <span class="math inline">\(k \to \infty\)</span>일 때 Lemma 2에 따라서,</p>
+<p><span class="math display">\[
+x \geq \lim_{k \to \infty} A^k x = 0.
+\]</span></p>
+</section>
+<section id="lemma-4" class="level3">
+<h3 class="anchored" data-anchor-id="lemma-4">Lemma 4</h3>
+<blockquote class="blockquote">
+<p>If <span class="math inline">\(A\)</span> 가 생산적 행렬이라면, <span class="math inline">\((I-A)\)</span> is non-singular.</p>
+</blockquote>
+<p>증명은 간단하다. <span class="math inline">\((I-A)\)</span>가 singular 라고 가정하자. 그렇다면, <span class="math inline">\(x \neq 0\)</span>이면서, <span class="math inline">\((I-A) x = 0\)</span>인 <span class="math inline">\(x\)</span>가 존재하게 된다. <span class="math inline">\((I-A)(-x) = 0\)</span> 역시 마찬가지라고 성립한다. <span class="math inline">\(-x \geq 0\)</span>가 성립해야 하는데, 이를 만족시키는 <span class="math inline">\(x\)</span>는 <span class="math inline">\(x = 0\)</span>가 유일하다. 이는 <span class="math inline">\(x \neq 0\)</span> 전제와 모순된다.</p>
+</section>
+<section id="theorem-1" class="level3">
+<h3 class="anchored" data-anchor-id="theorem-1">Theorem 1</h3>
+<p>비음의 벡터 <span class="math inline">\(d\)</span>가 있을 때, <span class="math inline">\(A\)</span>가 생산적일 때,</p>
+<p><span class="math display">\[
+(I-A)x = d
+\]</span></p>
+<p>는 유니크한 비음의 해를 지닌다.</p>
+<section id="proof" class="level4">
+<h4 class="anchored" data-anchor-id="proof">Proof</h4>
+<p>Lemma 4에 따르면, <span class="math inline">\((I-A)\)</span>는 비특이(nonsingular) 행렬이다. 따라서 위 시스템의 해 <span class="math inline">\(x^*\)</span>는 유니크하다. 아울러, <span class="math inline">\(d \geq 0\)</span>이므로,</p>
+<p><span class="math display">\[
+(I-A) x^*  \geq 0
+\]</span></p>
+<p>가 성립한다. <span class="math inline">\(A\)</span>는 생산적이고 위 식이 성립하므로 Lemma 3에 따라서 <span class="math inline">\(x^* \geq 0\)</span>.</p>
+</section>
+</section>
+</section>
+<section id="hawkins-simon-condition-1" class="level2">
+<h2 class="anchored" data-anchor-id="hawkins-simon-condition-1">Hawkins-Simon Condition</h2>
+<ol type="1">
+<li>A는 생산적</li>
+<li>행렬 <span class="math inline">\((A-I)^{-1}\)</span>이 존재하며, 비음</li>
+<li><span class="math inline">\(B = I - A\)</span> 모든 주 행렬식이 양수</li>
+</ol>
+<p>보통 호킨스-사이먼 조건은 3번을 뜻한다. 3과 2번이 동치를 밝히는 것을 호킨스-사이먼 정리로 지칭한다.</p>
+<p>먼저 1과 2가 동치임을 증명해보자.</p>
+<section id="sufficiency-1-2" class="level3">
+<h3 class="anchored" data-anchor-id="sufficiency-1-2">Sufficiency (1 → 2)</h3>
+<p>A가 생산적 행렬이며, Lemma 4에 의해서 <span class="math inline">\((I-A)^{-1}\)</span>이 존재함을 알 수 있다.</p>
+<p><span class="math display">\[
+\Phi_s = I + A + \dotsc + A^s
+\]</span></p>
+<p>라고 하자. 이때,</p>
+<p><span class="math display">\[
+A \Phi_s = A + A^2 + \dotsc + A^{s+1}.
+\]</span></p>
+<p><span class="math display">\[
+(I - A) \Phi_s = I - A^{s+1}.
+\]</span></p>
+<p>앙변에 극한값을 취하면,</p>
+<p><span class="math display">\[
+\lim_{s \to \infty} [(I-A) \Phi_s ] = I
+\]</span></p>
+<p>이 성립한다. 이는 Lemma 2에 의해서 <span class="math inline">\(\lim_{s \to \infty} A^{s+1} \to 0\)</span>가 성립하기 때문이다.</p>
+<p><span class="math display">\[
+\lim_{s \to \infty} \Phi_s = (I-A)^{-1}
+\]</span></p>
+<p><span class="math inline">\(A \geq 0\)</span>이기 때문에, <span class="math inline">\(\Phi_s \geq 0\)</span>가 항상 성립한다. 따라서,</p>
+<p><span class="math display">\[
+(I-A)^{-1} \geq 0
+\]</span></p>
+</section>
+<section id="necessity-1-2" class="level3">
+<h3 class="anchored" data-anchor-id="necessity-1-2">Necessity (1 ← 2)</h3>
+<p><span class="math inline">\((I-A)^{-1} \geq 0\)</span>가 성립한다고 하자. 임의의 <span class="math inline">\(d &gt; 0\)</span>를 잡으면 <span class="math inline">\(x = (I-A)^{-1} d \geq 0\)</span> 가 성립한다. 이때,</p>
+<p><span class="math display">\[
+x = A x + d &gt; Ax
+\]</span></p>
+<p>가 성립하므로 1이 만족한다.</p>
+<p>나머지 증명은 테크니컬한 문제이므로 생략하자.</p>
+</section>
+<section id="eigenvalues-eigenvectors" class="level3">
+<h3 class="anchored" data-anchor-id="eigenvalues-eigenvectors">Eigenvalues &amp; Eigenvectors</h3>
+<p>이제 생산적 행렬의 아이겐밸류와 아이겐벡터를 고민해보도록 하자. 생산적 행렬의 정의 <span class="math inline">\(x - Ax &gt; 0\)</span>에서 출발해보자. 만일 아이겐밸류 <span class="math inline">\(\lambda\)</span>가 존재한다면 그 값은 어때야 할까? 즉,</p>
+<p><span class="math display">\[
+\lambda x - Ax = \lambda x - x &lt; 0
+\]</span></p>
+<p>따라서 <span class="math inline">\(\lambda &lt; 1\)</span>이 된다. 아울러, 비음 행렬의 P-F 정리에 따르면 가장 아이겐밸류가 존재할 때 가장 큰 값 <span class="math inline">\(\lambda_{\rm pf}\)</span>가 존재하는데, 이 역시 <span class="math inline">\(\lambda_{\rm pf} &lt; 1\)</span>이 된다. 따라서 이에 상응하는 아이겐벡터 <span class="math inline">\(x_{\rm pf}\)</span>는 다음을 만족시켜야 한다. <span class="math inline">\((I-A) x_{\rm pf} \geq 0\)</span>.</p>
+<p><span class="math display">\[
+(I-A) x_{\rm pf} = (\lambda_{\rm pf} I - A ) x_{\rm pf} + (1 - \lambda_{\rm pf}) x_{\rm pf} = (1-\lambda_{\rm pf}) x_{\rm pf} \geq 0
+\]</span></p>
+<p>식의 마지막은 각각 <span class="math inline">\(\lambda_{\rm pf} &lt; 1\)</span> 그리고 <span class="math inline">\(x_{\rm pf} \geq 0\)</span>로부터 성립한다.</p>
+</section>
+</section>
+<section id="some-applications" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="some-applications">Some Applications</h2>
+<section id="steady-state-growth-rate" class="level3">
+<h3 class="anchored" data-anchor-id="steady-state-growth-rate">Steady-state growth rate</h3>
+<p>투입계수 행렬 <span class="math inline">\(A\)</span>를 지닌 어떤 경제를 상정하자. <span class="math inline">\(A\)</span>가 생산적 행렬이라고 하자. 그리고 금기 초의 투입물 벡터를 <span class="math inline">\(x_0\)</span>라고 하자. 금기 말에 생산물 벡터를 <span class="math inline">\(x_1\)</span>이라고 하면, 아래의 관계가 성립한다.</p>
+<p><span class="math display">\[
+x_0 = A x_1
+\]</span></p>
+<p>보통 함수를 적을 때 왼쪽에 산출을 오른쪽에 투입을 적어서 약간 의아할 수 있다. 하지만,</p>
+<p><span class="math display">\[
+A = [A_1, \dotsc, A_i, \dotsc, A_n]
+\]</span></p>
+<p><span class="math inline">\(A_i\)</span>는 <span class="math inline">\(A\)</span>의 컬럼 벡터를 나타난다. <span class="math inline">\(a_{ij}\)</span>는 <span class="math inline">\(j\)</span> 한단위를 생산하기 위해 필요한 투입 <span class="math inline">\(i\)</span>를 나타낸다. 따라서,</p>
+<p><span class="math display">\[
+Ax = a_1 x_1 + \dotsb + a_i x_i + \dotsb + a_n x_n
+\]</span></p>
+<p>는 <span class="math inline">\(x_i\)</span>를 얻기 위해 필요한 투입 벡터들의 선형결합으로 이해하면 쉽다. 따라서 <span class="math inline">\(x_0 = A x_1\)</span>이 성립한다. 이제 <span class="math inline">\(x_0\)</span>가 <span class="math inline">\(g\)</span>의 성장률로 성장한다고 하자. 즉, <span class="math inline">\(x_0 = (1+g) x_0\)</span>이다. 이를 정리해서 쓰면 다음과 같다.</p>
+<p><span class="math display">\[
+A x_0 = \dfrac{1}{1+g} x_0
+\]</span></p>
+<p>이때 <span class="math inline">\(\dfrac{1}{1+g}\)</span>는 아이겐밸류, <span class="math inline">\(x_0\)</span>는 아이겐벡터임을 알 수 있다. <span class="math inline">\(A\)</span>가 생산적 행렬이기 때문에 아이겐밸류는 <span class="math inline">\([0,1)\)</span> 사이에 존재하게 된다. 따라서, <span class="math inline">\(g = \dfrac{1}{\lambda}-1 &gt; 0\)</span>로 성장하게 된다.</p>
+</section>
+<section id="equilibrium-price" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="equilibrium-price">Equilibrium price</h3>
+<p>투입계수 행렬이 <span class="math inline">\(A\)</span>인 경제를 생각하자. 각 재화를 생산하는 기업의 이윤율이 모두 <span class="math inline">\(\pi\)</span>로 동일하다고 하자. 이때 가격 백터 <span class="math inline">\(p = [p_1, \dotsc, p_n]^T\)</span>가 균형 가격이 되기 위한 조건은 무엇일까? 우선 <span class="math inline">\(i\)</span> 기업의 이윤을 따져보자. <span class="math inline">\(i\)</span> 기업이 생산물 1 단위를 생산하기 위해 필요한 원자재는 (<span class="math inline">\(i\)</span> 자신의 물건을 포함해) <span class="math inline">\(n\)</span> 개이고 그 각각 필요량은 <span class="math inline">\(a_{1i}, \dotsc, a_{ni}\)</span>가 된다. 이들을 시장가격 <span class="math inline">\(p_\cdot\)</span>으로 조달해와야 하므로 1단위당 원자재의 가격은 <span class="math inline">\(a_{1i} p_1 + \dotsc + a_{ni} p_n\)</span>이 된다. 이제 원료 가격에 마크업 <span class="math inline">\(\pi\)</span>를 붙이면 이것이 해당 기업이 설정한 균형 가격이 된다. 즉,</p>
+<p><span class="math display">\[
+p_i = (1+\pi)(a_{1i} p_1 + \dotsc + a_{ni} p_n)
+\]</span></p>
+<p>이를 행렬로 나타나면 다음과 같다.</p>
+<p><span class="math display">\[
+p = (1 + \pi) A^T p
+\]</span></p>
+<p>위 식에서 <span class="math inline">\(p\)</span>는 <span class="math inline">\(A^T\)</span>의 아이겐벡터이고 균등 이윤과 해당 아이겐밸류는 다음과 같다.</p>
+<p><span class="math display">\[
+\dfrac{1}{1+\pi} = \lambda_{\rm pf}
+\]</span></p>
+<p>아이겐벡터는 스케일링이 가능하다. 즉, 가격 벡터는 다루기 편한 방식으로 정규화화면 된다.[^1]</p>
+
+
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>통상적인 경우 임의의 재화 하나의 가격을 1로 둔다. 이런 재화를 단위재(numeraire)라고 부른다.</p>
+</div></div></section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

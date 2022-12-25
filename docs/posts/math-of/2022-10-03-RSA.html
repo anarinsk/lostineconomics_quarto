@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JS HUHH">
+<meta name="dcterms.date" content="2022-10-03">
+<meta name="description" content="나놈을 위한 RSA 정리">
+
+<title>lostineconomics.com - RSA, Simply Explained</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">lostineconomics.com</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Junsok Huhh</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/anarinsk"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/anarinsk"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">RSA, Simply Explained</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">math-of</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    나놈을 위한 RSA 정리
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>JS HUHH </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 3, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">tl; dr</h2>
+<ul>
+<li>RSA 알고리즘을 쉽게 풀어보자.</li>
+</ul>
+</section>
+<section id="왜" class="level2">
+<h2 class="anchored" data-anchor-id="왜">왜?</h2>
+<p>한글로 된 책이나 블로그 등에 RSA가 제법 많이 소개되어 있다. 하지만 대체로 개념 혹은 전체적인 그림 정도의 설명이 많았고, 알고리즘을 구체적으로 해설하는 경우는 드물더라. 적어도 보안 관련 지식에 일천한 수준에 있는 나는 그렇게 느꼈다. 조금 친절하게 소개된 내용을 두루 찾다가 아래 두 개의 위키를 찾았다. 나중에 까먹을 나 놈을 위해서 내용을 간단히 정리해두도록 하곘다.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+References
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="https://brilliant.org/wiki/eulers-totient-function/">Euler’s Totient Function | Brilliant Math &amp; Science Wiki</a></li>
+<li><a href="https://brilliant.org/wiki/rsa-encryption/">RSA Encryption | Brilliant Math &amp; Science Wiki</a></li>
+</ul>
+</div>
+</div>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 49.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="https://ds055uzetaobb.cloudfront.net/brioche/uploads/JO18nrj1mE-rsa-encryption.png" class="lightbox" title="수신자는 발송자에게 상자와 열쇠를 보낸다. 해당 열쇠는 수신자의 개인 키로만 열 수 있다." data-gallery="quarto-lightbox-gallery-1"><img src="https://ds055uzetaobb.cloudfront.net/brioche/uploads/JO18nrj1mE-rsa-encryption.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">수신자는 발송자에게 상자와 열쇠를 보낸다. 해당 열쇠는 수신자의 개인 키로만 열 수 있다.</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 2.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 49.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="https://miro.medium.com/max/1400/0*yeF86NncRejLnXJz.png" class="lightbox" title="보안의 맥락에서 생각하면 이렇다." data-gallery="quarto-lightbox-gallery-2"><img src="https://miro.medium.com/max/1400/0*yeF86NncRejLnXJz.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">보안의 맥락에서 생각하면 이렇다.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>비대칭 암호의 핵심은 공개 키로 어떤 메시지 혹은 내용을 암호화를 하고 이를 개인 키를 통해서 풀 수 있게 (복호화)하는 것이다. 개인 키는 해당 개인만 보유하고 관리하면 된다. 따라서 암호화와 복호화에 필요한 키를 모두 공유해야 하는 대칭 암호 체계에 비해 비대칭 암호가 보안에 우수하다.</p>
+<p>만일 암호화를 수행해서 공개 키를 불특정 다수에게 전달하고 개인 키를 갖는 쪽이 sender(센더)면 이는 ’전자 서명’이다. 반대로 receiver(리시버)가 공개 키를 배포하고 자신이 개인 키를 보유한다면, 이는 암호화 기반 메시지 전달이다. 동전의 양면 처럼 동일한 개념이므로 여기서는 후자, 즉 암호화 메시지 교환을 다루도록 하겠다.</p>
+</section>
+<section id="개념" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="개념">개념</h2>
+<p>RSA 알고리즘의 핵심은 소수의 활용 그리고 오일러 정리다. 필요한 개념 몇 가지 미리 정리하고 가자.</p>
+<section id="euler-phi-function" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="euler-phi-function">Euler <span class="math inline">\(\phi\)</span> function</h3>
+<p>오일러 피 함수(Euler totient function), <span class="math inline">\(\phi(n)\)</span>, 은 <span class="math inline">\(n\)</span>까지의 정수 중에서 <span class="math inline">\(n\)</span>와 서로소(coprime)인 정수 집합의 크기를 나타낸다. 오일러 피 함수에 관해서 아래와 같은 내용이 성립함을 확인하자.</p>
+<ol type="1">
+<li>만일 <span class="math inline">\(p\)</span>가 소수일 때, <span class="math inline">\(\phi(p) = p-1\)</span>가 성립한다. <span class="math inline">\(p\)</span>가 소수라면 정의상 <span class="math inline">\(1, \dotsc, p-1\)</span>의 모든 수와 <span class="math inline">\(p\)</span>는 서로소가 된다.</li>
+<li>만일 <span class="math inline">\(p,q\)</span>가 서로소이면, <span class="math inline">\(\phi (pq) = \phi(p) \phi(q)\)</span>. 증명이 간단하지 않으니 일단 받아들이자.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>증명은 <a href="https://brilliant.org/wiki/eulers-totient-function/">여기</a>를 참고하자.</p>
+</div></div></section>
+<section id="euler-theorem" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="euler-theorem">Euler theorem</h3>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+오일러 정리
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(n\)</span>이 양의 정수라고 하고, <span class="math inline">\(a\)</span>와 <span class="math inline">\(n\)</span>은 서로소라고 하자. 이때 아래의 관계가 성립한다.</p>
+<p><span class="math display">\[
+a^{\phi(n)} \equiv 1~(\text{mod } n)
+\]</span></p>
+</div>
+</div>
+<p>즉, 오일러 정리는 <span class="math inline">\(n\)</span>에 관한 오일러 피 함수와 <span class="math inline">\(n\)</span>의 나머지 연산 간에 매우 편리한 관계를 보여준다. 오일러 정리애 관한 증명 역시 생략한다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>증명은 <a href="https://brilliant.org/wiki/eulers-theorem/">여기</a>를 참고하자. 증명이 몹시 난해한 것은 아니다.</p>
+</div></div></section>
+</section>
+<section id="step-by-step" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="step-by-step">Step by Step</h2>
+<p>여기서는 암호화를 수행하는 쪽이 리시버인 상황을 상정해서 설명하겠다. 리시버는 나에게 온 메시지가 나에게 온 것이 맞는지 그리고 메시지를 나만 볼 수 있는지가 염려된다. 이를 보장하기 위해서 리시버는 아래와 같은 과정을 통해서 공개 키 정보를 대중에게 제공한다.</p>
+<ol type="1">
+<li>리시버는 <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span> 두 개의 (상대적으로 큰) 소수를 생성한다. 값은 필요한 만큼 커야 한다. <span class="math inline">\(p \cdot q=n\)</span>이 된다. <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span>는 당연히 비공개 정보여야 한다. 하지만 <span class="math inline">\(n\)</span>은 공개 키가 된다. <span class="math inline">\(n\)</span>으로부터 <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span>를 찾는 것은 단순 무식한 작업(brute force)을 요하고, 그래서 암호로서 기능할 수 있다.</li>
+<li><span class="math inline">\(\phi(n) = \phi (pq) = (p-1) (q-1)\)</span> 이 성립한다. 만일 <span class="math inline">\(\phi(n)\)</span>을 알고 있으면 <span class="math inline">\(p+q\)</span>을 알게 된다. <span class="math inline">\(pq=n\)</span>을 알고 있으므로 이차 방정식을 풀면 <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span>를 알게 된다. 따라서 <span class="math inline">\(\phi(n)\)</span>은 비공개 정보다. 오일러 피 함수에 해당하는 공개 키를 만들기 위해서 <span class="math inline">\(\phi(n)\)</span>과 서로소인 <span class="math inline">\(e\)</span>를 하나 생성하도록 하자. 대신 이 녀석이 공개 키가 된다.</li>
+<li><span class="math inline">\(\phi(n)\)</span>의 나머지 연산에 대해서 <span class="math inline">\(d e = 1\)</span>을 만족하는 <span class="math inline">\(d\)</span>를 구하자. 이 녀석이 비밀 키가 된다.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="math inline">\(\phi(pq) = \phi(p)\phi(q)\)</span>가 성립한다. <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span>는 각각 소수이므로 <span class="math inline">\(\phi(p)=p-1\)</span>, <span class="math inline">\(\phi(q)=q-1\)</span>이다. 한편, <span class="math inline">\(e\)</span>는 대체로 공개 키의 크기 역할을 한다. 따라서 <span class="math inline">\(2^{16}+1\)</span>이 자주 사용된다.</p>
+</div></div><p>이제 공개 키와 비밀키를 한번 나누어 써보도록 하자.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">secret</th>
+<th style="text-align: center;">public</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(p, q\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(n\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\phi(n), d\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(e\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>리시버는 공개 키 <span class="math inline">\(n\)</span>, <span class="math inline">\(e\)</span>를 일반에게 공개한 상태다.</p>
+<ol start="4" type="1">
+<li>이 리시버에게 메시지를 보내고자 하는 센더는 자신의 메시지 <span class="math inline">\(m\)</span>을 공개 키 <span class="math inline">\(e\)</span>를 통해 암호화한다. 이 과정은 별게 아니다. 메시지 혹은 메시지의 해시값에 <span class="math inline">\(e\)</span> 승을 한 값에 <span class="math inline">\(n\)</span>의 나머지 연산을 적용한다. 즉,</li>
+</ol>
+<p><span class="math display">\[
+c \equiv m^e ~ (\text{mod } n)
+\]</span></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<ol type="1">
+<li>아래에서 보듯이 <span class="math inline">\(n\)</span>이 너무 크면 나머지 연산이 제대로 적용되지 않는다. 또한 <span class="math inline">\(e\)</span>의 값이 너무 크면 계산 과정이 길고 복잡해진다.</li>
+<li>메시지를 메시지 자체라고 생각할 필요는 없다. 메시지의 해시값이라고 생각하면 암호화의 대상이 되는 메시지는 원 메시지보다 훨씬 짧을 수 있다. 리시버와 센더가 맞춰봐야 하는 것은 해당 해시값이다.</li>
+</ol>
+</div></div><ol start="5" type="1">
+<li>리시버는 암호화된 메시지를 받은 후에 여기에 <span class="math inline">\(d\)</span> 승을 하고 모드 연산 <span class="math inline">\(n\)</span>을 적용한다. 즉,</li>
+</ol>
+<p><span class="math display">\[
+c^d \equiv m~(\text{mod } n)
+\]</span></p>
+<p>위에 보는 것처럼 두 번의 모드 연산에서 센더는 <span class="math inline">\(n\)</span>, <span class="math inline">\(e\)</span>의 공개된 정보(공개 키)만을 활용했고, 리시버는 복호화 과정에서 자신이 갖고 있는 정보, 개인 키 <span class="math inline">\(d\)</span>를 활용했다.</p>
+<section id="증명" class="level3">
+<h3 class="anchored" data-anchor-id="증명">증명</h3>
+<p>오일러 정리를 활용하면 위 연산을 쉽게 증명할 수 있다.</p>
+<ol type="1">
+<li>오일러 정리에 따르면, <span class="math inline">\(m^{\phi(n)} \equiv 1~(\text{mod } n)\)</span>이 성립한다.</li>
+<li>우리는 <span class="math inline">\(d\)</span>와 <span class="math inline">\(e\)</span>를 고를 때 <span class="math inline">\(d e \equiv 1~(\text{mod }\phi(n))\)</span>이 되도록 골랐다. 따라서 <span class="math inline">\(de = k \phi(n) + 1\)</span>이 되는 적절한 <span class="math inline">\(k\)</span>가 존재한다는 뜻이다.</li>
+</ol>
+<p>이를 정리하면,</p>
+<p><span class="math display">\[
+\begin{aligned}
+m^{de} &amp; \equiv m^{k \phi(n)+1} \\
+&amp; \equiv m^{k \phi(n)} m \\
+&amp; \equiv (m^\phi(n))^k m \\
+&amp; \equiv 1^k m  ~(\text{mod } n)
+\end{aligned}
+\]</span></p>
+<p>공개 키인 <span class="math inline">\(n\)</span>과 <span class="math inline">\(e\)</span>를 생성하는 과정에서 해당 정보만으로는 암호화에 동원된 <span class="math inline">\(p, q, \phi (pq), d\)</span>를 알아내기 힘들다. 단순 계산 이외에는 달리 방법이 없고, 이것이 암호화가 의도하는 것이다.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","loop":true,"openEffect":"zoom"});</script>
+
+
+
+</body></html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JS HUHH">
+<meta name="dcterms.date" content="2019-07-18">
+<meta name="description" content="기하학적으로 내적을 살펴보자.">
+
+<title>lostineconomics.com - Dot Product with Geometry</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">lostineconomics.com</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Junsok Huhh</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/anarinsk"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/anarinsk"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Dot Product with Geometry</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">math-simple</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    기하학적으로 내적을 살펴보자.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>JS HUHH </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 18, 2019</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script><section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
+<ul>
+<li>닷 프로덕트 혹은 내적을 기하적으로 이해하면 여러모로 편리하고 기억에도 잘 남는다.</li>
+</ul>
+</section>
+<section id="definition" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="definition">Definition</h2>
+<p>dot product는 내적이라고도 번역하지만 여기서는 닷 프로덕트로 쓰기로 하겠다. 먼저 정의부터 살펴보자.</p>
+<p><span class="math display">\[
+\mathbf{u}=\left[u_{1}, {u}_{2}, \ldots, {u}_{n}\right] \in {\mathbb R}^n
+\]</span></p>
+<p><span class="math display">\[
+\mathbf{v}=\left[{v}_{1}, {v}_{2}, \ldots, {v}_{n}\right] \in {\mathbb R}^n
+\]</span></p>
+<p><span class="math display">\[
+\mathbf{u} \cdot \mathbf{v} = \sum_{n} u_i v_i
+\]</span></p>
+<p>쉽게 말해서 닷 프로덕트는 차원이 같은 두 개의 인풋 벡터를 하나의 스칼라로 바꿔주는 일종의 함수로 이해할 수 있다. 두 개의 벡터를 서로 연관 짓는데 이를 해당 벡터의 길이라는 정보로 압축한다고 보면 얼추 맞을 듯 싶다. 하나의 숫자로 요약된다는 뜻에서 스칼라 프로덕트라고도 불린다. 그림으로 나타내면 아래와 같다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/perpendicularprojection.jpg?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption"><span class="math inline">\(\mathbf v\)</span>를 <span class="math inline">\(\mathbf u\)</span>로 프로젝션한다. <span class="math inline">\(\mathbf u\)</span>는 스크린, <span class="math inline">\(\mathbf v\)</span>는 투영체라고 생각하면 좋다.</figcaption><p></p>
+</figure>
+</div>
+<section id="from-definition-to-geometry" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="from-definition-to-geometry">From Definition to Geometry</h3>
+<p>닷 프로덕트에 관한 설명은 정의에서 바로 코사인 법칙으로 넘어간다. 하지만 뭔가 분명하지 않다. 이걸 조금 더 풀어보자.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_components.png.webp" class="my-figure7 img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">닷 프로덕트, 내적의 계산법</figcaption><p></p>
+</figure>
+</div>
+<p>위 그림은 <span class="math inline">\(2 \times 2\)</span> 벡터의 닷 프로덕트를 각 요소로 분해한 것이다. 이중에서 <span class="math inline">\(\dfrac{\pi}{2}\)</span> 각을 이루고 있는 벡터는 서로 곱하면 0이 된다. 따라서 닷 프로덕트 계산에서는 <span class="math inline">\(a_x b_x\)</span>와 <span class="math inline">\(a_y b_y\)</span>가 남게 된다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_rotation.png.webp" class="my-figure7 img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption"><span class="math inline">\(\cos\theta\)</span> 그리고 닷 프로덕트</figcaption><p></p>
+</figure>
+</div>
+<p>닷 프로덕트란 길이만 문제가 되므로 두 벡터를 한 방향으로 정렬하자.이렇게 되면, 파란색 높이가 <span class="math inline">\(0\)</span>이 된다. 따라서 위 그림과 같은 코사인 법칙이 쉽게 도출된다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>그림에서 보듯이 벡터를 회전해도 닷 프로덕트의 크기가 변하지 않을까? <a href="https://math.stackexchange.com/posts/947928/revisions">여기</a>서 보듯이 임의의 각도 <span class="math inline">\(\theta\)</span>로 회전해도 닷 프로덕트의 크기는 변하지 않는다.</p>
+</div></div></section>
+<section id="symmetry" class="level3">
+<h3 class="anchored" data-anchor-id="symmetry">Symmetry</h3>
+<p><span class="math inline">\(\mathbf{v}\)</span> 벡터를 <span class="math inline">\(\mathbf u\)</span> 벡터 위에, 즉 <span class="math inline">\(\mathbf u\)</span> 벡터를 스크린로 삼아 직각으로 쏜 <span class="math inline">\(\mathbf v\)</span>의 프로젝션 벡터 <span class="math inline">\(\mathrm{Proj}_{\mathbf u} {\mathbf v}\)</span>의 길이와 <span class="math inline">\(\mathbf u\)</span> 길이를 곱하면 그것이 <span class="math inline">\(\mathbf u\)</span>와 <span class="math inline">\(\mathbf v\)</span>의 닷 프로덕트가 된다. 어느 벡터로 프로젝션 하는지는 관계가 없다. 즉,</p>
+<p><span class="math display">\[
+{\mathbf v} \cdot {\mathbf u} = \Vert \mathbf u \Vert \Vert {\rm Proj}_{\mathbf u} {\mathbf v} \Vert =  \Vert \mathbf u \Vert (\Vert \mathbf v \Vert \cos\theta)
+\]</span></p>
+<p><span class="math display">\[
+{\mathbf u} \cdot {\mathbf v} = \Vert \mathbf v \Vert \Vert {\rm Proj}_{\mathbf v} {\mathbf u} \Vert = \Vert \mathbf v \Vert (\Vert \mathbf u \Vert \cos\theta)
+\]</span></p>
+<p>다시 보면, 닷 프로덕트의 정의상 <span class="math inline">\({\mathbf v} \cdot {\mathbf u} = {\mathbf u} \cdot {\mathbf v}\)</span>인 셈이다. 닷 프로덕트는 어떻게 도출하는가? 그 기하학적인 구조는 무엇인가?</p>
+</section>
+</section>
+<section id="with-law-of-cosine" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="with-law-of-cosine">With ‘Law of Cosine’</h2>
+<p>코사인 법칙을 활용해서 닷 프로덕트를 도출할 수 있다. 맨 처음 그림에서 보듯이 벡터 <span class="math inline">\(\mathbf u - \mathbf v\)</span>와 <span class="math inline">\(\mathbf u\)</span>, <span class="math inline">\(\mathbf v\)</span>는 삼각형을 이룬다. 따라서 코사인 법칙에 따라서 아래와 같이 적을 수 있다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><a href="https://math.stackexchange.com/questions/116133/how-to-understand-dot-product-is-the-angles-cosine">여기</a>를 참고 했다. <a href="https://en.wikipedia.org/wiki/Law_of_cosines">Law of Cosine</a>도 참고하자.</p>
+</div></div><p><span class="math display">\[
+\lVert \mathbf u -  \mathbf v \rVert^2 = \lVert  \mathbf  u \rVert^2 + \lVert   \mathbf  v \rVert^2 - 2\lVert  \mathbf  u \rVert \lVert   \mathbf  v \rVert \cos \theta
+\]</span></p>
+<p>노름(norm, 길이)에 대해서는 대칭과 쌍방선형이 유지되기 때문에 아래와 같이 쓸 수 있다.</p>
+<p><span class="math display">\[
+\lVert  \mathbf u -  \mathbf v \rVert^2 = ( \mathbf u -  \mathbf v) \cdot ( \mathbf u -  \mathbf v ) = \lVert \mathbf u \rVert^2 +  \lVert \mathbf v \rVert^2 - 2  (\mathbf u \cdot \mathbf v)
+\]</span></p>
+<p>따라서</p>
+<p><span class="math display">\[
+\mathbf u \cdot  \mathbf v = \lVert \mathbf u \rVert \lVert \mathbf v \rVert   \cos \theta = \lVert \mathbf u \rVert   ( \lVert \mathbf v \rVert \cos \theta) = \lVert \mathbf u \rVert \rVert \text{Proj}_{\mathbf u} \mathbf v \lVert
+\]</span></p>
+<p>한편 반대로 <span class="math inline">\(\mathbf u\)</span>에서 <span class="math inline">\(\mathbf v\)</span>로 프로젝션하는 경우를 생각해 볼 수도 있겠다.</p>
+<p><span class="math display">\[
+\mathbf u \cdot  \mathbf v = \lVert \mathbf u \rVert \lVert \mathbf v \rVert   \cos \theta = \lVert \mathbf v \rVert   ( \lVert \mathbf u \rVert \cos \theta) = \lVert \mathbf v \rVert \rVert \text{Proj}_{\mathbf v} \mathbf u \lVert
+\]</span></p>
+<p>닷 프로덕트로 둘 중 어느 쪽을 써도 좋다.</p>
+</section>
+<section id="applications" class="level2">
+<h2 class="anchored" data-anchor-id="applications">Applications</h2>
+<section id="cosine-similarity" class="level3">
+<h3 class="anchored" data-anchor-id="cosine-similarity">Cosine similarity</h3>
+<p>두 개의 벡터가 얼마나 유사한지를 나타내는 지표로 코사인 유사도라는 게 있다. 위에서 보듯이 두 개의 벡터(<span class="math inline">\(\mathbf v, \mathbf u\)</span>)가 이루는 각 <span class="math inline">\(\theta\)</span>의 코사인 값은 다음과 같다.</p>
+<p><span class="math display">\[
+\cos \theta = \dfrac{\mathbf u \cdot \mathbf v}{\lVert \mathbf u \rVert \lVert \mathbf v \rVert}
+\]</span></p>
+<p>두 벡터가 가까울수록 코사인 값이 1에 가깝게 될 것이고, 멀수록 -1에 가깝게 될 것이다. 이른바 코사인 유사도는 이 값의 크기를 따른다. 벡터로 표현된 두 대상 사이의 유클리드 거리와 무관하게 지향하는 방향에 따른 유사도를 측정할 때 이 값을 쓴다.</p>
+</section>
+<section id="hyperplane" class="level3">
+<h3 class="anchored" data-anchor-id="hyperplane">Hyperplane</h3>
+<p>닷 프로덕트를 이해하고 있으면 기하학 문제를 쉽게 풀 수 있는 게 많다. 가장 좋은 예가 초평면(hyperplane)이다. 예를 들어 3차원 공간에서 점 <span class="math inline">\(\mathbf{x}^0 = (x_1^0, x_2^0, x_3^0)\)</span>를 지나면서 벡터 <span class="math inline">\(\mathbf{p} = (p_1, p_2, p_3)\)</span>에 수직인 평면을 찾고 있다고 하자. 복잡해보이지만 닷 프로덕트를 활용하면 쉽게 풀린다. 즉,</p>
+<p><span class="math display">\[
+\mathbf{p} \cdot (\mathbf{x} - \mathbf{x}^0) = 0
+\]</span></p>
+<p>평면 <span class="math inline">\(\mathbf x\)</span>가 <span class="math inline">\(\mathbf{x}^0\)</span>를 지나는 것은 분명하다. 이 평면이 <span class="math inline">\(\mathbf{p}\)</span>에 수직이라는 것은 두 벡터의 닷 프로덕트가 0이 되면 된다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/hyperplane.jpg?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">벡터 <span class="math inline">\(\mathbf p\)</span>와 직교하는 하이퍼플레인 찾기</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="appendix-geometrically" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="appendix-geometrically">Appendix: Geometrically</h2>
+<p>기하적으로 도출하는 보다 복잡한 방법도 있다. 이해를 돕기 위해서 2차원 벡터공간으로 한정해서 논의하겠다. <span class="math inline">\(n\)</span> 차원으로 확대하는 것이 수학적으로 어렵지는 않다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>보다 상세한 내용은 <a href="https://www.youtube.com/watch?v=LyGKycYT2v0&amp;t=610s">여기</a>를 참고하라.</p>
+</div></div><p>일단 <span class="math inline">\(\mathbf u\)</span>가 길이 1로 표준화된 벡터라고 정의를 살짝 바꾸겠다. 즉, 새로운 <span class="math inline">\(\mathbf u\)</span>는 <span class="math inline">\(\rVert \mathbf u \lVert\)</span>로 <span class="math inline">\(\mathbf u\)</span>를 나눈 벡터다. 아래 그림처럼 이 벡터를 향해서 2차원 평면의 기저를 구성하는 <span class="math inline">\((1,0)(\equiv i)\)</span>과 <span class="math inline">\((0,1)(\equiv j)\)</span>에서 벡터로 프로젝션을 해보자.</p>
+<p>이렇게 프로젝션을 하면 프로젝션된 지점의 <span class="math inline">\(x\)</span> 좌표는 공교롭게도 원점에서부터 해당 프로젝션된 지점까지의 벡터의 길이가 된다. <span class="math inline">\(y\)</span>에 대해서도 마찬가지다.</p>
+<p><img src="https://github.com/anarinsk/public_writing/blob/master/assets/images/dot_1.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><img src="https://github.com/anarinsk/public_writing/blob/master/assets/images/dot_2.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p>이제 (1,1)에서 벡터 <span class="math inline">\(\mathbf u\)</span>로 프로젝션을 해보자. (1,1)은 각각 두 개의 기저를 1의 가중치로 선형결합한 벡터다. 이 벡터의 프로젝션의 길이는 어떻게 구성될까? 그림에서 보듯이 <span class="math inline">\(u_x + u_y\)</span>가 된다. 이를 일반적인 논리로 확장해보자. 어떤 임의의 벡터 <span class="math inline">\(\mathbf v(=(x,y))\)</span>가 존재할 때 해당 벡터는 각각 두 개의 기저의 선형 결합으로 이해할 수 있다.</p>
+<p><img src="https://github.com/anarinsk/public_writing/blob/master/assets/images/dot_3.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p>따라서 <span class="math inline">\(\mathbf v\)</span> 벡터를 <span class="math inline">\(\mathbf u\)</span>로 프로젝션한 길이는 다음과 같다.</p>
+<p><span class="math display">\[
+\underset{\mathbf u 프로젝션}{\left[\begin{array}{ll}{u_{x}} &amp; { u_{y}}\end{array}\right]}\left[\begin{array}{l}{x} \\ {y}\end{array}\right]= u_{x} \cdot x + u_{y} \cdot y = \mathbf u \cdot \mathbf v
+\]</span></p>
+<p>벡터를 기저의 선형결합을 통해 나타낼 수 있듯이, 벡터의 프로젝션의 길이 역시 비슷한 방식의 선형결합을 동원해서 나타낼 수 있다. 앞서 <span class="math inline">\(\mathbf u\)</span>가 표준화된 벡터라고 했다. 따라서 원래대로 돌려 놓으면 닷 프로덕트는 프로젝션된 지점까지의 벡터의 거리와 해당 벡터의 길이의 곱이 된다. 즉,</p>
+<p><span class="math display">\[
+\mathbf u \cdot \mathbf v = \rVert \mathbf u \lVert \rVert \text{Proj}_{\mathbf u} \mathbf v \lVert
+\]</span></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

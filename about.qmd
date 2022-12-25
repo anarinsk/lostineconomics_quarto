@@ -1,0 +1,44 @@
+---
+title: "Junsok Huhh"
+image: "profile-3.png"
+about:
+  template: trestles
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/anarinsk
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/jun-sok-huhh-bb539a19/
+    - icon: github
+      text: Github
+      href: https://github.com/anarinsk
+---
+
+#### Who am I?
+
+허준석 Junsok Huhh | Ph.D. in Economics <br>
+Currently works as a data scientist (Pangyo, South Korea).
+
+---
+
+안녕하세요. 허준석의 블로그입니다. 쓸데 없고 목적 없는 블로그입니다. 뭐라도 도움이 되면 좋겠습니다. 이 블로그는 네번째 버전입니다. 이전 블로그의 역사는 아래 "History of lostineconomics.com"에서 확인하실 수 있습니다. 
+
+블로그의 이름 "lost in economics"는 현재 저의 처지와 같습니다. 경제학에서 길을 잃었지만 여전히 그 안에 빠져 있습니다. 블로그는 [Quarto](https://quarto.org)로 제작되었고, 페이지 호스팅은 [Github Pages](https://pages.github.com/)를 이용합니다.
+
+Hi, I'm Junsok Huhh. If you are interested in me, check my c.v. and contact. The blog name, "lost in economics" has double-edge meaning. In one way, I lost my way in economics, but I am still finding a way in it. This blog is serviced by [Quarto](https://quarto.org/) and [Github Pages](https://pages.github.com/).
+
+---
+
+#### C.V. 
+[Brief](https://anarinsk.github.io/markdown-cv/) | [Long](https://anarinsk.github.io/markdown-cv-long/)
+
+---
+
+#### History of lostineconomics.com 
+- [v3](https://anarinsk.github.io/lostineconomics_quarto/) built with [Quarto](https://quarto.org/) and [Github Pages](https://pages.github.com/) ⛧⛧⛧
+- [v2](https://anarinsk.github.io/lostineconomics-v2-1/) built with [fastpages](https://github.com/fastai/fastpages) and [Github Pages](https://pages.github.com/)
+- [v1](https://anarinsk.github.io/lostineconomics-v1/) built with markdown and [Github](https://www.github.com/)
+- [v0](https://lostineconomics.netlify.com/) built with [BlogDown](https://bookdown.org/yihui/blogdown) and [Github Pages](https://pages.github.com/)
+
+🐈 🐈 🐈  일러스트는 [최진영](https://www.instagram.com/jychoioioi/) 작가의 2021년 일력에 실린 작품입니다.

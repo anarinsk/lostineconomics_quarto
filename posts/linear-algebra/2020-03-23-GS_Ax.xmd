@@ -1,0 +1,305 @@
+---
+
+layout: post
+toc: false
+comments: true
+title: Following Gilbert Strang 5
+description: 연립방정식의 이해 
+categories: [math, matrix-theory, gilbert-strang]
+
+---
+
+## Sources
+
+[Solving Ax = 0: Pivot Variables, Special Solutions](https://youtu.be/VqP2tREMvt0)
+
+[Solving Ax = b: Row Reduced Form R](https://youtu.be/9Q1q7s1jTzU)
+
+
+## Homogeneous System
+
+$$
+\mathbf A x = 0
+$$
+
+- 결론부터 말하면, 
+
+$$
+\mathbf A \to \mathbf R =
+\begin{bmatrix}
+\mathbf I_{r \times r} & | & \mathbf  F_{r \times (n-r)} \\
+\mathbf 0_{(m-r) \times r} & | & \mathbf 0_{(m-r) \times (n-r)}
+\end{bmatrix}
+$$
+
+- Homogeneous system이므로 augmentation이 필요 없다. 
+- RREF(Row Reduced Echelon Form) 매트릭스 
+	- Echelon Form이란 계단식을 생각하면 좋겠다. 한국에서는 사다리꼴이라고 번역한다. 
+
+### Example 
+
+$$
+\mathbf A =
+\begin{bmatrix}
+1 & 2 & 3 \\
+2 & 4 & 6 \\
+2 & 6 & 8 \\
+2 & 8 & 10 \\
+\end{bmatrix}
+$$
+
+- $\mathbf A x = 0$를 만족하는 $x \neq \mathbf 0$를 구하는 것이다. 
+- G-J 과정을 적용해보자. 
+
+$$
+\begin{bmatrix}
+1 & 2 & 3 \\
+2 & 4 & 6 \\
+2 & 6 & 8 \\
+2 & 8 & 10 \\
+\end{bmatrix} \overset{\text{2 * 1'st - others}}{\longrightarrow} 
+\begin{bmatrix}
+1 & 2 & 3 \\
+0 & 0 & 0 \\
+0 & 2 & 2 \\
+0 & 4 & 4 \\
+\end{bmatrix}  \overset{\text{2 * 3'rd - 4'th}}{\longrightarrow}\\
+\vphantom{x} \\
+\begin{bmatrix}
+1 & 2 & 3 \\
+0 & 0 & 0 \\
+0 & 2 & 2 \\
+0 & 0 & 0 \\
+\end{bmatrix} 
+\overset{\text{2'nd$\leftrightarrow$ 3'rd}}{\longrightarrow}
+\begin{bmatrix}
+1 & 2 & 3 \\
+0 & 2 & 2 \\
+0 & 0 & 0 \\
+0 & 0 & 0 \\
+\end{bmatrix} \overset{\text{1'st - 2'nd}}\longrightarrow \\
+\vphantom{x}\\
+\begin{bmatrix}
+1 & 0 & 1 \\
+0 & 2 & 2 \\
+0 & 0 & 0 \\
+0 & 0 & 0 \\
+\end{bmatrix} \overset{\text{$\frac{1}{2}$*2'nd}}\longrightarrow
+\begin{bmatrix}
+1 & 0 & 1 \\
+0 & 1 & 1 \\
+0 & 0 & 0 \\
+0 & 0 & 0 \\
+\end{bmatrix}
+$$
+
+- 마지막 매트릭스를 보자. $x_1$, $x_2$은 피봇 변수다. 그리고 $x_3$는 free variable이다. 즉, 어떤 것이 와도 된다. 
+- 위 시스템의 $r = 2$. 
+- 일단 free variable로 1을 넣어보자. 즉, $x_3  = 1$
+	- 왜 free variable을 0으로 넣지 않을까? 0을 넣으면 $x_1 = x_2 = 0$의 trivial case가 된다. 
+	- 이를 각각 $x_1 + x_3 = 0$, $x_2 + x_3 = 0$에 넣어 해를 구할 수 있다. 즉, $x_1 = x_2 = -1$
+- 일반화하면, $x = c[-1~-1~~1]^T$이다. 
+
+### Generalization 
+
+- 마지막 매트릭스를 보자. 
+
+$$
+\mathbf R = 
+\begin{bmatrix}
+\mathbf I_{2 \times 2} & | & \mathbf F_{2 \times (3-2)} \\
+\mathbf 0_{(4-2) \times 2} & | & \mathbf 0_{(4-2) \times (3-2)}
+\end{bmatrix}
+$$
+
+$\mathbf R x = \mathbf 0$ &rarr; 
+
+$$
+\begin{bmatrix}
+\mathbf I_{2 \times 2} & | & \mathbf F_{2 \times 1}
+\end{bmatrix} 
+\begin{bmatrix}
+x_{\rm pivot} \\
+-- \\
+x_{\rm free} 
+\end{bmatrix}  + \mathbf 0 = \mathbf 0 
+$$
+
+$x_{\rm pivot}  = -\mathbf F x_{\rm free}$
+
+## Non-homogeneous System 
+
+- equation representation은 생략하자. 
+
+$$
+\begin{bmatrix}
+1 & 2 & 2 & 2 & | & b_1\\
+2 & 4 & 6 & 8 & | & b_2\\
+3 & 6 & 8 & 10 & | & b_3
+\end{bmatrix} \\
+\sim
+$$
+
+$$
+\begin{bmatrix}
+1 & 2 & 2 & 2 & | & b_1\\
+0 & 0 & 2 & 4 & | & b_2 - 2b_1\\
+0 & 0 & 0 & 0 & | & b_3 - b_2 - b_1
+\end{bmatrix} 
+$$
+
+### Checked 
+
+- 1'st, 3'rd 컬럼이 피봇 컬럼이다. 
+-  $b_3 - b_2 - b_1 = 0$을 만족해야 solvable. 
+
+Solvability condition on $b$
+
+$\mathbf A x = b$ is solvable when $b$ is in $\mathcal C (\mathbf A)$
+
+### Complete solution 
+
+- particular solution($x^p$)과 special solution($x^s$)의 합.
+	- $\mathbf A x_p = b$
+	- $\mathbf A x_s = 0$
+- $\mathbf A x = b$일 때 $\mathbf A$가 생성하는 $\mathcal N(\mathbf A)$는 언제나 $\mathbf A x = 0$를 만족한다. 따라서, 
+
+$$
+\mathbf A (x_p + x_s) = b
+$$
+
+- 이제 $b = [1~5~6]^T$이라고 두고 문제를 풀 것이다. 
+
+#### Particular solution 
+
+- free variable을 다 0으로 두자. 
+- $x_1 + 2 x_3 = 1$, $2 x_3 = 3$ &rarr; $x_1 = -2$, $x_3 = 3/2$
+
+$$
+x_p = 
+\begin{bmatrix}
+-2 \\
+0 \\
+3/2 \\
+0
+\end{bmatrix} 
+$$
+
+#### Special solution 
+
+- $x_2$, $x_4$는 free variable이고 $\mathcal N (\mathbf A)$에 속한다. 따라서 얘네들은 일종의 basis로 생각하면 좋다. 따라서 좋은 방법은 $(x_2, x_4) = (1,0)$ 그리고 $(x_2, x_4) = (0,1)$로 두는 것이다. 그리고 $x_1$, $x_3$를 찾는다. 
+
+$$
+x_{\rm complete} = 
+\begin{bmatrix}
+-2 \\
+0 \\
+3/2 \\
+0
+\end{bmatrix} + 
+c_1
+\begin{bmatrix}
+\text O \\
+1 \\
+\text O \\
+0
+\end{bmatrix} + 
+c_2
+\begin{bmatrix}
+\text O \\
+0 \\
+\text O \\
+1
+\end{bmatrix} 
+$$
+
+해는 
+
+$$
+x_{\rm complete} = 
+\begin{bmatrix}
+-2 \\
+0 \\
+3/2 \\
+0
+\end{bmatrix} + 
+\underbrace{
+c_1
+\begin{bmatrix}
+-2 \\
+1 \\
+0 \\
+0
+\end{bmatrix} + 
+c_2
+\begin{bmatrix}
+2 \\
+0 \\
+-2 \\
+1
+\end{bmatrix}
+}_{\mathcal N(\mathbf A)}
+$$
+
+### General case 
+
+#### $m \times n$ matrix of $\mathbf A$ of full column rank
+
+- $r = n$
+- There is no free variable $\leftrightarrow$ $\mathcal N (\mathbf A) = 0$
+- $x = x_p$ 은 유일해다. 
+- $x_p$가 존재하지 않는다면, 해는 없다.  
+
+#### Example 
+
+$$
+\mathbf A =
+\begin{bmatrix}
+1 & 3 \\
+2 & 1 \\
+6 & 1 \\
+5 & 1
+\end{bmatrix}
+$$
+
+$r(\mathbf A)=2$
+
+$$
+\mathbf R =
+\begin{bmatrix}
+1 & 0 \\
+0 & 1 \\
+0 & 0 \\
+0 & 0
+\end{bmatrix}
+$$
+
+#### $m \times n$ matrix of $\mathbf A$ of full row rank
+
+- $r = m$
+- $\mathbf A^T$의 컬럼을 보면 되겠다.  
+- 자유 변수의 숫자는 $m - n(r)$
+
+$$
+\mathbf A^T =
+\begin{bmatrix}
+1 & 2 & 6 &5 \\
+3 & 1 &1 & 1
+\end{bmatrix}
+$$
+
+$$
+\mathbf R =
+\begin{bmatrix}
+1 & 0 & | & \text{free} \\
+0 & 1 & | & \text{var}
+\end{bmatrix}
+$$
+
+#### $n \times n$ matrix $\mathbf A$ of full columan (and row) rank 
+
+- 생각해보라!
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjA4MzkxNzcwNiwtMjk3MjI1MzIsMjA4Mz
+k4MDc0NF19
+-->
