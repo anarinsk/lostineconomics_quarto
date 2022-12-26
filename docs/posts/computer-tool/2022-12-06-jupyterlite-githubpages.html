@@ -259,8 +259,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>두 가지 방법 모두 소프트웨어를 어딘가에 까는 과정이 포함된다.</p>
 <p>가끔은 ’공통 환경’이 필요할 때가 있다. 강의나 구현물의 시현을 해야 한다면 동일한 결과를 얻는 것이 필요하다. 결과물을 얻은 컴퓨터를 사용하거나 원격 접속을 설정하지 않고 이러한 수준의 공동 환경을 만들 수 있을까? 즉 <code>.ipynb</code>, <code>.py</code> 등의 파일을 교환하는 수준을 넘어선 ’호환성’을 게으르고 편리하게 보장할 수 있을까?</p>
 <p>만일 웹 브라우저만 구동해서 이 공통 환경을 빠르게 만들어낼 수 있다면 어떨까? 이를 실현한 것이 <a href="https://github.com/jupyterlite">jupyterLite</a>이다.</p>
-<p>주피터 라이트는 가벼운 노트북 환경을 구현하는 것을 목표로 한다. 이 녀석은 아직 시험 단계의 프로젝트지만 많은 주목을 받고 있다. 이때 ’가벼운 노트북’이란 주피터 환경을 구현하는 데 있어 웹 브라우저와 단순한 스태틱 웹 페이지 이외에 어떤 것도 필요하지 않다는 뜻이다.</p>
-<p>웹어셈블리(WASM)로 구현된 파이썬 인터프리터를 통해서 브라우저만 있으면 아주 단순한 웹 페이지 하나로 주피터 라이트가 파이썬과 주피터(IDE)의 마법을 부린다. 원래 주피터 노트북이라는 녀석이 서버-클라이언트를 전제로 만들어진 것인데, 여기서 서버가 빠진 가벼운 변종이 주피터라이트다.</p>
+<p>주피터라이트는 가벼운 노트북 환경을 구현하는 것을 목표로 한다. 이 녀석은 아직 시험 단계의 프로젝트지만 많은 주목을 받고 있다. 이때 ’가벼운 노트북’이란 주피터 환경을 구현하는 데 있어 웹 브라우저와 단순한 스태틱 웹 페이지 이외에 어떤 것도 필요하지 않다는 뜻이다.</p>
+<p>웹어셈블리(WASM)로 구현된 파이썬 인터프리터를 통해서 브라우저만 있으면 아주 단순한 웹 페이지 하나로 주피터라이트가 파이썬과 주피터(IDE)의 마법을 부린다. 원래 주피터 노트북이라는 녀석이 서버-클라이언트를 전제로 만들어진 것인데, 여기서 서버가 빠진 가벼운 변종이 주피터라이트다.</p>
 <section id="패키지-설치" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="패키지-설치">패키지 설치</h3>
 <p>여기까지 들으면 ‘웹 브라우저에서 도는 것은 좋은데 패키지 설치는 가능해?’ 라고 묻고 싶어질 터. 답부터 말하면, 가능하지만 전부 가능한 것은 아니다. ’일반적’으로 많이 쓰는 패키지인 pandas, numpy, scipy, scikit-learn 등은 거의 주피터라이트 위에 쉽게 올라간다. 대단한 복잡도를 지닌 앱이 아니라 개념을 입증하는 프로토타입 특히 교육용으로 주피터를 쓰려는 용도라는 주피터라이트로 충분하다.</p>
@@ -273,7 +273,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="github-pages" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="github-pages">Github Pages</h2>
-<p>이제 이렇게 만들어진 페이지를 웹을 통한 전달할 경로가 필요하다. 만일 별도로 서버를 복잡하게 세팅해야 한다면 주피터 라이트의 장점도 거의 사라질 것이다.</p>
+<p>이제 이렇게 만들어진 페이지를 웹을 통한 전달할 경로가 필요하다. 만일 별도로 서버를 복잡하게 세팅해야 한다면 주피터라이트의 장점도 거의 사라질 것이다.</p>
 <p>웹어셈블리는 css, js만 사용한다. 이는 스태틱 웹을 통해서도 주피터라이트가 돌아간다는 의미이다. 그리고 스태틱 웹을 호스팅하는 현존하는 가장 저렴하고 편리한 방식은 GitHub Pages다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -356,7 +356,7 @@ Code Tips
 </div></div></section>
 <section id="커널-관련updated" class="level3">
 <h3 class="anchored" data-anchor-id="커널-관련updated">커널 관련(updated)</h3>
-<p>꼭 xeus-python을 써야 하나 싶다. Python의 네트워크 관련 명령들이 <a href="https://github.com/koenvo/pyodide-http">pyodide-http</a> 패키지로 거의 완전하게 해결이 된다. 이 패키지는 기존 명령어를 주피터 라이트에 맞게 패치한다. 아래 코드를 참고하자.</p>
+<p>꼭 xeus-python을 써야 하나 싶다. Python의 네트워크 관련 명령들이 <a href="https://github.com/koenvo/pyodide-http">pyodide-http</a> 패키지로 거의 완전하게 해결이 된다. 이 패키지는 기존 명령어를 주피터라이트에 맞게 패치한다. 아래 코드를 참고하자.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install <span class="op">-</span>q pyodide<span class="op">-</span>http</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyodide_http </span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>pyodide_http.patch_all() <span class="co"># 기존 http 관련 명령어 패치 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
