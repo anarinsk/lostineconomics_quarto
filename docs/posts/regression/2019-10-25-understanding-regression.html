@@ -2,22 +2,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.38">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="JS HUHH">
 <meta name="dcterms.date" content="2019-10-25">
-<meta name="description" content="회귀분석, 기하학적으로 한 방에 깨우치기">
+<meta name="description" content="회귀 분석, 기하학적으로 한 방에 깨우치기">
 
 <title>lostineconomics.com - Understanding Regression</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -40,6 +45,9 @@ ul.task-list{list-style: none;}
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,31 +79,34 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="../../index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">lostineconomics.com</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">Junsok Huhh</a>
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Junsok Huhh</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/anarinsk"><i class="bi bi-github" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/anarinsk"><i class="bi bi-twitter" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
               <div class="quarto-toggle-container">
@@ -126,7 +137,7 @@ ul.task-list{list-style: none;}
 
 <div>
   <div class="description">
-    회귀분석, 기하학적으로 한 방에 깨우치기
+    회귀 분석, 기하학적으로 한 방에 깨우치기
   </div>
 </div>
 
@@ -146,6 +157,7 @@ ul.task-list{list-style: none;}
       <p class="date">October 25, 2019</p>
     </div>
   </div>
+  
     
   </div>
   
@@ -160,50 +172,87 @@ ul.task-list{list-style: none;}
   gtag('config', 'G-JNRF3S74Z4');
 </script><section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
+<section id="not-in-this-post" class="level3">
+<h3 class="anchored" data-anchor-id="not-in-this-post">Not in This Post</h3>
 <ul>
-<li>회귀분석을 선형 대수를 통해서 이해하면 새로운 깨달음을 얻을 수 있다.</li>
-<li>회귀분석이라는 것은 PCA와 마찬가지로 차원을 ’축소’하는 방법이다. <span class="math inline">\(n\)</span> 개의 관찰을 지닌 어떤 한 대상을 이보다 낮은 <span class="math inline">\(k(&lt;n)\)</span> 개의 변수로 요약하는 것이 핵심이다.</li>
-<li>선형대수로 보면 <span class="math inline">\(\mathrm R^2\)</span> 공식은 피타고라스 정리의 흔한 응용 사례이며, 코사인 유사도와 거의 같은 개념이다.</li>
+<li>회귀 분석에 관한 미주알 고주알</li>
 </ul>
+</section>
+<section id="what-in-this-post" class="level3">
+<h3 class="anchored" data-anchor-id="what-in-this-post">What in This Post</h3>
+<ul>
+<li>선형 대수를 통해 회귀 분석을 이해하면 새로운 깨달음을 얻을 수 있다.</li>
+</ul>
+</section>
 </section>
 <section id="regression-in-vector-space" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="regression-in-vector-space">Regression in vector space</h2>
-<p>여기서 회귀분석을 해설할 생각은 없다. 이미 너무나 많은 그리고 매우 훌륭한 내용들이 책, 웹, 강의로 넘쳐날테니까. 이 글의 용도는 그림 하나로 지나치기 쉬운 회귀분석의 ’핵심’을 살피는 것이다. <a href="https://stats.stackexchange.com/questions/123651/geometric-interpretation-of-multiple-correlation-coefficient-r-and-coefficient">crossvalidated</a>에서 아래 그림을 보는 순간 일종의 ’돈오돈수’가 강림했다. (이렇게 이해하면 쉬웠을 것을…)</p>
-<div class="quarto-figure quarto-figure-center">
+<p>여기서 회귀 분석을 해설할 생각은 없다. 이미 너무나 많은 그리고 매우 훌륭한 내용들이 책, 웹, 강의로 넘쳐날테니까. 이 글의 용도는 그림 하나로 지나치기 쉬운 회귀 분석의 ’핵심’을 살피는 것이다. <a href="https://stats.stackexchange.com/questions/123651/geometric-interpretation-of-multiple-correlation-coefficient-r-and-coefficient">crossvalidated</a>에서 아래 그림을 보는 순간 일종의 ’돈오돈수’가 강림했다. (이렇게 이해하면 쉬웠을 것을…)</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
 <figure class="figure">
-<p><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p><a href="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="벡터 스페이스에 바라본 회귀 분석"><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">벡터 스페이스에 바라본 회귀 분석</figcaption><p></p>
 </figure>
 </div>
-<p><br> 먼저 우리에게 익숙한 회귀분석 모델을 매트릭스로 적어보자.</p>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>먼저 우리에게 익숙한 회귀 분석 모델을 매트릭스로 적어보자.</p>
 <p><span class="math display">\[
 \underset{n \times 1}{\phantom{\mathbf \gamma}\mathbf{Y}\phantom{\mathbf \gamma}} = \underset{n \times k}{\phantom{\mathbf \gamma} \mathbf{X} \phantom{\mathbf \gamma} }\underset{k \times 1}{\boldsymbol \beta} + \underset{n \times 1}{\phantom{\boldsymbol \beta} \mathbf \varepsilon \phantom{\mathbf \gamma} }
 \]</span></p>
-<p>식에 관한 자세한 설명 역시 생략한다. 대충 <span class="math inline">\(n\)</span> 개의 관찰 수과 <span class="math inline">\(k\)</span> 개의 regressor를 지닌 중회귀분석 모형이라고 생각하면 되겠다. 앞서 본 그림은 보통 회귀분석의 예시로 많이 활용되는 아래 그림과는 다르다.</p>
+<p>식에 관한 자세한 설명 역시 생략한다. 대충 <span class="math inline">\(n\)</span> 개의 관찰 수과 <span class="math inline">\(k\)</span> 개의 regressor를 지닌 중회귀 분석 모형이라고 생각하면 되겠다. 앞서 본 그림은 보통 회귀 분석의 예시로 많이 활용되는 아래 그림과는 다르다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>흔히 <span class="math inline">\(\mathbf Y\)</span>를 종속변수, <span class="math inline">\(\mathbf X\)</span>를 독립변수로 부르기도 한다. 하지만 이러한 이름에는 혼란의 여지가 있다. 여기서는 regressor, regressand라는 영어 표현을 그대로 쓰도록 하겠다.</p>
-</div></div><div class="quarto-figure quarto-figure-center">
+</div></div><div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
 <figure class="figure">
-<p><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p><a href="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="독립변수 1개인 회귀 분석"><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">독립변수 1개인 회귀 분석</figcaption><p></p>
 </figure>
 </div>
-<p><br> 위 그림은 1개의 regressor가 존재할 때 이것과 regressand를 그대로 2차원 평면에 관찰 수만큼 찍은 것이다. 첫번째 그림에서 “Observed Y”는 점 하나가 <span class="math inline">\(n\)</span> 개의 regressand를 모두 포괄한다. <span class="math inline">\(\mathbf{Y} \in {\mathbb R}^{n}\)</span> 벡터, 즉 <span class="math inline">\(n\)</span> 차원 벡터이고, 이것이 회귀식 좌변의 관찰값 <span class="math inline">\(n\)</span> 개를 표현한다.</p>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>위 그림은 1개의 regressor가 존재할 때 이것과 regressand를 그대로 2차원 평면에 관찰 수만큼 찍은 것이다. 첫번째 그림에서 “Observed Y”는 점 하나가 <span class="math inline">\(n\)</span> 개의 regressand를 모두 포괄한다. <span class="math inline">\(\mathbf{Y} \in {\mathbb R}^{n}\)</span> 벡터, 즉 <span class="math inline">\(n\)</span> 차원 벡터이고, 이것이 회귀식 좌변의 관찰값 <span class="math inline">\(n\)</span> 개를 표현한다.</p>
 <p>이제 선형대수의 세계로 들어가보자. <span class="math inline">\(\mathbf X\)</span>의 열(column)이 각각 <span class="math inline">\(n\)</span> 개의 관찰 값을 지닌 regressor에 해당한다. 이 각각의 컬럼 <span class="math inline">\(x_i\)</span>는 <span class="math inline">\(x_i \in {\mathbb R}^{n}\)</span> 벡터이다. <span class="math inline">\(x_i\)</span> 벡터 <span class="math inline">\(k\)</span> 개가 생성할 수 있는 공간이 <span class="math inline">\(\mathbf X\)</span>의 열 공간(column space)이다. 앞으로 이를 col <span class="math inline">\(\mathbf X\)</span>로 표기하자.</p>
 <p>이렇게 생각하면 좋겠다. <span class="math inline">\(x_i \in {\mathbb R}^{n}\)</span> 벡터가 <span class="math inline">\(k(&lt;n)\)</span> 개 있다고 하자. 이는 <span class="math inline">\(n\)</span> 보다 차원이 낮기 때문에 기하학적으로는 <span class="math inline">\(n\)</span> 차원 공간에서 초평면(hyperplane)으로 나타날 것이다. 위 그림에서 컬럼 스페이스가 평면으로 표현되는 것은 이러한 취지다. 3차원 벡터의 열 공간이 생성하는 초평면을 예시하면 아래와 같다.</p>
-<div class="quarto-figure quarto-figure-center">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
 <figure class="figure">
-<p><img src="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="my-figure5 img-fluid figure-img"></p>
+<p><a href="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="2차원 컬럼 스페이스"><img src="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">2차원 컬럼 스페이스</figcaption><p></p>
 </figure>
 </div>
-<p><br> col <span class="math inline">\(\mathbf X\)</span>의 최대 차원, 즉 <span class="math inline">\(\mathbf X\)</span>의 랭크(위수)는 무엇일까? 회귀분석에서는 대체로 <span class="math inline">\(n &gt; k\)</span>가 일반적이고 이런 상황에서 <span class="math inline">\(\mathbf X\)</span>의 랭크는 <span class="math inline">\(k\)</span>를 넘을 수 없다. 다시 말하면, <span class="math inline">\(\mathbf X\)</span>가 생성하는(span)하는 컬럼 스페이스의 차원의 크기가 <span class="math inline">\(k\)</span>를 넘을 수 없다. 그리고 잘 된 회귀분석이라면 <span class="math inline">\({\rm rank}(\mathbf X) = k\)</span>를 만족한다.</p>
-<p>맨 앞에 제시했던 그림을 다시 보자. 아래 색칠된 평면이 <span class="math inline">\(\mathbf X\)</span>가 생성하는 컬럼 스페이스, 즉 col <span class="math inline">\(\mathbf X\)</span>를 표현하고 있다. 몹시 특별한 경우가 아니라면 <span class="math inline">\(\mathbf Y \in {\mathbb R}^{n}\)</span> 벡터가 col <span class="math inline">\(\mathbf X\)</span>에 속할 가능성은 없다. 그렇다면 회귀분석의 필요도 애초에 없었을 것이다. col <span class="math inline">\(\mathbf X\)</span>를 통해서 <span class="math inline">\(\mathbf Y\)</span>를 완벽하게 예측할 수 있는데 무슨 걱정이 있겠는가? 대체로 우리가 마주하는 상황은 <span class="math inline">\(n\)</span> 차원 벡터를 <span class="math inline">\(k\)</span> 차원 공간에 끼워 넣기 힘든 상황이다.</p>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>col <span class="math inline">\(\mathbf X\)</span>의 최대 차원, 즉 <span class="math inline">\(\mathbf X\)</span>의 랭크(위수)는 무엇일까? 회귀 분석에서는 대체로 <span class="math inline">\(n &gt; k\)</span>가 일반적이고 이런 상황에서 <span class="math inline">\(\mathbf X\)</span>의 랭크는 <span class="math inline">\(k\)</span>를 넘을 수 없다. 다시 말하면, <span class="math inline">\(\mathbf X\)</span>가 생성하는(span)하는 컬럼 스페이스의 차원의 크기가 <span class="math inline">\(k\)</span>를 넘을 수 없다. 그리고 잘 된 회귀 분석이라면 <span class="math inline">\({\rm rank}(\mathbf X) = k\)</span>를 만족한다.</p>
+<p>맨 앞에 제시했던 그림을 다시 보자. 아래 색칠된 평면이 <span class="math inline">\(\mathbf X\)</span>가 생성하는 컬럼 스페이스, 즉 col <span class="math inline">\(\mathbf X\)</span>를 표현하고 있다. 몹시 특별한 경우가 아니라면 <span class="math inline">\(\mathbf Y \in {\mathbb R}^{n}\)</span> 벡터가 col <span class="math inline">\(\mathbf X\)</span>에 속할 가능성은 없다. 그렇다면 회귀 분석의 필요도 애초에 없었을 것이다. col <span class="math inline">\(\mathbf X\)</span>를 통해서 <span class="math inline">\(\mathbf Y\)</span>를 완벽하게 예측할 수 있는데 무슨 걱정이 있겠는가? 대체로 우리가 마주하는 상황은 <span class="math inline">\(n\)</span> 차원 벡터를 <span class="math inline">\(k\)</span> 차원 공간에 끼워 넣기 힘든 상황이다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>이를 선형 대수에서 배운 연립방정식을 푸는 문제로 이해해도 좋겠다. <span class="math inline">\(A x = b(b \neq \mathbf{0})\)</span>라고 하자. <span class="math inline">\(n\)</span> 개의 미지수가 유일한 해를 지니고 위해서는 <span class="math inline">\({\rm rank}(A) = n\)</span>이어야 한다. 즉 서로 독립인 식이 <span class="math inline">\(n\)</span> 개 주어져야 고유의 해 <span class="math inline">\(x\)</span>를 찾을 수 있다. 그런데 회귀분석은 식이 <span class="math inline">\(k(&lt;n)\)</span> 개만 주어진 상황이다.</p>
-</div></div><p>회귀분석의 목표는 regressor를 통해서, 더 정확하게는 regressor의 집합이 생성하는 공간을 통해서 regressand를 ‘가장’ 잘 설명하는 것이다. 회귀분석이란 regressand와 ‘닮은’ 것 col <span class="math inline">\(\mathbf X\)</span>에서 찾는 것이다. 즉 <span class="math inline">\(\mathbf Y\)</span>와 닮은 무엇을 <span class="math inline">\(\mathbf X\)</span>의 컬럼 스페이스에 찾아야 한다. 직관적으로 쉽게 떠올릴 수 있는 것은 이 평면과 <span class="math inline">\(\mathbf Y\)</span>의 (유클리드) 거리를 가장 짧게 만들어주는 벡터일 것이다. 그리고 이 최단거리는 <span class="math inline">\(\mathbf Y\)</span>에서 <span class="math inline">\(\mathbf X\)</span> 컬럼 스페이스로 내린 수선의 발이 닿는 col <span class="math inline">\(\mathbf X\)</span>의 지점이다. col <span class="math inline">\(\mathbf X\)</span> 내에 있는 이런 지점을 찾는 연산자(operator)가 회귀분석 계수 <span class="math inline">\(\hat{\boldsymbol \beta}\)</span>이다. 즉,</p>
+<p>이를 선형 대수에서 배운 연립방정식을 푸는 문제로 이해해도 좋겠다. <span class="math inline">\(A x = b(b \neq \mathbf{0})\)</span>라고 하자. <span class="math inline">\(n\)</span> 개의 미지수가 유일한 해를 지니고 위해서는 <span class="math inline">\({\rm rank}(A) = n\)</span>이어야 한다. 즉 서로 독립인 식이 <span class="math inline">\(n\)</span> 개 주어져야 고유의 해 <span class="math inline">\(x\)</span>를 찾을 수 있다. 그런데 회귀 분석은 식이 <span class="math inline">\(k(&lt;n)\)</span> 개만 주어진 상황이다.</p>
+</div></div><p>회귀 분석의 목표는 regressor를 통해서, 더 정확하게는 regressor의 집합이 생성하는 공간을 통해서 regressand를 ‘가장’ 잘 설명하는 것이다. 회귀 분석이란 regressand와 ‘닮은’ 것 col <span class="math inline">\(\mathbf X\)</span>에서 찾는 것이다. 즉 <span class="math inline">\(\mathbf Y\)</span>와 닮은 무엇을 <span class="math inline">\(\mathbf X\)</span>의 컬럼 스페이스에 찾아야 한다. 직관적으로 쉽게 떠올릴 수 있는 것은 이 평면과 <span class="math inline">\(\mathbf Y\)</span>의 (유클리드) 거리를 가장 짧게 만들어주는 벡터일 것이다. 그리고 이 최단거리는 <span class="math inline">\(\mathbf Y\)</span>에서 <span class="math inline">\(\mathbf X\)</span> 컬럼 스페이스로 내린 수선의 발이 닿는 col <span class="math inline">\(\mathbf X\)</span>의 지점이다. col <span class="math inline">\(\mathbf X\)</span> 내에 있는 이런 지점을 찾는 연산자(operator)가 회귀 분석 계수 <span class="math inline">\(\hat{\boldsymbol \beta}\)</span>이다. 즉,</p>
 <p><span class="math display">\[
 \hat{\boldsymbol \beta} = ({\mathbf X}'{\mathbf X})^{-1} ({\mathbf X}' \mathbf Y)
 \]</span></p>
@@ -218,7 +267,7 @@ ul.task-list{list-style: none;}
 \end{aligned}
 \]</span></p>
 <p><span class="math inline">\(\hat{\boldsymbol \beta}\)</span>가 왠지 원래 식의 근사값으로 기능할 것 같지 않은가? (실제로 그렇다)</p>
-</div></div><p>이 연산자를 reggressor의 모음인 col <span class="math inline">\(\mathbf X\)</span>에 적용하면, <span class="math inline">\(\mathbf{X} \hat{\boldsymbol \beta} =\hat{\mathbf Y}\)</span>이 {X}’계산된다. 그림에서 보듯이 <span class="math inline">\(\hat{\mathbf Y}\)</span>은 <span class="math inline">\(\mathbf Y\)</span>와 col <span class="math inline">\(\mathbf X\)</span>의 거리를 최소화하는 위치에 존재한다. <span class="math inline">\(\hat{\mathbf Y}\)</span>는 어떤 벡터일까? <span class="math inline">\(\hat{\mathbf Y} \in {\mathbb R}^n\)</span> 벡터지만, col <span class="math inline">\(\mathbf X(\in {\mathbb R}^k)\)</span>내에 위치하고 있다. <span class="math inline">\(n\)</span> 차원이 <span class="math inline">\(k\)</span> 차원으로 축소된 셈이다. 이것이 회귀분석의 핵심이다.</p>
+</div></div><p>이 연산자를 reggressor의 모음인 col <span class="math inline">\(\mathbf X ([x_1, \dotsc, x_k])\)</span>에 적용하면, <span class="math inline">\(\mathbf{X} \hat{\boldsymbol \beta} =\hat{\mathbf Y}\)</span>이 산출된다. 그림에서 보듯이 <span class="math inline">\(\hat{\mathbf Y}\)</span>은 <span class="math inline">\(\mathbf Y\)</span>와 col <span class="math inline">\(\mathbf X\)</span>의 거리를 최소화하는 위치에 존재한다. <span class="math inline">\(\hat{\mathbf Y}\)</span>는 어떤 벡터일까? <span class="math inline">\(\hat{\mathbf Y} \in {\mathbb R}^n\)</span> 벡터지만, col <span class="math inline">\(\mathbf X(\in {\mathbb R}^k)\)</span>내에 위치하고 있다. <span class="math inline">\(n\)</span> 차원이 <span class="math inline">\(k\)</span> 차원으로 축소된 셈이다. 이것이 회귀 분석의 핵심이다.</p>
 <p>선형 대수의 관점에서 내용을 다시 음미해보자. <span class="math inline">\(x_i \in {\mathbb R}^n\)</span> (for <span class="math inline">\(i = 1, \dotsc, k\)</span>) 벡터의 리그레서 <span class="math inline">\(k\)</span> 개를 선형 결합해서 초평면의 한점, 즉 원래의 관찰 <span class="math inline">\(\mathbf Y\)</span>와 최소 거리를 지니는 벡터를 찾아야 한다. 이 거리를 최소화하는 <span class="math inline">\(\beta_i\)</span>를 알고 있다면 이 벡터는 다음과 같이 표현된다. <span class="math inline">\({\mathbf X} = [x_1, \dotsc, x_k]\)</span>일 때,</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -234,11 +283,21 @@ x_1 \beta_1 + \dotsc + x_k \beta_k
 \end{aligned}
 \]</span></p>
 <p>아래 그림을 참고하자.</p>
-<div class="quarto-figure quarto-figure-center">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
 <figure class="figure">
-<p><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/regression-vector_comb.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p><a href="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/regression-vector_comb.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="잔차의 의미"><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/regression-vector_comb.png?raw=true" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">잔차의 의미</figcaption><p></p>
 </figure>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
 </div>
 </section>
 <section id="r-squared-as-pythagorean-theorem" class="level2 page-columns page-full">
@@ -256,7 +315,7 @@ x_1 \beta_1 + \dotsc + x_k \beta_k
 <p><span class="math display">\[
 \underset{\text{TSS}}{\Vert \mathbf Y - \overline{\mathbf Y} \Vert^2} = \underset{\text{RSS}}{\Vert \mathbf Y - \hat{\mathbf Y} \Vert^2} + \underset{\text{ESS}}{\Vert \hat{\mathbf Y} - \overline{\mathbf Y} \Vert^2}
 \]</span></p>
-<p>흔한 피타고라스의 정리다. 그런데 이것 어디서 많이 보던 식이다. 회귀분석 배우면 언제나 나오는 식이다. Regressand의 평균과 관찰의 이른바 총 제곱의 합(TSS: Total Sum of Squares)은 설명된 제곱의 합(ESS: Explained Sum of Squares)과 잔차 제곱의 합(RSS:Residual Sum of Squares)와 같다. 대체로 복잡하게 소개되는 이 식이 기하학적으로 보면 그냥 피타고라스의 공식에 불과한 것이다.</p>
+<p>흔한 피타고라스의 정리다. 그런데 이것 어디서 많이 보던 식이다. 회귀 분석 배우면 언제나 나오는 식이다. Regressand의 평균과 관찰의 이른바 총 제곱의 합(TSS: Total Sum of Squares)은 설명된 제곱의 합(ESS: Explained Sum of Squares)과 잔차 제곱의 합(RSS:Residual Sum of Squares)와 같다. 대체로 복잡하게 소개되는 이 식이 기하학적으로 보면 그냥 피타고라스의 공식에 불과한 것이다.</p>
 <p>양변을 <span class="math inline">\(\Vert \mathbf Y - \overline{\mathbf Y} \Vert^2\)</span>으로 나누면 다음과 같다.</p>
 <p><span class="math display">\[
 1 =  \dfrac{\Vert \mathbf Y - \hat{\mathbf Y} \Vert^2}{\Vert \mathbf Y - \overline{\mathbf Y} \Vert^2} + \dfrac{\Vert \hat{\mathbf Y} - \overline{\mathbf Y} \Vert^2}{\Vert \mathbf Y - \overline{\mathbf Y} \Vert^2}
@@ -265,15 +324,15 @@ x_1 \beta_1 + \dotsc + x_k \beta_k
 <p><span class="math display">\[
   {\mathrm R}^2 = 1 - \dfrac{\text{RSS}}{\text{TSS}}
 \]</span></p>
-<p>사실 <span class="math inline">\(\textrm R^2\)</span>는 가끔 회귀분석의 성과 지표로 남용되는 경우가 있다. 이렇게 기하학적으로 보면 col <span class="math inline">\(\mathbf X\)</span> 내에 표현된 <span class="math inline">\(\hat{\mathbf Y}\)</span> 가 <span class="math inline">\(\mathbf Y\)</span>와 얼마나 가깝게 있는지를 <span class="math inline">\(\overline{\mathbf Y}\)</span>를 기준으로 지표화한 것에 불과하다.</p>
-<p><span class="math inline">\({\mathrm R}^2\)</span>는 회귀분석의 성과 지표로 어떤 의미가 있을까? 분석의 목표가 회귀분석을 통한 예측이라면, 즉 원래 관찰값과 예측된 값이 얼마나 떨어져 있는지 여부가 중요하다면 <span class="math inline">\(\textrm R^2\)</span>는 의미를 지닐 수 있다. 반면, 분석의 목표가 회귀분석을 통한 이러한 종류의 예측이 아니라 특정한 regressor의 인과관계에 관한 추정이라면, <span class="math inline">\(\textrm R^2\)</span>는 거의 무시해도 좋다.</p>
-<p>아울러 회귀분석이라는 이름을 달고 있지만 전형적인 회귀분석의 방법을 따르지 않는 기법에서 <span class="math inline">\(\textrm R^2\)</span>가 정의되지 않는 경우도 있다. 잘 알려진 로지스틱 회귀가 이에 해당한다. 로지스틱 회귀에서 회귀 계수의 추정은 여기서 봤듯이 관찰과 col <span class="math inline">\(\mathbf X\)</span> 사이의 거리를 최소화하는 방식이 아니라 우도(likelihood)를 극대화하는 방식을 따른다. 따라서 벡터 공간의 피타고라스 정리를 따르는 <span class="math inline">\(\textrm R^2\)</span>는 정의되지 않는다.</p>
+<p>사실 <span class="math inline">\(\textrm R^2\)</span>는 가끔 회귀 분석의 성과 지표로 남용되는 경우가 있다. 이렇게 기하학적으로 보면 col <span class="math inline">\(\mathbf X\)</span> 내에 표현된 <span class="math inline">\(\hat{\mathbf Y}\)</span> 가 <span class="math inline">\(\mathbf Y\)</span>와 얼마나 가깝게 있는지를 <span class="math inline">\(\overline{\mathbf Y}\)</span>를 기준으로 지표화한 것에 불과하다.</p>
+<p><span class="math inline">\({\mathrm R}^2\)</span>는 회귀 분석의 성과 지표로 어떤 의미가 있을까? 분석의 목표가 회귀 분석을 통한 예측이라면, 즉 원래 관찰값과 예측된 값이 얼마나 떨어져 있는지 여부가 중요하다면 <span class="math inline">\(\textrm R^2\)</span>는 의미를 지닐 수 있다. 반면, 분석의 목표가 회귀 분석을 통한 이러한 종류의 예측이 아니라 특정한 regressor의 인과관계에 관한 추정이라면, <span class="math inline">\(\textrm R^2\)</span>는 거의 무시해도 좋다.</p>
+<p>아울러 회귀 분석이라는 이름을 달고 있지만 전형적인 회귀 분석의 방법을 따르지 않는 기법에서 <span class="math inline">\(\textrm R^2\)</span>가 정의되지 않는 경우도 있다. 잘 알려진 로지스틱 회귀가 이에 해당한다. 로지스틱 회귀에서 회귀 계수의 추정은 여기서 봤듯이 관찰과 col <span class="math inline">\(\mathbf X\)</span> 사이의 거리를 최소화하는 방식이 아니라 우도(likelihood)를 극대화하는 방식을 따른다. 따라서 벡터 공간의 피타고라스 정리를 따르는 <span class="math inline">\(\textrm R^2\)</span>는 정의되지 않는다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>궁여지책으로 이와 유사한 지표를 만들어낼 수는 있겠다. <a href="https://thestatsgeek.com/2014/02/08/r-squared-in-logistic-regression">여기</a>를 참고하라.</p>
 </div></div></section>
-<section id="bonus-regression-vs-pca" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="bonus-regression-vs-pca">Bonus: Regression vs PCA</h2>
+<section id="곁눈질-regression-vs-pca" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="곁눈질-regression-vs-pca">곁눈질: Regression vs PCA</h2>
 <p>회귀 분석과 PCA는 어떻게 다른가? 여러가지 답이 있을 수 있다. 그걸 다 소개하겠다는 게 아니다. 둘이 데이터 모델링의 시야에서 어떻게 다른지를 살펴보는 게 이 글의 목적이다. 이 글은 둘을 어떻게 실행하는지를 다루지 않는다. 앞선 PCA 관련 <a href="https://anarinsk.github.io/lie-math_pca/">포스팅</a>을 읽고 오시면 이해에 도움이 될 것이다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -286,7 +345,7 @@ x_1 \beta_1 + \dotsc + x_k \beta_k
 </section>
 <section id="차원-축소" class="level4">
 <h4 class="anchored" data-anchor-id="차원-축소">차원 축소</h4>
-<p>흔히 PCA를 차원축소의 방법으로 이해하는데, 이 말은 맞다. 반대로 회귀분석은 이와 다르다고 이해하는 경우가 많은데 이 말은 틀리다. 회귀 분석도 어떻게 보면 ’차원 축소’다. 회귀 분석에서 target 변수는 <span class="math inline">\(n\)</span> 차원 공간 위의 주어진 한 점이다. 우리의 목표는 이 한 점을 잘 설명하는 더 낮은 차원의 어떤 지점을 찾는 것이다. 이런 점에서 본다면 회귀 분석 역시 차원 축소의 한 방법이라고 봐야 할 것이다.</p>
+<p>흔히 PCA를 차원축소의 방법으로 이해하는데, 이 말은 맞다. 반대로 회귀 분석은 이와 다르다고 이해하는 경우가 많은데 이 말은 틀리다. 회귀 분석도 어떻게 보면 ’차원 축소’다. 회귀 분석에서 target 변수는 <span class="math inline">\(n\)</span> 차원 공간 위의 주어진 한 점이다. 우리의 목표는 이 한 점을 잘 설명하는 더 낮은 차원의 어떤 지점을 찾는 것이다. 이런 점에서 본다면 회귀 분석 역시 차원 축소의 한 방법이라고 봐야 할 것이다.</p>
 </section>
 <section id="극소화" class="level4">
 <h4 class="anchored" data-anchor-id="극소화">극소화</h4>
@@ -376,6 +435,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         }
       }
     }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
   }
   const isFileUrl = () => { 
     return window.location.protocol === 'file:';
@@ -427,7 +496,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   // Switch to dark mode if need be
   if (hasAlternateSentinel()) {
     toggleColorMode(true);
-  } 
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -449,7 +520,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -477,35 +565,55 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":true,"selector":".lightbox"});</script>
 
 
 
