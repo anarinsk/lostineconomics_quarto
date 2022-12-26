@@ -195,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="벡터 스페이스에 바라본 회귀 분석"><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="img-fluid figure-img"></a></p>
+<p><a href="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="lightbox" title="벡터 스페이스에 바라본 회귀 분석" data-gallery="quarto-lightbox-gallery-1"><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">벡터 스페이스에 바라본 회귀 분석</figcaption><p></p>
 </figure>
 </div>
@@ -219,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="독립변수 1개인 회귀 분석"><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="img-fluid figure-img"></a></p>
+<p><a href="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="lightbox" title="독립변수 1개인 회귀 분석" data-gallery="quarto-lightbox-gallery-2"><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">독립변수 1개인 회귀 분석</figcaption><p></p>
 </figure>
 </div>
@@ -238,7 +238,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="2차원 컬럼 스페이스"><img src="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="img-fluid figure-img"></a></p>
+<p><a href="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="lightbox" title="2차원 컬럼 스페이스" data-gallery="quarto-lightbox-gallery-3"><img src="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">2차원 컬럼 스페이스</figcaption><p></p>
 </figure>
 </div>
@@ -284,8 +284,8 @@ x_1 \beta_1 + \dotsc + x_k \beta_k
 \]</span></p>
 <p>위의 벡터 스페이스 그림을 다시 한 번 노려보시라.</p>
 </section>
-<section id="r-squared-as-pythagorean-theorem" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="r-squared-as-pythagorean-theorem">R squared as Pythagorean Theorem</h2>
+<section id="rm-r2은-피타고라스-정리야" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="rm-r2은-피타고라스-정리야"><span class="math inline">\(\rm R^2\)</span>은 피타고라스 정리야!</h2>
 <p>이제 <span class="math inline">\(\mathrm R^2\)</span>의 의미를 살펴보자. 결론부터 이야기하면 <span class="math inline">\(\mathrm R^2\)</span>는 그림에서 <span class="math inline">\((\mathbf Y - \overline{\mathbf Y})\)</span> 벡터와 <span class="math inline">\((\hat{\mathbf Y}-\overline{\mathbf Y})\)</span> 벡터가 이루는 각의 코사인 값, 즉 <span class="math inline">\(\cos \theta\)</span>다. 잠깐! 왜 직접 거리를 재지 않고 코사인 값을 재는 것일까? 우리는 얼마나 가까운지를 판단하기 쉽지 않다. 그래서 가까운 정도를 상대적인 비율로 나타내면 좋을 것이다. 즉, regressor의 컬럼 스페이스에 위치한 <span class="math inline">\(\overline{\mathbf Y}\)</span>를 기준으로 거리를 재는 셈이다. 이렇게 측정된 상대적인 거리가 <span class="math inline">\(\cos \theta\)</span>이다. 이는 원점을 중심으로 두 벡터 사이의 코사인 값을 재는 코사인 유사도와 거의 같은 개념이다! 코사인 유사도란 길이가 서로 다른 두 벡터가 얼마나 비슷한지를 측정한다. 이를 응용하면 <span class="math inline">\(\mathrm R^2\)</span>란 관찰된 값(<span class="math inline">\(\mathbf Y\)</span>)과 피팅된 값(<span class="math inline">\(\mathbf {\hat Y}\)</span>)이 얼마나 비슷한지를 측정한다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -597,7 +597,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});</script>
 
 
 
