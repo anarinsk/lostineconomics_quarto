@@ -103,11 +103,7 @@ x_1 \beta_1 + \dotsc + x_k \beta_k
 \end{aligned}
 $$   
 
-아래 그림을 참고하자. 
-
-::: {layout="[[-20, 60, -20]]"}
-![잔차의 의미](https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/regression-vector_comb.png?raw=true){.my-figure5}
-:::
+위의 벡터 스페이스 그림을 다시 한 번 노려보시라. 
 
 ## R squared as Pythagorean Theorem 
 
