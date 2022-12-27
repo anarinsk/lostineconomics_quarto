@@ -64,7 +64,7 @@ col $\mathbf X$의 최대 차원, 즉 $\mathbf X$의 랭크(위수)는 무엇일
 이를 선형 대수에서 배운 연립방정식을 푸는 문제로 이해해도 좋겠다. $A x = b(b \neq \mathbf{0})$라고 하자. $n$ 개의 미지수가 유일한 해를 지니고 위해서는 ${\rm rank}(A) = n$이어야 한다. 즉 서로 독립인 식이 $n$ 개 주어져야 고유의 해 $x$를 찾을 수 있다. 그런데 회귀 분석은 식이 $k(<n)$ 개만 주어진 상황이다. 
 :::
 
-회귀 분석의 목표는 regressor를 통해서, 더 정확하게는 regressor의 집합이 생성하는 공간을 통해서 regressand를 '가장' 잘 설명하는 것이다. 회귀 분석이란 regressand와 '닮은' 것 col $\mathbf X$에서 찾는 것이다. 즉 $\mathbf Y$와 닮은 무엇을 $\mathbf X$의 컬럼 스페이스에 찾아야 한다. 직관적으로 쉽게 떠올릴 수 있는 것은 이 평면과 $\mathbf Y$의 (유클리드) 거리를 가장 짧게 만들어주는 벡터일 것이다. 그리고 이 최단거리는 $\mathbf Y$에서 $\mathbf X$ 컬럼 스페이스로 내린 수선의 발이 닿는 col $\mathbf X$의 지점이다. col $\mathbf X$ 내에 있는 이런 지점을 찾는 연산자(operator)가 회귀 분석 계수 $\hat{\boldsymbol \beta}$이다. 즉, 
+회귀 분석의 목표는 regressor를 통해서, 더 정확하게는 regressor의 열 공간이 생성하는 초 평면을 이용해서, regressand를 '가장' 잘 설명하는 무엇을 찾는 것이다. 즉 회귀 분석이란 regressand와 '닮은' 것을 col $\mathbf X$에서 찾는 것이다. 직관적으로 쉽게 떠올릴 수 있는 것은 이 평면과 $\mathbf Y$의 (유클리드) 거리를 가장 짧게 만들어주는 벡터일 것이다. 그리고 이 최단거리는 $\mathbf Y$에서 $\mathbf X$ 컬럼 스페이스로 내린 수선의 발이 닿는 col $\mathbf X$의 지점이다. col $\mathbf X$ 내에 있는 이런 지점을 찾는 연산자(operator)가 회귀 분석의 추정 계수 $\hat{\boldsymbol \beta}$이다. 즉, 
 
 $$
 \hat{\boldsymbol \beta} = ({\mathbf X}'{\mathbf X})^{-1} ({\mathbf X}' \mathbf Y)
@@ -85,7 +85,7 @@ $$
 $\hat{\boldsymbol \beta}$가 왠지 원래 식의 근사값으로 기능할 것 같지 않은가? (실제로 그렇다)  
 :::
 
-이 연산자를 reggressor의  모음인 col $\mathbf X ([x_1, \dotsc, x_k])$에 적용하면,  $\mathbf{X} \hat{\boldsymbol \beta}  =\hat{\mathbf Y}$이 산출된다. 그림에서 보듯이 $\hat{\mathbf Y}$은 $\mathbf Y$와 col $\mathbf X$의 거리를 최소화하는 위치에 존재한다. $\hat{\mathbf Y}$는 어떤 벡터일까? $\hat{\mathbf Y} \in {\mathbb R}^n$ 벡터지만, col $\mathbf X(\in {\mathbb R}^k)$내에 위치하고 있다. $n$ 차원이 $k$ 차원으로 축소된 셈이다. 이것이 회귀 분석의 핵심이다. 
+이 연산자를 reggressor의  모음인 col $\mathbf X$에 적용하면,  $\mathbf{X} \hat{\boldsymbol \beta}  =\hat{\mathbf Y}$이 산출된다. 그림에서 보듯이 $\hat{\mathbf Y}$은 $\mathbf Y$와 col $\mathbf X$의 거리를 최소화하는 위치에 존재한다. $\hat{\mathbf Y}$는 어떤 벡터일까? $\hat{\mathbf Y} \in {\mathbb R}^n$ 벡터지만, col $\mathbf X(\in {\mathbb R}^k)$내에 위치하고 있다. $n$ 차원이 $k$ 차원으로 축소된 셈이다. 이것이 회귀 분석의 기하적 핵심이다. 
 
 선형 대수의 관점에서 내용을 다시 음미해보자. $x_i \in {\mathbb R}^n$ (for $i = 1, \dotsc, k$) 벡터의 리그레서 $k$ 개를 선형 결합해서 초평면의 한점, 즉 원래의 관찰 $\mathbf Y$와 최소 거리를 지니는 벡터를 찾아야 한다. 이 거리를 최소화하는 $\beta_i$를 알고 있다면 이 벡터는 다음과 같이 표현된다. ${\mathbf X} = [x_1, \dotsc, x_k]$일 때, 
 
@@ -103,9 +103,9 @@ x_1 \beta_1 + \dotsc + x_k \beta_k
 \end{aligned}
 $$   
 
-위의 벡터 스페이스 그림을 다시 한 번 노려보시라. 
+위의 벡터 스페이스 그림을 다시 한 번 노려보시라. $\beta_i$는 col $\mathbf X$를 구성하는 벡터 $x_i$에 부여되는 가중치를 의미한다. 
 
-## $\rm R^2$은 피타고라스 정리야!
+## $\rm R^2$은 피타고라스 정리의 용용
 
 이제 $\mathrm R^2$의 의미를 살펴보자. 결론부터 이야기하면  $\mathrm R^2$는 그림에서 $(\mathbf Y - \overline{\mathbf Y})$ 벡터와 $(\hat{\mathbf Y}-\overline{\mathbf Y})$ 벡터가 이루는 각의 코사인 값, 즉 $\cos \theta$다. 잠깐! 왜 직접 거리를 재지 않고 코사인 값을 재는 것일까? 우리는 얼마나 가까운지를 판단하기 쉽지 않다. 그래서 가까운 정도를 상대적인 비율로 나타내면 좋을 것이다. 즉, regressor의 컬럼 스페이스에 위치한 $\overline{\mathbf Y}$를 기준으로 거리를 재는 셈이다. 이렇게 측정된 상대적인 거리가 $\cos \theta$이다. 이는 원점을 중심으로 두 벡터 사이의 코사인 값을 재는 코사인 유사도와 거의 같은 개념이다! 코사인 유사도란 길이가 서로 다른 두 벡터가 얼마나 비슷한지를 측정한다. 이를 응용하면  $\mathrm R^2$란 관찰된 값($\mathbf Y$)과 피팅된 값($\mathbf {\hat Y}$)이 얼마나 비슷한지를 측정한다. 
 
@@ -116,7 +116,7 @@ $$
 $\overline{\mathbf Y}$는 무엇일까? 포스팅의 맨 처음 보았던 그림과 같이 $\overline{Y} \mathbf{1}_n$로 표기할 수 있다. $\mathbf Y$의 평균값 $\overline{Y}$만으로 구성된 $(n \times 1)$ 벡터다. 이 벡터는 col $\mathbf X$ 안에 있을까? 당연히 그렇다. $\mathbf X$는 최대한 $k(<n)$ 차원의 벡터이고, $\overline{\mathbf Y}$는 1차원 벡터다.
 
 :::{.column-margin}
-왜 그런지 잠시 따져보자. 앞서 보았듯이 regressor의 평면은 $\alpha_1 x_1 + \dotsb + \alpha_k x_k$ 와 같은 형태의 선형 결합을 통해 달성된다. 즉, $\alpha_i$를 어떻게 잡는지에 따라서 $k$ 차원까지 이 식을 통해서 생성할 수 있다. 그런데 $\overline{\mathbf Y}$는 1차원 즉, 모든 원소가 $\overline{y}$, 즉 $y$의 평균이다. 따라서 이를 만족하는 $\alpha_i$(for $i = 1, \dotsc, k$)를 ${\rm col}~{\mathbf X}$에서 반드시 찾을 수 있다. 
+왜 그런지 잠시 따져보자. 앞서 보았듯이 regressor의 평면은 $\alpha_1 x_1 + \dotsb + \alpha_k x_k$ 와 같은 형태의 선형 결합을 통해 달성된다. 즉, $\alpha_i$를 어떻게 잡는지에 따라서 $k$ 차원까지 이 식을 통해서 생성할 수 있다. 그런데 $\overline{\mathbf Y}$는 1차원 즉, 모든 원소가 $\overline{y}$, 즉 $y$의 평균이다. 따라서 이를 만족하는 $\alpha_i$(for $i = 1, \dotsc, k$)를 ${\\rm col}~{\mathbf X}$에서 반드시 찾을 수 있다. 
 :::
 
 어쨌든 이 코사인 값의 의미는 무엇일까? 
