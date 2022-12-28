@@ -195,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="벡터 스페이스에 바라본 회귀 분석"><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="img-fluid figure-img"></a></p>
+<p><a href="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="lightbox" title="벡터 스페이스에 바라본 회귀 분석" data-gallery="quarto-lightbox-gallery-1"><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">벡터 스페이스에 바라본 회귀 분석</figcaption><p></p>
 </figure>
 </div>
@@ -219,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="독립변수 1개인 회귀 분석"><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="img-fluid figure-img"></a></p>
+<p><a href="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="lightbox" title="독립변수 1개인 회귀 분석" data-gallery="quarto-lightbox-gallery-2"><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">독립변수 1개인 회귀 분석</figcaption><p></p>
 </figure>
 </div>
@@ -238,7 +238,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="2차원 컬럼 스페이스"><img src="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="img-fluid figure-img"></a></p>
+<p><a href="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="lightbox" title="2차원 컬럼 스페이스" data-gallery="quarto-lightbox-gallery-3"><img src="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">2차원 컬럼 스페이스</figcaption><p></p>
 </figure>
 </div>
@@ -290,12 +290,11 @@ x_1 \beta_1 + \dotsc + x_k \beta_k
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>이런 면에서 보면, <span class="math inline">\(\mathrm R^2\)</span>에 코사인 유사도가 숨어 있는 셈이다. 두 벡터의 코사인 유사도란 개별 벡터가 지니고 있는 (유클리드) 길이와 관계 없이 벡터의 지향성을 중심으로 비슷한 정도를 파악하는 것이다. <span class="math inline">\(\mathrm R^2\)</span> 역시 마찬가지다.</p>
-</div></div><p><span class="math inline">\(\overline{\mathbf Y}\)</span>는 무엇일까? 포스팅의 맨 처음 보았던 그림과 같이 <span class="math inline">\(\overline{Y} \mathbf{1}_n\)</span>로 표기할 수 있다. <span class="math inline">\(\mathbf Y\)</span>의 평균값 <span class="math inline">\(\overline{Y}\)</span>만으로 구성된 <span class="math inline">\((n \times 1)\)</span> 벡터다. 이 벡터는 col <span class="math inline">\(\mathbf X\)</span> 안에 있을까? 당연히 그렇다. <span class="math inline">\(\mathbf X\)</span>는 최대한 <span class="math inline">\(k(&lt;n)\)</span> 차원의 벡터이고, <span class="math inline">\(\overline{\mathbf Y}\)</span>는 1차원 벡터다.</p>
+</div></div><p><span class="math inline">\(\overline{\mathbf Y}\)</span>는 무엇일까? 포스팅의 맨 처음 보았던 그림과 같이 <span class="math inline">\(\overline{Y} \mathbf{1}_n\)</span>로 표기할 수 있다. <span class="math inline">\(\mathbf Y\)</span>의 평균값 <span class="math inline">\(\overline{Y}\)</span>만으로 구성된 <span class="math inline">\((n \times 1)\)</span> 벡터다. 이 벡터는 col <span class="math inline">\(\mathbf X\)</span> 안에 있을까? 당연히 그렇다. <span class="math inline">\(\mathbf X\)</span>는 (이상적으로는) <span class="math inline">\(k(&lt;n)\)</span> 차원의 벡터이고, <span class="math inline">\(\overline{\mathbf Y}\)</span>는 1차원 벡터다. 따라서 col <span class="math inline">\(\mathbf X\)</span> 안 어딘가에 <span class="math inline">\(\overline{\mathbf Y}\)</span>이 있다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>왜 그런지 잠시 따져보자. 앞서 보았듯이 regressor의 평면은 <span class="math inline">\(\alpha_1 x_1 + \dotsb + \alpha_k x_k\)</span> 와 같은 형태의 선형 결합을 통해 달성된다. 즉, <span class="math inline">\(\alpha_i\)</span>를 어떻게 잡는지에 따라서 <span class="math inline">\(k\)</span> 차원까지 이 식을 통해서 생성할 수 있다. 그런데 <span class="math inline">\(\overline{\mathbf Y}\)</span>는 1차원 즉, 모든 원소가 <span class="math inline">\(\overline{y}\)</span>, 즉 <span class="math inline">\(y\)</span>의 평균이다. 따라서 이를 만족하는 <span class="math inline">\(\alpha_i\)</span>(for <span class="math inline">\(i = 1, \dotsc, k\)</span>)를 <span class="math inline">\({\\rm col}~{\mathbf X}\)</span>에서 반드시 찾을 수 있다.</p>
-</div></div><p>어쨌든 이 코사인 값의 의미는 무엇일까?</p>
-<p>그림에서 보듯이 세 개의 벡터가 직각삼각형을 이루고 있으므로 아래의 식이 성립한다.</p>
+<p>왜 그런지 잠시 따져보자. 앞서 보았듯이 regressor의 평면은 <span class="math inline">\(\alpha_1 x_1 + \dotsb + \alpha_k x_k\)</span> 와 같은 형태의 선형 결합을 통해 달성된다. 즉, <span class="math inline">\(\alpha_i\)</span>를 어떻게 잡는지에 따라서 <span class="math inline">\(k\)</span> 차원까지 이 식을 통해서 생성할 수 있다. 그런데 <span class="math inline">\(\overline{\mathbf Y}\)</span>는 1차원 즉, 모든 원소가 <span class="math inline">\(\overline{y}\)</span>, 즉 <span class="math inline">\(y\)</span>의 평균이다. 따라서 이를 만족하는 <span class="math inline">\(\alpha_i\)</span>(for <span class="math inline">\(i = 1, \dotsc, k\)</span>)를 <span class="math inline">\({\rm col}~{\mathbf X}\)</span>에서 반드시 찾을 수 있다.</p>
+</div></div><p>그렇다면 이 코사인 값의 의미는 무엇일까? 첫번째 그림에서 보듯이 세 개의 벡터가 직각삼각형을 이루고 있으므로 아래의 식이 성립한다.</p>
 <p><span class="math display">\[
 \underset{\text{TSS}}{\Vert \mathbf Y - \overline{\mathbf Y} \Vert^2} = \underset{\text{RSS}}{\Vert \mathbf Y - \hat{\mathbf Y} \Vert^2} + \underset{\text{ESS}}{\Vert \hat{\mathbf Y} - \overline{\mathbf Y} \Vert^2}
 \]</span></p>
@@ -308,9 +307,8 @@ x_1 \beta_1 + \dotsc + x_k \beta_k
 <p><span class="math display">\[
   {\mathrm R}^2 = 1 - \dfrac{\text{RSS}}{\text{TSS}}
 \]</span></p>
-<p>사실 <span class="math inline">\(\textrm R^2\)</span>는 가끔 회귀 분석의 성과 지표로 남용되는 경우가 있다. 이렇게 기하학적으로 보면 col <span class="math inline">\(\mathbf X\)</span> 내에 표현된 <span class="math inline">\(\hat{\mathbf Y}\)</span> 가 <span class="math inline">\(\mathbf Y\)</span>와 얼마나 가깝게 있는지를 <span class="math inline">\(\overline{\mathbf Y}\)</span>를 기준으로 지표화한 것에 불과하다.</p>
-<p><span class="math inline">\({\mathrm R}^2\)</span>는 회귀 분석의 성과 지표로 어떤 의미가 있을까? 분석의 목표가 회귀 분석을 통한 예측이라면, 즉 원래 관찰값과 예측된 값이 얼마나 떨어져 있는지 여부가 중요하다면 <span class="math inline">\(\textrm R^2\)</span>는 의미를 지닐 수 있다. 반면, 분석의 목표가 회귀 분석을 통한 이러한 종류의 예측이 아니라 특정한 regressor의 인과관계에 관한 추정이라면, <span class="math inline">\(\textrm R^2\)</span>는 거의 무시해도 좋다.</p>
-<p>아울러 회귀 분석이라는 이름을 달고 있지만 전형적인 회귀 분석의 방법을 따르지 않는 기법에서 <span class="math inline">\(\textrm R^2\)</span>가 정의되지 않는 경우도 있다. 잘 알려진 로지스틱 회귀가 이에 해당한다. 로지스틱 회귀에서 회귀 계수의 추정은 여기서 봤듯이 관찰과 col <span class="math inline">\(\mathbf X\)</span> 사이의 거리를 최소화하는 방식이 아니라 우도(likelihood)를 극대화하는 방식을 따른다. 따라서 벡터 공간의 피타고라스 정리를 따르는 <span class="math inline">\(\textrm R^2\)</span>는 정의되지 않는다.</p>
+<p>사실 <span class="math inline">\(\textrm R^2\)</span>는 가끔 회귀 분석의 성과 지표로 남용되는 경우가 있다. 이렇게 기하학적으로 보면 col <span class="math inline">\(\mathbf X\)</span> 내에 표현된 <span class="math inline">\(\hat{\mathbf Y}\)</span> 가 <span class="math inline">\(\mathbf Y\)</span>와 얼마나 가깝게 있는지를 <span class="math inline">\(\overline{\mathbf Y}\)</span>를 기준으로 지표화한 것에 불과하다. <span class="math inline">\({\mathrm R}^2\)</span>는 회귀 분석의 성과 지표로 어떤 의미를 지닐까? 분석의 목표가 회귀 분석을 통한 예측이라면, 즉 원래 관찰값과 예측된 값이 얼마나 떨어져 있는지 여부가 중요하다면 <span class="math inline">\(\textrm R^2\)</span>는 의미를 지닐 수 있다. 반면, 분석의 목표가 회귀 분석을 통한 이러한 종류의 예측이 아니라 특정한 regressor의 인과관계에 관한 추정이라면, <span class="math inline">\(\textrm R^2\)</span>는 거의 무시해도 좋다.</p>
+<p>아울러 회귀 분석이라는 이름을 달고 있지만 전형적인 회귀 분석의 방법을 따르지 않는 기법에서 <span class="math inline">\(\textrm R^2\)</span>가 정의되지 않는 경우도 있다. 잘 알려진 로지스틱 회귀가 이에 해당한다. 로지스틱 회귀에서 회귀 계수의 추정은 여기서 봤듯이 관찰과 col <span class="math inline">\(\mathbf X\)</span> 사이의 거리를 최소화하는 방식이 아니라 우도(likelihood)를 극대화하는 방식을 따른다. 따라서 벡터 공간의 최소 거리라는 개념에 기반한 <span class="math inline">\(\textrm R^2\)</span>를 로지스틱 회귀에서는 정의할 수 없다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>궁여지책으로 이와 유사한 지표를 만들어낼 수는 있겠다. <a href="https://thestatsgeek.com/2014/02/08/r-squared-in-logistic-regression">여기</a>를 참고하라.</p>
@@ -597,7 +595,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});</script>
 
 
 
