@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.38">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,10 +14,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -71,31 +76,34 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="../../index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">lostineconomics.com</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">Junsok Huhh</a>
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Junsok Huhh</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/anarinsk"><i class="bi bi-github" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/anarinsk"><i class="bi bi-twitter" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
               <div class="quarto-toggle-container">
@@ -146,6 +154,7 @@ ul.task-list{list-style: none;}
       <p class="date">November 10, 2019</p>
     </div>
   </div>
+  
     
   </div>
   
@@ -161,20 +170,20 @@ ul.task-list{list-style: none;}
 </script><section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <ul>
-<li>로짓 회귀는 우리가 알던 그 ’회귀’와는 조금 다르다.</li>
+<li>로짓 회귀는 우리가 알던 그 ’회귀’와 다르다!</li>
 <li>로짓 회귀는 아래와 같은 데이터 모형에 기반을 둔 추정법이다.</li>
 </ul>
 <p><span class="math display">\[
 \ln \dfrac{p(\boldsymbol{x_i})}{1-p(\boldsymbol{x_i})} =\boldsymbol{x_i}\boldsymbol{\beta}
 \]</span></p>
 <ul>
-<li>회귀식의 계수 <span class="math inline">\(\boldsymbol{\beta}\)</span>를 해석할 때 주의하자. 이를 통상적인 회귀분석의 계수(한계 효과)처럼 해석하려면 별도의 계산이 필요하다.</li>
+<li>회귀식의 계수 <span class="math inline">\(\boldsymbol{\beta}\)</span>를 해석할 때 주의하자. 이를 통상적인 회귀 분석의 계수(한계 효과)처럼 해석하려면 별도의 계산이 필요하다.</li>
 </ul>
 </section>
 <section id="로짓-회귀-제대로-알고-있나" class="level2">
 <h2 class="anchored" data-anchor-id="로짓-회귀-제대로-알고-있나">로짓 회귀, 제대로 알고 있나?</h2>
-<p>잘 알고 있다고 여기고 있지만 사실 잘 모르는 것이 있다. 로지스틱 회귀(logistic regression) 혹은 로짓 회귀가 그렇지 않을까? 요즘 기계 학습을 배우게 되면, 로짓 회귀는 첫 챕터에서그냥 쓱 지나치기 쉽다. 뒤에 소개될 랜덤 포레스트, SVM, 뉴럴넷 등이 더 진보된 방법으로 보이기 때문이다.</p>
-<p>로짓 회귀는 단순하면서도 강력한 방법이다. 필자는 분류(classification)의 문제에 접근할 때 로짓 회귀를 먼저 해볼 것을 권한다. 로짓 회귀에서 ’견적’이 나오면 그 질문 혹은 문제는 더 흥미로운 형태로 진화할 가능성이 높다. 반면 로짓 회귀에서 싹수가 없으면 더 복잡한 고급 방법도 소용이 없는 경우가 많다. 요컨대 로짓 회귀는 시간 낭비를 막는 일종의 ’맛보기’로서 유용하다.</p>
+<p>요즘 기계 학습을 배우게 되면, 로짓 회귀는 첫 챕터에서 그냥 쓱 지나치기 쉽다. 이어 등장하는 랜덤 포레스트, SVM, 뉴럴넷 등이 더 진보된 방법으로 보이기 때문이다.</p>
+<p>로짓 회귀는 단순하면서도 강력한 방법이다. 나는 분류(classification)의 문제에 접근할 때 로짓 회귀를 먼저 해본다. 로짓 회귀에서 ’견적’이 나오면 그 질문 혹은 문제는 더 흥미로운 형태로 진화할 가능성이 높다. 반면 로짓 회귀에서 싹수가 없으면 더 복잡한 고급 방법도 소용이 없는 경우가 많다. 요컨대 로짓 회귀는 시간 낭비를 막는 일종의 ’맛보기’로서도 유용하다.</p>
 </section>
 <section id="로짓-함수는-어떻게-등장하나" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="로짓-함수는-어떻게-등장하나">로짓 함수는 어떻게 등장하나?</h2>
@@ -254,13 +263,26 @@ ul.task-list{list-style: none;}
 </table>
 </div></div><section id="어떤-경우-ols는-곤란한가" class="level3">
 <h3 class="anchored" data-anchor-id="어떤-경우-ols는-곤란한가">어떤 경우 OLS는 곤란한가?</h3>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 10.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 80.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://miro.medium.com/max/1280/0*gKOV65tvGfY8SMem.png" class="my-figure7 img-fluid figure-img"></p>
+<p><img src="https://miro.medium.com/max/1280/0*gKOV65tvGfY8SMem.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">로지스틱 리그레션이 필요한 순간</figcaption><p></p>
 </figure>
 </div>
-<p><br> 독립 변수가 하나인 모형을 가정하고 위의 그림을 보자. 종속 변수가 0, 1인 상태로 그대로 회귀분석을 하면 그림의 왼쪽 같이 된다. 회귀식의 기울기를 구할 수 있으니 된 것 아니냐? 아니다. 앞서 0과 1은 값 그 자체로 의미를 지니지 않는다고 말했다. 그런데 이를 그대로 값으로 바꿔서 회귀분석을 해도 좋은 것일까? 그러기에는 어딘가 찜찜하다. 게다가 <span class="math inline">\(x\)</span> 값에 따라서 회귀식의 예측치가 <span class="math inline">\([0,1]\)</span>을 벗어날 수 있다. 임의로 계단 함수를 다시 얹어서 OLS(통상적인 최소자승법이라는 의미에서 Ordinary Least Squares라고 흔히 부른다)를 구제할 수도 있겠다. 즉,</p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 10.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>독립 변수가 하나인 모형을 가정하고 위의 그림을 보자. 종속 변수가 0, 1인 상태로 그대로 회귀 분석을 하면 그림의 왼쪽 같이 된다. 회귀식의 기울기를 구할 수 있으니 된 것 아니냐? 아니다. 앞서 0과 1은 값 그 자체로 의미를 지니지 않는다고 말했다. 그런데 이를 그대로 값으로 바꿔서 회귀 분석을 해도 좋은 것일까? 그러기에는 어딘가 찜찜하다.</p>
+<p>게다가 <span class="math inline">\(x\)</span> 값에 따라서 회귀식의 예측치가 <span class="math inline">\([0,1]\)</span>을 벗어날 수 있다. 임의로 계단 함수를 다시 얹어서 OLS(통상적인 최소자승법이라는 의미에서 Ordinary Least Squares라고 흔히 부른다)를 구제할 수도 있겠다. 즉,</p>
 <p><span class="math display">\[
 s(\beta x) =
 \begin{cases}
@@ -272,7 +294,7 @@ s(\beta x) =
 </section>
 <section id="범주형에서-확률로" class="level3">
 <h3 class="anchored" data-anchor-id="범주형에서-확률로">범주형에서 확률로</h3>
-<p>앞서 0 또는 1의 문제가 범주형의 문제라고 했다. 따라서 0, 1은 값 자체로는 아무 의미를 지니지 않는다. 회귀분석의 종속 변수가 실수값을 지닐 때 분석으로서 의미를 지닌다. 그렇다면 그렇게 바뀌보면 어떨까. 범주형 변수가 결국 상태를 나타내는 것이라면 1이라는 상태를 지닐 ’확률’을 추정하는 문제로 바꿔 생각해볼 수 있겠다. 즉,</p>
+<p>앞서 0 또는 1의 문제가 범주형의 문제라고 했다. 따라서 0, 1은 값 자체로는 아무 의미를 지니지 않는다. 회귀 분석의 종속 변수가 실수값을 지닐 때 분석으로서 의미를 지닌다. 그렇다면 그렇게 바뀌보면 어떨까. 범주형 변수가 결국 상태를 나타내는 것이라면 1이라는 상태를 지닐 ’확률’을 추정하는 문제로 바꿔 생각해볼 수 있겠다. 즉,</p>
 <p><span class="math display">\[
 p(y_i = 1 | \boldsymbol{x_i}) = p(\boldsymbol{x_i})
 \]</span></p>
@@ -293,8 +315,8 @@ p(y_i = 1 | \boldsymbol{x_i}) = p(\boldsymbol{x_i})
 <p><span class="math display">\[
 \ln \dfrac{p(\boldsymbol{X})}{1-p(\boldsymbol{X})} = \underset{n \times k}{\phantom{\boldsymbol{\beta}}\boldsymbol{X}\phantom{\boldsymbol{\beta}}}\underset{k \times 1}{\boldsymbol{\beta}}
 \]</span></p>
-<p>애석하지만 이 식은 우리에게 주어진 자료로는 추정할 수 없다. 당장 좌변의 종속 변수를 얻으려면 관찰별로 확률값을 알아야 하는데 우리에게 주어진 관찰 값은 0 또는 1 뿐이다. 따라서 위의 식은 선형 회귀와 유사한 모형을 적용할 수 있는 방법을 찾은 것일 뿐 실제로 추정할 수 있는 식이 아니다. <span class="math inline">\(\boldsymbol{\beta}\)</span>는 어떻게 구해야 할까?</p>
-<p>이를 보기 전에 추정 모형에서 로지스틱 함수를 찾아보자. 위의 식에서 <span class="math inline">\(p(x_i)\)</span>를 구해보자.</p>
+<p>애석하지만 이 식은 우리에게 주어진 자료로는 추정할 수 없다. 당장 좌변의 종속 변수를 얻으려면 확률 함수를 알아야 하는데 이는 미리 알 수 없는 분포를 안다는 뜻이다. 따라서 위의 식은 선형 회귀와 유사한 모형을 적용할 수 있는 방법을 고안한 것일 뿐 실제로 추정할 수 있는 식이 아니다. 그렇다면, <span class="math inline">\(\boldsymbol{\beta}\)</span>는 어떻게 구해야 할까?</p>
+<p>이 문제를 살펴 보기 전에 위의 모형에서 로지스틱 함수를 찾아보자. 위의 식에서 <span class="math inline">\(p(x_i)\)</span>를 구해보자.</p>
 <p><span class="math display">\[
 \begin{aligned}
 \ln \dfrac{p(\boldsymbol{x_i})}{1-p(\boldsymbol{x_i})} &amp; =\boldsymbol{x_i}\boldsymbol{\beta} \\
@@ -308,7 +330,7 @@ p(\boldsymbol{x_i}) &amp; = \dfrac{1}{e^{-\boldsymbol{x_i}\boldsymbol{\beta}} + 
 </section>
 <section id="link-function" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="link-function">Link function</h2>
-<p>말이 나온 김에 링크 함수에 대해서 살펴보고 가자. 위에서 보듯이, 사실 회귀 분석이란 실수의 범위를 지니는 좌변을 역시 변수의 선형결합을 통해 이루어진 우변으로 설명하려는 것이다. 그런데 만일 좌변의 영역이 실수 전체가 아니라면? 예를 들면 아래와 같다.</p>
+<p>말이 나온 김에 “링크 함수”를 한번 보고 가자. 위에서 보듯이, 사실 회귀 분석이란 실수의 범위를 지니는 좌변을 역시 변수의 선형결합을 통해 이루어진 우변으로 설명하려는 것이다. 그런데 만일 좌변의 영역이 실수 전체가 아니라면? 예를 들면 아래와 같다.</p>
 <ul>
 <li>절단 자료 (truncated): 지속 시간의 경우 0보다 큰 실수가 된다.</li>
 <li>범주형 자료: 이 경우는 수로 표현하려면 적절한 변형이 필요하다.</li>
@@ -331,8 +353,8 @@ g(\mu_i) = \eta_i = \boldsymbol x_i^T \beta
 p(\boldsymbol{x_i}) = \dfrac{1}{e^{-\boldsymbol{x_i}\boldsymbol{\beta}} + 1}
 \]</span></p>
 <p>이는 평균 함수(mean function)이라고 부른다. 로짓 회귀의 경우는 이산 변수를 활용하기 때문에 확률 질량 함수가 곧 확률이 된다는 점을 기억해두자.</p>
-<section id="three-steps" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="three-steps">Three steps</h3>
+<section id="삼단계" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="삼단계">삼단계</h3>
 <p>위 과정이 세 가지 단계를 거쳤다는 점을 쉽게 알 수 있을 것이다.</p>
 <p><span class="math display">\[
 y_i \xrightarrow{\rm prob.~function} \mu_i \xrightarrow{\rm link~function} \eta_i = \boldsymbol x_i \beta
@@ -350,11 +372,11 @@ y_i \xrightarrow{\rm prob.~function} \mu_i \xrightarrow{\rm link~function} \eta_
 <li>종속 변수의 관찰값은 0 또는 1이다.</li>
 <li>로짓 함수를 통해서 독립 변수를 해당 관찰의 확률과 연결시킬 수 있게 되었다.</li>
 </ol>
-<p>어차피 종속 변수를 실수로 바꿀 수 없는 이상 우리가 아는 선형 회귀분석을 쓸 수는 없다. 그래서 이름과 달리 우리가 아는 ‘회귀분석’, 즉 OLS를 여기서 쓸 수는 없다. 미안하다. 앞에서 거짓말 했다.</p>
+<p>어차피 종속 변수를 실수로 바꿀 수 없는 이상 우리가 아는 선형 회귀 분석을 쓸 수는 없다. 그래서 이름과 달리 우리가 아는 ‘회귀 분석’, 즉 OLS를 여기서 쓸 수는 없다. 미안하다. 앞에서 거짓말 했다.</p>
 <p><span class="math display">\[
 \ln \dfrac{p(\boldsymbol{x_i})}{1-p(\boldsymbol{x_i})} = \underset{1 \times k}{\phantom{\boldsymbol{\beta}}\boldsymbol{x_i}\phantom{\boldsymbol{\beta}}}\underset{k \times 1}{\boldsymbol{\beta}}, ~k = 1,  2, \dotsc, n
 \]</span></p>
-<p>애초에 <span class="math inline">\(\boldsymbol \beta\)</span>을 알고 있어야, 이 식으로부터 <span class="math inline">\(p(\cdot)\)</span>을 구해낼 수 있다. 그런데 우리가 아는 회귀분석이란 <span class="math inline">\(y\)</span>와 <span class="math inline">\(\boldsymbol{\rm X}\)</span>가 주어졌을 때 하는 것 아닌가? 회귀분석의 좌변이 없기에 OLS로는 추정할 수 없다.</p>
+<p>애초에 <span class="math inline">\(\boldsymbol \beta\)</span>을 알고 있어야, 이 식으로부터 <span class="math inline">\(p(\cdot)\)</span>을 구해낼 수 있다. 그런데 우리가 아는 회귀 분석이란 <span class="math inline">\(y\)</span>와 <span class="math inline">\(\boldsymbol{\rm X}\)</span>가 주어졌을 때 하는 것 아닌가? 회귀 분석의 좌변이 없기에 OLS로는 추정할 수 없다.</p>
 <p>그래서 로짓 회귀는 이름과 달리 <span class="math inline">\(\boldsymbol{\beta}\)</span>의 추정치 <span class="math inline">\(\hat{\boldsymbol\beta}\)</span>를 구하는데 OLS의 방법을 쓰지 않는다. 로짓 회귀에서는 어떻게 <span class="math inline">\(\hat{\boldsymbol\beta}\)</span>를 얻는 것일까?</p>
 <section id="확률-vs-우도" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="확률-vs-우도">확률 vs 우도</h3>
@@ -524,6 +546,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         }
       }
     }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
   }
   const isFileUrl = () => { 
     return window.location.protocol === 'file:';
@@ -575,7 +607,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   // Switch to dark mode if need be
   if (hasAlternateSentinel()) {
     toggleColorMode(true);
-  } 
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -597,7 +631,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -625,31 +676,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
