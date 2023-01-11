@@ -145,6 +145,10 @@ import pyodide_http
 pyodide_http.patch_all() # 기존 http 관련 명령어 패치 
 ```
 
+:::{.column-margin}
+pyodide에 관한 보다 상세한 내용은 [해설 1](https://ryanking13.github.io/2022/01/17/introducing-pyodide-1.html), [해설 2](https://ryanking13.github.io/2022/01/25/introducing-pyodide-2.html)를 참고하도록 하자. 
+:::
+
 ### 몇 가지 핵심 활용법 
 
 `content/python-notebooks` 안에 믾이 쓸 것 같은 필요한 활용 용례를 몇 가지 넣어 두었다. 자세한 것은 [README](https://github.com/anarinsk/test_jupyterlite)를 참고하면 된다. 

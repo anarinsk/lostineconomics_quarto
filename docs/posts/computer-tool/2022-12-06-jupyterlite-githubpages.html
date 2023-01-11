@@ -354,13 +354,16 @@ Code Tips
 <div class="no-row-height column-margin column-container"><div class="">
 <p>네트워크와 관련한 보다 상세한 내용은 <a href="https://dev.to/openhacking/3-ways-to-implement-network-requests-in-pyodide-4e5n">여기</a>를 참고하도록 하자.</p>
 </div></div></section>
-<section id="커널-관련updated" class="level3">
+<section id="커널-관련updated" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="커널-관련updated">커널 관련(updated)</h3>
 <p>꼭 xeus-python을 써야 하나 싶다. Python의 네트워크 관련 명령들이 <a href="https://github.com/koenvo/pyodide-http">pyodide-http</a> 패키지로 거의 완전하게 해결이 된다. 이 패키지는 기존 명령어를 주피터라이트에 맞게 패치한다. 아래 코드를 참고하자.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install <span class="op">-</span>q pyodide<span class="op">-</span>http</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyodide_http </span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>pyodide_http.patch_all() <span class="co"># 기존 http 관련 명령어 패치 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>pyodide에 관한 보다 상세한 내용은 <a href="https://ryanking13.github.io/2022/01/17/introducing-pyodide-1.html">해설 1</a>, <a href="https://ryanking13.github.io/2022/01/25/introducing-pyodide-2.html">해설 2</a>를 참고하도록 하자.</p>
+</div></div></section>
 <section id="몇-가지-핵심-활용법" class="level3">
 <h3 class="anchored" data-anchor-id="몇-가지-핵심-활용법">몇 가지 핵심 활용법</h3>
 <p><code>content/python-notebooks</code> 안에 믾이 쓸 것 같은 필요한 활용 용례를 몇 가지 넣어 두었다. 자세한 것은 <a href="https://github.com/anarinsk/test_jupyterlite">README</a>를 참고하면 된다.</p>

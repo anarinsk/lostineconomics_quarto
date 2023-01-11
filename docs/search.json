@@ -2027,7 +2027,7 @@
     "href": "posts/computer-tool/2022-12-06-jupyterlite-githubpages.html#몇-가지-더",
     "title": "JupyterLite + GitHub Pages",
     "section": "몇 가지 더",
-    "text": "몇 가지 더\n\n커널 관련(outdated)\n위 빌드 과정에서 보듯이 두 개의 파이썬 커널을 설치했다. 범용성은 pyodide 기반의 pyolite 커널이 낫다. 다만 네트워크 기능을 제대로 쓰기 위해서는 xeus-python이 편리하다. 예를 들어 scikit-learn 패키지에서 데이터를 인터넷으로 끌어오는 fetch 계열의 명령은 XPython 커널에서 제대로 작동한다. pyolite는 네트워크를 네이티브 파이썬 환경처럼 다루지 않는다.\n\n\n네트워크와 관련한 보다 상세한 내용은 여기를 참고하도록 하자.\n\n\n커널 관련(updated)\n꼭 xeus-python을 써야 하나 싶다. Python의 네트워크 관련 명령들이 pyodide-http 패키지로 거의 완전하게 해결이 된다. 이 패키지는 기존 명령어를 주피터라이트에 맞게 패치한다. 아래 코드를 참고하자.\n%pip install -q pyodide-http\nimport pyodide_http \npyodide_http.patch_all() # 기존 http 관련 명령어 패치 \n\n\n몇 가지 핵심 활용법\ncontent/python-notebooks 안에 믾이 쓸 것 같은 필요한 활용 용례를 몇 가지 넣어 두었다. 자세한 것은 README를 참고하면 된다."
+    "text": "몇 가지 더\n\n커널 관련(outdated)\n위 빌드 과정에서 보듯이 두 개의 파이썬 커널을 설치했다. 범용성은 pyodide 기반의 pyolite 커널이 낫다. 다만 네트워크 기능을 제대로 쓰기 위해서는 xeus-python이 편리하다. 예를 들어 scikit-learn 패키지에서 데이터를 인터넷으로 끌어오는 fetch 계열의 명령은 XPython 커널에서 제대로 작동한다. pyolite는 네트워크를 네이티브 파이썬 환경처럼 다루지 않는다.\n\n\n네트워크와 관련한 보다 상세한 내용은 여기를 참고하도록 하자.\n\n\n커널 관련(updated)\n꼭 xeus-python을 써야 하나 싶다. Python의 네트워크 관련 명령들이 pyodide-http 패키지로 거의 완전하게 해결이 된다. 이 패키지는 기존 명령어를 주피터라이트에 맞게 패치한다. 아래 코드를 참고하자.\n%pip install -q pyodide-http\nimport pyodide_http \npyodide_http.patch_all() # 기존 http 관련 명령어 패치 \n\n\npyodide에 관한 보다 상세한 내용은 해설 1, 해설 2를 참고하도록 하자.\n\n\n몇 가지 핵심 활용법\ncontent/python-notebooks 안에 믾이 쓸 것 같은 필요한 활용 용례를 몇 가지 넣어 두었다. 자세한 것은 README를 참고하면 된다."
   },
   {
     "objectID": "posts/regression/2022-06-06-berkson-paradox-regression.html",
