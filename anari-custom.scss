@@ -21,30 +21,31 @@ $headings-font-weight:  600 !default;
 
 /*-- scss:rules --*/
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'SUITE', sans-serif !important;
-  font-weight: 450;
+  font-family: 'SUITE Variable', sans-serif !important;
+  font-weight: 700;
   //text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
 }
 
 ul, li, ol{
-    font-family: 'SUIT', sans-serif !important;
+    font-family: 'SUIT Variable', sans-serif !important;
     font-size: 95%;
+    font-weight: 400;
    }
 
 p, fig-caption {
-    font-family: 'SUIT', sans-serif !important;
+    font-family: 'SUIT Variable', sans-serif !important;
     font-size: 90%;
     font-weight: 400; 
 }
 
 table {
-  font-family: 'SUIT', sans-serif !important;
+  font-family: 'SUIT Variable', sans-serif !important;
   font-size: 90%;
   font-weight: 400; 
 }
 
 .category{
-  font-family: 'SUIT', sans-serif !important;
+  font-family: 'SUIT Variable', sans-serif !important;
   font-size: 90%;
 }
 
