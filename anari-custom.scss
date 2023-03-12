@@ -27,24 +27,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ul, li, ol{
-    font-family: 'SUIT' !important;
+    font-family: 'SUIT', sans-serif !important;
     font-size: 95%;
    }
 
 p, fig-caption {
-    font-family: 'SUIT' !important;
+    font-family: 'SUIT', sans-serif !important;
     font-size: 90%;
     font-weight: 400; 
 }
 
 table {
-  font-family: 'SUIT' !important;
+  font-family: 'SUIT', sans-serif !important;
   font-size: 90%;
   font-weight: 400; 
 }
 
 .category{
-  font-family: 'SUIT' !important;
+  font-family: 'SUIT', sans-serif !important;
   font-size: 90%;
 }
 
@@ -60,7 +60,7 @@ code {
 
 .math.display {
   //font-family: 'STIX Two Math' !important; // Not working
-  font-size: 95%;
+  font-size: 90%;
 }
 
 .math.inline {
