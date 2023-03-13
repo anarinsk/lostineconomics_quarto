@@ -4,7 +4,7 @@ description: 그냥 또 하나의 경제학책?
 author: "JS HUHH"
 date: "03/13/2023"
 image: "https://thedailyguardian.com/wp-content/uploads/2022/08/books_759.jpg"
-categories: [the-books]
+categories: [the-books, economics]
 filters:
    - lightbox
 lightbox: auto
