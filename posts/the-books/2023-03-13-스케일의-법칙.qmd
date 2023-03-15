@@ -23,7 +23,7 @@ draft: false
 - 책 내용을 시시콜콜 소개하지 않는다. 
 
 ### What in this Post 
-- 꼴리는 대로 쓴 책에 대한 느낌적 느낌 
+- 내키는 대로 쓴 책에 대한 느낌적 느낌 
 ::::
 :::
 
@@ -42,7 +42,7 @@ draft: false
 나는 우버와 리프트에서 겪은 사업의 경험을 보다 내밀하게 "규모의 경제" 혹은 "네트워크 효과"와 연결하는 내용을 기대했다. 규모의 경제를 다루는 많은 책이 있지만, 본질을 솔직하게 제대로 치고 나가는 책이 생각보다 드물다. Varian & Shapiro가 20년 전에 썼던 책이 여전히 메력이라고 생각하기에 보다 갱신된 내용이 경제학적으로 잘 다뤄졌으면 싶었다. 
 
 :::{.column-margin}
-[Information Rules](https://www.amazon.com/Information-Rules-Strategic-Network-Economy/dp/087584863X/); 이 책은 번역서도 있었는데 절판되었다. 
+[Information Rules](https://www.amazon.com/Information-Rules-Strategic-Network-Economy/dp/087584863X/); 이 책은 번역 출간되었으나, 현재는 절판 상태이다. 
 :::
 
 ## 기대와는 달랐다... 
