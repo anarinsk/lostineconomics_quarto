@@ -42,7 +42,7 @@ matplotlib은 표준적인 파이썬 시각화 패키지다. 아쉽게도 이 �
 
 
 ```{python}
-#| layout: "[-10,70,-10]"
+#| layout: "[[-10,50,-10]]"
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
@@ -67,7 +67,7 @@ $ pip install koreanize-matplotlib
 ```
 
 ```{python}
-#| layout: "[-10,70,-10]"
+#| layout: "[[-10,50,-10]]"
 import koreanize_matplotlib
 draw_sample()
 ```
@@ -83,7 +83,7 @@ draw_sample()
 앞서 링크에서 소개한 폰트 추가 방법은 시스템에 폰트를 먼저 깔고 해당 폰트를 matplotlib에 등록하는 방법이다. pyodide에서 활용할 수 있는 다른 방법은 없을까? 아래 소개할 방법은 ttf 폰트 파일을 바로 matplotlib이 쓸 수 있게 해주는 방법이다.    
 
 ```{python}
-#| layout: "[-10,70,-10]"
+#| layout: "[[-10,50,-10]]"
 font_path = './font/D2Coding v.1.3.2 ligature Nerd Font Complete.ttf' # 폰트 파일의 위치에 따라서 조정
 font_callsign = 'D2 Coding Nerd'
 fe = fm.FontEntry(
@@ -114,7 +114,7 @@ matplotlib에서 폰트를 활용하는 방법은 두 가지다. 하나는 폰�
 아래 결과에서 보듯이, fontprop을 통해 지정된 폰트 양식을 그래프 요소에 적용해보자. 
 
 ```{python}
-#| layout: "[-10,70,-10]"
+#| layout: "[[-10,50,-10]]"
 fontprop = fm.FontProperties(fname=font_path, size=15)
 draw_sample(fontprop)
 ```
@@ -124,7 +124,7 @@ draw_sample(fontprop)
 폰트 속성을 전역으로 지정하고 그래프를 그려보자. 
 
 ```{python}
-#| layout: "[-10,70,-10]"
+#| layout: "[[-10,50,-10]]"
 # rcParams 설정
 plt.rcParams["font.family"] = 'D2 Coding Nerd'
 plt.rcParams['font.size'] = 15.
