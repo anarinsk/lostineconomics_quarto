@@ -87,9 +87,9 @@ Quarto + Reveal.js의 기본 설정을 그대로 써도 된다. 다만 영문과
 
 ```css
 /* @import url('https://fonts.googleapis.com/css2? family=Nanum+Gothic&display=swap'); */
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
 @import url("https://cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-ligature-subset.css");
+@import url("https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/variable/woff2/SUIT-Variable.css");
+@import url("https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/variable/woff2/SUITE-Variable.css");
 
 /*-- scss:rules --*/
 .reveal h1, 
@@ -120,8 +120,11 @@ Quarto + Reveal.js의 기본 설정을 그대로 써도 된다. 다만 영문과
 }
 ```
 
+:::{.callout-tip}
+#### Code Tips
 - `@import...` | 필요한 폰트 3종을 로드한다. 
-- 나머지는 지정된 요소 별로 사용할 폰트와 글자 크기 등을 지정한다. 
+- 나머지는 부분은 css의 요소 별로 사용할 폰트와 글자 크기 등을 지정하는 내용이다. 
+:::
 
 ## Working Example 
 
