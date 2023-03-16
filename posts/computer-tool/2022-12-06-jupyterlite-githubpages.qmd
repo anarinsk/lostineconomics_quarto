@@ -76,9 +76,13 @@ draft: false
 
 설정은 이게 전부이다. 빌드가 잘 되었는지 확인하기 위해서는 상단 탭에서 "Actions"를 선택하자. 빌드가 진행중인지 끝났는지를 확인할 수 있을 것이다. 발드가 끝났다면, 이제 Pages를 방문하도록 하자. 주소는 아래와 같다. 
 
+::: {.callout-tip}
+## GitHub Pages 주소
 ```
 {이용자-깃헙계정}.github.io/{이용자-리포이름}
 ```
+:::
+
 
 ### 자세히 들여다 본 빌드 과정
 
@@ -129,7 +133,7 @@ draft: false
 
 ### ~~커널 관련(outdated)~~ 
 
-위 빌드 과정에서 보듯이 두 개의 파이썬 커널을 설치했다. 범용성은 pyodide 기반의 pyolite 커널이 낫다. 다만 네트워크 기능을 제대로 쓰기 위해서는 xeus-python이 편리하다. 예를 들어 scikit-learn 패키지에서 데이터를 인터넷으로 끌어오는 `fetch` 계열의 명령은 XPython 커널에서 제대로 작동한다. pyolite는 네트워크를 네이티브 파이썬 환경처럼 다루지 않는다.
+~~위 빌드 과정에서 보듯이 두 개의 파이썬 커널을 설치했다. 범용성은 pyodide 기반의 pyolite 커널이 낫다. 다만 네트워크 기능을 제대로 쓰기 위해서는 xeus-python이 편리하다. 예를 들어 scikit-learn 패키지에서 데이터를 인터넷으로 끌어오는 `fetch` 계열의 명령은 XePython 커널에서 제대로 작동한다. pyolite는 네트워크를 네이티브 파이썬 환경처럼 다루지 않는다.~~
 
 :::{.column-margin}
 네트워크와 관련한 보다 상세한 내용은 [여기](https://dev.to/openhacking/3-ways-to-implement-network-requests-in-pyodide-4e5n)를 참고하도록 하자. 

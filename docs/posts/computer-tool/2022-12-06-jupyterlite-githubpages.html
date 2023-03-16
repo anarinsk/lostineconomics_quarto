@@ -292,7 +292,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul>
 <p>설정은 이게 전부이다. 빌드가 잘 되었는지 확인하기 위해서는 상단 탭에서 “Actions”를 선택하자. 빌드가 진행중인지 끝났는지를 확인할 수 있을 것이다. 발드가 끝났다면, 이제 Pages를 방문하도록 하자. 주소는 아래와 같다.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+GitHub Pages 주소
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <pre><code>{이용자-깃헙계정}.github.io/{이용자-리포이름}</code></pre>
+</div>
+</div>
 <section id="자세히-들여다-본-빌드-과정" class="level3">
 <h3 class="anchored" data-anchor-id="자세히-들여다-본-빌드-과정">자세히 들여다 본 빌드 과정</h3>
 <p>깃허브 디렉토리의 감춰진 디렉토리를 보이게 설정하자. 해당 디렉토리 안에 <code>.github/workflows</code>로 들어가면 <code>deploy.yml</code>이 있다. 이 녀석이 깃허브 액션스의 빌드 순서 및 명렁을 구성한다. 내용을 전부 설명할 필요는 없다. 필요한 부분만 살펴보자.</p>
@@ -349,7 +361,7 @@ Code Tips
 <h2 class="anchored" data-anchor-id="몇-가지-더">몇 가지 더</h2>
 <section id="커널-관련outdated" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="커널-관련outdated"><del>커널 관련(outdated)</del></h3>
-<p>위 빌드 과정에서 보듯이 두 개의 파이썬 커널을 설치했다. 범용성은 pyodide 기반의 pyolite 커널이 낫다. 다만 네트워크 기능을 제대로 쓰기 위해서는 xeus-python이 편리하다. 예를 들어 scikit-learn 패키지에서 데이터를 인터넷으로 끌어오는 <code>fetch</code> 계열의 명령은 XPython 커널에서 제대로 작동한다. pyolite는 네트워크를 네이티브 파이썬 환경처럼 다루지 않는다.</p>
+<p><del>위 빌드 과정에서 보듯이 두 개의 파이썬 커널을 설치했다. 범용성은 pyodide 기반의 pyolite 커널이 낫다. 다만 네트워크 기능을 제대로 쓰기 위해서는 xeus-python이 편리하다. 예를 들어 scikit-learn 패키지에서 데이터를 인터넷으로 끌어오는 <code>fetch</code> 계열의 명령은 XePython 커널에서 제대로 작동한다. pyolite는 네트워크를 네이티브 파이썬 환경처럼 다루지 않는다.</del></p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>네트워크와 관련한 보다 상세한 내용은 <a href="https://dev.to/openhacking/3-ways-to-implement-network-requests-in-pyodide-4e5n">여기</a>를 참고하도록 하자.</p>
