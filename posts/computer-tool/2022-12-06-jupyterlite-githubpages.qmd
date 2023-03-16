@@ -81,6 +81,7 @@ draft: false
 ```
 {이용자-깃헙계정}.github.io/{이용자-리포이름}
 ```
+👉[http://anarinsk.github.io/demo_jupyterlite](http://anarinsk.github.io/demo_jupyterlite)
 :::
 
 
