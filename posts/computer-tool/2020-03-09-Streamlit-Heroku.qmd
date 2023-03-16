@@ -1,6 +1,6 @@
 ---
-title:  Streamlit + Heroku
-description: python 만으로 웹 앱을 만들어보자  
+title:  ~~Streamlit + Heroku~~
+description: 낡은 내용입니다...
 author: "JS HUHH"
 date: "03/09/2020"
 image: "https://t3.ftcdn.net/jpg/03/67/94/46/240_F_367944626_tkPR8g1rZihc0ql5WpJhDYffS3nTfKqP.jpg"
