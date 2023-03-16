@@ -238,7 +238,7 @@
   </url>
   <url>
     <loc>https://www.lostineconomics.com/index.html</loc>
-    <lastmod>2023-03-16T06:31:04.063Z</lastmod>
+    <lastmod>2023-03-16T07:15:14.432Z</lastmod>
   </url>
   <url>
     <loc>https://www.lostineconomics.com/posts/regression/2022-06-04-simpson-paradox-regression.html</loc>
@@ -262,7 +262,7 @@
   </url>
   <url>
     <loc>https://www.lostineconomics.com/posts/computer-tool/2022-12-06-jupyterlite-githubpages.html</loc>
-    <lastmod>2023-03-16T06:31:13.817Z</lastmod>
+    <lastmod>2023-03-16T07:14:04.368Z</lastmod>
   </url>
   <url>
     <loc>https://www.lostineconomics.com/posts/computer-tool/2022-09-25-latex-vscode.html</loc>
@@ -315,5 +315,9 @@
   <url>
     <loc>https://www.lostineconomics.com/posts/math-simple/2022-10-05-paradox-of-friendship.html</loc>
     <lastmod>2023-03-16T01:36:28.295Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/stats-simple/2022-05-30-markov-chebyshev.html</loc>
+    <lastmod>2023-03-16T07:15:16.932Z</lastmod>
   </url>
 </urlset>

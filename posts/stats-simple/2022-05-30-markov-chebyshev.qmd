@@ -36,7 +36,11 @@ $$
 
 ## 어디에 써먹나? 
 
-약한 버전의 LLN(대수의 법칙)을 증명할 때 체비쇼프의 부등식을 쓴다. 만일 $X_1, X_2, \dotsc, X_n$이 IID를 따르고 $\E (X_i^2) < \infty$라고 가정하자. 이때, 확률 극한의 정의를 따라, 표본 통계량 $\ES{X}_n$가 임의의 양수 $\epsilon$에 대해서 다음을 증명하면 대수의 법칙이 성립한다. 
+약한 버전의 LLN(대수의 법칙)을 증명할 때 체비쇼프의 부등식을 쓴다. 만일 $X_1, X_2, \dotsc, X_n$이 iid를 따르고 $\E (X_i^2) < \infty$라고 가정하자. 이때, 확률 극한의 정의를 따라, 표본 통계량 $\ES{X}_n$가 임의의 양수 $\epsilon$에 대해서 다음을 증명하면 대수의 법칙이 성립한다. 
+
+:::{.column-margin}
+iid란 indeendent and indentically distributed를 의미한다. 즉, for $i, j \in \{1, 2, \dotsc, n\}$, $X_i, X_j(i \neq j)$ 의 각 확률 변수가 독립적이며, $X_i$가 모두 동일한 분포에서 추출됨을 의미한다. 
+:::
 
 $$
 \lim_{n \to \infty} P(\vert \ES{X}_n - \mu \vert \geq \epsilon) = 0

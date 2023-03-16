@@ -189,8 +189,11 @@ P(\vert X - \mu \vert \geq k) \leq \dfrac{\sigma^2}{k^2}
 </section>
 <section id="어디에-써먹나" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="어디에-써먹나">어디에 써먹나?</h2>
-<p>약한 버전의 LLN(대수의 법칙)을 증명할 때 체비쇼프의 부등식을 쓴다. 만일 <span class="math inline">\(X_1, X_2, \dotsc, X_n\)</span>이 IID를 따르고 <span class="math inline">\(\E (X_i^2) &lt; \infty\)</span>라고 가정하자. 이때, 확률 극한의 정의를 따라, 표본 통계량 <span class="math inline">\(\ES{X}_n\)</span>가 임의의 양수 <span class="math inline">\(\epsilon\)</span>에 대해서 다음을 증명하면 대수의 법칙이 성립한다.</p>
-<p><span class="math display">\[
+<p>약한 버전의 LLN(대수의 법칙)을 증명할 때 체비쇼프의 부등식을 쓴다. 만일 <span class="math inline">\(X_1, X_2, \dotsc, X_n\)</span>이 iid를 따르고 <span class="math inline">\(\E (X_i^2) &lt; \infty\)</span>라고 가정하자. 이때, 확률 극한의 정의를 따라, 표본 통계량 <span class="math inline">\(\ES{X}_n\)</span>가 임의의 양수 <span class="math inline">\(\epsilon\)</span>에 대해서 다음을 증명하면 대수의 법칙이 성립한다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>iid란 indeendent and indentically distributed를 의미한다. 즉, for <span class="math inline">\(i, j \in \{1, 2, \dotsc, n\}\)</span>, <span class="math inline">\(X_i, X_j(i \neq j)\)</span> 의 각 확률 변수가 독립적이며, <span class="math inline">\(X_i\)</span>가 모두 동일한 분포에서 추출됨을 의미한다.</p>
+</div></div><p><span class="math display">\[
 \lim_{n \to \infty} P(\vert \ES{X}_n - \mu \vert \geq \epsilon) = 0
 \]</span></p>
 <section id="증명" class="level3 page-columns page-full">
