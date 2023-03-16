@@ -1,6 +1,6 @@
 ---
 title:  ~~Build Your Blog on Github, Easily~~
-description: 참고 안하셔도 되는 낡은 내용입니다. 
+description: 낡은 내용입니다...
 author: "JS HUHH"
 date: "03/07/2020"
 image: "https://t3.ftcdn.net/jpg/03/67/94/46/240_F_367944626_tkPR8g1rZihc0ql5WpJhDYffS3nTfKqP.jpg"
