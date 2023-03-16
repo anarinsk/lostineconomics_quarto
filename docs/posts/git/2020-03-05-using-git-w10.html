@@ -8,7 +8,7 @@
 
 <meta name="author" content="JS HUHH">
 <meta name="dcterms.date" content="2020-03-05">
-<meta name="description" content="낡은 내용입니다…">
+<meta name="description" content="이제는 쓰지 않는 낡은 내용입니다…">
 
 <title>lostineconomics.com - Using Git ‘Smoothly’ in Windows 10</title>
 <style>
@@ -194,7 +194,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <div>
   <div class="description">
-    낡은 내용입니다…
+    이제는 쓰지 않는 낡은 내용입니다…
   </div>
 </div>
 
@@ -261,22 +261,70 @@ Note
 <p>“커맨더”라고 읽으면 된다. git은 이미 깔았으므로 쓰면 된다. 다만 좀 더 편리한 환경에서 CLI를 쓰기 위해서 Cmder를 깔아보도록 하자. 이 녀석은 별도의 인스톨 없이 쓸 수 있다. git을 포함한 무거운 버전과 git이 빠진 미니 버전이 있다. 어차피 우리는 별도로 깃을 깔았으니, 미니 버전을 다운받으면 되겠다. 다운 받은 후 아무 위치에나 두어도 된다. 어차피 exe 파일만 사용할 것이기 때문이다. 다만, 관리가 편하도록 나는 아래의 위치에 두었다.</p>
 <p><code>Users\[your id]\cmder_mini\</code></p>
 <p>최초 실행하면 윈도우가 경고를 날린다. 이래 그림에서 형광색이 칠해진 부분을 클릭하고 프로그램을 허용해준다. 이후 몇 번의 경고성 질문이 더 날아온다. 전부 “허용”해주면 되겠다.</p>
-<p><img src="{{ site.baseurl }}/images/git-cmder/fig_4.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
+<p><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/git-cmder/fig_4.png?raw=true" class="img-fluid"></p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
 <p>그리고 cmder 실행 파일 위에서 좌 클릭해서, <code>속성 &gt; 호환성 &gt; 관리자 권한으로 이 프로그램을 실행</code>을 체크해두는 편을 권한다. 혹시 dock에 cmder를 박아둔 상태라면 Shift 키와 함께 좌 클릭을 하면 <code>속성</code>을 선택할 수 있다.</p>
 </section>
 </section>
 <section id="how" class="level2">
 <h2 class="anchored" data-anchor-id="how">How</h2>
 <p>깃을 편하게 쓰기 위해서 Cmder의 설정을 약간 바꿔주겠다. 우선 아래의 그림처럼 맨 위 메뉴의 삼선을 클릭하면 Cmder의 세팅으로 갈 수 있다.</p>
-<p><img src="{{ site.baseurl }}/images/git-cmder/fig_1.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 77.8%;justify-content: center;">
+<p><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/git-cmder/fig_1.png?raw=true" class="img-fluid"></p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
 <p>엄청나게 많은 설정들이 있다. 창을 투명으로 만든다든가, 텍스트의 폰트를 바꾼다든가, 하는 것들이 가능하다. 여기서는 git bash를 쓰는 설정만 간단하게 설명하도록 하자.</p>
-<p><img src="{{ site.baseurl }}/images/git-cmder/fig_2.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 77.8%;justify-content: center;">
+<p><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/git-cmder/fig_2.png?raw=true" class="img-fluid"></p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
 <p>그림에서 보듯이 <code>startup &gt; task</code>를 선택한다. 선택 가능한 CLI 중에서 <code>{Bash:: Git bash}</code>를 선택한다. 이 녀석을 디폴트 CLI로 설정한다. 시작 디렉토리를 지정하고 싶다면 아래 <code>Startup dir...</code>을 선택해 바꿔주면 된다.</p>
 </section>
 <section id="finally" class="level2">
 <h2 class="anchored" data-anchor-id="finally">Finally?</h2>
 <p>아래 그림에서 보듯이 윈도 명령 창에서는 먹지 않는 <code>ls</code> 등의 명령어가 잘 먹고, git도 편안하게 사용할 수 있다.</p>
-<p><img src="{{ site.baseurl }}/images/git-cmder/fig_3.png" class="img-fluid">{: style=“textalign:center;” width=“500”}</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 77.8%;justify-content: center;">
+<p><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/git-cmder/fig_3.png?raw=true" class="img-fluid"></p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
 </section>
 <section id="seriously" class="level2">
 <h2 class="anchored" data-anchor-id="seriously">Seriously!</h2>

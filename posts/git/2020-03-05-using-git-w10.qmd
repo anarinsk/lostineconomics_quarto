@@ -1,9 +1,9 @@
 ---
 title: ~~Using Git ‘Smoothly’ in Windows 10~~
-description: 낡은 내용입니다...
+description: 이제는 쓰지 않는 낡은 내용입니다...
 author: "JS HUHH"
 date: "03/05/2020"
-image: "https://t3.ftcdn.net/jpg/03/67/94/46/240_F_367944626_tkPR8g1rZihc0ql5WpJhDYffS3nTfKqP.jpg"
+image: "https://cdn.theatlantic.com/media/mt/food/assets_c/2012/01/Expired-SS-Post-thumb-615x300-74166.jpg"
 categories: [git]
 #margin-header: subscribe.html
 ---
@@ -38,7 +38,9 @@ macos나 linux 계열을 쓸 때는 git에 관해서 크게 고민하지 않아�
 
 최초 실행하면 윈도우가 경고를 날린다. 이래 그림에서 형광색이 칠해진 부분을 클릭하고 프로그램을 허용해준다. 이후 몇 번의 경고성 질문이 더 날아온다. 전부 "허용"해주면 되겠다. 
 
-![]({{ site.baseurl }}/images/git-cmder/fig_4.png){: style="textalign:center; " width="500"}
+::: {layout="[[-10,60,-10]]"}
+![](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/git-cmder/fig_4.png?raw=true)
+:::
 
 그리고 cmder 실행 파일 위에서 좌 클릭해서, `속성 > 호환성 > 관리자 권한으로 이 프로그램을 실행`을 체크해두는 편을 권한다. 혹시 dock에 cmder를 박아둔 상태라면 Shift 키와 함께 좌 클릭을 하면 `속성`을 선택할 수 있다. 
 
@@ -46,11 +48,15 @@ macos나 linux 계열을 쓸 때는 git에 관해서 크게 고민하지 않아�
 
 깃을 편하게 쓰기 위해서 Cmder의 설정을 약간 바꿔주겠다. 우선 아래의 그림처럼 맨 위 메뉴의 삼선을 클릭하면 Cmder의 세팅으로 갈 수 있다. 
 
-![]({{ site.baseurl }}/images/git-cmder/fig_1.png){: style="textalign:center; " width="500"}
+::: {layout="[[-10,70,-10]]"}
+![](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/git-cmder/fig_1.png?raw=true)
+:::
 
 엄청나게 많은 설정들이 있다. 창을 투명으로 만든다든가, 텍스트의 폰트를 바꾼다든가, 하는 것들이 가능하다. 여기서는 git bash를 쓰는 설정만 간단하게 설명하도록 하자.
 
-![]({{ site.baseurl }}/images/git-cmder/fig_2.png){: style="textalign:center; " width="500"}
+::: {layout="[[-10,70,-10]]"}
+![](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/git-cmder/fig_2.png?raw=true)
+:::
 
 그림에서 보듯이 `startup > task`를 선택한다. 선택 가능한 CLI 중에서 `{Bash:: Git bash}`를 선택한다. 이 녀석을 디폴트 CLI로 설정한다. 시작 디렉토리를 지정하고 싶다면 아래 `Startup dir...`을 선택해 바꿔주면 된다. 
 
@@ -58,7 +64,9 @@ macos나 linux 계열을 쓸 때는 git에 관해서 크게 고민하지 않아�
 
 아래 그림에서 보듯이 윈도 명령 창에서는 먹지 않는 `ls` 등의 명령어가 잘 먹고, git도 편안하게 사용할 수 있다. 
 
-![]({{ site.baseurl }}/images/git-cmder/fig_3.png){: style="textalign:center; " width="500"}
+::: {layout="[[-10,70,-10]]"}
+![](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/git-cmder/fig_3.png?raw=true)
+:::
 
 ## Seriously! 
 
