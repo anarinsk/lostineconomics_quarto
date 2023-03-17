@@ -18,8 +18,8 @@ website:
   body-header: "google_analytics.html"
 format:
   html:
-    resources: 
-      - "fonts.html"
+    #resources: 
+    #  - "fonts.html"
     theme:
         light: [cosmo, theme.scss, anari-custom.scss]
         dark: [cosmo, theme-dark.scss, anari-custom.scss]
