@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -151,7 +151,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../about.html">
- <span class="menu-text">Junsok Huhh</span></a>
+ <span class="menu-text">about</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../project.html">
+ <span class="menu-text">project</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/anarinsk"><i class="bi bi-github" role="img">
@@ -273,31 +277,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"This Is a Testflight"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> </span><span class="st">"Completely useless presentation"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"[anarinsk](https://github.com/anarinsk/learn_quarto-revealjs/)"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"2022-07-07"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"[anarinsk](https://www.lostineconomics.com)"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"2022-09-06"</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">revealjs</span><span class="kw">:</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">incremental</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="at">   </span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> black</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">css</span><span class="kw">:</span><span class="at"> </span><span class="st">"index.css"</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">transition</span><span class="kw">:</span><span class="at"> concave</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">background-transition</span><span class="kw">:</span><span class="at"> fade</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">smaller</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">scrollable</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">logo</span><span class="kw">:</span><span class="at"> </span><span class="st">"logo2.png"</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">footer</span><span class="kw">:</span><span class="at"> </span><span class="st">"This is FOOTER!"</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">        #self-contained: true</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>대체로 항목이 자명하기 때문에 별도의 설명은 하지 않겠다. reveal.js의 각종 옵션을 지정해 줄 수 있는데, 지원하는 항목은 <a href="https://tutorial.quarto.org/docs/reference/formats/presentations/revealjs.html">여기</a>에서 확인할 수 있다.</p>
-<section id="눈여겨볼-항목" class="level4">
-<h4 class="anchored" data-anchor-id="눈여겨볼-항목">눈여겨볼 항목</h4>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">include-in-header</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">favicon.html</span><span class="kw">,</span><span class="at"> mathjax.html</span><span class="kw">]</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">incremental</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="at">   </span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">        #css:</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">format.scss</span><span class="kw">,</span><span class="at"> black</span><span class="kw">]</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">transition</span><span class="kw">:</span><span class="at"> concave</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">background-transition</span><span class="kw">:</span><span class="at"> fade</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">smaller</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">scrollable</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">logo</span><span class="kw">:</span><span class="at"> </span><span class="st">"logo2.png"</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">footer</span><span class="kw">:</span><span class="at"> </span><span class="st">"TEST FOR FOOTER!"</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">        #self-contained: true</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>대체로 항목이 자명하기 때문에 별도의 설명은 하지 않겠다. reveal.js의 각종 옵션을 지정해 줄 수 있는데, 지원하는 항목은 <a href="https://tutorial.quarto.org/docs/reference/formats/presentations/revealjs.html">여기</a>에서 확인할 수 있다. 주의할 내용만 갼락하게 살펴보자.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Code Tips
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li><code>theme</code>: reveal.js의 <a href="https://revealjs.com/themes/">테마</a>다. 복잡하게 생각하지 말고 간단한 거 쓰자.</li>
-<li><code>transition</code>: 슬라이드 혹은 항목 등장의 시각적인 전환 효과를 지정한다.</li>
-<li><code>background-transition</code>: 배경 효과를 지정한다.</li>
-<li><code>css</code>: 특화를 위한 css 파일을 지정한다.</li>
+<li><code>theme...</code> | <code>css</code> 항목에 <code>format.scss</code>를 넣을 경우 해당 파일에서 지정한 폰트 설정이 작동하지 않는다. 테마와 같은 레벨에 특화된 css를 포함시키도록 하자.</li>
+<li><code>theme</code> | reveal.js의 <a href="https://revealjs.com/themes/">테마</a>다. 복잡하게 생각하지 말고 간단한 거 쓰자.</li>
+<li><code>transition</code> | 슬라이드 혹은 항목 등장의 시각적인 전환 효과를 지정한다.</li>
+<li><code>background-transition</code> | 배경 효과를 지정한다.</li>
 </ul>
-</section>
+</div>
+</div>
 </section>
 <section id="customization" class="level3">
 <h3 class="anchored" data-anchor-id="customization">Customization</h3>

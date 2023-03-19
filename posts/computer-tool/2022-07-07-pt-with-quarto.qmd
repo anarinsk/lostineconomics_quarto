@@ -54,32 +54,33 @@ Markdown 문서에 Reveal.js의 기능을 붙이기 위해 문서 앞에 YAML �
 ---
 title: "This Is a Testflight"
 subtitle: "Completely useless presentation"
-author: "[anarinsk](https://github.com/anarinsk/learn_quarto-revealjs/)"
-date: "2022-07-07"
+author: "[anarinsk](https://www.lostineconomics.com)"
+date: "2022-09-06"
 format: 
     revealjs:
+        include-in-header: [favicon.html, mathjax.html]
         incremental: true   
-        theme: black
-        css: "index.css"
+        #css:
+        theme: [format.scss, black]
         transition: concave
         background-transition: fade
         smaller: false
         scrollable: true
         logo: "logo2.png"
-        footer: "This is FOOTER!"
+        footer: "TEST FOR FOOTER!"
         #self-contained: true
 ---
 ```
 
-대체로 항목이 자명하기 때문에 별도의 설명은 하지 않겠다. reveal.js의 각종 옵션을 지정해 줄 수 있는데, 지원하는 항목은 [여기](https://tutorial.quarto.org/docs/reference/formats/presentations/revealjs.html)에서 확인할 수 있다. 
+대체로 항목이 자명하기 때문에 별도의 설명은 하지 않겠다. reveal.js의 각종 옵션을 지정해 줄 수 있는데, 지원하는 항목은 [여기](https://tutorial.quarto.org/docs/reference/formats/presentations/revealjs.html)에서 확인할 수 있다. 주의할 내용만 갼락하게 살펴보자.  
 
-#### 눈여겨볼 항목 
-
-- `theme`: reveal.js의 [테마](https://revealjs.com/themes/)다. 복잡하게 생각하지 말고 간단한 거 쓰자. 
-- `transition`: 슬라이드 혹은 항목 등장의 시각적인 전환 효과를 지정한다. 
-- `background-transition`: 배경 효과를 지정한다.
-- `css`: 특화를 위한 css 파일을 지정한다. 
-
+:::{.callout-tip}
+## Code Tips 
+- `theme...` | `css` 항목에 `format.scss`를 넣을 경우 해당 파일에서 지정한 폰트 설정이 작동하지 않는다. 테마와 같은 레벨에 특화된 css를 포함시키도록 하자. 
+- `theme` | reveal.js의 [테마](https://revealjs.com/themes/)다. 복잡하게 생각하지 말고 간단한 거 쓰자. 
+- `transition` | 슬라이드 혹은 항목 등장의 시각적인 전환 효과를 지정한다. 
+- `background-transition` | 배경 효과를 지정한다.
+:::
 
 ### Customization 
 

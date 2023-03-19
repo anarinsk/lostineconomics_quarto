@@ -1,5 +1,5 @@
 ---
-title: "Junsok Huhh"
+title: "about"
 image: "profile-3.png"
 about:
   template: trestles
