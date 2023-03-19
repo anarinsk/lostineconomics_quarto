@@ -1,3 +1,4 @@
 /.quarto/
 index.qmd
 /.luarc.json
+.DS_Store
