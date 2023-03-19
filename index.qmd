@@ -1,0 +1,11 @@
+---
+title: ""
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: false
+page-layout: full
+title-block-banner: false
+---
