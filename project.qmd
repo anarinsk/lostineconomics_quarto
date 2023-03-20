@@ -11,16 +11,22 @@ about:
 
 ---
 
+### Economic Index Board 
+
+- Ouput: [Anari's Economic Indices](https://eis.anari.dev/)
+
+개인적으로 보려고 만든 경제 지표 보드입니다. 고급스럽게 웹 개발을 하면 좋았겠지만 부족한 지식과 시간과 타협한 산물입니다. 
+
 ### JupyterLite
 
-- Example: [Customized JupyterLite](https://jupyterlite.anari.dev/)
+- Ouput: [Customized JupyterLite](https://jupyterlite.anari.dev/)
 - Post: [LINK](https://www.lostineconomics.com/posts/computer-tool/2022-12-06-jupyterlite-githubpages.html)
 
 JupyterLite는 Wasm(웹 어셈블리)로 구현되는 경량화된 쥬피터IDE + Python 구동 방식입니다. 파이썬 코딩 경험이 말할 수 없이 편리해집니다! 
 
 ### Presentation with Quarto & Revealjs 
 
-- Example: [Fun PT](https://fun-pt.lostineconomics.com/)
+- Ouput: [Fun PT](https://fun-pt.lostineconomics.com/)
 - Post: [LINK](https://www.lostineconomics.com/posts/computer-tool/2022-07-07-pt-with-quarto.html)
 
 Quarto의 PT는 Revealjs를 붙일 수 있습니다. 다음과 같은 점에서 장점이 있습니다. 
