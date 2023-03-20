@@ -1,6 +1,6 @@
 ---
 title: "about"
-image: "profile-3.png"
+image: "profile-4.jpg"
 about:
   template: trestles
   links:
@@ -41,5 +41,5 @@ Hi, I'm Junsok Huhh. If you are interested in me, check my c.v. and contact. The
 - [v1](https://anarinsk.github.io/lostineconomics-v1/) built with markdown and [Github](https://www.github.com/)
 - [v0](https://lostineconomics.netlify.com/) built with [BlogDown](https://bookdown.org/yihui/blogdown) and [Github Pages](https://pages.github.com/)
 
-🐈 🐈 🐈  일러스트는 [최진영](https://www.instagram.com/jychoioioi/) 작가의 2021년 일력에 실린 작품입니다.</br>
+🐈 🐈 🐈  일러스트는 Arthur B. Frost가 Lewis Carroll의 [시](https://classic-literature.co.uk/lewis-carroll-hiawathas-photographing-poem/)를 위해 그린 그림입니다.</br>
 🐈 🐈 🐈  폰트는 [SUIT](https://sunn.us/suit/), [SUITE](https://sunn.us/suite/), [D2Coding](https://github.com/naver/d2codingfont)의 웹폰트를 사용합니다. 
