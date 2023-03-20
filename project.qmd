@@ -1,5 +1,6 @@
 ---
 title: "project"
+description: (Illustration by Arthur B. Frost)
 image: "project.jpg"
 about:
   template: trestles
