@@ -76,8 +76,7 @@ format:
 
 :::{.callout-tip}
 ## Code Tips 
-- `theme...` | `css` 항목에 `format.scss`를 넣을 경우 해당 파일에서 지정한 폰트 설정이 작동하지 않는다. 테마와 같은 레벨에 특화된 css를 포함시키도록 하자. 
-- `theme` | reveal.js의 [테마](https://revealjs.com/themes/)다. 복잡하게 생각하지 말고 간단한 거 쓰자. 
+- `theme` | reveal.js의 [테마](https://revealjs.com/themes/)다. 복잡하게 생각하지 말고 간단한 거 쓰자. 주의할 점; `css` 항목에 `format.scss`를 넣을 경우 해당 파일에서 지정한 폰트 설정이 작동하지 않는다. 테마와 같은 레벨에 특화된 css를 포함시키도록 하자. 
 - `transition` | 슬라이드 혹은 항목 등장의 시각적인 전환 효과를 지정한다. 
 - `background-transition` | 배경 효과를 지정한다.
 :::
