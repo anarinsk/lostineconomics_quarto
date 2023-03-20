@@ -1,6 +1,6 @@
 ---
 title: "project"
-description: (Illustration by Arthur B. Frost)
+#description: (Illustration by Arthur B. Frost)
 image: "project.jpg"
 about:
   template: trestles
@@ -29,5 +29,5 @@ Quarto의 PT는 Revealjs를 붙일 수 있습니다. 다음과 같은 점에서 
 - GitHub Pages를 통해서 퍼블리시할 수 있습니다. 
 - 이런 저런 디자인 지옥에 고통받지 않을 수 있습니다! 
 
-
-
+</br>
+🐈 🐈 🐈  일러스트는 Arthur B. Frost가 Lewis Carroll의 [The Three Voices Poem](https://classic-literature.co.uk/lewis-carroll-the-three-voices-poem/)을 위해 그린 삽화입니다. 
