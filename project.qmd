@@ -19,15 +19,13 @@ about:
 
 ### JupyterLite
 
-- Ouput: [Customized JupyterLite](https://jupyterlite.anari.dev/)
-- Post: [LINK](https://www.lostineconomics.com/posts/computer-tool/2022-12-06-jupyterlite-githubpages.html)
+Ouput: [Customized JupyterLite](https://jupyterlite.anari.dev/) | Post: [LINK](https://www.lostineconomics.com/posts/computer-tool/2022-12-06-jupyterlite-githubpages.html)
 
 JupyterLite는 Wasm(웹 어셈블리)로 구현되는 경량화된 쥬피터IDE + Python 개발 환경입니다. 사용성에 제한이 있지만 파이썬 코딩 경험이 말할 수 없이 빨리지고 편리해집니다! 
 
 ### Presentation with Quarto & Reveal.js 
 
-- Ouput: [Fun PT](https://fun-pt.lostineconomics.com/)
-- Post: [LINK](https://www.lostineconomics.com/posts/computer-tool/2022-07-07-pt-with-quarto.html)
+Ouput: [Fun PT](https://fun-pt.lostineconomics.com/) | Post: [LINK](https://www.lostineconomics.com/posts/computer-tool/2022-07-07-pt-with-quarto.html)
 
 Quarto는 Reveal.js를 부릴 수 있습니다. Quarto를 이용한 PT 제작에는 다음과 같은 점에서 좋습니다. 
 
@@ -37,8 +35,7 @@ Quarto는 Reveal.js를 부릴 수 있습니다. Quarto를 이용한 PT 제작에
 
 ### Generating CV in GitHub 
 
-- Oputput: [short CV](https://anarinsk.github.io/markdown-cv)
-- Post: [LINK](https://www.lostineconomics.com/posts/computer-tool/2022-05-10-how-to-make-cv.html)
+Oputput: [short CV](https://anarinsk.github.io/markdown-cv) | Post: [LINK](https://www.lostineconomics.com/posts/computer-tool/2022-05-10-how-to-make-cv.html)
 
 깃허브의 markdown과 Pages 기능을 활용해 자동으로 CV를 생성하고 웹으로 배포할 수 있습니다. 아직 100% 만족스럽지 않지만 게으르게 쓸만한 할 정도 됩니다. 
 
