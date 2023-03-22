@@ -3,7 +3,7 @@ title: $\rm\LaTeX$ + VS Code
 description: Tiny$\rm\TeX$으로 모든 OS에서 쉽게!
 author: "JS HUHH"
 date: "09/25/2022"
-image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Metal_movable_type.jpg/600px-Metal_movable_type.jpg"
+image: "images/type_cat.jfif"
 categories: [computer-tool]
 filters:
    - lightbox

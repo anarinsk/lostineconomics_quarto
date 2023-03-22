@@ -3,7 +3,7 @@ title:  $\rm\LaTeX$ in Modern Ways
 description: $\rm\LaTeX$을 다시 써볼까?
 author: "JS HUHH"
 date: "10/24/2020"
-image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/LaTeX_project_logo_bird.svg/1920px-LaTeX_project_logo_bird.svg.png"
+image: "images/type_cat.jfif"
 categories: [computer-tool]
 #margin-header: subscribe.html
 ---
