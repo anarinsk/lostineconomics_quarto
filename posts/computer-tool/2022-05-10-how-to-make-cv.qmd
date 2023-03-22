@@ -4,7 +4,7 @@ description: markdown으로 이력서를 만들어보자.
 author: "JS HUHH"
 date: "05/10/2022"
 #image: "https://cdn.ourcodeworld.com/public-media/articles/articleocw-5755472112ab3.jpg"
-image: "https://opem.b-cdn.net/wp-content/uploads/2022/01/curriculum-vitae-english-example.jpg.webp"
+image: "images/cv.jfif"
 categories: [computer-tool]
 
 ---

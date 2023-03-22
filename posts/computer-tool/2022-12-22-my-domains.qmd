@@ -3,7 +3,7 @@ title: 보유 도메인을 GitHub Pages에 연결하자.
 description: 도메인을 도메인 답게!
 author: "JS HUHH"
 date: "12/22/2022"
-image: "https://kinsta.com/wp-content/uploads/2018/05/what-is-dns.png"
+image: "images/dns.jfif"
 categories: [computer-tool]
 filters:
    - lightbox
