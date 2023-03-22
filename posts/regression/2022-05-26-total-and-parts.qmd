@@ -3,7 +3,7 @@ title: 전체와 부분
 description: Confounder, Collider, Simpson's and Berkson's Paradox 
 author: "JS HUHH"
 date: "05/26/2022"
-#image: "https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png"
+image: "images/total_parts.jfif"
 categories: [regression]
 draft: false
 #margin-header: subscribe.html
