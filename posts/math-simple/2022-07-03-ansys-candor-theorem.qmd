@@ -4,7 +4,7 @@ description: 칸토어의 정리를 증명해 보자.
 author: "JS HUHH"
 date: "07/03/2022"
 draft: false
-image: "https://cdn.mos.cms.futurecdn.net/o6jb2hRLbHfdLAgCESuMjh-1024-80.jpg.webp"
+image: "images/proof.jfif"
 categories: [math-simple]
 #margin-header: subscribe.html
 ---
