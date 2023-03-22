@@ -1,7 +1,7 @@
 ---
 title: "project"
 #description: (Illustration by Arthur B. Frost)
-image: "project.jpg"
+image: "title_images/project-3.jfif"
 about:
   template: trestles
 ---
@@ -40,4 +40,6 @@ Quarto는 Reveal.js를 부릴 수 있습니다. Quarto를 이용한 PT 제작에
 깃허브의 markdown과 Pages 기능을 활용해 자동으로 CV를 생성하고 웹으로 배포할 수 있습니다. 아직 100% 만족스럽지 않지만 게으르게 쓸만한 할 정도 됩니다. 
 
 </br>
-🐈 🐈 🐈  일러스트는 Arthur B. Frost가 Lewis Carroll의 [The Three Voices Poem](https://classic-literature.co.uk/lewis-carroll-the-three-voices-poem/)을 위해 그린 삽화입니다. 
+🐈 🐈 🐈 삽회는 Bing의 [이미지 작성자](https://www.bing.com/images/create)를 통해 `many old statues of tiny gods, digital art` 키워드로 성성되었습니다.
+
+
