@@ -41,5 +41,5 @@ Hi, I'm Junsok Huhh. If you are interested in me, check my c.v. and contact. The
 - [v1](https://anarinsk.github.io/lostineconomics-v1/) built with markdown and [Github](https://www.github.com/)
 - [v0](https://lostineconomics.netlify.com/) built with [BlogDown](https://bookdown.org/yihui/blogdown) and [Github Pages](https://pages.github.com/)
 
-🐈 🐈 🐈  삽회는 Bing의 [이미지 작성자](https://www.bing.com/images/create)를 통해 "a cat lost in something, digital art" 키워드로 성성되었습니다.</br>
+🐈 🐈 🐈  삽회는 Bing의 [이미지 작성자](https://www.bing.com/images/create)에서 `a cat lost in something, digital art` 키워드로 생성되었습니다.</br>
 🐈 🐈 🐈  폰트는 [SUIT](https://sunn.us/suit/), [SUITE](https://sunn.us/suite/), [D2Coding](https://github.com/naver/d2codingfont)의 웹폰트를 사용합니다. 
