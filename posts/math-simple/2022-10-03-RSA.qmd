@@ -3,7 +3,7 @@ title: RSA, Simply Explained
 description:  나 놈을 위한 RSA 정리 
 author: "JS HUHH"
 date: "10/03/2022"
-image: "https://securityintelligence.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/01/Encryption-key.jpeg.webp"
+image: "images/decode_encode.jfif"
 categories: [math-simple]
 #margin-header: subscribe.html
 draft: false

@@ -3,7 +3,7 @@ title: Blogging with Quarto
 description: Quarto로 블로그를
 author: "JS HUHH"
 date: "05/14/2022"
-image: "https://pulverer.si.edu/sites/default/files/styles/essay_large/public/image_assets/Fig1_Japanese%20bookmaking_05.jpg"
+image: "images/calligraphy.jfif"
 categories: [computer-tool]
 
 ---

@@ -3,7 +3,7 @@ title: Paradox of Friendship
 description:  역설을 수학적으로 풀어보자
 author: "JS HUHH"
 date: "10/05/2022"
-image: "https://static01.nyt.com/images/2010/09/19/business/STREAM/STREAM-jumbo.jpg?quality=75&auto=webp"
+image: "images/network.jfif"
 categories: [math-simple]
 #margin-header: subscribe.html
 draft: false
