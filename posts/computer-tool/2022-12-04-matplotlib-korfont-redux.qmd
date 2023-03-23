@@ -3,7 +3,7 @@ title: matplotlib + 한글 Redux
 description: 마지막으로 정리해봅시다!
 author: "JS HUHH"
 date: "12/04/2022"
-image: "https://miro.medium.com/max/1400/1*aUSZsGFCMPNYCkQygs4aGQ.webp"
+image: "images/matplotlib.jfif"
 categories: [computer-tool]
 draft: false
 format:
