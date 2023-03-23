@@ -3,7 +3,7 @@ title:  Poisson as Binormial Distribution
 description: 이항 분포의 관점에서 푸아송 분포 이해하기
 author: "JS HUHH"
 date: "07/13/2019"
-image: "https://seungwooham.github.io/assets/images/2020-03-24-PD1.png"
+image: "http://matcmath.org/textbooks/engineeringstats/wp-content/uploads/sites/4/2019/06/poisson-lambda-1-5-10-768x552.png"
 categories: [math-simple]
 #margin-header: subscribe.html
 ---
