@@ -3,7 +3,7 @@ title:  Trilemma, Lately
 description: 거시 경제의 트릴레마와 스테이블 코인의 트릴레마  
 author: "JS HUHH"
 date: "05/16/2022"
-image: "goodecon.jpg"
+image: "images/econcat.jfif"
 categories: [economics]
 #margin-header: subscribe.html
 ---
