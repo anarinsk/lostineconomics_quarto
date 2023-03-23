@@ -25,7 +25,8 @@ JupyterLite는 Wasm(웹 어셈블리)로 구현되는 경량화된 쥬피터IDE 
 
 ### Presentation with Quarto & Reveal.js 
 
-⛧ Ouput: [Fun PT](https://fun-pt.lostineconomics.com/) | Post: [LINK](https://www.lostineconomics.com/posts/computer-tool/2022-07-07-pt-with-quarto.html)
+⛧ Ouput: <a href="https://fun-pt.lostineconomics.com/" target="_blank">Useless PT</a> | 
+Post: [LINK](https://www.lostineconomics.com/posts/computer-tool/2022-07-07-pt-with-quarto.html)
 
 Quarto는 Reveal.js를 부릴 수 있습니다. Quarto를 이용한 PT 제작에는 다음과 같은 장점이 있습니다.  
 
