@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.lostineconomics.com/about.html</loc>
-    <lastmod>2023-03-22T08:19:42.822Z</lastmod>
+    <lastmod>2023-03-23T23:19:49.484Z</lastmod>
   </url>
   <url>
     <loc>https://www.lostineconomics.com/fonts/dummy.html</loc>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://www.lostineconomics.com/index.html</loc>
-    <lastmod>2023-03-23T23:05:42.876Z</lastmod>
+    <lastmod>2023-03-23T23:13:14.561Z</lastmod>
   </url>
   <url>
     <loc>https://www.lostineconomics.com/posts/computer-tool/2020-03-07-blogging-with-fastpages.html</loc>
@@ -246,6 +246,10 @@
   </url>
   <url>
     <loc>https://www.lostineconomics.com/project.html</loc>
-    <lastmod>2023-03-22T08:19:47.007Z</lastmod>
+    <lastmod>2023-03-23T23:20:57.043Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/machine-learning/images/2022-11-29-shannon-entropy.html</loc>
+    <lastmod>2023-03-23T23:13:11.374Z</lastmod>
   </url>
 </urlset>
