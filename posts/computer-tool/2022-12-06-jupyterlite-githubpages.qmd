@@ -61,7 +61,7 @@ draft: false
 웹어셈블리는 css, js만 사용한다. 이는 스태틱 웹을 통해서도 주피터라이트가 돌아간다는 의미이다. 그리고 스태틱 웹을 호스팅하는 현존하는 가장 저렴하고 편리한 방식은 GitHub Pages다. 
 
 :::{.column-margin}
-테스트로 빌드한 리포는 [여기](https://anarinsk.github.io/test_jupyterlite/lab/index.html)를 참고하자. `python-notebooks` 디렉토리가 포함되어 있는데, 여기 matplotlib 한글을 구현하는 노트북 등 몇 가지 활용에 참고할 만한 간단한 예제를 넣어 두었다. 
+테스트로 빌드한 리포는 [여기](https://github.com/anarinsk/demo_jupyterlite)를 참고하자. `python-notebooks` 디렉토리가 포함되어 있는데, 여기 matplotlib 한글을 구현하는 노트북 등 몇 가지 활용에 참고할 만한 간단한 예제를 넣어 두었다. 
 :::
 
 빌드하고 연동하는 방법이 [공식 페이지](https://jupyterlite.readthedocs.io/en/latest/quickstart/deploy.html)에 잘 소개되어 있다. 호스팅을 위해서는 GitHub Actions를 통한 빌드의 과정이 필요한데, 이용자가 크게 신경 쓸 것은 없다. 소개된대로 템플릿을 가져와서 사용하면 된다. 해당 리포의 변형이 있을 떄마다 푸시를 하면 Actions를 통한 build -> Pages를 통한 depoly 과정이 자동으로 발생한다. 주의 사항만 몇가지 적어두자. 

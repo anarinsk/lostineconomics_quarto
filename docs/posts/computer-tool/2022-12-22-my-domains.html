@@ -205,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
 </div></div></section>
 <section id="github에-보유-도메인-소유-증명하기" class="level2">
 <h2 class="anchored" data-anchor-id="github에-보유-도메인-소유-증명하기">GitHub에 보유 도메인 소유 증명하기</h2>
-<p>GitHub Pages는 훌륭한 스태틱 웹 서비스다. js, css 정도를 쓰는 html 문서를 전달하는 데에는 이 보다 싸고 편리한 서비스를 찾기 어려울 것이다. GitHub Pages에는 외부 도메인을 연결할 수 있다. 다만 연결을 위해 몇 가지 절차를 거쳐야 한다.</p>
+<p>GitHub Pages는 훌륭한 스태틱 웹 서비스다. js, css 정도를 쓰는 html 문서를 전달하는 데에는 이 보다 싸고 편ㅗ한 서비스를 찾기 어려울 것이다. GitHub Pages에는 외부 도메인을 연결할 수 있다. 다만 연결을 위해 몇 가지 절차를 거쳐야 한다.</p>
 <section id="도메인-확인하기-1-github" class="level3">
 <h3 class="anchored" data-anchor-id="도메인-확인하기-1-github">도메인 확인하기 1 (GitHub)</h3>
 <p>먼저 연결하고자 하는 도메인이 소유자의 것이 맞는지를 확인하는 절차가 필요하다. 깃허브의 계정 <code>Settings</code> &gt; “Code, planning, and autiomation” 섹션에 <code>Pages</code>라는 항목으로 들어가보자.</p>
@@ -282,7 +282,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>위 그림에서 보듯이 유형을 “CNAME”으로 잡는다. 이제 구입한 도메인 앞에 접두어(하위 도메인)이 들어간다. 가장 흔하게 쓸 수 있는 것이 <code>www</code>다. 즉, <code>www.lostineconomics.com</code>을 치면 어디로 포워딩되어야 하는지를 표시하면 된다. 호스트 이름이 <code>www</code>가 되고, 데이터는 <code>anarinsk.github.io</code>가 된다.</p>
-<p>주의할 점; 데이터에 해당 것허브 페이지스의 주소가 <code>/{리포시터리-이름}</code>까지 전부 전달되어야 할 것 같지만, 깃허브 페이지스의 최상위 페이지까지만 DNS에 전달해야 한다. 이후 과정은 연결은 GitHub Pages의 몫이다. <code>/</code>가 들어간 디렉토리는 전달할 수 없다. <code>{이용자-ID}.github.io</code>까지만 전달하면 해당 깃허브 페이지스의 디렉토리 자원과 도메인의 연결이 자동적으로 이루어진다.</p>
+<p>주의할 점; 데이터에 해당 것허브 페이지스의 주소가 <code>/{리포지터리-이름}</code>까지 전부 전달되어야 할 것 같지만, 깃허브 페이지스의 최상위 페이지까지만 DNS에 전달해야 한다. 이후 과정은 연결은 GitHub Pages의 몫이다. <code>/</code>가 들어간 디렉토리는 전달할 수 없다. <code>{이용자-ID}.github.io</code>까지만 전달하면 해당 깃허브 페이지스의 디렉토리 자원과 도메인의 연결이 자동적으로 이루어진다.</p>
 <p>해당 도메인이 깃허브 페이지까지 잘 연결되는지 보려면, 아래의 셸 명령을 활용해보자.</p>
 <pre class="shell"><code>$ dig www.lostineconomics.com +nostats +nocomments +nocmd</code></pre>
 <p>윈도 파워셸에는 <code>dig</code> 명령어가 없다. 설치가 가능하니 검색을 통해 적절히 방법을 찾으시라. 결과가 <code>{이용자-ID}.github.io</code>까지 잘 타고 들어가는지 확인하면 된다. 뒤에서 다루겠지만 여기서 IP 주소도 확인할 수 있는데, 이 녀석들이 설정에서 다시 활용될 수 있다.</p>
@@ -640,7 +640,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":true,"selector":".lightbox","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});</script>
 
 
 
