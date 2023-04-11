@@ -3,7 +3,7 @@ title: JupyterLite + GitHub Pages
 description: 인스톨이 필요 없는 주피터 노트북! 
 author: "JS HUHH"
 date: "12/06/2022"
-image: "images/jupyterlite.svg"
+image: "images/jupyterlite.jfif"
 categories: [computer-tool]
 filters:
    - lightbox
