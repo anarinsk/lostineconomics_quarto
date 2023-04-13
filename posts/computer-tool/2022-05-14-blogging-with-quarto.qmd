@@ -3,7 +3,7 @@ title: Blogging with Quarto
 description: Quarto로 블로그를
 author: "JS HUHH"
 date: "05/14/2022"
-image: "images/quarto.jfif"
+image: "images/writing_cat.jfif"
 categories: [computer-tool]
 
 ---
