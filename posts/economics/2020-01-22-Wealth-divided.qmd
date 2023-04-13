@@ -3,7 +3,7 @@ title:  The College Wealth Divide
 description: 미국 대졸자와 비대졸자의 투자 행태에 따른 부의 불평등  
 author: "JS HUHH"
 date: "01/22/2020"
-image: "goodecon.jpg"
+image: "images/econcat_2.jfif"
 categories: [economics]
 #margin-header: subscribe.html
 ---
