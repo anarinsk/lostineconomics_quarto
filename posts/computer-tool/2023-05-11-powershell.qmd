@@ -55,7 +55,7 @@ draft: false
 
 1. Windows Terminal에서 기본 프로필을 "Windows Powershell"에서 "Powershell"로 바꾸자. 
 2. 최신 버전의 Windows Terminal에서는 "관리자 권한 실행" 옵션이 있다. 이 녀석도 켜도록 하자. 
-3. "모양" 항목을 찾아서 몇 가지 폰트 설정을 해줘야 한다. 폰트는 취향이다. 내가 쓰는 폰트는 아래와 같다. 
+3. "모양" 항목을 찾아서 몇 가지 폰트 설정을 해줘야 한다. 폰트 선택은 취향을 따르면 된다. 내가 쓰는 폰트는 아래와 같다. 
 
 [Hack Nerd](https://www.nerdfonts.com/font-downloads), [D2Coding Nerd](https://www.dante2k.com/602)
 
@@ -87,8 +87,6 @@ winget install --id=Posit.Quarto  -e
 ```powershell
 > conda init Powershell
 ```
-
-이 작업을 하고 나면 콘다가 파워셀을 위해서 시작 스크립트를 잡는다. 이후 가상 환경이 잘 보이면 그냥 넘어가면 된다. `conda env list`로 확인하자. 만일 가상 환경이 활성화되지 않는다면, 우선 "명령 프롬프트"에서 다시 확인해보자. 여기서 잘 보인다면, PS의 설정에 문제가 생긴 것이다. 왜 이런 문제가 생길까? 좀 우습게도 PS가 설정을 로드하게 되는 홈디렉토리에 한글 문자이 들어 있는 경우 이런 문제가 생긴다. 일례로 윈드라이브를 설정하고 여기를 문서 등의 홈으로 활용하면 한글 문자가 들어가게 된다. 이때 설정을 제대로 로드하지 못하게 된다.
 
 :::{.column-margin}
 이 부분은 [여기](https://jh-bk.tistory.com/57)를 참고했다. 

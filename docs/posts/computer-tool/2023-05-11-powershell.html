@@ -248,7 +248,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li>Windows Terminal에서 기본 프로필을 “Windows Powershell”에서 “Powershell”로 바꾸자.</li>
 <li>최신 버전의 Windows Terminal에서는 “관리자 권한 실행” 옵션이 있다. 이 녀석도 켜도록 하자.</li>
-<li>“모양” 항목을 찾아서 몇 가지 폰트 설정을 해줘야 한다. 폰트는 취향이다. 내가 쓰는 폰트는 아래와 같다.</li>
+<li>“모양” 항목을 찾아서 몇 가지 폰트 설정을 해줘야 한다. 폰트 선택은 취향을 따르면 된다. 내가 쓰는 폰트는 아래와 같다.</li>
 </ol>
 <p><a href="https://www.nerdfonts.com/font-downloads">Hack Nerd</a>, <a href="https://www.dante2k.com/602">D2Coding Nerd</a></p>
 </section>
@@ -272,7 +272,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>다른 것들은 설치 이후에 대체로 쓰던대로 쓰면 된다. 별도의 언급이 필요한 두 개가 miniconda와 OhMyPosh이다. 하나씩 살펴보자. 이왕 터미널을 쓸 바에야 그냥 miniconda3를 쓰는 것이 낫다. 그래서 미니콘다(이하 콘다)를 설치했다.</p>
 <p>콘다를 설치한 이후 초기화가 필요하다. 설치 이후 터미널을 재시작하고 아래와 같이 입력한다.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> conda init Powershell</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>이 작업을 하고 나면 콘다가 파워셀을 위해서 시작 스크립트를 잡는다. 이후 가상 환경이 잘 보이면 그냥 넘어가면 된다. <code>conda env list</code>로 확인하자. 만일 가상 환경이 활성화되지 않는다면, 우선 “명령 프롬프트”에서 다시 확인해보자. 여기서 잘 보인다면, PS의 설정에 문제가 생긴 것이다. 왜 이런 문제가 생길까? 좀 우습게도 PS가 설정을 로드하게 되는 홈디렉토리에 한글 문자이 들어 있는 경우 이런 문제가 생긴다. 일례로 윈드라이브를 설정하고 여기를 문서 등의 홈으로 활용하면 한글 문자가 들어가게 된다. 이때 설정을 제대로 로드하지 못하게 된다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>이 부분은 <a href="https://jh-bk.tistory.com/57">여기</a>를 참고했다.</p>
