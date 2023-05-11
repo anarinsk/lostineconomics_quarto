@@ -1,0 +1,166 @@
+---
+title: Power to Powershell!
+description: 윈도11에서 PS 잘 쓰기 
+author: "JS HUHH"
+date: "05/11/2023"
+image: "https://www.fullstackpython.com/img/logos/powershell.png"
+categories: [computer-tool, pc-install]
+filters:
+   - lightbox
+lightbox: auto
+draft: false
+---
+
+## TL; DR
+
+- 파워셸의 힘으로 윈도11을 폼나게 써보자. 
+
+### Not in this Post 
+
+- 파워셸 이용법 
+- 윈도 11 까지는 법 
+
+### What in this Post 
+
+- 파워셸을 이용해 주요 소프트웨어 설치 
+- conda, ohmyposh 설정법 
+
+## Power to the Powershell 
+
+파워셸(이하 PS)은 원래 윈도의 CLI 도구였으나, 현재는 OS에 상관 없이 범용으로 활용될 수 있는 툴을 제공한다. 굳이 PS를 애용할 필요는 없으나 윈도를 쓴다면 PS를 굳이 쓰지 않을 이유 또한 없다. 게다가 윈도11부터 MS에서 "앱 설치 관리자"라는 녀석을 제공하는데, 이 녀석을 쓰면 macos의 `brew`, Ubuntu의 `apt`와 같은 스타일로 `winget`을 통해 패키지 관리를 할 수 있다. 때때로 미진한 점은 있지만 윈도의 거의 모든 프로그램을 `winget`을 통해 관리할 수 있다. GUI를 잘 쓰지 않는 입장에서는 편리하고 좋은 장점이다. 
+
+:::{.column-margin}
+이 글은 어쩌다가 윈도11을 다시 깔게 된 나 놈을 위해 남기는 글이다. 훗날 현재 과정을 기억하지 못하게 될 것이기 때문에... 
+:::
+
+## Install 
+
+### Prelim
+윈도11을 갓 설치했다면, "Windows Powershell"이 설치되어 있다. 이 녀석을 쓰지는 않을 것이다. 우선 다음 두 개를 갖추도록 하자. 설치하는 방법은 구글링을 하시면 금방 나온다. 
+
+1. Windows Terminal 
+2. "앱 설치 관리자"
+
+1은 윈도11을 깔고 최신 버전으로 업데이트하면 자동으로 깔려 나온다. 이왕이면 기본 터미널 앱 자체를 "명령 프롬프트"에서 이 녀석으로 바꾸도록 하자. 2는 Microsoft Store에서 다운 받아 설치할 수 있다. 역시 업데이트하면 기본으로 깔려서 나온다. 
+
+### 설치 
+이제 터미널로 들어가서 "명령 프롬프트" 혹은 "Windows Powershell" 둘 중 하나에서 파워셸을 깔아보자. 
+
+```powershell
+> winget install --id=Microsoft.PowerShell  -e
+```
+
+### Post-job
+설치가 완료된 이후 몇 가지 후처리를 하도록 하자. 
+
+1. Windows Terminal에서 기본 프로필을 "Windows Powershell"에서 "Powershell"로 바꾸자. 
+2. 최신 버전의 Windows Terminal에서는 "관리자 권한 실행" 옵션이 있다. 이 녀석도 켜도록 하자. 
+3. "모양" 항목을 찾아서 몇 가지 폰트 설정을 해줘야 한다. 폰트는 취향이다. 내가 쓰는 폰트는 아래와 같다. 
+
+[Hack Nerd](https://www.nerdfonts.com/font-downloads), [D2Coding Nerd](https://www.dante2k.com/602)
+
+## Install Apps 
+
+이제 앱들을 설치하면 된다. json을 만들어서 일괄 설치할 수도 있지만 문제가 생기면 대응이 필요하니 필요한 앱을 일단 하나씩 까는 것이 좋겠다. 내가 쓰는 앱들이다. 
+
+```powershell
+winget install --id=Microsoft.PowerToys  -e
+winget install --id=Git.Git  -e
+winget install --id=GitHub.GitHubDesktop  -e
+winget install --id=Anaconda.Miniconda3  -e
+winget install --id=JanDeDobbeleer.OhMyPosh  -e
+winget install --id=Microsoft.VisualStudioCode  -e
+winget install --id=Obsidian.Obsidian  -e
+winget install --id=Posit.Quarto  -e
+```
+
+금새 눈치 챘겠지만, `install` 명령어 뒤에 해당 앱의 id를 넣어 주는 식으로 구성되어 있다. 내게 필요한 앱이 `winget`을 통한 설치 경로를 제공하는지 알고 싶다면 [여기](https://winstall.app/)를 방문해서 검색하면 된다. 
+
+또 하나 보고 가자. 위에 보다시피 설치 파일을 다운받아서 깔았던 거의 대부분의 소프트웨어가 `winget`을 통해 제공된다. 
+
+## Conda 설정 
+
+다른 것들은 설치 이후에 대체로 쓰던대로 쓰면 된다. 별도의 언급이 필요한 두 개가 miniconda와 OhMyPosh이다. 하나씩 살펴보자. 이왕 터미널을 쓸 바에야 그냥 miniconda3를 쓰는 것이 낫다. 그래서 미니콘다(이하 콘다)를 설치했다. 
+
+콘다를 설치한 이후 초기화가 필요하다. 설치 이후 터미널을 재시작하고 아래와 같이 입력한다. 
+
+```powershell
+> conda init Powershell
+```
+
+이 작업을 하고 나면 콘다가 파워셀을 위해서 시작 스크립트를 잡는다. 이후 가상 환경이 잘 보이면 그냥 넘어가면 된다. `conda env list`로 확인하자. 만일 가상 환경이 활성화되지 않는다면, 우선 "명령 프롬프트"에서 다시 확인해보자. 여기서 잘 보인다면, PS의 설정에 문제가 생긴 것이다. 왜 이런 문제가 생길까? 좀 우습게도 PS가 설정을 로드하게 되는 홈디렉토리에 한글 문자이 들어 있는 경우 이런 문제가 생긴다. 일례로 윈드라이브를 설정하고 여기를 문서 등의 홈으로 활용하면 한글 문자가 들어가게 된다. 이때 설정을 제대로 로드하지 못하게 된다.
+
+:::{.column-margin}
+이 부분은 [여기](https://jh-bk.tistory.com/57)를 참고했다. 
+:::
+
+```powershell
+> test-path $profile
+```
+
+여기서 `false`가 뜬다면 프로필을 로드하는 경로에 문제가 생긴 것이다. 강제로 다시 설정해주자. 
+
+```powershell
+> new-item -path $profile -itemtype file -force
+```
+
+이제 `conda init powershell`을 다시 실행해준다. 그리고 해당 설정 파일이 생성된 위치를 확인하려면 `$profile`을 타이핑하자. 내 경우 `C:\PowerShell` 아래 설정되었다. 
+
+:::{.column-margin}
+해당 위치에 프로필 파일이 여러 개 있어도 된다. 파일 이름이 달라도 `.ps1` 확장자를 지닐 경우 PS로드 시 읽어온다.  `conda init powershell`로 설정한 프로필 파일은 `profile.ps1`으로 저장된다. 파일을 노트패드 등으로 열어보자. conda 관련 설정 스크립트가 들어 있다. 
+:::
+
+이제 다시 PS로 돌아와서 가상 환경이 잘 설정되어 있는지 확인해보자. 
+
+## Oh-my-posh 설정 
+
+[Home | Oh My Posh](https://ohmyposh.dev/)
+
+winget으로 설치한 이후 필요한 테마를 테스트하면 된다. 
+
+```shell
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/jandedobbeleer.omp.json" | Invoke-Expression
+```
+
+테마가 잘 먹는지 일단 확인해볼 수 있다. 원하는 테마를 항상 띄우려면 프로필을 하나 생성해주면 된다. 
+
+```shell
+> notepad $profile
+```
+
+파일이 없으면 생성된다. 여기에 필요한 테마를 올려주면 된다. 예를 들어 나는 "powerlevel10k_modern" 테마를 좋아한다. 그러면 해당 프로필 파일에 아래와 같이 넣으면 된다. 
+
+```shell
+> oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/powerlevel10k_modern.omp.json" | Invoke-Expression
+```
+
+### 업데이트 시 테마가 초기화되는 문제 
+
+`$env:POSH_THEMES_PATH`의 위치에 따라서 업데이트 시 테마까지 함께 업데이트가 된다. 만일 해당 테마의 json 파일을 바꾸었다면 이 역시 사라지게 된다. 어차피 테마 파일의 위치는 자유롭게 바꿀 수 있으니까 자신이 커스텀한 테마 파일의 위치를 바꾸고 녀석을 로드하면 된다. 
+
+### Python 가상 환경이 안보이는 경우 
+
+테마에서 conda, python의 가상 환경이 안보일 때가 있다. 테마에서 python을 표현하는 부분에 이 부분이 빠져 있어서 그렇다. 해당 테마의 `json` 파일에서 python이 표시되는 분을 찾는다. 적당한 부분에 아래 코드를 넣자. 
+
+```json
+"properties": {
+    "fetch_virtual_env": true,
+    "display_mode": "environment",
+    "home_enabled": true
+  },
+  "template": "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
+  "trailing_diamond": "\ue0b4 ",
+  "type": "python"
+```
+
+`properties`가 중요한 부분이고 나머지 템플릿은 적당히 바꾸면 된다. 
+
+## 사후 관리 
+
+`winget`으로 설치한 패키지를 업데이트하고 싶다면 
+
+```powershell
+> winget update --all 
+```
+
+이렇게 하면 알아서 업데이트가 진행된다. 

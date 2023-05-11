@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.3.340">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,7 +20,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -80,39 +80,39 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">lostineconomics.com</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../project.html">
+    <a class="nav-link" href="../../project.html" rel="" target="">
  <span class="menu-text">project</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/anarinsk"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/anarinsk" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/anarinsk"><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/anarinsk" rel="" target=""><i class="bi bi-twitter" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -162,13 +162,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><p>내가 보고 있는 것을 남이 그대로 봐야 의사 소통이 온전해지는 경우가 있다. 아마도 코드를 나누는 경우가 그렇지 않을까 싶다. 이 점에서 Github은 꽤 좋은 코드 나눔 도구다. 그런데 문제가 하나 있다. Github을 통해 배포하는 것이 패키지라면 각자 땡겨가서 쓰면 되겠지만, 특정하게 실현된 결과물이라면?</p>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><p>내가 보고 있는 것을 남이 그대로 봐야 의사 소통이 온전해지는 경우가 있다. 아마도 코드를 나누는 경우가 그렇지 않을까 싶다. 이 점에서 Github은 꽤 좋은 코드 나눔 도구다. 그런데 문제가 하나 있다. Github을 통해 배포하는 것이 패키지라면 각자 땡겨가서 쓰면 되겠지만, 특정하게 실현된 결과물이라면?</p>
 <p>예를 들어보자. Python으로 특정한 결과를 도출하는 코드를 짰다고 하자. 당연히 내가 작업한 환경에 의존할 것이다. 다른 환경에서 돌아갈지 아닐지 모르지만 어쨌든 의존성은 피할 수 없다. 상대를 불러서 내 컴퓨터에서 돌아가는 모습을 보여줄 수 있다면 좋겠지만 그럴 수 없는 경우가 많다. 내가 돌려본 환경을 그대로 상대가 볼 수 있게 할 수는 없는 것일까?</p>
 <p>당장 떠오르는 솔루션이 클라우드다. 클라우드에 소프트웨어 환경을 세팅하고 내가 테스트해본다. 원하는 상대에게 url을 주고 같은 테스트를 반복 체험하게 한다. 물론 좋다. 사실 AWS 같은 곳에 Linux 서버를 깔고 주피터 관련 패키지나 RStudio 등을 설치하기는 쉽다. AWS를 비롯해 많은 클라우드 업체에서 원스톱 서비스까지 제공한다. 그런데, 문제가 있다. 비용이 든다. 사용량이 많아서 뽕을 뽑을 수 있다면 덜 아깝겠지만 코드 공유하고 결과를 확인하는 정도가 족하다면 많이 아깝다.</p>
 <p>이런 용도로 활용할 수 있는 ‘무료’ 서비스가 Binder이다.</p>
@@ -339,9 +333,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -406,6 +414,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {

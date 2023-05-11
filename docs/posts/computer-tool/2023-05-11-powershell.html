@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="JS HUHH">
-<meta name="dcterms.date" content="2023-03-13">
-<meta name="description" content="목차 정리">
+<meta name="dcterms.date" content="2023-05-11">
+<meta name="description" content="윈도11에서 PS 잘 쓰기">
 
-<title>lostineconomics.com - 스케일의 법칙 Sub 1</title>
+<title>lostineconomics.com - Power to Powershell!</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -69,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -121,21 +155,24 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">스케일의 법칙 Sub 1</h1>
+<h1 class="title">Power to Powershell!</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">the-books</div>
+    <div class="quarto-category">computer-tool</div>
+    <div class="quarto-category">pc-install</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    목차 정리
+    윈도11에서 PS 잘 쓰기
   </div>
 </div>
 
@@ -152,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 13, 2023</p>
+      <p class="date">May 11, 2023</p>
     </div>
   </div>
   
@@ -162,97 +199,126 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><p>목차 별로 기억할 만한 내용 간단히 정리해보자.</p>
-<section id="규모-확장을-가로막는-5가지-신호" class="level1">
-<h1>규모 확장을 가로막는 5가지 신호</h1>
-<section id="긍정-오류" class="level2">
-<h2 class="anchored" data-anchor-id="긍정-오류">긍정 오류</h2>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <ul>
-<li>확증 편향</li>
-<li>승자의 저주</li>
+<li>파워셸의 힘으로 윈도11을 폼나게 써보자.</li>
+</ul>
+<section id="not-in-this-post" class="level3">
+<h3 class="anchored" data-anchor-id="not-in-this-post">Not in this Post</h3>
+<ul>
+<li>파워셸 이용법</li>
+<li>윈도 11 까지는 법</li>
 </ul>
 </section>
-<section id="과대평가" class="level2">
-<h2 class="anchored" data-anchor-id="과대평가">과대평가</h2>
+<section id="what-in-this-post" class="level3">
+<h3 class="anchored" data-anchor-id="what-in-this-post">What in this Post</h3>
 <ul>
-<li>선택 편향; 표본을 잘못 설정하는 오류</li>
-<li>잘못된 표본에서 출발하면 확장성이 급격하게 제한된다.</li>
+<li>파워셸을 이용해 주요 소프트웨어 설치</li>
+<li>conda, ohmyposh 설정법</li>
 </ul>
 </section>
-<section id="잘못된-판단" class="level2">
-<h2 class="anchored" data-anchor-id="잘못된-판단">잘못된 판단</h2>
-<ul>
-<li>인과성을 잘못 파악하는 오류</li>
-<li>협상/타협의 대상이 될 수 있는 것과 없는 것에 관한 구별
-<ul>
-<li>협상 불가능한 것이 확장성이 있나?</li>
-</ul></li>
-</ul>
 </section>
-<section id="파급-효과" class="level2">
-<h2 class="anchored" data-anchor-id="파급-효과">파급 효과</h2>
-<ul>
-<li>책에서 가장 읽을 만한 챕터</li>
-<li>spillover effect를 “파급효과”로 번역해야 하는지는 잘 모르겠다. 더 좋은 번역어를 찾았으면 싶다.</li>
-<li>일반 균형의 원리; 한 시장에서 생긴 변화는 다른 시장 전체에 걸쳐 변화를 유발할 수 있다.
-<ul>
-<li>안전띠의 의도하지 않은 효과 (모럴 해저드)</li>
-</ul></li>
-<li>규모가 확대됨에 따라서 파급 효과 역시 다양해지고 복잡해질 수 있다.</li>
-</ul>
-<blockquote class="blockquote">
+<section id="power-to-the-powershell" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="power-to-the-powershell">Power to the Powershell</h2>
+<p>파워셸(이하 PS)은 원래 윈도의 CLI 도구였으나, 현재는 OS에 상관 없이 범용으로 활용될 수 있는 툴을 제공한다. 굳이 PS를 애용할 필요는 없으나 윈도를 쓴다면 PS를 굳이 쓰지 않을 이유 또한 없다. 게다가 윈도11부터 MS에서 “앱 설치 관리자”라는 녀석을 제공하는데, 이 녀석을 쓰면 macos의 <code>brew</code>, Ubuntu의 <code>apt</code>와 같은 스타일로 <code>winget</code>을 통해 패키지 관리를 할 수 있다. 때때로 미진한 점은 있지만 윈도의 거의 모든 프로그램을 <code>winget</code>을 통해 관리할 수 있다. GUI를 잘 쓰지 않는 입장에서는 편리하고 좋은 장점이다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>이 글은 어쩌다가 윈도11을 다시 깔게 된 나 놈을 위해 남기는 글이다. 훗날 현재 과정을 기억하지 못하게 될 것이기 때문에…</p>
+</div></div></section>
+<section id="install" class="level2">
+<h2 class="anchored" data-anchor-id="install">Install</h2>
+<section id="prelim" class="level3">
+<h3 class="anchored" data-anchor-id="prelim">Prelim</h3>
+<p>윈도11을 갓 설치했다면, “Windows Powershell”이 설치되어 있다. 이 녀석을 쓰지는 않을 것이다. 우선 다음 두 개를 갖추도록 하자. 설치하는 방법은 구글링을 하시면 금방 나온다.</p>
 <ol type="1">
-<li><p>일반균형 효과: 이것은 규모의 확장에 따라 발생하는 경향이 있다. 의도하지 않은 결과를 초래해서 긍정적이거나 부정적인 영향을 시장 전체에 매우 크게 미친다. 이런 유형의 파급 효과는 티핑 포인트로 나타난다.</p></li>
-<li><p>사회적 측면의 행동 파급 효과: 이것은 관찰하거나 직접적인 영향을 받아 어떤 사람들이 다른 사람들의 행동에 영향을 미칠 때 발생한다. 다른 사람들을 관찷사는 사람은 의식적으로든 무의식적으로든 그 사람들 영향을 받고, 긍정적으로든 부정적으로든 자기 행동을 바꾼다.</p></li>
-<li><p>네트워크에 따른 파급 효과: 이것은 어떤 제품이나 서비스 또는 정책을 채택할 때 모든 사람의 이익이나 비용이 증가할 때 발생한다. 이 파급 효과는 해당 제품이나 서비스 혹은 정책에 의도적으로 내재해 있을 수도 있고, 규모 확장에 따라서 유기적으로 나타날 수도 있다.</p></li>
+<li>Windows Terminal</li>
+<li>“앱 설치 관리자”</li>
 </ol>
-</blockquote>
+<p>1은 윈도11을 깔고 최신 버전으로 업데이트하면 자동으로 깔려 나온다. 이왕이면 기본 터미널 앱 자체를 “명령 프롬프트”에서 이 녀석으로 바꾸도록 하자. 2는 Microsoft Store에서 다운 받아 설치할 수 있다. 역시 업데이트하면 기본으로 깔려서 나온다.</p>
 </section>
-<section id="비용의-함정" class="level2">
-<h2 class="anchored" data-anchor-id="비용의-함정">비용의 함정</h2>
-<ul>
-<li>규모 확장에 따른 편익만 생각하고 비용을 고려하지 않는 문제</li>
-</ul>
-<blockquote class="blockquote">
-<p>자신이 부담해야 할 고정비용이 얼마나 될지 처음부터 꼼꼼하게 살펴야 한다는 점이다. 그런 다음에는 그 비용을 감당할 정도로 자금이 충분한지 확인해야 한다. 또 자금이 충분하더라도 해당 아이디어를 상품으로 출시하는 데 필요한 초기비용을 줄일 방법을 찾아봐야 한다.</p>
-</blockquote>
+<section id="설치" class="level3">
+<h3 class="anchored" data-anchor-id="설치">설치</h3>
+<p>이제 터미널로 들어가서 “명령 프롬프트” 혹은 “Windows Powershell” 둘 중 하나에서 파워셸을 깔아보자.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> winget install <span class="op">--</span>id<span class="op">=</span>Microsoft<span class="op">.</span><span class="fu">PowerShell</span>  <span class="op">-</span>e</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="post-job" class="level3">
+<h3 class="anchored" data-anchor-id="post-job">Post-job</h3>
+<p>설치가 완료된 이후 몇 가지 후처리를 하도록 하자.</p>
+<ol type="1">
+<li>Windows Terminal에서 기본 프로필을 “Windows Powershell”에서 “Powershell”로 바꾸자.</li>
+<li>최신 버전의 Windows Terminal에서는 “관리자 권한 실행” 옵션이 있다. 이 녀석도 켜도록 하자.</li>
+<li>“모양” 항목을 찾아서 몇 가지 폰트 설정을 해줘야 한다. 폰트는 취향이다. 내가 쓰는 폰트는 아래와 같다.</li>
+</ol>
+<p><a href="https://www.nerdfonts.com/font-downloads">Hack Nerd</a>, <a href="https://www.dante2k.com/602">D2Coding Nerd</a></p>
 </section>
 </section>
-<section id="규모-확장을-성공시키는-4가지-기술" class="level1">
-<h1>규모 확장을 성공시키는 4가지 기술</h1>
-<ul>
-<li>이 파트의 내용이 좀 힘이 빠진다. 지나치게 일반적(generic)하고 교과서적이랄까? 교과서 밖에 뭐 별게 있나, 라고 주장한다면 할 말은 없다.</li>
-</ul>
-<section id="인센티브" class="level2">
-<h2 class="anchored" data-anchor-id="인센티브">인센티브</h2>
-<ul>
-<li>장난하나? 인센티브는 규모와 관계없이 중요하다.</li>
-<li>저자는 잘 조율된 인센티브가 규모 확장의 무기라고 말한다. 하지만 정말 그러한가? 규모에 따른 인센티브의 파생 효과는 없나?</li>
-<li>손실 회피, 소유 효과 같은 역시 일반적인 행동 경제학의 응용 사례가 소개된다.</li>
-</ul>
+<section id="install-apps" class="level2">
+<h2 class="anchored" data-anchor-id="install-apps">Install Apps</h2>
+<p>이제 앱들을 설치하면 된다. json을 만들어서 일괄 설치할 수도 있지만 문제가 생기면 대응이 필요하니 필요한 앱을 일단 하나씩 까는 것이 좋겠다. 내가 쓰는 앱들이다.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id<span class="op">=</span>Microsoft<span class="op">.</span><span class="fu">PowerToys</span>  <span class="op">-</span>e</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id<span class="op">=</span>Git<span class="op">.</span><span class="fu">Git</span>  <span class="op">-</span>e</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id<span class="op">=</span>GitHub<span class="op">.</span><span class="fu">GitHubDesktop</span>  <span class="op">-</span>e</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id<span class="op">=</span>Anaconda<span class="op">.</span><span class="fu">Miniconda3</span>  <span class="op">-</span>e</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id<span class="op">=</span>JanDeDobbeleer<span class="op">.</span><span class="fu">OhMyPosh</span>  <span class="op">-</span>e</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id<span class="op">=</span>Microsoft<span class="op">.</span><span class="fu">VisualStudioCode</span>  <span class="op">-</span>e</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id<span class="op">=</span>Obsidian<span class="op">.</span><span class="fu">Obsidian</span>  <span class="op">-</span>e</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id<span class="op">=</span>Posit<span class="op">.</span><span class="fu">Quarto</span>  <span class="op">-</span>e</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>금새 눈치 챘겠지만, <code>install</code> 명령어 뒤에 해당 앱의 id를 넣어 주는 식으로 구성되어 있다. 내게 필요한 앱이 <code>winget</code>을 통한 설치 경로를 제공하는지 알고 싶다면 <a href="https://winstall.app/">여기</a>를 방문해서 검색하면 된다.</p>
+<p>또 하나 보고 가자. 위에 보다시피 설치 파일을 다운받아서 깔았던 거의 대부분의 소프트웨어가 <code>winget</code>을 통해 제공된다.</p>
 </section>
-<section id="한계혁명" class="level2">
-<h2 class="anchored" data-anchor-id="한계혁명">한계혁명</h2>
-<ul>
-<li>한계에서 생각하라.</li>
-<li>한계 편익을 계산하는 문제 아니 한계 편익 자체를 떠올리는 문제는 그렇게 단순하지 않을 수 있다.</li>
-<li>매몰 비용을 무시하는 것의 중요성</li>
-</ul>
+<section id="conda-설정" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="conda-설정">Conda 설정</h2>
+<p>다른 것들은 설치 이후에 대체로 쓰던대로 쓰면 된다. 별도의 언급이 필요한 두 개가 miniconda와 OhMyPosh이다. 하나씩 살펴보자. 이왕 터미널을 쓸 바에야 그냥 miniconda3를 쓰는 것이 낫다. 그래서 미니콘다(이하 콘다)를 설치했다.</p>
+<p>콘다를 설치한 이후 초기화가 필요하다. 설치 이후 터미널을 재시작하고 아래와 같이 입력한다.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> conda init Powershell</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>이 작업을 하고 나면 콘다가 파워셀을 위해서 시작 스크립트를 잡는다. 이후 가상 환경이 잘 보이면 그냥 넘어가면 된다. <code>conda env list</code>로 확인하자. 만일 가상 환경이 활성화되지 않는다면, 우선 “명령 프롬프트”에서 다시 확인해보자. 여기서 잘 보인다면, PS의 설정에 문제가 생긴 것이다. 왜 이런 문제가 생길까? 좀 우습게도 PS가 설정을 로드하게 되는 홈디렉토리에 한글 문자이 들어 있는 경우 이런 문제가 생긴다. 일례로 윈드라이브를 설정하고 여기를 문서 등의 홈으로 활용하면 한글 문자가 들어가게 된다. 이때 설정을 제대로 로드하지 못하게 된다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>이 부분은 <a href="https://jh-bk.tistory.com/57">여기</a>를 참고했다.</p>
+</div></div><div class="sourceCode" id="cb4"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="fu">test-path</span> <span class="va">$profile</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>여기서 <code>false</code>가 뜬다면 프로필을 로드하는 경로에 문제가 생긴 것이다. 강제로 다시 설정해주자.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="fu">new-item</span> <span class="op">-</span>path <span class="va">$profile</span> <span class="op">-</span>itemtype file <span class="op">-</span>force</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>이제 <code>conda init powershell</code>을 다시 실행해준다. 그리고 해당 설정 파일이 생성된 위치를 확인하려면 <code>$profile</code>을 타이핑하자. 내 경우 <code>C:\PowerShell</code> 아래 설정되었다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>해당 위치에 프로필 파일이 여러 개 있어도 된다. 파일 이름이 달라도 <code>.ps1</code> 확장자를 지닐 경우 PS로드 시 읽어온다. <code>conda init powershell</code>로 설정한 프로필 파일은 <code>profile.ps1</code>으로 저장된다. 파일을 노트패드 등으로 열어보자. conda 관련 설정 스크립트가 들어 있다.</p>
+</div></div><p>이제 다시 PS로 돌아와서 가상 환경이 잘 설정되어 있는지 확인해보자.</p>
 </section>
-<section id="포기의-타이밍" class="level2">
-<h2 class="anchored" data-anchor-id="포기의-타이밍">포기의 타이밍</h2>
-<ul>
-<li>기회비용을 살피면서 대안을 찾아 나가기</li>
-</ul>
+<section id="oh-my-posh-설정" class="level2">
+<h2 class="anchored" data-anchor-id="oh-my-posh-설정">Oh-my-posh 설정</h2>
+<p><a href="https://ohmyposh.dev/">Home | Oh My Posh</a></p>
+<p>winget으로 설치한 이후 필요한 테마를 테스트하면 된다.</p>
+<pre class="shell"><code>oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/jandedobbeleer.omp.json" | Invoke-Expression</code></pre>
+<p>테마가 잘 먹는지 일단 확인해볼 수 있다. 원하는 테마를 항상 띄우려면 프로필을 하나 생성해주면 된다.</p>
+<pre class="shell"><code>&gt; notepad $profile</code></pre>
+<p>파일이 없으면 생성된다. 여기에 필요한 테마를 올려주면 된다. 예를 들어 나는 “powerlevel10k_modern” 테마를 좋아한다. 그러면 해당 프로필 파일에 아래와 같이 넣으면 된다.</p>
+<pre class="shell"><code>&gt; oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/powerlevel10k_modern.omp.json" | Invoke-Expression</code></pre>
+<section id="업데이트-시-테마가-초기화되는-문제" class="level3">
+<h3 class="anchored" data-anchor-id="업데이트-시-테마가-초기화되는-문제">업데이트 시 테마가 초기화되는 문제</h3>
+<p><code>$env:POSH_THEMES_PATH</code>의 위치에 따라서 업데이트 시 테마까지 함께 업데이트가 된다. 만일 해당 테마의 json 파일을 바꾸었다면 이 역시 사라지게 된다. 어차피 테마 파일의 위치는 자유롭게 바꿀 수 있으니까 자신이 커스텀한 테마 파일의 위치를 바꾸고 녀석을 로드하면 된다.</p>
 </section>
-<section id="문화의-규모-확장성" class="level2">
-<h2 class="anchored" data-anchor-id="문화의-규모-확장성">문화의 규모 확장성</h2>
-<ul>
-<li>장난해?</li>
-</ul>
+<section id="python-가상-환경이-안보이는-경우" class="level3">
+<h3 class="anchored" data-anchor-id="python-가상-환경이-안보이는-경우">Python 가상 환경이 안보이는 경우</h3>
+<p>테마에서 conda, python의 가상 환경이 안보일 때가 있다. 테마에서 python을 표현하는 부분에 이 부분이 빠져 있어서 그렇다. 해당 테마의 <code>json</code> 파일에서 python이 표시되는 분을 찾는다. 적당한 부분에 아래 코드를 넣자.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="er">"properties":</span> <span class="fu">{</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"fetch_virtual_env"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"display_mode"</span><span class="fu">:</span> <span class="st">"environment"</span><span class="fu">,</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"home_enabled"</span><span class="fu">:</span> <span class="kw">true</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span><span class="er">,</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="er">"template":</span> <span class="er">"\ue235</span> <span class="fu">{</span><span class="er">{</span> <span class="er">if</span> <span class="er">.Error</span> <span class="fu">}</span><span class="er">}</span><span class="fu">{</span><span class="er">{</span> <span class="er">.Error</span> <span class="fu">}</span><span class="er">}</span><span class="fu">{</span><span class="er">{</span> <span class="er">else</span> <span class="fu">}</span><span class="er">}</span><span class="fu">{</span><span class="er">{</span> <span class="er">if</span> <span class="er">.Venv</span> <span class="fu">}</span><span class="er">}</span><span class="fu">{</span><span class="er">{</span> <span class="er">.Venv</span> <span class="fu">}</span><span class="er">}</span> <span class="fu">{</span><span class="er">{</span> <span class="er">end</span> <span class="fu">}</span><span class="er">}</span><span class="fu">{</span><span class="er">{</span> <span class="er">.Full</span> <span class="fu">}</span><span class="er">}</span><span class="fu">{</span><span class="er">{</span> <span class="er">end</span> <span class="fu">}</span><span class="er">}",</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="er">"trailing_diamond":</span> <span class="er">"\ue0b4</span> <span class="er">",</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="er">"type":</span> <span class="er">"python"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>properties</code>가 중요한 부분이고 나머지 템플릿은 적당히 바꾸면 된다.</p>
+</section>
+</section>
+<section id="사후-관리" class="level2">
+<h2 class="anchored" data-anchor-id="사후-관리">사후 관리</h2>
+<p><code>winget</code>으로 설치한 패키지를 업데이트하고 싶다면</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> winget update <span class="op">--</span>all </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>이렇게 하면 알아서 업데이트가 진행된다.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.3.340">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,7 +20,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -65,6 +65,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
@@ -81,39 +82,39 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">lostineconomics.com</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../project.html">
+    <a class="nav-link" href="../../project.html" rel="" target="">
  <span class="menu-text">project</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/anarinsk"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/anarinsk" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/anarinsk"><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/anarinsk" rel="" target=""><i class="bi bi-twitter" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -165,13 +166,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNRF3S74Z4');
-</script><section id="projection-scalar-and-vector" class="level2">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="projection-scalar-and-vector" class="level2">
 <h2 class="anchored" data-anchor-id="projection-scalar-and-vector">Projection: Scalar and Vector</h2>
 <section id="definition" class="level3">
 <h3 class="anchored" data-anchor-id="definition">Definition</h3>
@@ -179,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Projection_and_rejection.png" class="my-figure5 img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">벡터 <span class="math inline">\(\mathbf a\)</span>를 벡터 <span class="math inline">\(\mathbf b\)</span>로 프로젝션 할 때 스칼라 프로젝션은 <span class="math inline">\(\mathbf a_1\)</span>의 길이를 벡터 프로젝션은 벡터 <span class="math inline">\(\mathbf a_1\)</span>를 나타난다.</figcaption><p></p>
+<figcaption class="figure-caption">벡터 <span class="math inline">\(\mathbf a\)</span>를 벡터 <span class="math inline">\(\mathbf b\)</span>로 프로젝션 할 때 스칼라 프로젝션은 <span class="math inline">\(\mathbf a_1\)</span>의 길이를 벡터 프로젝션은 벡터 <span class="math inline">\(\mathbf a_1\)</span>를 나타난다.</figcaption>
 </figure>
 </div>
 <p>스칼라 프로젝션 <span class="math inline">\(a_1\)</span>의 정의는 다음과 같다.</p>
@@ -308,7 +303,7 @@ z
 </div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj.png?raw=true" class="my-figure7 img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption"><span class="math inline">\(\vec u = \Pi_{l} (\vec u) + \Pi_{l^{\perp}} (\vec u)\)</span></figcaption><p></p>
+<figcaption class="figure-caption"><span class="math inline">\(\vec u = \Pi_{l} (\vec u) + \Pi_{l^{\perp}} (\vec u)\)</span></figcaption>
 </figure>
 </div>
 <p>그림에서 <span class="math inline">\(\vec u\)</span>의 <span class="math inline">\(\vec v\)</span>로의 프로젝션은 앞서 살펴본 벡터 프로젝션이다. <span class="math inline">\(\vec v\)</span> 대신 <span class="math inline">\(l\)</span>로 표기된 점에 유의하자.</p>
@@ -329,7 +324,7 @@ l: \{ \vec v' \in \mathbb R^n \lvert \vec v' = \vec 0 + t \vec v, t \in \mathbb 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection//vector_proj_2.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption"><span class="math inline">\(\vec u = \Pi_P(\vec u) + \Pi_{P^\perp}(\vec u)\)</span></figcaption><p></p>
+<figcaption class="figure-caption"><span class="math inline">\(\vec u = \Pi_P(\vec u) + \Pi_{P^\perp}(\vec u)\)</span></figcaption>
 </figure>
 </div>
 <p>평면 위로의 프로젝션을 생각해 보자. 기본적인 원리는 동일하다. 이에 앞서 평면을 벡터로 표현하는 방법에 대해 알아보자. 가장 편리한 방법은 노멀 벡터를 활용하는 것이다. 즉, 평면 위의 점 <span class="math inline">\(\vec {p_0}\)</span>를 지나는 <span class="math inline">\(P\)</span>는 다음과 같이 정의할 수 있다.</p>
@@ -343,7 +338,7 @@ P = \{ \vec p \in \mathbb R^n : \vec n \cdot(\vec p - \vec p_0) = 0 \}
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj_2a.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption"><span class="math inline">\(\vec u\)</span>에서 노멀 벡터 <span class="math inline">\(\vec n\)</span>으로 프로젝션했을 때 벡터 프로젝션이 바로 <span class="math inline">\(\Pi_{P^\perp}(\vec u)\)</span>가 된다.</figcaption><p></p>
+<figcaption class="figure-caption"><span class="math inline">\(\vec u\)</span>에서 노멀 벡터 <span class="math inline">\(\vec n\)</span>으로 프로젝션했을 때 벡터 프로젝션이 바로 <span class="math inline">\(\Pi_{P^\perp}(\vec u)\)</span>가 된다.</figcaption>
 </figure>
 </div>
 <p>우리가 알고 싶은 것은 <span class="math inline">\(\Pi_P(\vec u)\)</span>다. 그리고 벡터는 위치가 아니라 방향과 크기에 의해 결정되기 때문에 노멀 벡터 <span class="math inline">\(\vec n\)</span>은 크기와 뱡향을 유지한다면 어디로든 옮겨도 된다. 이를 <span class="math inline">\(\vec u\)</span>가 시작하는 위치로 옮겨보자. 이제 <span class="math inline">\(\vec u\)</span>에서 <span class="math inline">\(\vec n\)</span>으로 프로젝션을 하자. <span class="math inline">\(\vec n\)</span> 위의 벡터가 바로 <span class="math inline">\(\Pi_{P^\perp}(\vec u)\)</span>가 된다. 즉,</p>
@@ -370,7 +365,7 @@ l: \{ \vec p \in \mathbb R^n | \vec p = \mathbf {p}_0 + t \vec v, t \in \mathbb 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">아래 그림에서 보듯이 적당한 위치에 <span class="math inline">\(\mathbf p_0\)</span>가 있다고 하자.</figcaption><p></p>
+<figcaption class="figure-caption">아래 그림에서 보듯이 적당한 위치에 <span class="math inline">\(\mathbf p_0\)</span>가 있다고 하자.</figcaption>
 </figure>
 </div>
 <p>위 그림에서 원점과 <span class="math inline">\(l\)</span>의 거리는 어떻게 나타낼 수 있을까? <span class="math inline">\(l\)</span>이 지나가는 <span class="math inline">\(\vec p_0\)</span>를 그대로 두고, <span class="math inline">\(l\)</span>이 원점을 지나가도록 이동해 보자. 즉,</p>
@@ -380,7 +375,7 @@ l_0 = \{  \vec p \in \mathbb R^n | \vec p = \mathbf {0} + t \vec v, t \in \mathb
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line_2.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption"><span class="math inline">\(\mathbf{p_0} = \Pi_{l_0}(\mathbf p_0) + \Pi_{l_0^\perp}(\mathbf p_0)\)</span></figcaption><p></p>
+<figcaption class="figure-caption"><span class="math inline">\(\mathbf{p_0} = \Pi_{l_0}(\mathbf p_0) + \Pi_{l_0^\perp}(\mathbf p_0)\)</span></figcaption>
 </figure>
 </div>
 <p>이제 이 벡터와 <span class="math inline">\(\vec p_0\)</span> 사이의 거리를 구하면 된다. 이는 앞서 제시한 벡터 프로젝션의 수직 벡터의 길이와 같다. 즉,</p>
@@ -401,7 +396,7 @@ P = \{ \vec p \in \mathbb R^n : \vec n \cdot(\vec p - \mathbf{p_0}) = 0 \}
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/plane.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">현재 평면을 지나는 점 <span class="math inline">\(\mathbf p_0\)</span>를 두고 평면을 원점으로 밀어보자. 이때 평면을 정의하는 노멀 벡터 <span class="math inline">\(\vec n\)</span>을 표현하면 원점과 이 점을 잇는 벡터 <span class="math inline">\(\vec p_0\)</span>f를 <span class="math inline">\(\vec n\)</span>으로 프로젝션한 벡터의 길이가 평면과 원점의 거리가 된다.</figcaption><p></p>
+<figcaption class="figure-caption">현재 평면을 지나는 점 <span class="math inline">\(\mathbf p_0\)</span>를 두고 평면을 원점으로 밀어보자. 이때 평면을 정의하는 노멀 벡터 <span class="math inline">\(\vec n\)</span>을 표현하면 원점과 이 점을 잇는 벡터 <span class="math inline">\(\vec p_0\)</span>f를 <span class="math inline">\(\vec n\)</span>으로 프로젝션한 벡터의 길이가 평면과 원점의 거리가 된다.</figcaption>
 </figure>
 </div>
 <p>원점을 지나도록 평면을 이동시키고 평면의 노멀 벡터가 정의된 <span class="math inline">\(p_0\)</span>와 원점을 지나는 평면 <span class="math inline">\(P_0\)</span> 사이의 거리를 측정하면 된다.</p>
@@ -419,7 +414,7 @@ d(P, \vec 0) = d(P_0, \vec p_0) = \lVert  \dfrac{\vec p_0 \cdot \vec n}{\lVert\v
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="my-figure5 img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">선형대수로 본 회귀 분석</figcaption><p></p>
+<figcaption class="figure-caption">선형대수로 본 회귀 분석</figcaption>
 </figure>
 </div>
 <p>앞서 소개했던 회귀 분석에 관한 포스팅 <a href="https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-10-25-understanding-regression.html">Understanding Regression</a>을 다시 보자. Origin–Observed Y–Fitted <span class="math inline">\(\hat Y\)</span>이 만드는 삼각형을 보자. 직각 삼각형이다. 여기서 잔차에 해당하는 <span class="math inline">\(e\)</span>는 <span class="math inline">\(X\)</span>의 칼럼 스페이스와 항상 직교한다. 즉, <span class="math inline">\(X' e = 0\)</span>이 성립한다. 그리고 <span class="math inline">\(\hat Y = X \hat\beta\)</span>이므로</p>
@@ -580,9 +575,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -647,6 +656,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
