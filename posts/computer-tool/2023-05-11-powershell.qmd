@@ -85,30 +85,27 @@ winget install --id=Posit.Quarto  -e
 콘다를 설치한 이후 초기화가 필요하다. 설치 이후 터미널을 재시작하고 아래와 같이 입력한다. 
 
 ```powershell
-> conda init Powershell
+> conda init powershell
 ```
 
 :::{.column-margin}
 이 부분은 [여기](https://jh-bk.tistory.com/57)를 참고했다. 
 :::
 
+콘다가 터미널의 종류 별로 필요한 파일을 감지한다. 나오는 정보 중에서 아래 두 줄이 개인 프로필 관련 설정이 담김 폴더이다. 해당 폴더가 제대로 설정되어 있는지 확인하려면 아래를 실행하자. 
+
 ```powershell
 > test-path $profile
 ```
 
-여기서 `false`가 뜬다면 프로필을 로드하는 경로에 문제가 생긴 것이다. 강제로 다시 설정해주자. 
-
-```powershell
-> new-item -path $profile -itemtype file -force
-```
-
-이제 `conda init powershell`을 다시 실행해준다. 그리고 해당 설정 파일이 생성된 위치를 확인하려면 `$profile`을 타이핑하자. 내 경우 `C:\PowerShell` 아래 설정되었다. 
-
-:::{.column-margin}
-해당 위치에 프로필 파일이 여러 개 있어도 된다. 파일 이름이 달라도 `.ps1` 확장자를 지닐 경우 PS로드 시 읽어온다.  `conda init powershell`로 설정한 프로필 파일은 `profile.ps1`으로 저장된다. 파일을 노트패드 등으로 열어보자. conda 관련 설정 스크립트가 들어 있다. 
-:::
+여기서 `false`가 뜬다면 프로필을 로드하는 경로에 문제가 생긴 것이다. `conda init powershell`을 다시 실행해보자. 만일 이떄에도 문제가 생긴다면 기본으로 잡힌 도큐먼트 폴더를 powershell에서 읽어들이지 못하는 문제에 해당한다. 이 문제 해결은 옆의 link 안의 내용을 참고하자. 
 
 이제 다시 PS로 돌아와서 가상 환경이 잘 설정되어 있는지 확인해보자. 
+
+
+:::{.column-margin}
+해당 위치에 프로필 파일이 여러 개 있어도 된다. 파일 이름이 달라도 `.ps1` 확장자를 지닐 경우 PS로드 시 읽어온다.  `conda init powershell`로 설정한 프로필 파일은 `profile.ps1`으로 저장된다. 파일을 노트패드 등으로 열어보자. conda 관련 설정 스크립트가 들어 있다. 만일 여전히 가상환경이 잘 보이지 않는다면 profile.ps1의 내용이 제대로 로드되지 않은 것이다. `conda init`은 셸 별로 필요한 스크립트를 생성하는 과정이다. 내용을 참고해서 적절한 조치를 취해주면 된다. conda 설치 자체에 문제가 있는 것은 아니다. 
+:::
 
 ## Oh-my-posh 설정 
 
@@ -158,7 +155,8 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/jandedobbeleer.omp.json" | 
 `winget`으로 설치한 패키지를 업데이트하고 싶다면 
 
 ```powershell
-> winget update --all 
+> winget update --all # or
+> winget update --all --include-unknown
 ```
 
 이렇게 하면 알아서 업데이트가 진행된다. 
