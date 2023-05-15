@@ -98,9 +98,7 @@ winget install --id=Posit.Quarto  -e
 > test-path $profile
 ```
 
-여기서 `false`가 뜬다면 프로필을 로드하는 경로에 문제가 생긴 것이다. `conda init powershell`을 다시 실행해보자. 만일 이떄에도 문제가 생긴다면 기본으로 잡힌 도큐먼트 폴더를 powershell에서 읽어들이지 못하는 문제에 해당한다. 이 문제 해결은 옆의 link 안의 내용을 참고하자. 
-
-이제 다시 PS로 돌아와서 가상 환경이 잘 설정되어 있는지 확인해보자. 
+여기서 `false`가 뜬다면 프로필을 로드하는 경로에 문제가 생긴 것이다. `conda init powershell`을 다시 실행해보자. 자세히 보면(아마도 맨 끝에 두 개), `.PS1`을 로드하는 경로 중에 깨진 것이 존재할 것이다. 이 경우 `$profle`을 로드하는 경로를 강제로 설정해줘야 한다. 이 문제 해결은 옆의 link 안의 내용을 참고하자. 강제로 설정한 후  `conda init powershell`을 다시 실행해보자. 만일 경로에 문제가 없다면 PS로 돌아와서 가상 환경이 잘 설정되어 있는지 확인해보자. 
 
 
 :::{.column-margin}
