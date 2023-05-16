@@ -2531,21 +2531,21 @@
     "href": "posts/computer-tool/2023-05-16-workflow-with-vscode.html",
     "title": "Quick Ready for Python in Windows",
     "section": "",
-    "text": "윈도11에서 powershell, conda 가상환경, VS Code로 빠르게 설정하는 Python 환경을 소개한다.\n\n\n\n\n각각의 프로덕트에 대한 상세한 소개\nJupyter 이용법\n\n\n\n\n\n윈도에서 편리하게 파이썬 작업 환경에 이르는 길"
+    "text": "윈도11 환경에서 powershell, conda 가상환경, VS Code로 빠르게 Python 환경을 설정하기\n\n\n\n\n각각의 프로덕트에 대한 상세한 소개와 이용법 ### What in this Post\n윈도에서 편리하게 파이썬 작업 환경에 이르는 길"
   },
   {
     "objectID": "posts/computer-tool/2023-05-16-workflow-with-vscode.html#tl-dr",
     "href": "posts/computer-tool/2023-05-16-workflow-with-vscode.html#tl-dr",
     "title": "Quick Ready for Python in Windows",
     "section": "",
-    "text": "윈도11에서 powershell, conda 가상환경, VS Code로 빠르게 설정하는 Python 환경을 소개한다.\n\n\n\n\n각각의 프로덕트에 대한 상세한 소개\nJupyter 이용법\n\n\n\n\n\n윈도에서 편리하게 파이썬 작업 환경에 이르는 길"
+    "text": "윈도11 환경에서 powershell, conda 가상환경, VS Code로 빠르게 Python 환경을 설정하기\n\n\n\n\n각각의 프로덕트에 대한 상세한 소개와 이용법 ### What in this Post\n윈도에서 편리하게 파이썬 작업 환경에 이르는 길"
   },
   {
     "objectID": "posts/computer-tool/2023-05-16-workflow-with-vscode.html#왜-powershell-miniconda-vs-code를-써야-하는가",
     "href": "posts/computer-tool/2023-05-16-workflow-with-vscode.html#왜-powershell-miniconda-vs-code를-써야-하는가",
     "title": "Quick Ready for Python in Windows",
     "section": "왜 PowerShell, miniconda, VS Code를 써야 하는가?",
-    "text": "왜 PowerShell, miniconda, VS Code를 써야 하는가?\n이 묶음이 ’최선’의 선택이 아니다. 다만, 이 앱들은 윈도11 위에서 작업할 때 (내 기준에서) 최대한 단순하고 일관된 Python 환경을 만드는 데 필요하다.\n\nPowerShell(PS): 셸을 써서 miniconda를 통해 기본적인 파이썬 환경을 제어할 것이다. 따라서 PS가 기본적으로 필요하다.\nminiconda: 본격적인 개발 용도라면 conda 가상 환경이 충분하지 않다. 하지만 개인 프로젝트 용도로 이 만큼 편리한 것도 없다. 불필요한 앱들이 따라 붙는 anaconda 대신 우리는 단촐하게 miniconda를 쓸 것이다.\nVS Code: Python 개발 환경과 Jupyter 환경 모두를 편리하게 부릴 수 있다. 다른 선택의 여지를 돌아볼 필요조차 없을 만큼 윈도에서는 최강의 에디터이다."
+    "text": "왜 PowerShell, miniconda, VS Code를 써야 하는가?\nPowerShell(PS) + miniconda + VS Code 묶음이 ’최선’의 선택이 아니다. 내 기준에서 이 앱들은 윈도11 환경에서 일관되고 단순한 Python 환경을 만드는 데 필요한 최소 집합이다.\n\nPowerShell: 셸을 써서 miniconda를 통해 기본적인 파이썬 환경을 제어할 것이다. 따라서 PS가 기본적으로 필요하다.\nminiconda: 본격적인 개발 용도라면 conda 가상 환경이 충분하지 않다. 하지만 개인 프로젝트 용도로 이 만큼 편리한 것도 없다. 불필요한 앱들이 따라 붙는 anaconda 대신 우리는 단촐하게 miniconda를 쓸 것이다.\nVS Code: Python 개발 환경과 Jupyter 환경 모두를 편리하게 부릴 수 있다. 다른 선택의 여지를 돌아볼 필요조차 없을 만큼 윈도에서는 최강의 에디터이다."
   },
   {
     "objectID": "posts/computer-tool/2023-05-16-workflow-with-vscode.html#prelim",
@@ -2559,13 +2559,13 @@
     "href": "posts/computer-tool/2023-05-16-workflow-with-vscode.html#가상-환경-생성",
     "title": "Quick Ready for Python in Windows",
     "section": "가상 환경 생성",
-    "text": "가상 환경 생성\n먼저 conda를 통해서 가상 환경을 생성해보자.\n&gt; conda create -n {가상환경-이름} python={파이썬 버전}\n이 명령을 통해 특정 버전의 파이썬을 백엔드로 하는 가상환경을 만들 수 있다. 가상 환경이 생성된 후 잘 생성되었는지를 확인해보자.\n❯ conda env list\n# conda environments:\n#\nbase                     C:\\Users\\junsokhuhh\\Miniconda3\npandas=2.0_python=3.11  *  C:\\Users\\junsokhuhh\\Miniconda3\\envs\\pandas=2.0_python=3.11\ntorch=2.0_python=3.11     C:\\Users\\junsokhuhh\\Miniconda3\\envs\\torch=2.0_python=3.11\n예시에서 보듯이 생성된 환경의 이름과 경로 그리고 활성화된 환경이 *로 표기된다. 해당 환경을 복사하거나 지우고 싶다면 conda 명령어를 활용할 수 있지만, 더 편리한 방법은 저 폴더에 들어가서 직접 작업하는 것이다. 폴더 구조만 유지되면 conda에서 잘 인식된다.\n\n\n환경의 이름을 짓는 법을 고민해두면 도움이 된다. 내 경우 대 분류를 _로 구별하고 그 앞에 쓰는 주요 패키지의 버전을 위 예시처럼 명시한다. 이렇게 해두면 나중에 봤을 떄 혼란이 덜 발생한다.\n해당 환경을 활성화하려면 conda activate {가상환경-이름}, 비 활성화는 conda deactivate다.\n환경을 활성화한 후 필요한 패키지를 설치하면 된다. Jupyter를 활용할 예정이라면 꼭 주피터를 깔어주도록 하자.\n&gt; pip3 install jupyter"
+    "text": "가상 환경 생성\n먼저 conda에서 가상 환경을 생성해보자.\n&gt; conda create -n {가상환경-이름} python={파이썬 버전}\n이 명령을 통해 특정 버전의 파이썬을 백엔드로 하는 가상환경을 만들 수 있다. 생성 후 원하는 환경이 잘 생성되었는지를 확인해보자.\n❯ conda env list\n# conda environments:\n#\nbase                     C:\\Users\\junsokhuhh\\Miniconda3\npandas=2.0_python=3.11  *  C:\\Users\\junsokhuhh\\Miniconda3\\envs\\pandas=2.0_python=3.11\ntorch=2.0_python=3.11     C:\\Users\\junsokhuhh\\Miniconda3\\envs\\torch=2.0_python=3.11\n예시에서 보듯이 생성된 환경의 이름과 경로 그리고 활성화된 환경이 *로 표기된다. 해당 환경을 복사하거나 지우고 싶다면 conda 명령어를 활용할 수 있다. 보다 직관적으로 편리한 방법은 저 폴더에 대해서 직접 복사하거나 지워서 환경을 복제, 삭제하는 것이다. 폴더 구조만 유지되면 conda에서 가상 환경으로 잘 인식된다.\n\n\n각자 환경의 이름을 짓는 법을 고민해두면 좋다. 내 경우 대 분류를 _로 구별하고 그 앞에 쓰는 주요 패키지의 버전을 위 예시처럼 명시한다. 이렇게 해두면 나중에 봤을 떄 혼란이 덜 발생한다.\n해당 환경을 활성화하려면 conda activate {가상환경-이름}, 비 활성화는 conda deactivate다.\n환경을 활성화한 후 필요한 패키지를 설치하면 된다. Jupyter를 활용할 예정이라면 꼭 주피터를 깔어주도록 하자.\n&gt; pip3 install jupyter"
   },
   {
     "objectID": "posts/computer-tool/2023-05-16-workflow-with-vscode.html#jupyter-vs-code",
     "href": "posts/computer-tool/2023-05-16-workflow-with-vscode.html#jupyter-vs-code",
     "title": "Quick Ready for Python in Windows",
     "section": "Jupyter + VS Code",
-    "text": "Jupyter + VS Code\nVS Code에서 깔아야 하는 Extension은 Python, Pylance, Jupyter 확장이다. 모두 Microsoft에서 제공하는 것이니 의심 없이 설치하면 된다.\n설치 후에 VS Code에서 .ipynb을 열어보자. 이전에 설정된 kernel이 없다면 커널을 새로 설정해주면 된다.\n커널을 선택을 누르면, “파이썬 환경”과 “기존 Jupyter 서버” 중 하나를 선택할 수 있다. 전자를 택하면 앞서 설정한 miniconda의 환경이 잘 보인다. 필요한 환경을 선택하고 녀석을 VS Code의 Jupyter 환경으로 작업하면 된다. 아래 스크린 샷을 보면 순서대로 1, 2, 3, 4의 화면에서 필요한 내용을 선택하면 된다.\n\n\n\n \n\n\n\n\nVS Code 커널 선택 (클릭하면 확대)\n\n\n\n \n\n\n\n기존 주피터 환경보다는 단순한 형태지만, VS Code에서는 GitHub Copilot을 함께 쓸 수 있다. 모든 단점을 상쇄하고도 남는다."
+    "text": "Jupyter + VS Code\n파이썬을 부리기 위해서 VS Code에서 깔아야 하는 Extension은 Python, Pylance, Jupyter 확장이다. 모두 Microsoft에서 제공하는 것이니 의심 없이 설치하면 된다. 각각 필요한 몇 가지 확장이 함께 깔리게 되니 이 점 유의하시라. 설치 후에 VS Code에서 .ipynb을 열어보자. 이전에 설정된 kernel이 없다면 Jupyter에서 부릴 커널을 새로 설정해야 한다.\n커널을 선택을 누르면, “파이썬 환경”과 “기존 Jupyter 서버” 중 하나를 선택할 수 있다. 전자를 택하면 앞서 설정한 miniconda의 환경이 잘 보인다. 필요한 환경을 선택하고 녀석을 VS Code의 Jupyter 환경으로 작업하면 된다. 아래 스크린 샷을 보면 순서대로 1(현재 이용 중인 커널), 2(커널 선택), 3(주피터 파이썬 환경 선택), 4(파이썬 환경 선택)의 화면에서 필요한 내용을 선택하면 된다.\n\n\n\n \n\n\n\n\nVS Code 커널 선택 (클릭하면 확대)\n\n\n\n \n\n\n\n기존 주피터 환경보다는 단순한 형태지만, VS Code에서는 GitHub Copilot을 함께 쓸 수 있다. 모든 단점을 상쇄하고도 남는다."
   }
 ]
