@@ -80,7 +80,7 @@ VS Code에서 깔아야 하는 Extension은 Python, Pylance, Jupyter 확장이�
 커널을 선택을 누르면, "파이썬 환경"과 "기존 Jupyter 서버" 중 하나를 선택할 수 있다. 전자를 택하면 앞서 설정한 miniconda의 환경이 잘 보인다. 필요한 환경을 선택하고 녀석을 VS Code의 Jupyter 환경으로 작업하면 된다. 아래 스크린 샷을 보면 순서대로 1, 2, 3, 4의 화면에서 필요한 내용을 선택하면 된다. 
 
 :::{layout="[-20, 85, -20]" layout-valign="bottom"}
-![VS Code 커널 선택 (클릭하면 K그림 확대)](images/vscode_kernel.png)
+![VS Code 커널 선택 (클릭하면 확대)](images/vscode_kernel.png)
 :::
 
 기존 주피터 환경보다는 단순한 형태지만, VS Code에서는 GitHub Copilot을 함께 쓸 수 있다. 모든 단점을 상쇄하고도 남는다. 
