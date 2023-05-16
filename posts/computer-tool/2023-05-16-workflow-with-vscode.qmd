@@ -1,5 +1,5 @@
 ---
-title: Workflow for Python in Windows and VS Code
+title: Quick Ready for Python in Windows
 description:  파이썬 작업환경을 빠르게 구축하기 
 author: "JS HUHH"
 date: "05/16/2023"
