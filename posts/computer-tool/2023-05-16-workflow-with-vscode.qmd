@@ -3,7 +3,7 @@ title: Workflow for Python in Windows and VS Code
 description:  파이썬 작업환경을 빠르게 구축하기 
 author: "JS HUHH"
 date: "05/16/2023"
-image: "https://www.fullstackpython.com/img/logos/powershell.png"
+image: "https://d1k571r5p7i4n1.cloudfront.net/c.1391/large/essential_tools_for_home_repair.JPG"
 categories: [computer-tool]
 filters:
    - lightbox
