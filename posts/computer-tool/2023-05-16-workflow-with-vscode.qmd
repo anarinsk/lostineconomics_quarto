@@ -19,6 +19,7 @@ draft: false
 ### Not in this Post 
 
 - 각각의 프로덕트에 대한 상세한 소개와 이용법
+
 ### What in this Post 
 
 - 윈도에서 편리하게 파이썬 작업 환경에 이르는 길 
