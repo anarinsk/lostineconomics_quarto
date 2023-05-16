@@ -2566,6 +2566,6 @@
     "href": "posts/computer-tool/2023-05-16-workflow-with-vscode.html#jupyter-vs-code",
     "title": "Quick Ready for Python in Windows",
     "section": "Jupyter + VS Code",
-    "text": "Jupyter + VS Code\nVS Code에서 깔아야 하는 Extension은 Python, Pylance, Jupyter 확장이다. 모두 Microsoft에서 제공하는 것이니 의심 없이 설치하면 된다.\n설치 후에 VS Code에서 .ipynb을 열어보자. 이전에 설정된 kernel이 없다면 커널을 새로 설정해주면 된다.\n커널을 선택을 누르면, “파이썬 환경”과 “기존 Jupyter 서버” 중 하나를 선택할 수 있다. 전자를 택하면 앞서 설정한 miniconda의 환경이 잘 보인다. 필요한 환경을 선택하고 녀석을 VS Code의 Jupyter 환경으로 작업하면 된다. 아래 스크린 샷을 보면 순서대로 1, 2, 3, 4의 화면에서 필요한 내용을 선택하면 된다.\n\n\n\n\n\n기존 주피터 환경보다는 단순한 형태지만, VS Code에서는 GitHub Copilot을 함께 쓸 수 있다. 모든 단점을 상쇄하고도 남는다."
+    "text": "Jupyter + VS Code\nVS Code에서 깔아야 하는 Extension은 Python, Pylance, Jupyter 확장이다. 모두 Microsoft에서 제공하는 것이니 의심 없이 설치하면 된다.\n설치 후에 VS Code에서 .ipynb을 열어보자. 이전에 설정된 kernel이 없다면 커널을 새로 설정해주면 된다.\n커널을 선택을 누르면, “파이썬 환경”과 “기존 Jupyter 서버” 중 하나를 선택할 수 있다. 전자를 택하면 앞서 설정한 miniconda의 환경이 잘 보인다. 필요한 환경을 선택하고 녀석을 VS Code의 Jupyter 환경으로 작업하면 된다. 아래 스크린 샷을 보면 순서대로 1, 2, 3, 4의 화면에서 필요한 내용을 선택하면 된다.\n\n\n\n \n\n\n\n\n\n\n\n \n\n\n\n기존 주피터 환경보다는 단순한 형태지만, VS Code에서는 GitHub Copilot을 함께 쓸 수 있다. 모든 단점을 상쇄하고도 남는다."
   }
 ]

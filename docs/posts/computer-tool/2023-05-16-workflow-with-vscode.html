@@ -261,10 +261,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>VS Code에서 깔아야 하는 Extension은 Python, Pylance, Jupyter 확장이다. 모두 Microsoft에서 제공하는 것이니 의심 없이 설치하면 된다.</p>
 <p>설치 후에 VS Code에서 <code>.ipynb</code>을 열어보자. 이전에 설정된 kernel이 없다면 커널을 새로 설정해주면 된다.</p>
 <p>커널을 선택을 누르면, “파이썬 환경”과 “기존 Jupyter 서버” 중 하나를 선택할 수 있다. 전자를 택하면 앞서 설정한 miniconda의 환경이 잘 보인다. 필요한 환경을 선택하고 녀석을 VS Code의 Jupyter 환경으로 작업하면 된다. 아래 스크린 샷을 보면 순서대로 1, 2, 3, 4의 화면에서 필요한 내용을 선택하면 된다.</p>
-<div class="quarto-figure quarto-figure-center">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 16.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 68.0%;justify-content: center;">
 <figure class="figure">
 <p><a href="images/vscode_kernel.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/vscode_kernel.png" class="img-fluid figure-img"></a></p>
 </figure>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 16.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
 </div>
 <p>기존 주피터 환경보다는 단순한 형태지만, VS Code에서는 GitHub Copilot을 함께 쓸 수 있다. 모든 단점을 상쇄하고도 남는다.</p>
 
@@ -621,7 +631,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","loop":true,"openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 
