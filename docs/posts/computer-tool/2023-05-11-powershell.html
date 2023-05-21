@@ -230,10 +230,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="install">Install</h2>
 <section id="prelim" class="level3">
 <h3 class="anchored" data-anchor-id="prelim">Prelim</h3>
-<p>윈도11을 갓 설치했다고 하자. 여기에는 “Windows Powershell”이 설치되어 있다. 이 녀석을 계속 쓰지는 않을 것이다. 우선 아래의 두 개 도구를 확인하도록 하자. 설치하는 방법은 구글링을 하시면 금방 나온다.</p>
+<p>윈도11을 갓 설치했다고 하자. 여기에는 “Windows Powershell”이 설치되어 있다. 이 녀석을 계속 쓰지는 않을 것이다. 우선 아래의 두 개 도구를 확인하도록 하자. 설치하는 방법은 구글링을 하면 되겠다.</p>
 <ol type="1">
-<li>Windows Terminal</li>
-<li>“앱 설치 관리자”</li>
+<li>Windows Terminal: “명령 프롬프트” 대신 쓸 터미널 앱</li>
+<li>“앱 설치 관리자”: <code>winget</code> 활성화</li>
 </ol>
 <p>둘 모두 MS Store에서 찾아 설치하면 된다. 이왕이면 기본 터미널 앱 자체를 “명령 프롬프트”에서 이 녀석으로 바꾸도록 하자.</p>
 </section>
@@ -244,10 +244,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="post-job" class="level3">
 <h3 class="anchored" data-anchor-id="post-job">Post-job</h3>
-<p>설치가 완료된 이후 몇 가지 후처리를 하면 좋다.</p>
+<p>설치가 완료된 이후 “설정” 항목에서 몇 가지 후처리를 하면 좋다.</p>
 <ol type="1">
-<li>Windows Terminal에서 기본 프로필을 “Windows Powershell”에서 “Powershell”로 바꾸자.</li>
-<li>최신 버전의 Windows Terminal에서는 “관리자 권한 실행” 옵션이 있다. 이 녀석도 켜도록 하자.</li>
+<li>기본 프로필을 “Windows Powershell”에서 “Powershell”로 바꾸자.</li>
+<li>최신 버전에서는 “관리자 권한 실행” 옵션이 있다. 이 녀석도 켜도록 하자.</li>
 <li>“모양” 항목을 찾아서 몇 가지 폰트 설정을 해줘야 한다. 폰트 선택은 취향을 따르면 된다. 내가 쓰는 폰트는 아래와 같다.</li>
 </ol>
 <p><a href="https://www.nerdfonts.com/font-downloads">Hack Nerd</a>, <a href="https://www.dante2k.com/602">D2Coding Nerd</a></p>
@@ -255,7 +255,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="install-apps" class="level2">
 <h2 class="anchored" data-anchor-id="install-apps">Install Apps</h2>
-<p>이제 앱들을 설치하면 된다. json을 만들어서 일괄 설치할 수도 있지만 문제가 생기면 대응이 필요하니 필요한 앱을 일단 하나씩 까는 것이 좋겠다. 내가 쓰는 앱들이다.</p>
+<p>이제 필요한 앱들을 명령을 통해 설치하면 된다. json을 만들어서 일괄 설치할 수도 있지만 문제가 생기면 대응이 필요하니 필요한 앱을 일단 하나씩 까는 것도 괜찮다. 아래는 내가 쓰는 앱들이다.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id<span class="op">=</span>Microsoft<span class="op">.</span><span class="fu">PowerToys</span>  <span class="op">-</span>e</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id<span class="op">=</span>Git<span class="op">.</span><span class="fu">Git</span>  <span class="op">-</span>e</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id<span class="op">=</span>GitHub<span class="op">.</span><span class="fu">GitHubDesktop</span>  <span class="op">-</span>e</span>
@@ -264,20 +264,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id<span class="op">=</span>Microsoft<span class="op">.</span><span class="fu">VisualStudioCode</span>  <span class="op">-</span>e</span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id<span class="op">=</span>Obsidian<span class="op">.</span><span class="fu">Obsidian</span>  <span class="op">-</span>e</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>winget install <span class="op">--</span>id<span class="op">=</span>Posit<span class="op">.</span><span class="fu">Quarto</span>  <span class="op">-</span>e</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>금새 눈치 챘겠지만, <code>install</code> 명령어 뒤에 해당 앱의 id를 넣어 주는 식으로 구성되어 있다. 내게 필요한 앱이 <code>winget</code>을 통한 설치 경로를 제공하는지 알고 싶다면 <a href="https://winstall.app/">여기</a>를 방문해서 검색하면 된다.</p>
-<p>또 하나 보고 가자. 위에 보다시피 설치 파일을 다운받아서 깔았던 거의 대부분의 소프트웨어가 <code>winget</code>을 통해 제공된다.</p>
+<p>금새 눈치 챘겠지만 <code>install</code> 명령어 뒤에 해당 앱의 id를 넣어 주는 식으로 구성되어 있다. 내게 필요한 앱이 <code>winget</code>을 통한 설치 경로를 제공하는지 알고 싶다면 <a href="https://winstall.app/">여기</a>를 방문해서 검색하면 된다.</p>
+<p>설치 파일을 다운받아서 깔았던 거의 대부분의 앱들을 <code>winget</code>을 통해 설치할 수 있다.</p>
 </section>
 <section id="conda-설정" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="conda-설정">Conda 설정</h2>
-<p>다른 것들은 설치 이후에 대체로 쓰던대로 쓰면 된다. 별도의 언급이 필요한 두 개가 miniconda와 OhMyPosh이다. 하나씩 살펴보자. 이왕 터미널을 쓸 바에야 그냥 miniconda3를 쓰는 것이 낫다. 그래서 미니콘다(이하 콘다)를 설치했다.</p>
+<p>다른 것들은 설치 이후에 대체로 쓰던대로 쓰면 된다. 별도의 언급이 필요한 두 개가 miniconda와 OhMyPosh이다. 하나씩 살펴보자. 이왕 터미널을 쓸 바에야 anaconda 대신 miniconda3를 쓰는 것이 낫다. 아래에서는 미니콘다를 콘다로 부르도록 하자.</p>
 <p>콘다를 설치한 이후 초기화가 필요하다. 설치 이후 터미널을 재시작하고 아래와 같이 입력한다.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> conda init powershell</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>이 부분은 <a href="https://jh-bk.tistory.com/57">여기</a>를 참고했다.</p>
-</div></div><p>콘다가 터미널의 종류 별로 필요한 파일을 감지한다. 나오는 정보 중에서 아래 두 줄이 개인 프로필 관련 설정이 담김 폴더이다. 해당 폴더가 제대로 설정되어 있는지 확인하려면 아래를 실행하자.</p>
+</div></div><p>콘다가 터미널의 종류 별로 필요한 설정을 생성한다. 화면에 표시되는 정보 중에서 아래 두 줄이 개인 프로필 관련 설정이 담김 폴더이다. 해당 폴더가 제대로 설정되어 있는지 확인하려면 아래를 실행하자.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="fu">test-path</span> <span class="va">$profile</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>여기서 <code>false</code>가 뜬다면 프로필을 로드하는 경로에 문제가 생긴 것이다. <code>conda init powershell</code>을 다시 실행해보자. 자세히 보면(아마도 맨 끝에 두 개), <code>.PS1</code>을 로드하는 경로 중에 깨진 것이 존재할 것이다. 이 경우 <code>$profle</code>을 로드하는 경로를 강제로 설정해줘야 한다. 이 문제 해결은 옆의 link 안의 내용을 참고하면 된다. <code>$profile</code>의 경로를 강제로 설정한 후 <code>conda init powershell</code>을 다시 실행하자. 만일 경로에 문제가 없다면 PS로 돌아와서 가상 환경이 잘 설정되어 있는지 확인하면 된다.</p>
+<p>여기서 <code>false</code>가 뜬다면 프로필을 로드하는 경로에 문제가 생긴 것이다. <code>conda init powershell</code>을 다시 실행해보자. 자세히 보면(아마도 맨 끝에 두 개), <code>.PS1</code>을 로드하는 경로 중에 깨진 것이 존재할 것이다. 이 경우 <code>$profle</code>을 로드하는 경로를 강제로 설정해줘야 한다. 이 문제 해결은 옆의 link의 내용을 참고하면 된다. <code>$profile</code>의 경로를 강제로 설정한 후 <code>conda init powershell</code>을 다시 실행하자. 만일 경로에 문제가 없다면 PS로 돌아와서 가상 환경이 잘 설정되어 있는지 확인하면 된다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>해당 위치에 프로필 파일이 여러 개 있어도 된다. 파일 이름이 달라도 <code>.ps1</code> 확장자를 지닐 경우 PS로드 시 읽어온다. <code>conda init powershell</code>로 설정한 프로필 파일은 <code>profile.ps1</code>으로 저장된다. 파일을 노트패드 등으로 열어보자. conda 관련 설정 스크립트가 들어 있다. 만일 여전히 가상환경이 잘 보이지 않는다면 profile.ps1의 내용이 제대로 로드되지 않은 것이다. <code>conda init</code>은 셸 별로 필요한 스크립트를 생성하는 과정이다. 내용을 참고해서 적절한 조치를 취해주면 된다. conda 설치 자체에 문제가 있는 것은 아니다.</p>
@@ -293,7 +293,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre class="shell"><code>&gt; oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/powerlevel10k_modern.omp.json" | Invoke-Expression</code></pre>
 <section id="업데이트-시-테마가-초기화되는-문제" class="level3">
 <h3 class="anchored" data-anchor-id="업데이트-시-테마가-초기화되는-문제">업데이트 시 테마가 초기화되는 문제</h3>
-<p><code>$env:POSH_THEMES_PATH</code>의 위치에 따라서 업데이트 시 테마까지 함께 업데이트가 된다. 만일 해당 테마의 json 파일을 바꾸었다면 이 역시 사라지게 된다. 어차피 테마 파일의 위치는 자유롭게 바꿀 수 있으니까 자신이 커스텀한 테마 파일의 위치를 바꾸고 녀석을 로드하면 된다.</p>
+<p><code>$env:POSH_THEMES_PATH</code>의 위치에 따라서 업데이트 시 테마까지 함께 업데이트가 된다. 만일 해당 테마의 json 파일을 바꾸었다면 업데이트가 되면서 초기화된다. 어차피 테마 파일의 위치는 자유롭게 바꿀 수 있으니까 자신이 커스텀한 테마 파일의 위치를 바꾸고 녀석을 로드하면 된다.</p>
 </section>
 <section id="python-가상-환경이-안보이는-경우" class="level3">
 <h3 class="anchored" data-anchor-id="python-가상-환경이-안보이는-경우">Python 가상 환경이 안보이는 경우</h3>
