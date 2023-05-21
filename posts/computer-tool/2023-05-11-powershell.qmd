@@ -18,12 +18,12 @@ draft: false
 ### Not in this Post 
 
 - 파워셸 이용법 
-- 윈도 11 까지는 법 
+- 윈도11 설치하기  
 
 ### What in this Post 
 
 - 파워셸을 이용해 주요 소프트웨어 설치 
-- conda, ohmyposh 설정법 
+- conda, ohmyposh 설정하기  
 
 ## Powershell을 써야 하는 이유 
 
