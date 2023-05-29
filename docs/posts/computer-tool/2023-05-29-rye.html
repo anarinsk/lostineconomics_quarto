@@ -195,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
 <pre class="shell"><code>&gt; rye self update # Rye 업데이트 
 &gt; rye self uninstall # Rye 삭제 </code></pre>
 </section>
-<section id="프로젝트-개시-및-패키지-설치" class="level2">
+<section id="프로젝트-개시-및-패키지-설치" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="프로젝트-개시-및-패키지-설치">프로젝트 개시 및 패키지 설치</h2>
 <p>프로젝트를 생성할 상위 폴더에서 아래와 같이 생성 명령어를 실행한다.</p>
 <pre class="shell"><code>&gt; rye init {프로젝트-이름}</code></pre>
@@ -203,7 +203,10 @@ ul.task-list li input[type="checkbox"] {
 <pre class="shell"><code>&gt; rye add ipykernel pandas 
 &gt; rye sync </code></pre>
 <p>가상 환경의 개별 설정은 <code>project.toml</code> 파일을 통해서 관리된다. 버전 관리 등의 자세한 내용은 <a href="https://rye-up.com/guide/pyproject/">공식 문서</a>를 참고하자.</p>
-</section>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>패키지 의존성 관리의 좋은 예를 소개한다. pytorch의 cuda 버전을 깔아야 한다고 하자. rye의 디폴트 저장소에는 해당 내용이 없다. 따라서 해당 <code>whl</code>을 끌고 오기 위해서는 별도의 저장소를 저장해줘야 한다. 이 지정은 프로젝트 단위로 할 수 있고 전체 설정으로도 할 수 있다. 자세한 내용은 <a href="https://github.com/anarinsk/test_pytorch-install#with-rye--vs-code-20230530">여기</a>를 확인하도록 하자.</p>
+</div></div></section>
 <section id="vs-code에서-.ipynb-작업하기" class="level2">
 <h2 class="anchored" data-anchor-id="vs-code에서-.ipynb-작업하기">VS Code에서 <code>.ipynb</code> 작업하기</h2>
 <p>프로젝트 폴더와 연동해서 VS Code를 열어주자. 터미널에서 <code>code .</code>을 실행하면 된다. 이제 해당 프로젝트의 파이썬 커널과 VS Code의 Jupyter 환경을 연결해보자.</p>
@@ -568,7 +571,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":true,"closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"descPosition":"bottom","openEffect":"zoom","selector":".lightbox"});</script>
 
 
 
