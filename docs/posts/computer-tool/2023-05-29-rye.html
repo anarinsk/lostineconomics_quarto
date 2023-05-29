@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.361">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -64,7 +64,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -173,9 +174,10 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="어딘가-모자란-가상환경" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="어딘가-모자란-가상환경">어딘가 모자란 가상환경</h2>
-<p>가상 환경은 사실 어딘가 하나씩 부족하다. Venv, virtualenv, conda 등 다양한 선택지가 있지만 마음 놓고 편리하게 쓸 수 있는 툴이 딱 떨어지지 않는다. 그나마 conda가 가장 편리해서 사용하지만, 사용하다보면 의존성 등의 대목에서 환경이 꼬여 버리게 되기 쉽다.</p>
-<p>대안으로 pyenv 등의 가상환경과 <a href="https://python-poetry.org/">poetry</a> 같은 의존성 관리 도구를 쓸 수 있다. 하지만 이 녀석들은 다루기가 조금 까다롭고 사용 가능한 OS가 제한적이다. conda 정도의 편리함을 주면서 동시에 패키지 의존성 관리가 가능한 도구는 없을까?</p>
-<p>Rye가 이 문제에 관한 거의 완벽한 해결책이다. Rye에서 필요한 파이썬 버전부터 의존성을 포함해 패키지까지 모두 관리하기 때문에 편리하면서도 통일성 있는 가상 환경을 구축할 수 있다. 프로젝트가 극히 초기라는 것이 유일한 단점인데, 이 정도의 사용성이라면 곧 자리를 잡지 않을까 싶다.</p>
+<p>파이썬 용 가상 환경은 어딘가 하나씩 부족하다. Venv, virtualenv, conda 등 다양한 선택지가 있지만 마음 놓고 생각 없이 편리하게 쓸 수 있는 툴은 없다. 그나마 conda가 가장 편리해서 사용하고 있으나, 쓰다보면 의존성 등의 대목이 아쉽다. 앞 각주에서 보듯이 conda에서는 환경이 꼬이기 쉽고 한 번 이 상태가 되면 수습도 쉽지 않다.</p>
+<p>대안으로 pyenv 등의 가상 환경과 <a href="https://python-poetry.org/">poetry</a> 같은 의존성 관리 도구를 함께 쓸 수 있다. 의존성 관리의 이점이 있지만, 이 녀석들을 다루는 것이 아주 쉽지는 않고, 활용 가능한 OS 역시 제한적이다. conda 정도의 편리함을 주면서 동시에 패키지 의존성 관리가 가능한 도구는 없을까?</p>
+<p>Rye가 이 문제에 관해 거의 완벽한 해결책이다. Rye에서 필요한 파이썬 버전부터 의존성을 포함해 패키지까지 함께 관리하기 때문에 편리하면서도 통일성 있는 가상 환경을 구축할 수 있다. 프로젝트와 가상 환경이 함께 따라 다니기 때문에 환경 자체를 별도로 관리해야 하는 conda 보다 훨씬 우월하다.</p>
+<p>이 프로젝트가 극히 초기라는 것이 유일한 단점인데, 이 정도의 사용성이라면 곧 자리를 잡지 않을까 싶다.</p>
 <p><a href="https://rye-up.com">https://rye-up.com</a></p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -188,15 +190,15 @@ ul.task-list li input[type="checkbox"] {
 <div class="no-row-height column-margin column-container"><div class="">
 <p><a href="https://rye-up.com/guide/installation/">설치</a> 항목을 참고하자.</p>
 </div></div><p>업데이트와 삭제는 아래와 같다.</p>
-<pre class="shell="><code>&gt; rye self update # 업데이트 
+<pre class="shell"><code>&gt; rye self update # 업데이트 
 &gt; rye self uninstall # 삭제 </code></pre>
 </section>
 <section id="프로젝트-개시-및-패키지-설치" class="level2">
 <h2 class="anchored" data-anchor-id="프로젝트-개시-및-패키지-설치">프로젝트 개시 및 패키지 설치</h2>
 <p>프로젝트를 생성할 상위 폴더에서 아래와 같이 생성 명령어를 실행한다.</p>
-<pre class="shell="><code>&gt; rye init {프로젝트-이름}</code></pre>
+<pre class="shell"><code>&gt; rye init {프로젝트-이름}</code></pre>
 <p>만일 이미 폴더가 만들어져 있다면 해당 폴더 안에서 <code>rye init</code>을 실행하면 된다. 이제 프로젝트의 폴더에 들어가서 설치하려는 패키지를 <code>add</code>하고 <code>sync</code>로 이를 설치한다. <code>ipykernel</code> 패키지는 VS Code 등에서 <code>.ipynb</code> 파일을 불러와 작업하고자 할 때 필요한 패키지다.</p>
-<pre><code>&gt; rye add ipykernel pandas 
+<pre class="shell"><code>&gt; rye add ipykernel pandas 
 &gt; rye sync </code></pre>
 <p>가상 환경의 개별 설정은 <code>project.toml</code> 파일을 통해서 관리된다. 자세한 것은 <a href="https://rye-up.com/guide/pyproject/">공식 문서</a>를 참고하자.</p>
 </section>
@@ -210,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 68.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="./images/vscode_rye.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="VS Code 커널 선택 (클릭하면 확대)"><img src="./images/vscode_rye.png" class="img-fluid figure-img"></a></p>
+<p><a href="./images/vscode_rye.png" class="lightbox" title="VS Code 커널 선택 (클릭하면 확대)" data-gallery="quarto-lightbox-gallery-1"><img src="./images/vscode_rye.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">VS Code 커널 선택 (클릭하면 확대)</figcaption>
 </figure>
 </div>
@@ -574,7 +576,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","closeEffect":"zoom"});</script>
 
 
 
