@@ -172,12 +172,12 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <p>Rye를 이용해 편리하게 가상 환경을 구축해보자.</p>
 </section>
-<section id="어딘가-모자란-가상환경" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="어딘가-모자란-가상환경">어딘가 모자란 가상환경</h2>
-<p>파이썬 용 가상 환경은 어딘가 하나씩 부족하다. Venv, virtualenv, conda 등 다양한 선택지가 있지만 마음 놓고 생각 없이 편리하게 쓸 수 있는 툴은 없다. 그나마 conda가 가장 편리해서 사용하고 있으나, 쓰다보면 의존성 등의 대목이 아쉽다. 앞 각주에서 보듯이 conda에서는 환경이 꼬이기 쉽고 한 번 이 상태가 되면 수습도 쉽지 않다.</p>
-<p>대안으로 pyenv 등의 가상 환경과 <a href="https://python-poetry.org/">poetry</a> 같은 의존성 관리 도구를 함께 쓸 수 있다. 의존성 관리의 이점이 있지만, 이 녀석들을 다루는 것이 아주 쉽지는 않고, 활용 가능한 OS 역시 제한적이다. conda 정도의 편리함을 주면서 동시에 패키지 의존성 관리가 가능한 도구는 없을까?</p>
-<p>Rye가 이 문제에 관해 거의 완벽한 해결책이다. Rye에서 필요한 파이썬 버전부터 의존성을 포함해 패키지까지 함께 관리하기 때문에 편리하면서도 통일성 있는 가상 환경을 구축할 수 있다. 프로젝트와 가상 환경이 함께 따라 다니기 때문에 환경 자체를 별도로 관리해야 하는 conda 보다 훨씬 우월하다.</p>
-<p>이 프로젝트가 극히 초기라는 것이 유일한 단점인데, 이 정도의 사용성이라면 곧 자리를 잡지 않을까 싶다.</p>
+<section id="어딘가-모자란-python-가상환경" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="어딘가-모자란-python-가상환경">어딘가 모자란 Python 가상환경</h2>
+<p>파이썬 용 가상 환경은 어딘가 하나씩 아쉽다. Venv, virtualenv, conda 등 다양한 선택지가 있지만 마음 놓고 생각 없이 편리하게 쓸 수 있는 툴이 없다. 그나마 conda가 가장 편리해서 사용하고 있지만, 쓰다보면 의존성 관리 등의 대목이 아쉽다. 각주에서 보듯이 conda에서는 환경이 꼬이기 쉽다, 그리고 이 상태가 되면 수습도 어렵다.</p>
+<p>대안으로 pyenv 등의 가상 환경과 <a href="https://python-poetry.org/">poetry</a> 같은 의존성 관리 도구를 함께 부릴 수 있겠다. 이 경우 의존성 관리의 이점이 있다. 하지만 이 녀석들을 다루는 것이 그리 쉽지는 않고, 활용헐 수 있는 OS 역시 제한적이다. conda 정도의 편리함을 주면서 동시에 패키지 의존성 관리가 가능한 도구는 없을까?</p>
+<p>Rye가 이 문제에 관해 거의 완벽한 해결책이다. Rye는 파이썬 버전에서 패키지의 의존성 관리까지 편리하게 지원한다. 프로젝트와 가상 환경이 함께 따라 다니기 때문에 환경 자체를 별도로 관리해야 하는 conda 보다 단정하다.</p>
+<p>유일한 단점이라면 이 프로젝트가 극히 초기라는 것인데, 이 정도의 사용성이라면 빠르게 자리를 잡지 않을까 싶다.</p>
 <p><a href="https://rye-up.com">https://rye-up.com</a></p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -207,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
 <p>프로젝트 폴더와 연동해서 VS Code를 열어주자. 터미널에서 <code>code .</code>을 실행하면 된다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/vscode_rye.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="VS Code 커널 선택 (클릭하면 확대)"><img src="./images/vscode_rye.png" class="img-fluid figure-img" style="width:70.0%"></a></p>
+<p><a href="./images/vscode_rye.png" class="lightbox" title="VS Code 커널 선택 (클릭하면 확대)" data-gallery="quarto-lightbox-gallery-1"><img src="./images/vscode_rye.png" class="img-fluid figure-img" style="width:70.0%"></a></p>
 <figcaption class="figure-caption">VS Code 커널 선택 (클릭하면 확대)</figcaption>
 </figure>
 </div>
@@ -566,7 +566,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox","loop":true});</script>
 
 
 
