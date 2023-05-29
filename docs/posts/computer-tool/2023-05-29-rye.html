@@ -174,10 +174,10 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="어딘가-모자란-python-가상환경" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="어딘가-모자란-python-가상환경">어딘가 모자란 Python 가상환경</h2>
-<p>파이썬 용 가상 환경은 어딘가 하나씩 아쉽다. Venv, virtualenv, conda 등 다양한 선택지가 있지만 마음 놓고 생각 없이 편리하게 쓸 수 있는 툴이 없다. 그나마 conda가 가장 편리해서 사용하고 있지만, 쓰다보면 의존성 관리 등의 대목이 아쉽다. 각주에서 보듯이 conda에서는 환경이 꼬이기 쉽다, 그리고 이 상태가 되면 수습도 어렵다.</p>
-<p>대안으로 pyenv 등의 가상 환경과 <a href="https://python-poetry.org/">poetry</a> 같은 의존성 관리 도구를 함께 부릴 수 있겠다. 이 경우 의존성 관리의 이점이 있다. 하지만 이 녀석들을 다루는 것이 그리 쉽지는 않고, 활용헐 수 있는 OS 역시 제한적이다. conda 정도의 편리함을 주면서 동시에 패키지 의존성 관리가 가능한 도구는 없을까?</p>
-<p>Rye가 이 문제에 관해 거의 완벽한 해결책이다. Rye는 파이썬 버전에서 패키지의 의존성 관리까지 편리하게 지원한다. 프로젝트와 가상 환경이 함께 따라 다니기 때문에 환경 자체를 별도로 관리해야 하는 conda 보다 단정하다.</p>
-<p>유일한 단점이라면 이 프로젝트가 극히 초기라는 것인데, 이 정도의 사용성이라면 빠르게 자리를 잡지 않을까 싶다.</p>
+<p>파이썬 용 가상 환경은 하나씩 아쉽다. Venv, virtualenv, conda 등 다양한 선택지가 있지만 생각 없이 편리하게 쓸 수 있는 툴이 없다. 그나마 conda를 쓰고는 있으나 의존성 관리 등의 대목이 아쉽다. 각주에서 보듯이 conda를 쓰면 환경이 쉽게 꼬인다. 그리고 이 상태가 되면 수습이 쉽지 않다.</p>
+<p>대안으로 pyenv 등의 가상 환경과 <a href="https://python-poetry.org/">poetry</a> 같은 의존성 관리 도구를 함께 부릴 수 있다. 이 경우 의존성 관리의 문제는 해결 된다. 다만 이 녀석을 다루는 게 그리 직관적이지 않고, 활용헐 수 있는 OS 역시 제한적이다. conda 정도의 편리함과 범용성을 지니면서 동시에 패키지 설치의 의존성 관리를 구현하는 도구는 없을까?</p>
+<p>소개하려는 Rye는 파이썬 버전 관리에서 패키지 설치의 의존성 관리까지 필요한 내용을 손쉽게 지원한다. 프로젝트와 가상 환경이 함께 따라 다니기 때문에 환경 자체를 별도로 관리해야 하는 conda 보다 직관적이다.</p>
+<p>유일한 단점이라면 프로젝트가 극히 초기라는 것인데, 이 정도의 사용성이라면 빠르게 자리를 잡지 않을까 기대해본다.</p>
 <p><a href="https://rye-up.com">https://rye-up.com</a></p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -185,33 +185,33 @@ ul.task-list li input[type="checkbox"] {
 </div></div></section>
 <section id="설치-및-rye-관리" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="설치-및-rye-관리">설치 및 Rye 관리</h2>
-<p>OS에 맞춰 Rye를 설치해주자. 윈도의 경우는 아직 <code>winget</code>을 통한 설치는 아직 지원되지 않고, macos에서는 <code>brew</code>를 통해 설치할 수 있다.</p>
+<p>OS에 맞게 Rye를 설치해주자. 윈도의 경우는 <code>winget</code>을 통한 설치는 아직 지원되지 않고, macos에서는 가이드에는 없지만 <code>brew</code>를 통해 설치할 수 있다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><a href="https://rye-up.com/guide/installation/">설치</a> 항목을 참고하자.</p>
-</div></div><p>업데이트와 삭제는 아래와 같다.</p>
-<pre class="shell"><code>&gt; rye self update # 업데이트 
-&gt; rye self uninstall # 삭제 </code></pre>
+</div></div><p>Rye 자체에 관한 업데이트와 삭제는 아래와 같다.</p>
+<pre class="shell"><code>&gt; rye self update # Rye 업데이트 
+&gt; rye self uninstall # Rye 삭제 </code></pre>
 </section>
 <section id="프로젝트-개시-및-패키지-설치" class="level2">
 <h2 class="anchored" data-anchor-id="프로젝트-개시-및-패키지-설치">프로젝트 개시 및 패키지 설치</h2>
 <p>프로젝트를 생성할 상위 폴더에서 아래와 같이 생성 명령어를 실행한다.</p>
 <pre class="shell"><code>&gt; rye init {프로젝트-이름}</code></pre>
-<p>만일 이미 폴더가 만들어져 있다면 해당 폴더 안에서 <code>rye init</code>을 실행하면 된다. 이제 프로젝트의 폴더에 들어가서 설치하려는 패키지를 <code>add</code>하고 <code>sync</code>로 이를 설치한다. <code>ipykernel</code> 패키지는 VS Code 등에서 <code>.ipynb</code> 파일을 불러와 작업하고자 할 때 필요한 패키지다.</p>
+<p>만일 이미 폴더가 만들어져 있다면 해당 폴더 안에서 <code>rye init</code>을 실행하면 된다. 이제 프로젝트의 폴더에 들어가서 설치하려는 패키지를 <code>add</code>하고 <code>sync</code>로 이를 설치한다. <code>ipykernel</code> 패키지는 VS Code 등에서 <code>.ipynb</code> 파일을 불러와 작업하고자 할 때 필요한 패키지다. <code>ipykernel</code>과 <code>pandas</code>를 아래와 같이 설치해보자.</p>
 <pre class="shell"><code>&gt; rye add ipykernel pandas 
 &gt; rye sync </code></pre>
-<p>가상 환경의 개별 설정은 <code>project.toml</code> 파일을 통해서 관리된다. 자세한 것은 <a href="https://rye-up.com/guide/pyproject/">공식 문서</a>를 참고하자.</p>
+<p>가상 환경의 개별 설정은 <code>project.toml</code> 파일을 통해서 관리된다. 버전 관리 등의 자세한 내용은 <a href="https://rye-up.com/guide/pyproject/">공식 문서</a>를 참고하자.</p>
 </section>
 <section id="vs-code에서-.ipynb-작업하기" class="level2">
 <h2 class="anchored" data-anchor-id="vs-code에서-.ipynb-작업하기">VS Code에서 <code>.ipynb</code> 작업하기</h2>
-<p>프로젝트 폴더와 연동해서 VS Code를 열어주자. 터미널에서 <code>code .</code>을 실행하면 된다.</p>
+<p>프로젝트 폴더와 연동해서 VS Code를 열어주자. 터미널에서 <code>code .</code>을 실행하면 된다. 이제 해당 프로젝트의 파이썬 커널과 VS Code의 Jupyter 환경을 연결해보자.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/vscode_rye.png" class="lightbox" title="VS Code 커널 선택 (클릭하면 확대)" data-gallery="quarto-lightbox-gallery-1"><img src="./images/vscode_rye.png" class="img-fluid figure-img" style="width:70.0%"></a></p>
+<p><a href="./images/vscode_rye.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="VS Code 커널 선택 (클릭하면 확대)"><img src="./images/vscode_rye.png" class="img-fluid figure-img" style="width:70.0%"></a></p>
 <figcaption class="figure-caption">VS Code 커널 선택 (클릭하면 확대)</figcaption>
 </figure>
 </div>
-<p>스크린 샷을 참고하자. <code>커널 선택</code> &gt; <code>다른 커널 선택</code> &gt; <code>Python 환경</code> &gt; <code>.venv...</code>를 택하면 된다. 해당 프로젝트 폴더 아래 <code>.venv</code> 폴더 안에 있는 파이썬 환경을 가져오게 되고, 해당 프로젝트의 실행 환경이 VS Code와 연결된다.</p>
+<p>스크린 샷에서 보듯이 <code>커널 선택</code> &gt; <code>다른 커널 선택</code> &gt; <code>Python 환경</code> &gt; <code>.venv...</code>를 택하면 된다. 해당 프로젝트 폴더 아래 <code>.venv</code> 폴더 안에 있는 파이썬 환경을 가져오게 되면, 해당 프로젝트의 파이썬 커널 밀 설치 패키지가 VS Code와 연결된다.</p>
 
 
 </section>
@@ -566,7 +566,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":true,"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom"});</script>
 
 
 
