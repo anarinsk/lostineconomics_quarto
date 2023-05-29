@@ -1,0 +1,73 @@
+---
+title: RYE 
+description: 아마도 가장 편리한 파이썬 가상 환경 
+author: "JS HUHH"
+date: "05/29/2023"
+image: "https://d1k571r5p7i4n1.cloudfront.net/c.1391/large/essential_tools_for_home_repair.JPG"
+categories: [computer-tool]
+filters:
+   - lightbox
+lightbox: auto
+#jupyter: python3
+draft: false
+---
+
+## TL; DR
+
+Rye를 이용해 편리하게 가상 환경을 구축해보자. 
+
+## 어딘가 모자란 가상환경 
+
+가상 환경은 사실 어딘가 하나씩 부족하다. Venv, virtualenv, conda 등 다양한 선택지가 있지만 마음 놓고 편리하게 쓸 수 있는 툴이 딱 떨어지지 않는다. 그나마 conda가 가장 편리해서 사용하지만, 사용하다보면 의존성 등의 대목에서 환경이 꼬여 버리게 되기 쉽다.  
+
+대안으로 pyenv 등의 가상환경과 [poetry](https://python-poetry.org/) 같은 의존성 관리 도구를 쓸 수 있다. 하지만 이 녀석들은 다루기가 조금 까다롭고 사용 가능한 OS가 제한적이다. conda 정도의 편리함을 주면서 동시에 패키지 의존성 관리가 가능한 도구는 없을까? 
+
+Rye가 이 문제에 관한 거의 완벽한 해결책이다. Rye에서 필요한 파이썬 버전부터 의존성을 포함해 패키지까지 모두 관리하기 때문에 편리하면서도 통일성 있는 가상 환경을 구축할 수 있다. 프로젝트가 극히 초기라는 것이 유일한 단점인데, 이 정도의 사용성이라면 곧 자리를 잡지 않을까 싶다. 
+
+[https://rye-up.com](https://rye-up.com)
+
+:::{.column-margin}
+[여기](https://velog.io/@snoop2head/no-more-conda-please-pyenv-poetry-please) 내용을 참고하자. 
+:::
+
+## 설치 및 Rye 관리  
+
+OS에 맞춰 Rye를 설치해주자. 윈도의 경우는 아직 `winget`을 통한 설치는 아직 지원되지 않고, macos에서는 `brew`를 통해 설치할 수 있다. 
+
+:::{.column-margin}
+[설치](https://rye-up.com/guide/installation/) 항목을 참고하자. 
+:::
+
+업데이트와 삭제는 아래와 같다. 
+
+```shell=
+> rye self update # 업데이트 
+> rye self uninstall # 삭제 
+```
+
+## 프로젝트 개시 및 패키지 설치 
+
+프로젝트를 생성할 상위 폴더에서 아래와 같이 생성 명령어를 실행한다. 
+
+```shell=
+> rye init {프로젝트-이름}
+```
+
+이제 프로젝트의 폴더에 들어가서 설치하려는 패키지를 `add`하고 `sync`로 이를 설치한다. `ipykernel` 패키지는 VS Code 등에서 `.ipynb` 파일을 불러와 작업하고자 할 때 필요한 패키지다. 
+
+```
+> rye add ipykernel pandas 
+> rye sync 
+```
+
+가상 환경의 개별 설정은 `project.toml` 파일을 통해서 관리된다. 자세한 것은 [공식 문서](https://rye-up.com/guide/pyproject/)를 참고하자. 
+
+## VS Code에서 `.ipynb` 작업하기 
+
+프로젝트 폴더와 연동해서 VS Code를 열어주자. 터미널에서 `code .`을 실행하면 된다. 
+
+:::{layout="[-20, 85, -20]"}
+![VS Code 커널 선택 (클릭하면 확대)](./images/vscode_rye.png)
+:::
+
+스크린 샷을 참고하자. `커널 선택` > `다른 커널 선택` > `Python 환경` > `.venv...`를 택하면 된다. 해당 프로젝트 폴더 아래 `.venv` 폴더 안에 있는 파이썬 환경을 가져오게 되고, 해당 프로젝트의 실행 환경이 VS Code와 연결된다. 
