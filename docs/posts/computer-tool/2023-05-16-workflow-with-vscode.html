@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.361">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -98,7 +98,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -259,21 +260,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="jupyter-vs-code">Jupyter + VS Code</h2>
 <p>파이썬을 부리기 위해서 VS Code에서 깔아야 하는 Extension은 Python, Pylance, Jupyter 확장이다. 모두 Microsoft에서 제공하는 것이니 의심 없이 설치하면 된다. 각각 필요한 몇 가지 확장이 함께 깔리게 되니 이 점 유의하시라. 설치 후에 VS Code에서 <code>.ipynb</code>을 열어보자. 이전에 설정된 kernel이 없다면 Jupyter에서 부릴 커널을 새로 설정해야 한다.</p>
 <p>커널을 선택을 누르면, “파이썬 환경”과 “기존 Jupyter 서버” 중 하나를 선택할 수 있다. 전자를 택하면 앞서 설정한 miniconda의 환경이 잘 보인다. 필요한 환경을 선택하고 녀석을 VS Code의 Jupyter 환경으로 작업하면 된다. 아래 스크린 샷을 보면 순서대로 1(현재 이용 중인 커널), 2(커널 선택), 3(주피터 파이썬 환경 선택), 4(파이썬 환경 선택)의 화면에서 필요한 내용을 선택하면 된다.</p>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 16.0%;justify-content: center;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 68.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/vscode_kernel.png" class="lightbox" title="VS Code 커널 선택 (클릭하면 확대)" data-gallery="quarto-lightbox-gallery-1"><img src="./images/vscode_kernel.png" class="img-fluid figure-img"></a></p>
+<p><a href="./images/vscode_kernel.png" class="lightbox" title="VS Code 커널 선택 (클릭하면 확대)" data-gallery="quarto-lightbox-gallery-1"><img src="./images/vscode_kernel.png" class="img-fluid figure-img" style="width:70.0%"></a></p>
 <figcaption class="figure-caption">VS Code 커널 선택 (클릭하면 확대)</figcaption>
 </figure>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 16.0%;justify-content: center;">
-<p>&nbsp;</p>
-</div>
-</div>
 </div>
 <p>기존 주피터 환경보다는 단순한 형태지만, VS Code에서는 GitHub Copilot을 함께 쓸 수 있다. 모든 단점을 상쇄하고도 남는다.</p>
 
@@ -630,7 +621,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","loop":true,"selector":".lightbox","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":true});</script>
 
 
 

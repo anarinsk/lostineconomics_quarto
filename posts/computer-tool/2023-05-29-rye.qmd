@@ -1,6 +1,6 @@
 ---
-title: RYE 
-description: 아마도 가장 편리한 파이썬 가상 환경 
+title: "RYE" 
+description: 아마도 가장 편리한 Python 가상 환경 
 author: "JS HUHH"
 date: "05/29/2023"
 image: "https://d1k571r5p7i4n1.cloudfront.net/c.1391/large/essential_tools_for_home_repair.JPG"
@@ -68,8 +68,8 @@ OS에 맞춰 Rye를 설치해주자. 윈도의 경우는 아직 `winget`을 통�
 
 프로젝트 폴더와 연동해서 VS Code를 열어주자. 터미널에서 `code .`을 실행하면 된다. 
 
-:::{layout="[-20, 85, -20]"}
-![VS Code 커널 선택 (클릭하면 확대)](./images/vscode_rye.png)
-:::
+
+![VS Code 커널 선택 (클릭하면 확대)](./images/vscode_rye.png){width=70%}
 
 스크린 샷을 참고하자. `커널 선택` > `다른 커널 선택` > `Python 환경` > `.venv...`를 택하면 된다. 해당 프로젝트 폴더 아래 `.venv` 폴더 안에 있는 파이썬 환경을 가져오게 되고, 해당 프로젝트의 실행 환경이 VS Code와 연결된다. 
+
