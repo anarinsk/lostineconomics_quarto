@@ -3,7 +3,7 @@ title: "RYE"
 description: 아마도 가장 편리한 Python 가상 환경 
 author: "JS HUHH"
 date: "05/29/2023"
-image: "https://d1k571r5p7i4n1.cloudfront.net/c.1391/large/essential_tools_for_home_repair.JPG"
+image: "./images/tools.jpg"
 categories: [computer-tool]
 filters:
    - lightbox
