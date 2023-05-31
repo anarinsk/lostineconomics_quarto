@@ -2643,7 +2643,7 @@
     "href": "posts/computer-tool/2023-05-29-rye.html#vs-code에서-.ipynb-작업하기",
     "title": "RYE",
     "section": "VS Code에서 .ipynb 작업하기",
-    "text": "VS Code에서 .ipynb 작업하기\n프로젝트 폴더와 연동해서 VS Code를 열어주자. 터미널에서 code .을 실행하면 된다. 이제 해당 프로젝트의 파이썬 커널과 VS Code의 Jupyter 환경을 연결해보자.\n\n\n\nVS Code 커널 선택 (클릭하면 확대); (오른쪽) 커널 선택 &gt; 다른 커널 선택 &gt; Python 환경 &gt; .venv... 순으로 선택하면 된다.\n\n\n스크린 샷에서 보듯이 커널 선택 &gt; 다른 커널 선택 &gt; Python 환경 &gt; .venv...를 택하면 된다. 해당 프로젝트 폴더 아래 .venv 폴더 안에 있는 파이썬 환경을 가져오게 되면, 해당 프로젝트의 파이썬 커널 밀 설치 패키지가 VS Code와 연결된다."
+    "text": "VS Code에서 .ipynb 작업하기\n프로젝트 폴더와 연동해서 VS Code를 열어주자. 터미널에서 code .을 실행하면 된다. 이제 해당 프로젝트의 파이썬 커널과 VS Code의 Jupyter 환경을 연결해보자.\n\n\n\nVS Code 커널 선택 (클릭하면 확대); (오른쪽) 커널 선택 &gt; 다른 커널 선택 &gt; Python 환경 &gt; .venv... 순으로 선택하면 된다.\n\n\n스크린 샷에서 보듯이 커널 선택 &gt; 다른 커널 선택 &gt; Python 환경 &gt; .venv...를 택하면 된다. 해당 프로젝트 폴더 아래 .venv 폴더 안에 있는 파이썬 환경을 가져오게 되면, 해당 프로젝트의 파이썬 커널과 설치된 패키지가 VS Code의 Jupyter 환경과 연결된다."
   },
   {
     "objectID": "posts/computer-tool/2023-05-29-rye.html#어딘가-모자란-python-가상환경",
