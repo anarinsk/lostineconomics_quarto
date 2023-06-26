@@ -6,7 +6,7 @@ date: "06/26/2023"
 image: "images/proof.jfif"
 categories: [math-simple]
 #margin-header: subscribe.html
-draft: true
+draft: false
 filters:
    - lightbox
 lightbox: auto
@@ -115,8 +115,8 @@ $\lim_{x \to a} f(x)$가 존재하는 경우는 그림에서 보듯이 매핑되
 
 ### 함수의 극한이 존재하는 경우
 
-$\lim_{x \to a} f(x)$이 존재하는 경우에 대해서 존재하지 않는 경우의 정의를 살펴보자. $\delta$를 아무리 작게 잡는다고 해도,$x$를 $a$에 접근시켜서 $|f(x)-L| \geq \delta$의 조건을 깰 수 있다. 
+$\lim_{x \to a} f(x)$이 존재하는 경우에 대해서 존재하지 않는 경우의 정의를 살펴보자. $\delta$를 아무리 작게 잡는다고 해도,$x$를 $a$에 접근시켜서 $|f(x)-L| \geq \delta$의 조건을 깰 수 있다. 따라서 이 경우 함수 극한 정의의 '부정'을 만족시키는 경우를 찾을 수 없다. 
 
 ### 함수의 극한이 존재하지 않는 경우 
 
-$L$이 $(f(a-\epsilon), f(a+\epsilon))$ 사이 어딘가에 존재한다면, $|L-f(a-\epsilon)|$과 $|L-f(a+\epsilon)|$ 중 작은 값을 $\delta'$이라고 하자. 이때 $\epsilon$을 아무리 $a$에 근접시킨다고 해도 $|f(x)-L| \geq \delta'$이 언제나 만족한다. 따라서 함수 극한의 정의를 만족하는 $\delta$를 찾을 수 없다. 
+$L$이 $(f(a-\epsilon), f(a+\epsilon))$ 사이 어딘가에 존재한다면, $|L-f(a-\epsilon)|$과 $|L-f(a+\epsilon)|$ 중 작은 값을 $\delta'$이라고 하자. 이때 $\epsilon$을 아무리 $a$에 근접시킨다고 해도 $|f(x)-L| \geq \delta'$이 언제나 만족한다. 따라서 함수 극한의 정의를 만족하는 $\delta$를 찾을 수 없다. 이 경우 극한의 정의를 만족시키는 경우를 찾을 수 없다. 
