@@ -1,12 +1,12 @@
 ---
 title: 조건 명제 
-description:  $A \to B$의 의미를 새겨보자
+description:  $A \to B$ 의 의미를 새겨보자
 author: "JS HUHH"
 date: "06/26/2023"
 image: "images/proof.jfif"
 categories: [math-simple]
 #margin-header: subscribe.html
-draft: true
+draft: false
 filters:
    - lightbox
 lightbox: auto
