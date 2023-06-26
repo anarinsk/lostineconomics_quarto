@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.361">
+<meta name="generator" content="quarto-1.3.427">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -253,10 +253,10 @@ ul.task-list li input[type="checkbox"] {
 <p>영어로는 다음과 같다. For every <span class="math inline">\(\epsilon &gt; 0\)</span>, there exists <span class="math inline">\(\delta &gt; 0\)</span> s.t. <span class="math inline">\(0 &lt; |x-a| &lt; \epsilon\)</span> implies <span class="math inline">\(|f(x) - L| &lt; \delta\)</span>. 논리 기호로 표현한다면, <span class="math inline">\(\forall \epsilon&gt;0, \exists \delta &gt; 0\)</span> s.t. <span class="math inline">\(0 &lt; |x-a| &lt; \epsilon\)</span> implies <span class="math inline">\(|f(x)| - L| &lt; \delta\)</span>.</p>
 </div></div><p>쉽지 않지만 말로 풀어보자. 말이 지니는 모호함을 없애기 위해서 하나씩 끊어서 살펴보자.</p>
 <ul>
-<li><span class="math inline">\(a\)</span> 주변에 있는 임의의 작은 <span class="math inline">\(2\epsilon\)</span> 크기의 구간을 잡는다.<br>
+<li><span class="math inline">\(a\)</span> 주변으로 각 <span class="math inline">\(\epsilon\)</span> 크기의 구간을 잡는다.<br>
 </li>
-<li>해당 구간에 속하는 모든 <span class="math inline">\(x\)</span>를 고려하자.</li>
-<li><span class="math inline">\(x \to a\)</span> 일 때 함수 <span class="math inline">\(f(x)\)</span>의 극한값 <span class="math inline">\(L\)</span>이 있다고 하자.</li>
+<li>해당 구간에 속하는 <strong>모든</strong> <span class="math inline">\(x\)</span>를 고려하자.</li>
+<li><span class="math inline">\(x \to a\)</span> 일 때 함수 <span class="math inline">\(f(x)\)</span>의 극한값을 <span class="math inline">\(L\)</span>이라고 하자.</li>
 <li><span class="math inline">\(f(x)\)</span>와 <span class="math inline">\(L\)</span> 사이의 거리(<span class="math inline">\(|f(x)-L|\)</span>)가 <span class="math inline">\(\delta\)</span>보다 작아지는 <span class="math inline">\(\delta\)</span>가 존재한다.</li>
 </ul>
 <p>사실 함축의 정의를 살펴보면, ‘모든(<span class="math inline">\(\forall\)</span>)’, ’존재한다(<span class="math inline">\(\exists\)</span>)’는 의미를 분명하게 전달하기 위한 사족이다.</p>
@@ -264,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="함수의-극한이-존재하지-않는-경우">함수의 극한이 존재하지 않는 경우</h3>
 <p>함수의 극한에 관한 정의의 ’부정(negation)’을 정의해보자. 그리고 이 부정의 정의가 참이 되는 경우를 따져볼 것이다. 정의가 함축(<span class="math inline">\(\to\)</span>)의 형태를 취하고 있으므로 이 부정형은 신중하게 다뤄야 한다.</p>
 <p><span class="math inline">\(|x-a|&lt; \epsilon\)</span>을 만족하는 어떤 <span class="math inline">\(\epsilon&gt;0\)</span>에 대해서 다음을 만족하는 <span class="math inline">\(\delta&gt;0\)</span>가 존재한다; <span class="math inline">\(|f(x) - L| \geq \delta\)</span>.</p>
-<p>말로 풀기는 어렵겠지만 역시 이를 말로 풀어보자.</p>
+<p>역시 말로 풀기는 어렵겠지만 역시 이를 말로 풀어보자.</p>
 <ul>
 <li><span class="math inline">\(a\)</span>의 일정한 주변의 위치한 모든 <span class="math inline">\(x\)</span>를 고려하자.</li>
 <li><span class="math inline">\(|f(x)-L|\)</span> 값을 <span class="math inline">\(\delta\)</span> 보다 낮게 줄일 수 없다.</li>
@@ -272,37 +272,59 @@ ul.task-list li input[type="checkbox"] {
 <p>이 경우는 <span class="math inline">\(\lim_{x \to a}f(x)\)</span>는 존재하지 않는다.</p>
 </section>
 </section>
-<section id="그림으로-살펴보자." class="level2">
+<section id="진리-집합" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="진리-집합">진리 집합</h2>
+<p>조건 명제는 속임수를 품고 있을 수 있다. 진리 집합의 입장에서 한번 따져보도록 하자.</p>
+<p><span class="math display">\[
+\begin{aligned}
+P &amp; = \{ x : |x - a| &lt; \epsilon ~, \forall x \} \\
+Q &amp; = \{ x : |f(x) - L| &lt; \delta ~, \forall x \}
+\end{aligned}
+\]</span></p>
+<p>함수 극한의 정의는 <span class="math inline">\(P \subset Q\)</span>를 의미한다. 여기서 모든에 해당하는 것은 <span class="math inline">\(x\)</span>이다. 엡실론-델타의 함수 극한 정의와 혼동하면 안되는 지점이다. 그러면, 엡실론-델타 정의의 <span class="math inline">\(\forall\)</span>, <span class="math inline">\(\exists\)</span>는 어디서 나오는 것일까? 정의에서 <span class="math inline">\(P \subset Q\)</span>이므로 모든 <span class="math inline">\(P\)</span>는 <span class="math inline">\(Q\)</span>에 속해야 한다. 즉, <span class="math inline">\(p\)</span>가 참이 되는 모든 경우에 대해서 <span class="math inline">\(q\)</span>가 참이어야 한다.</p>
+<p>이제 <span class="math inline">\(\neg q\)</span>, 즉 <span class="math inline">\(Q\)</span>를 보자.</p>
+<p><span class="math display">\[
+Q^C = \{ x: |f(x) - L| \geq \delta ~, \forall x  \}
+\]</span></p>
+<p><span class="math inline">\(p \to q\)</span>의 부정 명제는 <span class="math inline">\(p \land \neg q\)</span>가 된다. 진리집합으로 본다면 다음과 같다; <span class="math inline">\(P \cap Q^C\)</span>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="math inline">\(p \to q \equiv \neg p \lor q\)</span>이다. 따라서 <span class="math inline">\(\neg(\neg p \lor q)\)</span>가 부정 명제이다.</p>
+</div></div></section>
+<section id="그림으로-살펴보자." class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="그림으로-살펴보자.">그림으로 살펴보자.</h2>
 <p>조금 정확하지 않을 수 있지만 x가 스칼라 값일 때 <span class="math inline">\(f(x)\)</span>를 통해서 위 경우를 한번 살펴보자.</p>
 <div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 44.4%;justify-content: center;">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 42.9%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/limf_1.jpg" class="lightbox" title="f(x)가 존재하는 경우" data-gallery="quarto-lightbox-gallery-1"><img src="images/limf_1.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/limf_1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="f(x)가 존재하는 경우"><img src="images/limf_1.jpg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption"><span class="math inline">\(f(x)\)</span>가 존재하는 경우</figcaption>
 </figure>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 44.4%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 42.9%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/limf_2.jpg" class="lightbox" title="f(x)가 존재하지 않는 경우" data-gallery="quarto-lightbox-gallery-2"><img src="images/limf_2.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/limf_2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="f(x)가 존재하지 않는 경우"><img src="images/limf_2.jpg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption"><span class="math inline">\(f(x)\)</span>가 존재하지 않는 경우</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p><span class="math inline">\(\lim_{x \to a} f(x)\)</span>가 존재하는 경우는 그림에서 보듯이 매핑되는 <span class="math inline">\(|f(x)-L|\)</span>를 덮을 수 있는 <span class="math inline">\(\delta\)</span>가 존재하는 경우이다. 이는 <span class="math inline">\(\epsilon\)</span>이 아무리 작더라도 가능해야 한다. 한편 <span class="math inline">\(\lim_{x \to a} f(x)\)</span>가 존재하지 않는 경우를 살펴보자. 그림에서 보듯이 L을 어떻게 설정하든지 <span class="math inline">\(|f(x)-L| \geq \delta\)</span>가 성립하는 <span class="math inline">\(\epsilon\)</span>의 구간을 쉽게 설정할 수 있다.</p>
-<p>동어반복일 수 있지만, 반대로 생각해보면 정의를 이해하는 데 도움이 될 수 있다.</p>
-<section id="함수의-극한이-존재하는-경우" class="level3">
+<p><span class="math inline">\(\lim_{x \to a} f(x)\)</span>가 존재하는 경우를 살펴보자. <span class="math inline">\(|x - a| &lt; \epsilon\)</span>을 만족하는 모든 <span class="math inline">\(x\)</span>에 대해서 <span class="math inline">\(|f(x) - L| &lt; \delta\)</span>를 만족하는 <span class="math inline">\(\delta\)</span>가 존재해야 한다. 그림에서 보면 <span class="math inline">\(\epsilon\)</span>의 크기와 무관하게 함수에 의해 매핑되는 <span class="math inline">\(L\)</span>을 포함하는 <span class="math inline">\(f(x)\)</span>의 범위를 덮을 수 있는 <span class="math inline">\(\delta\)</span>가 존재하면 된다.</p>
+<p>동어반복일 수 있지만, 반대로 생각해보면 함수 극한의 정의를 이해하는 데 도움이 될 수 있다.</p>
+<section id="함수의-극한이-존재하는-경우" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="함수의-극한이-존재하는-경우">함수의 극한이 존재하는 경우</h3>
-<p><span class="math inline">\(\lim_{x \to a} f(x)\)</span>이 존재하는 경우에 대해서 존재하지 않는 경우의 정의를 살펴보자. <span class="math inline">\(\delta\)</span>를 아무리 작게 잡는다고 해도,<span class="math inline">\(x\)</span>를 <span class="math inline">\(a\)</span>에 접근시켜서 <span class="math inline">\(|f(x)-L| \geq \delta\)</span>의 조건을 깰 수 있다. 따라서 이 경우 함수 극한 정의의 ’부정’을 만족시키는 경우를 찾을 수 없다.</p>
-</section>
+<p><span class="math inline">\(\lim_{x \to a} f(x)\)</span>이 존재하는 경우에 대해서 존재하지 않는 경우의 정의를 살펴보자. <span class="math inline">\(\delta\)</span>를 아무리 작게 잡는다고 해도,<span class="math inline">\(x\)</span>를 <span class="math inline">\(a\)</span>에 접근시켜서 <span class="math inline">\(|f(x)-L| \geq \delta\)</span>의 조건을 깰 수 있다. 따라서 이 경우 <span class="math inline">\(Q^C\)</span>를 만족하는 <span class="math inline">\(\delta\)</span>를 찾을 수 없다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>여기서 반대로 생각해보면 도움이 된다. <span class="math inline">\(Q^C\)</span> 즉 모든 <span class="math inline">\(x\)</span> s.t. <span class="math inline">\(|x-a|&lt;\epsilon\)</span>에 대해서 <span class="math inline">\(|f(x) - L| \geq \delta\)</span>를 만족하는 <span class="math inline">\(delta\)</span>가 있다고 하자. 이때 <span class="math inline">\(x\)</span>를 <span class="math inline">\(a\)</span>에 충분히 붙이게 되면 이 조건은 꺠지게 된다.</p>
+</div></div></section>
 <section id="함수의-극한이-존재하지-않는-경우-1" class="level3">
 <h3 class="anchored" data-anchor-id="함수의-극한이-존재하지-않는-경우-1">함수의 극한이 존재하지 않는 경우</h3>
-<p><span class="math inline">\(L\)</span>이 <span class="math inline">\((f(a-\epsilon), f(a+\epsilon))\)</span> 사이 어딘가에 존재한다면, <span class="math inline">\(|L-f(a-\epsilon)|\)</span>과 <span class="math inline">\(|L-f(a+\epsilon)|\)</span> 중 작은 값을 <span class="math inline">\(\delta'\)</span>이라고 하자. 이때 <span class="math inline">\(\epsilon\)</span>을 아무리 <span class="math inline">\(a\)</span>에 근접시킨다고 해도 <span class="math inline">\(|f(x)-L| \geq \delta'\)</span>이 언제나 만족한다. 따라서 함수 극한의 정의를 만족하는 <span class="math inline">\(\delta\)</span>를 찾을 수 없다. 이 경우 극한의 정의를 만족시키는 경우를 찾을 수 없다.</p>
+<p><span class="math inline">\(L\)</span>이 <span class="math inline">\((f(a-\epsilon), f(a+\epsilon))\)</span> 사이 어딘가에 존재한다고 하자. 이때 <span class="math inline">\(|L-f(a-\epsilon)|\)</span>과 <span class="math inline">\(|L-f(a+\epsilon)|\)</span> 중 작은 값을 <span class="math inline">\(\hat \delta\)</span>라고 하자. 이때 <span class="math inline">\(x\)</span>가 <span class="math inline">\(a\)</span>에 적당하게 접근하면 <span class="math inline">\(|f(x)-L| \geq \hat \delta\)</span>는 항상 만족한다. 즉, <span class="math inline">\(|x-a| &lt; \epsilon\)</span>을 만족하는 <span class="math inline">\(\epsilon\)</span>이 존재한다. 즉, <span class="math inline">\(P \cap Q^c \neq \emptyset\)</span>가 성립한다.</p>
 
 
 </section>
@@ -658,7 +680,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","loop":true,"closeEffect":"zoom"});</script>
 
 
 
