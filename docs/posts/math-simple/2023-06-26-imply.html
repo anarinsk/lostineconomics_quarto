@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.361">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JS HUHH">
+<meta name="dcterms.date" content="2023-06-26">
+<meta name="description" content="A \to B의 의미를 새겨보자">
+
+<title>lostineconomics.com - 조건 명제</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">lostineconomics.com</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">about</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../project.html" rel="" target="">
+ <span class="menu-text">project</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/anarinsk" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/anarinsk" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">조건 명제</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">math-simple</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    <span class="math inline">\(A \to B\)</span>의 의미를 새겨보자
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>JS HUHH </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 26, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">tl; dr</h2>
+<ul>
+<li>조건 명제가 의미하는 것을 다시 새겨 보고, 조건 명제의 ’부정’도 따져보자.</li>
+</ul>
+</section>
+<section id="조건-명제" class="level2">
+<h2 class="anchored" data-anchor-id="조건-명제">조건 명제</h2>
+<p>조건 명제는 수학에서 많이 사용된다. 물론 일상어에도 많이 활용된다. 그런데 가끔 살짝 어떤 대목이 뒤틀리며 혼란의 순간이 찾아오기도 한다. 대체로 이런 순간을 뭉개고 가지만, 이번에 한번 정리해보기로 했다.</p>
+</section>
+<section id="용어-정리" class="level2">
+<h2 class="anchored" data-anchor-id="용어-정리">용어 정리</h2>
+<ul>
+<li>명제: 참과 거짓을 가릴 수 있는 언술을 의미한다. 배중률에 따르면 명제는 참 혹은 거짓 둘 중에 하나만 될 수 있다. 둘 다 될 수 있거나 둘 다 아니거나의 상태는 없다고 가정한다.</li>
+<li>진리 집합: “모든 인간은 죽는다”와 같은 종류의 명제 조건이 붙지 않는다. 하지만 명제에 조건을 달아서 해당 조건을 충족하는 대상을 살피면 편리한 경우가 있다. 이를 명제의 조건이라고 하자. 이때 조건 명제의 조건을 충족하는 어떤 대상, 즉 조건을 참으로 만드는 대상을 모아 놓은 집합을 ’진리 집합’이라고 부른다.</li>
+</ul>
+<p>명제를 진리 집합과 연결해 생각하면 편리한 경우가 있다. 명제의 여러가지 조작을 집합으로 바꿔 생각하면 조금 이해가 쉬워진다. 우리가 잘 알고 익숙한 ’벤 다이어그램’을 활용할 수 있기 때문에 더 쉽게 응용할 수 있다는 장점도 있다.</p>
+</section>
+<section id="조건-명제conditional-proposition" class="level2">
+<h2 class="anchored" data-anchor-id="조건-명제conditional-proposition">조건 명제(conditional proposition)</h2>
+<p>’조건 명제’는 ’조건’과는 조금 다르다. 일상어의 감각과는 조금 다르니 유의해두도록 하자. 조건 명제란 우리가 흔히 “만일 <span class="math inline">\(p\)</span>이라면, <span class="math inline">\(q\)</span>가 성립한다”와 같이 표현하는 것이다. 몇 가지 표현을 알아보자.</p>
+<ul>
+<li><span class="math inline">\(p \to q\)</span></li>
+<li>If <span class="math inline">\(p\)</span>, then <span class="math inline">\(q\)</span>.</li>
+<li><span class="math inline">\(p\)</span> impies <span class="math inline">\(q\)</span></li>
+</ul>
+<p>일단 이 관계는 형식 논리상의 관계이지 인과관계는 아니다. 즉, 형식 논리상 <span class="math inline">\(p\)</span>라는 명제와 <span class="math inline">\(q\)</span>라는 명제의 관계를 기계적으로 서술한다. 진리 집합이 존재한다면, <span class="math inline">\(p\)</span>의 진리집합 <span class="math inline">\(P\)</span>와 <span class="math inline">\(q\)</span>의 진리집함 <span class="math inline">\(Q\)</span>에 대해서 <span class="math inline">\(P \subset Q\)</span>가 성립한다는 의미로 이해할 수 있겠다.</p>
+<p>조건 명제에는 숨은 ’함정’이 있다. <span class="math inline">\(p \to q\)</span>는 진리집합으로 본다면 <span class="math inline">\(P\)</span>에 속하는 모든 원소는 <span class="math inline">\(Q\)</span>에 속해야 한다는 뜻이다. 즉, <span class="math inline">\(p\)</span>라는 명제를 만족하는 모든 경우에 대해서 <span class="math inline">\(q\)</span>가 만족해야 한다. 조건 명제는 한정 기호를 함축하고 있는 것이다.</p>
+<section id="진리표" class="level3">
+<h3 class="anchored" data-anchor-id="진리표">진리표</h3>
+<p>이를 이해하고 나면 <span class="math inline">\(p \to q\)</span>와 동일한 진리값을 지니는 <span class="math inline">\(\neg p \lor q\)</span>가 달리 보인다.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg p \lor q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">T</td>
+</tr>
+</tbody>
+</table>
+<p>위 진리표에서 <span class="math inline">\(p\)</span>가 T인 경우에는 <span class="math inline">\(q\)</span>가 T일 때만 T가 된다. 즉, <span class="math inline">\(p\)</span> T라면, <span class="math inline">\(p \to q\)</span> 혹은 <span class="math inline">\(\neg p \lor q\)</span>가 T가 되는 경우는 <span class="math inline">\(q\)</span>가 T일 때 뿐이다. 즉, <span class="math inline">\(P\)</span>의 모든 부분 집합은 <span class="math inline">\(Q\)</span>에도 속해야 한다.</p>
+</section>
+<section id="공진리" class="level3">
+<h3 class="anchored" data-anchor-id="공진리">공진리</h3>
+<p>아마도 ‘공진리(vacous truth)’ 혹은 ’항진’의 문제가 거슬릴 것이다. 논리로 보면 조금 이상해보일 수 있지만 진리집합으로 보면 이해가 쉽다. <span class="math inline">\(p\)</span>가 F라는 것은 <span class="math inline">\(P=\emptyset\)</span>을 의미한다. 집합의 공리상 공집합은 모든 집합의 부분 집합이 될 수 있다.</p>
+</section>
+<section id="조건-명제의-부정" class="level3">
+<h3 class="anchored" data-anchor-id="조건-명제의-부정">조건 명제의 부정</h3>
+<p>조건 명제의 ’부정’은 어떻게 될까? 조건 명제를 <span class="math inline">\(p \to q\)</span>의 형태로 놓고 보면 부정 명제를 만들기 까다로울 수 있다. 대신 <span class="math inline">\(\neg p \lor q\)</span>의 부정 명제를 만들어보자. <span class="math inline">\(\neg(\neg p \lor q) = p \land \neg q\)</span>가 된다.</p>
+<p>일단 직관적으로 생각해보자. 배중률에 따르면 <span class="math inline">\(p \to q\)</span>가 성립하지 않는 경우가 단 1개라도 존재하면 해당 부정 명제가 참이 된다. 말로 푼다면, <span class="math inline">\(p\)</span>를 만족하는 경우 중에서 <span class="math inline">\(\neg q\)</span>를 만족하는 것이 존재하면 된다. 앞서 <span class="math inline">\(p \to q\)</span>가 ’모든’의 한정 기호를 함축하고 있다며 조건 명제의 부정은 ’어떤’의 한정 기호를 함축하고 있다. 진리 집합으로 서술하면 <span class="math inline">\(P' \subset P\)</span>에 대해서 <span class="math inline">\(P' \cap Q^C \neq \emptyset\)</span>이 성립하면 된다.</p>
+</section>
+</section>
+<section id="함수의-극한" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="함수의-극한">함수의 극한</h2>
+<p>’함수의 극한’의 정의에 관해서 살펴보자. 한번쯤 좌절해봤다는 엡실론-델타 정의는 다음과 같다. <span class="math inline">\(\lim_{x \to a} f(x) = L\)</span>의 정의는 다음과 같다.</p>
+<p>모든 <span class="math inline">\(\epsilon &gt; 0\)</span>에 대해서, 다음을 만족하는 <span class="math inline">\(\delta &gt; 0\)</span>가 존재한다; <span class="math inline">\(0 &lt; |x - a| &lt; \epsilon\)</span> <span class="math inline">\(\to\)</span> <span class="math inline">\(|f(x)-L| &lt; \delta\)</span>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>영어로는 다음과 같다. For every <span class="math inline">\(\epsilon &gt; 0\)</span>, there exists <span class="math inline">\(\delta &gt; 0\)</span> s.t. <span class="math inline">\(0 &lt; |x-a| &lt; \epsilon\)</span> implies <span class="math inline">\(|f(x) - L| &lt; \delta\)</span>. 논리 기호로 표현한다면, <span class="math inline">\(\forall \epsilon&gt;0, \exists \delta &gt; 0\)</span> s.t. <span class="math inline">\(0 &lt; |x-a| &lt; \epsilon\)</span> implies <span class="math inline">\(|f(x)| - L| &lt; \delta\)</span>.</p>
+</div></div><p>쉽지 않지만 말로 풀어보자. 말이 지니는 모호함을 없애기 위해서 하나씩 끊어서 살펴보자.</p>
+<ul>
+<li><span class="math inline">\(a\)</span> 주변에 있는 임의의 작은 <span class="math inline">\(2\epsilon\)</span> 크기의 구간을 잡는다.<br>
+</li>
+<li>해당 구간에 속하는 모든 <span class="math inline">\(x\)</span>를 고려하자.</li>
+<li><span class="math inline">\(x \to a\)</span> 일 때 함수 <span class="math inline">\(f(x)\)</span>의 극한값 <span class="math inline">\(L\)</span>이 있다고 하자.</li>
+<li><span class="math inline">\(f(x)\)</span>와 <span class="math inline">\(L\)</span> 사이의 거리(<span class="math inline">\(|f(x)-L|\)</span>)가 <span class="math inline">\(\delta\)</span>보다 작아지는 <span class="math inline">\(\delta\)</span>가 존재한다.</li>
+</ul>
+<p>사실 함축의 정의를 살펴보면, ‘모든(<span class="math inline">\(\forall\)</span>)’, ’존재한다(<span class="math inline">\(\exists\)</span>)’는 의미를 분명하게 전달하기 위한 사족이다.</p>
+<section id="함수의-극한이-존재하지-않는-경우" class="level3">
+<h3 class="anchored" data-anchor-id="함수의-극한이-존재하지-않는-경우">함수의 극한이 존재하지 않는 경우</h3>
+<p>함수의 극한에 관한 정의의 ’부정(negation)’을 정의해보자. 그리고 이 부정의 정의가 참이 되는 경우를 따져볼 것이다. 정의가 함축(<span class="math inline">\(\to\)</span>)의 형태를 취하고 있으므로 이 부정형은 신중하게 다뤄야 한다.</p>
+<p><span class="math inline">\(|x-a|&lt; \epsilon\)</span>을 만족하는 어떤 <span class="math inline">\(\epsilon&gt;0\)</span>에 대해서 다음을 만족하는 <span class="math inline">\(\delta&gt;0\)</span>가 존재한다; <span class="math inline">\(|f(x) - L| \geq \delta\)</span>.</p>
+<p>말로 풀기는 어렵겠지만 역시 이를 말로 풀어보자.</p>
+<ul>
+<li><span class="math inline">\(a\)</span>의 일정한 주변의 위치한 모든 <span class="math inline">\(x\)</span>를 고려하자.</li>
+<li><span class="math inline">\(|f(x)-L|\)</span> 값을 <span class="math inline">\(\delta\)</span> 보다 낮게 줄일 수 없다.</li>
+</ul>
+<p>이 경우는 <span class="math inline">\(\lim_{x \to a}f(x)\)</span>는 존재하지 않는다.</p>
+</section>
+</section>
+<section id="그림으로-살펴보자." class="level2">
+<h2 class="anchored" data-anchor-id="그림으로-살펴보자.">그림으로 살펴보자.</h2>
+<p>조금 정확하지 않을 수 있지만 x가 스칼라 값일 때 <span class="math inline">\(f(x)\)</span>를 통해서 위 경우를 한번 살펴보자.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 44.4%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/limf_1.jpg" class="lightbox" title="f(x)가 존재하는 경우" data-gallery="quarto-lightbox-gallery-1"><img src="images/limf_1.jpg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption"><span class="math inline">\(f(x)\)</span>가 존재하는 경우</figcaption>
+</figure>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 44.4%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/limf_2.jpg" class="lightbox" title="f(x)가 존재하지 않는 경우" data-gallery="quarto-lightbox-gallery-2"><img src="images/limf_2.jpg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption"><span class="math inline">\(f(x)\)</span>가 존재하지 않는 경우</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><span class="math inline">\(\lim_{x \to a} f(x)\)</span>가 존재하는 경우는 그림에서 보듯이 매핑되는 <span class="math inline">\(f(x)\)</span>를 모두 덮을 수 있는 <span class="math inline">\(\delta\)</span>가 존재하는 경우이다. 이는 <span class="math inline">\(\epsilon\)</span>이 아무리 작더라도 가능해야 한다. 한편 <span class="math inline">\(\lim_{x \to a} f(x)\)</span>가 존재하지 않는 경우를 살펴보자. 그림에서 보듯이 L을 어떻게 설정하든지 <span class="math inline">\(|f(x)-L| \geq \delta\)</span>가 성립하는 <span class="math inline">\(\epsilon\)</span>의 구간을 쉽게 설정할 수 있다.</p>
+<p>동어반복일 수 있지만, 반대로 생각해보면 정의를 이해하는 데 도움이 될 수 있다.</p>
+<section id="함수의-극한이-존재하는-경우" class="level3">
+<h3 class="anchored" data-anchor-id="함수의-극한이-존재하는-경우">함수의 극한이 존재하는 경우</h3>
+<p><span class="math inline">\(\lim_{x \to a} f(x)\)</span>이 존재하는 경우에 대해서 존재하지 않는 경우의 정의를 살펴보자. <span class="math inline">\(\delta\)</span>를 아무리 작게 잡는다고 해도,<span class="math inline">\(x\)</span>를 <span class="math inline">\(a\)</span>에 접근시켜서 <span class="math inline">\(|f(x)-L| \geq \delta\)</span>의 조건을 깰 수 있다.</p>
+</section>
+<section id="함수의-극한이-존재하지-않는-경우-1" class="level3">
+<h3 class="anchored" data-anchor-id="함수의-극한이-존재하지-않는-경우-1">함수의 극한이 존재하지 않는 경우</h3>
+<p><span class="math inline">\(L\)</span>이 <span class="math inline">\((f(a-\epsilon), f(a+\epsilon))\)</span> 사이 어딘가에 존재한다면, <span class="math inline">\(|L-f(a-\epsilon)|\)</span>과 <span class="math inline">\(|L-f(a+\epsilon)|\)</span> 중 작은 값을 <span class="math inline">\(\delta'\)</span>이라고 하자. 이때 <span class="math inline">\(\epsilon\)</span>을 아무리 <span class="math inline">\(a\)</span>에 근접시킨다고 해도 <span class="math inline">\(|f(x)-L| \geq \delta'\)</span>이 언제나 만족한다. 따라서 함수 극한의 정의를 만족하는 <span class="math inline">\(\delta\)</span>를 찾을 수 없다.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":true,"openEffect":"zoom","descPosition":"bottom"});</script>
+
+
+
+</body></html>
