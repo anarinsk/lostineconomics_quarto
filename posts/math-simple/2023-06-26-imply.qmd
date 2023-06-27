@@ -36,7 +36,7 @@ lightbox: auto
 - If $p$, then $q$.
 - $p$ impies $q$
 
-일단 이 관계는 형식 논리상의 관계이지 인과관계는 아니다. 즉, 형식 논리상 $p$라는 명제와 $q$라는 명제의 관계를 기계적으로 서술한다. 진리 집합이 존재한다면, $p$의 진리집합 $P$와 $q$의 진리집합 $Q$에 대해서 $P \subset Q$가 성립한다는 의미로 이해할 수 있겠다. 
+일단 이 관계는 형식 논리상의 관계이지 '인과' 관계가 아니다. 즉, 형식 논리상 $p$라는 명제와 $q$라는 명제의 관계를 기계적으로 서술한다. 진리 집합이 존재한다면, $p$의 진리집합 $P$와 $q$의 진리집합 $Q$에 대해서 $P \subset Q$가 성립한다는 의미로 이해할 수 있겠다. 
 
 조건 명제에는 숨은 '함정'이 있다. $p \to q$는 진리집합으로 본다면 $P$에 속하는 모든 원소는 $Q$에 속해야 한다는 뜻이다. 즉, $p$라는 명제를 만족하는 모든 경우에 대해서 $q$가 만족해야 한다.
 
@@ -62,7 +62,7 @@ lightbox: auto
 
 조건 명제의 '부정'은 어떻게 될까? 조건 명제를 $p \to q$의 형태로 놓고 보면 부정 명제를 만들기 까다로울 수 있다. 대신 $\neg p \lor q$의 부정 명제를 만들어보자. $\neg(\neg p \lor q) = p \land \neg q$가 된다. 
 
-직관적으로 생각해보자. 배중률에 따르면 $p \to q$가 성립하지 않는 경우가 단 1개라도 존재하면 해당 부정 명제가 참이 된다. 말로 푼다면, $p$를 만족하는 경우 중에서 $\neg q$를 만족하는 것이 존재하면 된다. 앞서 $p \to q$가 '모든($\forall$)'이라는 한정 기호를 담고 있다면, 조건 명제의 부정은 '어떤($\exists$)'의 한정 기호를 지니고 있다. 진리 집합으로 서술하면 $P \cap Q^C \neq \emptyset$이 성립하면 된다.
+직관적으로 생각해보자. 배중률에 따르면 $p \to q$가 성립하지 않는 경우가 단 하나라도 존재하면 해당 부정형이 참이 된다. 즉, $p$를 만족하는 경우 중에서 $\neg q$를 만족하는 것이 존재하면 된다. 앞서 $p \to q$가 $\forall$)의 전칭 한정기호 지니고 있다면, 조건 명제의 부정은 '어떤($\exists$)'이라는 존재 한정 기호 지닌다. 진리 집합으로 서술하면 $P \cap Q^C \neq \emptyset$이 성립하면 된다.
 
 ## 함수의 극한 
 
@@ -71,28 +71,29 @@ lightbox: auto
 모든 $\epsilon > 0$에 대해서, 다음을 만족하는 $\delta > 0$가 존재한다; $0 < |x - a| < \delta$ $\to$ $|f(x)-L| < \epsilon$.
 
 :::{.column-margin}
-영어로는 다음과 같다. For all $\epsilon > 0$, there exists $\delta > 0$ s.t. $0 < |x-a| < \delta$ implies $|f(x) - L| < \epsilon$. 논리 기호로 표현한다면, $\forall \epsilon>0, \exists \delta > 0$ s.t. $0 < |x-a| < \delta$ implies $|f(x)| - L| < \epsilon$.
+영어로는 다음과 같다. For every $\epsilon > 0$, there exists a $\delta > 0$ s.t. for all $x \in \mathbb R$, $0 < |x-a| < \delta$ implies $|f(x)-L| < \epsilon$. 기호만으로 표현해보자. 
+$(\forall \epsilon >0)(\exists \delta >0)(\forall x \in \mathbb R)(0 < |x-a| < \delta \implies |f(x) - L|<\epsilon)$
 :::
 
 쉽지 않지만 말로 풀어보자. 말이 지니는 모호함을 없애기 위해서 하나씩 끊어서 살펴보자. 
 
-- $a$ 주변으로 각 $\delta$ 크기의 구간을 잡는다.  
+- $x=a$ 주변으로 양쪽으로 $\delta$ 크기의 구간을 잡는다.  
 - 해당 구간에 속하는 **모든** $x$를 고려하자. 
 - $x \to a$ 일 때 함수 $f(x)$의 극한값을 $L$이라고 하자. 
-- $f(x)$와 $L$ 사이의 거리($|f(x)-L|$)가 임의의 $\epsilon(>0)$보다 작아야 한다. 
+- $f(x)$와 $L$ 사이의 거리($|f(x)-L|$)가 임의의 $\epsilon>0$보다 작아야 한다. 
 
 ### 함수의 극한이 존재하지 않는 경우 
 
 함수의 극한에 관한 정의의 '부정(negation)'을 정의해보자. 그리고 이 부정의 정의가 참이 되는 경우를 따져볼 것이다. 정의가 함축(implication, $\to$)의 형태를 취하고 있으므로 이 부정형을 조심히 다뤄보자.
 
-$|x-a|< \delta$을 만족하는 모든 $\delta(>0)$에 대해서 다음을 만족하는 어떤 $\epsilon(>0)$이 존재한다; $|f(x) - L| \geq \epsilon$. 
+$|x-a|< \delta$을 만족하는 모든 $\delta(>0)$에 대해서 다음을 만족하는 어떤 $\epsilon>0$와 $x \in \mathbb R$이 존재한다; $|f(x) - L| \geq \epsilon$. 
 
 말로 풀기는 어렵겠지만 구별해서 풀어보자. 
 
 - $a$의 어떤 주변($\delta$의 크기)에 속한 **어떤** $x$를 고려하자. 
 - $|f(x)-L|$ 값을 $\epsilon$ 보다 낮게 줄일 수 없다. 
 
-이 경우는 $\lim_{x \to a}f(x)$는 존재하지 않는다. 주의 깊게 볼 지점이 있다. $p \to q$에서 $P$의 모든 경우에 해당 조건 명제를 만족해야 한다. 따라서 이 형태는 암묵적으로 $x$에 대해서 $\forall$의 전칭 명제를 지닌다. 한편 조건 명제의 부정형의 경우 $x$에 대해서 $\forall$의 전칭 명제는 $\exists$의 존재 명제가 된다. 
+이 경우는 $\lim_{x \to a}f(x)$는 존재하지 않는다. 주의 깊게 볼 지점이 있다. $p \to q$에서 $P$의 모든 경우에 해당 조건 명제를 만족해야 한다. 따라서 이 형태는 암묵적으로 $x$에 대해서 $\forall$의 전칭 명제를 지닌다. 한편 조건 명제의 부정형의 경우 $x$에 대해서 $\forall$의 전칭 한정기호는 $\exists$의 존재 한정기호가 된다. 
 
 ## 진리 집합 
 
@@ -101,14 +102,14 @@ $|x-a|< \delta$을 만족하는 모든 $\delta(>0)$에 대해서 다음을 만�
 $$
 \begin{aligned}
 P & = \{x: \exists\delta \text{ s.t. } |x - a| < \delta \} \\
-Q & = \{x: \forall\epsilon \text{ s.t. }|f(x) - L| < \epsilon \} 
+Q & = \{f(x): \forall\epsilon \text{ s.t. }|f(x) - L| < \epsilon \} 
 \end{aligned}
 $$
 
 함수 극한의 정의는 $P \subset Q$를 의미한다. 이제 $\neg q$, 즉 $Q^C$를 보자.
 
 $$
-Q^C = \{x: \exists \epsilon \text{ s.t. } |f(x) - L| \geq \epsilon \}
+Q^C = \{f(x): \exists \epsilon \text{ s.t. } |f(x) - L| \geq \epsilon \}
 $$
 
 여기서 $Q^C$를 정의할 때 $Q$의 전체 조건 $\forall \epsilon$이 존재 조건 $\exists \epsilon$으로 바뀌게 된다는 점을 눈여겨 보도록 하자. $p \to q$의 부정 명제는 $p \land \neg q$가 된다. 진리집합으로 본다면 다음과 같다; $P \cap Q^C$. 만일 이 집합이 공집합이 아니라면 정의상 함수의 극한은 존재하지 않는다. 술어로 푼다면, $p$를 만족하면서 $q$를 만족하지 않는 경우가 존재하면 된다.  
@@ -137,7 +138,7 @@ $\lim_{x \to a} f(x)$가 존재하는 경우를 살펴보자. 문장으로는 �
 그림에서 보듯이 임의의 양의 $\epsilon$이 주어져 있을 때 $\delta$를 충분히 작게 택하여 $f(x)$와 $L$의 거리를 충분히 작게 만들 수 있다면, 함수의 극한값이 존재한다. 
 
 :::{.column-margin}
-다소 동어반복이 될지는 모르겠지만 극한이 존재하지 않는 경우에 넣어서 따져보면 이해에 도움이 된다. 진리집합 $Q^C$ 즉 $|f(x) - L| \geq \epsilon$를 만족하는 $\epsilon$이 존재하고 이것이 해당 조건을 만족하는 모든 $x$에 대해서 성립한다고 하자. $x$를 $a$에 충분히 붙이게 되면 즉 $\delta$를 충분히 작게 잡으면 이 조건을 만족하는 $\epsilon$은 존재하지 않는다. 즉, $P \cap Q^C = \emptyset$이다. 
+다소 동어반복이 될지는 모르겠지만 극한이 존재하지 않는 경우에 넣어서 따져보면 이해에 도움이 된다. 진리집합 $Q^C$ 즉 $|f(x) - L| \geq \epsilon$를 만족하는 $\epsilon$와 $x$가 존재한다고 하자. $x$를 $a$에 충분히 붙이게 되면, 즉 $\delta$를 충분히 작게 잡으면, 이 조건을 만족하는 $\epsilon$은 존재하지 않는다. 즉, $P \cap Q^C = \emptyset$이다. 
 :::
 
 ### 함수의 극한이 존재하지 않는 경우 
@@ -146,6 +147,6 @@ $L$이 $(f(a-\delta), f(a+\delta))$ 사이 어딘가에 존재한다고 하자. 
 
 ![그림의 상황을 명제로 표현해보자; $\exists\epsilon$, $\exists x$ s.t. $|f(x)-L| \geq \epsilon$ f$x$ for some $|x-a| < \delta$ for some $\delta$.](images/limf_3.jpg){width=70%}
 
-$f(x)$는 $x=a$ 주변에서 끊어져 있고, 이 간격과 $L$의 위치를 고려해서 $|f(x)-L| \geq \epsilon$과 $|x-a| < \delta$를 만족하는 $\epsilon$과 $\delta$를 찾을 수 있다. 
+$f(x)$는 $x=a$ 주변에서 끊어져 있고, 이 간격과 $L$의 위치를 고려해서 $|f(x)-L| \geq \epsilon$과 $|x-a| < \delta$를 만족하는 $\epsilon$과 $\delta$를 찾을 수 있다. 따라서 $x=a$에서 $\lim_{x \to a} f(x)$는 존재하지 않는다. 
 
 
