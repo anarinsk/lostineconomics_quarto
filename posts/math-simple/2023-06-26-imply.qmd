@@ -146,4 +146,10 @@ $\lim_{x \to a} f(x)$이 존재하는 경우에 대해서 존재하지 않는 �
 
 ### 함수의 극한이 존재하지 않는 경우 
 
-$L$이 $(f(a-\epsilon), f(a+\epsilon))$ 사이 어딘가에 존재한다고 하자. 이때  $|L-f(a-\epsilon)|$과 $|L-f(a+\epsilon)|$ 중 작은 값을 $\hat \delta$라고 하자. 이때 $x$가 $a$에 적당하게 접근하면 $|f(x)-L| \geq \hat \delta$는 항상 만족한다. 즉, $|x-a| < \epsilon$을 만족하는 $\epsilon$이 존재한다.  즉, $P \cap Q^c \neq \emptyset$가 성립한다. 
+$L$이 $(f(a-\epsilon), f(a+\epsilon))$ 사이 어딘가에 존재한다고 하자. 이때  $|L-f(a-\epsilon)|$과 $|L-f(a+\epsilon)|$ 중 작은 값을 $\hat \delta$라고 하자. 이때 $x$가 $a$에 적당하게 접근하면 $|f(x)-L| \geq \hat \delta$는 항상 만족한다. 즉, $|x-a| < \epsilon$을 만족하는 $\epsilon$이 존재한다.  즉, $P \cap Q^c \neq \emptyset$가 성립한다. 도움이 될지는 모르겠지만 그림으로 살펴보자. 
+
+![](images/limf_3.jpg){width=70%}
+
+$f(x)$는 $x=a$ 주변에서 끊어져 있고, 이 간격과 $L$의 위치를 고려해서 $|f(x)-L| \geq \hat \delta$를 모든 $x$ s.t. $|x-a| < \epsilon$ 에 대해서 만족하는 $\hat \delta$를 찾을 수 있다. 
+
+
