@@ -245,14 +245,15 @@ ul.task-list li input[type="checkbox"] {
 <p>직관적으로 생각해보자. 배중률에 따르면 <span class="math inline">\(p \to q\)</span>가 성립하지 않는 경우가 단 하나라도 존재하면 해당 부정형이 참이 된다. 즉, <span class="math inline">\(p\)</span>를 만족하는 경우 중에서 <span class="math inline">\(\neg q\)</span>를 만족하는 것이 존재하면 된다. 앞서 <span class="math inline">\(p \to q\)</span>가 <span class="math inline">\(\forall\)</span>)의 전칭 한정기호 지니고 있다면, 조건 명제의 부정은 ’어떤(<span class="math inline">\(\exists\)</span>)’이라는 존재 한정 기호 지닌다. 진리 집합으로 서술하면 <span class="math inline">\(P \cap Q^C \neq \emptyset\)</span>이 성립하면 된다.</p>
 </section>
 </section>
-<section id="함수의-극한" class="level2 page-columns page-full">
+<section id="함수의-극한" class="level2">
 <h2 class="anchored" data-anchor-id="함수의-극한">함수의 극한</h2>
 <p>’함수의 극한’의 정의에 관해서 살펴보자. 한번쯤 좌절해봤다는 엡실론-델타 정의는 다음과 같다. <span class="math inline">\(\lim_{x \to a} f(x) = L\)</span>의 정의는 다음과 같다.</p>
 <p>모든 <span class="math inline">\(\epsilon &gt; 0\)</span>에 대해서, 다음을 만족하는 <span class="math inline">\(\delta &gt; 0\)</span>가 존재한다; <span class="math inline">\(0 &lt; |x - a| &lt; \delta\)</span> <span class="math inline">\(\to\)</span> <span class="math inline">\(|f(x)-L| &lt; \epsilon\)</span>.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>영어로는 다음과 같다. For every <span class="math inline">\(\epsilon &gt; 0\)</span>, there exists a <span class="math inline">\(\delta &gt; 0\)</span> s.t. for all <span class="math inline">\(x \in \mathbb R\)</span>, <span class="math inline">\(0 &lt; |x-a| &lt; \delta\)</span> implies <span class="math inline">\(|f(x)-L| &lt; \epsilon\)</span>. 기호만으로 표현해보자. <span class="math inline">\((\forall \epsilon &gt;0)(\exists \delta &gt;0)(\forall x \in \mathbb R)(0 &lt; |x-a| &lt; \delta \implies |f(x) - L|&lt;\epsilon)\)</span></p>
-</div></div><p>쉽지 않지만 말로 풀어보자. 말이 지니는 모호함을 없애기 위해서 하나씩 끊어서 살펴보자.</p>
+<p>영어로는 다음과 같다.</p>
+<p>For every <span class="math inline">\(\epsilon &gt; 0\)</span>, there exists a <span class="math inline">\(\delta &gt; 0\)</span> s.t. for all <span class="math inline">\(x \in \mathbb R\)</span>, <span class="math inline">\(0 &lt; |x-a| &lt; \delta\)</span> implies <span class="math inline">\(|f(x)-L| &lt; \epsilon\)</span>.</p>
+<p>기호만으로 표현해보자.</p>
+<p><span class="math inline">\((\forall \epsilon &gt;0)(\exists \delta &gt;0)(\forall x \in \mathbb R)(0 &lt; |x-a| &lt; \delta \implies |f(x) - L|&lt;\epsilon)\)</span></p>
+<p>하나씩 끊어서 말로 살펴보자.</p>
 <ul>
 <li><span class="math inline">\(x=a\)</span> 주변으로 양쪽으로 <span class="math inline">\(\delta\)</span> 크기의 구간을 잡는다.<br>
 </li>
@@ -689,7 +690,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":true});</script>
 
 
 

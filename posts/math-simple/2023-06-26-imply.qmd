@@ -70,12 +70,15 @@ lightbox: auto
 
 모든 $\epsilon > 0$에 대해서, 다음을 만족하는 $\delta > 0$가 존재한다; $0 < |x - a| < \delta$ $\to$ $|f(x)-L| < \epsilon$.
 
-:::{.column-margin}
-영어로는 다음과 같다. For every $\epsilon > 0$, there exists a $\delta > 0$ s.t. for all $x \in \mathbb R$, $0 < |x-a| < \delta$ implies $|f(x)-L| < \epsilon$. 기호만으로 표현해보자. 
-$(\forall \epsilon >0)(\exists \delta >0)(\forall x \in \mathbb R)(0 < |x-a| < \delta \implies |f(x) - L|<\epsilon)$
-:::
+영어로는 다음과 같다. 
 
-쉽지 않지만 말로 풀어보자. 말이 지니는 모호함을 없애기 위해서 하나씩 끊어서 살펴보자. 
+For every $\epsilon > 0$, there exists a $\delta > 0$ s.t. for all $x \in \mathbb R$, $0 < |x-a| < \delta$ implies $|f(x)-L| < \epsilon$. 
+
+기호만으로 표현해보자. 
+
+$(\forall \epsilon >0)(\exists \delta >0)(\forall x \in \mathbb R)(0 < |x-a| < \delta \implies |f(x) - L|<\epsilon)$
+
+하나씩 끊어서 말로 살펴보자. 
 
 - $x=a$ 주변으로 양쪽으로 $\delta$ 크기의 구간을 잡는다.  
 - 해당 구간에 속하는 **모든** $x$를 고려하자. 
