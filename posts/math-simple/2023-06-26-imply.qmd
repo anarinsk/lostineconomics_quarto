@@ -6,7 +6,7 @@ date: "06/26/2023"
 image: "images/proof.jfif"
 categories: [math-simple]
 #margin-header: subscribe.html
-draft: false
+draft: true
 filters:
    - lightbox
 lightbox: auto
