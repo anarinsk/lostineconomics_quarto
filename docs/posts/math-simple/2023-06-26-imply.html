@@ -8,7 +8,7 @@
 
 <meta name="author" content="JS HUHH">
 <meta name="dcterms.date" content="2023-06-26">
-<meta name="description" content="Imply란 무엇일까">
+<meta name="description" content="\implies를 생각해보자">
 
 <title>lostineconomics.com - 조건 명제</title>
 <style>
@@ -143,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Imply란 무엇일까
+    <span class="math inline">\(\implies\)</span>를 생각해보자
   </div>
 </div>
 
@@ -264,20 +264,20 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <p>하나씩 끊어서 말로 살펴보자.</p>
 <ul>
-<li><span class="math inline">\(x=a\)</span> 주변으로 양쪽으로 <span class="math inline">\(\delta\)</span> 크기의 구간을 잡는다.<br>
+<li><span class="math inline">\(x=a\)</span> 주변으로 양쪽으로 <strong>어떤</strong> <span class="math inline">\(\delta\)</span> 크기의 구간을 잡는다.<br>
 </li>
 <li>해당 구간에 속하는 <strong>모든</strong> <span class="math inline">\(x\)</span>를 고려하자.</li>
 <li><span class="math inline">\(x \to a\)</span> 일 때 함수 <span class="math inline">\(f(x)\)</span>의 극한값을 <span class="math inline">\(L\)</span>이라고 하자.</li>
-<li><span class="math inline">\(f(x)\)</span>와 <span class="math inline">\(L\)</span> 사이의 거리(<span class="math inline">\(|f(x)-L|\)</span>)가 임의의 <span class="math inline">\(\epsilon&gt;0\)</span>보다 작아야 한다.</li>
+<li><span class="math inline">\(f(x)\)</span>와 <span class="math inline">\(L\)</span> 사이의 거리(<span class="math inline">\(|f(x)-L|\)</span>)가 <strong>모든</strong> <span class="math inline">\(\epsilon&gt;0\)</span>보다 작아야 한다.</li>
 </ul>
 <section id="함수의-극한이-존재하지-않는-경우" class="level3">
 <h3 class="anchored" data-anchor-id="함수의-극한이-존재하지-않는-경우">함수의 극한이 존재하지 않는 경우</h3>
 <p>함수의 극한에 관한 정의의 ’부정(negation)’을 정의해보자. 그리고 이 부정의 정의가 참이 되는 경우를 따져볼 것이다. 정의가 함축(implication, <span class="math inline">\(\implies\)</span>)의 형태를 취하고 있으므로 이 부정형을 조심히 다뤄보자.</p>
 <p><span class="math inline">\(|x-a|&lt; \delta\)</span>을 만족하는 모든 <span class="math inline">\(\delta(&gt;0)\)</span>에 대해서 다음을 만족하는 어떤 <span class="math inline">\(\epsilon&gt;0\)</span>와 <span class="math inline">\(x \in \mathbb R\)</span>이 존재한다; <span class="math inline">\(|f(x) - L| \geq \epsilon\)</span>.</p>
-<p>말로 풀기는 어렵겠지만 구별해서 풀어보자.</p>
+<p>역시 말로 구별해서 풀어보자.</p>
 <ul>
-<li><span class="math inline">\(a\)</span>의 어떤 주변(<span class="math inline">\(\delta\)</span>의 크기)에 속한 <strong>어떤</strong> <span class="math inline">\(x\)</span>를 고려하자.</li>
-<li><span class="math inline">\(|f(x)-L|\)</span> 값을 <span class="math inline">\(\epsilon\)</span> 보다 낮게 줄일 수 없다.</li>
+<li><span class="math inline">\(a\)</span>의 <strong>모든</strong> 주변(<span class="math inline">\(\delta\)</span>의 크기)에 속한 <strong>어떤</strong> <span class="math inline">\(x\)</span>를 고려하자.</li>
+<li><span class="math inline">\(|f(x)-L|\)</span> 값을 <strong>어떤</strong> <span class="math inline">\(\epsilon\)</span> 보다 낮게 줄일 수 없다.</li>
 </ul>
 <p>이 경우는 <span class="math inline">\(\lim_{x \to a}f(x)\)</span>는 존재하지 않는다. 주의 깊게 볼 지점이 있다. <span class="math inline">\(p \implies q\)</span>에서 <span class="math inline">\(P\)</span>의 모든 경우에 해당 조건 명제를 만족해야 한다. 따라서 이 형태는 암묵적으로 <span class="math inline">\(x\)</span>에 대해서 <span class="math inline">\(\forall\)</span>의 전칭 명제를 지닌다. 한편 조건 명제의 부정형의 경우 <span class="math inline">\(x\)</span>에 대해서 <span class="math inline">\(\forall\)</span>의 전칭 한정기호는 <span class="math inline">\(\exists\)</span>의 존재 한정기호가 된다.</p>
 </section>
@@ -307,7 +307,7 @@ Q^C = \{x: \exists\epsilon \text{ s.t. } |f(x) - L| \geq \epsilon \}
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 42.9%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/limf_1.jpg" class="lightbox" title="f(x)가 존재하는 경우" data-gallery="quarto-lightbox-gallery-1"><img src="images/limf_1.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/limf_1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="f(x)가 존재하는 경우"><img src="images/limf_1.jpg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption"><span class="math inline">\(f(x)\)</span>가 존재하는 경우</figcaption>
 </figure>
 </div>
@@ -316,13 +316,16 @@ Q^C = \{x: \exists\epsilon \text{ s.t. } |f(x) - L| \geq \epsilon \}
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 42.9%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/limf_2.jpg" class="lightbox" title="f(x)가 존재하지 않는 경우" data-gallery="quarto-lightbox-gallery-2"><img src="images/limf_2.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/limf_2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="f(x)가 존재하지 않는 경우"><img src="images/limf_2.jpg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption"><span class="math inline">\(f(x)\)</span>가 존재하지 않는 경우</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<section id="함수의-극한이-존재하는-경우" class="level3 page-columns page-full">
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>그림이 정확하지는 않지만 이해하는 데 도움이 되지 않을까 싶어 소개한다. 아래 “[ ]”에 있는 그림은 <span class="math inline">\(y\)</span>축을 옆으로 눕혀 확대해서 그린 것이다. <span class="math inline">\(f(x)\)</span>가 존재하는 왼쪽의 경우 <span class="math inline">\(L\)</span> 주변에서 임의의 <span class="math inline">\(\epsilon\)</span>을 잡더라도 <span class="math inline">\(\delta\)</span>를 더 작게 설정함으로써 <span class="math inline">\(|f(x)-L| &lt; \epsilon\)</span> for <span class="math inline">\(x \in (f(a-\delta), f(a+\delta))\)</span>를 만족한다. 오른쪽의 경우를 보자. <span class="math inline">\(x=a\)</span>에서 <span class="math inline">\(f(x)\)</span>의 점프가 있다. 따라서 해당 구간에 적당한 크기의 <span class="math inline">\(\epsilon\)</span>을 설정하면 <span class="math inline">\(|f(x)-L| geq \epsilon\)</span>$ for <span class="math inline">\(x=a\)</span>가 모든 <span class="math inline">\(\delta\)</span>에 대해서 성립한다.</p>
+</div></div><section id="함수의-극한이-존재하는-경우" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="함수의-극한이-존재하는-경우">함수의 극한이 존재하는 경우</h3>
 <p><span class="math inline">\(\lim_{x \to a} f(x)\)</span>가 존재하는 경우를 살펴보자. 문장으로는 이상하지만 이렇게 풀어 놓고 써보자. 모든 <span class="math inline">\(x\)</span>에 대해서 만족한다는 것은 극한을 정의하기 위한 전제 조건이다.</p>
 <ul>
@@ -339,10 +342,11 @@ Q^C = \{x: \exists\epsilon \text{ s.t. } |f(x) - L| \geq \epsilon \}
 <p><span class="math inline">\(L\)</span>이 <span class="math inline">\((f(a-\delta), f(a+\delta))\)</span> 사이 어딘가에 존재한다고 하자. 이때 <span class="math inline">\(|L-f(a-\delta)|\)</span>과 <span class="math inline">\(|L-f(a+\delta)|\)</span> 중 작은 값보다 아주 작은 어떤 값을 <span class="math inline">\(\epsilon\)</span>이라고 하자. 이때 <span class="math inline">\(|x-a|&lt;\delta\)</span>를 만족하는 모든 <span class="math inline">\(x\)</span>에 대해서 <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span>이 성립한다. 즉, <span class="math inline">\(P \cap Q^C \neq \emptyset\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/limf_3.jpg" class="lightbox" title="그림의 상황을 명제로 표현해보자; \exists\epsilon, \exists x, \forall\delta>0 s.t. |f(x)-L| \geq \epsilon for some |x-a| < \delta." data-gallery="quarto-lightbox-gallery-3"><img src="images/limf_3.jpg" class="img-fluid figure-img" style="width:70.0%"></a></p>
-<figcaption class="figure-caption">그림의 상황을 명제로 표현해보자; <span class="math inline">\(\exists\epsilon\)</span>, <span class="math inline">\(\exists x\)</span>, <span class="math inline">\(\forall\delta&gt;0\)</span> s.t. <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span> for some <span class="math inline">\(|x-a| &lt; \delta\)</span>.</figcaption>
+<p><a href="images/limf_3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/limf_3.jpg" class="img-fluid figure-img" style="width:70.0%"></a></p>
 </figure>
 </div>
+<p>그림의 상황을 명제로 표현해보자.</p>
+<p><span class="math inline">\((\exists \epsilon)(\exists x)(\forall\delta&gt;0)\)</span> s.t. <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span> for <span class="math inline">\(x=a\)</span>.</p>
 <p><span class="math inline">\(f(x)\)</span>는 <span class="math inline">\(x=a\)</span> 주변에서 끊어져 있고, 이 간격과 <span class="math inline">\(L\)</span>의 위치를 고려해서 <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span>과 <span class="math inline">\(|x-a| &lt; \delta\)</span>를 만족하는 <span class="math inline">\(\epsilon\)</span>과 <span class="math inline">\(\delta\)</span>를 찾을 수 있다. 따라서 <span class="math inline">\(x=a\)</span>에서 <span class="math inline">\(\lim_{x \to a} f(x)\)</span>는 존재하지 않는다.</p>
 
 
@@ -699,7 +703,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":true,"openEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":true,"closeEffect":"zoom","openEffect":"zoom"});</script>
 
 
 
