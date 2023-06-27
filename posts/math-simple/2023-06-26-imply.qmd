@@ -100,12 +100,12 @@ $|x-a|< \delta$을 만족하는 모든 $\delta(>0)$에 대해서 다음을 만�
 
 ## 진리 집합 
 
-복습을 겸해서 진리 집합으로 다시 따져보도록 하자. 
+복습을 겸해서 진리 집합으로 다시 따져보도록 하자. 진리 집합은 조건제시법(set builder notation)을 통해 표현한다. 
 
 $$
 \begin{aligned}
-P & = \{x: \exists\delta \text{ s.t. } |x - a| < \delta \} \\
-Q & = \{f(x): \forall\epsilon \text{ s.t. }|f(x) - L| < \epsilon \} 
+P & = \{x: \exists\delta > 0 \text{ s.t. } |x - a| < \delta \} \\
+Q & = \{f(x): \forall\epsilon > 0 \text{ s.t. } |f(x) - L| < \epsilon \} 
 \end{aligned}
 $$
 
