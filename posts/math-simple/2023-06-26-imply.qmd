@@ -136,7 +136,7 @@ $p \implies q \equiv \neg p \lor q$이다. 따라서 $\neg(\neg p \lor q)$가 �
 :::
 
 :::{.column-margin}
-그림이 정확하지는 않지만 이해하는 데 도움이 되지 않을까 싶어 소개한다. 아래 "[ ]"에 있는 그림은 $y$축을 옆으로 눕혀 확대해서 그린 것이다. $f(x)$가 존재하는 왼쪽의 경우 $L$ 주변에서 임의의 $\epsilon$을 잡더라도 $\delta$를 더 작게 설정함으로써 $|f(x)-L| < \epsilon$ for $x \in (f(a-\delta), f(a+\delta))$를 만족한다. 오른쪽의 경우를 보자. $x=a$에서 $f(x)$의 점프가 있다. 따라서 해당 구간에 적당한 크기의 $\epsilon$을 설정하면 $|f(x)-L| geq \epsilon$$ for $x=a$가 모든 $\delta$에 대해서 성립한다. 
+그림이 정확하지는 않지만 이해하는 데 도움이 되지 않을까 싶어 소개한다. 아래 "[ ]"에 있는 그림은 $y$축을 옆으로 눕혀 확대해서 그린 것이다. $f(x)$가 존재하는 왼쪽의 경우 $L$ 주변에서 임의의 $\epsilon$을 잡더라도 $\delta$를 더 작게 설정함으로써 $|f(x)-L| < \epsilon$ for $x \in (f(a-\delta), f(a+\delta))$를 만족한다. 오른쪽의 경우를 보자. $x=a$에서 $f(x)$의 점프가 있다. 따라서 해당 구간에 적당한 크기의 $\epsilon$을 설정하면 $|f(x)-L| \geq \epsilon$ for $x=a$가 모든 $\delta$에 대해서 성립한다. 
 :::
 
 
