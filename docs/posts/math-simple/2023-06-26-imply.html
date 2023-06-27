@@ -245,10 +245,13 @@ ul.task-list li input[type="checkbox"] {
 <p>직관적으로 생각해보자. 배중률에 따르면 <span class="math inline">\(p \implies q\)</span>가 성립하지 않는 경우가 단 하나라도 존재하면 해당 부정형이 참이 된다. 즉, <span class="math inline">\(p\)</span>를 만족하는 경우 중에서 <span class="math inline">\(\neg q\)</span>를 만족하는 것이 존재하면 된다. 앞서 <span class="math inline">\(p \implies q\)</span>가 <span class="math inline">\(\forall\)</span>)의 전칭 한정기호 지니고 있다면, 조건 명제의 부정은 ’어떤(<span class="math inline">\(\exists\)</span>)’이라는 존재 한정 기호 지닌다. 진리 집합으로 서술하면 <span class="math inline">\(P \cap Q^C \neq \emptyset\)</span>이 성립하면 된다.</p>
 </section>
 </section>
-<section id="함수의-극한" class="level2">
+<section id="함수의-극한" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="함수의-극한">함수의 극한</h2>
 <p>’함수의 극한’의 정의에 관해서 살펴보자. 한번쯤 좌절해봤다는 엡실론-델타 정의는 다음과 같다. <span class="math inline">\(\lim_{x \to a} f(x) = L\)</span>의 정의는 다음과 같다.</p>
-<blockquote class="blockquote">
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>엡실론-델타의 정식화는 대략 코시(Cauchy)로 거슬러 올라간다. 그는 <span class="math inline">\(\epsilon\)</span>을 error의 의미로 <span class="math inline">\(\delta\)</span>를 distance의 의미로 썼다고 한다. 즉, 목표가 되는 타겟 <span class="math inline">\(f(x)\)</span>의 ’오차’를 일정한 범위 이하로 줄이기 위해 필요한 <span class="math inline">\(a\)</span> 주변의 ’거리’로 느슨하게 외우면 괜찮을 듯 싶다.</p>
+</div></div><blockquote class="blockquote">
 <p>모든 <span class="math inline">\(\epsilon &gt; 0\)</span>에 대해서, 다음을 만족하는 <span class="math inline">\(\delta &gt; 0\)</span>가 존재한다; <span class="math inline">\(0 &lt; |x - a| &lt; \delta\)</span> <span class="math inline">\(\implies\)</span> <span class="math inline">\(|f(x)-L| &lt; \epsilon\)</span>.</p>
 </blockquote>
 <p>영어로는 다음과 같다.</p>
@@ -696,7 +699,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":true,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
 
 
 
