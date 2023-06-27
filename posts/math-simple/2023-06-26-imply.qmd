@@ -111,13 +111,13 @@ $$
 Q^C = \{ x: \exists \epsilon \text{ s.t. } |f(x) - L| \geq \epsilon \}
 $$
 
-$p \to q$의 부정 명제는 $p \land \neg q$가 된다. 진리집합으로 본다면 다음과 같다; $P \cap Q^C$. 만일 이 집합이 공집합이 아니라면 정의상 함수의 극한은 존재하지 않는다. 
+여기서 $Q^C$를 정의할 때 $Q$의 전체 조건 $\forall \epsilon$이 존재 조건 $\exists \epsilon$으로 바뀌게 된다는 점을 눈여겨 보도록 하자. $p \to q$의 부정 명제는 $p \land \neg q$가 된다. 진리집합으로 본다면 다음과 같다; $P \cap Q^C$. 만일 이 집합이 공집합이 아니라면 정의상 함수의 극한은 존재하지 않는다. 
 
 :::{.column-margin}
 $p \to q \equiv \neg p \lor q$이다. 따라서 $\neg(\neg p \lor q)$가 부정 명제이다. 
 :::
 
-## 그림으로 살펴보자. 
+## 그림으로 
 
 배경을 이루는 여러가지 조건을 생략하고 $x \in \mathbb R$에서 정의되는 $f(x)$를 통해서 위 경우를 그림을 통해 살펴보기로 하자.
 
@@ -142,7 +142,7 @@ $\lim_{x \to a} f(x)$가 존재하는 경우를 살펴보자. 문장으로는 �
 
 ### 함수의 극한이 존재하지 않는 경우 
 
-$L$이 $(f(a-\delta), f(a+\delta))$ 사이 어딘가에 존재한다고 하자. 이때  $|L-f(a-\delta)|$과 $|L-f(a+\delta)|$ 중 작은 값보다 아주 작은 어떤 값을 $\hat \epsilon$이라고 하자. 이때 $|x-a|<\delta$를 만족하는 모든 $x$에 대해서 $|f(x)-L| \geq hat \epsilon$이 성립한다.  즉, $P \cap Q^c \neq \emptyset$.  
+$L$이 $(f(a-\delta), f(a+\delta))$ 사이 어딘가에 존재한다고 하자. 이때  $|L-f(a-\delta)|$과 $|L-f(a+\delta)|$ 중 작은 값보다 아주 작은 어떤 값을 $\epsilon$이라고 하자. 이때 $|x-a|<\delta$를 만족하는 모든 $x$에 대해서 $|f(x)-L| \geq \epsilon$이 성립한다. 즉, $P \cap Q^C \neq \emptyset$.  
 
 ![그림의 상황을 명제로 표현해보자; $\exists\epsilon$ s.t. $|f(x)-L| \geq \delta$ for all $x$ s.t. $|x-a| < \delta$ for some $\delta$.](images/limf_3.jpg){width=70%}
 
