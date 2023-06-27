@@ -297,7 +297,7 @@ Q^C = \{f(x): \exists \epsilon \text{ s.t. } |f(x) - L| \geq \epsilon \}
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 42.9%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/limf_1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="f(x)가 존재하는 경우"><img src="images/limf_1.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/limf_1.jpg" class="lightbox" title="f(x)가 존재하는 경우" data-gallery="quarto-lightbox-gallery-1"><img src="images/limf_1.jpg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption"><span class="math inline">\(f(x)\)</span>가 존재하는 경우</figcaption>
 </figure>
 </div>
@@ -306,7 +306,7 @@ Q^C = \{f(x): \exists \epsilon \text{ s.t. } |f(x) - L| \geq \epsilon \}
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 42.9%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/limf_2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="f(x)가 존재하지 않는 경우"><img src="images/limf_2.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/limf_2.jpg" class="lightbox" title="f(x)가 존재하지 않는 경우" data-gallery="quarto-lightbox-gallery-2"><img src="images/limf_2.jpg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption"><span class="math inline">\(f(x)\)</span>가 존재하지 않는 경우</figcaption>
 </figure>
 </div>
@@ -329,8 +329,8 @@ Q^C = \{f(x): \exists \epsilon \text{ s.t. } |f(x) - L| \geq \epsilon \}
 <p><span class="math inline">\(L\)</span>이 <span class="math inline">\((f(a-\delta), f(a+\delta))\)</span> 사이 어딘가에 존재한다고 하자. 이때 <span class="math inline">\(|L-f(a-\delta)|\)</span>과 <span class="math inline">\(|L-f(a+\delta)|\)</span> 중 작은 값보다 아주 작은 어떤 값을 <span class="math inline">\(\epsilon\)</span>이라고 하자. 이때 <span class="math inline">\(|x-a|&lt;\delta\)</span>를 만족하는 모든 <span class="math inline">\(x\)</span>에 대해서 <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span>이 성립한다. 즉, <span class="math inline">\(P \cap Q^C \neq \emptyset\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/limf_3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="그림의 상황을 명제로 표현해보자; \exists\epsilon, \exists x s.t. |f(x)-L| \geq \epsilon fx for some |x-a| < \delta for some \delta."><img src="images/limf_3.jpg" class="img-fluid figure-img" style="width:70.0%"></a></p>
-<figcaption class="figure-caption">그림의 상황을 명제로 표현해보자; <span class="math inline">\(\exists\epsilon\)</span>, <span class="math inline">\(\exists x\)</span> s.t. <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span> f<span class="math inline">\(x\)</span> for some <span class="math inline">\(|x-a| &lt; \delta\)</span> for some <span class="math inline">\(\delta\)</span>.</figcaption>
+<p><a href="images/limf_3.jpg" class="lightbox" title="그림의 상황을 명제로 표현해보자; \exists\epsilon, \exists x, \forall\delta>0 s.t. |f(x)-L| \geq \epsilon for some |x-a| < \delta." data-gallery="quarto-lightbox-gallery-3"><img src="images/limf_3.jpg" class="img-fluid figure-img" style="width:70.0%"></a></p>
+<figcaption class="figure-caption">그림의 상황을 명제로 표현해보자; <span class="math inline">\(\exists\epsilon\)</span>, <span class="math inline">\(\exists x\)</span>, <span class="math inline">\(\forall\delta&gt;0\)</span> s.t. <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span> for some <span class="math inline">\(|x-a| &lt; \delta\)</span>.</figcaption>
 </figure>
 </div>
 <p><span class="math inline">\(f(x)\)</span>는 <span class="math inline">\(x=a\)</span> 주변에서 끊어져 있고, 이 간격과 <span class="math inline">\(L\)</span>의 위치를 고려해서 <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span>과 <span class="math inline">\(|x-a| &lt; \delta\)</span>를 만족하는 <span class="math inline">\(\epsilon\)</span>과 <span class="math inline">\(\delta\)</span>를 찾을 수 있다. 따라서 <span class="math inline">\(x=a\)</span>에서 <span class="math inline">\(\lim_{x \to a} f(x)\)</span>는 존재하지 않는다.</p>
@@ -689,7 +689,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 
