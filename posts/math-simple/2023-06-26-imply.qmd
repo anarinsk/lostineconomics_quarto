@@ -1,6 +1,6 @@
 ---
 title: 조건 명제 
-description:  P&rarr;Q&hairsp;를 새겨보자
+description:  "Imply란 무엇일까"
 author: "JS HUHH"
 date: "06/26/2023"
 image: "images/proof.jfif"
@@ -15,6 +15,7 @@ lightbox: auto
 ## tl; dr
 
 - 조건 명제가 의미하는 것을 다시 새겨 보고, 조건 명제의 '부정'도 따져보자. 
+- 함수 극한의 엡실론-델타 정의를 통해 조건 명제의 의미를 다시 확인해보자. 
 
 ## 조건 명제 
 
@@ -146,9 +147,9 @@ $\lim_{x \to a} f(x)$이 존재하는 경우에 대해서 존재하지 않는 �
 
 ### 함수의 극한이 존재하지 않는 경우 
 
-$L$이 $(f(a-\epsilon), f(a+\epsilon))$ 사이 어딘가에 존재한다고 하자. 이때  $|L-f(a-\epsilon)|$과 $|L-f(a+\epsilon)|$ 중 작은 값을 $\hat \delta$라고 하자. 이때 $x$가 $a$에 적당하게 접근하면 $|f(x)-L| \geq \hat \delta$는 항상 만족한다. 즉, $|x-a| < \epsilon$을 만족하는 $\epsilon$이 존재한다.  즉, $P \cap Q^c \neq \emptyset$가 성립한다. 도움이 될지는 모르겠지만 그림으로 살펴보자. 
+$L$이 $(f(a-\epsilon), f(a+\epsilon))$ 사이 어딘가에 존재한다고 하자. 이때  $|L-f(a-\epsilon)|$과 $|L-f(a+\epsilon)|$ 중 작은 값보다 적당하게 작은 값을 $\hat \delta$라고 하자. 이때 $x$가 $a$에 적당하게 접근하면 $|f(x)-L| \geq \hat \delta$는 항상 만족한다. 즉, $|x-a| < \epsilon$을 만족하는 $\epsilon$이 존재한다.  즉, $P \cap Q^c \neq \emptyset$가 성립한다. 도움이 될지는 모르겠지만 그림으로 살펴보자. 
 
-![그림의 상황을 명제로 표현해보자; $|f(x)-L| \geq \delta$ for all $x$ s.t. $|x-a| < \epsilon$](images/limf_3.jpg){width=70%}
+![그림의 상황을 명제로 표현해보자; $|f(x)-L| \geq \hat\delta$ for all $x$ s.t. $|x-a| < \epsilon$](images/limf_3.jpg){width=70%}
 
 $f(x)$는 $x=a$ 주변에서 끊어져 있고, 이 간격과 $L$의 위치를 고려해서 $|f(x)-L| \geq \hat \delta$를 모든 $x$ s.t. $|x-a| < \epsilon$ 에 대해서 만족하는 $\hat \delta$를 찾을 수 있다. 
 

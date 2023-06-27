@@ -8,7 +8,7 @@
 
 <meta name="author" content="JS HUHH">
 <meta name="dcterms.date" content="2023-06-26">
-<meta name="description" content="P→Q 를 새겨보자">
+<meta name="description" content="Imply란 무엇일까">
 
 <title>lostineconomics.com - 조건 명제</title>
 <style>
@@ -143,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    P→Q 를 새겨보자
+    Imply란 무엇일까
   </div>
 </div>
 
@@ -174,6 +174,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="tl-dr">tl; dr</h2>
 <ul>
 <li>조건 명제가 의미하는 것을 다시 새겨 보고, 조건 명제의 ’부정’도 따져보자.</li>
+<li>함수 극한의 엡실론-델타 정의를 통해 조건 명제의 의미를 다시 확인해보자.</li>
 </ul>
 </section>
 <section id="조건-명제" class="level2">
@@ -324,11 +325,11 @@ Q^C = \{ x: |f(x) - L| \geq \delta ~, \forall x  \}
 </div></div></section>
 <section id="함수의-극한이-존재하지-않는-경우-1" class="level3">
 <h3 class="anchored" data-anchor-id="함수의-극한이-존재하지-않는-경우-1">함수의 극한이 존재하지 않는 경우</h3>
-<p><span class="math inline">\(L\)</span>이 <span class="math inline">\((f(a-\epsilon), f(a+\epsilon))\)</span> 사이 어딘가에 존재한다고 하자. 이때 <span class="math inline">\(|L-f(a-\epsilon)|\)</span>과 <span class="math inline">\(|L-f(a+\epsilon)|\)</span> 중 작은 값을 <span class="math inline">\(\hat \delta\)</span>라고 하자. 이때 <span class="math inline">\(x\)</span>가 <span class="math inline">\(a\)</span>에 적당하게 접근하면 <span class="math inline">\(|f(x)-L| \geq \hat \delta\)</span>는 항상 만족한다. 즉, <span class="math inline">\(|x-a| &lt; \epsilon\)</span>을 만족하는 <span class="math inline">\(\epsilon\)</span>이 존재한다. 즉, <span class="math inline">\(P \cap Q^c \neq \emptyset\)</span>가 성립한다. 도움이 될지는 모르겠지만 그림으로 살펴보자.</p>
+<p><span class="math inline">\(L\)</span>이 <span class="math inline">\((f(a-\epsilon), f(a+\epsilon))\)</span> 사이 어딘가에 존재한다고 하자. 이때 <span class="math inline">\(|L-f(a-\epsilon)|\)</span>과 <span class="math inline">\(|L-f(a+\epsilon)|\)</span> 중 작은 값보다 적당하게 작은 값을 <span class="math inline">\(\hat \delta\)</span>라고 하자. 이때 <span class="math inline">\(x\)</span>가 <span class="math inline">\(a\)</span>에 적당하게 접근하면 <span class="math inline">\(|f(x)-L| \geq \hat \delta\)</span>는 항상 만족한다. 즉, <span class="math inline">\(|x-a| &lt; \epsilon\)</span>을 만족하는 <span class="math inline">\(\epsilon\)</span>이 존재한다. 즉, <span class="math inline">\(P \cap Q^c \neq \emptyset\)</span>가 성립한다. 도움이 될지는 모르겠지만 그림으로 살펴보자.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/limf_3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="그림의 상황을 명제로 표현해보자; |f(x)-L| \geq \delta for all x s.t. |x-a| < \epsilon"><img src="images/limf_3.jpg" class="img-fluid figure-img" style="width:70.0%"></a></p>
-<figcaption class="figure-caption">그림의 상황을 명제로 표현해보자; <span class="math inline">\(|f(x)-L| \geq \delta\)</span> for all <span class="math inline">\(x\)</span> s.t. <span class="math inline">\(|x-a| &lt; \epsilon\)</span></figcaption>
+<p><a href="images/limf_3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="그림의 상황을 명제로 표현해보자; |f(x)-L| \geq \hat\delta for all x s.t. |x-a| < \epsilon"><img src="images/limf_3.jpg" class="img-fluid figure-img" style="width:70.0%"></a></p>
+<figcaption class="figure-caption">그림의 상황을 명제로 표현해보자; <span class="math inline">\(|f(x)-L| \geq \hat\delta\)</span> for all <span class="math inline">\(x\)</span> s.t. <span class="math inline">\(|x-a| &lt; \epsilon\)</span></figcaption>
 </figure>
 </div>
 <p><span class="math inline">\(f(x)\)</span>는 <span class="math inline">\(x=a\)</span> 주변에서 끊어져 있고, 이 간격과 <span class="math inline">\(L\)</span>의 위치를 고려해서 <span class="math inline">\(|f(x)-L| \geq \hat \delta\)</span>를 모든 <span class="math inline">\(x\)</span> s.t. <span class="math inline">\(|x-a| &lt; \epsilon\)</span> 에 대해서 만족하는 <span class="math inline">\(\hat \delta\)</span>를 찾을 수 있다.</p>
@@ -687,7 +688,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":true,"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom"});</script>
 
 
 
