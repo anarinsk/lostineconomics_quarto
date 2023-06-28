@@ -163,6 +163,6 @@ $L$이 $(f(a-\delta), f(a+\delta))$ 사이 어딘가에 존재한다고 하자. 
 
 $(\exists \epsilon)(\exists x)(\forall\delta>0)$ s.t. $|f(x)-L| \geq \epsilon$ for $x=a$.
 
-$f(x)$는 $x=a$ 주변에서 끊어져 있고, 이 간격과 $L$의 위치를 고려해서 모든 $\delta$와 $|f(x)-L| \geq \epsilon$를 만족하는 $\epsilon$을 찾을 수 있다. 즉, $\lim_{x \to a} f(x)$는 존재하지 않는다. 
+$f(x)$는 $x=a$ 주변에서 끊어져 있고, 이 간격과 $L$의 위치를 고려해서 모든 $\delta$와 $|f(x)-L| \geq \epsilon$를 만족하는 $\epsilon>0$을 찾을 수 있다. 위 그림에서 보듯이 $\delta$를 아무리 작게 설정해도 $x=a$에서 존재하는 $f(x)$의 간격을 줄일 수는 없다. 즉, $\lim_{x \to a} f(x)$는 존재하지 않는다. 
 
 
