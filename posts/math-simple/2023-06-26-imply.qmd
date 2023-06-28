@@ -1,6 +1,6 @@
 ---
 title: 조건 명제 
-description:  $\implies$를 생각해보자
+description: $\implies$를 생각해보자
 author: "JS HUHH"
 date: "06/26/2023"
 image: "images/proof.jfif"
@@ -72,7 +72,7 @@ lightbox: auto
 엡실론-델타의 정식화는 대략 코시(Cauchy)로 거슬러 올라간다. 그는 $\epsilon$을 error의 의미로 $\delta$를 distance의 의미로 썼다고 한다. 즉, 목표가 되는 타겟 $f(x)$의 '오차'를 일정한 범위 이하로 줄이기 위해 필요한 $a$ 주변의 '거리'로 느슨하게 외우면 괜찮을 듯 싶다. 
 :::
 
-> 모든 $\epsilon > 0$에 대해서, 다음을 만족하는 $\delta > 0$가 존재한다; $0 < |x - a| < \delta$ $\implies$ $|f(x)-L| < \epsilon$.
+> 모든 $\epsilon > 0$에 대해서, 다음을 만족하는 $\delta > 0$가 존재한다; $x \in \mathbb R$인 모든 $x$에 대해서 $0 < |x - a| < \delta$ $\implies$ $|f(x)-L| < \epsilon$.
 
 영어로는 다음과 같다. 
 
@@ -87,18 +87,18 @@ lightbox: auto
 - $x=a$ 주변으로 양쪽으로 **어떤** $\delta$ 크기의 구간을 잡는다.  
 - 해당 구간에 속하는 **모든** $x$를 고려하자. 
 - $x \to a$ 일 때 함수 $f(x)$의 극한값을 $L$이라고 하자. 
-- $f(x)$와 $L$ 사이의 거리($|f(x)-L|$)가 **모든** $\epsilon>0$보다 작아야 한다. 
+- $\delta$를 조정해서 $f(x)$와 $L$ 사이의 거리($|f(x)-L|$)가 **모든** $\epsilon>0$보다 작게 만들 수 있다. 
 
 ### 함수의 극한이 존재하지 않는 경우 
 
-함수의 극한에 관한 정의의 '부정(negation)'을 정의해보자. 그리고 이 부정의 정의가 참이 되는 경우를 따져볼 것이다. 정의가 함축(implication, $\implies$)의 형태를 취하고 있으므로 이 부정형을 조심히 다뤄보자.
+함수의 극한에 관한 정의의 '부정형(negation)'을 정의해보자. 그리고 이 부정의 정의가 참이 되는 경우를 따져볼 것이다. 정의가 함축(implication, $\implies$)의 형태를 취하고 있으므로 이 부정형을 만들 때 주의를 기울여야 한다.
 
-$|x-a|< \delta$을 만족하는 모든 $\delta(>0)$에 대해서 다음을 만족하는 어떤 $\epsilon>0$와 $x \in \mathbb R$이 존재한다; $|f(x) - L| \geq \epsilon$. 
+$0 < |x-a|< \delta$을 만족하는 모든 $\delta>0$에 대해서 다음을 만족하는 어떤 $\epsilon>0$와 $x \in \mathbb R$이 존재한다; $|f(x) - L| \geq \epsilon$. 
 
 역시 말로 구별해서 풀어보자. 
 
-- $a$의 **모든** 주변($\delta$의 크기)에 속한 **어떤** $x$를 고려하자. 
-- $|f(x)-L|$ 값을 **어떤** $\epsilon$ 보다 낮게 줄일 수 없다. 
+- $a$의 **모든** 주변($\delta$의 크기)에 속한 **어떤** $x$를 고려하자.
+- 가능한 모든 $\delta$를 고려해도 $|f(x)-L|$ 값을 **어떤** $\epsilon$ 보다 낮게 줄일 수 없다. 
 
 이 경우는 $\lim_{x \to a}f(x)$는 존재하지 않는다. 주의 깊게 볼 지점이 있다. $p \implies q$에서 $P$의 모든 경우에 해당 조건 명제를 만족해야 한다. 따라서 이 형태는 암묵적으로 $x$에 대해서 $\forall$의 전칭 명제를 지닌다. 한편 조건 명제의 부정형의 경우 $x$에 대해서 $\forall$의 전칭 한정기호는 $\exists$의 존재 한정기호가 된다. 
 
@@ -163,6 +163,6 @@ $L$이 $(f(a-\delta), f(a+\delta))$ 사이 어딘가에 존재한다고 하자. 
 
 $(\exists \epsilon)(\exists x)(\forall\delta>0)$ s.t. $|f(x)-L| \geq \epsilon$ for $x=a$.
 
-$f(x)$는 $x=a$ 주변에서 끊어져 있고, 이 간격과 $L$의 위치를 고려해서 $|f(x)-L| \geq \epsilon$과 $|x-a| < \delta$를 만족하는 $\epsilon$과 $\delta$를 찾을 수 있다. 따라서 $x=a$에서 $\lim_{x \to a} f(x)$는 존재하지 않는다. 
+$f(x)$는 $x=a$ 주변에서 끊어져 있고, 이 간격과 $L$의 위치를 고려해서 모든 $\delta$와 $|f(x)-L| \geq \epsilon$를 만족하는 $\epsilon$을 찾을 수 있다. 즉, $\lim_{x \to a} f(x)$는 존재하지 않는다. 
 
 
