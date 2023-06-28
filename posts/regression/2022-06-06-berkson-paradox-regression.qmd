@@ -3,7 +3,7 @@ title: Berkson's Paradox with Regression
 description: 어떤 변인을 고려하지 말아야 할까?  
 author: "JS HUHH"
 date: "06/06/2022"
-image: "https://pbs.twimg.com/media/Ew7SkFMU8AcxUam?format=jpg&name=small"
+image: "images/simpson.jpg"
 categories: [regression, stats-simple]
 draft: false
 format:
@@ -29,7 +29,7 @@ lightbox: auto
 :::
 
 ::: {layout="[[-20, 80, -20]]" layout-valign="bottom"}
-![입원 여부는 충돌 요인(collider)이 된다.](./imgs/covid-hospital.png)
+![입원 여부는 충돌 요인(collider)이 된다.](./images/covid-hospital.png)
 :::
 
 담배를 많이 피울수록 혹은 그래왔을수록 코로나19 이외의 요인으로도 병원에 입원할 가능성이 높아진다. 또한 코로나 증세가 심할수록 병원에 입원할 가능성이 높아진다. 이 경우 병원에 입원한다는 변인이 두 요인(흡연의 정도, 코로나19 중증도) 모두에 영향을 받는 충돌 요인이 된다. 따라서 충돌 요인을 통제할 경우 흡연의 정도와 코로나19의 중증도 사이의 관계가 왜곡된다. 이러한 취지로 데이터를 생성해보도록 하자. 
