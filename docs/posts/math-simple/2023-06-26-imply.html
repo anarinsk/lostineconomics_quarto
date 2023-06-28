@@ -242,7 +242,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="조건-명제의-부정" class="level3">
 <h3 class="anchored" data-anchor-id="조건-명제의-부정">조건 명제의 부정</h3>
 <p>조건 명제의 ’부정’은 어떻게 될까? 조건 명제를 <span class="math inline">\(p \implies q\)</span>의 형태로 놓고 보면 부정 명제를 만들기 까다로울 수 있다. 대신 <span class="math inline">\(\neg p \lor q\)</span>의 부정 명제를 만들어보자. <span class="math inline">\(\neg(\neg p \lor q) = p \land \neg q\)</span>가 된다.</p>
-<p>직관적으로 생각해보자. 배중률에 따르면 <span class="math inline">\(p \implies q\)</span>가 성립하지 않는 경우가 단 하나라도 존재하면 해당 부정형이 참이 된다. 즉, <span class="math inline">\(p\)</span>를 만족하는 경우 중에서 <span class="math inline">\(\neg q\)</span>를 만족하는 것이 존재하면 된다. 앞서 <span class="math inline">\(p \implies q\)</span>가 <span class="math inline">\(\forall\)</span>)의 전칭 한정기호 지니고 있다면, 조건 명제의 부정은 ’어떤(<span class="math inline">\(\exists\)</span>)’이라는 존재 한정 기호 지닌다. 진리 집합으로 서술하면 <span class="math inline">\(P \cap Q^C \neq \emptyset\)</span>이 성립하면 된다.</p>
+<p>직관적으로 생각해보자. 배중률에 따르면 <span class="math inline">\(p \implies q\)</span>가 성립하지 않는 경우가 단 하나라도 존재하면 해당 부정형이 참이 된다. 즉, <span class="math inline">\(p\)</span>를 만족하는 경우 중에서 <span class="math inline">\(\neg q\)</span>를 만족하는 것이 존재하면 된다. 앞서 <span class="math inline">\(p \implies q\)</span>에서 <span class="math inline">\(p\)</span>가 <span class="math inline">\(\forall\)</span>의 전칭 한정기호를 달고 있다면, 조건 명제의 부정형에서 <span class="math inline">\(p\)</span>는 <span class="math inline">\(\exists\)</span>의 존재 한정기호 달고 있다. 진리 집합으로 서술하면 <span class="math inline">\(P \cap Q^C \neq \emptyset\)</span>이 성립하면 된다.</p>
 </section>
 </section>
 <section id="함수의-극한" class="level2 page-columns page-full">
@@ -703,7 +703,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","openEffect":"zoom"});</script>
 
 
 
