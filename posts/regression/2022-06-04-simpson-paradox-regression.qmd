@@ -3,7 +3,7 @@ title: Simpson's Paradox with Regression
 description: 펭귄의 부리로 직접 계산해보자. 
 author: "JS HUHH"
 date: "06/05/2022"
-image: "https://pbs.twimg.com/media/E_fzweGVIAEyalV?format=jpg&name=4096x4096"
+image: "./images/simpson_2.png"
 categories: [regression, stats-simple]
 draft: false
 format:

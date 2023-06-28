@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.427">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -246,7 +246,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
-Int64Index: 334 entries, 0 to 343
+Index: 334 entries, 0 to 343
 Data columns (total 7 columns):
  #   Column             Non-Null Count  Dtype  
 ---  ------             --------------  -----  
@@ -288,7 +288,7 @@ memory usage: 20.9+ KB</code></pre>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 77.8%;justify-content: center;">
 <figure class="figure">
-<p><a href="2022-06-04-simpson-paradox-regression_files/figure-html/cell-3-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="2022-06-04-simpson-paradox-regression_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></a></p>
+<p><a href="2022-06-04-simpson-paradox-regression_files/figure-html/cell-3-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="2022-06-04-simpson-paradox-regression_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img" width="1078"></a></p>
 </figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
@@ -320,7 +320,7 @@ memory usage: 20.9+ KB</code></pre>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>stargazer <span class="op">=</span> Stargazer([ols1, ols2, ols3])</span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>stargazer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="12">
 
 <table style="text-align:center"><tbody><tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td colspan="3"><em>Dependent variable:culmen_depth_mm</em></td></tr><tr><td style="text-align:left"></td></tr><tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td><td>(3)</td></tr><tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Intercept</td><td>20.786<sup>***</sup></td><td>10.619<sup>***</sup></td><td>11.488<sup>***</sup></td></tr><tr><td style="text-align:left"></td><td>(0.854)</td><td>(0.691)</td><td>(1.162)</td></tr><tr><td style="text-align:left">culmen_length_mm</td><td>-0.082<sup>***</sup></td><td>0.199<sup>***</sup></td><td>0.177<sup>***</sup></td></tr><tr><td style="text-align:left"></td><td>(0.019)</td><td>(0.018)</td><td>(0.030)</td></tr><tr><td style="text-align:left">species[T.Chinstrap]</td><td></td><td>-1.919<sup>***</sup></td><td>-3.919<sup>*</sup></td></tr><tr><td style="text-align:left"></td><td></td><td>(0.226)</td><td>(2.070)</td></tr><tr><td style="text-align:left">species[T.Chinstrap]:culmen_length_mm</td><td></td><td></td><td>0.046<sup></sup></td></tr><tr><td style="text-align:left"></td><td></td><td></td><td>(0.046)</td></tr><tr><td style="text-align:left">species[T.Gentoo]</td><td></td><td>-5.080<sup>***</sup></td><td>-6.187<sup>***</sup></td></tr><tr><td style="text-align:left"></td><td></td><td>(0.194)</td><td>(1.778)</td></tr><tr><td style="text-align:left">species[T.Gentoo]:culmen_length_mm</td><td></td><td></td><td>0.027<sup></sup></td></tr><tr><td style="text-align:left"></td><td></td><td></td><td>(0.041)</td></tr><tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align: left">Observations</td><td>334</td><td>334</td><td>334</td></tr><tr><td style="text-align: left">R<sup>2</sup></td><td>0.052</td><td>0.766</td><td>0.767</td></tr><tr><td style="text-align: left">Adjusted R<sup>2</sup></td><td>0.049</td><td>0.764</td><td>0.764</td></tr><tr><td style="text-align: left">Residual Std. Error</td><td>1.919 (df=332)</td><td>0.956 (df=330)</td><td>0.957 (df=328)</td></tr><tr><td style="text-align: left">F Statistic</td><td>18.313<sup>***</sup> (df=1; 332)</td><td>360.759<sup>***</sup> (df=3; 330)</td><td>216.026<sup>***</sup> (df=5; 328)</td></tr><tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align: left">Note:</td>
  <td colspan="3" style="text-align: right">
@@ -697,7 +697,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"descPosition":"bottom","selector":".lightbox","openEffect":"zoom"});</script>
 
 
 
