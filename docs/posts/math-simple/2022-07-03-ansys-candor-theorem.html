@@ -174,10 +174,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="prelim">Prelim</h2>
 <section id="cardinality" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="cardinality">Cardinality</h3>
-<p>집합이 ’크다’는 것의 의미를 따져보자. 유한 집합의 경우 크다는 것의 의미는 자명하다. 무한 집합이 크다는 것은 어떻게 측정할 수 있을까? 일단 무한 집합에 대해서는 원소의 개수라는 개념을 쓸 없으니 대신 카디널 수(cardinality)를 쓴다. 무한 집합 <span class="math inline">\(A\)</span>에 대해서 <span class="math inline">\(|A|\)</span>라고 쓸 경우 이는 무한 집합의 크기, 즉 카디널 수를 의미한다.</p>
+<p>집합이 ’크다’는 것의 의미를 따져보자. 유한 집합의 경우 크다는 것의 의미는 자명하다. 무한 집합의 크기는 어떻게 비교할 수 있을까? 무한 집합에 대해서는 원소의 ’개수’라는 개념을 쓸 수 없다. 대신 크기의 비교를 위해서 카디널 수(cardinality)라는 말을 쓴다. 무한 집합 <span class="math inline">\(A\)</span>에 대해서 <span class="math inline">\(|A|\)</span>라고 쓸 경우 이는 무한 집합의 크기, 즉 카디널 수를 의미한다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>카디널 수에서 기준이 되는 것은 자연수의 집합이다. 자연수(<span class="math inline">\(\mathbb N\)</span>)는 가장 작은 무한 집합이다. 이 점을 기억하자.</p>
+<p>카디널 수를 따질 때 기준이 되는 것은 자연수의 집합이다. 자연수(<span class="math inline">\(\mathbb N\)</span>)는 가장 작은 무한 집합이다. 만일 자연수 집합과 일대일 대응이 가능하다면 둘의 카디널 수는 같다.</p>
 </div></div></section>
 <section id="injection-surjection-and-bijection" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="injection-surjection-and-bijection">Injection, Surjection, and Bijection</h3>
@@ -187,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
 <li>단사 함수(injective function): 일대일 함수(one-to-one function)</li>
 <li>전단사 함수(bijective function): 일대일 대응(one-to-one correspondence) one-to-one and onto</li>
 </ul>
-<p>일대일 함수와 일대일 대응은 단사 함수와 전단사 함수의 차이와 같다.</p>
+<p>일대일 함수와 일대일 대응은 단사 함수와 전단사 함수를 각각 뜻한다. 용어에 주의하자.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>고등학교에서 함수를 배울 때 왜 “전사 함수”, “단사 함수” 구별이 필요하지라는 의문을 가져 본 적이 있다. 이러한 분류가 카디널 수를 따질 결정적일 수 있다는 것은 뒤늦은 깨달음이리라…</p>
@@ -198,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/four-functions.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="카디널 수에 따른 함수의 구분"><img src="images/four-functions.png" class="img-fluid figure-img"></a></p>
+<p><a href="images/four-functions.png" class="lightbox" title="카디널 수에 따른 함수의 구분" data-gallery="quarto-lightbox-gallery-1"><img src="images/four-functions.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">카디널 수에 따른 함수의 구분</figcaption>
 </figure>
 </div>
@@ -207,46 +207,47 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>단사 함수의 경우 <span class="math inline">\(x\)</span>가 <span class="math inline">\(f(x)\)</span> 크지 않아야 존재할 수 있다. 전사함수의 경우 반대로 <span class="math inline">\(f(x)\)</span>가 <span class="math inline">\(x\)</span>보다 크지 않아야 한다. 해당 형태의 함수가 존재할 필요 조건은 다음과 같다.</p>
+<p>단사 함수의 경우 정의역 <span class="math inline">\(X\)</span>가 치역 <span class="math inline">\(f(X)\)</span>보디 ‘크지’ 않아야 존재할 수 있다. 전사함수의 경우 반대로 <span class="math inline">\(f(X)\)</span>가 <span class="math inline">\(X\)</span>보다 크지 않아야 한다. 해당 형태의 함수가 존재할 수 있는 정의역과 치역의 카디널 수에 관한 필요 조건은 다음과 같다.</p>
 <ul>
-<li>전사 함수: <span class="math inline">\(|x| \geq |f(x)|\)</span></li>
-<li>단사 함수: <span class="math inline">\(|x| \leq |f(x)|\)</span></li>
-<li>전단사 함수: <span class="math inline">\(|x| = |f(x)|\)</span></li>
+<li>전사 함수: <span class="math inline">\(|X| \geq |f(X)|\)</span></li>
+<li>단사 함수: <span class="math inline">\(|X| \leq |f(X)|\)</span></li>
+<li>전단사 함수: <span class="math inline">\(|X| = |f(X)|\)</span></li>
 </ul>
 </section>
 </section>
 <section id="theorem" class="level2">
 <h2 class="anchored" data-anchor-id="theorem">Theorem</h2>
-<p>임의의 집합 <span class="math inline">\(A\)</span>에 대해서 멱집합 <span class="math inline">\(\mathcal P (A)\)</span>는 <span class="math inline">\(A\)</span>보다 크다. 즉,</p>
+<p>이제 칸토어의 정리를 살펴보자. 담고 있는 엄청난 내용과 비교해서 증명은 너무 간단하다. 임의의 집합 <span class="math inline">\(A\)</span>에 대해서 멱집합 <span class="math inline">\(\mathcal P (A)\)</span>는 <span class="math inline">\(A\)</span>보다 크다. 즉,</p>
 <p><span class="math display">\[
 |\mathcal P(A)| &gt; |A|.
 \]</span></p>
 </section>
 <section id="proof" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="proof">Proof</h2>
+<p><span class="math inline">\(A\)</span>가 유한 집합일 때는 자명하다. 즉, <span class="math inline">\(N &lt; 2^N\)</span>이 성립한다. 이하에서는 <span class="math inline">\(A\)</span>가 무한 집합이라고 전제한다.</p>
 <section id="part-1" class="level3">
 <h3 class="anchored" data-anchor-id="part-1">Part 1</h3>
-<p><span class="math inline">\(|A| \leq |\mathcal P (A)|\)</span>를 증명하자. 이는 <span class="math inline">\(f: A \to \mathcal P(A)\)</span>를 만족하는 단사함수, 즉 일대일 함수가 존재하면 된다. <span class="math inline">\(\mathcal P(A)\)</span>에는 <span class="math inline">\(a \in A\)</span>의 <span class="math inline">\(\{ a \}\)</span>가 포함된다. 따라서 <span class="math inline">\(f(x) = \{ x \}\)</span>로 정의하면 된다.</p>
+<p><span class="math inline">\(|A| \leq |\mathcal P (A)|\)</span>를 증명하자. 이는 <span class="math inline">\(f: A \to \mathcal P(A)\)</span>를 만족하는 단사함수, 즉 일대일 함수가 존재하면 된다. <span class="math inline">\(\mathcal P(A)\)</span>에는 <span class="math inline">\(a \in A\)</span>의 <span class="math inline">\(\{ a \}\)</span>가 포함된다. 따라서 <span class="math inline">\(f(x) = \{ x \}\)</span>로 정의하면 <span class="math inline">\(f\)</span>는 단수 함수이다.</p>
 </section>
 <section id="part-2-1" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="part-2-1">Part 2-1</h3>
 <p><span class="math inline">\(|A| \neq |\mathcal P (A)|\)</span></p>
-<p>이는 귀류법(proof by contradiction)을 활용한다. 만일 등호를 만족하는 함수, 즉 전단사함수 존재한다고 하자. 여기 속하는 함수 <span class="math inline">\(f: A \to \mathcal P(A)\)</span>가 전사함수(surjective function)가 된다. 이제 다음과 같은 집합 <span class="math inline">\(B\)</span>를 빚어보자.</p>
+<p>이는 귀류법(proof by contradiction)을 활용한다. 만일 등호를 만족하는 함수, 즉 전단사 함수 존재한다고 하자. 여기 속하는 함수 <span class="math inline">\(f: A \to \mathcal P(A)\)</span>는 전사 함수이기도 하다. 이제 다음과 같은 집합 <span class="math inline">\(B\)</span>를 빚어보자.</p>
 <p><span class="math display">\[
 B = \{ x \in A| x \notin f(x) \}
 \]</span></p>
-<p><span class="math inline">\(B\)</span>는 <span class="math inline">\(x \in A\)</span>에는 들어 있지만 <span class="math inline">\(f\)</span>에 의해 매핑된 원소에는 포함되어 있지 않은 그런 집합을 의미한다.</p>
+<p><span class="math inline">\(B\)</span>는 <span class="math inline">\(x \in A\)</span>에는 들어 있지만 <span class="math inline">\(f\)</span>에 의해 부분 집합의 집합으로 매핑된 원소(이 원소는 부분 집합이다)에는 속하지 않은 원소들의 집합이다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>예를 들어보자. <span class="math inline">\(A = \{1,2,3\}\)</span>일 때, <span class="math inline">\(1 \to \emptyset\)</span>, <span class="math inline">\(2 \to \{ 1, 3\}\)</span>, <span class="math inline">\(3 \to \{ 2\}\)</span>와 같은 매핑을 의미한다.</p>
-</div></div><p><span class="math inline">\(B\)</span>는 <span class="math inline">\(A\)</span>의 원소들로 구성되어 있으므로 <span class="math inline">\(B \in \mathcal P(A)\)</span>이다. <span class="math inline">\(f\)</span>는 전사 함수이고 따라서 <span class="math inline">\(\mathcal P(A)\)</span>에 속한 모든 원소에 대응하는 <span class="math inline">\(a \in A\)</span>가 존재한다. 즉, <span class="math inline">\(f(a) = B\)</span>인 <span class="math inline">\(a\)</span>가 존재한다.</p>
+</div></div><p><span class="math inline">\(B\)</span>는 <span class="math inline">\(A\)</span>의 원소들로 구성되어 있으므로 <span class="math inline">\(B \in \mathcal P(A)\)</span>이다. <span class="math inline">\(f\)</span>는 가정에 따라서 전사 함수이고, 따라서 <span class="math inline">\(\mathcal P(A)\)</span>에 속한 모든 원소에 대응하는 <span class="math inline">\(a \in A\)</span>가 존재한다. 이때 집합 <span class="math inline">\(B\)</span>에 대응하는 <span class="math inline">\(A\)</span>의 원소를 <span class="math inline">\(a\)</span>라고 하자. 즉, <span class="math inline">\(f(a) = B\)</span>인 <span class="math inline">\(a \in A\)</span>가 존재한다.</p>
 </section>
 <section id="part-2-2" class="level3">
 <h3 class="anchored" data-anchor-id="part-2-2">Part 2-2</h3>
 <p><span class="math inline">\(a\)</span>는 <span class="math inline">\(B\)</span>에 속하거나 혹은 그렇지 않거나 둘 중 하나가 참이어야 한다. 각각의 경우를 살펴보자.</p>
 <ol type="1">
-<li><span class="math inline">\(a \in B\)</span>; 이 명제가 맞다면, <span class="math inline">\(a \in f(a)\)</span>가 성립한다. 그런데 집합 B의 정의에 따르면 <span class="math inline">\(a \notin f(a) = B\)</span>이다; <span class="math inline">\(a \in B.\)</span> 따라서 모순이다.</li>
-<li><span class="math inline">\(a \notin B\)</span>; 이 명제가 맞다면, <span class="math inline">\(a \notin f(a)\)</span>가 성립한다. 그런데 집합 B의 정의에 따르면 <span class="math inline">\(a \notin f(A)\)</span>는 B에 원소여야 한다; <span class="math inline">\(a \in B.\)</span> 따라서 모순이다.</li>
+<li><span class="math inline">\(a \in B\)</span>; 이 명제가 맞다면, <span class="math inline">\(a \in f(a)\)</span>가 성립한다. 그런데 집합 B의 정의에 따르면 <span class="math inline">\(a \notin f(a) = B\)</span>이다; <span class="math inline">\(a \notin B.\)</span> 따라서 모순이다.</li>
+<li><span class="math inline">\(a \notin B\)</span>; 이 명제가 맞다면, <span class="math inline">\(a \notin f(a)\)</span>가 성립한다. 그런데 집합 B의 정의에 따르면 <span class="math inline">\(a \notin f(A)\)</span>는 B의 원소다; <span class="math inline">\(a \in B.\)</span> 따라서 모순이다.</li>
 </ol>
 <p>두 경우 모두 모순이다. 귀류법에 따라 <span class="math inline">\(|A| \neq |\mathcal P(A)|\)</span>가 참이다. 앞서 단사함수의 존재 증명과 함께 집합의 카디널 수에 관해 칸토어의 정리가 성립한다;</p>
 <p><span class="math display">\[
@@ -607,7 +608,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":true,"openEffect":"zoom","descPosition":"bottom"});</script>
 
 
 
