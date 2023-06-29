@@ -174,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="prelim">Prelim</h2>
 <section id="cardinality" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="cardinality">Cardinality</h3>
-<p>집합이 ’크다’는 것의 의미를 따져보자. 유한 집합의 경우 크다는 것의 의미는 자명하다. 무한 집합이 크다는 것은 어떻게 측정할 수 있을까? 일단 무한 집합에 대해서는 원소의 개수라는 개념을 쓸 없으니 대신 카디널 수(cardinality)라는 용어를 쓴다. 즉, 집합 <span class="math inline">\(A\)</span>의 카디널 수는 <span class="math inline">\(c(A)\)</span>이다. 무한 집합 <span class="math inline">\(A\)</span>에 대해서 <span class="math inline">\(|A|\)</span>라고 쓰는 이는 카디널 수를 의미한다.</p>
+<p>집합이 ’크다’는 것의 의미를 따져보자. 유한 집합의 경우 크다는 것의 의미는 자명하다. 무한 집합이 크다는 것은 어떻게 측정할 수 있을까? 일단 무한 집합에 대해서는 원소의 개수라는 개념을 쓸 없으니 대신 카디널 수(cardinality)를 쓴다. 무한 집합 <span class="math inline">\(A\)</span>에 대해서 <span class="math inline">\(|A|\)</span>라고 쓸 경우 이는 무한 집합의 크기, 즉 카디널 수를 의미한다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>카디널 수에서 기준이 되는 것은 자연수의 집합이다. 자연수(<span class="math inline">\(\mathbb N\)</span>)는 가장 작은 무한 집합이다. 이 점을 기억하자.</p>
@@ -193,14 +193,14 @@ ul.task-list li input[type="checkbox"] {
 <p>고등학교에서 함수를 배울 때 왜 “전사 함수”, “단사 함수” 구별이 필요하지라는 의문을 가져 본 적이 있다. 이러한 분류가 카디널 수를 따질 결정적일 수 있다는 것은 뒤늦은 깨달음이리라…</p>
 </div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/four-functions.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="카디널 수에 따른 함수의 구분"><img src="images/four-functions.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<p><a href="images/four-functions.png" class="lightbox" title="카디널 수에 따른 함수의 구분" data-gallery="quarto-lightbox-gallery-1"><img src="images/four-functions.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
 <figcaption class="figure-caption">카디널 수에 따른 함수의 구분</figcaption>
 </figure>
 </div>
-<p>단사 함수의 경우 <span class="math inline">\(x\)</span>가 <span class="math inline">\(f(x)\)</span> 크지 않아야 존재할 수 있다. 전사함수의 경우 반대로 <span class="math inline">\(f(x)\)</span>가 <span class="math inline">\(x\)</span>보다 크지 않아야 한다. 즉,</p>
+<p>단사 함수의 경우 <span class="math inline">\(x\)</span>가 <span class="math inline">\(f(x)\)</span> 크지 않아야 존재할 수 있다. 전사함수의 경우 반대로 <span class="math inline">\(f(x)\)</span>가 <span class="math inline">\(x\)</span>보다 크지 않아야 한다. 해당 형태의 함수가 존재할 필요 조건은 다음과 같다.</p>
 <ul>
-<li>단사 함수: <span class="math inline">\(|x| \leq |f(x)|\)</span></li>
 <li>전사 함수: <span class="math inline">\(|x| \geq |f(x)|\)</span></li>
+<li>단사 함수: <span class="math inline">\(|x| \leq |f(x)|\)</span></li>
 <li>전단사 함수: <span class="math inline">\(|x| = |f(x)|\)</span></li>
 </ul>
 </section>
@@ -597,7 +597,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":true,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});</script>
 
 
 
