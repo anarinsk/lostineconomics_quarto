@@ -2398,7 +2398,7 @@
     "href": "posts/math-simple/2022-07-03-ansys-candor-theorem.html#theorem",
     "title": "Cantor’s Theorem",
     "section": "Theorem",
-    "text": "Theorem\n임의의 집합 \\(A\\)에 대해서 멱집합 \\(\\mathcal P (A)\\)는 \\(A\\)보다 크다. 즉,\n\\[\n|\\mathcal P(A)| &gt; |A|\n\\]"
+    "text": "Theorem\n임의의 집합 \\(A\\)에 대해서 멱집합 \\(\\mathcal P (A)\\)는 \\(A\\)보다 크다. 즉,\n\\[\n|\\mathcal P(A)| &gt; |A|.\n\\]"
   },
   {
     "objectID": "posts/math-simple/2022-10-03-RSA.html#tl-dr",
