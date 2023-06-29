@@ -26,7 +26,7 @@ lightbox: auto
 일대일 함수(one-to-one function) 혹은 단사 함수(injection), 전사 함수(onto function, surjection), 그리고 전단사 함수(bijection) 혹은 일대일 대응(one-to-one correspondence)로 함수를 분류할 수 있다. 
 
 :::{.column-margin}
-고등학교 때 함수를 배울 때 왜 "전사 함수", "단사 함수" 구별이 필요하지라는 의문을 가져 본 적이 있다. 이러한 분류가 카디널 수를 따질 결정적일 수 있다는 것은 뒤늦은 깨달음이리라... 
+고등학교에서 함수를 배울 때 왜 "전사 함수", "단사 함수" 구별이 필요하지라는 의문을 가져 본 적이 있다. 이러한 분류가 카디널 수를 따질 결정적일 수 있다는 것은 뒤늦은 깨달음이리라... 
 :::
 
 ![카디널 수에 따른 함수의 구분](images/four-functions.png){width=50%}
