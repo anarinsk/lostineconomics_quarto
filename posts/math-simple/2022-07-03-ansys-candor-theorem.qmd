@@ -6,49 +6,74 @@ date: "07/03/2022"
 draft: false
 image: "images/proof.jfif"
 categories: [math-simple]
+filters:
+   - lightbox
+lightbox: auto
 #margin-header: subscribe.html
 ---
 
+## Prelim
+
+### Cardinality
+집합이 '크다'는 것의 의미를 따져보자. 유한 집합의 경우 크다는 것의 의미는 자명하다. 무한 집합이 크다는 것은 어떻게 측정할 수 있을까? 일단 무한 집합에 대해서는 원소의 개수라는 개념을 쓸 없으니 대신 카디널 수(cardinality)라는 용어를 쓴다. 즉, 집합 $A$의 카디널 수는 $c(A)$이다. 무한 집합 $A$에 대해서 $|A|$라고 쓰는 이는 카디널 수를 의미한다. 
+
+:::{.column-margin}
+카디널 수에서 기준이 되는 것은 자연수의 집합이다. 자연수($\mathbb N$)는 가장 작은 무한 집합이다. 이 점을 기억하자. 
+:::
+
+### Injection, Surjection, and Bijection 
+
+일대일 함수(one-to-one function) 혹은 단사 함수(injection), 전사 함수(onto function, surjection), 그리고 전단사 함수(bijection) 혹은 일대일 대응(one-to-one correspondence)로 함수를 구별할 수 있다. 이 구별은 카디널 수를 따질 떄 크게 도움이 된다. 
+
+![카디널 수에 따른 함수의 구분](images/four-functions.png){width=70%}
+
+단사 함수의 경우 $x$가 $f(x)$ 크지 않아야 존재할 수 있다. 전사함수의 경우 반대로 $f(x)가 $x$보다 크지 않아야 한다. 즉, 
+
+- 단사 함수: $|x| \leq |f(x)|$
+- 전사 함수: $|x| \geq |f(x)|$
+- 전단사 함수: $|x| = |f(x)|$
+
 ## Theorem 
 
-임의의 집합 $E$에 대해서 멱집합 $\mathcal P (E)$는 $E$보다 크다. 
+임의의 집합 $A$에 대해서 멱집합 $\mathcal P (A)$는 $A$보다 크다. 즉, 
+
+$$
+|\mathcal P(A)| > |A|
+$$
 
 ## Proof 
 
 ### Part 1 
-일단 $E \preccurlyeq \mathcal P (E)$는 쉽게 증명할 수 있다. $e \in E$에 대해서 $f: e \to \lbrace e \rbrace$는 반드시 존재하고 이는 일대일함수(injective/one-to-one function)를 이룬다. 이제 $E \not\approx \mathcal P (E)$임을 증명하면 $E \prec \mathcal P (E)$가 증명된다. 
 
-### Part 2
-귀류법을 활용한다. 만일 $E \approx \mathcal P (E)$(두 집합의 크기가 같다)이라고 가정하자. 이는 일대일대응 $\phi: E \to \mathcal P (E)$가 존재한다는 뜻이다. 
+$|A| \leq |\mathcal P (A)|$를 증명하자. 이는 $f: A \to \mathcal P(A)$를 만족하는 단사함수, 즉 일대일 함수가 존재하면 된다. $\mathcal P(A)$에는 $a \in A$의 $\{ a \}$가 포함된다. 따라서 $f(x) = \{ x \}$로 정의하면 된다. 
+
+### Part 2-1
+$|A| \neq |\mathcal P (A)|$
+
+이는 귀류법을 활용한다. 만일 등호를 만족하는 함수, 즉 전단사함수 존재한다고 하자. 여기 속하는 함수 $f: A \to \mathcal P(A)$가 전사함수(surjective function)가 된다. 이제 다음과 같은 집합 $B$를 빚어보자. 
+
+$$
+B = \{ x \in A| x \notin f(x) \}
+$$
+
+$B$는 $x \in A$에는 들어 있지만 $f$에 의해 매핑된 원소에는 포함되어 있지 않은 그런 집합을 의미한다. 
 
 :::{.column-margin}
-단사 함수(injective)를 뜻하는 일대일 함수(one-to-one function)와 전단사함수(bijective)를 뜻하는 일대일대응(one-to-one correspondence)를 혼동하지 말자. 
+예를 들어보자. $A = \{1,2,3\}$일 때, $1 \to \emptyset$, $2 \to \{ 1, 3\}$, $3 \to \{ 2\}$와 같은 매핑을 의미한다. 
 :::
 
-$$
-B = \lbrace x \in E | x \notin \phi(x) \rbrace
-$$
+$B$는 $A$의 원소들로 구성되어 있으므로 $B \in \mathcal P(A)$이다. $f$는 전사 함수이고 따라서 $\mathcal P(A)$에 속한 모든 원소에 대응하는 $a \in A$가 존재한다. 즉, $f(a) = B$인 $a$가 존재한다. 
 
-$B \subseteq E$이다. 따라서 $\phi$에 따라서 $B$에 매핑되는 원소 $y(\in E)$가 존재한다. 즉, $B = \phi(y)$인 $y$가 존재한다.  
+## Part 2-2
 
-### Part3 
+$a$는 $B$에 속하거나 혹은 그렇지 않거나 둘 중 하나에 해당해야 한다(배중률의 공리). 각각의 경우를 살펴보자. 
 
-#### 1. $y \in \phi(y)$
 
-이 가정이 맞다면 집합 $B$의 정의에 따라서 $y \notin \phi(y)$여야 한다. 이는 모순이다. 
+1. $a \in B$; 이것이 맞다면, $a \in f(a)$가 성립한다. 그런데 정의에 따르면 $B$는 $a \notin B$이다. 따라서 모순이다. 
+2. $a \notin B$; 이것이 맞다면, $a \notin f(a)$가 성립한다. 그런데 정의에 따르면 $a \in B$가 되어야 한다. 따라서 모순이다. 
 
-#### 2. $y \notin \phi(y)$
-
-이 가정이 맞다면 집합 $B$의 정의에 따라서 $y \in \phi(y)$가 되어야 한다. 이 역시 모순이다. 
-
-### Finally 
-
-따라서 일대일대응을 이루는 함수 $\phi(\cdot)$은 존재하지 않는다. 즉, $E \prec \mathcal P (E)$. 
-
-이에 따르면 더 큰 무한 집합을 무한히 생성할 수 있다. 
+두 경우 모두 모순이 된다. 따라서 $|A| \neq |\mathcal P(A)|$가 된다. 앞서의 단사함수의 존재 증명과 결합하면 집합의 크기에 관해 칸토어의 정리가 성립한다; 
 
 $$
-E \prec \mathcal P (E) \prec \mathcal P ( \mathcal P (E) ) \prec \dotsb 
+|A| < |\mathcal P (A)|.
 $$
-
-

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.427">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -45,6 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -167,48 +170,72 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="theorem" class="level2">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="prelim" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="prelim">Prelim</h2>
+<section id="cardinality" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="cardinality">Cardinality</h3>
+<p>집합이 ’크다’는 것의 의미를 따져보자. 유한 집합의 경우 크다는 것의 의미는 자명하다. 무한 집합이 크다는 것은 어떻게 측정할 수 있을까? 일단 무한 집합에 대해서는 원소의 개수라는 개념을 쓸 없으니 대신 카디널 수(cardinality)라는 용어를 쓴다. 즉, 집합 <span class="math inline">\(A\)</span>의 카디널 수는 <span class="math inline">\(c(A)\)</span>이다. 무한 집합 <span class="math inline">\(A\)</span>에 대해서 <span class="math inline">\(|A|\)</span>라고 쓰는 이는 카디널 수를 의미한다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>카디널 수에서 기준이 되는 것은 자연수의 집합이다. 자연수(<span class="math inline">\(\mathbb N\)</span>)는 가장 작은 무한 집합이다. 이 점을 기억하자.</p>
+</div></div></section>
+<section id="injection-surjection-and-bijection" class="level3">
+<h3 class="anchored" data-anchor-id="injection-surjection-and-bijection">Injection, Surjection, and Bijection</h3>
+<p>일대일 함수(one-to-one function) 혹은 단사 함수(injection), 전사 함수(onto function, surjection), 그리고 전단사 함수(bijection) 혹은 일대일 대응(one-to-one correspondence)로 함수를 구별할 수 있다. 이 구별은 카디널 수를 따질 떄 크게 도움이 된다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/four-functions.png" class="lightbox" title="카디널 수에 따른 함수의 구분" data-gallery="quarto-lightbox-gallery-1"><img src="images/four-functions.png" class="img-fluid figure-img" style="width:70.0%"></a></p>
+<figcaption class="figure-caption">카디널 수에 따른 함수의 구분</figcaption>
+</figure>
+</div>
+<p>단사 함수의 경우 <span class="math inline">\(x\)</span>가 <span class="math inline">\(f(x)\)</span> 크지 않아야 존재할 수 있다. 전사함수의 경우 반대로 $f(x)가 <span class="math inline">\(x\)</span>보다 크지 않아야 한다. 즉,</p>
+<ul>
+<li>단사 함수: <span class="math inline">\(|x| \leq |f(x)|\)</span></li>
+<li>전사 함수: <span class="math inline">\(|x| \geq |f(x)|\)</span></li>
+<li>전단사 함수: <span class="math inline">\(|x| = |f(x)|\)</span></li>
+</ul>
+</section>
+</section>
+<section id="theorem" class="level2">
 <h2 class="anchored" data-anchor-id="theorem">Theorem</h2>
-<p>임의의 집합 <span class="math inline">\(E\)</span>에 대해서 멱집합 <span class="math inline">\(\mathcal P (E)\)</span>는 <span class="math inline">\(E\)</span>보다 크다.</p>
+<p>임의의 집합 <span class="math inline">\(A\)</span>에 대해서 멱집합 <span class="math inline">\(\mathcal P (A)\)</span>는 <span class="math inline">\(A\)</span>보다 크다. 즉,</p>
+<p><span class="math display">\[
+|\mathcal P(A)| &gt; |A|
+\]</span></p>
 </section>
 <section id="proof" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="proof">Proof</h2>
 <section id="part-1" class="level3">
 <h3 class="anchored" data-anchor-id="part-1">Part 1</h3>
-<p>일단 <span class="math inline">\(E \preccurlyeq \mathcal P (E)\)</span>는 쉽게 증명할 수 있다. <span class="math inline">\(e \in E\)</span>에 대해서 <span class="math inline">\(f: e \to \lbrace e \rbrace\)</span>는 반드시 존재하고 이는 일대일함수(injective/one-to-one function)를 이룬다. 이제 <span class="math inline">\(E \not\approx \mathcal P (E)\)</span>임을 증명하면 <span class="math inline">\(E \prec \mathcal P (E)\)</span>가 증명된다.</p>
+<p><span class="math inline">\(|A| \leq |\mathcal P (A)|\)</span>를 증명하자. 이는 <span class="math inline">\(f: A \to \mathcal P(A)\)</span>를 만족하는 단사함수, 즉 일대일 함수가 존재하면 된다. <span class="math inline">\(\mathcal P(A)\)</span>에는 <span class="math inline">\(a \in A\)</span>의 <span class="math inline">\(\{ a \}\)</span>가 포함된다. 따라서 <span class="math inline">\(f(x) = \{ x \}\)</span>로 정의하면 된다.</p>
 </section>
-<section id="part-2" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="part-2">Part 2</h3>
-<p>귀류법을 활용한다. 만일 <span class="math inline">\(E \approx \mathcal P (E)\)</span>(두 집합의 크기가 같다)이라고 가정하자. 이는 일대일대응 <span class="math inline">\(\phi: E \to \mathcal P (E)\)</span>가 존재한다는 뜻이다.</p>
+<section id="part-2-1" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="part-2-1">Part 2-1</h3>
+<p><span class="math inline">\(|A| \neq |\mathcal P (A)|\)</span></p>
+<p>이는 귀류법을 활용한다. 만일 등호를 만족하는 함수, 즉 전단사함수 존재한다고 하자. 여기 속하는 함수 <span class="math inline">\(f: A \to \mathcal P(A)\)</span>가 전사함수(surjective function)가 된다. 이제 다음과 같은 집합 <span class="math inline">\(B\)</span>를 빚어보자.</p>
+<p><span class="math display">\[
+B = \{ x \in A| x \notin f(x) \}
+\]</span></p>
+<p><span class="math inline">\(B\)</span>는 <span class="math inline">\(x \in A\)</span>에는 들어 있지만 <span class="math inline">\(f\)</span>에 의해 매핑된 원소에는 포함되어 있지 않은 그런 집합을 의미한다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>단사 함수(injective)를 뜻하는 일대일 함수(one-to-one function)와 전단사함수(bijective)를 뜻하는 일대일대응(one-to-one correspondence)를 혼동하지 말자.</p>
-</div></div><p><span class="math display">\[
-B = \lbrace x \in E | x \notin \phi(x) \rbrace
-\]</span></p>
-<p><span class="math inline">\(B \subseteq E\)</span>이다. 따라서 <span class="math inline">\(\phi\)</span>에 따라서 <span class="math inline">\(B\)</span>에 매핑되는 원소 <span class="math inline">\(y(\in E)\)</span>가 존재한다. 즉, <span class="math inline">\(B = \phi(y)\)</span>인 <span class="math inline">\(y\)</span>가 존재한다.</p>
-</section>
-<section id="part3" class="level3">
-<h3 class="anchored" data-anchor-id="part3">Part3</h3>
-<section id="y-in-phiy" class="level4">
-<h4 class="anchored" data-anchor-id="y-in-phiy">1. <span class="math inline">\(y \in \phi(y)\)</span></h4>
-<p>이 가정이 맞다면 집합 <span class="math inline">\(B\)</span>의 정의에 따라서 <span class="math inline">\(y \notin \phi(y)\)</span>여야 한다. 이는 모순이다.</p>
-</section>
-<section id="y-notin-phiy" class="level4">
-<h4 class="anchored" data-anchor-id="y-notin-phiy">2. <span class="math inline">\(y \notin \phi(y)\)</span></h4>
-<p>이 가정이 맞다면 집합 <span class="math inline">\(B\)</span>의 정의에 따라서 <span class="math inline">\(y \in \phi(y)\)</span>가 되어야 한다. 이 역시 모순이다.</p>
+<p>예를 들어보자. <span class="math inline">\(A = \{1,2,3\}\)</span>일 때, <span class="math inline">\(1 \to \emptyset\)</span>, <span class="math inline">\(2 \to \{ 1, 3\}\)</span>, <span class="math inline">\(3 \to \{ 2\}\)</span>와 같은 매핑을 의미한다.</p>
+</div></div><p><span class="math inline">\(B\)</span>는 <span class="math inline">\(A\)</span>의 원소들로 구성되어 있으므로 <span class="math inline">\(B \in \mathcal P(A)\)</span>이다. <span class="math inline">\(f\)</span>는 전사 함수이고 따라서 <span class="math inline">\(\mathcal P(A)\)</span>에 속한 모든 원소에 대응하는 <span class="math inline">\(a \in A\)</span>가 존재한다. 즉, <span class="math inline">\(f(a) = B\)</span>인 <span class="math inline">\(a\)</span>가 존재한다.</p>
 </section>
 </section>
-<section id="finally" class="level3">
-<h3 class="anchored" data-anchor-id="finally">Finally</h3>
-<p>따라서 일대일대응을 이루는 함수 <span class="math inline">\(\phi(\cdot)\)</span>은 존재하지 않는다. 즉, <span class="math inline">\(E \prec \mathcal P (E)\)</span>.</p>
-<p>이에 따르면 더 큰 무한 집합을 무한히 생성할 수 있다.</p>
+<section id="part-2-2" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-2">Part 2-2</h2>
+<p><span class="math inline">\(a\)</span>는 <span class="math inline">\(B\)</span>에 속하거나 혹은 그렇지 않거나 둘 중 하나에 해당해야 한다(배중률의 공리). 각각의 경우를 살펴보자.</p>
+<ol type="1">
+<li><span class="math inline">\(a \in B\)</span>; 이것이 맞다면, <span class="math inline">\(a \in f(a)\)</span>가 성립한다. 그런데 정의에 따르면 <span class="math inline">\(B\)</span>는 <span class="math inline">\(a \notin B\)</span>이다. 따라서 모순이다.</li>
+<li><span class="math inline">\(a \notin B\)</span>; 이것이 맞다면, <span class="math inline">\(a \notin f(a)\)</span>가 성립한다. 그런데 정의에 따르면 <span class="math inline">\(a \in B\)</span>가 되어야 한다. 따라서 모순이다.</li>
+</ol>
+<p>두 경우 모두 모순이 된다. 따라서 <span class="math inline">\(|A| \neq |\mathcal P(A)|\)</span>가 된다. 앞서의 단사함수의 존재 증명과 결합하면 집합의 크기에 관해 칸토어의 정리가 성립한다;</p>
 <p><span class="math display">\[
-E \prec \mathcal P (E) \prec \mathcal P ( \mathcal P (E) ) \prec \dotsb
+|A| &lt; |\mathcal P (A)|.
 \]</span></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -561,6 +588,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","loop":true});</script>
 
 
 
