@@ -61,7 +61,7 @@ $|A| \leq |\mathcal P (A)|$를 증명하자. 이는 $f: A \to \mathcal P(A)$를 
 ### Part 2-1
 $|A| \neq |\mathcal P (A)|$
 
-이는 귀류법을 활용한다. 만일 등호를 만족하는 함수, 즉 전단사함수 존재한다고 하자. 여기 속하는 함수 $f: A \to \mathcal P(A)$가 전사함수(surjective function)가 된다. 이제 다음과 같은 집합 $B$를 빚어보자. 
+이는 귀류법(proof by contradiction)을 활용한다. 만일 등호를 만족하는 함수, 즉 전단사함수 존재한다고 하자. 여기 속하는 함수 $f: A \to \mathcal P(A)$가 전사함수(surjective function)가 된다. 이제 다음과 같은 집합 $B$를 빚어보자. 
 
 $$
 B = \{ x \in A| x \notin f(x) \}
