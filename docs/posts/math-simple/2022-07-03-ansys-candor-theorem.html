@@ -198,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/four-functions.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="카디널 수에 따른 함수의 구분"><img src="images/four-functions.png" class="img-fluid figure-img"></a></p>
+<p><a href="images/four-functions.png" class="lightbox" title="카디널 수에 따른 함수의 구분" data-gallery="quarto-lightbox-gallery-1"><img src="images/four-functions.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">카디널 수에 따른 함수의 구분</figcaption>
 </figure>
 </div>
@@ -246,8 +246,8 @@ B = \{ x \in A| x \notin f(x) \}
 <h3 class="anchored" data-anchor-id="part-2-2">Part 2-2</h3>
 <p><span class="math inline">\(a\)</span>는 <span class="math inline">\(B\)</span>에 속하거나 혹은 그렇지 않거나 둘 중 하나가 참이어야 한다. 각각의 경우를 살펴보자.</p>
 <ol type="1">
-<li><span class="math inline">\(a \in B\)</span>; 이 명제가 맞다면, <span class="math inline">\(a \in f(a)\)</span>가 성립한다. 그런데 집합 B의 정의에 따르면 <span class="math inline">\(a \notin f(a) = B\)</span>이다; <span class="math inline">\(a \notin B.\)</span> 따라서 모순이다.</li>
-<li><span class="math inline">\(a \notin B\)</span>; 이 명제가 맞다면, <span class="math inline">\(a \notin f(a)\)</span>가 성립한다. 그런데 집합 <span class="math inline">\(B\)</span>의 정의(<span class="math inline">\(B\)</span>의 such that 이하)에 따르면 <span class="math inline">\(a \notin f(a)\)</span>는 B의 원소다; <span class="math inline">\(a \in B.\)</span> 따라서 모순이다.</li>
+<li><span class="math inline">\(a \in B\)</span>; 이 명제가 맞다면, <span class="math inline">\(a \in f(a)\)</span>가 성립한다. 그런데 집합 B의 정의(<span class="math inline">\(B\)</span>의 such that)에 따르면 <span class="math inline">\(a \notin f(a) = B\)</span>이다; <span class="math inline">\(a \notin B.\)</span> 따라서 모순이다.</li>
+<li><span class="math inline">\(a \notin B\)</span>; 이 명제가 맞다면, <span class="math inline">\(a \notin f(a)\)</span>가 성립한다. 그런데 집합 <span class="math inline">\(B\)</span>의 정의에 따르면 <span class="math inline">\(a \notin f(a)\)</span>는 B의 원소다; <span class="math inline">\(a \in B.\)</span> 따라서 모순이다.</li>
 </ol>
 <p>두 경우 모두 모순이다. 귀류법에 따라 <span class="math inline">\(|A| \neq |\mathcal P(A)|\)</span>가 참이다. 앞서 단사함수의 존재 증명과 함께 집합의 카디널 수에 관해 칸토어의 정리가 성립한다;</p>
 <p><span class="math display">\[
@@ -608,7 +608,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":true,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":true});</script>
 
 
 
