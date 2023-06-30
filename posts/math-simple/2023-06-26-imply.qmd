@@ -99,9 +99,11 @@ $0 < |x-a|< \delta$을 만족하는 모든 $\delta>0$에 대해서 다음을 만
 역시 말로 구별해서 풀어보자. 
 
 - $a$의 **모든** 주변($\delta$의 크기)에 속한 **어떤** $x$를 고려하자.
-- 가능한 모든 $\delta$를 고려해도 $|f(x)-L|$ 값을 **어떤** $\epsilon$ 보다 낮게 줄일 수 없다. 
+- $|f(x)-L|$ 값을 **어떤** $\epsilon$ 보다 낮게 줄일 수 없다. 
 
-이 경우는 $\lim_{x \to a}f(x)$는 존재하지 않는다. 주의 깊게 볼 지점이 있다. $p \implies q$에서 $P$의 모든 경우에 해당 조건 명제를 만족해야 한다. 따라서 이 형태는 암묵적으로 $x$에 대해서 $\forall$의 전칭 명제를 지닌다. 한편 조건 명제의 부정형의 경우 $x$에 대해서 $\forall$의 전칭 한정기호는 $\exists$의 존재 한정기호가 된다. 
+이 경우는 $\lim_{x \to a}f(x)$는 존재하지 않는다. 
+
+주의 깊게 볼 지점이 있다. $p \implies q$에서 $P$의 모든 경우에 해당 조건 명제를 만족해야 한다. 따라서 이 형태는 암묵적으로 $x$에 대해서 $\forall$의 전칭 명제를 지닌다. 한편 조건 명제의 부정형의 경우 $x$에 대해서 $\forall$의 전칭 한정기호는 $\exists$의 존재 한정기호가 된다. 
 
 ## 진리 집합 
 
@@ -120,7 +122,7 @@ $$
 Q^C = \{x: \exists\epsilon \text{ s.t. } |f(x) - L| \geq \epsilon \}
 $$
 
-여기서 $Q^C$를 정의할 때 $Q$의 전체 조건 $\forall \epsilon$이 존재 조건 $\exists \epsilon$으로 바뀌게 된다는 점을 눈여겨 보도록 하자. $p \implies q$의 부정 명제는 $p \land \neg q$가 된다. 진리집합으로 본다면 다음과 같다; $P \cap Q^C$. 만일 이 집합이 공집합이 아니라면 정의상 함수의 극한은 존재하지 않는다. 술어로 푼다면, $p$를 만족하면서 $q$를 만족하지 않는 경우가 존재하면 된다.  
+여기서 $Q^C$를 정의할 때 $Q$의 전체 조건 $\forall \epsilon$이 존재 조건 $\exists \epsilon$으로 바뀌게 된다는 점을 눈여겨 보도록 하자. $p \implies q$의 부정 명제는 $p \land \neg q$가 된다. 진리집합으로 본다면 다음과 같다; $P \cap Q^C$. 만일 이 집합이 공집합이 아니라면 정의상 함수의 극한은 존재하지 않는다. 
 
 :::{.column-margin}
 $p \implies q \equiv \neg p \lor q$이다. 따라서 $\neg(\neg p \lor q)$가 부정 명제이다. 
@@ -128,7 +130,7 @@ $p \implies q \equiv \neg p \lor q$이다. 따라서 $\neg(\neg p \lor q)$가 �
 
 ## 그림으로 
 
-배경을 이루는 여러가지 조건을 생략하고 $x \in \mathbb R$에서 정의되는 $f(x)$를 통해서 위 경우를 그림을 통해 살펴보기로 하자.
+여러가지 상세한 조건을 과감히 생략하고 $x \in \mathbb R$에서 정의되는 $f(x)$의 그림을 통해 함수 극한을 살펴보기로 하자.
 
 ::: {layout="[30, -10, 30], [1]"  layout-valign="bottom"}
 ![$f(x)$가 존재하는 경우](images/limf_1.jpg)
@@ -143,12 +145,12 @@ $p \implies q \equiv \neg p \lor q$이다. 따라서 $\neg(\neg p \lor q)$가 �
 
 ### 함수의 극한이 존재하는 경우
 
-$\lim_{x \to a} f(x)$가 존재하는 경우를 살펴보자. 문장으로는 이상하지만 이렇게 풀어 놓고 써보자. 모든 $x$에 대해서 만족한다는 것은 극한을 정의하기 위한 전제 조건이다. 
+$\lim_{x \to a} f(x)$가 존재하는 경우를 살펴보자. 문장으로는 이상하지만 이렇게 풀어 놓고 써보자. 
 
-- $p$: 다음의 조건을 만족하는 어떤 $\delta$가 존재한다; $|x - a| < \delta$
-- $q$: 모든 $\epsilon$에 대해서 다음 조건을 만족한다; $|f(x) - L| < \epsilon$
+- $p$: 다음의 조건을 만족하는 어떤 $\delta>0$가 존재한다; $|x - a| < \delta$
+- $q$: 모든 $\epsilon>0$, 모든 $x \in \mathbb R$에 대해서 다음 조건을 만족한다; $|f(x) - L| < \epsilon$
 
-그림에서 보듯이 임의의 양의 $\epsilon$이 주어져 있을 때 $\delta$를 충분히 작게 택하여 $f(x)$와 $L$의 거리를 충분히 작게 만들 수 있다면, 함수의 극한값이 존재한다. 
+그림에서 보듯이 어떤 크기의 $\epsilon$가 주어진다고 해도 $\delta$를 필요한 만큼 작게 택하여 $f(x)$와 $L$의 거리를 충분히 좁힐 수 있을 때, 함수의 극한값이 존재한다. 
 
 :::{.column-margin}
 다소 동어반복이 될지는 모르겠지만 극한이 존재하지 않는 경우에 넣어서 따져보면 이해에 도움이 된다. 진리집합 $Q^C$ 즉 $|f(x) - L| \geq \epsilon$를 만족하는 $\epsilon$와 $x$가 존재한다고 하자. $x$를 $a$에 충분히 붙이게 되면, 즉 $\delta$를 충분히 작게 잡으면, 이 조건을 만족하는 $\epsilon$은 존재하지 않는다. 즉, $P \cap Q^C = \emptyset$이다. 
@@ -156,7 +158,7 @@ $\lim_{x \to a} f(x)$가 존재하는 경우를 살펴보자. 문장으로는 �
 
 ### 함수의 극한이 존재하지 않는 경우 
 
-$L$이 $(f(a-\delta), f(a+\delta))$ 사이 어딘가에 존재한다고 하자. 이때  $|L-f(a-\delta)|$과 $|L-f(a+\delta)|$ 중 작은 값보다 아주 작은 어떤 값을 $\epsilon$이라고 하자. 이때 $|x-a|<\delta$를 만족하는 모든 $x$에 대해서 $|f(x)-L| \geq \epsilon$이 성립한다. 즉, $P \cap Q^C \neq \emptyset$.  
+$L$이 $(f(a-\delta), f(a+\delta))$ 사이 어딘가에 존재한다고 하자. 이때  $|L-f(a-\delta)|$과 $|L-f(a+\delta)|$ 중 작은 값보다 아주 작은 어떤 값을 $\epsilon$이라고 두자. 이때 $|x-a|<\delta$를 만족하는 모든 $x$에 대해서 $|f(x)-L| \geq \epsilon$이 성립한다. 즉, $P \cap Q^C \neq \emptyset$.  
 
 ![](images/limf_3.jpg){width=70%}
 
@@ -164,6 +166,6 @@ $L$이 $(f(a-\delta), f(a+\delta))$ 사이 어딘가에 존재한다고 하자. 
 
 $(\exists \epsilon)(\exists x)(\forall\delta>0)$ s.t. $|f(x)-L| \geq \epsilon$ for $x \in (x-\delta, x+\delta)$.
 
-$f(x)$는 $x=a$ 주변에서 끊어져 있고, 이 간격과 $L$의 위치를 고려해서 모든 $\delta$와 $|f(x)-L| \geq \epsilon$를 만족하는 $\epsilon>0$을 찾을 수 있다. 위 그림에서 보듯이 $\delta$를 아무리 작게 설정해도 $x=a$에서 존재하는 $f(x)$의 간격을 줄일 수는 없다. 즉, $\lim_{x \to a} f(x)$는 존재하지 않는다. 
+$f(x)$는 $x=a$ 주변에서 끊어져 있고, 이 간격과 $L$의 위치를 고려해서 모든 $\delta$와 $|f(x)-L| \geq \epsilon$를 만족하는 $\epsilon>0$와 $x$를 찾을 수 있다. 위 그림에서 보듯이 $\delta$를 아무리 작게 설정해도 $x=a$에서 존재하는 $f(x)$의 간격을 줄일 수는 없다. 즉, $\lim_{x \to a} f(x)$는 존재하지 않는다. 
 
 
