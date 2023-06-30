@@ -185,7 +185,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="용어-정리">용어 정리</h2>
 <ul>
 <li>명제: 참과 거짓을 가릴 수 있는 언술을 의미한다. 배중률에 따르면 명제는 참 혹은 거짓 둘 중에 하나만 될 수 있다. 둘 다 될 수 있거나 둘 다 아니거나의 상태는 없다고 가정한다.</li>
-<li>진리 집합: “모든 인간은 죽는다”와 같은 종류의 명제 조건이 붙지 않는다. 하지만 명제에 조건을 달아서 해당 조건을 충족하는 대상을 살피면 편리한 경우가 있다. 이를 명제의 조건이라고 하자. 이때 조건 명제의 조건을 충족하는 어떤 대상, 즉 조건을 참으로 만드는 대상을 모아 놓은 집합을 ’진리 집합’이라고 부른다.</li>
+<li>진리 집합: “모든 인간은 죽는다”와 같은 종류의 명제 조건이 붙지 않는다. 하지만 명제에 조건을 달아서 해당 조건을 충족하는 대상을 살피면 편리한 경우가 있다. 이를 명제의 조건(predicate)이라고 하자. 이때 명제의 조건을 충족하는 어떤 대상, 즉 조건을 참으로 만드는 대상을 모아 놓은 집합을 ’진리 집합’이라고 부른다.</li>
 </ul>
 <p>명제를 진리 집합과 연결해 생각하면 편리한 경우가 있다. 명제의 여러가지 조작을 집합으로 바꿔 생각하면 조금 이해가 쉬워진다. 우리가 잘 알고 익숙한 ’벤 다이어그램’을 활용할 수 있기 때문에 더 쉽게 응용할 수 있다는 장점도 있다.</p>
 </section>
@@ -196,6 +196,7 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\(p \implies q\)</span></li>
 <li>If <span class="math inline">\(p\)</span>, then <span class="math inline">\(q\)</span>.</li>
 <li><span class="math inline">\(p\)</span> implies <span class="math inline">\(q\)</span></li>
+<li><span class="math inline">\(p\)</span> is sufficient condition for <span class="math inline">\(q\)</span>.</li>
 </ul>
 <p>일단 이 관계는 형식 논리상의 관계이지 ‘인과’ 관계가 아니다. 즉, 형식 논리상 <span class="math inline">\(p\)</span>라는 명제와 <span class="math inline">\(q\)</span>라는 명제의 관계를 기계적으로 서술한다. 진리 집합이 존재한다면, <span class="math inline">\(p\)</span>의 진리집합 <span class="math inline">\(P\)</span>와 <span class="math inline">\(q\)</span>의 진리집합 <span class="math inline">\(Q\)</span>에 대해서 <span class="math inline">\(P \subset Q\)</span>가 성립한다는 의미로 이해할 수 있겠다.</p>
 <p>조건 명제에는 숨은 ’함정’이 있다. <span class="math inline">\(p \implies q\)</span>는 진리집합으로 본다면 <span class="math inline">\(P\)</span>에 속하는 모든 원소는 <span class="math inline">\(Q\)</span>에 속해야 한다는 뜻이다. 즉, <span class="math inline">\(p\)</span>라는 명제를 만족하는 모든 경우에 대해서 <span class="math inline">\(q\)</span>가 만족해야 한다.</p>
@@ -237,7 +238,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="공진리" class="level3">
 <h3 class="anchored" data-anchor-id="공진리">공진리</h3>
-<p>아마도 ‘공진리(vacuous truth)’ 혹은 ’항진’의 문제가 거슬릴 것이다. 논리로 보면 조금 이상해보일 수 있지만 진리집합으로 보면 이해가 쉽다. <span class="math inline">\(p\)</span>가 F라는 것은 <span class="math inline">\(P=\emptyset\)</span>을 의미한다. 집합의 공리상 공집합은 모든 집합의 부분 집합이 될 수 있다.</p>
+<p>‘공진리(vacuous truth)’, ‘항진’ 혹은 ’공허 참’의 문제가 거슬릴 수 겠다. 논리로 보면 조금 이상해보일 수 있지만 진리집합으로 보면 상대적으로 이해가 쉽다. <span class="math inline">\(p\)</span>가 F라는 것은 <span class="math inline">\(P=\emptyset\)</span>을 의미한다. 집합의 공리에 따르면 공집합은 모든 집합의 부분 집합이다.</p>
 </section>
 <section id="조건-명제의-부정" class="level3">
 <h3 class="anchored" data-anchor-id="조건-명제의-부정">조건 명제의 부정</h3>
@@ -307,7 +308,7 @@ Q^C = \{x: \exists\epsilon \text{ s.t. } |f(x) - L| \geq \epsilon \}
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 42.9%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/limf_1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="f(x)가 존재하는 경우"><img src="images/limf_1.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/limf_1.jpg" class="lightbox" title="f(x)가 존재하는 경우" data-gallery="quarto-lightbox-gallery-1"><img src="images/limf_1.jpg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption"><span class="math inline">\(f(x)\)</span>가 존재하는 경우</figcaption>
 </figure>
 </div>
@@ -316,7 +317,7 @@ Q^C = \{x: \exists\epsilon \text{ s.t. } |f(x) - L| \geq \epsilon \}
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 42.9%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/limf_2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="f(x)가 존재하지 않는 경우"><img src="images/limf_2.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/limf_2.jpg" class="lightbox" title="f(x)가 존재하지 않는 경우" data-gallery="quarto-lightbox-gallery-2"><img src="images/limf_2.jpg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption"><span class="math inline">\(f(x)\)</span>가 존재하지 않는 경우</figcaption>
 </figure>
 </div>
@@ -703,7 +704,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":true,"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":true,"closeEffect":"zoom","descPosition":"bottom"});</script>
 
 
 
