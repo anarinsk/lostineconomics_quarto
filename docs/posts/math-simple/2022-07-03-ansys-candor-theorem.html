@@ -174,18 +174,18 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="prelim">Prelim</h2>
 <section id="cardinality" class="level3">
 <h3 class="anchored" data-anchor-id="cardinality">Cardinality</h3>
-<p>집합이 ’크다’는 것의 의미를 따져보자. 유한 집합의 경우 크다는 뜻이 자명하다. 무한 집합의 크기는 어떻게 비교할 수 있을까? 무한 집합에 대해서는 원소의 ’개수’라는 개념을 쓸 수 없다. 대신 크기의 비교를 위해서 카디널 수(cardinality)라는 말을 쓴다. 무한 집합 <span class="math inline">\(A\)</span>에 대해서 <span class="math inline">\(|A|\)</span>라고 쓸 경우 이는 무한 집합의 크기, 즉 카디널 수를 의미한다.</p>
-<p>자세한 내용을 생략하고 말한다면, 카디널 수는 자연수 집합을 기준으로 집합의 크기를 가늠한다. 자연수(<span class="math inline">\(\mathbb N\)</span>)는 가장 작은 무한 집합이다. 만일 자연수 집합과 일대일 대응이 가능하다면 둘의 카디널 수는 같다. 즉 둘은 같은 크기의 집합이 된다.</p>
+<p>집합이 ’크다’는 것의 의미를 따져보자. 유한 집합의 경우 원소의 개수에 따라서 크기가 정해지므로 그 뜻이 자명하다. 그러면 무한 집합의 크기는 어떻게 비교할 수 있을까? 무한 집합에 대해서는 원소의 ’개수’라는 개념을 쓸 수 없다. 대신 크기의 비교를 위해서 카디널 수(cardinality)라는 개념을 쓴다. 무한 집합 <span class="math inline">\(A\)</span>에 대해서 <span class="math inline">\(|A|\)</span>라고 쓸 경우 이는 무한 집합의 크기, 즉 카디널 수를 의미한다.</p>
+<p>자세한 내용을 생략하면 두 집합 사이에 일대일 대응 함수가 존재할 경우 같은 카디널 수를 지닌다고 말한다. 그리고 자연수 집합(<span class="math inline">\(\mathbb N\)</span>)은 가장 작은 무한 집합으로 정의한다.</p>
 </section>
 <section id="injection-surjection-and-bijection" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="injection-surjection-and-bijection">Injection, Surjection, and Bijection</h3>
-<p>집합의 크기를 재려면 집합과 집합 사이에 어떤 짝짓기(mapping)이 가능한지를 살펴야 한다. 용어 및 번역어 먼저 정리하자.</p>
+<p>앞서 보았듯이 집합의 크기를 재려면 집합과 집합 사이에 어떤 짝짓기(mapping)가 가능한지를 살펴야 한다. 용어 및 번역어 먼저 정리하자.</p>
 <ul>
 <li>전사 함수(surjective function): onto function</li>
 <li>단사 함수(injective function): 일대일 함수(one-to-one function)</li>
 <li>전단사 함수(bijective function): 일대일 대응(one-to-one correspondence) one-to-one and onto</li>
 </ul>
-<p>일대일 함수와 일대일 대응은 단사 함수와 전단사 함수를 각각 뜻한다. 용어에 주의하자.</p>
+<p>“일대일 함수”와 “일대일 대응”은 단사 함수와 전단사 함수를 각각 뜻한다. 용어에 주의하자.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>고등학교에서 함수를 배울 때 “전사 함수”, “단사 함수”와 같은 구별이 필요한 이유는 별로 강조하지 않는다. 이러한 분류가 카디널 수를 따질 필요하다는 것을 미리 알았다면…</p>
@@ -196,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/four-functions.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="카디널 수에 따른 함수의 구분"><img src="images/four-functions.png" class="img-fluid figure-img"></a></p>
+<p><a href="images/four-functions.png" class="lightbox" title="카디널 수에 따른 함수의 구분" data-gallery="quarto-lightbox-gallery-1"><img src="images/four-functions.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">카디널 수에 따른 함수의 구분</figcaption>
 </figure>
 </div>
@@ -215,7 +215,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="theorem" class="level2">
 <h2 class="anchored" data-anchor-id="theorem">Theorem</h2>
-<p>이제 칸토어의 정리를 살펴보자. 정리의 대단한 내용과 비교해서 증명은 매우 간단하다. 임의의 집합 <span class="math inline">\(A\)</span>에 대해서 멱집합 <span class="math inline">\(\mathcal P (A)\)</span>는 <span class="math inline">\(A\)</span>보다 크다. 즉,</p>
+<p>이제 칸토어의 정리를 살펴보자. 정리의 대단한 내용을 생각하면, 증명은 매우 간단하다. 임의의 집합 <span class="math inline">\(A\)</span>에 대해서 멱집합 <span class="math inline">\(\mathcal P (A)\)</span>는 <span class="math inline">\(A\)</span>보다 크다. 즉,</p>
 <p><span class="math display">\[
 |\mathcal P(A)| &gt; |A|.
 \]</span></p>
@@ -251,9 +251,13 @@ B = \{ x \in A| x \notin f(x) \}
 <p><span class="math display">\[
 |A| &lt; |\mathcal P (A)|.
 \]</span></p>
-
-
 </section>
+</section>
+<section id="simple-but-beautiful" class="level2">
+<h2 class="anchored" data-anchor-id="simple-but-beautiful">Simple but Beautiful</h2>
+<p>이 정리 참 아름답다. f(X)에 존재하는 원소를 폭탄으로 잘못된 전제에서 출발한 명제를 폭파시키는 방식의 논법이다. 자세히 보면 이 정리는 러셀의 역설과 닮았다. 러셀이 칸토어의 해당 정리를 먼저 봤다고 하니, 레셀의 아이디어가 칸토어에서 왔다고 볼 수도 있을 듯 싶다.</p>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -606,7 +610,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":true,"openEffect":"zoom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":true});</script>
 
 
 
