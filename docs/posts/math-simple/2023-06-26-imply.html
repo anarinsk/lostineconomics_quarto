@@ -273,7 +273,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <section id="함수의-극한이-존재하지-않는-경우" class="level3">
 <h3 class="anchored" data-anchor-id="함수의-극한이-존재하지-않는-경우">함수의 극한이 존재하지 않는 경우</h3>
-<p>함수의 극한에 관한 정의의 ’부정형(negation)’을 정의해보자. 그리고 이 부정의 정의가 참이 되는 경우를 따져볼 것이다. 정의가 함축(implication, <span class="math inline">\(\implies\)</span>)의 형태를 취하고 있으므로 이 부정형을 만들 때 주의를 기울여야 한다.</p>
+<p>함수의 극한에 관한 정의의 ’부정형(negation)’을 정의해보자. 그리고 이 부정의 정의가 참이 되는 경우를 따져볼 것이다. 정의가 함축(implication, <span class="math inline">\(\implies\)</span>)의 형태를 취하고 있으므로 부정형을 만들 때 앞서 언급한 방식을 따르면 된다.</p>
 <p><span class="math inline">\(0 &lt; |x-a|&lt; \delta\)</span>을 만족하는 모든 <span class="math inline">\(\delta&gt;0\)</span>에 대해서 다음을 만족하는 어떤 <span class="math inline">\(\epsilon&gt;0\)</span>와 <span class="math inline">\(x \in \mathbb R\)</span>이 존재한다; <span class="math inline">\(|f(x) - L| \geq \epsilon\)</span>.</p>
 <p>역시 말로 구별해서 풀어보자.</p>
 <ul>
@@ -281,7 +281,6 @@ ul.task-list li input[type="checkbox"] {
 <li><span class="math inline">\(|f(x)-L|\)</span> 값을 <strong>어떤</strong> <span class="math inline">\(\epsilon\)</span> 보다 낮게 줄일 수 없다.</li>
 </ul>
 <p>이 경우는 <span class="math inline">\(\lim_{x \to a}f(x)\)</span>는 존재하지 않는다.</p>
-<p>주의 깊게 볼 지점이 있다. <span class="math inline">\(p \implies q\)</span>에서 <span class="math inline">\(P\)</span>의 모든 경우에 해당 조건 명제를 만족해야 한다. 따라서 이 형태는 암묵적으로 <span class="math inline">\(x\)</span>에 대해서 <span class="math inline">\(\forall\)</span>의 전칭 명제를 지닌다. 한편 조건 명제의 부정형의 경우 <span class="math inline">\(x\)</span>에 대해서 <span class="math inline">\(\forall\)</span>의 전칭 한정기호는 <span class="math inline">\(\exists\)</span>의 존재 한정기호가 된다.</p>
 </section>
 </section>
 <section id="진리-집합" class="level2 page-columns page-full">
@@ -705,7 +704,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom","closeEffect":"zoom"});</script>
 
 
 
