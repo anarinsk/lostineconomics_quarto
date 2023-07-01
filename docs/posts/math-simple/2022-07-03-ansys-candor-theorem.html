@@ -253,12 +253,15 @@ B = \{ x \in A| x \notin f(x) \}
 \]</span></p>
 </section>
 </section>
-<section id="simple-but-beautiful" class="level2">
+<section id="simple-but-beautiful" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="simple-but-beautiful">Simple but Beautiful</h2>
 <p>이 정리 참 아름답다. ‘전사 함수’ <span class="math inline">\(f(X)\)</span>에 짝지워진 치역에 존재하는 어떤 원소를 폭탄 삼아 잘못된 전제에서 출발한 명제를 폭파시키는 방식의 절묘한 논법이다. 자세히 보면 이 정리는 러셀의 역설과 꽤 닮았다. 러셀이 칸토어의 해당 정리를 먼저 봤다고 하니, 레셀의 아이디어가 칸토어에서 왔다고 볼 수도 있을 듯 싶다.</p>
 
 
-</section>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><a href="https://plato.stanford.edu/entries/russell-paradox/">여기</a>를 참고하자. 소박한 집합론(naive set theory)에 따르면 특정한 특성을 바탕으로 집합을 정리할 수 있다. 하지만 이러한 공리에 구멍이 있음을 러셀이 발견했다. 즉, <span class="math inline">\(\pi(x)\)</span>라는 특성은 <span class="math inline">\(x \in x\)</span>라고 하자. <span class="math inline">\(\pi(x)\)</span>는 집합 자체가 그 자신의 원소가 되는 특성까지 포함한다. 이제 <span class="math inline">\(R = \{ x: \neg \pi(x) \}\)</span>라고 하자. 이제 <span class="math inline">\(R \in R\)</span>을 만족한다고 하자. <span class="math inline">\(R\)</span>의 정의상 <span class="math inline">\(R \notin R\)</span>이어야 한다. 따라서 모순이다. 만일 <span class="math inline">\(R \notin R\)</span>이라고 하자. <span class="math inline">\(R\)</span>의 정의상 <span class="math inline">\(R \in R\)</span>이어야 한다. 따라서 모순이다.</p>
+</div></div></section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -610,7 +613,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 
