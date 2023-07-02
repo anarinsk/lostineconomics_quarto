@@ -46,9 +46,10 @@ lightbox: auto
 - Windows Terminal 
 - [PowerShell](https://github.com/PowerShell/PowerShell) (Core 버전, 크로스플랫폼 버전)
 
-어떻게 설치하면 될까? 아래 사이트로 가자. 
+어떻게 설치하면 될까? 아래 사이트 중 하나로 가자. 
 
-<https://winstall.app>
+- <https://winstall.app> 
+- <https://winget.run>
 
 위 웹사이트의 검색창에 "Windows Terminal"을 넣고 엔터를 누르자. 아래 검색 결과에 정식 본과 preview 버전 두 개가 뜰 것이다. 특별한 이유가 없다면 정식 버전을 설치하도록 하자. 클릭해서 들어가면 아래와 같은 스크린 샷이 보인다. 
 
