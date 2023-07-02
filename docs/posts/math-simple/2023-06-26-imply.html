@@ -195,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><span class="math inline">\(p \implies q\)</span></li>
 <li>If <span class="math inline">\(p\)</span>, then <span class="math inline">\(q\)</span>.</li>
-<li><span class="math inline">\(p\)</span> implies <span class="math inline">\(q\)</span></li>
+<li><span class="math inline">\(p\)</span> implies <span class="math inline">\(q\)</span>.</li>
 <li><span class="math inline">\(p\)</span> is sufficient condition for <span class="math inline">\(q\)</span>.</li>
 </ul>
 <p>일단 이 관계는 형식 논리의 관계이지 ‘인과’ 관계가 아니다. 즉, 형식 논리상 <span class="math inline">\(p\)</span>라는 명제와 <span class="math inline">\(q\)</span>라는 명제의 관계를 기계적으로 서술한다. 진리 집합이 존재한다면, <span class="math inline">\(p\)</span>의 진리집합 <span class="math inline">\(P\)</span>와 <span class="math inline">\(q\)</span>의 진리집합 <span class="math inline">\(Q\)</span>에 대해서 <span class="math inline">\(P \subset Q\)</span>가 성립한다는 의미로 이해할 수 있겠다.</p>
@@ -263,13 +263,16 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p><span class="math inline">\((\forall \epsilon &gt;0)(\exists \delta &gt;0)(\forall x \in \mathbb R)(0 &lt; |x-a| &lt; \delta \implies |f(x) - L|&lt;\epsilon)\)</span></p>
 </blockquote>
+<blockquote class="blockquote">
+<p><span class="math inline">\((\forall \epsilon &gt;0)(\forall x \in \mathbb R)(\exists \delta: 0 &lt; |x-a| &lt; \delta \implies |f(x) - L|&lt;\epsilon)\)</span></p>
+</blockquote>
 <p>하나씩 끊어서 말로 살펴보자.</p>
 <ul>
 <li><span class="math inline">\(x=a\)</span> 주변으로 양쪽으로 <strong>어떤</strong> <span class="math inline">\(\delta\)</span> 크기의 구간을 잡는다.<br>
 </li>
 <li>해당 구간에 속하는 <strong>모든</strong> <span class="math inline">\(x\)</span>를 고려하자.</li>
 <li><span class="math inline">\(x \to a\)</span> 일 때 함수 <span class="math inline">\(f(x)\)</span>의 극한값을 <span class="math inline">\(L\)</span>이라고 하자.</li>
-<li><span class="math inline">\(\delta\)</span>를 조정해서 <span class="math inline">\(f(x)\)</span>와 <span class="math inline">\(L\)</span> 사이의 거리(<span class="math inline">\(|f(x)-L|\)</span>)가 <strong>모든</strong> <span class="math inline">\(\epsilon&gt;0\)</span>보다 작게 만들 수 있다.</li>
+<li><span class="math inline">\(\delta\)</span>를 조정해서 <span class="math inline">\(f(x)\)</span>와 <span class="math inline">\(L\)</span> 사이의 거리(<span class="math inline">\(|f(x)-L|\)</span>)가 <strong>모든</strong> <span class="math inline">\(\epsilon&gt;0\)</span>보다 작게 만들 수 있다. 즉, 조건을 만족하는 <span class="math inline">\(\delta\)</span>가 존재한다.</li>
 </ul>
 <section id="함수의-극한이-존재하지-않는-경우" class="level3">
 <h3 class="anchored" data-anchor-id="함수의-극한이-존재하지-않는-경우">함수의 극한이 존재하지 않는 경우</h3>
@@ -288,15 +291,19 @@ ul.task-list li input[type="checkbox"] {
 <p>진리 집합으로 다시 따져보도록 하자. 진리 집합은 조건제시법(set builder notation)을 통해 표현한다.</p>
 <p><span class="math display">\[
 \begin{aligned}
-P &amp; = \{x: \exists\delta &gt; 0 \text{ s.t. } |x - a| &lt; \delta \} \\
-Q &amp; = \{x: \forall\epsilon &gt; 0 \text{ s.t. } |f(x) - L| &lt; \epsilon \}
+P &amp; = \{x|~\exists\delta &gt; 0:~|x - a| &lt; \delta \} \\
+Q &amp; = \{x \vert ~\forall\epsilon &gt; 0:~|f(x) - L| &lt; \epsilon \}
 \end{aligned}
 \]</span></p>
-<p>함수 극한의 정의는 진리 집합으로는 <span class="math inline">\(P \subset Q\)</span>를 의미한다. 이제 <span class="math inline">\(\neg q\)</span>, 즉 <span class="math inline">\(Q^C\)</span>를 보자.</p>
+<p>첫번째 진리 집합을 말로 풀어보자. <span class="math inline">\(|\)</span>이하의 조건을 만족하는 <span class="math inline">\(x\)</span>를 의미한다. <span class="math inline">\(\exists \delta\)</span> 조건이 있기 때문에 해당 <span class="math inline">\(x\)</span> 값은 <span class="math inline">\(\delta\)</span>에 의존하게 된다.함수 극한의 정의는 진리 집합으로는 <span class="math inline">\(P \subset Q\)</span>를 의미한다.</p>
+<p><span class="math inline">\(\neg q\)</span>, 즉 <span class="math inline">\(Q^C\)</span>도 정의해보자.</p>
 <p><span class="math display">\[
-Q^C = \{x: \exists\epsilon \text{ s.t. } |f(x) - L| \geq \epsilon \}
+Q^C = \{x|~\exists\epsilon&gt;0:~ |f(x) - L| \geq \epsilon \}
 \]</span></p>
-<p>여기서 <span class="math inline">\(Q^C\)</span>를 정의할 때 <span class="math inline">\(Q\)</span>의 전체 조건 <span class="math inline">\(\forall \epsilon\)</span>이 존재 조건 <span class="math inline">\(\exists \epsilon\)</span>으로 바뀌게 된다는 점을 눈여겨 보도록 하자. <span class="math inline">\(p \implies q\)</span>의 부정 명제는 <span class="math inline">\(p \land \neg q\)</span>가 된다. 진리집합으로 본다면 다음과 같다; <span class="math inline">\(P \cap Q^C\)</span>. 만일 이 집합이 공집합이 아니라면 정의상 함수의 극한은 존재하지 않는다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>조건제시법을 쓸 때 <span class="math inline">\(|\)</span>과 <span class="math inline">\(:\)</span>는 차이가 있을까? 별 차이가 없다는 게 중론인 듯 싶다. 영어로 옮기면 “such that(s.t.)”에 해당한다. 사례처럼 “s.t.”이 중복되면 번갈아서 써주면 어떨까 싶다.</p>
+</div></div><p>여기서 <span class="math inline">\(Q^C\)</span>를 정의할 때 <span class="math inline">\(Q\)</span>의 전체 조건 <span class="math inline">\(\forall \epsilon\)</span>이 존재 조건 <span class="math inline">\(\exists \epsilon\)</span>으로 바뀌게 된다는 점을 눈여겨 보도록 하자. <span class="math inline">\(p \implies q\)</span>의 부정 명제는 <span class="math inline">\(p \land \neg q\)</span>가 된다. 진리집합으로 본다면 다음과 같다; <span class="math inline">\(P \cap Q^C\)</span>. 만일 이 집합이 공집합이 아니라면 정의상 함수의 극한은 존재하지 않는다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><span class="math inline">\(p \implies q \equiv \neg p \lor q\)</span>이다. 따라서 <span class="math inline">\(\neg(\neg p \lor q)\)</span>가 부정 명제이다.</p>
@@ -704,7 +711,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});</script>
 
 
 
