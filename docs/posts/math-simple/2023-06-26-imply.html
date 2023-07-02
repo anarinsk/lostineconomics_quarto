@@ -8,7 +8,7 @@
 
 <meta name="author" content="JS HUHH">
 <meta name="dcterms.date" content="2023-06-26">
-<meta name="description" content="\implies를 생각해보자">
+<meta name="description" content="\implies를 따져보자">
 
 <title>lostineconomics.com - 조건 명제</title>
 <style>
@@ -143,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    <span class="math inline">\(\implies\)</span>를 생각해보자
+    <span class="math inline">\(\implies\)</span>를 따져보자
   </div>
 </div>
 
@@ -171,33 +171,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="tl-dr" class="level2">
-<h2 class="anchored" data-anchor-id="tl-dr">tl; dr</h2>
+<h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <ul>
-<li>조건 명제가 의미하는 것을 다시 새겨 보고, 조건 명제의 ’부정’도 따져보자.</li>
-<li>함수 극한의 엡실론-델타 정의를 통해 조건 명제의 의미를 다시 확인해보자.</li>
+<li>조건 명제가 의미하는 것을 확인해보고, 조건 명제의 ’부정’도 도출해보자.</li>
+<li>함수 극한의 엡실론-델타 정의를 통해 조건 명제의 의미를 연습해보자.</li>
 </ul>
 </section>
 <section id="조건-명제" class="level2">
 <h2 class="anchored" data-anchor-id="조건-명제">조건 명제</h2>
-<p>조건 명제는 수학에서 많이 사용된다. 물론 일상어에도 많이 활용된다. 그런데 가끔 살짝 어떤 대목이 뒤틀리며 혼란의 순간이 찾아오기도 한다. 대체로 이런 순간을 뭉개고 가지만, 이번에 한번 정리해보기로 했다.</p>
+<p>조건 명제는 잘 아는 듯싶지만, 내게는 가끔 혼란의 시간이 찾아오더라. 이 기회에 생각나는 대로 한번 정리해 보겠다.</p>
 </section>
 <section id="용어-정리" class="level2">
 <h2 class="anchored" data-anchor-id="용어-정리">용어 정리</h2>
 <ul>
-<li>명제: 참과 거짓을 가릴 수 있는 언술을 의미한다. 배중률에 따르면 명제는 참 혹은 거짓 둘 중에 하나만 될 수 있다. 둘 다 될 수 있거나 둘 다 아니거나의 상태는 없다고 가정한다.</li>
-<li>진리 집합: “모든 인간은 죽는다”와 같은 종류의 명제 조건이 붙지 않는다. 하지만 명제에 조건을 달아서 해당 조건을 충족하는 대상을 살피면 편리한 경우가 있다. 이를 명제의 조건이라고 하자. 이때 조건 명제의 조건을 충족하는 어떤 대상, 즉 조건을 참으로 만드는 대상을 모아 놓은 집합을 ’진리 집합’이라고 부른다.</li>
+<li>명제: 참과 거짓을 가릴 수 있는 언술을 의미한다. 배중률(law of excluded middle)에 따르면 명제는 참혹은 거짓 중 하나만 될 수 있다. 둘 모두가 참이거나 둘 모두 거짓인 상태는 없다고 가정한다.</li>
+<li>진리 집합: “모든 인간은 죽는다”와 같은 명제는 특별한 조건 없이 참과 거짓을 할당할 수 있다. 명제에서 주어와 술어를 분리하고 술어를 충족하는 일정한 대상을 살피면 편리할 수 있다. 이를 명제가 나타내고 싶은 어떤 조건을 술어(predicate)라고 부른다. 그리고 명제의 술어를 충족하는 어떤 대상, 즉 술어를 충족하는 주어를 모은 집합을 ’진리 집합’이라고 정의한다.</li>
 </ul>
-<p>명제를 진리 집합과 연결해 생각하면 편리한 경우가 있다. 명제의 여러가지 조작을 집합으로 바꿔 생각하면 조금 이해가 쉬워진다. 우리가 잘 알고 익숙한 ’벤 다이어그램’을 활용할 수 있기 때문에 더 쉽게 응용할 수 있다는 장점도 있다.</p>
+<p>명제를 진리 집합과 연결해 생각하면 편리할 때가 있다. 명제의 여러 가지 조작을 집합으로 바꿔 생각하면 익숙한 ’벤 다이어그램’을 활용할 수 있다.</p>
 </section>
 <section id="조건-명제conditional-proposition" class="level2">
 <h2 class="anchored" data-anchor-id="조건-명제conditional-proposition">조건 명제(conditional proposition)</h2>
-<p>’조건 명제’는 ’조건’과는 조금 다르다. 일상어의 감각과는 조금 다르니 유의해두도록 하자. 조건 명제란 우리가 흔히 “만일 <span class="math inline">\(p\)</span>이라면, <span class="math inline">\(q\)</span>가 성립한다”와 같이 표현하는 것이다. 몇 가지 표현을 알아보자.</p>
+<p>조건 명제는 “만일 <span class="math inline">\(p\)</span>이라면, <span class="math inline">\(q\)</span>가 성립한다”와 같이 표현한다. 동일한 의미를 지니는 표현을 몇 가지 더 알아보자.</p>
 <ul>
 <li><span class="math inline">\(p \implies q\)</span></li>
 <li>If <span class="math inline">\(p\)</span>, then <span class="math inline">\(q\)</span>.</li>
-<li><span class="math inline">\(p\)</span> implies <span class="math inline">\(q\)</span></li>
+<li><span class="math inline">\(p\)</span> implies <span class="math inline">\(q\)</span>.</li>
+<li><span class="math inline">\(p\)</span> is sufficient condition for <span class="math inline">\(q\)</span>.</li>
 </ul>
-<p>일단 이 관계는 형식 논리상의 관계이지 ‘인과’ 관계가 아니다. 즉, 형식 논리상 <span class="math inline">\(p\)</span>라는 명제와 <span class="math inline">\(q\)</span>라는 명제의 관계를 기계적으로 서술한다. 진리 집합이 존재한다면, <span class="math inline">\(p\)</span>의 진리집합 <span class="math inline">\(P\)</span>와 <span class="math inline">\(q\)</span>의 진리집합 <span class="math inline">\(Q\)</span>에 대해서 <span class="math inline">\(P \subset Q\)</span>가 성립한다는 의미로 이해할 수 있겠다.</p>
+<p>일단 이 관계는 형식 논리의 관계이지 ‘인과’ 관계가 아니다. 즉, 형식 논리상 <span class="math inline">\(p\)</span>라는 명제와 <span class="math inline">\(q\)</span>라는 명제의 관계를 기계적으로 서술한다. 진리 집합이 존재한다면, <span class="math inline">\(p\)</span>의 진리집합 <span class="math inline">\(P\)</span>와 <span class="math inline">\(q\)</span>의 진리집합 <span class="math inline">\(Q\)</span>에 대해서 <span class="math inline">\(P \subset Q\)</span>가 성립한다는 의미로 이해할 수 있겠다.</p>
 <p>조건 명제에는 숨은 ’함정’이 있다. <span class="math inline">\(p \implies q\)</span>는 진리집합으로 본다면 <span class="math inline">\(P\)</span>에 속하는 모든 원소는 <span class="math inline">\(Q\)</span>에 속해야 한다는 뜻이다. 즉, <span class="math inline">\(p\)</span>라는 명제를 만족하는 모든 경우에 대해서 <span class="math inline">\(q\)</span>가 만족해야 한다.</p>
 <section id="진리표" class="level3">
 <h3 class="anchored" data-anchor-id="진리표">진리표</h3>
@@ -237,20 +238,20 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="공진리" class="level3">
 <h3 class="anchored" data-anchor-id="공진리">공진리</h3>
-<p>아마도 ‘공진리(vacuous truth)’ 혹은 ’항진’의 문제가 거슬릴 것이다. 논리로 보면 조금 이상해보일 수 있지만 진리집합으로 보면 이해가 쉽다. <span class="math inline">\(p\)</span>가 F라는 것은 <span class="math inline">\(P=\emptyset\)</span>을 의미한다. 집합의 공리상 공집합은 모든 집합의 부분 집합이 될 수 있다.</p>
+<p>‘공진리(vacuous truth)’, ‘항진’ 혹은 ’공허 참’의 문제를 살펴보고 가자. 논리로는 이해가 쉽지 않을 수 있지만 진리집합으로 보면 상대적으로 이해가 쉽다. <span class="math inline">\(p\)</span>가 F라는 것은 <span class="math inline">\(P=\emptyset\)</span>을 의미한다. 집합의 공리에 따르면 공집합은 모든 집합의 부분 집합이다. 따라서 공허 참의 조건 명제는 언제나 참이다.</p>
 </section>
 <section id="조건-명제의-부정" class="level3">
 <h3 class="anchored" data-anchor-id="조건-명제의-부정">조건 명제의 부정</h3>
-<p>조건 명제의 ’부정’은 어떻게 될까? 조건 명제를 <span class="math inline">\(p \implies q\)</span>의 형태로 놓고 보면 부정 명제를 만들기 까다로울 수 있다. 대신 <span class="math inline">\(\neg p \lor q\)</span>의 부정 명제를 만들어보자. <span class="math inline">\(\neg(\neg p \lor q) = p \land \neg q\)</span>가 된다.</p>
+<p>조건 명제의 ’부정’은 어떻게 될까? 조건 명제를 <span class="math inline">\(p \implies q\)</span>의 형태로 놓고 부정 명제를 떠올리기는 쉽지 않다. 대신 <span class="math inline">\(\neg p \lor q\)</span>의 부정 명제를 만들어보자. <span class="math inline">\(\neg(\neg p \lor q) = p \land \neg q\)</span>가 된다.</p>
 <p>직관적으로 생각해보자. 배중률에 따르면 <span class="math inline">\(p \implies q\)</span>가 성립하지 않는 경우가 단 하나라도 존재하면 해당 부정형이 참이 된다. 즉, <span class="math inline">\(p\)</span>를 만족하는 경우 중에서 <span class="math inline">\(\neg q\)</span>를 만족하는 것이 존재하면 된다. 앞서 <span class="math inline">\(p \implies q\)</span>에서 <span class="math inline">\(p\)</span>가 <span class="math inline">\(\forall\)</span>의 전칭 한정기호를 달고 있다면, 조건 명제의 부정형에서 <span class="math inline">\(p\)</span>는 <span class="math inline">\(\exists\)</span>의 존재 한정기호 달고 있다. 진리 집합으로 서술하면 <span class="math inline">\(P \cap Q^C \neq \emptyset\)</span>이 성립하면 된다.</p>
 </section>
 </section>
 <section id="함수의-극한" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="함수의-극한">함수의 극한</h2>
-<p>’함수의 극한’의 정의에 관해서 살펴보자. 한번쯤 좌절해봤다는 엡실론-델타 정의는 다음과 같다. <span class="math inline">\(\lim_{x \to a} f(x) = L\)</span>의 정의는 다음과 같다.</p>
+<p>한번쯤 좌절해봤다는 함수 극한, <span class="math inline">\(\lim_{x \to a} f(x) = L\)</span>, 에 관한 엡실론-델타 논법은 다음과 같다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>엡실론-델타의 정식화는 대략 코시(Cauchy)로 거슬러 올라간다. 그는 <span class="math inline">\(\epsilon\)</span>을 error의 의미로 <span class="math inline">\(\delta\)</span>를 distance의 의미로 썼다고 한다. 즉, 목표가 되는 타겟 <span class="math inline">\(f(x)\)</span>의 ’오차’를 일정한 범위 이하로 줄이기 위해 필요한 <span class="math inline">\(a\)</span> 주변의 ’거리’로 느슨하게 외우면 괜찮을 듯 싶다.</p>
+<p>엡실론-델타 논법의 정식화는 대략 코시(Cauchy)로 거슬러 올라간다. 그는 <span class="math inline">\(\epsilon\)</span>을 error의 의미로 <span class="math inline">\(\delta\)</span>를 distance의 의미로 썼다고 한다. 즉, 목표가 되는 타겟 <span class="math inline">\(f(x)\)</span>의 ’오차’를 일정한 범위 이하로 줄이기 위해 필요한 <span class="math inline">\(a\)</span> 주변의 ’거리’로 느슨하게 외우면 괜찮을 듯 싶다.</p>
 </div></div><blockquote class="blockquote">
 <p>모든 <span class="math inline">\(\epsilon &gt; 0\)</span>에 대해서, 다음을 만족하는 <span class="math inline">\(\delta &gt; 0\)</span>가 존재한다; <span class="math inline">\(x \in \mathbb R\)</span>인 모든 <span class="math inline">\(x\)</span>에 대해서 <span class="math inline">\(0 &lt; |x - a| &lt; \delta\)</span> <span class="math inline">\(\implies\)</span> <span class="math inline">\(|f(x)-L| &lt; \epsilon\)</span>.</p>
 </blockquote>
@@ -262,52 +263,59 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p><span class="math inline">\((\forall \epsilon &gt;0)(\exists \delta &gt;0)(\forall x \in \mathbb R)(0 &lt; |x-a| &lt; \delta \implies |f(x) - L|&lt;\epsilon)\)</span></p>
 </blockquote>
+<blockquote class="blockquote">
+<p><span class="math inline">\((\forall \epsilon &gt;0)(\forall x \in \mathbb R)(\exists \delta: 0 &lt; |x-a| &lt; \delta \implies |f(x) - L|&lt;\epsilon)\)</span></p>
+</blockquote>
 <p>하나씩 끊어서 말로 살펴보자.</p>
 <ul>
 <li><span class="math inline">\(x=a\)</span> 주변으로 양쪽으로 <strong>어떤</strong> <span class="math inline">\(\delta\)</span> 크기의 구간을 잡는다.<br>
 </li>
 <li>해당 구간에 속하는 <strong>모든</strong> <span class="math inline">\(x\)</span>를 고려하자.</li>
 <li><span class="math inline">\(x \to a\)</span> 일 때 함수 <span class="math inline">\(f(x)\)</span>의 극한값을 <span class="math inline">\(L\)</span>이라고 하자.</li>
-<li><span class="math inline">\(\delta\)</span>를 조정해서 <span class="math inline">\(f(x)\)</span>와 <span class="math inline">\(L\)</span> 사이의 거리(<span class="math inline">\(|f(x)-L|\)</span>)가 <strong>모든</strong> <span class="math inline">\(\epsilon&gt;0\)</span>보다 작게 만들 수 있다.</li>
+<li><span class="math inline">\(\delta\)</span>를 조정해서 <span class="math inline">\(f(x)\)</span>와 <span class="math inline">\(L\)</span> 사이의 거리(<span class="math inline">\(|f(x)-L|\)</span>)가 <strong>모든</strong> <span class="math inline">\(\epsilon&gt;0\)</span>보다 작게 만들 수 있다. 즉, 조건을 만족하는 <span class="math inline">\(\delta\)</span>가 존재한다.</li>
 </ul>
 <section id="함수의-극한이-존재하지-않는-경우" class="level3">
 <h3 class="anchored" data-anchor-id="함수의-극한이-존재하지-않는-경우">함수의 극한이 존재하지 않는 경우</h3>
-<p>함수의 극한에 관한 정의의 ’부정형(negation)’을 정의해보자. 그리고 이 부정의 정의가 참이 되는 경우를 따져볼 것이다. 정의가 함축(implication, <span class="math inline">\(\implies\)</span>)의 형태를 취하고 있으므로 이 부정형을 만들 때 주의를 기울여야 한다.</p>
+<p>함수의 극한에 관한 정의의 ’부정형(negation)’을 정의해보자. 그리고 이 부정의 정의가 참이 되는 경우를 따져볼 것이다. 정의가 함축(implication, <span class="math inline">\(\implies\)</span>)의 형태를 취하고 있으므로 부정형을 만들 때 앞서 언급한 방식을 따르면 된다.</p>
 <p><span class="math inline">\(0 &lt; |x-a|&lt; \delta\)</span>을 만족하는 모든 <span class="math inline">\(\delta&gt;0\)</span>에 대해서 다음을 만족하는 어떤 <span class="math inline">\(\epsilon&gt;0\)</span>와 <span class="math inline">\(x \in \mathbb R\)</span>이 존재한다; <span class="math inline">\(|f(x) - L| \geq \epsilon\)</span>.</p>
 <p>역시 말로 구별해서 풀어보자.</p>
 <ul>
 <li><span class="math inline">\(a\)</span>의 <strong>모든</strong> 주변(<span class="math inline">\(\delta\)</span>의 크기)에 속한 <strong>어떤</strong> <span class="math inline">\(x\)</span>를 고려하자.</li>
-<li>가능한 모든 <span class="math inline">\(\delta\)</span>를 고려해도 <span class="math inline">\(|f(x)-L|\)</span> 값을 <strong>어떤</strong> <span class="math inline">\(\epsilon\)</span> 보다 낮게 줄일 수 없다.</li>
+<li><span class="math inline">\(|f(x)-L|\)</span> 값을 <strong>어떤</strong> <span class="math inline">\(\epsilon\)</span> 보다 낮게 줄일 수 없다.</li>
 </ul>
-<p>이 경우는 <span class="math inline">\(\lim_{x \to a}f(x)\)</span>는 존재하지 않는다. 주의 깊게 볼 지점이 있다. <span class="math inline">\(p \implies q\)</span>에서 <span class="math inline">\(P\)</span>의 모든 경우에 해당 조건 명제를 만족해야 한다. 따라서 이 형태는 암묵적으로 <span class="math inline">\(x\)</span>에 대해서 <span class="math inline">\(\forall\)</span>의 전칭 명제를 지닌다. 한편 조건 명제의 부정형의 경우 <span class="math inline">\(x\)</span>에 대해서 <span class="math inline">\(\forall\)</span>의 전칭 한정기호는 <span class="math inline">\(\exists\)</span>의 존재 한정기호가 된다.</p>
+<p>이 경우는 <span class="math inline">\(\lim_{x \to a}f(x)\)</span>는 존재하지 않는다.</p>
 </section>
 </section>
 <section id="진리-집합" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="진리-집합">진리 집합</h2>
-<p>복습을 겸해서 진리 집합으로 다시 따져보도록 하자. 진리 집합은 조건제시법(set builder notation)을 통해 표현한다.</p>
+<p>진리 집합으로 다시 따져보도록 하자. 진리 집합은 조건제시법(set builder notation)을 통해 표현한다.</p>
 <p><span class="math display">\[
 \begin{aligned}
-P &amp; = \{x: \exists\delta &gt; 0 \text{ s.t. } |x - a| &lt; \delta \} \\
-Q &amp; = \{x: \forall\epsilon &gt; 0 \text{ s.t. } |f(x) - L| &lt; \epsilon \}
+P &amp; = \{x|~\exists\delta &gt; 0:~|x - a| &lt; \delta \} \\
+Q &amp; = \{x \vert ~\forall\epsilon &gt; 0:~|f(x) - L| &lt; \epsilon \}
 \end{aligned}
 \]</span></p>
-<p>함수 극한의 정의는 진리 집합으로는 <span class="math inline">\(P \subset Q\)</span>를 의미한다. 이제 <span class="math inline">\(\neg q\)</span>, 즉 <span class="math inline">\(Q^C\)</span>를 보자.</p>
+<p>첫번째 진리 집합을 말로 풀어보자. <span class="math inline">\(|\)</span>이하의 조건을 만족하는 <span class="math inline">\(x\)</span>를 의미한다. <span class="math inline">\(\exists \delta\)</span> 조건이 있기 때문에 해당 <span class="math inline">\(x\)</span> 값은 <span class="math inline">\(\delta\)</span>에 의존하게 된다.함수 극한의 정의는 진리 집합으로는 <span class="math inline">\(P \subset Q\)</span>를 의미한다.</p>
+<p><span class="math inline">\(\neg q\)</span>, 즉 <span class="math inline">\(Q^C\)</span>도 정의해보자.</p>
 <p><span class="math display">\[
-Q^C = \{x: \exists\epsilon \text{ s.t. } |f(x) - L| \geq \epsilon \}
+Q^C = \{x|~\exists\epsilon&gt;0:~ |f(x) - L| \geq \epsilon \}
 \]</span></p>
-<p>여기서 <span class="math inline">\(Q^C\)</span>를 정의할 때 <span class="math inline">\(Q\)</span>의 전체 조건 <span class="math inline">\(\forall \epsilon\)</span>이 존재 조건 <span class="math inline">\(\exists \epsilon\)</span>으로 바뀌게 된다는 점을 눈여겨 보도록 하자. <span class="math inline">\(p \implies q\)</span>의 부정 명제는 <span class="math inline">\(p \land \neg q\)</span>가 된다. 진리집합으로 본다면 다음과 같다; <span class="math inline">\(P \cap Q^C\)</span>. 만일 이 집합이 공집합이 아니라면 정의상 함수의 극한은 존재하지 않는다. 술어로 푼다면, <span class="math inline">\(p\)</span>를 만족하면서 <span class="math inline">\(q\)</span>를 만족하지 않는 경우가 존재하면 된다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>조건제시법을 쓸 때 <span class="math inline">\(|\)</span>과 <span class="math inline">\(:\)</span>는 차이가 있을까? 별 차이가 없다는 게 중론인 듯 싶다. 영어로 옮기면 “such that(s.t.)”에 해당한다. 사례처럼 “s.t.”이 중복되면 번갈아서 써주면 어떨까 싶다.</p>
+</div></div><p>여기서 <span class="math inline">\(Q^C\)</span>를 정의할 때 <span class="math inline">\(Q\)</span>의 전체 조건 <span class="math inline">\(\forall \epsilon\)</span>이 존재 조건 <span class="math inline">\(\exists \epsilon\)</span>으로 바뀌게 된다는 점을 눈여겨 보도록 하자. <span class="math inline">\(p \implies q\)</span>의 부정 명제는 <span class="math inline">\(p \land \neg q\)</span>가 된다. 진리집합으로 본다면 다음과 같다; <span class="math inline">\(P \cap Q^C\)</span>. 만일 이 집합이 공집합이 아니라면 정의상 함수의 극한은 존재하지 않는다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><span class="math inline">\(p \implies q \equiv \neg p \lor q\)</span>이다. 따라서 <span class="math inline">\(\neg(\neg p \lor q)\)</span>가 부정 명제이다.</p>
 </div></div></section>
 <section id="그림으로" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="그림으로">그림으로</h2>
-<p>배경을 이루는 여러가지 조건을 생략하고 <span class="math inline">\(x \in \mathbb R\)</span>에서 정의되는 <span class="math inline">\(f(x)\)</span>를 통해서 위 경우를 그림을 통해 살펴보기로 하자.</p>
+<p>여러가지 상세한 조건을 과감히 생략하고 <span class="math inline">\(x \in \mathbb R\)</span>에서 정의되는 <span class="math inline">\(f(x)\)</span>의 그림을 통해 함수 극한을 살펴보기로 하자.</p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 42.9%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/limf_1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="f(x)가 존재하는 경우"><img src="images/limf_1.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/limf_1.jpg" class="lightbox" title="f(x)가 존재하는 경우" data-gallery="quarto-lightbox-gallery-1"><img src="images/limf_1.jpg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption"><span class="math inline">\(f(x)\)</span>가 존재하는 경우</figcaption>
 </figure>
 </div>
@@ -316,7 +324,7 @@ Q^C = \{x: \exists\epsilon \text{ s.t. } |f(x) - L| \geq \epsilon \}
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 42.9%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/limf_2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="f(x)가 존재하지 않는 경우"><img src="images/limf_2.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/limf_2.jpg" class="lightbox" title="f(x)가 존재하지 않는 경우" data-gallery="quarto-lightbox-gallery-2"><img src="images/limf_2.jpg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption"><span class="math inline">\(f(x)\)</span>가 존재하지 않는 경우</figcaption>
 </figure>
 </div>
@@ -327,19 +335,19 @@ Q^C = \{x: \exists\epsilon \text{ s.t. } |f(x) - L| \geq \epsilon \}
 <p>그림이 정확하지는 않지만 이해하는 데 도움이 되지 않을까 싶어 소개한다. 아래 “[ ]”에 있는 그림은 <span class="math inline">\(y\)</span>축을 옆으로 눕혀 확대해서 그린 것이다. <span class="math inline">\(f(x)\)</span>가 존재하는 왼쪽의 경우 <span class="math inline">\(L\)</span> 주변에서 임의의 <span class="math inline">\(\epsilon\)</span>을 잡더라도 <span class="math inline">\(\delta\)</span>를 더 작게 설정함으로써 <span class="math inline">\(|f(x)-L| &lt; \epsilon\)</span> for <span class="math inline">\(x \in (f(a-\delta), f(a+\delta))\)</span>를 만족한다. 오른쪽의 경우를 보자. <span class="math inline">\(x=a\)</span>에서 <span class="math inline">\(f(x)\)</span>의 점프가 있다. 따라서 해당 구간에 적당한 크기의 <span class="math inline">\(\epsilon\)</span>을 설정하면 <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span> for <span class="math inline">\(x=a\)</span>가 모든 <span class="math inline">\(\delta\)</span>에 대해서 성립한다.</p>
 </div></div><section id="함수의-극한이-존재하는-경우" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="함수의-극한이-존재하는-경우">함수의 극한이 존재하는 경우</h3>
-<p><span class="math inline">\(\lim_{x \to a} f(x)\)</span>가 존재하는 경우를 살펴보자. 문장으로는 이상하지만 이렇게 풀어 놓고 써보자. 모든 <span class="math inline">\(x\)</span>에 대해서 만족한다는 것은 극한을 정의하기 위한 전제 조건이다.</p>
+<p><span class="math inline">\(\lim_{x \to a} f(x)\)</span>가 존재하는 경우를 살펴보자. 문장으로는 이상하지만 이렇게 풀어 놓고 써보자.</p>
 <ul>
-<li><span class="math inline">\(p\)</span>: 다음의 조건을 만족하는 어떤 <span class="math inline">\(\delta\)</span>가 존재한다; <span class="math inline">\(|x - a| &lt; \delta\)</span></li>
-<li><span class="math inline">\(q\)</span>: 모든 <span class="math inline">\(\epsilon\)</span>에 대해서 다음 조건을 만족한다; <span class="math inline">\(|f(x) - L| &lt; \epsilon\)</span></li>
+<li><span class="math inline">\(p\)</span>: 다음의 조건을 만족하는 어떤 <span class="math inline">\(\delta&gt;0\)</span>가 존재한다; <span class="math inline">\(|x - a| &lt; \delta\)</span></li>
+<li><span class="math inline">\(q\)</span>: 모든 <span class="math inline">\(\epsilon&gt;0\)</span>, 모든 <span class="math inline">\(x \in \mathbb R\)</span>에 대해서 다음 조건을 만족한다; <span class="math inline">\(|f(x) - L| &lt; \epsilon\)</span></li>
 </ul>
-<p>그림에서 보듯이 임의의 양의 <span class="math inline">\(\epsilon\)</span>이 주어져 있을 때 <span class="math inline">\(\delta\)</span>를 충분히 작게 택하여 <span class="math inline">\(f(x)\)</span>와 <span class="math inline">\(L\)</span>의 거리를 충분히 작게 만들 수 있다면, 함수의 극한값이 존재한다.</p>
+<p>그림에서 보듯이 어떤 크기의 <span class="math inline">\(\epsilon\)</span>가 주어진다고 해도 <span class="math inline">\(\delta\)</span>를 필요한 만큼 작게 택하여 <span class="math inline">\(f(x)\)</span>와 <span class="math inline">\(L\)</span>의 거리를 충분히 좁힐 수 있을 때, 함수의 극한값이 존재한다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>다소 동어반복이 될지는 모르겠지만 극한이 존재하지 않는 경우에 넣어서 따져보면 이해에 도움이 된다. 진리집합 <span class="math inline">\(Q^C\)</span> 즉 <span class="math inline">\(|f(x) - L| \geq \epsilon\)</span>를 만족하는 <span class="math inline">\(\epsilon\)</span>와 <span class="math inline">\(x\)</span>가 존재한다고 하자. <span class="math inline">\(x\)</span>를 <span class="math inline">\(a\)</span>에 충분히 붙이게 되면, 즉 <span class="math inline">\(\delta\)</span>를 충분히 작게 잡으면, 이 조건을 만족하는 <span class="math inline">\(\epsilon\)</span>은 존재하지 않는다. 즉, <span class="math inline">\(P \cap Q^C = \emptyset\)</span>이다.</p>
 </div></div></section>
 <section id="함수의-극한이-존재하지-않는-경우-1" class="level3">
 <h3 class="anchored" data-anchor-id="함수의-극한이-존재하지-않는-경우-1">함수의 극한이 존재하지 않는 경우</h3>
-<p><span class="math inline">\(L\)</span>이 <span class="math inline">\((f(a-\delta), f(a+\delta))\)</span> 사이 어딘가에 존재한다고 하자. 이때 <span class="math inline">\(|L-f(a-\delta)|\)</span>과 <span class="math inline">\(|L-f(a+\delta)|\)</span> 중 작은 값보다 아주 작은 어떤 값을 <span class="math inline">\(\epsilon\)</span>이라고 하자. 이때 <span class="math inline">\(|x-a|&lt;\delta\)</span>를 만족하는 모든 <span class="math inline">\(x\)</span>에 대해서 <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span>이 성립한다. 즉, <span class="math inline">\(P \cap Q^C \neq \emptyset\)</span>.</p>
+<p><span class="math inline">\(L\)</span>이 <span class="math inline">\((f(a-\delta), f(a+\delta))\)</span> 사이 어딘가에 존재한다고 하자. 이때 <span class="math inline">\(|L-f(a-\delta)|\)</span>과 <span class="math inline">\(|L-f(a+\delta)|\)</span> 중 작은 값보다 아주 작은 어떤 값을 <span class="math inline">\(\epsilon\)</span>이라고 두자. 이때 <span class="math inline">\(|x-a|&lt;\delta\)</span>를 만족하는 모든 <span class="math inline">\(x\)</span>에 대해서 <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span>이 성립한다. 즉, <span class="math inline">\(P \cap Q^C \neq \emptyset\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="images/limf_3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/limf_3.jpg" class="img-fluid figure-img" style="width:70.0%"></a></p>
@@ -347,7 +355,7 @@ Q^C = \{x: \exists\epsilon \text{ s.t. } |f(x) - L| \geq \epsilon \}
 </div>
 <p>그림의 상황을 명제로 표현해보자.</p>
 <p><span class="math inline">\((\exists \epsilon)(\exists x)(\forall\delta&gt;0)\)</span> s.t. <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span> for <span class="math inline">\(x \in (x-\delta, x+\delta)\)</span>.</p>
-<p><span class="math inline">\(f(x)\)</span>는 <span class="math inline">\(x=a\)</span> 주변에서 끊어져 있고, 이 간격과 <span class="math inline">\(L\)</span>의 위치를 고려해서 모든 <span class="math inline">\(\delta\)</span>와 <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span>를 만족하는 <span class="math inline">\(\epsilon&gt;0\)</span>을 찾을 수 있다. 위 그림에서 보듯이 <span class="math inline">\(\delta\)</span>를 아무리 작게 설정해도 <span class="math inline">\(x=a\)</span>에서 존재하는 <span class="math inline">\(f(x)\)</span>의 간격을 줄일 수는 없다. 즉, <span class="math inline">\(\lim_{x \to a} f(x)\)</span>는 존재하지 않는다.</p>
+<p><span class="math inline">\(f(x)\)</span>는 <span class="math inline">\(x=a\)</span> 주변에서 끊어져 있고, 이 간격과 <span class="math inline">\(L\)</span>의 위치를 고려해서 모든 <span class="math inline">\(\delta\)</span>와 <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span>를 만족하는 <span class="math inline">\(\epsilon&gt;0\)</span>와 <span class="math inline">\(x\)</span>를 찾을 수 있다. 위 그림에서 보듯이 <span class="math inline">\(\delta\)</span>를 아무리 작게 설정해도 <span class="math inline">\(x=a\)</span>에서 존재하는 <span class="math inline">\(f(x)\)</span>의 간격을 줄일 수는 없다. 즉, <span class="math inline">\(\lim_{x \to a} f(x)\)</span>는 존재하지 않는다.</p>
 
 
 </section>
@@ -703,7 +711,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":true,"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});</script>
 
 
 
