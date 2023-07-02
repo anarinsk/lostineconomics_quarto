@@ -193,14 +193,14 @@ ul.task-list li input[type="checkbox"] {
 <p>고등학교에서 함수를 배울 때 왜 “전사 함수”, “단사 함수” 구별이 필요하지라는 의문을 가져 본 적이 있다. 이러한 분류가 카디널 수를 따질 결정적일 수 있다는 것은 뒤늦은 깨달음이리라…</p>
 </div></div><div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/four-functions.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="카디널 수에 따른 함수의 구분"><img src="images/four-functions.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<p><a href="images/four-functions.png" class="lightbox" title="카디널 수에 따른 함수의 구분" data-gallery="quarto-lightbox-gallery-1"><img src="images/four-functions.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
 <figcaption class="figure-caption">카디널 수에 따른 함수의 구분</figcaption>
 </figure>
 </div>
-<p>단사 함수의 경우 <span class="math inline">\(x\)</span>가 <span class="math inline">\(f(x)\)</span> 크지 않아야 존재할 수 있다. 전사함수의 경우 반대로 <span class="math inline">\(f(x)\)</span>가 <span class="math inline">\(x\)</span>보다 크지 않아야 한다. 즉,</p>
+<p>단사 함수의 경우 <span class="math inline">\(x\)</span>가 <span class="math inline">\(f(x)\)</span> 크지 않아야 존재할 수 있다. 전사함수의 경우 반대로 <span class="math inline">\(f(x)\)</span>가 <span class="math inline">\(x\)</span>보다 크지 않아야 한다. 즉, 카디널 수의 입장에서 각각의 함수가 될 필요 조건은 아래와 같다.</p>
 <ul>
-<li>단사 함수: <span class="math inline">\(|x| \leq |f(x)|\)</span></li>
 <li>전사 함수: <span class="math inline">\(|x| \geq |f(x)|\)</span></li>
+<li>단사 함수: <span class="math inline">\(|x| \leq |f(x)|\)</span></li>
 <li>전단사 함수: <span class="math inline">\(|x| = |f(x)|\)</span></li>
 </ul>
 </section>
@@ -221,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="part-2-1" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="part-2-1">Part 2-1</h3>
 <p><span class="math inline">\(|A| \neq |\mathcal P (A)|\)</span></p>
-<p>이는 귀류법을 활용한다. 만일 등호를 만족하는 함수, 즉 전단사함수 존재한다고 하자. 여기 속하는 함수 <span class="math inline">\(f: A \to \mathcal P(A)\)</span>가 전사함수(surjective function)가 된다. 이제 다음과 같은 집합 <span class="math inline">\(B\)</span>를 빚어보자.</p>
+<p>증명은 귀류법을 활용한다. 만일 등호를 만족하는 함수, 즉 전단사 함수가 존재한다고 하자. 여기 속하는 함수 <span class="math inline">\(f: A \to \mathcal P(A)\)</span>는 전사 함수다. 이제 다음과 같은 집합 <span class="math inline">\(B\)</span>를 빚어보자.</p>
 <p><span class="math display">\[
 B = \{ x \in A| x \notin f(x) \}
 \]</span></p>
@@ -597,7 +597,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":true,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":true});</script>
 
 
 
