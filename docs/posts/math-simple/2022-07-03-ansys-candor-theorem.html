@@ -255,12 +255,15 @@ B = \{ x \in A| x \notin f(x) \}
 </section>
 <section id="simple-but-beautiful" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="simple-but-beautiful">Simple but Beautiful</h2>
-<p>이 정리 참 아름답다. ‘전사 함수’ <span class="math inline">\(f(X)\)</span>에 짝지워진 치역에 존재하는 어떤 원소를 폭탄 삼아 잘못된 전제에서 출발한 명제를 폭파시키는 방식의 절묘한 논법이다. 자세히 보면 이 정리는 러셀의 역설과 꽤 닮았다. 러셀이 칸토어의 해당 정리를 먼저 봤다고 하니, 레셀의 아이디어가 칸토어에서 왔다고 볼 수도 있을 듯 싶다.</p>
+<p>이 정리 참 아름답다. ‘전사 함수’ <span class="math inline">\(f(X)\)</span>에 짝지워진 치역에 존재하는 어떤 원소를 폭탄 삼아 잘못된 전제에서 출발한 명제를 폭파시키는 방식의 절묘한 논법이다. 자세히 보면 이 정리는 러셀의 역설과 꽤 닮았다. 러셀이 칸토어의 해당 정리를 먼저 봤다고 하니, 레셀의 아이디어가 칸토어에서 왔다고 볼 수도 있을 듯 싶다. 러셀의 역설이 칸토어의 소박한 집합론에 일격을 날린 것을 생각하면 조금 아이러니한 대목이다.</p>
+<p>소박한 집합론(naive set theory)은 일정한 서술적 특성을 바탕으로 집합을 (쉽게) 정의할 수 있다고 보았다. 러셀의 역설은 이러한 공리에 구멍이 있음을 보여준다. 다소 말장난 같지만 생각해볼 대목이 있다. 직관적으로 생각해보자. 자신을 포함해 모든 것들의 ’집합’이 가능할까? 가능하다고 가정해보자. 이 집합에는 그 자신이 포함될 것이다. <span class="math inline">\(x \in x\)</span>가 된다. 이제 <span class="math inline">\(R = \{ x: x \notin x \}\)</span>라고 하자. 이 집합 역시 일정한 서술적 특성에 기반하고 있으므로 소박한 집합론에 따르면 집합이 될 수 있어야 한다. 이렇게 함정이 완성된다.</p>
+<p>이제 <span class="math inline">\(R \in R\)</span>을 만족한다고 하자. 그런데 <span class="math inline">\(R\)</span>의 정의상 <span class="math inline">\(R \notin R\)</span>이어야 한다. 따라서 모순이다. 만일 <span class="math inline">\(R \notin R\)</span>이라고 하자. <span class="math inline">\(R\)</span>의 정의상 <span class="math inline">\(R \in R\)</span>이어야 한다. 따라서 모순이다. 소박한 집합론의 주장과 달리 집합으로 정의될 수 없는 특징 혹은 대상이 존재함을 러셀의 역설이 보여준 셈이다.</p>
+<p>조금 말로 풀어보자. ‘모든’ 것을 포함하는 집합이 존재한다면, 그 자신을 포함하지 않는 집합을 정의할 때 문제가 생긴다. 러셀의 역설의 사례로 많이 언급되는 경우들이 거의 이런 ’재귀적’인 특징을 지니고 있다. 마을에 존재하는 유일한 이발사 갑은 스스로 이발을 하지 않는 모든 사람을 이발하는 사람이다. 그렇다면 이발사 갑은 자신을 이발할 수 있는가? 할 수 없다. 그는 스스로 이발을 하지 않는 모든 사람을 이발하기 때문이다. 그렇다면 남에게 이발을 부탁할 수 있는가? 그럴 수도 없다. 스스로 이발을 하지 않는 모든 사람을 이발해야 하기 때문이다.</p>
 
 
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p><a href="https://plato.stanford.edu/entries/russell-paradox/">여기</a>를 참고하자. 소박한 집합론(naive set theory)은 특정한 특성을 바탕으로 집합을 정의할 수 있다고 보았다. 하지만 이러한 공리에 구멍이 있음을 러셀이 발견했다. 즉, <span class="math inline">\(\phi(x)\)</span>라는 특성은 <span class="math inline">\(x \in x\)</span>라고 하자. <span class="math inline">\(\phi(x)\)</span>는 집합 자체가 그 자신의 원소가 된다. 이제 <span class="math inline">\(R = \{ x: \neg \phi(x) \}\)</span>라고 하자. 이제 <span class="math inline">\(R \in R\)</span>을 만족한다고 하자. <span class="math inline">\(R\)</span>의 정의상 <span class="math inline">\(R \notin R\)</span>이어야 한다. 따라서 모순이다. 만일 <span class="math inline">\(R \notin R\)</span>이라고 하자. <span class="math inline">\(R\)</span>의 정의상 <span class="math inline">\(R \in R\)</span>이어야 한다. 따라서 모순이다.</p>
+<p>보다 상세한 내용은 <a href="https://plato.stanford.edu/entries/russell-paradox/">여기</a>를 참고하자.</p>
 </div></div></section>
 
 </main> <!-- /main -->
@@ -613,7 +616,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":true,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":true});</script>
 
 
 
