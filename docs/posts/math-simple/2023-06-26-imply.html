@@ -184,8 +184,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="용어-정리" class="level2">
 <h2 class="anchored" data-anchor-id="용어-정리">용어 정리</h2>
 <ul>
-<li>명제: 참과 거짓을 가릴 수 있는 언술을 의미한다. 배중률(law of excluded middle)에 따르면 명제는 참혹은 거짓 중 하나만 될 수 있다. 둘 모두가 참이거나 둘 모두 거짓인 상태는 없다고 가정한다.</li>
-<li>진리 집합: “모든 인간은 죽는다”와 같은 명제는 특별한 조건 없이 참과 거짓을 할당할 수 있다. 명제에서 주어와 술어를 분리하고 술어를 충족하는 일정한 대상을 살피면 편리할 수 있다. 이를 명제가 나타내고 싶은 어떤 조건을 술어(predicate)라고 부른다. 그리고 명제의 술어를 충족하는 어떤 대상, 즉 술어를 충족하는 주어를 모은 집합을 ’진리 집합’이라고 정의한다.</li>
+<li>명제: 참과 거짓을 가릴 수 있는 언술을 의미한다. 배중률(law of excluded middle)에 따르면 명제는 참 혹은 거짓 중 하나만 될 수 있다. 둘 모두가 참이거나 둘 모두 거짓인 상태는 없다고 가정한다.</li>
+<li>진리 집합: “모든 인간은 죽는다”와 같은 명제는 특별한 조건 없이 참과 거짓을 할당할 수 있다. 명제에서 주어와 술어를 분리하고 술어를 충족하는 일정한 대상을 살피면 편리할 수 있다. 명제가 나타내고 싶은 어떤 조건을 술어(predicate)라고 부른다. 그리고 명제의 술어를 충족하는 어떤 대상, 즉 술어를 충족하는 주어를 모은 집합을 ’진리 집합’이라고 정의한다.</li>
 </ul>
 <p>명제를 진리 집합과 연결해 생각하면 편리할 때가 있다. 명제의 여러 가지 조작을 집합으로 바꿔 생각하면 익숙한 ’벤 다이어그램’을 활용할 수 있다.</p>
 </section>
@@ -345,17 +345,33 @@ Q^C = \{x|~\exists\epsilon&gt;0:~ |f(x) - L| \geq \epsilon \}
 <div class="no-row-height column-margin column-container"><div class="">
 <p>다소 동어반복이 될지는 모르겠지만 극한이 존재하지 않는 경우에 넣어서 따져보면 이해에 도움이 된다. 진리집합 <span class="math inline">\(Q^C\)</span> 즉 <span class="math inline">\(|f(x) - L| \geq \epsilon\)</span>를 만족하는 <span class="math inline">\(\epsilon\)</span>와 <span class="math inline">\(x\)</span>가 존재한다고 하자. <span class="math inline">\(x\)</span>를 <span class="math inline">\(a\)</span>에 충분히 붙이게 되면, 즉 <span class="math inline">\(\delta\)</span>를 충분히 작게 잡으면, 이 조건을 만족하는 <span class="math inline">\(\epsilon\)</span>은 존재하지 않는다. 즉, <span class="math inline">\(P \cap Q^C = \emptyset\)</span>이다.</p>
 </div></div></section>
-<section id="함수의-극한이-존재하지-않는-경우-1" class="level3">
+<section id="함수의-극한이-존재하지-않는-경우-1" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="함수의-극한이-존재하지-않는-경우-1">함수의 극한이 존재하지 않는 경우</h3>
-<p><span class="math inline">\(L\)</span>이 <span class="math inline">\((f(a-\delta), f(a+\delta))\)</span> 사이 어딘가에 존재한다고 하자. 이때 <span class="math inline">\(|L-f(a-\delta)|\)</span>과 <span class="math inline">\(|L-f(a+\delta)|\)</span> 중 작은 값보다 아주 작은 어떤 값을 <span class="math inline">\(\epsilon\)</span>이라고 두자. 이때 <span class="math inline">\(|x-a|&lt;\delta\)</span>를 만족하는 모든 <span class="math inline">\(x\)</span>에 대해서 <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span>이 성립한다. 즉, <span class="math inline">\(P \cap Q^C \neq \emptyset\)</span>.</p>
-<div class="quarto-figure quarto-figure-center">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 42.9%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/limf_3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/limf_3.jpg" class="img-fluid figure-img" style="width:70.0%"></a></p>
+<p><a href="images/limf_4.jpg" class="lightbox" title="f(x)가 존재하는 않는 경우" data-gallery="quarto-lightbox-gallery-3"><img src="images/limf_4.jpg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption"><span class="math inline">\(f(x)\)</span>가 존재하는 않는 경우</figcaption>
 </figure>
 </div>
-<p>그림의 상황을 명제로 표현해보자.</p>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 42.9%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/limf_5.jpg" class="lightbox" title="f(x)가 존재하는 경우" data-gallery="quarto-lightbox-gallery-4"><img src="images/limf_5.jpg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption"><span class="math inline">\(f(x)\)</span>가 존재하는 경우</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><span class="math inline">\(L\)</span>이 <span class="math inline">\((f(a-\delta), f(a+\delta))\)</span> 사이 어딘가에 존재한다고 하자. 이때 <span class="math inline">\(|L-f(a-\delta)|\)</span>(그림의 *)과 <span class="math inline">\(|L-f(a+\delta)|\)</span>(그림의 **) 중 작은 값보다 아주 작은 어떤 값을 <span class="math inline">\(\epsilon\)</span>이라고 두자. 이때 <span class="math inline">\(|x-a|&lt;\delta\)</span>를 만족하는 모든 <span class="math inline">\(\delta에 대해서\)</span> <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span>을 만족하는 <span class="math inline">\(x\)</span>를 찾을 수 있다. 즉, <span class="math inline">\(P \cap Q^C \neq \emptyset\)</span>. 이 상황을 명제로 표현하면 아래와 같다.</p>
 <p><span class="math inline">\((\exists \epsilon)(\exists x)(\forall\delta&gt;0)\)</span> s.t. <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span> for <span class="math inline">\(x \in (x-\delta, x+\delta)\)</span>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p><span class="math inline">\(f(x)\)</span>는 <span class="math inline">\(x=a\)</span> 주변에서 끊어져 있고, 이 간격과 <span class="math inline">\(L\)</span>의 위치를 고려해서 모든 <span class="math inline">\(\delta\)</span>와 <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span>를 만족하는 <span class="math inline">\(\epsilon&gt;0\)</span>와 <span class="math inline">\(x\)</span>를 찾을 수 있다. 위 그림에서 보듯이 <span class="math inline">\(\delta\)</span>를 아무리 작게 설정해도 <span class="math inline">\(x=a\)</span>에서 존재하는 <span class="math inline">\(f(x)\)</span>의 간격을 줄일 수는 없다. 즉, <span class="math inline">\(\lim_{x \to a} f(x)\)</span>는 존재하지 않는다.</p>
+</div></div><p>연습 삼아서 연속인 경우의 그림도 살펴보자. 위의 그림에서 보듯이 모든 <span class="math inline">\(\delta\)</span>에 대해서 성립해야 하므로 어떤 <span class="math inline">\(\epsilon\)</span>이나 <span class="math inline">\(x\)</span>를 잡더라도 <span class="math inline">\(\delta\)</span>를 좁히면 <span class="math inline">\(|f(x)-L| \geq \epsilon\)</span>의 조건을 깰 수 있다.</p>
 
 
 </section>
@@ -711,7 +727,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":true,"descPosition":"bottom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});</script>
 
 
 
