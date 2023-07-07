@@ -173,11 +173,10 @@ $\lim_{x \to a} f(x)$가 존재하는 경우를 살펴보자. 문장으로는 �
 
 $L$이 $(f(a-\delta), f(a+\delta))$ 사이 어딘가에 존재한다고 하자. 이때  $|L-f(a-\delta)|$(그림의 *)과 $|L-f(a+\delta)|$(그림의 **) 중 작은 값보다 아주 작은 어떤 값을 $\epsilon$이라고 두자. 이때 $|x-a|<\delta$를 만족하는 모든 $\delta$에 대해서 $|f(x)-L| \geq \epsilon$을 만족하는 $x$를 찾을 수 있다. 즉, $P \cap Q^C \neq \emptyset$. 이 상황을 명제로 표현하면 아래와 같다.  
 
-$(\exists \epsilon)(\exists x)(\forall\delta>0)$ s.t. $|f(x)-L| \geq \epsilon$ for $x \in (x-\delta, x+\delta)$.
+$(\exists \epsilon)(\exists x)(\forall\delta>0)$ s.t. $|f(x)-L| \geq \epsilon$ for $x \in (a-\delta, a+\delta)$.
 
 :::{.column-margin}
 $f(x)$는 $x=a$ 주변에서 끊어져 있고, 이 간격과 $L$의 위치를 고려해서 모든 $\delta$와 $|f(x)-L| \geq \epsilon$를 만족하는 $\epsilon>0$와 $x$를 찾을 수 있다. 위 그림에서 보듯이 $\delta$를 아무리 작게 설정해도 $x=a$에서 존재하는 $f(x)$의 간격을 줄일 수는 없다. 즉, $\lim_{x \to a} f(x)$는 존재하지 않는다. 
 :::
 
-연습 삼아서 연속인 경우의 그림도 살펴보자. 위의 그림에서 보듯이 모든 $\delta$에 대해서 성립해야 하므로 어떤 $\epsilon$이나 $x$를 잡더라도 $\delta$를 좁히면 $|f(x)-L| \geq \epsilon$의 조건을 깰 수 있다. 
-
+연습 삼아서 $a$에서 $f(x)$의 극한값이 존재하는 경우도 살펴보자. 위의 그림에서 보듯이 모든 $\delta$에 대해서 성립해야 하므로 어떤 $\epsilon$이나 $x$를 잡더라도 $\delta$를 좁히면 $|f(x)-L| \geq \epsilon$의 조건을 깰 수 있다. 
