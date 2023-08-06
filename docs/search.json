@@ -2629,7 +2629,11 @@
     "href": "posts/computer-tool/2023-05-29-rye.html#프로젝트-개시-및-패키지-설치",
     "title": "RYE",
     "section": "프로젝트 개시 및 패키지 설치",
+<<<<<<< Updated upstream
     "text": "프로젝트 개시 및 패키지 설치\n프로젝트를 생성할 상위 폴더에서 아래와 같이 생성 명령어를 실행한다.\n&gt; rye init {프로젝트-이름}\n만일 이미 폴더가 만들어져 있다면 해당 폴더 안에서 rye init을 실행하면 된다. 이제 프로젝트의 폴더에 들어가서 설치하려는 패키지를 add하고 sync로 이를 설치한다. ipykernel 패키지는 VS Code 등에서 .ipynb 파일을 불러와 작업하고자 할 때 필요한 패키지다. ipykernel과 pandas를 아래와 같이 설치해보자.\n&gt; rye add ipykernel pandas \n&gt; rye sync \n가상 환경의 개별 설정은 project.toml 파일을 통해서 관리된다. 버전 관리 등의 자세한 내용은 공식 문서를 참고하자.\n\n패키지 의존성 관리\n패키지 의존성 관리의 좋은 예를 소개한다. pytorch의 cuda 버전이 필요하다고 가정하자. Rye의 디폴트 패키지 리포에는 해당 버전이 없다. 따라서 해당 whl을 끌고 오기 위해서는 별도의 저장소를 저장해줘야 한다. 파이토치 홈페이지에 따르면 cuda 버전의 설치 방법은 다음과 같다.\npip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118\n--index-url https://download.pytorch.org/whl/cu118에 해당하는 부분을 Rye에서 별도로 설정할 수 있다. 자세한 내용은 여기를 확인하도록 하자."
+=======
+    "text": "프로젝트 개시 및 패키지 설치\n프로젝트를 생성할 상위 폴더에서 아래와 같이 생성 명령어를 실행한다.\n&gt; rye init {프로젝트-이름}\n만일 이미 폴더가 만들어져 있다면 해당 폴더 안에서 rye init을 실행하면 된다. 이제 프로젝트의 폴더에 들어가서 설치하려는 패키지를 add하고 sync로 이를 설치한다. ipykernel 패키지는 VS Code 등에서 .ipynb 파일을 불러와 작업하고자 할 때 필요한 패키지다. 이 패키지를 깔지 않으면 ipynb 파일 작업시 커널이 선택되지 않는다.\nipykernel과 pandas를 아래와 같이 설치해보자.\n&gt; rye add ipykernel pandas \n&gt; rye sync \n가상 환경의 개별 설정은 pyproject.toml 파일을 통해서 관리된다. 버전 관리 등의 자세한 내용은 공식 문서를 참고하자.\n\n\n패키지 의존성 관리의 좋은 예를 소개한다. pytorch의 cuda 버전이 필요하다고 가정하자. Rye의 디폴트 패키지 리포에는 해당 버전이 없다. 따라서 해당 whl을 끌고 오기 위해서는 별도의 저장소를 저장해줘야 한다. 파이토치 홈페이지에 따르면 cuda 버전의 설치 방법은 다음과 같다.\npip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117\n--index-url https://download.pytorch.org/whl/cu117에 해당하는 부분을 Rye에서 별도로 설정할 수 있다. 자세한 내용은 여기를 확인하도록 하자."
+>>>>>>> Stashed changes
   },
   {
     "objectID": "posts/computer-tool/2023-05-29-rye.html#vs-code와-작업하기",
@@ -2756,5 +2760,12 @@
     "title": "Cantor’s Theorem",
     "section": "Simple but Beautiful",
     "text": "Simple but Beautiful\n이 정리 참 아름답다. ‘전사 함수’ \\(f(X)\\)에 짝지워진 치역에 존재하는 어떤 원소를 폭탄 삼아 잘못된 전제에서 출발한 명제를 폭파시키는 방식의 절묘한 논법이다. 자세히 보면 이 정리는 러셀의 역설과 꽤 닮았다. 러셀이 칸토어의 해당 정리를 먼저 봤다고 하니, 레셀의 아이디어가 칸토어에서 왔다고 볼 수도 있을 듯 싶다. 러셀의 역설이 칸토어의 소박한 집합론에 일격을 날린 것을 생각하면 조금 아이러니한 대목이다.\n소박한 집합론(naive set theory)은 일정한 서술적 특성을 바탕으로 집합을 (쉽게) 정의할 수 있다고 보았다. 러셀의 역설은 이러한 공리에 구멍이 있음을 보여준다. 다소 말장난 같지만 생각해볼 대목이 있다. 직관적으로 생각해보자. 자신을 포함해 모든 것들의 ’집합’이 가능할까? 가능하다고 가정해보자. 이 집합에는 그 자신이 포함될 것이다. \\(x \\in x\\)가 된다. 이제 \\(R = \\{ x: x \\notin x \\}\\)라고 하자. 이 집합 역시 일정한 서술적 특성에 기반하고 있으므로 소박한 집합론에 따르면 집합이 될 수 있어야 한다. 이렇게 함정이 완성된다.\n이제 \\(R \\in R\\)을 만족한다고 하자. 그런데 \\(R\\)의 정의상 \\(R \\notin R\\)이어야 한다. 따라서 모순이다. 만일 \\(R \\notin R\\)이라고 하자. \\(R\\)의 정의상 \\(R \\in R\\)이어야 한다. 따라서 모순이다. 소박한 집합론의 주장과 달리 집합으로 정의될 수 없는 특징 혹은 대상이 존재함을 러셀의 역설이 보여준 셈이다.\n조금 말로 풀어보자. 모든 것을 포함하는 집합이 존재한다면, 그 자신을 포함하지 않는 집합을 정의할 때 문제가 생긴다. 러셀의 역설의 사례로 많이 언급되는 경우들이 거의 이런 재귀적인 특징을 지니고 있다. 마을에 존재하는 유일한 이발사 “갑”은 스스로 이발을 하지 않는 모든 사람을 이발하는 사람이다. 그렇다면 이발사 갑은 자신을 이발할 수 있는가? 할 수 없다. 그는 스스로 이발을 하지 않는 모든 사람을 이발하기 때문이다. 그렇다면 남에게 이발을 부탁할 수 있는가? 그럴 수도 없다. 스스로 이발을 하지 않는 모든 사람을 이발해야 하기 때문이다.\n\n\n\n\n보다 상세한 내용은 여기를 참고하자."
+  },
+  {
+    "objectID": "posts/computer-tool/2023-05-29-rye.html#in-short",
+    "href": "posts/computer-tool/2023-05-29-rye.html#in-short",
+    "title": "RYE",
+    "section": "In Short…",
+    "text": "In Short…\n\nrye init, rye add..., rye sync의 순으로 rye 설정\nVS Code에서 쓴다면, ipykernel 패키지를 rye 환경에 설치하도록 하자.\n프로젝트 폴더에서 code .을 통해 VS Code를 열거나, 아니면 이후 해당 폴더를 작업 폴더로 설정하자.\nkernel 선택 시 프로젝트 폴더 아래 깔린 .venv 환경을 선택한다."
   }
 ]

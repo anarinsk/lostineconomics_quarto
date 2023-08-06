@@ -67,15 +67,15 @@ Rye 앱 자체에 관한 업데이트와 삭제는 아래와 같다.
 
 가상 환경의 개별 설정은 `pyproject.toml` 파일을 통해서 관리된다. 버전 관리 등의 자세한 내용은 [공식 문서](https://rye-up.com/guide/pyproject/)를 참고하자. 
 
-### 패키지 의존성 관리
-
+:::{.column-margin}
 패키지 의존성 관리의 좋은 예를 소개한다. pytorch의 cuda 버전이 필요하다고 가정하자. Rye의 디폴트 패키지 리포에는 해당 버전이 없다. 따라서 해당 `whl`을 끌고 오기 위해서는 별도의 저장소를 저장해줘야 한다. 파이토치 홈페이지에 따르면 cuda 버전의 설치 방법은 다음과 같다. 
 
 ```shell
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
 ```
 
-`--index-url https://download.pytorch.org/whl/cu118`에 해당하는 부분을 Rye에서 별도로 설정할 수 있다. 자세한 내용은 [여기](https://github.com/anarinsk/test_pytorch-install#20230530-rye--vs-code)를 확인하도록 하자. 
+`--index-url https://download.pytorch.org/whl/cu117`에 해당하는 부분을 Rye에서 별도로 설정할 수 있다. 자세한 내용은 [여기](https://github.com/anarinsk/test_pytorch-install#20230530-rye--vs-code)를 확인하도록 하자. 
+:::
 
 ## VS Code에서 `.ipynb` 작업하기 
 
