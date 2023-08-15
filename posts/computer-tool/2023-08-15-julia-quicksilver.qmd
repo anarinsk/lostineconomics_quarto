@@ -133,7 +133,7 @@ Status `C:\프로젝트-폴더\Project.toml`
 
 ### 가져온 환경 활성화 
 
-가져온 환경을 어떻게 활성화하는지 간락하게 알아보자. 먼저 필요한 환경을 터미널에서 가져온다. 
+가져온 환경을 어떻게 활성화하는지 간락하게 알아보자. 먼저 필요한 환경을 가져온다. 
 
 ```bash
 shell> git clone https://github.com/JuliaLang/Example.jl.git
