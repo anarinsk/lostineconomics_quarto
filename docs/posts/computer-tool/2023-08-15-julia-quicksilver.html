@@ -283,6 +283,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><a href="https://pkgdocs.julialang.org/v1/toml-files/" class="uri">https://pkgdocs.julialang.org/v1/toml-files/</a></p>
 <p>내가 생성한 환경 뿐 아니라 다른 사람이 만들어둔 환경을 가져와서 해당 환경과 동일한 환경을 구축할 수 있다. 상세한 내용은 아래 링크를 참고하자. 특히 다른 실행 환경을 가져와 그대로 재현할 수 있는 대목은 Julia 가상 환경의 큰 장점 중 하나이다.</p>
 <p><a href="https://pkgdocs.julialang.org/v1/environments/" class="uri">https://pkgdocs.julialang.org/v1/environments/</a></p>
+</section>
+<section id="가져온-환경-활성화" class="level3">
+<h3 class="anchored" data-anchor-id="가져온-환경-활성화">가져온 환경 활성화</h3>
+<p>가져온 환경을 어떻게 활성화하는지 간락하게 알아보자. 먼저 필요한 환경을 터미널에서 가져온다.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">shell</span><span class="op">&gt;</span> git clone https://github.com/JuliaLang/Example.jl.git</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Cloning</span> into <span class="st">'Example.jl'</span>...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>줄리아 패키지 모드에서 해당 환경을 활성화하자. 해당 폴더에 들어가서 활성화하면 편하다.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(<span class="pp">@v1</span><span class="fl">.8</span>) pkg<span class="op">&gt;</span> activate .</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>Activating project at <span class="ss">`~/Example.jl`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>다음으로 패키지 모드에서 환경을 활성화한다.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>(Example) pkg<span class="op">&gt;</span> instantiate</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  No Changes to <span class="ss">`~/Example.jl/Project.toml`</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  No Changes to <span class="ss">`~/Example.jl/Manifest.toml`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

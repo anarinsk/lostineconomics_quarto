@@ -129,3 +129,28 @@ Status `C:\프로젝트-폴더\Project.toml`
 내가 생성한 환경 뿐 아니라 다른 사람이 만들어둔 환경을 가져와서 해당 환경과 동일한 환경을 구축할 수 있다. 상세한 내용은 아래 링크를 참고하자. 특히 다른 실행 환경을 가져와 그대로 재현할 수 있는 대목은 Julia 가상 환경의 큰 장점 중 하나이다.  
 
 <https://pkgdocs.julialang.org/v1/environments/>
+
+
+### 가져온 환경 활성화 
+
+가져온 환경을 어떻게 활성화하는지 간락하게 알아보자. 먼저 필요한 환경을 터미널에서 가져온다. 
+
+```bash
+shell> git clone https://github.com/JuliaLang/Example.jl.git
+Cloning into 'Example.jl'...
+```
+
+줄리아 패키지 모드에서 해당 환경을 활성화하자. 해당 폴더에 들어가서 활성화하면 편하다. 
+
+```julia
+(@v1.8) pkg> activate .
+Activating project at `~/Example.jl`
+```
+
+다음으로 패키지 모드에서 환경을 활성화한다. 
+
+```julia
+(Example) pkg> instantiate
+  No Changes to `~/Example.jl/Project.toml`
+  No Changes to `~/Example.jl/Manifest.toml`
+```
