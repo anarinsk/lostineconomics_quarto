@@ -205,7 +205,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="넋두리" class="level2">
 <h2 class="anchored" data-anchor-id="넋두리">넋두리</h2>
-<p>생성 AI 덕분에 프로그래밍 언어가 필요없어진 시대라지만 이럴 수록 취미 삼아(?) 프로그래밍 언어를 배우기 좋은 시절이 아닌가 싶다. 평소 가장 뛰어난 하이레벨 컴퓨터 언어라고 생각해온 Julia를 윈도우와 Macos에서 빠르게 설치하고, VS Code에서 Jupyter를 통해 활용하는 방법을 소개한다.</p>
+<p>생성 AI 덕분에 프로그래밍 언어가 필요없어진 시대라지만 이럴 수록 취미 삼아(?) 프로그래밍 언어를 배우기 좋은 시절이 아닐까? 평소 가장 뛰어난 high-level 컴퓨터 언어라고 생각해온 Julia를 윈도와 Macos에서 빠르게 설치하고, VS Code에서 Jupyter를 통해 활용하는 방법을 소개한다.</p>
 <p>물론 이 소개 역시 정리할 내용을 망각할 미래의 나 놈을 위한 것이다!</p>
 </section>
 <section id="설치" class="level2">
@@ -213,8 +213,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>설치는 아래 공식 사이트에서 OS별로 다운로드 받아서 설치하면 된다.</p>
 <p><a href="https://julialang.org/" class="uri">https://julialang.org/</a></p>
 <p>조금 특이하게 하고 싶다면, 윈도의 경우는 <code>wingret</code>을 맥의 경우에는 <code>brew</code>를 쓰면 되겠다.</p>
-<pre class="shell"><code>&gt; winget install --id=Julialang.Julia  -e # Windows PowerShell
-&gt; brew install julia # Macos </code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> winget <span class="fu">install</span> <span class="at">--id</span><span class="op">=</span>Julialang.Julia  <span class="at">-e</span> <span class="co"># For Windows PowerShell</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> brew <span class="fu">install</span> julia <span class="co"># For Macos </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="repl-세팅" class="level2">
 <h2 class="anchored" data-anchor-id="repl-세팅">REPL 세팅</h2>
@@ -276,9 +276,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>(프로젝트<span class="op">-</span>폴더) pkg<span class="op">&gt;</span> st</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>Status <span class="ss">`C:\프로젝트-폴더\Project.toml`</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="op">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>프로젝트의 개시와 함께 해당 폴더에 <code>Manifest.toml</code>, <code>Project.toml</code>이 생성된다. 두 파일에 용도에 대해서는 상세하게 다루지는 않겠다. <code>Manifest.toml</code>는 해당 폴더의 프로젝트를 진행하기 위한 패키지의 세목(버전, 의존성 등)이 담겨 있다. 자세한 내용은 아래 링크를 참고하자.</p>
+<p>프로젝트의 개시와 함께 해당 폴더에 <code>Manifest.toml</code>, <code>Project.toml</code>이 생성된다. 두 파일에 용도에 대해서는 상세하게 다루지는 않겠다. <code>Manifest.toml</code>는 해당 폴더의 프로젝트를 진행하기 위한 패키지의 세목(버전, 의존성 등)이 담겨 있다. <code>Project.toml</code>은 프로젝트의 메타 데이터를 담고 있다. 자세한 내용은 아래 링크를 참고하자.</p>
 <p><a href="https://pkgdocs.julialang.org/v1/toml-files/" class="uri">https://pkgdocs.julialang.org/v1/toml-files/</a></p>
-<p>내가 생성한 환경 뿐 아니라 다른 사람이 만들어둔 환경을 가져와서 해당 환경과 동일한 환경을 구축할 수도 있다. 상세한 내용은 아래 링크를 참고하면 된다.</p>
+<p>내가 생성한 환경 뿐 아니라 다른 사람이 만들어둔 환경을 가져와서 해당 환경과 동일한 환경을 구축할 수도 있다. 상세한 내용은 아래 링크를 참고하자. 특히 다른 실행 환경을 가져와 그대로 재현할 수 있는 대목은 Julia 가상 환경의 큰 장점 중 하나이다.</p>
 <p><a href="https://pkgdocs.julialang.org/v1/environments/" class="uri">https://pkgdocs.julialang.org/v1/environments/</a></p>
 
 
