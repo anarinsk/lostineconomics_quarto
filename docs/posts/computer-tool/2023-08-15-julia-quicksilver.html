@@ -331,7 +331,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="dt">test</span> <span class="op">=</span> <span class="op">[</span><span class="st">"Test"</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>[deps]</code> 항목에 해당 패키지의 이름이 <code>ThinkJulia</code>로 표기되어 있음을 알 수 있다.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>(Example) pkg<span class="op">&gt;</span> rm ThinkJulia</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>환경과 관련되었던 내용들이 제거된다. 가끔 <code>gc</code> 명령을 수행해야 할 수도 있는데, REPL에 출력된 내용을 참고하면 된다. 제거한 후 <code>Project.toml</code>을 확인해보면 <code>[deps]</code> 항목이 제거되었음을 알 수 있다.</p>
+<p>위 명령을 통해 환경과 관련된 항목들이 제거된다. 가끔 <code>gc</code> 명령의 실행이 필요할 수 있다. REPL에 출력된 내용을 참고하자. 제거한 후 <code>Project.toml</code>을 확인해보면 <code>[deps]</code> 항목이 제거되었음을 알 수 있다. <code>Project.toml</code>과 <code>Manifest.toml</code>은 이렇게 환경에 발생하는 패키지 및 바이너리의 변화를 알아서 기록하고 추적한다.</p>
 
 
 </section>
