@@ -303,11 +303,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  No Changes to <span class="ss">`~/Example.jl/Project.toml`</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  No Changes to <span class="ss">`~/Example.jl/Manifest.toml`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
-
-
 <div class="no-row-height column-margin column-container"><div class="">
 <p>github를 통해 <code>.gitignore</code>를 설정하면 <code>manifest.toml</code>이 제외되도록 설정되어 있다. 따라서 일반적으로 github의 리포를 클론해왔다면 별도의 패키지 설치 과정을 거쳐야 할 수 있다. 패키지 REPL에서 <code>add</code> 명령어를 활용하면 된다.</p>
 </div></div></section>
+<section id="환경-관련-패키지-제거" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="환경-관련-패키지-제거">환경 관련 패키지 제거</h3>
+<p>먼저 project.toml을 열어보자. 아래 예시는 <code>Example</code>이라는 환경에 ThinkJulia라는 패키지 셋을 설치한 상황을 가정한 것이다. 패키지 설치 방법은 아래와 같다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>이 패키지는 “Think Julia” 책을 위해 제작된 패키지다. 자세한 것은 <a href="https://benlauwens.github.io/ThinkJulia.jl/">여기</a>를 참고하라.</p>
+</div></div><div class="sourceCode" id="cb9"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>(Example) pkg<span class="op">&gt;</span> add https<span class="op">://</span>github.com<span class="op">/</span>BenLauwens<span class="op">/</span>ThinkJulia.jl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>이제 패키지 설치가 끝난 이후 <code>Project.toml</code>을 열어보면 아래와 같다.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"Example"</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="dt">uuid</span> <span class="op">=</span> <span class="st">"7876af07-****-****-ab0e-********"</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.5.4"</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">deps</span><span class="kw">]</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="dt">ThinkJulia</span> <span class="op">=</span> <span class="st">"a7f2b756-****-4c7f-****-*********"</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">compat</span><span class="kw">]</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="dt">julia</span> <span class="op">=</span> <span class="st">"1"</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">extras</span><span class="kw">]</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="dt">Test</span> <span class="op">=</span> <span class="st">"*******-e22c-****-****-65c5234f0b40"</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">targets</span><span class="kw">]</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="dt">test</span> <span class="op">=</span> <span class="op">[</span><span class="st">"Test"</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>[deps]</code> 항목에 해당 패키지의 이름이 <code>ThinkJulia</code>로 표기되어 있음을 알 수 있다.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>(Example) pkg<span class="op">&gt;</span> rm ThinkJulia</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>환경과 관련되었던 내용들이 제거된다. 가끔 <code>gc</code> 명령을 수행해야 할 수도 있는데, REPL에 출력된 내용을 참고하면 된다. 제거한 후 <code>Project.toml</code>을 확인해보면 <code>[deps]</code> 항목이 제거되었음을 알 수 있다.</p>
+
+
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -165,3 +165,43 @@ Activating project at `~/Example.jl`
 :::{.column-margin}
 github를 통해 `.gitignore`를 설정하면 `manifest.toml`이 제외되도록 설정되어 있다. 따라서 일반적으로 github의 리포를 클론해왔다면 별도의 패키지 설치 과정을 거쳐야 할 수 있다. 패키지 REPL에서 `add` 명령어를 활용하면 된다. 
 :::
+
+### 환경 관련 패키지 제거 
+
+먼저 project.toml을 열어보자. 아래 예시는 `Example`이라는 환경에 ThinkJulia라는 패키지 셋을 설치한 상황을 가정한 것이다. 패키지 설치 방법은 아래와 같다. 
+
+:::{.column-margin}
+이 패키지는 "Think Julia" 책을 위해 제작된 패키지다. 자세한 것은 [여기](https://benlauwens.github.io/ThinkJulia.jl/)를 참고하라. 
+:::
+
+```julia
+(Example) pkg> add https://github.com/BenLauwens/ThinkJulia.jl
+```
+
+이제 패키지 설치가 끝난 이후 `Project.toml`을 열어보면 아래와 같다. 
+
+```toml
+name = "Example"
+uuid = "7876af07-****-****-ab0e-********"
+version = "0.5.4"
+
+[deps]
+ThinkJulia = "a7f2b756-****-4c7f-****-*********"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "*******-e22c-****-****-65c5234f0b40"
+
+[targets]
+test = ["Test"]
+```
+
+`[deps]` 항목에 해당 패키지의 이름이 `ThinkJulia`로 표기되어 있음을 알 수 있다. 
+
+```julia 
+(Example) pkg> rm ThinkJulia
+```
+
+환경과 관련되었던 내용들이 제거된다. 가끔 `gc` 명령을 수행해야 할 수도 있는데, REPL에 출력된 내용을 참고하면 된다. 제거한 후 `Project.toml`을 확인해보면 `[deps]` 항목이 제거되었음을 알 수 있다. 
