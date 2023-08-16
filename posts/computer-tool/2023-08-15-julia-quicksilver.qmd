@@ -161,3 +161,7 @@ Activating project at `~/Example.jl`
   No Changes to `~/Example.jl/Project.toml`
   No Changes to `~/Example.jl/Manifest.toml`
 ```
+
+:::{.column-margin}
+github를 통해 `.gitignore`를 설정하면 `manifest.toml`이 제외되도록 설정되어 있다. 따라서 일반적으로 github의 리포를 클론해왔다면 별도의 패키지 설치 과정을 거쳐야 할 수 있다. 패키지 REPL에서 `add` 명령어를 활용하면 된다. 
+:::

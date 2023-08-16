@@ -288,7 +288,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>위에 보는 것처럼 줄리아가 <code>프로젝트-폴더</code>를 환경으로 바라보고 있다는 점을 잘 알 수 있다. 프로젝트의 개시와 함께 해당 폴더에 <code>Manifest.toml</code>, <code>Project.toml</code>이 생성된다. 두 파일에 용도에 대해서는 상세하게 다루지는 않겠다. <code>Manifest.toml</code>는 해당 폴더의 프로젝트를 진행하기 위한 패키지의 세목(버전, 의존성 등)이 담겨 있다. <code>Project.toml</code>은 프로젝트의 메타 데이터를 담고 있다. 자세한 내용은 아래 링크를 참고하자.</p>
 <p><a href="https://pkgdocs.julialang.org/v1/toml-files/" class="uri">https://pkgdocs.julialang.org/v1/toml-files/</a></p>
 </section>
-<section id="가져온-환경-활성화" class="level3">
+<section id="가져온-환경-활성화" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="가져온-환경-활성화">가져온 환경 활성화</h3>
 <p>내가 생성한 환경 뿐 아니라 다른 사람이 만들어둔 환경을 가져와서 해당 환경과 동일한 환경을 구축할 수 있다. 상세한 내용은 아래 링크를 참고하자. 특히 다른 실행 환경을 가져와 그대로 재현할 수 있는 대목은 Julia 가상 환경의 큰 장점 중 하나이다.</p>
 <p><a href="https://pkgdocs.julialang.org/v1/environments/" class="uri">https://pkgdocs.julialang.org/v1/environments/</a></p>
@@ -304,7 +304,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  No Changes to <span class="ss">`~/Example.jl/Manifest.toml`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
-</section>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>github를 통해 <code>.gitignore</code>를 설정하면 <code>manifest.toml</code>이 제외되도록 설정되어 있다. 따라서 일반적으로 github의 리포를 클론해왔다면 별도의 패키지 설치 과정을 거쳐야 할 수 있다. 패키지 REPL에서 <code>add</code> 명령어를 활용하면 된다.</p>
+</div></div></section>
 </section>
 
 </main> <!-- /main -->
