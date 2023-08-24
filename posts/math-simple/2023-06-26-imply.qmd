@@ -107,28 +107,28 @@ $0 < |x-a|< \delta$을 만족하는 모든 $\delta>0$에 대해서 다음을 만
 
 ## 진리 집합 
 
-진리 집합으로 다시 따져보도록 하자. 진리 집합은 조건제시법(set builder notation)을 통해 표현한다. 
+진리 집합으로 다시 따져보도록 하자. 진리 집합은 조건제시법(set builder notation)을 통해 표현한다. 일단 한정사를 제외하고 $P$와 $Q$를 표현해보자. 
 
 $$
 \begin{aligned}
-P & = \{x|~\exists\delta > 0:~|x - a| < \delta \} \\
-Q & = \{x \vert ~\forall\epsilon > 0:~|f(x) - L| < \epsilon \} 
+P & = \{x|~|x - a| < \delta \} \\
+Q & = \{x|~|f(x) - L| < \epsilon \} 
 \end{aligned}
 $$
 
-첫번째 진리 집합을 말로 풀어보자. $|$이하의 조건을 만족하는 $x$를 의미한다. $\exists \delta$ 조건이 있기 때문에 해당 $x$ 값은 $\delta$에 의존하게 된다.함수 극한의 정의는 진리 집합으로는 $P \subset Q$를 의미한다. 
-
-$\neg q$, 즉 $Q^C$도 정의해보자.
-
+진리 집합을 정의할 때 다소 까다로운 것은 한정사이다. 한정사의 경우 명제를 부정할 경우 전체가 바뀌게 된다. 따라서 $P$의 진리 집합에 적용되는 한정사는 $\forall \delta > 0$가 된다. $Q^C$에 적용되는 한정 명제는 $\exists \epsilon > 0$가 된다. 이 점을 고려하면, 
 $$
-Q^C = \{x|~\exists\epsilon>0:~ |f(x) - L| \geq \epsilon \}
+\begin{aligned}
+P & = \{ x|~\forall\delta>0: |x - a| < \delta \} \\
+Q^C & = \{ x|~\exists\epsilon>0:~ |f(x) - L| \geq \epsilon \}
+\end{aligned}
 $$
 
 :::{.column-margin}
 조건제시법을 쓸 때 $|$과 $:$는 차이가 있을까? 별 차이가 없다는 게 중론인 듯 싶다. 영어로 옮기면 "such that(s.t.)"에 해당한다. 사례처럼 "s.t."이 중복되면 번갈아서 써주면 어떨까 싶다. 
 :::
 
-여기서 $Q^C$를 정의할 때 $Q$의 전체 조건 $\forall \epsilon$이 존재 조건 $\exists \epsilon$으로 바뀌게 된다는 점을 눈여겨 보도록 하자. $p \implies q$의 부정 명제는 $p \land \neg q$가 된다. 진리집합으로 본다면 다음과 같다; $P \cap Q^C$. 만일 이 집합이 공집합이 아니라면 정의상 함수의 극한은 존재하지 않는다. 
+만일 $P \cap Q^C \neq \varnothing$이면, 정의상 함수의 극한은 존재하지 않는다. 
 
 :::{.column-margin}
 $p \implies q \equiv \neg p \lor q$이다. 따라서 $\neg(\neg p \lor q)$가 부정 명제이다. 
