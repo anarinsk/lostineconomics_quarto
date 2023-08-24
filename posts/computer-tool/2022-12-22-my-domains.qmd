@@ -137,3 +137,13 @@ A 유형은 해당 호출을 바로 IP로 연결해준다. 해당 IP는 앞서 �
 - [깃허브; 도메인 인증](https://docs.github.com/ko/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages)
 - [깃허브; 깃허브 페이지스 커스텀 도메인 설정](https://docs.github.com/ko/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)
 - [구글 도메인스; DNS 레코드 설정](https://support.google.com/domains/answer/3290350)
+
+## A follow-up
+
+빌어먹을 구글이 Domains 서비스를 접었다. 하지만 우리에게는 그에 못지 않은 훌륭한 대안이 있다. 도메인 구매와 DNS 관리 그리고 analytics까지 모두 제공하는 [Cloudflare](https://www.cloudflare.com/products/registrar/)를 추천한다. 
+
+가입 후 웹 사이트를 등록하면서 DNS을 바꿔주면 그 이후 세부 설정을 할 수 있다. 이 홈페이지의 예시를 간략하게 스샷으로 소개하겠다. 도메인 관리의 모든 기능이 제공되면서도 인터페이스도 편리하다. 
+
+![](images\cloudflare.png)
+
+

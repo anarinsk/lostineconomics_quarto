@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2023-06-26">
 <meta name="description" content="\implies를 따져보자">
 
-<title>lostineconomics.com - 조건 명제</title>
+<title>lostineconomics.com - 조건 명제 그리고 부정</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">조건 명제</h1>
+<h1 class="title">조건 명제 그리고 부정</h1>
   <div class="quarto-categories">
     <div class="quarto-category">math-simple</div>
   </div>
@@ -179,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="조건-명제" class="level2">
 <h2 class="anchored" data-anchor-id="조건-명제">조건 명제</h2>
-<p>조건 명제는 잘 아는 듯싶지만, 내게는 가끔 혼란의 시간이 찾아오더라. 이 기회에 생각나는 대로 한번 정리해 보겠다.</p>
+<p>조건 명제는 잘 아는 듯싶지만, 내게는 가끔 혼란의 시간이 찾아오더라. 이 기회에 생각나는 대로 한번 정리해 보겠다. 아울러 극한의 정의까지 응용편으로 살펴보겠다.</p>
 </section>
 <section id="용어-정리" class="level2">
 <h2 class="anchored" data-anchor-id="용어-정리">용어 정리</h2>
@@ -243,7 +243,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="조건-명제의-부정" class="level3">
 <h3 class="anchored" data-anchor-id="조건-명제의-부정">조건 명제의 부정</h3>
 <p>조건 명제의 ’부정’은 어떻게 될까? 조건 명제를 <span class="math inline">\(p \implies q\)</span>의 형태로 놓고 부정 명제를 떠올리기는 쉽지 않다. 대신 <span class="math inline">\(\neg p \lor q\)</span>의 부정 명제를 만들어보자. <span class="math inline">\(\neg(\neg p \lor q) = p \land \neg q\)</span>가 된다.</p>
-<p>직관적으로 생각해보자. 배중률에 따르면 <span class="math inline">\(p \implies q\)</span>가 성립하지 않는 경우가 단 하나라도 존재하면 해당 부정형이 참이 된다. 즉, <span class="math inline">\(p\)</span>를 만족하는 경우 중에서 <span class="math inline">\(\neg q\)</span>를 만족하는 것이 존재하면 된다. 앞서 <span class="math inline">\(p \implies q\)</span>에서 <span class="math inline">\(p\)</span>가 <span class="math inline">\(\forall\)</span>의 전칭 한정기호를 달고 있다면, 조건 명제의 부정형에서 <span class="math inline">\(p\)</span>는 <span class="math inline">\(\exists\)</span>의 존재 한정기호 달고 있다. 진리 집합으로 서술하면 <span class="math inline">\(P \cap Q^C \neq \emptyset\)</span>이 성립하면 된다.</p>
+<p>직관적으로 생각해보자. 배중률에 따르면 <span class="math inline">\(p \implies q\)</span>가 성립하지 않는 경우가 단 하나라도 존재하면 해당 부정형이 참이 된다. 즉, <span class="math inline">\(p\)</span>를 만족하는 경우 중에서 <span class="math inline">\(\neg q\)</span>를 만족하는 것이 존재하면 된다. 앞서 <span class="math inline">\(p \implies q\)</span>에서 <span class="math inline">\(p\)</span>가 <span class="math inline">\(\forall\)</span>의 전칭 한정기호를 달고 있다면, 조건 명제의 부정형에서 <span class="math inline">\(p\)</span>는 <span class="math inline">\(\exists\)</span>의 존재 한정기호 달고 있다. 진리 집합으로 서술하면 <span class="math inline">\(P \cap Q^C \neq \varnothing\)</span>이 성립하면 된다.</p>
 </section>
 </section>
 <section id="함수의-극한" class="level2 page-columns page-full">
@@ -272,16 +272,25 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li>해당 구간에 속하는 <strong>모든</strong> <span class="math inline">\(x\)</span>를 고려하자.</li>
 <li><span class="math inline">\(x \to a\)</span> 일 때 함수 <span class="math inline">\(f(x)\)</span>의 극한값을 <span class="math inline">\(L\)</span>이라고 하자.</li>
-<li><span class="math inline">\(\delta\)</span>를 조정해서 <span class="math inline">\(f(x)\)</span>와 <span class="math inline">\(L\)</span> 사이의 거리(<span class="math inline">\(|f(x)-L|\)</span>)가 <strong>모든</strong> <span class="math inline">\(\epsilon&gt;0\)</span>보다 작게 만들 수 있다. 즉, 조건을 만족하는 <span class="math inline">\(\delta\)</span>가 존재한다.</li>
+<li><span class="math inline">\(\delta\)</span>를 조정해서 <span class="math inline">\(f(x)\)</span>와 <span class="math inline">\(L\)</span> 사이의 거리(<span class="math inline">\(|f(x)-L|\)</span>)가 <strong>모든</strong> <span class="math inline">\(\epsilon&gt;0\)</span>보다 작게 만들 수 있다. 즉, 이 조건을 만족하는 <span class="math inline">\(\delta\)</span>가 존재한다.</li>
 </ul>
+<p>양화사(quantifier)에 각별히 주의하자. 해당 명제의 부정을 정의할 때 골치거리가 되는 것이 바로 이 녀석이다.</p>
 <section id="함수의-극한이-존재하지-않는-경우" class="level3">
 <h3 class="anchored" data-anchor-id="함수의-극한이-존재하지-않는-경우">함수의 극한이 존재하지 않는 경우</h3>
-<p>함수의 극한에 관한 정의의 ’부정형(negation)’을 정의해보자. 그리고 이 부정의 정의가 참이 되는 경우를 따져볼 것이다. 정의가 함축(implication, <span class="math inline">\(\implies\)</span>)의 형태를 취하고 있으므로 부정형을 만들 때 앞서 언급한 방식을 따르면 된다.</p>
-<p><span class="math inline">\(0 &lt; |x-a|&lt; \delta\)</span>을 만족하는 모든 <span class="math inline">\(\delta&gt;0\)</span>에 대해서 다음을 만족하는 어떤 <span class="math inline">\(\epsilon&gt;0\)</span>와 <span class="math inline">\(x \in \mathbb R\)</span>이 존재한다; <span class="math inline">\(|f(x) - L| \geq \epsilon\)</span>.</p>
-<p>역시 말로 구별해서 풀어보자.</p>
+<p>이제 함수의 극한에 관한 정의의 ’부정(negation)’을 만들어 보자. 덤으로 이 부정형이 참이 되는 경우, 즉 극한이 존재하지 않는 경우도 살펴볼 것이다. 정의가 함축(implication, <span class="math inline">\(\implies\)</span>)의 형태를 취하고 있으므로 부정을 만들 때 앞서 살펴본 방식을 따르면 된다.</p>
+<p>그런데 문제가 되는 것은 양화사다. 질문은 다음과 같다.</p>
 <ul>
-<li><span class="math inline">\(a\)</span>의 <strong>모든</strong> 주변(<span class="math inline">\(\delta\)</span>의 크기)에 속한 <strong>어떤</strong> <span class="math inline">\(x\)</span>를 고려하자.</li>
-<li><span class="math inline">\(|f(x)-L|\)</span> 값을 <strong>어떤</strong> <span class="math inline">\(\epsilon\)</span> 보다 낮게 줄일 수 없다.</li>
+<li>양화사를 <span class="math inline">\(p\)</span>와 <span class="math inline">\(q\)</span>의 조건이 넣어서 함축 명제의 부정을 만들어야 할까?</li>
+<li>아니면 영화사는 별도로 처리해줘야 할까?</li>
+</ul>
+<p>결국 정의의 취지가 무엇인지에 달려 있다. 극한의 정의를 보면 존재하는 세 개의 양화사가 전제 조건으로 제시되어 있다. 따라서 함축과는 별도로 다루는 것이 타당할 것이다. 양화사는 부정을 취할 때 반대로 바뀌게 된다. 즉,</p>
+<blockquote class="blockquote">
+<p>모든 <span class="math inline">\(\delta&gt;0\)</span>에 대해서 다음을 만족하는 어떤 <span class="math inline">\(\epsilon&gt;0\)</span>와 어떤 <span class="math inline">\(x \in \mathbb R\)</span>이 존재한다; <span class="math inline">\(0 &lt; |x-a| &lt; \delta\)</span>와 <span class="math inline">\(|f(x) - L| \geq \epsilon\)</span>를 동시에 만족한다.</p>
+</blockquote>
+<p>구별해서 풀어보자.</p>
+<ul>
+<li><span class="math inline">\(a\)</span>의 <strong>모든</strong> 주변(<span class="math inline">\(\delta\)</span>의 크기)에 속한 <strong>어떤</strong> <span class="math inline">\(x\)</span>를 고려하자.모든 <span class="math inline">\(\delta&gt;0\)</span>이므로 <span class="math inline">\(a\)</span> 주변의 지극히 극소한(?) 범위에서까지 만족해야 한다. 이것은 매우 강한 조건이다. 원래 정의에서 <span class="math inline">\(\epsilon\)</span>에 대해서 강한 조건이었다면 이것이 <span class="math inline">\(\delta\)</span>로 바뀐 셈이다.</li>
+<li><span class="math inline">\(|f(x)-L|\)</span> 값을 <strong>어떤</strong> <span class="math inline">\(\epsilon\)</span> 보다 낮게 줄일 수 없는 <span class="math inline">\(x\)</span>가 존재한다.</li>
 </ul>
 <p>이 경우는 <span class="math inline">\(\lim_{x \to a}f(x)\)</span>는 존재하지 않는다.</p>
 </section>
@@ -316,7 +325,7 @@ Q^C &amp; = \{ x|~\exists\epsilon&gt;0:~ |f(x) - L| \geq \epsilon \}
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 42.9%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/limf_1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="\lim_{x \to a} f(x)가 존재하는 경우"><img src="images/limf_1.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/limf_1.jpg" class="lightbox" title="\lim_{x \to a} f(x)가 존재하는 경우" data-gallery="quarto-lightbox-gallery-1"><img src="images/limf_1.jpg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption"><span class="math inline">\(\lim_{x \to a} f(x)\)</span>가 존재하는 경우</figcaption>
 </figure>
 </div>
@@ -325,7 +334,7 @@ Q^C &amp; = \{ x|~\exists\epsilon&gt;0:~ |f(x) - L| \geq \epsilon \}
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 42.9%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/limf_2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="\lim_{x \to a} f(x)가 존재하지 않는 경우"><img src="images/limf_2.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/limf_2.jpg" class="lightbox" title="\lim_{x \to a} f(x)가 존재하지 않는 경우" data-gallery="quarto-lightbox-gallery-2"><img src="images/limf_2.jpg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption"><span class="math inline">\(\lim_{x \to a} f(x)\)</span>가 존재하지 않는 경우</figcaption>
 </figure>
 </div>
@@ -352,7 +361,7 @@ Q^C &amp; = \{ x|~\exists\epsilon&gt;0:~ |f(x) - L| \geq \epsilon \}
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 42.9%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/limf_4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="\lim_{x \to a} f(x)가 존재하는 않는 경우"><img src="images/limf_4.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/limf_4.jpg" class="lightbox" title="\lim_{x \to a} f(x)가 존재하는 않는 경우" data-gallery="quarto-lightbox-gallery-3"><img src="images/limf_4.jpg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption"><span class="math inline">\(\lim_{x \to a} f(x)\)</span>가 존재하는 않는 경우</figcaption>
 </figure>
 </div>
@@ -361,7 +370,7 @@ Q^C &amp; = \{ x|~\exists\epsilon&gt;0:~ |f(x) - L| \geq \epsilon \}
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 42.9%;justify-content: center;">
 <figure class="figure">
-<p><a href="images/limf_5.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="\lim_{x \to a} f(x)가 존재하는 경우"><img src="images/limf_5.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="images/limf_5.jpg" class="lightbox" title="\lim_{x \to a} f(x)가 존재하는 경우" data-gallery="quarto-lightbox-gallery-4"><img src="images/limf_5.jpg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption"><span class="math inline">\(\lim_{x \to a} f(x)\)</span>가 존재하는 경우</figcaption>
 </figure>
 </div>
@@ -728,7 +737,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});</script>
 
 
 
