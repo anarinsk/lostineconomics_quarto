@@ -30,7 +30,7 @@ Julia를 빠르게 세팅하는 방법 (Windows/Macos)
 
 <https://julialang.org/>
 
-조금 특이하게 하고 싶다면, 윈도의 경우는 `wingret`을 맥의 경우에는 `brew`를 쓰면 되겠다. 
+조금 특이하게 하고 싶다면, 윈도의 경우는 `winget`을 맥의 경우에는 `brew`를 쓰면 되겠다. 
 
 ```bash
 > winget install --id=Julialang.Julia  -e # For Windows PowerShell
