@@ -65,7 +65,13 @@ Rye 앱 자체에 관한 업데이트와 삭제는 아래와 같다.
 > rye sync 
 ```
 
-가상 환경의 개별 설정은 `pyproject.toml` 파일을 통해서 관리된다. 버전 관리 등의 자세한 내용은 [공식 문서](https://rye-up.com/guide/pyproject/)를 참고하자. 
+필요한 패키지가 있다면 `rye add...` - `rye sync` 사이클로 설치하면 된다. 
+
+가상 환경의 개별 설정은 `pyproject.toml` 파일을 통해서 관리된다. 만일 github 등을 통해서 `pyproject.toml`을 임포트했다면 `rye sync`로 필요한 패키지를 한방에 설치할 수 있다. 
+
+:::{.column-margin}
+버전 관리 등의 자세한 내용은 [공식 문서](https://rye-up.com/guide/pyproject/)를 참고하자. 
+:::
 
 ### 패키지 의존성 관리
 
@@ -84,6 +90,15 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 ![VS Code 커널 선택 (클릭하면 확대); (오른쪽) `커널 선택` > `다른 커널 선택` > `Python 환경` > `.venv...` 순으로 선택하면 된다.](./images/vscode_rye.png){width=70%}
 
 스크린 샷에서 보듯이 `커널 선택` > `다른 커널 선택` > `Python 환경` > `.venv...`를 택하면 된다. 해당 프로젝트 폴더 아래 `.venv` 폴더 안에 있는 파이썬 환경을 가져오게 되면, 해당 프로젝트의 파이썬 커널과 설치된 패키지가 VS Code의 Jupyter 환경과 연결된다. 
+
+## 터미널에서 작업하기 
+
+가상 환경으로 `Venv` 패키지를 쓰고 있기 때문에 터미널에서 작업해야 한다면 해당 환경을 활성화하면 된다. [여기](https://rye-up.com/guide/basics/#working-with-the-project)를 참고하자. 해당 프로젝트의 디렉토리에서 
+
+```bash
+> .venv\Scripts\activate # for activation 
+> deactivate # for deactivation 
+```
 
 ## In Short... 
 
