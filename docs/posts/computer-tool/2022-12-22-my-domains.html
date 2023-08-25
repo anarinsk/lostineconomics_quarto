@@ -23,6 +23,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -279,7 +313,7 @@ ul.task-list li input[type="checkbox"] {
 <p>위 그림에서 보듯이 유형을 “CNAME”으로 잡는다. 이제 구입한 도메인 앞에 접두어(하위 도메인)이 들어간다. 가장 흔하게 쓸 수 있는 것이 <code>www</code>다. 즉, <code>www.lostineconomics.com</code>을 치면 어디로 포워딩되어야 하는지를 표시하면 된다. 호스트 이름이 <code>www</code>가 되고, 데이터는 <code>anarinsk.github.io</code>가 된다.</p>
 <p>주의할 점; 데이터에 해당 것허브 페이지스의 주소가 <code>/{리포지터리-이름}</code>까지 전부 전달되어야 할 것 같지만, 깃허브 페이지스의 최상위 페이지까지만 DNS에 전달해야 한다. 이후 과정은 연결은 GitHub Pages의 몫이다. <code>/</code>가 들어간 디렉토리는 전달할 수 없다. <code>{이용자-ID}.github.io</code>까지만 전달하면 해당 깃허브 페이지스의 디렉토리 자원과 도메인의 연결이 자동적으로 이루어진다.</p>
 <p>해당 도메인이 깃허브 페이지까지 잘 연결되는지 보려면, 아래의 셸 명령을 활용해보자.</p>
-<pre class="shell"><code>$ dig www.lostineconomics.com +nostats +nocomments +nocmd</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> dig www.lostineconomics.com +nostats +nocomments +nocmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>윈도 파워셸에는 <code>dig</code> 명령어가 없다. 설치가 가능하니 검색을 통해 적절히 방법을 찾으시라. 결과가 <code>{이용자-ID}.github.io</code>까지 잘 타고 들어가는지 확인하면 된다. 뒤에서 다루겠지만 여기서 IP 주소도 확인할 수 있는데, 이 녀석들이 설정에서 다시 활용될 수 있다.</p>
 </section>
 <section id="도메인-연결-2-github-pages" class="level3">
@@ -745,7 +779,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":true,"openEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","selector":".lightbox"});</script>
 
 
 

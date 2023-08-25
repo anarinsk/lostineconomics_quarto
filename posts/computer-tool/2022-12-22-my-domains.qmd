@@ -89,7 +89,7 @@ GitHub Pages는 훌륭한 스태틱 웹 서비스다. js, css 정도를 쓰는 h
 
 해당 도메인이 깃허브 페이지까지 잘 연결되는지 보려면, 아래의 셸 명령을 활용해보자. 
 
-```shell
+```bash
 $ dig www.lostineconomics.com +nostats +nocomments +nocmd
 ```
 
