@@ -227,18 +227,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="no-row-height column-margin column-container"><div class="">
 <p><a href="https://rye-up.com/guide/installation/">설치</a> 항목을 참고하자.</p>
 </div></div><p>Rye 앱 자체에 관한 업데이트와 삭제는 아래와 같다.</p>
-<pre class="shell"><code>&gt; rye self update # Rye 업데이트 
-&gt; rye self uninstall # Rye 삭제 </code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> rye self update <span class="co"># Rye 업데이트 </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> rye self uninstall <span class="co"># Rye 삭제 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="프로젝트-개시-및-패키지-설치" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="프로젝트-개시-및-패키지-설치">프로젝트 개시 및 패키지 설치</h2>
 <p>프로젝트를 생성할 상위 폴더에서 아래와 같이 생성 명령어를 실행한다.</p>
-<pre class="shell"><code>&gt; rye init {프로젝트-이름}</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> rye init <span class="op">{</span>프로젝트<span class="op">-</span>이름<span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>만일 이미 폴더가 만들어져 있다면 해당 폴더 안에서 <code>rye init</code>을 실행하면 된다. 이제 프로젝트의 폴더에 들어가서 설치하려는 패키지를 <code>add</code>하고 <code>sync</code>로 이를 설치한다. <code>ipykernel</code> 패키지는 VS Code 등에서 <code>.ipynb</code> 파일을 불러와 작업하고자 할 때 필요한 패키지다. 이 패키지를 깔지 않으면 ipynb 파일 작업시 커널이 선택되지 않는다.</p>
 <p><code>ipykernel</code>과 <code>pandas</code>를 아래와 같이 설치해보자.</p>
-<pre class="shell"><code>&gt; rye add ipykernel pandas 
-&gt; rye sync </code></pre>
-<p>필요한 패키지가 있다면 <code>rye add...</code> - <code>rye sync</code> 사이클로 설치하면 된다.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> rye add ipykernel pandas </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> rye sync </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>필요한 패키지가 있다면 <code>rye add...</code>↔︎<code>rye sync</code> 사이클로 설치하면 된다.</p>
 <p>가상 환경의 개별 설정은 <code>pyproject.toml</code> 파일을 통해서 관리된다. 만일 github 등을 통해서 <code>pyproject.toml</code>을 임포트했다면 <code>rye sync</code>로 필요한 패키지를 한방에 설치할 수 있다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -255,7 +255,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>프로젝트 폴더와 연동해서 VS Code를 열어주자. 터미널에서 <code>code .</code>을 실행하면 된다. 이제 해당 프로젝트의 파이썬 커널과 VS Code의 Jupyter 환경을 연결해보자.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/vscode_rye.png" class="lightbox" title="VS Code 커널 선택 (클릭하면 확대); (오른쪽) 커널 선택 > 다른 커널 선택 > Python 환경 > .venv... 순으로 선택하면 된다." data-gallery="quarto-lightbox-gallery-1"><img src="./images/vscode_rye.png" class="img-fluid figure-img" style="width:70.0%"></a></p>
+<p><a href="./images/vscode_rye.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="VS Code 커널 선택 (클릭하면 확대); (오른쪽) 커널 선택 > 다른 커널 선택 > Python 환경 > .venv... 순으로 선택하면 된다."><img src="./images/vscode_rye.png" class="img-fluid figure-img" style="width:70.0%"></a></p>
 <figcaption class="figure-caption">VS Code 커널 선택 (클릭하면 확대); (오른쪽) <code>커널 선택</code> &gt; <code>다른 커널 선택</code> &gt; <code>Python 환경</code> &gt; <code>.venv...</code> 순으로 선택하면 된다.</figcaption>
 </figure>
 </div>
@@ -264,7 +264,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="터미널에서-작업하기" class="level2">
 <h2 class="anchored" data-anchor-id="터미널에서-작업하기">터미널에서 작업하기</h2>
 <p>가상 환경으로 <code>Venv</code> 패키지를 쓰고 있기 때문에 터미널에서 작업해야 한다면 해당 환경을 활성화하면 된다. <a href="https://rye-up.com/guide/basics/#working-with-the-project">여기</a>를 참고하자. 해당 프로젝트의 디렉토리에서</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> .venv\Scripts\activate <span class="co"># for activation </span></span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="op">.</span><span class="fu">venv</span>\Scripts\activate <span class="co"># for activation </span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> deactivate <span class="co"># for deactivation </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="in-short" class="level2">
@@ -629,7 +629,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":true,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});</script>
 
 
 
