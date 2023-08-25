@@ -146,4 +146,9 @@ A 유형은 해당 호출을 바로 IP로 연결해준다. 해당 IP는 앞서 �
 
 ![](images\cloudflare.png)
 
+1. `lostineconomics.com` &rarr; `www.lostineconomics.com` 으로 연결 [이동](#곁눈질-www가-없는-호출-포위딩하기)
+2. `www.lostineconomics` &rarr; `anarinsk.github.io`로 연결 [이동](#도메인-연결-1-google-domains)
+3. Bluesky 핸들 사용을 위한 인증 텍스트 파일 
+4. Github Pages 연결을 위한 인증 텍스트 파일 [이동](#도메인-확인하기-2-google-domains)
+
 
