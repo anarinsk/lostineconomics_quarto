@@ -264,8 +264,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="터미널에서-작업하기" class="level2">
 <h2 class="anchored" data-anchor-id="터미널에서-작업하기">터미널에서 작업하기</h2>
 <p>가상 환경으로 <code>Venv</code> 패키지를 쓰고 있기 때문에 터미널에서 작업해야 한다면 해당 환경을 활성화하면 된다. <a href="https://rye-up.com/guide/basics/#working-with-the-project">여기</a>를 참고하자. 해당 프로젝트의 디렉토리에서</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="op">.</span><span class="fu">venv</span>\Scripts\activate <span class="co"># for activation </span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> deactivate <span class="co"># for deactivation </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="op">.</span><span class="fu">venv</span>\Scripts\activate <span class="co"># for activation </span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> deactivate <span class="co"># for deactivation</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Unix </span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="op">.</span> <span class="op">.</span><span class="fu">venv</span>\Scripts\activate <span class="co"># for activation </span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> deactivate <span class="co"># for deactivation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="in-short" class="level2">
 <h2 class="anchored" data-anchor-id="in-short">In Short…</h2>
@@ -629,7 +634,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":true});</script>
 
 
 

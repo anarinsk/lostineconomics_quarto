@@ -96,8 +96,13 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 가상 환경으로 `Venv` 패키지를 쓰고 있기 때문에 터미널에서 작업해야 한다면 해당 환경을 활성화하면 된다. [여기](https://rye-up.com/guide/basics/#working-with-the-project)를 참고하자. 해당 프로젝트의 디렉토리에서 
 
 ```powershell
+# Windows 
 > .venv\Scripts\activate # for activation 
-> deactivate # for deactivation 
+> deactivate # for deactivation
+
+# Unix 
+> . .venv\Scripts\activate # for activation 
+> deactivate # for deactivation
 ```
 
 ## In Short... 
