@@ -203,7 +203,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="넋두리" class="level2">
 <h2 class="anchored" data-anchor-id="넋두리">넋두리</h2>
-<p>심각한 프로젝트를 하지 않는다면, ’의존성’은 문제가 되지 않을 수 있다. 하지만 습관을 잘 들여놓아야 심각한 상황이 왔을 때 적응력이 높아지는 법이다. 지난 번 소개했던 RYE와 유사한 의존성 관리 도구 pixi를 소개한다. 아직 극초기 프로젝트지만 개인 프로젝트인 RYE와 달리 pixi는 조금 더 체계적인 지원 체계를 갖출 듯 싶다.</p>
+<p>심각한 프로젝트를 하지 않는다면 ’의존성’이 문제가 되지 않을 수 있다. 하지만 습관을 잘 들여놓아야 심각한 상황이 왔을 때 대처가 가능한 법이다. 지난 번 소개했던 RYE와 유사한 의존성 관리 도구 pixi를 소개한다. 아직 극초기 프로젝트지만 개인 프로젝트인 RYE와 달리 pixi는 조금 더 체계적인 지원 체계를 갖출 듯 싶다.</p>
 </section>
 <section id="설치" class="level2">
 <h2 class="anchored" data-anchor-id="설치">설치</h2>
@@ -226,13 +226,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>예를 들어보자. <code>test</code>라는 폴더에 파이썬 환경을 만들고 여기에 pandas와 plotly를 설치하고 싶다고 하자. 해당 폴더를 만들고 터미널을 통해 해당 폴더에 들어가자.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">&gt;</span> pixi <span class="ex">init</span> . </span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="op">&gt;</span> pixi <span class="ex">add</span> python pandas plotly </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>pixi가 필요한 패키지를 콘더 리포지터리에서 끌어와 설치한다. 만일 터미널에서 활용하고 싶다면 <code>pixi shell</code>을 치면 된다. <code>pixi</code>를 치면 필요한 명령어를 보여준다.</p>
+<p>pixi가 필요한 패키지를 콘다 리포지터리에서 끌어와 설치한다. 만일 터미널에서 활용하고 싶다면 <code>pixi shell</code>을 치면 된다. <code>pixi</code>를 치면 필요한 명령어를 보여준다.</p>
 <p>pixi의 장점은 os별로 구별해서 패키지를 관리할 수 있다는 것이다. 환경을 담고 있는 <code>pixi.toml</code>을 열어보면 이 점을 쉽게 알 수 있다.</p>
 <p>자세한 것은 <a href="https://prefix.dev/docs/pixi/advanced/multi_platform_configuration">여기</a>를 참고하도록 하자.</p>
 </section>
 <section id="vs-code" class="level2">
 <h2 class="anchored" data-anchor-id="vs-code">VS Code</h2>
-<p>VS Code에서 <code>.ipynb</code>로 작업하고 싶다면 간단하다. 커널 즉 필요한 파이썬 바이너리를 선택해주면 된다.</p>
+<p>VS Code에서 <code>.ipynb</code>로 작업하고 싶다면 간단하다. 커널 즉 필요한 파이썬 실행 파일을 선택해주면 된다.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -246,7 +246,7 @@ Tip
 <p><code>F1</code> &gt; <code>Python: 인터프리터 선택</code> &gt; <code>+인터프리터 경로 입력...</code></p>
 </div>
 </div>
-<p>해당 프로젝트 폴더 안에 <code>.pixi</code>로 가자. OS 별로 구별해서 파이썬 바이너를 선택하면 된다.</p>
+<p>해당 프로젝트 폴더 안에 <code>.pixi</code>로 가자. OS 별로 구별해서 파이썬 바이너리 혹은 스크립트를 선택하면 된다.</p>
 <ul>
 <li>(macos) <code>.pixi/env/bin/pyhon</code></li>
 <li>(windows)</li>
