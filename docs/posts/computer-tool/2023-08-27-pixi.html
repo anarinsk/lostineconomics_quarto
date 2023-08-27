@@ -104,7 +104,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -156,9 +156,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -250,10 +252,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-10"><a href="#cb4-10"></a>  <span class="ex">help:</span> The project needs to be configured to support your platform <span class="er">(</span><span class="ex">win-64</span><span class="kw">)</span><span class="bu">.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>아래와 같이 메시지를 띄워준다. <code>pixi.toml</code> 파일을 열어 해당 플랫폼을 추가한 후 다시 <code>pixi install</code>을 실행하면 된다. 만일 에러가 뜬다면 셸 창을 다시 실행하자. 플랫폼 별 의존성을 세밀하게 정의해 설치하거나 이를 <code>pixi.toml</code>에 지정할 수 있다. 자세한 것은 <a href="https://prefix.dev/docs/pixi/advanced/multi_platform_configuration">여기</a>를 참고하도록 하자.</p>
 </section>
-<section id="vs-code" class="level2">
+<section id="vs-code" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="vs-code">VS Code</h2>
 <p>VS Code에서 <code>.ipynb</code>로 작업하고 싶다면 간단하다. 해당 폴더가 작업 폴더로 잡혀 있다면, 아마도 <code>.pixi...</code> 아래 커널이 선택가능할 것이다. 그렇지 않다면 커널을 직접 선택해주면 된다.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>VS Code에서 <code>파일</code> &gt; <code>작업 영역에 폴더 추가</code>를 통해 작업 폴더를 지정할 수 있다. 터미널의 해당 폴더에서 <code>code .</code>을 실행해도 된다.</p>
+</div></div><div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
