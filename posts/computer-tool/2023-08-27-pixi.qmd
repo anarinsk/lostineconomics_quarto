@@ -29,11 +29,16 @@ format:
 
 OS에 따라서 설치 방법이 제공된다. macos는 `brew`를 쓰는 것을 권장한다. 
 
+```bash
+brew install pixi # for Macos 
+iwr -useb https://pixi.sh/install.ps1 | iex # For PS of Win64
+```
+
 ## 활용 
 
 RYE와 거의 비슷하다. 
 
-- 환경을 폴더 안에 활성화한다. 
+- 환경을 프로젝트 폴더 안에 활성화한다. 
 - 활용한 언어를 포함해서 필요한 패키지를 `add`한다. 
 - 코딩한다. 
 
@@ -42,22 +47,46 @@ pixi의 경우 다음과 같은 특징을 지닌다.
 - conda 환경을 따른다. 
 - 별도의 셸 환경을 제공한다. 
 
-예를 들어보자. `test`라는 폴더에 파이썬 환경을 만들고 여기에 pandas와 plotly를 설치하고 싶다고 하자. 해당 폴더를 만들고 터미널을 통해 해당 폴더에 들어가자. 
+예를 들어보자. 원하는 폴더에 파이썬 환경을 만들고 여기에 pandas와 plotly를 설치하고 싶다고 하자. 해당 폴더를 만들고 터미널을 통해 해당 폴더에 들어가자. 
 
 ```bash
-> pixi init . 
+> pixi init .  # 폴더를 생성하고 싶다면 pixi init {프로젝트-이름}
 > pixi add python pandas plotly 
 ```
 
 pixi가 필요한 패키지를 콘다 리포지터리에서 끌어와 설치한다. 만일 터미널에서 활용하고 싶다면 `pixi shell`을 치면 된다. `pixi`를 치면 필요한 명령어를 보여준다. 
 
-pixi의 장점은 os별로 구별해서 패키지를 관리할 수 있다는 것이다. 환경을 담고 있는 `pixi.toml`을 열어보면 이 점을 쉽게 알 수 있다. 
+## Multi platform 
 
-자세한 것은 [여기](https://prefix.dev/docs/pixi/advanced/multi_platform_configuration)를 참고하도록 하자. 
+pixi의 장점은 os별로 구별해서 패키지를 관리할 수 있다는 것이다. 환경을 담고 있는 `pixi.toml`을 열어보면 이 점을 쉽게 알 수 있다.
+
+```toml
+[project]
+# Default project info....
+# A list of platforms you are supporting with your package.
+platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
+```
+
+`pixi.toml`을 열어보면 프로젝트의 메타 데이터로 플랫폼이 있다. 여기에 정의되어 있지 않은 환경에서 `.toml`에 정의된 패키지를 인스톨해보자. 
+
+```bash
+❯ pixi install
+  × the project is not configured for your current platform
+   ╭─[pixi.toml:6:1]
+ 6 │ channels = ["conda-forge"]
+ 7 │ platforms = ["osx-arm64"]
+   ·             ────────────────┬────────────────
+   ·                             ╰── add 'win-64' here
+ 8 │
+   ╰────
+  help: The project needs to be configured to support your platform (win-64).
+```
+
+아래와 같이 메시지를 띄워준다. `pixi.toml` 파일을 열어 해당 플랫폼을 추가한 후 다시 `pixi install`을 실행하면 된다. 만일 에러가 뜬다면 셸 창을 다시 실행하자. 플랫폼 별 의존성을 세밀하게 정의해 설치하거나 이를 `pixi.toml`에 지정할 수 있다. 자세한 것은 [여기](https://prefix.dev/docs/pixi/advanced/multi_platform_configuration)를 참고하도록 하자. 
 
 ## VS Code 
 
-VS Code에서 `.ipynb`로 작업하고 싶다면 간단하다. 커널 즉 필요한 파이썬 실행 파일을 선택해주면 된다. 
+VS Code에서 `.ipynb`로 작업하고 싶다면 간단하다. 해당 폴더가 작업 폴더로 잡혀 있다면, 아마도 `.pixi...` 아래 커널이 선택가능할 것이다. 그렇지 않다면 커널을 직접 선택해주면 된다. 
 
 :::{.callout-tip}
 `F1` > `Python: 인터프리터 선택` > `+인터프리터 경로 입력...`
@@ -66,7 +95,7 @@ VS Code에서 `.ipynb`로 작업하고 싶다면 간단하다. 커널 즉 필요
 해당 프로젝트 폴더 안에 `.pixi`로 가자. OS 별로 구별해서 파이썬 바이너리 혹은 스크립트를 선택하면 된다. 
 
 - (macos) `.pixi/env/bin/pyhon`
-- (windows)
+- (windows) `.pixi\env\python.exe`
 
 ## References
 
