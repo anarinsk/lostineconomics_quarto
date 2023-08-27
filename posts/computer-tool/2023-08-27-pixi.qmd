@@ -1,0 +1,73 @@
+---
+title: "pixi" 
+description: 의존성 지옥을 벗어날 또 다른 방법 
+author: "JS HUHH"
+date: "08/27/2023"
+image: "./images/cat-coder.png"
+categories: [computer-tool]
+filters:
+   - lightbox
+   #- line-highlight
+lightbox: auto
+#jupyter: python3
+draft: false
+format:
+  html:
+    code-line-numbers: true
+    highlight-style: arrow
+---
+
+## TL; DR
+의존성이라는 지옥을 벗어나보자. 
+
+## 넋두리 
+심각한 프로젝트를 하지 않는다면, '의존성'은 문제가 되지 않을 수 있다. 하지만 습관을 잘 들여놓아야 심각한 상황이 왔을 때 적응력이 높아지는 법이다. 지난 번 소개했던 RYE와 유사한 의존성 관리 도구 pixi를 소개한다. 아직 극초기 프로젝트지만 개인 프로젝트인 RYE와 달리 pixi는 조금 더 체계적인 지원 체계를 갖출 듯 싶다. 
+
+## 설치 
+
+<https://prefix.dev/docs/pixi/overview#installation>
+
+OS에 따라서 설치 방법이 제공된다. macos는 `brew`를 쓰는 것을 권장한다. 
+
+## 활용 
+
+RYE와 거의 비슷하다. 
+
+- 환경을 폴더 안에 활성화한다. 
+- 활용한 언어를 포함해서 필요한 패키지를 `add`한다. 
+- 코딩한다. 
+
+pixi의 경우 다음과 같은 특징을 지닌다. 
+
+- conda 환경을 따른다. 
+- 별도의 셸 환경을 제공한다. 
+
+예를 들어보자. `test`라는 폴더에 파이썬 환경을 만들고 여기에 pandas와 plotly를 설치하고 싶다고 하자. 해당 폴더를 만들고 터미널을 통해 해당 폴더에 들어가자. 
+
+```bash
+> pixi init . 
+> pixi add python pandas plotly 
+```
+
+pixi가 필요한 패키지를 콘더 리포지터리에서 끌어와 설치한다. 만일 터미널에서 활용하고 싶다면 `pixi shell`을 치면 된다. `pixi`를 치면 필요한 명령어를 보여준다. 
+
+pixi의 장점은 os별로 구별해서 패키지를 관리할 수 있다는 것이다. 환경을 담고 있는 `pixi.toml`을 열어보면 이 점을 쉽게 알 수 있다. 
+
+자세한 것은 [여기](https://prefix.dev/docs/pixi/advanced/multi_platform_configuration)를 참고하도록 하자. 
+
+## VS Code 
+
+VS Code에서 `.ipynb`로 작업하고 싶다면 간단하다. 커널 즉 필요한 파이썬 바이너리를 선택해주면 된다. 
+
+:::{.callout-tip}
+`F1` > `Python: 인터프리터 선택` > `+인터프리터 경로 입력...`
+:::
+
+해당 프로젝트 폴더 안에 `.pixi`로 가자. OS 별로 구별해서 파이썬 바이너를 선택하면 된다. 
+
+- (macos) `.pixi/env/bin/pyhon`
+- (windows)
+
+## References
+
+<https://prefix.dev/blog/launching_pixi>
