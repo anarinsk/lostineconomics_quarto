@@ -115,7 +115,7 @@ lightbox: auto
 이 경우는 $\lim_{x \to a}f(x)$는 존재하지 않는다. 
 
 :::{.column-margin}
-[여기](https://math.stackexchange.com/questions/1473090/negation-of-the-definition-of-limit-of-a-function)를 같이 참고하자. 
+[여기](https://math.stackexchange.com/a/1473135)를 같이 참고하자. 
 :::
 
 ## 진리 집합 
