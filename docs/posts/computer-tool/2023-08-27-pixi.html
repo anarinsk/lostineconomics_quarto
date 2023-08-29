@@ -235,7 +235,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-2"><a href="#cb2-2"></a><span class="op">&gt;</span> pixi <span class="ex">add</span> python pandas plotly </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>pixi가 필요한 패키지를 콘다 리포지터리에서 끌어와 설치한다. 만일 터미널에서 활용하고 싶다면 <code>pixi shell</code>을 치면 된다. <code>pixi</code>를 치면 필요한 명령어를 보여준다.</p>
 </section>
-<section id="multi-platform" class="level2">
+<section id="multi-platform" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="multi-platform">Multi platform</h2>
 <p>pixi의 장점은 os별로 구별해서 패키지를 관리할 수 있다는 것이다. 환경을 담고 있는 <code>pixi.toml</code>을 열어보면 이 점을 쉽게 알 수 있다.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource toml number-lines code-with-copy"><code class="sourceCode toml"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">[</span><span class="dt">project</span><span class="kw">]</span></span>
@@ -253,8 +253,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-8"><a href="#cb4-8"></a> <span class="ex">8</span> │</span>
 <span id="cb4-9"><a href="#cb4-9"></a>   <span class="ex">╰────</span></span>
 <span id="cb4-10"><a href="#cb4-10"></a>  <span class="ex">help:</span> The project needs to be configured to support your platform <span class="er">(</span><span class="ex">win-64</span><span class="kw">)</span><span class="bu">.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>아래와 같이 메시지를 띄워준다. <code>pixi.toml</code> 파일을 열어 해당 플랫폼을 추가한 후 다시 <code>pixi install</code>을 실행하면 된다. 만일 에러가 뜬다면 셸 창을 다시 실행하자. 플랫폼 별 의존성을 세밀하게 정의해 설치하거나 이를 <code>pixi.toml</code>에 지정할 수 있다. 자세한 것은 <a href="https://prefix.dev/docs/pixi/advanced/multi_platform_configuration">여기</a>를 참고하도록 하자.</p>
-<section id="example" class="level3">
+<p>이렇게 메시지를 띄워준다. <code>pixi.toml</code> 파일을 열어 해당 플랫폼을 추가한 후 다시 <code>pixi install</code>을 실행하면 된다. 만일 에러가 뜬다면 셸 창을 다시 실행하자. 플랫폼 별 의존성을 세밀하게 정의해 설치하거나 이를 <code>pixi.toml</code>에 지정할 수 있다. 바로 이어서 살펴볼 것이다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>자세한 것은 <a href="https://prefix.dev/docs/pixi/advanced/multi_platform_configuration">여기</a>를 참고하도록 하자.</p>
+</div></div><section id="example" class="level3">
 <h3 class="anchored" data-anchor-id="example">Example</h3>
 <p>아마도 멀티플랫폼 지원이 pixi의 가장 큰 장점이 아닐까 싶다. pytorch를 인스톨하는 경우를 떠올려보자.</p>
 <ul>

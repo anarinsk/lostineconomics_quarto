@@ -86,7 +86,11 @@ platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
   help: The project needs to be configured to support your platform (win-64).
 ```
 
-아래와 같이 메시지를 띄워준다. `pixi.toml` 파일을 열어 해당 플랫폼을 추가한 후 다시 `pixi install`을 실행하면 된다. 만일 에러가 뜬다면 셸 창을 다시 실행하자. 플랫폼 별 의존성을 세밀하게 정의해 설치하거나 이를 `pixi.toml`에 지정할 수 있다. 자세한 것은 [여기](https://prefix.dev/docs/pixi/advanced/multi_platform_configuration)를 참고하도록 하자. 
+이렇게 메시지를 띄워준다. `pixi.toml` 파일을 열어 해당 플랫폼을 추가한 후 다시 `pixi install`을 실행하면 된다. 만일 에러가 뜬다면 셸 창을 다시 실행하자. 플랫폼 별 의존성을 세밀하게 정의해 설치하거나 이를 `pixi.toml`에 지정할 수 있다. 바로 이어서 살펴볼 것이다. 
+
+:::{.column-margin}
+자세한 것은 [여기](https://prefix.dev/docs/pixi/advanced/multi_platform_configuration)를 참고하도록 하자. 
+:::
 
 ### Example 
 
