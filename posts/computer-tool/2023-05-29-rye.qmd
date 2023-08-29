@@ -1,6 +1,6 @@
 ---
 title: "Rye" 
-description: 아마도 가장 편리한 Python 가상 환경 
+description: 꽤 편리한 Python 가상 환경
 author: "JS HUHH"
 date: "05/29/2023"
 image: "./images/tools.jpg"
