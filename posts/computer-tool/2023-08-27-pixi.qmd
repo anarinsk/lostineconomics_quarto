@@ -103,7 +103,7 @@ platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
 아마도 멀티플랫폼 지원이 pixi의 가장 큰 장점이 아닐까 싶다. pytorch를 인스톨하는 경우를 떠올려보자. 
 
 - 플랫폼A: Windows + Nvidia GPU 
-- 플랫폼B: Silicon mac + macos
+- 플랫폼B: macos + Silicon mac 
 
 하나의 `pixi.toml` 파일을 통해서 각기 다른 플랫폼에서 파이토치 프로젝트를 유지하는 것이 목표이다. 특히 플랫폼A에서는 cuda를 활용할 예정이다. 
 
@@ -136,7 +136,8 @@ ipykernel = "6.25.1.*"
   - `.`이후 플랫폼, 그리고 지정할 pixi 영역이 붙는다. 
   - 지정 가능한 pixi 영역은 `activation`, `dependencies`, `tasks` 세 가지이다. 
 
-`pixi.toml`을 플랫폼A에서 실행하면 `.pixi\` 폴더 아래 cuda 기반의 파이토치가 설치된다. 플랫폼B에는 `.pixi/` 아래 실리콘 맥 기반의 MPS를 활용한 파이토치가 설치된다. 
+- 위 예시 파일을 살펴보자. 
+  - `pixi.toml`을 플랫폼A에서 실행하면 `.pixi\` 폴더 아래 cuda 기반의 파이토치가 설치된다. 플랫폼B에는 `.pixi/` 아래 실리콘 맥 기반의 MPS를 활용한 파이토치가 설치된다. 
 
 ## VS Code 
 
