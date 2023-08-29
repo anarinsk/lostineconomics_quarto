@@ -256,7 +256,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>아래와 같이 메시지를 띄워준다. <code>pixi.toml</code> 파일을 열어 해당 플랫폼을 추가한 후 다시 <code>pixi install</code>을 실행하면 된다. 만일 에러가 뜬다면 셸 창을 다시 실행하자. 플랫폼 별 의존성을 세밀하게 정의해 설치하거나 이를 <code>pixi.toml</code>에 지정할 수 있다. 자세한 것은 <a href="https://prefix.dev/docs/pixi/advanced/multi_platform_configuration">여기</a>를 참고하도록 하자.</p>
 <section id="example" class="level3">
 <h3 class="anchored" data-anchor-id="example">Example</h3>
-<p>아마도 멀티플랫폼 지원이 pixi의 가장 큰 장점이 아닐까 싶다. pytorch를 인스톨하는 경우를 떠올려보자. 플랫폼A는 Windows + Nvidia GPU를 운용하며, 플랫폼B는 Silicon mac 기반의 macos이다. 하나의 <code>pixi.toml</code> 파일을 통해서 각기 다른 플랫폼에서 파이토치 프로젝트를 유지하는 것이 목표이다.</p>
+<p>아마도 멀티플랫폼 지원이 pixi의 가장 큰 장점이 아닐까 싶다. pytorch를 인스톨하는 경우를 떠올려보자.</p>
+<ul>
+<li>플랫폼A: Windows + Nvidia GPU</li>
+<li>플랫폼B: Silicon mac + macos</li>
+</ul>
+<p>하나의 <code>pixi.toml</code> 파일을 통해서 각기 다른 플랫폼에서 파이토치 프로젝트를 유지하는 것이 목표이다. 특히 플랫폼A에서는 cuda를 활용할 예정이다.</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>pixi.toml</strong></pre>
@@ -291,7 +296,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>지정 가능한 pixi 영역은 <code>activation</code>, <code>dependencies</code>, <code>tasks</code> 세 가지이다.</li>
 </ul></li>
 </ul>
-<p><code>pixi.toml</code>을 플랫폼A에서 실행하면 <code>.pixi\</code> 폴더 아래 cuda 기반의 파이토치가 설치된다. 플랫폼B에서는 <code>.pixi/</code> 아래 실리콘 맥 기반의 MPS를 활용한 파이토치가 설치된다.</p>
+<p><code>pixi.toml</code>을 플랫폼A에서 실행하면 <code>.pixi\</code> 폴더 아래 cuda 기반의 파이토치가 설치된다. 플랫폼B에는 <code>.pixi/</code> 아래 실리콘 맥 기반의 MPS를 활용한 파이토치가 설치된다.</p>
 </section>
 </section>
 <section id="vs-code" class="level2 page-columns page-full">
