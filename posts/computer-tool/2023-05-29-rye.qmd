@@ -1,5 +1,5 @@
 ---
-title: "RYE" 
+title: "Rye" 
 description: 아마도 가장 편리한 Python 가상 환경 
 author: "JS HUHH"
 date: "05/29/2023"
@@ -105,7 +105,7 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 > deactivate # for deactivation
 ```
 
-## In Short... 
+## In Short! 
 
 - `rye init`, `rye add...`, `rye sync`의 순으로 rye 설정 
 - VS Code에서 쓴다면, `ipykernel` 패키지를 rye 환경에 설치하도록 하자. 
