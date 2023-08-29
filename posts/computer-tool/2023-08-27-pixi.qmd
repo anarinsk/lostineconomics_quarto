@@ -121,7 +121,7 @@ ipykernel = "6.25.1.*"
   - `.`이후 플랫폼, 그리고 지정할 pixi 영역이 붙는다. 
   - 지정 가능한 pixi 영역은 `activation`, `dependencies`, `tasks` 세 가지이다. 
 
-`pixi.toml`을 플랫폼A에서 실행하면 `.pixi\` 폴더 아래 cuda 기반의 파이토치가 설치된다. 플랫폼B에서는 mps용 파이토치가 설치된다. 
+`pixi.toml`을 플랫폼A에서 실행하면 `.pixi\` 폴더 아래 cuda 기반의 파이토치가 설치된다. 플랫폼B에서는 `.pixi/` 아래 실리콘 맥 기반의 MPS를 활용한 파이토치가 설치된다. 
 
 ## VS Code 
 
