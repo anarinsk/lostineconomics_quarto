@@ -37,7 +37,7 @@ OS에 따라서 설치 방법이 제공된다. macos는 `brew`를 쓰는 것을 
 
 ```bash
 brew install pixi # for Macos 
-iwr -useb https://pixi.sh/install.ps1 | iex # For PS of Win64
+iwr -useb https://pixi.sh/install.ps1 | iex # For Windows PowerShell
 ```
 
 ## 활용 
