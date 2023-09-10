@@ -292,6 +292,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre class="shell"><code>&gt; notepad $profile</code></pre>
 <p>파일이 없으면 생성된다. 여기에 필요한 테마를 올려주면 된다. 예를 들어 나는 “powerlevel10k_modern” 테마를 좋아한다. 그러면 해당 프로필 파일에 아래와 같이 넣으면 된다.</p>
 <pre class="shell"><code>&gt; oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/powerlevel10k_modern.omp.json" | Invoke-Expression</code></pre>
+<p>만일 <code>$env:POSH_THEMES_PATH</code>를 쓰지 않고 특정한 디렉토리의 설정 json 파일을 가져오고 싶다면, 해당 디렉토리를 직접 지정하면 된다.</p>
 <section id="업데이트-시-테마가-초기화되는-문제" class="level3">
 <h3 class="anchored" data-anchor-id="업데이트-시-테마가-초기화되는-문제">업데이트 시 테마가 초기화되는 문제</h3>
 <p><code>$env:POSH_THEMES_PATH</code>의 위치에 따라서 업데이트 시 테마까지 함께 업데이트가 된다. 만일 해당 테마의 json 파일을 바꾸었다면 업데이트가 되면서 초기화된다. 어차피 테마 파일의 위치는 자유롭게 바꿀 수 있으니까 자신이 커스텀한 테마 파일의 위치를 바꾸고 녀석을 로드하면 된다.</p>
