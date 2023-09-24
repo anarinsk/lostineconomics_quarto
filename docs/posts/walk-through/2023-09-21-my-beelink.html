@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2023-09-21">
 <meta name="description" content="싸게 만들어보자.">
 
-<title>lostineconomics.com - 소박한 웹서버</title>
+<title>lostineconomics.com - 소박한 가정용 웹서버</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,6 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -162,9 +165,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">소박한 웹서버</h1>
+<h1 class="title">소박한 가정용 웹서버</h1>
   <div class="quarto-categories">
     <div class="quarto-category">computer-tool</div>
+    <div class="quarto-category">walk-through</div>
   </div>
   </div>
 
@@ -201,7 +205,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <ul>
 <li>단순 용도의 개인용 웹 서버를 구축해보자.</li>
-<li>구매부터 기본 세팅까지 개인이 경험한 전 과정을 소개한다. (역시 나중에 잊어버릴 나 놈을 위한 것이다!)</li>
+<li>구매부터 기본 세팅까지 개인이 경험한 전 과정을 소개한다. (역시 나중에 잊어버릴 나 놈을 위한 것이다!)<br>
+</li>
+<li>모든 것은 ‘게으른’ 접근이다. 필요한 것을 얻으면 그 이상은 나아가지 않을 것이다.</li>
 </ul>
 </section>
 <section id="넋두리" class="level2">
@@ -211,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="서버-구매" class="level2">
 <h2 class="anchored" data-anchor-id="서버-구매">서버 구매</h2>
 <p>일단 최대한 싸고 간단하게 구축하는 것이 목표였다. 싸다는 대목에서 라즈베리 파이를 고민했으나 이런 저런 부품을 구비하려면 비용이 만만치 않더라. 알리익스를 검색해보니, N95와 같은 준수한 저전력 x86 CPU를 장착한 베이본 물건이 13만원 정도면 살 수 있더라. 윈도OS도 필요 없고 메모리와 nvme SSD는 이미 굴러다니는 게 있어서 이 베어본을 구매했다. 말 그대로 램과 SSD가 빠진 깡통이 온다. 16GB 메모리는 약 5.5만원 정도, 512GB SSD는 4만원 정도면 구매하니, 대략 10만원 정도 더하면 쓸만한 서버를 살 수 있는 셈이다.</p>
-<p><a href="https://www.aliexpress.com/item/1005005305248100.html" class="uri">https://www.aliexpress.com/item/1005005305248100.html</a></p>
+<p><a href="./images/beelink.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="./images/beelink.webp" class="img-fluid" style="width:70.0%"></a> <a href="https://www.aliexpress.com/item/1005005305248100.html" class="uri">https://www.aliexpress.com/item/1005005305248100.html</a></p>
 </section>
 <section id="우분투-설치" class="level2">
 <h2 class="anchored" data-anchor-id="우분투-설치">우분투 설치</h2>
@@ -228,13 +234,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="기본-저장소-교체-및-업데이트" class="level3">
 <h3 class="anchored" data-anchor-id="기본-저장소-교체-및-업데이트">기본 저장소 교체 및 업데이트</h3>
 <p>apt 패키지 업데이트를 위한 주소는 <code>/etc/apt/sources.list</code> 파일을 편집하면 된다.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash= number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>&gt; sudo nano /etc/apt/sources.list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">&gt;</span> sudo <span class="fu">nano</span> /etc/apt/sources.list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>기본 저장소보다는 카카오의 미러 저장소가 국내에서는 빠르다. 해당 파일을 적당한 편집기로 열어 기본 패키지 저장소가 어떻게 되어 있는지 살펴보자. 파일 내의 모든 저장소 URL을 찾아 <code>http://archive.ubuntu.com/ubuntu/</code> 또는 <code>http://kr.archive.ubuntu.com/ubuntu/</code> 등의 주소를 <code>http://mirror.kakao.com/ubuntu/</code>로 변경하면 된다. 둘 중 뭘로 되어 있는지 모르니 확인 후 작업하는 것을 권장한다.</p>
 </section>
 <section id="패키지-업데이트와-업그레이드" class="level3">
 <h3 class="anchored" data-anchor-id="패키지-업데이트와-업그레이드">패키지 업데이트와 업그레이드</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash= number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>&gt; sudo apt update </span>
-<span id="cb2-2"><a href="#cb2-2"></a>&gt; sudo apt upgrade # OS 요소까지 모두 업그레이드하려면 full-upgrade  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="op">&gt;</span> sudo <span class="ex">apt</span> update </span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="op">&gt;</span> sudo <span class="ex">apt</span> upgrade <span class="co"># OS 요소까지 모두 업그레이드하려면 full-upgrade  </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="zsh-설치" class="level3">
 <h3 class="anchored" data-anchor-id="zsh-설치">zsh 설치</h3>
@@ -249,9 +255,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="p10k-깔기">p10k 깔기</h3>
 <div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash= number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href="#cb4-1"></a>&gt; git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>셸 꾸미기로 속 편하게 파워레벨10k를 쓰자.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash= number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a href="#cb5-1"></a># zsh 설정 열기 </span>
-<span id="cb5-2"><a href="#cb5-2"></a>&gt; nano ~/.zshrc</span>
-<span id="cb5-3"><a href="#cb5-3"></a># ZSH_THEME="robbyrussell" -&gt; ZSH_THEME="powerlevel10k/powerlevel10k"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># zsh 설정 열기 </span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="op">&gt;</span> nano <span class="ex">~/.zshrc</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co"># ZSH_THEME="robbyrussell" -&gt; ZSH_THEME="powerlevel10k/powerlevel10k"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>변경 후 셸을 다시 시작하면 설정화면이 뜬다. 취향대로 설정하도록 하자.</p>
 </section>
 <section id="brew-설치" class="level3">
@@ -263,17 +269,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="gh-pixi-with-brew" class="level3">
 <h3 class="anchored" data-anchor-id="gh-pixi-with-brew">gh, pixi with brew</h3>
 <p>이제 brew를 통해서 필요한 앱들을 깔겠다. 일단 깃헙을 활용하기 위한 gh와 파이썬 의존성 관리도구인 pixi를 깔도록 하자.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash= number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a href="#cb6-1"></a>&gt; brew install gh, pixi </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="op">&gt;</span> brew <span class="fu">install</span> gh, pixi </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>gh를 설치한 후 <code>gh auth login</code>을 통해 깃헙 계정에 로그인을 해두자. 필요한 리포가 있을 경우 <code>gh repo clone {리포-주소}</code>를 통해 편하게 당겨올 수 있다.</p>
+</section>
+<section id="streamlit" class="level3">
+<h3 class="anchored" data-anchor-id="streamlit">streamlit</h3>
+<p>이 소박한 가정용 서버의 목적이 streamlit을 호스팅하기 위한 것이다. 외부 클라우드 컴퓨팅을 사용하면 허름한 것을 쓰더라도 월 만원 정도 나간다. 스트림릿에서 제공하는 무료 티어를 쓸 수도 있지만, 이 녀석은 자주 쓰지 않는 경우 파킹에 들어가기 때문에 사용성이 아주 좋지는 않다. 우분투 깔아서 직접 호스팅하는 편이 가정용 용도라도 꽤 편리하다. 서버 가격이 비싸지 않으면서, 저전력이라서 전기세도 부담스럽지 않다. 아무튼, pixi를 통해서 streamlit을 설치하고 필요한 앱의 호스팅까지 별다른 문제 없이 진행할 수 있다.</p>
 </section>
 </section>
 <section id="토렌트-서버" class="level2">
 <h2 class="anchored" data-anchor-id="토렌트-서버">토렌트 서버</h2>
+<p>전반적인 설치는 아래 지침을 따르자.</p>
+<p><a href="https://hyperhand.tistory.com/entry/우분투에-토렌트-설치" class="uri">https://hyperhand.tistory.com/entry/우분투에-토렌트-설치</a></p>
+<section id="몇-가지-팁" class="level3">
+<h3 class="anchored" data-anchor-id="몇-가지-팁">몇 가지 팁</h3>
+<ul>
+<li>설정을 바꿀 때에는 반드시 서비스를 멈춘 상태에서 진행하도록 하자.</li>
+<li>유저 anari를 가정한 상태에서 이 아래 폴더에 다운로드된 결과를 넣고 싶다고 하자.<code>\home\anari\downloads</code>라고 하자.</li>
+<li>이때 넣고 싶은 폴더는 <code>anari</code> 그룹 안에 속해 있고 이용자는 <code>debian-transmission</code>이다.</li>
+<li>이 경우 <code>anari</code> 그룹 안에 <code>debian-transmission</code>이라는 이용자를 추가해주면 된다.</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="op">&gt;</span> cat <span class="ex">\etc\group</span> <span class="co"># 그룹 내역 및 소속 확인하기 </span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="op">&gt;</span> sudo <span class="ex">usermod</span> <span class="at">-aG</span> anari debian-transmission <span class="co"># anari 그룹 안에 debian-transmission 이용자 추가하기 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 </section>
 <section id="dlna-서버" class="level2">
 <h2 class="anchored" data-anchor-id="dlna-서버">DLNA 서버</h2>
+<p>본격적인 활용을 위해서는 Plex 등을 설치하는 게 좋겠지만, 스마트 티비 앱에 영상 정도 전송하는 것이 목적이라면 DLNA 서버만 있으면 된다. 이 용도에 딱 적합한 것이 minidlna다.</p>
+<p><a href="https://www.nemonein.xyz/2020/09/4403/" class="uri">https://www.nemonein.xyz/2020/09/4403/</a></p>
+<section id="몇-가지-팁-1" class="level3">
+<h3 class="anchored" data-anchor-id="몇-가지-팁-1">몇 가지 팁</h3>
+<ul>
+<li>위 설정에 소개된 대로 미디어를 스트리밍할 폴더를 설정해주면 된다.</li>
+<li>만일 내가 전송할 폴더의 위치가 anari 그룹에 속해있다면 마찬가지로 minidlna 유저를 이 그룹에 넣어주면 되겠다.</li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="op">&gt;</span> sudo <span class="ex">usermod</span> <span class="at">-aG</span> anari minidlna <span class="co"># 유저 추가하기</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="op">&gt;</span> sudo <span class="ex">systemctl</span> restart minidlna.service <span class="co"># 서비스 재개 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>서비스를 멈추고 설정을 바꾸는 게 좋다. <code>restart</code> 부분을 <code>start</code>, <code>stop</code> 등으로 응용하면 된다.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -626,6 +661,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":true,"openEffect":"zoom","closeEffect":"zoom"});</script>
 
 
 

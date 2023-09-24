@@ -1,16 +1,16 @@
 ---
-title: "소박한 웹서버" 
+title: "소박한 가정용 웹서버" 
 description: 싸게 만들어보자.  
 author: "JS HUHH"
 date: "09/21/2023"
-image: "./images/pixi.webp"
-categories: [computer-tool]
+image: "./images/title_0.jpg"
+categories: [computer-tool, walk-through]
 filters:
    - lightbox
    #- line-highlight
 lightbox: auto
 #jupyter: python3
-draft: true
+draft: false
 format:
   html:
     code-line-numbers: true
@@ -20,6 +20,7 @@ format:
 ## TL; DR
 - 단순 용도의 개인용 웹 서버를 구축해보자. 
 - 구매부터 기본 세팅까지 개인이 경험한 전 과정을 소개한다. (역시 나중에 잊어버릴 나 놈을 위한 것이다!)  
+- 모든 것은 '게으른' 접근이다. 필요한 것을 얻으면 그 이상은 나아가지 않을 것이다. 
 
 ## 넋두리 
 
@@ -29,6 +30,7 @@ format:
 
 일단 최대한 싸고 간단하게 구축하는 것이 목표였다. 싸다는 대목에서 라즈베리 파이를 고민했으나 이런 저런 부품을 구비하려면 비용이 만만치 않더라. 알리익스를 검색해보니, N95와 같은 준수한 저전력 x86 CPU를 장착한 베이본 물건이 13만원 정도면 살 수 있더라. 윈도OS도 필요 없고 메모리와 nvme SSD는 이미 굴러다니는 게 있어서 이 베어본을 구매했다. 말 그대로 램과 SSD가 빠진 깡통이 온다. 16GB 메모리는 약 5.5만원 정도, 512GB SSD는 4만원 정도면 구매하니, 대략 10만원 정도 더하면 쓸만한 서버를 살 수 있는 셈이다. 
 
+![](./images/beelink.webp){width="70%"}
 <https://www.aliexpress.com/item/1005005305248100.html>
 
 ## 우분투 설치 
@@ -47,7 +49,7 @@ USB에 다운받아서 설치하면 된다. 부팅 USB를 macos나 윈도에서 
 
 apt 패키지 업데이트를 위한 주소는 `/etc/apt/sources.list` 파일을 편집하면 된다. 
 
-```bash=
+```bash
 > sudo nano /etc/apt/sources.list
 ```
 
@@ -55,7 +57,7 @@ apt 패키지 업데이트를 위한 주소는 `/etc/apt/sources.list` 파일을
 
 ### 패키지 업데이트와 업그레이드 
 
-```bash=
+```bash
 > sudo apt update 
 > sudo apt upgrade # OS 요소까지 모두 업그레이드하려면 full-upgrade  
 ```
@@ -79,7 +81,7 @@ apt 패키지 업데이트를 위한 주소는 `/etc/apt/sources.list` 파일을
 
 셸 꾸미기로 속 편하게 파워레벨10k를 쓰자. 
 
-```bash=
+```bash
 # zsh 설정 열기 
 > nano ~/.zshrc
 # ZSH_THEME="robbyrussell" -> ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -99,16 +101,49 @@ apt 패키지 업데이트를 위한 주소는 `/etc/apt/sources.list` 파일을
 
 이제 brew를 통해서 필요한 앱들을 깔겠다. 일단 깃헙을 활용하기 위한 gh와 파이썬 의존성 관리도구인 pixi를 깔도록 하자. 
 
-```bash=
+```bash
 > brew install gh, pixi 
 ```
 
 gh를 설치한 후 `gh auth login`을 통해 깃헙 계정에 로그인을 해두자. 필요한 리포가 있을 경우 `gh repo clone {리포-주소}`를 통해 편하게 당겨올 수 있다. 
 
+### streamlit
+
+이 소박한 가정용 서버의 목적이 streamlit을 호스팅하기 위한 것이다. 외부 클라우드 컴퓨팅을 사용하면 허름한 것을 쓰더라도 월 만원 정도 나간다. 스트림릿에서 제공하는 무료 티어를 쓸 수도 있지만, 이 녀석은 자주 쓰지 않는 경우 파킹에 들어가기 때문에 사용성이 아주 좋지는 않다. 우분투 깔아서 직접 호스팅하는 편이 가정용 용도라도 꽤 편리하다. 서버 가격이 비싸지 않으면서, 저전력이라서 전기세도 부담스럽지 않다. 
+아무튼, pixi를 통해서 streamlit을 설치하고 필요한 앱의 호스팅까지 별다른 문제 없이 진행할 수 있다. 
+
 ## 토렌트 서버
 
+전반적인 설치는 아래 지침을 따르자. 
 
+<https://hyperhand.tistory.com/entry/우분투에-토렌트-설치>
+
+### 몇 가지 팁 
+
+- 설정을 바꿀 때에는 반드시 서비스를 멈춘 상태에서 진행하도록 하자. 
+- 유저 anari를 가정한 상태에서 이 아래 폴더에 다운로드된 결과를 넣고 싶다고 하자.`\home\anari\downloads`라고 하자. 
+- 이때 넣고 싶은 폴더는 `anari` 그룹 안에 속해 있고 이용자는 `debian-transmission`이다. 
+- 이 경우 `anari` 그룹 안에 `debian-transmission`이라는 이용자를 추가해주면 된다. 
+
+```bash
+> cat \etc\group # 그룹 내역 및 소속 확인하기 
+> sudo usermod -aG anari debian-transmission # anari 그룹 안에 debian-transmission 이용자 추가하기 
+```
 
 ## DLNA 서버 
 
+본격적인 활용을 위해서는 Plex 등을 설치하는 게 좋겠지만, 스마트 티비 앱에 영상 정도 전송하는 것이 목적이라면 DLNA 서버만 있으면 된다. 이 용도에 딱 적합한 것이 minidlna다. 
 
+<https://www.nemonein.xyz/2020/09/4403/>
+
+### 몇 가지 팁 
+
+- 위 설정에 소개된 대로 미디어를 스트리밍할 폴더를 설정해주면 된다. 
+- 만일 내가 전송할 폴더의 위치가 anari 그룹에 속해있다면 마찬가지로 minidlna 유저를 이 그룹에 넣어주면 되겠다. 
+
+```bash
+> sudo usermod -aG anari minidlna # 유저 추가하기
+> sudo systemctl restart minidlna.service # 서비스 재개 
+```
+
+서비스를 멈추고 설정을 바꾸는 게 좋다. `restart` 부분을 `start`, `stop` 등으로 응용하면 된다. 
