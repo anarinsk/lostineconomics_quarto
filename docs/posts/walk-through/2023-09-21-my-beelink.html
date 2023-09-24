@@ -214,11 +214,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="넋두리" class="level2">
 <h2 class="anchored" data-anchor-id="넋두리">넋두리</h2>
-<p>“웹 서버”라고 제목에 쓰긴 했지만 사실 단순한 파이썬 앱 호스팅, 토렌트 다운로드, 그리고 DLNA 서버 정도 만드는 것이 전부이다. 즉 본격적인 의미의 NAS를 만드는 것이 아니다. 깃헙과 스트리밍 서비스가 존재하는 시대에 굳이 개인용 NAS까지 만들 정도로 보관해야 할 자료가 없기도 하다.</p>
+<p>“웹 서버”라고 제목에 쓰긴 했지만 사실 단순한 파이썬 앱 호스팅, 토렌트 다운로드, 그리고 DLNA 서버 정도 만드는 것이 전부이다. 본격적인 의미의 NAS를 만드는 것이 아니다. 깃헙과 스트리밍 서비스가 존재하는 시대에 개인용 NAS까지 만들 정도로 보관해야 할 자료가 나에게는 없다.</p>
 </section>
 <section id="서버-구매" class="level2">
 <h2 class="anchored" data-anchor-id="서버-구매">서버 구매</h2>
-<p>최대한 싸고 간단하게 구축하는 것이 목표이다. 처음에는 라즈베리 파이를 고민했으나 이런 저런 부품을 구비하려면 그 비용이 만만치 않더라. 알리익스를 검색해보니 N95와 같은 준수한 저전력 x86 CPU를 장착한 베이본 물건을 13만원 정도면 살 수 있었다. 윈도OS도 필요 없고 메모리와 nvme SSD는 이미 굴러다니는 게 있어서 이 녀석을 구매했다. 16GB 메모리는 약 5.5만원 정도, 512GB SSD는 4만원 정도면 구매하니, 대략 10만원 정도 더하면 쓸만한 작은 서버를 살 수 있는 셈이다.</p>
+<p>목표는 최대한 싸고 간단하게 구축하는 것. 처음에는 라즈베리 파이를 고민했으나 이런 저런 부품을 구비하려면 비용이 꽤 들더라. 이럴 바에야 x86이 낫지 않을까? 알리익스프레스를 검색했다. N95와 같은 준수한 저전력 x86 CPU가 장착된 베이본 물건을 13만원 정도면 살 수 있었다. 윈도 OS도 필요 없고 메모리와 nvme SSD는 이미 굴러다니는 게 있어서 이 녀석을 구매했다. 16GB 메모리는 약 5.5만원 정도, 512GB SSD는 4만원 정도면 구매하니, 대략 베어본 가격에서 10만원 정도 더하면 쓸만한 작은 서버를 갖출 수 있다.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
 <p><a href="./images/beelink.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="https://www.aliexpress.com/item/1005005305248100.html"><img src="./images/beelink.webp" class="img-fluid figure-img" style="width:60.0%"></a></p>
@@ -230,14 +230,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="우분투-설치">우분투 설치</h2>
 <p>USB 메모리에 다운받아서 설치하면 된다. 부팅 USB를 macos나 윈도에서 편리하게 만들 수 있다. <a href="https://ubuntu.com/tutorials/create-a-usb-stick-on-macos#1-overview">여기</a>를 참고하자. 설치 과정에서 경험한 몇 가지 사실을 소개한다.</p>
 <ul>
-<li>“Ubuntu 22.04.3 LTS” 서버 버전 설치했다. 이 녀석을 통해 GUI를 쓸 일이 없을 듯 해서 데스크탑 버전이나 GUI 활용을 위한 앱을 깔지 않았다.</li>
-<li>요즘 우분투 설치시 github을 통해서 ssh 오픈키를 가져올 수 있다. ssh 키를 깃헙에 미리 설정해두면 서버에 네트워크 접속할 때 무척 편하다. 해당 오픈키의 프라이빗 키가 설치된 노트북에서는 바로 접속이 가능하다.</li>
-<li>설치가 끝는 이후에는 별도의 기기를 통해 ssh 접속하는 게 작업하기에 편리하다. 서버에 디스플레이와 키보드를 붙여서 쓴다면 명령어를 일일이 타이핑 해야 한다.</li>
+<li>“Ubuntu 22.04.3 LTS” 서버 버전 설치했다. 이 녀석을 통해 GUI를 쓸 일이 없을 듯 하기에 GUI 활용을 위한 데스크탑 앱을 깔지 않았다.</li>
+<li>요즘 버전 우분투 설치시 github을 통해서 ssh 오픈키를 가져올 수 있다. 해당 오픈키의 프라이빗 키가 설정된 노트북에서 바로 서버로 접속이 가능하다.</li>
+<li>OS 설치가 끝난 이후 macos나 윈도가 설치된 기기를 통해 ssh 접속을 통해 작업하기를 권한다. 서버에 디스플레이와 키보드를 붙여서 쓰면 명령어를 모두 타이핑 해야 한다.</li>
 </ul>
 </section>
 <section id="설치-후-작업" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="설치-후-작업">설치 후 작업</h2>
-<p>우분투 설치 후에는 몇가지 작업을 해주자.</p>
+<p>우분투 설치 후에는 몇가지 필요한 작업을 해야 한다.</p>
 <section id="기본-저장소-교체-및-업데이트" class="level3">
 <h3 class="anchored" data-anchor-id="기본-저장소-교체-및-업데이트">기본 저장소 교체 및 업데이트</h3>
 <p>apt 패키지 업데이트를 위한 주소는 <code>/etc/apt/sources.list</code> 파일을 편집하면 된다.</p>
@@ -247,31 +247,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="패키지-업데이트와-업그레이드" class="level3">
 <h3 class="anchored" data-anchor-id="패키지-업데이트와-업그레이드">패키지 업데이트와 업그레이드</h3>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="op">&gt;</span> sudo <span class="ex">apt</span> update </span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="op">&gt;</span> sudo <span class="ex">apt</span> upgrade <span class="co"># OS 요소까지 모두 업그레이드하려면 full-upgrade  </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="op">&gt;</span> sudo <span class="ex">apt</span> upgrade <span class="co"># OS 요소까지 모두 업그레이드하려면 upgrade &gt; full-upgrade  </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="zsh-설치" class="level3">
 <h3 class="anchored" data-anchor-id="zsh-설치">zsh 설치</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash= number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>&gt; sudo apt update # 이미 실행했다면 건너뛰자 </span>
-<span id="cb3-2"><a href="#cb3-2"></a>&gt; sudo apt install zsh # zsh 설치</span>
-<span id="cb3-3"><a href="#cb3-3"></a>&gt; chsh -s $(which zsh) # zsh을 기본 셸로 설치 </span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="op">&gt;</span> sudo <span class="ex">apt</span> update <span class="co"># 이미 실행했다면 건너 뛰자 </span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="op">&gt;</span> sudo <span class="ex">apt</span> install zsh <span class="co"># zsh 설치</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="op">&gt;</span> chsh <span class="ex">-s</span> <span class="va">$(</span><span class="fu">which</span> zsh<span class="va">)</span> <span class="co"># zsh을 기본 셸로 설치 </span></span>
 <span id="cb3-4"><a href="#cb3-4"></a></span>
-<span id="cb3-5"><a href="#cb3-5"></a># 로그아웃 후에 다시 로그인하면 zsh이 기본셸로 설정된다. </span>
-<span id="cb3-6"><a href="#cb3-6"></a>&gt; sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" # oh my zsh을 설치하자. </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="co"># 로그아웃 후에 다시 로그인하면 zsh이 기본셸로 설정된다. </span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="op">&gt;</span> sh <span class="ex">-c</span> <span class="st">"</span><span class="va">$(</span><span class="ex">curl</span> <span class="at">-fsSL</span> https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="va">)</span><span class="st">"</span> <span class="co"># oh my zsh을 설치하자. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="p10k-깔기" class="level3">
 <h3 class="anchored" data-anchor-id="p10k-깔기">p10k 깔기</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash= number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href="#cb4-1"></a>&gt; git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="op">&gt;</span> git <span class="ex">clone</span> <span class="at">--depth</span><span class="op">=</span>1 https://github.com/romkatv/powerlevel10k.git <span class="va">${ZSH_CUSTOM</span><span class="op">:-</span><span class="va">$HOME</span>/.oh-my-zsh/custom<span class="va">}</span>/themes/powerlevel10k</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>셸 꾸미기로 속 편하게 파워레벨10k를 쓰자.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># zsh 설정 열기 </span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="op">&gt;</span> nano <span class="ex">~/.zshrc</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="co"># ZSH_THEME="robbyrussell" -&gt; ZSH_THEME="powerlevel10k/powerlevel10k"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>변경 후 셸을 다시 시작하면 설정화면이 뜬다. 취향대로 설정하도록 하자.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="op">&gt;</span> nano <span class="ex">~/.zshrc</span> <span class="co"># zsh 설정 열기 </span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="co"># ZSH_THEME="robbyrussell" -&gt; ZSH_THEME="powerlevel10k/powerlevel10k" # 테마를 p10k로 바꾸자 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>변경 후 셸을 다시 시작하면 p10k 설정화면이 뜬다. 취향대로 설정하도록 하자.</p>
 </section>
 <section id="brew-설치" class="level3">
 <h3 class="anchored" data-anchor-id="brew-설치">brew 설치</h3>
-<p>우분투에서 필요한 앱을 까는 방법은 apt, snap 그리고 brew가 있다. OS 단위의 업데이트 혹은 OS와 프로세스과 깊게 연관된 앱들은 apt를 통해서 깔자. 이용자 레벨에서 필요한 앱들은 brew가 편하다. macos 만큼 편하지는 않지만 그래도 쓸만하다.</p>
+<p>우분투에서 필요한 앱을 까는 방법은 apt, snap 그리고 brew가 있다. OS 단위의 업데이트 혹은 OS와 프로세스과 깊게 연관된 앱들은 apt를 통해서 깔자. snap도 나쁘지는 않지만 거추장스런 면이 있다. user 레벨에서 필요한 앱들을 깔고 관리하기에는 brew가 편하다. macos 만큼 편하지는 않지만 리눅스에서도 쓸만하다.</p>
 <p><a href="https://brew.sh/" class="uri">https://brew.sh/</a></p>
-<p>설치 후에는 화면에 뜬 사후 작업을 꼭 해줘야 한다. 그래야 brew 명령어를 제대로 실행할 수 있다. 사용하는 셸에 따라서 차별적인 명령어가 등장하니 유의하면 되겠다.</p>
+<p>웹 페이지의 소개된 방식대로 설치하자. 설치 후에는 화면에 뜬 메시지대로 사후 작업을 꼭 해줘야 한다. 그래야 brew 명령어를 제대로 실행할 수 있다. 사용하는 셸에 따라서 서로 다른 사후 실행 명령이 등장하니 유의하시라.</p>
 </section>
 <section id="gh-pixi-with-brew" class="level3">
 <h3 class="anchored" data-anchor-id="gh-pixi-with-brew">gh, pixi with brew</h3>
@@ -293,7 +292,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>디태치해서 빠져 나온다.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="op">&gt;</span> tmux <span class="ex">new-session</span> <span class="at">-s</span> {내-세션} <span class="co"># 새로운 세션 시작 </span></span>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="op">&gt;</span> tmux <span class="ex">new-session</span> <span class="at">-s</span> {내-세션} <span class="co"># {내-세션}이라는 이름의 새로운 세션 시작 </span></span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="op">&gt;</span> pixi <span class="ex">run</span> streamlit {당신의-앱.py} <span class="at">--server.port</span> 8880 <span class="co"># 서버 포트는 필요한 경우 추가 </span></span>
 <span id="cb7-3"><a href="#cb7-3"></a><span class="op">&gt;</span> <span class="ex">[CTRL-B]</span> + D 로 창을 빠져 나온다. </span>
 <span id="cb7-4"><a href="#cb7-4"></a><span class="co">#</span></span>
@@ -317,8 +316,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>설정을 바꿀 때에는 반드시 서비스를 멈춘 상태에서 진행하도록 하자.</li>
 <li>유저 anari를 가정한 상태에서 이 아래 폴더에 다운로드된 결과를 넣고 싶다고 하자.<code>\home\anari\downloads</code>라고 하자.</li>
-<li>이때 넣고 싶은 폴더는 <code>anari</code> 그룹 안에 속해 있고 이용자는 <code>debian-transmission</code>이다.</li>
-<li>이 경우 <code>anari</code> 그룹 안에 <code>debian-transmission</code>이라는 이용자를 추가해주면 된다.</li>
+<li>이때 다운로드 파일을 넣고 싶은 폴더는 <code>anari</code> 그룹 안에 속해 있고 이용자는 <code>debian-transmission</code>이다.</li>
+<li>이 경우 <code>anari</code> 그룹 안에 <code>debian-transmission</code>이라는 이용자를 추가하면 권한 문제가 해결된다.</li>
 </ul>
 <div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="op">&gt;</span> cat <span class="ex">\etc\group</span> <span class="co"># 그룹 내역 및 소속 확인하기 </span></span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="op">&gt;</span> sudo <span class="ex">usermod</span> <span class="at">-aG</span> anari debian-transmission <span class="co"># anari 그룹 안에 debian-transmission 이용자 추가하기 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -692,7 +691,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
 
 
 
