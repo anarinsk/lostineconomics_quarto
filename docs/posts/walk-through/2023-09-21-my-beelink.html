@@ -214,30 +214,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="넋두리" class="level2">
 <h2 class="anchored" data-anchor-id="넋두리">넋두리</h2>
-<p>웹 서버라고 제목에 쓰긴 했지만, 사실 웹 서버라기보다는 단순한 파이썬 앱 호스팅, 토렌트 다운로드, 그리고 DLNA 서버 정도 만드는 목적이다. 우선 NAS 용도는 아니다. 깃헙과 스트리밍 서비스가 존재하는 시대에 굳이 개인용 NAS까지 만들 정도로 보관해야 할 자료가 없기 때문이다.</p>
+<p>“웹 서버”라고 제목에 쓰긴 했지만 사실 단순한 파이썬 앱 호스팅, 토렌트 다운로드, 그리고 DLNA 서버 정도 만드는 것이 전부이다. 즉 본격적인 의미의 NAS를 만드는 것이 아니다. 깃헙과 스트리밍 서비스가 존재하는 시대에 굳이 개인용 NAS까지 만들 정도로 보관해야 할 자료가 없기도 하다.</p>
 </section>
 <section id="서버-구매" class="level2">
 <h2 class="anchored" data-anchor-id="서버-구매">서버 구매</h2>
-<p>일단 최대한 싸고 간단하게 구축하는 것이 목표였다. 싸다는 대목에서 라즈베리 파이를 고민했으나 이런 저런 부품을 구비하려면 비용이 만만치 않더라. 알리익스를 검색해보니, N95와 같은 준수한 저전력 x86 CPU를 장착한 베이본 물건이 13만원 정도면 살 수 있더라. 윈도OS도 필요 없고 메모리와 nvme SSD는 이미 굴러다니는 게 있어서 이 베어본을 구매했다. 말 그대로 램과 SSD가 빠진 깡통이 온다. 16GB 메모리는 약 5.5만원 정도, 512GB SSD는 4만원 정도면 구매하니, 대략 10만원 정도 더하면 쓸만한 서버를 살 수 있는 셈이다.</p>
+<p>최대한 싸고 간단하게 구축하는 것이 목표이다. 처음에는 라즈베리 파이를 고민했으나 이런 저런 부품을 구비하려면 그 비용이 만만치 않더라. 알리익스를 검색해보니 N95와 같은 준수한 저전력 x86 CPU를 장착한 베이본 물건을 13만원 정도면 살 수 있었다. 윈도OS도 필요 없고 메모리와 nvme SSD는 이미 굴러다니는 게 있어서 이 녀석을 구매했다. 16GB 메모리는 약 5.5만원 정도, 512GB SSD는 4만원 정도면 구매하니, 대략 10만원 정도 더하면 쓸만한 작은 서버를 살 수 있는 셈이다.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><a href="./images/beelink.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="https://www.aliexpress.com/item/1005005305248100.html"><img src="./images/beelink.webp" class="img-fluid figure-img" style="width:40.0%"></a></p>
+<p><a href="./images/beelink.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="https://www.aliexpress.com/item/1005005305248100.html"><img src="./images/beelink.webp" class="img-fluid figure-img" style="width:60.0%"></a></p>
 <figcaption class="figure-caption"><a href="https://www.aliexpress.com/item/1005005305248100.html" class="uri">https://www.aliexpress.com/item/1005005305248100.html</a></figcaption>
 </figure>
 </div>
 </section>
 <section id="우분투-설치" class="level2">
 <h2 class="anchored" data-anchor-id="우분투-설치">우분투 설치</h2>
-<p>USB에 다운받아서 설치하면 된다. 부팅 USB를 macos나 윈도에서 편리하게 만들 수 있다. <a href="https://ubuntu.com/tutorials/create-a-usb-stick-on-macos#1-overview">여기</a>를 참고하자. 설치 과정에서 경험한 몇 가지 사실을 소개한다.</p>
+<p>USB 메모리에 다운받아서 설치하면 된다. 부팅 USB를 macos나 윈도에서 편리하게 만들 수 있다. <a href="https://ubuntu.com/tutorials/create-a-usb-stick-on-macos#1-overview">여기</a>를 참고하자. 설치 과정에서 경험한 몇 가지 사실을 소개한다.</p>
 <ul>
 <li>“Ubuntu 22.04.3 LTS” 서버 버전 설치했다. 이 녀석을 통해 GUI를 쓸 일이 없을 듯 해서 데스크탑 버전이나 GUI 활용을 위한 앱을 깔지 않았다.</li>
 <li>요즘 우분투 설치시 github을 통해서 ssh 오픈키를 가져올 수 있다. ssh 키를 깃헙에 미리 설정해두면 서버에 네트워크 접속할 때 무척 편하다. 해당 오픈키의 프라이빗 키가 설치된 노트북에서는 바로 접속이 가능하다.</li>
-<li>설치가 끝는 이후에는 별도의 기기를 통해 ssh 접속하는 게 작업에 유리하다. 복붙을 해야 할 일이 많은데 서버에 디스플레이와 키보드를 붙여서 써서는 이 작업이 용이하지 않다.</li>
+<li>설치가 끝는 이후에는 별도의 기기를 통해 ssh 접속하는 게 작업하기에 편리하다. 서버에 디스플레이와 키보드를 붙여서 쓴다면 명령어를 일일이 타이핑 해야 한다.</li>
 </ul>
 </section>
 <section id="설치-후-작업" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="설치-후-작업">설치 후 작업</h2>
-<p>우분투 설치 후에 몇가지 작업을 해줘야 한다.</p>
+<p>우분투 설치 후에는 몇가지 작업을 해주자.</p>
 <section id="기본-저장소-교체-및-업데이트" class="level3">
 <h3 class="anchored" data-anchor-id="기본-저장소-교체-및-업데이트">기본 저장소 교체 및 업데이트</h3>
 <p>apt 패키지 업데이트를 위한 주소는 <code>/etc/apt/sources.list</code> 파일을 편집하면 된다.</p>
@@ -692,7 +692,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":true,"openEffect":"zoom","descPosition":"bottom"});</script>
 
 
 
