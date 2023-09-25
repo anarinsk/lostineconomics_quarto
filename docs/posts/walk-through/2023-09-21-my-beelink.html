@@ -221,7 +221,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>목표는 최대한 싸고 간단하게 구축하는 것. 처음에는 라즈베리 파이를 고민했으나 이런 저런 부품을 구비하려면 비용이 꽤 들더라. 이럴 바에야 x86이 낫지 않을까? 알리익스프레스를 검색했다. N95와 같은 준수한 저전력 x86 CPU가 장착된 베이본 물건을 13만원 정도면 살 수 있었다. 윈도 OS도 필요 없고 메모리와 nvme SSD는 이미 굴러다니는 게 있어서 이 녀석을 구매했다. 16GB 메모리는 약 5.5만원 정도, 512GB SSD는 4만원 정도면 구매하니, 대략 베어본 가격에서 10만원 정도 더하면 쓸만한 작은 서버를 갖출 수 있다.</p>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><a href="./images/beelink.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="https://www.aliexpress.com/item/1005005305248100.html"><img src="./images/beelink.webp" class="img-fluid figure-img" style="width:60.0%"></a></p>
+<p><a href="./images/beelink.webp" class="lightbox" title="https://www.aliexpress.com/item/1005005305248100.html" data-gallery="quarto-lightbox-gallery-1"><img src="./images/beelink.webp" class="img-fluid figure-img" style="width:60.0%"></a></p>
 <figcaption class="figure-caption"><a href="https://www.aliexpress.com/item/1005005305248100.html" class="uri">https://www.aliexpress.com/item/1005005305248100.html</a></figcaption>
 </figure>
 </div>
@@ -303,7 +303,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Cloudflare를 예로 들어보자. http와 https 별로 특정한 포트가 열려 있다. 해당 포트로만 접근이 가능하다. IP 주소를 감추기 위해 다음과 같은 우회로를 쓸 수 있다. A 호스트네임을 IP 주소와 연동한다. 필요한 서비스에 접속하기 위해서는 <code>A:8880</code>이런 식으로 접근하면 된다. 만일 8880도 없애고 싶다면 어떻게 해야 할까? CNAME으로 B 호스트네임을 자체 도메인으로 연동한다. 그리고 Rule의 리디렉션 룰을 생성해서 B 호스트네임을 <code>A:8880</code>으로 리디렉션하면 된다.</p>
+<p>Cloudflare를 예로 들어보자. http와 https 별로 특정한 포트가 열려 있다(<a href="https://developers.cloudflare.com/fundamentals/reference/network-ports/">LINK</a>).해당 포트로만 접근이 가능하다. IP 주소를 감추기 위해 다음과 같은 우회로를 쓸 수 있다. A 호스트네임을 IP 주소와 연동하고 proxy를 켠다. 필요한 서비스에 접속하기 위해서는 <code>A:8880</code>이런 식으로 도메인네임으로 접근하면 된다. 만일 8880을 기억하기 싫다면? CNAME으로 B 호스트네임을 자체 도메인으로 연동한다. 그리고 Rule의 리디렉션 룰을 생성해서 B 호스트네임을 <code>A:8880</code>으로 리디렉션하면 된다.</p>
 </div></div></section>
 </section>
 </section>
@@ -691,7 +691,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":true,"closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
 
 
 
