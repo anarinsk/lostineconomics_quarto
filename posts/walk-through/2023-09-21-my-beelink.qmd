@@ -30,7 +30,7 @@ format:
 
 목표는 최대한 싸고 간단하게 구축하는 것. 처음에는 라즈베리 파이를 고민했으나 이런 저런 부품을 구비하려면 비용이 꽤 들더라. 이럴 바에야 x86이 낫지 않을까? 알리익스프레스를 검색했다. N95와 같은 준수한 저전력 x86 CPU가 장착된 베이본 물건을 13만원 정도면 살 수 있었다. 윈도 OS도 필요 없고 메모리와 nvme SSD는 이미 굴러다니는 게 있어서 이 녀석을 구매했다. 16GB 메모리는 약 5.5만원 정도, 512GB SSD는 4만원 정도면 구매하니, 대략 베어본 가격에서 10만원 정도 더하면 쓸만한 작은 서버를 갖출 수 있다. 
 
-![<https://www.aliexpress.com/item/1005005305248100.html>](./images/beelink.webp){width="60%" fig-align="left"}
+![<https://www.aliexpress.com/item/1005005305248100.html>](./images/beelink.webp){width="40%" fig-align="left"}
 
 
 ## 우분투 설치 
