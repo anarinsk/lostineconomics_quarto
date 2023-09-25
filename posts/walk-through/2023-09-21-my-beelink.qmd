@@ -53,7 +53,7 @@ apt 패키지 업데이트를 위한 주소는 `/etc/apt/sources.list` 파일을
 > sudo nano /etc/apt/sources.list
 ```
 
-기본 저장소보다는 카카오의 미러 저장소가 국내에서는 빠르다. 해당 파일을 적당한 편집기로 열어 기본 패키지 저장소가 어떻게 되어 있는지 살펴보자. 파일 내의 모든 저장소 URL을 찾아 `http://archive.ubuntu.com/ubuntu/` 또는 `http://kr.archive.ubuntu.com/ubuntu/` 등의 주소를 `http://mirror.kakao.com/ubuntu/`로 변경하면 된다. 둘 중 뭘로 되어 있는지 모르니 확인 후 작업하는 것을 권장한다. 
+기본 저장소보다는 카카오의 미러 저장소가 국내에서 빠르다. 해당 파일을 적당한 편집기로 열어 기본 패키지 저장소가 어떻게 되어 있는지 살펴보자. 파일 내의 모든 저장소 URL을 찾아 `http://archive.ubuntu.com/ubuntu/` 또는 `http://kr.archive.ubuntu.com/ubuntu/` 등의 주소를 `http://mirror.kakao.com/ubuntu/`로 변경하면 된다. 둘 중 뭘로 되어 있는지 모르니 확인 후 작업하는 것을 권한다. 
 
 ### 패키지 업데이트와 업그레이드 
 
@@ -67,7 +67,7 @@ apt 패키지 업데이트를 위한 주소는 `/etc/apt/sources.list` 파일을
 ```bash
 > sudo apt update # 이미 실행했다면 건너 뛰자 
 > sudo apt install zsh # zsh 설치
-> chsh -s $(which zsh) # zsh을 기본 셸로 설치 
+> chsh -s $(which zsh) # zsh을 기본 셸로 설정
 
 # 로그아웃 후에 다시 로그인하면 zsh이 기본셸로 설정된다. 
 > sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" # oh my zsh을 설치하자. 
@@ -86,7 +86,7 @@ apt 패키지 업데이트를 위한 주소는 `/etc/apt/sources.list` 파일을
 # ZSH_THEME="robbyrussell" -> ZSH_THEME="powerlevel10k/powerlevel10k" # 테마를 p10k로 바꾸자 
 ```
 
-변경 후 셸을 다시 시작하면 p10k 설정화면이 뜬다. 취향대로 설정하도록 하자. 
+변경 후 셸을 다시 시작하면 p10k 설정화면이 뜬다. 취향대로 설정하도록 하자. 설정을 바꾸고 싶다면, `p10k configure`를 실행하거나 `~/.p10k.zsh`를 직접 수정해도 좋다. 
 
 ### brew 설치 
 
@@ -98,7 +98,7 @@ apt 패키지 업데이트를 위한 주소는 `/etc/apt/sources.list` 파일을
 
 ### gh, pixi with brew 
 
-이제 brew를 통해서 필요한 앱들을 깔겠다. 일단 깃헙을 활용하기 위한 gh와 파이썬 의존성 관리도구인 pixi를 깔도록 하자. 
+이제 brew를 통해서 필요한 앱들을 깔겠다. 필요한 앱을 알아서 깔면 된다. brew를 통해서 설치할 수 있는지 여부는 brew 홈페이지에서 검색으로 확인할 수 있다. 나는 깃헙을 활용하기 위한 gh와 파이썬 의존성 관리도구인 pixi를 가장 먼저 설치했다. 
 
 ```bash
 > brew install gh, pixi 
@@ -108,12 +108,12 @@ gh를 설치한 후 `gh auth login`을 통해 깃헙 계정에 로그인을 해�
 
 ### streamlit
 
-이 소박한 가정용 서버의 목적이 streamlit을 호스팅하기 위한 것이다. 외부 클라우드 컴퓨팅을 사용하면 허름한 것을 쓰더라도 월 만원 정도 나간다. 스트림릿에서 제공하는 무료 티어를 쓸 수도 있지만, 이 녀석은 자주 쓰지 않는 경우 파킹에 들어가기 때문에 사용성이 아주 좋지는 않다. 우분투 깔아서 직접 호스팅하는 편이 가정용 용도라도 꽤 편리하다. 서버 가격이 비싸지 않으면서, 저전력이라서 전기세도 부담스럽지 않다. 
+이 소박한 가정용 서버의 목적이 streamlit을 호스팅하기 위한 것이다. 외부 클라우드 컴퓨팅을 사용하면 허름한 것을 쓰더라도 월 만원 정도 나간다. 스트림릿에서 제공하는 무료 티어를 쓸 수도 있지만, 이 녀석은 자주 쓰지 않는 경우 파킹에 들어가기 때문에 사용성이 아주 좋지는 않다. 우분투 깔아서 직접 호스팅하는 편이 소박한 용도라도 제법 편리하다. 앞서 보았듯이 서버 가격이 비싸지 않으며 전기 요금도 얼마 되지 않는다. 
 
 #### 설치와 서비스
 
 - pixi를 통해서 streamlit을 설치한다. 
-- 프로세스를 계속 띄우기 위해서는 tmux를 활용하자. 
+- 프로세스를 계속 살려두기 위해서 tmux를 활용하자. 
   - tmux세션을 만든 후에 
   - 해당 세션에서 streamlit 프로세스를 띄우고 
   - 디태치해서 빠져 나온다. 
