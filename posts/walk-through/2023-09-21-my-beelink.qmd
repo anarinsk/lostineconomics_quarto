@@ -3,7 +3,7 @@ title: "소박한 가정용 웹서버"
 description: 싸게 만들어보자.  
 author: "JS HUHH"
 date: "09/21/2023"
-image: "./images/title_0.jpg"
+image: "./images/webserver.webp"
 categories: [computer-tool, walk-through]
 filters:
    - lightbox
