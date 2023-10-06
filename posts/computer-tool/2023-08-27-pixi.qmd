@@ -35,10 +35,10 @@ format:
 
 <https://prefix.dev/docs/pixi/overview#installation>
 
-OS에 따라서 설치 방법이 제공된다. macos는 `brew`를 쓰는 것을 권장한다. 
+OS에 따라서 설치 방법이 제공된다. macos나 linux라면 `brew`를 쓰는 것을 권장한다. 
 
 ```bash
-brew install pixi # for Macos 
+brew install pixi # for Macos or linux
 iwr -useb https://pixi.sh/install.ps1 | iex # For Windows PowerShell
 ```
 
