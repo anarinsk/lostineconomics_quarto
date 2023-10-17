@@ -14,7 +14,7 @@ new blog based on quarto
 - pixi를 통해서 필요한 패키지 설치 
 - vs code에서 컴파일 할 때 `F1 > "파이썬 인터프리터 선택"`해서 `.pixi/env/bin/python` 선택
 
-~~### 20130317 - 폰트 로딩 방식 개선~~
+~~### 20230317 - 폰트 로딩 방식 개선~~
 
 
 ~~- `_quarto.yml` 파일 수정~~
