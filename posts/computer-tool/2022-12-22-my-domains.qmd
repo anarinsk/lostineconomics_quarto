@@ -3,7 +3,7 @@ title: 내 도메인을 GitHub Pages에 연결하자.
 description: 도메인을 도메인 답게!
 author: "JS HUHH"
 date: "12/22/2022"
-image: "images/dns.jfif"
+image: "./images/web-cat.webp"
 categories: [computer-tool]
 filters:
    - lightbox
