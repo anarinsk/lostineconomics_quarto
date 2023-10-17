@@ -3,7 +3,7 @@ title: Berkson's Paradox with Regression
 description: 어떤 변인을 고려하지 말아야 할까?  
 author: "JS HUHH"
 date: "06/06/2022"
-image: "images/simpson.jpg"
+image: "./images/berson.webp"
 categories: [regression, stats-simple]
 draft: false
 format:
