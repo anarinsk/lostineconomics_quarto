@@ -3,7 +3,7 @@ title: Berkson's Paradox with Regression
 description: 어떤 변인을 고려하지 말아야 할까?  
 author: "JS HUHH"
 date: "06/06/2022"
-image: "./images/berson.webp"
+image: "./images/cat-berkson.webp"
 categories: [regression, stats-simple]
 draft: false
 format:
@@ -123,9 +123,17 @@ ols3 = sm.ols(formula="covid_severity ~ pack_of_cigar + is_hospitalized", data=r
 #ols1.summary()
 #ols2.summary()
 
-from stargazer.stargazer import Stargazer
-stargazer = Stargazer([ols1, ols2, ols3])
-stargazer
+# stargazer sucks 
+#from stargazer.stargazer import Stargazer
+#stargazer = Stargazer([ols1, ols2, ols3])
+#stargazer
+regs = [ols1, ols2, ols3]
+from statsmodels.iolib.summary2 import summary_col
+print(summary_col(regs,stars=True,float_format='%0.2f',
+                  model_names=['I','II','III'],
+                  info_dict={'N':lambda x: "{0:d}".format(int(x.nobs))}, 
+                  regressor_order=['Intercept','pack_of_cigar','is_hospitalized[T.Yes]'])
+    )
 ```
 
 회귀 분석에서 이러한 결과를 잘 확인할 수 있다. 회귀 분석에서 현실에 가장 근접한 분석은 (1)이다. 입원 여부를 통제하게 될 경우(식 (2))는 흡연의 정도가 코로나19의 중증도에 미치는 영향을 왜곡하게 된다. 벅슨의 역설의 극단적인 버전은 입원한 환자만 표본으로 삼아 분석을 실시하는 경우이다. (3)에서 보듯이 흡연의 정도와 코로나19 중증도의 정도가 가장 많이 왜곡된다.

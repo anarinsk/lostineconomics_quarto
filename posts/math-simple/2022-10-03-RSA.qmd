@@ -3,7 +3,7 @@ title: RSA, Simply Explained
 description:  나 놈을 위한 RSA 정리 
 author: "JS HUHH"
 date: "10/03/2022"
-image: "./images/lock-cat.webp"
+image: "./images/lock-cat-2.webp"
 categories: [math-simple]
 #margin-header: subscribe.html
 draft: false
