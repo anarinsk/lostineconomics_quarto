@@ -3,7 +3,7 @@ title: 단순하고 깔끔한 윈도 분석 환경
 description: winget으로 일관되게 쓰자   
 author: "JS HUHH"
 date: "08/13/2022"
-image: "images/windws-2.jfif"
+image: "./images/windows-cat.webp"
 categories: [computer-tool]
 draft: false
 filters:

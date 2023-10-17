@@ -3,7 +3,7 @@ title: 스케일의 법칙
 description: 그냥 또 하나의 경제학책? 
 author: "JS HUHH"
 date: "03/13/2023"
-image: "images/books_2.jfif"
+image: "./images/book-cat-2.webp"
 categories: [the-books, economics]
 filters:
    - lightbox
