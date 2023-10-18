@@ -129,9 +129,15 @@ ols3 = sm.ols(formula="covid_severity ~ pack_of_cigar + is_hospitalized", data=r
 #stargazer
 regs = [ols1, ols2, ols3]
 from statsmodels.iolib.summary2 import summary_col
-print(summary_col(regs,stars=True,float_format='%0.2f',
+print(summary_col(
+                  regs,
+                  stars=True, 
+                  float_format='%0.2f',
                   model_names=['(1)','(2)','(3)'],
-                  info_dict={'N':lambda x: "{0:d}".format(int(x.nobs))}, 
+                  info_dict={
+                    'N':lambda x: "{0:d}".format(int(x.nobs)), 
+                    'F': lambda x: "{0:.2f}".format(x.fvalue),
+                    }, 
                   regressor_order=['Intercept','pack_of_cigar','is_hospitalized[T.Yes]'])
     )
 ```

@@ -26,7 +26,7 @@ draft: false
 
 ## 도메인 구입 
 
-구입은 편한 곳에서 하시면 되겠다. 나는 [Google Domains](https://domains.google/)를 이용했다. 도메인을 산다는 것은 무엇일까? 예를 들어 이 홈페이지를 위해 구입한 도메인은 `lostineconomics.com`이다. 나는 `www.lostineconomics.com`을 산 것이 아니었다! 웹 서비스 `www`을 도메인의 하위 도메인으로 설정할 수 있지만, 구입한 것은 도메인 `lostineconomics.com`이다. 그리고 하위 도메인에는 `www`만 있는 것은 아니다. `blog.lostineconomics.com`이나 `mail.lostineconomics.com`도 설정할 수 있다. 
+구입은 편한 곳에서 하시면 되겠다. 나는 [Google Domains](https://domains.google/)를 이용했다. 도메인을 산다는 것은 무엇일까? 예를 들어 이 홈페이지를 위해 구입한 도메인은 `lostineconomics.com`이다. 나는 `www.lostineconomics.com`을 산 것이 아니었다! 웹 서비스 `www`을 도메인의 하위 도메인으로 설정할 수 있지만, 구입한 것은 도메인 `lostineconomics.com`이다. 그리고 하위 도메인에는 `www`만 있는 것이 아니다. `blog.lostineconomics.com`이나 `mail.lostineconomics.com`도 설정할 수 있다. 
 
 :::{.column-margin}
 자세한 내용은 [여기](https://joonius.tistory.com/19)를 참고하자. 
@@ -40,7 +40,7 @@ draft: false
 
 ## GitHub에 보유 도메인 소유 증명하기 
 
-GitHub Pages는 훌륭한 스태틱 웹 서비스다. js, css 정도를 쓰는 html 문서를 전달하는 데에는 이 보다 싸고 편ㅗ한 서비스를 찾기 어려울 것이다. GitHub Pages에는 외부 도메인을 연결할 수 있다. 다만 연결을 위해 몇 가지 절차를 거쳐야 한다. 
+GitHub Pages는 훌륭한 스태틱 웹 서비스다. js, css 정도를 쓰는 html 문서를 전달하는 데에는 이보다 싸고 편한 서비스를 찾기 어려울 듯 싶다. GitHub Pages는 개별 리포의 주소를 외부 도메인과 연결하는 서비스도 제공한다. 다만 연결을 위해 몇 가지 절차를 거쳐야 한다. 
 
 ### 도메인 확인하기 1 (GitHub)
 
