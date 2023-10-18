@@ -3,7 +3,7 @@ title: "Julia + VS Code"
 description: Julia를 빠르게 찍먹해보자 
 author: "JS HUHH"
 date: "08/15/2023"
-image: "./images/tools.jpg"
+image: "./images/tool-cat-2.webp"
 categories: [computer-tool]
 filters:
    - lightbox
