@@ -3,7 +3,7 @@ title: Shannon's Entropy
 description:  섀넌 엔트로피를 슬쩍 본다. 
 author: "JS HUHH"
 date: "11/29/2022"
-image: "images/entropy.png"
+image: "images/entropy-cat.webp"
 categories: [machine-learning]
 #margin-header: subscribe.html
 draft: false
