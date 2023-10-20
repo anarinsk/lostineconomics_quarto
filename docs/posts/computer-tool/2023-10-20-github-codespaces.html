@@ -79,6 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -104,7 +107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -156,9 +159,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -203,18 +208,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="넋두리" class="level2">
 <h2 class="anchored" data-anchor-id="넋두리">넋두리</h2>
-<p>회사에서 퍼블릭 깃헙을 쓸 때 종종 눈치가 보인다. 우선 회사의 정책상 가능하지 않은 경우가 많다. 정책상 가능하다고 해도 개인 작업을 회사의 컴퓨터 로컬에 까는 일이 아주 적절해보이지는 않는다. 만일 온전하게 온라인을 통해 모든 걸 다 할 수 있다면 어떨까?</p>
-<p>깃헙은 이미 기능을 제공하고 있다. 깃헙 코드스페이시스(깃헙 코스)는 웹에서 모든 컴퓨팅 환경을 제공하는 서비스다. 노트북 환경만을 제공하는 구글 코랩과 달리 깃헙 코스는 온전한 우분투의 컴퓨팅 환경을 제공한다. 깃헙 코스는 높은 자유도를 지니며 다양한 형태로 활용할 수 있다.</p>
+<p>회사에서 퍼블릭 깃헙을 쓸 때 종종 눈치가 보인다. 우선 아예 쓰지 못하게 하는 회사가 있다. 막지는 않는다고 해도 깃헙을 활용하는 개인 작업에 회사 컴퓨터 쓰는 일이 그리 적절해 보이지 않는다. 그렇다고 (솔직히) 회사에서 개인 작업을 아예 안 할 수는 없다. 만일 온라인 도구만으로 필요한 작업을 다 할 수 있다면 어떨까?</p>
+<p>깃헙이 이미 이런 기능을 제공하고 있다. 깃헙 코드스페이시스(깃헙 코스)는 웹에서 개발과 컴퓨팅 환경을 상당한 수준으로 제공하는 서비스다. 노트북 환경에 제한된 구글 코랩과 달리 깃헙 코스는 온전한 우분투의 컴퓨팅 환경을 제공한다. 클라우드에 별도의 환경을 세팅하지 않는 이상 깃헙 코스를 능가하는 유연하고 편리한 컴퓨팅 환경을 얻기는 쉽지 않을 것이다.</p>
 </section>
-<section id="깃헙-코스-활성화" class="level2">
+<section id="깃헙-코스-활성화" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="깃헙-코스-활성화">깃헙 코스 활성화</h2>
 <p>깃헙 코스는 깃헙의 레포지토리를 기반으로 동작한다. 깃헙 레포지토리를 만들고, 레포지토리의 <code>Settings</code> 탭으로 이동한다. <code>Settings</code> 탭에서 <code>Options</code> 메뉴를 선택하고, <code>Features</code> 섹션에서 <code>Codespaces</code>를 활성화한다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://docs.github.com/assets/cb-50007/mw-1440/images/help/codespaces/who-will-pay.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://docs.github.com/assets/cb-50007/mw-1440/images/help/codespaces/who-will-pay.webp" class="img-fluid figure-img" style="width:50.0%"></a></p>
+</figure>
+</div>
+<p>그림처럼 깃헙 페이지의 오른쪽 상단에 <code>Code</code> 버튼이 생기는데, 이 버튼을 누르면 <code>Open with Codespaces</code> 메뉴가 나타난다. 이 메뉴를 선택하면 깃헙 코스가 활성화된다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p>깃헙 코스의 장점은 리포의 브랜치에 따라서 서로 다른 코스를 붙일 수 있다는 것이다. 비슷한 개발 환경을 미묘하게 바꿔야 할 필요가 있다면 유용한 기능이 될 것이다.</p>
-<p>활성화된 이후에는 VS Code와 동일한 환경을 보장한다. 별도로 설명할 것이 없다는 이야기다.</p>
+</div></div><p>활성화된 이후에는 VS Code와 동일한 환경이 제공된다. 별도로 구구절절하게 설명할 것이 없다는 이야기다. 자세한 것은 아래 페이지를 참고하면 된다.</p>
+<p><a href="https://docs.github.com/ko/codespaces/overview" class="uri">https://docs.github.com/ko/codespaces/overview</a></p>
 </section>
-<section id="활용법" class="level2">
-<h2 class="anchored" data-anchor-id="활용법">활용법</h2>
-<p>깃헙 코스를 어떻게 써야 하는지에 대해서 간단하게 살펴보도록 하자. 우선 코스를 처음에 구동할 때 여타 VS Code의 환경과 연동이 되어 있다면 확장을 설치하는데 시간이 좀 걸릴 것이다.</p>
+<section id="나의-활용법" class="level2">
+<h2 class="anchored" data-anchor-id="나의-활용법">나의 활용법</h2>
+<p>깃헙코스를 내가 어떻게 쓰고 있는지 간단히 소개하겠다. 물론 소개는 미래에 모든 것을 망각할 나 놈을 위한 것이다. 깃헙코스를 올리고 처음 구동할 때, 자신의 다른 VS Code의 환경과 연동이 되어 있다면 확장을 설치하는데 시간이 좀 걸린다. 한번만 참고 기다리면 된다.</p>
 <section id="업데이트와-업그레이드" class="level3">
 <h3 class="anchored" data-anchor-id="업데이트와-업그레이드">업데이트와 업그레이드</h3>
 <p>최초에 설치한 우분투 디스트는 업데이트와 업그레이드가 필요하다. 아래와 같이 실행하자.</p>
@@ -613,6 +627,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox","loop":true});</script>
 
 
 
