@@ -8,7 +8,7 @@
 
 <meta name="author" content="JS HUHH">
 <meta name="dcterms.date" content="2023-10-20">
-<meta name="description" content="거의 완벽한 스탠드얼론 코딩 환경">
+<meta name="description" content="거의 완벽한 클라우드 코딩 환경">
 
 <title>lostineconomics.com - Perfectly Codespaces</title>
 <style>
@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -136,7 +170,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    거의 완벽한 스탠드얼론 코딩 환경
+    거의 완벽한 클라우드 코딩 환경
   </div>
 </div>
 
@@ -174,8 +208,59 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="깃헙-코스-활성화" class="level2">
 <h2 class="anchored" data-anchor-id="깃헙-코스-활성화">깃헙 코스 활성화</h2>
+<p>깃헙 코스는 깃헙의 레포지토리를 기반으로 동작한다. 깃헙 레포지토리를 만들고, 레포지토리의 <code>Settings</code> 탭으로 이동한다. <code>Settings</code> 탭에서 <code>Options</code> 메뉴를 선택하고, <code>Features</code> 섹션에서 <code>Codespaces</code>를 활성화한다.</p>
+<p>깃헙 코스의 장점은 리포의 브랜치에 따라서 서로 다른 코스를 붙일 수 있다는 것이다. 비슷한 개발 환경을 미묘하게 바꿔야 할 필요가 있다면 유용한 기능이 될 것이다.</p>
+<p>활성화된 이후에는 VS Code와 동일한 환경을 보장한다. 별도로 설명할 것이 없다는 이야기다.</p>
+</section>
+<section id="활용법" class="level2">
+<h2 class="anchored" data-anchor-id="활용법">활용법</h2>
+<p>깃헙 코스를 어떻게 써야 하는지에 대해서 간단하게 살펴보도록 하자. 우선 코스를 처음에 구동할 때 여타 VS Code의 환경과 연동이 되어 있다면 확장을 설치하는데 시간이 좀 걸릴 것이다.</p>
+<section id="업데이트와-업그레이드" class="level3">
+<h3 class="anchored" data-anchor-id="업데이트와-업그레이드">업데이트와 업그레이드</h3>
+<p>최초에 설치한 우분투 디스트는 업데이트와 업그레이드가 필요하다. 아래와 같이 실행하자.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">&gt;</span> sudo <span class="ex">apt</span> update </span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="op">&gt;</span> sudo <span class="ex">apt</span> upgrade <span class="at">-y</span> <span class="co"># sudo full-upgrade -y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="brew-설치" class="level3">
+<h3 class="anchored" data-anchor-id="brew-설치">Brew 설치</h3>
+<p>역시 가벼운 앱들은 brew로 깔아서 쓰는 것이 좋다. 리눅스에서 brew를 설치하는 방법은 홈페이지 첫번째 화면에 잘 소개되어 있다.</p>
+<p><a href="https://brew.sh" class="uri">https://brew.sh</a></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="op">&gt;</span> /bin/bash <span class="ex">-c</span> <span class="st">"</span><span class="va">$(</span><span class="ex">curl</span> <span class="at">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="va">)</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>위와 같이 brew 설치는 마치면 셸 별로 특화된 추가 설정 명령이 뜬다. 그런데 깃헙 코스의 경우 zsh이 깔여 있음에도 불구하고 brew가 bash 환경에 깔린다. 따라서 셸을 다시 실행했을 때 brew가 인식되지 않는다. 이 문제를 해결하기 위해서 <code>~/.zshrc</code>에 아래 설정의 두 번째 실행 명령을 심도록 하자.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="bu">eval</span> <span class="va">$(</span><span class="ex">/home/linuxbrew/.linuxbrew/bin/brew</span> shellenv<span class="va">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="pixi-설치" class="level3">
+<h3 class="anchored" data-anchor-id="pixi-설치">pixi 설치</h3>
+<p>brew를 이용해서 pixi를 설치하자.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="op">&gt;</span> pixi <span class="ex">init</span> . </span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="op">&gt;</span> pixi <span class="ex">add</span> python=3.11 pandas scipy matplotlib ipykernel </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>이 pixi를 통해 설치된 파이썬 환경은 깃헙 코스에서 실행되는 파이썬 명령의 가상 환경으로 기능한다. 가상 환경을 설정하는 방법은</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="파이썬 실행 환경 설정">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+파이썬 실행 환경 설정
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>F1 &gt; “Python: 파이썬 인터프리터 선택”</p>
+</div>
+</div>
+<p>그리고 <code>.pixi/env/bin/python</code>을 선택하면 된다. 파이썬 인터프리터가 선택되면 자연스럽게 가상 환경으로 지정된다.</p>
+</section>
+<section id="quarto" class="level3">
+<h3 class="anchored" data-anchor-id="quarto">Quarto</h3>
+<p>brew를 통해 설치할 수 있으면 좋겠지만 Quarto는 별도로 설치해야 한다. 아래 링크를 참고하자.</p>
+<p><a href="https://docs.posit.co/resources/install-quarto/#quarto-deb-file-install" class="uri">https://docs.posit.co/resources/install-quarto/#quarto-deb-file-install</a></p>
+<p>최신 버전 설치는 아래와 같다.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="op">&gt;</span> sudo <span class="ex">curl</span> <span class="at">-LO</span> https://quarto.org/download/latest/quarto-linux-amd64.deb <span class="co"># 최신 버전 다운로드</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="op">&gt;</span> sudo <span class="ex">apt-get</span> install gdebi-core</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="op">&gt;</span> sudo <span class="ex">gdebi</span> quarto-linux-amd64.deb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

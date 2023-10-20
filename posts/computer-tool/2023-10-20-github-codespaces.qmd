@@ -1,16 +1,16 @@
 ---
 title: "Perfectly Codespaces" 
-description: 거의 완벽한 스탠드얼론 코딩 환경  
+description: 거의 완벽한 클라우드 코딩 환경  
 author: "JS HUHH"
 date: "10/20/2023"
-image: "./images/pixi.jpg"
+image: "./images/codespaces.webp"
 categories: [computer-tool]
 filters:
    - lightbox
    #- line-highlight
 lightbox: auto
 #jupyter: python3
-draft: true
+draft: false
 format:
   html:
     code-line-numbers: true
@@ -27,4 +27,69 @@ format:
 
 ## 깃헙 코스 활성화
 
+깃헙 코스는 깃헙의 레포지토리를 기반으로 동작한다. 깃헙 레포지토리를 만들고, 레포지토리의 `Settings` 탭으로 이동한다. `Settings` 탭에서 `Options` 메뉴를 선택하고, `Features` 섹션에서 `Codespaces`를 활성화한다.
+
+깃헙 코스의 장점은 리포의 브랜치에 따라서 서로 다른 코스를 붙일 수 있다는 것이다. 비슷한 개발 환경을 미묘하게 바꿔야 할 필요가 있다면 유용한 기능이 될 것이다. 
+
+활성화된 이후에는 VS Code와 동일한 환경을 보장한다. 별도로 설명할 것이 없다는 이야기다. 
+
+## 활용법 
+
+깃헙 코스를 어떻게 써야 하는지에 대해서 간단하게 살펴보도록 하자. 우선 코스를 처음에 구동할 때 여타 VS Code의 환경과 연동이 되어 있다면 확장을 설치하는데 시간이 좀 걸릴 것이다.
+
+### 업데이트와 업그레이드 
+
+최초에 설치한 우분투 디스트는 업데이트와 업그레이드가 필요하다. 아래와 같이 실행하자. 
+
+```bash
+> sudo apt update 
+> sudo apt upgrade -y # sudo full-upgrade -y
+```
+
+### Brew 설치 
+
+역시 가벼운 앱들은 brew로 깔아서 쓰는 것이 좋다. 리눅스에서 brew를 설치하는 방법은 홈페이지 첫번째 화면에 잘 소개되어 있다. 
+
+<https://brew.sh>
+
+```bash
+> /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+위와 같이 brew 설치는 마치면 셸 별로 특화된 추가 설정 명령이 뜬다. 그런데 깃헙 코스의 경우 zsh이 깔여 있음에도 불구하고 brew가 bash 환경에 깔린다. 따라서 셸을 다시 실행했을 때 brew가 인식되지 않는다. 이 문제를 해결하기 위해서 `~/.zshrc`에 아래 설정의 두 번째 실행 명령을 심도록 하자. 
+
+```bash
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+```
+
+### pixi 설치 
+
+brew를 이용해서 pixi를 설치하자. 
+
+```bash
+> pixi init . 
+> pixi add python=3.11 pandas scipy matplotlib ipykernel 
+```
+
+이 pixi를 통해 설치된 파이썬 환경은 깃헙 코스에서 실행되는 파이썬 명령의 가상 환경으로 기능한다. 가상 환경을 설정하는 방법은 
+
+:::{.callout-tip title="파이썬 실행 환경 설정"}
+F1 > "Python: 파이썬 인터프리터 선택"
+:::
+
+그리고 `.pixi/env/bin/python`을 선택하면 된다. 파이썬 인터프리터가 선택되면 자연스럽게 가상 환경으로 지정된다. 
+
+### Quarto 
+
+brew를 통해 설치할 수 있으면 좋겠지만 Quarto는 별도로 설치해야 한다. 아래 링크를 참고하자. 
+
+<https://docs.posit.co/resources/install-quarto/#quarto-deb-file-install>
+
+최신 버전 설치는 아래와 같다. 
+
+```bash
+> sudo curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb # 최신 버전 다운로드
+> sudo apt-get install gdebi-core
+> sudo gdebi quarto-linux-amd64.deb
+```
 
