@@ -23,40 +23,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -104,7 +70,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -156,11 +122,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -205,136 +169,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="넋두리" class="level2">
 <h2 class="anchored" data-anchor-id="넋두리">넋두리</h2>
-<p>회사에서 퍼블릭 깃헙을 쓸 때 종종 눈치가 보인다. 회사의 정책상 가능하지 않은 경우가 많다. 정책상 가능하다고 해도, 개인 작업을 회사의 컴퓨터 로컬에 까는 일이 아주 적절해보이지는 않는다. 이때 활용할 수 있는 환경은 온전하게 온라인을 통해</p>
+<p>회사에서 퍼블릭 깃헙을 쓸 때 종종 눈치가 보인다. 우선 회사의 정책상 가능하지 않은 경우가 많다. 정책상 가능하다고 해도 개인 작업을 회사의 컴퓨터 로컬에 까는 일이 아주 적절해보이지는 않는다. 만일 온전하게 온라인을 통해 모든 걸 다 할 수 있다면 어떨까?</p>
+<p>깃헙은 이미 기능을 제공하고 있다. 깃헙 코드스페이시스(깃헙 코스)는 웹에서 모든 컴퓨팅 환경을 제공하는 서비스다. 노트북 환경만을 제공하는 구글 코랩과 달리 깃헙 코스는 온전한 우분투의 컴퓨팅 환경을 제공한다. 깃헙 코스는 높은 자유도를 지니며 다양한 형태로 활용할 수 있다.</p>
 </section>
-<section id="설치" class="level2">
-<h2 class="anchored" data-anchor-id="설치">설치</h2>
-<p><a href="https://prefix.dev/docs/pixi/overview#installation" class="uri">https://prefix.dev/docs/pixi/overview#installation</a></p>
-<p>OS에 따라서 설치 방법이 제공된다. macos나 linux라면 <code>brew</code>를 쓰는 것을 권장한다.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">brew</span> install pixi <span class="co"># for Macos or linux</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="ex">iwr</span> <span class="at">-useb</span> https://pixi.sh/install.ps1 <span class="kw">|</span> <span class="ex">iex</span> <span class="co"># For Windows PowerShell</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="활용" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="활용">활용</h2>
-<p>Rye와 거의 비슷하다.</p>
-<ul>
-<li>환경을 프로젝트 폴더 안에 활성화한다.</li>
-<li>활용한 언어를 포함해서 필요한 패키지를 <code>add</code>한다.</li>
-<li>코딩한다.</li>
-</ul>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Rye든 pixi든 사실 문법 자체는 대체로 Poetry를 따르고 있다.</p>
-</div></div><p>pixi의 경우 다음과 같은 특징을 지닌다.</p>
-<ul>
-<li>conda 환경을 따른다.</li>
-<li>별도의 셸 환경을 제공한다.</li>
-</ul>
-<p>예를 들어보자. 원하는 폴더에 파이썬 환경을 만들고 여기에 pandas와 plotly를 설치하고 싶다고 하자. 해당 폴더를 만들고 터미널을 통해 해당 폴더에 들어가자.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="op">&gt;</span> pixi <span class="ex">init</span> .  <span class="co"># 폴더를 생성하고 싶다면 pixi init {프로젝트-이름}</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="op">&gt;</span> pixi <span class="ex">add</span> python pandas plotly </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>pixi가 필요한 패키지를 콘다 리포지터리에서 끌어와 설치한다. 만일 터미널에서 활용하고 싶다면 <code>pixi shell</code>을 치면 된다. <code>pixi</code>를 치면 필요한 명령어를 보여준다.</p>
-</section>
-<section id="multi-platform" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="multi-platform">Multi platform</h2>
-<p>pixi의 장점은 os별로 구별해서 패키지를 관리할 수 있다는 것이다. 환경을 담고 있는 <code>pixi.toml</code>을 열어보면 이 점을 쉽게 알 수 있다.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource toml number-lines code-with-copy"><code class="sourceCode toml"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">[</span><span class="dt">project</span><span class="kw">]</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="co"># Default project info....</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="co"># A list of platforms you are supporting with your package.</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="dt">platforms</span> <span class="op">=</span> <span class="op">[</span><span class="st">"win-64"</span><span class="op">,</span> <span class="st">"linux-64"</span><span class="op">,</span> <span class="st">"osx-64"</span><span class="op">,</span> <span class="st">"osx-arm64"</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><code>pixi.toml</code>을 열어보면 프로젝트의 메타 데이터로 플랫폼이 있다. 여기에 정의되어 있지 않은 환경에서 <code>.toml</code>에 정의된 패키지를 인스톨해보자.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">❯</span> pixi install</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="ex">×</span> the project is not configured for your current platform</span>
-<span id="cb4-3"><a href="#cb4-3"></a>   <span class="ex">╭─[pixi.toml:6:1]</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a> <span class="ex">6</span> │ channels = <span class="pp">[</span><span class="st">"conda-forge"</span><span class="pp">]</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a> <span class="ex">7</span> │ platforms = <span class="pp">[</span><span class="st">"osx-arm64"</span><span class="pp">]</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>   <span class="ex">·</span>             ────────────────┬────────────────</span>
-<span id="cb4-7"><a href="#cb4-7"></a>   <span class="ex">·</span>                             ╰── add <span class="st">'win-64'</span> here</span>
-<span id="cb4-8"><a href="#cb4-8"></a> <span class="ex">8</span> │</span>
-<span id="cb4-9"><a href="#cb4-9"></a>   <span class="ex">╰────</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a>  <span class="ex">help:</span> The project needs to be configured to support your platform <span class="er">(</span><span class="ex">win-64</span><span class="kw">)</span><span class="bu">.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>이렇게 메시지를 띄워준다. <code>pixi.toml</code> 파일을 열어 해당 플랫폼을 추가한 후 다시 <code>pixi install</code>을 실행하면 된다. 만일 에러가 뜬다면 셸 창을 다시 실행하자. 플랫폼 별 의존성을 세밀하게 정의해 설치하거나 이를 <code>pixi.toml</code>에 지정할 수 있다. 바로 이어서 살펴볼 것이다.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>자세한 것은 <a href="https://prefix.dev/docs/pixi/advanced/multi_platform_configuration">여기</a>를 참고하도록 하자.</p>
-</div></div><p>GitHub를 통해 여러 플랫폼에서 코드를 반복 사용하는 경우를 생각해보자. <code>.pixi/env</code> 아래 폴더에 바이너리 및 패키지가 저장된다. 만일 GitHub를 통해 <code>.ignore</code>를 설정했다면 <code>env</code> 아래 폴더가 모두 무시되므로 플랫폼 별로 다른 바이너리가 GitHub로 동기화되지는 않는다.</p>
-<section id="example" class="level3">
-<h3 class="anchored" data-anchor-id="example">Example</h3>
-<p>아마도 멀티플랫폼 지원이 pixi의 가장 큰 장점이 아닐까 싶다. pytorch를 인스톨하는 경우를 떠올려보자.</p>
-<ul>
-<li>플랫폼A: Windows + Nvidia GPU</li>
-<li>플랫폼B: macos + Silicon mac</li>
-</ul>
-<p>하나의 <code>pixi.toml</code> 파일을 통해서 각기 다른 플랫폼에서 파이토치 프로젝트를 유지하는 것이 목표이다. 특히 플랫폼A에서는 cuda를 활용할 예정이다.</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>pixi.toml</strong></pre>
-</div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource toml number-lines code-with-copy"><code class="sourceCode toml"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">[</span><span class="dt">project</span><span class="kw">]</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"pixi_pytorch"</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.1.0"</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="dt">description</span> <span class="op">=</span> <span class="st">"Add a short description here"</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a><span class="dt">authors</span> <span class="op">=</span> <span class="op">[</span><span class="st">"Junsok Huhh &lt;anarinsk@gmail.com&gt;"</span><span class="op">]</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="dt">channels</span> <span class="op">=</span> <span class="op">[</span><span class="st">"conda-forge"</span><span class="op">,</span> <span class="st">"pytorch"</span><span class="op">,</span> <span class="st">"nvidia"</span><span class="op">]</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="dt">platforms</span> <span class="op">=</span> <span class="op">[</span><span class="st">"win-64"</span><span class="op">,</span> <span class="st">"osx-arm64"</span><span class="op">]</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a></span>
-<span id="cb5-9"><a href="#cb5-9"></a><span class="kw">[</span><span class="dt">tasks</span><span class="kw">]</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a></span>
-<span id="cb5-11"><a href="#cb5-11"></a><span class="kw">[</span><span class="dt">target</span><span class="kw">.</span><span class="dt">win-64</span><span class="kw">.</span><span class="dt">dependencies</span><span class="kw">]</span></span>
-<span id="cb5-12"><a href="#cb5-12"></a><span class="dt">pytorch-cuda</span> <span class="op">=</span> <span class="st">"11.8.*"</span></span>
-<span id="cb5-13"><a href="#cb5-13"></a><span class="dt">torchaudio</span> <span class="op">=</span> <span class="st">"2.0.2.*"</span></span>
-<span id="cb5-14"><a href="#cb5-14"></a><span class="dt">pytorch</span> <span class="op">=</span> <span class="st">"2.0.1.*"</span></span>
-<span id="cb5-15"><a href="#cb5-15"></a><span class="dt">torchvision</span> <span class="op">=</span> <span class="st">"0.15.2.*"</span></span>
-<span id="cb5-16"><a href="#cb5-16"></a></span>
-<span id="cb5-17"><a href="#cb5-17"></a><span class="kw">[</span><span class="dt">target</span><span class="kw">.</span><span class="dt">osx-arm64</span><span class="kw">.</span><span class="dt">dependencies</span><span class="kw">]</span></span>
-<span id="cb5-18"><a href="#cb5-18"></a><span class="dt">pytorch</span> <span class="op">=</span> <span class="st">"2.0.1.*"</span></span>
-<span id="cb5-19"><a href="#cb5-19"></a><span class="dt">torchvision</span> <span class="op">=</span> <span class="st">"0.15.2.*"</span></span>
-<span id="cb5-20"><a href="#cb5-20"></a></span>
-<span id="cb5-21"><a href="#cb5-21"></a><span class="kw">[</span><span class="dt">dependencies</span><span class="kw">]</span></span>
-<span id="cb5-22"><a href="#cb5-22"></a><span class="dt">ipykernel</span> <span class="op">=</span> <span class="st">"6.25.1.*"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li><code>target</code>은 플랫폼별로 특화된 분기를 지정할 수 있다.
-<ul>
-<li><code>.</code>이후 플랫폼, 그리고 지정할 pixi 영역이 붙는다.</li>
-<li>지정 가능한 pixi 영역은 <code>activation</code>, <code>dependencies</code>, <code>tasks</code> 세 가지이다.</li>
-</ul></li>
-<li>위 예시 파일을 살펴보자.
-<ul>
-<li><code>pixi.toml</code>을 플랫폼A에서 실행하면 <code>.pixi\</code> 폴더 아래 cuda 기반의 파이토치가 설치된다. 플랫폼B에는 <code>.pixi/</code> 아래 실리콘 맥 기반의 MPS를 활용한 파이토치가 설치된다.</li>
-<li>채널은 플랫폼 별로 구별할 필요가 없다. 플랫폼A는 pytorch, nvidia를 쓰고 플랫폼B는 pytorch 채널을 쓴다.</li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="vs-code" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="vs-code">VS Code</h2>
-<p>VS Code에서 <code>.ipynb</code>로 작업하고 싶다면 간단하다. 윈도의 경우 해당 폴더가 작업 폴더로 잡혀 있다면 커널 선택 시 <code>.pixi...</code> 아래 설치된 커널이 바로 선택가능할 것이다. 만일 그렇지 않다면 커널을 직접 선택해주면 된다.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>VS Code에서 <code>파일</code> &gt; <code>작업 영역에 폴더 추가</code>를 통해 작업 폴더를 지정할 수 있다. 터미널의 해당 폴더에서 <code>code .</code>을 실행해도 된다.</p>
-</div></div><div class="callout callout-style-default callout-tip callout-titled" title="인터프리터 경로 설정">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-인터프리터 경로 설정
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><code>F1</code> &gt; <code>Python: 인터프리터 선택</code> &gt; <code>+인터프리터 경로 입력...</code></p>
-</div>
-</div>
-<p>해당 프로젝트 폴더 안에 <code>.pixi</code>로 가자. OS 별로 구별해서 파이썬 바이너리 혹은 스크립트를 선택하면 된다.</p>
-<ul>
-<li>(macos) <code>.pixi/env/bin/pyhon</code></li>
-<li>(windows) <code>.pixi\env\python.exe</code></li>
-</ul>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<p><a href="https://prefix.dev/blog/launching_pixi" class="uri">https://prefix.dev/blog/launching_pixi</a></p>
+<section id="깃헙-코스-활성화" class="level2">
+<h2 class="anchored" data-anchor-id="깃헙-코스-활성화">깃헙 코스 활성화</h2>
 
 
 </section>
