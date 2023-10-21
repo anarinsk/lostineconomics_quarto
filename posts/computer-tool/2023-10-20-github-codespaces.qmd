@@ -67,7 +67,7 @@ https://docs.github.com/en/codespaces/customizing-your-codespace/changing-the-ma
 > /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-위와 같이 brew 설치는 마치면 셸 별로 특화된 추가 설정 명령이 뜬다. 그런데 깃헙 코스의 경우 zsh이 깔여 있음에도 불구하고 brew가 bash 환경에 깔린다. 따라서 셸을 다시 실행했을 때 brew가 인식되지 않는다. 이 문제를 해결하기 위해서 `~/.zshrc`에 아래 설정의 두 번째 실행 명령을 심도록 하자. 
+위와 같이 brew 설치는 마치면 셸 별로 특화된 추가 설정 명령이 뜬다. 그런데 깃헙 코스의 경우 zsh이 깔여 있음에도 불구하고 brew가 bash 환경에 깔린다. 따라서 셸을 다시 실행했을 때 brew가 인식되지 않는다. 이 문제를 해결하기 위해서 `~/.zshrc`에 아래의 명령을 심도록 하자. 실행되면 리눅스용 brew가 셸 환경에 설정된다.    
 
 ```bash
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
@@ -82,7 +82,7 @@ brew를 이용해서 pixi를 설치하자.
 > pixi add python=3.11 pandas scipy matplotlib ipykernel 
 ```
 
-이 pixi를 통해 설치된 파이썬 환경은 깃헙 코스에서 실행되는 파이썬 명령의 가상 환경으로 기능한다. 가상 환경을 설정하는 방법은 
+이 pixi를 통해 설치된 파이썬 환경은 깃헙 코스에서 실행되는 파이썬 명령의 가상 환경으로 기능한다. VS Code에서 가상 환경을 설정하는 방법은 
 
 :::{.callout-tip title="파이썬 실행 환경 설정"}
 F1 > "Python: 파이썬 인터프리터 선택"
@@ -96,7 +96,7 @@ brew를 통해 설치할 수 있으면 좋겠지만 Quarto는 별도로 설치�
 
 <https://docs.posit.co/resources/install-quarto/#quarto-deb-file-install>
 
-최신 버전 설치는 아래와 같다. 
+최신 버전의 설치 방법은 아래와 같다. 
 
 ```bash
 > sudo curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb # 최신 버전 다운로드
