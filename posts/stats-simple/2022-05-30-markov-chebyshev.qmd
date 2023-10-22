@@ -3,7 +3,7 @@ title:  Markov and Chebyshev Inequalities
 description: ""
 author: "JS HUHH"
 date: "05/30/2022"
-image: "https://miro.medium.com/max/1400/1*e2LIgXPudagHYON8HdRO_g.png"
+image: "./images/cat-equation.webp"
 categories: [stats-simple]
 draft: false
 ---
