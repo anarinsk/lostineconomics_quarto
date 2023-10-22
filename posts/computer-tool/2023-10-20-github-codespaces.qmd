@@ -5,6 +5,7 @@ author: "JS HUHH"
 date: "10/20/2023"
 image: "./images/codespaces.webp"
 categories: [computer-tool]
+#fig-align: center
 filters:
    - lightbox
    #- line-highlight
@@ -34,7 +35,9 @@ https://docs.github.com/en/codespaces/customizing-your-codespace/changing-the-ma
 
 깃헙 코스는 깃헙의 레포지토리를 기반으로 동작한다. 깃헙 레포지토리를 만들고, 레포지토리의 `Settings` 탭으로 이동한다. `Settings` 탭에서 `Options` 메뉴를 선택하고, `Features` 섹션에서 `Codespaces`를 활성화한다.
 
-![](https://docs.github.com/assets/cb-50007/mw-1440/images/help/codespaces/who-will-pay.webp){width=50%}
+:::{layout="[-10,20,-10]"}
+![](https://raw.githubusercontent.com/simonw/codespaces-datasette/main/get-started.jpg){}
+:::
 
 그림처럼 깃헙 페이지의 오른쪽 상단에 `Code`을 누르면 `Open with Codespaces` 메뉴가 나타난다. 이 메뉴를 선택하면 깃헙 코스가 활성화된다. 활성화된 이후에는 VS Code와 동일한 환경이 제공된다. 별도로 구구절절하게 설명할 것이 없다는 이야기다. 자세한 것은 아래 페이지를 참고하면 된다. 
 

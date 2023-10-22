@@ -382,7 +382,7 @@
     "href": "posts/computer-tool/2023-10-20-github-codespaces.html#깃헙-코스-활성화",
     "title": "Perfectly Codespaces",
     "section": "깃헙 코스 활성화",
-    "text": "깃헙 코스 활성화\n깃헙 코스는 깃헙의 레포지토리를 기반으로 동작한다. 깃헙 레포지토리를 만들고, 레포지토리의 Settings 탭으로 이동한다. Settings 탭에서 Options 메뉴를 선택하고, Features 섹션에서 Codespaces를 활성화한다.\n\n그림처럼 깃헙 페이지의 오른쪽 상단에 Code을 누르면 Open with Codespaces 메뉴가 나타난다. 이 메뉴를 선택하면 깃헙 코스가 활성화된다. 활성화된 이후에는 VS Code와 동일한 환경이 제공된다. 별도로 구구절절하게 설명할 것이 없다는 이야기다. 자세한 것은 아래 페이지를 참고하면 된다.\n\n\n\nLINK를 참고하자."
+    "text": "깃헙 코스 활성화\n깃헙 코스는 깃헙의 레포지토리를 기반으로 동작한다. 깃헙 레포지토리를 만들고, 레포지토리의 Settings 탭으로 이동한다. Settings 탭에서 Options 메뉴를 선택하고, Features 섹션에서 Codespaces를 활성화한다.\n\n\n\n\n\n\n \n\n\n\n\n\n \n\n\n\n그림처럼 깃헙 페이지의 오른쪽 상단에 Code을 누르면 Open with Codespaces 메뉴가 나타난다. 이 메뉴를 선택하면 깃헙 코스가 활성화된다. 활성화된 이후에는 VS Code와 동일한 환경이 제공된다. 별도로 구구절절하게 설명할 것이 없다는 이야기다. 자세한 것은 아래 페이지를 참고하면 된다.\n\n\n\nLINK를 참고하자."
   },
   {
     "objectID": "posts/computer-tool/2023-10-20-github-codespaces.html#나의-활용법",
