@@ -3,7 +3,7 @@ title: 정규 분포에 집착하지 말자.
 description: 만일 당신의 표본 크기가 충분하다면...
 author: "JS HUHH"
 date: "05/28/2022"
-#image: "https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png"
+image: "images/cat-normality.webp"
 categories: [regression]
 draft: false
 filters:

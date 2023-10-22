@@ -3,7 +3,7 @@ title:  Sample Statistics and Standard Error
 description:  기본 용어 정리한다.
 author: "JS HUHH"
 date: "05/27/2022"
-#image: "goodecon.jpg"
+image: "images/cat-sampling.webp"
 categories: [statistics, stats-simple]
 draft: false
 ---
