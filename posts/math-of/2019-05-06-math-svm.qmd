@@ -3,7 +3,7 @@ title: Mathematics of Support Vector Machine
 description:  SVM의 수학  
 author: "JS HUHH"
 date: "05/06/2019"
-image: "https://d2r55xnwy6nx47.cloudfront.net/uploads/2021/03/Perfect-Number_2880_Lede.jpg"
+image: "images/cat-mathsolving.webp"
 categories: [math-of]
 #margin-header: subscribe.html
 ---

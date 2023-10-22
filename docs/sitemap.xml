@@ -1,291 +1,283 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.lostineconomics.com/about.html</loc>
-    <lastmod>2023-03-23T23:35:53.263Z</lastmod>
-  </url>
-  <url>
     <loc>https://www.lostineconomics.com/fonts/dummy.html</loc>
-    <lastmod>2023-10-20T09:59:20.379Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/index.html</loc>
     <lastmod>2023-10-01T00:39:51.608Z</lastmod>
   </url>
   <url>
-    <loc>https://www.lostineconomics.com/posts/computer-tool/2020-03-07-blogging-with-fastpages.html</loc>
-    <lastmod>2023-10-20T09:59:00.811Z</lastmod>
+    <loc>https://www.lostineconomics.com/about.html</loc>
+    <lastmod>2023-10-01T00:39:51.575Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/math-simple/2022-07-03-ansys-candor-theorem.html</loc>
+    <lastmod>2023-10-17T10:20:15.077Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/math-simple/2022-10-03-RSA.html</loc>
+    <lastmod>2023-10-19T11:08:28.999Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/math-simple/2019-07-18-dot-product.html</loc>
+    <lastmod>2023-10-22T02:05:15.035Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/git/2020-03-05-using-git-w10.html</loc>
+    <lastmod>2023-10-01T00:39:51.636Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/computer-tool/2022-08-13-clean-use-of-windows.html</loc>
+    <lastmod>2023-10-17T10:20:15.073Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/computer-tool/2023-05-11-powershell.html</loc>
+    <lastmod>2023-10-01T00:39:51.612Z</lastmod>
   </url>
   <url>
     <loc>https://www.lostineconomics.com/posts/computer-tool/2020-03-09-Streamlit-Heroku.html</loc>
-    <lastmod>2023-10-20T09:58:55.079Z</lastmod>
+    <lastmod>2023-10-01T00:39:51.608Z</lastmod>
   </url>
   <url>
-    <loc>https://www.lostineconomics.com/posts/computer-tool/2020-04-09-wsl2-walkthru.html</loc>
-    <lastmod>2023-10-20T09:59:08.235Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/computer-tool/2020-09-26-windows-terminal.html</loc>
-    <lastmod>2023-10-20T09:58:59.547Z</lastmod>
+    <loc>https://www.lostineconomics.com/posts/computer-tool/2023-10-20-github-codespaces.html</loc>
+    <lastmod>2023-10-22T01:19:04.961Z</lastmod>
   </url>
   <url>
     <loc>https://www.lostineconomics.com/posts/computer-tool/2020-10-24-classy-latex.html</loc>
     <lastmod>2023-10-22T01:37:02.316Z</lastmod>
   </url>
   <url>
-    <loc>https://www.lostineconomics.com/posts/computer-tool/2020-10-27-viva-binder.html</loc>
-    <lastmod>2023-10-20T09:59:06.419Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/computer-tool/2021-02-02-all-vs-code.html</loc>
-    <lastmod>2023-10-20T09:59:02.835Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/computer-tool/2021-11-19-python-in-browser.html</loc>
-    <lastmod>2023-10-20T09:59:02.095Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/computer-tool/2022-05-10-how-to-make-cv.html</loc>
-    <lastmod>2023-10-22T01:31:05.511Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/computer-tool/2022-05-14-blogging-with-quarto.html</loc>
-    <lastmod>2023-10-20T09:58:55.699Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/computer-tool/2022-05-25-pytorch.html</loc>
-    <lastmod>2023-10-20T09:58:57.171Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/computer-tool/2022-07-07-pt-with-quarto.html</loc>
-    <lastmod>2023-10-20T09:59:06.835Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/computer-tool/2022-08-13-clean-use-of-windows.html</loc>
-    <lastmod>2023-10-20T09:59:04.799Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/computer-tool/2022-09-25-latex-vscode.html</loc>
-    <lastmod>2023-10-20T09:58:59.955Z</lastmod>
-  </url>
-  <url>
     <loc>https://www.lostineconomics.com/posts/computer-tool/2022-12-04-matplotlib-korfont-redux.html</loc>
-    <lastmod>2023-10-20T09:58:56.623Z</lastmod>
+    <lastmod>2023-10-01T00:39:51.610Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/computer-tool/2023-08-27-pixi.html</loc>
+    <lastmod>2023-10-07T02:11:54.268Z</lastmod>
   </url>
   <url>
     <loc>https://www.lostineconomics.com/posts/computer-tool/2022-12-06-jupyterlite-githubpages.html</loc>
-    <lastmod>2023-10-20T09:59:06.059Z</lastmod>
+    <lastmod>2023-10-01T00:39:51.612Z</lastmod>
   </url>
   <url>
-    <loc>https://www.lostineconomics.com/posts/computer-tool/2022-12-22-my-domains.html</loc>
-    <lastmod>2023-10-21T23:32:24.360Z</lastmod>
+    <loc>https://www.lostineconomics.com/posts/computer-tool/2022-05-14-blogging-with-quarto.html</loc>
+    <lastmod>2023-10-01T00:39:51.609Z</lastmod>
   </url>
   <url>
-    <loc>https://www.lostineconomics.com/posts/container/2020-09-23-docker-humble-practice.html</loc>
-    <lastmod>2023-10-20T09:59:12.327Z</lastmod>
+    <loc>https://www.lostineconomics.com/posts/computer-tool/2023-05-29-rye.html</loc>
+    <lastmod>2023-10-19T11:08:28.996Z</lastmod>
   </url>
   <url>
-    <loc>https://www.lostineconomics.com/posts/container/2020-09-24-install-hangul-in-docker.html</loc>
-    <lastmod>2023-10-20T09:59:11.107Z</lastmod>
+    <loc>https://www.lostineconomics.com/posts/computer-tool/2022-07-07-pt-with-quarto.html</loc>
+    <lastmod>2023-10-01T00:39:51.609Z</lastmod>
   </url>
   <url>
-    <loc>https://www.lostineconomics.com/posts/container/2021-05-09-docker_korfont.html</loc>
-    <lastmod>2023-10-20T09:59:10.619Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/container/2021-09-13-podman-1.html</loc>
-    <lastmod>2023-10-20T09:59:13.095Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/container/2022-04-26-k8s-personally.html</loc>
-    <lastmod>2023-10-20T09:59:11.527Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/econ-simple/2022-04-30-gdp-import.html</loc>
-    <lastmod>2023-10-20T09:58:42.151Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/economics/2020-01-22-Wealth-divided.html</loc>
-    <lastmod>2023-10-20T09:59:14.687Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/economics/2022-05-16-trilemma.html</loc>
-    <lastmod>2023-10-20T09:59:14.135Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/git/2020-03-05-using-git-w10.html</loc>
-    <lastmod>2023-10-20T09:59:15.111Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/git/2022-04-27-happy-giting.html</loc>
-    <lastmod>2023-10-20T09:59:15.491Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html</loc>
-    <lastmod>2023-10-20T09:59:19.011Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/linear-algebra/2020-12-16-measuring-distance.html</loc>
-    <lastmod>2023-10-20T09:59:19.699Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/linear-algebra/2021-01-05-vector-geometry-1.html</loc>
-    <lastmod>2023-10-20T09:59:16.459Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/linear-algebra/2021-01-06-vector-geometry-2.html</loc>
-    <lastmod>2023-10-20T09:59:16.927Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</loc>
-    <lastmod>2023-10-20T09:59:18.255Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/linear-algebra/2021-01-08-basis.html</loc>
-    <lastmod>2023-10-20T09:59:17.739Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/linear-algebra/2021-01-10-Eigenspace-1.html</loc>
-    <lastmod>2023-10-20T09:59:15.975Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/linear-algebra/2021-01-18-Eigenspace-2.html</loc>
-    <lastmod>2023-10-20T09:59:17.311Z</lastmod>
+    <loc>https://www.lostineconomics.com/posts/computer-tool/2020-09-26-windows-terminal.html</loc>
+    <lastmod>2023-10-01T00:39:51.609Z</lastmod>
   </url>
   <url>
     <loc>https://www.lostineconomics.com/posts/machine-learning/2020-04-19-classification-metrics.html</loc>
-    <lastmod>2023-10-20T09:58:42.603Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/machine-learning/2022-11-29-shannon-entropy.html</loc>
-    <lastmod>2023-10-19T11:08:28.998Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/machine-learning/images/2022-11-29-shannon-entropy.html</loc>
-    <lastmod>2023-03-23T23:36:40.711Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/math-of/2019-05-06-math-svm.html</loc>
-    <lastmod>2023-10-20T09:58:50.163Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/math-of/2019-05-17-math-pca.html</loc>
-    <lastmod>2023-10-20T09:58:46.995Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/math-of/2019-12-11-Peron-Frobenus-1.html</loc>
-    <lastmod>2023-10-20T09:58:49.427Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/math-of/2019-12-20-Peron-Frobenius-2.html</loc>
-    <lastmod>2023-10-20T09:58:48.751Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/math-of/2019-12-24-PageRank.html</loc>
-    <lastmod>2023-10-20T09:58:48.147Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/math-of/2020-07-03-bayesian-inference.html</loc>
-    <lastmod>2023-10-20T09:58:47.671Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/math-simple/2019-07-13-Poisson.html</loc>
-    <lastmod>2023-10-20T09:58:45.879Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/math-simple/2019-07-18-dot-product.html</loc>
-    <lastmod>2023-10-20T09:58:46.351Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/math-simple/2022-07-03-ansys-candor-theorem.html</loc>
-    <lastmod>2023-10-20T09:58:44.719Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/math-simple/2022-10-03-RSA.html</loc>
-    <lastmod>2023-10-20T09:58:44.087Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/math-simple/2022-10-05-paradox-of-friendship.html</loc>
-    <lastmod>2023-10-20T09:58:43.583Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/regression/2019-10-25-understanding-regression.html</loc>
-    <lastmod>2023-10-20T09:58:53.443Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/regression/2019-11-10-understanding-logit-regression.html</loc>
-    <lastmod>2023-10-20T09:58:51.491Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</loc>
-    <lastmod>2023-10-20T09:58:52.291Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/regression/2022-05-26-total-and-parts.html</loc>
-    <lastmod>2023-10-20T09:58:51.923Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/regression/2022-05-28-normality.html</loc>
-    <lastmod>2023-10-22T01:51:03.904Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/regression/2022-06-04-simpson-paradox-regression.html</loc>
-    <lastmod>2023-10-20T09:58:52.927Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.lostineconomics.com/posts/regression/2022-06-06-berkson-paradox-regression.html</loc>
-    <lastmod>2023-10-22T01:36:08.202Z</lastmod>
+    <lastmod>2023-10-22T02:18:59.941Z</lastmod>
   </url>
   <url>
     <loc>https://www.lostineconomics.com/posts/stats-simple/2022-05-27-SE.html</loc>
     <lastmod>2023-10-22T01:53:44.104Z</lastmod>
   </url>
   <url>
-    <loc>https://www.lostineconomics.com/posts/stats-simple/2022-05-30-markov-chebyshev.html</loc>
-    <lastmod>2023-10-20T09:58:54.419Z</lastmod>
+    <loc>https://www.lostineconomics.com/posts/regression/2022-06-06-berkson-paradox-regression.html</loc>
+    <lastmod>2023-10-22T01:36:08.202Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/regression/2022-06-04-simpson-paradox-regression.html</loc>
+    <lastmod>2023-10-01T00:39:51.647Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/regression/2022-05-26-total-and-parts.html</loc>
+    <lastmod>2023-10-01T00:39:51.647Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html</loc>
+    <lastmod>2023-10-01T00:39:51.637Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/linear-algebra/2021-01-08-basis.html</loc>
+    <lastmod>2023-10-01T00:39:51.638Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/linear-algebra/2020-12-16-measuring-distance.html</loc>
+    <lastmod>2023-10-01T00:39:51.637Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/linear-algebra/2021-01-05-vector-geometry-1.html</loc>
+    <lastmod>2023-10-01T00:39:51.638Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/economics/2020-01-22-Wealth-divided.html</loc>
+    <lastmod>2023-10-01T00:39:51.635Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/container/2021-09-13-podman-1.html</loc>
+    <lastmod>2023-10-01T00:39:51.632Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/container/2021-05-09-docker_korfont.html</loc>
+    <lastmod>2023-10-01T00:39:51.632Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/container/2020-09-23-docker-humble-practice.html</loc>
+    <lastmod>2023-10-01T00:39:51.632Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/math-of/2019-05-17-math-pca.html</loc>
+    <lastmod>2023-10-22T02:10:29.206Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/math-of/2019-12-11-Peron-Frobenus-1.html</loc>
+    <lastmod>2023-10-22T02:10:29.205Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/math-of/2019-05-06-math-svm.html</loc>
+    <lastmod>2023-10-22T02:10:29.216Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/walk-through/2023-09-21-my-beelink.html</loc>
+    <lastmod>2023-10-17T10:20:15.084Z</lastmod>
   </url>
   <url>
     <loc>https://www.lostineconomics.com/posts/the-books/2023-03-13-스케일의-법칙.html</loc>
-    <lastmod>2023-10-20T09:59:09.791Z</lastmod>
+    <lastmod>2023-10-17T12:07:30.549Z</lastmod>
   </url>
   <url>
-    <loc>https://www.lostineconomics.com/project.html</loc>
-    <lastmod>2023-10-20T09:59:20.023Z</lastmod>
+    <loc>https://www.lostineconomics.com/posts/math-of/2019-12-20-Peron-Frobenius-2.html</loc>
+    <lastmod>2023-10-22T02:10:29.205Z</lastmod>
   </url>
   <url>
-    <loc>https://www.lostineconomics.com/posts/computer-tool/2023-05-11-powershell.html</loc>
-    <lastmod>2023-10-20T09:58:59.211Z</lastmod>
+    <loc>https://www.lostineconomics.com/posts/math-of/2019-12-24-PageRank.html</loc>
+    <lastmod>2023-10-22T02:10:29.205Z</lastmod>
   </url>
   <url>
-    <loc>https://www.lostineconomics.com/posts/computer-tool/2023-05-16-workflow-with-vscode.html</loc>
-    <lastmod>2023-10-20T09:59:07.519Z</lastmod>
+    <loc>https://www.lostineconomics.com/posts/math-of/2020-07-03-bayesian-inference.html</loc>
+    <lastmod>2023-10-22T02:11:07.679Z</lastmod>
   </url>
   <url>
-    <loc>https://www.lostineconomics.com/posts/computer-tool/2023-05-29-rye.html</loc>
-    <lastmod>2023-10-20T09:59:08.823Z</lastmod>
+    <loc>https://www.lostineconomics.com/posts/econ-simple/2022-04-30-gdp-import.html</loc>
+    <lastmod>2023-10-01T00:39:51.633Z</lastmod>
   </url>
   <url>
-    <loc>https://www.lostineconomics.com/posts/math-simple/2023-06-26-imply.html</loc>
-    <lastmod>2023-10-20T09:58:45.435Z</lastmod>
+    <loc>https://www.lostineconomics.com/posts/container/2022-04-26-k8s-personally.html</loc>
+    <lastmod>2023-10-01T00:39:51.632Z</lastmod>
   </url>
   <url>
-    <loc>https://www.lostineconomics.com/posts/2023-05-29-rye.html</loc>
-    <lastmod>2023-08-06T10:50:22.713Z</lastmod>
+    <loc>https://www.lostineconomics.com/posts/container/2020-09-24-install-hangul-in-docker.html</loc>
+    <lastmod>2023-10-01T00:39:51.632Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/economics/2022-05-16-trilemma.html</loc>
+    <lastmod>2023-10-01T00:39:51.635Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/linear-algebra/2021-01-18-Eigenspace-2.html</loc>
+    <lastmod>2023-10-01T00:39:51.638Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/linear-algebra/2021-01-07-linear-transform-matrix.html</loc>
+    <lastmod>2023-10-01T00:39:51.638Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/linear-algebra/2021-01-06-vector-geometry-2.html</loc>
+    <lastmod>2023-10-01T00:39:51.638Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/linear-algebra/2021-01-10-Eigenspace-1.html</loc>
+    <lastmod>2023-10-01T00:39:51.638Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/regression/2019-10-25-understanding-regression.html</loc>
+    <lastmod>2023-10-01T00:39:51.647Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/regression/2022-05-28-normality.html</loc>
+    <lastmod>2023-10-22T01:51:03.904Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/regression/2019-11-10-understanding-logit-regression.html</loc>
+    <lastmod>2023-10-01T00:39:51.647Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/regression/2020-11-11-log-linear-regression.html</loc>
+    <lastmod>2023-10-01T00:39:51.647Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/stats-simple/2022-05-30-markov-chebyshev.html</loc>
+    <lastmod>2023-10-01T00:39:51.652Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/machine-learning/2022-11-29-shannon-entropy.html</loc>
+    <lastmod>2023-10-19T11:08:28.998Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/computer-tool/2022-05-10-how-to-make-cv.html</loc>
+    <lastmod>2023-10-22T01:31:05.511Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/computer-tool/2022-12-22-my-domains.html</loc>
+    <lastmod>2023-10-21T23:32:24.360Z</lastmod>
   </url>
   <url>
     <loc>https://www.lostineconomics.com/posts/computer-tool/2023-08-15-julia-quicksilver.html</loc>
     <lastmod>2023-10-19T11:08:28.997Z</lastmod>
   </url>
   <url>
-    <loc>https://www.lostineconomics.com/posts/computer-tool/2023-08-27-pixi.html</loc>
-    <lastmod>2023-10-20T09:59:05.255Z</lastmod>
+    <loc>https://www.lostineconomics.com/posts/computer-tool/2022-05-25-pytorch.html</loc>
+    <lastmod>2023-10-01T00:39:51.609Z</lastmod>
   </url>
   <url>
-    <loc>https://www.lostineconomics.com/posts/walk-through/2023-09-21-my-beelink.html</loc>
-    <lastmod>2023-10-20T09:59:13.755Z</lastmod>
+    <loc>https://www.lostineconomics.com/posts/computer-tool/2021-11-19-python-in-browser.html</loc>
+    <lastmod>2023-10-01T00:39:51.609Z</lastmod>
   </url>
   <url>
-    <loc>https://www.lostineconomics.com/posts/computer-tool/2023-10-20-github-codespaces.html</loc>
-    <lastmod>2023-10-21T23:59:49.664Z</lastmod>
+    <loc>https://www.lostineconomics.com/posts/computer-tool/2022-09-25-latex-vscode.html</loc>
+    <lastmod>2023-10-01T00:39:51.609Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/computer-tool/2020-03-07-blogging-with-fastpages.html</loc>
+    <lastmod>2023-10-01T00:39:51.608Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/computer-tool/2020-04-09-wsl2-walkthru.html</loc>
+    <lastmod>2023-10-01T00:39:51.609Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/computer-tool/2023-05-16-workflow-with-vscode.html</loc>
+    <lastmod>2023-10-19T11:08:28.996Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/computer-tool/2020-10-27-viva-binder.html</loc>
+    <lastmod>2023-10-01T00:39:51.609Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/computer-tool/2021-02-02-all-vs-code.html</loc>
+    <lastmod>2023-10-01T00:39:51.609Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/git/2022-04-27-happy-giting.html</loc>
+    <lastmod>2023-10-01T00:39:51.636Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/math-simple/2022-10-05-paradox-of-friendship.html</loc>
+    <lastmod>2023-10-17T10:20:15.078Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/math-simple/2023-06-26-imply.html</loc>
+    <lastmod>2023-10-17T10:20:15.078Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/posts/math-simple/2019-07-13-Poisson.html</loc>
+    <lastmod>2023-10-22T02:01:45.220Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/index.html</loc>
+    <lastmod>2023-10-01T00:39:51.608Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.lostineconomics.com/project.html</loc>
+    <lastmod>2023-10-01T00:39:51.655Z</lastmod>
   </url>
 </urlset>

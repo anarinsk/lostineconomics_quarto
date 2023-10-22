@@ -3,7 +3,7 @@ title:  Dot Product with Geometry
 description: 기하학적으로 내적을 살펴보자. 
 author: "JS HUHH"
 date: "07/18/2019"
-#image: "image.jpg"
+image: "images/cat-dotproduct.webp"
 categories: [math-simple]
 #margin-header: subscribe.html
 ---

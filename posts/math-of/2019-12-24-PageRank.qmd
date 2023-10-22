@@ -3,7 +3,7 @@ title: PageRank as Markov Chain
 description: 마르코프 체인에서 페이지랭크를 보다. 
 author: "JS HUHH"
 date: "12/24/2019"
-image: "https://d2r55xnwy6nx47.cloudfront.net/uploads/2021/03/Perfect-Number_2880_Lede.jpg"
+image: "images/cat-mathsolving.webp"
 categories: [math-of]
 #margin-header: subscribe.html
 ---

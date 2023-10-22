@@ -3,7 +3,7 @@ title:  Metrics for Binary Classification
 description: 이항 분류 지표 정리합니다.  
 author: "JS HUHH"
 date: "04/19/2020"
-image: "https://www.httpcs.com/images/produit/machine-learning/apprentissage-machine-learning.svg"
+image: "images/cat-ml.webp"
 categories: [machine-learning]
 #margin-header: subscribe.html
 ---

@@ -3,7 +3,7 @@ title: Bayesian Inference with MCMC
 description:  MCMC 기억 되살리기
 author: "JS HUHH"
 date: "07/03/2020"
-image: "https://d2r55xnwy6nx47.cloudfront.net/uploads/2021/03/Perfect-Number_2880_Lede.jpg"
+image: "images/cat-mathsolving.webp"
 categories: [math-of]
 #margin-header: subscribe.html
 ---
