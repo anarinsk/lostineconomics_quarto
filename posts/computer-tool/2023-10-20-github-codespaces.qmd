@@ -95,10 +95,16 @@ brew를 통해 설치할 수 있으면 좋겠지만 Quarto는 별도로 설치�
 
 <https://docs.posit.co/resources/install-quarto/#quarto-deb-file-install>
 
-최신 버전의 설치 방법은 아래와 같다. 
+최신 버전 혹은 특정 버전의 설치 방법은 아래와 같다. 
 
 ```bash
+# Downloading 
+# 둘 중 하나를 택해서 deb을 다운받자. 
 > sudo curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb # 최신 버전 다운로드
+> sudo curl -o quarto-linux-amd64.deb -L \ 
+  https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.435/quarto-1.4.435-linux-amd64.deb 
+  # 특정 버전의 다운로드 링크를 붙여 넣는다. 
+# Installing
 > sudo apt-get install gdebi-core
 > sudo gdebi quarto-linux-amd64.deb
 ```

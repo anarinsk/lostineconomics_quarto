@@ -88,7 +88,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
@@ -244,7 +244,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>그림처럼 깃헙 페이지의 오른쪽 상단에 <code>Code</code>을 누르면 <code>Open with Codespaces</code> 메뉴가 나타난다. 이 메뉴를 선택하면 깃헙 코스가 활성화된다. 활성화된 이후에는 VS Code와 동일한 환경이 제공된다. 별도로 구구절절하게 설명할 것이 없다는 이야기다. 자세한 것은 아래 페이지를 참고하면 된다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://nira.com/wp-content/uploads/2021/11/image2-3-1336x848.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-description="" title="LINK를 참고하자."><img src="https://nira.com/wp-content/uploads/2021/11/image2-3-1336x848.png" class="img-fluid figure-img" alt="LINK를 참고하자."></a></p>
+<p><a href="https://nira.com/wp-content/uploads/2021/11/image2-3-1336x848.png" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-2" title="LINK를 참고하자."><img src="https://nira.com/wp-content/uploads/2021/11/image2-3-1336x848.png" class="img-fluid figure-img" alt="LINK를 참고하자."></a></p>
 <figcaption><a href="https://docs.github.com/ko/codespaces/overview">LINK</a>를 참고하자.</figcaption>
 </figure>
 </div>
@@ -291,10 +291,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="quarto">Quarto</h3>
 <p>brew를 통해 설치할 수 있으면 좋겠지만 Quarto는 별도로 설치해야 한다. 아래 링크를 참고하자.</p>
 <p><a href="https://docs.posit.co/resources/install-quarto/#quarto-deb-file-install" class="uri">https://docs.posit.co/resources/install-quarto/#quarto-deb-file-install</a></p>
-<p>최신 버전의 설치 방법은 아래와 같다.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="op">&gt;</span> sudo <span class="ex">curl</span> <span class="at">-LO</span> https://quarto.org/download/latest/quarto-linux-amd64.deb <span class="co"># 최신 버전 다운로드</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="op">&gt;</span> sudo <span class="ex">apt-get</span> install gdebi-core</span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="op">&gt;</span> sudo <span class="ex">gdebi</span> quarto-linux-amd64.deb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>최신 버전 혹은 특정 버전의 설치 방법은 아래와 같다.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Downloading </span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="co"># 둘 중 하나를 택해서 deb을 다운받자. </span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="op">&gt;</span> sudo <span class="ex">curl</span> <span class="at">-LO</span> https://quarto.org/download/latest/quarto-linux-amd64.deb <span class="co"># 최신 버전 다운로드</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="op">&gt;</span> sudo <span class="ex">curl</span> <span class="at">-o</span> quarto-linux-amd64.deb <span class="at">-L</span> <span class="dt">\ </span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>  <span class="ex">https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.435/quarto-1.4.435-linux-amd64.deb</span> </span>
+<span id="cb5-6"><a href="#cb5-6"></a>  <span class="co"># 특정 버전의 다운로드 링크를 붙여 넣는다. </span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="co"># Installing</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="op">&gt;</span> sudo <span class="ex">apt-get</span> install gdebi-core</span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="op">&gt;</span> sudo <span class="ex">gdebi</span> quarto-linux-amd64.deb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
@@ -836,7 +842,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox"});</script>
 
 
 
