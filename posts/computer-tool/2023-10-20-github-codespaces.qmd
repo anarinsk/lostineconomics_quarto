@@ -43,6 +43,10 @@ https://docs.github.com/en/codespaces/customizing-your-codespace/changing-the-ma
 
 ![[LINK](https://docs.github.com/ko/codespaces/overview)를 참고하자.](https://nira.com/wp-content/uploads/2021/11/image2-3-1336x848.png)
 
+:::{.column-margin}
+과금은 생각보다 너그러운 편이다. 개인 무료 이용자의 경우 월 15GB 스토리지, 월 120시간의 core hour를 제공한다. 유료 사용자의 경우 스토리지는 월 20GB, core hour는 180시간이다. [LINK](https://docs.github.com/en/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces)를 참고하자. 
+:::
+
 ## 나의 활용법 
 
 깃헙 코스를 내가 어떻게 쓰고 있는지 간단히 소개하겠다. 물론 이는 미래에 모든 것을 망각할 나 놈을 위한 동어반복이다. 깃헙 코스를 올리고 처음 구동할 때, 자신의 다른 VS Code의 환경과 연동이 되어 있다면 확장을 설치하는데 시간이 좀 걸린다. 한번만 참고 기다리면 된다. 
