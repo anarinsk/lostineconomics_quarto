@@ -144,7 +144,7 @@ A 유형은 해당 호출을 바로 IP로 연결해준다. 해당 IP는 앞서 �
 
 가입 후 웹 사이트를 등록하면서 DNS을 바꿔주면 그 이후 세부 설정을 할 수 있다. 이 홈페이지의 예시를 간략하게 스샷으로 소개하겠다. 도메인 관리의 모든 기능이 제공되고 인터페이스도 편리하다. 
 
-![](images\cloudflare.png)
+![](images/cloudflare.png)
 
 1. `lostineconomics.com` &rarr; `www.lostineconomics.com` 으로 연결 [이동](#곁눈질-www가-없는-호출-포위딩하기)
 2. `www.lostineconomics` &rarr; `anarinsk.github.io`로 연결 [이동](#도메인-연결-1-google-domains)
