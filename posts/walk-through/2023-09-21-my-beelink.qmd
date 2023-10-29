@@ -18,7 +18,7 @@ format:
 ---
 
 ::: columns
-::: {.column width="30%"}
+::: {.column width="40%"}
 ## The Gadget 
 
 [![](./images/beelink.webp)](https://www.aliexpress.com/item/1005005305248100.html)
@@ -27,7 +27,7 @@ format:
 :::{.column width="5%"}
 :::
 
-::: {.column width="65%"}
+::: {.column width="55%"}
 ## TL; DR
 - 단순 용도의 개인용 웹 서버를 구축해보자. 
 - 구매부터 기본 세팅까지 개인이 경험한 전 과정을 소개한다. (역시 나중에 잊어버릴 나 놈을 위한 것이다!)  
