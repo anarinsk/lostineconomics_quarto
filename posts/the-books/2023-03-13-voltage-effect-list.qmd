@@ -20,7 +20,10 @@ format:
 [![](https://image.aladin.co.kr/product/30562/27/cover500/8901266431_1.jpg)](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=305622732)
 :::
 
-::: {.column width="70%"}
+:::{.column width=5%}
+:::
+
+::: {.column width="65%"}
 ## TL; DR
 - 경제학 혹은 행동 경제학의 기본적인 개념을 응용하기에는 좋다. 
 - 저자의 우버에서의 경험이 '날 것'으로 들어가 있지는 않더라. 
