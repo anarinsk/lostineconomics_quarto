@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.451">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="JS HUHH">
-<meta name="dcterms.date" content="2022-10-03">
-<meta name="description" content="나 놈을 위한 RSA 정리">
+<meta name="dcterms.date" content="2023-10-27">
+<meta name="description" content="재미는 있지만, 좀 장황하다">
 
-<title>lostineconomics.com - RSA, Simply Explained</title>
+<title>lostineconomics.com - 마약 하는 마음, 마약 파는 사회</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -54,7 +54,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -69,19 +75,17 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">lostineconomics.com</span>
     </a>
@@ -93,33 +97,33 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">about</span></a>
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../project.html" rel="" target="">
- <span class="menu-text">project</span></a>
+    <a class="nav-link" href="../../project.html"> 
+<span class="menu-text">project</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/anarinsk" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/anarinsk"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/anarinsk" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/anarinsk"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -127,23 +131,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">RSA, Simply Explained</h1>
+<h1 class="title">마약 하는 마음, 마약 파는 사회</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">math-simple</div>
+    <div class="quarto-category">the-books</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    나 놈을 위한 RSA 정리
+    재미는 있지만, 좀 장황하다
   </div>
 </div>
 
@@ -160,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 3, 2022</p>
+      <p class="date">October 27, 2023</p>
     </div>
   </div>
   
@@ -168,167 +170,61 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
 
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="tl-dr" class="level2">
-<h2 class="anchored" data-anchor-id="tl-dr">tl; dr</h2>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><div class="columns">
+<div class="column" style="width:30%;">
+<section id="the-book" class="level2">
+<h2 class="anchored" data-anchor-id="the-book">The Book</h2>
+<p><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=326261783"><img src="https://image.aladin.co.kr/product/32626/17/cover500/e432532385_1.jpg" class="img-fluid"></a></p>
+</section>
+</div><div class="column" style="width:70%;">
+<section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <ul>
-<li>RSA 알고리즘을 쉽게 풀어보자.</li>
+<li>마약의 이모저모를 잘 알려주긴 한다.</li>
+<li>의사로서의 전문 지식은 책의 장점이지만, 마약의 모든 것을 포괄하려는 욕심은 과했다.</li>
 </ul>
 </section>
-<section id="왜" class="level2">
-<h2 class="anchored" data-anchor-id="왜">왜?</h2>
-<p>한글로 된 책이나 블로그 등을 찾아보면 RSA가 제법 많이 소개되어 있다. 아쉽게도 대체로 개념 혹은 전체적인 그림 정도의 설명이 많았고, 알고리즘을 구체적으로 해설하는 경우는 드물더라. 보안 지식이 일천한 나는 그렇게 느꼈다. 알고리즘 자체를 보다 친절하게 소개하는 내용을 두루 찾다가 아래 두 개의 위키를 찾았다. 나중에 까먹을 나 놈을 위해서 내용을 간단히 정리해두도록 하곘다.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-References
 </div>
 </div>
-<div class="callout-body-container callout-body">
+<section id="넋두리" class="level2">
+<h2 class="anchored" data-anchor-id="넋두리">넋두리</h2>
+<p>책은 “1부 마약하는 사람”, “2부 마약 파는 사회”로 구성되어 있다. 1부가 마약 자체의 분류, 효과 그리고 마약하는 개별자에 대해서 다루고, 2부는 마약의 정치경제학(?), 역사 등을 다루고 있다.</p>
+<p>1부는 의학자로서 저자의 전문 지식이 돋보이는 부분이 있다. 마약의 분류, 작용 기제 등에 대한 설명을 다른 대중서들보다 명쾌하다. 2부는 이래저래 다른 자료들을 발췌해서 쓴 느낌이 강하다. ’마약 왕국’을 다루는 분은 넷플릭스 시리즈 “나르코스” 그리고 “돕식”(디즈니+), “페인킬러”(디즈니+) 등을 한 번 보는 게 훨씬 낫다. 한국 마약계의 역사에 관해서는 저자가 참고한 서적을 직접 보는 게 나을 것 같다. 스케치로서 아주 나쁘지는 않다.</p>
+<p>다만 내용을 다루다가 저자가 너무 심취하는 순간이 종종 발견된다. 이런 게 나는 상당히 거슬리더라. 이또한 취향이니 그냥 넘어가자.</p>
+</section>
+<section id="챙길-대목들" class="level2">
+<h2 class="anchored" data-anchor-id="챙길-대목들">챙길 대목들</h2>
+<section id="신경전달물질" class="level3">
+<h3 class="anchored" data-anchor-id="신경전달물질">신경전달물질</h3>
+<p>마약은 신경전달물질을 통해서 작용한다. 신경전달물질이 스탭스의 수용체에 달라붙어 효과를 낸다. 저자가 제시한 핵심 신경전달물질을 살펴보자.</p>
 <ul>
-<li><a href="https://brilliant.org/wiki/eulers-totient-function/">Euler’s Totient Function | Brilliant Math &amp; Science Wiki</a></li>
-<li><a href="https://brilliant.org/wiki/rsa-encryption/">RSA Encryption | Brilliant Math &amp; Science Wiki</a></li>
+<li><p><strong>아세틸콜린</strong>: 가장 기본적인 물질이다. 전화벨과 같다고 한다. 뭘 해야 하는지 알려주는 신호 역할을 한다는 의미로 이해하면 될까? “이 아세틸콜린이 줄어들면 뇌의 모든 기능, 그 중에서도 지식과 정보를 받아들여 저장하고 판단하는 인지 기능에 이상이 생긴다. 바로 알츠하이머 치매다.”</p></li>
+<li><p><strong>노르에피네프린</strong>: “시계의 알람처럼 긴장과 흥분을 일으켜 혈압을 상승시키기 떄문에 출혈 등으로 혈압이 떨어진 쇼크 환자에게 치료제로 쓴다.”</p></li>
+<li><p><strong>도파민</strong>: “클럽 DJ가 들려주는 음악같이 운동기능과 함께 즐거움과 쾌락을 준다. 이 도파민을 분비하는 신경세포에 이상에 생기면 운동기능 이상으로 몸을 떨거나 강직이 온다. 바로 파킨슨 병이다.”</p></li>
+<li><p><strong>세로토닌</strong>: “절의 목탁 소리처럼 평온함과 행복감을 주는데 이것이 부족하면 우울증이 생긴다.”</p></li>
+<li><p><strong>엔도르핀</strong>: “우리 몸에는 몸이 만든 모르핀(endogenous morphine), 즉 엔도르핀이 극소량이지만 존재한다. 이 엔도르핀은 평소에는 전혀 분비되지 않다가 극한의 상황에서만 분비되기에 어지간히 아프거나 다쳐서는 나오지 않는다.”</p></li>
 </ul>
-</div>
-</div>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 49.0%;justify-content: center;">
-<figure class="figure">
-<p><a href="https://ds055uzetaobb.cloudfront.net/brioche/uploads/JO18nrj1mE-rsa-encryption.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="수신자는 발송자에게 상자와 열쇠를 보낸다. 해당 열쇠는 수신자의 개인 키로만 열 수 있다."><img src="https://ds055uzetaobb.cloudfront.net/brioche/uploads/JO18nrj1mE-rsa-encryption.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">수신자는 발송자에게 상자와 열쇠를 보낸다. 해당 열쇠는 수신자의 개인 키로만 열 수 있다.</figcaption>
-</figure>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 2.0%;justify-content: center;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 49.0%;justify-content: center;">
-<figure class="figure">
-<p><a href="https://miro.medium.com/max/1400/0*yeF86NncRejLnXJz.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="메시지 전달에서 비대칭 암호 체계"><img src="https://miro.medium.com/max/1400/0*yeF86NncRejLnXJz.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">메시지 전달에서 비대칭 암호 체계</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>비대칭 암호의 핵심은 공개 키로 어떤 메시지 혹은 내용을 암호화를 하고 이를 개인 키를 통해서 풀 수 있게 (복호화) 하는 것이다. 공개 키는 널리 퍼트리고, 개인 키는 해당 개인이 보유하고 관리한다. 이런 구조 때문에 암호화와 복호화에 필요한 키를 공유하는 대칭 암호 체계에 비해 비대칭 암호가 보안에 우수하다.</p>
-<p>만일 암호화를 수행해서 공개 키를 불특정 다수에게 전달하고 개인 키를 갖는 쪽이 sender(센더)면 이는 ’전자 서명’이다. 반대로 receiver(리시버)가 공개 키를 배포하고 자신이 개인 키를 보유한다면, 이는 암호화 기반 메시지 전달이다. 동전의 양면 처럼 동일한 개념이므로 여기서는 후자, 즉 암호화 메시지 교환을 다루도록 하겠다.</p>
 </section>
-<section id="개념" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="개념">개념</h2>
-<p>RSA 알고리즘의 핵심은 소수의 활용 그리고 오일러 정리다. 필요한 개념 몇 가지 미리 정리하고 가자.</p>
-<section id="euler-phi-function" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="euler-phi-function">Euler <span class="math inline">\(\phi\)</span> function</h3>
-<p>오일러 피 함수(Euler totient function), <span class="math inline">\(\phi(n)\)</span>, 은 <span class="math inline">\(n\)</span>까지의 정수 중에서 <span class="math inline">\(n\)</span>와 서로소(coprime)인 정수 집합의 크기를 나타낸다. 오일러 피 함수에 관해서 아래와 같은 내용이 성립함을 확인하자.</p>
-<ol type="1">
-<li>만일 <span class="math inline">\(p\)</span>가 소수일 때, <span class="math inline">\(\phi(p) = p-1\)</span>가 성립한다. <span class="math inline">\(p\)</span>가 소수라면 정의상 <span class="math inline">\(1, \dotsc, p-1\)</span>의 모든 수와 <span class="math inline">\(p\)</span>는 서로소가 된다.</li>
-<li>만일 <span class="math inline">\(p,q\)</span>가 서로소이면, <span class="math inline">\(\phi (pq) = \phi(p) \phi(q)\)</span>. 증명이 간단하지 않으니 일단 받아들이자.</li>
-</ol>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>증명은 <a href="https://brilliant.org/wiki/eulers-totient-function/">여기</a>를 참고하자.</p>
-</div></div></section>
-<section id="euler-theorem" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="euler-theorem">Euler theorem</h3>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-오일러 정리
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span class="math inline">\(n\)</span>이 양의 정수라고 하고, <span class="math inline">\(a\)</span>와 <span class="math inline">\(n\)</span>은 서로소라고 하자. 이때 아래의 관계가 성립한다.</p>
-<p><span class="math display">\[
-a^{\phi(n)} \equiv 1~(\text{mod } n)
-\]</span></p>
-</div>
-</div>
-<p>즉, 오일러 정리는 <span class="math inline">\(n\)</span>에 관한 오일러 피 함수와 <span class="math inline">\(n\)</span>의 나머지 연산 간에 매우 편리한 관계를 보여준다. 오일러 정리애 관한 증명 역시 생략한다.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>증명은 <a href="https://brilliant.org/wiki/eulers-theorem/">여기</a>를 참고하자. 증명이 몹시 난해한 것은 아니다.</p>
-</div></div><p>잠깐 “나머지 연산”(modulo operation)이 왜 동원되는지 살펴보고 넘어가자. 나머지 연산을 통해 일방향 함수를 쉽게 구성할 수 있다. <span class="math inline">\(f(x) = ax\)</span>가 있다고 하자. <span class="math inline">\(x\)</span>를 알면 <span class="math inline">\(f(x)\)</span>를 쉽게 계산할 수 있고 반대로 <span class="math inline">\(f(x)\)</span>를 알면 <span class="math inline">\(x\)</span>도 쉽게 구할 수 있다. 이런 함수를 양방향 함수라고 한다. 반면, <span class="math inline">\(f(x) = a^x\text{ mod ($b$)}\)</span>라고 하자. 이때, <span class="math inline">\(a, b\)</span>가 주어진 값이라고 하자. <span class="math inline">\(x\)</span>를 알면 쉽게 <span class="math inline">\(y\)</span>가 계산된다. 반면, <span class="math inline">\(f(x)\)</span>가 주어졌다고 해도 <span class="math inline">\(x\)</span>를 알아내기는 쉽지 않다. 하나씩 다른 값을 넣어보면서 맞는지 확인하는 방법 밖에 없다. 일방향 함수에서는 <span class="math inline">\(a^x\)</span>와 <span class="math inline">\(b\)</span>가 충분히 큰 값일 때, <span class="math inline">\(f(x)\)</span>를 알아도 <span class="math inline">\(x\)</span>를 찾기 쉽지 않다.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>이런 형태의 문제를 이산 대수의 문제라고 한다.</p>
-</div></div></section>
+<section id="마약-분류" class="level3">
+<h3 class="anchored" data-anchor-id="마약-분류">마약 분류</h3>
+<p><a href="./images/drugmap.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="./images/drugmap.png" class="img-fluid"></a></p>
+<p>정말 잘 분류해 놓은 그림이다! 코카인/암페타민 계열의 약과 마리화나/모르핀 계열의 약은 각각 업과 다운 계열이다. 그리고 모르핀에서 파생되는 헤로인, 마약성 진통제, 펜타닐 등이 다운 계열에 속한다.</p>
+<p>저자는 책에서 다운 계열의 약이 막연히 ’안전’할 것이라는 짐작은 위험하다고 말한다. 대마에 대해서 이런 이야기를 하고는 한다. 자극이 세지 않아서 중독될 가능성이 낮다고.</p>
+<p>저자에 따르면 오히려 반대가 진실에 가까울 수 있다. 업 계열의 약들이 에너지 소모가 많다. 따라서 효과의 지속시간이 짧다. 업 계열 약에는 복용과 복용 사이의 필연적인 텀이 존재한다. 이에 반해 다운 계열의 약은 그런 주기가 없다. 미끄러지듯이 중독에 빠져들기에는 다운 계열이 보다 쉬울 수 있다는 뜻이다. 마약성 진통제 위기(opioid crisis)에서 옥시콘틴 같은 약에 사람들이 쉽게 빠져든 이유를 여기서 짐작할 수 있다.</p>
 </section>
-<section id="step-by-step" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="step-by-step">Step by Step</h2>
-<p>여기서는 암호화를 수행하는 쪽이 리시버인 상황을 상정해서 설명하겠다. 리시버는 나에게 온 메시지가 나에게 온 것이 맞는지 그리고 메시지를 나만 볼 수 있는지가 염려된다. 이를 보장하기 위해서 리시버는 아래와 같은 과정을 통해서 공개 키 정보를 대중에게 제공한다.</p>
-<ol type="1">
-<li>리시버는 <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span> 두 개의 (상대적으로 큰) 소수를 생성한다. 값은 필요한 만큼 커야 한다. <span class="math inline">\(p \cdot q=n\)</span>이 된다. <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span>는 당연히 비공개 정보여야 한다. 하지만 <span class="math inline">\(n\)</span>은 공개 키가 된다. <span class="math inline">\(n\)</span>으로부터 <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span>를 찾는 것은 단순 무식한 작업(brute force)을 요하고, 그래서 암호로서 기능할 수 있다.</li>
-<li><span class="math inline">\(\phi(n) = \phi (pq) = (p-1) (q-1)\)</span> 이 성립한다. 만일 <span class="math inline">\(\phi(n)\)</span>을 알고 있으면 <span class="math inline">\(p+q\)</span>을 알게 된다. <span class="math inline">\(pq=n\)</span>을 알고 있으므로 이차 방정식을 풀면 <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span>를 알게 된다. 따라서 <span class="math inline">\(\phi(n)\)</span>은 비공개 정보다. 오일러 피 함수에 해당하는 공개 키를 만들기 위해서 <span class="math inline">\(\phi(n)\)</span>과 서로소인 <span class="math inline">\(e\)</span>를 하나 생성하도록 하자. 대신 이 녀석이 공개 키가 된다.</li>
-<li><span class="math inline">\(\phi(n)\)</span>의 나머지 연산에 대해서 <span class="math inline">\(d e = 1\)</span>을 만족하는 <span class="math inline">\(d\)</span>를 구하자. 이 녀석이 비밀 키가 된다.</li>
-</ol>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p><span class="math inline">\(\phi(pq) = \phi(p)\phi(q)\)</span>가 성립한다. <span class="math inline">\(p\)</span>, <span class="math inline">\(q\)</span>는 각각 소수이므로 <span class="math inline">\(\phi(p)=p-1\)</span>, <span class="math inline">\(\phi(q)=q-1\)</span>이다. 한편, <span class="math inline">\(e\)</span>는 대체로 공개 키의 크기 역할을 한다. 따라서 <span class="math inline">\(2^{16}+1\)</span>이 자주 사용된다.</p>
-</div></div><p>이제 공개 키와 비밀키를 한번 나누어 써보도록 하자.</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: center;">secret</th>
-<th style="text-align: center;">public</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(p, q\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(n\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(\phi(n), d\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(e\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>리시버는 공개 키 <span class="math inline">\(n\)</span>, <span class="math inline">\(e\)</span>를 일반에게 공개한 상태다.</p>
-<ol start="4" type="1">
-<li>이 리시버에게 메시지를 보내고자 하는 센더는 자신의 메시지 <span class="math inline">\(m\)</span>을 공개 키 <span class="math inline">\(e\)</span>를 통해 암호화한다. 이 과정은 별게 아니다. 메시지 혹은 메시지의 해시값에 <span class="math inline">\(e\)</span> 승을 한 값에 <span class="math inline">\(n\)</span>의 나머지 연산을 적용한다. 즉,</li>
-</ol>
-<p><span class="math display">\[
-c \equiv m^e ~ (\text{mod } n)
-\]</span></p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<ol type="1">
-<li>아래에서 보듯이 <span class="math inline">\(n\)</span>이 너무 크면 나머지 연산이 제대로 적용되지 않는다. 또한 <span class="math inline">\(e\)</span>의 값이 너무 크면 계산 과정이 길고 복잡해진다.</li>
-<li>메시지를 메시지 자체라고 생각할 필요는 없다. 메시지의 해시값이라고 생각하면 암호화의 대상이 되는 메시지는 원 메시지보다 훨씬 짧을 수 있다. 리시버와 센더가 맞춰봐야 하는 것은 해당 해시값이다.</li>
-</ol>
-</div></div><ol start="5" type="1">
-<li>리시버는 암호화된 메시지를 받은 후에 여기에 <span class="math inline">\(d\)</span> 승을 하고 나머지 연산 <span class="math inline">\(n\)</span>을 적용한다. 즉,</li>
-</ol>
-<p><span class="math display">\[
-c^d \equiv m~(\text{mod } n)
-\]</span></p>
-<p>위에 보는 것처럼 두 번의 나머지 연산에서 센더는 <span class="math inline">\(n\)</span>, <span class="math inline">\(e\)</span>의 공개된 정보(공개 키)만을 활용했고, 리시버는 복호화 과정에서 자신이 갖고 있는 정보, 개인 키 <span class="math inline">\(d\)</span>를 활용했다.</p>
-<section id="증명" class="level3">
-<h3 class="anchored" data-anchor-id="증명">증명</h3>
-<p>오일러 정리를 활용하면 위 연산을 쉽게 증명할 수 있다.</p>
-<ol type="1">
-<li>오일러 정리에 따르면, <span class="math inline">\(m^{\phi(n)} \equiv 1~(\text{mod } n)\)</span>이 성립한다.</li>
-<li>우리는 <span class="math inline">\(d\)</span>와 <span class="math inline">\(e\)</span>를 고를 때 <span class="math inline">\(d e \equiv 1~(\text{mod }\phi(n))\)</span>이 되도록 골랐다. 따라서 <span class="math inline">\(de = k \phi(n) + 1\)</span>이 되는 적절한 <span class="math inline">\(k\)</span>가 존재한다는 뜻이다.</li>
-</ol>
-<p>이를 정리하면,</p>
-<p><span class="math display">\[
-\begin{aligned}
-m^{de} &amp; \equiv m^{k \phi(n)+1} \\
-&amp; \equiv m^{k \phi(n)} m \\
-&amp; \equiv (m^\phi(n))^k m \\
-&amp; \equiv 1^k m  ~(\text{mod } n)
-\end{aligned}
-\]</span></p>
-<p>공개 키인 <span class="math inline">\(n\)</span>과 <span class="math inline">\(e\)</span>를 생성하는 과정을 보자. 생성 과정에서 일방향 연산, (충분히 큰) 소수 및 서로소를 활용했다. 따라서 공개 키만으로 암호화에 동원된 <span class="math inline">\(p, q, \phi (pq), d\)</span>를 빠른 시간 내에 쉽게 알아낼 수 없다. 이것이 암호화가 의도하는 것이다.</p>
-
-
 </section>
+<section id="흥미로운-대목들" class="level2">
+<h2 class="anchored" data-anchor-id="흥미로운-대목들">흥미로운 대목들</h2>
+<ul>
+<li><p>자연에서 발견된 것을 제외하면 대부분의 미약은 제약사를 통해 개발되었다. 코카인은 원래 ’국소 마취제’로 1885년 머크사가, ’모르핀’은 전쟁 부상병의 고통을 덜기 위한 목적으로 1898년 바이어사가 개발햇다. 독일의 페르비틴, 일본의 필로폰 그리고 영국의 벤제드린은 모두 2차 대전 중인 국가들이 전후방의 전투력을 높일 목적으로 활용되었다.</p></li>
+<li><p>북한산 필로폰이 높은 순도를 자랑한다는 점을 처음 알았다. 국가에서 정책적(?)으로 제조해서 그렇다고 한다. 북한에서 “빙두”(여기서 두는 독의 한자 발음이다)라고 부르는 이 마약이 탈북자의 네트워크를 통해서 남한으로 전해지지 않았을까 상상해 보았다. 이에 관한 연구가 있는지는 아직 찾아보지 못했다.</p></li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -373,6 +269,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -441,13 +364,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -526,10 +451,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -539,8 +463,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -553,6 +486,128 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -596,6 +651,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -621,6 +677,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -681,7 +763,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":true,"descPosition":"bottom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":false});</script>
+
 
 
 
