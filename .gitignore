@@ -1,4 +1,4 @@
-.indentifier
+*.indentifier
 /.quarto/
 index.qmd
 /.luarc.json
@@ -118,3 +118,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+*.Identifier
