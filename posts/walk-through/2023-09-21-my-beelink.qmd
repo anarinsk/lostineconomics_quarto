@@ -64,7 +64,7 @@ apt 패키지 업데이트를 위한 주소는 `/etc/apt/sources.list` 파일을
 > sudo nano /etc/apt/sources.list
 ```
 
-기본 저장소보다는 카카오의 미러 저장소가 국내에서 빠르다. 해당 파일을 적당한 편집기로 열어 기본 패키지 저장소가 어떻게 되어 있는지 살펴보자. 파일 내의 모든 저장소 URL을 찾아 `http://archive.ubuntu.com/ubuntu/` 또는 `http://kr.archive.ubuntu.com/ubuntu/` 등의 주소를 `http://mirror.kakao.com/ubuntu/`로 변경하면 된다. 둘 중 뭘로 되어 있는지 모르니 확인 후 작업하는 것을 권한다. 
+기본 저장소보다는 카카오의 미러 저장소가 국내에서 빠르다. 해당 파일을 적당한 편집기로 열어 기본 패키지 저장소가 어떻게 되어 있는지 살펴보자. 파일 내의 모든 저장소 URL을 찾아 `http://archive.ubuntu.com/ubuntu/` 또는 `http://kr.archive.ubuntu.com/ubuntu/` 등의 주소를 `http://mirror.kakao.com/ubuntu/`로 변경하면 된다. 둘 중 뭘로 되어 있는지 모르니 확인 후 작업하는 것을 권한다. nano 앱에서 `crtl-w > crtl-r`로 찾아서 바꾸자.  
 
 ### 패키지 업데이트와 업그레이드 
 
