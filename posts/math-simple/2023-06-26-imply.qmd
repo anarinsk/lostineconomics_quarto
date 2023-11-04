@@ -3,7 +3,7 @@ title: 조건 명제 그리고 부정
 description: $\implies$를 따져보자
 author: "JS HUHH"
 date: "06/26/2023"
-image: "images/cat-proof.webp"
+image: "./images/cat-proof.webp"
 categories: [math-simple]
 #margin-header: subscribe.html
 draft: false
@@ -37,7 +37,7 @@ lightbox: auto
 - $p$ **implies** $q$.
 - $p$ is **sufficient condition** for $q$.
 
-일단 이 관계는 형식 논리의 관계이지 '인과' 관계가 아니다. 즉, 형식 논리상 명제 $p$와 명제 $q$ 사이의 관계를 기계적으로 서술한다. 진리 집합이 존재한다면, $p$의 진리집합 $P$와 $q$의 진리집합 $Q$에 대해서 $P \subset Q$가 성립한다는 의미로 이해할 수 있겠다. 
+일단 이 관계는 형식 논리의 관계이지 '인과' 관계가 아니다. 즉, 형식 논리상 명제 $p$ 와 명제 $q$ 사이의 관계를 기계적으로 서술한다. 진리 집합이 존재한다면, $p$의 진리집합 $P$와 $q$의 진리집합 $Q$에 대해서 $P \subset Q$가 성립한다는 의미로 이해할 수 있겠다. 
 
 조건 명제에는 숨은 '함정'이 있다. $p \implies q$는 진리집합으로 본다면 $P$에 속하는 모든 원소는 $Q$에 속해야 한다는 뜻이다. 즉, $p$라는 명제를 만족하는 모든 경우에 대해서 $q$가 만족해야 한다.
 
@@ -191,7 +191,7 @@ $(\exists \epsilon)(\exists x)(\forall\delta>0)$ s.t. $|f(x)-L| \geq \epsilon$ f
 $f(x)$는 $x=a$ 주변에서 끊어져 있고, 이 간격과 $L$의 위치를 고려해서 모든 $\delta$와 $|f(x)-L| \geq \epsilon$를 만족하는 $\epsilon>0$와 $x$를 찾을 수 있다. 위 그림에서 보듯이 $\delta$를 아무리 작게 설정해도 $x=a$에서 존재하는 $f(x)$의 간격을 줄일 수는 없다. 즉, $\lim_{x \to a} f(x)$는 존재하지 않는다. 
 :::
 
-연습 삼아서 $a$에서 $f(x)$의 극한값이 존재하는 경우도 살펴보자. 위의 그림에서 보듯이 모든 $\delta$에 대해서 성립해야 하므로 어떤 $\epsilon$이나 $x$를 잡더라도 $\delta$를 좁히면 $|f(x)-L| \geq \epsilon$의 조건을 깰 수 있다. 
+연습 삼아서 $a$에서 $f(x)$의 극한값이 존재하는 경우도 살펴보자. 위의 그림에서 보듯이 모든 $\delta$에 대해서 성립해야 하므로 어떤 $\epsilon$이나 $x$를 잡더라도 $\delta$ 를 좁히면 $|f(x)-L| \geq \epsilon$의 조건을 깰 수 있다. 
 
 ## My bullshit 
 
