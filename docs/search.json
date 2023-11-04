@@ -1537,7 +1537,7 @@
     "href": "posts/walk-through/2023-11-03-definitive-guide-to-windows.html#ubuntu-관리-및-앱-설치",
     "title": "윈도 작업 환경을 기록한다",
     "section": "Ubuntu 관리 및 앱 설치",
-    "text": "Ubuntu 관리 및 앱 설치\n아래 링크를 참고하자.\nLINK🔗"
+    "text": "Ubuntu 관리 및 앱 설치\n아래 링크를 참고하자.\n🔗LINK"
   },
   {
     "objectID": "posts/math-of/2019-05-06-math-svm.html",
@@ -2980,5 +2980,12 @@
     "title": "project",
     "section": "",
     "text": "Mostly Useless\n대부분 쓸모 없는 개인 프로젝트 저장소입니다. 역시 뭐라도 도움이 될 수 있다면 저는 기쁠 따름!\n\n\n\nEconomic Index Board\n⛧ Ouput: Anari’s Economic Indices\n개인적으로 보려고 만든 경제 지표 보드입니다. 고급스럽게 웹 개발을 하면 좋았겠지만 초보적인 웹 지식과 pyscript 약간 활용했습니다. 부족한 지식 및 시간과 타협한 졸작입니다.\n\n\nJupyterLite\n⛧ Ouput: Customized JupyterLite | Post: LINK\nJupyterLite는 Wasm(웹 어셈블리)로 구현되는 경량화된 쥬피터IDE + Python 개발 환경입니다. 사용성에 제한이 있지만 파이썬 코딩 경험이 말할 수 없이 빨리지고 편리해집니다!\n\n\nPresentation with Quarto & Reveal.js\n⛧ Ouput: Useless PT | Post: LINK\nQuarto는 Reveal.js를 부릴 수 있습니다. Quarto를 이용한 PT 제작에는 다음과 같은 장점이 있습니다.\n\nhtml로 구성되어 있어서 웹 브라우저 이외에 별도의 소프트웨어가 필요하지 않습니다.\nGitHub Pages를 통해서 퍼블리시할 수 있습니다.\n이런 저런 ’디자인 지옥’에 고통받지 않을 수 있습니다!\n\n\n\nGenerating CV in GitHub\n⛧ Oputput: short CV | Post: LINK\n깃허브의 markdown과 Pages 기능을 활용해 자동으로 CV를 생성하고 웹으로 배포할 수 있습니다. 아직 100% 만족스럽지 않지만 게으르게 쓸만한 할 정도 됩니다.\n 🐈 🐈 🐈 삽화는 Bing의 이미지 작성자에서 many old statues of tiny gods, digital art 키워드로 생성되었습니다."
+  },
+  {
+    "objectID": "posts/walk-through/2023-11-03-definitive-guide-to-windows.html#ubuntu-관리-및-필수-앱-설치",
+    "href": "posts/walk-through/2023-11-03-definitive-guide-to-windows.html#ubuntu-관리-및-필수-앱-설치",
+    "title": "윈도 작업 환경을 기록한다",
+    "section": "Ubuntu 관리 및 필수 앱 설치",
+    "text": "Ubuntu 관리 및 필수 앱 설치\n아래 링크를 참고하자.\n🔗LINK"
   }
 ]

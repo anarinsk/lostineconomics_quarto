@@ -76,11 +76,11 @@ https://learn.microsoft.com/en-us/windows/wsl/install
 > wsl --unregister <Distribution Name> # 특정 배포판 삭제
 ```
 
-## Ubuntu 관리 및 앱 설치 
+## Ubuntu 관리 및 필수 앱 설치 
 
 아래 링크를 참고하자. 
 
-[LINK🔗](../computer-tool/2023-11-03-first-thing-ubuntu.html)
+🔗[LINK](../computer-tool/2023-11-03-first-thing-ubuntu.html)
 
 
 
