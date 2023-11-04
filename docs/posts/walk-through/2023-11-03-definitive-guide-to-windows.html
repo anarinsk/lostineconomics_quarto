@@ -244,52 +244,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>리눅스를 개발환경으로 쓴다고 해서 그 불편함까지 감수해야 하는 것은 아니다. 네이티브 환경의 UI/UX 및 필요한 앱들은 그대로 활용하면 된다. VS Code룰 통해 리눅스 환경에 원격 접속해 편리하게 코딩을 할 수 있고, 윈도 탐색기에서 리눅스 OS 안의 폴더로 접근할 수도 있다.</p>
 <section id="설치" class="level3">
 <h3 class="anchored" data-anchor-id="설치">설치</h3>
-<p>아래 명령어를 통해서 WSL 기능을 활성화하고 Ubuntu 배포판을 설치할 수 있다.</p>
+<p>아래 명령어를 통해서 WSL 기능을 활성화하고 Ubuntu 배포판까지 한 방에 설치할 수 있다.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>&gt; wsl --install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>디폴트 배포판을 바꾸는 법, 배포판을 삭제하는 방법 등은 아래 링크를 참고하자.</p>
 <p>https://learn.microsoft.com/en-us/windows/wsl/install</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>&gt;  wsl --list --online # or wsl -l -o 설치 가능한 배포판 조회 </span>
+<span id="cb3-2"><a href="#cb3-2"></a>&gt; wsl --install -d &lt;Distribution Name&gt; # 특정 배포판 설치 </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
-<section id="ubuntu-관리" class="level2">
-<h2 class="anchored" data-anchor-id="ubuntu-관리">Ubuntu 관리</h2>
-<section id="리포지토리-주소-변경" class="level3">
-<h3 class="anchored" data-anchor-id="리포지토리-주소-변경">리포지토리 주소 변경</h3>
-<p>기본 리포지토리 주소를 바꾸도록 하자. 만일 WSL을 통해 설치했다면 우분투 메인 서버로 설정되어 있을 것이다. apt 패키지 업데이트를 위한 주소는 <code>/etc/apt/sources.list</code> 파일을 편집하면 된다.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="op">&gt;</span> sudo <span class="fu">nano</span> /etc/apt/sources.list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>기본 저장소보다는 카카오의 미러 저장소가 국내에서 빠르다. 해당 파일을 적당한 편집기로 열어 기본 패키지 저장소가 어떻게 되어 있는지 살펴보자. 파일 내의 모든 저장소 URL을 찾아 <code>http://archive.ubuntu.com/ubuntu/</code> 또는 <code>http://kr.archive.ubuntu.com/ubuntu/</code> 등의 주소를 <code>http://mirror.kakao.com/ubuntu/</code>로 변경하면 된다. 둘 중 뭘로 되어 있는지 모르니 확인 후 작업하는 것을 권한다. nano 앱에서 <code>crtl-w &gt; crtl-r</code>로 찾아서 바꾸자.</p>
-</section>
-<section id="zsh-설치" class="level3">
-<h3 class="anchored" data-anchor-id="zsh-설치">zsh 설치</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="op">&gt;</span> sudo <span class="ex">apt</span> update <span class="co"># 이미 실행했다면 건너 뛰자 </span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="op">&gt;</span> sudo <span class="ex">apt</span> install zsh <span class="co"># zsh 설치</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="op">&gt;</span> chsh <span class="ex">-s</span> <span class="va">$(</span><span class="fu">which</span> zsh<span class="va">)</span> <span class="co"># zsh을 기본 셸로 설정</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="co"># 로그아웃 후에 다시 로그인하면 zsh이 기본셸로 설정된다. </span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="op">&gt;</span> sh <span class="ex">-c</span> <span class="st">"</span><span class="va">$(</span><span class="ex">curl</span> <span class="at">-fsSL</span> https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="va">)</span><span class="st">"</span> <span class="co"># oh my zsh을 설치하자. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="p10k-깔기" class="level3">
-<h3 class="anchored" data-anchor-id="p10k-깔기">p10k 깔기</h3>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="op">&gt;</span> git <span class="ex">clone</span> <span class="at">--depth</span><span class="op">=</span>1 https://github.com/romkatv/powerlevel10k.git <span class="va">${ZSH_CUSTOM</span><span class="op">:-</span><span class="va">$HOME</span>/.oh-my-zsh/custom<span class="va">}</span>/themes/powerlevel10k</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>셸 꾸미기로 속 편하게 파워레벨10k를 쓰자.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="op">&gt;</span> nano <span class="ex">~/.zshrc</span> <span class="co"># zsh 설정 열기 </span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="co"># ZSH_THEME="robbyrussell" -&gt; ZSH_THEME="powerlevel10k/powerlevel10k" # 테마를 p10k로 바꾸자 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>변경 후 셸을 다시 시작하면 p10k 설정화면이 뜬다. 취향대로 설정하도록 하자. 설정을 바꾸고 싶다면, <code>p10k configure</code>를 실행하거나 <code>~/.p10k.zsh</code>를 직접 수정해도 좋다.</p>
-</section>
-<section id="brew-설치" class="level3">
-<h3 class="anchored" data-anchor-id="brew-설치">brew 설치</h3>
-<p>우분투에서 필요한 앱을 까는 방법은 apt, snap 그리고 brew가 있다. OS 단위의 업데이트 혹은 OS와 프로세스과 깊게 연관된 앱들은 apt를 통해서 깔자. snap도 나쁘지는 않지만 거추장스런 면이 있다. user 레벨에서 필요한 앱들을 깔고 관리하기에는 brew가 편하다. macos 만큼 편하지는 않지만 리눅스에서도 쓸만하다.</p>
-<p><a href="https://brew.sh/" class="uri">https://brew.sh/</a></p>
-<p>웹 페이지의 소개된 방식대로 설치하자. 설치 후에는 화면에 뜬 메시지대로 사후 작업을 꼭 해줘야 한다. 그래야 brew 명령어를 제대로 실행할 수 있다. 사용하는 셸에 따라서 서로 다른 사후 실행 명령이 등장하니 유의하시라.</p>
-</section>
-<section id="gh-pixi-with-brew" class="level3">
-<h3 class="anchored" data-anchor-id="gh-pixi-with-brew">gh, pixi with brew</h3>
-<p>이제 brew를 통해서 필요한 앱들을 깔겠다. 필요한 앱을 알아서 깔면 된다. brew를 통해서 설치할 수 있는지 여부는 brew 홈페이지에서 검색으로 확인할 수 있다. 나는 깃헙을 활용하기 위한 gh와 파이썬 의존성 관리도구인 pixi를 가장 먼저 설치했다.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="op">&gt;</span> brew <span class="fu">install</span> gh, pixi </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>gh를 설치한 후 <code>gh auth login</code>을 통해 깃헙 계정에 로그인을 해두자. 필요한 리포가 있을 경우 <code>gh repo clone {리포-주소}</code>를 통해 편하게 당겨올 수 있다.</p>
-</section>
-</section>
-<section id="linux-앱" class="level2">
-<h2 class="anchored" data-anchor-id="linux-앱">Linux 앱</h2>
+<section id="ubuntu-관리-및-앱-설치" class="level2">
+<h2 class="anchored" data-anchor-id="ubuntu-관리-및-앱-설치">Ubuntu 관리 및 앱 설치</h2>
+<p>아래 링크를 참고하자.</p>
+<p><a href="../computer-tool/2023-11-03-first-thing-ubuntu.html">LINK</a></p>
 
 
 </section>
