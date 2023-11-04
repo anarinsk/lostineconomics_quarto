@@ -39,14 +39,14 @@
     "href": "posts/walk-through/2023-11-03-definitive-guide-to-windows.html#wsl",
     "title": "윈도 작업 환경을 기록한다",
     "section": "WSL",
-    "text": "WSL\n윈도에서 개발 환경은 WSL을 쓰도록 하자. 네이티브 개발 환경도 어느 정도 까지는 나쁘지 않다. 하지만 아래와 같은 이유로 WSL을 쓰는 편이 낫다고 본다.\n\n윈도의 레거시 요소(인코딩) 등이 방해하는 경우가 제법 있다.\n\nWSL이 원본에 가까운 리눅스 환경을 제공한다. 여전히 많은 개발 환경들이 리눅스 기반으로 개발된다. 좋은 리눅스 환경이 있는데 쓰지 않을 이유가 있을까?\n\n리눅스를 개발환경으로 쓴다고 해서 그 불편함까지 감수해야 하는 것은 아니다. 네이티브 환경의 UI/UX 및 필요한 앱들은 그대로 활용하면 된다. VS Code룰 통해 리눅스 환경에 원격 접속해 편리하게 코딩을 할 수 있고, 윈도 탐색기에서 리눅스 OS 안의 폴더로 접근할 수도 있다.\n\n설치\n아래 명령어를 통해서 WSL 기능을 활성화하고 Ubuntu 배포판까지 한 방에 설치할 수 있다.\n&gt; wsl --install\n디폴트 배포판을 바꾸는 법, 배포판을 삭제하는 방법 등은 아래 링크를 참고하자.\nhttps://learn.microsoft.com/en-us/windows/wsl/install\n&gt;  wsl --list --online # or wsl -l -o 설치 가능한 배포판 조회 \n&gt; wsl --install -d &lt;Distribution Name&gt; # 특정 배포판 설치"
+    "text": "WSL\n윈도에서 개발 환경은 WSL을 쓰도록 하자. 네이티브 개발 환경도 어느 정도 까지는 나쁘지 않다. 하지만 아래와 같은 이유로 WSL을 쓰는 편이 낫다고 본다.\n\n윈도의 레거시 요소(인코딩) 등이 방해하는 경우가 제법 있다.\n\nWSL이 원본에 가까운 리눅스 환경을 제공한다. 여전히 많은 개발 환경들이 리눅스 기반으로 개발된다. 좋은 리눅스 환경이 있는데 쓰지 않을 이유가 있을까?\n\n리눅스를 개발환경으로 쓴다고 해서 그 불편함까지 감수해야 하는 것은 아니다. 네이티브 환경의 UI/UX 및 필요한 앱들은 그대로 활용하면 된다. VS Code룰 통해 리눅스 환경에 원격 접속해 편리하게 코딩을 할 수 있고, 윈도 탐색기에서 리눅스 OS 안의 폴더로 접근할 수도 있다.\n\n설치\n과거 윈도11 버전에서는 WSL 기능을 활성화한 후 배포판을 별도로 다운로드 받아서 설치했다. 이제는 아래 명령어를 통해서 WSL 기능을 활성화하고 Ubuntu 배포판까지 한번에 설치할 수 있다.\n&gt; wsl --install\n디폴트 배포판을 바꾸는 법, 배포판을 삭제하는 방법 등은 아래 링크를 참고하자.\nhttps://learn.microsoft.com/en-us/windows/wsl/install\n&gt; wsl --list --online # or wsl -l -o 설치 가능한 배포판 조회 \n&gt; wsl --install -d &lt;Distribution Name&gt; # 특정 배포판 설치 \n&gt; wsl --unregister &lt;Distribution Name&gt; # 특정 배포판 삭제"
   },
   {
     "objectID": "posts/walk-through/2023-11-03-definitive-guide-to-windows.html#ubuntu-관리-및-앱-설치",
     "href": "posts/walk-through/2023-11-03-definitive-guide-to-windows.html#ubuntu-관리-및-앱-설치",
     "title": "윈도 작업 환경을 기록한다",
     "section": "Ubuntu 관리 및 앱 설치",
-    "text": "Ubuntu 관리 및 앱 설치\n아래 링크를 참고하자.\nLINK"
+    "text": "Ubuntu 관리 및 앱 설치\n아래 링크를 참고하자.\nLINK🔗"
   },
   {
     "objectID": "fonts/dummy.html",

@@ -215,10 +215,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="앱-설치-관리자" class="level2">
 <h2 class="anchored" data-anchor-id="앱-설치-관리자">앱 설치 관리자</h2>
-<p>https://apps.microsoft.com/detail/9NBLGGH4NNS1?hl=ko-kr&amp;gl=KR</p>
+<p><a href="https://apps.microsoft.com/detail/9NBLGGH4NNS1?hl=ko-kr&amp;gl=KR" class="uri">https://apps.microsoft.com/detail/9NBLGGH4NNS1?hl=ko-kr&amp;gl=KR</a></p>
 <p>winget으로 소프트웨어를 설치하고 관리하려면 “마이크로소프트 스토어”에서 앱설치 관리자를 설치하자. 꼭 winget을 깔아야 하는 것은 아니지만, 터미널에서 일관되게 관리할 수 있어서 꽤 편리하다.</p>
 <p>winget으로 설치할 수 있는 소프트웨어 확인은 아래 웹 사이트를 참고하자.</p>
-<p>https://winget.run/</p>
+<p><a href="https://winget.run/" class="uri">https://winget.run/</a></p>
 <pre><code>&gt; winget install -e --id Microsoft.PowerToys # 키보드 리매핑
 &gt; winget install -e --id Microsoft.PowerShell
 &gt; winget install -e --id GitHub.GitHubDesktop
@@ -244,18 +244,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>리눅스를 개발환경으로 쓴다고 해서 그 불편함까지 감수해야 하는 것은 아니다. 네이티브 환경의 UI/UX 및 필요한 앱들은 그대로 활용하면 된다. VS Code룰 통해 리눅스 환경에 원격 접속해 편리하게 코딩을 할 수 있고, 윈도 탐색기에서 리눅스 OS 안의 폴더로 접근할 수도 있다.</p>
 <section id="설치" class="level3">
 <h3 class="anchored" data-anchor-id="설치">설치</h3>
-<p>아래 명령어를 통해서 WSL 기능을 활성화하고 Ubuntu 배포판까지 한 방에 설치할 수 있다.</p>
+<p>과거 윈도11 버전에서는 WSL 기능을 활성화한 후 배포판을 별도로 다운로드 받아서 설치했다. 이제는 아래 명령어를 통해서 WSL 기능을 활성화하고 Ubuntu 배포판까지 한번에 설치할 수 있다.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>&gt; wsl --install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>디폴트 배포판을 바꾸는 법, 배포판을 삭제하는 방법 등은 아래 링크를 참고하자.</p>
 <p>https://learn.microsoft.com/en-us/windows/wsl/install</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>&gt;  wsl --list --online # or wsl -l -o 설치 가능한 배포판 조회 </span>
-<span id="cb3-2"><a href="#cb3-2"></a>&gt; wsl --install -d &lt;Distribution Name&gt; # 특정 배포판 설치 </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>&gt; wsl --list --online # or wsl -l -o 설치 가능한 배포판 조회 </span>
+<span id="cb3-2"><a href="#cb3-2"></a>&gt; wsl --install -d &lt;Distribution Name&gt; # 특정 배포판 설치 </span>
+<span id="cb3-3"><a href="#cb3-3"></a>&gt; wsl --unregister &lt;Distribution Name&gt; # 특정 배포판 삭제</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="ubuntu-관리-및-앱-설치" class="level2">
 <h2 class="anchored" data-anchor-id="ubuntu-관리-및-앱-설치">Ubuntu 관리 및 앱 설치</h2>
 <p>아래 링크를 참고하자.</p>
-<p><a href="../computer-tool/2023-11-03-first-thing-ubuntu.html">LINK</a></p>
+<p><a href="../computer-tool/2023-11-03-first-thing-ubuntu.html">LINK🔗</a></p>
 
 
 </section>

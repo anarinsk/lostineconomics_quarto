@@ -26,13 +26,13 @@ format:
 
 ## 앱 설치 관리자 
 
-https://apps.microsoft.com/detail/9NBLGGH4NNS1?hl=ko-kr&gl=KR
+<https://apps.microsoft.com/detail/9NBLGGH4NNS1?hl=ko-kr&gl=KR>
 
 winget으로 소프트웨어를 설치하고 관리하려면 "마이크로소프트 스토어"에서 앱설치 관리자를 설치하자. 꼭 winget을 깔아야 하는 것은 아니지만, 터미널에서 일관되게 관리할 수 있어서 꽤 편리하다. 
 
 winget으로 설치할 수 있는 소프트웨어 확인은 아래 웹 사이트를 참고하자. 
 
-https://winget.run/
+<https://winget.run/>
 
 ```
 > winget install -e --id Microsoft.PowerToys # 키보드 리매핑
@@ -60,7 +60,7 @@ https://winget.run/
 
 ### 설치 
 
-아래 명령어를 통해서 WSL 기능을 활성화하고 Ubuntu 배포판까지 한 방에 설치할 수 있다. 
+과거 윈도11 버전에서는 WSL 기능을 활성화한 후 배포판을 별도로 다운로드 받아서 설치했다. 이제는 아래 명령어를 통해서 WSL 기능을 활성화하고 Ubuntu 배포판까지 한번에 설치할 수 있다. 
 
 ```shell
 > wsl --install
@@ -71,15 +71,16 @@ https://winget.run/
 https://learn.microsoft.com/en-us/windows/wsl/install
 
 ```shell
->  wsl --list --online # or wsl -l -o 설치 가능한 배포판 조회 
+> wsl --list --online # or wsl -l -o 설치 가능한 배포판 조회 
 > wsl --install -d <Distribution Name> # 특정 배포판 설치 
+> wsl --unregister <Distribution Name> # 특정 배포판 삭제
 ```
 
 ## Ubuntu 관리 및 앱 설치 
 
 아래 링크를 참고하자. 
 
-[LINK](../computer-tool/2023-11-03-first-thing-ubuntu.html)
+[LINK🔗](../computer-tool/2023-11-03-first-thing-ubuntu.html)
 
 
 
