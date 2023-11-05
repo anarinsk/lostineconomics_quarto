@@ -1516,21 +1516,21 @@
     "href": "posts/walk-through/2023-11-03-definitive-guide-to-windows.html#앱-설치-관리자",
     "title": "윈도 작업 환경을 기록한다",
     "section": "앱 설치 관리자",
-    "text": "앱 설치 관리자\n🔗 윈도 스토어 앱설치 관리자\nwinget으로 소프트웨어를 설치하고 관리하려면 “마이크로소프트 스토어”에서 앱설치 관리자를 설치하자. 꼭 winget을 깔아야 하는 것은 아니지만, 터미널에서 일관되게 관리할 수 있어서 꽤 편리하다.\nwinget으로 설치할 수 있는 소프트웨어 확인은 아래 웹 사이트를 참고하자.\nhttps://winget.run/\n&gt; winget install -e --id Microsoft.PowerToys # 키보드 리매핑\n&gt; winget install -e --id Microsoft.PowerShell\n&gt; winget install -e --id GitHub.GitHubDesktop\n&gt; winget install -e --id Microsoft.VisualStudioCode"
+    "text": "앱 설치 관리자\n🔗 윈도 스토어 앱설치 관리자\nwinget으로 소프트웨어를 설치하고 관리하려면 “마이크로소프트 스토어”에서 앱설치 관리자를 설치하자. 꼭 winget을 깔아야 하는 것은 아니지만, 터미널에서 일관되게 관리할 수 있어서 꽤 편리하다.\nwinget으로 설치할 수 있는 소프트웨어 확인은 아래 웹 사이트를 참고하자.\nhttps://winget.run/\n\n\nwinget 설치 항목\n\n&gt; winget install -e --id Microsoft.PowerToys # 키보드 리매핑\n&gt; winget install -e --id Microsoft.PowerShell\n&gt; winget install -e --id GitHub.GitHubDesktop\n&gt; winget install -e --id Microsoft.VisualStudioCode"
   },
   {
     "objectID": "posts/walk-through/2023-11-03-definitive-guide-to-windows.html#터미널",
     "href": "posts/walk-through/2023-11-03-definitive-guide-to-windows.html#터미널",
     "title": "윈도 작업 환경을 기록한다",
     "section": "터미널",
-    "text": "터미널\n터미널 앱은 당연히 윈도 터미널을 써야 한다. 다른 OS의 터미널 앱과 비교해도 이 만큼 편리하고 다재다능한 앱이 없다. 최근 윈도11 버전에는 기본으로 탑재가 되어 있다. 몇 가지 팁만 짚고 넘어가자.\n\nFont는 Hack Nerd Font를 쓰자. 여기서 다운받자.\n최근 버전에서는 json을 고치지 않고도 설정을 쉽게 바꿀 수 있다. 여기서 테마, 폰트 등을 바꾸면 된다.\n셸 전체 설정과 개별 셸 설정 모두 가능하다."
+    "text": "터미널\n터미널 앱은 당연히 윈도 터미널을 써야 한다. 다른 OS의 터미널 앱과 비교해도 이 만큼 편리하고 다재다능한 앱이 없다. 최근 윈도11 버전에는 기본으로 탑재가 되어 있다. 몇 가지 팁만 짚고 넘어가자.\n\nFont는 Hack Nerd Font를 쓰자. 여기서 다운받자.\n최근 버전에서는 settings.json 파일 고치지 않고도 UI를 통해 쉽게 설정을 바꿀 수 있다. 여기서 테마, 폰트 등을 바꾸면 된다.\n셸 공통 설정 뿐 아니라 개별 셸 설정도 세부적으로 지정할 수 있다."
   },
   {
     "objectID": "posts/walk-through/2023-11-03-definitive-guide-to-windows.html#wsl",
     "href": "posts/walk-through/2023-11-03-definitive-guide-to-windows.html#wsl",
     "title": "윈도 작업 환경을 기록한다",
     "section": "WSL",
-    "text": "WSL\n윈도에서 개발 환경은 WSL을 쓰도록 하자. 네이티브 개발 환경도 어느 정도 까지는 나쁘지 않다. 하지만 아래와 같은 이유로 WSL을 쓰는 편이 낫다고 본다.\n\n윈도의 레거시 요소(인코딩) 등이 방해하는 경우가 제법 있다.\n\nWSL이 원본에 가까운 리눅스 환경을 제공한다. 여전히 많은 개발 환경들이 리눅스 기반으로 개발된다. 좋은 리눅스 환경이 있는데 쓰지 않을 이유가 있을까?\n\n리눅스를 개발환경으로 쓴다고 해서 그 불편함까지 감수해야 하는 것은 아니다. 네이티브 환경의 UI/UX 및 필요한 앱들은 그대로 활용하면 된다. VS Code룰 통해 리눅스 환경에 원격 접속해 편리하게 코딩을 할 수 있고, 윈도 탐색기에서 리눅스 OS 안의 폴더로 접근할 수도 있다.\n\n설치\n과거 윈도11 버전에서는 WSL 기능을 활성화한 후 배포판을 별도로 다운로드 받아서 설치했다. 이제는 아래 명령어를 통해서 WSL 기능을 활성화하고 Ubuntu 배포판까지 한번에 설치할 수 있다.\n&gt; wsl --install\n디폴트 배포판을 바꾸는 법, 배포판을 삭제하는 방법 등은 아래 링크를 참고하자.\n🔗 WSL MS 공식 설치 가이드\n&gt; wsl --list --online # or wsl -l -o 설치 가능한 배포판 조회 \n&gt; wsl --install -d &lt;Distribution Name&gt; # 특정 배포판 설치 \n&gt; wsl --unregister &lt;Distribution Name&gt; # 특정 배포판 삭제"
+    "text": "WSL\n윈도에서 개발 환경은 WSL을 쓰도록 하자. 네이티브 개발 환경도 사실 상당히 괜찮다. 하지만 아래와 같은 이유로 WSL을 쓰는 편이 조금 낫다고 본다.\n\n윈도의 레거시 요소(인코딩) 등이 방해하는 경우가 없지 않더라.\n\nWSL이 원본에 접근한 리눅스 환경을 제공한다. 여전히 많은 개발 환경들이 리눅스를 기초로 제공된다. 좋은 리눅스 환경이 있는데 쓰지 않을 이유가 있을까?\nWSL은 리눅스의 GUI도 제공하고 있다. 만일 리눅스 GUI 환경이 필요하다면 윈도 내에서 그냥 쓰면 된다.\n\n리눅스를 개발환경으로 쓴다고 해서 그 불편함까지 감수해야 하는 것은 아니다. 네이티브 환경의 UI/UX 및 필요한 앱들은 그대로 활용하면 된다. VS Code룰 통해 리눅스 환경에 원격 접속해 편리하게 코딩을 할 수 있고, 윈도 탐색기에서 리눅스 OS 안의 폴더로 접근할 수도 있다.\n\n설치\n과거 윈도11 버전에서는 WSL 기능을 활성화한 후 배포판을 별도로 다운로드 받아서 설치했다. 이제는 아래 명령어를 통해서 WSL 기능을 활성화하고 Ubuntu 배포판까지 한번에 설치할 수 있다.\n&gt; wsl --install\n디폴트 배포판을 바꾸는 법, 배포판을 삭제하는 방법 등은 아래 링크를 참고하자.\n🔗 WSL MS 공식 설치 가이드\n&gt; wsl --list --online # or wsl -l -o 설치 가능한 배포판 조회 \n&gt; wsl --install -d &lt;Distribution Name&gt; # 특정 배포판 설치 \n&gt; wsl --unregister &lt;Distribution Name&gt; # 특정 배포판 삭제"
   },
   {
     "objectID": "posts/walk-through/2023-11-03-definitive-guide-to-windows.html#ubuntu-관리-및-앱-설치",
