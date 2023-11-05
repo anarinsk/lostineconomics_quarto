@@ -68,7 +68,7 @@ winget으로 설치할 수 있는 소프트웨어 확인은 아래 웹 사이트
 
 디폴트 배포판을 바꾸는 법, 배포판을 삭제하는 방법 등은 아래 링크를 참고하자. 
 
-https://learn.microsoft.com/en-us/windows/wsl/install
+🔗 [Ubuntu를 깔고 먼저 해야 할 일들](https://learn.microsoft.com/en-us/windows/wsl/install)
 
 ```shell
 > wsl --list --online # or wsl -l -o 설치 가능한 배포판 조회 

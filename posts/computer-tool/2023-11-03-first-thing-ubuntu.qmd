@@ -113,7 +113,7 @@ Ubuntu 22.04 LTS와 VS Code + Mojo Extension을 활용한다고 가정하자.
 
 mojo의 경우 파이썬과 운용할 일이 많은데 파이썬 가상 환경을 별도로 설정할 수 있다. 아래 링크를 참고하자. 
 
-<https://github.com/anarinsk/setup_mojo>
+🔗 [mojo 설치 및 파이썬 환경 운용](https://github.com/anarinsk/setup_mojo)
 
 ## 활용 
 
