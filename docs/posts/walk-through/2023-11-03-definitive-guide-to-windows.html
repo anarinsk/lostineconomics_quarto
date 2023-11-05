@@ -168,7 +168,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">윈도 작업 환경을 기록한다</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<h1 class="title">윈도 작업 환경을 기록한다</h1>
   <div class="quarto-categories">
     <div class="quarto-category">walkthrough</div>
   </div>
@@ -269,8 +269,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>아래 링크를 참고하자.</p>
 <p>🔗 <a href="../computer-tool/2023-11-03-first-thing-ubuntu.html">Ubuntu를 깔고 먼저 해야 할 일들</a></p>
 
-
-<!-- -->
 
 </section>
 
@@ -498,57 +496,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  const viewSource = window.document.getElementById('quarto-view-source') ||
-                     window.document.getElementById('quarto-code-tools-source');
-  if (viewSource) {
-    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-    viewSource.addEventListener("click", function(e) {
-      if (sourceUrl) {
-        // rstudio viewer pane
-        if (/\bcapabilities=\b/.test(window.location)) {
-          window.open(sourceUrl);
-        } else {
-          window.location.href = sourceUrl;
-        }
-      } else {
-        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-        modal.show();
-      }
-      return false;
-    });
-  }
-  function toggleCodeHandler(show) {
-    return function(e) {
-      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-      for (let i=0; i<detailsSrc.length; i++) {
-        const details = detailsSrc[i].parentElement;
-        if (show) {
-          details.open = true;
-        } else {
-          details.removeAttribute("open");
-        }
-      }
-      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-      const fromCls = show ? "hidden" : "unhidden";
-      const toCls = show ? "unhidden" : "hidden";
-      for (let i=0; i<cellCodeDivs.length; i++) {
-        const codeDiv = cellCodeDivs[i];
-        if (codeDiv.classList.contains(fromCls)) {
-          codeDiv.classList.remove(fromCls);
-          codeDiv.classList.add(toCls);
-        } 
-      }
-      return false;
-    }
-  }
-  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-  if (hideAllCode) {
-    hideAllCode.addEventListener("click", toggleCodeHandler(false));
-  }
-  const showAllCode = window.document.getElementById("quarto-show-all-code");
-  if (showAllCode) {
-    showAllCode.addEventListener("click", toggleCodeHandler(true));
-  }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -859,99 +806,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">---</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="an">title:</span><span class="co"> "윈도 작업 환경을 기록한다" </span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="an">description:</span><span class="co"> 네이티브와 WSL의 콜래버    </span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="an">author:</span><span class="co"> "JS HUHH"</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="an">date:</span><span class="co"> "11/03/2023"</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="an">image:</span><span class="co"> "./images/cat-windows.webp"</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="an">categories:</span><span class="co"> [walkthrough]</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="co">#fig-align: center</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="an">filters:</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a><span class="co">   - lightbox</span></span>
-<span id="cb4-11"><a href="#cb4-11"></a><span class="co">   #- line-highlight</span></span>
-<span id="cb4-12"><a href="#cb4-12"></a><span class="an">lightbox:</span><span class="co"> auto</span></span>
-<span id="cb4-13"><a href="#cb4-13"></a><span class="co">#jupyter: python3</span></span>
-<span id="cb4-14"><a href="#cb4-14"></a><span class="an">draft:</span><span class="co"> false</span></span>
-<span id="cb4-15"><a href="#cb4-15"></a><span class="an">format:</span></span>
-<span id="cb4-16"><a href="#cb4-16"></a><span class="co">  html:</span></span>
-<span id="cb4-17"><a href="#cb4-17"></a><span class="co">    code-fold: false</span></span>
-<span id="cb4-18"><a href="#cb4-18"></a><span class="co">    code-tools: true</span></span>
-<span id="cb4-19"><a href="#cb4-19"></a><span class="co">    code-line-numbers: true</span></span>
-<span id="cb4-20"><a href="#cb4-20"></a><span class="co">    #code-block-bg: true</span></span>
-<span id="cb4-21"><a href="#cb4-21"></a><span class="co">    #code-block-border-left: "#31BAE9"</span></span>
-<span id="cb4-22"><a href="#cb4-22"></a><span class="co">    highlight-style: kate</span></span>
-<span id="cb4-23"><a href="#cb4-23"></a><span class="co">---</span></span>
-<span id="cb4-24"><a href="#cb4-24"></a></span>
-<span id="cb4-25"><a href="#cb4-25"></a><span class="fu">## TL; DR</span></span>
-<span id="cb4-26"><a href="#cb4-26"></a>윈도우 작업 환경을 만드는 방법을 기록한다. 내용은 변화에 따라서 조금씩 변해갈 것이다.  </span>
-<span id="cb4-27"><a href="#cb4-27"></a></span>
-<span id="cb4-28"><a href="#cb4-28"></a><span class="fu">## 넋두리 </span></span>
-<span id="cb4-29"><a href="#cb4-29"></a>앞서 윈도에 관한 여러 포스트를 게재했다. 그런데 그 내용 중에서 이제는 쓰지 않는 것도 있다. 이 글은 '현재'를 바라보면서 윈도에서 어떤 작업환경을 유지하고 있는지를 기록하는 내용이다. </span>
-<span id="cb4-30"><a href="#cb4-30"></a></span>
-<span id="cb4-31"><a href="#cb4-31"></a><span class="fu">## 앱 설치 관리자 </span></span>
-<span id="cb4-32"><a href="#cb4-32"></a></span>
-<span id="cb4-33"><a href="#cb4-33"></a>🔗 <span class="co">[</span><span class="ot">윈도 스토어 앱설치 관리자</span><span class="co">](https://apps.microsoft.com/detail/9NBLGGH4NNS1?hl=ko-kr&amp;gl=KR)</span></span>
-<span id="cb4-34"><a href="#cb4-34"></a></span>
-<span id="cb4-35"><a href="#cb4-35"></a>winget으로 소프트웨어를 설치하고 관리하려면 "마이크로소프트 스토어"에서 앱설치 관리자를 설치하자. 꼭 winget을 깔아야 하는 것은 아니지만, 터미널에서 일관되게 관리할 수 있어서 꽤 편리하다. </span>
-<span id="cb4-36"><a href="#cb4-36"></a></span>
-<span id="cb4-37"><a href="#cb4-37"></a>winget으로 설치할 수 있는 소프트웨어 확인은 아래 웹 사이트를 참고하자. </span>
-<span id="cb4-38"><a href="#cb4-38"></a></span>
-<span id="cb4-39"><a href="#cb4-39"></a><span class="ot">&lt;https://winget.run/&gt;</span></span>
-<span id="cb4-40"><a href="#cb4-40"></a></span>
-<span id="cb4-41"><a href="#cb4-41"></a><span class="in">```{filename="winget 설치 항목"}</span></span>
-<span id="cb4-42"><a href="#cb4-42"></a><span class="in">&gt; winget install -e --id Microsoft.PowerToys # 키보드 리매핑</span></span>
-<span id="cb4-43"><a href="#cb4-43"></a><span class="in">&gt; winget install -e --id Microsoft.PowerShell</span></span>
-<span id="cb4-44"><a href="#cb4-44"></a><span class="in">&gt; winget install -e --id GitHub.GitHubDesktop</span></span>
-<span id="cb4-45"><a href="#cb4-45"></a><span class="in">&gt; winget install -e --id Microsoft.VisualStudioCode</span></span>
-<span id="cb4-46"><a href="#cb4-46"></a><span class="in">```</span></span>
-<span id="cb4-47"><a href="#cb4-47"></a></span>
-<span id="cb4-48"><a href="#cb4-48"></a><span class="fu">## 터미널 </span></span>
-<span id="cb4-49"><a href="#cb4-49"></a></span>
-<span id="cb4-50"><a href="#cb4-50"></a>터미널 앱은 당연히 윈도 터미널을 써야 한다. 다른 OS의 터미널 앱과 비교해도 이 만큼 편리하고 다재다능한 앱이 없다. 최근 윈도11 버전에는 기본으로 탑재가 되어 있다. 몇 가지 팁만 짚고 넘어가자. </span>
-<span id="cb4-51"><a href="#cb4-51"></a></span>
-<span id="cb4-52"><a href="#cb4-52"></a><span class="ss">- </span>Font는 Hack Nerd Font를 쓰자. <span class="co">[</span><span class="ot">여기서</span><span class="co">](https://www.nerdfonts.com/font-downloads)</span> 다운받자. </span>
-<span id="cb4-53"><a href="#cb4-53"></a><span class="ss">- </span>최근 버전에서는 <span class="in">`settings.json`</span> 파일 고치지 않고도 UI를 통해 쉽게 설정을 바꿀 수 있다. 여기서 테마, 폰트 등을 바꾸면 된다. </span>
-<span id="cb4-54"><a href="#cb4-54"></a><span class="ss">- </span>셸 공통 설정 뿐 아니라 개별 셸 설정도 세부적으로 지정할 수 있다. </span>
-<span id="cb4-55"><a href="#cb4-55"></a></span>
-<span id="cb4-56"><a href="#cb4-56"></a><span class="fu">## WSL </span></span>
-<span id="cb4-57"><a href="#cb4-57"></a></span>
-<span id="cb4-58"><a href="#cb4-58"></a>윈도에서 개발 환경은 WSL을 쓰도록 하자. 네이티브 개발 환경도 사실 상당히 괜찮다. 하지만 아래와 같은 이유로 WSL을 쓰는 편이 조금 낫다고 본다. </span>
-<span id="cb4-59"><a href="#cb4-59"></a></span>
-<span id="cb4-60"><a href="#cb4-60"></a><span class="ss">- </span>윈도의 레거시 요소(인코딩) 등이 방해하는 경우가 없지 않더라.  </span>
-<span id="cb4-61"><a href="#cb4-61"></a><span class="ss">- </span>WSL이 원본에 접근한 리눅스 환경을 제공한다. 여전히 많은 개발 환경들이 리눅스를 기초로 제공된다. 좋은 리눅스 환경이 있는데 쓰지 않을 이유가 있을까? </span>
-<span id="cb4-62"><a href="#cb4-62"></a><span class="ss">- </span>WSL은 리눅스의 GUI도 제공하고 있다. 만일 리눅스 GUI 환경이 필요하다면 윈도 내에서 그냥 쓰면 된다. </span>
-<span id="cb4-63"><a href="#cb4-63"></a></span>
-<span id="cb4-64"><a href="#cb4-64"></a>리눅스를 개발환경으로 쓴다고 해서 그 불편함까지 감수해야 하는 것은 아니다. 네이티브 환경의 UI/UX 및 필요한 앱들은 그대로 활용하면 된다. VS Code룰 통해 리눅스 환경에 원격 접속해 편리하게 코딩을 할 수 있고, 윈도 탐색기에서 리눅스 OS 안의 폴더로 접근할 수도 있다.</span>
-<span id="cb4-65"><a href="#cb4-65"></a></span>
-<span id="cb4-66"><a href="#cb4-66"></a><span class="fu">### 설치 </span></span>
-<span id="cb4-67"><a href="#cb4-67"></a></span>
-<span id="cb4-68"><a href="#cb4-68"></a>과거 윈도11 버전에서는 WSL 기능을 활성화한 후 배포판을 별도로 다운로드 받아서 설치했다. 이제는 아래 명령어를 통해서 WSL 기능을 활성화하고 Ubuntu 배포판까지 한번에 설치할 수 있다. </span>
-<span id="cb4-69"><a href="#cb4-69"></a></span>
-<span id="cb4-70"><a href="#cb4-70"></a><span class="in">```shell</span></span>
-<span id="cb4-71"><a href="#cb4-71"></a><span class="op">&gt;</span> wsl <span class="ex">--install</span></span>
-<span id="cb4-72"><a href="#cb4-72"></a><span class="in">```</span></span>
-<span id="cb4-73"><a href="#cb4-73"></a></span>
-<span id="cb4-74"><a href="#cb4-74"></a>디폴트 배포판을 바꾸는 법, 배포판을 삭제하는 방법 등은 아래 링크를 참고하자. </span>
-<span id="cb4-75"><a href="#cb4-75"></a></span>
-<span id="cb4-76"><a href="#cb4-76"></a>🔗 <span class="co">[</span><span class="ot">WSL MS 공식 설치 가이드</span><span class="co">](https://learn.microsoft.com/en-us/windows/wsl/install)</span></span>
-<span id="cb4-77"><a href="#cb4-77"></a></span>
-<span id="cb4-78"><a href="#cb4-78"></a><span class="in">```shell{filename="WSL 관련 명령어"}</span></span>
-<span id="cb4-79"><a href="#cb4-79"></a><span class="in">&gt; wsl --list --online # or wsl -l -o 설치 가능한 배포판 조회 </span></span>
-<span id="cb4-80"><a href="#cb4-80"></a><span class="in">&gt; wsl --install -d &lt;Distribution Name&gt; # 특정 배포판 설치 </span></span>
-<span id="cb4-81"><a href="#cb4-81"></a><span class="in">&gt; wsl --unregister &lt;Distribution Name&gt; # 특정 배포판 삭제</span></span>
-<span id="cb4-82"><a href="#cb4-82"></a><span class="in">```</span></span>
-<span id="cb4-83"><a href="#cb4-83"></a></span>
-<span id="cb4-84"><a href="#cb4-84"></a><span class="fu">## Ubuntu 관리 및 필수 앱 설치 </span></span>
-<span id="cb4-85"><a href="#cb4-85"></a></span>
-<span id="cb4-86"><a href="#cb4-86"></a>아래 링크를 참고하자. </span>
-<span id="cb4-87"><a href="#cb4-87"></a></span>
-<span id="cb4-88"><a href="#cb4-88"></a>🔗 <span class="co">[</span><span class="ot">Ubuntu를 깔고 먼저 해야 할 일들</span><span class="co">](../computer-tool/2023-11-03-first-thing-ubuntu.html)</span></span>
-<span id="cb4-89"><a href="#cb4-89"></a></span>
-<span id="cb4-90"><a href="#cb4-90"></a></span>
-<span id="cb4-91"><a href="#cb4-91"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></div></div></div></div>
+</script>
 </div> <!-- /content -->
 
 
