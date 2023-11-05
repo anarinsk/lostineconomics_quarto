@@ -233,8 +233,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-5"><a href="#cb2-5"></a><span class="co"># 로그아웃 후에 다시 로그인하면 zsh이 기본셸로 설정된다. </span></span>
 <span id="cb2-6"><a href="#cb2-6"></a><span class="op">&gt;</span> sh <span class="ex">-c</span> <span class="st">"</span><span class="va">$(</span><span class="ex">curl</span> <span class="at">-fsSL</span> https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="va">)</span><span class="st">"</span> <span class="co"># oh my zsh을 설치하자. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="p10k-깔기" class="level2">
-<h2 class="anchored" data-anchor-id="p10k-깔기">p10k 깔기</h2>
+<section id="powerlevel10kp10k-깔기" class="level2">
+<h2 class="anchored" data-anchor-id="powerlevel10kp10k-깔기">powerlevel10k(p10k) 깔기</h2>
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="op">&gt;</span> git <span class="ex">clone</span> <span class="at">--depth</span><span class="op">=</span>1 https://github.com/romkatv/powerlevel10k.git <span class="va">${ZSH_CUSTOM</span><span class="op">:-</span><span class="va">$HOME</span>/.oh-my-zsh/custom<span class="va">}</span>/themes/powerlevel10k</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>셸 꾸미기로 속 편하게 파워레벨10k를 쓰자.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="op">&gt;</span> nano <span class="ex">~/.zshrc</span> <span class="co"># zsh 설정 열기 </span></span>

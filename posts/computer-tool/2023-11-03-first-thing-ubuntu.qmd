@@ -51,7 +51,7 @@ WSL이 생기면서 우분투를 써야 할 일이 생각보다 많아졌다. �
 > sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" # oh my zsh을 설치하자. 
 ```
 
-## p10k 깔기 
+## powerlevel10k(p10k) 깔기 
 
 ```bash
 > git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
