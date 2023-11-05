@@ -228,7 +228,7 @@
     "href": "posts/computer-tool/2023-11-03-first-thing-ubuntu.html#활용",
     "title": "Ubuntu를 깔고 먼저 해야 할 일들",
     "section": "활용",
-    "text": "활용\n\n윈도 터미널에서 WSL에 접근한 뒤 작업 폴더로 가자.\ncode .을 실행하자. 이 명령어를 실행하면 해당 폴더 아래에서 윈도의 VS Code가 실행된다.\nVS Code는 윈도 앱니다. 윈도의 모든 편리함을 그대로 누리면 된다."
+    "text": "활용\n\n윈도 터미널에서 WSL에 접근한 뒤 작업 폴더로 가자.\ncode .을 실행하자. 이 명령어를 실행하면 해당 폴더 아래에서 윈도의 VS Code가 실행된다.\nVS Code는 윈도 앱이다. UI등 윈도의 모든 편리함을 그대로 누리면 된다."
   },
   {
     "objectID": "posts/computer-tool/2021-02-02-all-vs-code.html",
