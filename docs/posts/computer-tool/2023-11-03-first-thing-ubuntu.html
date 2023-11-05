@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.451">
+<meta name="generator" content="quarto-1.4.455">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -255,22 +255,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="non-brew" class="level2">
 <h2 class="anchored" data-anchor-id="non-brew">Non-brew</h2>
+<section id="miniforge" class="level3">
+<h3 class="anchored" data-anchor-id="miniforge">Miniforge</h3>
+<p>Miniforge는 패키지 관리 도구이자 독립적인 가상 환경을 제공하는 miniconda의 오픈소스 버전이다. Macos에서는 brew를 통해 설치되지만 아쉽게도 리눅스에서는 별도로 설치해야 한다. pixi를 쓴다면 다른 가상 환경은 필요하지 않다. 다만 다른 프로그램이 conda에 의존할 경우 필요할 수 있다.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="op">&gt;</span> curl <span class="ex">-L</span> <span class="at">-O</span> <span class="st">"https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-</span><span class="va">$(</span><span class="fu">uname</span><span class="va">)</span><span class="st">-</span><span class="va">$(</span><span class="fu">uname</span> <span class="at">-m</span><span class="va">)</span><span class="st">.sh"</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">bash</span> Miniforge3-<span class="va">$(</span><span class="fu">uname</span><span class="va">)</span>-<span class="va">$(</span><span class="fu">uname</span> <span class="at">-m</span><span class="va">)</span>.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>삭제를 비롯한 보다 자세한 사항은 아래 링크를 참고하자.</p>
+<p>🔗 <a href="https://github.com/conda-forge/miniforge">miniforge</a></p>
+</section>
 <section id="quarto" class="level3">
 <h3 class="anchored" data-anchor-id="quarto">Quarto</h3>
 <p>문서 작성에 필수 도구인 Quarto의 경우 우분투에서는 brew를 통해 설치할 수 없다.</p>
 <p>🔗 <a href="https://docs.posit.co/resources/install-quarto/#__tabbed_1_2">Linux에 Quarto 설치하기</a></p>
 <p><code>.deb</code> 확장자 파일을 다운받아서 gdebi 앱을 통해서 설치하는 방식이다.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="op">&gt;</span> sudo <span class="ex">curl</span> <span class="at">-LO</span> https://quarto.org/download/latest/quarto-linux-amd64.deb <span class="co">#deb 다운로드 </span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="op">&gt;</span> sudo <span class="ex">apt-get</span> install gdebi-core</span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="op">&gt;</span> sudo <span class="ex">gdebi</span> quarto-linux-amd64.deb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="op">&gt;</span> sudo <span class="ex">curl</span> <span class="at">-LO</span> https://quarto.org/download/latest/quarto-linux-amd64.deb <span class="co">#deb 다운로드 </span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="op">&gt;</span> sudo <span class="ex">apt-get</span> install gdebi-core</span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="op">&gt;</span> sudo <span class="ex">gdebi</span> quarto-linux-amd64.deb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="mojo" class="level3">
 <h3 class="anchored" data-anchor-id="mojo">Mojo</h3>
 <p>Ubuntu 22.04 LTS와 VS Code + Mojo Extension을 활용한다고 가정하자.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="op">&gt;</span> curl <span class="ex">https://get.modular.com</span> <span class="kw">|</span> <span class="fu">sh</span> <span class="at">-</span> <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>  <span class="ex">modular</span> auth mut_c4e7186420c84b86b1f7b5219b4028d9</span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="op">&gt;</span> modular <span class="fu">install</span> mojo</span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="op">&gt;</span> code <span class="bu">.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="op">&gt;</span> curl <span class="ex">https://get.modular.com</span> <span class="kw">|</span> <span class="fu">sh</span> <span class="at">-</span> <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="ex">modular</span> auth mut_c4e7186420c84b86b1f7b5219b4028d9</span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="op">&gt;</span> modular <span class="fu">install</span> mojo</span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="op">&gt;</span> code <span class="bu">.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>mojo의 경우 파이썬과 운용할 일이 많은데 파이썬 가상 환경을 별도로 설정할 수 있다. 아래 링크를 참고하자.</p>
 <p>🔗 <a href="https://github.com/anarinsk/setup_mojo">mojo 설치 및 파이썬 환경 운용</a></p>
 </section>
