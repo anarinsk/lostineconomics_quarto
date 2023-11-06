@@ -38,7 +38,7 @@ winget으로 설치할 수 있는 소프트웨어 확인은 아래 웹 사이트
 
 <https://winget.run/>
 
-```{filename="winget 설치 항목"}
+```shell{filename="winget 설치 항목"}
 > winget install -e --id Microsoft.PowerToys # 키보드 리매핑
 > winget install -e --id Microsoft.PowerShell
 > winget install -e --id GitHub.GitHubDesktop
