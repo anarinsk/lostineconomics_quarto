@@ -219,11 +219,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>winget으로 소프트웨어를 설치하고 관리하려면 “마이크로소프트 스토어”에서 앱설치 관리자를 설치하자. 꼭 winget을 깔아야 하는 것은 아니지만, 터미널에서 일관되게 관리할 수 있어서 꽤 편리하다.</p>
 <p>winget으로 설치할 수 있는 소프트웨어 확인은 아래 웹 사이트를 참고하자.</p>
 <p><a href="https://winget.run/" class="uri">https://winget.run/</a></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a># 윈도 앱 설치 목록 </span>
-<span id="cb1-2"><a href="#cb1-2"></a>&gt; winget install -e --id Microsoft.PowerToys # 키보드 리매핑</span>
-<span id="cb1-3"><a href="#cb1-3"></a>&gt; winget install -e --id Microsoft.PowerShell</span>
-<span id="cb1-4"><a href="#cb1-4"></a>&gt; winget install -e --id GitHub.GitHubDesktop</span>
-<span id="cb1-5"><a href="#cb1-5"></a>&gt; winget install -e --id Microsoft.VisualStudioCode</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a># 윈도 앱 설치 목록 </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;</span> winget install <span class="at">-e</span> -<span class="at">-id</span> Microsoft.PowerToys # 키보드 리매핑</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;</span> winget install <span class="at">-e</span> -<span class="at">-id</span> Microsoft.PowerShell</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;</span> winget install <span class="at">-e</span> -<span class="at">-id</span> GitHub.GitHubDesktop</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;</span> winget install <span class="at">-e</span> -<span class="at">-id</span> Microsoft.VisualStudioCode</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="터미널" class="level2">
 <h2 class="anchored" data-anchor-id="터미널">터미널</h2>
@@ -247,13 +247,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="설치" class="level3">
 <h3 class="anchored" data-anchor-id="설치">설치</h3>
 <p>과거 윈도11 버전에서는 WSL 기능을 활성화한 후 배포판을 별도로 다운로드 받아서 설치했다. 이제는 아래 명령어를 통해서 WSL 기능을 활성화하고 Ubuntu 배포판까지 한번에 설치할 수 있다.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>&gt; wsl --install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;</span> wsl --install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>디폴트 배포판을 바꾸는 법, 배포판을 삭제하는 방법 등은 아래 링크를 참고하자.</p>
 <p>🔗 <a href="https://learn.microsoft.com/en-us/windows/wsl/install">WSL MS 공식 설치 가이드</a></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a># WSL 관련 명령어</span>
-<span id="cb3-2"><a href="#cb3-2"></a>&gt; wsl --list --online # or wsl -l -o 설치 가능한 배포판 조회 </span>
-<span id="cb3-3"><a href="#cb3-3"></a>&gt; wsl --install -d &lt;Distribution Name&gt; # 특정 배포판 설치 </span>
-<span id="cb3-4"><a href="#cb3-4"></a>&gt; wsl --unregister &lt;Distribution Name&gt; # 특정 배포판 삭제</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a># WSL 관련 명령어</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;</span> wsl --list -<span class="at">-online</span> # or wsl <span class="at">-l</span> <span class="at">-o</span> 설치 가능한 배포판 조회 </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;</span> wsl --install <span class="at">-d</span> <span class="kw">&lt;</span>Distribution Name<span class="kw">&gt;</span> # 특정 배포판 설치 </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;</span> wsl --unregister <span class="kw">&lt;</span>Distribution Name<span class="kw">&gt;</span> # 특정 배포판 삭제</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="ubuntu-관리-및-필수-앱-설치" class="level2">

@@ -10,14 +10,11 @@ filters:
    - lightbox
    #- line-highlight
 lightbox: auto
-jupyter: python3
+#jupyter: python3
 draft: false
 format:
   html:
     code-fold: false
-    #code-tools: true
-    code-block-border-left: "#31BAE9"
-    code-line-numbers: true
     code-block-bg: true
     highlight-style: github
 ---
@@ -39,7 +36,7 @@ winget으로 설치할 수 있는 소프트웨어 확인은 아래 웹 사이트
 <https://winget.run/>
 
 
-```shell
+```cmd
 # 윈도 앱 설치 목록 
 > winget install -e --id Microsoft.PowerToys # 키보드 리매핑
 > winget install -e --id Microsoft.PowerShell
@@ -69,7 +66,7 @@ winget으로 설치할 수 있는 소프트웨어 확인은 아래 웹 사이트
 
 과거 윈도11 버전에서는 WSL 기능을 활성화한 후 배포판을 별도로 다운로드 받아서 설치했다. 이제는 아래 명령어를 통해서 WSL 기능을 활성화하고 Ubuntu 배포판까지 한번에 설치할 수 있다. 
 
-```shell
+```cmd
 > wsl --install
 ```
 
@@ -77,7 +74,7 @@ winget으로 설치할 수 있는 소프트웨어 확인은 아래 웹 사이트
 
 🔗 [WSL MS 공식 설치 가이드](https://learn.microsoft.com/en-us/windows/wsl/install)
 
-```shell
+```cmd
 # WSL 관련 명령어
 > wsl --list --online # or wsl -l -o 설치 가능한 배포판 조회 
 > wsl --install -d <Distribution Name> # 특정 배포판 설치 
