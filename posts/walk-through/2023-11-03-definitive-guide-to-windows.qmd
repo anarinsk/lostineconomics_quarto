@@ -10,16 +10,16 @@ filters:
    - lightbox
    #- line-highlight
 lightbox: auto
-#jupyter: python3
+jupyter: python3
 draft: false
 format:
   html:
     code-fold: false
     #code-tools: true
+    code-block-border-left: "#31BAE9"
     code-line-numbers: true
     code-block-bg: true
-    code-block-border-left: "#31BAE9"
-    highlight-style: kate
+    highlight-style: github
 ---
 
 ## TL; DR
