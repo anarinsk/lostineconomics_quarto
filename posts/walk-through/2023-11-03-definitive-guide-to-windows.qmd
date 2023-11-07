@@ -38,7 +38,9 @@ winget으로 설치할 수 있는 소프트웨어 확인은 아래 웹 사이트
 
 <https://winget.run/>
 
-```shell{filename="winget 설치 항목"}
+
+```shell
+# 윈도 앱 설치 목록 
 > winget install -e --id Microsoft.PowerToys # 키보드 리매핑
 > winget install -e --id Microsoft.PowerShell
 > winget install -e --id GitHub.GitHubDesktop
@@ -75,7 +77,8 @@ winget으로 설치할 수 있는 소프트웨어 확인은 아래 웹 사이트
 
 🔗 [WSL MS 공식 설치 가이드](https://learn.microsoft.com/en-us/windows/wsl/install)
 
-```shell{filename="WSL 관련 명령어"}
+```shell
+# WSL 관련 명령어
 > wsl --list --online # or wsl -l -o 설치 가능한 배포판 조회 
 > wsl --install -d <Distribution Name> # 특정 배포판 설치 
 > wsl --unregister <Distribution Name> # 특정 배포판 삭제
