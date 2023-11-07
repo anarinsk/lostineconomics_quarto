@@ -5,17 +5,17 @@ author: "JS HUHH"
 date: "11/03/2023"
 image: "./images/ubuntu.png"
 categories: [computer-tool]
+lightbox: auto
 #fig-align: center
 filters:
    - lightbox
    #- line-highlight
-lightbox: auto
 #jupyter: python3
 draft: false
 format:
   html:
-    highlight-style: github
-    code-line-numbers: true
+    highlight-style: pygments
+    #code-line-numbers: true
     code-block-bg: true
     code-block-border-left: "#31BAE9"
 ---
@@ -28,9 +28,13 @@ WSL이 생기면서 윈도에서도 리눅스를 제대로 쓸 수 있게 되었
 
 ## 터미널 
 
-보통 우분투를 설치하고 네이티브 상태에서 키보드와 마우스를 연결해서 쓰는 일은 드물지 않을까 싶다. 다른 클라이언트(Windows, Macos)에서 서버에 접속해서 쓴다면 해당 클라이언트 안에서 돌아가는 터미널 앱이 중요하다. 만일 윈도에서 WSL을 쓴다면 윈도 옆에서 나란히 설치된 리눅스에 윈도가 접속하게 되는 형태라고 이해하면 된다. Windows에서는 윈도 터미널을 Macos에서는 iTerm2를 쓰면 좋다. 
+보통 우분투를 설치하고 그 기기에 키보드와 마우스를 연결해서 쓰는 일은 드물지 않을까 싶다. WSL을 예로 들어 보자. 이는 윈도와 나란히 설치된 리눅스 서버에 윈도 안에서 접속해 활용하게 된다. 이렇게 다른 OS(Windows, Macos)에서 우분투 서버에 접속해서 쓸 때는 터미널 앱이 중요하다. 윈도에서는 윈도 터미널이 Macos에서는 iTerm2이 좋다. 
 
-해당 클라이언트 OS에 필요한 폰트를 설치하자. 여러 폰트가 있겠지만, HACK Nerd 폰트를 추천한다. 폰트는 [여기](https://www.nerdfonts.com/font-downloads)서 확보하자. 
+폰트 설정 역시 마찬가지다. 접속하는 OS에 취향껏 폰트를 설치하면 된다. HACK Nerd 폰트를 강추한다. 
+
+:::{.column-margin}
+요즘은 여러가지 이모지가 많이 활용되는데, 이를 제대로 쓰려면 Nerd 계열의 폰트를 설치하자. Hack Nerd 폰트는 [여기](https://www.nerdfonts.com/font-downloads)서 다운로드하자. 
+:::
 
 ## 리포지토리 주소 변경 
 
