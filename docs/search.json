@@ -193,14 +193,14 @@
     "href": "posts/computer-tool/2023-11-03-first-thing-ubuntu.html#터미널",
     "title": "Ubuntu를 깔고 먼저 해야 할 일들",
     "section": "터미널",
-    "text": "터미널\n보통 우분투를 설치하고 그 기기에 키보드와 마우스를 연결해서 쓰는 일은 드물지 않을까 싶다. WSL을 예로 들어 보자. 이는 윈도와 나란히 설치된 리눅스 서버에 윈도 안에서 접속해 활용하게 된다. 이렇게 다른 OS(Windows, Macos)에서 우분투 서버에 접속해서 쓸 때는 터미널 앱이 중요하다. 윈도에서는 윈도 터미널이 Macos에서는 iTerm2이 좋다.\n폰트 설정 역시 마찬가지다. 접속하는 OS에 취향껏 폰트를 설치하면 된다. HACK Nerd 폰트를 강추한다.\n\n\n요즘은 여러가지 이모지가 많이 활용되는데, 이를 제대로 쓰려면 Nerd 계열의 폰트를 설치하자. Hack Nerd 폰트는 여기서 다운로드하자."
+    "text": "터미널\n보통 우분투를 설치하고 그 기기에 키보드와 마우스를 연결해서 쓰는 일은 드물지 않을까 싶다. WSL을 예로 들어 보자. 윈도와 나란히 설치된(윈도 내부에 있지만 사실상 독립된 형태로 존재한다) 리눅스 서버에 윈도에서 접속해 활용하는 구조가 WSL이다. 이렇게 다른 OS(Windows, Macos)에서 우분투 서버에 접속해서 쓸 때는 터미널 앱이 중요하다. 윈도에서는 윈도 터미널이 Macos에서는 iTerm2이 좋다.\n폰트 설정 역시 마찬가지다. 접속하는 OS에 취향껏 폰트를 설치하면 된다. HACK Nerd 폰트를 강추한다.\n\n\n요즘은 여러가지 이모지가 많이 활용되는데, 이를 제대로 쓰려면 Nerd 계열의 폰트를 설치하자. Hack Nerd 폰트는 여기서 다운로드하자."
   },
   {
     "objectID": "posts/computer-tool/2023-11-03-first-thing-ubuntu.html#리포지토리-주소-변경",
     "href": "posts/computer-tool/2023-11-03-first-thing-ubuntu.html#리포지토리-주소-변경",
     "title": "Ubuntu를 깔고 먼저 해야 할 일들",
     "section": "리포지토리 주소 변경",
-    "text": "리포지토리 주소 변경\n기본 리포지토리 주소를 바꾸도록 하자. 만일 WSL을 통해 설치했다면 우분투 메인 서버로 설정되어 있을 것이고, iso 이미지로 설치했다면, kr이 앞에 붙어 있다. apt 패키지 업데이트를 위한 주소는 /etc/apt/sources.list 파일을 직접 편집하면 된다.\n&gt; sudo nano /etc/apt/sources.list\n기본 저장소보다는 카카오의 미러 저장소가 국내에서 빠르다. 해당 파일을 적당한 편집기로 열어 기본 패키지 저장소가 어떻게 되어 있는지 살펴보자. 파일 내의 모든 저장소 URL을 찾아 http://archive.ubuntu.com/ubuntu/ 또는 http://kr.archive.ubuntu.com/ubuntu/ 등의 주소를 http://mirror.kakao.com/ubuntu/로 변경하면 된다. 둘 중 뭘로 되어 있는지 모르니 확인 후 작업하는 것을 권한다. nano 앱에서 crtl-w &gt; crtl-r로 찾아서 바꾸자."
+    "text": "리포지토리 주소 변경\n기본 리포지토리 주소를 바꾸도록 하자. 만일 WSL을 통해 설치했다면 우분투 메인 리포(http://archive.ubuntu.com/ubuntu/)로 설정되어 있을 것이고, iso 이미지로 설치했다면, kr이 앞에 붙어 있다. apt 패키지 업데이트를 위한 주소는 /etc/apt/sources.list 파일을 직접 편집하면 된다. 에디터는 취향껏 쓰면 된다. 편리한 nano로 예를 들자.\n&gt; sudo nano /etc/apt/sources.list\n기본 저장소보다는 카카오의 미러 저장소가 국내에서 빠르다. 해당 파일을 적당한 편집기로 열어 기본 패키지 저장소가 어떻게 되어 있는지 살펴보자. 파일 내의 모든 저장소 URL을 찾아 http://archive.ubuntu.com/ubuntu/ 또는 http://kr.archive.ubuntu.com/ubuntu/ 등의 주소를 http://mirror.kakao.com/ubuntu/로 변경하면 된다. 둘 중 뭘로 되어 있는지 모르니 확인 후 작업하는 것을 권한다. nano 앱에서 crtl-w &gt; crtl-r로 해당 부분을 찾아서 바꾸자."
   },
   {
     "objectID": "posts/computer-tool/2023-11-03-first-thing-ubuntu.html#zsh-관련-설치",
