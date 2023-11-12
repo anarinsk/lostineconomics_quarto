@@ -6,6 +6,12 @@ date: "07/07/2022"
 image: "images/revealjs.jfif"
 categories: [computer-tool]
 draft: false
+format:
+  html:
+    highlight-style: pygments
+    #code-line-numbers: true
+    code-block-bg: true
+    code-block-border-left: "#31BAE9"
 ---
 
 ## TL; DR
@@ -58,8 +64,9 @@ author: "[anarinsk](https://www.lostineconomics.com)"
 date: "2022-09-06"
 format: 
     revealjs:
+        embed-resources: true
         include-in-header: [favicon.html, mathjax.html]
-        incremental: true   
+        incremental: true  
         #css:
         theme: [format.scss, black]
         transition: concave
@@ -68,6 +75,7 @@ format:
         scrollable: true
         logo: "logo2.png"
         footer: "TEST FOR FOOTER!"
+        #preview-links: true
         #self-contained: true
 ---
 ```
@@ -76,9 +84,12 @@ format:
 
 :::{.callout-tip}
 ## Code Tips 
+- `embed-resources` | 만일 GitHub Pages 등을 통해 퍼블리시 하려면 이 항목을 `true`로 설정하자. 
 - `theme` | reveal.js의 [테마](https://revealjs.com/themes/)다. 복잡하게 생각하지 말고 간단한 거 쓰자. 주의할 점; `css` 항목에 `format.scss`를 넣을 경우 해당 파일에서 지정한 폰트 설정이 작동하지 않는다. 테마와 같은 레벨에 특화된 css를 포함시키도록 하자. 
-- `transition` | 슬라이드 혹은 항목 등장의 시각적인 전환 효과를 지정한다. 
+- `transition` | 슬라이드 혹은 항목 등장의 시각적인 전환 효과를 지정한다. [🔗](https://quarto.org/docs/presentations/revealjs/advanced.html#slide-transitions)를 참고하자. 
 - `background-transition` | 배경 효과를 지정한다.
+- `preview-links` | `true`로 설정하면 슬라이드 내에서 링크를 클릭하면 해당 링크가 새 탭에서 열린다. 다만 일부 웹 페이지에서 제대로 작동하지 않는다. 개별 링크에서 별도로 설정할 수 있으므로 false로 두거나 주석 처리하자. 
+- `self-contained` | `true`로 설정하면 html 파일 내에 모든 자원을 포함시킨다. 파일이 지나치게 커질 수도 있고, 제대로 동작하지 않을 수 있으니 되도록 주석처리하자. 
 :::
 
 ### Customization 
@@ -128,7 +139,7 @@ Quarto + Reveal.js의 기본 설정을 그대로 써도 된다. 다만 영문과
 
 ## Working Example 
 
-시험 삼아서 Reveal.js의 몇 가지 기능을 Quarto로 구현해 보았다. 내용 없이 형식을 구현하는데 집중한 사례이니 참작해 주시라. 
+시험 삼아서 Reveal.js의 몇 가지 기능을 Quarto로 구현해 보았다. 내용 없이 형식을 구현하는데 집중한 사례이니 참작해 주시라. 아래의 사례는 나 놈이 발견한 새로운 진전이 있을 떄 업데이트된다. 
 
 - 예시: [Completely Useless Quarto-Reveal.js](https://anarinsk.github.io/learn_quarto-revealjs/#/title-slide)
 - 코드: [anarinsk/learn_quarto-revealjs](https://github.com/anarinsk/learn_quarto-revealjs)
