@@ -110,7 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -162,9 +162,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -207,7 +209,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
-<p>윈도우 작업 환경을 만드는 방법을 기록한다. 내용은 변화에 따라서 조금씩 변해갈 것이다.</p>
+<p>윈도우에서 WSL(WIndows Subsystem for Linux) 작업 환경을 만드는 방법을 기록한다. 내용은 변화에 따라서 조금씩 변해갈 것이다.</p>
 </section>
 <section id="넋두리" class="level2">
 <h2 class="anchored" data-anchor-id="넋두리">넋두리</h2>
@@ -234,7 +236,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>셸 공통 설정 뿐 아니라 개별 셸 설정도 세부적으로 지정할 수 있다.</li>
 </ul>
 </section>
-<section id="wsl" class="level2">
+<section id="wsl" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="wsl">WSL</h2>
 <p>윈도에서 개발 환경은 WSL을 쓰도록 하자. 네이티브 개발 환경도 사실 상당히 괜찮다. 하지만 아래와 같은 이유로 WSL을 쓰는 편이 조금 낫다고 본다.</p>
 <ul>
@@ -244,9 +246,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>WSL은 리눅스의 GUI도 제공하고 있다. 만일 리눅스 GUI 환경이 필요하다면 윈도 내에서 그냥 쓰면 된다.</li>
 </ul>
 <p>리눅스를 개발환경으로 쓴다고 해서 그 불편함까지 감수해야 하는 것은 아니다. 네이티브 환경의 UI/UX 및 필요한 앱들은 그대로 활용하면 된다. VS Code룰 통해 리눅스 환경에 원격 접속해 편리하게 코딩을 할 수 있고, 윈도 탐색기에서 리눅스 OS 안의 폴더로 접근할 수도 있다.</p>
-<section id="설치" class="level3">
+<section id="설치" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="설치">설치</h3>
-<p>과거 윈도11 버전에서는 WSL 기능을 활성화한 후 배포판을 별도로 다운로드 받아서 설치했다. 이제는 아래 명령어를 통해서 WSL 기능을 활성화하고 Ubuntu 배포판까지 한번에 설치할 수 있다.</p>
+<p>과거 윈도11 버전에서는 WSL 기능을 활성화한 후 배포판을 별도로 다운로드 받아서 설치했다. 이제는 아래 명령어를 통해서 WSL 기능을 활성화하고 Ubuntu 디폴트 배포판까지 한번에 설치할 수 있다.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;</span> wsl --install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>디폴트 배포판을 바꾸는 법, 배포판을 삭제하는 방법 등은 아래 링크를 참고하자.</p>
 <p>🔗 <a href="https://learn.microsoft.com/en-us/windows/wsl/install">WSL MS 공식 설치 가이드</a></p>
@@ -254,7 +256,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;</span> wsl --list -<span class="at">-online</span> # or wsl <span class="at">-l</span> <span class="at">-o</span> 설치 가능한 배포판 조회 </span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;</span> wsl --install <span class="at">-d</span> <span class="kw">&lt;</span>Distribution Name<span class="kw">&gt;</span> # 특정 배포판 설치 </span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;</span> wsl --unregister <span class="kw">&lt;</span>Distribution Name<span class="kw">&gt;</span> # 특정 배포판 삭제</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<ol type="1">
+<li><a href="https://learn.microsoft.com/en-us/windows/wsl/install-manual">수동으로 설치하기</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows/wsl/basic-commands#unregister-or-uninstall-a-linux-distribution">삭제 및 배포판 내리기</a></li>
+</ol>
+</div></div></section>
 </section>
 <section id="ubuntu-관리-및-필수-앱-설치" class="level2">
 <h2 class="anchored" data-anchor-id="ubuntu-관리-및-필수-앱-설치">Ubuntu 관리 및 필수 앱 설치</h2>
