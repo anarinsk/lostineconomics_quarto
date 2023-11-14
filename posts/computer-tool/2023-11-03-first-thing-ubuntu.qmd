@@ -24,13 +24,15 @@ format:
 우분투 설치하고 먼저 해야 할 일들을 정리해보자.   
 
 ## 넋두리 
-WSL이 생기면서 윈도에서도 리눅스를 제대로 쓸 수 있게 되었다. 하는 김에 우분투 설치하고 (내 기준에서) 먼저 해야 할 일을 정리해보려 한다. 물론 이 포스트 역시 모든 걸 까먹을 미래의 나 놈 때문이다. 
+WSL이 생기면서 윈도에서도 리눅스를 제대로 쓸 수 있게 되었다. 리눅스(아마도 우분투)를 쓸 일이 많아진 만큼, 우분투 설치하고 (내 기준에서) 해야 할 일을 정리해보려 한다. 물론 이 포스트 멀지 않은 미래에 모든 걸 까먹을 나 놈을 위한 것이다. 
 
 ## 터미널 
 
-보통 우분투를 설치하고 그 기기에 키보드와 마우스를 연결해서 쓰는 일은 드물지 않을까 싶다. WSL을 예로 들어 보자. 윈도와 나란히 설치된(윈도 내부에 있지만 사실상 독립된 형태로 존재한다) 리눅스 서버에 윈도에서 접속해 활용하는 구조가 WSL이다. 이렇게 다른 OS(Windows, Macos)에서 우분투 서버에 접속해서 쓸 때는 터미널 앱이 중요하다. 윈도에서는 [윈도 터미널](https://learn.microsoft.com/ko-kr/windows/terminal/install)이 Macos에서는 [iTerm2](https://iterm2.com/)이 좋다. 
+보통 우분투를 설치하고 그 기기에 키보드와 마우스를 연결해서 쓰는 일은 드물지 않을까 싶다. 
 
-폰트 설정 역시 마찬가지다. 접속하는 OS에 취향껏 폰트를 설치하면 된다. HACK Nerd 폰트를 강추한다. 
+WSL을 예로 들어 보자. 윈도와 나란히 설치되어 독립적으로 운용되는, 즉 윈도 내부에 있지만 사실상 독립된 형태로 돌아가는 리눅스 서버가 WSL이다. 윈도에서 WSL을 쓴다면 해당 서버에 접속해 활용하게 된다. 이렇게 다른 OS(Windows, Macos)에서 우분투 서버에 접속해서 쓸 때는 관문 역할을 하는 터미널 앱이 중요하다. 윈도에서는 [윈도 터미널](https://learn.microsoft.com/ko-kr/windows/terminal/install)이 Macos에서는 [iTerm2](https://iterm2.com/)이 좋다. 
+
+접속하는 OS에 취향껏 터미널에서 쓸 폰트를 설치하면 된다. HACK Nerd 폰트 강추다! 
 
 :::{.column-margin}
 요즘은 여러가지 이모지가 많이 활용되는데, 이를 제대로 쓰려면 Nerd 계열의 폰트를 설치하자. Hack Nerd 폰트는 [여기](https://www.nerdfonts.com/font-downloads)서 다운로드하자. 
@@ -38,7 +40,7 @@ WSL이 생기면서 윈도에서도 리눅스를 제대로 쓸 수 있게 되었
 
 ## 리포지토리 주소 변경 
 
-기본 리포지토리 주소를 바꾸도록 하자. 만일 WSL을 통해 설치했다면 우분투 메인 리포(`http://archive.ubuntu.com/ubuntu/`)로 설정되어 있을 것이고, iso 이미지로 설치했다면, `kr`이 앞에 붙어 있다. apt 패키지 업데이트를 위한 주소는 `/etc/apt/sources.list` 파일을 직접 편집하면 된다. 에디터는 취향껏 쓰면 된다. 편리한 nano로 예를 들자. 
+우분투 업데이트에 필요한 리포지토리 주소를 바꾸도록 하자. 만일 WSL을 통해 설치했다면 우분투 메인 리포(`http://archive.ubuntu.com/ubuntu/`)로 설정되어 있을 것이고, iso 이미지로 설치했다면, `archive` 앞에 `kr.`이 앞에 붙어 있다. apt 패키지 업데이트를 위한 주소는 `/etc/apt/sources.list` 파일을 직접 편집하면 된다. 편집용 에디터는 취향껏 쓰면 된다. 편리한 nano로 예를 들자. 
 
 ```zsh
 > sudo nano /etc/apt/sources.list
@@ -47,6 +49,8 @@ WSL이 생기면서 윈도에서도 리눅스를 제대로 쓸 수 있게 되었
 기본 저장소보다는 카카오의 미러 저장소가 국내에서 빠르다. 해당 파일을 적당한 편집기로 열어 기본 패키지 저장소가 어떻게 되어 있는지 살펴보자. 파일 내의 모든 저장소 URL을 찾아 `http://archive.ubuntu.com/ubuntu/` 또는 `http://kr.archive.ubuntu.com/ubuntu/` 등의 주소를 `http://mirror.kakao.com/ubuntu/`로 변경하면 된다. 둘 중 뭘로 되어 있는지 모르니 확인 후 작업하는 것을 권한다. nano 앱에서 `crtl-w` `>`  `crtl-r`로 해당 부분을 찾아서 바꾸자.  
 
 ## zsh 관련 설치 
+
+아래 터미널 명령어로 zsh를 설치하자. 
 
 ```zsh
 > sudo apt update # 이미 실행했다면 건너 뛰자 
@@ -59,13 +63,10 @@ WSL이 생기면서 윈도에서도 리눅스를 제대로 쓸 수 있게 되었
 
 ## powerlevel10k(p10k) 깔기 
 
-```zsh
-> git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-```
-
-셸 꾸미기로 속 편하게 파워레벨10k를 쓰자. 
+셸 꾸미기로 고민 말고 파워레벨10k를 쓰자. 제일 쓸 만 하다. 
 
 ```zsh
+> git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k # p10k 끌어오기 
 > nano ~/.zshrc # zsh 설정 열기 
 # ZSH_THEME="robbyrussell" -> ZSH_THEME="powerlevel10k/powerlevel10k" # 테마를 p10k로 바꾸자 
 ```
