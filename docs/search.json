@@ -826,6 +826,13 @@
     "text": "당연히 알고 있다고 생각하지만 모르는 게 생각보다 많다. 회귀 분석에서 로그-리니어 모델, 즉 종속 변수에 로그를 취하고 독립 변수가 선형인 모델에서 계수를 어떻게 이해해야 할까?"
   },
   {
+    "objectID": "posts/regression/2020-11-11-log-linear-regression.html#왜-로그로-변환할까",
+    "href": "posts/regression/2020-11-11-log-linear-regression.html#왜-로그로-변환할까",
+    "title": "Understanding Log-Linear Regression Model",
+    "section": "왜 로그로 변환할까?",
+    "text": "왜 로그로 변환할까?\n우선 이것부터 따져보자. 교과서나 자료를 찾아보면 \\(y_i\\)를 로그 변환하는 이유가 \\(y_i\\)의 분포를 정규분포에 가깝게 만들어주기 때문이라는 내용이 있다. 소표본을 다루는 경우라면 오차 항의 정규 분포를 가정하기 때문에 타당한 이야기일 수도 있다. 대표본이라면 중심 극한 정리(Central Limit Theorem)에 의지하는 것으로 충분하다.\n우선 아래 그림에서 보듯이 로그로 변환했을 때 회귀 분석이 보다 타당해지는 경우가 있다. 로그는 곱셈을 덧셈으로 폴어주는 역할을 한다. \\(y_i = e^{\\alpha \\beta x_i}\\)의 경우 함수 형태가 \\(e^\\alpha\\)와 \\(e^{\\beta x_i}\\)의 곱으로 구성되어 있고, 이 녀석을 회귀 분석으로 추정하는 것은 적합하지 않다. 이때 \\(\\log y_i\\)를 취하면 회귀 분석으로 다루기 좋은 녀석으로 바뀐다.\n\n\n\n\n\n\n \n\n\n\n\n비선형의 함수 형태를 선형으로 바꿔 회귀분석을 활용할 수 있다.\n\n\n\n \n\n\n\n곱으로 표현되는 식이 어떤 경우가 해당할까? 어떤 기준점의 몇 배로 늘고 주는 것이 자연스러운 맥락을 떠올려보자. 여기서 몇 배가 된다는 것은 다시 말하면 퍼센트 변화를 뜻한다. 즉, 로그 변환은 수치의 절대적인 변화량보다는 퍼센트 변화가 의미를 지닐 때 유용하게 사용할 수 있다.\n비슷한 맥락이지만 데이터의 분산이 클 때도 로그 변환이 유효하다. 부(wealth)의 분포는 극단적인 경우가 많다. 매우 적은 부를 소유한 사람부터 매우 많은 부를 소유한 사람까지 분산이 매우 크다. 이런 경우 로그 변환을 하면 분산이 크게 줄어든다."
+  },
+  {
     "objectID": "posts/regression/2020-11-11-log-linear-regression.html#근삿값으로-본-계수의-의미",
     "href": "posts/regression/2020-11-11-log-linear-regression.html#근삿값으로-본-계수의-의미",
     "title": "Understanding Log-Linear Regression Model",
@@ -845,13 +852,6 @@
     "title": "Understanding Log-Linear Regression Model",
     "section": "계수의 해석",
     "text": "계수의 해석\n지수 함수 \\(e^x\\)의 그래프를 생각해 보자. \\(x\\)가 커짐에 따라서 도함수의 기울기가 커진다는 점을 알 수 있다. 위의 전개에서 보듯이 \\(\\frac{\\Delta y}{y_0} \\approx 0\\)일 때 \\(\\beta\\)는 실제의 도함수 기울기에 값에 근접한다. \\(\\frac{\\Delta y}{y_0} \\approx 0\\)의 가정이란 \\(y\\)의 증가율이 크지 않다는 의미이다. 예를 들어보자. 만일 \\(\\beta = 0.3\\)이라고 하자. 실제 \\(\\%\\Delta y\\)를 구해보면,\n\\[\n\\%\\Delta y = \\exp(\\beta) - 1 = 0.35\n\\]\n약 5% 정도 과소평가되었음을 알 수 있다. 이 크기의 의미나 중요성은 분석자가 선택할 문제다. 다만 \\(\\beta\\)가 너무 크게 나왔다면, 실재 값과의 오차가 생길 수 있다. 로그-선형 모델의 경우 원래 크기보다 퍼센트 변화를 과소 측정한다. 원래 지수적으로 늘어나는 것을 로그를 취해 선형으로 끌어내린 결과이다."
-  },
-  {
-    "objectID": "posts/regression/2020-11-11-log-linear-regression.html#왜-로그로-변환할까",
-    "href": "posts/regression/2020-11-11-log-linear-regression.html#왜-로그로-변환할까",
-    "title": "Understanding Log-Linear Regression Model",
-    "section": "왜 로그로 변환할까?",
-    "text": "왜 로그로 변환할까?\n우선 이것부터 따져보자. 교과서나 자료를 찾아보면 \\(y_i\\)를 로그 변환하는 이유가 \\(y_i\\)의 분포를 정규분포에 가깝게 만들어주기 때문이라는 내용이 있다. 소표본을 다루는 경우라면 오차 항의 정규 분포를 가정하기 때문에 타당한 이야기일 수도 있다. 대표본이라면 중심 극한 정리(Central Limit Theorem)에 의지하는 것으로 충분하다.\n우선 아래 그림에서 보듯이 로그로 변환했을 때 회귀 분석이 보다 타당해지는 경우가 있다. 로그는 곱셈을 덧셈으로 폴어주는 역할을 한다. \\(y_i = e^{\\alpha \\beta x_i}\\)의 경우 함수 형태가 \\(e^\\alpha\\)와 \\(e^{\\beta x_i}\\)의 곱으로 구성되어 있고, 이 녀석을 회귀 분석으로 추정하는 것은 적합하지 않다. 이때 \\(\\log y_i\\)를 취하면 회귀 분석으로 다루기 좋은 녀석으로 바뀐다.\n\n\n\n\n\n\n \n\n\n\n\n비선형의 함수 형태를 선형으로 바꿔 회귀분석을 활용할 수 있다.\n\n\n\n \n\n\n\n곱으로 표현되는 식이 어떤 경우가 해당할까? 어떤 기준점의 몇 배로 늘고 주는 것이 자연스러운 맥락을 떠올려보자. 여기서 몇 배가 된다는 것은 다시 말하면 퍼센트 변화를 뜻한다. 즉, 로그 변환은 수치의 절대적인 변화량보다는 퍼센트 변화가 의미를 지닐 때 유용하게 사용할 수 있다.\n비슷한 맥락이지만 데이터의 분산이 클 때도 로그 변환이 유효하다. 부(wealth)의 분포는 극단적인 경우가 많다. 매우 적은 부를 소유한 사람부터 매우 많은 부를 소유한 사람까지 분산이 매우 크다. 이런 경우 로그 변환을 하면 분산이 크게 줄어든다."
   },
   {
     "objectID": "posts/regression/2019-11-10-understanding-logit-regression.html",
@@ -1538,6 +1538,13 @@
     "title": "윈도 작업 환경을 기록한다",
     "section": "Ubuntu 관리 및 필수 앱 설치",
     "text": "Ubuntu 관리 및 필수 앱 설치\n아래 링크를 참고하자.\n🔗 Ubuntu를 깔고 먼저 해야 할 일들"
+  },
+  {
+    "objectID": "posts/walk-through/2023-11-03-definitive-guide-to-windows.html#vs-code",
+    "href": "posts/walk-through/2023-11-03-definitive-guide-to-windows.html#vs-code",
+    "title": "윈도 작업 환경을 기록한다",
+    "section": "VS Code",
+    "text": "VS Code\nVS 코드는 이 협업의 핵심이다. VS 코드는 윈도에 있다. 하지만 이 녀석은 WSL의 리눅스와 윈도를 긴밀하게 연결한다. WSL 내 위치하는 어떤 폴더에서 코딩 작업을 하고 싶다면, WSL이 활성화된 터미널에서 아래와 같이 실행하자.\n# 원하는 폴더 내에서 \n&gt; code . \n이 명령어는 파일 &gt; 작업 영역에 폴더 추가를 한방에 실행해준다. 해당 폴더가 작업 영역에 추가되기 때문에 여러가지 작업을 편리하게 진행할 수 있다. 이렇게 윈도의 ’호사’와 함께 리눅스 환경의 코딩 작업이 가능하다."
   },
   {
     "objectID": "posts/math-of/2019-05-06-math-svm.html",
@@ -2980,12 +2987,5 @@
     "title": "project",
     "section": "",
     "text": "Mostly Useless\n대부분 쓸모 없는 개인 프로젝트 저장소입니다. 역시 뭐라도 도움이 될 수 있다면 저는 기쁠 따름!\n\n\n\nEconomic Index Board\n⛧ Ouput: Anari’s Economic Indices\n개인적으로 보려고 만든 경제 지표 보드입니다. 고급스럽게 웹 개발을 하면 좋았겠지만 초보적인 웹 지식과 pyscript 약간 활용했습니다. 부족한 지식 및 시간과 타협한 졸작입니다.\n\n\nJupyterLite\n⛧ Ouput: Customized JupyterLite | Post: LINK\nJupyterLite는 Wasm(웹 어셈블리)로 구현되는 경량화된 쥬피터IDE + Python 개발 환경입니다. 사용성에 제한이 있지만 파이썬 코딩 경험이 말할 수 없이 빨리지고 편리해집니다!\n\n\nPresentation with Quarto & Reveal.js\n⛧ Ouput: Useless PT | Post: LINK\nQuarto는 Reveal.js를 부릴 수 있습니다. Quarto를 이용한 PT 제작에는 다음과 같은 장점이 있습니다.\n\nhtml로 구성되어 있어서 웹 브라우저 이외에 별도의 소프트웨어가 필요하지 않습니다.\nGitHub Pages를 통해서 퍼블리시할 수 있습니다.\n이런 저런 ’디자인 지옥’에 고통받지 않을 수 있습니다!\n\n\n\nGenerating CV in GitHub\n⛧ Oputput: short CV | Post: LINK\n깃허브의 markdown과 Pages 기능을 활용해 자동으로 CV를 생성하고 웹으로 배포할 수 있습니다. 아직 100% 만족스럽지 않지만 게으르게 쓸만한 할 정도 됩니다.\n 🐈 🐈 🐈 삽화는 Bing의 이미지 작성자에서 many old statues of tiny gods, digital art 키워드로 생성되었습니다."
-  },
-  {
-    "objectID": "posts/walk-through/2023-11-03-definitive-guide-to-windows.html#vs-code",
-    "href": "posts/walk-through/2023-11-03-definitive-guide-to-windows.html#vs-code",
-    "title": "윈도 작업 환경을 기록한다",
-    "section": "VS Code",
-    "text": "VS Code\nVS 코드는 이 협업의 핵심이다. VS 코드는 윈도에 있다. 하지만 이 녀석은 WSL의 리눅스와 윈도를 긴밀하게 연결한다. WSL 내 위치하는 어떤 폴더에서 코딩 작업을 하고 싶다면, WSL이 활성화된 터미널에서 아래와 같이 실행하자.\n# 원하는 폴더 내에서 \n&gt; code . \n이 명령어는 파일 &gt; 작업 영역에 폴더 추가를 한방에 실행해준다. 해당 폴더가 작업 영역에 추가되기 때문에 여러가지 작업을 편리하게 진행할 수 있다. 이렇게 윈도의 ’호사’와 함께 리눅스 환경의 코딩 작업이 가능하다."
   }
 ]
