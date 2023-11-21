@@ -72,7 +72,7 @@ $$
 |표본 분산|sample variance|표본의 분산|$S(Y_i)^2 = \frac{1}{n-1}\sum_{i=1}^n (Y_i - \ES{Y}_n)^2$|
 |표준 오차|standard error|표본 통계량의 표준 편차|$SE(\ES{Y}_n) = \frac{\sigma_Y}{\sqrt{n}}$|
 |표준 오차의 추정치|estimated standard error|표준 오차 계산 시 $\sigma_Y \to S(Y_i)$|$\widehat{SE}(\ES{Y}_n) = \frac{S(Y_i)}{\sqrt{n}}$|
-|$t-$통계량|$t-$statistic|$t(\mu) = \frac{\ES{Y}_n - \mu}{\widehat{SE}(\ES{Y}_n)}$|$n$이 커질 때 정규분포에 근접한다.|
+|$t-$통계량|$t-$statistic|$t(\mu) = \frac{\ES{Y}_n - \mu}{\widehat{SE}(\ES{Y}_n)}$|$n$이 커질 때 정규분포에 근접|
 
 ## Sample Mean 
 
