@@ -28,7 +28,7 @@ lightbox: auto
 [이 연구](https://www.nature.com/articles/s41467-020-19478-2)는 코로나19 인식에 있어서 충돌 요인의 문제를 다양하게 지적하고 있다. 
 :::
 
-::: {layout="[[-20, 80, -20]]" layout-valign="bottom"}
+::: {layout="[-1, 3, -1]"}
 ![입원 여부는 충돌 요인(collider)이 된다.](./images/covid-hospital.png)
 :::
 
@@ -92,12 +92,9 @@ for pack in np.linspace(0, 6, 60):
 
 ```{python}
 #| fig-cap: "충돌 요인은 어떻게 작용하는가? `pack_of_cigar`는 흡연의 정도를 `covid_severity`는 코로나19 중증도를 의미한다."
-#| layout: "[-10,70,-10]"
-
 palette = sns.color_palette("dark")
 #sns.palplot(palette)
-
-plt.rcParams['figure.figsize'] = [12, 5]
+plt.rcParams['figure.figsize'] = [8, 4]
 plt.style.use("fivethirtyeight")# for pretty graphs
 fig, (ax1, ax2) = plt.subplots(ncols=2, sharey=True)
 sns.regplot(x = 'pack_of_cigar',y = 'covid_severity', data = res, ax=ax1, color='grey',scatter_kws={'alpha': 0.4})
@@ -108,10 +105,12 @@ for i, value in enumerate(res['is_hospitalized'].unique()):
                      #marker=markers[i],      
                      scatter_kws={'alpha': 0.3 if value == "Yes" else 0.15},        
                      data=res[res['is_hospitalized'] == value],
-                     label=value, 
+                     label=value,
                      ax = ax2)
 
-ax2.legend(loc='best');
+ax2.legend(loc='best')
+
+ax1.set_aspect(1.5); ax2.set_aspect(1.5)
 ```
 
 위의 왼쪽 그래프에서 보듯이 추출된 표본 전체에 대해서는 흡연의 정도와 코로나19의 중증도 사이에 양의 관계가 존재한다. 그런데 만일 충돌 요인인 입원 여부를 회귀 분석에서 통제하면 어떻게 될까? 오른쪽 그림에서 보듯이 병원에 입원한 환자에 대해서는 음의 상관성이 관찰된다. 왜 이럴까? 병원의 입원하는 변인은 코로나19의 중증도 이외에 흡연 정도에도 영향을 받는다. 흡연을 많이 할수록 코로나와 관계없이 그 자체로 입원할 가능성이 커진다. 흡연 정도가 낮을 경우 입원을 했다면 코로나19의 중증도에 따른 것일 가능성이 크다. 반면 흡연 정도가 높을 경우 코로나19 중증도는 상대적으로 다양한 상태를 지니게 되고, 따라서 평균적으로는 흡연 정도가 낮은 입원 환자에 비해서 낮은 코로나19 중증도를 지닐 수 있다. 
