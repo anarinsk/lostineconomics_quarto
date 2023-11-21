@@ -96,6 +96,8 @@ palette = sns.color_palette("dark")
 #sns.palplot(palette)
 plt.rcParams['figure.figsize'] = [8, 4]
 plt.style.use("fivethirtyeight")# for pretty graphs
+sns.set(font_scale=0.7)
+
 fig, (ax1, ax2) = plt.subplots(ncols=2, sharey=True)
 sns.regplot(x = 'pack_of_cigar',y = 'covid_severity', data = res, ax=ax1, color='grey',scatter_kws={'alpha': 0.4})
 #
@@ -122,7 +124,7 @@ ols3 = sm.ols(formula="covid_severity ~ pack_of_cigar + is_hospitalized", data=r
 #ols1.summary()
 #ols2.summary()
 
-# stargazer sucks 
+#stargazer sucks 
 #from stargazer.stargazer import Stargazer
 #stargazer = Stargazer([ols1, ols2, ols3])
 #stargazer
@@ -137,7 +139,7 @@ print(summary_col(
                     'N':lambda x: "{0:d}".format(int(x.nobs)), 
                     'F': lambda x: "{0:.2f}".format(x.fvalue),
                     }, 
-                  regressor_order=['Intercept','pack_of_cigar','is_hospitalized[T.Yes]'])
+                  regressor_order=['Intercept','pack_of_cigar','is_hospitalized[T.Yes]#'])
     )
 ```
 

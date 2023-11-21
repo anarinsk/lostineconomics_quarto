@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.451">
+<meta name="generator" content="quarto-1.4.455">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -243,7 +243,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>담배를 많이 피울수록 혹은 그래왔을수록 코로나19 이외의 요인으로도 병원에 입원할 가능성이 높아진다. 또한 코로나 증세가 심할수록 병원에 입원할 가능성이 높아진다. 이 경우 병원에 입원한다는 변인이 두 요인(흡연의 정도, 코로나19 중증도) 모두에 영향을 받는 충돌 요인이 된다. 따라서 충돌 요인을 통제할 경우 흡연의 정도와 코로나19의 중증도 사이의 관계가 왜곡된다. 이러한 취지로 데이터를 생성해보도록 하자.</p>
-<div id="7964f5f8" class="cell" data-execution_count="1">
+<div id="15432434" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic packages</span></span>
@@ -300,40 +300,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <p>위의 플롯에 따라서 가상의 데이터를 생성했다. 코로나19 중증도는 흡연의 정도에 양의 영향을 받는다. 그리고 흡연의 정도는 별도로 건강에 악영향을 준다. 따라서 코로나19 중증도, 흡연의 정도 모두 해당 환자가 입원할 가능성을 결정하게 된다.</p>
-<div id="075f6fdb" class="cell" data-execution_count="2">
+<div id="1f204338" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>palette <span class="op">=</span> sns.color_palette(<span class="st">"dark"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#sns.palplot(palette)</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'figure.figsize'</span>] <span class="op">=</span> [<span class="dv">8</span>, <span class="dv">4</span>]</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">"fivethirtyeight"</span>)<span class="co"># for pretty graphs</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="dv">2</span>, sharey<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>sns.regplot(x <span class="op">=</span> <span class="st">'pack_of_cigar'</span>,y <span class="op">=</span> <span class="st">'covid_severity'</span>, data <span class="op">=</span> res, ax<span class="op">=</span>ax1, color<span class="op">=</span><span class="st">'grey'</span>,scatter_kws<span class="op">=</span>{<span class="st">'alpha'</span>: <span class="fl">0.4</span>})</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, value <span class="kw">in</span> <span class="bu">enumerate</span>(res[<span class="st">'is_hospitalized'</span>].unique()):</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    ax2 <span class="op">=</span> sns.regplot(x<span class="op">=</span><span class="st">"pack_of_cigar"</span>, y<span class="op">=</span><span class="st">"covid_severity"</span>,</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>                     <span class="co">#color=colors[value],</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>                     <span class="co">#marker=markers[i],      </span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>                     scatter_kws<span class="op">=</span>{<span class="st">'alpha'</span>: <span class="fl">0.3</span> <span class="cf">if</span> value <span class="op">==</span> <span class="st">"Yes"</span> <span class="cf">else</span> <span class="fl">0.15</span>},        </span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>                     data<span class="op">=</span>res[res[<span class="st">'is_hospitalized'</span>] <span class="op">==</span> value],</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                     label<span class="op">=</span>value,</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                     ax <span class="op">=</span> ax2)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>ax2.legend(loc<span class="op">=</span><span class="st">'best'</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>(font_scale<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="dv">2</span>, sharey<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>sns.regplot(x <span class="op">=</span> <span class="st">'pack_of_cigar'</span>,y <span class="op">=</span> <span class="st">'covid_severity'</span>, data <span class="op">=</span> res, ax<span class="op">=</span>ax1, color<span class="op">=</span><span class="st">'grey'</span>,scatter_kws<span class="op">=</span>{<span class="st">'alpha'</span>: <span class="fl">0.4</span>})</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, value <span class="kw">in</span> <span class="bu">enumerate</span>(res[<span class="st">'is_hospitalized'</span>].unique()):</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    ax2 <span class="op">=</span> sns.regplot(x<span class="op">=</span><span class="st">"pack_of_cigar"</span>, y<span class="op">=</span><span class="st">"covid_severity"</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>                     <span class="co">#color=colors[value],</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>                     <span class="co">#marker=markers[i],      </span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                     scatter_kws<span class="op">=</span>{<span class="st">'alpha'</span>: <span class="fl">0.3</span> <span class="cf">if</span> value <span class="op">==</span> <span class="st">"Yes"</span> <span class="cf">else</span> <span class="fl">0.15</span>},        </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                     data<span class="op">=</span>res[res[<span class="st">'is_hospitalized'</span>] <span class="op">==</span> value],</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>                     label<span class="op">=</span>value,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>                     ax <span class="op">=</span> ax2)</span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>ax1.set_aspect(<span class="fl">1.5</span>)<span class="op">;</span> ax2.set_aspect(<span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>ax2.legend(loc<span class="op">=</span><span class="st">'best'</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>ax1.set_aspect(<span class="fl">1.5</span>)<span class="op">;</span> ax2.set_aspect(<span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="2022-06-06-berkson-paradox-regression_files/figure-html/cell-3-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-description="" title="충돌 요인은 어떻게 작용하는가? pack_of_cigar는 흡연의 정도를 covid_severity는 코로나19 중증도를 의미한다."><img src="2022-06-06-berkson-paradox-regression_files/figure-html/cell-3-output-1.png" width="732" height="333" alt="충돌 요인은 어떻게 작용하는가? pack_of_cigar는 흡연의 정도를 covid_severity는 코로나19 중증도를 의미한다." class="figure-img"></a></p>
+<p><a href="2022-06-06-berkson-paradox-regression_files/figure-html/cell-3-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-description="" title="충돌 요인은 어떻게 작용하는가? pack_of_cigar는 흡연의 정도를 covid_severity는 코로나19 중증도를 의미한다."><img src="2022-06-06-berkson-paradox-regression_files/figure-html/cell-3-output-1.png" width="733" height="322" alt="충돌 요인은 어떻게 작용하는가? pack_of_cigar는 흡연의 정도를 covid_severity는 코로나19 중증도를 의미한다." class="figure-img"></a></p>
 <figcaption>충돌 요인은 어떻게 작용하는가? <code>pack_of_cigar</code>는 흡연의 정도를 <code>covid_severity</code>는 코로나19 중증도를 의미한다.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>위의 왼쪽 그래프에서 보듯이 추출된 표본 전체에 대해서는 흡연의 정도와 코로나19의 중증도 사이에 양의 관계가 존재한다. 그런데 만일 충돌 요인인 입원 여부를 회귀 분석에서 통제하면 어떻게 될까? 오른쪽 그림에서 보듯이 병원에 입원한 환자에 대해서는 음의 상관성이 관찰된다. 왜 이럴까? 병원의 입원하는 변인은 코로나19의 중증도 이외에 흡연 정도에도 영향을 받는다. 흡연을 많이 할수록 코로나와 관계없이 그 자체로 입원할 가능성이 커진다. 흡연 정도가 낮을 경우 입원을 했다면 코로나19의 중증도에 따른 것일 가능성이 크다. 반면 흡연 정도가 높을 경우 코로나19 중증도는 상대적으로 다양한 상태를 지니게 되고, 따라서 평균적으로는 흡연 정도가 낮은 입원 환자에 비해서 낮은 코로나19 중증도를 지닐 수 있다.</p>
-<div id="f7473bea" class="cell" data-execution_count="3">
+<div id="76732c70" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ols1 <span class="op">=</span> sm.ols(formula<span class="op">=</span><span class="st">"covid_severity ~ pack_of_cigar"</span>, data<span class="op">=</span>res).fit(use_t<span class="op">=</span><span class="va">True</span>)</span>
@@ -342,7 +344,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#ols1.summary()</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#ols2.summary()</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># stargazer sucks </span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#stargazer sucks </span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">#from stargazer.stargazer import Stargazer</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">#stargazer = Stargazer([ols1, ols2, ols3])</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">#stargazer</span></span>
@@ -357,7 +359,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'N'</span>:<span class="kw">lambda</span> x: <span class="st">"</span><span class="sc">{0:d}</span><span class="st">"</span>.<span class="bu">format</span>(<span class="bu">int</span>(x.nobs)), </span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'F'</span>: <span class="kw">lambda</span> x: <span class="st">"</span><span class="sc">{0:.2f}</span><span class="st">"</span>.<span class="bu">format</span>(x.fvalue),</span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>                    }, </span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>                  regressor_order<span class="op">=</span>[<span class="st">'Intercept'</span>,<span class="st">'pack_of_cigar'</span>,<span class="st">'is_hospitalized[T.Yes]'</span>])</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>                  regressor_order<span class="op">=</span>[<span class="st">'Intercept'</span>,<span class="st">'pack_of_cigar'</span>,<span class="st">'is_hospitalized[T.Yes]#'</span>])</span>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -365,16 +367,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ===============================================
                          (1)     (2)     (3)   
 -----------------------------------------------
-Intercept              0.56*** 0.70*** 2.59*** 
-                       (0.08)  (0.08)  (0.21)  
-pack_of_cigar          0.20*** -0.03   -0.20***
+Intercept              0.53*** 0.74*** 2.64*** 
+                       (0.09)  (0.08)  (0.21)  
+pack_of_cigar          0.20*** -0.04   -0.20***
                        (0.02)  (0.03)  (0.04)  
-is_hospitalized[T.Yes]         1.11***         
-                               (0.11)          
-R-squared              0.14    0.28    0.06    
-R-squared Adj.         0.14    0.28    0.06    
-N                      524     524     312     
-F                      85.73   103.76  20.71   
+is_hospitalized[T.Yes]         1.19***         
+                               (0.10)          
+R-squared              0.14    0.32    0.07    
+R-squared Adj.         0.14    0.32    0.06    
+N                      546     546     308     
+F                      90.84   128.51  21.28   
 ===============================================
 Standard errors in parentheses.
 * p&lt;.1, ** p&lt;.05, ***p&lt;.01</code></pre>
@@ -944,7 +946,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});</script>
 
 
 
