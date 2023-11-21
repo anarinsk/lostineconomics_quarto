@@ -19,7 +19,7 @@ format:
 
 ::: columns
 ::: {.column width="40%"}
-## The Gadget 
+## The Gadget 👇
 
 [![](./images/beelink.webp)](https://www.aliexpress.com/item/1005005305248100.html)
 :::
