@@ -51,8 +51,9 @@ df.info()
 ```
 
 ```{python}
-#| layout: "[-10,70,-10]"
-plt.rcParams['figure.figsize'] = [12, 6]
+plt.rcParams['figure.figsize'] = [8, 4]
+sns.set(font_scale=0.7)
+
 fig, (ax1, ax2) = plt.subplots(ncols=2, sharey=True)
 sns.regplot(x = 'culmen_length_mm',y = 'culmen_depth_mm', data = df, scatter_kws={'alpha': 0.4}, ax=ax1)
 r = stats.pearsonr(df['culmen_length_mm'], df['culmen_depth_mm'])[0]
@@ -83,10 +84,23 @@ ols3 = sm.ols(formula="culmen_depth_mm ~ species * culmen_length_mm", data=df).f
 #ols1.summary()
 #ols2.summary()
 
+#from stargazer.stargazer import Stargazer
+#stargazer = Stargazer([ols1, ols2, ols3])
+#stargazer
 
-from stargazer.stargazer import Stargazer
-stargazer = Stargazer([ols1, ols2, ols3])
-stargazer
+regs = [ols1, ols2, ols3]
+from statsmodels.iolib.summary2 import summary_col
+print(summary_col(
+                  regs,
+                  stars=True, 
+                  float_format='%0.2f',
+                  model_names=['(1)','(2)','(3)'],
+                  info_dict={
+                    'N':lambda x: "{0:d}".format(int(x.nobs)), 
+                    'F': lambda x: "{0:.2f}".format(x.fvalue),
+                    }, 
+                  regressor_order=['Intercept','culmen_length_mm','secies'])
+    )
 ```
 
 회귀 분석에서 종을 통제한 경우와 그렇지 않은 경우의 `culmen_length_mm`(부리의 길이)의 계수를 비교해보자. (1)은 종족을 통제하지 않은 회귀식으로 `culmen_length_mm`의 계수는 음수이다. 반면 종족을 통제한 (2)의 회귀식은 종족의 구분해 각 절편과 해당 종족 내의 부리의 길이와 높이의 관계를 계산해 이를 적절하게 가중 평균한 값이 `culmen_length_mm`의 계수가 된다. 회귀 테이블에서 보듯이 `culmen_length_mm`의 계수는 음수에서 양수로 바뀌어 있다. 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.451">
+<meta name="generator" content="quarto-1.4.455">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -108,9 +108,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -229,7 +226,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </div></div><p><code>culmen</code>은 새의 부리를 뜻한다. 옆 그림에서 보듯이 <code>length</code>는 부리의 앞으로 튀어나온 길이를, <code>depth</code>는 부리의 높이를 의미한다. 아래 데이터는 펭귄의 세 가지 종족, 성별 등을 별도로 기록하고 있다.pip</p>
-<div class="cell" data-execution_count="1">
+<div id="60151c98" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a> <span class="co"># Basic packages</span></span>
@@ -269,36 +266,30 @@ dtypes: float64(4), object(3)
 memory usage: 20.9+ KB</code></pre>
 </div>
 </div>
+<div id="da150009" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'figure.figsize'</span>] <span class="op">=</span> [<span class="dv">12</span>, <span class="dv">6</span>]</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="dv">2</span>, sharey<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>sns.regplot(x <span class="op">=</span> <span class="st">'culmen_length_mm'</span>,y <span class="op">=</span> <span class="st">'culmen_depth_mm'</span>, data <span class="op">=</span> df, scatter_kws<span class="op">=</span>{<span class="st">'alpha'</span>: <span class="fl">0.4</span>}, ax<span class="op">=</span>ax1)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> stats.pearsonr(df[<span class="st">'culmen_length_mm'</span>], df[<span class="st">'culmen_depth_mm'</span>])[<span class="dv">0</span>]</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>ax1.text(<span class="fl">.03</span>, <span class="dv">1</span>, <span class="st">'r=</span><span class="sc">{:.3f}</span><span class="st">'</span>.<span class="bu">format</span>(r), transform<span class="op">=</span>ax1.transAxes)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> [<span class="st">'darkorange'</span>, <span class="st">'royalblue'</span>, <span class="st">'#555555'</span>]</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>markers <span class="op">=</span> [<span class="st">'.'</span>, <span class="st">'+'</span>, <span class="st">'x'</span>]</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, value <span class="kw">in</span> <span class="bu">enumerate</span>(df[<span class="st">'species'</span>].unique()):</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    ax2 <span class="op">=</span> sns.regplot(x<span class="op">=</span><span class="st">"culmen_length_mm"</span>, y<span class="op">=</span><span class="st">"culmen_depth_mm"</span>, ax<span class="op">=</span>ax2,</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>                      scatter_kws<span class="op">=</span>{<span class="st">'alpha'</span>: <span class="fl">0.4</span>},</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>                     color<span class="op">=</span>colors[i],</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>                     <span class="co">#marker=markers[i],                      </span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>                     data<span class="op">=</span>df[df[<span class="st">'species'</span>] <span class="op">==</span> value],</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>                     label<span class="op">=</span>value)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>ax2.legend(loc<span class="op">=</span><span class="st">'best'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'figure.figsize'</span>] <span class="op">=</span> [<span class="dv">8</span>, <span class="dv">4</span>]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>(font_scale<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(ncols<span class="op">=</span><span class="dv">2</span>, sharey<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>sns.regplot(x <span class="op">=</span> <span class="st">'culmen_length_mm'</span>,y <span class="op">=</span> <span class="st">'culmen_depth_mm'</span>, data <span class="op">=</span> df, scatter_kws<span class="op">=</span>{<span class="st">'alpha'</span>: <span class="fl">0.4</span>}, ax<span class="op">=</span>ax1)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> stats.pearsonr(df[<span class="st">'culmen_length_mm'</span>], df[<span class="st">'culmen_depth_mm'</span>])[<span class="dv">0</span>]</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>ax1.text(<span class="fl">.03</span>, <span class="dv">1</span>, <span class="st">'r=</span><span class="sc">{:.3f}</span><span class="st">'</span>.<span class="bu">format</span>(r), transform<span class="op">=</span>ax1.transAxes)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> [<span class="st">'darkorange'</span>, <span class="st">'royalblue'</span>, <span class="st">'#555555'</span>]</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>markers <span class="op">=</span> [<span class="st">'.'</span>, <span class="st">'+'</span>, <span class="st">'x'</span>]</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, value <span class="kw">in</span> <span class="bu">enumerate</span>(df[<span class="st">'species'</span>].unique()):</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    ax2 <span class="op">=</span> sns.regplot(x<span class="op">=</span><span class="st">"culmen_length_mm"</span>, y<span class="op">=</span><span class="st">"culmen_depth_mm"</span>, ax<span class="op">=</span>ax2,</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>                      scatter_kws<span class="op">=</span>{<span class="st">'alpha'</span>: <span class="fl">0.4</span>},</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>                     color<span class="op">=</span>colors[i],</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>                     <span class="co">#marker=markers[i],                      </span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>                     data<span class="op">=</span>df[df[<span class="st">'species'</span>] <span class="op">==</span> value],</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>                     label<span class="op">=</span>value)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>ax2.legend(loc<span class="op">=</span><span class="st">'best'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell quarto-layout-panel" data-execution_count="2" data-layout="[-10,70,-10]">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 77.8%;justify-content: center;">
-<p><a href="2022-06-04-simpson-paradox-regression_files/figure-html/cell-3-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="2022-06-04-simpson-paradox-regression_files/figure-html/cell-3-output-1.png" width="1078" height="551"></a></p>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 11.1%;justify-content: center;">
-<p>&nbsp;</p>
-</div>
+<div class="cell-output cell-output-display">
+<p><a href="2022-06-04-simpson-paradox-regression_files/figure-html/cell-3-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="2022-06-04-simpson-paradox-regression_files/figure-html/cell-3-output-1.png" width="730" height="379"></a></p>
 </div>
 </div>
 <p>왼쪽 그림에서 보듯이 종 구분 없이 펭귄 부리의 길이와 높이를 보면 서로 음의 상관성을 지니고 있는 듯 보인다. 그런데 이를 종별로 구별해서 살펴보면 오히려 길이와 높이는 양의 상관성을 지니고 있다.</p>
@@ -310,7 +301,7 @@ memory usage: 20.9+ KB</code></pre>
 <figcaption>펭귄 종류</figcaption>
 </figure>
 </div>
-</div></div><div class="cell" data-execution_count="3">
+</div></div><div id="966a3a05" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ols1 <span class="op">=</span> sm.ols(formula<span class="op">=</span><span class="st">"culmen_depth_mm ~ culmen_length_mm"</span>, data<span class="op">=</span>df).fit(use_t<span class="op">=</span><span class="va">True</span>)</span>
@@ -319,18 +310,48 @@ memory usage: 20.9+ KB</code></pre>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#ols1.summary()</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">#ols2.summary()</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> stargazer.stargazer <span class="im">import</span> Stargazer</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>stargazer <span class="op">=</span> Stargazer([ols1, ols2, ols3])</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>stargazer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">#from stargazer.stargazer import Stargazer</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">#stargazer = Stargazer([ols1, ols2, ols3])</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">#stargazer</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>regs <span class="op">=</span> [ols1, ols2, ols3]</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.iolib.summary2 <span class="im">import</span> summary_col</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(summary_col(</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>                  regs,</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>                  stars<span class="op">=</span><span class="va">True</span>, </span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>                  float_format<span class="op">=</span><span class="st">'</span><span class="sc">%0.2f</span><span class="st">'</span>,</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>                  model_names<span class="op">=</span>[<span class="st">'(1)'</span>,<span class="st">'(2)'</span>,<span class="st">'(3)'</span>],</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>                  info_dict<span class="op">=</span>{</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'N'</span>:<span class="kw">lambda</span> x: <span class="st">"</span><span class="sc">{0:d}</span><span class="st">"</span>.<span class="bu">format</span>(<span class="bu">int</span>(x.nobs)), </span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>                    <span class="st">'F'</span>: <span class="kw">lambda</span> x: <span class="st">"</span><span class="sc">{0:.2f}</span><span class="st">"</span>.<span class="bu">format</span>(x.fvalue),</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>                    }, </span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>                  regressor_order<span class="op">=</span>[<span class="st">'Intercept'</span>,<span class="st">'culmen_length_mm'</span>,<span class="st">'secies'</span>])</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="12">
-<table style="text-align:center"><tbody><tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td colspan="3"><em>Dependent variable:culmen_depth_mm</em></td></tr><tr><td style="text-align:left"></td></tr><tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td><td>(3)</td></tr><tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Intercept</td><td>20.786<sup>***</sup></td><td>10.619<sup>***</sup></td><td>11.488<sup>***</sup></td></tr><tr><td style="text-align:left"></td><td>(0.854)</td><td>(0.691)</td><td>(1.162)</td></tr><tr><td style="text-align:left">culmen_length_mm</td><td>-0.082<sup>***</sup></td><td>0.199<sup>***</sup></td><td>0.177<sup>***</sup></td></tr><tr><td style="text-align:left"></td><td>(0.019)</td><td>(0.018)</td><td>(0.030)</td></tr><tr><td style="text-align:left">species[T.Chinstrap]</td><td></td><td>-1.919<sup>***</sup></td><td>-3.919<sup>*</sup></td></tr><tr><td style="text-align:left"></td><td></td><td>(0.226)</td><td>(2.070)</td></tr><tr><td style="text-align:left">species[T.Chinstrap]:culmen_length_mm</td><td></td><td></td><td>0.046<sup></sup></td></tr><tr><td style="text-align:left"></td><td></td><td></td><td>(0.046)</td></tr><tr><td style="text-align:left">species[T.Gentoo]</td><td></td><td>-5.080<sup>***</sup></td><td>-6.187<sup>***</sup></td></tr><tr><td style="text-align:left"></td><td></td><td>(0.194)</td><td>(1.778)</td></tr><tr><td style="text-align:left">species[T.Gentoo]:culmen_length_mm</td><td></td><td></td><td>0.027<sup></sup></td></tr><tr><td style="text-align:left"></td><td></td><td></td><td>(0.041)</td></tr><tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align: left">Observations</td><td>334</td><td>334</td><td>334</td></tr><tr><td style="text-align: left">R<sup>2</sup></td><td>0.052</td><td>0.766</td><td>0.767</td></tr><tr><td style="text-align: left">Adjusted R<sup>2</sup></td><td>0.049</td><td>0.764</td><td>0.764</td></tr><tr><td style="text-align: left">Residual Std. Error</td><td>1.919 (df=332)</td><td>0.956 (df=330)</td><td>0.957 (df=328)</td></tr><tr><td style="text-align: left">F Statistic</td><td>18.313<sup>***</sup> (df=1; 332)</td><td>360.759<sup>***</sup> (df=3; 330)</td><td>216.026<sup>***</sup> (df=5; 328)</td></tr><tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align: left">Note:</td>
- <td colspan="3" style="text-align: right">
-  <sup>*</sup>p&lt;0.1;
-  <sup>**</sup>p&lt;0.05;
-  <sup>***</sup>p&lt;0.01
- </td></tr></tbody></table>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+================================================================
+                                        (1)      (2)      (3)   
+----------------------------------------------------------------
+Intercept                             20.79*** 10.62*** 11.49***
+                                      (0.85)   (0.69)   (1.16)  
+culmen_length_mm                      -0.08*** 0.20***  0.18*** 
+                                      (0.02)   (0.02)   (0.03)  
+species[T.Chinstrap]                           -1.92*** -3.92*  
+                                               (0.23)   (2.07)  
+species[T.Chinstrap]:culmen_length_mm                   0.05    
+                                                        (0.05)  
+species[T.Gentoo]                              -5.08*** -6.19***
+                                               (0.19)   (1.78)  
+species[T.Gentoo]:culmen_length_mm                      0.03    
+                                                        (0.04)  
+R-squared                             0.05     0.77     0.77    
+R-squared Adj.                        0.05     0.76     0.76    
+N                                     334      334      334     
+F                                     18.31    360.76   216.03  
+================================================================
+Standard errors in parentheses.
+* p&lt;.1, ** p&lt;.05, ***p&lt;.01</code></pre>
 </div>
 </div>
 <p>회귀 분석에서 종을 통제한 경우와 그렇지 않은 경우의 <code>culmen_length_mm</code>(부리의 길이)의 계수를 비교해보자. (1)은 종족을 통제하지 않은 회귀식으로 <code>culmen_length_mm</code>의 계수는 음수이다. 반면 종족을 통제한 (2)의 회귀식은 종족의 구분해 각 절편과 해당 종족 내의 부리의 길이와 높이의 관계를 계산해 이를 적절하게 가중 평균한 값이 <code>culmen_length_mm</code>의 계수가 된다. 회귀 테이블에서 보듯이 <code>culmen_length_mm</code>의 계수는 음수에서 양수로 바뀌어 있다.</p>
@@ -886,7 +907,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","loop":false,"openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox","loop":false});</script>
 
 
 
