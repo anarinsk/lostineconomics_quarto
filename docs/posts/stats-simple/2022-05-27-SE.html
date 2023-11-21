@@ -283,8 +283,8 @@ ul.task-list li input[type="checkbox"] {
 <td><span class="math inline">\(\widehat{SE}(\ES{Y}_n) = \frac{S(Y_i)}{\sqrt{n}}\)</span></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">t-통계량</td>
-<td>t-statistic</td>
+<td style="text-align: center;"><span class="math inline">\(t-\)</span>통계량</td>
+<td><span class="math inline">\(t-\)</span>statistic</td>
 <td><span class="math inline">\(t(\mu) = \frac{\ES{Y}_n - \mu}{\widehat{SE}(\ES{Y}_n)}\)</span></td>
 <td><span class="math inline">\(n\)</span>이 커질 때 정규분포에 근접한다.</td>
 </tr>
@@ -345,23 +345,23 @@ SE = \dfrac{\sigma}{\sqrt{n}}
 </section>
 <section id="asymptotically-normal" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="asymptotically-normal">Asymptotically Normal</h2>
-<p>t-통계량이 정규 분포에 근사하는 이유는 무엇일까?</p>
+<p><span class="math inline">\(t-\)</span>통계량이 정규 분포에 근사하는 이유는 무엇일까?</p>
 <p><span class="math display">\[
 t(\mu) = \frac{\overline{Y}-\mu}{\widehat{SE}(\overline{Y})}
 \]</span></p>
-<p>우선 t-통계량의 분자와 분모를 살펴보면, 각각 <span class="math inline">\(n\)</span>이 커질 때 분자와 분모는 모두 0으로 수렴한다. 이 비율이 정규분포에 수렴하는 게 되는 이유는 중심극한 정리를 이용해 증명할 수 있다. 일단 결론만 기억하도록 하자. <span class="math inline">\(t\)</span>는 표본 크기 <span class="math inline">\(n\)</span>이 증가하면서 표준 정규 분포에 근사하게 된다. 이를 점근적 정규 분포(asymptotically normal)라고 칭한다.</p>
-<p>다시 말하면, <span class="math inline">\(\ES{Y}_n\)</span>은 평균이 <span class="math inline">\(\mu\)</span>이고 표준편차가 <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span>인 정규 분포에 근사하게 된다. 따라서 표본 크기가 커짐에 따라서 t-통계량은 표준 정규 분포를 점점 닮아간다.</p>
+<p>우선 <span class="math inline">\(t-\)</span>통계량의 분자와 분모를 살펴보면, 각각 <span class="math inline">\(n\)</span>이 커질 때 분자와 분모는 모두 0으로 수렴한다. 이 비율이 정규분포에 수렴하는 게 되는 이유는 중심극한 정리를 이용해 증명할 수 있다. 일단 결론만 기억하도록 하자. <span class="math inline">\(t\)</span>는 표본 크기 <span class="math inline">\(n\)</span>이 증가하면서 표준 정규 분포에 근사하게 된다. 이를 점근적 정규 분포(asymptotically normal)라고 칭한다.</p>
+<p>다시 말하면, <span class="math inline">\(\ES{Y}_n\)</span>은 평균이 <span class="math inline">\(\mu\)</span>이고 표준편차가 <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span>인 정규 분포에 근사하게 된다. 따라서 표본 크기가 커짐에 따라서 <span class="math inline">\(t-\)</span>통계량은 표준 정규 분포를 점점 닮아간다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg" class="my-figure7 img-fluid figure-img"></p>
 <figcaption><span class="math inline">\(n\)</span>이 커질수록 <span class="math inline">\(\ES{X}_n\)</span>의 분포는 표준 정규 분포에 근접한다.</figcaption>
 </figure>
 </div>
-<p>t-통계량은 대 표본(large sample)의 통계적 검정에 핵심을 이룬다. 원래 자료가 어느 분포에서 나왔는지와 관계없이 표본에 근거한 t-통계량은 정규 분포를 따르게 되고, 이를 통해 가설 검정을 실시할 수 있다.</p>
+<p><span class="math inline">\(t-\)</span>통계량은 대 표본(large sample)의 통계적 검정에 핵심을 이룬다. 원래 자료가 어느 분포에서 나왔는지와 관계없이 표본에 근거한 <span class="math inline">\(t-\)</span>통계량은 정규 분포를 따르게 되고, 이를 통해 가설 검정을 실시할 수 있다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>회귀 분석의 검정 또한 t-통계량에 근거한다. <a href="#regression-t-statistic">여기</a>를 참고하도록 하자.</p>
-</div></div><p>t-통계량의 크기는 검정을 위한 통계학적 증거일 뿐이다. 이 점을 잊지 말자. t-통계량의 형태에서 보듯이 분자가 충분히 크거나 혹은 분모가 충분히 작을 때 이 값이 커진다. 이는 신뢰 구간에 대해서도 마찬가지다. 신뢰 구간은 표준 오차에 반영되어 있는 통계적 정밀성에 의해 결정되지 우리가 발견하고자 하는 관계의 강도에 의해서 결정되지 않는다. 즉, t-통계량 및 신뢰 구간의 크기를 보고 해당 독립 변수가 종속 변수에 미치는 효과의 강도로 오해하면 곤란하다.</p>
+<p>회귀 분석의 검정 또한 <span class="math inline">\(t-\)</span>통계량에 근거한다. <a href="#regression-$t-$statistic">여기</a>를 참고하도록 하자.</p>
+</div></div><p><span class="math inline">\(t-\)</span>통계량의 크기는 검정을 위한 통계학적 증거일 뿐이다. 이 점을 잊지 말자. <span class="math inline">\(t-\)</span>통계량의 형태에서 보듯이 분자가 충분히 크거나 혹은 분모가 충분히 작을 때 이 값이 커진다. 이는 신뢰 구간에 대해서도 마찬가지다. 신뢰 구간은 표준 오차에 반영되어 있는 통계적 정밀성에 의해 결정되지 우리가 발견하고자 하는 관계의 강도에 의해서 결정되지 않는다. 즉, <span class="math inline">\(t-\)</span>통계량 및 신뢰 구간의 크기를 보고 해당 독립 변수가 종속 변수에 미치는 효과의 강도로 오해하면 곤란하다.</p>
 </section>
 <section id="more" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="more">More</h2>
@@ -437,7 +437,7 @@ S_n^2 &amp; = \dfrac{1}{n-1}\sum_{i=1}^n (X_i - \overline{X}_n) \\
 <p>자세한 내용은 <a href="http://www.utstat.toronto.edu/~brunner/oldclass/413f08/handouts/STA413Ch4.pdf">여기</a> 책의 해당 부분을 참고하라.</p>
 </div></div></section>
 <section id="regression-t-statistic" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="regression-t-statistic">회귀 분석의 t-통계량</h3>
+<h3 class="anchored" data-anchor-id="regression-t-statistic">회귀 분석의 <span class="math inline">\(t-\)</span>통계량</h3>
 <p>회귀 분석의 계수의 표본 추정량 <span class="math inline">\(\hat \beta\)</span>는 다음과 같다. <span class="math display">\[
 \hat \beta = (X^T X)^{-1}(X y)
 \]</span></p>
