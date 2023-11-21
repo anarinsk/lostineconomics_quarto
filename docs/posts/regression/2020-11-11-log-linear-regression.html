@@ -178,8 +178,8 @@ ul.task-list li input[type="checkbox"] {
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><p>당연히 알고 있다고 생각하지만 모르는 게 생각보다 많다. 회귀 분석에서 로그-리니어 모델, 즉 종속 변수에 로그를 취하고 독립 변수가 선형인 모델에서 계수를 어떻게 이해해야 할까?</p>
 <section id="왜-로그로-변환할까" class="level2">
 <h2 class="anchored" data-anchor-id="왜-로그로-변환할까">왜 로그로 변환할까?</h2>
-<p>우선 이것부터 따져보자. 교과서나 자료를 찾아보면 <span class="math inline">\(y_i\)</span>를 로그 변환하는 이유가 <span class="math inline">\(y_i\)</span>의 분포를 정규분포에 가깝게 만들어주기 때문이라는 내용이 있다. 소표본을 다루는 경우라면 오차 항의 정규 분포를 가정하기 때문에 타당한 이야기일 수도 있다. 대표본이라면 굳이 중심극한정리에 의지하는 것으로 충분하다.</p>
-<p>로그로 변환했을 때 회귀 분석이 보다 타당해지는 경우가 있다. 로그는 곱셈을 덧셈으로 폴어주는 역할을 한다. <span class="math inline">\(y_i = e^{\alpha \beta x_i}\)</span>의 경우 함수 형태가 <span class="math inline">\(e^\alpha\)</span>와 <span class="math inline">\(e^{\beta x_i}\)</span>의 곱으로 구성되어 있고, 이 녀석을 회귀 분석으로 추정하는 것은 적합하지 않다. 이때 <span class="math inline">\(\log y_i\)</span>를 취하면 회귀 분석으로 다루기 좋은 녀석으로 바뀐다.</p>
+<p>우선 이것부터 따져보자. 교과서나 자료를 찾아보면 <span class="math inline">\(y_i\)</span>를 로그 변환하는 이유가 <span class="math inline">\(y_i\)</span>의 분포를 정규분포에 가깝게 만들어주기 때문이라는 내용이 있다. 소표본을 다루는 경우라면 오차 항의 정규 분포를 가정하기 때문에 타당한 이야기일 수도 있다. 대표본이라면 중심 극한 정리(Central Limit Theorem)에 의지하는 것으로 충분하다.</p>
+<p>우선 아래 그림에서 보듯이 로그로 변환했을 때 회귀 분석이 보다 타당해지는 경우가 있다. 로그는 곱셈을 덧셈으로 폴어주는 역할을 한다. <span class="math inline">\(y_i = e^{\alpha \beta x_i}\)</span>의 경우 함수 형태가 <span class="math inline">\(e^\alpha\)</span>와 <span class="math inline">\(e^{\beta x_i}\)</span>의 곱으로 구성되어 있고, 이 녀석을 회귀 분석으로 추정하는 것은 적합하지 않다. 이때 <span class="math inline">\(\log y_i\)</span>를 취하면 회귀 분석으로 다루기 좋은 녀석으로 바뀐다.</p>
 <div>
 
 </div>
