@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.451">
+<meta name="generator" content="quarto-1.4.455">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2022-05-28">
 <meta name="description" content="만일 당신의 표본 크기가 충분하다면…">
 
-<title>lostineconomics.com - 정규 분포에 집착하지 말자.</title>
+<title>lostineconomics.com - 정규성(normality)에 집착하지 말자.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -141,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">정규 분포에 집착하지 말자.</h1>
+<h1 class="title">정규성(normality)에 집착하지 말자.</h1>
   <div class="quarto-categories">
     <div class="quarto-category">regression</div>
   </div>
@@ -181,8 +181,7 @@ ul.task-list li input[type="checkbox"] {
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <ul>
-<li>샘플 크기가 충분하면, 통계적 검정 시 정규 분포 가정에 집착하지 말자.<br>
-</li>
+<li>샘플 크기가 충분하다면 가설 검정 시 정규 분포 가정에 집착할 필요가 없다!</li>
 <li>가설 검정에서 중요한 것은 ’표본 (통계량)’의 분포이지 ’모집단’의 분포가 아니다!</li>
 </ul>
 </section>
@@ -195,20 +194,20 @@ Y_i = \alpha + \beta_1 X_{1i} + \beta_2 X_{2i} + \dotsb + \beta_n X_{ni} + \epsi
 <p>원래 정규 분포 가정은 <span class="math inline">\(\epsilon_i \sim \rm N (0, \sigma^2)\)</span>이다. 그런데 우리는 이 가정을 어떻게 확인할 수 있을까?</p>
 <ul>
 <li><p><span class="math inline">\(Y_i \sim \rm N(\cdot)\)</span>을 확인하면 될까? 원래의 가정은 오차항에 대한 가정이다. 앞에 여러 가지 변수의 작용으로 <span class="math inline">\(Y_i\)</span>가 결정되므로 <span class="math inline">\(Y_i\)</span>가 정규 분포를 따르는 것이 <span class="math inline">\(\epsilon_i\)</span>가 정규분포를 따르는 것의 충분 조건이 되지 않는다. 반면 <span class="math inline">\(\epsilon_i\)</span>가 정규 분포를 따른다고 해서 반드시 <span class="math inline">\(Y_i\)</span>가 정규 분포를 따른다고 볼 수도 없다.</p></li>
-<li><p><span class="math inline">\(\hat\epsilon_i = Y_i - \hat{Y}_i\)</span>가 정규 분포를 따르면 될까? 이 역시 <span class="math inline">\(\hat\epsilon_i\)</span>이 정규 분포를 따른다고 해서 <span class="math inline">\(\epsilon_i\)</span>가 정규 분포를 따르리라고 볼 수 없다. <span class="math inline">\(\hat\epsilon_i\)</span>는 회귀 분석의 모델링 아래 도출된 <span class="math inline">\(\epsilon_i\)</span>에 관한 추정치일 뿐이다. 추정치가 정규 분포를 따른다고 해서 원래 대상도 같은 성질을 지닐까?</p></li>
+<li><p><span class="math inline">\(\hat\epsilon_i = Y_i - \hat{Y}_i\)</span>가 정규 분포를 따르면 될까? 이 역시 <span class="math inline">\(\hat\epsilon_i\)</span>이 정규 분포를 따른다고 해서 <span class="math inline">\(\epsilon_i\)</span>가 정규 분포를 따르리라고 볼 수 없다. <span class="math inline">\(\hat\epsilon_i\)</span>는 회귀 분석의 모델링 아래 도출된 <span class="math inline">\(\epsilon_i\)</span>에 관한 추정치일 뿐이다. 추정치가 정규 분포를 따르는 것이 모수가 정규 분포를 따르는 것의 충분 조건이 되지는 않는다.</p></li>
 </ul>
-<p>회귀 분석에서 오차항은 모델링을 위한 일종의 ’가정’이다. 대체로 모델링의 가정은 받아들이는 것이지 검증하는 것이 아니다.</p>
+<p>회귀 분석에서 오차항은 모델링을 위한 일종의 ’가정’이다. 모델링의 가정은 받아들이는 것이지 검증하는 것이 아니다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>표본이 크지 않을 때 즉 소 표본에 적합한 분석 방법을 찾는 것은 대 표본의 경우에 비해 까다로운 문제이다. 그런데 소 표본에서 회귀 분석은 그리 나쁜 분석 방법이 아니다.</p>
 </div></div></section>
 <section id="표본의-크기가-충분히-크다면" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="표본의-크기가-충분히-크다면">표본의 크기가 충분히 크다면…</h2>
-<p>만일 가정을 받아들일 수 없다면 회귀분석에서 검정을 수행할 수 없을까? 그렇지 않다는 걸 우리는 이미 잘 알고 있다. 만일 표본의 크기가 충분히 크다면 오차 항의 정규 분포 가정 없이도 가설 검정을 할 수 있다.</p>
+<p>만일 가정을 받아들일 수 없다면 회귀분석에서 가설 검정을 수행할 수 없을까? 그렇지 않다는 점을 우리는 이미 잘 알고 있다. 만일 표본의 크기가 충분히 크다면 오차 항의 정규 분포 가정 없이도 중심 극한 정리를 활용해 가설 검정을 할 수 있다.</p>
 <p>행렬을 활용해 나타낸 회귀 분석의 계수의 표본 추정량 <span class="math inline">\(\hat \beta\)</span>는 다음과 같다. <span class="math display">\[
 \hat \beta = (X^T X)^{-1}(X y)
 \]</span></p>
-<p>회귀 분석에서 <span class="math inline">\(\beta_i\)</span>를 검정하기 위한 t-통계량은 다음과 같이 정의된다.</p>
+<p>회귀 분석에서 <span class="math inline">\(\beta_i\)</span>를 검정하기 위한 <span class="math inline">\(t\)</span>-통계량은 다음과 같이 정의된다.</p>
 <p><span class="math display">\[
 t_i = \dfrac{\hat \beta_i - \beta}{S \sqrt{(X^T X)_{ii}^{-1}}}
 \]</span></p>
@@ -221,7 +220,7 @@ S(y_i) = \sqrt{\dfrac{1}{n-k} \sum_{i=1}^n (y_i -  \hat y_i)^2}
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><span class="math inline">\(\sqrt{n}(\beta_i - \beta) \overset{d}{\longrightarrow} \rm N (0, \sigma_i)\)</span> 직관적으로 설명하면 <span class="math inline">\(t_i\)</span>의 분자와 분모 모두 0으로 수렴한다. 이때 분자와 분모의 수렴이 일정한 분포, 정규 분포로 수렴한다는 것이 중심 극한 정리이다.</p>
-</div></div><p>요약하면 표본의 크기가 충분할 때 오차 항의 정규 분포 가정은 잊어도 좋다. 이 가정이 없어도 중심 극한 정리에 따라서 필요한 가설 검정을 수행할 수 있다. t–값과 표준 정규 분포에 근거한 개별 계수의 검정 그리고 F–값과 F 분포에 근거한 전체 계수의 검정이 모두 가능하다. t–값은 항상 t 분포를 따를까? 대 표본이라면, 대략 <span class="math inline">\(n \geq 30\)</span>, t 분포라고 보든 정규 분포라고 보든 문제가 될 것이 없다. 따라서 대표본에서 굳이 t 분포를 고집할 필요는 없다.</p>
+</div></div><p>요약하면 표본의 크기가 충분할 때 오차 항의 정규 분포 가정은 잊어도 좋다. 이 가정이 없어도 중심 극한 정리에 따라서 필요한 가설 검정을 수행할 수 있다. <span class="math inline">\(t\)</span>-값과 표준 정규 분포에 근거한 개별 계수의 검정 그리고 F–값과 F 분포에 근거한 전체 계수의 검정이 모두 가능하다. <span class="math inline">\(t\)</span>-값은 항상 <span class="math inline">\(t\)</span> 분포를 따를까? 대 표본이라면, 대략 <span class="math inline">\(n \geq 30\)</span>, t 분포라고 보든 정규 분포라고 보든 문제가 될 것이 없다. 따라서 대표본에서 굳이 <span class="math inline">\(t\)</span> 분포를 고집할 필요는 없다. 사실 표본의 수가 어느 정도 이상이면 <span class="math inline">\(t\)</span> 분포의 값과 정규 분포의 값의 차이는 무시해도 좋을 만큼 작다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>표본의 크기가 얼마나 크면 될까? <a href="https://www.jclinepi.com/article/S0895-4356(17)%2030485-7">Schmidt and Finan</a>의 연구에 따르면 회귀 모형의 경우 변수 당 대략 10개 이상의 관찰이 필요하다. 옆 그림에서 보듯이 모평균을 추정하는 문제에서 표본 평균의 크기가 30개 이상이면 CLT을 적용할 수 있다.</p>
@@ -235,7 +234,7 @@ S(y_i) = \sqrt{\dfrac{1}{n-k} \sum_{i=1}^n (y_i -  \hat y_i)^2}
 </div>
 <div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
 <figure class="figure">
-<p><a href="http://player.slideplayer.com/76/12695720/slides/slide_3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description="" title="표본의 크기가 커질수록 표본 통계량의 분포는 정규 분포에 근접한다."><img src="http://player.slideplayer.com/76/12695720/slides/slide_3.jpg" class="my-figure7 img-fluid figure-img" alt="표본의 크기가 커질수록 표본 통계량의 분포는 정규 분포에 근접한다."></a></p>
+<p><a href="http://player.slideplayer.com/76/12695720/slides/slide_3.jpg" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-1" title="표본의 크기가 커질수록 표본 통계량의 분포는 정규 분포에 근접한다."><img src="http://player.slideplayer.com/76/12695720/slides/slide_3.jpg" class="my-figure7 img-fluid figure-img" alt="표본의 크기가 커질수록 표본 통계량의 분포는 정규 분포에 근접한다."></a></p>
 <figcaption>표본의 크기가 커질수록 표본 통계량의 분포는 정규 분포에 근접한다.</figcaption>
 </figure>
 </div>
@@ -244,7 +243,8 @@ S(y_i) = \sqrt{\dfrac{1}{n-k} \sum_{i=1}^n (y_i -  \hat y_i)^2}
 </div>
 </div>
 </div>
-<p>위 그림에서 보듯이 가설 검정에서 모집단의 분포는 우리의 관심사가 아니다. 우리의 관심사는 표본 통계량이고, 이 표본 통계량이 얼마나 믿을만지를 가설 검정을 통해 파악한다. 후자를 가능하게 하는 것이 대 표본의 표본 통계량에 대해 성립하는 중심 극한 정리인 셈이다.</p>
+<p>위 그림에서 보듯이 가설 검정에서 모집단의 분포는 우리의 관심사가 아니다. 우리의 관심사는 <strong>표본</strong> 통계량이고, 이 표본 통계량이 얼마나 믿을만 할지를 가설 검정을 통해 파악한다. 후자를 가능하게 하는 것이 대 표본의 표본 통계량에 대해 성립하는 중심 극한 정리인 셈이다.</p>
+<p>물론 주의해야 할 점이 있다. 중심 극한 정리를 제대로 쓰기 위해서는 표본 분산 <span class="math inline">\(S^2\)</span>의 추정이 중요하다. 만일 어떤 이유에서건 분산의 추정에 방해하는 요인이 개입한다면 이에 따라서 가설 검정도 흔들릴 수 밖에 없다. 때문에 정규성보다는 등분산성 그리고 내생성 등에 더 신경을 쓰는 편이 낫다.</p>
 <div>
 
 </div>
@@ -255,7 +255,7 @@ S(y_i) = \sqrt{\dfrac{1}{n-k} \sum_{i=1}^n (y_i -  \hat y_i)^2}
 </div>
 <div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://raw.githubusercontent.com/dfsnow/clt/master/gifs/binom.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-description="" title="p=0.75의 베르누이 시행을 n에 따라서 10,000 번 시뮬레이션한 분포"><img src="https://raw.githubusercontent.com/dfsnow/clt/master/gifs/binom.gif" class="my-figure7 img-fluid figure-img" alt="p=0.75의 베르누이 시행을 n에 따라서 10,000 번 시뮬레이션한 분포"></a></p>
+<p><a href="https://raw.githubusercontent.com/dfsnow/clt/master/gifs/binom.gif" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-2" title="p=0.75의 베르누이 시행을 n에 따라서 10,000 번 시뮬레이션한 분포"><img src="https://raw.githubusercontent.com/dfsnow/clt/master/gifs/binom.gif" class="my-figure7 img-fluid figure-img" alt="p=0.75의 베르누이 시행을 n에 따라서 10,000 번 시뮬레이션한 분포"></a></p>
 <figcaption><span class="math inline">\(p=0.75\)</span>의 베르누이 시행을 <span class="math inline">\(n\)</span>에 따라서 10,000 번 시뮬레이션한 분포</figcaption>
 </figure>
 </div>
@@ -268,8 +268,10 @@ S(y_i) = \sqrt{\dfrac{1}{n-k} \sum_{i=1}^n (y_i -  \hat y_i)^2}
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <ul>
-<li><a href="https://thestatsgeek.com/2013/08/07/assumptions-for-linear-regression/" class="my-figure7">The Stats Geek</a></li>
+<li><a href="https://thestatsgeek.com/2013/08/07/assumptions-for-linear-regression/">The Stats Geek</a></li>
 <li><a href="https://www.youtube.com/watch?%20v=dBB_atu-1QM">Large Sample Inference: 2. Asymptotic Normality</a></li>
+<li><a href="https://www.statisticssolutions.com/free-resources/directory-of-statistical-analyses/normality/">Normality</a></li>
+<li><a href="https://discovery.ucl.ac.uk/id/eprint/10070182/1/Schmidt_UCL_depos_JCE2018.pdf">Linear regression and the normality assumption</a></li>
 </ul>
 
 
@@ -811,7 +813,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom"});</script>
 
 
 
