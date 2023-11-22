@@ -221,12 +221,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>데이터는 <a href="https://towardsdatascience.com/the-curious-case-of-simpsons-paradox-6f178548d7e8">여기</a>를 참고하자.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://user-images.githubusercontent.com/39834789/86522451-84949f00-be38-11ea-9555-6409579f3b58.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description="" title="펭귄 부리의 길이와 높이"><img src="https://user-images.githubusercontent.com/39834789/86522451-84949f00-be38-11ea-9555-6409579f3b58.png" class="img-fluid figure-img" alt="펭귄 부리의 길이와 높이"></a></p>
+<p><a href="https://user-images.githubusercontent.com/39834789/86522451-84949f00-be38-11ea-9555-6409579f3b58.png" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-1" title="펭귄 부리의 길이와 높이"><img src="https://user-images.githubusercontent.com/39834789/86522451-84949f00-be38-11ea-9555-6409579f3b58.png" class="img-fluid figure-img" alt="펭귄 부리의 길이와 높이"></a></p>
 <figcaption>펭귄 부리의 길이와 높이</figcaption>
 </figure>
 </div>
-</div></div><p><code>culmen</code>은 새의 부리를 뜻한다. 옆 그림에서 보듯이 <code>length</code>는 부리의 앞으로 튀어나온 길이를, <code>depth</code>는 부리의 높이를 의미한다. 아래 데이터는 펭귄의 세 가지 종족, 성별 등을 별도로 기록하고 있다.pip</p>
-<div id="60151c98" class="cell" data-execution_count="1">
+</div></div><p><code>culmen</code>은 새의 부리를 뜻한다. 옆 그림에서 보듯이 <code>length</code>는 부리의 앞으로 튀어나온 길이를, <code>depth</code>는 부리의 높이를 의미한다. 아래 보듯이 이 데이터는 펭귄의 세 가지 종족, 성별 등을 별도로 담고 있다.</p>
+<div id="26daed97" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a> <span class="co"># Basic packages</span></span>
@@ -266,7 +266,7 @@ dtypes: float64(4), object(3)
 memory usage: 20.9+ KB</code></pre>
 </div>
 </div>
-<div id="da150009" class="cell" data-execution_count="2">
+<div id="b593201d" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'figure.figsize'</span>] <span class="op">=</span> [<span class="dv">8</span>, <span class="dv">4</span>]</span>
@@ -292,16 +292,16 @@ memory usage: 20.9+ KB</code></pre>
 <p><a href="2022-06-04-simpson-paradox-regression_files/figure-html/cell-3-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="2022-06-04-simpson-paradox-regression_files/figure-html/cell-3-output-1.png" width="730" height="379"></a></p>
 </div>
 </div>
-<p>왼쪽 그림에서 보듯이 종 구분 없이 펭귄 부리의 길이와 높이를 보면 서로 음의 상관성을 지니고 있는 듯 보인다. 그런데 이를 종별로 구별해서 살펴보면 오히려 길이와 높이는 양의 상관성을 지니고 있다.</p>
+<p>패널의 왼쪽 그림에서 보듯이 종 구분 없이 펭귄 부리의 길이와 높이를 보면 서로 음의 상관성을 지니고 있는 듯 보인다. 그런데 이를 종별로 구별해서 살펴보면 오히려 길이와 높이는 양의 상관성을 지니고 있다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://user-images.githubusercontent.com/39834789/86522450-7f375480-be38-11ea-9437-9fd2a382aa7b.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-description="" title="펭귄 종류"><img src="https://user-images.githubusercontent.com/39834789/86522450-7f375480-be38-11ea-9437-9fd2a382aa7b.png" class="img-fluid figure-img" alt="펭귄 종류"></a></p>
+<p><a href="https://user-images.githubusercontent.com/39834789/86522450-7f375480-be38-11ea-9437-9fd2a382aa7b.png" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-3" title="펭귄 종류"><img src="https://user-images.githubusercontent.com/39834789/86522450-7f375480-be38-11ea-9437-9fd2a382aa7b.png" class="img-fluid figure-img" alt="펭귄 종류"></a></p>
 <figcaption>펭귄 종류</figcaption>
 </figure>
 </div>
-</div></div><div id="966a3a05" class="cell" data-execution_count="3">
+</div></div><div id="4ed11514" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ols1 <span class="op">=</span> sm.ols(formula<span class="op">=</span><span class="st">"culmen_depth_mm ~ culmen_length_mm"</span>, data<span class="op">=</span>df).fit(use_t<span class="op">=</span><span class="va">True</span>)</span>
@@ -907,7 +907,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox","loop":false});</script>
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});</script>
 
 
 
