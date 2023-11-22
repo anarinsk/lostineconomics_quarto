@@ -28,7 +28,7 @@ lightbox: auto
 [이 연구](https://www.nature.com/articles/s41467-020-19478-2)는 코로나19 인식에 있어서 충돌 요인의 문제를 다양하게 지적하고 있다. 
 :::
 
-::: {layout="[-1, 3, -1]"}
+::: {layout="[-1, 2, -1]"}
 ![입원 여부는 충돌 요인(collider)이 된다.](./images/covid-hospital.png)
 :::
 

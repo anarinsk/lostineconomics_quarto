@@ -226,24 +226,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div></div><div>
 
 </div>
-<div class="quarto-layout-panel" data-layout="[-1, 3, -1]">
+<div class="quarto-layout-panel" data-layout="[-1, 2, -1]">
 <div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
 <p><a href="./images/covid-hospital.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description="" title="입원 여부는 충돌 요인(collider)이 된다."><img src="./images/covid-hospital.png" class="img-fluid figure-img" alt="입원 여부는 충돌 요인(collider)이 된다."></a></p>
 <figcaption>입원 여부는 충돌 요인(collider)이 된다.</figcaption>
 </figure>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
 </div>
 </div>
 <p>담배를 많이 피울수록 혹은 그래왔을수록 코로나19 이외의 요인으로도 병원에 입원할 가능성이 높아진다. 또한 코로나 증세가 심할수록 병원에 입원할 가능성이 높아진다. 이 경우 병원에 입원한다는 변인이 두 요인(흡연의 정도, 코로나19 중증도) 모두에 영향을 받는 충돌 요인이 된다. 따라서 충돌 요인을 통제할 경우 흡연의 정도와 코로나19의 중증도 사이의 관계가 왜곡된다. 이러한 취지로 데이터를 생성해보도록 하자.</p>
-<div id="15432434" class="cell" data-execution_count="1">
+<div id="e69ed697" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic packages</span></span>
@@ -300,7 +300,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <p>위의 플롯에 따라서 가상의 데이터를 생성했다. 코로나19 중증도는 흡연의 정도에 양의 영향을 받는다. 그리고 흡연의 정도는 별도로 건강에 악영향을 준다. 따라서 코로나19 중증도, 흡연의 정도 모두 해당 환자가 입원할 가능성을 결정하게 된다.</p>
-<div id="1f204338" class="cell" data-execution_count="2">
+<div id="6cb6f616" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>palette <span class="op">=</span> sns.color_palette(<span class="st">"dark"</span>)</span>
@@ -335,7 +335,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>위의 왼쪽 그래프에서 보듯이 추출된 표본 전체에 대해서는 흡연의 정도와 코로나19의 중증도 사이에 양의 관계가 존재한다. 그런데 만일 충돌 요인인 입원 여부를 회귀 분석에서 통제하면 어떻게 될까? 오른쪽 그림에서 보듯이 병원에 입원한 환자에 대해서는 음의 상관성이 관찰된다. 왜 이럴까? 병원의 입원하는 변인은 코로나19의 중증도 이외에 흡연 정도에도 영향을 받는다. 흡연을 많이 할수록 코로나와 관계없이 그 자체로 입원할 가능성이 커진다. 흡연 정도가 낮을 경우 입원을 했다면 코로나19의 중증도에 따른 것일 가능성이 크다. 반면 흡연 정도가 높을 경우 코로나19 중증도는 상대적으로 다양한 상태를 지니게 되고, 따라서 평균적으로는 흡연 정도가 낮은 입원 환자에 비해서 낮은 코로나19 중증도를 지닐 수 있다.</p>
-<div id="76732c70" class="cell" data-execution_count="3">
+<div id="ad022328" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ols1 <span class="op">=</span> sm.ols(formula<span class="op">=</span><span class="st">"covid_severity ~ pack_of_cigar"</span>, data<span class="op">=</span>res).fit(use_t<span class="op">=</span><span class="va">True</span>)</span>
@@ -367,16 +367,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ===============================================
                          (1)     (2)     (3)   
 -----------------------------------------------
-Intercept              0.53*** 0.74*** 2.64*** 
-                       (0.09)  (0.08)  (0.21)  
-pack_of_cigar          0.20*** -0.04   -0.20***
+Intercept              0.59*** 0.77*** 2.60*** 
+                       (0.09)  (0.08)  (0.20)  
+pack_of_cigar          0.18*** -0.05*  -0.20***
                        (0.02)  (0.03)  (0.04)  
-is_hospitalized[T.Yes]         1.19***         
+is_hospitalized[T.Yes]         1.15***         
                                (0.10)          
-R-squared              0.14    0.32    0.07    
-R-squared Adj.         0.14    0.32    0.06    
-N                      546     546     308     
-F                      90.84   128.51  21.28   
+R-squared              0.12    0.28    0.07    
+R-squared Adj.         0.12    0.28    0.06    
+N                      541     541     326     
+F                      72.17   105.48  23.31   
 ===============================================
 Standard errors in parentheses.
 * p&lt;.1, ** p&lt;.05, ***p&lt;.01</code></pre>
@@ -946,7 +946,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"descPosition":"bottom","openEffect":"zoom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 
