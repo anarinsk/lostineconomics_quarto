@@ -1,5 +1,5 @@
 ---
-title: 정규성(normality)에 집착하지 말자. 
+title: 정규성에 집착하지 말자. 
 description: 만일 당신의 표본 크기가 충분하다면...
 author: "JS HUHH"
 date: "05/28/2022"
