@@ -3,8 +3,8 @@ name = "lostineconomics_quarto"
 version = "0.1.0"
 description = "Add a short description here"
 authors = ["Junsok Huhh <anarinsk@gmail.com>"]
-channels = ["conda-forge"]
-platforms = ["linux-64", "osx-arm64"]
+channels = ["conda-forge", "bioconda"]
+latforms = ["linux-64", "osx-arm64"]
 
 [tasks]
 
