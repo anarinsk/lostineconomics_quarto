@@ -4,7 +4,7 @@ description: Windows와 Linux의 컬래버
 author: "JS HUHH"
 date: "11/03/2023"
 image: "./images/cat-windows.webp"
-categories: [walk-through, pc-insall]
+categories: [walk-through, pc-install]
 #fig-align: center
 filters:
    - lightbox
