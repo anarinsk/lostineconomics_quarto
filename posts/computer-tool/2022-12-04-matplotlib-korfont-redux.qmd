@@ -66,6 +66,8 @@ draw_sample()
 $ pip install koreanize-matplotlib 
 ```
 
+위에서 보다시피, `koreanize-matplotlib`는 PyPI에만 있다. conda와 같은 다른 저장소를 통해서는 설치할 수 없다는 것은 유의하시라. 
+
 ```{python}
 import koreanize_matplotlib
 draw_sample()
@@ -123,7 +125,7 @@ draw_sample(fontprop)
 ```{python}
 # rcParams 설정
 plt.rcParams["font.family"] = 'D2 Coding Nerd'
-plt.rcParams['font.size'] = 13.
+plt.rcParams['font.size'] = 15.
 plt.rcParams['xtick.labelsize'] = 12.
 plt.rcParams['ytick.labelsize'] = 12.
 plt.rcParams['axes.labelsize'] = 12.
