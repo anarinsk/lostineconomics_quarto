@@ -50,7 +50,7 @@ import numpy as np
 
 # 그릴 데이터 생성 
 def draw_sample(fontprop=None): 
-    plt.rcParams['figure.figsize'] = [8, 4]
+    plt.rcParams['figure.figsize'] = [4, 4]
     data = np.random.randint(-100, 100, 50).cumsum()
     plt.plot(range(50), data, 'r')
     plt.title('가격변동 추이', fontproperties=fontprop)
