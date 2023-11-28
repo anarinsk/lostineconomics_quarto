@@ -3,8 +3,8 @@ name = "lostineconomics_quarto"
 version = "0.1.0"
 description = "Add a short description here"
 authors = ["Junsok Huhh <anarinsk@gmail.com>"]
-channels = ["conda-forge", "bioconda"]
-latforms = ["linux-64", "osx-arm64"]
+channels = ["conda-forge"]
+platforms = ["linux-64", "osx-arm64"]
 
 [tasks]
 
@@ -34,3 +34,6 @@ matplotlib = "3.8.0.*"
 python = "3.11.*"
 pandas = "2.1.1.*"
 statsmodels = "0.14.0.*"
+
+[pypi-dependencies]
+koreanize-matplotlib = "==0.1.1"
