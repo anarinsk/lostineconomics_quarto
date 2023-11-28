@@ -15,8 +15,6 @@ pandas = "2.1.1.*"
 scipy = "1.11.3.*"
 seaborn = "0.13.0.*"
 statsmodels = "0.14.0.*"
-jupyter = "1.0.0.*"
-#stargazer = "0.*"
 
 [target.osx-arm64.dependencies]
 matplotlib = "3.8.0.*"
@@ -25,7 +23,6 @@ pandas = "2.1.1.*"
 scipy = "1.11.3.*"
 seaborn = "0.13.0.*"
 statsmodels = "0.14.0.*"
-jupyter = "1.0.0.*"
 
 [dependencies]
 scipy = "1.11.3.*"
@@ -34,6 +31,8 @@ matplotlib = "3.8.0.*"
 python = "3.11.*"
 pandas = "2.1.1.*"
 statsmodels = "0.14.0.*"
+jupyter = "1.0.0.*"
 
 [pypi-dependencies]
 koreanize-matplotlib = "==0.1.1"
+stargazer = "*"

@@ -8704,6 +8704,24 @@ package:
   purls:
   - pkg:pypi/stack-data
 - platform: linux-64
+  name: stargazer
+  version: 0.0.6
+  category: main
+  manager: pypi
+  url: https://files.pythonhosted.org/packages/05/ef/bf2eb43ff3047099f3c2f502040fcca384d3b035adf38cefcca96ae6cf92/stargazer-0.0.6-py3-none-any.whl#sha256=99c7800d96e3a04cf0fea18517ab096ca82083ee7edc907e5473deba1786e5e6
+  hash:
+    md5: null
+    sha256: 99c7800d96e3a04cf0fea18517ab096ca82083ee7edc907e5473deba1786e5e6
+- platform: osx-arm64
+  name: stargazer
+  version: 0.0.6
+  category: main
+  manager: pypi
+  url: https://files.pythonhosted.org/packages/05/ef/bf2eb43ff3047099f3c2f502040fcca384d3b035adf38cefcca96ae6cf92/stargazer-0.0.6-py3-none-any.whl#sha256=99c7800d96e3a04cf0fea18517ab096ca82083ee7edc907e5473deba1786e5e6
+  hash:
+    md5: null
+    sha256: 99c7800d96e3a04cf0fea18517ab096ca82083ee7edc907e5473deba1786e5e6
+- platform: linux-64
   name: statsmodels
   version: 0.14.0
   category: main
