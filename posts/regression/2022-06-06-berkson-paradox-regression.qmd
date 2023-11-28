@@ -118,6 +118,8 @@ ax1.set_aspect(1.5); ax2.set_aspect(1.5)
 위의 왼쪽 그래프에서 보듯이 추출된 표본 전체에 대해서는 흡연의 정도와 코로나19의 중증도 사이에 양의 관계가 존재한다. 그런데 만일 충돌 요인인 입원 여부를 회귀 분석에서 통제하면 어떻게 될까? 오른쪽 그림에서 보듯이 병원에 입원한 환자에 대해서는 음의 상관성이 관찰된다. 왜 이럴까? 병원의 입원하는 변인은 코로나19의 중증도 이외에 흡연 정도에도 영향을 받는다. 흡연을 많이 할수록 코로나와 관계없이 그 자체로 입원할 가능성이 커진다. 흡연 정도가 낮을 경우 입원을 했다면 코로나19의 중증도에 따른 것일 가능성이 크다. 반면 흡연 정도가 높을 경우 코로나19 중증도는 상대적으로 다양한 상태를 지니게 되고, 따라서 평균적으로는 흡연 정도가 낮은 입원 환자에 비해서 낮은 코로나19 중증도를 지닐 수 있다. 
 
 ```{python}
+#| layout: [[-0.2,1,-0.2]]
+#| 
 ols1 = sm.ols(formula="covid_severity ~ pack_of_cigar", data=res).fit(use_t=True)
 ols2 = sm.ols(formula="covid_severity ~ pack_of_cigar + is_hospitalized", data=res).fit(use_t=True)
 ols3 = sm.ols(formula="covid_severity ~ pack_of_cigar + is_hospitalized", data=res[res.is_hospitalized=="Yes"]).fit(use_t=True)

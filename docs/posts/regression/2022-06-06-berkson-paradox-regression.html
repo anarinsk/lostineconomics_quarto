@@ -236,7 +236,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="./images/covid-hospital.png" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-1" title="입원 여부는 충돌 요인(collider)이 된다."><img src="./images/covid-hospital.png" class="img-fluid figure-img" alt="입원 여부는 충돌 요인(collider)이 된다."></a></p>
+<p><a href="./images/covid-hospital.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description="" title="입원 여부는 충돌 요인(collider)이 된다."><img src="./images/covid-hospital.png" class="img-fluid figure-img" alt="입원 여부는 충돌 요인(collider)이 된다."></a></p>
 <figcaption>입원 여부는 충돌 요인(collider)이 된다.</figcaption>
 </figure>
 </div>
@@ -246,7 +246,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>담배를 많이 피울수록 혹은 그래왔을수록 코로나19 이외의 요인으로도 병원에 입원할 가능성이 높아진다. 또한 코로나 증세가 심할수록 병원에 입원할 가능성이 높아진다. 이 경우 병원에 입원한다는 변인이 두 요인(흡연의 정도, 코로나19 중증도) 모두에 영향을 받는 충돌 요인이 된다. 따라서 충돌 요인을 통제할 경우 흡연의 정도와 코로나19의 중증도 사이의 관계가 왜곡된다. 이러한 취지로 데이터를 생성해보도록 하자.</p>
-<div id="1d02041b" class="cell" data-execution_count="1">
+<div id="9cf35067" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic packages</span></span>
@@ -303,7 +303,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <p>위의 플롯에 따라서 가상의 데이터를 생성했다. 코로나19 중증도는 흡연의 정도에 양의 영향을 받는다. 그리고 흡연의 정도는 별도로 건강에 악영향을 준다. 따라서 코로나19 중증도, 흡연의 정도 모두 해당 환자가 입원할 가능성을 결정하게 된다.</p>
-<div id="efaa73af" class="cell" data-execution_count="2">
+<div id="de0edf85" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>palette <span class="op">=</span> sns.color_palette(<span class="st">"dark"</span>)</span>
@@ -331,14 +331,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="2022-06-06-berkson-paradox-regression_files/figure-html/cell-3-output-1.png" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-2" title="충돌 요인은 어떻게 작용하는가? pack_of_cigar는 흡연의 정도를 covid_severity는 코로나19 중증도를 의미한다."><img src="2022-06-06-berkson-paradox-regression_files/figure-html/cell-3-output-1.png" width="730" height="321" alt="충돌 요인은 어떻게 작용하는가? pack_of_cigar는 흡연의 정도를 covid_severity는 코로나19 중증도를 의미한다." class="figure-img"></a></p>
+<p><a href="2022-06-06-berkson-paradox-regression_files/figure-html/cell-3-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-description="" title="충돌 요인은 어떻게 작용하는가? pack_of_cigar는 흡연의 정도를 covid_severity는 코로나19 중증도를 의미한다."><img src="2022-06-06-berkson-paradox-regression_files/figure-html/cell-3-output-1.png" width="733" height="321" alt="충돌 요인은 어떻게 작용하는가? pack_of_cigar는 흡연의 정도를 covid_severity는 코로나19 중증도를 의미한다." class="figure-img"></a></p>
 <figcaption>충돌 요인은 어떻게 작용하는가? <code>pack_of_cigar</code>는 흡연의 정도를 <code>covid_severity</code>는 코로나19 중증도를 의미한다.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>위의 왼쪽 그래프에서 보듯이 추출된 표본 전체에 대해서는 흡연의 정도와 코로나19의 중증도 사이에 양의 관계가 존재한다. 그런데 만일 충돌 요인인 입원 여부를 회귀 분석에서 통제하면 어떻게 될까? 오른쪽 그림에서 보듯이 병원에 입원한 환자에 대해서는 음의 상관성이 관찰된다. 왜 이럴까? 병원의 입원하는 변인은 코로나19의 중증도 이외에 흡연 정도에도 영향을 받는다. 흡연을 많이 할수록 코로나와 관계없이 그 자체로 입원할 가능성이 커진다. 흡연 정도가 낮을 경우 입원을 했다면 코로나19의 중증도에 따른 것일 가능성이 크다. 반면 흡연 정도가 높을 경우 코로나19 중증도는 상대적으로 다양한 상태를 지니게 되고, 따라서 평균적으로는 흡연 정도가 낮은 입원 환자에 비해서 낮은 코로나19 중증도를 지닐 수 있다.</p>
-<div id="0704e80e" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ols1 <span class="op">=</span> sm.ols(formula<span class="op">=</span><span class="st">"covid_severity ~ pack_of_cigar"</span>, data<span class="op">=</span>res).fit(use_t<span class="op">=</span><span class="va">True</span>)</span>
@@ -365,21 +364,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co">#                  regressor_order=['Intercept','pack_of_cigar','is_hospitalized[T.Yes]#'])</span></span>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co">#    )</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div id="79760bcf" class="cell quarto-layout-panel" data-execution_count="3" data-layout="[[-0.2,1,-0.2]]">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: center;">
 <table style="text-align:center"><tbody><tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr>
 <tr><td style="text-align:left"></td><td colspan="3"><em>Dependent variable: covid_severity</em></td></tr><tr><td style="text-align:left"></td></tr><tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td><td>(3)</td></tr>
 <tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr>
 
-<tr><td style="text-align:left">Intercept</td><td>0.507<sup>***</sup></td><td>0.778<sup>***</sup></td><td>2.888<sup>***</sup></td></tr>
-<tr><td style="text-align:left"></td><td>(0.091)</td><td>(0.082)</td><td>(0.214)</td></tr>
-<tr><td style="text-align:left">is_hospitalized[T.Yes]</td><td></td><td>1.279<sup>***</sup></td><td></td></tr>
-<tr><td style="text-align:left"></td><td></td><td>(0.095)</td><td></td></tr>
-<tr><td style="text-align:left">pack_of_cigar</td><td>0.201<sup>***</sup></td><td>-0.070<sup>**</sup></td><td>-0.248<sup>***</sup></td></tr>
-<tr><td style="text-align:left"></td><td>(0.023)</td><td>(0.028)</td><td>(0.044)</td></tr>
+<tr><td style="text-align:left">Intercept</td><td>0.474<sup>***</sup></td><td>0.646<sup>***</sup></td><td>2.540<sup>***</sup></td></tr>
+<tr><td style="text-align:left"></td><td>(0.081)</td><td>(0.076)</td><td>(0.215)</td></tr>
+<tr><td style="text-align:left">is_hospitalized[T.Yes]</td><td></td><td>1.133<sup>***</sup></td><td></td></tr>
+<tr><td style="text-align:left"></td><td></td><td>(0.105)</td><td></td></tr>
+<tr><td style="text-align:left">pack_of_cigar</td><td>0.213<sup>***</sup></td><td>-0.022<sup></sup></td><td>-0.182<sup>***</sup></td></tr>
+<tr><td style="text-align:left"></td><td>(0.020)</td><td>(0.028)</td><td>(0.044)</td></tr>
 
 <tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr>
-<tr><td style="text-align: left">Observations</td><td>549</td><td>549</td><td>307</td></tr><tr><td style="text-align: left">R<sup>2</sup></td><td>0.123</td><td>0.342</td><td>0.092</td></tr><tr><td style="text-align: left">Adjusted R<sup>2</sup></td><td>0.122</td><td>0.340</td><td>0.089</td></tr><tr><td style="text-align: left">Residual Std. Error</td><td>0.893 (df=547)</td><td>0.774 (df=546)</td><td>0.846 (df=305)</td></tr><tr><td style="text-align: left">F Statistic</td><td>77.042<sup>***</sup> (df=1; 547)</td><td>142.120<sup>***</sup> (df=2; 546)</td><td>30.968<sup>***</sup> (df=1; 305)</td></tr>
+<tr><td style="text-align: left">Observations</td><td>572</td><td>572</td><td>341</td></tr><tr><td style="text-align: left">R<sup>2</sup></td><td>0.164</td><td>0.307</td><td>0.047</td></tr><tr><td style="text-align: left">Adjusted R<sup>2</sup></td><td>0.163</td><td>0.305</td><td>0.045</td></tr><tr><td style="text-align: left">Residual Std. Error</td><td>0.870 (df=570)</td><td>0.793 (df=569)</td><td>0.873 (df=339)</td></tr><tr><td style="text-align: left">F Statistic</td><td>112.101<sup>***</sup> (df=1; 570)</td><td>126.278<sup>***</sup> (df=2; 569)</td><td>16.876<sup>***</sup> (df=1; 339)</td></tr>
 <tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align: left">Note:</td><td colspan="3" style="text-align: right"><sup>*</sup>p&lt;0.1; <sup>**</sup>p&lt;0.05; <sup>***</sup>p&lt;0.01</td></tr></tbody></table>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
 </div>
 </div>
 <p>회귀 분석에서 이러한 결과를 잘 확인할 수 있다. 회귀 분석에서 현실에 가장 근접한 분석은 회귀식 (1)이다. 입원 여부를 통제하게 될 경우(회귀식 (2))는 흡연의 정도가 코로나19의 중증도에 미치는 영향을 왜곡하게 된다. 벅슨의 역설의 극단적인 버전은 입원한 환자만 표본으로 삼아 분석을 실시하는 경우이다. 회귀식 (3)에서 보듯이 흡연의 정도와 코로나19 중증도의 정도가 가장 많이 왜곡된다.</p>
@@ -397,7 +405,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 55.6%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Survivorship-bias.svg/600px-Survivorship-bias.svg.png" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-3" title="Abraham Wald가 했다는 전설적인 통찰의 사실 여부는 검증된 바 없다고 한다."><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Survivorship-bias.svg/600px-Survivorship-bias.svg.png" class="img-fluid figure-img" alt="Abraham Wald가 했다는 전설적인 통찰의 사실 여부는 검증된 바 없다고 한다."></a></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Survivorship-bias.svg/600px-Survivorship-bias.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-description="" title="Abraham Wald가 했다는 전설적인 통찰의 사실 여부는 검증된 바 없다고 한다."><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Survivorship-bias.svg/600px-Survivorship-bias.svg.png" class="img-fluid figure-img" alt="Abraham Wald가 했다는 전설적인 통찰의 사실 여부는 검증된 바 없다고 한다."></a></p>
 <figcaption>Abraham Wald가 했다는 전설적인 통찰의 사실 여부는 검증된 바 없다고 한다.</figcaption>
 </figure>
 </div>
@@ -946,7 +954,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":false});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom"});</script>
 
 
 
