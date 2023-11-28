@@ -117,7 +117,7 @@ name = "pixi_pytorch"
 version = "0.1.0"
 description = "Add a short description here"
 authors = ["Junsok Huhh <anarinsk@gmail.com>"]
-channels = ["conda-forge", "pytorch", "nvidia"]
+channels = ["pytorch", "nvidia", "conda-forge"]
 platforms = ["win-64", "osx-arm64"]
 
 [tasks]
@@ -133,7 +133,7 @@ pytorch = "2.0.1.*"
 torchvision = "0.15.2.*"
 
 [dependencies]
-ipykernel = "6.25.1.*"
+jupyter = "1.0.0"
 ```
 
 - `target`은 플랫폼별로 특화된 분기를 지정할 수 있다. 
@@ -172,6 +172,13 @@ VS Code에서 `파일` > `작업 영역에 폴더 추가`를 통해 작업 폴�
 
 - (macos) `.pixi/env/bin/pyhon`
 - (windows) `.pixi\env\python.exe`
+
+## 실제 응용 
+
+아래 리포에서 `pixi.toml`을 살펴보시라. 
+
+- [Pytorch OS 플랫폼 별 인스톨 및 테스트](https://github.com/anarinsk/test_pytorch-install/)
+- [PyPI 패키지 설치](https://github.com/anarinsk/lostineconomics_quarto)
 
 ## References
 

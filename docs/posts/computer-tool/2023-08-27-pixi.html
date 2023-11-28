@@ -288,7 +288,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-3"><a href="#cb5-3"></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.1.0"</span></span>
 <span id="cb5-4"><a href="#cb5-4"></a><span class="dt">description</span> <span class="op">=</span> <span class="st">"Add a short description here"</span></span>
 <span id="cb5-5"><a href="#cb5-5"></a><span class="dt">authors</span> <span class="op">=</span> <span class="op">[</span><span class="st">"Junsok Huhh &lt;anarinsk@gmail.com&gt;"</span><span class="op">]</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="dt">channels</span> <span class="op">=</span> <span class="op">[</span><span class="st">"conda-forge"</span><span class="op">,</span> <span class="st">"pytorch"</span><span class="op">,</span> <span class="st">"nvidia"</span><span class="op">]</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="dt">channels</span> <span class="op">=</span> <span class="op">[</span><span class="st">"pytorch"</span><span class="op">,</span> <span class="st">"nvidia"</span><span class="op">,</span> <span class="st">"conda-forge"</span><span class="op">]</span></span>
 <span id="cb5-7"><a href="#cb5-7"></a><span class="dt">platforms</span> <span class="op">=</span> <span class="op">[</span><span class="st">"win-64"</span><span class="op">,</span> <span class="st">"osx-arm64"</span><span class="op">]</span></span>
 <span id="cb5-8"><a href="#cb5-8"></a></span>
 <span id="cb5-9"><a href="#cb5-9"></a><span class="kw">[tasks]</span></span>
@@ -304,7 +304,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-19"><a href="#cb5-19"></a><span class="dt">torchvision</span> <span class="op">=</span> <span class="st">"0.15.2.*"</span></span>
 <span id="cb5-20"><a href="#cb5-20"></a></span>
 <span id="cb5-21"><a href="#cb5-21"></a><span class="kw">[dependencies]</span></span>
-<span id="cb5-22"><a href="#cb5-22"></a><span class="dt">ipykernel</span> <span class="op">=</span> <span class="st">"6.25.1.*"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-22"><a href="#cb5-22"></a><span class="dt">jupyter</span> <span class="op">=</span> <span class="st">"1.0.0"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><code>target</code>은 플랫폼별로 특화된 분기를 지정할 수 있다.
@@ -356,6 +356,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>(macos) <code>.pixi/env/bin/pyhon</code></li>
 <li>(windows) <code>.pixi\env\python.exe</code></li>
+</ul>
+</section>
+<section id="실제-응용" class="level2">
+<h2 class="anchored" data-anchor-id="실제-응용">실제 응용</h2>
+<p>아래 리포에서 <code>pixi.toml</code>을 살펴보시라.</p>
+<ul>
+<li><a href="https://github.com/anarinsk/test_pytorch-install/">Pytorch OS 플랫폼 별 인스톨 및 테스트</a></li>
+<li><a href="https://github.com/anarinsk/lostineconomics_quarto">PyPI 패키지 설치</a></li>
 </ul>
 </section>
 <section id="references" class="level2">
