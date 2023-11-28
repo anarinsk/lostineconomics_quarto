@@ -320,6 +320,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
+<section id="pypi-패키지-설치" class="level2">
+<h2 class="anchored" data-anchor-id="pypi-패키지-설치">PyPI 패키지 설치</h2>
+<p>pixi는 conda를 기반으로 하기 때문에 PyPI 패키지를 설치할 수 없다. 대체로 문제가 되지 않지만, <code>matplotlib</code>, <code>stargazer</code> 등은 PyPI로만 설치할 수 있다. 다행히 0.8 버전부터 PyPI 패키지를 설치할 수 있게 되었다.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>pixi.toml</strong></pre>
+</div>
+<div class="sourceCode" id="cb6" data-filename="pixi.toml"><pre class="sourceCode numberSource toml number-lines code-with-copy"><code class="sourceCode toml"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">[pypi-dependencies]</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="dt">koreanize-matplotlib</span> <span class="op">=</span> <span class="st">"==0.1.1"</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="dt">stargazer</span> <span class="op">=</span> <span class="st">"*"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>아직 실험적인 개발 단계라서 버전 지정 방법 등이 conda와 다르다. <code>*</code>의 경우 최신 버전을 설치한다.</p>
+</section>
 <section id="vs-code" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="vs-code">VS Code</h2>
 <p>VS Code에서 <code>.ipynb</code>로 작업하고 싶다면 간단하다. 윈도의 경우 해당 폴더가 작업 폴더로 잡혀 있다면 커널 선택 시 <code>.pixi...</code> 아래 설치된 커널이 바로 선택가능할 것이다. 만일 그렇지 않다면 커널을 직접 선택해주면 된다.</p>

@@ -144,6 +144,18 @@ ipykernel = "6.25.1.*"
   - `pixi.toml`을 플랫폼A에서 실행하면 `.pixi\` 폴더 아래 cuda 기반의 파이토치가 설치된다. 플랫폼B에는 `.pixi/` 아래 실리콘 맥 기반의 MPS를 활용한 파이토치가 설치된다. 
   - 채널은 플랫폼 별로 구별할 필요가 없다. 플랫폼A는 pytorch, nvidia를 쓰고 플랫폼B는 pytorch 채널을 쓴다. 
 
+## PyPI 패키지 설치 
+
+pixi는 conda를 기반으로 하기 때문에 PyPI 패키지를 설치할 수 없다. 대체로 문제가 되지 않지만, `matplotlib`, `stargazer` 등은 PyPI로만 설치할 수 있다. 다행히 0.8 버전부터 PyPI 패키지를 설치할 수 있게 되었다. 
+
+```{.toml filename="pixi.toml"}
+[pypi-dependencies]
+koreanize-matplotlib = "==0.1.1"
+stargazer = "*"
+```
+
+아직 실험적인 개발 단계라서 버전 지정 방법 등이 conda와 다르다. `*`의 경우 최신 버전을 설치한다.
+
 ## VS Code 
 
 VS Code에서 `.ipynb`로 작업하고 싶다면 간단하다. 윈도의 경우 해당 폴더가 작업 폴더로 잡혀 있다면 커널 선택 시 `.pixi...` 아래 설치된 커널이 바로 선택가능할 것이다. 만일 그렇지 않다면 커널을 직접 선택해주면 된다. 
