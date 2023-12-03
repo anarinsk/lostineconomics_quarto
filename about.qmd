@@ -4,9 +4,9 @@ image: "title_images/profile-5.jfif"
 about:
   template: trestles
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/anarinsk
+    - icon: envelope
+      text: Bluesky
+      href: https://bsky.app/profile/anari.lostineconomics.com
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/jun-sok-huhh-bb539a19/
