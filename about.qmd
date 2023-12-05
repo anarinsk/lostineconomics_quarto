@@ -4,7 +4,7 @@ image: "title_images/profile-5.jfif"
 about:
   template: trestles
   links:
-    - icon: envelope
+    - icon: square
       text: Bluesky
       href: https://bsky.app/profile/anari.lostineconomics.com
     - icon: linkedin
