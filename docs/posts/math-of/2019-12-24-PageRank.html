@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.455">
+<meta name="generator" content="quarto-1.4.451">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -235,7 +235,8 @@ A^T =
 \dfrac{L_{1n}}{m_n}&amp; \dotsc&amp; \dfrac{L_{nn}}{m_n}
 \end{bmatrix}
 \]</span></p>
-<p><span class="math inline">\(A^T\)</span>를 들어다보자. 일단, 행을 더하면 1이 된다. 즉, <span class="math inline">\(i\)</span>에서 <span class="math inline">\(i\)</span>를 포함해서 어디론가는 가야 한다는 뜻이다. 다음으로 <span class="math inline">\(L_\cdot\)</span>의 정의를 살펴보면 <span class="math inline">\(j \to i\)</span>의 이행확률은 <span class="math inline">\(j\)</span>가 <span class="math inline">\(i\)</span>로 향하는 링크를 지닐 경우는 <span class="math inline">\(\frac{1}{m_i}\)</span>가 되고, 그렇지 않으면 0이다. 페이지와 브린이 정의한 random surfer라는 게 결국 이런 내용이다. <span class="math inline">\(m_i\)</span>의 링크 중에서 특별히 선호하는 링크 없이 무작위로 하나를 골라서 나간다는 가정이 숨어 이는 셈이다. 아울러 해당 링크를 선택하는 데에는 현재의 가능성 이외에 그 전의 선택은 고려되지 않는다. 이점에서 이번 기의 선택에 바로 전기만 영향을 끼치는 마르코프 프로세스의 가정과 일치한다.</p>
+<p><span class="math inline">\(A^T\)</span>를 들어다보자. 일단, 행을 더하면 1이 된다. 즉, <span class="math inline">\(i\)</span>에서 <span class="math inline">\(i\)</span>를 포함해서 어디론가는 가야 한다는 뜻이다. 다음으로 <span class="math inline">\(L_\cdot\)</span>의 정의를 살펴보면 <span class="math inline">\(j \to i\)</span>의 이행확률은 <span class="math inline">\(j\)</span>가 <span class="math inline">\(i\)</span>로 향하는 링크를 지닐 경우는 <span class="math inline">\(\frac{1}{m_i}\)</span>가 되고, 그렇지 않으면 0이다. 페이지와 브린이 정의한 random surfer의 의미가 이것이다. <span class="math inline">\(m_i\)</span>의 링크 중에서 특별히 선호하는 링크 없이 무작위로 하나를 골라서 나간다는 가정이다. 아울러 해당 링크를 선택하는 데에는 현재의 가능성 이외에 그 전의 선택은 고려되지 않는다. 이점에서 이번 기의 선택에 바로 전기만 영향을 끼치는 마르코프 프로세스의 가정과 일치한다.</p>
+<p>한편 행 <span class="math inline">\(i\)</span>는 <span class="math inline">\(j \to i\)</span>로 들어오는 링크를 의미한다. <span class="math inline">\(L_{\cdot j}\)</span>가 1이 많을수록 <span class="math inline">\(i\)</span>로 오는 링크가 많다는 뜻이다. 즉, 이 링크는 영향력이 높은 링크를 뜻한다.</p>
 </section>
 <section id="why-broken" class="level3">
 <h3 class="anchored" data-anchor-id="why-broken">Why broken?</h3>
