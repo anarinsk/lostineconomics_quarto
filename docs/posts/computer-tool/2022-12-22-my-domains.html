@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.451">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -25,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -88,13 +88,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
+  "limit": 20,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -117,9 +111,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
+      <div class="navbar-brand-container">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">lostineconomics.com</span>
     </a>
@@ -131,33 +125,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
-<span class="menu-text">about</span></a>
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../project.html"> 
-<span class="menu-text">project</span></a>
+    <a class="nav-link" href="../../project.html" rel="" target="">
+ <span class="menu-text">project</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/anarinsk"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/anarinsk" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
-<span class="menu-text"></span></a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/anarinsk"> <i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/anarinsk" rel="" target=""><i class="bi bi-twitter" role="img">
 </i> 
-<span class="menu-text"></span></a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
-<span class="menu-text"></span></a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
+          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -206,9 +200,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
-
 </header>
-
 
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
@@ -247,16 +239,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="도메인-확인하기-1-github">도메인 확인하기 1 (GitHub)</h3>
 <p>먼저 연결하고자 하는 도메인이 소유자의 것이 맞는지를 확인하는 절차가 필요하다. 깃허브의 계정 <code>Settings</code> &gt; “Code, planning, and autiomation” 섹션에 <code>Pages</code>라는 항목으로 들어가보자.</p>
 <p><code>www</code>를 제외하고 구입한 도메인 이름을 넣으면 아래와 같은 창이 뜬다. 1번은 도메인의 앞에 붙여줄 하위 주소 이름이고, 2번은 이를 인증할 수 있는 값이다. 이 창을 띄워 두고 도에인 구입처로 가자. 두 값은 아래 그림처럼 버튼을 통해 복사하면 된다.</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[[-20, 60, -20]]">
+<div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
-<p><a href="images/verifying-domain-masked.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/verifying-domain-masked.png" class="img-fluid"></a></p>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/verifying-domain-masked.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/verifying-domain-masked.png" class="img-fluid figure-img"></a></p>
+</figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
 <p>&nbsp;</p>
@@ -278,16 +269,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>옆의 3600은 그대로 두면 된다. 구글 도메인스에서도 이를 권장한다.</li>
 </ul></li>
 </ul>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[[-20, 60, -20]]">
+<div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
-<p><a href="images/position.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/position.png" class="img-fluid"></a></p>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/position.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/position.png" class="img-fluid figure-img"></a></p>
+</figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
 <p>&nbsp;</p>
@@ -305,16 +295,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>특정한 리포지터리의 깃허브 페이지(<code>{유저-ID}.github.io/{리포지터리-이름}</code>)를 도메인과 연결하기 위해서는 두 가지 과정이 필요하다. Google Domains에서 DNS 설정을 통해 CNAME을 설정해야 한다. CNAME이란 도메인의 이름에서 도메인의 이름으로 연결해주기 위한 설정이라고 생각하면 쉽다. 앞서와 같이 구글 도메인스의 DNS 설정으로 가자.</p>
 <section id="도메인-연결-1-google-domains" class="level3">
 <h3 class="anchored" data-anchor-id="도메인-연결-1-google-domains">도메인 연결 1 (Google Domains)</h3>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[[-20, 60, -20]]">
+<div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
-<p><a href="images/cname.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/cname.png" class="img-fluid"></a></p>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/cname.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/cname.png" class="img-fluid figure-img"></a></p>
+</figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
 <p>&nbsp;</p>
@@ -346,16 +335,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="곁눈질-www가-없는-호출-포위딩하기">곁눈질; <code>www</code>가 없는 호출 포위딩하기</h2>
 <p>웹페이지에 들어갈 때 <code>www</code>를 쓰지 않는 경우가 있다. 이런 경우에도 해당 페이지로 잘 안내되는 것은 최상위 도메인이 <code>www</code> 등이 붙은 하위 도메인으로 연결되기 때문이다. 이를 구현하려면 구글 도메인스 DNS 설정에서 “A” 유형을 추가하면 된다. A 유형은 해당 호출을 바로 IP로 연결해준다. 해당 IP는 앞서 설정한 CNAME과 같기 때문에 원 도메인이 CNAME 도메인으로 연결된다.</p>
 <p>앞서 <code>dig</code> 명령을 실행하면 포워딩되는 IP 주소를 확인할 수 있다. 이를 DNS 레코드 관리에서 설정해주자. 도메인 이름은 비워둔다. 유형에는 “A”를 설정하고, 데이터에는 연결되는 IP 주소를 가급적 다 적어주자.</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[[-20, 60, -20]]">
+<div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
-<p><a href="images/atype.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/atype.png" class="img-fluid"></a></p>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/atype.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/atype.png" class="img-fluid figure-img"></a></p>
+</figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
 <p>&nbsp;</p>
@@ -363,16 +351,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>구글 도메인의 전체적인 DNS 설정을 한번 정리해보자.</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[[-20, 60, -20]]">
+<div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
-<p><a href="images/google-domains.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/google-domains.png" class="img-fluid"></a></p>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/google-domains.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/google-domains.png" class="img-fluid figure-img"></a></p>
+</figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
 <p>&nbsp;</p>
@@ -433,7 +420,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="a-follow-up">A follow-up</h2>
 <p>빌어먹을 구글이 Domains 서비스를 접었다. 하지만 우리에게는 그에 못지 않은 훌륭한 대안이 있다. 도메인 구매와 DNS 관리 그리고 analytics까지 모두 제공하는 <a href="https://www.cloudflare.com/products/registrar/">Cloudflare</a>를 추천한다. 큰 회사라서 안정성도 큰 염려는 없을 듯 싶다. (하지만 구글은…)</p>
 <p>가입 후 웹 사이트를 등록하면서 DNS을 바꿔주면 그 이후 세부 설정을 할 수 있다. 이 홈페이지의 예시를 간략하게 스샷으로 소개하겠다. 도메인 관리의 모든 기능이 제공되고 인터페이스도 편리하다.</p>
-<p><a href="images/cloudflare.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/cloudflare.png" class="img-fluid"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/cloudflare.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/cloudflare.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <ol type="1">
 <li><code>lostineconomics.com</code> → <code>www.lostineconomics.com</code> 으로 연결 <a href="#곁눈질-www가-없는-호출-포위딩하기">이동</a></li>
 <li><code>www.lostineconomics</code> → <code>anarinsk.github.io</code>로 연결 <a href="#도메인-연결-1-google-domains">이동</a></li>
@@ -486,33 +477,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
-    }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -581,15 +545,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  let localAlternateSentinel = 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -668,9 +630,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+  function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
+      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -680,17 +643,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start',
+      placement: 'bottom-start'
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -703,128 +657,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
-        }
-        typesetMath(container);
-        return container.innerHTML
-      } else {
-        typesetMath(note);
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      typesetMath(note);
-      return note.innerHTML;
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -868,7 +700,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
-            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -894,32 +725,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -980,8 +785,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});</script>
-
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":true,"openEffect":"zoom","descPosition":"bottom"});</script>
 
 
 

@@ -32,7 +32,11 @@ $$
 - 알려진 분포도 없다. 
 - 표본 추출은 평균이 $\mu$이고 분산이 $\sigma^2 < \infty$인 분포에서 IID(independent and identically distributed)로 생성된다. 
 
-## Unbiasedness and Consistency
+## Finite Sample vs Asymptotic Properties
+
+"유한 표본"이란 어떤 크기든 표본의 크기가 정해져 있다는 의미이다. 가끔 "소 표본 small sample"이라는 표현도 활용된다. "점근적 특성 asymptotic properties"이란 표본 크기가 계속 커질 때 추정량이 지니는 특성을 의미한다. 통계학을 가르칠 때는 유한 표본의 추정량(estimator)에 관해 엄밀하게 내용을 배우지만, 실용적인 관점에서 중요한 것은 추량량의 점근적 특징이다. 
+
+## Unbiasedness, Efficiency, Consistency
 
 파라미터 $\theta$와 추정량 $\hat \theta$이 있다고 하자. 
 
@@ -45,9 +49,19 @@ $$
 \E(\hat \theta) = \theta
 $$
 
-추정량의 시퀀스 $\lbrace \hat\theta_n \rbrace$이 있다고 할 때, 
+불편성은 추정량의 중요한 특징이지만, 불편성 하나로는 충분하지 않다. 극단적인 예로 $X$에서 추출된 샘플 하나를 $x_1$라고 하자. 이 샘플 하나를 추정량으로 쓰면 이 역시 불편성을 지니고 있다. 하지만 이 추정량은 좋은 추정량이 아니다. 
+
+**Efficiency**
+$\theta$에 대해서 $\hat \theta_1$과 $\hat \theta_2$ 두 개의 추정량이 있다고 하자. 
+$$
+\rm{Var} (\hat\theta_1) \leq \rm{Var} (\hat\theta_2)
+$$
+
+모든 $\theta$에 대해서 위의 부등식이 성립하고, 적어도 하나의 $\theta$에 대해서 강 부등호가 성립하면 $\hat\theta_1$이 $\hat\theta_2$보다 효율적이다. 
 
 **Consistent**
+
+추정량의 시퀀스 $\lbrace \hat\theta_n \rbrace$이 있다고 할 때, 
 $$
 \underset{n \to \infty}{\rm plim}~\hat\theta_n = \theta  
 $$
