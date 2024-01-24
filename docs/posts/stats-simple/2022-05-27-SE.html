@@ -45,6 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -197,6 +200,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="finite-sample-vs-asymptotic-properties" class="level2">
 <h2 class="anchored" data-anchor-id="finite-sample-vs-asymptotic-properties">Finite Sample vs Asymptotic Properties</h2>
 <p>“유한 표본”이란 어떤 크기든 표본의 크기가 정해져 있다는 의미이다. 가끔 “소 표본 small sample”이라는 표현도 활용된다. “점근적 특성 asymptotic properties”이란 표본 크기가 계속 커질 때 추정량이 지니는 특성을 의미한다. 통계학을 가르칠 때는 유한 표본의 추정량(estimator)에 관해 엄밀하게 내용을 배우지만, 실용적인 관점에서 중요한 것은 추량량의 점근적 특징이다.</p>
+<p>점근적 특성에서 중요한 내용은 두 개다. 하나는 일치성, 즉 샘플의 크기가 커질수록 추정량이 모수에 접근한다는 것이다. 다른 하나는 중심 극한 정리다. 샘플의 크기가 커질수록 추정량의 분포가 정규 분포에 접근한다는 것이다.</p>
 </section>
 <section id="unbiasedness-efficiency-consistency" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="unbiasedness-efficiency-consistency">Unbiasedness, Efficiency, Consistency</h2>
@@ -218,7 +222,7 @@ ul.task-list li input[type="checkbox"] {
 \]</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" class="my-figure7 img-fluid figure-img"></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" class="lightbox" title="파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다." data-gallery="quarto-lightbox-gallery-1"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다.</figcaption>
 </figure>
 </div>
@@ -352,11 +356,21 @@ t(\mu) = \frac{\overline{Y}-\mu}{\widehat{SE}(\overline{Y})}
 \]</span></p>
 <p>우선 <span class="math inline">\(t-\)</span>통계량의 분자와 분모를 살펴보면, 각각 <span class="math inline">\(n\)</span>이 커질 때 분자와 분모는 모두 0으로 수렴한다. 이 비율이 정규분포에 수렴하는 게 되는 이유는 중심극한 정리를 이용해 증명할 수 있다. 일단 결론만 기억하도록 하자. <span class="math inline">\(t\)</span>는 표본 크기 <span class="math inline">\(n\)</span>이 증가하면서 표준 정규 분포에 근사하게 된다. 이를 점근적 정규 분포(asymptotically normal)라고 칭한다.</p>
 <p>다시 말하면, <span class="math inline">\(\ES{Y}_n\)</span>은 평균이 <span class="math inline">\(\mu\)</span>이고 표준편차가 <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span>인 정규 분포에 근사하게 된다. 따라서 표본 크기가 커짐에 따라서 <span class="math inline">\(t-\)</span>통계량은 표준 정규 분포를 점점 닮아간다.</p>
-<div class="quarto-figure quarto-figure-center">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 75.0%;justify-content: center;">
 <figure class="figure">
-<p><img src="https://miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg" class="my-figure7 img-fluid figure-img"></p>
+<p><a href="https://miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg" class="lightbox" title="n이 커질수록 \ES{X}_n의 분포는 표준 정규 분포에 근접한다." data-gallery="quarto-lightbox-gallery-2"><img src="https://miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption"><span class="math inline">\(n\)</span>이 커질수록 <span class="math inline">\(\ES{X}_n\)</span>의 분포는 표준 정규 분포에 근접한다.</figcaption>
 </figure>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
 </div>
 <p><span class="math inline">\(t-\)</span>통계량은 대 표본(large sample)의 통계적 검정에 핵심을 이룬다. 원래 자료가 어느 분포에서 나왔는지와 관계없이 표본에 근거한 <span class="math inline">\(t-\)</span>통계량은 정규 분포를 따르게 되고, 이를 통해 가설 검정을 실시할 수 있다.</p>
 
@@ -460,17 +474,37 @@ S(y_i)^2 = \dfrac{1}{n-k} \sum_{i=1}^n (y_i -  x^r_i \hat\beta)
 </section>
 <section id="clt-and-lln-illustrated" class="level3">
 <h3 class="anchored" data-anchor-id="clt-and-lln-illustrated">CLT and LLN illustrated</h3>
-<div class="quarto-figure quarto-figure-center">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
 <figure class="figure">
-<p><img src="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-2.png" class="my-figure7 img-fluid figure-img"></p>
+<p><a href="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-2.png" class="lightbox" title="CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다." data-gallery="quarto-lightbox-gallery-3"><img src="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-2.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다.</figcaption>
 </figure>
 </div>
-<div class="quarto-figure quarto-figure-center">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
 <figure class="figure">
-<p><img src="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-3.png" class="my-figure7 img-fluid figure-img"></p>
+<p><a href="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-3.png" class="lightbox" title="LLN; n이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 x 축의 범위를 0, 1 사이로 고정했다." data-gallery="quarto-lightbox-gallery-4"><img src="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-3.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">LLN; <span class="math inline">\(n\)</span>이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 <span class="math inline">\(x\)</span> 축의 범위를 0, 1 사이로 고정했다.</figcaption>
 </figure>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
 </div>
 
 
@@ -827,6 +861,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"loop":true,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});</script>
 
 
 
