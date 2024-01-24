@@ -72,7 +72,7 @@ $$
 \underset{n \to \infty}{\rm plim}~\hat\theta_n = \theta  
 $$
 
-::: {layout="[[-10, 60, -10]]" layout-valign="bottom"}
+::: {layout="[[-10, 89, -10]]" layout-valign="bottom"}
 ![파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다.](https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg)
 :::
 
