@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.455">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -54,7 +54,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -79,9 +85,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">lostineconomics.com</span>
     </a>
@@ -93,33 +99,33 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">about</span></a>
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../project.html" rel="" target="">
- <span class="menu-text">project</span></a>
+    <a class="nav-link" href="../../project.html"> 
+<span class="menu-text">project</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/anarinsk" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/anarinsk"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/anarinsk" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/anarinsk"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -169,7 +175,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><div class="hidden">
 <p><span class="math display">\[
@@ -181,13 +189,13 @@ ul.task-list li input[type="checkbox"] {
 <section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <ul>
-<li>기본 통계학 용어와 개념 몇 가를 정리해 보자.</li>
-<li>자주 잊어먹는 나를 위한 개인적인 용도</li>
+<li>기본 통계학 용어와 개념 몇 개를 두서없이 내 맘대로 정리한다.</li>
+<li>자주 잊는 나를 위한 개인적인 용도</li>
 </ul>
 </section>
 <section id="why" class="level2">
 <h2 class="anchored" data-anchor-id="why">Why</h2>
-<p>통계학을 들은 사람들이라면 표준 오차는 대체로 잘 아는 내용이다. 그런데 가끔 까먹는다. 개인적인 용도를 위해서 관련된 앞뒤 내용 몇 가지 정리해둔다.</p>
+<p>통계학을 배운 사람들이라면 표준 오차는 대체로 잘 아는 내용이다. 그런데 나는 가끔 까먹는다. 개인적인 용도를 위해서 관련된 앞뒤 내용 몇 가지를 순서 없이 정리해둔다.</p>
 </section>
 <section id="big-ifs" class="level2">
 <h2 class="anchored" data-anchor-id="big-ifs">Big Ifs</h2>
@@ -200,7 +208,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="finite-sample-vs-asymptotic-properties" class="level2">
 <h2 class="anchored" data-anchor-id="finite-sample-vs-asymptotic-properties">Finite Sample vs Asymptotic Properties</h2>
 <p>“유한 표본 finite sample”이란 어떤 크기든 표본의 크기가 정해져 있다는 의미이다. 가끔 “소 표본 small sample”이라는 표현도 활용된다. “점근적 특성 asymptotic properties”이란 표본 크기가 계속 커질 때 추정량이 지니는 특성을 의미한다. 통계학을 가르칠 때는 유한 표본의 추정량(estimator)에 관해 엄밀하게 내용을 배우지만, 실용적인 관점에서 중요한 것은 추량량의 점근적 특징이다.</p>
-<p>점근적 특성에서 중요한 내용은 두 개다. 하나는 일치성, 즉 샘플의 크기가 커질수록 추정량이 모수에 접근한다는 것이다. 다른 하나는 중심 극한 정리다. 샘플의 크기가 커질수록 추정량의 분포가 정규 분포에 접근한다는 것이다.</p>
+<p>점근성에서 가장 중요한 내용은 두 개다. 일치성은 샘플의 크기가 커질수록 추정량이 모수에 접근하는 특징이다. 다른 하나는 중심 극한 정리이다. 샘플의 크기가 커질수록 추정량의 분포가 정규 분포에 접근하게 된다. 일치성이 확보되면 추정량이 불편성을 지니고 있지 않아도 표본의 크기가 커질수록 참 값이 충분히 가깝게 접근한다. 한편 중심 극한 정리는 추정량의 통계적인 검정을 위한 필수적인 방법을 제공한다.</p>
 </section>
 <section id="unbiasedness-efficiency-consistency" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="unbiasedness-efficiency-consistency">Unbiasedness, Efficiency, Consistency</h2>
@@ -211,8 +219,9 @@ ul.task-list li input[type="checkbox"] {
 </div></div><p><strong>Unbiased</strong> <span class="math display">\[
 \E(\hat \theta) = \theta
 \]</span></p>
-<p>불편성은 추정량의 중요한 특징이지만, 불편성 하나로는 충분하지 않다. 극단적인 예로 <span class="math inline">\(X\)</span>에서 추출된 샘플 하나를 <span class="math inline">\(x_1\)</span>라고 하자. 이 샘플 하나를 추정량으로 쓰면 이 역시 불편성을 지니고 있다. 하지만 이 추정량은 좋은 추정량이 아니다.</p>
-<p><strong>Efficiency</strong> <span class="math inline">\(\theta\)</span>에 대해서 <span class="math inline">\(\hat \theta_1\)</span>과 <span class="math inline">\(\hat \theta_2\)</span> 두 개의 추정량이 있다고 하자. <span class="math display">\[
+<p>불편성은 추정량의 중요한 특징이지만, 불편성만으로 충분하지 않다. 극단적인 예로 <span class="math inline">\(X\)</span>에서 추출된 샘플 하나를 <span class="math inline">\(x_1\)</span>라고 하자. 이 샘플 하나를 추정량으로 쓰면 이 역시 불편성을 지니고 있다 (<span class="math inline">\(\E(x_1) = \theta\)</span>). 하지만 이 추정량은 좋은 추정량이 아니다.</p>
+<p><strong>Efficiency</strong></p>
+<p><span class="math inline">\(\theta\)</span>에 대해서 <span class="math inline">\(\hat \theta_1\)</span>과 <span class="math inline">\(\hat \theta_2\)</span> 두 개의 추정량이 있다고 하자. <span class="math display">\[
 \rm{Var} (\hat\theta_1) \leq \rm{Var} (\hat\theta_2)
 \]</span></p>
 <p>모든 <span class="math inline">\(\theta\)</span>에 대해서 위의 부등식이 성립하고, 적어도 하나의 <span class="math inline">\(\theta\)</span>에 대해서 강 부등호가 성립하면 <span class="math inline">\(\hat\theta_1\)</span>이 <span class="math inline">\(\hat\theta_2\)</span>보다 효율적이다.</p>
@@ -220,15 +229,18 @@ ul.task-list li input[type="checkbox"] {
 <p>추정량의 시퀀스 <span class="math inline">\(\lbrace \hat\theta_n \rbrace\)</span>이 있다고 할 때, <span class="math display">\[
 \underset{n \to \infty}{\rm plim}~\hat\theta_n = \theta  
 \]</span></p>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[-10, 89, -10]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.2%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 81.7%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 81.7%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" class="lightbox" title="파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다." data-gallery="quarto-lightbox-gallery-1"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다.</figcaption>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description="" title="파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다."><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" class="img-fluid figure-img" alt="파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다."></a></p>
+<figcaption>파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.2%;justify-content: center;">
@@ -341,7 +353,7 @@ Z_n = \lim_{n \to \infty} \dfrac{\ES{Y}_n - \mu}{\frac{\sigma}{\sqrt{n}}} \sim \
 <p><span class="math display">\[
 S^2_n = \dfrac{1}{n-1} \sum_{i=1}^{n} (Y_i - \ES{Y}_n)^2
 \]</span></p>
-<p><span class="math inline">\(S^2_n\)</span>은 <a href="#s2-n-1">불편 추정량</a>이고 <a href="#s2-consistent">일치 추정량</a>이다. <span class="math inline">\(n\)</span>이 충분히 크다면 불편 추정량 여부는 중요하지 않다. <span class="math inline">\(\dfrac{1}{10000}\)</span>과 <span class="math inline">\(\dfrac{1}{9999}\)</span>의 차이가 큰 의미가 있을까? <span class="math inline">\((n-1)\)</span> 대신 <span class="math inline">\(n\)</span>이 들어간 표본 추정량과 일치성을 유지한다.</p>
+<p><span class="math inline">\(S^2_n\)</span>은 <a href="#s2-n-1">불편 추정량</a>이고 <a href="#s2-consistent">일치 추정량</a>이다. <span class="math inline">\(n\)</span>이 충분히 크다면 불편 추정량 여부는 중요하지 않다. <span class="math inline">\(\dfrac{1}{10000}\)</span>과 <span class="math inline">\(\dfrac{1}{9999}\)</span>의 차이가 큰 의미가 있을까? <span class="math inline">\((n-1)\)</span> 대신 <span class="math inline">\(n\)</span>이 들어간 표본 추정량 역시 일치성을 지니고 있다.</p>
 </section>
 <section id="standard-error" class="level2">
 <h2 class="anchored" data-anchor-id="standard-error">Standard Error</h2>
@@ -364,17 +376,20 @@ SE = \dfrac{\sigma}{\sqrt{n}}
 <p><span class="math display">\[
 t(\mu) = \frac{\overline{Y}-\mu}{\widehat{SE}(\overline{Y})}
 \]</span></p>
-<p>우선 <span class="math inline">\(t-\)</span>통계량의 분자와 분모를 살펴보면, 각각 <span class="math inline">\(n\)</span>이 커질 때 분자와 분모는 모두 0으로 수렴한다. 이 비율이 정규분포에 수렴하는 게 되는 이유는 중심극한 정리를 이용해 증명할 수 있다. 일단 결론만 기억하도록 하자. <span class="math inline">\(t\)</span>는 표본 크기 <span class="math inline">\(n\)</span>이 증가하면서 표준 정규 분포에 근사하게 된다. 이를 점근적 정규 분포(asymptotically normal)라고 칭한다.</p>
-<p>다시 말하면, <span class="math inline">\(\ES{Y}_n\)</span>은 평균이 <span class="math inline">\(\mu\)</span>이고 표준편차가 <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span>인 정규 분포에 근사하게 된다. 따라서 표본 크기가 커짐에 따라서 <span class="math inline">\(t-\)</span>통계량은 표준 정규 분포를 점점 닮아간다.</p>
-<div class="quarto-layout-panel">
+<p>우선 <span class="math inline">\(t-\)</span>통계량의 분자와 분모를 살펴보면, 각각 <span class="math inline">\(n\)</span>이 커질 때 분자와 분모는 모두 0으로 수렴한다. 이 비율이 정규분포에 수렴하는 게 되는 이유는 중심극한 정리를 이용해 증명할 수 있다. 일단 결론만 기억하도록 하자. <span class="math inline">\(t\)</span>-통계량은 표본 크기 <span class="math inline">\(n\)</span>이 증가하면서 표준 정규 분포에 근사하게 된다. 즉 점근적으로 (표준) 정규분포(asymptotically normal)가 된다.</p>
+<p>다시 말하면 <span class="math inline">\(\ES{Y}_n\)</span>은 평균이 <span class="math inline">\(\mu\)</span>이고 표준편차가 <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span>인 정규 분포에 근사하게 된다. 따라서 표본 크기가 커짐에 따라서 <span class="math inline">\(t-\)</span>통계량은 표준 정규 분포를 점점 닮아간다.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[-10, 60, -10]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 75.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg" class="lightbox" title="n이 커질수록 \ES{X}_n의 분포는 표준 정규 분포에 근접한다." data-gallery="quarto-lightbox-gallery-2"><img src="https://miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption"><span class="math inline">\(n\)</span>이 커질수록 <span class="math inline">\(\ES{X}_n\)</span>의 분포는 표준 정규 분포에 근접한다.</figcaption>
+<p><a href="https://miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-description="" title="n이 커질수록 \ES{X}_n의 분포는 표준 정규 분포에 근접한다."><img src="https://miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg" class="img-fluid figure-img" alt="n이 커질수록 \ES{X}_n의 분포는 표준 정규 분포에 근접한다."></a></p>
+<figcaption><span class="math inline">\(n\)</span>이 커질수록 <span class="math inline">\(\ES{X}_n\)</span>의 분포는 표준 정규 분포에 근접한다.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
@@ -382,11 +397,14 @@ t(\mu) = \frac{\overline{Y}-\mu}{\widehat{SE}(\overline{Y})}
 </div>
 </div>
 </div>
-<p><span class="math inline">\(t-\)</span>통계량은 대 표본(large sample)의 통계적 검정에 핵심을 이룬다. 원래 자료가 어느 분포에서 나왔는지와 관계없이 표본에 근거한 <span class="math inline">\(t-\)</span>통계량은 정규 분포를 따르게 되고, 이를 통해 가설 검정을 실시할 수 있다.</p>
+<p><span class="math inline">\(t-\)</span>통계량은 대 표본(large sample)의 통계적 검정에 기둥이다. 원래 자료가 어느 분포에서 나왔는지와 관계없이 표본 통계량을 활용하는 <span class="math inline">\(t-\)</span>통계량은 정규 분포를 따르게 되고 이를 통해 가설 검정을 실시할 수 있다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>회귀 분석의 검정 또한 <span class="math inline">\(t-\)</span>통계량에 근거한다. <a href="#regression-$t-$statistic">여기</a>를 참고하도록 하자.</p>
-</div></div><p><span class="math inline">\(t-\)</span>통계량의 크기는 검정을 위한 통계학적 증거일 뿐이다. 이 점을 잊지 말자. <span class="math inline">\(t-\)</span>통계량의 형태에서 보듯이 분자가 충분히 크거나 혹은 분모가 충분히 작을 때 이 값이 커진다. 이는 신뢰 구간에 대해서도 마찬가지다. 신뢰 구간은 표준 오차에 반영되어 있는 통계적 정밀성에 의해 결정되지 우리가 발견하고자 하는 관계의 강도에 의해서 결정되지 않는다. 즉, <span class="math inline">\(t-\)</span>통계량 및 신뢰 구간의 크기를 보고 해당 독립 변수가 종속 변수에 미치는 효과의 강도로 오해하면 곤란하다.</p>
+</div></div></section>
+<section id="t-값은-해당-통계량의-통계적인-증거일-뿐이다" class="level2">
+<h2 class="anchored" data-anchor-id="t-값은-해당-통계량의-통계적인-증거일-뿐이다"><span class="math inline">\(t\)</span>-값은 해당 통계량의 ‘통계적인’ 증거일 뿐이다</h2>
+<p><span class="math inline">\(t-\)</span>통계량의 크기는 검정을 위한 통계학적 증거일 뿐이다. 이 점을 잊지 말자. <span class="math inline">\(t-\)</span>통계량의 형태에서 보듯이 분자가 충분히 크거나 혹은 분모가 충분히 작을 때 이 값이 커진다. 이는 신뢰 구간에 대해서도 마찬가지다. 신뢰 구간은 표준 오차에 반영되어 있는 통계적 정밀성에 의해 결정되지 우리가 발견하고자 하는 관계의 강도에 의해서 결정되지 않는다. 즉, <span class="math inline">\(t-\)</span>통계량 및 신뢰 구간의 크기를 보고 해당 독립 변수가 종속 변수에 미치는 효과의 강도로 오해하면 곤란하다.</p>
 <p>울드리지 교수는 이를 통계적 유의성과 실용적 유의성의 차이로 설명했다. 대체로 통계적으로 유의미한 변수를 찾으면 우리는 흥분하기 마련이다. 하지만 그 통계적으로 유의한 관계가 실용적으로도 그럴까? 만일 통계적 유의성을 지닌 계수가 사실상 의미가 없는 경우라면 어떨까? 책을 읽을 때 다리를 떨면 책을 읽는 속도가 1에서 1.01이 된다는 결과를 얻었다고 하자. 이는 유의미한 결과일까?</p>
 </section>
 <section id="more" class="level2 page-columns page-full">
@@ -485,34 +503,40 @@ S(y_i)^2 = \dfrac{1}{n-k} \sum_{i=1}^n (y_i -  x^r_i \hat\beta)
 </section>
 <section id="clt-and-lln-illustrated" class="level3">
 <h3 class="anchored" data-anchor-id="clt-and-lln-illustrated">CLT and LLN illustrated</h3>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[-10, 60, -10]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-2.png" class="lightbox" title="CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다." data-gallery="quarto-lightbox-gallery-3"><img src="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-2.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다.</figcaption>
+<p><a href="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-description="" title="CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다."><img src="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-2.png" class="img-fluid figure-img" alt="CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다."></a></p>
+<figcaption>CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다.</figcaption>
 </figure>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
 </div>
 </div>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[-10, 60, -10]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-3.png" class="lightbox" title="LLN; n이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 x 축의 범위를 0, 1 사이로 고정했다." data-gallery="quarto-lightbox-gallery-4"><img src="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-3.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">LLN; <span class="math inline">\(n\)</span>이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 <span class="math inline">\(x\)</span> 축의 범위를 0, 1 사이로 고정했다.</figcaption>
+<p><a href="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-description="" title="LLN; n이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 x 축의 범위를 0, 1 사이로 고정했다."><img src="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-3.png" class="img-fluid figure-img" alt="LLN; n이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 x 축의 범위를 0, 1 사이로 고정했다."></a></p>
+<figcaption>LLN; <span class="math inline">\(n\)</span>이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 <span class="math inline">\(x\)</span> 축의 범위를 0, 1 사이로 고정했다.</figcaption>
 </figure>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
 </div>
@@ -564,6 +588,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -632,13 +683,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -717,10 +770,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -730,8 +782,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -744,6 +805,128 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -787,6 +970,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -812,6 +996,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -872,7 +1082,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","loop":true,"selector":".lightbox","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","openEffect":"zoom"});</script>
+
 
 
 
