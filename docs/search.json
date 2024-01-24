@@ -2202,7 +2202,7 @@
     "href": "posts/stats-simple/2022-05-27-SE.html#big-ifs",
     "title": "Sample Statistics and Standard Error",
     "section": "Big Ifs",
-    "text": "Big Ifs\n\n알려진 파라미터는 없다.\n알려진 분포도 없다.\n표본 추출은 평균이 \\(\\mu\\)이고 분산이 \\(\\sigma^2 &lt; \\infty\\)인 분포에서 IID(independent and identically distributed)로 생성된다."
+    "text": "Big Ifs\n\n알려진 파라미터는 없다.\n알려진 분포도 없다.\n표본은 평균이 \\(\\mu\\)이고 분산이 \\(\\sigma^2 &lt; \\infty\\)인 분포에서 IID(independent and identically distributed)로 추출된다."
   },
   {
     "objectID": "posts/stats-simple/2022-05-27-SE.html#unbiasedness-and-consistency",
@@ -3007,14 +3007,14 @@
     "href": "posts/stats-simple/2022-05-27-SE.html#finite-sample-vs-asymptotic-properties",
     "title": "Sample Statistics and Standard Error",
     "section": "Finite Sample vs Asymptotic Properties",
-    "text": "Finite Sample vs Asymptotic Properties\n“유한 표본”이란 어떤 크기든 표본의 크기가 정해져 있다는 의미이다. 가끔 “소 표본 small sample”이라는 표현도 활용된다. “점근적 특성 asymptotic properties”이란 표본 크기가 계속 커질 때 추정량이 지니는 특성을 의미한다. 통계학을 가르칠 때는 유한 표본의 추정량(estimator)에 관해 엄밀하게 내용을 배우지만, 실용적인 관점에서 중요한 것은 추량량의 점근적 특징이다.\n점근적 특성에서 중요한 내용은 두 개다. 하나는 일치성, 즉 샘플의 크기가 커질수록 추정량이 모수에 접근한다는 것이다. 다른 하나는 중심 극한 정리다. 샘플의 크기가 커질수록 추정량의 분포가 정규 분포에 접근한다는 것이다."
+    "text": "Finite Sample vs Asymptotic Properties\n“유한 표본 finite sample”이란 어떤 크기든 표본의 크기가 정해져 있다는 의미이다. 가끔 “소 표본 small sample”이라는 표현도 활용된다. “점근적 특성 asymptotic properties”이란 표본 크기가 계속 커질 때 추정량이 지니는 특성을 의미한다. 통계학을 가르칠 때는 유한 표본의 추정량(estimator)에 관해 엄밀하게 내용을 배우지만, 실용적인 관점에서 중요한 것은 추량량의 점근적 특징이다.\n점근적 특성에서 중요한 내용은 두 개다. 하나는 일치성, 즉 샘플의 크기가 커질수록 추정량이 모수에 접근한다는 것이다. 다른 하나는 중심 극한 정리다. 샘플의 크기가 커질수록 추정량의 분포가 정규 분포에 접근한다는 것이다."
   },
   {
     "objectID": "posts/stats-simple/2022-05-27-SE.html#unbiasedness-efficiency-consistency",
     "href": "posts/stats-simple/2022-05-27-SE.html#unbiasedness-efficiency-consistency",
     "title": "Sample Statistics and Standard Error",
     "section": "Unbiasedness, Efficiency, Consistency",
-    "text": "Unbiasedness, Efficiency, Consistency\n파라미터 \\(\\theta\\)와 추정량 \\(\\hat \\theta\\)이 있다고 하자.\n\n\n표본 \\(x_i\\)가 있다고 할 때, \\(\\hat \\theta\\)는 표본 \\(x_i\\)라는 정보를 통해 구성된다. 즉, \\(\\hat\\theta \\equiv \\hat\\theta(x_i)\\).\nUnbiased \\[\n\\E(\\hat \\theta) = \\theta\n\\]\n불편성은 추정량의 중요한 특징이지만, 불편성 하나로는 충분하지 않다. 극단적인 예로 \\(X\\)에서 추출된 샘플 하나를 \\(x_1\\)라고 하자. 이 샘플 하나를 추정량으로 쓰면 이 역시 불편성을 지니고 있다. 하지만 이 추정량은 좋은 추정량이 아니다.\nEfficiency \\(\\theta\\)에 대해서 \\(\\hat \\theta_1\\)과 \\(\\hat \\theta_2\\) 두 개의 추정량이 있다고 하자. \\[\n\\rm{Var} (\\hat\\theta_1) \\leq \\rm{Var} (\\hat\\theta_2)\n\\]\n모든 \\(\\theta\\)에 대해서 위의 부등식이 성립하고, 적어도 하나의 \\(\\theta\\)에 대해서 강 부등호가 성립하면 \\(\\hat\\theta_1\\)이 \\(\\hat\\theta_2\\)보다 효율적이다.\nConsistent\n추정량의 시퀀스 \\(\\lbrace \\hat\\theta_n \\rbrace\\)이 있다고 할 때, \\[\n\\underset{n \\to \\infty}{\\rm plim}~\\hat\\theta_n = \\theta  \n\\]\n\n\n\n파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다.\n\n\n\n\nplim의 정의는 다음과 같다. 표본 크기 \\(n\\)과 임의의 양의 상수 \\(c\\)에 대하여 표본 추정량 \\(\\hat\\theta_n\\)은 \\(\\theta\\)의 일치 추정량(consistent estimator)이라고 한다.\n\\[\n\\lim_{n\\to\\infty}P[|\\hat\\theta_n - \\theta|\\geq c]=0\n\\]"
+    "text": "Unbiasedness, Efficiency, Consistency\n파라미터 \\(\\theta\\)와 추정량 \\(\\hat \\theta\\)이 있다고 하자.\n\n\n표본 \\(x_i\\)가 있다고 할 때, \\(\\hat \\theta\\)는 표본 \\(x_i\\)라는 정보를 통해 구성된다. 즉, \\(\\hat\\theta \\equiv \\hat\\theta(x_i)\\).\nUnbiased \\[\n\\E(\\hat \\theta) = \\theta\n\\]\n불편성은 추정량의 중요한 특징이지만, 불편성 하나로는 충분하지 않다. 극단적인 예로 \\(X\\)에서 추출된 샘플 하나를 \\(x_1\\)라고 하자. 이 샘플 하나를 추정량으로 쓰면 이 역시 불편성을 지니고 있다. 하지만 이 추정량은 좋은 추정량이 아니다.\nEfficiency \\(\\theta\\)에 대해서 \\(\\hat \\theta_1\\)과 \\(\\hat \\theta_2\\) 두 개의 추정량이 있다고 하자. \\[\n\\rm{Var} (\\hat\\theta_1) \\leq \\rm{Var} (\\hat\\theta_2)\n\\]\n모든 \\(\\theta\\)에 대해서 위의 부등식이 성립하고, 적어도 하나의 \\(\\theta\\)에 대해서 강 부등호가 성립하면 \\(\\hat\\theta_1\\)이 \\(\\hat\\theta_2\\)보다 효율적이다.\nConsistent\n추정량의 시퀀스 \\(\\lbrace \\hat\\theta_n \\rbrace\\)이 있다고 할 때, \\[\n\\underset{n \\to \\infty}{\\rm plim}~\\hat\\theta_n = \\theta  \n\\]\n\n\n\n \n\n\n\n\n파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다.\n\n\n\n \n\n\n\n\n\nplim의 정의는 다음과 같다. 표본 크기 \\(n\\)과 임의의 양의 상수 \\(c\\)에 대하여 표본 추정량 \\(\\hat\\theta_n\\)은 \\(\\theta\\)의 일치 추정량(consistent estimator)이라고 한다.\n\\[\n\\lim_{n\\to\\infty}P[|\\hat\\theta_n - \\theta|\\geq c]=0\n\\]"
   },
   {
     "objectID": "posts/machine-learning/2020-04-19-classification-metrics.html#footnotes",
