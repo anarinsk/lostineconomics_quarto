@@ -207,12 +207,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="finite-sample-vs-asymptotic-properties" class="level2">
 <h2 class="anchored" data-anchor-id="finite-sample-vs-asymptotic-properties">Finite Sample vs Asymptotic Properties</h2>
-<p>“유한 표본 finite sample”이란 어떤 크기든 표본의 크기가 정해져 있다는 의미이다. 가끔 “소 표본 small sample”이라는 표현도 활용된다. “점근적 특성 asymptotic properties”이란 표본 크기가 계속 커질 때 추정량이 지니는 특성을 의미한다. 통계학을 가르칠 때는 유한 표본의 추정량(estimator)에 관해 엄밀하게 내용을 배우지만, 실용적인 관점에서 중요한 것은 추량량의 점근적 특징이다.</p>
-<p>점근성에서 가장 중요한 내용은 두 개다. 일치성은 샘플의 크기가 커질수록 추정량이 모수에 접근하는 특징이다. 다른 하나는 중심 극한 정리이다. 샘플의 크기가 커질수록 추정량의 분포가 정규 분포에 접근하게 된다. 일치성이 확보되면 추정량이 불편성을 지니고 있지 않아도 표본의 크기가 커질수록 참 값이 충분히 가깝게 접근한다. 한편 중심 극한 정리는 추정량의 통계적인 검정을 위한 필수적인 방법을 제공한다.</p>
+<p>“유한 표본 finite sample”이란 어떤 크기든 표본의 크기가 정해져 있다는 의미이다. 가끔 “소 표본 small sample”이라는 표현도 활용된다. “점근적 특성 asymptotic properties”이란 표본 크기가 계속 커질 때 추정량이 지니는 특성을 의미한다. 통계학을 배울 때는 유한 표본의 추정량(estimator)에 관해 먼저 엄밀하게 배운다. 통계학을 활용한다는 실용적인 관점에서 중요한 것은 추정량의 점근적 특징이다.</p>
+<p>점근성에 관해서 두 가지를 짚고 가자. 일치성은 샘플의 크기가 커질수록 추정량이 모수에 접근하는 특징이다. 다른 하나는 중심 극한 정리이다. 샘플의 크기가 커질수록 추정량의 분포가 정규 분포에 접근하게 된다. 일치성이 확보되면 추정량이 불편성을 지니고 있지 않아도 표본의 크기가 커질수록 참 값이 충분히 가깝게 접근한다. 한편 중심 극한 정리는 추정량의 통계적인 검정을 위한 필수적인 방법을 제공한다. 아래에서 자세하게 살펴볼 것이다.</p>
 </section>
 <section id="unbiasedness-efficiency-consistency" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="unbiasedness-efficiency-consistency">Unbiasedness, Efficiency, Consistency</h2>
-<p>파라미터 <span class="math inline">\(\theta\)</span>와 추정량 <span class="math inline">\(\hat \theta\)</span>이 있다고 하자.</p>
+<p>파라미터 <span class="math inline">\(\theta\)</span>와 이 모수에 관한 추정량 <span class="math inline">\(\hat \theta\)</span>이 있다고 하자.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>표본 <span class="math inline">\(x_i\)</span>가 있다고 할 때, <span class="math inline">\(\hat \theta\)</span>는 표본 <span class="math inline">\(x_i\)</span>라는 정보를 통해 구성된다. 즉, <span class="math inline">\(\hat\theta \equiv \hat\theta(x_i)\)</span>.</p>
@@ -226,7 +226,7 @@ ul.task-list li input[type="checkbox"] {
 \]</span></p>
 <p>모든 <span class="math inline">\(\theta\)</span>에 대해서 위의 부등식이 성립하고, 적어도 하나의 <span class="math inline">\(\theta\)</span>에 대해서 강 부등호가 성립하면 <span class="math inline">\(\hat\theta_1\)</span>이 <span class="math inline">\(\hat\theta_2\)</span>보다 효율적이다.</p>
 <p><strong>Consistent</strong></p>
-<p>추정량의 시퀀스 <span class="math inline">\(\lbrace \hat\theta_n \rbrace\)</span>이 있다고 할 때, <span class="math display">\[
+<p>표본의 크기에 따른 추정량의 시퀀스 <span class="math inline">\(\lbrace \hat\theta_n \rbrace\)</span>이 있다고 할 때, <span class="math display">\[
 \underset{n \to \infty}{\rm plim}~\hat\theta_n = \theta  
 \]</span></p>
 <div>
@@ -239,7 +239,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 81.7%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description="" title="파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다."><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" class="img-fluid figure-img" alt="파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다."></a></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-1" title="파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다."><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" class="img-fluid figure-img" alt="파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다."></a></p>
 <figcaption>파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다.</figcaption>
 </figure>
 </div>
@@ -320,11 +320,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sample-mean" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="sample-mean">Sample Mean</h2>
-<p>IID 추출로 크기 <span class="math inline">\(n\)</span>의 표본 <span class="math inline">\(Y_1, \dotsc, Y_n\)</span>을 얻었다고 하자. <span class="math inline">\(Y_i\)</span>가 모평균 <span class="math inline">\(\mu\)</span>와 모 표준편차 <span class="math inline">\(\sigma\)</span>를 따른다고 할 때, 표본 평균의 정의는 다음과 같다.</p>
+<p>IID 추출로 크기 <span class="math inline">\(n\)</span>의 표본 <span class="math inline">\(Y_1, \dotsc, Y_n\)</span>을 얻었다고 하자. <span class="math inline">\(Y_i\)</span>가 모평균 <span class="math inline">\(\mu\)</span>와 모 표준편차 <span class="math inline">\(\sigma\)</span>를 따른다. 표본 평균의 정의는 다음과 같다.</p>
 <p><span class="math display">\[
 \ES{Y}_n = \sum_{i=1}^n Y_i.
 \]</span></p>
-<p>표본 평균과 달리 <span class="math inline">\(Y_i\)</span>의 기댓값, 즉 모평균은 <span class="math inline">\(\E (Y_i) \equiv \mu\)</span>라고 쓴다. 여기는 <span class="math inline">\(n\)</span>이 붙지 않는다. 이는 모평균의 특성으로 일종의 고정된 (미지의) 값이다. 기댓값 <span class="math inline">\(\E(Y_i)\)</span>를 추정하는 값으로서 표본 평균 <span class="math inline">\(\ES{Y}_n\)</span>의 특징은 아래 두 개로 요약된다.</p>
+<p>표본 평균과 달리 <span class="math inline">\(Y_i\)</span>의 기댓값, 즉 모평균은 <span class="math inline">\(\E (Y_i) \equiv \mu\)</span>라고 쓴다. 여기는 <span class="math inline">\(n\)</span>이 붙지 않는다. 이는 모평균의 특성으로 일종의 고정된 (미지의) 값이다. 기댓값 <span class="math inline">\(\E(Y_i)\)</span>를 추정하는 값으로서 표본 평균 <span class="math inline">\(\ES{Y}_n\)</span>의 세 가지 특징을 알아보자.</p>
 <ol type="1">
 <li><span class="math inline">\(\E(\ES Y_n) = \mu\)</span></li>
 <li><span class="math inline">\(\V(\ES Y_n) = {\sigma^2}/{n}\)</span></li>
@@ -349,35 +349,34 @@ Z_n = \lim_{n \to \infty} \dfrac{\ES{Y}_n - \mu}{\frac{\sigma}{\sqrt{n}}} \sim \
 </section>
 <section id="sample-variance" class="level2">
 <h2 class="anchored" data-anchor-id="sample-variance">Sample Variance</h2>
-<p>얼른 생각할 수 있는 <span class="math inline">\(\sigma\)</span>의 추정량은 표본 분산 <span class="math inline">\(S_n\)</span>는 다음과 같다.</p>
+<p><span class="math inline">\(\sigma\)</span>의 추정량인 표본 분산 <span class="math inline">\(S_n\)</span>는 다음과 같다.</p>
 <p><span class="math display">\[
 S^2_n = \dfrac{1}{n-1} \sum_{i=1}^{n} (Y_i - \ES{Y}_n)^2
 \]</span></p>
-<p><span class="math inline">\(S^2_n\)</span>은 <a href="#s2-n-1">불편 추정량</a>이고 <a href="#s2-consistent">일치 추정량</a>이다. <span class="math inline">\(n\)</span>이 충분히 크다면 불편 추정량 여부는 중요하지 않다. <span class="math inline">\(\dfrac{1}{10000}\)</span>과 <span class="math inline">\(\dfrac{1}{9999}\)</span>의 차이가 큰 의미가 있을까? <span class="math inline">\((n-1)\)</span> 대신 <span class="math inline">\(n\)</span>이 들어간 표본 추정량 역시 일치성을 지니고 있다.</p>
+<p><span class="math inline">\(S^2_n\)</span>은 <a href="#s2-n-1">불편 추정량</a>이고 <a href="#s2-consistent">일치 추정량</a>이다. <span class="math inline">\(n\)</span>이 충분히 크다면 불편 추정량 여부는 중요하지 않다. <span class="math inline">\(\dfrac{1}{10000}\)</span>과 <span class="math inline">\(\dfrac{1}{9999}\)</span>의 차이가 큰 의미가 있을까? 분모의 <span class="math inline">\((n-1)\)</span> 대신 <span class="math inline">\(n\)</span>이 들어간 표본 추정량 역시 일치성을 지니고 있다.</p>
 </section>
-<section id="standard-error" class="level2">
-<h2 class="anchored" data-anchor-id="standard-error">Standard Error</h2>
-<p>어떤 통계량의 표준 오차(standard error: SE)는 표본 통계량의 표준 편차를 뜻한다. 표본 통계량 <span class="math inline">\(\ES{Y}_n\)</span>의 표준 편차 <span class="math inline">\(\sqrt{\V(\ES{Y}_n)}\)</span>을 의미한다. <span class="math inline">\(\sigma^2 &lt; \infty\)</span>를 가정할 때,</p>
+<section id="standard-errorse" class="level2">
+<h2 class="anchored" data-anchor-id="standard-errorse">Standard Error(SE)</h2>
+<p>어떤 통계량의 표준 오차(Standard Error)는 표본 통계량의 표준 편차를 뜻한다. 표본 통계량 <span class="math inline">\(\ES{Y}_n\)</span>의 표준 편차 <span class="math inline">\(\sqrt{\V(\ES{Y}_n)}\)</span>을 의미한다. <span class="math inline">\(\sigma^2 &lt; \infty\)</span>를 가정할 때,</p>
 <p><span class="math display">\[
 \E(\ES{Y}_n - \mu)^2 = \E (\dfrac{\sum(Y_i -\mu)}{n})^2 = \dfrac{1}{n^2} n \sigma^2 = \dfrac{\sigma^2}{n}
 \]</span></p>
-<p>표준오차 <span class="math inline">\(SE\)</span>는 다음과 같다.</p>
+<p>표준오차 SE는 다음과 같다.</p>
 <p><span class="math display">\[
 SE = \dfrac{\sigma}{\sqrt{n}}
 \]</span></p>
-<p>이를 대입하면 <span class="math inline">\(SE\)</span>의 추정량 <span class="math inline">\(\widehat{SE}\)</span>는 다음과 같다.</p>
+<p><span class="math inline">\(SE\)</span>의 추정량 <span class="math inline">\(\widehat{SE}\)</span>는 <span class="math inline">\(\sigma\)</span> 대신 <span class="math inline">\(S_n\)</span>을 사용한다.</p>
 <p><span class="math display">\[
 \widehat{SE} = \dfrac{S_n}{\sqrt{n}}
 \]</span></p>
 </section>
 <section id="asymptotically-normal" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="asymptotically-normal">Asymptotically Normal</h2>
-<p><span class="math inline">\(t-\)</span>통계량이 정규 분포에 근사하는 이유는 무엇일까?</p>
+<h2 class="anchored" data-anchor-id="asymptotically-normal">Asymptotically Normal!</h2>
+<p>가설 검정에 활용하는 <span class="math inline">\(t-\)</span>통계량이 정규 분포에 근사하는 이유는 무엇일까?</p>
 <p><span class="math display">\[
 t(\mu) = \frac{\overline{Y}-\mu}{\widehat{SE}(\overline{Y})}
 \]</span></p>
-<p>우선 <span class="math inline">\(t-\)</span>통계량의 분자와 분모를 살펴보면, 각각 <span class="math inline">\(n\)</span>이 커질 때 분자와 분모는 모두 0으로 수렴한다. 이 비율이 정규분포에 수렴하는 게 되는 이유는 중심극한 정리를 이용해 증명할 수 있다. 일단 결론만 기억하도록 하자. <span class="math inline">\(t\)</span>-통계량은 표본 크기 <span class="math inline">\(n\)</span>이 증가하면서 표준 정규 분포에 근사하게 된다. 즉 점근적으로 (표준) 정규분포(asymptotically normal)가 된다.</p>
-<p>다시 말하면 <span class="math inline">\(\ES{Y}_n\)</span>은 평균이 <span class="math inline">\(\mu\)</span>이고 표준편차가 <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span>인 정규 분포에 근사하게 된다. 따라서 표본 크기가 커짐에 따라서 <span class="math inline">\(t-\)</span>통계량은 표준 정규 분포를 점점 닮아간다.</p>
+<p><span class="math inline">\(t-\)</span>통계량의 분자와 분모를 살펴보면 각각 <span class="math inline">\(n\)</span>이 커질 때 분자와 분모는 모두 0으로 수렴한다. 이 비율이 정규분포에 수렴한다는 사실은 중심극한 정리를 이용해 증명할 수 있다. 일단 결론만 기억하도록 하자. 요컨대 <span class="math inline">\(t\)</span>-통계량은 표본 크기 <span class="math inline">\(n\)</span>이 증가하면서 표준 정규 분포에 근사하게 된다. 다시 말하면 추정량 <span class="math inline">\(\ES{Y}_n\)</span>은 평균이 <span class="math inline">\(\mu\)</span>이고 표준편차가 <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span>인 정규 분포에 근사하게 된다.</p>
 <div>
 
 </div>
@@ -388,7 +387,7 @@ t(\mu) = \frac{\overline{Y}-\mu}{\widehat{SE}(\overline{Y})}
 </div>
 <div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-description="" title="n이 커질수록 \ES{X}_n의 분포는 표준 정규 분포에 근접한다."><img src="https://miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg" class="img-fluid figure-img" alt="n이 커질수록 \ES{X}_n의 분포는 표준 정규 분포에 근접한다."></a></p>
+<p><a href="https://miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-2" title="n이 커질수록 \ES{X}_n의 분포는 표준 정규 분포에 근접한다."><img src="https://miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg" class="img-fluid figure-img" alt="n이 커질수록 \ES{X}_n의 분포는 표준 정규 분포에 근접한다."></a></p>
 <figcaption><span class="math inline">\(n\)</span>이 커질수록 <span class="math inline">\(\ES{X}_n\)</span>의 분포는 표준 정규 분포에 근접한다.</figcaption>
 </figure>
 </div>
@@ -404,8 +403,8 @@ t(\mu) = \frac{\overline{Y}-\mu}{\widehat{SE}(\overline{Y})}
 </div></div></section>
 <section id="t-값은-해당-통계량의-통계적인-증거일-뿐이다" class="level2">
 <h2 class="anchored" data-anchor-id="t-값은-해당-통계량의-통계적인-증거일-뿐이다"><span class="math inline">\(t\)</span>-값은 해당 통계량의 ‘통계적인’ 증거일 뿐이다</h2>
-<p><span class="math inline">\(t-\)</span>통계량의 크기는 검정을 위한 통계학적 증거일 뿐이다. 이 점을 잊지 말자. <span class="math inline">\(t-\)</span>통계량의 형태에서 보듯이 분자가 충분히 크거나 혹은 분모가 충분히 작을 때 이 값이 커진다. 이는 신뢰 구간에 대해서도 마찬가지다. 신뢰 구간은 표준 오차에 반영되어 있는 통계적 정밀성에 의해 결정되지 우리가 발견하고자 하는 관계의 강도에 의해서 결정되지 않는다. 즉, <span class="math inline">\(t-\)</span>통계량 및 신뢰 구간의 크기를 보고 해당 독립 변수가 종속 변수에 미치는 효과의 강도로 오해하면 곤란하다.</p>
-<p>울드리지 교수는 이를 통계적 유의성과 실용적 유의성의 차이로 설명했다. 대체로 통계적으로 유의미한 변수를 찾으면 우리는 흥분하기 마련이다. 하지만 그 통계적으로 유의한 관계가 실용적으로도 그럴까? 만일 통계적 유의성을 지닌 계수가 사실상 의미가 없는 경우라면 어떨까? 책을 읽을 때 다리를 떨면 책을 읽는 속도가 1에서 1.01이 된다는 결과를 얻었다고 하자. 이는 유의미한 결과일까?</p>
+<p><span class="math inline">\(t-\)</span>통계량의 크기는 검정을 위한 통계학적 증거일 뿐이다. 이 점을 잊지 말자. <span class="math inline">\(t-\)</span>통계량의 형태에서 보듯이 분자가 충분히 크거나 혹은 분모가 충분히 작을 때 이 값이 커진다. 이는 신뢰 구간에 대해서도 마찬가지다. 신뢰 구간은 표준 오차에 반영되어 있는 통계적 정밀성에 의해 결정되지 우리가 발견하고자 하는 관계의 내용상 강도에 의해서 결정되지 않는다. 즉 <span class="math inline">\(t-\)</span>통계량 및 신뢰 구간의 모습을 보고 해당 독립 변수가 종속 변수에 미치는 효과의 강도로 오해하면 곤란하다.</p>
+<p>울드리지 교수는 이를 통계적 유의성과 실용적 유의성의 차이로 설명한다. 통계적으로 유의미한 변수를 찾으면 우리는 대체로 기분이 좋아진다. 하지만 통계적으로 유의한 그 관계가 실용적으로도 그럴까? 만일 통계적 유의성을 지닌 계수가 사실상 의미가 없는 경우라면 어떨까? 책을 읽을 때 다리를 떨면 책을 읽는 속도가 0.1% 증가한다고 하자. 이는 사실상 의미 있는 결과일까? (책을 읽을 때는 열심히 다리를 떨어라?)</p>
 </section>
 <section id="more" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="more">More</h2>
@@ -503,6 +502,7 @@ S(y_i)^2 = \dfrac{1}{n-k} \sum_{i=1}^n (y_i -  x^r_i \hat\beta)
 </section>
 <section id="clt-and-lln-illustrated" class="level3">
 <h3 class="anchored" data-anchor-id="clt-and-lln-illustrated">CLT and LLN illustrated</h3>
+<p>LLN과 CLT은 동전의 양면처럼 보이기도 한다. 아래 첫번째 그림에서 보듯이 <span class="math inline">\([0,1]\)</span> 사이를 고정해서 보면 표본의 크기가 증가할수록 분산이 줄어들게 되고 추정량이 파라미터 주변으로 모이게 된다. 반면, 두번째 그림에서 보듯이, 표본의 크기에 따라서 <span class="math inline">\(x\)</span> 축의 비율을 조절하면 분포가 점점 정규 분포를 닮아간다.</p>
 <div>
 
 </div>
@@ -513,8 +513,8 @@ S(y_i)^2 = \dfrac{1}{n-k} \sum_{i=1}^n (y_i -  x^r_i \hat\beta)
 </div>
 <div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-description="" title="CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다."><img src="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-2.png" class="img-fluid figure-img" alt="CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다."></a></p>
-<figcaption>CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다.</figcaption>
+<p><a href="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-3.png" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-3" title="LLN; n이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 x 축의 범위를 0, 1 사이로 고정했다."><img src="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-3.png" class="img-fluid figure-img" alt="LLN; n이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 x 축의 범위를 0, 1 사이로 고정했다."></a></p>
+<figcaption>LLN; <span class="math inline">\(n\)</span>이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 <span class="math inline">\(x\)</span> 축의 범위를 0, 1 사이로 고정했다.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
@@ -532,8 +532,8 @@ S(y_i)^2 = \dfrac{1}{n-k} \sum_{i=1}^n (y_i -  x^r_i \hat\beta)
 </div>
 <div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-description="" title="LLN; n이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 x 축의 범위를 0, 1 사이로 고정했다."><img src="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-3.png" class="img-fluid figure-img" alt="LLN; n이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 x 축의 범위를 0, 1 사이로 고정했다."></a></p>
-<figcaption>LLN; <span class="math inline">\(n\)</span>이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 <span class="math inline">\(x\)</span> 축의 범위를 0, 1 사이로 고정했다.</figcaption>
+<p><a href="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-2.png" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-4" title="CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다."><img src="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-2.png" class="img-fluid figure-img" alt="CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다."></a></p>
+<figcaption>CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
@@ -1082,7 +1082,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});</script>
 
 
 
