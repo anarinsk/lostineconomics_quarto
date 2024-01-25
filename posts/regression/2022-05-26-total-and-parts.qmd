@@ -6,6 +6,10 @@ date: "05/26/2022"
 image: "images/total_parts.jfif"
 categories: [regression]
 draft: false
+filters:
+   - lightbox
+   #- line-highlight
+lightbox: auto
 #margin-header: subscribe.html
 ---
 
@@ -32,19 +36,24 @@ Angrist와 Pischke가 이런 맥락에서 회귀 분석이 자동화된 짝짓�
 
 먼저 심슨의 역설을 먼저 살펴보자. 아래는 웃자고 만든 그림인데 웃고 넘기기에는 아까운 중요한 통찰이 들어 있다. 
 
-![전체를 볼 것인가 부분을 볼 것인가?](https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/12/simpsons-paradox.jpg){ .my-figure7 }
+::: {layout="[[-10, 60, -10]]" layout-valign="bottom"}
+![전체를 볼 것인가 부분을 볼 것인가?](https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/12/simpsons-paradox.jpg)
+:::
 
 위 그림에서 심슨가족 전체를 보면 $x$ 축 변인의 증가에 따라서 $y$ 축 변인이 증가하는 형태를 취한다. 반면, 가족 구성원 하나하나에 대해서는 반대의 관계를 취하고 있다. 심슨의 역설은 전체의 경향과 부분의 경향이 어긋나는 현상을 나타낸다. 조금 더 진지한 사례는 아래의 그림과 같다. 
 
-![심슨의 역설](https://upload.wikimedia.org/wikipedia/commons/f/fb/Simpsons_paradox_-_animation.gif?1653868287578){ .my-figure7 }
-
+::: {layout="[[-10, 60, -10]]" layout-valign="bottom"}
+![심슨의 역설](https://upload.wikimedia.org/wikipedia/commons/f/fb/Simpsons_paradox_-_animation.gif?1653868287578)
+:::
 :::{ .column-margin }
 심슨의 역설에 흥미로운 사례는 미국 대학 입학의 남녀 학생 비율이다. 전체로 보면 남학생의 입학 비율이 여학생의 입학 비율보다 높았다. 그런데 개별 학과를 보면 여학생의 입학 비율이 대체로 남학생의 입학 비율보다 높았다. 서로 상반되는 듯 보이는 이 결과는 관심의 대상이 비율인데 반해서 학과 단위에서 작용하는 지원자들의 행태를 반영하지 못한 데 따른 것이다. 사례로는 [여기](https://namu.wiki/w/%EC%8B%AC%EC%8A%A8%EC%9D%98%20%EC%97%AD%EC%84%A4)와 [여기](https://medium.com/bondata/simpsons-paradox-and-confounding-190a26f9e039)를 참고하자. 
 :::
 
 여기서 중요한 것은 역설 자체가 아니다. 역설의 함정에 빠지지 않고 어디에 포커스를 둘 것인지가 문제다. 만일 인구 구성의 각 그룹 별 경향을 평균적으로 살펴보는 것이 관심 사항이라면 위 그림에서 그룹 각각의 기울기를 평균한 값이 우리가 찾는 경향이다. 반대로 개별 그룹은 중요하지 않고 인구 전체가 관심사라면 개별 인구를 동일하게 보고 기울기를 찾는 게 맞다. 
 
-![DAG로 본 confounder & collider](https://slidetodoc.com/presentation_image_h/792ab2d7ce21c60c396545ec752d13fe/image-44.jpg){ .my-figure7 }
+::: {layout="[[-10, 60, -10]]" layout-valign="bottom"}
+![DAG로 본 confounder & collider](https://slidetodoc.com/presentation_image_h/792ab2d7ce21c60c396545ec752d13fe/image-44.jpg)
+:::
 
 심슨의 역설은 DAG(Directed Acyclic Graph)를 통한 인과 추론에서 교란 요인(confounder)에 해당한다.  A --> Z가 현재 우리가 관찰하는 사실이다. 예를 들어, 교육 수준이 높을수록 졸업 후 취업 시 임금이 높다. 하지만 이는 교육 수준과 임금 모두에게 영향을 미치는 제3의 요인을 고려하지 않는 것일지도 모른다. 교육 수준과 임금 모두에게 영향을 주는 미처 파악하지 못한 변인, 예를 들어 능력치(C)가 있다고 하자. 이 능력치는 교육 수준과 임금 모두에게 영향을 준다. 
 
@@ -54,11 +63,15 @@ Angrist와 Pischke가 이런 맥락에서 회귀 분석이 자동화된 짝짓�
 
 벡터를 통해 그래프로 설명하는 사례가 직관적으로 잘 와닿고 이해하기도 좋다. 
 
-![붉은 벡터 1,2가 파란 벡터 1,2 보다 각각 더 높은 비율(벡터의 각도)를 지니고 있다. 그럼에도 둘을 결합했을 경우 파란 벡터가 더 높은 비율을 지니게 된다.](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Simpsons-vector.svg/430px-Simpsons-vector.svg.png?20180610180117){ .my-figure5 }
+::: {layout="[[-10, 60, -10]]" layout-valign="bottom"}
+![붉은 벡터 1,2가 파란 벡터 1,2 보다 각각 더 높은 비율(벡터의 각도)를 지니고 있다. 그럼에도 둘을 결합했을 경우 파란 벡터가 더 높은 비율을 지니게 된다.](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Simpsons-vector.svg/430px-Simpsons-vector.svg.png?20180610180117)
+:::
 
 ## Collider and Berkson's Paradox 
 
-![전체를 볼 것인가 부분을 볼 것인가?](https://brilliant-staff-media.s3-us-west-2.amazonaws.com/tiffany-wang/1Mvt8RPtlU.png){ .my-figure5 }
+::: {layout="[[-10, 60, -10]]" layout-valign="bottom"}
+![전체를 볼 것인가 부분을 볼 것인가? 해당 밴드를 중심으로 SAT 점수가 높고 GPA도 높은 사람들은 더 좋은 학교에 진학했고, 낮은 사람들은 내가 관찰하는 샘플에서 탈랐했다. 그렇다면 이 관계는 실제로 존재하는 것일까?](https://brilliant-staff-media.s3-us-west-2.amazonaws.com/tiffany-wang/1Mvt8RPtlU.png){ .my-figure5 }
+:::
 
 이번에는 벅슨의 역설을 살펴볼 차례다. 보통 수능 점수와 대학 성적은 별 관련이 없고 심지어 역의 상관성이 있다는 이야기를 접할 때가 있다. 이것은 맞는 주장인가? 이런 종류의 주장은 대체로 전체를 가정한다. '수능 점수와 대학 성적이 별로 상관이 없으니, 수능은 인간의 능력을 판단하는 지표로 별로 유용하지 않아.' 이야기가 이렇게 흐르기 마련이다. 
 

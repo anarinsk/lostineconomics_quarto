@@ -5,7 +5,7 @@ $h3-font-size: 115%  !default;
 $h4-font-size: 100%  !default; 
 $h5-font-size: 100%  !default;
 $g6-font-size: 100%  !default;
-$figure-caption-font-size: 80% !important;
+//$figure-caption-font-size: 70% !default;
 $headings-font-weight:  600 !default;
 
 // $body-color: black !default;
@@ -33,7 +33,7 @@ ul, li, ol{
     font-weight: 400;
    }
 
-p, fig-caption {
+p {
     font-family: 'SUIT', sans-serif !important;
     font-size: 90%;
     font-weight: 400; 
@@ -83,6 +83,8 @@ code {
     padding: 5px;
     text-align: left; 
     background:#FFFFFF;
+    font-family: 'SUIT', sans-serif !important;
+    font-size: 80%;
    }
 
 .figurec{
@@ -92,7 +94,9 @@ code {
     padding: 5px;
     text-align: right; 
     background:#FFFFFF;
-   }
+    font-family: 'SUIT', sans-serif !important;
+    font-size: 80%;
+  }
 
 
 // Obsolete but backward compatibility 
@@ -105,6 +109,8 @@ code {
     text-align: left; 
     width: 70%;
     background:#FFFFFF;
+    font-family: 'SUIT', sans-serif !important;
+    font-size: 80%;
   }
   
 .my-figure5 {
@@ -115,6 +121,8 @@ code {
     text-align: left; 
     width: 50%;
     background:#FFFFFF;
+    font-family: 'SUIT', sans-serif !important;
+    font-size: 80%;
   }
   
 .my-figure3 {
@@ -125,5 +133,7 @@ code {
     text-align: left; 
     width: 30%;
     background:#FFFFFF;
+    font-family: 'SUIT', sans-serif !important;
+    font-size: 80%;
   }
   
