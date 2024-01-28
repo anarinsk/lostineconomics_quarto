@@ -230,7 +230,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>위 그림은 1개의 독립변수가 존재할 때 이것과 종속변수를 그대로 2차원 평면에 관찰 수만큼 찍은 것이다. 첫번째 그림에서 “Observed Y”는 점 하나가 종속변수 <span class="math inline">\(n\)</span>개의 관측치를 포괄한다. <span class="math inline">\(\mathbf{Y} \in {\mathbb R}^{n}\)</span> 벡터, 즉 <span class="math inline">\(n\)</span> 차원 벡터이고, 이것이 회귀식 좌변의 관찰값 <span class="math inline">\(n\)</span> 개를 표현한다.</p>
 <p>이제 선형대수의 세계로 들어가보자. <span class="math inline">\(\mathbf X\)</span>의 하나의 열(column)이 <span class="math inline">\(n\)</span> 개의 관찰 값을 지닌 독립변수이다. 이 각각의 컬럼 <span class="math inline">\(x_i\)</span>는 <span class="math inline">\(x_i \in {\mathbb R}^{n}\)</span> 벡터이다. <span class="math inline">\(x_i\)</span> 벡터 <span class="math inline">\(k\)</span> 개가 생성할 수 있는 공간이 <span class="math inline">\(\mathbf X\)</span>의 열 공간(column space)이다. 앞으로 이를 col <span class="math inline">\(\mathbf X\)</span>로 표기하자.</p>
-<p>이렇게 생각하면 좋겠다. <span class="math inline">\(x_i \in {\mathbb R}^{n}\)</span> 벡터가 <span class="math inline">\(k(&lt;n)\)</span> 개 있다고 하자. 이는 <span class="math inline">\(n\)</span> 보다 차원이 낮기 때문에 기하학적으로는 <span class="math inline">\(n\)</span> 차원 공간에서 초평면(hyperplane)으로 나타날 것이다. 위 그림에서 컬럼 스페이스가 평면으로 표현되는 것은 이러한 취지다. 3차원 벡터의 열 공간이 생성하는 초평면을 예시하면 아래와 같다.</p>
+<p><span class="math inline">\(x_i \in {\mathbb R}^{n}\)</span> 벡터가 <span class="math inline">\(k(&lt;n)\)</span> 개 있다고 하자. 이는 <span class="math inline">\(n\)</span> 보다 차원이 낮기 때문에 기하학적으로는 <span class="math inline">\(n\)</span> 차원 공간에서 초 평면(hyperplane)으로 나타날 것이다. 위 그림에서 컬럼 스페이스가 평면으로 표현되는 것은 이러한 취지다. 3차원 벡터의 열 공간이 생성하는 초 평면을 예시하면 아래와 같다. 즉 3차원 공간 안에 놓인 2차원 평면이다.</p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
@@ -248,18 +248,18 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>col <span class="math inline">\(\mathbf X\)</span>의 최대 차원, 즉 <span class="math inline">\(\mathbf X\)</span>의 랭크(위수)는 무엇일까? 회귀 분석에서는 대체로 <span class="math inline">\(n &gt; k\)</span>가 일반적이고 이런 상황에서 <span class="math inline">\(\mathbf X\)</span>의 랭크는 <span class="math inline">\(k\)</span>를 넘을 수 없다. 다시 말하면, <span class="math inline">\(\mathbf X\)</span>가 생성하는(span)하는 컬럼 스페이스의 차원의 크기가 <span class="math inline">\(k\)</span>를 넘을 수 없다. 그리고 잘 된 회귀 분석이라면 <span class="math inline">\({\rm rank}(\mathbf X) = k\)</span>를 만족한다.</p>
-<p>맨 앞에 제시했던 그림을 다시 보자. 아래 색칠된 평면이 <span class="math inline">\(\mathbf X\)</span>가 생성하는 컬럼 스페이스, 즉 col <span class="math inline">\(\mathbf X\)</span>를 표현하고 있다. 몹시 특별한 경우가 아니라면 <span class="math inline">\(\mathbf Y \in {\mathbb R}^{n}\)</span> 벡터가 col <span class="math inline">\(\mathbf X\)</span>에 속할 가능성은 없다. 그렇다면 회귀 분석의 필요도 애초에 없었을 것이다. col <span class="math inline">\(\mathbf X\)</span>를 통해서 <span class="math inline">\(\mathbf Y\)</span>를 완벽하게 예측할 수 있는데 무슨 걱정이 있겠는가? 대체로 우리가 마주하는 상황은 <span class="math inline">\(n\)</span> 차원 벡터를 <span class="math inline">\(k\)</span> 차원 공간에 끼워 넣기 힘든 상황이다.</p>
+<p>맨 앞에 제시했던 그림을 다시 보자. 아래 색칠된 평면이 <span class="math inline">\(\mathbf X\)</span>가 생성하는 컬럼 스페이스, 즉 col <span class="math inline">\(\mathbf X\)</span>를 표현하고 있다. 몹시 특별한 경우가 아니라면 <span class="math inline">\(\mathbf Y \in {\mathbb R}^{n}\)</span> 벡터가 col <span class="math inline">\(\mathbf X\)</span>에 속할 가능성은 없다. 그렇다면 회귀 분석의 필요도 애초에 없었을 것이다. col <span class="math inline">\(\mathbf X\)</span>를 통해서 <span class="math inline">\(\mathbf Y\)</span>를 완벽하게 예측할 수 있는데 뭘 더 할까? 우리가 다루는 분석 문제는 <span class="math inline">\(n\)</span> 차원 벡터를 <span class="math inline">\(k\)</span> 차원 초 평면에 두기 힘든 상황이다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>이를 선형 대수에서 배운 연립방정식을 푸는 문제로 이해해도 좋겠다. <span class="math inline">\(A x = b(b \neq \mathbf{0})\)</span>라고 하자. <span class="math inline">\(n\)</span> 개의 미지수가 유일한 해를 지니고 위해서는 <span class="math inline">\({\rm rank}(A) = n\)</span>이어야 한다. 즉 서로 독립인 식이 <span class="math inline">\(n\)</span> 개 주어져야 고유의 해 <span class="math inline">\(x\)</span>를 찾을 수 있다. 그런데 회귀 분석은 식이 <span class="math inline">\(k(&lt;n)\)</span> 개만 주어진 상황이다.</p>
-</div></div><p>회귀 분석의 목표는 독립변수를 통해서, 더 정확하게는 독립변수의 열 공간이 생성하는 초 평면을 이용해서, 종속변수를 ‘가장’ 잘 설명하는 무엇을 찾는 것이다. 즉 회귀 분석이란 종속변수와 ‘닮은’ 것을 독립변수의 공간 col <span class="math inline">\(\mathbf X\)</span>에서 찾는 것이다. 직관적으로 쉽게 떠올릴 수 있는 것은 이 평면과 <span class="math inline">\(\mathbf Y\)</span>의 (유클리드) 거리를 가장 짧게 만들어주는 벡터일 것이다. 그리고 이 최단거리는 <span class="math inline">\(\mathbf Y\)</span>에서 <span class="math inline">\(\mathbf X\)</span> 컬럼 스페이스로 내린 수선의 발이 닿는 col <span class="math inline">\(\mathbf X\)</span>의 지점이다. col <span class="math inline">\(\mathbf X\)</span> 내에 있는 이런 지점을 찾는 연산자(operator)가 회귀 분석의 추정 계수 <span class="math inline">\(\hat{\boldsymbol \beta}\)</span>이다. 즉,</p>
+</div></div><p>회귀 분석의 목표는 독립변수를 통해서, 더 정확하게는 독립변수의 열 공간이 생성하는 초 평면을 이용해서, 종속변수를 ‘가장’ 잘 설명하는 무엇을 찾는 것이다. 즉 회귀 분석이란 종속변수와 ‘닮은’ 것을 독립변수가 형성하는 초 평면 col <span class="math inline">\(\mathbf X\)</span>에서 찾는 것이다. 직관적으로 쉽게 떠올릴 수 있는 것은 이 평면과 <span class="math inline">\(\mathbf Y\)</span>의 (유클리드) 거리를 가장 짧게 만들어주는 벡터일 것이다. 그리고 이 최단거리는 <span class="math inline">\(\mathbf Y\)</span>에서 <span class="math inline">\(\mathbf X\)</span> 컬럼 스페이스로 내린 수선의 발이 닿는 col <span class="math inline">\(\mathbf X\)</span>의 지점이다. col <span class="math inline">\(\mathbf X\)</span> 내에 있는 이런 지점을 찾는 연산자(operator)가 회귀 분석의 추정 계수 <span class="math inline">\(\hat{\boldsymbol \beta}\)</span>이다. 즉,</p>
 <p><span class="math display">\[
 \hat{\boldsymbol \beta} = ({\mathbf X}'{\mathbf X})^{-1} ({\mathbf X}' \mathbf Y)
 \]</span></p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>정석은 아니지만 이 연산자를 이해하는 흥미로운 방법이 있다.</p>
-<p><span class="math inline">\({\mathbf X} {\boldsymbol \beta} = {\mathbf Y}\)</span>가 연립방정식이라면 해는 <span class="math inline">\({\mathbf X}^{-1}\)</span>을 구해서 얻을 수 있을 것이다. 하지만 <span class="math inline">\({\mathbf X} \in \mathbb R^{n \times k}\)</span>이므로 딱 떨어지는 특수해 1개를 구할 수 없다. 되도록 근사값의 해를 구하려면 어떻게 해야 할까?</p>
+<p><span class="math inline">\({\mathbf X} {\boldsymbol \beta} \equiv {\mathbf Y}\)</span>가 연립방정식이라면 해는 <span class="math inline">\({\mathbf X}^{-1}\)</span>을 구해서 얻을 수 있을 것이다. 하지만 <span class="math inline">\({\mathbf X} \in \mathbb R^{n \times k}\)</span>이므로 딱 떨어지는 특수해 1개를 구할 수 없다. 되도록 근사값의 해를 구하려면 어떻게 해야 할까?</p>
 <p><span class="math display">\[
 \begin{aligned}
 {\mathbf X}'{\mathbf X} \hat{\boldsymbol \beta} &amp; = {\mathbf X}'{\mathbf Y} \\
@@ -268,7 +268,7 @@ ul.task-list li input[type="checkbox"] {
 \]</span></p>
 <p><span class="math inline">\(\hat{\boldsymbol \beta}\)</span>가 왠지 원래 식의 근사값으로 기능할 것 같지 않은가? (실제로 그렇다)</p>
 </div></div><p>이 연산자를 독립변수의 모음인 col <span class="math inline">\(\mathbf X\)</span>에 적용하면 일종의 예측치 <span class="math inline">\(\mathbf{X} \hat{\boldsymbol \beta} =\hat{\mathbf Y}\)</span>이 산출된다. 그림에서 보듯이 <span class="math inline">\(\hat{\mathbf Y}\)</span>은 <span class="math inline">\(\mathbf Y\)</span>와 col <span class="math inline">\(\mathbf X\)</span>의 거리를 최소화하는 위치에 존재한다. <span class="math inline">\(\hat{\mathbf Y}\)</span>는 어떤 벡터일까? <span class="math inline">\(\hat{\mathbf Y} \in {\mathbb R}^n\)</span> 벡터지만, col <span class="math inline">\(\mathbf X(\in {\mathbb R}^k)\)</span>내에 위치하고 있다. <span class="math inline">\(n\)</span> 차원이 <span class="math inline">\(k\)</span> 차원으로 축소된 셈이다. 이것이 회귀 분석의 기하적 핵심이다.</p>
-<p>선형 대수의 관점에서 내용을 다시 음미해보자. <span class="math inline">\(x_i \in {\mathbb R}^n\)</span> (for <span class="math inline">\(i = 1, \dotsc, k\)</span>) 벡터의 리그레서 <span class="math inline">\(k\)</span> 개를 선형 결합해서 초평면의 한점, 즉 원래의 관찰 <span class="math inline">\(\mathbf Y\)</span>와 최소 거리를 지니는 벡터를 찾아야 한다. 이 거리를 최소화하는 <span class="math inline">\(\beta_i\)</span>를 알고 있다면 이 벡터는 다음과 같이 표현된다. <span class="math inline">\({\mathbf X} = [x_1, \dotsc, x_k]\)</span>일 때,</p>
+<p>선형 대수의 관점에서 내용을 다시 음미해보자. <span class="math inline">\(x_i \in {\mathbb R}^n\)</span> (for <span class="math inline">\(i = 1, \dotsc, k\)</span>) 벡터의 리그레서 <span class="math inline">\(k\)</span> 개를 선형 결합해서 초 평면의 한점, 즉 원래의 관찰 <span class="math inline">\(\mathbf Y\)</span>와 최소 거리를 지니는 벡터를 찾아야 한다. 이 거리를 최소화하는 <span class="math inline">\(\beta_i\)</span>를 알고 있다면 이 벡터는 다음과 같이 표현된다. <span class="math inline">\({\mathbf X} = [x_1, \dotsc, x_k]\)</span>일 때,</p>
 <p><span class="math display">\[
 \begin{aligned}
 \underset{(n \times 1)}{\hat{\mathbf Y}} &amp; = {\mathbf X} {\boldsymbol \beta} \\
@@ -695,7 +695,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","loop":true,"closeEffect":"zoom","selector":".lightbox"});</script>
 
 
 
