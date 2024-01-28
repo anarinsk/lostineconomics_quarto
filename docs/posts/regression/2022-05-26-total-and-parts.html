@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.455">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -54,13 +54,7 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
+  "limit": 20,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -85,9 +79,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
+      <div class="navbar-brand-container">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">lostineconomics.com</span>
     </a>
@@ -99,33 +93,33 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
-<span class="menu-text">about</span></a>
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../project.html"> 
-<span class="menu-text">project</span></a>
+    <a class="nav-link" href="../../project.html" rel="" target="">
+ <span class="menu-text">project</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/anarinsk"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/anarinsk" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
-<span class="menu-text"></span></a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/anarinsk"> <i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/anarinsk" rel="" target=""><i class="bi bi-twitter" role="img">
 </i> 
-<span class="menu-text"></span></a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
-<span class="menu-text"></span></a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
+          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -174,9 +168,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
-
 </header>
-
 
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
@@ -199,18 +191,15 @@ y_i = \alpha + \beta x_i + \gamma D_i + \epsilon_i
 <section id="confounder-and-simpsons-paradox" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="confounder-and-simpsons-paradox">Confounder and Simpson’s Paradox</h2>
 <p>먼저 심슨의 역설을 먼저 살펴보자. 아래는 웃자고 만든 그림인데 웃고 넘기기에는 아까운 중요한 통찰이 들어 있다.</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[[-10, 60, -10]]">
+<div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 75.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/12/simpsons-paradox.jpg" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-1" title="전체를 볼 것인가 부분을 볼 것인가?"><img src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/12/simpsons-paradox.jpg" class="img-fluid figure-img" alt="전체를 볼 것인가 부분을 볼 것인가?"></a></p>
-<figcaption>전체를 볼 것인가 부분을 볼 것인가?</figcaption>
+<p><a href="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/12/simpsons-paradox.jpg" class="lightbox" title="전체를 볼 것인가 부분을 볼 것인가?" data-gallery="quarto-lightbox-gallery-1"><img src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/12/simpsons-paradox.jpg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">전체를 볼 것인가 부분을 볼 것인가?</figcaption>
 </figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
@@ -219,18 +208,15 @@ y_i = \alpha + \beta x_i + \gamma D_i + \epsilon_i
 </div>
 </div>
 <p>위 그림에서 심슨가족 전체를 보면 <span class="math inline">\(x\)</span> 축 변인의 증가에 따라서 <span class="math inline">\(y\)</span> 축 변인이 증가하는 형태를 취한다. 반면, 가족 구성원 하나하나에 대해서는 반대의 관계를 취하고 있다. 심슨의 역설은 전체의 경향과 부분의 경향이 어긋나는 현상을 나타낸다. 조금 더 진지한 사례는 아래의 그림과 같다.</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[[-10, 60, -10]]">
+<div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 75.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/f/fb/Simpsons_paradox_-_animation.gif?1653868287578" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-2" title="심슨의 역설"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Simpsons_paradox_-_animation.gif?1653868287578" class="img-fluid figure-img" alt="심슨의 역설"></a></p>
-<figcaption>심슨의 역설</figcaption>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/f/fb/Simpsons_paradox_-_animation.gif?1653868287578" class="lightbox" title="심슨의 역설" data-gallery="quarto-lightbox-gallery-2"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Simpsons_paradox_-_animation.gif?1653868287578" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">심슨의 역설</figcaption>
 </figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
@@ -242,18 +228,15 @@ y_i = \alpha + \beta x_i + \gamma D_i + \epsilon_i
 <div class="no-row-height column-margin column-container"><div class="">
 <p>심슨의 역설에 흥미로운 사례는 미국 대학 입학의 남녀 학생 비율이다. 전체로 보면 남학생의 입학 비율이 여학생의 입학 비율보다 높았다. 그런데 개별 학과를 보면 여학생의 입학 비율이 대체로 남학생의 입학 비율보다 높았다. 서로 상반되는 듯 보이는 이 결과는 관심의 대상이 비율인데 반해서 학과 단위에서 작용하는 지원자들의 행태를 반영하지 못한 데 따른 것이다. 사례로는 <a href="https://namu.wiki/w/%EC%8B%AC%EC%8A%A8%EC%9D%98%20%EC%97%AD%EC%84%A4">여기</a>와 <a href="https://medium.com/bondata/simpsons-paradox-and-confounding-190a26f9e039">여기</a>를 참고하자.</p>
 </div></div><p>여기서 중요한 것은 역설 자체가 아니다. 역설의 함정에 빠지지 않고 어디에 포커스를 둘 것인지가 문제다. 만일 인구 구성의 각 그룹 별 경향을 평균적으로 살펴보는 것이 관심 사항이라면 위 그림에서 그룹 각각의 기울기를 평균한 값이 우리가 찾는 경향이다. 반대로 개별 그룹은 중요하지 않고 인구 전체가 관심사라면 개별 인구를 동일하게 보고 기울기를 찾는 게 맞다.</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[[-10, 60, -10]]">
+<div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 75.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://slidetodoc.com/presentation_image_h/792ab2d7ce21c60c396545ec752d13fe/image-44.jpg" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-3" title="DAG로 본 confounder &amp; collider"><img src="https://slidetodoc.com/presentation_image_h/792ab2d7ce21c60c396545ec752d13fe/image-44.jpg" class="img-fluid figure-img" alt="DAG로 본 confounder &amp; collider"></a></p>
-<figcaption>DAG로 본 confounder &amp; collider</figcaption>
+<p><a href="https://slidetodoc.com/presentation_image_h/792ab2d7ce21c60c396545ec752d13fe/image-44.jpg" class="lightbox" title="DAG로 본 confounder &amp; collider" data-gallery="quarto-lightbox-gallery-3"><img src="https://slidetodoc.com/presentation_image_h/792ab2d7ce21c60c396545ec752d13fe/image-44.jpg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">DAG로 본 confounder &amp; collider</figcaption>
 </figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
@@ -266,18 +249,15 @@ y_i = \alpha + \beta x_i + \gamma D_i + \epsilon_i
 <section id="그래도-심슨의-역설이-잘-이해가-되지-않는다면" class="level3">
 <h3 class="anchored" data-anchor-id="그래도-심슨의-역설이-잘-이해가-되지-않는다면">그래도 심슨의 역설이 잘 이해가 되지 않는다면…</h3>
 <p>벡터를 통해 그래프로 설명하는 사례가 직관적으로 잘 와닿고 이해하기도 좋다.</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[[-10, 60, -10]]">
+<div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 75.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Simpsons-vector.svg/430px-Simpsons-vector.svg.png?20180610180117" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-4" title="붉은 벡터 1,2가 파란 벡터 1,2 보다 각각 더 높은 비율(벡터의 각도)를 지니고 있다. 그럼에도 둘을 결합했을 경우 파란 벡터가 더 높은 비율을 지니게 된다."><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Simpsons-vector.svg/430px-Simpsons-vector.svg.png?20180610180117" class="img-fluid figure-img" alt="붉은 벡터 1,2가 파란 벡터 1,2 보다 각각 더 높은 비율(벡터의 각도)를 지니고 있다. 그럼에도 둘을 결합했을 경우 파란 벡터가 더 높은 비율을 지니게 된다."></a></p>
-<figcaption>붉은 벡터 1,2가 파란 벡터 1,2 보다 각각 더 높은 비율(벡터의 각도)를 지니고 있다. 그럼에도 둘을 결합했을 경우 파란 벡터가 더 높은 비율을 지니게 된다.</figcaption>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Simpsons-vector.svg/430px-Simpsons-vector.svg.png?20180610180117" class="lightbox" title="붉은 벡터 1,2가 파란 벡터 1,2 보다 각각 더 높은 비율(벡터의 각도)를 지니고 있다. 그럼에도 둘을 결합했을 경우 파란 벡터가 더 높은 비율을 지니게 된다." data-gallery="quarto-lightbox-gallery-4"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Simpsons-vector.svg/430px-Simpsons-vector.svg.png?20180610180117" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">붉은 벡터 1,2가 파란 벡터 1,2 보다 각각 더 높은 비율(벡터의 각도)를 지니고 있다. 그럼에도 둘을 결합했을 경우 파란 벡터가 더 높은 비율을 지니게 된다.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
@@ -289,18 +269,15 @@ y_i = \alpha + \beta x_i + \gamma D_i + \epsilon_i
 </section>
 <section id="collider-and-berksons-paradox" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="collider-and-berksons-paradox">Collider and Berkson’s Paradox</h2>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[[-10, 60, -10]]">
+<div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 75.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="https://brilliant-staff-media.s3-us-west-2.amazonaws.com/tiffany-wang/1Mvt8RPtlU.png" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-5" title="전체를 볼 것인가 부분을 볼 것인가? 해당 밴드를 중심으로 SAT 점수가 높고 GPA도 높은 사람들은 더 좋은 학교에 진학했고, 낮은 사람들은 내가 관찰하는 샘플에서 탈랐했다. 그렇다면 이 관계는 실제로 존재하는 것일까?"><img src="https://brilliant-staff-media.s3-us-west-2.amazonaws.com/tiffany-wang/1Mvt8RPtlU.png" class="my-figure5 img-fluid figure-img" alt="전체를 볼 것인가 부분을 볼 것인가? 해당 밴드를 중심으로 SAT 점수가 높고 GPA도 높은 사람들은 더 좋은 학교에 진학했고, 낮은 사람들은 내가 관찰하는 샘플에서 탈랐했다. 그렇다면 이 관계는 실제로 존재하는 것일까?"></a></p>
-<figcaption>전체를 볼 것인가 부분을 볼 것인가? 해당 밴드를 중심으로 SAT 점수가 높고 GPA도 높은 사람들은 더 좋은 학교에 진학했고, 낮은 사람들은 내가 관찰하는 샘플에서 탈랐했다. 그렇다면 이 관계는 실제로 존재하는 것일까?</figcaption>
+<p><a href="https://brilliant-staff-media.s3-us-west-2.amazonaws.com/tiffany-wang/1Mvt8RPtlU.png" class="lightbox" title="전체를 볼 것인가 부분을 볼 것인가? 해당 밴드를 중심으로 SAT 점수가 높고 GPA도 높은 사람들은 더 좋은 학교에 진학했고, 낮은 사람들은 내가 관찰하는 샘플에서 탈랐했다. 그렇다면 이 관계는 실제로 존재하는 것일까?" data-gallery="quarto-lightbox-gallery-5"><img src="https://brilliant-staff-media.s3-us-west-2.amazonaws.com/tiffany-wang/1Mvt8RPtlU.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">전체를 볼 것인가 부분을 볼 것인가? 해당 밴드를 중심으로 SAT 점수가 높고 GPA도 높은 사람들은 더 좋은 학교에 진학했고, 낮은 사람들은 내가 관찰하는 샘플에서 탈랐했다. 그렇다면 이 관계는 실제로 존재하는 것일까?</figcaption>
 </figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
@@ -315,7 +292,11 @@ y_i = \alpha + \beta x_i + \gamma D_i + \epsilon_i
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>벅슨의 역설은 통제하지 않아야 할 변수를 통제할 때 발생하기도 하지만 많은 경우 표본 자체를 살피지 않은 데에서 생기기도 한다. 예를 들어 아래 그림을 보자.</p>
-<p><a href="https://mixtape.scunning.com/03-Directed_Acyclical_Graphs_files/figure-html/moviestar-dag-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://mixtape.scunning.com/03-Directed_Acyclical_Graphs_files/figure-html/moviestar-dag-1.png" class="img-fluid"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://mixtape.scunning.com/03-Directed_Acyclical_Graphs_files/figure-html/moviestar-dag-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://mixtape.scunning.com/03-Directed_Acyclical_Graphs_files/figure-html/moviestar-dag-1.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
 <p>보통 배우가 되려면 연기 재능과 외모 둘 중 하나는 갖추어야 한다고들 한다. 이 말 자체는 맞지만 이를 확대 해석해서 외모와 연기 재능이 역의 상관성이 있다고 주장하는 경우가 있다. 이는 모집단 전체(모든 사람)에 대해서 타당한 말일까? 배우라는 집단으로 제한해보면 외모와 재능이 모두 미달되는 사람들은 배우가 아닌 다른 직업을 찾았을 가능성이 높다. 외모와 재능을 사분면으로 나눌 때 3 사분면에 위치한 사람들이 사라진 배우라는 집단에 대해서는 음의 상관성이 관찰되는 것처럼 보인다.</p>
 </div></div></section>
 <section id="중요한-것은-질문과-문제-설정" class="level2">
@@ -369,33 +350,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
-    }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -464,15 +418,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  let localAlternateSentinel = 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -551,9 +503,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+  function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
+      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -563,17 +516,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start',
+      placement: 'bottom-start'
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -586,128 +530,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
-        }
-        typesetMath(container);
-        return container.innerHTML
-      } else {
-        typesetMath(note);
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      typesetMath(note);
-      return note.innerHTML;
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -751,7 +573,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
-            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -777,32 +598,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -863,8 +658,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false});</script>
-
+<script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","closeEffect":"zoom"});</script>
 
 
 
