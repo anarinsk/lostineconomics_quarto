@@ -1,5 +1,5 @@
 ---
-title: 스케일의 법칙
+title: 존 리스트, "스케일의 법칙"
 description: 그냥 또 하나의 경제학책? 
 author: "JS HUHH"
 date: "03/13/2023"

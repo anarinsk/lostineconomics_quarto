@@ -1,5 +1,5 @@
 ---
-title: 마약 하는 마음, 마약 파는 사회
+title: 양성관, "마약 하는 마음, 마약 파는 사회"
 description: 재미는 있지만, 좀 장황하다
 author: "JS HUHH"
 date: "10/27/2023"

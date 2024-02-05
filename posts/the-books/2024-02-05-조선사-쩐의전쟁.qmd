@@ -1,5 +1,5 @@
 ---
-title: 조선사 쩐의 전쟁
+title: 이한, "조선사 쩐의 전쟁"
 description: 조선은 '조선'이 아니야!
 author: "JS HUHH"
 date: "02/05/2024"

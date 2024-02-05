@@ -1,5 +1,5 @@
 ---
-title: 백광 
+title: 렌조 미키히코, "백광"
 description: 놀라운 추리 소설 
 author: "JS HUHH"
 date: "01/30/2024"
