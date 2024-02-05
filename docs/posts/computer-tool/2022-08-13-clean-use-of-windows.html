@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.455">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -25,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -88,7 +88,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -111,9 +117,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">lostineconomics.com</span>
     </a>
@@ -125,33 +131,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">about</span></a>
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../project.html" rel="" target="">
- <span class="menu-text">project</span></a>
+    <a class="nav-link" href="../../project.html"> 
+<span class="menu-text">project</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/anarinsk" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/anarinsk"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/anarinsk" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/anarinsk"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -200,7 +206,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
@@ -242,15 +250,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="https://winget.run" class="uri">https://winget.run</a></li>
 </ul>
 <p>위 웹사이트의 검색창에 “Windows Terminal”을 넣고 엔터를 누르자. 아래 검색 결과에 정식 본과 preview 버전 두 개가 뜰 것이다. 특별한 이유가 없다면 정식 버전을 설치하도록 하자. 클릭해서 들어가면 아래와 같은 스크린 샷이 보인다.</p>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[-20, 50, -20]]">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 22.2%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 55.6%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 55.6%;justify-content: center;">
 <figure class="figure">
-<p><a href="./images/winget-wt.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="박스를 복붙해 넣자."><img src="./images/winget-wt.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">박스를 복붙해 넣자.</figcaption>
+<p><a href="./images/winget-wt.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description="" title="박스를 복붙해 넣자."><img src="./images/winget-wt.png" class="img-fluid figure-img" alt="박스를 복붙해 넣자."></a></p>
+<figcaption>박스를 복붙해 넣자.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 22.2%;justify-content: center;">
@@ -259,10 +270,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>박스 친 부분을 클릭으로 복사할 수 있다. 이대로 copy-paste(복붙)를 해주면 된다. CTRL-V로는 커맨드셸에서는 제대로 붙지 않을 수 있다. 복사 후 마우스 우버튼 클릭으로 붙여녛기를 선택하면 잘 들어갈 것이다. 다 안되면 직접 타이핑하자.</p>
-<pre class="cmd"><code>&gt;_ winget install --id=Microsoft.WindowsTerminal  -e</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;</span>_ winget install -<span class="at">-id</span>=Microsoft.WindowsTerminal  <span class="at">-e</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>이렇게 winget을 통해서 필요한 앱들을 터미널을 통해 설치할 수 있다. Winget은 Debian의 apt 혹은 Mac의 brew와 거의 같은 방식으로 작동한다.</p>
 <p>Powershell 역시 같은 방식으로 설치하자.</p>
-<pre class="cmd"><code>&gt;_ winget install --id=Microsoft.PowerShell  -e</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cmd code-with-copy"><code class="sourceCode dosbat"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&gt;</span>_ winget install -<span class="at">-id</span>=Microsoft.PowerShell  <span class="at">-e</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>WT를 설치하면 윈도용 PowerShell이 깔려 있다. 크로스플랫폼으로 개발된 PowerShell Core를 추가로 깔도록 하자.</p>
@@ -357,37 +368,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="환경-변수-설정" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="환경-변수-설정">환경 변수 설정</h4>
 <p>아래 그림과 같이 윈도 태스크바의 검색 창에서 “환경 변수”라고 치면 아래 그림과 같은 검색 결과 비슷한 것이 뜰 것이다. “계정의 환경 변수 편집”을 선택하도록 하자.</p>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[-30, 65, -30], [100, -5, 118.5]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 24.0%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 52.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
+<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 52.0%;justify-content: center;">
 <figure class="figure">
 <p><img src="./images/search-1.png" class="nolightbox img-fluid figure-img"></p>
-<figcaption class="figure-caption">환경 변수 편집을 찾아가자!</figcaption>
+<figcaption>환경 변수 편집을 찾아가자!</figcaption>
 </figure>
-</div>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 24.0%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
 </div>
 <div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 44.7%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 44.7%;justify-content: center;">
 <figure class="figure">
-<p><a href="./images/user-env-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="계정의 환경 변수(클릭시 확대)"><img src="./images/user-env-1.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">계정의 환경 변수(클릭시 확대)</figcaption>
+<p><a href="./images/user-env-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-description="" title="계정의 환경 변수(클릭시 확대)"><img src="./images/user-env-1.png" class="img-fluid figure-img" alt="계정의 환경 변수(클릭시 확대)"></a></p>
+<figcaption>계정의 환경 변수(클릭시 확대)</figcaption>
 </figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 2.2%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 53.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 53.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="./images/user-env-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="path 추가(클릭시 확대)"><img src="./images/user-env-2.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">path 추가(클릭시 확대)</figcaption>
+<p><a href="./images/user-env-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-description="" title="path 추가(클릭시 확대)"><img src="./images/user-env-2.png" class="img-fluid figure-img" alt="path 추가(클릭시 확대)"></a></p>
+<figcaption>path 추가(클릭시 확대)</figcaption>
 </figure>
 </div>
 </div>
@@ -473,15 +485,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="jupyter-모듈-설치" class="level4">
 <h4 class="anchored" data-anchor-id="jupyter-모듈-설치">Jupyter 모듈 설치</h4>
 <p>Jupyter를 실행할 때 만일 해당 언어 환경에 Jupyter가 깔려 있지 않다면 어떻게 될까? 똑똑한 VS Code는 무엇을 깔아야 하는지 알려준다. 아래 그림과 같은 메시지에서 설치 관련 명령을 복사헤서 붙여 넣고 실행하자. VS Code에서 하단에 커맨드셸을 활성화하려면 CTRL-J를 누르도록 하자. 혹은 오른쪽 상단의 아이콘 중에서 하단 바가 색칠된 형태의 아이콘을 눌러도 된다.</p>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[-20, 80, -20]]">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 16.7%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 66.7%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
 <figure class="figure">
-<p><a href="./images/vscode-instruct-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="VS Code는 설치한 필요한 패키지를 알아서 알려준다!"><img src="./images/vscode-instruct-1.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">VS Code는 설치한 필요한 패키지를 알아서 알려준다!</figcaption>
+<p><a href="./images/vscode-instruct-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-description="" title="VS Code는 설치한 필요한 패키지를 알아서 알려준다!"><img src="./images/vscode-instruct-1.png" class="img-fluid figure-img" alt="VS Code는 설치한 필요한 패키지를 알아서 알려준다!"></a></p>
+<figcaption>VS Code는 설치한 필요한 패키지를 알아서 알려준다!</figcaption>
 </figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 16.7%;justify-content: center;">
@@ -498,15 +513,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>검색창에서 Python을 칠 때 나오는 것 중에서 “Python:인터프리터 선택” 클릭</li>
 <li>아래 그림과 같은 창에서 인터프리터를 선택하면 된다. 만일 보이지 않으면 리프레시 버튼을 눌러서 다시 환경을 갱신해보자. Conda 가상 환경까지 잘 찾아준다.</li>
 </ol>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[-20, 60, -20]]">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="./images/vscode-interpreter.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Jupyter Runtime을 선택할 수 있다. Python 뿐 아니라 다른 언어 환경도 선택할 수 있다."><img src="./images/vscode-interpreter.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Jupyter Runtime을 선택할 수 있다. Python 뿐 아니라 다른 언어 환경도 선택할 수 있다.</figcaption>
+<p><a href="./images/vscode-interpreter.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-description="" title="Jupyter Runtime을 선택할 수 있다. Python 뿐 아니라 다른 언어 환경도 선택할 수 있다."><img src="./images/vscode-interpreter.png" class="my-figure7 img-fluid figure-img" alt="Jupyter Runtime을 선택할 수 있다. Python 뿐 아니라 다른 언어 환경도 선택할 수 있다."></a></p>
+<figcaption>Jupyter Runtime을 선택할 수 있다. Python 뿐 아니라 다른 언어 환경도 선택할 수 있다.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
@@ -581,6 +599,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -647,13 +692,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -732,10 +779,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -745,8 +791,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -759,6 +814,128 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -802,6 +979,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -827,6 +1005,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -887,7 +1091,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":true,"closeEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","closeEffect":"zoom"});</script>
+
 
 
 
