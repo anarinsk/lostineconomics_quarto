@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.455">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -65,6 +65,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -103,6 +104,33 @@ ul.task-list li input[type="checkbox"] {
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -161,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(71)</span></div><div class="category" data-category="computer-tool">computer-tool <span class="quarto-category-count">(27)</span></div><div class="category" data-category="container">container <span class="quarto-category-count">(5)</span></div><div class="category" data-category="econ-simple">econ-simple <span class="quarto-category-count">(1)</span></div><div class="category" data-category="economics">economics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="git">git <span class="quarto-category-count">(2)</span></div><div class="category" data-category="linear-algebra">linear-algebra <span class="quarto-category-count">(8)</span></div><div class="category" data-category="machine-learning">machine-learning <span class="quarto-category-count">(3)</span></div><div class="category" data-category="math-of">math-of <span class="quarto-category-count">(6)</span></div><div class="category" data-category="math-simple">math-simple <span class="quarto-category-count">(6)</span></div><div class="category" data-category="pc-install">pc-install <span class="quarto-category-count">(3)</span></div><div class="category" data-category="regression">regression <span class="quarto-category-count">(7)</span></div><div class="category" data-category="statistics">statistics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="stats-simple">stats-simple <span class="quarto-category-count">(4)</span></div><div class="category" data-category="the-books">the-books <span class="quarto-category-count">(4)</span></div><div class="category" data-category="walk-through">walk-through <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(72)</span></div><div class="category" data-category="computer-tool">computer-tool <span class="quarto-category-count">(27)</span></div><div class="category" data-category="container">container <span class="quarto-category-count">(5)</span></div><div class="category" data-category="econ-simple">econ-simple <span class="quarto-category-count">(1)</span></div><div class="category" data-category="economics">economics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="git">git <span class="quarto-category-count">(2)</span></div><div class="category" data-category="linear-algebra">linear-algebra <span class="quarto-category-count">(8)</span></div><div class="category" data-category="machine-learning">machine-learning <span class="quarto-category-count">(4)</span></div><div class="category" data-category="math-of">math-of <span class="quarto-category-count">(6)</span></div><div class="category" data-category="math-simple">math-simple <span class="quarto-category-count">(6)</span></div><div class="category" data-category="pc-install">pc-install <span class="quarto-category-count">(3)</span></div><div class="category" data-category="regression">regression <span class="quarto-category-count">(7)</span></div><div class="category" data-category="statistics">statistics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="stats-simple">stats-simple <span class="quarto-category-count">(4)</span></div><div class="category" data-category="the-books">the-books <span class="quarto-category-count">(4)</span></div><div class="category" data-category="the-lectures">the-lectures <span class="quarto-category-count">(1)</span></div><div class="category" data-category="walk-through">walk-through <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content"><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script>
 
@@ -174,18 +202,54 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="the-books" data-listing-date-sort="1707058800000" data-listing-file-modified-sort="1707172584839" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="680">
+<div class="quarto-post image-right" data-index="0" data-categories="the-lectures,machine-learning" data-listing-date-sort="1707231600000" data-listing-file-modified-sort="1707276782221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="314">
 <div class="thumbnail">
-<p><a href="./posts/the-books/2024-02-05-조선사-쩐의전쟁.html"></a></p><a href="./posts/the-books/2024-02-05-조선사-쩐의전쟁.html">
-<p><img src="./posts/the-books/images/book-cat-2.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/the-books/2024-02-05-조선사-쩐의전쟁.html"></a></p>
+<p><a href="./posts/the-lectures/2024-02-07-statquest-w2v.html" class="no-external"></a></p><a href="./posts/the-lectures/2024-02-07-statquest-w2v.html" class="no-external">
+<p><img src="./posts/the-lectures/images/cat-windows.webp" class="thumbnail-image"></p>
+</a><p><a href="./posts/the-lectures/2024-02-07-statquest-w2v.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/the-books/2024-02-05-조선사-쩐의전쟁.html">이한, “조선사 쩐의 전쟁”</a>
+<a href="./posts/the-lectures/2024-02-07-statquest-w2v.html" class="no-external">Word2Vec</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/the-books/2024-02-05-조선사-쩐의전쟁.html"></a>
+<a href="./posts/the-lectures/2024-02-07-statquest-w2v.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('the-lectures'); return false;">
+the-lectures
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('machine-learning'); return false;">
+machine-learning
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/the-lectures/2024-02-07-statquest-w2v.html" class="no-external">Word2Vec에 대한 기본 이해</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/the-lectures/2024-02-07-statquest-w2v.html" class="no-external">
+<div class="listing-date">
+Feb 7, 2024
+</div>
+<div class="listing-author">
+JS HUHH
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="the-books" data-listing-date-sort="1707058800000" data-listing-file-modified-sort="1707172584839" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="680">
+<div class="thumbnail">
+<p><a href="./posts/the-books/2024-02-05-조선사-쩐의전쟁.html" class="no-external"></a></p><a href="./posts/the-books/2024-02-05-조선사-쩐의전쟁.html" class="no-external">
+<p><img src="./posts/the-books/images/book-cat-2.webp" class="thumbnail-image"></p>
+</a><p><a href="./posts/the-books/2024-02-05-조선사-쩐의전쟁.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/the-books/2024-02-05-조선사-쩐의전쟁.html" class="no-external">이한, “조선사 쩐의 전쟁”</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/the-books/2024-02-05-조선사-쩐의전쟁.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('the-books'); return false;">
@@ -193,11 +257,11 @@ the-books
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/the-books/2024-02-05-조선사-쩐의전쟁.html">조선은 ’조선’이 아니야!</a>
+<a href="./posts/the-books/2024-02-05-조선사-쩐의전쟁.html" class="no-external">조선은 ’조선’이 아니야!</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/the-books/2024-02-05-조선사-쩐의전쟁.html">
+<a href="./posts/the-books/2024-02-05-조선사-쩐의전쟁.html" class="no-external">
 <div class="listing-date">
 Feb 5, 2024
 </div>
@@ -207,18 +271,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="the-books" data-listing-date-sort="1706540400000" data-listing-file-modified-sort="1707172881869" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="303">
+<div class="quarto-post image-right" data-index="2" data-categories="the-books" data-listing-date-sort="1706540400000" data-listing-file-modified-sort="1707172881869" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="306">
 <div class="thumbnail">
-<p><a href="./posts/the-books/2024-01-30-백광.html"></a></p><a href="./posts/the-books/2024-01-30-백광.html">
+<p><a href="./posts/the-books/2024-01-30-백광.html" class="no-external"></a></p><a href="./posts/the-books/2024-01-30-백광.html" class="no-external">
 <p><img src="./posts/the-books/images/book-cat-2.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/the-books/2024-01-30-백광.html"></a></p>
+</a><p><a href="./posts/the-books/2024-01-30-백광.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/the-books/2024-01-30-백광.html">렌조 미키히코, “백광”</a>
+<a href="./posts/the-books/2024-01-30-백광.html" class="no-external">렌조 미키히코, “백광”</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/the-books/2024-01-30-백광.html"></a>
+<a href="./posts/the-books/2024-01-30-백광.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('the-books'); return false;">
@@ -226,11 +290,11 @@ the-books
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/the-books/2024-01-30-백광.html">놀라운 추리 소설</a>
+<a href="./posts/the-books/2024-01-30-백광.html" class="no-external">놀라운 추리 소설</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/the-books/2024-01-30-백광.html">
+<a href="./posts/the-books/2024-01-30-백광.html" class="no-external">
 <div class="listing-date">
 Jan 30, 2024
 </div>
@@ -240,18 +304,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="walk-through,pc-install" data-listing-date-sort="1698937200000" data-listing-file-modified-sort="1700778397314" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="472">
+<div class="quarto-post image-right" data-index="3" data-categories="walk-through,pc-install" data-listing-date-sort="1698937200000" data-listing-file-modified-sort="1700778397314" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="472">
 <div class="thumbnail">
-<p><a href="./posts/walk-through/2023-11-03-definitive-guide-to-windows.html"></a></p><a href="./posts/walk-through/2023-11-03-definitive-guide-to-windows.html">
+<p><a href="./posts/walk-through/2023-11-03-definitive-guide-to-windows.html" class="no-external"></a></p><a href="./posts/walk-through/2023-11-03-definitive-guide-to-windows.html" class="no-external">
 <p><img src="./posts/walk-through/images/cat-windows.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/walk-through/2023-11-03-definitive-guide-to-windows.html"></a></p>
+</a><p><a href="./posts/walk-through/2023-11-03-definitive-guide-to-windows.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/walk-through/2023-11-03-definitive-guide-to-windows.html">윈도 작업 환경을 기록한다</a>
+<a href="./posts/walk-through/2023-11-03-definitive-guide-to-windows.html" class="no-external">윈도 작업 환경을 기록한다</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/walk-through/2023-11-03-definitive-guide-to-windows.html"></a>
+<a href="./posts/walk-through/2023-11-03-definitive-guide-to-windows.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('walk-through'); return false;">
@@ -262,11 +326,11 @@ pc-install
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/walk-through/2023-11-03-definitive-guide-to-windows.html">Windows와 Linux의 컬래버</a>
+<a href="./posts/walk-through/2023-11-03-definitive-guide-to-windows.html" class="no-external">Windows와 Linux의 컬래버</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/walk-through/2023-11-03-definitive-guide-to-windows.html">
+<a href="./posts/walk-through/2023-11-03-definitive-guide-to-windows.html" class="no-external">
 <div class="listing-date">
 Nov 3, 2023
 </div>
@@ -276,18 +340,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="computer-tool,pc-install" data-listing-date-sort="1698937200000" data-listing-file-modified-sort="1700778397314" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="703">
+<div class="quarto-post image-right" data-index="4" data-categories="computer-tool,pc-install" data-listing-date-sort="1698937200000" data-listing-file-modified-sort="1700778397314" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="703">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2023-11-03-first-thing-ubuntu.html"></a></p><a href="./posts/computer-tool/2023-11-03-first-thing-ubuntu.html">
+<p><a href="./posts/computer-tool/2023-11-03-first-thing-ubuntu.html" class="no-external"></a></p><a href="./posts/computer-tool/2023-11-03-first-thing-ubuntu.html" class="no-external">
 <p><img src="./posts/computer-tool/images/ubuntu.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2023-11-03-first-thing-ubuntu.html"></a></p>
+</a><p><a href="./posts/computer-tool/2023-11-03-first-thing-ubuntu.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2023-11-03-first-thing-ubuntu.html">Ubuntu를 깔고 먼저 해야 할 일들</a>
+<a href="./posts/computer-tool/2023-11-03-first-thing-ubuntu.html" class="no-external">Ubuntu를 깔고 먼저 해야 할 일들</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2023-11-03-first-thing-ubuntu.html"></a>
+<a href="./posts/computer-tool/2023-11-03-first-thing-ubuntu.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -298,11 +362,11 @@ pc-install
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2023-11-03-first-thing-ubuntu.html">우분투 설치 후 이것부터!</a>
+<a href="./posts/computer-tool/2023-11-03-first-thing-ubuntu.html" class="no-external">우분투 설치 후 이것부터!</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2023-11-03-first-thing-ubuntu.html">
+<a href="./posts/computer-tool/2023-11-03-first-thing-ubuntu.html" class="no-external">
 <div class="listing-date">
 Nov 3, 2023
 </div>
@@ -312,18 +376,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="the-books" data-listing-date-sort="1698332400000" data-listing-file-modified-sort="1707172590389" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="504">
+<div class="quarto-post image-right" data-index="5" data-categories="the-books" data-listing-date-sort="1698332400000" data-listing-file-modified-sort="1707172590389" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="504">
 <div class="thumbnail">
-<p><a href="./posts/the-books/2023-10-27-drug-mind-yang.html"></a></p><a href="./posts/the-books/2023-10-27-drug-mind-yang.html">
+<p><a href="./posts/the-books/2023-10-27-drug-mind-yang.html" class="no-external"></a></p><a href="./posts/the-books/2023-10-27-drug-mind-yang.html" class="no-external">
 <p><img src="./posts/the-books/images/book-cat-2.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/the-books/2023-10-27-drug-mind-yang.html"></a></p>
+</a><p><a href="./posts/the-books/2023-10-27-drug-mind-yang.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/the-books/2023-10-27-drug-mind-yang.html">양성관, “마약 하는 마음, 마약 파는 사회”</a>
+<a href="./posts/the-books/2023-10-27-drug-mind-yang.html" class="no-external">양성관, “마약 하는 마음, 마약 파는 사회”</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/the-books/2023-10-27-drug-mind-yang.html"></a>
+<a href="./posts/the-books/2023-10-27-drug-mind-yang.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('the-books'); return false;">
@@ -331,11 +395,11 @@ the-books
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/the-books/2023-10-27-drug-mind-yang.html">재미는 있지만, 좀 장황하다</a>
+<a href="./posts/the-books/2023-10-27-drug-mind-yang.html" class="no-external">재미는 있지만, 좀 장황하다</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/the-books/2023-10-27-drug-mind-yang.html">
+<a href="./posts/the-books/2023-10-27-drug-mind-yang.html" class="no-external">
 <div class="listing-date">
 Oct 27, 2023
 </div>
@@ -345,18 +409,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="computer-tool" data-listing-date-sort="1697727600000" data-listing-file-modified-sort="1698617764068" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="511">
+<div class="quarto-post image-right" data-index="6" data-categories="computer-tool" data-listing-date-sort="1697727600000" data-listing-file-modified-sort="1698617764068" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="511">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2023-10-20-github-codespaces.html"></a></p><a href="./posts/computer-tool/2023-10-20-github-codespaces.html">
+<p><a href="./posts/computer-tool/2023-10-20-github-codespaces.html" class="no-external"></a></p><a href="./posts/computer-tool/2023-10-20-github-codespaces.html" class="no-external">
 <p><img src="./posts/computer-tool/images/codespaces.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2023-10-20-github-codespaces.html"></a></p>
+</a><p><a href="./posts/computer-tool/2023-10-20-github-codespaces.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2023-10-20-github-codespaces.html">Perfectly Codespaces</a>
+<a href="./posts/computer-tool/2023-10-20-github-codespaces.html" class="no-external">Perfectly Codespaces</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2023-10-20-github-codespaces.html"></a>
+<a href="./posts/computer-tool/2023-10-20-github-codespaces.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -364,11 +428,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2023-10-20-github-codespaces.html">거의 완벽한 클라우드 코딩 환경</a>
+<a href="./posts/computer-tool/2023-10-20-github-codespaces.html" class="no-external">거의 완벽한 클라우드 코딩 환경</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2023-10-20-github-codespaces.html">
+<a href="./posts/computer-tool/2023-10-20-github-codespaces.html" class="no-external">
 <div class="listing-date">
 Oct 20, 2023
 </div>
@@ -378,18 +442,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="computer-tool,walk-through" data-listing-date-sort="1695222000000" data-listing-file-modified-sort="1700605136003" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1020">
+<div class="quarto-post image-right" data-index="7" data-categories="computer-tool,walk-through" data-listing-date-sort="1695222000000" data-listing-file-modified-sort="1700605136003" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1020">
 <div class="thumbnail">
-<p><a href="./posts/walk-through/2023-09-21-my-beelink.html"></a></p><a href="./posts/walk-through/2023-09-21-my-beelink.html">
+<p><a href="./posts/walk-through/2023-09-21-my-beelink.html" class="no-external"></a></p><a href="./posts/walk-through/2023-09-21-my-beelink.html" class="no-external">
 <p><img src="./posts/walk-through/images/cat-server.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/walk-through/2023-09-21-my-beelink.html"></a></p>
+</a><p><a href="./posts/walk-through/2023-09-21-my-beelink.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/walk-through/2023-09-21-my-beelink.html">소박한 가정용 웹서버</a>
+<a href="./posts/walk-through/2023-09-21-my-beelink.html" class="no-external">소박한 가정용 웹서버</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/walk-through/2023-09-21-my-beelink.html"></a>
+<a href="./posts/walk-through/2023-09-21-my-beelink.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -400,11 +464,11 @@ walk-through
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/walk-through/2023-09-21-my-beelink.html">싸게 만들어보자.</a>
+<a href="./posts/walk-through/2023-09-21-my-beelink.html" class="no-external">싸게 만들어보자.</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/walk-through/2023-09-21-my-beelink.html">
+<a href="./posts/walk-through/2023-09-21-my-beelink.html" class="no-external">
 <div class="listing-date">
 Sep 21, 2023
 </div>
@@ -414,18 +478,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="computer-tool" data-listing-date-sort="1693062000000" data-listing-file-modified-sort="1701304086135" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="890">
+<div class="quarto-post image-right" data-index="8" data-categories="computer-tool" data-listing-date-sort="1693062000000" data-listing-file-modified-sort="1701304086135" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="890">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2023-08-27-pixi.html"></a></p><a href="./posts/computer-tool/2023-08-27-pixi.html">
+<p><a href="./posts/computer-tool/2023-08-27-pixi.html" class="no-external"></a></p><a href="./posts/computer-tool/2023-08-27-pixi.html" class="no-external">
 <p><img src="./posts/computer-tool/images/pixi.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2023-08-27-pixi.html"></a></p>
+</a><p><a href="./posts/computer-tool/2023-08-27-pixi.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2023-08-27-pixi.html">pixi</a>
+<a href="./posts/computer-tool/2023-08-27-pixi.html" class="no-external">pixi</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2023-08-27-pixi.html"></a>
+<a href="./posts/computer-tool/2023-08-27-pixi.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -433,11 +497,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2023-08-27-pixi.html">의존성 지옥을 벗어날 또 다른 방법</a>
+<a href="./posts/computer-tool/2023-08-27-pixi.html" class="no-external">의존성 지옥을 벗어날 또 다른 방법</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2023-08-27-pixi.html">
+<a href="./posts/computer-tool/2023-08-27-pixi.html" class="no-external">
 <div class="listing-date">
 Aug 27, 2023
 </div>
@@ -447,18 +511,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="computer-tool" data-listing-date-sort="1692025200000" data-listing-file-modified-sort="1697601012202" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="982">
+<div class="quarto-post image-right" data-index="9" data-categories="computer-tool" data-listing-date-sort="1692025200000" data-listing-file-modified-sort="1697601012202" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="982">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2023-08-15-julia-quicksilver.html"></a></p><a href="./posts/computer-tool/2023-08-15-julia-quicksilver.html">
+<p><a href="./posts/computer-tool/2023-08-15-julia-quicksilver.html" class="no-external"></a></p><a href="./posts/computer-tool/2023-08-15-julia-quicksilver.html" class="no-external">
 <p><img src="./posts/computer-tool/images/tool-cat-2.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2023-08-15-julia-quicksilver.html"></a></p>
+</a><p><a href="./posts/computer-tool/2023-08-15-julia-quicksilver.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2023-08-15-julia-quicksilver.html">Julia + VS Code</a>
+<a href="./posts/computer-tool/2023-08-15-julia-quicksilver.html" class="no-external">Julia + VS Code</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2023-08-15-julia-quicksilver.html"></a>
+<a href="./posts/computer-tool/2023-08-15-julia-quicksilver.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -466,11 +530,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2023-08-15-julia-quicksilver.html">Julia를 빠르게 찍먹해보자</a>
+<a href="./posts/computer-tool/2023-08-15-julia-quicksilver.html" class="no-external">Julia를 빠르게 찍먹해보자</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2023-08-15-julia-quicksilver.html">
+<a href="./posts/computer-tool/2023-08-15-julia-quicksilver.html" class="no-external">
 <div class="listing-date">
 Aug 15, 2023
 </div>
@@ -480,18 +544,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="math-simple" data-listing-date-sort="1687705200000" data-listing-file-modified-sort="1700781106891" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1660">
+<div class="quarto-post image-right" data-index="10" data-categories="math-simple" data-listing-date-sort="1687705200000" data-listing-file-modified-sort="1700781106891" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1660">
 <div class="thumbnail">
-<p><a href="./posts/math-simple/2023-06-26-imply.html"></a></p><a href="./posts/math-simple/2023-06-26-imply.html">
+<p><a href="./posts/math-simple/2023-06-26-imply.html" class="no-external"></a></p><a href="./posts/math-simple/2023-06-26-imply.html" class="no-external">
 <p><img src="./posts/math-simple/images/cat-proof.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/math-simple/2023-06-26-imply.html"></a></p>
+</a><p><a href="./posts/math-simple/2023-06-26-imply.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/math-simple/2023-06-26-imply.html">조건 명제 그리고 부정</a>
+<a href="./posts/math-simple/2023-06-26-imply.html" class="no-external">조건 명제 그리고 부정</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/math-simple/2023-06-26-imply.html"></a>
+<a href="./posts/math-simple/2023-06-26-imply.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math-simple'); return false;">
@@ -499,11 +563,11 @@ math-simple
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/math-simple/2023-06-26-imply.html"><span class="math inline">\(\implies\)</span>를 따져보자</a>
+<a href="./posts/math-simple/2023-06-26-imply.html" class="no-external"><span class="math inline">\(\implies\)</span>를 따져보자</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/math-simple/2023-06-26-imply.html">
+<a href="./posts/math-simple/2023-06-26-imply.html" class="no-external">
 <div class="listing-date">
 Jun 26, 2023
 </div>
@@ -513,18 +577,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="computer-tool" data-listing-date-sort="1685286000000" data-listing-file-modified-sort="1697601051872" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="566">
+<div class="quarto-post image-right" data-index="11" data-categories="computer-tool" data-listing-date-sort="1685286000000" data-listing-file-modified-sort="1697601051872" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="566">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2023-05-29-rye.html"></a></p><a href="./posts/computer-tool/2023-05-29-rye.html">
+<p><a href="./posts/computer-tool/2023-05-29-rye.html" class="no-external"></a></p><a href="./posts/computer-tool/2023-05-29-rye.html" class="no-external">
 <p><img src="./posts/computer-tool/images/tool-cat-2.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2023-05-29-rye.html"></a></p>
+</a><p><a href="./posts/computer-tool/2023-05-29-rye.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2023-05-29-rye.html">Rye</a>
+<a href="./posts/computer-tool/2023-05-29-rye.html" class="no-external">Rye</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2023-05-29-rye.html"></a>
+<a href="./posts/computer-tool/2023-05-29-rye.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -532,11 +596,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2023-05-29-rye.html">꽤 편리한 Python 가상 환경</a>
+<a href="./posts/computer-tool/2023-05-29-rye.html" class="no-external">꽤 편리한 Python 가상 환경</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2023-05-29-rye.html">
+<a href="./posts/computer-tool/2023-05-29-rye.html" class="no-external">
 <div class="listing-date">
 May 29, 2023
 </div>
@@ -546,18 +610,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="computer-tool" data-listing-date-sort="1684162800000" data-listing-file-modified-sort="1697608477082" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="456">
+<div class="quarto-post image-right" data-index="12" data-categories="computer-tool" data-listing-date-sort="1684162800000" data-listing-file-modified-sort="1697608477082" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="456">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2023-05-16-workflow-with-vscode.html"></a></p><a href="./posts/computer-tool/2023-05-16-workflow-with-vscode.html">
+<p><a href="./posts/computer-tool/2023-05-16-workflow-with-vscode.html" class="no-external"></a></p><a href="./posts/computer-tool/2023-05-16-workflow-with-vscode.html" class="no-external">
 <p><img src="./posts/computer-tool/images/tool-cat-2.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2023-05-16-workflow-with-vscode.html"></a></p>
+</a><p><a href="./posts/computer-tool/2023-05-16-workflow-with-vscode.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2023-05-16-workflow-with-vscode.html">Quick Ready for Python in Windows</a>
+<a href="./posts/computer-tool/2023-05-16-workflow-with-vscode.html" class="no-external">Quick Ready for Python in Windows</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2023-05-16-workflow-with-vscode.html"></a>
+<a href="./posts/computer-tool/2023-05-16-workflow-with-vscode.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -565,11 +629,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2023-05-16-workflow-with-vscode.html">파이썬 작업환경을 빠르게 구축하기</a>
+<a href="./posts/computer-tool/2023-05-16-workflow-with-vscode.html" class="no-external">파이썬 작업환경을 빠르게 구축하기</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2023-05-16-workflow-with-vscode.html">
+<a href="./posts/computer-tool/2023-05-16-workflow-with-vscode.html" class="no-external">
 <div class="listing-date">
 May 16, 2023
 </div>
@@ -579,18 +643,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="computer-tool,pc-install" data-listing-date-sort="1683730800000" data-listing-file-modified-sort="1694389561515" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="833">
+<div class="quarto-post image-right" data-index="13" data-categories="computer-tool,pc-install" data-listing-date-sort="1683730800000" data-listing-file-modified-sort="1694389561515" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="833">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2023-05-11-powershell.html"></a></p><a href="./posts/computer-tool/2023-05-11-powershell.html">
+<p><a href="./posts/computer-tool/2023-05-11-powershell.html" class="no-external"></a></p><a href="./posts/computer-tool/2023-05-11-powershell.html" class="no-external">
 <p><img src="https://www.fullstackpython.com/img/logos/powershell.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2023-05-11-powershell.html"></a></p>
+</a><p><a href="./posts/computer-tool/2023-05-11-powershell.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2023-05-11-powershell.html">Power to Powershell!</a>
+<a href="./posts/computer-tool/2023-05-11-powershell.html" class="no-external">Power to Powershell!</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2023-05-11-powershell.html"></a>
+<a href="./posts/computer-tool/2023-05-11-powershell.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -601,11 +665,11 @@ pc-install
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2023-05-11-powershell.html">윈도11에서 PS 잘 쓰기</a>
+<a href="./posts/computer-tool/2023-05-11-powershell.html" class="no-external">윈도11에서 PS 잘 쓰기</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2023-05-11-powershell.html">
+<a href="./posts/computer-tool/2023-05-11-powershell.html" class="no-external">
 <div class="listing-date">
 May 11, 2023
 </div>
@@ -615,18 +679,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="the-books" data-listing-date-sort="1678633200000" data-listing-file-modified-sort="1707172598719" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="438">
+<div class="quarto-post image-right" data-index="14" data-categories="the-books" data-listing-date-sort="1678633200000" data-listing-file-modified-sort="1707172598719" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="438">
 <div class="thumbnail">
-<p><a href="./posts/the-books/2023-03-13-voltage-effect-list.html"></a></p><a href="./posts/the-books/2023-03-13-voltage-effect-list.html">
+<p><a href="./posts/the-books/2023-03-13-voltage-effect-list.html" class="no-external"></a></p><a href="./posts/the-books/2023-03-13-voltage-effect-list.html" class="no-external">
 <p><img src="./posts/the-books/images/book-cat-2.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/the-books/2023-03-13-voltage-effect-list.html"></a></p>
+</a><p><a href="./posts/the-books/2023-03-13-voltage-effect-list.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/the-books/2023-03-13-voltage-effect-list.html">존 리스트, “스케일의 법칙”</a>
+<a href="./posts/the-books/2023-03-13-voltage-effect-list.html" class="no-external">존 리스트, “스케일의 법칙”</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/the-books/2023-03-13-voltage-effect-list.html"></a>
+<a href="./posts/the-books/2023-03-13-voltage-effect-list.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('the-books'); return false;">
@@ -634,11 +698,11 @@ the-books
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/the-books/2023-03-13-voltage-effect-list.html">그냥 또 하나의 경제학책?</a>
+<a href="./posts/the-books/2023-03-13-voltage-effect-list.html" class="no-external">그냥 또 하나의 경제학책?</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/the-books/2023-03-13-voltage-effect-list.html">
+<a href="./posts/the-books/2023-03-13-voltage-effect-list.html" class="no-external">
 <div class="listing-date">
 Mar 13, 2023
 </div>
@@ -648,18 +712,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="computer-tool" data-listing-date-sort="1671634800000" data-listing-file-modified-sort="1698274802385" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="950">
+<div class="quarto-post image-right" data-index="15" data-categories="computer-tool" data-listing-date-sort="1671634800000" data-listing-file-modified-sort="1698274802385" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="950">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2022-12-22-my-domains.html"></a></p><a href="./posts/computer-tool/2022-12-22-my-domains.html">
+<p><a href="./posts/computer-tool/2022-12-22-my-domains.html" class="no-external"></a></p><a href="./posts/computer-tool/2022-12-22-my-domains.html" class="no-external">
 <p><img src="./posts/computer-tool/images/web-cat.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2022-12-22-my-domains.html"></a></p>
+</a><p><a href="./posts/computer-tool/2022-12-22-my-domains.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2022-12-22-my-domains.html">내 도메인을 GitHub Pages에 연결하자.</a>
+<a href="./posts/computer-tool/2022-12-22-my-domains.html" class="no-external">내 도메인을 GitHub Pages에 연결하자.</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2022-12-22-my-domains.html"></a>
+<a href="./posts/computer-tool/2022-12-22-my-domains.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -667,11 +731,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2022-12-22-my-domains.html">도메인을 도메인 답게!</a>
+<a href="./posts/computer-tool/2022-12-22-my-domains.html" class="no-external">도메인을 도메인 답게!</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2022-12-22-my-domains.html">
+<a href="./posts/computer-tool/2022-12-22-my-domains.html" class="no-external">
 <div class="listing-date">
 Dec 22, 2022
 </div>
@@ -681,18 +745,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="computer-tool" data-listing-date-sort="1670252400000" data-listing-file-modified-sort="1694130839959" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="937">
+<div class="quarto-post image-right" data-index="16" data-categories="computer-tool" data-listing-date-sort="1670252400000" data-listing-file-modified-sort="1694130839959" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="937">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2022-12-06-jupyterlite-githubpages.html"></a></p><a href="./posts/computer-tool/2022-12-06-jupyterlite-githubpages.html">
+<p><a href="./posts/computer-tool/2022-12-06-jupyterlite-githubpages.html" class="no-external"></a></p><a href="./posts/computer-tool/2022-12-06-jupyterlite-githubpages.html" class="no-external">
 <p><img src="./posts/computer-tool/images/jupyterlite.jfif" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2022-12-06-jupyterlite-githubpages.html"></a></p>
+</a><p><a href="./posts/computer-tool/2022-12-06-jupyterlite-githubpages.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2022-12-06-jupyterlite-githubpages.html">JupyterLite + GitHub Pages</a>
+<a href="./posts/computer-tool/2022-12-06-jupyterlite-githubpages.html" class="no-external">JupyterLite + GitHub Pages</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2022-12-06-jupyterlite-githubpages.html"></a>
+<a href="./posts/computer-tool/2022-12-06-jupyterlite-githubpages.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -700,11 +764,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2022-12-06-jupyterlite-githubpages.html">인스톨이 필요 없는 주피터 노트북!</a>
+<a href="./posts/computer-tool/2022-12-06-jupyterlite-githubpages.html" class="no-external">인스톨이 필요 없는 주피터 노트북!</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2022-12-06-jupyterlite-githubpages.html">
+<a href="./posts/computer-tool/2022-12-06-jupyterlite-githubpages.html" class="no-external">
 <div class="listing-date">
 Dec 6, 2022
 </div>
@@ -714,18 +778,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="computer-tool" data-listing-date-sort="1670079600000" data-listing-file-modified-sort="1701162852935" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="480">
+<div class="quarto-post image-right" data-index="17" data-categories="computer-tool" data-listing-date-sort="1670079600000" data-listing-file-modified-sort="1701162852935" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="480">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2022-12-04-matplotlib-korfont-redux.html"></a></p><a href="./posts/computer-tool/2022-12-04-matplotlib-korfont-redux.html">
+<p><a href="./posts/computer-tool/2022-12-04-matplotlib-korfont-redux.html" class="no-external"></a></p><a href="./posts/computer-tool/2022-12-04-matplotlib-korfont-redux.html" class="no-external">
 <p><img src="./posts/computer-tool/images/matplotlib.jfif" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2022-12-04-matplotlib-korfont-redux.html"></a></p>
+</a><p><a href="./posts/computer-tool/2022-12-04-matplotlib-korfont-redux.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2022-12-04-matplotlib-korfont-redux.html">matplotlib + 한글 Redux</a>
+<a href="./posts/computer-tool/2022-12-04-matplotlib-korfont-redux.html" class="no-external">matplotlib + 한글 Redux</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2022-12-04-matplotlib-korfont-redux.html"></a>
+<a href="./posts/computer-tool/2022-12-04-matplotlib-korfont-redux.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -733,11 +797,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2022-12-04-matplotlib-korfont-redux.html">마지막으로 정리해봅시다!</a>
+<a href="./posts/computer-tool/2022-12-04-matplotlib-korfont-redux.html" class="no-external">마지막으로 정리해봅시다!</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2022-12-04-matplotlib-korfont-redux.html">
+<a href="./posts/computer-tool/2022-12-04-matplotlib-korfont-redux.html" class="no-external">
 <div class="listing-date">
 Dec 4, 2022
 </div>
@@ -747,18 +811,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="machine-learning" data-listing-date-sort="1669647600000" data-listing-file-modified-sort="1697668228850" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="983">
+<div class="quarto-post image-right" data-index="18" data-categories="machine-learning" data-listing-date-sort="1669647600000" data-listing-file-modified-sort="1697668228850" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="983">
 <div class="thumbnail">
-<p><a href="./posts/machine-learning/2022-11-29-shannon-entropy.html"></a></p><a href="./posts/machine-learning/2022-11-29-shannon-entropy.html">
+<p><a href="./posts/machine-learning/2022-11-29-shannon-entropy.html" class="no-external"></a></p><a href="./posts/machine-learning/2022-11-29-shannon-entropy.html" class="no-external">
 <p><img src="./posts/machine-learning/images/entropy-cat.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/machine-learning/2022-11-29-shannon-entropy.html"></a></p>
+</a><p><a href="./posts/machine-learning/2022-11-29-shannon-entropy.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/machine-learning/2022-11-29-shannon-entropy.html">Shannon’s Entropy</a>
+<a href="./posts/machine-learning/2022-11-29-shannon-entropy.html" class="no-external">Shannon’s Entropy</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/machine-learning/2022-11-29-shannon-entropy.html"></a>
+<a href="./posts/machine-learning/2022-11-29-shannon-entropy.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('machine-learning'); return false;">
@@ -766,11 +830,11 @@ machine-learning
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/machine-learning/2022-11-29-shannon-entropy.html">섀넌 엔트로피를 슬쩍 본다.</a>
+<a href="./posts/machine-learning/2022-11-29-shannon-entropy.html" class="no-external">섀넌 엔트로피를 슬쩍 본다.</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/machine-learning/2022-11-29-shannon-entropy.html">
+<a href="./posts/machine-learning/2022-11-29-shannon-entropy.html" class="no-external">
 <div class="listing-date">
 Nov 29, 2022
 </div>
@@ -780,18 +844,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="math-simple" data-listing-date-sort="1664895600000" data-listing-file-modified-sort="1697521530942" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="702">
+<div class="quarto-post image-right" data-index="19" data-categories="math-simple" data-listing-date-sort="1664895600000" data-listing-file-modified-sort="1697521530942" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="702">
 <div class="thumbnail">
-<p><a href="./posts/math-simple/2022-10-05-paradox-of-friendship.html"></a></p><a href="./posts/math-simple/2022-10-05-paradox-of-friendship.html">
+<p><a href="./posts/math-simple/2022-10-05-paradox-of-friendship.html" class="no-external"></a></p><a href="./posts/math-simple/2022-10-05-paradox-of-friendship.html" class="no-external">
 <p><img src="./posts/math-simple/images/paradox-cat.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/math-simple/2022-10-05-paradox-of-friendship.html"></a></p>
+</a><p><a href="./posts/math-simple/2022-10-05-paradox-of-friendship.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/math-simple/2022-10-05-paradox-of-friendship.html">Paradox of Friendship</a>
+<a href="./posts/math-simple/2022-10-05-paradox-of-friendship.html" class="no-external">Paradox of Friendship</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/math-simple/2022-10-05-paradox-of-friendship.html"></a>
+<a href="./posts/math-simple/2022-10-05-paradox-of-friendship.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math-simple'); return false;">
@@ -799,11 +863,11 @@ math-simple
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/math-simple/2022-10-05-paradox-of-friendship.html">역설을 수학적으로 풀어보자</a>
+<a href="./posts/math-simple/2022-10-05-paradox-of-friendship.html" class="no-external">역설을 수학적으로 풀어보자</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/math-simple/2022-10-05-paradox-of-friendship.html">
+<a href="./posts/math-simple/2022-10-05-paradox-of-friendship.html" class="no-external">
 <div class="listing-date">
 Oct 5, 2022
 </div>
@@ -813,18 +877,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="math-simple" data-listing-date-sort="1664722800000" data-listing-file-modified-sort="1697583236132" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="857">
+<div class="quarto-post image-right" data-index="20" data-categories="math-simple" data-listing-date-sort="1664722800000" data-listing-file-modified-sort="1697583236132" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="857">
 <div class="thumbnail">
-<p><a href="./posts/math-simple/2022-10-03-RSA.html"></a></p><a href="./posts/math-simple/2022-10-03-RSA.html">
+<p><a href="./posts/math-simple/2022-10-03-RSA.html" class="no-external"></a></p><a href="./posts/math-simple/2022-10-03-RSA.html" class="no-external">
 <p><img src="./posts/math-simple/images/lock-cat-2.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/math-simple/2022-10-03-RSA.html"></a></p>
+</a><p><a href="./posts/math-simple/2022-10-03-RSA.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/math-simple/2022-10-03-RSA.html">RSA, Simply Explained</a>
+<a href="./posts/math-simple/2022-10-03-RSA.html" class="no-external">RSA, Simply Explained</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/math-simple/2022-10-03-RSA.html"></a>
+<a href="./posts/math-simple/2022-10-03-RSA.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math-simple'); return false;">
@@ -832,11 +896,11 @@ math-simple
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/math-simple/2022-10-03-RSA.html">나 놈을 위한 RSA 정리</a>
+<a href="./posts/math-simple/2022-10-03-RSA.html" class="no-external">나 놈을 위한 RSA 정리</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/math-simple/2022-10-03-RSA.html">
+<a href="./posts/math-simple/2022-10-03-RSA.html" class="no-external">
 <div class="listing-date">
 Oct 3, 2022
 </div>
@@ -846,18 +910,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="computer-tool" data-listing-date-sort="1664031600000" data-listing-file-modified-sort="1694130839899" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="622">
+<div class="quarto-post image-right" data-index="21" data-categories="computer-tool" data-listing-date-sort="1664031600000" data-listing-file-modified-sort="1694130839899" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="622">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2022-09-25-latex-vscode.html"></a></p><a href="./posts/computer-tool/2022-09-25-latex-vscode.html">
+<p><a href="./posts/computer-tool/2022-09-25-latex-vscode.html" class="no-external"></a></p><a href="./posts/computer-tool/2022-09-25-latex-vscode.html" class="no-external">
 <p><img src="./posts/computer-tool/images/type_cat_2.jfif" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2022-09-25-latex-vscode.html"></a></p>
+</a><p><a href="./posts/computer-tool/2022-09-25-latex-vscode.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2022-09-25-latex-vscode.html"><span class="math inline">\(\rm\LaTeX\)</span> + VS Code</a>
+<a href="./posts/computer-tool/2022-09-25-latex-vscode.html" class="no-external"><span class="math inline">\(\rm\LaTeX\)</span> + VS Code</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2022-09-25-latex-vscode.html"></a>
+<a href="./posts/computer-tool/2022-09-25-latex-vscode.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -865,11 +929,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2022-09-25-latex-vscode.html">Tiny<span class="math inline">\(\rm\TeX\)</span>으로 모든 OS에서 쉽게!</a>
+<a href="./posts/computer-tool/2022-09-25-latex-vscode.html" class="no-external">Tiny<span class="math inline">\(\rm\TeX\)</span>으로 모든 OS에서 쉽게!</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2022-09-25-latex-vscode.html">
+<a href="./posts/computer-tool/2022-09-25-latex-vscode.html" class="no-external">
 <div class="listing-date">
 Sep 25, 2022
 </div>
@@ -879,18 +943,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="computer-tool" data-listing-date-sort="1660316400000" data-listing-file-modified-sort="1697519219052" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1583">
+<div class="quarto-post image-right" data-index="22" data-categories="computer-tool" data-listing-date-sort="1660316400000" data-listing-file-modified-sort="1697519219052" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1583">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2022-08-13-clean-use-of-windows.html"></a></p><a href="./posts/computer-tool/2022-08-13-clean-use-of-windows.html">
+<p><a href="./posts/computer-tool/2022-08-13-clean-use-of-windows.html" class="no-external"></a></p><a href="./posts/computer-tool/2022-08-13-clean-use-of-windows.html" class="no-external">
 <p><img src="./posts/computer-tool/images/windows-cat.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2022-08-13-clean-use-of-windows.html"></a></p>
+</a><p><a href="./posts/computer-tool/2022-08-13-clean-use-of-windows.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2022-08-13-clean-use-of-windows.html">단순하고 깔끔한 윈도 분석 환경</a>
+<a href="./posts/computer-tool/2022-08-13-clean-use-of-windows.html" class="no-external">단순하고 깔끔한 윈도 분석 환경</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2022-08-13-clean-use-of-windows.html"></a>
+<a href="./posts/computer-tool/2022-08-13-clean-use-of-windows.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -898,11 +962,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2022-08-13-clean-use-of-windows.html">winget으로 일관되게 쓰자</a>
+<a href="./posts/computer-tool/2022-08-13-clean-use-of-windows.html" class="no-external">winget으로 일관되게 쓰자</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2022-08-13-clean-use-of-windows.html">
+<a href="./posts/computer-tool/2022-08-13-clean-use-of-windows.html" class="no-external">
 <div class="listing-date">
 Aug 13, 2022
 </div>
@@ -912,18 +976,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-categories="computer-tool" data-listing-date-sort="1657119600000" data-listing-file-modified-sort="1699828311416" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="726">
+<div class="quarto-post image-right" data-index="23" data-categories="computer-tool" data-listing-date-sort="1657119600000" data-listing-file-modified-sort="1699828311416" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="726">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2022-07-07-pt-with-quarto.html"></a></p><a href="./posts/computer-tool/2022-07-07-pt-with-quarto.html">
+<p><a href="./posts/computer-tool/2022-07-07-pt-with-quarto.html" class="no-external"></a></p><a href="./posts/computer-tool/2022-07-07-pt-with-quarto.html" class="no-external">
 <p><img src="./posts/computer-tool/images/revealjs.jfif" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2022-07-07-pt-with-quarto.html"></a></p>
+</a><p><a href="./posts/computer-tool/2022-07-07-pt-with-quarto.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2022-07-07-pt-with-quarto.html">Presentation with Reveal.js</a>
+<a href="./posts/computer-tool/2022-07-07-pt-with-quarto.html" class="no-external">Presentation with Reveal.js</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2022-07-07-pt-with-quarto.html"></a>
+<a href="./posts/computer-tool/2022-07-07-pt-with-quarto.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -931,11 +995,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2022-07-07-pt-with-quarto.html">Quarto로 편하게!</a>
+<a href="./posts/computer-tool/2022-07-07-pt-with-quarto.html" class="no-external">Quarto로 편하게!</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2022-07-07-pt-with-quarto.html">
+<a href="./posts/computer-tool/2022-07-07-pt-with-quarto.html" class="no-external">
 <div class="listing-date">
 Jul 7, 2022
 </div>
@@ -945,18 +1009,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-categories="math-simple" data-listing-date-sort="1656774000000" data-listing-file-modified-sort="1697494773789" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="811">
+<div class="quarto-post image-right" data-index="24" data-categories="math-simple" data-listing-date-sort="1656774000000" data-listing-file-modified-sort="1697494773789" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="811">
 <div class="thumbnail">
-<p><a href="./posts/math-simple/2022-07-03-ansys-candor-theorem.html"></a></p><a href="./posts/math-simple/2022-07-03-ansys-candor-theorem.html">
+<p><a href="./posts/math-simple/2022-07-03-ansys-candor-theorem.html" class="no-external"></a></p><a href="./posts/math-simple/2022-07-03-ansys-candor-theorem.html" class="no-external">
 <p><img src="./posts/math-simple/images/cat-proof.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/math-simple/2022-07-03-ansys-candor-theorem.html"></a></p>
+</a><p><a href="./posts/math-simple/2022-07-03-ansys-candor-theorem.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/math-simple/2022-07-03-ansys-candor-theorem.html">Cantor’s Theorem</a>
+<a href="./posts/math-simple/2022-07-03-ansys-candor-theorem.html" class="no-external">Cantor’s Theorem</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/math-simple/2022-07-03-ansys-candor-theorem.html"></a>
+<a href="./posts/math-simple/2022-07-03-ansys-candor-theorem.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math-simple'); return false;">
@@ -964,11 +1028,11 @@ math-simple
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/math-simple/2022-07-03-ansys-candor-theorem.html">칸토어의 정리를 증명해 보자.</a>
+<a href="./posts/math-simple/2022-07-03-ansys-candor-theorem.html" class="no-external">칸토어의 정리를 증명해 보자.</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/math-simple/2022-07-03-ansys-candor-theorem.html">
+<a href="./posts/math-simple/2022-07-03-ansys-candor-theorem.html" class="no-external">
 <div class="listing-date">
 Jul 3, 2022
 </div>
@@ -978,18 +1042,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="24" data-categories="regression,stats-simple" data-listing-date-sort="1654441200000" data-listing-file-modified-sort="1701214405752" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1230">
+<div class="quarto-post image-right" data-index="25" data-categories="regression,stats-simple" data-listing-date-sort="1654441200000" data-listing-file-modified-sort="1701214405752" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1230">
 <div class="thumbnail">
-<p><a href="./posts/regression/2022-06-06-berkson-paradox-regression.html"></a></p><a href="./posts/regression/2022-06-06-berkson-paradox-regression.html">
-<p><img src="./posts/regression/images/cat-berkson.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/regression/2022-06-06-berkson-paradox-regression.html"></a></p>
+<p><a href="./posts/regression/2022-06-06-berkson-paradox-regression.html" class="no-external"></a></p><a href="./posts/regression/2022-06-06-berkson-paradox-regression.html" class="no-external">
+<p><img data-src="./posts/regression/images/cat-berkson.webp" class="thumbnail-image"></p>
+</a><p><a href="./posts/regression/2022-06-06-berkson-paradox-regression.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/regression/2022-06-06-berkson-paradox-regression.html">Berkson’s Paradox with Regression</a>
+<a href="./posts/regression/2022-06-06-berkson-paradox-regression.html" class="no-external">Berkson’s Paradox with Regression</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/regression/2022-06-06-berkson-paradox-regression.html"></a>
+<a href="./posts/regression/2022-06-06-berkson-paradox-regression.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('regression'); return false;">
@@ -1000,11 +1064,11 @@ stats-simple
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/regression/2022-06-06-berkson-paradox-regression.html">어떤 변인을 고려하지 말아야 할까?</a>
+<a href="./posts/regression/2022-06-06-berkson-paradox-regression.html" class="no-external">어떤 변인을 고려하지 말아야 할까?</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/regression/2022-06-06-berkson-paradox-regression.html">
+<a href="./posts/regression/2022-06-06-berkson-paradox-regression.html" class="no-external">
 <div class="listing-date">
 Jun 6, 2022
 </div>
@@ -1014,18 +1078,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="25" data-categories="regression,stats-simple" data-listing-date-sort="1654354800000" data-listing-file-modified-sort="1701209893092" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="661">
+<div class="quarto-post image-right" data-index="26" data-categories="regression,stats-simple" data-listing-date-sort="1654354800000" data-listing-file-modified-sort="1701209893092" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="661">
 <div class="thumbnail">
-<p><a href="./posts/regression/2022-06-04-simpson-paradox-regression.html"></a></p><a href="./posts/regression/2022-06-04-simpson-paradox-regression.html">
+<p><a href="./posts/regression/2022-06-04-simpson-paradox-regression.html" class="no-external"></a></p><a href="./posts/regression/2022-06-04-simpson-paradox-regression.html" class="no-external">
 <p><img data-src="./posts/regression/images/simpson_2.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/regression/2022-06-04-simpson-paradox-regression.html"></a></p>
+</a><p><a href="./posts/regression/2022-06-04-simpson-paradox-regression.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/regression/2022-06-04-simpson-paradox-regression.html">Simpson’s Paradox with Regression</a>
+<a href="./posts/regression/2022-06-04-simpson-paradox-regression.html" class="no-external">Simpson’s Paradox with Regression</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/regression/2022-06-04-simpson-paradox-regression.html"></a>
+<a href="./posts/regression/2022-06-04-simpson-paradox-regression.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('regression'); return false;">
@@ -1036,11 +1100,11 @@ stats-simple
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/regression/2022-06-04-simpson-paradox-regression.html">펭귄의 부리로 직접 계산해보자.</a>
+<a href="./posts/regression/2022-06-04-simpson-paradox-regression.html" class="no-external">펭귄의 부리로 직접 계산해보자.</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/regression/2022-06-04-simpson-paradox-regression.html">
+<a href="./posts/regression/2022-06-04-simpson-paradox-regression.html" class="no-external">
 <div class="listing-date">
 Jun 5, 2022
 </div>
@@ -1050,18 +1114,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="26" data-categories="stats-simple" data-listing-date-sort="1653836400000" data-listing-file-modified-sort="1698020343314" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="299">
+<div class="quarto-post image-right" data-index="27" data-categories="stats-simple" data-listing-date-sort="1653836400000" data-listing-file-modified-sort="1698020343314" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="299">
 <div class="thumbnail">
-<p><a href="./posts/stats-simple/2022-05-30-markov-chebyshev.html"></a></p><a href="./posts/stats-simple/2022-05-30-markov-chebyshev.html">
+<p><a href="./posts/stats-simple/2022-05-30-markov-chebyshev.html" class="no-external"></a></p><a href="./posts/stats-simple/2022-05-30-markov-chebyshev.html" class="no-external">
 <p><img data-src="./posts/stats-simple/images/equation.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/stats-simple/2022-05-30-markov-chebyshev.html"></a></p>
+</a><p><a href="./posts/stats-simple/2022-05-30-markov-chebyshev.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/stats-simple/2022-05-30-markov-chebyshev.html">Markov and Chebyshev Inequalities</a>
+<a href="./posts/stats-simple/2022-05-30-markov-chebyshev.html" class="no-external">Markov and Chebyshev Inequalities</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/stats-simple/2022-05-30-markov-chebyshev.html"></a>
+<a href="./posts/stats-simple/2022-05-30-markov-chebyshev.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('stats-simple'); return false;">
@@ -1069,7 +1133,7 @@ stats-simple
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/stats-simple/2022-05-30-markov-chebyshev.html"><span class="math display">\[
+<a href="./posts/stats-simple/2022-05-30-markov-chebyshev.html" class="no-external"><span class="math display">\[
 \def\E{{\mathbb E}}
 \def\V{{\mathbb V}}
 \def\ES#1{\overline{#1}}
@@ -1077,7 +1141,7 @@ stats-simple
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/stats-simple/2022-05-30-markov-chebyshev.html">
+<a href="./posts/stats-simple/2022-05-30-markov-chebyshev.html" class="no-external">
 <div class="listing-date">
 May 30, 2022
 </div>
@@ -1087,18 +1151,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="27" data-categories="regression" data-listing-date-sort="1653663600000" data-listing-file-modified-sort="1700692822002" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="633">
+<div class="quarto-post image-right" data-index="28" data-categories="regression" data-listing-date-sort="1653663600000" data-listing-file-modified-sort="1700692822002" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="633">
 <div class="thumbnail">
-<p><a href="./posts/regression/2022-05-28-normality.html"></a></p><a href="./posts/regression/2022-05-28-normality.html">
+<p><a href="./posts/regression/2022-05-28-normality.html" class="no-external"></a></p><a href="./posts/regression/2022-05-28-normality.html" class="no-external">
 <p><img data-src="./posts/regression/images/cat-normality.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/regression/2022-05-28-normality.html"></a></p>
+</a><p><a href="./posts/regression/2022-05-28-normality.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/regression/2022-05-28-normality.html">정규성에 집착하지 말자.</a>
+<a href="./posts/regression/2022-05-28-normality.html" class="no-external">정규성에 집착하지 말자.</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/regression/2022-05-28-normality.html"></a>
+<a href="./posts/regression/2022-05-28-normality.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('regression'); return false;">
@@ -1106,11 +1170,11 @@ regression
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/regression/2022-05-28-normality.html">만일 당신의 표본 크기가 충분하다면…</a>
+<a href="./posts/regression/2022-05-28-normality.html" class="no-external">만일 당신의 표본 크기가 충분하다면…</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/regression/2022-05-28-normality.html">
+<a href="./posts/regression/2022-05-28-normality.html" class="no-external">
 <div class="listing-date">
 May 28, 2022
 </div>
@@ -1120,18 +1184,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="28" data-categories="statistics,stats-simple" data-listing-date-sort="1653577200000" data-listing-file-modified-sort="1706483996347" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1424">
+<div class="quarto-post image-right" data-index="29" data-categories="statistics,stats-simple" data-listing-date-sort="1653577200000" data-listing-file-modified-sort="1706483996347" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1424">
 <div class="thumbnail">
-<p><a href="./posts/stats-simple/2022-05-27-SE.html"></a></p><a href="./posts/stats-simple/2022-05-27-SE.html">
+<p><a href="./posts/stats-simple/2022-05-27-SE.html" class="no-external"></a></p><a href="./posts/stats-simple/2022-05-27-SE.html" class="no-external">
 <p><img data-src="./posts/stats-simple/images/cat-sampling.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/stats-simple/2022-05-27-SE.html"></a></p>
+</a><p><a href="./posts/stats-simple/2022-05-27-SE.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/stats-simple/2022-05-27-SE.html">Sample Statistics and Standard Error</a>
+<a href="./posts/stats-simple/2022-05-27-SE.html" class="no-external">Sample Statistics and Standard Error</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/stats-simple/2022-05-27-SE.html"></a>
+<a href="./posts/stats-simple/2022-05-27-SE.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
@@ -1142,11 +1206,11 @@ stats-simple
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/stats-simple/2022-05-27-SE.html">기본 용어 정리한다.</a>
+<a href="./posts/stats-simple/2022-05-27-SE.html" class="no-external">기본 용어 정리한다.</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/stats-simple/2022-05-27-SE.html">
+<a href="./posts/stats-simple/2022-05-27-SE.html" class="no-external">
 <div class="listing-date">
 May 27, 2022
 </div>
@@ -1156,18 +1220,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="29" data-categories="regression" data-listing-date-sort="1653490800000" data-listing-file-modified-sort="1706225078606" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1034">
+<div class="quarto-post image-right" data-index="30" data-categories="regression" data-listing-date-sort="1653490800000" data-listing-file-modified-sort="1706225078606" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1034">
 <div class="thumbnail">
-<p><a href="./posts/regression/2022-05-26-total-and-parts.html"></a></p><a href="./posts/regression/2022-05-26-total-and-parts.html">
+<p><a href="./posts/regression/2022-05-26-total-and-parts.html" class="no-external"></a></p><a href="./posts/regression/2022-05-26-total-and-parts.html" class="no-external">
 <p><img data-src="./posts/regression/images/total_parts.jfif" class="thumbnail-image"></p>
-</a><p><a href="./posts/regression/2022-05-26-total-and-parts.html"></a></p>
+</a><p><a href="./posts/regression/2022-05-26-total-and-parts.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/regression/2022-05-26-total-and-parts.html">전체와 부분</a>
+<a href="./posts/regression/2022-05-26-total-and-parts.html" class="no-external">전체와 부분</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/regression/2022-05-26-total-and-parts.html"></a>
+<a href="./posts/regression/2022-05-26-total-and-parts.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('regression'); return false;">
@@ -1175,11 +1239,11 @@ regression
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/regression/2022-05-26-total-and-parts.html">Confounder, Collider, Simpson’s and Berkson’s Paradox</a>
+<a href="./posts/regression/2022-05-26-total-and-parts.html" class="no-external">Confounder, Collider, Simpson’s and Berkson’s Paradox</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/regression/2022-05-26-total-and-parts.html">
+<a href="./posts/regression/2022-05-26-total-and-parts.html" class="no-external">
 <div class="listing-date">
 May 26, 2022
 </div>
@@ -1189,18 +1253,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="30" data-categories="computer-tool,machine-learning" data-listing-date-sort="1653404400000" data-listing-file-modified-sort="1694130839889" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="534">
+<div class="quarto-post image-right" data-index="31" data-categories="computer-tool,machine-learning" data-listing-date-sort="1653404400000" data-listing-file-modified-sort="1694130839889" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="534">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2022-05-25-pytorch.html"></a></p><a href="./posts/computer-tool/2022-05-25-pytorch.html">
+<p><a href="./posts/computer-tool/2022-05-25-pytorch.html" class="no-external"></a></p><a href="./posts/computer-tool/2022-05-25-pytorch.html" class="no-external">
 <p><img data-src="https://miro.medium.com/max/649/1*6sV-YTdpob36egPM-yXGXA.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2022-05-25-pytorch.html"></a></p>
+</a><p><a href="./posts/computer-tool/2022-05-25-pytorch.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2022-05-25-pytorch.html">PyTorch + WSL</a>
+<a href="./posts/computer-tool/2022-05-25-pytorch.html" class="no-external">PyTorch + WSL</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2022-05-25-pytorch.html"></a>
+<a href="./posts/computer-tool/2022-05-25-pytorch.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -1211,11 +1275,11 @@ machine-learning
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2022-05-25-pytorch.html">이보다 더 좋을 수 있을까?</a>
+<a href="./posts/computer-tool/2022-05-25-pytorch.html" class="no-external">이보다 더 좋을 수 있을까?</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2022-05-25-pytorch.html">
+<a href="./posts/computer-tool/2022-05-25-pytorch.html" class="no-external">
 <div class="listing-date">
 May 25, 2022
 </div>
@@ -1225,18 +1289,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="31" data-categories="economics" data-listing-date-sort="1652626800000" data-listing-file-modified-sort="1694130840219" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="659">
+<div class="quarto-post image-right" data-index="32" data-categories="economics" data-listing-date-sort="1652626800000" data-listing-file-modified-sort="1694130840219" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="659">
 <div class="thumbnail">
-<p><a href="./posts/economics/2022-05-16-trilemma.html"></a></p><a href="./posts/economics/2022-05-16-trilemma.html">
+<p><a href="./posts/economics/2022-05-16-trilemma.html" class="no-external"></a></p><a href="./posts/economics/2022-05-16-trilemma.html" class="no-external">
 <p><img data-src="./posts/economics/images/econcat_2.jfif" class="thumbnail-image"></p>
-</a><p><a href="./posts/economics/2022-05-16-trilemma.html"></a></p>
+</a><p><a href="./posts/economics/2022-05-16-trilemma.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/economics/2022-05-16-trilemma.html">Trilemma, Lately</a>
+<a href="./posts/economics/2022-05-16-trilemma.html" class="no-external">Trilemma, Lately</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/economics/2022-05-16-trilemma.html"></a>
+<a href="./posts/economics/2022-05-16-trilemma.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('economics'); return false;">
@@ -1244,11 +1308,11 @@ economics
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/economics/2022-05-16-trilemma.html">거시 경제의 트릴레마와 스테이블 코인의 트릴레마</a>
+<a href="./posts/economics/2022-05-16-trilemma.html" class="no-external">거시 경제의 트릴레마와 스테이블 코인의 트릴레마</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/economics/2022-05-16-trilemma.html">
+<a href="./posts/economics/2022-05-16-trilemma.html" class="no-external">
 <div class="listing-date">
 May 16, 2022
 </div>
@@ -1258,18 +1322,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="32" data-categories="computer-tool" data-listing-date-sort="1652454000000" data-listing-file-modified-sort="1698020343224" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="970">
+<div class="quarto-post image-right" data-index="33" data-categories="computer-tool" data-listing-date-sort="1652454000000" data-listing-file-modified-sort="1698020343224" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="970">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2022-05-14-blogging-with-quarto.html"></a></p><a href="./posts/computer-tool/2022-05-14-blogging-with-quarto.html">
+<p><a href="./posts/computer-tool/2022-05-14-blogging-with-quarto.html" class="no-external"></a></p><a href="./posts/computer-tool/2022-05-14-blogging-with-quarto.html" class="no-external">
 <p><img data-src="./posts/computer-tool/images/cat-blog.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2022-05-14-blogging-with-quarto.html"></a></p>
+</a><p><a href="./posts/computer-tool/2022-05-14-blogging-with-quarto.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2022-05-14-blogging-with-quarto.html">Blogging with Quarto</a>
+<a href="./posts/computer-tool/2022-05-14-blogging-with-quarto.html" class="no-external">Blogging with Quarto</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2022-05-14-blogging-with-quarto.html"></a>
+<a href="./posts/computer-tool/2022-05-14-blogging-with-quarto.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -1277,11 +1341,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2022-05-14-blogging-with-quarto.html">Quarto로 블로그를</a>
+<a href="./posts/computer-tool/2022-05-14-blogging-with-quarto.html" class="no-external">Quarto로 블로그를</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2022-05-14-blogging-with-quarto.html">
+<a href="./posts/computer-tool/2022-05-14-blogging-with-quarto.html" class="no-external">
 <div class="listing-date">
 May 14, 2022
 </div>
@@ -1291,18 +1355,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="33" data-categories="computer-tool" data-listing-date-sort="1652108400000" data-listing-file-modified-sort="1698020343214" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1100">
+<div class="quarto-post image-right" data-index="34" data-categories="computer-tool" data-listing-date-sort="1652108400000" data-listing-file-modified-sort="1698020343214" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1100">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2022-05-10-how-to-make-cv.html"></a></p><a href="./posts/computer-tool/2022-05-10-how-to-make-cv.html">
+<p><a href="./posts/computer-tool/2022-05-10-how-to-make-cv.html" class="no-external"></a></p><a href="./posts/computer-tool/2022-05-10-how-to-make-cv.html" class="no-external">
 <p><img data-src="./posts/computer-tool/images/cat-cv.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2022-05-10-how-to-make-cv.html"></a></p>
+</a><p><a href="./posts/computer-tool/2022-05-10-how-to-make-cv.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2022-05-10-how-to-make-cv.html">How to make a manageable C.V.</a>
+<a href="./posts/computer-tool/2022-05-10-how-to-make-cv.html" class="no-external">How to make a manageable C.V.</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2022-05-10-how-to-make-cv.html"></a>
+<a href="./posts/computer-tool/2022-05-10-how-to-make-cv.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -1310,11 +1374,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2022-05-10-how-to-make-cv.html">markdown으로 이력서를 만들어보자.</a>
+<a href="./posts/computer-tool/2022-05-10-how-to-make-cv.html" class="no-external">markdown으로 이력서를 만들어보자.</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2022-05-10-how-to-make-cv.html">
+<a href="./posts/computer-tool/2022-05-10-how-to-make-cv.html" class="no-external">
 <div class="listing-date">
 May 10, 2022
 </div>
@@ -1324,18 +1388,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="34" data-categories="economics,econ-simple" data-listing-date-sort="1651158000000" data-listing-file-modified-sort="1694130840189" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="448">
+<div class="quarto-post image-right" data-index="35" data-categories="economics,econ-simple" data-listing-date-sort="1651158000000" data-listing-file-modified-sort="1694130840189" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="448">
 <div class="thumbnail">
-<p><a href="./posts/econ-simple/2022-04-30-gdp-import.html"></a></p><a href="./posts/econ-simple/2022-04-30-gdp-import.html">
+<p><a href="./posts/econ-simple/2022-04-30-gdp-import.html" class="no-external"></a></p><a href="./posts/econ-simple/2022-04-30-gdp-import.html" class="no-external">
 <p><img data-src="./posts/econ-simple/images/econcat_2.jfif" class="thumbnail-image"></p>
-</a><p><a href="./posts/econ-simple/2022-04-30-gdp-import.html"></a></p>
+</a><p><a href="./posts/econ-simple/2022-04-30-gdp-import.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/econ-simple/2022-04-30-gdp-import.html">수입은 GDP에 영향을 주는가?</a>
+<a href="./posts/econ-simple/2022-04-30-gdp-import.html" class="no-external">수입은 GDP에 영향을 주는가?</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/econ-simple/2022-04-30-gdp-import.html"></a>
+<a href="./posts/econ-simple/2022-04-30-gdp-import.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('economics'); return false;">
@@ -1346,11 +1410,11 @@ econ-simple
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/econ-simple/2022-04-30-gdp-import.html">GDP 항등식을 오해하지 말자</a>
+<a href="./posts/econ-simple/2022-04-30-gdp-import.html" class="no-external">GDP 항등식을 오해하지 말자</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/econ-simple/2022-04-30-gdp-import.html">
+<a href="./posts/econ-simple/2022-04-30-gdp-import.html" class="no-external">
 <div class="listing-date">
 Apr 29, 2022
 </div>
@@ -1360,18 +1424,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="35" data-categories="git" data-listing-date-sort="1650985200000" data-listing-file-modified-sort="1694130840239" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="391">
+<div class="quarto-post image-right" data-index="36" data-categories="git" data-listing-date-sort="1650985200000" data-listing-file-modified-sort="1694130840239" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="391">
 <div class="thumbnail">
-<p><a href="./posts/git/2022-04-27-happy-giting.html"></a></p><a href="./posts/git/2022-04-27-happy-giting.html">
+<p><a href="./posts/git/2022-04-27-happy-giting.html" class="no-external"></a></p><a href="./posts/git/2022-04-27-happy-giting.html" class="no-external">
 <p><img data-src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmxcpJ%2Fbtq9IDonGa1%2FLGoNFr3kBHT3tm8QnIwjrK%2Fimg.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/git/2022-04-27-happy-giting.html"></a></p>
+</a><p><a href="./posts/git/2022-04-27-happy-giting.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/git/2022-04-27-happy-giting.html">Happy Git-ing!</a>
+<a href="./posts/git/2022-04-27-happy-giting.html" class="no-external">Happy Git-ing!</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/git/2022-04-27-happy-giting.html"></a>
+<a href="./posts/git/2022-04-27-happy-giting.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('git'); return false;">
@@ -1379,11 +1443,11 @@ git
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/git/2022-04-27-happy-giting.html">모든 플랫폼에서 git과 github 잘 쓰기</a>
+<a href="./posts/git/2022-04-27-happy-giting.html" class="no-external">모든 플랫폼에서 git과 github 잘 쓰기</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/git/2022-04-27-happy-giting.html">
+<a href="./posts/git/2022-04-27-happy-giting.html" class="no-external">
 <div class="listing-date">
 Apr 27, 2022
 </div>
@@ -1393,18 +1457,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="36" data-categories="container" data-listing-date-sort="1650898800000" data-listing-file-modified-sort="1694130840169" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="757">
+<div class="quarto-post image-right" data-index="37" data-categories="container" data-listing-date-sort="1650898800000" data-listing-file-modified-sort="1694130840169" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="757">
 <div class="thumbnail">
-<p><a href="./posts/container/2022-04-26-k8s-personally.html"></a></p><a href="./posts/container/2022-04-26-k8s-personally.html">
+<p><a href="./posts/container/2022-04-26-k8s-personally.html" class="no-external"></a></p><a href="./posts/container/2022-04-26-k8s-personally.html" class="no-external">
 <p><img data-src="./posts/container/images/container.jfif" class="thumbnail-image"></p>
-</a><p><a href="./posts/container/2022-04-26-k8s-personally.html"></a></p>
+</a><p><a href="./posts/container/2022-04-26-k8s-personally.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/container/2022-04-26-k8s-personally.html">Kubernetes As an Alternative to Docker</a>
+<a href="./posts/container/2022-04-26-k8s-personally.html" class="no-external">Kubernetes As an Alternative to Docker</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/container/2022-04-26-k8s-personally.html"></a>
+<a href="./posts/container/2022-04-26-k8s-personally.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('container'); return false;">
@@ -1412,11 +1476,11 @@ container
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/container/2022-04-26-k8s-personally.html">Docker의 대안으로 K8s를 써보자!</a>
+<a href="./posts/container/2022-04-26-k8s-personally.html" class="no-external">Docker의 대안으로 K8s를 써보자!</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/container/2022-04-26-k8s-personally.html">
+<a href="./posts/container/2022-04-26-k8s-personally.html" class="no-external">
 <div class="listing-date">
 Apr 26, 2022
 </div>
@@ -1426,18 +1490,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="37" data-categories="computer-tool" data-listing-date-sort="1637247600000" data-listing-file-modified-sort="1694130839879" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="180">
+<div class="quarto-post image-right" data-index="38" data-categories="computer-tool" data-listing-date-sort="1637247600000" data-listing-file-modified-sort="1694130839879" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="180">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2021-11-19-python-in-browser.html"></a></p><a href="./posts/computer-tool/2021-11-19-python-in-browser.html">
+<p><a href="./posts/computer-tool/2021-11-19-python-in-browser.html" class="no-external"></a></p><a href="./posts/computer-tool/2021-11-19-python-in-browser.html" class="no-external">
 <p><img data-src="https://irydium.dev/logos/pyodide.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2021-11-19-python-in-browser.html"></a></p>
+</a><p><a href="./posts/computer-tool/2021-11-19-python-in-browser.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2021-11-19-python-in-browser.html">Python in the Browser</a>
+<a href="./posts/computer-tool/2021-11-19-python-in-browser.html" class="no-external">Python in the Browser</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2021-11-19-python-in-browser.html"></a>
+<a href="./posts/computer-tool/2021-11-19-python-in-browser.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -1445,11 +1509,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2021-11-19-python-in-browser.html">브라우저에서 python을 돌린다굽쇼?</a>
+<a href="./posts/computer-tool/2021-11-19-python-in-browser.html" class="no-external">브라우저에서 python을 돌린다굽쇼?</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2021-11-19-python-in-browser.html">
+<a href="./posts/computer-tool/2021-11-19-python-in-browser.html" class="no-external">
 <div class="listing-date">
 Nov 19, 2021
 </div>
@@ -1459,18 +1523,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="38" data-categories="container" data-listing-date-sort="1631458800000" data-listing-file-modified-sort="1694130840159" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1614">
+<div class="quarto-post image-right" data-index="39" data-categories="container" data-listing-date-sort="1631458800000" data-listing-file-modified-sort="1694130840159" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1614">
 <div class="thumbnail">
-<p><a href="./posts/container/2021-09-13-podman-1.html"></a></p><a href="./posts/container/2021-09-13-podman-1.html">
+<p><a href="./posts/container/2021-09-13-podman-1.html" class="no-external"></a></p><a href="./posts/container/2021-09-13-podman-1.html" class="no-external">
 <p><img data-src="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/container/2021-09-13-podman-1.html"></a></p>
+</a><p><a href="./posts/container/2021-09-13-podman-1.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/container/2021-09-13-podman-1.html">Enter the Podman!</a>
+<a href="./posts/container/2021-09-13-podman-1.html" class="no-external">Enter the Podman!</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/container/2021-09-13-podman-1.html"></a>
+<a href="./posts/container/2021-09-13-podman-1.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('container'); return false;">
@@ -1478,11 +1542,11 @@ container
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/container/2021-09-13-podman-1.html">Docker Desktop 없이 WSL에서 Podman으로 콘테이너를 써보자</a>
+<a href="./posts/container/2021-09-13-podman-1.html" class="no-external">Docker Desktop 없이 WSL에서 Podman으로 콘테이너를 써보자</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/container/2021-09-13-podman-1.html">
+<a href="./posts/container/2021-09-13-podman-1.html" class="no-external">
 <div class="listing-date">
 Sep 13, 2021
 </div>
@@ -1492,18 +1556,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="39" data-categories="container,computer-tool" data-listing-date-sort="1620486000000" data-listing-file-modified-sort="1694130840159" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="665">
+<div class="quarto-post image-right" data-index="40" data-categories="container,computer-tool" data-listing-date-sort="1620486000000" data-listing-file-modified-sort="1694130840159" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="665">
 <div class="thumbnail">
-<p><a href="./posts/container/2021-05-09-docker_korfont.html"></a></p><a href="./posts/container/2021-05-09-docker_korfont.html">
+<p><a href="./posts/container/2021-05-09-docker_korfont.html" class="no-external"></a></p><a href="./posts/container/2021-05-09-docker_korfont.html" class="no-external">
 <p><img data-src="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/container/2021-05-09-docker_korfont.html"></a></p>
+</a><p><a href="./posts/container/2021-05-09-docker_korfont.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/container/2021-05-09-docker_korfont.html">Docker + Jupyter + 한글 폰트</a>
+<a href="./posts/container/2021-05-09-docker_korfont.html" class="no-external">Docker + Jupyter + 한글 폰트</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/container/2021-05-09-docker_korfont.html"></a>
+<a href="./posts/container/2021-05-09-docker_korfont.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('container'); return false;">
@@ -1514,11 +1578,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/container/2021-05-09-docker_korfont.html">빌드할 때 Jupyter의 한글 문제도 같이 해결하자!</a>
+<a href="./posts/container/2021-05-09-docker_korfont.html" class="no-external">빌드할 때 Jupyter의 한글 문제도 같이 해결하자!</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/container/2021-05-09-docker_korfont.html">
+<a href="./posts/container/2021-05-09-docker_korfont.html" class="no-external">
 <div class="listing-date">
 May 9, 2021
 </div>
@@ -1528,18 +1592,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="40" data-categories="computer-tool" data-listing-date-sort="1612191600000" data-listing-file-modified-sort="1694130839879" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="997">
+<div class="quarto-post image-right" data-index="41" data-categories="computer-tool" data-listing-date-sort="1612191600000" data-listing-file-modified-sort="1694130839879" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="997">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2021-02-02-all-vs-code.html"></a></p><a href="./posts/computer-tool/2021-02-02-all-vs-code.html">
+<p><a href="./posts/computer-tool/2021-02-02-all-vs-code.html" class="no-external"></a></p><a href="./posts/computer-tool/2021-02-02-all-vs-code.html" class="no-external">
 <p><img data-src="https://velog.velcdn.com/images/jeongjae96/post/0db5fc06-a8bb-4970-bf6c-3b5a69ebe940/vs%20code.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2021-02-02-all-vs-code.html"></a></p>
+</a><p><a href="./posts/computer-tool/2021-02-02-all-vs-code.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2021-02-02-all-vs-code.html">All into VS Code</a>
+<a href="./posts/computer-tool/2021-02-02-all-vs-code.html" class="no-external">All into VS Code</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2021-02-02-all-vs-code.html"></a>
+<a href="./posts/computer-tool/2021-02-02-all-vs-code.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -1547,11 +1611,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2021-02-02-all-vs-code.html">Python, Julia, R을 하나의 도구로 코딩하자.</a>
+<a href="./posts/computer-tool/2021-02-02-all-vs-code.html" class="no-external">Python, Julia, R을 하나의 도구로 코딩하자.</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2021-02-02-all-vs-code.html">
+<a href="./posts/computer-tool/2021-02-02-all-vs-code.html" class="no-external">
 <div class="listing-date">
 Feb 2, 2021
 </div>
@@ -1561,18 +1625,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="41" data-categories="linear-algebra" data-listing-date-sort="1610895600000" data-listing-file-modified-sort="1694130840289" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="850">
+<div class="quarto-post image-right" data-index="42" data-categories="linear-algebra" data-listing-date-sort="1610895600000" data-listing-file-modified-sort="1694130840289" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="850">
 <div class="thumbnail">
-<p><a href="./posts/linear-algebra/2021-01-18-Eigenspace-2.html"></a></p><a href="./posts/linear-algebra/2021-01-18-Eigenspace-2.html">
+<p><a href="./posts/linear-algebra/2021-01-18-Eigenspace-2.html" class="no-external"></a></p><a href="./posts/linear-algebra/2021-01-18-Eigenspace-2.html" class="no-external">
 <p><img data-src="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/linear-algebra/2021-01-18-Eigenspace-2.html"></a></p>
+</a><p><a href="./posts/linear-algebra/2021-01-18-Eigenspace-2.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/linear-algebra/2021-01-18-Eigenspace-2.html">Eigenspace, part 2</a>
+<a href="./posts/linear-algebra/2021-01-18-Eigenspace-2.html" class="no-external">Eigenspace, part 2</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/linear-algebra/2021-01-18-Eigenspace-2.html"></a>
+<a href="./posts/linear-algebra/2021-01-18-Eigenspace-2.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('linear-algebra'); return false;">
@@ -1580,11 +1644,11 @@ linear-algebra
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/linear-algebra/2021-01-18-Eigenspace-2.html">아이겐 공간을 이해하자.</a>
+<a href="./posts/linear-algebra/2021-01-18-Eigenspace-2.html" class="no-external">아이겐 공간을 이해하자.</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/linear-algebra/2021-01-18-Eigenspace-2.html">
+<a href="./posts/linear-algebra/2021-01-18-Eigenspace-2.html" class="no-external">
 <div class="listing-date">
 Jan 18, 2021
 </div>
@@ -1594,18 +1658,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="42" data-categories="linear-algebra" data-listing-date-sort="1610204400000" data-listing-file-modified-sort="1694130840279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1262">
+<div class="quarto-post image-right" data-index="43" data-categories="linear-algebra" data-listing-date-sort="1610204400000" data-listing-file-modified-sort="1694130840279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1262">
 <div class="thumbnail">
-<p><a href="./posts/linear-algebra/2021-01-10-Eigenspace-1.html"></a></p><a href="./posts/linear-algebra/2021-01-10-Eigenspace-1.html">
+<p><a href="./posts/linear-algebra/2021-01-10-Eigenspace-1.html" class="no-external"></a></p><a href="./posts/linear-algebra/2021-01-10-Eigenspace-1.html" class="no-external">
 <p><img data-src="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/linear-algebra/2021-01-10-Eigenspace-1.html"></a></p>
+</a><p><a href="./posts/linear-algebra/2021-01-10-Eigenspace-1.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/linear-algebra/2021-01-10-Eigenspace-1.html">Eigenspace, part 1</a>
+<a href="./posts/linear-algebra/2021-01-10-Eigenspace-1.html" class="no-external">Eigenspace, part 1</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/linear-algebra/2021-01-10-Eigenspace-1.html"></a>
+<a href="./posts/linear-algebra/2021-01-10-Eigenspace-1.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('linear-algebra'); return false;">
@@ -1613,11 +1677,11 @@ linear-algebra
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/linear-algebra/2021-01-10-Eigenspace-1.html">아이겐 공간을 이해보자.</a>
+<a href="./posts/linear-algebra/2021-01-10-Eigenspace-1.html" class="no-external">아이겐 공간을 이해보자.</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/linear-algebra/2021-01-10-Eigenspace-1.html">
+<a href="./posts/linear-algebra/2021-01-10-Eigenspace-1.html" class="no-external">
 <div class="listing-date">
 Jan 10, 2021
 </div>
@@ -1627,18 +1691,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="43" data-categories="linear-algebra" data-listing-date-sort="1610031600000" data-listing-file-modified-sort="1694130840279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1261">
+<div class="quarto-post image-right" data-index="44" data-categories="linear-algebra" data-listing-date-sort="1610031600000" data-listing-file-modified-sort="1694130840279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1261">
 <div class="thumbnail">
-<p><a href="./posts/linear-algebra/2021-01-08-basis.html"></a></p><a href="./posts/linear-algebra/2021-01-08-basis.html">
+<p><a href="./posts/linear-algebra/2021-01-08-basis.html" class="no-external"></a></p><a href="./posts/linear-algebra/2021-01-08-basis.html" class="no-external">
 <p><img data-src="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/linear-algebra/2021-01-08-basis.html"></a></p>
+</a><p><a href="./posts/linear-algebra/2021-01-08-basis.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/linear-algebra/2021-01-08-basis.html">Basis</a>
+<a href="./posts/linear-algebra/2021-01-08-basis.html" class="no-external">Basis</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/linear-algebra/2021-01-08-basis.html"></a>
+<a href="./posts/linear-algebra/2021-01-08-basis.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('linear-algebra'); return false;">
@@ -1646,11 +1710,11 @@ linear-algebra
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/linear-algebra/2021-01-08-basis.html">두서 없이 정리</a>
+<a href="./posts/linear-algebra/2021-01-08-basis.html" class="no-external">두서 없이 정리</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/linear-algebra/2021-01-08-basis.html">
+<a href="./posts/linear-algebra/2021-01-08-basis.html" class="no-external">
 <div class="listing-date">
 Jan 8, 2021
 </div>
@@ -1660,18 +1724,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="44" data-categories="linear-algebra" data-listing-date-sort="1609945200000" data-listing-file-modified-sort="1694130840279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="892">
+<div class="quarto-post image-right" data-index="45" data-categories="linear-algebra" data-listing-date-sort="1609945200000" data-listing-file-modified-sort="1694130840279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="892">
 <div class="thumbnail">
-<p><a href="./posts/linear-algebra/2021-01-07-linear-transform-matrix.html"></a></p><a href="./posts/linear-algebra/2021-01-07-linear-transform-matrix.html">
+<p><a href="./posts/linear-algebra/2021-01-07-linear-transform-matrix.html" class="no-external"></a></p><a href="./posts/linear-algebra/2021-01-07-linear-transform-matrix.html" class="no-external">
 <p><img data-src="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/linear-algebra/2021-01-07-linear-transform-matrix.html"></a></p>
+</a><p><a href="./posts/linear-algebra/2021-01-07-linear-transform-matrix.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/linear-algebra/2021-01-07-linear-transform-matrix.html">Matrix as Linear Transformation</a>
+<a href="./posts/linear-algebra/2021-01-07-linear-transform-matrix.html" class="no-external">Matrix as Linear Transformation</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/linear-algebra/2021-01-07-linear-transform-matrix.html"></a>
+<a href="./posts/linear-algebra/2021-01-07-linear-transform-matrix.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('linear-algebra'); return false;">
@@ -1679,11 +1743,11 @@ linear-algebra
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/linear-algebra/2021-01-07-linear-transform-matrix.html">Matrix as Linear Transformation</a>
+<a href="./posts/linear-algebra/2021-01-07-linear-transform-matrix.html" class="no-external">Matrix as Linear Transformation</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/linear-algebra/2021-01-07-linear-transform-matrix.html">
+<a href="./posts/linear-algebra/2021-01-07-linear-transform-matrix.html" class="no-external">
 <div class="listing-date">
 Jan 7, 2021
 </div>
@@ -1693,18 +1757,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="45" data-categories="linear-algebra" data-listing-date-sort="1609858800000" data-listing-file-modified-sort="1694130840279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1143">
+<div class="quarto-post image-right" data-index="46" data-categories="linear-algebra" data-listing-date-sort="1609858800000" data-listing-file-modified-sort="1694130840279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1143">
 <div class="thumbnail">
-<p><a href="./posts/linear-algebra/2021-01-06-vector-geometry-2.html"></a></p><a href="./posts/linear-algebra/2021-01-06-vector-geometry-2.html">
+<p><a href="./posts/linear-algebra/2021-01-06-vector-geometry-2.html" class="no-external"></a></p><a href="./posts/linear-algebra/2021-01-06-vector-geometry-2.html" class="no-external">
 <p><img data-src="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/linear-algebra/2021-01-06-vector-geometry-2.html"></a></p>
+</a><p><a href="./posts/linear-algebra/2021-01-06-vector-geometry-2.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/linear-algebra/2021-01-06-vector-geometry-2.html">Vector Geometrically, part 2</a>
+<a href="./posts/linear-algebra/2021-01-06-vector-geometry-2.html" class="no-external">Vector Geometrically, part 2</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/linear-algebra/2021-01-06-vector-geometry-2.html"></a>
+<a href="./posts/linear-algebra/2021-01-06-vector-geometry-2.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('linear-algebra'); return false;">
@@ -1712,11 +1776,11 @@ linear-algebra
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/linear-algebra/2021-01-06-vector-geometry-2.html">벡터 공간의 기하적 특성</a>
+<a href="./posts/linear-algebra/2021-01-06-vector-geometry-2.html" class="no-external">벡터 공간의 기하적 특성</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/linear-algebra/2021-01-06-vector-geometry-2.html">
+<a href="./posts/linear-algebra/2021-01-06-vector-geometry-2.html" class="no-external">
 <div class="listing-date">
 Jan 6, 2021
 </div>
@@ -1726,18 +1790,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="46" data-categories="linear-algebra" data-listing-date-sort="1609772400000" data-listing-file-modified-sort="1694130840279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="565">
+<div class="quarto-post image-right" data-index="47" data-categories="linear-algebra" data-listing-date-sort="1609772400000" data-listing-file-modified-sort="1694130840279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="565">
 <div class="thumbnail">
-<p><a href="./posts/linear-algebra/2021-01-05-vector-geometry-1.html"></a></p><a href="./posts/linear-algebra/2021-01-05-vector-geometry-1.html">
+<p><a href="./posts/linear-algebra/2021-01-05-vector-geometry-1.html" class="no-external"></a></p><a href="./posts/linear-algebra/2021-01-05-vector-geometry-1.html" class="no-external">
 <p><img data-src="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/linear-algebra/2021-01-05-vector-geometry-1.html"></a></p>
+</a><p><a href="./posts/linear-algebra/2021-01-05-vector-geometry-1.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/linear-algebra/2021-01-05-vector-geometry-1.html">Vector Geometrically, part 1</a>
+<a href="./posts/linear-algebra/2021-01-05-vector-geometry-1.html" class="no-external">Vector Geometrically, part 1</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/linear-algebra/2021-01-05-vector-geometry-1.html"></a>
+<a href="./posts/linear-algebra/2021-01-05-vector-geometry-1.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('linear-algebra'); return false;">
@@ -1745,11 +1809,11 @@ linear-algebra
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/linear-algebra/2021-01-05-vector-geometry-1.html">벡터 공간의 기하적 특성</a>
+<a href="./posts/linear-algebra/2021-01-05-vector-geometry-1.html" class="no-external">벡터 공간의 기하적 특성</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/linear-algebra/2021-01-05-vector-geometry-1.html">
+<a href="./posts/linear-algebra/2021-01-05-vector-geometry-1.html" class="no-external">
 <div class="listing-date">
 Jan 5, 2021
 </div>
@@ -1759,18 +1823,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="47" data-categories="linear-algebra" data-listing-date-sort="1608044400000" data-listing-file-modified-sort="1694130840269" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1339">
+<div class="quarto-post image-right" data-index="48" data-categories="linear-algebra" data-listing-date-sort="1608044400000" data-listing-file-modified-sort="1694130840269" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1339">
 <div class="thumbnail">
-<p><a href="./posts/linear-algebra/2020-12-16-measuring-distance.html"></a></p><a href="./posts/linear-algebra/2020-12-16-measuring-distance.html">
+<p><a href="./posts/linear-algebra/2020-12-16-measuring-distance.html" class="no-external"></a></p><a href="./posts/linear-algebra/2020-12-16-measuring-distance.html" class="no-external">
 <p><img data-src="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/linear-algebra/2020-12-16-measuring-distance.html"></a></p>
+</a><p><a href="./posts/linear-algebra/2020-12-16-measuring-distance.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/linear-algebra/2020-12-16-measuring-distance.html">Projection and Distance</a>
+<a href="./posts/linear-algebra/2020-12-16-measuring-distance.html" class="no-external">Projection and Distance</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/linear-algebra/2020-12-16-measuring-distance.html"></a>
+<a href="./posts/linear-algebra/2020-12-16-measuring-distance.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('linear-algebra'); return false;">
@@ -1778,11 +1842,11 @@ linear-algebra
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/linear-algebra/2020-12-16-measuring-distance.html">프로젝션과 거리 측정에 관해 알아보자.</a>
+<a href="./posts/linear-algebra/2020-12-16-measuring-distance.html" class="no-external">프로젝션과 거리 측정에 관해 알아보자.</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/linear-algebra/2020-12-16-measuring-distance.html">
+<a href="./posts/linear-algebra/2020-12-16-measuring-distance.html" class="no-external">
 <div class="listing-date">
 Dec 16, 2020
 </div>
@@ -1792,18 +1856,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="48" data-categories="regression" data-listing-date-sort="1605020400000" data-listing-file-modified-sort="1700605135993" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="569">
+<div class="quarto-post image-right" data-index="49" data-categories="regression" data-listing-date-sort="1605020400000" data-listing-file-modified-sort="1700605135993" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="569">
 <div class="thumbnail">
-<p><a href="./posts/regression/2020-11-11-log-linear-regression.html"></a></p><a href="./posts/regression/2020-11-11-log-linear-regression.html">
+<p><a href="./posts/regression/2020-11-11-log-linear-regression.html" class="no-external"></a></p><a href="./posts/regression/2020-11-11-log-linear-regression.html" class="no-external">
 <p><img data-src="https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/regression/2020-11-11-log-linear-regression.html"></a></p>
+</a><p><a href="./posts/regression/2020-11-11-log-linear-regression.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/regression/2020-11-11-log-linear-regression.html">Understanding Log-Linear Regression Model</a>
+<a href="./posts/regression/2020-11-11-log-linear-regression.html" class="no-external">Understanding Log-Linear Regression Model</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/regression/2020-11-11-log-linear-regression.html"></a>
+<a href="./posts/regression/2020-11-11-log-linear-regression.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('regression'); return false;">
@@ -1811,11 +1875,11 @@ regression
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/regression/2020-11-11-log-linear-regression.html">로그 선형 모델의 베타를 어떻게 볼까?</a>
+<a href="./posts/regression/2020-11-11-log-linear-regression.html" class="no-external">로그 선형 모델의 베타를 어떻게 볼까?</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/regression/2020-11-11-log-linear-regression.html">
+<a href="./posts/regression/2020-11-11-log-linear-regression.html" class="no-external">
 <div class="listing-date">
 Nov 11, 2020
 </div>
@@ -1825,18 +1889,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="49" data-categories="computer-tool" data-listing-date-sort="1603724400000" data-listing-file-modified-sort="1694130839879" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="375">
+<div class="quarto-post image-right" data-index="50" data-categories="computer-tool" data-listing-date-sort="1603724400000" data-listing-file-modified-sort="1694130839879" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="375">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2020-10-27-viva-binder.html"></a></p><a href="./posts/computer-tool/2020-10-27-viva-binder.html">
+<p><a href="./posts/computer-tool/2020-10-27-viva-binder.html" class="no-external"></a></p><a href="./posts/computer-tool/2020-10-27-viva-binder.html" class="no-external">
 <p><img data-src="https://mybinder.org/static/logo.svg" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2020-10-27-viva-binder.html"></a></p>
+</a><p><a href="./posts/computer-tool/2020-10-27-viva-binder.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2020-10-27-viva-binder.html">Viva, Binder!</a>
+<a href="./posts/computer-tool/2020-10-27-viva-binder.html" class="no-external">Viva, Binder!</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2020-10-27-viva-binder.html"></a>
+<a href="./posts/computer-tool/2020-10-27-viva-binder.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -1844,11 +1908,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2020-10-27-viva-binder.html">코드 셰어링, 이제 걱정 끝</a>
+<a href="./posts/computer-tool/2020-10-27-viva-binder.html" class="no-external">코드 셰어링, 이제 걱정 끝</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2020-10-27-viva-binder.html">
+<a href="./posts/computer-tool/2020-10-27-viva-binder.html" class="no-external">
 <div class="listing-date">
 Oct 27, 2020
 </div>
@@ -1858,18 +1922,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="50" data-categories="computer-tool" data-listing-date-sort="1603465200000" data-listing-file-modified-sort="1698020343214" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="905">
+<div class="quarto-post image-right" data-index="51" data-categories="computer-tool" data-listing-date-sort="1603465200000" data-listing-file-modified-sort="1698020343214" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="905">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2020-10-24-classy-latex.html"></a></p><a href="./posts/computer-tool/2020-10-24-classy-latex.html">
+<p><a href="./posts/computer-tool/2020-10-24-classy-latex.html" class="no-external"></a></p><a href="./posts/computer-tool/2020-10-24-classy-latex.html" class="no-external">
 <p><img data-src="./posts/computer-tool/images/cat-tex.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2020-10-24-classy-latex.html"></a></p>
+</a><p><a href="./posts/computer-tool/2020-10-24-classy-latex.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2020-10-24-classy-latex.html"><span class="math inline">\(\rm\LaTeX\)</span> in Modern Ways</a>
+<a href="./posts/computer-tool/2020-10-24-classy-latex.html" class="no-external"><span class="math inline">\(\rm\LaTeX\)</span> in Modern Ways</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2020-10-24-classy-latex.html"></a>
+<a href="./posts/computer-tool/2020-10-24-classy-latex.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -1877,11 +1941,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2020-10-24-classy-latex.html"><span class="math inline">\(\rm\LaTeX\)</span>을 다시 써볼까?</a>
+<a href="./posts/computer-tool/2020-10-24-classy-latex.html" class="no-external"><span class="math inline">\(\rm\LaTeX\)</span>을 다시 써볼까?</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2020-10-24-classy-latex.html">
+<a href="./posts/computer-tool/2020-10-24-classy-latex.html" class="no-external">
 <div class="listing-date">
 Oct 24, 2020
 </div>
@@ -1891,18 +1955,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="51" data-categories="computer-tool" data-listing-date-sort="1601046000000" data-listing-file-modified-sort="1694130839879" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="322">
+<div class="quarto-post image-right" data-index="52" data-categories="computer-tool" data-listing-date-sort="1601046000000" data-listing-file-modified-sort="1694130839879" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="322">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2020-09-26-windows-terminal.html"></a></p><a href="./posts/computer-tool/2020-09-26-windows-terminal.html">
+<p><a href="./posts/computer-tool/2020-09-26-windows-terminal.html" class="no-external"></a></p><a href="./posts/computer-tool/2020-09-26-windows-terminal.html" class="no-external">
 <p><img data-src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2020-09-26-windows-terminal.html"></a></p>
+</a><p><a href="./posts/computer-tool/2020-09-26-windows-terminal.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2020-09-26-windows-terminal.html">The Best Terminal App for Windows</a>
+<a href="./posts/computer-tool/2020-09-26-windows-terminal.html" class="no-external">The Best Terminal App for Windows</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2020-09-26-windows-terminal.html"></a>
+<a href="./posts/computer-tool/2020-09-26-windows-terminal.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -1910,11 +1974,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2020-09-26-windows-terminal.html">윈도 터미널 잘 쓰기</a>
+<a href="./posts/computer-tool/2020-09-26-windows-terminal.html" class="no-external">윈도 터미널 잘 쓰기</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2020-09-26-windows-terminal.html">
+<a href="./posts/computer-tool/2020-09-26-windows-terminal.html" class="no-external">
 <div class="listing-date">
 Sep 26, 2020
 </div>
@@ -1924,18 +1988,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="52" data-categories="container,computer-tool" data-listing-date-sort="1600873200000" data-listing-file-modified-sort="1694130840159" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="391">
+<div class="quarto-post image-right" data-index="53" data-categories="container,computer-tool" data-listing-date-sort="1600873200000" data-listing-file-modified-sort="1694130840159" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="391">
 <div class="thumbnail">
-<p><a href="./posts/container/2020-09-24-install-hangul-in-docker.html"></a></p><a href="./posts/container/2020-09-24-install-hangul-in-docker.html">
+<p><a href="./posts/container/2020-09-24-install-hangul-in-docker.html" class="no-external"></a></p><a href="./posts/container/2020-09-24-install-hangul-in-docker.html" class="no-external">
 <p><img data-src="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/container/2020-09-24-install-hangul-in-docker.html"></a></p>
+</a><p><a href="./posts/container/2020-09-24-install-hangul-in-docker.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/container/2020-09-24-install-hangul-in-docker.html">Docker 컨테이너 + 한글 폰트</a>
+<a href="./posts/container/2020-09-24-install-hangul-in-docker.html" class="no-external">Docker 컨테이너 + 한글 폰트</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/container/2020-09-24-install-hangul-in-docker.html"></a>
+<a href="./posts/container/2020-09-24-install-hangul-in-docker.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('container'); return false;">
@@ -1946,11 +2010,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/container/2020-09-24-install-hangul-in-docker.html">컨테이너 안에서도 한글을 써보자</a>
+<a href="./posts/container/2020-09-24-install-hangul-in-docker.html" class="no-external">컨테이너 안에서도 한글을 써보자</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/container/2020-09-24-install-hangul-in-docker.html">
+<a href="./posts/container/2020-09-24-install-hangul-in-docker.html" class="no-external">
 <div class="listing-date">
 Sep 24, 2020
 </div>
@@ -1960,18 +2024,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="53" data-categories="container" data-listing-date-sort="1600786800000" data-listing-file-modified-sort="1694130840159" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1369">
+<div class="quarto-post image-right" data-index="54" data-categories="container" data-listing-date-sort="1600786800000" data-listing-file-modified-sort="1694130840159" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1369">
 <div class="thumbnail">
-<p><a href="./posts/container/2020-09-23-docker-humble-practice.html"></a></p><a href="./posts/container/2020-09-23-docker-humble-practice.html">
+<p><a href="./posts/container/2020-09-23-docker-humble-practice.html" class="no-external"></a></p><a href="./posts/container/2020-09-23-docker-humble-practice.html" class="no-external">
 <p><img data-src="https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/container/2020-09-23-docker-humble-practice.html"></a></p>
+</a><p><a href="./posts/container/2020-09-23-docker-humble-practice.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/container/2020-09-23-docker-humble-practice.html">Docker, 소박한 사용법</a>
+<a href="./posts/container/2020-09-23-docker-humble-practice.html" class="no-external">Docker, 소박한 사용법</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/container/2020-09-23-docker-humble-practice.html"></a>
+<a href="./posts/container/2020-09-23-docker-humble-practice.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('container'); return false;">
@@ -1979,11 +2043,11 @@ container
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/container/2020-09-23-docker-humble-practice.html">문과생이 도커를 쓰는 법</a>
+<a href="./posts/container/2020-09-23-docker-humble-practice.html" class="no-external">문과생이 도커를 쓰는 법</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/container/2020-09-23-docker-humble-practice.html">
+<a href="./posts/container/2020-09-23-docker-humble-practice.html" class="no-external">
 <div class="listing-date">
 Sep 23, 2020
 </div>
@@ -1993,18 +2057,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="54" data-categories="math-of" data-listing-date-sort="1593702000000" data-listing-file-modified-sort="1698020343274" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2154">
+<div class="quarto-post image-right" data-index="55" data-categories="math-of" data-listing-date-sort="1593702000000" data-listing-file-modified-sort="1698020343274" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2154">
 <div class="thumbnail">
-<p><a href="./posts/math-of/2020-07-03-bayesian-inference.html"></a></p><a href="./posts/math-of/2020-07-03-bayesian-inference.html">
+<p><a href="./posts/math-of/2020-07-03-bayesian-inference.html" class="no-external"></a></p><a href="./posts/math-of/2020-07-03-bayesian-inference.html" class="no-external">
 <p><img data-src="./posts/math-of/images/cat-mathsolving.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/math-of/2020-07-03-bayesian-inference.html"></a></p>
+</a><p><a href="./posts/math-of/2020-07-03-bayesian-inference.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/math-of/2020-07-03-bayesian-inference.html">Bayesian Inference with MCMC</a>
+<a href="./posts/math-of/2020-07-03-bayesian-inference.html" class="no-external">Bayesian Inference with MCMC</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/math-of/2020-07-03-bayesian-inference.html"></a>
+<a href="./posts/math-of/2020-07-03-bayesian-inference.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math-of'); return false;">
@@ -2012,11 +2076,11 @@ math-of
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/math-of/2020-07-03-bayesian-inference.html">MCMC 기억 되살리기</a>
+<a href="./posts/math-of/2020-07-03-bayesian-inference.html" class="no-external">MCMC 기억 되살리기</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/math-of/2020-07-03-bayesian-inference.html">
+<a href="./posts/math-of/2020-07-03-bayesian-inference.html" class="no-external">
 <div class="listing-date">
 Jul 3, 2020
 </div>
@@ -2026,18 +2090,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="55" data-categories="machine-learning" data-listing-date-sort="1587222000000" data-listing-file-modified-sort="1698020343244" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="583">
+<div class="quarto-post image-right" data-index="56" data-categories="machine-learning" data-listing-date-sort="1587222000000" data-listing-file-modified-sort="1698020343244" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="583">
 <div class="thumbnail">
-<p><a href="./posts/machine-learning/2020-04-19-classification-metrics.html"></a></p><a href="./posts/machine-learning/2020-04-19-classification-metrics.html">
+<p><a href="./posts/machine-learning/2020-04-19-classification-metrics.html" class="no-external"></a></p><a href="./posts/machine-learning/2020-04-19-classification-metrics.html" class="no-external">
 <p><img data-src="./posts/machine-learning/images/cat-ml.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/machine-learning/2020-04-19-classification-metrics.html"></a></p>
+</a><p><a href="./posts/machine-learning/2020-04-19-classification-metrics.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/machine-learning/2020-04-19-classification-metrics.html">Metrics for Binary Classification</a>
+<a href="./posts/machine-learning/2020-04-19-classification-metrics.html" class="no-external">Metrics for Binary Classification</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/machine-learning/2020-04-19-classification-metrics.html"></a>
+<a href="./posts/machine-learning/2020-04-19-classification-metrics.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('machine-learning'); return false;">
@@ -2045,11 +2109,11 @@ machine-learning
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/machine-learning/2020-04-19-classification-metrics.html">이항 분류 지표 정리합니다.</a>
+<a href="./posts/machine-learning/2020-04-19-classification-metrics.html" class="no-external">이항 분류 지표 정리합니다.</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/machine-learning/2020-04-19-classification-metrics.html">
+<a href="./posts/machine-learning/2020-04-19-classification-metrics.html" class="no-external">
 <div class="listing-date">
 Apr 19, 2020
 </div>
@@ -2059,18 +2123,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="56" data-categories="computer-tool" data-listing-date-sort="1586358000000" data-listing-file-modified-sort="1694130839869" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="695">
+<div class="quarto-post image-right" data-index="57" data-categories="computer-tool" data-listing-date-sort="1586358000000" data-listing-file-modified-sort="1694130839869" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="695">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2020-04-09-wsl2-walkthru.html"></a></p><a href="./posts/computer-tool/2020-04-09-wsl2-walkthru.html">
+<p><a href="./posts/computer-tool/2020-04-09-wsl2-walkthru.html" class="no-external"></a></p><a href="./posts/computer-tool/2020-04-09-wsl2-walkthru.html" class="no-external">
 <p><img data-src="https://blog.kakaocdn.net/dn/r101a/btrfoS8HzZ5/7Upmj62FYdW6AFxStfFkv0/img.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2020-04-09-wsl2-walkthru.html"></a></p>
+</a><p><a href="./posts/computer-tool/2020-04-09-wsl2-walkthru.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2020-04-09-wsl2-walkthru.html">wsl 2, a walk-thru</a>
+<a href="./posts/computer-tool/2020-04-09-wsl2-walkthru.html" class="no-external">wsl 2, a walk-thru</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2020-04-09-wsl2-walkthru.html"></a>
+<a href="./posts/computer-tool/2020-04-09-wsl2-walkthru.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -2078,11 +2142,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2020-04-09-wsl2-walkthru.html">wsl 2의 열기를 느껴보아요!</a>
+<a href="./posts/computer-tool/2020-04-09-wsl2-walkthru.html" class="no-external">wsl 2의 열기를 느껴보아요!</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2020-04-09-wsl2-walkthru.html">
+<a href="./posts/computer-tool/2020-04-09-wsl2-walkthru.html" class="no-external">
 <div class="listing-date">
 Apr 9, 2020
 </div>
@@ -2092,18 +2156,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="57" data-categories="computer-tool" data-listing-date-sort="1583679600000" data-listing-file-modified-sort="1694130839869" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="834">
+<div class="quarto-post image-right" data-index="58" data-categories="computer-tool" data-listing-date-sort="1583679600000" data-listing-file-modified-sort="1694130839869" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="834">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2020-03-09-Streamlit-Heroku.html"></a></p><a href="./posts/computer-tool/2020-03-09-Streamlit-Heroku.html">
+<p><a href="./posts/computer-tool/2020-03-09-Streamlit-Heroku.html" class="no-external"></a></p><a href="./posts/computer-tool/2020-03-09-Streamlit-Heroku.html" class="no-external">
 <p><img data-src="https://cdn.theatlantic.com/media/mt/food/assets_c/2012/01/Expired-SS-Post-thumb-615x300-74166.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2020-03-09-Streamlit-Heroku.html"></a></p>
+</a><p><a href="./posts/computer-tool/2020-03-09-Streamlit-Heroku.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2020-03-09-Streamlit-Heroku.html"><del>Streamlit + Heroku</del></a>
+<a href="./posts/computer-tool/2020-03-09-Streamlit-Heroku.html" class="no-external"><del>Streamlit + Heroku</del></a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2020-03-09-Streamlit-Heroku.html"></a>
+<a href="./posts/computer-tool/2020-03-09-Streamlit-Heroku.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -2111,11 +2175,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2020-03-09-Streamlit-Heroku.html">이제는 쓰지 않는 낡은 내용입니다…</a>
+<a href="./posts/computer-tool/2020-03-09-Streamlit-Heroku.html" class="no-external">이제는 쓰지 않는 낡은 내용입니다…</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2020-03-09-Streamlit-Heroku.html">
+<a href="./posts/computer-tool/2020-03-09-Streamlit-Heroku.html" class="no-external">
 <div class="listing-date">
 Mar 9, 2020
 </div>
@@ -2125,18 +2189,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="58" data-categories="computer-tool" data-listing-date-sort="1583506800000" data-listing-file-modified-sort="1694130839869" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1114">
+<div class="quarto-post image-right" data-index="59" data-categories="computer-tool" data-listing-date-sort="1583506800000" data-listing-file-modified-sort="1694130839869" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1114">
 <div class="thumbnail">
-<p><a href="./posts/computer-tool/2020-03-07-blogging-with-fastpages.html"></a></p><a href="./posts/computer-tool/2020-03-07-blogging-with-fastpages.html">
+<p><a href="./posts/computer-tool/2020-03-07-blogging-with-fastpages.html" class="no-external"></a></p><a href="./posts/computer-tool/2020-03-07-blogging-with-fastpages.html" class="no-external">
 <p><img data-src="https://cdn.theatlantic.com/media/mt/food/assets_c/2012/01/Expired-SS-Post-thumb-615x300-74166.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/computer-tool/2020-03-07-blogging-with-fastpages.html"></a></p>
+</a><p><a href="./posts/computer-tool/2020-03-07-blogging-with-fastpages.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/computer-tool/2020-03-07-blogging-with-fastpages.html"><del>Build Your Blog on Github, Easily</del></a>
+<a href="./posts/computer-tool/2020-03-07-blogging-with-fastpages.html" class="no-external"><del>Build Your Blog on Github, Easily</del></a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/computer-tool/2020-03-07-blogging-with-fastpages.html"></a>
+<a href="./posts/computer-tool/2020-03-07-blogging-with-fastpages.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computer-tool'); return false;">
@@ -2144,11 +2208,11 @@ computer-tool
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/computer-tool/2020-03-07-blogging-with-fastpages.html">이제는 쓰지 않는 낡은 내용입니다…</a>
+<a href="./posts/computer-tool/2020-03-07-blogging-with-fastpages.html" class="no-external">이제는 쓰지 않는 낡은 내용입니다…</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/computer-tool/2020-03-07-blogging-with-fastpages.html">
+<a href="./posts/computer-tool/2020-03-07-blogging-with-fastpages.html" class="no-external">
 <div class="listing-date">
 Mar 7, 2020
 </div>
@@ -2158,18 +2222,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="59" data-categories="git" data-listing-date-sort="1583334000000" data-listing-file-modified-sort="1694130840239" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="438">
+<div class="quarto-post image-right" data-index="60" data-categories="git" data-listing-date-sort="1583334000000" data-listing-file-modified-sort="1694130840239" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="438">
 <div class="thumbnail">
-<p><a href="./posts/git/2020-03-05-using-git-w10.html"></a></p><a href="./posts/git/2020-03-05-using-git-w10.html">
+<p><a href="./posts/git/2020-03-05-using-git-w10.html" class="no-external"></a></p><a href="./posts/git/2020-03-05-using-git-w10.html" class="no-external">
 <p><img data-src="https://cdn.theatlantic.com/media/mt/food/assets_c/2012/01/Expired-SS-Post-thumb-615x300-74166.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/git/2020-03-05-using-git-w10.html"></a></p>
+</a><p><a href="./posts/git/2020-03-05-using-git-w10.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/git/2020-03-05-using-git-w10.html"><del>Using Git ‘Smoothly’ in Windows 10</del></a>
+<a href="./posts/git/2020-03-05-using-git-w10.html" class="no-external"><del>Using Git ‘Smoothly’ in Windows 10</del></a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/git/2020-03-05-using-git-w10.html"></a>
+<a href="./posts/git/2020-03-05-using-git-w10.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('git'); return false;">
@@ -2177,11 +2241,11 @@ git
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/git/2020-03-05-using-git-w10.html">이제는 쓰지 않는 낡은 내용입니다…</a>
+<a href="./posts/git/2020-03-05-using-git-w10.html" class="no-external">이제는 쓰지 않는 낡은 내용입니다…</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/git/2020-03-05-using-git-w10.html">
+<a href="./posts/git/2020-03-05-using-git-w10.html" class="no-external">
 <div class="listing-date">
 Mar 5, 2020
 </div>
@@ -2191,18 +2255,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="60" data-categories="economics" data-listing-date-sort="1579618800000" data-listing-file-modified-sort="1694130840219" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1263">
+<div class="quarto-post image-right" data-index="61" data-categories="economics" data-listing-date-sort="1579618800000" data-listing-file-modified-sort="1694130840219" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1263">
 <div class="thumbnail">
-<p><a href="./posts/economics/2020-01-22-Wealth-divided.html"></a></p><a href="./posts/economics/2020-01-22-Wealth-divided.html">
+<p><a href="./posts/economics/2020-01-22-Wealth-divided.html" class="no-external"></a></p><a href="./posts/economics/2020-01-22-Wealth-divided.html" class="no-external">
 <p><img data-src="./posts/economics/images/econcat_2.jfif" class="thumbnail-image"></p>
-</a><p><a href="./posts/economics/2020-01-22-Wealth-divided.html"></a></p>
+</a><p><a href="./posts/economics/2020-01-22-Wealth-divided.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/economics/2020-01-22-Wealth-divided.html">The College Wealth Divide</a>
+<a href="./posts/economics/2020-01-22-Wealth-divided.html" class="no-external">The College Wealth Divide</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/economics/2020-01-22-Wealth-divided.html"></a>
+<a href="./posts/economics/2020-01-22-Wealth-divided.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('economics'); return false;">
@@ -2210,11 +2274,11 @@ economics
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/economics/2020-01-22-Wealth-divided.html">미국 대졸자와 비대졸자의 투자 행태에 따른 부의 불평등</a>
+<a href="./posts/economics/2020-01-22-Wealth-divided.html" class="no-external">미국 대졸자와 비대졸자의 투자 행태에 따른 부의 불평등</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/economics/2020-01-22-Wealth-divided.html">
+<a href="./posts/economics/2020-01-22-Wealth-divided.html" class="no-external">
 <div class="listing-date">
 Jan 22, 2020
 </div>
@@ -2224,18 +2288,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="61" data-categories="math-of" data-listing-date-sort="1577113200000" data-listing-file-modified-sort="1705270073100" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1045">
+<div class="quarto-post image-right" data-index="62" data-categories="math-of" data-listing-date-sort="1577113200000" data-listing-file-modified-sort="1705270073100" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1045">
 <div class="thumbnail">
-<p><a href="./posts/math-of/2019-12-24-PageRank.html"></a></p><a href="./posts/math-of/2019-12-24-PageRank.html">
+<p><a href="./posts/math-of/2019-12-24-PageRank.html" class="no-external"></a></p><a href="./posts/math-of/2019-12-24-PageRank.html" class="no-external">
 <p><img data-src="./posts/math-of/images/cat-mathsolving.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/math-of/2019-12-24-PageRank.html"></a></p>
+</a><p><a href="./posts/math-of/2019-12-24-PageRank.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/math-of/2019-12-24-PageRank.html">PageRank as Markov Chain</a>
+<a href="./posts/math-of/2019-12-24-PageRank.html" class="no-external">PageRank as Markov Chain</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/math-of/2019-12-24-PageRank.html"></a>
+<a href="./posts/math-of/2019-12-24-PageRank.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math-of'); return false;">
@@ -2243,11 +2307,11 @@ math-of
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/math-of/2019-12-24-PageRank.html">마르코프 체인에서 페이지랭크를 보다.</a>
+<a href="./posts/math-of/2019-12-24-PageRank.html" class="no-external">마르코프 체인에서 페이지랭크를 보다.</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/math-of/2019-12-24-PageRank.html">
+<a href="./posts/math-of/2019-12-24-PageRank.html" class="no-external">
 <div class="listing-date">
 Dec 24, 2019
 </div>
@@ -2257,18 +2321,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="62" data-categories="math-of" data-listing-date-sort="1576767600000" data-listing-file-modified-sort="1698020343264" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1231">
+<div class="quarto-post image-right" data-index="63" data-categories="math-of" data-listing-date-sort="1576767600000" data-listing-file-modified-sort="1698020343264" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1231">
 <div class="thumbnail">
-<p><a href="./posts/math-of/2019-12-20-Peron-Frobenius-2.html"></a></p><a href="./posts/math-of/2019-12-20-Peron-Frobenius-2.html">
+<p><a href="./posts/math-of/2019-12-20-Peron-Frobenius-2.html" class="no-external"></a></p><a href="./posts/math-of/2019-12-20-Peron-Frobenius-2.html" class="no-external">
 <p><img data-src="./posts/math-of/images/cat-mathsolving.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/math-of/2019-12-20-Peron-Frobenius-2.html"></a></p>
+</a><p><a href="./posts/math-of/2019-12-20-Peron-Frobenius-2.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/math-of/2019-12-20-Peron-Frobenius-2.html">Perron-Frobenius Theorem, part 2</a>
+<a href="./posts/math-of/2019-12-20-Peron-Frobenius-2.html" class="no-external">Perron-Frobenius Theorem, part 2</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/math-of/2019-12-20-Peron-Frobenius-2.html"></a>
+<a href="./posts/math-of/2019-12-20-Peron-Frobenius-2.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math-of'); return false;">
@@ -2276,11 +2340,11 @@ math-of
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/math-of/2019-12-20-Peron-Frobenius-2.html">페론-프로베니우스 정리 살펴보기</a>
+<a href="./posts/math-of/2019-12-20-Peron-Frobenius-2.html" class="no-external">페론-프로베니우스 정리 살펴보기</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/math-of/2019-12-20-Peron-Frobenius-2.html">
+<a href="./posts/math-of/2019-12-20-Peron-Frobenius-2.html" class="no-external">
 <div class="listing-date">
 Dec 20, 2019
 </div>
@@ -2290,18 +2354,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="63" data-categories="math-of" data-listing-date-sort="1575990000000" data-listing-file-modified-sort="1698020343264" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2012">
+<div class="quarto-post image-right" data-index="64" data-categories="math-of" data-listing-date-sort="1575990000000" data-listing-file-modified-sort="1698020343264" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2012">
 <div class="thumbnail">
-<p><a href="./posts/math-of/2019-12-11-Peron-Frobenus-1.html"></a></p><a href="./posts/math-of/2019-12-11-Peron-Frobenus-1.html">
+<p><a href="./posts/math-of/2019-12-11-Peron-Frobenus-1.html" class="no-external"></a></p><a href="./posts/math-of/2019-12-11-Peron-Frobenus-1.html" class="no-external">
 <p><img data-src="./posts/math-of/images/cat-mathsolving.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/math-of/2019-12-11-Peron-Frobenus-1.html"></a></p>
+</a><p><a href="./posts/math-of/2019-12-11-Peron-Frobenus-1.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/math-of/2019-12-11-Peron-Frobenus-1.html">Perron-Frobenius Theorem, part 1</a>
+<a href="./posts/math-of/2019-12-11-Peron-Frobenus-1.html" class="no-external">Perron-Frobenius Theorem, part 1</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/math-of/2019-12-11-Peron-Frobenus-1.html"></a>
+<a href="./posts/math-of/2019-12-11-Peron-Frobenus-1.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math-of'); return false;">
@@ -2309,11 +2373,11 @@ math-of
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/math-of/2019-12-11-Peron-Frobenus-1.html">페론-프로베니우스 정리 살펴보기</a>
+<a href="./posts/math-of/2019-12-11-Peron-Frobenus-1.html" class="no-external">페론-프로베니우스 정리 살펴보기</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/math-of/2019-12-11-Peron-Frobenus-1.html">
+<a href="./posts/math-of/2019-12-11-Peron-Frobenus-1.html" class="no-external">
 <div class="listing-date">
 Dec 11, 2019
 </div>
@@ -2323,18 +2387,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="64" data-categories="linear-algebra" data-listing-date-sort="1575298800000" data-listing-file-modified-sort="1694130840249" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1102">
+<div class="quarto-post image-right" data-index="65" data-categories="linear-algebra" data-listing-date-sort="1575298800000" data-listing-file-modified-sort="1694130840249" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1102">
 <div class="thumbnail">
-<p><a href="./posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html"></a></p><a href="./posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html">
+<p><a href="./posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html" class="no-external"></a></p><a href="./posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html" class="no-external">
 <p><img data-src="https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html"></a></p>
+</a><p><a href="./posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html">Eigenvalues and Eigenvectors</a>
+<a href="./posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html" class="no-external">Eigenvalues and Eigenvectors</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html"></a>
+<a href="./posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('linear-algebra'); return false;">
@@ -2342,11 +2406,11 @@ linear-algebra
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html">고유치와 고유벡터에 관해 알아보자.</a>
+<a href="./posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html" class="no-external">고유치와 고유벡터에 관해 알아보자.</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html">
+<a href="./posts/linear-algebra/2019-12-03-eigenvalue-eigenvector.html" class="no-external">
 <div class="listing-date">
 Dec 3, 2019
 </div>
@@ -2356,18 +2420,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="65" data-categories="regression" data-listing-date-sort="1573311600000" data-listing-file-modified-sort="1700605135983" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1967">
+<div class="quarto-post image-right" data-index="66" data-categories="regression" data-listing-date-sort="1573311600000" data-listing-file-modified-sort="1700605135983" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1967">
 <div class="thumbnail">
-<p><a href="./posts/regression/2019-11-10-understanding-logit-regression.html"></a></p><a href="./posts/regression/2019-11-10-understanding-logit-regression.html">
+<p><a href="./posts/regression/2019-11-10-understanding-logit-regression.html" class="no-external"></a></p><a href="./posts/regression/2019-11-10-understanding-logit-regression.html" class="no-external">
 <p><img data-src="https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/regression/2019-11-10-understanding-logit-regression.html"></a></p>
+</a><p><a href="./posts/regression/2019-11-10-understanding-logit-regression.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/regression/2019-11-10-understanding-logit-regression.html">Understanding Logit Regression</a>
+<a href="./posts/regression/2019-11-10-understanding-logit-regression.html" class="no-external">Understanding Logit Regression</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/regression/2019-11-10-understanding-logit-regression.html"></a>
+<a href="./posts/regression/2019-11-10-understanding-logit-regression.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('regression'); return false;">
@@ -2375,11 +2439,11 @@ regression
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/regression/2019-11-10-understanding-logit-regression.html">로지스틱 회귀를 이해해봅시다!</a>
+<a href="./posts/regression/2019-11-10-understanding-logit-regression.html" class="no-external">로지스틱 회귀를 이해해봅시다!</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/regression/2019-11-10-understanding-logit-regression.html">
+<a href="./posts/regression/2019-11-10-understanding-logit-regression.html" class="no-external">
 <div class="listing-date">
 Nov 10, 2019
 </div>
@@ -2389,18 +2453,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="66" data-categories="regression" data-listing-date-sort="1571929200000" data-listing-file-modified-sort="1706483760727" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1612">
+<div class="quarto-post image-right" data-index="67" data-categories="regression" data-listing-date-sort="1571929200000" data-listing-file-modified-sort="1706483760727" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1612">
 <div class="thumbnail">
-<p><a href="./posts/regression/2019-10-25-understanding-regression.html"></a></p><a href="./posts/regression/2019-10-25-understanding-regression.html">
+<p><a href="./posts/regression/2019-10-25-understanding-regression.html" class="no-external"></a></p><a href="./posts/regression/2019-10-25-understanding-regression.html" class="no-external">
 <p><img data-src="https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/regression/2019-10-25-understanding-regression.html"></a></p>
+</a><p><a href="./posts/regression/2019-10-25-understanding-regression.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/regression/2019-10-25-understanding-regression.html">Understanding Regression</a>
+<a href="./posts/regression/2019-10-25-understanding-regression.html" class="no-external">Understanding Regression</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/regression/2019-10-25-understanding-regression.html"></a>
+<a href="./posts/regression/2019-10-25-understanding-regression.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('regression'); return false;">
@@ -2408,11 +2472,11 @@ regression
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/regression/2019-10-25-understanding-regression.html">회귀 분석, 기하학적으로 한 방에 깨우치기</a>
+<a href="./posts/regression/2019-10-25-understanding-regression.html" class="no-external">회귀 분석, 기하학적으로 한 방에 깨우치기</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/regression/2019-10-25-understanding-regression.html">
+<a href="./posts/regression/2019-10-25-understanding-regression.html" class="no-external">
 <div class="listing-date">
 Oct 25, 2019
 </div>
@@ -2422,18 +2486,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="67" data-categories="math-simple" data-listing-date-sort="1563375600000" data-listing-file-modified-sort="1698020343284" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1001">
+<div class="quarto-post image-right" data-index="68" data-categories="math-simple" data-listing-date-sort="1563375600000" data-listing-file-modified-sort="1698020343284" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1001">
 <div class="thumbnail">
-<p><a href="./posts/math-simple/2019-07-18-dot-product.html"></a></p><a href="./posts/math-simple/2019-07-18-dot-product.html">
+<p><a href="./posts/math-simple/2019-07-18-dot-product.html" class="no-external"></a></p><a href="./posts/math-simple/2019-07-18-dot-product.html" class="no-external">
 <p><img data-src="./posts/math-simple/images/cat-dotproduct.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/math-simple/2019-07-18-dot-product.html"></a></p>
+</a><p><a href="./posts/math-simple/2019-07-18-dot-product.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/math-simple/2019-07-18-dot-product.html">Dot Product with Geometry</a>
+<a href="./posts/math-simple/2019-07-18-dot-product.html" class="no-external">Dot Product with Geometry</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/math-simple/2019-07-18-dot-product.html"></a>
+<a href="./posts/math-simple/2019-07-18-dot-product.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math-simple'); return false;">
@@ -2441,11 +2505,11 @@ math-simple
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/math-simple/2019-07-18-dot-product.html">기하학적으로 내적을 살펴보자.</a>
+<a href="./posts/math-simple/2019-07-18-dot-product.html" class="no-external">기하학적으로 내적을 살펴보자.</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/math-simple/2019-07-18-dot-product.html">
+<a href="./posts/math-simple/2019-07-18-dot-product.html" class="no-external">
 <div class="listing-date">
 Jul 18, 2019
 </div>
@@ -2455,18 +2519,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="68" data-categories="math-simple" data-listing-date-sort="1562943600000" data-listing-file-modified-sort="1698020343284" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="718">
+<div class="quarto-post image-right" data-index="69" data-categories="math-simple" data-listing-date-sort="1562943600000" data-listing-file-modified-sort="1698020343284" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="718">
 <div class="thumbnail">
-<p><a href="./posts/math-simple/2019-07-13-Poisson.html"></a></p><a href="./posts/math-simple/2019-07-13-Poisson.html">
+<p><a href="./posts/math-simple/2019-07-13-Poisson.html" class="no-external"></a></p><a href="./posts/math-simple/2019-07-13-Poisson.html" class="no-external">
 <p><img data-src="./posts/math-simple/images/cat-poisson.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/math-simple/2019-07-13-Poisson.html"></a></p>
+</a><p><a href="./posts/math-simple/2019-07-13-Poisson.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/math-simple/2019-07-13-Poisson.html">Poisson as Binormial Distribution</a>
+<a href="./posts/math-simple/2019-07-13-Poisson.html" class="no-external">Poisson as Binormial Distribution</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/math-simple/2019-07-13-Poisson.html"></a>
+<a href="./posts/math-simple/2019-07-13-Poisson.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math-simple'); return false;">
@@ -2474,11 +2538,11 @@ math-simple
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/math-simple/2019-07-13-Poisson.html">이항 분포의 관점에서 푸아송 분포 이해하기</a>
+<a href="./posts/math-simple/2019-07-13-Poisson.html" class="no-external">이항 분포의 관점에서 푸아송 분포 이해하기</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/math-simple/2019-07-13-Poisson.html">
+<a href="./posts/math-simple/2019-07-13-Poisson.html" class="no-external">
 <div class="listing-date">
 Jul 13, 2019
 </div>
@@ -2488,18 +2552,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="69" data-categories="math-of" data-listing-date-sort="1558018800000" data-listing-file-modified-sort="1698020343254" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1864">
+<div class="quarto-post image-right" data-index="70" data-categories="math-of" data-listing-date-sort="1558018800000" data-listing-file-modified-sort="1698020343254" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1864">
 <div class="thumbnail">
-<p><a href="./posts/math-of/2019-05-17-math-pca.html"></a></p><a href="./posts/math-of/2019-05-17-math-pca.html">
+<p><a href="./posts/math-of/2019-05-17-math-pca.html" class="no-external"></a></p><a href="./posts/math-of/2019-05-17-math-pca.html" class="no-external">
 <p><img data-src="./posts/math-of/images/cat-mathsolving.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/math-of/2019-05-17-math-pca.html"></a></p>
+</a><p><a href="./posts/math-of/2019-05-17-math-pca.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/math-of/2019-05-17-math-pca.html">Math Behind PCA</a>
+<a href="./posts/math-of/2019-05-17-math-pca.html" class="no-external">Math Behind PCA</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/math-of/2019-05-17-math-pca.html"></a>
+<a href="./posts/math-of/2019-05-17-math-pca.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math-of'); return false;">
@@ -2507,11 +2571,11 @@ math-of
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/math-of/2019-05-17-math-pca.html">PCA의 수학적 이해</a>
+<a href="./posts/math-of/2019-05-17-math-pca.html" class="no-external">PCA의 수학적 이해</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/math-of/2019-05-17-math-pca.html">
+<a href="./posts/math-of/2019-05-17-math-pca.html" class="no-external">
 <div class="listing-date">
 May 17, 2019
 </div>
@@ -2521,18 +2585,18 @@ JS HUHH
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="70" data-categories="math-of" data-listing-date-sort="1557068400000" data-listing-file-modified-sort="1698020343254" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2041">
+<div class="quarto-post image-right" data-index="71" data-categories="math-of" data-listing-date-sort="1557068400000" data-listing-file-modified-sort="1698020343254" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2041">
 <div class="thumbnail">
-<p><a href="./posts/math-of/2019-05-06-math-svm.html"></a></p><a href="./posts/math-of/2019-05-06-math-svm.html">
+<p><a href="./posts/math-of/2019-05-06-math-svm.html" class="no-external"></a></p><a href="./posts/math-of/2019-05-06-math-svm.html" class="no-external">
 <p><img data-src="./posts/math-of/images/cat-mathsolving.webp" class="thumbnail-image"></p>
-</a><p><a href="./posts/math-of/2019-05-06-math-svm.html"></a></p>
+</a><p><a href="./posts/math-of/2019-05-06-math-svm.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/math-of/2019-05-06-math-svm.html">Mathematics of Support Vector Machine</a>
+<a href="./posts/math-of/2019-05-06-math-svm.html" class="no-external">Mathematics of Support Vector Machine</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/math-of/2019-05-06-math-svm.html"></a>
+<a href="./posts/math-of/2019-05-06-math-svm.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('math-of'); return false;">
@@ -2540,11 +2604,11 @@ math-of
 </div>
 </div>
 <div class="listing-description">
-<a href="./posts/math-of/2019-05-06-math-svm.html">SVM의 수학</a>
+<a href="./posts/math-of/2019-05-06-math-svm.html" class="no-external">SVM의 수학</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/math-of/2019-05-06-math-svm.html">
+<a href="./posts/math-of/2019-05-06-math-svm.html" class="no-external">
 <div class="listing-date">
 May 6, 2019
 </div>
@@ -2834,38 +2898,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -2874,8 +2928,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
