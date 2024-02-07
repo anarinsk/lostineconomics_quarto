@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="JS HUHH">
+<meta name="dcterms.date" content="2024-02-08">
+<meta name="description" content="LLM에 관해 알아야 할 두세 가지 것들">
+
+<title>lostineconomics.com - Busy Person’s Intro to LLMs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">lostineconomics.com</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">about</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../project.html" rel="" target="">
+ <span class="menu-text">project</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/anarinsk" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/anarinsk" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Busy Person’s Intro to LLMs</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">the-lectures</div>
+    <div class="quarto-category">machine-learning</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    LLM에 관해 알아야 할 두세 가지 것들
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>JS HUHH </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 8, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="tl-dr" class="level2">
+<h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
+<p>LLMs에 관해 안드레이 카파시의 견해를 정리해보자.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/zjkBMFhNj_g" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="넋두리" class="level2">
+<h2 class="anchored" data-anchor-id="넋두리">넋두리</h2>
+<p>LLMs를 이해하는 방법은 다양하다. 많이 알수록 보다 간결하고 적확한 표현을 구사할 수 있다고들 하는데, 카파시의 경우가 그러했다. 인상적인 대목들 몇 가지 정리해보자.</p>
+</section>
+<section id="ted-chiang-a-blurry-jpeg-of-the-web" class="level2">
+<h2 class="anchored" data-anchor-id="ted-chiang-a-blurry-jpeg-of-the-web">Ted Chiang, “A Blurry JPEG of the Web”</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 22.2%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 55.6%;justify-content: center;">
+<figure class="figure">
+<p><a href="https://media.newyorker.com/photos/63e43df04138f62754b70bc1/1:1/w_571,h_571,c_limit/Chiang_final.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://media.newyorker.com/photos/63e43df04138f62754b70bc1/1:1/w_571,h_571,c_limit/Chiang_final.gif" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 22.2%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>테드 창은 chatGPT란 결국 웹의 부정확한(흐릿한) 압축버전의 무엇에 지나지 않는다는 뜻으로 말했지만 이 표현은 LLMs에 관한 정확한 묘사이자 좋은 논의의 출발점을 제공한다.</p>
+<p>그래서 LLMs을 의심해야 할까? 이것도 맞다. 하지만 인간과 웹의 상호 작용을 곰곰히 따져보면 이 말이 그리 틀리지도 않고 만일 사람이 아닌 누군가가 이걸 적당한 수준에서 ‘잘’ 할 수 있다면 blurry라는 표현이 그리 김빠지는 것이 아닐 수도 있겠다.</p>
+<p>카파시 역시 LLMs을 비슷하게 이해한다.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 71.4%;justify-content: center;">
+<figure class="figure">
+<p><a href="./images/karpathy/karpathy-1.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="./images/karpathy/karpathy-1.jpeg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>상당 기간동안 검색에 익숙해진 사람이 있다고 하자. 그가 검색을 통해 알게 된 지식이 모두 맞지 않는다. 하지만 확률적으로 다른 보통의 사람보다 낫다면 그는 쓸모가 있을 것이다. 컴퓨터가 내놓는 무엇은 정확하리라는 인간적인 편견을 누리고 보면, 사람이 아닌 이런 존재가 있다면 무척 활용도가 높지 않을까?</p>
+</section>
+<section id="llms-dream-internet" class="level2">
+<h2 class="anchored" data-anchor-id="llms-dream-internet">LLMs Dream Internet</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 71.4%;justify-content: center;">
+<figure class="figure">
+<p><a href="./images/karpathy/karpathy-2.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="./images/karpathy/karpathy-2.jpeg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>뉴럴넷은 인터넷 문서를 “꿈꾼다.” LLMs 편에서 보면 생성이라는 말은 “꿈꾸는” 것에 가깝다. “꿈꾼다”라는 표현이 찰지고도 정확하다. 엄밀히 말하면 뉴럴넷은 문서를 생성한다기다는 꿈꾸는 것에 가깝다. 그래서 헛소리가 들어갈수도 있고 정확하지 않을 수도 있다. 하지만 인간에게도 그러하듯이 꿈꾸는 것, 백지 위에 무엇인가를 그려내는 것이 얼마나 어려운 일인가?</p>
+</section>
+<section id="human-feedback" class="level2">
+<h2 class="anchored" data-anchor-id="human-feedback">Human Feedback</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 45.5%;justify-content: center;">
+<figure class="figure">
+<p><a href="./images/karpathy/karpathy-3.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="./images/karpathy/karpathy-3.jpeg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 45.5%;justify-content: center;">
+<figure class="figure">
+<p><a href="./images/karpathy/karpathy-4.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="./images/karpathy/karpathy-4.jpeg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>하지만 뉴럴넷은 인간이 원하는대로 움직이지 않는다. 그 내부의 작동 원리를 온전하게 모른다는 점에서 뉴럴넷은 그 발상을 복제한 인간의 뇌와 비슷하다. 인간의 아이를 학습시키는 과정을 떠올려보자. 뭔가 가르치고 싶은 것이 있다면 부모가 해당 내용을 밖에서 주입한다. 이 과정이 뉴럴넷에 인간의 손길을 더해주는 과정이다.</p>
+<p>카파시는 크게 두 가지를 제시한다. 하나는 ’보조 모델’을 인간이 만들고 이 내용을 뉴럴넷 안에 끼워넣는 것이다. 두번째는 LLMs가 꿈꾼 답을 비교해서 인간에게 더 좋아보이는 답을 제시해주는 것이다.</p>
+<p>첫번째 과정이 프리트레인 모델을 얻는 과정이라면 두 번째가 이른바 미세 조정(fine-tuning)이다. 첫번째가 엔지니어링의 영역이라면 두번째는 소셜 엔지니어링의 영역이다. 오늘날 chatGPT의 성공에는 GPU를 활용한 대규모 학습을 가능하게 한 첫번째 영역의 공로 만큼 두 번째 영역의 공로도 크다. 어쩌면 미세 조정의 영역이 각 모델을 내놓는 회사들의 숨은 역량이 발휘되는 곳일지도 모른다.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 71.4%;justify-content: center;">
+<figure class="figure">
+<p><a href="./images/karpathy/karpathy-6.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="./images/karpathy/karpathy-6.jpeg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</section>
+<section id="system-i-and-ii-for-llms" class="level2">
+<h2 class="anchored" data-anchor-id="system-i-and-ii-for-llms">System I and II for LLMs?</h2>
+<p>인공 지능의 미래에 관해서 여러가지 언급을 하고 있다. 다양한 입력 형태(멀티모달)을 지니게 되고 있으며 앞으로 가속될 것, 그리고 뒤에 길게 LLMs 보안에 관해 논하고 있다. 보안에 관한 내용이 흥미롭기는 하다. LLM을 해킹하는 방법은 기술적인 것 이상을 포괄한다. 마치 해커들이 현실 세계를 해킹할 대 소셜 엔지니어링을 활용한 것과 유사하다.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 45.5%;justify-content: center;">
+<figure class="figure">
+<p><a href="./images/karpathy/karpathy-7.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="./images/karpathy/karpathy-7.jpeg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 45.5%;justify-content: center;">
+<figure class="figure">
+<p><a href="./images/karpathy/karpathy-8.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="./images/karpathy/karpathy-8.jpeg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>미래에 관한 논의에서 제일 놀라웠던 것은 시스템1,2에 관한 언급이다. 시스템 1,2는 다니엘 카너만의 책에서 나온 개념이다. 시스템1은 빠르고 직관적인 판단을 내리는 것이고 시스템2는 느리고 논리적인 판단을 내리는 것이다. 카파시는 LLM이 시스템1이라고 말했다.</p>
+<p>시스템1이라고? 디지털을 통해 산출된 결과물이 시스템1이라는 언뜻 와닿지 않지만 생각해보면 이 말이 맞다. 앞서 LLMs가 꿈꾸는 것이라고 했는데, 꿈은 시스템1의 영역이다. 시스템2는 논리적인 추론을 하는 영역이다. LLMs가 시스템1이라면, 시스템2는 무엇일까?</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 45.5%;justify-content: center;">
+<figure class="figure">
+<p><a href="./images/karpathy/karpathy-9.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="./images/karpathy/karpathy-9.jpeg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 45.5%;justify-content: center;">
+<figure class="figure">
+<p><a href="./images/karpathy/karpathy-10.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="./images/karpathy/karpathy-10.jpeg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>만일 LLM이 시스템2였다면 맞든 틀리든 인과적인 추론의 과정을 뜯어볼 수 있었을 것이다. 이게 가능했다면 보다 정확한 LLM을 만들어내는 것도 가능하게 되지 않을까 싶다. 앞으로 LLM이 발전한다면 이 방면으로 발전하지 않을까?</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 45.5%;justify-content: center;">
+<figure class="figure">
+<p><a href="./images/karpathy/karpathy-11.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="./images/karpathy/karpathy-11.jpeg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 45.5%;justify-content: center;">
+<figure class="figure">
+<p><a href="./images/karpathy/karpathy-12.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="./images/karpathy/karpathy-12.jpeg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p>이외에 인간 기보에서 배운 초기 알파고 이후에 등장한 스스로 배우는 알파고에 해당하는 LLM 모델에 관한 질문, LLM 중심의 OS 등 흥미로운 슬라이드 샷을 몇 개 덧붙이겠다.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":true});</script>
+
+
+
+</body></html>
