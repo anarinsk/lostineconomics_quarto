@@ -298,8 +298,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/w2v/w2v-5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="Divide and Conquer!"><img src="./images/w2v/w2v-5.png" class="img-fluid figure-img" alt="Divide and Conquer!"></a></p>
-<figcaption>Divide and Conquer!</figcaption>
+<p><a href="./images/w2v/w2v-5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="Divide and Conquer! 그림에서 보듯이 “A”를 예측하기 위해서 “aardvark”, “abandon”만을 남긴다. 산출에서 “aardvark”도 고려하지 않아도 된다. 이렇게 하면 학습해야 할 웨이트의 수가 300개로 줄어든다."><img src="./images/w2v/w2v-5.png" class="img-fluid figure-img" alt="Divide and Conquer! 그림에서 보듯이 “A”를 예측하기 위해서 “aardvark”, “abandon”만을 남긴다. 산출에서 “aardvark”도 고려하지 않아도 된다. 이렇게 하면 학습해야 할 웨이트의 수가 300개로 줄어든다."></a></p>
+<figcaption>Divide and Conquer! 그림에서 보듯이 “A”를 예측하기 위해서 “aardvark”, “abandon”만을 남긴다. 산출에서 “aardvark”도 고려하지 않아도 된다. 이렇게 하면 학습해야 할 웨이트의 수가 300개로 줄어든다.</figcaption>
 </figure>
 </div>
 </div>
@@ -315,7 +315,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="glightbox-desc lightbox-desc-2">신경망을 구성해보자.</span>
 <span class="glightbox-desc lightbox-desc-3">신경망의 투입이 예측(뒤에 나올 단어)을 잘 맞출 수 있도록 네트워크의 웨이트를 조율해나간다.</span>
 <span class="glightbox-desc lightbox-desc-4">전체를 전부 학습하면 자원의 낭비가 막심하다!</span>
-<span class="glightbox-desc lightbox-desc-5">Divide and Conquer!</span>
+<span class="glightbox-desc lightbox-desc-5">Divide and Conquer! 그림에서 보듯이 “A”를 예측하기 위해서 “aardvark”, “abandon”만을 남긴다. 산출에서 “aardvark”도 고려하지 않아도 된다. 이렇게 하면 학습해야 할 웨이트의 수가 300개로 줄어든다.</span>
 </div>
 </section>
 
@@ -852,7 +852,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false,"selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
