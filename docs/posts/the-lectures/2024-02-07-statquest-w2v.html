@@ -183,11 +183,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="넋두리" class="level2">
 <h2 class="anchored" data-anchor-id="넋두리">넋두리</h2>
-<p>이른바 NLP의 주요한 돌파구가 된 것이 w2v의 아이디어다. 요즘 유행하는 트랜스포머 알고리즘 또한 그 시작은 w2v에 있다. 실전에 응용되는 경우는 많지 않겠지만 아이디어를 다시 새기는 것은 필요하다.</p>
+<p>이른바 NLP의 주요한 돌파구가 된 것이 w2v의 아이디어다. 요즘 유행하는 트랜스포머 알고리즘 또한 그 시작은 w2v에 있다. 원래의 w2v의 형태로 실전에 활용되는 경우는 거의 없겠지만, 그 기본 아이디어는 여전히 새겨볼 만하다.</p>
 </section>
 <section id="word-to-vector" class="level2">
 <h2 class="anchored" data-anchor-id="word-to-vector">Word to Vector</h2>
-<p>컴퓨터는 당연히 말을 그대로 알아들을 수 없다. 컴퓨터가 언어를 이해하기 위해서는 언어를 먼저 숫자로 바꿔야 한다. 이 작업이 w2v의 전부이다.</p>
+<p>컴퓨터는 당연히 사람의 언어를 ‘그대로’ 알아들을 수 없다. 컴퓨터가 언어를 이해하기 위해서는 언어를 먼저 숫자로 바꿔야 한다. 이렇게 말(단어, 문장, 문단)을 숫자로 바꾸는 작업이 w2v의 거의 전부이다.</p>
 <div>
 
 </div>
@@ -209,11 +209,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>그렇다면, 중요한 것은 어떻게 바꾸는지에 있다. 우선 강의 슬라이드에 나온대로 “Troll 2”, “is”, “great”, “Gymkata” 네 개의 단어를 생각해보자.</p>
-<p>가장 쉬운 방법은 해당 단어들에 임의로 숫자를 부여하는 것이다. 이렇게 숫자를 부여하면 컴퓨터에 넣을 수는 있다. 다만, 이렇게 부여된 숫자는 의미 있는 정보인가? 아니다. 인간의 언어가 지닌 의미를 컴퓨터에게 되도록 가깝게 옮기려면 말이 지니는 의미 혹은 연결망까지 모두 담겨야 한다.</p>
+<p>중요한 것은 ‘어떻게’ 바꾸는지에 있다. 우선 강의 슬라이드에 나온대로 “Troll 2”, “is”, “great”, “Gymkata” 네 개의 단어를 생각해보자.</p>
+<p>가장 쉬운 방법은 해당 단어들에 임의로 숫자를 부여하는 것이다. 이렇게 숫자를 부여하면 컴퓨터에 넣을 수는 있다. 다만 이렇게 부여된 숫자가 의미 있는 정보일까? 아니다. 인간의 언어가 지닌 ’의미’를 되도록 가깝게 컴퓨터로 옮기려면 말이 지니는 관계 혹은 말 사이의 연결망까지 모두 숫자에 반영되어야 한다.</p>
 <ol type="1">
 <li>왜 word to number가 아니라, vector일지 먼저 따져보자. 인간의 언어는 하나의 의미만 지니지 않고 다양한 의미를 지니고 있다. 이를 반영하기 위해서는 스칼라 숫자 하나로는 부족할 것이다. 벡터의 등장은 이런 점에서 타당하다.</li>
-<li>다음으로는 비슷한 의미를 지니는 말들이 비슷한 값을 지니면 좋을 것이다. 언어의 원래 의미가 벡터에도 잘 반영되어야 한다는 뜻이다.</li>
+<li>다음으로는 비슷한 의미를 지니는 말들이 서로 비슷한 값을 지니면 좋을 것이다. 언어의 원래 의미가 벡터에도 잘 반영되어야 한다는 뜻이다. 스칼라 값이 아니므로 벡터 사이의 유사도 즉 코사인 유사도 등을 활용하면 되겠다.</li>
 </ol>
 </section>
 <section id="neural-net" class="level2">
@@ -261,7 +261,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>물론 실전 뉴럴넷의 파라미터 차원을 훨씬 복잡하다. 그림에서 보듯이 단어를 3백만개 쓰고 100개의 액티베이션 펑션이 있다고 하면 6억 개의 웨이트가 필요하다.</p>
+<p>물론 실전 뉴럴넷의 파라미터 차원을 훨씬 복잡하다. 그림에서 보듯이 학습에 단어 3백만개 쓰고, 100개의 액티베이션 펑션이 있다고 하자. 별로 복잡하지 않은 아래 그림과 같은 구조에서도 6억 개의 웨이트가 필요하다.</p>
 </section>
 <section id="negative-sampling" class="level2">
 <h2 class="anchored" data-anchor-id="negative-sampling">Negative Sampling</h2>
@@ -286,7 +286,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>딱 봐도 너무 복잡하지 않나? 이 녀석들을 한방에 학습시키려면 너무 오랜 시간과 자원이 소모될 것이다. 그래서 조금 꼼수를 고안해볼 수 있을 것이다. 특정 단어를 예측하는데 필요한 단어를 임의로 선택하고 이 녀석의 연결망만 학습시키는 것이다. 이를 negative sampling이라고 한다.</p>
+<p>이 녀석들을 한방에 학습시키려면 너무 오랜 시간과 자원이 소모될 것이다. 그래서 조금 꼼수를 고안해볼 수 있을 것이다. 특정 단어를 예측하는데 필요한 단어를 임의로 선택하고 이 녀석의 연결망만 학습시키는 것이다. 이를 negative sampling이라고 한다.</p>
 <div>
 
 </div>
@@ -852,7 +852,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
