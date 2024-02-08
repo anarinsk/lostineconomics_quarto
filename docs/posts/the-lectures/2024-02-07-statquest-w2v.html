@@ -199,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/w2v/w2v-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="네 개의 단어를 숫자로 바꿔자."><img src="./images/w2v/w2v-1.png" class="img-fluid figure-img" alt="네 개의 단어를 숫자로 바꿔자."></a></p>
+<p><a href="./images/w2v/w2v-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="네 개의 단어를 숫자로 바꿔자."><img src="./images/w2v/w2v-1.png" class="img-fluid figure-img" alt="네 개의 단어를 숫자로 바꿔자."></a></p>
 <figcaption>네 개의 단어를 숫자로 바꿔자.</figcaption>
 </figure>
 </div>
@@ -221,46 +221,30 @@ ul.task-list li input[type="checkbox"] {
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout="[-1, 5, -1]">
-<div class="quarto-layout-row">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
+<div class="quarto-layout-panel" data-layout="[[5,-1,5]]">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/w2v/w2v-2.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="신경망을 구성해보자."><img src="./images/w2v/w2v-2.png" class="img-fluid figure-img" alt="신경망을 구성해보자."></a></p>
+<p><a href="./images/w2v/w2v-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="신경망을 구성해보자."><img src="./images/w2v/w2v-2.png" class="img-fluid figure-img" alt="신경망을 구성해보자."></a></p>
 <figcaption>신경망을 구성해보자.</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-</div>
-</div>
-<p>이제 신경망을 구성해서 학습을 시킬 차례다. 투입은 당연히 각 단어의 벡터이다. 해당 단어만을 1로 처리하고 나머지를 0으로 둔다. 산출 즉 아웃풋은 뒤에 나올 단어의 예측치가 된다. 이 뉴럴넷을 학습시킬 때 좋은 결과란 뒤에 나올 말을 잘 맞추는 것이다.</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[-1, 5, -1]">
-<div class="quarto-layout-row">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
+<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/w2v/w2v-3.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="신경망의 투입이 예측(뒤에 나올 단어)을 잘 맞출 수 있도록 네트워크의 웨이트를 조율해나간다."><img src="./images/w2v/w2v-3.png" class="img-fluid figure-img" alt="신경망의 투입이 예측(뒤에 나올 단어)을 잘 맞출 수 있도록 네트워크의 웨이트를 조율해나간다."></a></p>
+<p><a href="./images/w2v/w2v-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="신경망의 투입이 예측(뒤에 나올 단어)을 잘 맞출 수 있도록 네트워크의 웨이트를 조율해나간다."><img src="./images/w2v/w2v-3.png" class="img-fluid figure-img" alt="신경망의 투입이 예측(뒤에 나올 단어)을 잘 맞출 수 있도록 네트워크의 웨이트를 조율해나간다."></a></p>
 <figcaption>신경망의 투입이 예측(뒤에 나올 단어)을 잘 맞출 수 있도록 네트워크의 웨이트를 조율해나간다.</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
-<p>&nbsp;</p>
 </div>
 </div>
-</div>
+<p>이제 신경망을 구성해서 학습을 시킬 차례다. 투입은 당연히 각 단어의 벡터이다. 해당 단어만을 1로 처리하고 나머지를 0으로 둔다. 산출 즉 아웃풋은 뒤에 나올 단어의 예측치가 된다. 이 뉴럴넷을 학습시킬 때 좋은 결과란 뒤에 나올 말을 잘 맞추는 것이다.</p>
 <p>물론 실전 뉴럴넷의 파라미터 차원이 훨씬 복잡하다. 그림에서 보듯이 학습에 단어 3백만 개와 100개의 액티베이션 펑션이 있다고 하자. 아래 그림에 보듯이, 3백만 X 100 X 2 해서 6억 개의 웨이트가 필요하다.</p>
 </section>
 <section id="negative-sampling" class="level2">
@@ -268,46 +252,30 @@ ul.task-list li input[type="checkbox"] {
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout="[-1, 5, -1]">
-<div class="quarto-layout-row">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
+<div class="quarto-layout-panel" data-layout="[[5, -1, 5]]">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/w2v/w2v-4.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="전체를 전부 학습하면 자원의 낭비가 막심하다!"><img src="./images/w2v/w2v-4.png" class="img-fluid figure-img" alt="전체를 전부 학습하면 자원의 낭비가 막심하다!"></a></p>
+<p><a href="./images/w2v/w2v-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="전체를 전부 학습하면 자원의 낭비가 막심하다!"><img src="./images/w2v/w2v-4.png" class="img-fluid figure-img" alt="전체를 전부 학습하면 자원의 낭비가 막심하다!"></a></p>
 <figcaption>전체를 전부 학습하면 자원의 낭비가 막심하다!</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-</div>
-</div>
-<p>이 녀석들을 한방에 학습시키려면 너무 오랜 시간과 자원이 소모될 것이다. 그래서 조금 꼼수를 고안해볼 수 있을 것이다. 특정 단어를 예측하는데 필요한 단어를 임의로 선택하고 이 녀석의 연결망만 학습시키는 것이다. 이를 negative sampling이라고 한다.</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[-1, 5, -1]">
-<div class="quarto-layout-row">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
+<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/w2v/w2v-5.png" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5" title="Divide and Conquer! 그림에서 보듯이 “A”를 예측하기 위해서 “aardvark”, “abandon”만을 남긴다. 산출에서 “aardvark”도 고려하지 않아도 된다. 이렇게 하면 학습해야 할 웨이트의 수가 300개로 줄어든다."><img src="./images/w2v/w2v-5.png" class="img-fluid figure-img" alt="Divide and Conquer! 그림에서 보듯이 “A”를 예측하기 위해서 “aardvark”, “abandon”만을 남긴다. 산출에서 “aardvark”도 고려하지 않아도 된다. 이렇게 하면 학습해야 할 웨이트의 수가 300개로 줄어든다."></a></p>
+<p><a href="./images/w2v/w2v-5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="Divide and Conquer! 그림에서 보듯이 “A”를 예측하기 위해서 “aardvark”, “abandon”만을 남긴다. 산출에서 “aardvark”도 고려하지 않아도 된다. 이렇게 하면 학습해야 할 웨이트의 수가 300개로 줄어든다."><img src="./images/w2v/w2v-5.png" class="img-fluid figure-img" alt="Divide and Conquer! 그림에서 보듯이 “A”를 예측하기 위해서 “aardvark”, “abandon”만을 남긴다. 산출에서 “aardvark”도 고려하지 않아도 된다. 이렇게 하면 학습해야 할 웨이트의 수가 300개로 줄어든다."></a></p>
 <figcaption>Divide and Conquer! 그림에서 보듯이 “A”를 예측하기 위해서 “aardvark”, “abandon”만을 남긴다. 산출에서 “aardvark”도 고려하지 않아도 된다. 이렇게 하면 학습해야 할 웨이트의 수가 300개로 줄어든다.</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
-<p>&nbsp;</p>
 </div>
 </div>
-</div>
+<p>이 녀석들을 한방에 학습시키려면 너무 오랜 시간과 자원이 소모될 것이다. 그래서 조금 꼼수를 고안해볼 수 있을 것이다. 특정 단어를 예측하는데 필요한 단어를 임의로 선택하고 이 녀석의 연결망만 학습시키는 것이다. 이를 negative sampling이라고 한다.</p>
 
 
 <div class="hidden" aria-hidden="true">
@@ -852,7 +820,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
