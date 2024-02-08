@@ -20,7 +20,7 @@ format:
 ---
 
 ## TL; DR
-w2v의 기본 아이디어 위주로 정리해보자. 
+w2v의 기본 아이디어 위주로 정리해 보자. 
 
 {{< video https://www.youtube.com/watch?v=viZrOnJclY0&t=451s >}}
 
