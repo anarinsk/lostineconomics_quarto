@@ -79,7 +79,7 @@ LLMs를 이해하는 방법은 다양하다. 많이 알수록 더 간결하고 �
 ::: {layout="[[5,-1,5]]"}
 ![](./images/karpathy/karpathy-7.jpeg)
 
-![](./images/karpathy/karpathy-8.jpeg)
+![](./images/karpathy/karpathy-10.jpeg)
 :::
 
 무튼 미래에 관한 논의에서 내가 제일 놀란 것은 것은 시스템1, 시스템2에 관한 언급이다. 시스템1, 시스템2는 다니엘 카너만의 책에서 나온 개념이다. 시스템1은 빠르고 직관적인 판단을 내리는 것이고 시스템2는 느리고 논리적인 판단을 내리는 것이다. 카파시는 LLM이 시스템1이라고 말했다.
@@ -89,7 +89,7 @@ LLMs를 이해하는 방법은 다양하다. 많이 알수록 더 간결하고 �
 ::: {layout="[[5,-1,5]]"}
 ![](./images/karpathy/karpathy-9.jpeg)
 
-![](./images/karpathy/karpathy-10.jpeg)
+![](./images/karpathy/karpathy-8.jpeg)
 :::
 
 시스템2를 갖춘 LLM이 있다면 맞든 틀리든 녀석의 인과적인 추론의 과정을 뜯어볼 수 있었을 것이다. 이게 가능했다면 보다 정확하고 처방적인 대응을 내놓는 LLM을 만들어 낼 수 있지 않을까?
