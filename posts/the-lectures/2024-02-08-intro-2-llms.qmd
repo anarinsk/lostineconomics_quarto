@@ -3,7 +3,7 @@ title: "Busy Person's Intro to LLMs"
 description: LLM에 관해 알아야 할 두세 가지 것들 
 author: "JS HUHH"
 date: "02/08/2024"
-image: "./images/cat-learning.webp"
+image: "./images/cat-learning-2.webp"
 categories: [the-lectures, machine-learning]
 #fig-align: center
 filters:
