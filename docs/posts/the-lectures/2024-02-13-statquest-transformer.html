@@ -181,12 +181,9 @@ ul.task-list li input[type="checkbox"] {
 <p>Transformer를 급히 찍먹한다.</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/zxQyTK8quyY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
-<section id="넋두리" class="level2">
-<h2 class="anchored" data-anchor-id="넋두리">넋두리</h2>
-<p>타노스의 ‘핑거 스냅’ 같은 느낌으로 회자되는 트랜스포머에 관해서 찍 먹해보자. 중요한 것은 트랜스포머의 구조를 이해하는 것, 그리고 RNN과 달리 왜 이 녀석에서는 parallelization이 가능한지를 이해하는 것이다.</p>
-</section>
-<section id="encoder" class="level2">
-<h2 class="anchored" data-anchor-id="encoder">Encoder</h2>
+<section id="인풋과-아웃풋의-크기가-다를-때" class="level2">
+<h2 class="anchored" data-anchor-id="인풋과-아웃풋의-크기가-다를-때">인풋과 아웃풋의 크기가 다를 때</h2>
+<p>RNN은 CNN과 달리</p>
 <div>
 
 </div>
@@ -373,7 +370,27 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="decoder">Decoder</h2>
 <p>강의는 영어-스페인어의 번역의 맥락을 살펴보고 있다. 따라서 스페인어의 인코딩에서 시작한다.</p>
 <p>스페인어에 대해서 4단계의 트랜스포머 셀프-어텐션 프로세스를 마치고 어텐션 아웃풋을 얻는다. 인코딩의 과정이 기본적으로 동일하다. 다만 서로 다른 구조(언어)의 문장이므로 각 단계에 활용되는 웨이트는 다르다.</p>
-<p>::: {layout=“[-1, 5, -1]”} <img src="./images/transformer/11.png" class="img-fluid" style="border: 1px solid #000;" alt="디코더에 들어갈 인풋의 인코딩"> :::</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[-1, 5, -1]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/transformer/11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" data-glightbox="description: .lightbox-desc-10" title="디코더에 들어갈 인풋의 인코딩"><img src="./images/transformer/11.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="디코더에 들어갈 인풋의 인코딩"></a></p>
+<figcaption>디코더에 들어갈 인풋의 인코딩</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
 </section>
 <section id="encoder-decoder-attention" class="level2">
 <h2 class="anchored" data-anchor-id="encoder-decoder-attention">Encoder-Decoder Attention</h2>
@@ -386,7 +403,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/transformer/13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" data-glightbox="description: .lightbox-desc-10" title="인코더-디코더 어텐션"><img src="./images/transformer/13.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="인코더-디코더 어텐션"></a></p>
+<p><a href="./images/transformer/13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" data-glightbox="description: .lightbox-desc-11" title="인코더-디코더 어텐션"><img src="./images/transformer/13.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="인코더-디코더 어텐션"></a></p>
 <figcaption>인코더-디코더 어텐션</figcaption>
 </figure>
 </div>
@@ -397,7 +414,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/transformer/12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" data-glightbox="description: .lightbox-desc-11" title="인코더-디코더 어텐션 밸류 아웃풋"><img src="./images/transformer/12.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="인코더-디코더 어텐션 밸류 아웃풋"></a></p>
+<p><a href="./images/transformer/12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" data-glightbox="description: .lightbox-desc-12" title="인코더-디코더 어텐션 밸류 아웃풋"><img src="./images/transformer/12.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="인코더-디코더 어텐션 밸류 아웃풋"></a></p>
 <figcaption>인코더-디코더 어텐션 밸류 아웃풋</figcaption>
 </figure>
 </div>
@@ -417,8 +434,9 @@ ul.task-list li input[type="checkbox"] {
 <span class="glightbox-desc lightbox-desc-7">병렬화가 가능하다!</span>
 <span class="glightbox-desc lightbox-desc-8">멀티-헤드 어텐션</span>
 <span class="glightbox-desc lightbox-desc-9">Residual Connection; 뉴럴넷에서 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더한다.</span>
-<span class="glightbox-desc lightbox-desc-10">인코더-디코더 어텐션</span>
-<span class="glightbox-desc lightbox-desc-11">인코더-디코더 어텐션 밸류 아웃풋</span>
+<span class="glightbox-desc lightbox-desc-10">디코더에 들어갈 인풋의 인코딩</span>
+<span class="glightbox-desc lightbox-desc-11">인코더-디코더 어텐션</span>
+<span class="glightbox-desc lightbox-desc-12">인코더-디코더 어텐션 밸류 아웃풋</span>
 </div>
 </section>
 
@@ -955,7 +973,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

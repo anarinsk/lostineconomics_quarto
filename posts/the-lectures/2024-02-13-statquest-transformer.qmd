@@ -24,10 +24,10 @@ Transformer를 급히 찍먹한다.
 
 {{< video https://www.youtube.com/watch?v=zxQyTK8quyY >}}
 
-## 넋두리 
-타노스의 '핑거 스냅' 같은 느낌으로 회자되는 트랜스포머에 관해서 찍 먹해보자. 중요한 것은 트랜스포머의 구조를 이해하는 것, 그리고 RNN과 달리 왜 이 녀석을 쓰면 병렬화(parallelization)가 가능한지를 이해하는 것이다. 
 
-## Encoder
+## 인풋과 아웃풋의 크기가 다를 때
+
+RNN은 CNN과 달리 
 
 ::: {layout="[-1, 5, -1]"}
 ![기본 인코딩 세팅은 그림과 같다.](./images/transformer/1.png){ style="border: 1px solid #000;" }
@@ -105,7 +105,7 @@ Transformer를 급히 찍먹한다.
 
  스페인어에 대해서 4단계의 트랜스포머 셀프-어텐션 프로세스를 마치고 어텐션 아웃풋을 얻는다. 인코딩의 과정이 기본적으로 동일하다. 다만 서로 다른 구조(언어)의 문장이므로 각 단계에 활용되는 웨이트는 다르다. 
 
- ::: {layout="[-1, 5, -1]"}
+:::{layout="[-1, 5, -1]"}
 ![디코더에 들어갈 인풋의 인코딩](./images/transformer/11.png){ style="border: 1px solid #000;" }
 :::
 

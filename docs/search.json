@@ -3231,14 +3231,14 @@
     "href": "posts/the-lectures/2024-02-13-statquest-transformer.html#decoder",
     "title": "Transformer",
     "section": "Decoder",
-    "text": "Decoder\n강의는 영어-스페인어의 번역의 맥락을 살펴보고 있다. 따라서 스페인어의 인코딩에서 시작한다.\n스페인어에 대해서 4단계의 트랜스포머 셀프-어텐션 프로세스를 마치고 어텐션 아웃풋을 얻는다. 인코딩의 과정이 기본적으로 동일하다. 다만 서로 다른 구조(언어)의 문장이므로 각 단계에 활용되는 웨이트는 다르다.\n::: {layout=“[-1, 5, -1]”}  :::"
+    "text": "Decoder\n강의는 영어-스페인어의 번역의 맥락을 살펴보고 있다. 따라서 스페인어의 인코딩에서 시작한다.\n스페인어에 대해서 4단계의 트랜스포머 셀프-어텐션 프로세스를 마치고 어텐션 아웃풋을 얻는다. 인코딩의 과정이 기본적으로 동일하다. 다만 서로 다른 구조(언어)의 문장이므로 각 단계에 활용되는 웨이트는 다르다.\n\n\n\n\n\n\n \n\n\n\n\n\n디코더에 들어갈 인풋의 인코딩"
   },
   {
     "objectID": "posts/the-lectures/2024-02-13-statquest-transformer.html#encoder-decoder-attention",
     "href": "posts/the-lectures/2024-02-13-statquest-transformer.html#encoder-decoder-attention",
     "title": "Transformer",
     "section": "Encoder-Decoder Attention",
-    "text": "Encoder-Decoder Attention\n이제 이 두 개의 어텐션을 엮을 차례다. 어텐션 밸류가 생성된 디코더를 쿼리 자리에 넣고 인코더의 키를 활용해서 결과를 얻는다.\n\n\n\n\n\n\n\n\n\n인코더-디코더 어텐션\n\n\n\n\n \n\n\n\n\n\n인코더-디코더 어텐션 밸류 아웃풋\n\n\n\n\n\n인코더-디코더 어텐션의 아웃풋이 생성되고 난 후 마지막에 뉴럴넷을 통해서 스페인어 아웃풋을 산출한다. &lt;EOS&gt;(End of Sentence)까지 투입을 마치면 한 문장에 관한 번역이 완료된다.\n\n\n\n기본 인코딩 세팅은 그림과 같다.\n포지셔널 인코딩은 그림과 같이 수행한다.\n“+” 그림은 포지너설 인코딩을 의미한다.\n자신을 포함해서 문장 내 단어 사이의 유사도를 추적하자.\n셀프 어텐션 인코딩 과정\n트랜스포머 인코딩의 4단계\n병렬화가 가능하다!\n멀티-헤드 어텐션\nResidual Connection; 뉴럴넷에서 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더한다.\n인코더-디코더 어텐션\n인코더-디코더 어텐션 밸류 아웃풋"
+    "text": "Encoder-Decoder Attention\n이제 이 두 개의 어텐션을 엮을 차례다. 어텐션 밸류가 생성된 디코더를 쿼리 자리에 넣고 인코더의 키를 활용해서 결과를 얻는다.\n\n\n\n\n\n\n\n\n\n인코더-디코더 어텐션\n\n\n\n\n \n\n\n\n\n\n인코더-디코더 어텐션 밸류 아웃풋\n\n\n\n\n\n인코더-디코더 어텐션의 아웃풋이 생성되고 난 후 마지막에 뉴럴넷을 통해서 스페인어 아웃풋을 산출한다. &lt;EOS&gt;(End of Sentence)까지 투입을 마치면 한 문장에 관한 번역이 완료된다.\n\n\n\n기본 인코딩 세팅은 그림과 같다.\n포지셔널 인코딩은 그림과 같이 수행한다.\n“+” 그림은 포지너설 인코딩을 의미한다.\n자신을 포함해서 문장 내 단어 사이의 유사도를 추적하자.\n셀프 어텐션 인코딩 과정\n트랜스포머 인코딩의 4단계\n병렬화가 가능하다!\n멀티-헤드 어텐션\nResidual Connection; 뉴럴넷에서 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더한다.\n디코더에 들어갈 인풋의 인코딩\n인코더-디코더 어텐션\n인코더-디코더 어텐션 밸류 아웃풋"
   },
   {
     "objectID": "posts/the-lectures/2024-02-13-statquest-transformer copy.html",
@@ -3337,5 +3337,12 @@
     "title": "Recurrent Neural Network",
     "section": "Encoder-Decoder Attention",
     "text": "Encoder-Decoder Attention\n이제 이 두 개의 어텐션을 엮을 차례다. 어텐션 밸류가 생성된 디코더를 쿼리 자리에 넣고 인코더의 키를 활용해서 결과를 얻는다.\n\n\n\n\n\n\n\n\n\n인코더-디코더 어텐션\n\n\n\n\n \n\n\n\n\n\n인코더-디코더 어텐션 밸류 아웃풋\n\n\n\n\n\n인코더-디코더 어텐션의 아웃풋이 생성되고 난 후 마지막에 뉴럴넷을 통해서 스페인어 아웃풋을 산출한다. &lt;EOS&gt;(End of Sentence)까지 투입을 마치면 한 문장에 관한 번역이 완료된다.\n\n\n\n기본 인코딩 세팅은 그림과 같다.\n포지셔널 인코딩은 그림과 같이 수행한다.\n“+” 그림은 포지너설 인코딩을 의미한다.\n자신을 포함해서 문장 내 단어 사이의 유사도를 추적하자.\n셀프 어텐션 인코딩 과정\n트랜스포머 인코딩의 4단계\n병렬화가 가능하다!\n멀티-헤드 어텐션\nResidual Connection; 뉴럴넷에서 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더한다.\n인코더-디코더 어텐션\n인코더-디코더 어텐션 밸류 아웃풋"
+  },
+  {
+    "objectID": "posts/the-lectures/2024-02-13-statquest-transformer.html#인풋과-아웃풋의-크기가-다를-때",
+    "href": "posts/the-lectures/2024-02-13-statquest-transformer.html#인풋과-아웃풋의-크기가-다를-때",
+    "title": "Transformer",
+    "section": "인풋과 아웃풋의 크기가 다를 때",
+    "text": "인풋과 아웃풋의 크기가 다를 때\nRNN은 CNN과 달리\n\n\n\n\n\n\n \n\n\n\n\n\n기본 인코딩 세팅은 그림과 같다."
   }
 ]
