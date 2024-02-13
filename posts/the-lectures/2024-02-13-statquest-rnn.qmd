@@ -1,9 +1,9 @@
 ---
-title: "Transformer" 
-description: Transformer 찍먹하자. 
+title: "Recurrent Neural Network" 
+description: RNN에 대해서 알아보자 
 author: "JS HUHH"
 date: "02/13/2024"
-image: "./images/cat-learning.webp"
+image: "./images/cat-learning-2.webp"
 categories: [the-lectures, machine-learning]
 #fig-align: center
 filters:
@@ -20,9 +20,9 @@ format:
 ---
 
 ## TL; DR
-Transformer를 급히 찍먹한다. 
+RNN 찍먹하자. 
 
-{{< video https://www.youtube.com/watch?v=zxQyTK8quyY&t=133s >}}
+{{< video https://www.youtube.com/watch?v=AsNTP8Kwu80 >}}
 
 ## 넋두리 
 타노스의 '핑거 스냅' 같은 느낌으로 회자되는 트랜스포머에 관해서 찍 먹해보자. 중요한 것은 트랜스포머의 구조를 이해하는 것, 그리고 RNN과 달리 왜 이 녀석에서는 parallelization이 가능한지를 이해하는 것이다. 

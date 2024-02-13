@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="JS HUHH">
-<meta name="dcterms.date" content="2024-02-08">
-<meta name="description" content="LLM에 관해 알아야 할 두세 가지 것들">
+<meta name="dcterms.date" content="2024-02-13">
+<meta name="description" content="Transformer 찍먹하자.">
 
-<title>lostineconomics.com - Busy Person’s Intro to LLMs</title>
+<title>lostineconomics.com - Transformer</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Busy Person’s Intro to LLMs</h1>
+<h1 class="title">Transformer</h1>
   <div class="quarto-categories">
     <div class="quarto-category">the-lectures</div>
     <div class="quarto-category">machine-learning</div>
@@ -147,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    LLM에 관해 알아야 할 두세 가지 것들
+    Transformer 찍먹하자.
   </div>
 </div>
 
@@ -164,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 8, 2024</p>
+      <p class="date">February 13, 2024</p>
     </div>
   </div>
   
@@ -178,103 +178,19 @@ ul.task-list li input[type="checkbox"] {
 
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
-<p>LLMs에 관해 안드레이 카파시의 흥미로운 견해를 정리해보자.</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/zjkBMFhNj_g" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>Transformer를 급히 찍먹한다.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/zxQyTK8quyY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
 <section id="넋두리" class="level2">
 <h2 class="anchored" data-anchor-id="넋두리">넋두리</h2>
-<p>LLMs를 이해하는 방법은 다양하다. 많이 알수록 더 간결하고 적확한 표현을 구사할 수 있다고들 하는데, 카파시의 경우가 그러했다. 인상적인 대목들 몇 가지 정리해 보자.</p>
+<p>타노스의 ‘핑거 스냅’ 같은 느낌으로 회자되는 트랜스포머에 관해서 찍 먹해보자. 중요한 것은 트랜스포머의 구조를 이해하는 것, 그리고 RNN과 달리 왜 이 녀석을 쓰면 병렬화(parallelization)가 가능한지를 이해하는 것이다.</p>
 </section>
-<section id="ted-chiang-a-blurry-jpeg-of-the-web" class="level2">
-<h2 class="anchored" data-anchor-id="ted-chiang-a-blurry-jpeg-of-the-web">Ted Chiang, “A Blurry JPEG of the Web”</h2>
+<section id="encoder" class="level2">
+<h2 class="anchored" data-anchor-id="encoder">Encoder</h2>
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout="[-2, 5, -2]">
-<div class="quarto-layout-row">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 22.2%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 55.6%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://media.newyorker.com/photos/63e43df04138f62754b70bc1/1:1/w_571,h_571,c_limit/Chiang_final.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="테드 창, The New Yorker 기고문"><img src="https://media.newyorker.com/photos/63e43df04138f62754b70bc1/1:1/w_571,h_571,c_limit/Chiang_final.gif" class="img-fluid figure-img" alt="테드 창, The New Yorker 기고문"></a></p>
-<figcaption><a href="https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web">테드 창, The New Yorker 기고문</a></figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 22.2%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-</div>
-</div>
-<p>테드 창은 chatGPT란 결국 웹의 부정확한 혹은 흐릿한 압축 버전의 무엇에 지나지 않는다는 뜻으로 이 표현을 사용했다. 이 표현이 부정적인 뉘앙스를 지니고 있지만 LLMs에 관한 논의의 좋은 출발점을 제공한다.</p>
-<p>그래서 LLMs을 의심해야 할까? 그렇다. 그리고 거부해야 할까? LLM을 그냥 적당한 사람으로 대체해보자. LLM 정도로 일을 하는 사람을 우리가 “천재”라고 부르지는 않겠지만 그럭저럭 일 잘하는 사람 정도로는 인정할 수 있을 것이다. 적당한 수준에서 잘하는 것을 blurry라고 표현한다면, 그리 부정적인 것은 아닐 수도 있겠다.</p>
-<p>카파시의 LLMs 이해 역시 비슷하다.</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[[5, -1, 5]]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./images/karpathy/karpathy-1.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="인터넷을 학습한 LLM"><img src="./images/karpathy/karpathy-1.jpeg" class="img-fluid figure-img" style="border: 1px solid #000;" alt="인터넷을 학습한 LLM"></a></p>
-<figcaption>인터넷을 학습한 LLM</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./images/karpathy/karpathy-2.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="LLMs dream"><img src="./images/karpathy/karpathy-2.jpeg" class="img-fluid figure-img" style="border: 1px solid #000;" alt="LLMs dream"></a></p>
-<figcaption>LLMs dream</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<p>상당 기간 동안 검색을 사용해서 이에 익숙해진 어떤 사람이 있다고 하자. 그가 검색을 통해 알게 된 지식이 모두 맞는 것은 아닐 터다. 하지만 확률적으로 다른 보통의 사람보다 그가 낫다면 그의 쓸모는 충분하다. 컴퓨터가 내놓는 무엇이 언제나 정확하리라는 인간적인 편견을 잠시 치우고 생각하면, 사람이 아닌 이런 존재가 있다면 꽤 활용도가 높지 않을까?</p>
-<p>뉴럴넷은 인터넷 문서를 “꿈꾼다.” LLMs에서 생성이라는 말은 사실 “꿈꾸는” 것에 가깝다. “꿈꾼다”라는 표현이 찰지면서도 정확하다. 엄밀히 말하면 뉴럴넷은 문서를 쓰지 않는다. 꿈꾼다. 여느 인간의 꿈처럼 헛소리가 들어갈수도 있고, 정확하지 않을 수도 있다. 하지만 인간에게도 그러하듯이 꿈꾸는 것, 백지 위에 무엇인가를 그려내는 것이란 쉽지 않은 일이다.</p>
-</section>
-<section id="human-feedbacks" class="level2">
-<h2 class="anchored" data-anchor-id="human-feedbacks">Human Feedbacks</h2>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[[5,-1,5]]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./images/karpathy/karpathy-3.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="Human Assitant"><img src="./images/karpathy/karpathy-3.jpeg" class="img-fluid figure-img" style="border: 1px solid #000;" alt="Human Assitant"></a></p>
-<figcaption>Human Assitant</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./images/karpathy/karpathy-4.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="Human Guidance"><img src="./images/karpathy/karpathy-4.jpeg" class="img-fluid figure-img" style="border: 1px solid #000;" alt="Human Guidance"></a></p>
-<figcaption>Human Guidance</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<p>뉴럴넷은 인간이 원하는대로 움직이지 않는다. 그 내부의 작동 원리를 온전하게 모른다는 점에서 뉴럴넷은 그 발상을 복제한 인간의 뇌와 꽤 비슷하다. 인간의 아이를 학습시키는 과정을 떠올려보자. 뭔가 가르치고 싶은 것이 있다면 부모가 해당 내용을 밖에서 계속해서 주입한다. 이 작업이 뉴럴넷에 인간의 손길을 더해주는, 즉 양육의 과정이다.</p>
-<p>카파시는 크게 두 가지를 제시한다. 하나는 ’보조 모델(assistant model)’을 인간이 만들고 이 내용을 뉴럴넷 안에 바꿔 끼워넣는 것이다. 두번째는 LLMs가 꿈꾼 여러 답들을 인간이 비교해서 더 나아보이는 것을 알려주는 것이다.</p>
-<p>첫번째 과정이 프리트레인 모델을 얻는 과정이라면 두 번째가 이른바 미세 조정(fine-tuning)이다. 첫번째가 거의 순수한 엔지니어링의 영역이라면 두번째는 ‘소셜’ 엔지니어링의 영역이다. 오늘날 chatGPT의 성공에는 GPU를 활용한 대규모 학습을 가능하게 한 첫번째 영역의 공로 만큼 두 번째 영역의 공로도 크다. 어쩌면 미세 조정의 영역이 각 모델을 내놓는 회사들의 숨은 역량이 발휘되는 곳일지도 모른다.</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[[-1,5,-1]]">
+<div class="quarto-layout-panel" data-layout="[-1, 5, -1]">
 <div class="quarto-layout-row">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
 <p>&nbsp;</p>
@@ -282,8 +198,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/karpathy/karpathy-6.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="training of LLM"><img src="./images/karpathy/karpathy-6.jpeg" class="img-fluid figure-img" style="border: 1px solid #000;" alt="training of LLM"></a></p>
-<figcaption>training of LLM</figcaption>
+<p><a href="./images/transformer/1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="기본 인코딩 세팅은 그림과 같다."><img src="./images/transformer/1.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="기본 인코딩 세팅은 그림과 같다."></a></p>
+<figcaption>기본 인코딩 세팅은 그림과 같다.</figcaption>
 </figure>
 </div>
 </div>
@@ -293,19 +209,28 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="system-i-and-ii-for-llms" class="level2">
-<h2 class="anchored" data-anchor-id="system-i-and-ii-for-llms">System I and II for LLMs?</h2>
-<p>카파시는 인공 지능의 미래에 관해서 여러가지 언급을 하고 있다. 다양한 입력 형태(멀티모달)을 받을 수 있게 진화하고 있으며 이는 가속될 것, 그리고 마지막에 꽤 길게 LLMs 보안에 관해 논하고 있다. 보안에 관한 내용이 흥미롭기는 하다. LLM을 해킹하는 방법은 기술적인 것을 뛰어넘는다. 마치 해커들이 서버나 서비스를 해킹할 때 순수한 네트워크 기술 넘머의 소셜 엔지니어링을 활용한 것과 유사하다.</p>
+<section id="four-key-components" class="level2">
+<h2 class="anchored" data-anchor-id="four-key-components">Four Key Components</h2>
+<p>트랜스포머는 크게 4가지의 구성요소로 이루어져 있다.</p>
+<ol type="1">
+<li>Positional Encoding</li>
+<li>Self-Attention Mechanism</li>
+<li>Encoder</li>
+<li>Decoder</li>
+</ol>
+<section id="positional-encoding" class="level3">
+<h3 class="anchored" data-anchor-id="positional-encoding">Positional Encoding</h3>
+<p>단어의 위치를 인코딩하는 방법이다. 여러가지 방법이 있지만 사인-코사인 커브를 사용하는 것이 제일 일반적이라고 한다. 언뜻 보면 이해가 가지 않지만 사인 코사인의 파동 값을 활용하면 별다른 정보 손실 없이 벡터로 토큰의 위치 정보를 잘 반영할 수 있다.</p>
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout="[[5,-1,5]]">
-<div class="quarto-layout-row">
+<div class="quarto-layout-panel" data-layout="[[5, -1, 5]]">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/karpathy/karpathy-7.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7" title="System I"><img src="./images/karpathy/karpathy-7.jpeg" class="img-fluid figure-img" style="border: 1px solid #000;" alt="System I"></a></p>
-<figcaption>System I</figcaption>
+<p><a href="./images/transformer/2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="포지셔널 인코딩은 그림과 같이 수행한다."><img src="./images/transformer/2.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="포지셔널 인코딩은 그림과 같이 수행한다."></a></p>
+<figcaption>포지셔널 인코딩은 그림과 같이 수행한다.</figcaption>
 </figure>
 </div>
 </div>
@@ -315,25 +240,81 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/karpathy/karpathy-10.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8" title="System II"><img src="./images/karpathy/karpathy-10.jpeg" class="img-fluid figure-img" style="border: 1px solid #000;" alt="System II"></a></p>
-<figcaption>System II</figcaption>
+<p><a href="./images/transformer/3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="“+” 그림은 포지너설 인코딩을 의미한다."><img src="./images/transformer/3.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="“+” 그림은 포지너설 인코딩을 의미한다."></a></p>
+<figcaption>“+” 그림은 포지너설 인코딩을 의미한다.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
-<p>무튼 미래에 관한 논의에서 내가 제일 놀란 것은 것은 시스템1, 시스템2에 관한 언급이다. 시스템1, 시스템2는 다니엘 카너만의 책에서 나온 개념이다. 시스템1은 빠르고 직관적인 판단을 내리는 것이고 시스템2는 느리고 논리적인 판단을 내리는 것이다. 카파시는 LLM이 시스템1이라고 말했다.</p>
-<p>인공지능이 시스템1이라고? 디지털을 통해 산출된 결과물이 시스템1이라는 발상은 언뜻 와닿지 않지만, 생각해보면 이 말이 맞다! 앞서 LLMs가 꿈꾸는 것이라고 했는데, 꿈은 시스템1의 영역이다. 시스템2는 논리적인 추론을 하는 영역이다. LLMs가 시스템1이라면, LLMs와 어울리는 시스템2는 무엇일까? 아직 미지의 영역이다. 컴퓨팅 자원을 더 소모하고 결과를 얻는데 더 시간이 걸리더라도 이 개념이 만들어지면 LLMs에 또다른 도약이 있지 않을까 한다.</p>
+</section>
+<section id="self-attention-mechanism" class="level3">
+<h3 class="anchored" data-anchor-id="self-attention-mechanism">Self-Attention Mechanism</h3>
+<p>자신을 포함해서 단어 사이의 유사도를 계산한다.</p>
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout="[[5,-1,5]]">
+<div class="quarto-layout-panel" data-layout="[-1, 5, -1]">
 <div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/transformer/4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="자신을 포함해서 문장 내 단어 사이의 유사도를 추적하자."><img src="./images/transformer/4.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="자신을 포함해서 문장 내 단어 사이의 유사도를 추적하자."></a></p>
+<figcaption>자신을 포함해서 문장 내 단어 사이의 유사도를 추적하자.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>세 가지 하부 요소가 있다.</p>
+<ul>
+<li>Queries: 각 단어 자체를 표현하는 뉴럴넷의 중간 결과</li>
+<li>Keys: 각 단어와 다른 단어를 비교할 때 활용할 뉴럴넷의 중간 결과</li>
+<li>Values: 각 단어의 셀프 어텐션을 거친 중요도를 표현하는 뉴럴넷의 (중간) 결과</li>
+</ul>
+<p>쿼리와 키의 닷프로덕트를 구하면 스칼라 값을 얻게 된다. 이 녀석을 다시 softmax 함수에 넣어 정규화한 후 이 값을 세번째 구성요소인 Value를 거치도록 한다.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[-1, 5, -1]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/transformer/5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="셀프 어텐션 인코딩 과정"><img src="./images/transformer/5.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="셀프 어텐션 인코딩 과정"></a></p>
+<figcaption>셀프 어텐션 인코딩 과정</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>그림을 보면서 다시 한번 확인하자. 위 그림은 “let’s”가 자신 및 “go”와의 셀프 어텐션을 고려하여 Query, Key, Value를 계산하는 과정을 보여준다.</p>
+<p>같은 방식으로 “go”에 대해서도 계산을 수행한다. 여기서 중요한 대목이 나온다. “go”에 대해서 인코딩을 할 때 Query, Key, Value의 웨이트를 “Let’s” 때 썼던 것을 그대로 활용한다. 한 문장 안에서 단어의 의미가 맺고 있는 연결망이 같다고 보면다면 재활용이 가능하다. 그리고 이 때문에 병렬화가 가능하다! 즉 RNN처럼 앞부터 순차적으로 계산할 필요성이 사라지는 것이다.</p>
+</section>
+<section id="정리" class="level3">
+<h3 class="anchored" data-anchor-id="정리">정리</h3>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[5, -1, 5]]">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/karpathy/karpathy-9.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" data-glightbox="description: .lightbox-desc-9" title="LLM is System I"><img src="./images/karpathy/karpathy-9.jpeg" class="img-fluid figure-img" style="border: 1px solid #000;" alt="LLM is System I"></a></p>
-<figcaption>LLM is System I</figcaption>
+<p><a href="./images/transformer/6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="트랜스포머 인코딩의 4단계"><img src="./images/transformer/6.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="트랜스포머 인코딩의 4단계"></a></p>
+<figcaption>트랜스포머 인코딩의 4단계</figcaption>
 </figure>
 </div>
 </div>
@@ -343,25 +324,32 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/karpathy/karpathy-8.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-10" data-glightbox="description: .lightbox-desc-10" title="LLM as System II?"><img src="./images/karpathy/karpathy-8.jpeg" class="img-fluid figure-img" style="border: 1px solid #000;" alt="LLM as System II?"></a></p>
-<figcaption>LLM as System II?</figcaption>
+<p><a href="./images/transformer/9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7" title="병렬화가 가능하다!"><img src="./images/transformer/9.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="병렬화가 가능하다!"></a></p>
+<figcaption>병렬화가 가능하다!</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
-<p>시스템2를 갖춘 LLM이 있다면 맞든 틀리든 녀석의 인과적인 추론의 과정을 뜯어볼 수 있었을 것이다. 이게 가능했다면 보다 정확하고 처방적인 대응을 내놓는 LLM을 만들어 낼 수 있지 않을까?</p>
-<p>이외에 인간 기보에서 배운 초기 알파고 이후에 등장한 스스로 배우는 알파고에 해당하는 LLM 모델에 관한 질문, LLM 중심의 OS 등 흥미로운 슬라이드 샷을 몇 개 덧붙이겠다.</p>
+<ul>
+<li>Word Embedding: 단어를 벡터로 표현한다.</li>
+<li>Positional Encoding: 단어의 위치를 인코딩한다.</li>
+<li>Self-Attention Mechanism: 단어 사이의 유사도를 계산한다.</li>
+<li>Residual Connection</li>
+</ul>
+</section>
+<section id="comments" class="level3">
+<h3 class="anchored" data-anchor-id="comments">Comments</h3>
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout="[[5,-1,5]]">
-<div class="quarto-layout-row">
+<div class="quarto-layout-panel" data-layout="[[5, -1, 5]]">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/karpathy/karpathy-11.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-11" data-glightbox="description: .lightbox-desc-11" title="LLM version of Alpha Go Zero"><img src="./images/karpathy/karpathy-11.jpeg" class="img-fluid figure-img" style="border: 1px solid #000;" alt="LLM version of Alpha Go Zero"></a></p>
-<figcaption>LLM version of Alpha Go Zero</figcaption>
+<p><a href="./images/transformer/7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8" title="멀티-헤드 어텐션"><img src="./images/transformer/7.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="멀티-헤드 어텐션"></a></p>
+<figcaption>멀티-헤드 어텐션</figcaption>
 </figure>
 </div>
 </div>
@@ -371,28 +359,66 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/karpathy/karpathy-12.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-12" data-glightbox="description: .lightbox-desc-12" title="LLM OS"><img src="./images/karpathy/karpathy-12.jpeg" class="img-fluid figure-img" style="border: 1px solid #000;" alt="LLM OS"></a></p>
-<figcaption>LLM OS</figcaption>
+<p><a href="./images/transformer/8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" data-glightbox="description: .lightbox-desc-9" title="Residual Connection; 뉴럴넷에서 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더한다."><img src="./images/transformer/8.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="Residual Connection; 뉴럴넷에서 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더한다."></a></p>
+<figcaption>Residual Connection; 뉴럴넷에서 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더한다.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
+<p>만일 셀프 어텐션에서 같은 언어끼리라도 문장에서 서로 다른 의미망을 지닐 수 있다면 여러 개의 어텐션 유닛이 필요할 것이다. 이를 multi-head attention이라고 한다.</p>
+</section>
+</section>
+<section id="decoder" class="level2">
+<h2 class="anchored" data-anchor-id="decoder">Decoder</h2>
+<p>강의는 영어-스페인어의 번역의 맥락을 살펴보고 있다. 따라서 스페인어의 인코딩에서 시작한다.</p>
+<p>스페인어에 대해서 4단계의 트랜스포머 셀프-어텐션 프로세스를 마치고 어텐션 아웃풋을 얻는다. 인코딩의 과정이 기본적으로 동일하다. 다만 서로 다른 구조(언어)의 문장이므로 각 단계에 활용되는 웨이트는 다르다.</p>
+<p>::: {layout=“[-1, 5, -1]”} <img src="./images/transformer/11.png" class="img-fluid" style="border: 1px solid #000;" alt="디코더에 들어갈 인풋의 인코딩"> :::</p>
+</section>
+<section id="encoder-decoder-attention" class="level2">
+<h2 class="anchored" data-anchor-id="encoder-decoder-attention">Encoder-Decoder Attention</h2>
+<p>이제 이 두 개의 어텐션을 엮을 차례다. 어텐션 밸류가 생성된 디코더를 쿼리 자리에 넣고 인코더의 키를 활용해서 결과를 얻는다.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[5, -1, 5]]">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/transformer/13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" data-glightbox="description: .lightbox-desc-10" title="인코더-디코더 어텐션"><img src="./images/transformer/13.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="인코더-디코더 어텐션"></a></p>
+<figcaption>인코더-디코더 어텐션</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/transformer/12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" data-glightbox="description: .lightbox-desc-11" title="인코더-디코더 어텐션 밸류 아웃풋"><img src="./images/transformer/12.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="인코더-디코더 어텐션 밸류 아웃풋"></a></p>
+<figcaption>인코더-디코더 어텐션 밸류 아웃풋</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>인코더-디코더 어텐션의 아웃풋이 생성되고 난 후 마지막에 뉴럴넷을 통해서 스페인어 아웃풋을 산출한다. <code>&lt;EOS&gt;</code>(End of Sentence)까지 투입을 마치면 한 문장에 관한 번역이 완료된다.</p>
 
 
 <div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1"><a href="https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web">테드 창, The New Yorker 기고문</a></span>
-<span class="glightbox-desc lightbox-desc-2">인터넷을 학습한 LLM</span>
-<span class="glightbox-desc lightbox-desc-3">LLMs dream</span>
-<span class="glightbox-desc lightbox-desc-4">Human Assitant</span>
-<span class="glightbox-desc lightbox-desc-5">Human Guidance</span>
-<span class="glightbox-desc lightbox-desc-6">training of LLM</span>
-<span class="glightbox-desc lightbox-desc-7">System I</span>
-<span class="glightbox-desc lightbox-desc-8">System II</span>
-<span class="glightbox-desc lightbox-desc-9">LLM is System I</span>
-<span class="glightbox-desc lightbox-desc-10">LLM as System II?</span>
-<span class="glightbox-desc lightbox-desc-11">LLM version of Alpha Go Zero</span>
-<span class="glightbox-desc lightbox-desc-12">LLM OS</span>
+<span class="glightbox-desc lightbox-desc-1">기본 인코딩 세팅은 그림과 같다.</span>
+<span class="glightbox-desc lightbox-desc-2">포지셔널 인코딩은 그림과 같이 수행한다.</span>
+<span class="glightbox-desc lightbox-desc-3">“+” 그림은 포지너설 인코딩을 의미한다.</span>
+<span class="glightbox-desc lightbox-desc-4">자신을 포함해서 문장 내 단어 사이의 유사도를 추적하자.</span>
+<span class="glightbox-desc lightbox-desc-5">셀프 어텐션 인코딩 과정</span>
+<span class="glightbox-desc lightbox-desc-6">트랜스포머 인코딩의 4단계</span>
+<span class="glightbox-desc lightbox-desc-7">병렬화가 가능하다!</span>
+<span class="glightbox-desc lightbox-desc-8">멀티-헤드 어텐션</span>
+<span class="glightbox-desc lightbox-desc-9">Residual Connection; 뉴럴넷에서 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더한다.</span>
+<span class="glightbox-desc lightbox-desc-10">인코더-디코더 어텐션</span>
+<span class="glightbox-desc lightbox-desc-11">인코더-디코더 어텐션 밸류 아웃풋</span>
 </div>
 </section>
 
@@ -929,7 +955,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
