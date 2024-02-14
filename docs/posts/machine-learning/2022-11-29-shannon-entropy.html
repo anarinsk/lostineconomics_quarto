@@ -361,7 +361,7 @@ H(p,q)=-\sum_{x \in \chi} p(x) \log q(x)
 \]</span></p>
 <p>섀넌 엔트로피의 개념에 평가 값에 예측 확률을 넣었다고 보면 된다. 즉, 실제로 존재하는 확률이 <span class="math inline">\(p(x)\)</span>라고 할 때 이를 예측한 값이 <span class="math inline">\(q(x)\)</span>라고 하면, 위의 값은 실제 확률과 비교한 예측 확률의 성과를 나타난다. <span class="math inline">\(q(x) = p(x)\)</span>일 때 <span class="math inline">\(H(p,q)\)</span>는 최솟값을 지니게 된다.</p>
 <p>크로스 엔트로피는 분류 문제를 풀 때 손실 함수로 많이 활용된다. 왜 그럴까? 흔히 활용되는 오차제곱항에 비해서 올바른 확률에서 멀리 떨어져 있을 때 기울기의 값이 훨씬 크다. 경사하강법을 쓰면 훨씬 빠르게 원하는 위치로 접근한다.</p>
-<p>이산 분포를 가정했을 때 <span class="math inline">\(\chi\)</span>를 전체 분류의 크기를 담은 첨수 집합이라고 하자. 이제 1이라는 종류만을 담은 참 값은 그림의 오른쪽과 같고, 반면 모델이 예측한 각 분류의 확률은 왼쪽이라고 하자. 이때 크로스 엔트로피는 그림 속에 표현된 값과 같다.</p>
+<p>이산 분포를 가정했을 때 <span class="math inline">\(\chi\)</span>를 전체 분류의 크기를 담은 첨수 집합이라고 하자. 이제 1이라는 종류만을 담은 참 값은 그림의 오른쪽과 같고, 반면 모델이 예측한 각 분류의 확률은 왼쪽이라고 하자. 이때 크로스 엔트로피는 아래 그림과 같이 계산될 수 있다. S는 <span class="math inline">\(q(x)\)</span>, T는 <span class="math inline">\(p(x)\)</span>를 나타낸다.</p>
 <div>
 
 </div>
@@ -380,7 +380,7 @@ H(p,q)=-\sum_{x \in \chi} p(x) \log q(x)
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>기계학습에서 관련 내용은 <a href="https://www.youtube.com/watch?v=6ArSys5qHAU">여기</a>를 참고하자.</p>
+<p>기계학습에서 크로스 엔트로피와 관련된 내용은 <a href="https://www.youtube.com/watch?v=6ArSys5qHAU">statquest-cross entrophy</a>를 참고하자.</p>
 </div></div><section id="로지스틱-함수의-경우" class="level3">
 <h3 class="anchored" data-anchor-id="로지스틱-함수의-경우">로지스틱 함수의 경우</h3>
 <p>로지스틱 함수란 베르누이 분포(발생하거나 그렇지 않거나)를 지니는 사건의 확률을 표현하는 함수의 하나이다. 로지스틱 함수는 다음과 같이 정의된다.</p>
@@ -937,7 +937,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

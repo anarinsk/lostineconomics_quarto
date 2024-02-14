@@ -7,8 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="JS HUHH">
-<meta name="dcterms.date" content="2024-02-14">
-<meta name="description" content="RNN에 대해서 알아보자.">
+<meta name="dcterms.date" content="2024-02-13">
+<meta name="description" content="RNN에 대해서 알아보자">
 
 <title>lostineconomics.com - Recurrent Neural Network</title>
 <style>
@@ -147,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    RNN에 대해서 알아보자.
+    RNN에 대해서 알아보자
   </div>
 </div>
 
@@ -164,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 14, 2024</p>
+      <p class="date">February 13, 2024</p>
     </div>
   </div>
   
@@ -181,10 +181,45 @@ ul.task-list li input[type="checkbox"] {
 <p>RNN 찍먹하자.</p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/AsNTP8Kwu80" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
-<section id="기본-구조" class="level2">
-<h2 class="anchored" data-anchor-id="기본-구조">기본 구조</h2>
-<p>RNN은 Recurrent Neural Network의 약자로, 시퀀스 데이터를 처리하는데 사용되는 신경망이다. 시퀀스 데이터란, 데이터의 순서가 중요한 데이터를 말한다. 예를 들어, 문장, 음성, 동영상 등이 있다. RNN은 이러한 시퀀스 데이터를 처리하는데 사용된다.</p>
-<p>RNN의 핵심적인 아이디어는 한번 신경망을 거친 결과가 뒤에 따라온 데이터와 함께 학습이 다시 활용된다는 것이다. 그림으로 표현하면 아래와 같다.</p>
+<section id="넋두리" class="level2">
+<h2 class="anchored" data-anchor-id="넋두리">넋두리</h2>
+</section>
+<section id="encoder" class="level2">
+<h2 class="anchored" data-anchor-id="encoder">Encoder</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[-1, 5, -1]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/transformer/1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="기본 인코딩 세팅은 그림과 같다."><img src="./images/transformer/1.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="기본 인코딩 세팅은 그림과 같다."></a></p>
+<figcaption>기본 인코딩 세팅은 그림과 같다.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</section>
+<section id="four-key-components" class="level2">
+<h2 class="anchored" data-anchor-id="four-key-components">Four Key Components</h2>
+<p>트랜스포머는 크게 4가지의 구성요소로 이루어져 있다.</p>
+<ol type="1">
+<li>Positional Encoding</li>
+<li>Self-Attention Mechanism</li>
+<li>Encoder</li>
+<li>Decoder</li>
+</ol>
+<section id="positional-encoding" class="level3">
+<h3 class="anchored" data-anchor-id="positional-encoding">Positional Encoding</h3>
+<p>단어의 위치를 인코딩하는 방법이다. 여러가지 방법이 있지만 사인-코사인 커브를 사용하는 것이 제일 일반적이라고 한다. 언뜻 보면 이해가 가지 않지만 사인 코사인의 파동 값을 활용하면 별다른 정보 손실 없이 벡터로 토큰의 위치 정보를 잘 반영할 수 있다.</p>
 <div>
 
 </div>
@@ -193,8 +228,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/rnn/01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="피드백 루프로 표현하는 방식"><img src="./images/rnn/01.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="피드백 루프로 표현하는 방식"></a></p>
-<figcaption>피드백 루프로 표현하는 방식</figcaption>
+<p><a href="./images/transformer/2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="포지셔널 인코딩은 그림과 같이 수행한다."><img src="./images/transformer/2.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="포지셔널 인코딩은 그림과 같이 수행한다."></a></p>
+<figcaption>포지셔널 인코딩은 그림과 같이 수행한다.</figcaption>
 </figure>
 </div>
 </div>
@@ -204,30 +239,71 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/rnn/02.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="나란히 아래로 표현하는 방식"><img src="./images/rnn/02.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="나란히 아래로 표현하는 방식"></a></p>
-<figcaption>나란히 아래로 표현하는 방식</figcaption>
+<p><a href="./images/transformer/3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="“+” 그림은 포지너설 인코딩을 의미한다."><img src="./images/transformer/3.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="“+” 그림은 포지너설 인코딩을 의미한다."></a></p>
+<figcaption>“+” 그림은 포지너설 인코딩을 의미한다.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
-<p>피드백 루프로 표현하는 방식이 혼란의 여지가 있으므로 나란히 표현하는 방식을 활용해 구체적인 계산을 살펴보자.</p>
+</section>
+<section id="self-attention-mechanism" class="level3">
+<h3 class="anchored" data-anchor-id="self-attention-mechanism">Self-Attention Mechanism</h3>
+<p>자신을 포함해서 단어 사이의 유사도를 계산한다.</p>
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout="[[-1, 5, -1]]">
-<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-panel" data-layout="[-1, 5, -1]">
+<div class="quarto-layout-row">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: center;">
-<p><a href="./images/rnn/03.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="./images/rnn/03.png" class="img-fluid" style="border: 1px solid #000;"></a></p>
+<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/transformer/4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="자신을 포함해서 문장 내 단어 사이의 유사도를 추적하자."><img src="./images/transformer/4.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="자신을 포함해서 문장 내 단어 사이의 유사도를 추적하자."></a></p>
+<figcaption>자신을 포함해서 문장 내 단어 사이의 유사도를 추적하자.</figcaption>
+</figure>
+</div>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
 </div>
 </div>
+<p>세 가지 하부 요소가 있다.</p>
+<ul>
+<li>Queries: 각 단어 자체를 표현하는 뉴럴넷의 중간 결과</li>
+<li>Keys: 각 단어와 다른 단어를 비교할 때 활용할 뉴럴넷의 중간 결과</li>
+<li>Values: 각 단어의 셀프 어텐션을 거친 중요도를 표현하는 뉴럴넷의 (중간) 결과</li>
+</ul>
+<p>쿼리와 키의 닷프로덕트를 구하면 스칼라 값을 얻게 된다. 이 녀석을 다시 softmax 함수에 넣어 정규화한 후 이 값을 세번째 구성요소인 Value를 거치도록 한다.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[-1, 5, -1]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/transformer/5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="셀프 어텐션 인코딩 과정"><img src="./images/transformer/5.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="셀프 어텐션 인코딩 과정"></a></p>
+<figcaption>셀프 어텐션 인코딩 과정</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>그림을 보면서 다시 한번 확인하자. 위 그림은 “let’s”가 자신 및 “go”와의 셀프 어텐션을 고려하여 Query, Key, Value를 계산하는 과정을 보여준다.</p>
+<p>같은 방식으로 “go”에 대해서도 계산을 수행한다. 여기서 중요한 대목이 나온다. “go”에 대해서 인코딩을 할 때 Query, Key, Value의 웨이트를 “Let’s” 때 썼던 것을 그대로 활용한다. 한 문장 안에서 단어의 의미가 맺고 있는 연결망이 같다고 보면다면 재활용이 가능하다. 그리고 이 때문에 병렬화가 가능하다! 즉 RNN처럼 앞부터 순차적으로 계산할 필요성이 사라지는 것이다.</p>
+</section>
+<section id="정리" class="level3">
+<h3 class="anchored" data-anchor-id="정리">정리</h3>
 <div>
 
 </div>
@@ -236,8 +312,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/rnn/04.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="투입이 3개일 때"><img src="./images/rnn/04.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="투입이 3개일 때"></a></p>
-<figcaption>투입이 3개일 때</figcaption>
+<p><a href="./images/transformer/6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="트랜스포머 인코딩의 4단계"><img src="./images/transformer/6.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="트랜스포머 인코딩의 4단계"></a></p>
+<figcaption>트랜스포머 인코딩의 4단계</figcaption>
 </figure>
 </div>
 </div>
@@ -247,27 +323,32 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/rnn/05.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="같은 웨이트와 바이어스를 공유한다!"><img src="./images/rnn/05.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="같은 웨이트와 바이어스를 공유한다!"></a></p>
-<figcaption>같은 웨이트와 바이어스를 공유한다!</figcaption>
+<p><a href="./images/transformer/9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7" title="병렬화가 가능하다!"><img src="./images/transformer/9.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="병렬화가 가능하다!"></a></p>
+<figcaption>병렬화가 가능하다!</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
+<ul>
+<li>Word Embedding: 단어를 벡터로 표현한다.</li>
+<li>Positional Encoding: 단어의 위치를 인코딩한다.</li>
+<li>Self-Attention Mechanism: 단어 사이의 유사도를 계산한다.</li>
+<li>Residual Connection</li>
+</ul>
 </section>
-<section id="약점" class="level2">
-<h2 class="anchored" data-anchor-id="약점">약점</h2>
-<p>피드백 루프가 점점 커지거나 피드백 루프가 점점 약해지는 것을 막기 힘들다. 이는 무엇을 의미할까? 체인의 법칙에 따라서 역전파를 하는 상황을 생각해보자. 이에 따라서 특정 도함수의 계수가 지나치게 크거나 작아지게 된다. 이는 학습률에 따른 탐색 범위를 지나치게 왔다갔다 하게되거나 특정 범위를 벗어나지 못하게 만들 수 있다.</p>
+<section id="comments" class="level3">
+<h3 class="anchored" data-anchor-id="comments">Comments</h3>
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout="[[5, -1, 5], [5,-1,5]]">
+<div class="quarto-layout-panel" data-layout="[[5, -1, 5]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/rnn/06.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="너무 큰 웨이트를 지닐 때 효과가 증폭된다."><img src="./images/rnn/06.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="너무 큰 웨이트를 지닐 때 효과가 증폭된다."></a></p>
-<figcaption>너무 큰 웨이트를 지닐 때 효과가 증폭된다.</figcaption>
+<p><a href="./images/transformer/7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8" title="멀티-헤드 어텐션"><img src="./images/transformer/7.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="멀티-헤드 어텐션"></a></p>
+<figcaption>멀티-헤드 어텐션</figcaption>
 </figure>
 </div>
 </div>
@@ -277,50 +358,66 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/rnn/07.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7" title="역전파시 경사하강의 탐색 경로에 문제가 생길 수 있다."><img src="./images/rnn/07.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="역전파시 경사하강의 탐색 경로에 문제가 생길 수 있다."></a></p>
-<figcaption>역전파시 경사하강의 탐색 경로에 문제가 생길 수 있다.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./images/rnn/08.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8" title="탐색 범위가 큰 값과 작은 값을 오간다."><img src="./images/rnn/08.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="탐색 범위가 큰 값과 작은 값을 오간다."></a></p>
-<figcaption>탐색 범위가 큰 값과 작은 값을 오간다.</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./images/rnn/09.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" data-glightbox="description: .lightbox-desc-9" title="탐색 범위가 과하게 좁아진다."><img src="./images/rnn/09.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="탐색 범위가 과하게 좁아진다."></a></p>
-<figcaption>탐색 범위가 과하게 좁아진다.</figcaption>
+<p><a href="./images/transformer/8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" data-glightbox="description: .lightbox-desc-9" title="Residual Connection; 뉴럴넷에서 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더한다."><img src="./images/transformer/8.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="Residual Connection; 뉴럴넷에서 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더한다."></a></p>
+<figcaption>Residual Connection; 뉴럴넷에서 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더한다.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
+<p>만일 셀프 어텐션에서 같은 언어끼리라도 문장에서 서로 다른 의미망을 지닐 수 있다면 여러 개의 어텐션 유닛이 필요할 것이다. 이를 multi-head attention이라고 한다.</p>
 </section>
-<section id="유의할-점" class="level2">
-<h2 class="anchored" data-anchor-id="유의할-점">유의할 점</h2>
-<p>만일 문장의 토큰(단어)를 투입해야 하는 경우를 생각해보자. 당연히 단어를 그대로 넣을 수 없으니 W2V과 같은 방법을 써서 토큰을 벡터로 바꿔야 한다. 이때 RNN의 역전파 과정에서 이 W2V 네트워크 역시 조정될 수 있다는 점을 기억하자.</p>
-<p>시퀀셜 데이터를 인풋으로 쓰기 때문에 인풋의 길이를 어느 정도는 통제할 수 있다. 예를 들어 10개의 시리즈를 지닌 데이터와 5개의 데이터를 지닌 시리즈가 있다고 하자. 인풋으로 2개를 쓴다면, 이 두 시리즈 모두를 학습에 동원할 수 있다.</p>
+</section>
+<section id="decoder" class="level2">
+<h2 class="anchored" data-anchor-id="decoder">Decoder</h2>
+<p>강의는 영어-스페인어의 번역의 맥락을 살펴보고 있다. 따라서 스페인어의 인코딩에서 시작한다.</p>
+<p>스페인어에 대해서 4단계의 트랜스포머 셀프-어텐션 프로세스를 마치고 어텐션 아웃풋을 얻는다. 인코딩의 과정이 기본적으로 동일하다. 다만 서로 다른 구조(언어)의 문장이므로 각 단계에 활용되는 웨이트는 다르다.</p>
+<p>::: {layout=“[-1, 5, -1]”} <img src="./images/transformer/11.png" class="img-fluid" style="border: 1px solid #000;" alt="디코더에 들어갈 인풋의 인코딩"> :::</p>
+</section>
+<section id="encoder-decoder-attention" class="level2">
+<h2 class="anchored" data-anchor-id="encoder-decoder-attention">Encoder-Decoder Attention</h2>
+<p>이제 이 두 개의 어텐션을 엮을 차례다. 어텐션 밸류가 생성된 디코더를 쿼리 자리에 넣고 인코더의 키를 활용해서 결과를 얻는다.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[5, -1, 5]]">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/transformer/13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" data-glightbox="description: .lightbox-desc-10" title="인코더-디코더 어텐션"><img src="./images/transformer/13.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="인코더-디코더 어텐션"></a></p>
+<figcaption>인코더-디코더 어텐션</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/transformer/12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" data-glightbox="description: .lightbox-desc-11" title="인코더-디코더 어텐션 밸류 아웃풋"><img src="./images/transformer/12.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="인코더-디코더 어텐션 밸류 아웃풋"></a></p>
+<figcaption>인코더-디코더 어텐션 밸류 아웃풋</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>인코더-디코더 어텐션의 아웃풋이 생성되고 난 후 마지막에 뉴럴넷을 통해서 스페인어 아웃풋을 산출한다. <code>&lt;EOS&gt;</code>(End of Sentence)까지 투입을 마치면 한 문장에 관한 번역이 완료된다.</p>
 
 
 <div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">피드백 루프로 표현하는 방식</span>
-<span class="glightbox-desc lightbox-desc-2">나란히 아래로 표현하는 방식</span>
-<span class="glightbox-desc lightbox-desc-4">투입이 3개일 때</span>
-<span class="glightbox-desc lightbox-desc-5">같은 웨이트와 바이어스를 공유한다!</span>
-<span class="glightbox-desc lightbox-desc-6">너무 큰 웨이트를 지닐 때 효과가 증폭된다.</span>
-<span class="glightbox-desc lightbox-desc-7">역전파시 경사하강의 탐색 경로에 문제가 생길 수 있다.</span>
-<span class="glightbox-desc lightbox-desc-8">탐색 범위가 큰 값과 작은 값을 오간다.</span>
-<span class="glightbox-desc lightbox-desc-9">탐색 범위가 과하게 좁아진다.</span>
+<span class="glightbox-desc lightbox-desc-1">기본 인코딩 세팅은 그림과 같다.</span>
+<span class="glightbox-desc lightbox-desc-2">포지셔널 인코딩은 그림과 같이 수행한다.</span>
+<span class="glightbox-desc lightbox-desc-3">“+” 그림은 포지너설 인코딩을 의미한다.</span>
+<span class="glightbox-desc lightbox-desc-4">자신을 포함해서 문장 내 단어 사이의 유사도를 추적하자.</span>
+<span class="glightbox-desc lightbox-desc-5">셀프 어텐션 인코딩 과정</span>
+<span class="glightbox-desc lightbox-desc-6">트랜스포머 인코딩의 4단계</span>
+<span class="glightbox-desc lightbox-desc-7">병렬화가 가능하다!</span>
+<span class="glightbox-desc lightbox-desc-8">멀티-헤드 어텐션</span>
+<span class="glightbox-desc lightbox-desc-9">Residual Connection; 뉴럴넷에서 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더한다.</span>
+<span class="glightbox-desc lightbox-desc-10">인코더-디코더 어텐션</span>
+<span class="glightbox-desc lightbox-desc-11">인코더-디코더 어텐션 밸류 아웃풋</span>
 </div>
 </section>
 
@@ -857,7 +954,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
