@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.455">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -45,6 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -66,6 +69,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -74,6 +78,33 @@ ul.task-list li input[type="checkbox"] {
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -322,14 +353,35 @@ H(X)=-\sum_{x \in \chi} p(x) \log p(x) = \mathbb E [-\log p(x)]
 </table>
 <p>위 두 표에서 보듯이, 첫 번째 정보 묶음의 섀넌 엔트로피는 1이다. 두 번째 묶음의 섀넌 엔트로피는 0.875다. 후자가 전자보다 작다. 이는 정보의 분포에 따라서 엔트로피가 가장 무질서한, 즉 가장 클 때보다 효율적인 인코딩 방법이 존재함을 보여준다.</p>
 </section>
-<section id="오지랖-cross-entropy" class="level2">
+<section id="오지랖-cross-entropy" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="오지랖-cross-entropy">오지랖: Cross Entropy</h2>
 <p>크로스 엔트로피 역시 섀넌 엔트로피에서 파생된 개념이다. 크로스 엔트로피는 두 확률 분포의 차이를 측정하는 지표이다. 크로스 엔트로피는 다음과 같이 정의된다.</p>
 <p><span class="math display">\[
 H(p,q)=-\sum_{x \in \chi} p(x) \log q(x)
 \]</span></p>
 <p>섀넌 엔트로피의 개념에 평가 값에 예측 확률을 넣었다고 보면 된다. 즉, 실제로 존재하는 확률이 <span class="math inline">\(p(x)\)</span>라고 할 때 이를 예측한 값이 <span class="math inline">\(q(x)\)</span>라고 하면, 위의 값은 실제 확률과 비교한 예측 확률의 성과를 나타난다. <span class="math inline">\(q(x) = p(x)\)</span>일 때 <span class="math inline">\(H(p,q)\)</span>는 최솟값을 지니게 된다.</p>
-<section id="로지스틱-함수의-경우" class="level3">
+<p>크로스 엔트로피는 분류 문제를 풀 때 손실 함수로 많이 활용된다. 왜 그럴까? 흔히 활용되는 오차제곱항에 비해서 올바른 확률에서 멀리 떨어져 있을 때 기울기의 값이 훨씬 크다. 경사하강법을 쓰면 훨씬 빠르게 원하는 위치로 접근한다.</p>
+<p>이산 분포를 가정했을 때 <span class="math inline">\(\chi\)</span>를 전체 분류의 크기를 담은 첨수 집합이라고 하자. 이제 1이라는 종류만을 담은 참 값은 그림의 오른쪽과 같고, 반면 모델이 예측한 각 분류의 확률은 왼쪽이라고 하자. 이때 크로스 엔트로피는 그림 속에 표현된 값과 같다.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[-1,5,-1]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: center;">
+<p><a href="https://miro.medium.com/v2/resize:fit:882/format:webp/1*rcvGMOuWLMpnNvJ3Oj7fPA.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://miro.medium.com/v2/resize:fit:882/format:webp/1*rcvGMOuWLMpnNvJ3Oj7fPA.jpeg" class="img-fluid"></a></p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>기계학습에서 관련 내용은 <a href="https://www.youtube.com/watch?v=6ArSys5qHAU">여기</a>를 참고하자.</p>
+</div></div><section id="로지스틱-함수의-경우" class="level3">
 <h3 class="anchored" data-anchor-id="로지스틱-함수의-경우">로지스틱 함수의 경우</h3>
 <p>로지스틱 함수란 베르누이 분포(발생하거나 그렇지 않거나)를 지니는 사건의 확률을 표현하는 함수의 하나이다. 로지스틱 함수는 다음과 같이 정의된다.</p>
 <p><span class="math display">\[
@@ -625,38 +677,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -665,8 +707,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -888,6 +937,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 
