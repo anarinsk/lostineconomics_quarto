@@ -1,6 +1,6 @@
 ---
 title:  현실( 정치)에서 경제학자의 역할
-description: 무기를 벼려라! 
+description: 기회가 왔을 때 쓸 수 있는 아이디어를 벼려야 
 author: "JS HUHH"
 date: "02/14/2024"
 image: "images/econcat-3.webp"
@@ -8,7 +8,7 @@ categories: [economics, econ-simple]
 #margin-header: subscribe.html
 ---
 
-래리 서머스의 [ECONOFACT 대담](https://econofact.org/podcast/todays-economic-challenges) 중에서 경제학자의 현실 (정치)에서의 역할 혹은 임무에 관해 좋은 대목이 있어서 그래도 옮겨 본다. 
+래리 서머스의 [ECONOFACT 대담](https://econofact.org/podcast/todays-economic-challenges) 중에서 경제학자의 현실 (정치)에서의 역할 혹은 임무에 관해 좋은 대목이 있어서 그대로 옮겨 본다. 
 
 > 명확하게 제시된 단단한 분석은 시간이 지날수록 중요해집니다. 제가 들어 본 것 중에서 실제의 영향력에 관한 그리고 경제학자가 사고하는 방법과 과정에 관한 가장 정교한 논의는 오래 전 밀턴 프리드먼의 사례입니다. 밀턴 프리드먼의 정책적 견해를 믿든 믿지 않든 그 분석을 믿을 수 있습니다. 실제로 일이 진행될 때 주요 쟁점은 그의 정치력과 개성이었습니다. 관련된 사람들에게 그의 경제적 조언이 어느 정도 도움은 되었겠지만, 문제의 본질은 아니었지요. 
 
