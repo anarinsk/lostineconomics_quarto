@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="JS HUHH">
-<meta name="dcterms.date" content="2023-08-27">
-<meta name="description" content="의존성 지옥을 벗어날 또 다른 방법">
+<meta name="dcterms.date" content="2024-02-16">
+<meta name="description" content="관심은 어떻게 네트워크에 반영될까?">
 
-<title>lostineconomics.com - pixi</title>
+<title>lostineconomics.com - Attention Model</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,40 +22,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -79,6 +45,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -111,7 +80,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -163,23 +132,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">pixi</h1>
+<h1 class="title">Attention Model</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">computer-tool</div>
+    <div class="quarto-category">the-lectures</div>
+    <div class="quarto-category">machine-learning</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    의존성 지옥을 벗어날 또 다른 방법
+    관심은 어떻게 네트워크에 반영될까?
   </div>
 </div>
 
@@ -196,7 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 27, 2023</p>
+      <p class="date">February 16, 2024</p>
     </div>
   </div>
   
@@ -210,170 +178,180 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
-<p>의존성이라는 지옥을 벗어나보자.</p>
+<p>어텐션을 반영하는 하나의 방법을 살펴보자.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/PSs6nxngL6k" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
-<section id="넋두리" class="level2 page-columns page-full">
+<section id="넋두리" class="level2">
 <h2 class="anchored" data-anchor-id="넋두리">넋두리</h2>
-<p>심각한 프로젝트를 하지 않는다면 ’의존성’이 문제가 되지 않을 수 있다. 하지만 습관을 잘 들여놓아야 심각한 상황이 왔을 때 대처가 가능한 법이다. 지난 번 소개했던 <a href="https://www.lostineconomics.com/posts/computer-tool/2023-05-29-rye.html">Rye</a>와 유사한 의존성 관리 도구 pixi를 소개한다. 아직 초기 프로젝트지만 개인 프로젝트인 Rye와 달리 pixi는 조금 더 체계적인 지원 체계를 갖출 듯 싶다. OS 플랫폼 별로 별도의 의존성 등을 할당할 수 있는 대목이 가장 마음에 들었다.</p>
-<p>파이썬을 위한 많은 의존성 관리 도구가 있지만 선택이 간단하지는 않다. 일단 많은 도구가 OS를 탄다. 그리고 의존성 관리에 필수적인 가상 환경에도 (안타깝지만) ’대세’가 없다. 이렇다보니 조합이 이래저래 복잡해진다. 본격적으로 쓰려면 <a href="https://python-poetry.org/">Poetry</a> 같은 녀석을 부려야 하겠지만, 내가 타협할 수 있는 (문과적 수준의) 선택지가 있었으면 했다. Rye와 pixi가 딱 그 용도로 적합하다.</p>
-<p><del>단점이 아예 없는 것은 아니다. 서비스가 anaconda 패키지 관리 시스템에 의존하기 때문에 필요한 패키지가 사용 환경에서 아나콘다 생태계에 없다면 어쩔 수 없이 타협해야 한다.</del> 0.8 버전부터 PyPI 패키지를 설치할 수 있다. 물론 PyPI 설치의 경우 초기 개발 단계라서 버그가 많다. 그래도 개인 프로젝트를 위한 의존성 관리 도구로는 충분하다.</p>
+<p>비로소 (트랜스포머까지 이르는) ’목전’까지 온 느낌이다. Seq2Seq 모델은 이쪽의 정보를 압축해서 저쪽에 보내고 이를 다시 저쪽의 맥락에서 풀어내는 것을 의미한다. 전형적으로 ’번역’을 생각하면 되겠다. 강의 역시 영어 “Let’s go!”를 스페인어 “Vamos!”로 번역하는 과정을 예시로 들고 있다.</p>
+</section>
+<section id="context-vector" class="level2">
+<h2 class="anchored" data-anchor-id="context-vector">Context Vector</h2>
+<p>인코딩 파트의 그림을 잘 보자. 몇 가지 요소들을 확인할 수 있다.</p>
+<ul>
+<li>맨 아래 워드 임베딩이 포함되어 있음을 알 수 있다. 이는 언어를 숫자로 바꾸는 과정이다.</li>
+<li>LSTM은 두 개의 레이어로 이루어져 있고, 각 레이어의 셀(노드)은 2개로 구성되어 있다.</li>
+</ul>
+<p>이렇게 인코딩을 통해 만들어진 정보를 컨텍스트 벡터라고 부른다. 이 녀석을 활용해서 디코더에 초깃값을 부여한다.</p>
+<div>
 
-<div class="no-row-height column-margin column-container"><div class="">
-<p>개발팀은 Rust의 <code>cargo</code> 명령어를 지향한다고 하며, pixi가 언어에 종속되지는 않으나 의존성 지옥에 가장 취약한 python과 궁합이 잘 맞을 것이라고 밝히고 있다. conda-forge를 기본 패키지 저장소로 쓴다는 점부터 pixi가 python을 위한 의존성 관리 도구라는 것을 알 수 있다. 혹시나 해서 julia를 태워 봤다. conda-forge를 통해서 지원되는 julia는 intel macos와 linux다. 이 환경에서는 잘 돌아가고 WSL에서도 잘 설치된다. 콘다-포지의 줄리아 <a href="https://anaconda.org/conda-forge/julia/files?page=1">리포지토리</a>에는 Windows와 Silicon mac용 설치 파일이 없다.</p>
-</div></div></section>
-<section id="설치" class="level2">
-<h2 class="anchored" data-anchor-id="설치">설치</h2>
-<p><a href="https://prefix.dev/docs/pixi/overview#installation" class="uri">https://prefix.dev/docs/pixi/overview#installation</a></p>
-<p>OS에 따라서 설치 방법이 제공된다. macos나 linux라면 <code>brew</code>를 쓰는 것을 권장한다.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">brew</span> install pixi <span class="co"># for Macos or linux</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="ex">iwr</span> <span class="at">-useb</span> https://pixi.sh/install.ps1 <span class="kw">|</span> <span class="ex">iex</span> <span class="co"># For Windows PowerShell</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-layout-panel" data-layout="[[5, -1, 5]]">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/seq2seq/01.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="인코더 만들기"><img src="./images/seq2seq/01.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="인코더 만들기"></a></p>
+<figcaption>인코더 만들기</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/seq2seq/02.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="컨텍스트 벡터"><img src="./images/seq2seq/02.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="컨텍스트 벡터"></a></p>
+<figcaption>컨텍스트 벡터</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="활용" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="활용">활용</h2>
-<p>Rye와 거의 비슷하다.</p>
-<ul>
-<li>환경을 프로젝트 폴더 안에 활성화한다.</li>
-<li>활용한 언어를 포함해서 필요한 패키지를 <code>add</code>한다.</li>
-<li>코딩한다.</li>
-</ul>
+<section id="decoder" class="level2">
+<h2 class="anchored" data-anchor-id="decoder">Decoder</h2>
+<div>
 
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Rye든 pixi든 사실 문법 자체는 대체로 Poetry를 따르고 있다.</p>
-</div></div><p>pixi의 경우 다음과 같은 특징을 지닌다.</p>
-<ul>
-<li>conda 환경을 따른다.</li>
-<li>별도의 셸 환경을 제공한다.</li>
-</ul>
-<p>예를 들어보자. 원하는 폴더에 파이썬 환경을 만들고 여기에 pandas와 plotly를 설치하고 싶다고 하자. 해당 폴더를 만들고 터미널을 통해 해당 폴더에 들어가자.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="op">&gt;</span> pixi <span class="ex">init</span> .  <span class="co"># 폴더를 생성하고 싶다면 pixi init {프로젝트-이름}</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="op">&gt;</span> pixi <span class="ex">add</span> python pandas plotly </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>pixi가 필요한 패키지를 콘다 리포지터리에서 끌어와 설치한다. 만일 터미널에서 활용하고 싶다면 <code>pixi shell</code>을 치면 된다. <code>pixi</code>를 치면 필요한 명령어를 보여준다.</p>
-</section>
-<section id="multi-platform" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="multi-platform">Multi platform</h2>
-<p>pixi의 장점은 os별로 구별해서 패키지를 관리할 수 있다는 것이다. 환경을 담고 있는 <code>pixi.toml</code>을 열어보면 이 점을 쉽게 알 수 있다.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource toml number-lines code-with-copy"><code class="sourceCode toml"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">[project]</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="co"># Default project info....</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="co"># A list of platforms you are supporting with your package.</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="dt">platforms</span> <span class="op">=</span> <span class="op">[</span><span class="st">"win-64"</span><span class="op">,</span> <span class="st">"linux-64"</span><span class="op">,</span> <span class="st">"osx-64"</span><span class="op">,</span> <span class="st">"osx-arm64"</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><code>pixi.toml</code>을 열어보면 프로젝트의 메타 데이터로 플랫폼이 있다. 여기에 정의되어 있지 않은 환경에서 <code>.toml</code>에 정의된 패키지를 인스톨해보자.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">❯</span> pixi install</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="ex">×</span> the project is not configured for your current platform</span>
-<span id="cb4-3"><a href="#cb4-3"></a>   <span class="ex">╭─[pixi.toml:6:1]</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a> <span class="ex">6</span> │ channels = <span class="pp">[</span><span class="st">"conda-forge"</span><span class="pp">]</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a> <span class="ex">7</span> │ platforms = <span class="pp">[</span><span class="st">"osx-arm64"</span><span class="pp">]</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>   <span class="ex">·</span>             ────────────────┬────────────────</span>
-<span id="cb4-7"><a href="#cb4-7"></a>   <span class="ex">·</span>                             ╰── add <span class="st">'win-64'</span> here</span>
-<span id="cb4-8"><a href="#cb4-8"></a> <span class="ex">8</span> │</span>
-<span id="cb4-9"><a href="#cb4-9"></a>   <span class="ex">╰────</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a>  <span class="ex">help:</span> The project needs to be configured to support your platform <span class="er">(</span><span class="ex">win-64</span><span class="kw">)</span><span class="bu">.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>이렇게 메시지를 띄워준다. <code>pixi.toml</code> 파일을 열어 해당 플랫폼을 추가한 후 다시 <code>pixi install</code>을 실행하면 된다. 만일 에러가 뜬다면 셸 창을 다시 실행하자. 플랫폼 별 의존성을 세밀하게 정의해 설치하거나 이를 <code>pixi.toml</code>에 지정할 수 있다. 바로 이어서 살펴볼 것이다.</p>
+</div>
+<div class="quarto-layout-panel" data-layout="[[5, -1, 5]]">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/seq2seq/03.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="인코더와 디코더의 웨이트와 바이어스는 서로 다르다."><img src="./images/seq2seq/03.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="인코더와 디코더의 웨이트와 바이어스는 서로 다르다."></a></p>
+<figcaption>인코더와 디코더의 웨이트와 바이어스는 서로 다르다.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/seq2seq/04.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="디코더의 인풋; 디코딩의 맥락에서 필요한 단어를 임베딩해서 이 녀석을 투입으로 사용한다."><img src="./images/seq2seq/04.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="디코더의 인풋; 디코딩의 맥락에서 필요한 단어를 임베딩해서 이 녀석을 투입으로 사용한다."></a></p>
+<figcaption>디코더의 인풋; 디코딩의 맥락에서 필요한 단어를 임베딩해서 이 녀석을 투입으로 사용한다.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<section id="word-embedding-for-encoder-and-decoder" class="level3">
+<h3 class="anchored" data-anchor-id="word-embedding-for-encoder-and-decoder">Word Embedding for Encoder and Decoder</h3>
+<p>인코딩과 디코딩이라고 생각하면 각각 인코딩에서 인풋을 디코딩에서 아웃풋을 처리하는 이미지를 떠올릴 수 있다. 하지만 ’번역’의 맥락에서 인코딩은 인코딩되는 세계의 단어의 정보를 압축하는 것이고 디코딩이란 이 정보에 기반해서 디코딩 세계의 단어의 정보로 풀어내는 것을 의미한다. 따라서 인코딩과 디코딩 각각에 대해서 워드 임베딩이 필요하고, 물론 각각의 웨이트와 바이어스 역시 다르다.</p>
+<div>
 
-<div class="no-row-height column-margin column-container"><div class="">
-<p>자세한 것은 <a href="https://prefix.dev/docs/pixi/advanced/multi_platform_configuration">여기</a>를 참고하도록 하자.</p>
-</div></div><p>GitHub를 통해 여러 플랫폼에서 코드를 반복 사용하는 경우를 생각해보자. <code>.pixi/env</code> 아래 폴더에 바이너리 및 패키지가 저장된다. 만일 GitHub를 통해 <code>.ignore</code>를 설정했다면 <code>env</code> 아래 폴더가 모두 무시되므로 플랫폼 별로 다른 바이너리가 GitHub로 동기화되지는 않는다.</p>
-<section id="example" class="level3">
-<h3 class="anchored" data-anchor-id="example">Example</h3>
-<p>아마도 멀티플랫폼 지원이 pixi의 가장 큰 장점이 아닐까 싶다. pytorch를 인스톨하는 경우를 떠올려보자.</p>
-<ul>
-<li>플랫폼A: Windows + Nvidia GPU</li>
-<li>플랫폼B: macos + Silicon mac</li>
-</ul>
-<p>하나의 <code>pixi.toml</code> 파일을 통해서 각기 다른 플랫폼에서 파이토치 프로젝트를 유지하는 것이 목표이다. 특히 플랫폼A에서는 cuda를 활용할 예정이다.</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>pixi.toml</strong></pre>
 </div>
-<div class="sourceCode" id="cb5" data-filename="pixi.toml"><pre class="sourceCode numberSource toml number-lines code-with-copy"><code class="sourceCode toml"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">[project]</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"pixi_pytorch"</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.1.0"</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="dt">description</span> <span class="op">=</span> <span class="st">"Add a short description here"</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a><span class="dt">authors</span> <span class="op">=</span> <span class="op">[</span><span class="st">"Junsok Huhh &lt;anarinsk@gmail.com&gt;"</span><span class="op">]</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="dt">channels</span> <span class="op">=</span> <span class="op">[</span><span class="st">"pytorch"</span><span class="op">,</span> <span class="st">"nvidia"</span><span class="op">,</span> <span class="st">"conda-forge"</span><span class="op">]</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="dt">platforms</span> <span class="op">=</span> <span class="op">[</span><span class="st">"win-64"</span><span class="op">,</span> <span class="st">"osx-arm64"</span><span class="op">]</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a></span>
-<span id="cb5-9"><a href="#cb5-9"></a><span class="kw">[tasks]</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a></span>
-<span id="cb5-11"><a href="#cb5-11"></a><span class="kw">[target.win-64.dependencies]</span></span>
-<span id="cb5-12"><a href="#cb5-12"></a><span class="dt">pytorch-cuda</span> <span class="op">=</span> <span class="st">"11.8.*"</span></span>
-<span id="cb5-13"><a href="#cb5-13"></a><span class="dt">torchaudio</span> <span class="op">=</span> <span class="st">"2.0.2.*"</span></span>
-<span id="cb5-14"><a href="#cb5-14"></a><span class="dt">pytorch</span> <span class="op">=</span> <span class="st">"2.0.1.*"</span></span>
-<span id="cb5-15"><a href="#cb5-15"></a><span class="dt">torchvision</span> <span class="op">=</span> <span class="st">"0.15.2.*"</span></span>
-<span id="cb5-16"><a href="#cb5-16"></a></span>
-<span id="cb5-17"><a href="#cb5-17"></a><span class="kw">[target.osx-arm64.dependencies]</span></span>
-<span id="cb5-18"><a href="#cb5-18"></a><span class="dt">pytorch</span> <span class="op">=</span> <span class="st">"2.0.1.*"</span></span>
-<span id="cb5-19"><a href="#cb5-19"></a><span class="dt">torchvision</span> <span class="op">=</span> <span class="st">"0.15.2.*"</span></span>
-<span id="cb5-20"><a href="#cb5-20"></a></span>
-<span id="cb5-21"><a href="#cb5-21"></a><span class="kw">[dependencies]</span></span>
-<span id="cb5-22"><a href="#cb5-22"></a><span class="dt">jupyter</span> <span class="op">=</span> <span class="st">"1.0.0"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-layout-panel" data-layout="[[-1, 5, -1]]">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
 </div>
-<ul>
-<li><code>target</code>은 플랫폼별로 특화된 분기를 지정할 수 있다.
-<ul>
-<li><code>.</code>이후 플랫폼, 그리고 지정할 pixi 영역이 붙는다.</li>
-<li>지정 가능한 pixi 영역은 <code>activation</code>, <code>dependencies</code>, <code>tasks</code> 세 가지이다.</li>
-</ul></li>
-<li>위 예시 파일을 살펴보자.
-<ul>
-<li><code>pixi.toml</code>을 플랫폼A에서 실행하면 <code>.pixi\</code> 폴더 아래 cuda 기반의 파이토치가 설치된다. 플랫폼B에는 <code>.pixi/</code> 아래 실리콘 맥 기반의 MPS를 활용한 파이토치가 설치된다.</li>
-<li>채널은 플랫폼 별로 구별할 필요가 없다. 플랫폼A는 pytorch, nvidia를 쓰고 플랫폼B는 pytorch 채널을 쓴다.</li>
-</ul></li>
-</ul>
+<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/seq2seq/05.png" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5" title="워드 임베딩"><img src="./images/seq2seq/05.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="워드 임베딩"></a></p>
+<figcaption>워드 임베딩</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
 </section>
-</section>
-<section id="pypi-패키지-설치" class="level2">
-<h2 class="anchored" data-anchor-id="pypi-패키지-설치">PyPI 패키지 설치</h2>
-<p>conda 리포가 대체로 문제가 되지 않지만, <code>matplotlib</code>, <code>stargazer</code> 등은 현재로서는 PyPI로만 설치할 수 있다. 다행히 0.8 버전부터 PyPI 패키지를 설치할 수 있게 되었다. 방법은 두 가지다. (결국은 같은 방법이긴 하다.) 아래 같이 <code>toml</code> 파일을 업데이트하고, <code>pixi install</code>을 실행한다.</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>pixi.toml</strong></pre>
-</div>
-<div class="sourceCode" id="cb6" data-filename="pixi.toml"><pre class="sourceCode numberSource toml number-lines code-with-copy"><code class="sourceCode toml"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">[pypi-dependencies]</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="dt">koreanize-matplotlib</span> <span class="op">=</span> <span class="st">"==0.1.1"</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="dt">stargazer</span> <span class="op">=</span> <span class="st">"*"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>아직 실험적인 개발 단계라서 버전 지정 방법 등이 conda와 다르다. <code>*</code>의 경우 최신 버전을 설치한다.</p>
-<p>아니면 터미널 창에서 아래와 같이 실행하자. 이 내용은 <code>pixi add --help</code>로도 확인할 수 있다.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href="#cb7-1"></a>$ pixi add --pypi koreanize-matplotlib stargazer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="vs-code" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="vs-code">VS Code</h2>
-<p>VS Code에서 <code>.ipynb</code>로 작업하고 싶다면 간단하다. 윈도의 경우 해당 폴더가 작업 폴더로 잡혀 있다면 커널 선택 시 <code>.pixi...</code> 아래 설치된 커널이 바로 선택가능할 것이다. 만일 그렇지 않다면 커널을 직접 선택해주면 된다.</p>
+<section id="word-unembedding" class="level3">
+<h3 class="anchored" data-anchor-id="word-unembedding">Word Unembedding?</h3>
+<p>디코더의 끝단에에서는 디코딩된 정보를 다시 말로 풀어주는 과정이 필요하다. 이는 워드 ㅇㅁ베딩의 역과정이라고 생각하면 된다.</p>
+<div>
 
-<div class="no-row-height column-margin column-container"><div class="">
-<p>VS Code에서 <code>파일</code> &gt; <code>작업 영역에 폴더 추가</code>를 통해 작업 폴더를 지정할 수 있다. 터미널의 해당 폴더에서 <code>code .</code>을 실행해도 된다.</p>
-</div></div><div class="callout callout-style-default callout-tip callout-titled" title="인터프리터 경로 설정">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-인터프리터 경로 설정
+<div class="quarto-layout-panel" data-layout="[[-1, 5, -1]]">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/seq2seq/06.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="디코딩의 벡터를 다시 단어로"><img src="./images/seq2seq/06.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="디코딩의 벡터를 다시 단어로"></a></p>
+<figcaption>디코딩의 벡터를 다시 단어로</figcaption>
+</figure>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p><code>F1</code> &gt; <code>Python: 인터프리터 선택</code> &gt; <code>+인터프리터 경로 입력...</code></p>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
 </div>
 </div>
-<p>해당 프로젝트 폴더 안에 <code>.pixi</code>로 가자. OS 별로 구별해서 파이썬 바이너리 혹은 스크립트를 선택하면 된다.</p>
-<ul>
-<li>(macos) <code>.pixi/env/bin/pyhon</code></li>
-<li>(windows) <code>.pixi\env\python.exe</code></li>
-</ul>
+</div>
 </section>
-<section id="실제-응용" class="level2">
-<h2 class="anchored" data-anchor-id="실제-응용">실제 응용</h2>
-<p>아래 리포에서 <code>pixi.toml</code>을 살펴보시라.</p>
-<ul>
-<li><a href="https://github.com/anarinsk/test_pytorch-install/">Pytorch OS 플랫폼 별 인스톨 및 테스트</a></li>
-<li><a href="https://github.com/anarinsk/lostineconomics_quarto">PyPI 패키지 설치</a></li>
-</ul>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<p><a href="https://prefix.dev/blog/launching_pixi" class="uri">https://prefix.dev/blog/launching_pixi</a></p>
+<section id="eos-사용하기" class="level3">
+<h3 class="anchored" data-anchor-id="eos-사용하기"><code>&lt;EOS&gt;</code> 사용하기</h3>
+<p>디코딩에서는 <code>&lt;EOS&gt;</code>를 먼저 넣는다. 그리고 디코딩 프로세스는 <code>&lt;EOS&gt;</code>가 나올 때까지 계속한다.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[5, -1, 5, -1, 5]]">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell" style="flex-basis: 29.4%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/seq2seq/07.png" class="lightbox" data-glightbox="description: .lightbox-desc-7" data-gallery="quarto-lightbox-gallery-7" title="<EOS>에서 시작!"><img src="./images/seq2seq/07.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="<EOS>에서 시작!"></a></p>
+<figcaption><code>&lt;EOS&gt;</code>에서 시작!</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.9%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 29.4%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/seq2seq/08.png" class="lightbox" data-glightbox="description: .lightbox-desc-8" data-gallery="quarto-lightbox-gallery-8" title="<EOS>가 풀려 나올 때까지"><img src="./images/seq2seq/08.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="<EOS>가 풀려 나올 때까지"></a></p>
+<figcaption><code>&lt;EOS&gt;</code>가 풀려 나올 때까지</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.9%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 29.4%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/seq2seq/09.png" class="lightbox" data-glightbox="description: .lightbox-desc-9" data-gallery="quarto-lightbox-gallery-9" title="전체 과정"><img src="./images/seq2seq/09.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="전체 과정"></a></p>
+<figcaption>전체 과정</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">인코더 만들기</span>
+<span class="glightbox-desc lightbox-desc-2">컨텍스트 벡터</span>
+<span class="glightbox-desc lightbox-desc-3">인코더와 디코더의 웨이트와 바이어스는 서로 다르다.</span>
+<span class="glightbox-desc lightbox-desc-4">디코더의 인풋; 디코딩의 맥락에서 필요한 단어를 임베딩해서 이 녀석을 투입으로 사용한다.</span>
+<span class="glightbox-desc lightbox-desc-5">워드 임베딩</span>
+<span class="glightbox-desc lightbox-desc-6">디코딩의 벡터를 다시 단어로</span>
+<span class="glightbox-desc lightbox-desc-7"><code>&lt;EOS&gt;</code>에서 시작!</span>
+<span class="glightbox-desc lightbox-desc-8"><code>&lt;EOS&gt;</code>가 풀려 나올 때까지</span>
+<span class="glightbox-desc lightbox-desc-9">전체 과정</span>
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -909,6 +887,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":false,"openEffect":"zoom","descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 
