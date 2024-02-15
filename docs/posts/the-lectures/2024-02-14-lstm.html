@@ -183,8 +183,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="넋두리" class="level2">
 <h2 class="anchored" data-anchor-id="넋두리">넋두리</h2>
-<p>RNN의 가장 큰 문제는 웨이트의 크기에 따라서 효과가 지나치게 증폭되거나 지나치게 줄어드는 데 있다. 웨이트의 크기 자체가 제한된다면 제대로 된 최적화가 어려울 것이다. 경사하강법을 사용할 때 최적 파라미터의 범위가 지나치게 크게 변하거나 지나치게 작게 변하면 원활한 최적화가 어렵다. 이를 극복하기 위해 제안된 네트워크 구조가 LSTM이다.</p>
-<p>이걸 조금 말로 풀어보자. 아래 기본 구조에서 보듯이 시점 혹은 사건의 중요도에 따라서 해당 사건이 예측하려는 사건에 미치는 영향을 정도가 다를 수 있다. 이렇다면 RNN은 하나의 단일한 경로를 통해서 두 가지 정보, 즉 다음 노드에 미치는 영향과 더 멀리 떨어진 노드에 미치는 영향이 단일한 경로를 통해 전달되어 한다. 이 과정에서 정보의 손실이 발생할 수 밖에 없다. LSTM 모델이란 이 경로를 두 개로 분리해준 것이다.</p>
+<p>RNN의 가장 큰 문제는 웨이트의 크기에 따라서 효과가 지나치게 증폭되거나 지나치게 줄어드는 데 있다. 경사하강법을 사용할 때 최적 파라미터의 범위가 지나치게 크게 변하거나 지나치게 작게 변하면 원활한 최적화가 어렵다. 이러한 문제를 막기 위해 웨이트의 크기가 제한된다면 이는 그 자체로 최적화에 위배된다. 이러한 문제를 완화하기 위해 제안된 네트워크 구조가 LSTM이다.</p>
+<p>이걸 조금 말로 풀어보자. Long Short-term Memory란 말 그대로 과거의 정보가 미래로 전달되는 경로를 장기와 단기로 나누겠다는 것이다. 아래 기본 구조에서 보듯이 시점 혹은 노드의 중요도에 따라서 해당 노드가 뒤에 올 노드에 미치는 영향의 정도가 다를 수 있다. 그런데 RNN은 하나의 단일한 엣지 혹은 경로를 통해서 두 가지 정보, 즉 해당 노드가 바로 다음에 오는 노드에 미치는 영향과 더 멀리 떨어진 노드에 미치는 영향을 하나로 뭉쳐서 전달힌다. 이 과정에서 정보의 손실이 발생할 수 있다. LSTM 모델이란 이 경로를 두 개로 각각 분리한 것이다.</p>
 <div>
 
 </div>
@@ -911,7 +911,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
