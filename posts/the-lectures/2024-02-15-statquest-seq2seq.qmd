@@ -36,10 +36,12 @@ format:
 - 맨 아래 워드 임베딩이 포함되어 있음을 알 수 있다. 이는 언어를 숫자로 바꾸는 과정이다. 
 - LSTM은 두 개의 레이어로 이루어져 있고, 각 레이어의 셀은 2개로 구성되어 있다. 
 
-::: {layout="[[5, -1, 5, -1, 5]]" layout-valign="bottom"}
+이렇게 인코딩을 통해 만들어진 정보를 컨텍스트 벡터라고 부른다. 이 녀석을 활용해서 디코더에 초기값을 부여한다.
+
+::: {layout="[[5, -1, 5]]" layout-valign="bottom"}
 ![인코더 만들기](./images/seq2seq/01.png){ style="border: 1px solid #000;" }
 
-![컨텍스트 벡터; 이렇게 만들어진 정보를 컨텍스트 벡터라고 부른다. 이 녀석을 활용해서 디코더에 초기값을 부여한다.](./images/seq2seq/02.png){ style="border: 1px solid #000;" }
+![컨텍스트 벡터](./images/seq2seq/02.png){ style="border: 1px solid #000;" }
 :::
 
 ## Decoder 
