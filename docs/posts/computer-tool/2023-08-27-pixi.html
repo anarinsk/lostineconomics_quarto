@@ -321,10 +321,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="pypi-패키지-설치" class="level2">
+<section id="pypi-패키지-설치" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="pypi-패키지-설치">PyPI 패키지 설치</h2>
 <p>conda 리포가 대체로 문제가 되지 않지만, <code>matplotlib</code>, <code>stargazer</code> 등은 현재로서는 PyPI로만 설치할 수 있다. 다행히 0.8 버전부터 PyPI 패키지를 설치할 수 있게 되었다. 방법은 두 가지다. (결국은 같은 방법이긴 하다.) 아래 같이 <code>toml</code> 파일을 업데이트하고, <code>pixi install</code>을 실행한다.</p>
-<div class="code-with-filename">
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>PyPI 패키지란 파이썬 패키지 인덱스를 의미한다. 파이썬에서 표준적으로 패키지를 설치하는 명령어인 <code>pip</code>를 통해 설치되는 패키지를 의미한다.</p>
+</div></div><div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>pixi.toml</strong></pre>
 </div>
