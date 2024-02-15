@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="JS HUHH">
-<meta name="dcterms.date" content="2024-02-13">
-<meta name="description" content="RNN에 대해서 알아보자">
+<meta name="dcterms.date" content="2024-02-15">
+<meta name="description" content="RNN의 문제를 해결해보자.">
 
-<title>lostineconomics.com - Recurrent Neural Network</title>
+<title>lostineconomics.com - Long Short-Term Memory (LSTM) Network</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -138,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Recurrent Neural Network</h1>
+<h1 class="title">Long Short-Term Memory (LSTM) Network</h1>
   <div class="quarto-categories">
     <div class="quarto-category">the-lectures</div>
     <div class="quarto-category">machine-learning</div>
@@ -147,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    RNN에 대해서 알아보자
+    RNN의 문제를 해결해보자.
   </div>
 </div>
 
@@ -164,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 13, 2024</p>
+      <p class="date">February 15, 2024</p>
     </div>
   </div>
   
@@ -178,48 +178,85 @@ ul.task-list li input[type="checkbox"] {
 
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
-<p>RNN 찍먹하자.</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/AsNTP8Kwu80" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>LSTM을 찍먹해보자.</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/YCzL96nL7j0" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
 <section id="넋두리" class="level2">
 <h2 class="anchored" data-anchor-id="넋두리">넋두리</h2>
-</section>
-<section id="encoder" class="level2">
-<h2 class="anchored" data-anchor-id="encoder">Encoder</h2>
+<p>RNN의 가장 큰 문제는 웨이트의 크기에 따라서 효과가 지나치게 증폭되거나 지나치게 줄어드는 데 있다. 웨이트의 크기 자체가 제한된다면 제대로 된 최적화가 어려울 것이다. 경사하강법을 사용할 때 최적 파라미터의 범위가 지나치게 크게 변하거나 지나치게 작게 변하면 원활한 최적화가 어렵다. 이를 극복하기 위해 제안된 네트워크 구조가 LSTM이다.</p>
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout="[-1, 5, -1]">
+<div class="quarto-layout-panel" data-layout="[-1, 4, -1]">
 <div class="quarto-layout-row">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 16.7%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/transformer/1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="기본 인코딩 세팅은 그림과 같다."><img src="./images/transformer/1.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="기본 인코딩 세팅은 그림과 같다."></a></p>
-<figcaption>기본 인코딩 세팅은 그림과 같다.</figcaption>
+<p><a href="./images/lstm/01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="RNN의 문제점; KABOOM!!!은 explode, poof!!! vanish를 의미한다."><img src="./images/lstm/01.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="RNN의 문제점; KABOOM!!!은 explode, poof!!! vanish를 의미한다."></a></p>
+<figcaption>RNN의 문제점; KABOOM!!!은 explode, poof!!! vanish를 의미한다.</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 16.7%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
 </div>
 </div>
 </section>
-<section id="four-key-components" class="level2">
-<h2 class="anchored" data-anchor-id="four-key-components">Four Key Components</h2>
-<p>트랜스포머는 크게 4가지의 구성요소로 이루어져 있다.</p>
+<section id="기본-구조" class="level2">
+<h2 class="anchored" data-anchor-id="기본-구조">기본 구조</h2>
+<p>LSTM의 기본 구조는 복잡해보이지만, 아이디어는 단순하다.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[5, -1, 5, -1, 5]]">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell" style="flex-basis: 29.4%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/lstm/02.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="LSTM의 아이디어; 장기와 단기의 기억을 분리해서 각각을 업데이트한다."><img src="./images/lstm/02.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="LSTM의 아이디어; 장기와 단기의 기억을 분리해서 각각을 업데이트한다."></a></p>
+<figcaption>LSTM의 아이디어; 장기와 단기의 기억을 분리해서 각각을 업데이트한다.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.9%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 29.4%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/lstm/03.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="LSTM의 기본 구조"><img src="./images/lstm/03.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="LSTM의 기본 구조"></a></p>
+<figcaption>LSTM의 기본 구조</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.9%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 29.4%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/lstm/06.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="장기 기억에는 웨이트나 바이어스가 없다."><img src="./images/lstm/06.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="장기 기억에는 웨이트나 바이어스가 없다."></a></p>
+<figcaption>장기 기억에는 웨이트나 바이어스가 없다.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="three-gates" class="level2">
+<h2 class="anchored" data-anchor-id="three-gates">Three Gates</h2>
+<p>원래 용어에 따르면 LSTM은 세 개의 게이트로 구성되어 있다.</p>
 <ol type="1">
-<li>Positional Encoding</li>
-<li>Self-Attention Mechanism</li>
-<li>Encoder</li>
-<li>Decoder</li>
+<li>Forget Gate; 장기 기억을 할인하는 과정을 의미한다.</li>
+<li>Input Gate; 새로운 정보를 장기 기억에 추가하는 과정을 의미한다.</li>
+<li>Output Gate; 장기 기억을 바탕으로 새로운 단기 정보를 생성하는 과정을 의미한다.</li>
 </ol>
-<section id="positional-encoding" class="level3">
-<h3 class="anchored" data-anchor-id="positional-encoding">Positional Encoding</h3>
-<p>단어의 위치를 인코딩하는 방법이다. 여러가지 방법이 있지만 사인-코사인 커브를 사용하는 것이 제일 일반적이라고 한다. 언뜻 보면 이해가 가지 않지만 사인 코사인의 파동 값을 활용하면 별다른 정보 손실 없이 벡터로 토큰의 위치 정보를 잘 반영할 수 있다.</p>
+<p>전기에서 넘어온 장기 기억과 단기 기억이 존재한다고 가정하자.</p>
+<p>업데이트에는 Sigmoid 함수와 Tanh 함수를 사용한다. 두 함수의 특성을 보면 활용하는 이유를 알 수 있다. Sigmoid 함수는 0과 1 사이의 값을 가지며, Tanh 함수는 -1과 1 사이의 값을 가진다. 전자는 기억을 할인하는 비율을 결정하고 후자는 기억 자체의 크기를 결정한다.</p>
 <div>
 
 </div>
@@ -228,8 +265,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/transformer/2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="포지셔널 인코딩은 그림과 같이 수행한다."><img src="./images/transformer/2.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="포지셔널 인코딩은 그림과 같이 수행한다."></a></p>
-<figcaption>포지셔널 인코딩은 그림과 같이 수행한다.</figcaption>
+<p><a href="./images/lstm/04.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="Sigmoid 함수"><img src="./images/lstm/04.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="Sigmoid 함수"></a></p>
+<figcaption>Sigmoid 함수</figcaption>
 </figure>
 </div>
 </div>
@@ -239,71 +276,30 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/transformer/3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="“+” 그림은 포지너설 인코딩을 의미한다."><img src="./images/transformer/3.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="“+” 그림은 포지너설 인코딩을 의미한다."></a></p>
-<figcaption>“+” 그림은 포지너설 인코딩을 의미한다.</figcaption>
+<p><a href="./images/lstm/05.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="Tanh 함수"><img src="./images/lstm/05.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="Tanh 함수"></a></p>
+<figcaption>Tanh 함수</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
+<section id="forget-gate" class="level3">
+<h3 class="anchored" data-anchor-id="forget-gate">Forget Gate</h3>
+<p>단기 기억과 인풋을 받아서 장기 기억을 할인한다.</p>
 </section>
-<section id="self-attention-mechanism" class="level3">
-<h3 class="anchored" data-anchor-id="self-attention-mechanism">Self-Attention Mechanism</h3>
-<p>자신을 포함해서 단어 사이의 유사도를 계산한다.</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[-1, 5, -1]">
-<div class="quarto-layout-row">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./images/transformer/4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="자신을 포함해서 문장 내 단어 사이의 유사도를 추적하자."><img src="./images/transformer/4.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="자신을 포함해서 문장 내 단어 사이의 유사도를 추적하자."></a></p>
-<figcaption>자신을 포함해서 문장 내 단어 사이의 유사도를 추적하자.</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-</div>
-</div>
-<p>세 가지 하부 요소가 있다.</p>
-<ul>
-<li>Queries: 각 단어 자체를 표현하는 뉴럴넷의 중간 결과</li>
-<li>Keys: 각 단어와 다른 단어를 비교할 때 활용할 뉴럴넷의 중간 결과</li>
-<li>Values: 각 단어의 셀프 어텐션을 거친 중요도를 표현하는 뉴럴넷의 (중간) 결과</li>
-</ul>
-<p>쿼리와 키의 닷프로덕트를 구하면 스칼라 값을 얻게 된다. 이 녀석을 다시 softmax 함수에 넣어 정규화한 후 이 값을 세번째 구성요소인 Value를 거치도록 한다.</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[-1, 5, -1]">
-<div class="quarto-layout-row">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./images/transformer/5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="셀프 어텐션 인코딩 과정"><img src="./images/transformer/5.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="셀프 어텐션 인코딩 과정"></a></p>
-<figcaption>셀프 어텐션 인코딩 과정</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-</div>
-</div>
-<p>그림을 보면서 다시 한번 확인하자. 위 그림은 “let’s”가 자신 및 “go”와의 셀프 어텐션을 고려하여 Query, Key, Value를 계산하는 과정을 보여준다.</p>
-<p>같은 방식으로 “go”에 대해서도 계산을 수행한다. 여기서 중요한 대목이 나온다. “go”에 대해서 인코딩을 할 때 Query, Key, Value의 웨이트를 “Let’s” 때 썼던 것을 그대로 활용한다. 한 문장 안에서 단어의 의미가 맺고 있는 연결망이 같다고 보면다면 재활용이 가능하다. 그리고 이 때문에 병렬화가 가능하다! 즉 RNN처럼 앞부터 순차적으로 계산할 필요성이 사라지는 것이다.</p>
+<section id="input-gate" class="level3">
+<h3 class="anchored" data-anchor-id="input-gate">Input Gate</h3>
+<p>인풋이 장기기억을 어떻게 형성하는지를 표현한다. 이때 전기의 단기 기억과 인풋이 사용된다. 인풋과 전기의 단기 기억이 장기 기억의 크기를 Tanh 함수를 통해서 결정하고, Sigmonoid 함수를 통해서 얼마나 장기 기억에 추가할지를 결정한다.</p>
+<p>앞서 Forget Gate에서 할인된 장기 기억에 이 값을 더해 새 장기기억이 결정된다.</p>
 </section>
-<section id="정리" class="level3">
-<h3 class="anchored" data-anchor-id="정리">정리</h3>
+<section id="output-gate" class="level3">
+<h3 class="anchored" data-anchor-id="output-gate">Output Gate</h3>
+<p>업데이트된 장기기억, 전기의 단기기억, 그리고 인풋 세 값이 단기기억을 업데이트한다. 장기 기억의 일부가 단기 기억으로 전환된다. 다만 앞서 인풋을 통해 장기기억을 업데이트했으므로 Output Gate에서 인풋과 전기의 단기기억은 단기 기억 자체의 크기에는 영향을 주지 않고 비율에만 영향을 준다.</p>
+</section>
+</section>
+<section id="how-to-work" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-work">How to Work</h2>
+<p>이렇게 하나의 유닛이 매 기에 들어오는 정보를 처리한다고 보면 된다. 아래 예시에서 1기에 정보가 세 단계의 LSTM 유닛을 거쳐서 처리되 이런 유닛들이 이어져 마지막 정보까지 처리된다.</p>
 <div>
 
 </div>
@@ -312,8 +308,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/transformer/6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="트랜스포머 인코딩의 4단계"><img src="./images/transformer/6.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="트랜스포머 인코딩의 4단계"></a></p>
-<figcaption>트랜스포머 인코딩의 4단계</figcaption>
+<p><a href="./images/lstm/10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7" title="Day 1의 LSTM 처리"><img src="./images/lstm/10.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="Day 1의 LSTM 처리"></a></p>
+<figcaption>Day 1의 LSTM 처리</figcaption>
 </figure>
 </div>
 </div>
@@ -323,101 +319,24 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/transformer/9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7" title="병렬화가 가능하다!"><img src="./images/transformer/9.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="병렬화가 가능하다!"></a></p>
-<figcaption>병렬화가 가능하다!</figcaption>
+<p><a href="./images/lstm/11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8" title="Day4까지의 처리를 통해 Day 5 예측"><img src="./images/lstm/11.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="Day4까지의 처리를 통해 Day 5 예측"></a></p>
+<figcaption>Day4까지의 처리를 통해 Day 5 예측</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
-<ul>
-<li>Word Embedding: 단어를 벡터로 표현한다.</li>
-<li>Positional Encoding: 단어의 위치를 인코딩한다.</li>
-<li>Self-Attention Mechanism: 단어 사이의 유사도를 계산한다.</li>
-<li>Residual Connection</li>
-</ul>
-</section>
-<section id="comments" class="level3">
-<h3 class="anchored" data-anchor-id="comments">Comments</h3>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[[5, -1, 5]]">
-<div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./images/transformer/7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8" title="멀티-헤드 어텐션"><img src="./images/transformer/7.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="멀티-헤드 어텐션"></a></p>
-<figcaption>멀티-헤드 어텐션</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./images/transformer/8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" data-glightbox="description: .lightbox-desc-9" title="Residual Connection; 뉴럴넷에서 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더한다."><img src="./images/transformer/8.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="Residual Connection; 뉴럴넷에서 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더한다."></a></p>
-<figcaption>Residual Connection; 뉴럴넷에서 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더한다.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<p>만일 셀프 어텐션에서 같은 언어끼리라도 문장에서 서로 다른 의미망을 지닐 수 있다면 여러 개의 어텐션 유닛이 필요할 것이다. 이를 multi-head attention이라고 한다.</p>
-</section>
-</section>
-<section id="decoder" class="level2">
-<h2 class="anchored" data-anchor-id="decoder">Decoder</h2>
-<p>강의는 영어-스페인어의 번역의 맥락을 살펴보고 있다. 따라서 스페인어의 인코딩에서 시작한다.</p>
-<p>스페인어에 대해서 4단계의 트랜스포머 셀프-어텐션 프로세스를 마치고 어텐션 아웃풋을 얻는다. 인코딩의 과정이 기본적으로 동일하다. 다만 서로 다른 구조(언어)의 문장이므로 각 단계에 활용되는 웨이트는 다르다.</p>
-<p>::: {layout=“[-1, 5, -1]”} <img src="./images/transformer/11.png" class="img-fluid" style="border: 1px solid #000;" alt="디코더에 들어갈 인풋의 인코딩"> :::</p>
-</section>
-<section id="encoder-decoder-attention" class="level2">
-<h2 class="anchored" data-anchor-id="encoder-decoder-attention">Encoder-Decoder Attention</h2>
-<p>이제 이 두 개의 어텐션을 엮을 차례다. 어텐션 밸류가 생성된 디코더를 쿼리 자리에 넣고 인코더의 키를 활용해서 결과를 얻는다.</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[[5, -1, 5]]">
-<div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./images/transformer/13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" data-glightbox="description: .lightbox-desc-10" title="인코더-디코더 어텐션"><img src="./images/transformer/13.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="인코더-디코더 어텐션"></a></p>
-<figcaption>인코더-디코더 어텐션</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./images/transformer/12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" data-glightbox="description: .lightbox-desc-11" title="인코더-디코더 어텐션 밸류 아웃풋"><img src="./images/transformer/12.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="인코더-디코더 어텐션 밸류 아웃풋"></a></p>
-<figcaption>인코더-디코더 어텐션 밸류 아웃풋</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<p>인코더-디코더 어텐션의 아웃풋이 생성되고 난 후 마지막에 뉴럴넷을 통해서 스페인어 아웃풋을 산출한다. <code>&lt;EOS&gt;</code>(End of Sentence)까지 투입을 마치면 한 문장에 관한 번역이 완료된다.</p>
 
 
 <div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">기본 인코딩 세팅은 그림과 같다.</span>
-<span class="glightbox-desc lightbox-desc-2">포지셔널 인코딩은 그림과 같이 수행한다.</span>
-<span class="glightbox-desc lightbox-desc-3">“+” 그림은 포지너설 인코딩을 의미한다.</span>
-<span class="glightbox-desc lightbox-desc-4">자신을 포함해서 문장 내 단어 사이의 유사도를 추적하자.</span>
-<span class="glightbox-desc lightbox-desc-5">셀프 어텐션 인코딩 과정</span>
-<span class="glightbox-desc lightbox-desc-6">트랜스포머 인코딩의 4단계</span>
-<span class="glightbox-desc lightbox-desc-7">병렬화가 가능하다!</span>
-<span class="glightbox-desc lightbox-desc-8">멀티-헤드 어텐션</span>
-<span class="glightbox-desc lightbox-desc-9">Residual Connection; 뉴럴넷에서 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더한다.</span>
-<span class="glightbox-desc lightbox-desc-10">인코더-디코더 어텐션</span>
-<span class="glightbox-desc lightbox-desc-11">인코더-디코더 어텐션 밸류 아웃풋</span>
+<span class="glightbox-desc lightbox-desc-1">RNN의 문제점; KABOOM!!!은 explode, poof!!! vanish를 의미한다.</span>
+<span class="glightbox-desc lightbox-desc-2">LSTM의 아이디어; 장기와 단기의 기억을 분리해서 각각을 업데이트한다.</span>
+<span class="glightbox-desc lightbox-desc-3">LSTM의 기본 구조</span>
+<span class="glightbox-desc lightbox-desc-4">장기 기억에는 웨이트나 바이어스가 없다.</span>
+<span class="glightbox-desc lightbox-desc-5">Sigmoid 함수</span>
+<span class="glightbox-desc lightbox-desc-6">Tanh 함수</span>
+<span class="glightbox-desc lightbox-desc-7">Day 1의 LSTM 처리</span>
+<span class="glightbox-desc lightbox-desc-8">Day4까지의 처리를 통해 Day 5 예측</span>
 </div>
 </section>
 
@@ -954,7 +873,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","loop":false,"openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

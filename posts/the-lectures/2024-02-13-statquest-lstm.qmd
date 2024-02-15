@@ -1,9 +1,9 @@
 ---
-title: "Recurrent Neural Network" 
-description: RNN에 대해서 알아보자 
+title: "Long Short-Term Memory (LSTM) Network" 
+description: RNN의 문제를 해결해보자.  
 author: "JS HUHH"
-date: "02/13/2024"
-image: "./images/cat-learning-2.webp"
+date: "02/15/2024"
+image: "./images/cat-learning.webp"
 categories: [the-lectures, machine-learning]
 #fig-align: center
 filters:
@@ -20,106 +20,70 @@ format:
 ---
 
 ## TL; DR
-RNN 찍먹하자. 
+LSTM을 찍먹해보자. 
 
-{{< video https://www.youtube.com/watch?v=AsNTP8Kwu80 >}}
+{{< video https://www.youtube.com/watch?v=YCzL96nL7j0 >}}
 
 ## 넋두리 
 
+RNN의 가장 큰 문제는 웨이트의 크기에 따라서 효과가 지나치게 증폭되거나 지나치게 줄어드는 데 있다. 웨이트의 크기 자체가 제한된다면 제대로 된 최적화가 어려울 것이다. 경사하강법을 사용할 때 최적 파라미터의 범위가 지나치게 크게 변하거나 지나치게 작게 변하면 원활한 최적화가 어렵다. 이를 극복하기 위해 제안된 네트워크 구조가 LSTM이다. 
 
-## Encoder
-
-::: {layout="[-1, 5, -1]"}
-![기본 인코딩 세팅은 그림과 같다.](./images/transformer/1.png){ style="border: 1px solid #000;" }
+:::{layout="[-1, 4, -1]"}
+![RNN의 문제점; KABOOM!!!은 explode, poof!!! vanish를 의미한다.](./images/lstm/01.png){ style="border: 1px solid #000;" }
 :::
 
-## Four Key Components
+## 기본 구조 
 
-트랜스포머는 크게 4가지의 구성요소로 이루어져 있다.
+LSTM의 기본 구조는 복잡해보이지만, 아이디어는 단순하다. 
 
-1. Positional Encoding
-2. Self-Attention Mechanism
-3. Encoder
-4. Decoder
+::: {layout="[[5, -1, 5, -1, 5]]" layout-valign="bottom"}
+![LSTM의 아이디어; 장기와 단기의 기억을 분리해서 각각을 업데이트한다.](./images/lstm/02.png){ style="border: 1px solid #000;" }
 
-### Positional Encoding
+![LSTM의 기본 구조](./images/lstm/03.png){ style="border: 1px solid #000;" }
 
-단어의 위치를 인코딩하는 방법이다. 여러가지 방법이 있지만 사인-코사인 커브를 사용하는 것이 제일 일반적이라고 한다. 언뜻 보면 이해가 가지 않지만 사인 코사인의 파동 값을 활용하면 별다른 정보 손실 없이 벡터로 토큰의 위치 정보를 잘 반영할 수 있다. 
+![장기 기억에는 웨이트나 바이어스가 없다.](./images/lstm/06.png){ style="border: 1px solid #000;" }
+:::
+
+## Three Gates
+
+원래 용어에 따르면 LSTM은 세 개의 게이트로 구성되어 있다. 
+
+1. Forget Gate; 장기 기억을 할인하는 과정을 의미한다. 
+2. Input Gate; 새로운 정보를 장기 기억에 추가하는 과정을 의미한다.
+3. Output Gate; 장기 기억을 바탕으로 새로운 단기 정보를 생성하는 과정을 의미한다.
+
+전기에서 넘어온 장기 기억과 단기 기억이 존재한다고 가정하자. 
+
+업데이트에는 Sigmoid 함수와 Tanh 함수를 사용한다. 두 함수의 특성을 보면 활용하는 이유를 알 수 있다. Sigmoid 함수는 0과 1 사이의 값을 가지며, Tanh 함수는 -1과 1 사이의 값을 가진다. 전자는 기억을 할인하는 비율을 결정하고 후자는 기억 자체의 크기를 결정한다. 
 
 ::: {layout="[[5, -1, 5]]" layout-valign="bottom"}
-![포지셔널 인코딩은 그림과 같이 수행한다.](./images/transformer/2.png){ style="border: 1px solid #000;" }
+![Sigmoid 함수](./images/lstm/04.png){ style="border: 1px solid #000;" }
 
-!["+" 그림은 포지너설 인코딩을 의미한다.](./images/transformer/3.png){ style="border: 1px solid #000;" }
+![Tanh 함수](./images/lstm/05.png){ style="border: 1px solid #000;" }
 :::
 
-### Self-Attention Mechanism
+### Forget Gate 
 
-자신을 포함해서 단어 사이의 유사도를 계산한다. 
+단기 기억과 인풋을 받아서 장기 기억을 할인한다.
 
-::: {layout="[-1, 5, -1]"}
-![자신을 포함해서 문장 내 단어 사이의 유사도를 추적하자.](./images/transformer/4.png){ style="border: 1px solid #000;" }
+### Input Gate
+
+인풋이 장기기억을 어떻게 형성하는지를 표현한다. 이때 전기의 단기 기억과 인풋이 사용된다. 인풋과 전기의 단기 기억이 장기 기억의 크기를 Tanh 함수를 통해서 결정하고, Sigmonoid 함수를 통해서 얼마나 장기 기억에 추가할지를 결정한다. 
+
+앞서 Forget Gate에서 할인된 장기 기억에 이 값을 더해 새 장기기억이 결정된다. 
+
+### Output Gate
+
+업데이트된 장기기억, 전기의 단기기억, 그리고 인풋 세 값이 단기기억을 업데이트한다. 장기 기억의 일부가 단기 기억으로 전환된다. 다만 앞서 인풋을 통해 장기기억을 업데이트했으므로 Output Gate에서 인풋과 전기의 단기기억은 단기 기억 자체의 크기에는 영향을 주지 않고 비율에만 영향을 준다. 
+
+## How to Work 
+
+이렇게 하나의 유닛이 매 기에 들어오는 정보를 처리한다고 보면 된다. 아래 예시에서 1기에 정보가 세 단계의 LSTM 유닛을 거쳐서 처리되 이런 유닛들이 이어져 마지막 정보까지 처리된다. 
+
+::: {layout="[[5, -1, 5]]" layout-valign="bottom"}
+![Day 1의 LSTM 처리](./images/lstm/10.png){ style="border: 1px solid #000;" }
+
+![Day4까지의 처리를 통해 Day 5 예측](./images/lstm/11.png){ style="border: 1px solid #000;" }
 :::
 
-세 가지 하부 요소가 있다. 
 
-- Queries: 각 단어 자체를 표현하는 뉴럴넷의 중간 결과
-- Keys: 각 단어와 다른 단어를 비교할 때 활용할 뉴럴넷의 중간 결과
-- Values: 각 단어의 셀프 어텐션을 거친 중요도를 표현하는 뉴럴넷의 (중간) 결과 
-
-쿼리와 키의 닷프로덕트를 구하면 스칼라 값을 얻게 된다. 이 녀석을 다시 softmax 함수에 넣어 정규화한 후 이 값을 세번째 구성요소인 Value를 거치도록 한다. 
-
-::: {layout="[-1, 5, -1]"}
-![셀프 어텐션 인코딩 과정](./images/transformer/5.png){ style="border: 1px solid #000;" }
-:::
-
-그림을 보면서 다시 한번 확인하자. 위 그림은 "let's"가 자신 및 "go"와의 셀프 어텐션을 고려하여 Query, Key, Value를 계산하는 과정을 보여준다.
-
-같은 방식으로 "go"에 대해서도 계산을 수행한다. 여기서 중요한 대목이 나온다. "go"에 대해서 인코딩을 할 때 Query, Key, Value의 웨이트를 "Let's" 때 썼던 것을 그대로 활용한다. 한 문장 안에서 단어의 의미가 맺고 있는 연결망이 같다고 보면다면 재활용이 가능하다. 그리고 이 때문에 병렬화가 가능하다! 즉 RNN처럼 앞부터 순차적으로 계산할 필요성이 사라지는 것이다. 
-
-### 정리 
-
-::: {layout="[[5, -1, 5]]"  layout-valign="bottom"}
-![트랜스포머 인코딩의 4단계](./images/transformer/6.png){ style="border: 1px solid #000;" }
-
-![병렬화가 가능하다!](./images/transformer/9.png){ style="border: 1px solid #000;" }
-:::
-
-- Word Embedding: 단어를 벡터로 표현한다.
-- Positional Encoding: 단어의 위치를 인코딩한다.
-- Self-Attention Mechanism: 단어 사이의 유사도를 계산한다.
-- Residual Connection
-
-### Comments 
-
-::: {layout="[[5, -1, 5]]"  layout-valign="bottom"}
-![멀티-헤드 어텐션](./images/transformer/7.png){ style="border: 1px solid #000;" }
-
-![Residual Connection; 뉴럴넷에서 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더한다.](./images/transformer/8.png){ style="border: 1px solid #000;" }
-:::
-
-만일 셀프 어텐션에서 같은 언어끼리라도 문장에서 서로 다른 의미망을 지닐 수 있다면 여러 개의 어텐션 유닛이 필요할 것이다. 이를 multi-head attention이라고 한다.
-
-## Decoder 
-
- 강의는 영어-스페인어의 번역의 맥락을 살펴보고 있다. 따라서 스페인어의 인코딩에서 시작한다. 
-
- 스페인어에 대해서 4단계의 트랜스포머 셀프-어텐션 프로세스를 마치고 어텐션 아웃풋을 얻는다. 인코딩의 과정이 기본적으로 동일하다. 다만 서로 다른 구조(언어)의 문장이므로 각 단계에 활용되는 웨이트는 다르다. 
-
- ::: {layout="[-1, 5, -1]"}
-![디코더에 들어갈 인풋의 인코딩](./images/transformer/11.png){ style="border: 1px solid #000;" }
-:::
-
-## Encoder-Decoder Attention
-
-이제 이 두 개의 어텐션을 엮을 차례다. 어텐션 밸류가 생성된 디코더를 쿼리 자리에 넣고 인코더의 키를 활용해서 결과를 얻는다. 
-
-::: {layout="[[5, -1, 5]]"  layout-valign="bottom"}
-![인코더-디코더 어텐션](./images/transformer/13.png){ style="border: 1px solid #000;" }
-
-![인코더-디코더 어텐션 밸류 아웃풋](./images/transformer/12.png){ style="border: 1px solid #000;" }
-:::
-
-인코더-디코더 어텐션의 아웃풋이 생성되고 난 후 마지막에 뉴럴넷을 통해서 스페인어 아웃풋을 산출한다. `<EOS>`(End of Sentence)까지 투입을 마치면 한 문장에 관한 번역이 완료된다. 
-
-
-  
