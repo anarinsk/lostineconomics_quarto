@@ -304,14 +304,14 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td style="text-align: center;">Forget Gate</td>
 <td>장기 기억</td>
-<td style="text-align: center;">전기의 단기 기억, 인풋</td>
+<td style="text-align: center;">단기 기억, 인풋</td>
 <td style="text-align: center;">-</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">Input Gate</td>
 <td>포겟 게이트의 장기 기억</td>
-<td style="text-align: center;">전기의 단기 기억, 인풋</td>
-<td style="text-align: center;">전기의 단기 기억, 인풋</td>
+<td style="text-align: center;">단기 기억, 인풋</td>
+<td style="text-align: center;">단기 기억, 인풋</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">Output Gate</td>
@@ -911,7 +911,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
