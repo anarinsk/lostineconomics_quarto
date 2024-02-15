@@ -2,8 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/the-lectures/2024-02-13-statquest-lstm.html",
+      "/posts/the-lectures/2024-02-15-statquest-seq2seq.html",
       "/posts/econ-simple/2024-02-14-larry-summers.html",
+      "/posts/the-lectures/2024-02-14-lstm.html",
       "/posts/the-lectures/2024-02-13-statquest-rnn.html",
       "/posts/the-lectures/2024-02-13-statquest-transformer.html",
       "/posts/the-lectures/2024-02-08-intro-2-llms.html",
