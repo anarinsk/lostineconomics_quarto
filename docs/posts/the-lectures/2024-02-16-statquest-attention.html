@@ -269,7 +269,32 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="어텐션-구현하기">어텐션 구현하기</h2>
 <p>아래 왼쪽 그림을 보자. 인코더의 첫번째 셀의 벡터와 디코더의 첫번째 셀의 결과의 코사인 유사도를 먼저 후간다. 같은 방식으로 두번째 셀의 벡터와 디코더의 첫번째 셀의 결과의 코사인 유사도를 구한다.</p>
 <p>오른쪽 그림처럼 이렇게 구한 코사인 유사도가 일정의 어텐션의 지표가 된다.</p>
-<p>::: {layout=“[[5, -1, 5]]” layout-valign=“bottom”} <img src="./images/attention/04.png" class="img-fluid" style="border: 1px solid #000;" alt="어텐션 구현하기 1"> <img src="./images/attention/05.png" class="img-fluid" style="border: 1px solid #000;" alt="어텐션 구현하기 2"></p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[5, -1, 5]]">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/attention/04.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="어텐션 구현하기 1"><img src="./images/attention/04.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="어텐션 구현하기 1"></a></p>
+<figcaption>어텐션 구현하기 1</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/attention/05.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="어텐션 구현하기 2"><img src="./images/attention/05.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="어텐션 구현하기 2"></a></p>
+<figcaption>어텐션 구현하기 2</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 <p>이제 이렇게 확보된 어텐션 지표가 디코딩에서 직접 활용된다. 해당 지표를 소프트맥스 처리하고 이를 다시 인코더의 정보와 결합한 뒤 스페인 어로 풀어 놓는다. 여기서 소프트맥스 처리된 코사인 유사도는 인코더의 정보를 어느 정도의 비중으로 반영해야 하는지를 결정한다. 물론 앞서와 마찬가지로 <code>&lt;EOS&gt;</code>가 산출될 때까지 이 과정을 반복한다.</p>
 <div>
 
@@ -277,10 +302,23 @@ window.Quarto = {
 <div class="quarto-layout-panel" data-layout="[[5, -1, 5]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
-<p><img src="./images/attention/06.png" class="img-fluid" style="border: 1px solid #000;" alt="어텐션을 반영한 디코딩 워드 생성 1"> <img src="./images/attention/07.png" class="img-fluid" style="border: 1px solid #000;" alt="어텐션을 반영한 디코딩 워드 생성 1"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/attention/06.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="어텐션을 반영한 디코딩 워드 생성 1"><img src="./images/attention/06.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="어텐션을 반영한 디코딩 워드 생성 1"></a></p>
+<figcaption>어텐션을 반영한 디코딩 워드 생성 1</figcaption>
+</figure>
+</div>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: flex-start;">
 <p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/attention/07.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" data-glightbox="description: .lightbox-desc-7" title="어텐션을 반영한 디코딩 워드 생성 2"><img src="./images/attention/07.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="어텐션을 반영한 디코딩 워드 생성 2"></a></p>
+<figcaption>어텐션을 반영한 디코딩 워드 생성 2</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -294,10 +332,23 @@ window.Quarto = {
 <div class="quarto-layout-panel" data-layout="[[5, -1, 5]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
-<p><img src="./images/attention/08.png" class="img-fluid" style="border: 1px solid #000;" alt="어텐션을 반영한 인코더-디코더 과정"> <img src="./images/seq2seq/10.png" class="img-fluid" style="border: 1px solid #000;" alt="seq2seq 인코더-디코더 과정"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/attention/08.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" data-glightbox="description: .lightbox-desc-8" title="어텐션을 반영한 인코더-디코더 과정"><img src="./images/attention/08.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="어텐션을 반영한 인코더-디코더 과정"></a></p>
+<figcaption>어텐션을 반영한 인코더-디코더 과정</figcaption>
+</figure>
+</div>
 </div>
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: flex-start;">
 <p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/seq2seq/10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" data-glightbox="description: .lightbox-desc-9" title="seq2seq 인코더-디코더 과정"><img src="./images/seq2seq/10.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="seq2seq 인코더-디코더 과정"></a></p>
+<figcaption>seq2seq 인코더-디코더 과정</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -307,6 +358,12 @@ window.Quarto = {
 <span class="glightbox-desc lightbox-desc-1">맨 앞의 토큰이 문장 전체의 의미에 가장 중요하다.</span>
 <span class="glightbox-desc lightbox-desc-2">LSTM의 실패</span>
 <span class="glightbox-desc lightbox-desc-3">인코더의 정보를 디코더로 직접 넘겨주면 어떨까?</span>
+<span class="glightbox-desc lightbox-desc-4">어텐션 구현하기 1</span>
+<span class="glightbox-desc lightbox-desc-5">어텐션 구현하기 2</span>
+<span class="glightbox-desc lightbox-desc-6">어텐션을 반영한 디코딩 워드 생성 1</span>
+<span class="glightbox-desc lightbox-desc-7">어텐션을 반영한 디코딩 워드 생성 2</span>
+<span class="glightbox-desc lightbox-desc-8">어텐션을 반영한 인코더-디코더 과정</span>
+<span class="glightbox-desc lightbox-desc-9">seq2seq 인코더-디코더 과정</span>
 </div>
 </section>
 
@@ -843,7 +900,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":false,"selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","loop":false,"closeEffect":"zoom","selector":".lightbox"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

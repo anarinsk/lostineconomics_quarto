@@ -63,13 +63,16 @@ $$
 
 ::: {layout="[[5, -1, 5]]" layout-valign="bottom"}
 ![어텐션 구현하기 1](./images/attention/04.png){ style="border: 1px solid #000;" }
+
 ![어텐션 구현하기 2](./images/attention/05.png){ style="border: 1px solid #000;" }
+:::
 
 이제 이렇게 확보된 어텐션 지표가 디코딩에서 직접 활용된다. 해당 지표를 소프트맥스 처리하고 이를 다시 인코더의 정보와 결합한 뒤 스페인 어로 풀어 놓는다. 여기서 소프트맥스 처리된 코사인 유사도는 인코더의 정보를 어느 정도의 비중으로 반영해야 하는지를 결정한다. 물론 앞서와 마찬가지로 `<EOS>`가 산출될 때까지 이 과정을 반복한다. 
 
 ::: {layout="[[5, -1, 5]]" layout-valign="bottom"}
 ![어텐션을 반영한 디코딩 워드 생성 1](./images/attention/06.png){ style="border: 1px solid #000;" }
-![어텐션을 반영한 디코딩 워드 생성 1](./images/attention/07.png){ style="border: 1px solid #000;" }
+
+![어텐션을 반영한 디코딩 워드 생성 2](./images/attention/07.png){ style="border: 1px solid #000;" }
 :::
 
 ## Seq2Seq 모델과 비교하기 
@@ -78,5 +81,6 @@ $$
 
 ::: {layout="[[5, -1, 5]]" layout-valign="bottom"}
 ![어텐션을 반영한 인코더-디코더 과정](./images/attention/08.png){ style="border: 1px solid #000;" }
+
 ![seq2seq 인코더-디코더 과정](./images/seq2seq/10.png){ style="border: 1px solid #000;" }
 :::
