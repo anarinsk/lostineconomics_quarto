@@ -3,7 +3,7 @@ title: "Attention Model"
 description: 관심은 어떻게 네트워크에 반영될까?
 author: "JS HUHH"
 date: "02/16/2024"
-image: "./images/cat-learning.webp"
+image: "./images/cat-learning-3.webp"
 categories: [the-lectures, machine-learning]
 #fig-align: center
 filters:
