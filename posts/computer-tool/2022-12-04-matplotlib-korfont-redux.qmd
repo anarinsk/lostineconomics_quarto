@@ -4,7 +4,7 @@ description: 마지막으로 정리해봅시다!
 author: "JS HUHH"
 date: "12/04/2022"
 image: "images/matplotlib.jfif"
-categories: [computer-tool]
+categories: [computer-tool, coding]
 draft: false
 format:
   html:

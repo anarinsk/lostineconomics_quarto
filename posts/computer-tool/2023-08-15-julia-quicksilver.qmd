@@ -4,7 +4,7 @@ description: Julia를 빠르게 찍먹해보자
 author: "JS HUHH"
 date: "08/15/2023"
 image: "./images/tool-cat-2.webp"
-categories: [computer-tool]
+categories: [computer-tool, coding]
 filters:
    - lightbox
    #- line-highlight

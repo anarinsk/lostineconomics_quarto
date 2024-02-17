@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.455">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -66,6 +66,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -74,6 +75,33 @@ ul.task-list li input[type="checkbox"] {
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -222,7 +250,7 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="math display">\[
 \mu = \dfrac{\sum_{v \in V} d(v)}{|V|} = \dfrac{2|E|}{|V|}
 \]</span></p>
-<p>식의 분모는 자명하다. 네트워크 <span class="math inline">\(G\)</span>에 존재하는 개체의 크기를 나타난다. <span class="math inline">\(\sum_{v \in V} d(v) = 2|E|\)</span>가 되는 것 중요하다. <span class="math inline">\(E\)</span>는 노드와 노드 사이의 관계를 모두 표시한 집합이다. <span class="math inline">\(e = (v_i, v_j)\)</span>라면 이는 노드 <span class="math inline">\(i\)</span>와 <span class="math inline">\(j\)</span>가 서로 친구임을 나타낸다. 전체 친구의 숫자는 <span class="math inline">\(e\)</span> 하나당 2개가 된다. 따라서 <span class="math inline">\(E\)</span>의 크기 <span class="math inline">\(|E|\)</span>의 두 배가 전체 친구의 숫자가 된다.</p>
+<p>식의 분모는 자명하다. 네트워크 <span class="math inline">\(G\)</span>에 존재하는 개체의 크기를 나타난다. <span class="math inline">\(\sum_{v \in V} d(v) = 2|E|\)</span>가 되는 것 중요하다. <span class="math inline">\(E\)</span>는 노드와 노드 사이의 관계를 모두 표시한 집합이다. <span class="math inline">\(e  = (v_i, v_j)\)</span>라면 이는 노드 <span class="math inline">\(i\)</span>와 <span class="math inline">\(j\)</span>가 서로 친구임을 나타낸다. 전체 친구의 숫자는 <span class="math inline">\(e\)</span> 하나당 2개가 된다. 따라서 <span class="math inline">\(E\)</span>의 크기 <span class="math inline">\(|E|\)</span>의 두 배가 전체 친구의 숫자가 된다.</p>
 </section>
 <section id="친구의-친구를-측정하기-위한-표집-확률" class="level3">
 <h3 class="anchored" data-anchor-id="친구의-친구를-측정하기-위한-표집-확률">’친구의 친구’를 측정하기 위한 표집 확률</h3>
@@ -547,38 +575,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -587,8 +605,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {

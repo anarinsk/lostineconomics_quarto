@@ -4,7 +4,7 @@ description: wsl 2의 열기를 느껴보아요!
 author: "JS HUHH"
 date: "04/09/2020"
 image: "https://blog.kakaocdn.net/dn/r101a/btrfoS8HzZ5/7Upmj62FYdW6AFxStfFkv0/img.jpg"
-categories: [computer-tool]
+categories: [computer-tool, os]
 #margin-header: subscribe.html
 ---
 

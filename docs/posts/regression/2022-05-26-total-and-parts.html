@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.455">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,6 +69,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -77,6 +78,33 @@ ul.task-list li input[type="checkbox"] {
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -204,16 +232,18 @@ y_i = \alpha + \beta x_i + \gamma D_i + \epsilon_i
 </div>
 <div class="quarto-layout-panel" data-layout="[[-10, 60, -10]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 75.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/12/simpsons-paradox.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description="" title="전체를 볼 것인가 부분을 볼 것인가?"><img src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/12/simpsons-paradox.jpg" class="img-fluid figure-img" alt="전체를 볼 것인가 부분을 볼 것인가?"></a></p>
+<p><a href="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/12/simpsons-paradox.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="전체를 볼 것인가 부분을 볼 것인가?"><img src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2018/12/simpsons-paradox.jpg" class="img-fluid figure-img" alt="전체를 볼 것인가 부분을 볼 것인가?"></a></p>
 <figcaption>전체를 볼 것인가 부분을 볼 것인가?</figcaption>
 </figure>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
 </div>
@@ -224,16 +254,18 @@ y_i = \alpha + \beta x_i + \gamma D_i + \epsilon_i
 </div>
 <div class="quarto-layout-panel" data-layout="[[-10, 60, -10]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 75.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/f/fb/Simpsons_paradox_-_animation.gif?1653868287578" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-description="" title="심슨의 역설"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Simpsons_paradox_-_animation.gif?1653868287578" class="img-fluid figure-img" alt="심슨의 역설"></a></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/f/fb/Simpsons_paradox_-_animation.gif?1653868287578" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="심슨의 역설"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Simpsons_paradox_-_animation.gif?1653868287578" class="img-fluid figure-img" alt="심슨의 역설"></a></p>
 <figcaption>심슨의 역설</figcaption>
 </figure>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
 </div>
@@ -247,16 +279,18 @@ y_i = \alpha + \beta x_i + \gamma D_i + \epsilon_i
 </div>
 <div class="quarto-layout-panel" data-layout="[[-10, 60, -10]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 75.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://slidetodoc.com/presentation_image_h/792ab2d7ce21c60c396545ec752d13fe/image-44.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-description="" title="DAG로 본 confounder &amp; collider"><img src="https://slidetodoc.com/presentation_image_h/792ab2d7ce21c60c396545ec752d13fe/image-44.jpg" class="img-fluid figure-img" alt="DAG로 본 confounder &amp; collider"></a></p>
+<p><a href="https://slidetodoc.com/presentation_image_h/792ab2d7ce21c60c396545ec752d13fe/image-44.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="DAG로 본 confounder &amp; collider"><img src="https://slidetodoc.com/presentation_image_h/792ab2d7ce21c60c396545ec752d13fe/image-44.jpg" class="img-fluid figure-img" alt="DAG로 본 confounder &amp; collider"></a></p>
 <figcaption>DAG로 본 confounder &amp; collider</figcaption>
 </figure>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
 </div>
@@ -271,16 +305,18 @@ y_i = \alpha + \beta x_i + \gamma D_i + \epsilon_i
 </div>
 <div class="quarto-layout-panel" data-layout="[[-10, 60, -10]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 75.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Simpsons-vector.svg/430px-Simpsons-vector.svg.png?20180610180117" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-description="" title="붉은 벡터 1,2가 파란 벡터 1,2 보다 각각 더 높은 비율(벡터의 각도)를 지니고 있다. 그럼에도 둘을 결합했을 경우 파란 벡터가 더 높은 비율을 지니게 된다."><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Simpsons-vector.svg/430px-Simpsons-vector.svg.png?20180610180117" class="img-fluid figure-img" alt="붉은 벡터 1,2가 파란 벡터 1,2 보다 각각 더 높은 비율(벡터의 각도)를 지니고 있다. 그럼에도 둘을 결합했을 경우 파란 벡터가 더 높은 비율을 지니게 된다."></a></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Simpsons-vector.svg/430px-Simpsons-vector.svg.png?20180610180117" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="붉은 벡터 1,2가 파란 벡터 1,2 보다 각각 더 높은 비율(벡터의 각도)를 지니고 있다. 그럼에도 둘을 결합했을 경우 파란 벡터가 더 높은 비율을 지니게 된다."><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Simpsons-vector.svg/430px-Simpsons-vector.svg.png?20180610180117" class="img-fluid figure-img" alt="붉은 벡터 1,2가 파란 벡터 1,2 보다 각각 더 높은 비율(벡터의 각도)를 지니고 있다. 그럼에도 둘을 결합했을 경우 파란 벡터가 더 높은 비율을 지니게 된다."></a></p>
 <figcaption>붉은 벡터 1,2가 파란 벡터 1,2 보다 각각 더 높은 비율(벡터의 각도)를 지니고 있다. 그럼에도 둘을 결합했을 경우 파란 벡터가 더 높은 비율을 지니게 된다.</figcaption>
 </figure>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
 </div>
@@ -294,16 +330,18 @@ y_i = \alpha + \beta x_i + \gamma D_i + \epsilon_i
 </div>
 <div class="quarto-layout-panel" data-layout="[[-10, 60, -10]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 75.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://brilliant-staff-media.s3-us-west-2.amazonaws.com/tiffany-wang/1Mvt8RPtlU.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-description="" title="전체를 볼 것인가 부분을 볼 것인가? 해당 밴드를 중심으로 SAT 점수가 높고 GPA도 높은 사람들은 더 좋은 학교에 진학했고, 낮은 사람들은 내가 관찰하는 샘플에서 탈랐했다. 그렇다면 이 관계는 실제로 존재하는 것일까?"><img src="https://brilliant-staff-media.s3-us-west-2.amazonaws.com/tiffany-wang/1Mvt8RPtlU.png" class="my-figure5 img-fluid figure-img" alt="전체를 볼 것인가 부분을 볼 것인가? 해당 밴드를 중심으로 SAT 점수가 높고 GPA도 높은 사람들은 더 좋은 학교에 진학했고, 낮은 사람들은 내가 관찰하는 샘플에서 탈랐했다. 그렇다면 이 관계는 실제로 존재하는 것일까?"></a></p>
+<p><a href="https://brilliant-staff-media.s3-us-west-2.amazonaws.com/tiffany-wang/1Mvt8RPtlU.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="전체를 볼 것인가 부분을 볼 것인가? 해당 밴드를 중심으로 SAT 점수가 높고 GPA도 높은 사람들은 더 좋은 학교에 진학했고, 낮은 사람들은 내가 관찰하는 샘플에서 탈랐했다. 그렇다면 이 관계는 실제로 존재하는 것일까?"><img src="https://brilliant-staff-media.s3-us-west-2.amazonaws.com/tiffany-wang/1Mvt8RPtlU.png" class="my-figure5 img-fluid figure-img" alt="전체를 볼 것인가 부분을 볼 것인가? 해당 밴드를 중심으로 SAT 점수가 높고 GPA도 높은 사람들은 더 좋은 학교에 진학했고, 낮은 사람들은 내가 관찰하는 샘플에서 탈랐했다. 그렇다면 이 관계는 실제로 존재하는 것일까?"></a></p>
 <figcaption>전체를 볼 것인가 부분을 볼 것인가? 해당 밴드를 중심으로 SAT 점수가 높고 GPA도 높은 사람들은 더 좋은 학교에 진학했고, 낮은 사람들은 내가 관찰하는 샘플에서 탈랐했다. 그렇다면 이 관계는 실제로 존재하는 것일까?</figcaption>
 </figure>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
 </div>
@@ -325,6 +363,13 @@ y_i = \alpha + \beta x_i + \gamma D_i + \epsilon_i
 <p>이렇게 보면 심슨의 역설과 벅슨의 역설은 회귀 분석에서 모델링의 중요성 혹은 적절한 중도를 지키는 것이 얼마나 어려운지를 잘 보여준다. 회귀 분석의 길은 앵그리스트와 피스케 선생이 말했듯이 진정 “도”의 길이었던 것이다!</p>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">전체를 볼 것인가 부분을 볼 것인가?</span>
+<span class="glightbox-desc lightbox-desc-2">심슨의 역설</span>
+<span class="glightbox-desc lightbox-desc-3">DAG로 본 confounder &amp; collider</span>
+<span class="glightbox-desc lightbox-desc-4">붉은 벡터 1,2가 파란 벡터 1,2 보다 각각 더 높은 비율(벡터의 각도)를 지니고 있다. 그럼에도 둘을 결합했을 경우 파란 벡터가 더 높은 비율을 지니게 된다.</span>
+<span class="glightbox-desc lightbox-desc-5">전체를 볼 것인가 부분을 볼 것인가? 해당 밴드를 중심으로 SAT 점수가 높고 GPA도 높은 사람들은 더 좋은 학교에 진학했고, 낮은 사람들은 내가 관찰하는 샘플에서 탈랐했다. 그렇다면 이 관계는 실제로 존재하는 것일까?</span>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -600,38 +645,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -640,8 +675,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -863,7 +905,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

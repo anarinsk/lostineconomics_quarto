@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.455">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -100,6 +100,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -108,6 +109,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -244,7 +272,7 @@ p(\theta\lvert data) = \dfrac{p(data \lvert \theta) p(\theta)}{P(data)} = \dfrac
 <li><span class="math inline">\(p(\theta)\)</span>: prior, 데이터를 포함하지 않은 파라미터의 사전 분포를 뜻한다.</li>
 <li>파라미터 공간은 n 차원 벡터다. <span class="math inline">\(\theta \in \mathbb R^n\)</span>, <span class="math inline">\(\theta = (\theta_1, \theta_2, \dotsc, \theta_n)\)</span>.</li>
 </ul>
-<p>식의 분자는 모두 파리미터 <span class="math inline">\(\theta\)</span>의 함수다. 분모는 상수다. 뒤에 다시 설명하겠지만, <span class="math inline">\(p(\theta \lvert data)\)</span>를 <span class="math inline">\(\theta\)</span>에 대해서 최적화한다면, 분자만 고려하면 된다.</p>
+<p>식의 분자는 모두 파리미터 <span class="math inline">\(\theta\)</span>의 함수다. 분모는 상수다. 뒤에 다시 설명하겠지만, <span class="math inline">\(p(\theta \lvert  data)\)</span>를 <span class="math inline">\(\theta\)</span>에 대해서 최적화한다면, 분자만 고려하면 된다.</p>
 <p>대소문자를 구별해서 쓴 것에 유의하자. 소문자 <span class="math inline">\(p\)</span>는 확률 분포, 즉 확률 밀도 함수(pmf) 혹은 확률 질량 함수(pdf)를 뜻한다. 대문자 <span class="math inline">\(P\)</span>는 확률이다.</p>
 <p><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/mcmc/fig_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
 <p>위 그림을 보자. 사전 분포는 우도에 따라서 재평가 되면서 사후 분포를 만들어 낸다. 우도(때로는 가능도라고 표현하기도 한다)에 관해서 조금 더 살펴보자.</p>
@@ -359,7 +387,7 @@ p(\theta^i\lvert data) p(\theta^j\lvert \theta^i) = p(\theta^j\lvert data) p(\th
 <section id="metropolis-algorithm" class="level3">
 <h3 class="anchored" data-anchor-id="metropolis-algorithm">Metropolis algorithm</h3>
 <ul>
-<li>이행 행렬로 임의의 밀도 함수 <span class="math inline">\(Q(\theta^i \lvert \theta^{i-1})\)</span>를 정하자. 이를 밀도함수로 받아들일지 여부를 아래와 같은 확률로 결정한다. 이를 수용확률이라고 부른다.</li>
+<li>이행 행렬로 임의의 밀도 함수 <span class="math inline">\(Q(\theta^i \lvert  \theta^{i-1})\)</span>를 정하자. 이를 밀도함수로 받아들일지 여부를 아래와 같은 확률로 결정한다. 이를 수용확률이라고 부른다.</li>
 </ul>
 <p><span class="math display">\[
 r = \min \left( \dfrac{\pi(\theta^i)}{\pi(\theta^{i-1})}, 1 \right)
@@ -385,7 +413,7 @@ P(\theta^i = \theta^a \lvert  \theta^{i-1} = \theta^b)  &amp; = \pi(\theta^b\lve
 \end{aligned}
 \]</span></p>
 <ul>
-<li>메트로폴리스 알고리듬의 가정 중 하나는 이행 행렬이 대칭이라는 것이다. 즉, <span class="math inline">\(Q(\theta^b\lvert \theta^a) = Q(\theta^a\lvert \theta^b)\)</span>. 따라서 detailed balance가 성립한다. <span class="math inline">\(\pi(\theta^a\lvert data) &gt; \pi(\theta^b\lvert data)\)</span>인 경우에 대해서도 비슷하게 도출할 수 있다.</li>
+<li>메트로폴리스 알고리듬의 가정 중 하나는 이행 행렬이 대칭이라는 것이다. 즉, <span class="math inline">\(Q(\theta^b\lvert \theta^a)  = Q(\theta^a\lvert \theta^b)\)</span>. 따라서 detailed balance가 성립한다. <span class="math inline">\(\pi(\theta^a\lvert data) &gt; \pi(\theta^b\lvert data)\)</span>인 경우에 대해서도 비슷하게 도출할 수 있다.</li>
 </ul>
 </section>
 <section id="metropolis-hastings-algorithm" class="level3">
@@ -750,38 +778,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -790,8 +808,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {

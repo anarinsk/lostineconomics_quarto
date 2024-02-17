@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.455">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -103,6 +103,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -176,6 +177,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 class="title">Quick Ready for Python in Windows</h1>
   <div class="quarto-categories">
     <div class="quarto-category">computer-tool</div>
+    <div class="quarto-category">coding</div>
   </div>
   </div>
 
@@ -248,14 +250,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="가상-환경-생성" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="가상-환경-생성">가상 환경 생성</h2>
 <p>먼저 conda에서 가상 환경을 생성해보자.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> conda create <span class="op">-</span>n <span class="op">{</span>가상환경<span class="op">-</span>이름<span class="op">}</span> python<span class="op">={</span>파이썬 버전<span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> conda create <span class="op">-</span>n <span class="op">{</span>가상환경-이름<span class="op">}</span> python<span class="op">={</span>파이썬 버전<span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>이 명령을 통해 특정 버전의 파이썬을 백엔드로 하는 가상환경을 만들 수 있다. 생성 후 원하는 환경이 잘 생성되었는지를 확인해보자.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>❯ conda env list</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># conda environments:</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>base                     C<span class="op">:</span>\Users\junsokhuhh\Miniconda3</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>pandas<span class="op">=</span>2<span class="op">.</span><span class="fu">0_python</span><span class="op">=</span>3<span class="op">.</span><span class="fu">11</span>  <span class="op">*</span>  C<span class="op">:</span>\Users\junsokhuhh\Miniconda3\envs\pandas<span class="op">=</span>2<span class="op">.</span><span class="fu">0_python</span><span class="op">=</span>3<span class="op">.</span><span class="fu">11</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>torch<span class="op">=</span>2<span class="op">.</span><span class="fu">0_python</span><span class="op">=</span>3<span class="op">.</span><span class="fu">11</span>     C<span class="op">:</span>\Users\junsokhuhh\Miniconda3\envs\torch<span class="op">=</span>2<span class="op">.</span><span class="fu">0_python</span><span class="op">=</span>3<span class="op">.</span><span class="fu">11</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>pandas<span class="op">=</span><span class="dv">2.</span>0_python<span class="op">=</span><span class="dv">3.11</span>  <span class="op">*</span>  C<span class="op">:</span>\Users\junsokhuhh\Miniconda3\envs\pandas<span class="op">=</span><span class="dv">2.</span>0_python<span class="op">=</span><span class="dv">3.11</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="dt">torch</span><span class="op">=</span><span class="dv">2.</span>0_python<span class="op">=</span><span class="dv">3.11</span>     C<span class="op">:</span>\Users\junsokhuhh\Miniconda3\envs\torch<span class="op">=</span><span class="dv">2.</span>0_python<span class="op">=</span><span class="dv">3.11</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>예시에서 보듯이 생성된 환경의 이름과 경로 그리고 활성화된 환경이 <code>*</code>로 표기된다. 해당 환경을 복사하거나 지우고 싶다면 <code>conda</code> 명령어를 활용할 수 있다. 보다 직관적으로 편리한 방법은 저 폴더에 대해서 직접 복사하거나 지워서 환경을 복제, 삭제하는 것이다. 폴더 구조만 유지되면 conda에서 가상 환경으로 잘 인식된다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -270,13 +272,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>커널을 선택을 누르면, “파이썬 환경”과 “기존 Jupyter 서버” 중 하나를 선택할 수 있다. 전자를 택하면 앞서 설정한 miniconda의 환경이 잘 보인다. 필요한 환경을 선택하고 녀석을 VS Code의 Jupyter 환경으로 작업하면 된다. 아래 스크린 샷을 보면 순서대로 1(현재 이용 중인 커널), 2(커널 선택), 3(주피터 파이썬 환경 선택), 4(파이썬 환경 선택)의 화면에서 필요한 내용을 선택하면 된다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/vscode_kernel.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description="" title="VS Code 커널 선택 (클릭하면 확대)"><img src="./images/vscode_kernel.png" class="img-fluid figure-img" style="width:70.0%" alt="VS Code 커널 선택 (클릭하면 확대)"></a></p>
+<p><a href="./images/vscode_kernel.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="VS Code 커널 선택 (클릭하면 확대)"><img src="./images/vscode_kernel.png" class="img-fluid figure-img" style="width:70.0%" alt="VS Code 커널 선택 (클릭하면 확대)"></a></p>
 <figcaption>VS Code 커널 선택 (클릭하면 확대)</figcaption>
 </figure>
 </div>
 <p>기존 주피터 환경보다는 단순한 형태지만, VS Code에서는 GitHub Copilot을 함께 쓸 수 있다. 모든 단점을 상쇄하고도 남는다.</p>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">VS Code 커널 선택 (클릭하면 확대)</span>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -552,38 +557,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -592,8 +587,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -815,7 +817,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

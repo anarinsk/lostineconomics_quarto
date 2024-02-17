@@ -4,7 +4,7 @@ description: 거의 완벽한 클라우드 코딩 환경
 author: "JS HUHH"
 date: "10/20/2023"
 image: "./images/codespaces.webp"
-categories: [computer-tool]
+categories: [computer-tool, coding]
 #fig-align: center
 filters:
    - lightbox

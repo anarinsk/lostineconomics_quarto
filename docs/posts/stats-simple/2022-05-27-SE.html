@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.455">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,6 +69,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -77,6 +78,33 @@ ul.task-list li input[type="checkbox"] {
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -234,16 +262,18 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="quarto-layout-panel" data-layout="[[-10, 60, -10]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 75.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description="" title="파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다."><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" class="img-fluid figure-img" alt="파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다."></a></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다."><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Consistency_of_estimator.svg" class="img-fluid figure-img" alt="파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다."></a></p>
 <figcaption>파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다.</figcaption>
 </figure>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
 </div>
@@ -382,16 +412,18 @@ t(\mu) = \frac{\overline{Y}-\mu}{\widehat{SE}(\overline{Y})}
 </div>
 <div class="quarto-layout-panel" data-layout="[[-10, 60, -10]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 75.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-description="" title="n이 커질수록 \ES{X}_n의 분포는 표준 정규 분포에 근접한다. x_i가 추출된 모집단의 분포를 찾는 것이 아니다. 우리에게 중요한 것은 추정량 \ES{X}_n이고 이 녀석의 분포를 묘사하는 것이 CLT이다."><img src="https://miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg" class="img-fluid figure-img" alt="n이 커질수록 \ES{X}_n의 분포는 표준 정규 분포에 근접한다. x_i가 추출된 모집단의 분포를 찾는 것이 아니다. 우리에게 중요한 것은 추정량 \ES{X}_n이고 이 녀석의 분포를 묘사하는 것이 CLT이다."></a></p>
+<p><a href="https://miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="n이 커질수록 \ES{X}_n의 분포는 표준 정규 분포에 근접한다. x_i가 추출된 모집단의 분포를 찾는 것이 아니다. 우리에게 중요한 것은 추정량 \ES{X}_n이고 이 녀석의 분포를 묘사하는 것이 CLT이다."><img src="https://miro.medium.com/max/1400/0*V1zCLq5mboTCfq2_.jpeg" class="img-fluid figure-img" alt="n이 커질수록 \ES{X}_n의 분포는 표준 정규 분포에 근접한다. x_i가 추출된 모집단의 분포를 찾는 것이 아니다. 우리에게 중요한 것은 추정량 \ES{X}_n이고 이 녀석의 분포를 묘사하는 것이 CLT이다."></a></p>
 <figcaption><span class="math inline">\(n\)</span>이 커질수록 <span class="math inline">\(\ES{X}_n\)</span>의 분포는 표준 정규 분포에 근접한다. <span class="math inline">\(x_i\)</span>가 추출된 모집단의 분포를 찾는 것이 아니다. 우리에게 중요한 것은 추정량 <span class="math inline">\(\ES{X}_n\)</span>이고 이 녀석의 분포를 묘사하는 것이 CLT이다.</figcaption>
 </figure>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
 </div>
@@ -508,16 +540,18 @@ S(y_i)^2 = \dfrac{1}{n-k} \sum_{i=1}^n (y_i -  x^r_i \hat\beta)
 </div>
 <div class="quarto-layout-panel" data-layout="[[-10, 60, -10]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 75.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-description="" title="LLN; n이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 x 축의 범위를 0, 1 사이로 고정했다."><img src="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-3.png" class="img-fluid figure-img" alt="LLN; n이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 x 축의 범위를 0, 1 사이로 고정했다."></a></p>
+<p><a href="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-3.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="LLN; n이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 x 축의 범위를 0, 1 사이로 고정했다."><img src="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-3.png" class="img-fluid figure-img" alt="LLN; n이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 x 축의 범위를 0, 1 사이로 고정했다."></a></p>
 <figcaption>LLN; <span class="math inline">\(n\)</span>이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 <span class="math inline">\(x\)</span> 축의 범위를 0, 1 사이로 고정했다.</figcaption>
 </figure>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
 </div>
@@ -527,22 +561,30 @@ S(y_i)^2 = \dfrac{1}{n-k} \sum_{i=1}^n (y_i -  x^r_i \hat\beta)
 </div>
 <div class="quarto-layout-panel" data-layout="[[-10, 60, -10]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 75.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 75.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-description="" title="CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다."><img src="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-2.png" class="img-fluid figure-img" alt="CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다."></a></p>
+<p><a href="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-2.png" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다."><img src="https://i0.wp.com/lorentzen.ch/wp-content/uploads/2021/01/image-2.png" class="img-fluid figure-img" alt="CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다."></a></p>
 <figcaption>CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다.</figcaption>
 </figure>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: center;">
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 12.5%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
 </div>
 </div>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">파라미터 값 4를 추정하기 위한 샘플 추정량; 샘플 크기가 증가하면서 4로 접근한다. 예시의 샘플 추정량은 biased된 추정량이다.</span>
+<span class="glightbox-desc lightbox-desc-2"><span class="math inline">\(n\)</span>이 커질수록 <span class="math inline">\(\ES{X}_n\)</span>의 분포는 표준 정규 분포에 근접한다. <span class="math inline">\(x_i\)</span>가 추출된 모집단의 분포를 찾는 것이 아니다. 우리에게 중요한 것은 추정량 <span class="math inline">\(\ES{X}_n\)</span>이고 이 녀석의 분포를 묘사하는 것이 CLT이다.</span>
+<span class="glightbox-desc lightbox-desc-3">LLN; <span class="math inline">\(n\)</span>이 커짐에 따라서 평균값으로 모이는 현상이 발생한다. 위 그래프와 달리 <span class="math inline">\(x\)</span> 축의 범위를 0, 1 사이로 고정했다.</span>
+<span class="glightbox-desc lightbox-desc-4">CLT; 0, 1을 각각 0.8, 0.2의 확률로 갖는 베르누이 분포가 있을 때, 확률 변수의 샘플 크기가 커짐에 따라 표본 평균은 정규 분포를 닮아간다.</span>
+</div>
 </section>
 </section>
 
@@ -819,38 +861,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -859,8 +891,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1082,7 +1121,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":false,"closeEffect":"zoom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.455">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,6 +69,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -77,6 +78,33 @@ ul.task-list li input[type="checkbox"] {
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -200,17 +228,19 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 <div class="quarto-layout-panel" data-layout="[-1, 2, -1]">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-1" title="벡터 스페이스에 바라본 회귀 분석"><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="img-fluid figure-img" alt="벡터 스페이스에 바라본 회귀 분석"></a></p>
+<p><a href="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="벡터 스페이스에 바라본 회귀 분석"><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true" class="img-fluid figure-img" alt="벡터 스페이스에 바라본 회귀 분석"></a></p>
 <figcaption>벡터 스페이스에 바라본 회귀 분석</figcaption>
 </figure>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
 </div>
@@ -227,17 +257,19 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 <div class="quarto-layout-panel" data-layout="[[-20, 60, -20]]">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-2" title="독립변수 1개인 회귀 분석"><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="img-fluid figure-img" alt="독립변수 1개인 회귀 분석"></a></p>
+<p><a href="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="독립변수 1개인 회귀 분석"><img src="https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/simpe_reg.png?raw=true" class="img-fluid figure-img" alt="독립변수 1개인 회귀 분석"></a></p>
 <figcaption>독립변수 1개인 회귀 분석</figcaption>
 </figure>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
 </div>
@@ -249,17 +281,19 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 <div class="quarto-layout-panel" data-layout="[[-20, 60, -20]]">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-3" title="2차원 컬럼 스페이스"><img src="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="img-fluid figure-img" alt="2차원 컬럼 스페이스"></a></p>
+<p><a href="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="2차원 컬럼 스페이스"><img src="https://miro.medium.com/max/2240/1*VUmUxo3G2UTugIiZ26Pusw@2x.jpeg" class="img-fluid figure-img" alt="2차원 컬럼 스페이스"></a></p>
 <figcaption>2차원 컬럼 스페이스</figcaption>
 </figure>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
 </div>
@@ -284,7 +318,7 @@ ul.task-list li input[type="checkbox"] {
 \end{aligned}
 \]</span></p>
 <p><span class="math inline">\(\hat{\boldsymbol \beta}\)</span>가 왠지 원래 식의 근사값으로 기능할 것 같지 않은가? (실제로 그렇다)</p>
-</div></div><p>이 연산자를 독립변수의 모음인 col <span class="math inline">\(\mathbf X\)</span>에 적용하면 일종의 예측치 <span class="math inline">\(\mathbf{X} \hat{\boldsymbol \beta} =\hat{\mathbf Y}\)</span>이 산출된다. 그림에서 보듯이 <span class="math inline">\(\hat{\mathbf Y}\)</span>은 <span class="math inline">\(\mathbf Y\)</span>와 col <span class="math inline">\(\mathbf X\)</span>의 거리를 최소화하는 위치에 존재한다. <span class="math inline">\(\hat{\mathbf Y}\)</span>는 어떤 벡터일까? <span class="math inline">\(\hat{\mathbf Y} \in {\mathbb R}^n\)</span> 벡터지만, col <span class="math inline">\(\mathbf X(\in {\mathbb R}^k)\)</span>내에 위치하고 있다. <span class="math inline">\(n\)</span> 차원이 <span class="math inline">\(k\)</span> 차원으로 축소된 셈이다. 이것이 회귀 분석의 기하적 핵심이다.</p>
+</div></div><p>이 연산자를 독립변수의 모음인 col <span class="math inline">\(\mathbf X\)</span>에 적용하면 일종의 예측치 <span class="math inline">\(\mathbf{X} \hat{\boldsymbol \beta}  =\hat{\mathbf Y}\)</span>이 산출된다. 그림에서 보듯이 <span class="math inline">\(\hat{\mathbf Y}\)</span>은 <span class="math inline">\(\mathbf Y\)</span>와 col <span class="math inline">\(\mathbf X\)</span>의 거리를 최소화하는 위치에 존재한다. <span class="math inline">\(\hat{\mathbf Y}\)</span>는 어떤 벡터일까? <span class="math inline">\(\hat{\mathbf Y} \in {\mathbb R}^n\)</span> 벡터지만, col <span class="math inline">\(\mathbf X(\in {\mathbb R}^k)\)</span>내에 위치하고 있다. <span class="math inline">\(n\)</span> 차원이 <span class="math inline">\(k\)</span> 차원으로 축소된 셈이다. 이것이 회귀 분석의 기하적 핵심이다.</p>
 <p>선형 대수의 관점에서 내용을 다시 음미해보자. <span class="math inline">\(x_i \in {\mathbb R}^n\)</span> (for <span class="math inline">\(i = 1, \dotsc, k\)</span>) 벡터의 리그레서 <span class="math inline">\(k\)</span> 개를 선형 결합해서 초 평면의 한점, 즉 원래의 관찰 <span class="math inline">\(\mathbf Y\)</span>와 최소 거리를 지니는 벡터를 찾아야 한다. 이 거리를 최소화하는 <span class="math inline">\(\beta_i\)</span>를 알고 있다면 이 벡터는 다음과 같이 표현된다. <span class="math inline">\({\mathbf X} = [x_1, \dotsc, x_k]\)</span>일 때,</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -320,7 +354,7 @@ x_1 \beta_1 + \dotsc + x_k \beta_k
 <p><span class="math display">\[
 1 =  \dfrac{\Vert \mathbf Y - \hat{\mathbf Y} \Vert^2}{\Vert \mathbf Y - \overline{\mathbf Y} \Vert^2} + \dfrac{\Vert \hat{\mathbf Y} - \overline{\mathbf Y} \Vert^2}{\Vert \mathbf Y - \overline{\mathbf Y} \Vert^2}
 \]</span></p>
-<p>정의에 따라서 <span class="math inline">\(1 = \dfrac{\text{RSS}} {\text{TSS}} + {\mathrm R}^2\)</span>가 된다. 즉,</p>
+<p>정의에 따라서 <span class="math inline">\(1 = \dfrac{\text{RSS}} {\text{TSS}} +  {\mathrm R}^2\)</span>가 된다. 즉,</p>
 <p><span class="math display">\[
   {\mathrm R}^2 = 1 - \dfrac{\text{RSS}}{\text{TSS}}
 \]</span></p>
@@ -358,6 +392,11 @@ x_1 \beta_1 + \dotsc + x_k \beta_k
 <p>회귀 분석과 PCA를 지도 학습(supervised learning), 비지도 학습(unsupervised learning)으로 구분할 수는 없다. 다만 이 구분과 어느 정도 비슷한 부분이 있다. 회귀 분석은 target이 있다. 이 타겟과의 거리를 최소화하는 feature 공간의 어떤 위치를 찾는 것이 목적이다. 반면, PCA에는 target이 없다. <span class="math inline">\(k\)</span> 개의 feature를 최소 거리로 투영할 수 있는 스크린 벡터를 찾는게 목적이다. 간단히 말해서 PCA는 target 없이 벡터의 거리가 1인 임의의 프로젝션 벡터를 찾는 것이 목적이다.</p>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">벡터 스페이스에 바라본 회귀 분석</span>
+<span class="glightbox-desc lightbox-desc-2">독립변수 1개인 회귀 분석</span>
+<span class="glightbox-desc lightbox-desc-3">2차원 컬럼 스페이스</span>
+</div>
 </section>
 </section>
 </section>
@@ -635,38 +674,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -675,8 +704,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -898,7 +934,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":false});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":false,"closeEffect":"zoom","descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

@@ -4,7 +4,7 @@ description: 이보다 더 좋을 수 있을까?
 author: "JS HUHH"
 date: "05/25/2022"
 image: "https://miro.medium.com/max/649/1*6sV-YTdpob36egPM-yXGXA.png"
-categories: [computer-tool, machine-learning]
+categories: [computer-tool, machine-learning, coding]
 draft: false 
 ---
 

@@ -4,7 +4,7 @@ description:  파이썬 작업환경을 빠르게 구축하기
 author: "JS HUHH"
 date: "05/16/2023"
 image: "./images/tool-cat-2.webp"
-categories: [computer-tool]
+categories: [computer-tool, coding]
 filters:
    - lightbox
 lightbox: auto

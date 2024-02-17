@@ -4,7 +4,7 @@ description: 코드 셰어링, 이제 걱정 끝
 author: "JS HUHH"
 date: "10/27/2020"
 image: "https://mybinder.org/static/logo.svg"
-categories: [computer-tool]
+categories: [computer-tool, coding]
 #margin-header: subscribe.html
 ---
 

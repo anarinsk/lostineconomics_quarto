@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.455">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,6 +69,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -77,6 +78,33 @@ ul.task-list li input[type="checkbox"] {
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -208,20 +236,24 @@ References
 </div>
 <div class="quarto-layout-panel" data-layout="[[50,-2, 50]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 49.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 49.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://ds055uzetaobb.cloudfront.net/brioche/uploads/JO18nrj1mE-rsa-encryption.png" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-1" title="수신자는 발송자에게 상자와 열쇠를 보낸다. 해당 열쇠는 수신자의 개인 키로만 열 수 있다."><img src="https://ds055uzetaobb.cloudfront.net/brioche/uploads/JO18nrj1mE-rsa-encryption.png" class="img-fluid figure-img" alt="수신자는 발송자에게 상자와 열쇠를 보낸다. 해당 열쇠는 수신자의 개인 키로만 열 수 있다."></a></p>
+<p><a href="https://ds055uzetaobb.cloudfront.net/brioche/uploads/JO18nrj1mE-rsa-encryption.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="수신자는 발송자에게 상자와 열쇠를 보낸다. 해당 열쇠는 수신자의 개인 키로만 열 수 있다."><img src="https://ds055uzetaobb.cloudfront.net/brioche/uploads/JO18nrj1mE-rsa-encryption.png" class="img-fluid figure-img" alt="수신자는 발송자에게 상자와 열쇠를 보낸다. 해당 열쇠는 수신자의 개인 키로만 열 수 있다."></a></p>
 <figcaption>수신자는 발송자에게 상자와 열쇠를 보낸다. 해당 열쇠는 수신자의 개인 키로만 열 수 있다.</figcaption>
 </figure>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 2.0%;justify-content: center;">
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 2.0%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-figure quarto-figure-center quarto-layout-cell" style="flex-basis: 49.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 49.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://miro.medium.com/max/1400/0*yeF86NncRejLnXJz.png" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-2" title="메시지 전달에서 비대칭 암호 체계"><img src="https://miro.medium.com/max/1400/0*yeF86NncRejLnXJz.png" class="img-fluid figure-img" alt="메시지 전달에서 비대칭 암호 체계"></a></p>
+<p><a href="https://miro.medium.com/max/1400/0*yeF86NncRejLnXJz.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="메시지 전달에서 비대칭 암호 체계"><img src="https://miro.medium.com/max/1400/0*yeF86NncRejLnXJz.png" class="img-fluid figure-img" alt="메시지 전달에서 비대칭 암호 체계"></a></p>
 <figcaption>메시지 전달에서 비대칭 암호 체계</figcaption>
 </figure>
+</div>
 </div>
 </div>
 </div>
@@ -339,6 +371,10 @@ m^{de} &amp; \equiv m^{k \phi(n)+1} \\
 <p>공개 키인 <span class="math inline">\(n\)</span>과 <span class="math inline">\(e\)</span>를 생성하는 과정을 보자. 생성 과정에서 일방향 연산, (충분히 큰) 소수 및 서로소를 활용했다. 따라서 공개 키만으로 암호화에 동원된 <span class="math inline">\(p, q, \phi (pq), d\)</span>를 빠른 시간 내에 쉽게 알아낼 수 없다. 이것이 암호화가 의도하는 것이다.</p>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">수신자는 발송자에게 상자와 열쇠를 보낸다. 해당 열쇠는 수신자의 개인 키로만 열 수 있다.</span>
+<span class="glightbox-desc lightbox-desc-2">메시지 전달에서 비대칭 암호 체계</span>
+</div>
 </section>
 </section>
 
@@ -615,38 +651,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -655,8 +681,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -878,7 +911,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","loop":false,"closeEffect":"zoom","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"closeEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

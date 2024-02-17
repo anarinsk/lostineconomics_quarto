@@ -4,7 +4,7 @@ description: 도메인을 도메인 답게!
 author: "JS HUHH"
 date: "12/22/2022"
 image: "./images/web-cat.jpg"
-categories: [computer-tool]
+categories: [computer-tool, web]
 filters:
    - lightbox
 lightbox: auto

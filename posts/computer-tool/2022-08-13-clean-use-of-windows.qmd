@@ -4,7 +4,7 @@ description: winget으로 일관되게 쓰자
 author: "JS HUHH"
 date: "08/13/2022"
 image: "./images/windows-cat.webp"
-categories: [computer-tool]
+categories: [computer-tool, os]
 draft: false
 filters:
    - lightbox
