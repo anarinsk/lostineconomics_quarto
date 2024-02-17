@@ -3,7 +3,7 @@ title: "Transformer"
 description: Transformer 찍먹하자. 
 author: "JS HUHH"
 date: "02/13/2024"
-image: "./images/cat-learning.webp"
+image: "./images/cat-network.webp"
 categories: [the-lectures, machine-learning]
 #fig-align: center
 filters:

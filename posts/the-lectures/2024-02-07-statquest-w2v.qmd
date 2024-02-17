@@ -3,7 +3,7 @@ title: "Word2Vec"
 description: Word2Vec에 대한 기본 이해
 author: "JS HUHH"
 date: "02/07/2024"
-image: "./images/cat-learning.webp"
+image: "./images/cat-network.webp"
 categories: [the-lectures, machine-learning]
 #fig-align: center
 filters:

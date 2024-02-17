@@ -3,7 +3,7 @@ title: "Sequence to Sequence Model"
 description: Encoder-Decoder 구조를 알아보자.
 author: "JS HUHH"
 date: "02/15/2024"
-image: "./images/cat-learning-2.webp"
+image: "./images/cat-network.webp"
 categories: [the-lectures, machine-learning]
 #fig-align: center
 filters:

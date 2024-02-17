@@ -3,7 +3,7 @@ title: "Long Short-Term Memory (LSTM) Network"
 description: RNN의 문제를 해결해보자.  
 author: "JS HUHH"
 date: "02/14/2024"
-image: "./images/cat-learning.webp"
+image: "./images/cat-network.webp"
 categories: [the-lectures, machine-learning]
 #fig-align: center
 filters:
