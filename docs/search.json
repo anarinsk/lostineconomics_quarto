@@ -1257,7 +1257,7 @@
     "href": "posts/the-lectures/2024-02-16-statquest-attention.html#넋두리",
     "title": "Attention Model",
     "section": "넋두리",
-    "text": "넋두리\nLSTM은 단기와 장기의 기억을 나눠서 전달함으로써 RNN이 지는 문제점을 극복하고자 했다. 하지만 여전히 남는 문제가 있었으니, 언어에 따라서 혹은 표현에 따라서 거리가 많이 떨어지는 정보값이 중요해지는 경우가 종종 존재한다.\n아래의 그림을 보자.\n\n\n\n\n\n\n\n\n\n맨 앞의 토큰이 문장 전체의 의미에 가장 중요하다.\n\n\n\n\n \n\n\n\n\n\nLSTM의 실패\n\n\n\n\n \n\n\n\n\n\n인코더의 정보를 디코더로 직접 넘겨주면 어떨까?"
+    "text": "넋두리\nLSTM은 단기와 장기의 기억을 나눠서 전달함으로써 RNN이 지는 문제점을 극복하고자 했다. 하지만 여전히 남는 문제가 있었으니, 언어에 따라서 혹은 표현에 따라서 거리가 많이 떨어지는 정보값이 중요해지는 경우가 종종 존재한다.\n아래의 그림을 보자.\n\n\n\n\n\n\n\n\n\n맨 앞의 토큰이 문장 전체의 의미에 가장 중요하다.\n\n\n\n\n \n\n\n\n\n\nLSTM의 실패; 인코딩이 길어지면 앞에 정보가 소실될 수 있다.\n\n\n\n\n \n\n\n\n\n\n인코더의 정보를 디코더로 직접 넘겨주면 어떨까?"
   },
   {
     "objectID": "posts/the-lectures/2024-02-16-statquest-attention.html#어텐션이란-무엇인가",
@@ -1278,7 +1278,7 @@
     "href": "posts/the-lectures/2024-02-16-statquest-attention.html#seq2seq-모델과-비교하기",
     "title": "Attention Model",
     "section": "Seq2Seq 모델과 비교하기",
-    "text": "Seq2Seq 모델과 비교하기\n아래 그림에서 보듯이 Seq2Seq 모델에 비해서 인코딩의 정보가 디코딩에 직접적으로 영향을 끼치는 것을 알 수 있다.\n\n\n\n\n\n\n\n\n\n어텐션을 반영한 인코더-디코더 과정\n\n\n\n\n \n\n\n\n\n\nseq2seq 인코더-디코더 과정\n\n\n\n\n\n\n\n\n맨 앞의 토큰이 문장 전체의 의미에 가장 중요하다.\nLSTM의 실패\n인코더의 정보를 디코더로 직접 넘겨주면 어떨까?\n어텐션 구현하기 1\n어텐션 구현하기 2\n어텐션을 반영한 디코딩 워드 생성 1\n어텐션을 반영한 디코딩 워드 생성 2\n어텐션을 반영한 인코더-디코더 과정\nseq2seq 인코더-디코더 과정"
+    "text": "Seq2Seq 모델과 비교하기\n아래 그림에서 보듯이 Seq2Seq 모델에 비해서 인코딩의 정보가 디코딩에 직접적으로 영향을 끼치는 것을 알 수 있다.\n\n\n\n\n\n\n\n\n\n어텐션을 반영한 인코더-디코더 과정\n\n\n\n\n \n\n\n\n\n\nseq2seq 인코더-디코더 과정\n\n\n\n\n\n\n\n\n맨 앞의 토큰이 문장 전체의 의미에 가장 중요하다.\nLSTM의 실패; 인코딩이 길어지면 앞에 정보가 소실될 수 있다.\n인코더의 정보를 디코더로 직접 넘겨주면 어떨까?\n어텐션 구현하기 1\n어텐션 구현하기 2\n어텐션을 반영한 디코딩 워드 생성 1\n어텐션을 반영한 디코딩 워드 생성 2\n어텐션을 반영한 인코더-디코더 과정\nseq2seq 인코더-디코더 과정"
   },
   {
     "objectID": "posts/container/2021-09-13-podman-1.html",
@@ -2153,7 +2153,7 @@
     "href": "posts/the-lectures/2024-02-15-statquest-seq2seq.html#decoder",
     "title": "Sequence to Sequence Model",
     "section": "Decoder",
-    "text": "Decoder\n\n\n\n\n\n\n\n\n\n인코더와 디코더의 웨이트와 바이어스는 서로 다르다.\n\n\n\n\n \n\n\n\n\n\n디코더의 인풋; 디코딩의 맥락에서 필요한 단어를 임베딩해서 이 녀석을 투입으로 사용한다.\n\n\n\n\n\n\nWord Embedding for Encoder and Decoder\n인코딩과 디코딩이라고 생각하면 각각 인코딩에서 인풋을 디코딩에서 아웃풋을 처리하는 이미지를 떠올릴 수 있다. 하지만 ’번역’의 맥락에서 인코딩은 인코딩되는 세계의 단어의 정보를 압축하는 것이고 디코딩이란 이 정보에 기반해서 디코딩 세계의 단어의 정보로 풀어내는 것을 의미한다. 따라서 인코딩과 디코딩 각각에 대해서 워드 임베딩이 필요하고, 물론 각각의 웨이트와 바이어스 역시 다르다.\n\n\n\n\n\n\n \n\n\n\n\n\n워드 임베딩\n\n\n\n\n \n\n\n\n\n\nWord Unembedding?\n디코더의 끝단에에서는 디코딩된 정보를 다시 말로 풀어주는 과정이 필요하다. 이는 워드 ㅇㅁ베딩의 역과정이라고 생각하면 된다.\n\n\n\n\n\n\n \n\n\n\n\n\n디코딩의 벡터를 다시 단어로\n\n\n\n\n \n\n\n\n\n\n&lt;EOS&gt; 사용하기\n디코딩에서는 &lt;EOS&gt;를 먼저 넣는다. 그리고 디코딩 프로세스는 &lt;EOS&gt;가 나올 때까지 계속한다.\n\n\n\n\n\n\n\n\n\n&lt;EOS&gt;에서 시작!\n\n\n\n\n \n\n\n\n\n\n&lt;EOS&gt;가 풀려 나올 때까지\n\n\n\n\n \n\n\n\n\n\n전체 과정\n\n\n\n\n\n\n\n\n인코더 만들기\n컨텍스트 벡터\n인코더와 디코더의 웨이트와 바이어스는 서로 다르다.\n디코더의 인풋; 디코딩의 맥락에서 필요한 단어를 임베딩해서 이 녀석을 투입으로 사용한다.\n워드 임베딩\n디코딩의 벡터를 다시 단어로\n&lt;EOS&gt;에서 시작!\n&lt;EOS&gt;가 풀려 나올 때까지\n전체 과정"
+    "text": "Decoder\n\n\n\n\n\n\n\n\n\n인코더와 디코더의 웨이트와 바이어스; 둘은 서로 다른 네트워크이고 파라미터도 다르다.\n\n\n\n\n \n\n\n\n\n\n디코더의 인풋; 디코딩의 맥락에서 필요한 단어를 임베딩해서 이 녀석을 투입으로 사용한다.\n\n\n\n\n\n\nWord Embedding for Encoder and Decoder\n인코딩과 디코딩이라고 생각하면 각각 인코딩에서 인풋을 디코딩에서 아웃풋을 처리하는 이미지를 떠올릴 수 있다. 하지만 ’번역’의 맥락에서 인코딩은 인코딩되는 세계의 단어의 정보를 압축하는 것이고 디코딩이란 이 정보에 기반해서 디코딩 세계의 단어의 정보로 풀어내는 것을 의미한다. 따라서 인코딩과 디코딩 각각에 대해서 워드 임베딩이 필요하고, 물론 각각의 웨이트와 바이어스 역시 다르다.\n\n\n\n\n\n\n \n\n\n\n\n\n워드 임베딩\n\n\n\n\n \n\n\n\n\n\nWord Unembedding?\n디코더의 끝단에에서는 디코딩된 정보를 다시 말로 풀어주는 과정이 필요하다. 이는 워드 ㅇㅁ베딩의 역과정이라고 생각하면 된다.\n\n\n\n\n\n\n \n\n\n\n\n\n디코딩의 벡터를 다시 단어로\n\n\n\n\n \n\n\n\n\n\n&lt;EOS&gt; 사용하기\n디코딩에서는 &lt;EOS&gt;를 먼저 넣는다. 그리고 디코딩 프로세스는 &lt;EOS&gt;가 나올 때까지 계속한다.\n\n\n\n\n\n\n\n\n\n&lt;EOS&gt;에서 시작!\n\n\n\n\n \n\n\n\n\n\n&lt;EOS&gt;가 풀려 나올 때까지\n\n\n\n\n \n\n\n\n\n\n전체 과정\n\n\n\n\n\n\n\n\n인코더 만들기\n컨텍스트 벡터\n인코더와 디코더의 웨이트와 바이어스; 둘은 서로 다른 네트워크이고 파라미터도 다르다.\n디코더의 인풋; 디코딩의 맥락에서 필요한 단어를 임베딩해서 이 녀석을 투입으로 사용한다.\n워드 임베딩\n디코딩의 벡터를 다시 단어로\n&lt;EOS&gt;에서 시작!\n&lt;EOS&gt;가 풀려 나올 때까지\n전체 과정"
   },
   {
     "objectID": "posts/the-lectures/2024-02-13-statquest-transformer.html",

@@ -34,7 +34,7 @@ LSTM은 단기와 장기의 기억을 나눠서 전달함으로써 RNN이 지는
 ::: {layout="[[5, -1, 5, -1, 5]]" layout-valign="bottom"}
 ![맨 앞의 토큰이 문장 전체의 의미에 가장 중요하다.](./images/attention/01.png){ style="border: 1px solid #000;" }
 
-![LSTM의 실패](./images/attention/02.png){ style="border: 1px solid #000;" }
+![LSTM의 실패; 인코딩이 길어지면 앞에 정보가 소실될 수 있다.](./images/attention/02.png){ style="border: 1px solid #000;" }
 
 ![인코더의 정보를 디코더로 직접 넘겨주면 어떨까?](./images/attention/03.png){ style="border: 1px solid #000;" }
 :::

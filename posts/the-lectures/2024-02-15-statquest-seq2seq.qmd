@@ -46,7 +46,7 @@ format:
 ## Decoder 
 
 ::: {layout="[[5, -1, 5]]" layout-valign="bottom"}
-![인코더와 디코더의 웨이트와 바이어스는 서로 다르다.](./images/seq2seq/03.png){ style="border: 1px solid #000;" }
+![인코더와 디코더의 웨이트와 바이어스; 둘은 서로 다른 네트워크이고 파라미터도 다르다.](./images/seq2seq/03.png){ style="border: 1px solid #000;" }
 
 ![디코더의 인풋; 디코딩의 맥락에서 필요한 단어를 임베딩해서 이 녀석을 투입으로 사용한다.](./images/seq2seq/04.png){ style="border: 1px solid #000;" }
 :::
