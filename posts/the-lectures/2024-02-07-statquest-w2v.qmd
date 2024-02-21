@@ -44,10 +44,12 @@ w2v의 기본 아이디어 위주로 정리해 보자.
 
 ## Neural Net
 
-::: {layout="[[5,-1,5]]" layout-valign="bottom"}
-![신경망을 구성해보자.](./images/w2v/w2v-2.png){ style="border: 1px solid #000;" }
+::: {layout="[[5,-1,5], [-0.05, 1, -0.05]]" layout-valign="bottom"}
+![신경망의 구성](./images/w2v/w2v-2.png){ style="border: 1px solid #000;" }
 
-![신경망의 투입이 예측(뒤에 나올 단어)을 잘 맞출 수 있도록 네트워크의 웨이트를 조율해나간다.](./images/w2v/w2v-3.png){ style="border: 1px solid #000;" }
+![나올 단어 예측](./images/w2v/w2v-3.png){ style="border: 1px solid #000;" }
+
+신경망의 투입이 예측(뒤에 나올 단어)을 잘 맞출 수 있도록 네트워크의 웨이트와 바이어스를 조율해나간다
 :::
 
 이제 신경망을 구성해서 학습을 시킬 차례다. 투입은 당연히 각 단어의 벡터이다. 해당 단어만을 1로 처리하고 나머지를 0으로 둔다. 산출 즉 아웃풋은 뒤에 나올 단어의 예측치가 된다. 이 뉴럴넷을 학습시킬 때 좋은 결과란 뒤에 나올 말을 잘 맞추는 것이다. 
@@ -56,10 +58,12 @@ w2v의 기본 아이디어 위주로 정리해 보자.
 
 ## Negative Sampling 
 
-::: {layout="[[5, -1, 5]]" layout-valign="bottom"}
-![전체를 전부 학습하면 자원의 낭비가 막심하다!](./images/w2v/w2v-4.png){ style="border: 1px solid #000;" }
+::: {layout="[[5, -1, 5], [-0.05, 1, -0.05]]" layout-valign="bottom"}
+![전체 학습하면 자원의 낭비가 막심](./images/w2v/w2v-4.png){ style="border: 1px solid #000;" }
 
-![Divide and Conquer! 그림에서 보듯이 "A"를 예측하기 위해서 "aardvark", "abandon"만을 남긴다. 산출에서 "aardvark"도 고려하지 않아도 된다. 이렇게 하면 학습해야 할 웨이트의 수가 300개로 줄어든다.](./images/w2v/w2v-5.png){ style="border: 1px solid #000;" }
+![Divide and Conquer!](./images/w2v/w2v-5.png){ style="border: 1px solid #000;" }
+
+ "A"를 예측하기 위해서 "aardvark", "abandon"만을 남긴다. 산출에서 "aardvark"도 고려하지 않아도 된다. 이렇게 하면 학습해야 할 웨이트의 수가 300개로 줄어든다.
 :::
 
 이 녀석들을 한방에 학습시키려면 너무 오랜 시간과 자원이 소모될 것이다. 그래서 조금 꼼수를 고안해볼 수 있을 것이다. 특정 단어를 예측하는데 필요한 단어를 임의로 선택하고 이 녀석의 연결망만 학습시키는 것이다. 이를 negative sampling이라고 한다.

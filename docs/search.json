@@ -2230,14 +2230,14 @@
     "href": "posts/the-lectures/2024-02-07-statquest-w2v.html#neural-net",
     "title": "Word2Vec",
     "section": "Neural Net",
-    "text": "Neural Net\n\n\n\n\n\n\n\n\n\n신경망을 구성해보자.\n\n\n\n\n \n\n\n\n\n\n신경망의 투입이 예측(뒤에 나올 단어)을 잘 맞출 수 있도록 네트워크의 웨이트를 조율해나간다.\n\n\n\n\n\n이제 신경망을 구성해서 학습을 시킬 차례다. 투입은 당연히 각 단어의 벡터이다. 해당 단어만을 1로 처리하고 나머지를 0으로 둔다. 산출 즉 아웃풋은 뒤에 나올 단어의 예측치가 된다. 이 뉴럴넷을 학습시킬 때 좋은 결과란 뒤에 나올 말을 잘 맞추는 것이다.\n물론 실전 뉴럴넷의 파라미터 차원이 훨씬 복잡하다. 그림에서 보듯이 학습에 단어 3백만 개와 100개의 액티베이션 펑션이 있다고 하자. 아래 그림에 보듯이, 3백만 X 100 X 2 해서 6억 개의 웨이트가 필요하다."
+    "text": "Neural Net\n\n\n\n\n\n\n\n\n\n신경망의 구성\n\n\n\n\n \n\n\n\n\n\n나올 단어 예측\n\n\n\n\n\n\n \n\n\n신경망의 투입이 예측(뒤에 나올 단어)을 잘 맞출 수 있도록 네트워크의 웨이트와 바이어스를 조율해나간다\n\n\n \n\n\n\n이제 신경망을 구성해서 학습을 시킬 차례다. 투입은 당연히 각 단어의 벡터이다. 해당 단어만을 1로 처리하고 나머지를 0으로 둔다. 산출 즉 아웃풋은 뒤에 나올 단어의 예측치가 된다. 이 뉴럴넷을 학습시킬 때 좋은 결과란 뒤에 나올 말을 잘 맞추는 것이다.\n물론 실전 뉴럴넷의 파라미터 차원이 훨씬 복잡하다. 그림에서 보듯이 학습에 단어 3백만 개와 100개의 액티베이션 펑션이 있다고 하자. 아래 그림에 보듯이, 3백만 X 100 X 2 해서 6억 개의 웨이트가 필요하다."
   },
   {
     "objectID": "posts/the-lectures/2024-02-07-statquest-w2v.html#negative-sampling",
     "href": "posts/the-lectures/2024-02-07-statquest-w2v.html#negative-sampling",
     "title": "Word2Vec",
     "section": "Negative Sampling",
-    "text": "Negative Sampling\n\n\n\n\n\n\n\n\n\n전체를 전부 학습하면 자원의 낭비가 막심하다!\n\n\n\n\n \n\n\n\n\n\nDivide and Conquer! 그림에서 보듯이 “A”를 예측하기 위해서 “aardvark”, “abandon”만을 남긴다. 산출에서 “aardvark”도 고려하지 않아도 된다. 이렇게 하면 학습해야 할 웨이트의 수가 300개로 줄어든다.\n\n\n\n\n\n이 녀석들을 한방에 학습시키려면 너무 오랜 시간과 자원이 소모될 것이다. 그래서 조금 꼼수를 고안해볼 수 있을 것이다. 특정 단어를 예측하는데 필요한 단어를 임의로 선택하고 이 녀석의 연결망만 학습시키는 것이다. 이를 negative sampling이라고 한다.\n\n\n\n네 개의 단어를 숫자로 바꾸자.\n신경망을 구성해보자.\n신경망의 투입이 예측(뒤에 나올 단어)을 잘 맞출 수 있도록 네트워크의 웨이트를 조율해나간다.\n전체를 전부 학습하면 자원의 낭비가 막심하다!\nDivide and Conquer! 그림에서 보듯이 “A”를 예측하기 위해서 “aardvark”, “abandon”만을 남긴다. 산출에서 “aardvark”도 고려하지 않아도 된다. 이렇게 하면 학습해야 할 웨이트의 수가 300개로 줄어든다."
+    "text": "Negative Sampling\n\n\n\n\n\n\n\n\n\n전체 학습하면 자원의 낭비가 막심\n\n\n\n\n \n\n\n\n\n\nDivide and Conquer!\n\n\n\n\n\n\n \n\n\n“A”를 예측하기 위해서 “aardvark”, “abandon”만을 남긴다. 산출에서 “aardvark”도 고려하지 않아도 된다. 이렇게 하면 학습해야 할 웨이트의 수가 300개로 줄어든다.\n\n\n \n\n\n\n이 녀석들을 한방에 학습시키려면 너무 오랜 시간과 자원이 소모될 것이다. 그래서 조금 꼼수를 고안해볼 수 있을 것이다. 특정 단어를 예측하는데 필요한 단어를 임의로 선택하고 이 녀석의 연결망만 학습시키는 것이다. 이를 negative sampling이라고 한다.\n\n\n\n네 개의 단어를 숫자로 바꾸자.\n신경망의 구성\n나올 단어 예측\n전체 학습하면 자원의 낭비가 막심\nDivide and Conquer!"
   },
   {
     "objectID": "posts/the-lectures/2024-02-13-statquest-rnn.html",
