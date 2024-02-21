@@ -39,12 +39,14 @@ RNN의 가장 큰 문제는 웨이트의 크기에 따라서 효과가 지나치
 
 LSTM의 기본 구조는 복잡해보이지만, 아이디어는 단순하다. 
 
-::: {layout="[[5, -1, 5, -1, 5]]" layout-valign="bottom"}
+::: {layout="[[5, -0.5, 5, -0.5, 5], [-0.05, 1, -0.05]]" layout-valign="bottom"}
 ![LSTM의 아이디어](./images/lstm/02.png){ style="border: 1px solid #000;" }
 
 ![LSTM의 기본 구조](./images/lstm/03.png){ style="border: 1px solid #000;" }
 
-![장기 기억에는 웨이트나 바이어스가 없다.](./images/lstm/06.png){ style="border: 1px solid #000;" }
+![웨이트와 바이어스가 없는 장기 기억](./images/lstm/06.png){ style="border: 1px solid #000;" }
+
+장기와 단기의 정보를 별도로 전달하는 발상이 LSTM이다. 
 :::
 
 ## Three Gates

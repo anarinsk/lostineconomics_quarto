@@ -213,9 +213,9 @@ ul.task-list li input[type="checkbox"] {
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout="[[5, -1, 5, -1, 5]]">
+<div class="quarto-layout-panel" data-layout="[[5, -0.5, 5, -0.5, 5], [-0.05, 1, -0.05]]">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-layout-cell" style="flex-basis: 29.4%;justify-content: flex-start;">
+<div class="quarto-layout-cell" style="flex-basis: 31.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="./images/lstm/02.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="LSTM의 아이디어"><img src="./images/lstm/02.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="LSTM의 아이디어"></a></p>
@@ -223,10 +223,10 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.9%;justify-content: flex-start;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 3.1%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 29.4%;justify-content: flex-start;">
+<div class="quarto-layout-cell" style="flex-basis: 31.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="./images/lstm/03.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="LSTM의 기본 구조"><img src="./images/lstm/03.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="LSTM의 기본 구조"></a></p>
@@ -234,16 +234,27 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.9%;justify-content: flex-start;">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 3.1%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 29.4%;justify-content: flex-start;">
+<div class="quarto-layout-cell" style="flex-basis: 31.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/lstm/06.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="장기 기억에는 웨이트나 바이어스가 없다."><img src="./images/lstm/06.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="장기 기억에는 웨이트나 바이어스가 없다."></a></p>
-<figcaption>장기 기억에는 웨이트나 바이어스가 없다.</figcaption>
+<p><a href="./images/lstm/06.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4" title="웨이트와 바이어스가 없는 장기 기억"><img src="./images/lstm/06.png" class="img-fluid figure-img" style="border: 1px solid #000;" alt="웨이트와 바이어스가 없는 장기 기억"></a></p>
+<figcaption>웨이트와 바이어스가 없는 장기 기억</figcaption>
 </figure>
 </div>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 4.6%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 90.9%;justify-content: flex-start;">
+<p>장기와 단기의 정보를 별도로 전달하는 발상이 LSTM이다.</p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 4.6%;justify-content: flex-start;">
+<p>&nbsp;</p>
 </div>
 </div>
 </div>
@@ -370,7 +381,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="glightbox-desc lightbox-desc-1">RNN의 문제점; KABOOM!!!은 explode, poof!!! vanish를 의미한다.</span>
 <span class="glightbox-desc lightbox-desc-2">LSTM의 아이디어</span>
 <span class="glightbox-desc lightbox-desc-3">LSTM의 기본 구조</span>
-<span class="glightbox-desc lightbox-desc-4">장기 기억에는 웨이트나 바이어스가 없다.</span>
+<span class="glightbox-desc lightbox-desc-4">웨이트와 바이어스가 없는 장기 기억</span>
 <span class="glightbox-desc lightbox-desc-5">Sigmoid 함수</span>
 <span class="glightbox-desc lightbox-desc-6">Tanh 함수</span>
 <span class="glightbox-desc lightbox-desc-7">Day 1의 LSTM 처리</span>
@@ -911,7 +922,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
