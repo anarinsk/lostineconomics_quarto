@@ -91,10 +91,12 @@ RNN은 CNN과 달리
 
 ### Comments 
 
-::: {layout="[[5, -1, 5]]"  layout-valign="bottom"}
+::: {layout="[[5, -1, 5], [-0.05, 1, -0.05]]"  layout-valign="bottom"}
 ![멀티-헤드 어텐션](./images/transformer/7.png){ style="border: 1px solid #000;" }
 
-![Residual Connection; 뉴럴넷에서 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더한다.](./images/transformer/8.png){ style="border: 1px solid #000;" }
+![Residual Connection](./images/transformer/8.png){ style="border: 1px solid #000;" }
+
+ 멀티-헤드 어텐션은 같은 단어가 여러 개의 의미를 지니는 경우를 위해 필요하다. 몇 개를 설정해야 하는지는 흑마술이다. 원활한 학습을 도모하기 위해서 워드 임베딩과 포지셔널 임베딩의 벡터를 더하는 것이 residual connection의 역할이다. 
 :::
 
 만일 셀프 어텐션에서 같은 언어끼리라도 문장에서 서로 다른 의미망을 지닐 수 있다면 여러 개의 어텐션 유닛이 필요할 것이다. 이를 multi-head attention이라고 한다.
