@@ -1222,7 +1222,7 @@
     "href": "posts/the-lectures/2024-02-14-lstm.html#기본-구조",
     "title": "Long Short-Term Memory (LSTM) Network",
     "section": "기본 구조",
-    "text": "기본 구조\nLSTM의 기본 구조는 복잡해보이지만, 아이디어는 단순하다.\n\n\n\n\n\n\n\n\n\nLSTM의 아이디어; 장기와 단기의 기억을 분리해서 각각을 업데이트한다.\n\n\n\n\n \n\n\n\n\n\nLSTM의 기본 구조\n\n\n\n\n \n\n\n\n\n\n장기 기억에는 웨이트나 바이어스가 없다."
+    "text": "기본 구조\nLSTM의 기본 구조는 복잡해보이지만, 아이디어는 단순하다.\n\n\n\n\n\n\n\n\n\nLSTM의 아이디어\n\n\n\n\n \n\n\n\n\n\nLSTM의 기본 구조\n\n\n\n\n \n\n\n\n\n\n장기 기억에는 웨이트나 바이어스가 없다."
   },
   {
     "objectID": "posts/the-lectures/2024-02-14-lstm.html#three-gates",
@@ -1236,7 +1236,7 @@
     "href": "posts/the-lectures/2024-02-14-lstm.html#how-to-work",
     "title": "Long Short-Term Memory (LSTM) Network",
     "section": "How to Work",
-    "text": "How to Work\n이렇게 하나의 유닛이 매 기에 들어오는 정보를 처리한다고 보면 된다. 아래 예시에서 1기에 정보가 세 단계의 LSTM 유닛을 거쳐서 처리되 이런 유닛들이 이어져 마지막 정보까지 처리된다.\n\n\n\n\n\n\n\n\n\nDay 1의 LSTM 처리\n\n\n\n\n \n\n\n\n\n\nDay4까지의 처리를 통해 Day 5 예측\n\n\n\n\n\n\n\n\nRNN의 문제점; KABOOM!!!은 explode, poof!!! vanish를 의미한다.\nLSTM의 아이디어; 장기와 단기의 기억을 분리해서 각각을 업데이트한다.\nLSTM의 기본 구조\n장기 기억에는 웨이트나 바이어스가 없다.\nSigmoid 함수\nTanh 함수\nDay 1의 LSTM 처리\nDay4까지의 처리를 통해 Day 5 예측"
+    "text": "How to Work\n이렇게 하나의 유닛이 매 기에 들어오는 정보를 처리한다고 보면 된다. 아래 예시에서 1기에 정보가 세 단계의 LSTM 유닛을 거쳐서 처리되 이런 유닛들이 이어져 마지막 정보까지 처리된다.\n\n\n\n\n\n\n\n\n\nDay 1의 LSTM 처리\n\n\n\n\n \n\n\n\n\n\nDay4까지의 처리를 통해 Day 5 예측\n\n\n\n\n\n\n\n\nRNN의 문제점; KABOOM!!!은 explode, poof!!! vanish를 의미한다.\nLSTM의 아이디어\nLSTM의 기본 구조\n장기 기억에는 웨이트나 바이어스가 없다.\nSigmoid 함수\nTanh 함수\nDay 1의 LSTM 처리\nDay4까지의 처리를 통해 Day 5 예측"
   },
   {
     "objectID": "posts/the-lectures/2024-02-16-statquest-attention.html",
