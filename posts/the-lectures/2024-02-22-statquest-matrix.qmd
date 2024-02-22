@@ -68,9 +68,10 @@ format:
 
 어텐션도 네트워크로 그리면 복잡하지만 행렬로 표현하면 간단하다! 
 
-
-:::{}
+:::{layout=[[4,-1,4]] layout-valign="bottom"}
 
 ![어텐션의 행렬 표현](./images/matrix/matrix-7.png)
+
+![풀어보면 이렇다!](./images/matrix/matrix-8.png)
 
 :::
