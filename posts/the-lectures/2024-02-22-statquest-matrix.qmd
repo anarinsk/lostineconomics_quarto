@@ -1,0 +1,76 @@
+---
+title: "Matrix Algebra and Neural Networks" 
+description: 선형 대수는 어떻게 표현을 간략하게 만드는가?
+author: "JS HUHH"
+date: "02/22/2024"
+image: "./images/cat-network.webp"
+categories: [the-lectures, machine-learning]
+#fig-align: center
+filters:
+   - lightbox
+   #- line-highlight
+lightbox: auto
+#jupyter: python3
+draft: false
+format:
+  html:
+    code-fold: false
+    code-block-bg: true
+    highlight-style: github
+---
+
+## TL; DR
+
+선형대수는 인생을 쉽게 하지~ 
+
+{{< video https://www.youtube.com/watch?v=ZTt9gsGcdDo >}}
+
+## 넋두리 
+
+선형대수는 딥러닝 알고리즘 과정을 묘사하고 이해는데 편리하고 간결한 표현 형식을 제공한다. 강의의 내용을 살펴보자. 
+
+## 행렬의 본질 
+
+행렬을 함수로 이해하면 좋다. 즉, 어떤 인풋이 있을 때 이를 이렇게 저렇게 변형하는 것이 형렬의 역할이다. 
+
+:::{layout=[[4,-1,4]] layout-valign="bottom"}
+
+![행렬은 변형](./images/matrix/matrix-1.png)
+
+![행렬 곱은 합성함수와 유사하다](./images/matrix/matrix-2.png)
+:::
+
+## 뉴럴넷을 행렬 연산으로 표현하기
+
+:::{layout=[[4,-1,4]] layout-valign="bottom"}
+
+![아래의 뉴럴넷은 위의 행렬 연산](./images/matrix/matrix-3.png)
+
+![매트릭스 표현](./images/matrix/matrix-4.png)
+
+:::
+
+## pytorch의 사례 보기 
+
+파이토치 설명 중에서 다음과 같은 대목이 눈에 띈다. 
+
+
+:::{layout=[[4,-1,4]] layout-valign="bottom"}
+
+![선형 결합으로 구성된 뉴럴넷](./images/matrix/matrix-5.png)
+
+![뉴럴넷의 선형적 의미](./images/matrix/matrix-6.png)
+
+:::
+
+
+## 어텐션의 행렬 표현 
+
+어텐션도 네트워크로 그리면 복잡하지만 행렬로 표현하면 간단하다! 
+
+
+:::{}
+
+![어텐션의 행렬 표현](./images/matrix/matrix-7.png)
+
+:::
