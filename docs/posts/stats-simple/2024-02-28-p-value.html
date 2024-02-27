@@ -250,7 +250,7 @@ P(A|B) \neq P(B|A)
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>이 사례는 <a href="https://outsidetheasylum.blog/an-actually-intuitive-explanation-of-p-values/">여기</a>에서 가져왔다. 보다 익살스런 사례로 <a href="https://www.explainxkcd.com/wiki/index.php/882:_Significant">xkcd 882: Significant</a>도 참고하자.</p>
-</div></div><p>D&amp;D라는 게임은 다각 20면을 지닌 주사위를 쓴다. 만일 “녹색 모자를 쓰고 주사위를 던질 때 20이 더 잘나온다”는 대립 가설을 세웠다고 하자. 이때 영가설은 “녹색 모자를 쓰는 것은 주사위의 결과에 영향을 미치지 않는다”가 될 것이다. 그리고 녹색 모자를 쓴 채 주사위를 던져서 20을 얻었다. 이때 p값은 어떻게 될까? 0.05이다.</p>
+</div></div><p>D&amp;D라는 게임은 다각 20면을 지닌 주사위를 쓴다. 만일 “녹색 모자를 쓰고 주사위를 던질 때 20이 더 잘나온다”는 대립가설(alternative hypothesis)을 세웠다고 하자. 이때 영가설은 “녹색 모자를 쓰는 것은 주사위의 결과에 영향을 미치지 않는다”가 될 것이다. 그리고 녹색 모자를 쓴 채 주사위를 던져서 20을 얻었다. 이때 p값은 어떻게 될까? 0.05이다.</p>
 <p><span class="math display">\[
 P(\text{E}|H_0) = \dfrac{1}{20} = 0.05
 \]</span></p>
@@ -981,7 +981,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","loop":false,"closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
