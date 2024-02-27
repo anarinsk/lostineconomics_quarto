@@ -112,7 +112,7 @@ p값은 $P(\text{E}|H_0)$이다. 통계적인 검정력(statistical power)이란
 - false negative의 허용 확률 $\beta$가 2종 오류(type II error)이다. 
 - 세계의 상태를 나누는 것은 예측이 아니다. 세계의 상태는 위의 표에서 두 열 중 하나다. 따라서 해당 열에 대한 프리딕션은 Positive이거나 Negative이거나 둘 중 하나가 된다. 따라서 열에 관한 예측의 합은 1이 된다. 
 - 행의 합은 그렇지 않다. 왜그럴까? 
-- Negative의 크기를 $N$, Positive의 크기를 $P$라고 하자. 이때 유병률은 $\frac{P}{P+N}$이다. 즉, $P(\neg H_0)$.
+- Negative의 크기를 $N$, Positive의 크기를 $P$라고 하자. 이때 유병률은 $\frac{P}{P+N}$이다. 이 값은 $P(\neg H_0)$와 같다. 
 
 ### $\alpha$와 $\beta$의 tradeoff
 
