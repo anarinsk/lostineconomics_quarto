@@ -419,12 +419,12 @@ P(H_0|\text{E}) = \dfrac{\alpha P(H_0)}{\alpha P(H_0) + (1-\beta)P(\neg H_0)}
 </thead>
 <tbody>
 <tr class="odd">
-<td>reject</td>
+<td>reject <span class="math inline">\(H_0\)</span></td>
 <td>false positive(0.1), 90</td>
 <td>true positive(0.6), 60</td>
 </tr>
 <tr class="even">
-<td>fail to reject</td>
+<td>accept <span class="math inline">\(H_0\)</span></td>
 <td>true negative(0.9), 810</td>
 <td>false negative(0.4), 40</td>
 </tr>
@@ -982,7 +982,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false});
+<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
