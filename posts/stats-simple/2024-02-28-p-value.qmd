@@ -146,7 +146,7 @@ $$
 | reject         | false positive(0.1), 90  | true positive(0.6), 60 |
 | fail to reject | true negative(0.9), 810 | false negative(0.4), 40   |
 
-Positive라고 보고한 결과, 즉 $H_0$을 reject한 연구 중에서 오직 40%($\frac{60}{60+150}$)만 타당한 결과다. 나머지 60%는 false positive에 속한다. 
+Positive라고 보고한 결과, 즉 $H_0$을 reject한 연구 중에서 오직 40%($\frac{60}{90+60}$)만 타당한 결과다. 나머지 60%는 false positive에 속한다! 
 
 ### p값은 줄일수록 좋은가? 
 

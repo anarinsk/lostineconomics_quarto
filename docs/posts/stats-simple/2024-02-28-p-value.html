@@ -430,7 +430,7 @@ P(H_0|\text{E}) = \dfrac{\alpha P(H_0)}{\alpha P(H_0) + (1-\beta)P(\neg H_0)}
 </tr>
 </tbody>
 </table>
-<p>Positive라고 보고한 결과, 즉 <span class="math inline">\(H_0\)</span>을 reject한 연구 중에서 오직 40%(<span class="math inline">\(\frac{60}{60+150}\)</span>)만 타당한 결과다. 나머지 60%는 false positive에 속한다.</p>
+<p>Positive라고 보고한 결과, 즉 <span class="math inline">\(H_0\)</span>을 reject한 연구 중에서 오직 40%(<span class="math inline">\(\frac{60}{90+60}\)</span>)만 타당한 결과다. 나머지 60%는 false positive에 속한다!</p>
 </section>
 <section id="p값은-줄일수록-좋은가" class="level3">
 <h3 class="anchored" data-anchor-id="p값은-줄일수록-좋은가">p값은 줄일수록 좋은가?</h3>
@@ -982,7 +982,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
