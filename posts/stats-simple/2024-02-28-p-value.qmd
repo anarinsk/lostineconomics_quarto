@@ -100,8 +100,8 @@ p값은 $P(\text{E}|H_0)$이다. 통계적인 검정력(statistical power)이란
 
 |  | Negative | Positive |
 | -------- | :--------: | :--------: |
-| predicted Pos | false positive($\alpha$)  | true positive($1-\beta$) |
-| predicted Neg | true negative($1-\alpha$) | false negative($\beta$)  |
+| predicted Positve | false positive($\alpha$)  | true positive($1-\beta$) |
+| predicted Negative | true negative($1-\alpha$) | false negative($\beta$)  |
 
 : Binary classification {#tbl-binary}
 

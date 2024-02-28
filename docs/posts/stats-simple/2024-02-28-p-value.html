@@ -334,6 +334,11 @@ Table&nbsp;2: Binary classification
 </figcaption>
 <div aria-describedby="tbl-binary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 35%">
+<col style="width: 35%">
+</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
@@ -343,12 +348,12 @@ Table&nbsp;2: Binary classification
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">predicted Pos</td>
+<td style="text-align: left;">predicted Positve</td>
 <td style="text-align: center;">false positive(<span class="math inline">\(\alpha\)</span>)</td>
 <td style="text-align: center;">true positive(<span class="math inline">\(1-\beta\)</span>)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">predicted Neg</td>
+<td style="text-align: left;">predicted Negative</td>
 <td style="text-align: center;">true negative(<span class="math inline">\(1-\alpha\)</span>)</td>
 <td style="text-align: center;">false negative(<span class="math inline">\(\beta\)</span>)</td>
 </tr>
@@ -977,7 +982,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":false});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
