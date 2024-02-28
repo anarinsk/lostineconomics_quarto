@@ -54,7 +54,7 @@ $$
 P(\text{E}|H_0) = \dfrac{1}{20} = 0.05
 $$
 
-약간 에누리를 더해서 10% 유의 수준에서 해당 영가설을 기각했다! 따라서 "녹색 모자를 쓰고 주사위를 던질 때 20이 더 잘 나온다!" 이 말은 맞나? 당연히 이상한 말이다. 수많은 D&D 플레이어들은 이 말이 틀리다는 사실을 경험적으로 너무나(!) 잘 알고 있을 것이다. 
+(약간 에누리를 더해서) 10% 유의 수준에서 해당 영가설을 넉넉하게 기각할 수 있다! 따라서 "녹색 모자를 쓰고 주사위를 던질 때 20이 더 잘 나온다!" 이 말은 맞나? 당연히 이상한 말이다. 수많은 D&D 플레이어들은 이 말이 틀리다는 사실을 경험적으로 너무나(!) 잘 알고 있을 것이다. 
 
 ### 베이즈 정리 
 
@@ -90,18 +90,18 @@ p값은 $P(\text{E}|H_0)$이다. 통계적인 검정력(statistical power)이란
 
 위의 내용은 1종 오류, 2종 오류 그리고 이진 분류와 관련되어 있다. 
 
-::: {layout-ncol=2}
+::: {layout=[10,-0.1,10] layout-valign="top"}
 |  | $H_0$ is true | $H_0$ is false |
-| -------- | -------- | -------- |
-| reject         | false positive ($\alpha$)  | true positive ($1-\beta$) |
-| fail to reject | true negative ($1-\alpha$) | false negative($\beta$)   |
+| -------- | :--------: | :--------: |
+| reject $H_0$        | false positive($\alpha$)  | true positive($1-\beta$) |
+| aceept $H_0$        | true negative($1-\alpha$) | false negative($\beta$)   |
 
 : Error types {#tbl-error}
 
 |  | Negative | Positive |
-| -------- | -------- | -------- |
-| predicted Positive | false positive ($\alpha$)  | true positive ($1-\beta$) |
-| predicted Negative | true negative ($1-\alpha$) | false negative ($\beta$)  |
+| -------- | :--------: | :--------: |
+| predicted Pos | false positive($\alpha$)  | true positive($1-\beta$) |
+| predicted Neg | true negative($1-\alpha$) | false negative($\beta$)  |
 
 : Binary classification {#tbl-binary}
 
@@ -109,8 +109,8 @@ p값은 $P(\text{E}|H_0)$이다. 통계적인 검정력(statistical power)이란
 
 몇 가지 용어를 정리해보자. 
 
-- false positive의 허용 확률 $\alpha$가 1종 오류(type I error)이다.  
-- false negative의 허용 확률 $\beta$가 2종 오류(type II error)이다. 
+- false positive의 허용 확률 $\alpha$가 1종 오류(type I error)이다. 유의수준(significance level)이라고도 한다.
+- false negative의 허용 확률 $\beta$가 2종 오류(type II error)이다. $(1-\beta)$를 통계적 검정력(statistical power)이라고 한다. 
 - 세계의 상태를 나누는 것은 예측이 아니다. 세계의 상태는 위의 표에서 두 열 중 하나다. 따라서 해당 열에 대한 프리딕션은 Positive이거나 Negative이거나 둘 중 하나가 된다. 따라서 열에 관한 예측의 합은 1이 된다. 
 - 행의 합은 그렇지 않다. 왜그럴까? 
 - Negative의 크기를 $N$, Positive의 크기를 $P$라고 하자. 이때 유병률은 $\frac{P}{P+N}$이다. 이 값은 $P(\neg H_0)$와 같다. 
@@ -124,9 +124,7 @@ P(H_0|\text{E}) = \dfrac{\alpha P(H_0)}{\alpha P(H_0) + (1-\beta)P(\neg H_0)}
 $$
 
 
-증거 E를 관찰했을 때 영가설을 기각할 확률을 높이려면 위의 확률을 낮춰야 한다. $\alpha$와 $\beta$가 모두 낮을수록 해당 확률은 낮아진다. 그렇다면 이 둘을 모두 낮추면 좋지 않을까? 
-
-불행하게도 이는 불가능하다. 
+증거 E를 관찰했을 때 영가설을 기각할 확률을 높이려면 위의 확률을 낮춰야 한다. $\alpha$와 $\beta$가 모두 낮을수록 해당 확률은 낮아진다. 그렇다면 이 둘을 모두 낮추면 좋지 않을까? 불행하게도 이는 불가능하다. 
 
 :::{layout=[[-1,4,-1]] layout-valign="bottom"}
 
