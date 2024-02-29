@@ -1,5 +1,5 @@
 ---
-title:  p값,너무 믿지 마세요
+title:  p값? 너무 믿지 마세요
 description: "보고 있는 것과 믿고 싶은 것"
 author: "JS HUHH"
 date: "02/28/2024"
@@ -31,7 +31,7 @@ $$
 P(A|B) \neq P(B|A)
 $$
 
-이다. $P(\text{E}|H_0)$을 생각해보자. $H_0$이 영가설(null hypothesis)이다. E는 증거를 나타난다. 즉, 관측값이다. 우리가 아는 p값이란 영가설이 맞다고 가정할 때 E라는 증거거를 관측할 확률이다. 이는 당연히 $P(H_0|\text{E})$와는 다르다. 
+이다. $P(\text{E}|H_0)$을 생각해보자. $H_0$이 영가설(null hypothesis)이다. E는 증거를 뜻한다. 즉, 관측값이다. 우리가 아는 p값이란 영가설이 맞다고 가정할 때 E라는 증거를 관측할 확률이다. 이는 당연히 $P(H_0|\text{E})$와는 다르다. 
 
 "P의 비극"은 이 둘을 혼동하는 데에서 시작한다. 
 
@@ -45,7 +45,7 @@ $$
 :::
 
 :::{.column-margin}
-이 사례는 [여기](https://outsidetheasylum.blog/an-actually-intuitive-explanation-of-p-values/)에서 가져왔다. 보다 익살스런 사례로 [xkcd 882: Significant](https://www.explainxkcd.com/wiki/index.php/882:_Significant)도 참고하자. 
+이 사례는 [여기](https://outsidetheasylum.blog/an-actually-intuitive-explanation-of-p-values/)에서 가져왔다. 보다 익살스러운 사례로 [xkcd 882: Significant](https://www.explainxkcd.com/wiki/index.php/882:_Significant)도 참고하자. 
 :::
 
 D&D라는 게임은 다각 20면을 지닌 주사위를 쓴다. 만일 "녹색 모자를 쓰고 주사위를 던질 때 20이 더 잘나온다"는 대립가설(alternative hypothesis)을 세웠다고 하자. 이때 영가설은 "녹색 모자를 쓰는 것은 주사위의 결과에 영향을 미치지 않는다"가 될 것이다. 그리고 녹색 모자를 쓴 채 주사위를 던져서 20을 얻었다. 이때 p값은 어떻게 될까? 0.05이다. 
