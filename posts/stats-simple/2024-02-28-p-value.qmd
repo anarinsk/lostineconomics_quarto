@@ -1,6 +1,6 @@
 ---
 title:  p값? 너무 믿지 마세요
-description: "영가설을 기걱하기에 충분한 근거일까?"
+description: "영가설을 기각하기에 충분한 근거일까?"
 author: "JS HUHH"
 date: "02/28/2024"
 image: "./images/cat-stat.png"
