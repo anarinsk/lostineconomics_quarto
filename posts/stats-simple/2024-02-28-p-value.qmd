@@ -1,6 +1,6 @@
 ---
 title:  p값? 너무 믿지 마세요
-description: "보고 있는 것과 믿고 싶은 것"
+description: "영가설을 기걱하기에 충분한 근거일까?"
 author: "JS HUHH"
 date: "02/28/2024"
 image: "./images/cat-stat.png"
