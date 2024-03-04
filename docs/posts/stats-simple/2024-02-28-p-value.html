@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -435,9 +435,9 @@ P(H_0|\text{E}) = \dfrac{\alpha P(H_0)}{\alpha P(H_0) + (1-\beta)P(\neg H_0)}
 </table>
 <p>Positive라고 보고한 결과, 즉 <span class="math inline">\(H_0\)</span>을 reject한 연구 중에서 오직 40%(<span class="math inline">\(\frac{60}{90+60}\)</span>)만 타당한 결과다. 나머지 60%는 false positive에 속한다!</p>
 </section>
-<section id="p값은-줄일수록-좋은가" class="level3">
-<h3 class="anchored" data-anchor-id="p값은-줄일수록-좋은가">p값은 줄일수록 좋은가?</h3>
-<p>만일 <span class="math inline">\(P(E|\neg H_0)\)</span>의 값이 고정되어 있다면, p값, 즉 <span class="math inline">\(P(E|\neg H_0)\)</span>값이 낮을수록 <span class="math inline">\(P(H_0|\text{E})\)</span> 역시 작아질 것이다. 하지만 위에서 보듯이 영가설과 대립가설의 분포가 겹쳐 있는 상황에서 p값이 작다는 것 즉, 1종 오류를 아주 작게 줄인다는 것은 대개의 경우 2종 오류를 늘이게 된다. 만일 2종 오류가 많이 늘지 않는 경우라면 당연히 1종 오류를 줄이는 것이 도움이 된다.</p>
+<section id="p값은-낮을수록-좋은가" class="level3">
+<h3 class="anchored" data-anchor-id="p값은-낮을수록-좋은가">p값은 낮을수록 좋은가?</h3>
+<p>만일 <span class="math inline">\(P(\text{E}|\neg H_0)\)</span> 혹은 <span class="math inline">\((1-\beta)\)</span>의 값이 고정되어 있다면, p값, 즉 <span class="math inline">\(\alpha\)</span> 혹은 <span class="math inline">\(P(\text{E}|H_0)\)</span>값이 낮을수록 <span class="math inline">\(P(H_0|\text{E})\)</span> 역시 작아질 것이다. 하지만 위에서 보듯이 영가설과 대립가설의 분포가 겹쳐 있는 상황에서 p값이 작다는 것 즉, 1종 오류를 아주 작게 줄인다는 것은 대개의 경우 2종 오류를 늘이게 된다. 즉, <span class="math inline">\((1-\beta)\)</span>는 작아지고 우리가 마음 속으로 바라고 있는 값, E라는 증거가 발견되었는데도 영가설 <span class="math inline">\(H_0\)</span>가 맞을 확률은 높아진다. 이 때 <span class="math inline">\(\alpha\)</span>와 <span class="math inline">\(\beta\)</span> 중에서 어떤 것이 <span class="math inline">\(P(H_0|\text{E})\)</span> 변화에 더 큰 영향을 줄것인지는 따져봐야 알 수 있다.</p>
 </section>
 </section>
 <section id="그래서-뭐-어쩌라고" class="level2">
@@ -985,7 +985,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox","loop":false});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
