@@ -52,7 +52,8 @@ GitHub Pages는 훌륭한 스태틱 웹 서비스다. js, css 정도를 쓰는 h
 ![](images/verifying-domain-masked.png)
 :::
 
-자세한 내용은 [여기](https://docs.github.com/ko/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages)를 확인하자. 
+자세한 내용은 [여기](https://docs.github.com/ko/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages)를 확인하자. 그런데 이렇게 도메인을 연결해도 actions의 프로세스에 따라서 custom domain이 풀리는 경우가 있다. 이때 필요한 것이 `CNAME` 파일이다. 페이지가 만들어지는 리포의 디렉토리(보통은 root)에 `CNAME` 파일을 만들고, 그 안에 연결할 도메인 이름을 적어주면 된다. 이렇게 하면 페이지를 퍼블리싱할 때 해당 도메인이 함께 설정된다. 
+
 
 ### 도메인 확인하기 2 (Google Domains)
 
