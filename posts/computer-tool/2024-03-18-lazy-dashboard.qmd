@@ -4,7 +4,7 @@ description: "소박하고 개인적인"
 author: "JS HUHH"
 date: "03/18/2024"
 image: "./images/cat-sketch.webp"
-categories: [computer-tool, pc-install, os]
+categories: [computer-tool, quarto]
 lightbox: auto
 #fig-align: center
 filters:
