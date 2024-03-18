@@ -34,7 +34,7 @@ Quarto Dashboard를 활용해서 개인용 보드를 만들어 보자.
 
 ## Quarto Dashboard 
 
-정적인 페이지로 인터랙티비티가 없는 열람 전용 대시보드를 만들기로 했다면 툴을 선택해야 한다. 마침 딱 적당한 툴이 있다. 문서 작성 도구 Quarto에서 제공하는 [Quarto Dashboards](https://quarto.org/docs/dashboards/)라는 도구가 있다. 쿼토에 익숙한 사람이라면 링크를 둘러보면 장점을 쉽게 파악할 수 있을 것이다. 자세한 설명은 생략한다. 
+정적인 페이지로 인터랙티비티가 없는 열람 전용 대시보드를 만들기로 했다면 툴을 선택해야 한다. 마침 딱 적당한 툴이 있다. 문서 작성 도구 Quarto에서 제공하는 [Quarto Dashboards](https://quarto.org/docs/dashboards/){ target="_blank" }라는 도구가 있다. 쿼토에 익숙한 사람이라면 링크를 둘러보면 장점을 쉽게 파악할 수 있을 것이다. 자세한 설명은 생략한다. 
 
 ## 두 가지 문제 그리고 해결책 
 
@@ -44,9 +44,7 @@ Quarto Dashboard를 활용해서 개인용 보드를 만들어 보자.
 
 정적 웹이라는 것은 기본적으로 html 문서로 구성된다. 로그인 시스템은 해당 문서의 열람 앞에 존재할 것이기 때문에 사실 인증 시스템의 부재를 이 맥락에서 따지는 것이 적당하지 않다. 그럼에도 아쉽다. 깃허브 기준으로 private repo에서 pages를 만들면 전체 공개로 외부에 제공된다. credentials와 같은 민감한 정보는 리포를 private로 만들어 감출 수 있다. 대시 보드 자체에 올라가는 정보가 민감한 정보라면 어떻게 해야 할까? 최소한 페이지에 암호라도 있었으면 싶을 것이다. 이메일로 전달되는 각종 고지서에 적용된 암호화 정도면 충분하겠다. 
 
-<https://github.com/robinmoisson/staticrypt>
-
-staticrypt이라는 도구를 쓰면 html 문서에 암호를 걸 수 있다. 해당 페이지를 깃허브 페이지스로 서브하면 암호를 먼저 입력해야 내용을 볼 수 있다. 이것이 제대로 된 로그인 시스템이라고 할 수는 없지만, 개인적인 용도의 안전 장치 정도로는 충분하다.
+[Staticrypt](https://github.com/robinmoisson/staticrypt){target="_blank"}이라는 도구를 쓰면 html 문서에 암호를 걸 수 있다. 해당 페이지를 깃허브 페이지스로 서브하면 암호를 먼저 입력해야 내용을 볼 수 있다. 이것이 제대로 된 로그인 시스템이라고 할 수는 없지만, 개인적인 용도의 안전 장치 정도로는 충분하다.
 
 ### 데이터 업데이트 
 
@@ -59,7 +57,6 @@ staticrypt이라는 도구를 쓰면 html 문서에 암호를 걸 수 있다. �
 #
 :::
 
-<https://quarto.org/docs/publishing/github-pages.html#publish-action>
 
 링크를 보면 GitHub Actions를 통해서 Quarto 문서를 생성하고 퍼블리싱하는 방법이 잘 소개되어 있다. 일정한 시간 단위로 자동화하고 싶다면 코드의 맨 윗 부분을 아래와 같이 수정하면 된다. 
 
@@ -89,4 +86,4 @@ on:
 
 해당 명령을 구현하는 사례 리포를 만들어 두었다. 아래를 참고하시라. 암호는 `0000`이다. public repo이니 관심이 있으시면 내용을 뜯어보시면 되겠다. 물론 이 리포를 개인적인 용도로 사용한다면 해당 리포 자체는 private으로 바꿔야 한다. 그래야 암호가 노출되지 않을 것이다. 
 
-<https://anarinsk.github.io/example_pages-with-password/>
+<https://anarinsk.github.io/example_pages-with-password/>{ target="_blank" }
