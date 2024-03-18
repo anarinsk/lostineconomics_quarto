@@ -59,7 +59,7 @@ staticrypt이라는 도구를 쓰면 html 문서에 암호를 걸 수 있다. �
 #
 :::
 
-https://quarto.org/docs/publishing/github-pages.html#publish-action
+<https://quarto.org/docs/publishing/github-pages.html#publish-action>
 
 링크를 보면 GitHub Actions를 통해서 Quarto 문서를 생성하고 퍼블리싱하는 방법이 잘 소개되어 있다. 일정한 시간 단위로 자동화하고 싶다면 코드의 맨 윗 부분을 아래와 같이 수정하면 된다. 
 
