@@ -3049,7 +3049,7 @@
     "href": "posts/computer-tool/2024-03-18-lazy-dashboard.html#데이터-업데이트-암호화",
     "title": "게으르게 만드는 대시보드",
     "section": "데이터 업데이트 + 암호화?",
-    "text": "데이터 업데이트 + 암호화?\n앞서 살펴본 두 개의 요소를 조합하는 것도 가능하다! 위의 문서 생성 및 퍼블리시 과정과 압호화 과정을 Github Actions에서 결합하면 된다. 깃헙 액션스는 정말로 강력한 기능이다! 방법은 다음과 같다.\n\n정보의 업데이트를 통해서 최신 대시보드 html 및 퍼블리싱\ngh-pages 브랜치에 서브되는 html 페이지의 암호화\n\n해당 명령을 구현하는 사례 리포를 만들어 두었다. 아래를 참고하시라. 암호는 0000이다. public repo이니 관심이 있으시면 내용을 뜯어보시면 되겠다. 물론 이 리포를 개인적인 용도로 사용한다면 해당 리포 자체는 private으로 바꿔야 한다. 그래야 암호가 노출되지 않을 것이다.\nhttps://anarinsk.github.io/example_pages-with-password/"
+    "text": "데이터 업데이트 + 암호화?\n앞서 살펴본 두 개의 요소를 조합하는 것도 가능하다! 위의 문서 생성 및 퍼블리시 과정과 압호화 과정을 Github Actions에서 결합하면 된다. 깃헙 액션스는 정말로 강력한 기능이다! 방법은 다음과 같다.\n\n정보의 업데이트를 통해서 최신 대시보드 html 및 퍼블리싱\ngh-pages 브랜치에 서브되는 html 페이지의 암호화\n\n해당 명령을 구현하는 사례 리포를 만들어 두었다. 아래를 참고하시라. 두번째 대시보드의 암호는 0000이다. 관심이 있으시면 repo의 내용을 뜯어보시면 되겠다. 리포를 개인적인 용도로 사용한다면 포크가 복제후 private으로 바꿔 사용하시면 되겠다.\n\ngithub: https://github.com/anarinsk/example_pages-with-password\n대시보드: https://anarinsk.github.io/example_pages-with-password/"
   },
   {
     "objectID": "posts/computer-tool/2022-05-14-blogging-with-quarto.html",
