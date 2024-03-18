@@ -70,13 +70,13 @@ on:
     # 실제 스케쥴 작업이 시작될 cron을 등록하면 됩니다.
     # 크론은 https://crontab.guru/ 여기서 확인하면 좋을 것 같습니다.
     # 이 크론은 매 4시간 마다 실행됩니다.
-    #- cron: '* */4 * * *'  
+    #- cron: '0 */4 * * *'  
   #workflow_dispatch:    
   #push:
   #  branches: main
   schedule:
     #- cron: '*/30 * * * *' # 매 30분마다 실행
-    - cron: '* */3 * * *' # 매 3시간마다 실행
+    - cron: '0 */3 * * *' # 매 3시간마다 실행
 ```
 
 `on` 항목에 `schedule`을 설정하고 `cron`을 쓰면 crontab 규칙에 따라서 실행 간격을 지정할 수 있다. crontab 규칙을 따르므로 유연하게 실행 간격의 룰을 정할 수 있다. 
