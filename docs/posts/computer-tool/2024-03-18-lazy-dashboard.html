@@ -111,7 +111,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -163,9 +163,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -225,7 +227,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="quarto-dashboard">Quarto Dashboard</h2>
 <p>정적인 페이지로 인터랙티비티가 없는 열람 전용 대시보드를 만들기로 했다면 툴을 선택해야 한다. 마침 딱 적당한 툴이 있다. 문서 작성 도구 Quarto에서 제공하는 <a href="https://quarto.org/docs/dashboards/">Quarto Dashboards</a>라는 도구가 있다. 쿼토에 익숙한 사람이라면 링크를 둘러보면 장점을 쉽게 파악할 수 있을 것이다. 자세한 설명은 생략한다.</p>
 </section>
-<section id="두-가지-문제-그리고-해결책" class="level2">
+<section id="두-가지-문제-그리고-해결책" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="두-가지-문제-그리고-해결책">두 가지 문제 그리고 해결책</h2>
 <p>이렇게 대시보드를 만드는 것까지는 좋은데 당장 떠오르는 두 가지 결정적인 아쉬운 대목이 있다. 인증 시스템과 데이터 업데이트의 자동화가 그것이다. 일단 아쉬운대로 (불완전한) 두 가지 해결책을 제시하겠다.</p>
 <section id="최소한의-암호화" class="level3">
@@ -234,11 +236,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><a href="https://github.com/robinmoisson/staticrypt" class="uri">https://github.com/robinmoisson/staticrypt</a></p>
 <p>staticrypt이라는 도구를 쓰면 html 문서에 암호를 걸 수 있다. 해당 페이지를 깃허브 페이지스로 서브하면 암호를 먼저 입력해야 내용을 볼 수 있다. 이것이 제대로 된 로그인 시스템이라고 할 수는 없지만, 개인적인 용도의 안전 장치 정도로는 충분하다.</p>
 </section>
-<section id="데이터-업데이트" class="level3">
+<section id="데이터-업데이트" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="데이터-업데이트">데이터 업데이트</h3>
 <p>활용하는 데이터가 변하지 않는다면 해당 데이터를 한번 읽어서 대시보드를 제공하면 그만이다. 하지만 대시보드가 필요한 상황과 맥락에서 데이터가 이렇게 고정된 상황은 별로 없을 것이다. 데이터를 일정한 주기로 업데이트해야 한다면 어떻게 해야할까? 우선 데이터가 고빈도(high frequency)로 변하는 상황이라면 스트림릿과 같은 본격적인 대시보드 도구를 부리는 게 좋다. 이렇게 고빈도의 업데이트가 필요하지 않다면, 깃허브 페이지스를 통해서 데이터의 업데이트를 거의 완벽하게 구현할 수 있다.</p>
 <p>깃허브는 actions라는 자동화 도구를 제공한다. 리포의 <code>.github/workflows</code> 내에 위치한 yml 파일을 통해 일정한 순서로 여러가지 작업을 지시할 수 있다. 데이터 업데이트를 위해서 지시할 작업은 간단하다. 이용자가 미리 정해둔 시간 간격을 기준 마다 문서를 다시 생성하면 된다. 이떄 코드도 같이 실행될텐데 해당 코드에 따라서 업데이트된 데이터를 불러올 수 있다.</p>
-<p>https://quarto.org/docs/publishing/github-pages.html#publish-action</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>깃허브 액션스를 자세하게 다루지는 않겠다. 개념은 OS(주로 Ubuntu)를 불러와서 해당 OS 하에서 여러가지 작업을 자동화할 수 있는 도구다. Ubuntu를 좀 써봤다고 쉽게 생각하면 큰 코 다칠 수 있다. 예를 들어 깃헙 페이지스 하나 퍼블리시하는 데에도 여러가지 행동 조합이 필요하다. 따라서 개인지 작성하기 보다는 이미 작성된 actions를 가져다가 쓰는 것이 좋다. yml 코드를 보면 <code>uses: actions/checkout@v4</code>, <code>uses: actions/setup-python@v4</code>와 같은 내용을 볼 수 있다. 사전에 정의된 액션스를 가져다가 쓰는 것이고 필요할 경우 <code>with</code> 구문을 통해서 나에게 맞는 설정을 추가할 수 있다. 이런 식으로 기존에 검증된 actions 스크립트를 쓰는 것이 압도적으로 편리하고 안전하다. #</p>
+</div></div><p>https://quarto.org/docs/publishing/github-pages.html#publish-action</p>
 <p>링크를 보면 GitHub Actions를 통해서 Quarto 문서를 생성하고 퍼블리싱하는 방법이 잘 소개되어 있다. 일정한 시간 단위로 자동화하고 싶다면 코드의 맨 윗 부분을 아래와 같이 수정하면 된다.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">  #schedule:</span></span>
