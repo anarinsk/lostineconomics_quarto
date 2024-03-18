@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -265,7 +265,7 @@ window.Quarto = {
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/covid-hospital.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="입원 여부는 충돌 요인(collider)이 된다."><img src="./images/covid-hospital.png" class="img-fluid figure-img" alt="입원 여부는 충돌 요인(collider)이 된다."></a></p>
+<p><a href="./images/covid-hospital.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="입원 여부는 충돌 요인(collider)이 된다."><img src="./images/covid-hospital.png" class="img-fluid figure-img" alt="입원 여부는 충돌 요인(collider)이 된다."></a></p>
 <figcaption>입원 여부는 충돌 요인(collider)이 된다.</figcaption>
 </figure>
 </div>
@@ -361,15 +361,13 @@ window.Quarto = {
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="2022-06-06-berkson-paradox-regression_files/figure-html/cell-3-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="충돌 요인은 어떻게 작용하는가? pack_of_cigar는 흡연의 정도를 covid_severity는 코로나19 중증도를 의미한다."><img src="2022-06-06-berkson-paradox-regression_files/figure-html/cell-3-output-1.png" width="733" height="321" alt="충돌 요인은 어떻게 작용하는가? pack_of_cigar는 흡연의 정도를 covid_severity는 코로나19 중증도를 의미한다." class="figure-img"></a></p>
+<p><a href="2022-06-06-berkson-paradox-regression_files/figure-html/cell-3-output-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="충돌 요인은 어떻게 작용하는가? pack_of_cigar는 흡연의 정도를 covid_severity는 코로나19 중증도를 의미한다."><img src="2022-06-06-berkson-paradox-regression_files/figure-html/cell-3-output-1.png" width="733" height="321" alt="충돌 요인은 어떻게 작용하는가? pack_of_cigar는 흡연의 정도를 covid_severity는 코로나19 중증도를 의미한다." class="figure-img"></a></p>
 <figcaption>충돌 요인은 어떻게 작용하는가? <code>pack_of_cigar</code>는 흡연의 정도를 <code>covid_severity</code>는 코로나19 중증도를 의미한다.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>위의 왼쪽 그래프에서 보듯이 추출된 표본 전체에 대해서는 흡연의 정도와 코로나19의 중증도 사이에 양의 관계가 존재한다. 그런데 만일 충돌 요인인 입원 여부를 회귀 분석에서 통제하면 어떻게 될까? 오른쪽 그림에서 보듯이 병원에 입원한 환자에 대해서는 음의 상관성이 관찰된다. 왜 이럴까? 병원의 입원하는 변인은 코로나19의 중증도 이외에 흡연 정도에도 영향을 받는다. 흡연을 많이 할수록 코로나와 관계없이 그 자체로 입원할 가능성이 커진다. 흡연 정도가 낮을 경우 입원을 했다면 코로나19의 중증도에 따른 것일 가능성이 크다. 반면 흡연 정도가 높을 경우 코로나19 중증도는 상대적으로 다양한 상태를 지니게 되고, 따라서 평균적으로는 흡연 정도가 낮은 입원 환자에 비해서 낮은 코로나19 중증도를 지닐 수 있다.</p>
-<details class="code-fold">
-<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ols1 <span class="op">=</span> sm.ols(formula<span class="op">=</span><span class="st">"covid_severity ~ pack_of_cigar"</span>, data<span class="op">=</span>res).fit(use_t<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>ols2 <span class="op">=</span> sm.ols(formula<span class="op">=</span><span class="st">"covid_severity ~ pack_of_cigar + is_hospitalized"</span>, data<span class="op">=</span>res).fit(use_t<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>ols3 <span class="op">=</span> sm.ols(formula<span class="op">=</span><span class="st">"covid_severity ~ pack_of_cigar + is_hospitalized"</span>, data<span class="op">=</span>res[res.is_hospitalized<span class="op">==</span><span class="st">"Yes"</span>]).fit(use_t<span class="op">=</span><span class="va">True</span>)</span>
@@ -393,8 +391,18 @@ window.Quarto = {
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co">#                    }, </span></span>
 <span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co">#                  regressor_order=['Intercept','pack_of_cigar','is_hospitalized[T.Yes]#'])</span></span>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co">#    )</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div id="79760bcf" class="cell quarto-layout-panel" data-layout="[[-0.2,1,-0.2]]" data-execution_count="3">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+</details>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
 <div class="quarto-layout-row">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
 <p>&nbsp;</p>
@@ -436,7 +444,7 @@ window.Quarto = {
 <div class="quarto-layout-cell" style="flex-basis: 55.6%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Survivorship-bias.svg/600px-Survivorship-bias.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="Abraham Wald가 했다는 전설적인 통찰의 사실 여부는 검증된 바 없다고 한다."><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Survivorship-bias.svg/600px-Survivorship-bias.svg.png" class="img-fluid figure-img" alt="Abraham Wald가 했다는 전설적인 통찰의 사실 여부는 검증된 바 없다고 한다."></a></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Survivorship-bias.svg/600px-Survivorship-bias.svg.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="Abraham Wald가 했다는 전설적인 통찰의 사실 여부는 검증된 바 없다고 한다."><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Survivorship-bias.svg/600px-Survivorship-bias.svg.png" class="img-fluid figure-img" alt="Abraham Wald가 했다는 전설적인 통찰의 사실 여부는 검증된 바 없다고 한다."></a></p>
 <figcaption>Abraham Wald가 했다는 전설적인 통찰의 사실 여부는 검증된 바 없다고 한다.</figcaption>
 </figure>
 </div>
@@ -988,7 +996,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
