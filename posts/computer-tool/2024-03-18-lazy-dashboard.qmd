@@ -102,7 +102,7 @@ on:
 - [예시 리포](https://github.com/anarinsk/example_pages-with-password){ target="_blank" }
 - [대시 보드](https://anarinsk.github.io/example_pages-with-password/){ target="_blank" }
 
-두 번째의 암호는 `0000`이다. 리포의 Actions의 staticrypt 대목을 뜯어보시면 암호를 설정하는 부분이 있다. `0000` 대신 필요한 암호로 바꾸시라. 리포를 개인적인 용도로 사용한다면 포크가 복제후 private으로 바꿔 사용하면 된다.
+두 번째의 암호는 `0000`이다. 리포의 Actions의 staticrypt 대목을 뜯어보시면 암호를 설정하는 부분이 있다. `0000` 대신 필요한 암호로 바꾸시라. 리포를 포크하거나 복제한 후 private으로 바꿔 사용하면 된다.
 
 :::{ .column-margin }
 crontab을 설정할 수 있다면 초단위로 해두면 빠른 처리가 가능하지 않을까, 라고 생각할지 모르겠다. 깃허브는 최대 빠른 간격을 5분으로 제한하고 있다. 더 짧은 주기로 크론탭을 설정해도 5분 단위로 돌아간다. 
