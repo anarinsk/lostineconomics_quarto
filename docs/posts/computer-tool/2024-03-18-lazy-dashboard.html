@@ -243,7 +243,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="데이터-업데이트">데이터 업데이트</h3>
 <p>활용하는 데이터가 변하지 않는다면 해당 데이터를 한번 읽어서 대시보드를 제공하면 그만이다. 하지만 대시보드가 필요한 상황과 맥락에서 데이터가 이렇게 고정되는 상황은 별로 없을 것이다. 데이터를 일정한 주기로 업데이트해야 한다면 어떻게 해야할까? 필요할 때마다 깃허브를 호출해서 페이지를 수동으로 말아도 되겠지만 그리 좋은 방법은 아니다.</p>
 <p>데이터가 고빈도(high frequency)로 변하는 상황이라면 스트림릿과 같은 본격적인 대시보드 도구를 부리는 게 좋다. 업데이트의 빈도가 충분히 낮다면, 깃허브 Actions의 스크립트를 활용해 데이터의 자동 업데이트를 손쉽게 구현할 수 있다.</p>
-<p>깃허브는 액션스를 활용하면 리포의 <code>.github/workflows</code>에 들어 있는 yml 파일을 통해 원하는 순서로 리포 내에서 여러가지 작업을 수행할 수 있다. 데이터 업데이트를 위해서 지시할 작업은 간단하다. 이용자가 미리 정해둔 시간 간격으로 문서를 다시 생성하면 된다. 이떄 코드도 같이 실행될텐데 해당 코드에서 업데이트된 데이터를 불러올 수 있다.</p>
+<p>깃허브 액션스를 활용하면 리포의 <code>.github/workflows</code>에 들어 있는 yml 파일을 통해 원하는 순서로 리포 내에서 여러가지 작업을 수행할 수 있다. 데이터 업데이트를 위해서 지시할 작업은 간단하다. 이용자가 미리 정해둔 시간 간격으로 문서를 다시 생성하면 된다. 이떄 코드도 같이 실행될텐데 해당 코드에서 업데이트된 데이터를 불러오면 된다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>여기서 깃허브 액션스를 자세하게 다루지는 않겠다. 개념은 OS(주로 Ubuntu)를 불러와서 해당 OS 하에서 여러가지 작업을 자동화할 수 있는 도구다. Ubuntu를 좀 써봤다고 쉽게 생각하면 큰 코 다칠 수 있다. 예를 들어 깃헙 페이지스 하나 퍼블리시하는 데에도 여러가지 행동 조합이 필요하다. 따라서 개인지 작성하기 보다는 이미 작성된 actions를 가져다가 쓰는 것이 좋다. yml 코드를 보면 <code>uses: actions/checkout@v4</code>, <code>uses: actions/setup-python@v4</code>와 같은 내용을 볼 수 있다. 사전에 정의된 액션스를 가져다가 쓰는 것이고 필요할 경우 <code>with</code> 구문을 통해서 나에게 맞는 설정을 추가할 수 있다. 이런 식으로 기존에 검증된 actions 스크립트를 쓰는 것이 압도적으로 편리하고 안전하다.</p>
@@ -252,14 +252,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">  #schedule:</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">    # 실제 스케쥴 작업이 시작될 cron을 등록하면 됩니다.</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">    # 크론은 https://crontab.guru/ 여기서 확인하면 좋을 것 같습니다.</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">    # 이 크론은 매 4시간 마다 실행됩니다.</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">    # 이 크론은 매 4시간 마다 00분 기준으로 실행됩니다.</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    #- cron: '0 */4 * * *'  </span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  #workflow_dispatch:    </span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  #push:</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  #  branches: main</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">schedule</span><span class="kw">:</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">    #- cron: '*/30 * * * *' # 매 30분마다 실행</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">cron</span><span class="kw">:</span><span class="at"> </span><span class="st">'0 */3 * * *'</span><span class="co"> # 매 3시간마다 실행</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">cron</span><span class="kw">:</span><span class="at"> </span><span class="st">'0 */3 * * *'</span><span class="co"> # 매 3시간마다 00분 기준으로 실행 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
