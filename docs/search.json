@@ -3526,5 +3526,12 @@
     "title": "Metrics for Binary Classification",
     "section": "Footnotes",
     "text": "Footnotes\n\n\n멀티 클래스의 경우에 관해서는 여기를 참고하라.↩︎"
+  },
+  {
+    "objectID": "posts/computer-tool/2024-03-18-lazy-dashboard.html#quarto-dashboards",
+    "href": "posts/computer-tool/2024-03-18-lazy-dashboard.html#quarto-dashboards",
+    "title": "게으르게 만드는 대시보드",
+    "section": "Quarto Dashboards",
+    "text": "Quarto Dashboards\n정적인 웹 페이지로 인터랙티비티가 제한된 대시보드(사실상의 웹 페이지)를 만들기로 했다면 툴을 골라보자. 딱 좋은 툴이 있으니 문서 작성 도구 Quarto에서 제공하는 Quarto Dashboards이다. 쿼토에 익숙한 사람이라면 링크를 둘러보면 장점을 쉽게 파악할 수 있을 것이다. 자세한 설명은 생략한다.\n\n\n정적 웹이라고 해서 인터랙티비가 전혀 없는 것은 아니다. 소개되어 있듯이, Plotly, Leaflet, Jupyter Widgets, htmlwidgets 등을 쓸 수 있어서 제한된 수준에서 인터랙티브한 요소를 구현할 수 있다."
   }
 ]
