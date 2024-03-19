@@ -21,7 +21,7 @@ format:
 ---
 
 ## TL; DR
-Quarto Dashboard를 활용해서 개인용 보드를 만들어 보자. 
+Quarto Dashboards를 활용해서 개인용 보드를 만들어 보자. 
 
 ## 왜 정적 웹(static web)인가? 
 
