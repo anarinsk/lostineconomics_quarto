@@ -24,4 +24,4 @@ format:
     theme:
         light: [cosmo, theme.scss, anari-custom.scss]
         dark: [cosmo, theme-dark.scss, anari-custom.scss]
-    css: styles.css
+    #css: styles.css

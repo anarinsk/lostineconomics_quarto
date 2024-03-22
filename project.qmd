@@ -13,9 +13,10 @@ about:
 
 ### Economic Index Board 
 
-⛧ Ouput: [Anari's Economic Indices](https://eis.anari.dev/)
 
-개인적으로 보려고 만든 경제 지표 보드입니다. 고급스럽게 웹 개발을 하면 좋았겠지만 초보적인 웹 지식과 pyscript 약간 활용했습니다. 부족한 지식 및 시간과 타협한 졸작입니다. 
+⛧ Ouput: [Anari Sees US Economy](https://us-econ.anari.dev/)
+
+개인적으로 보려고 만든 경제 지표 보드입니다. 고급스럽게 웹 개발을 하면 좋았겠지만 Quarto Dashboards를 초보적으로 활용했습니다. 이전 버전은 [여기](https://eis.anari.dev/)에 있습니다. 
 
 ### JupyterLite
 
