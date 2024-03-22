@@ -213,7 +213,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <p>Quarto Dashboards를 활용해서 개인용 보드를 만들어 보자.</p>
 </section>
-<section id="왜-정적-웹static-web인가" class="level2">
+<section id="왜-정적-웹static-web인가" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="왜-정적-웹static-web인가">왜 정적 웹(static web)인가?</h2>
 <p>대시보드로 활용할 수 있는 도구는 다양하다. 본격적으로 웹 프로그래밍을 활용하지 않아도 파이썬으로 부릴 수 있는 streamlit, gradio를 비롯해 다양한 서비스들이 있다. 그런데 이러한 본격적인 서비스들에는 몇 가지 ‘개인적’ 단점이 있다.</p>
 <ul>
@@ -222,7 +222,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>이 단점이 그리 대단한 것은 아니다. 스트림릿에서 제공하는 기본 서비스로도 많은 것들을 구현할 수 있다. 하지만 더 간단하고 더 게으르게 뭔가 하고 싶은 나 같은 인간에게는 여전히 복잡하고 거추장스러워 보이기도 한다.</p>
 <p>사실 (개인용) 대시보드를 쓸 때 뭔가를 인터랙티브하게 선택하는 경우는 드물다. 대체로 주요 용도는 내가 보고 싶은 정보를 한번에 모아서 본다는 데 있다. 그 용도가 보는 데에만 있다면 미리 렌더링된 정보를 보여주는 정적 웹(static web)으로 충분하지 않을까? 정적 웹은 Github pages를 비롯해 공짜로 활용할 수 있는 다양한 서비스가 있어 선택의 범위도 넓다!</p>
-</section>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>인터렉티비티가 아주 없는 것은 아니다. <a href="https://quarto.org/docs/dashboards/interactivity">여기</a>를 참고하자.</p>
+</div></div></section>
 <section id="quarto-dashboards" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="quarto-dashboards">Quarto Dashboards</h2>
 <p>정적인 웹 페이지로 인터랙티비티가 제한된 대시보드(사실상의 웹 페이지)를 만들기로 했다면 툴을 골라보자. 딱 좋은 툴이 있으니 문서 작성 도구 Quarto에서 제공하는 <a href="https://quarto.org/docs/dashboards/" target="_blank">Quarto Dashboards</a>이다. 쿼토에 익숙한 사람이라면 링크의 내용을 보고 그 장점을 쉽게 파악할 수 있을 것이다. 자세한 설명은 생략한다.</p>
