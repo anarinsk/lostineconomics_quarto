@@ -35,6 +35,11 @@ Quarto는 Reveal.js를 부릴 수 있습니다. Quarto를 이용한 PT 제작에
 - GitHub Pages를 통해서 퍼블리시할 수 있습니다. 
 - 이런 저런 '디자인 지옥'에 고통받지 않을 수 있습니다! 
 
+⛧ Ouput: <a href="https://more-fun-pt.lostineconomics.com/" target="_blank">More on Quarto + Reveal.js</a> 
+
+- 위 프로젝트의 자매품입니다. 몇 가지 추가적인 기능을 다루었습니다. 
+
+
 ### Generating CV in GitHub 
 
 ⛧ Oputput: [short CV](https://anarinsk.github.io/markdown-cv) | Post: [LINK](https://www.lostineconomics.com/posts/computer-tool/2022-05-10-how-to-make-cv.html)
