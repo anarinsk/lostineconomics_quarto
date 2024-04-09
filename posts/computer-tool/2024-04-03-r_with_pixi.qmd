@@ -1,0 +1,86 @@
+---
+title: "R을 pixi로 깔아보자!" 
+description: "R이 꼬여도 걱정 없다"   
+author: "JS HUHH"
+date: "04/03/2024"
+image: "./images/cat-sketch.webp"
+categories: [computer-tool, r-stat]
+lightbox: auto
+#fig-align: center
+filters:
+   - lightbox
+   #- line-highlight
+#jupyter: python3
+draft: true
+format:
+  html:
+    highlight-style: pygments
+    #code-line-numbers: true
+    code-block-bg: true
+    code-block-border-left: "#31BAE9"
+---
+
+## TL; DR
+
+R을 pixi를 통해서 깔 수 있다. 
+
+## 왜 pixi인가? 
+
+나는 픽시를 사랑한다. 픽시를 쓰고부터 파이썬 패키지를 깔거나 세팅을 하는데 별 고민이 없다. 꼬이면 지우고 다시 깔면 되고, 망해도 지우면 그만이다. R을 이렇게 깔 수는 없을까? 문득 이런 생각이 들었다. pixi의 베이스가 되는 conda에 R이 있다. 그렇다면 pixi를 통해서도 깔 수 있는 거 아닐까? 
+
+이런 생각으로 쭉 해보니 잘 되더라. 이 포스팅은 까먹고 내용을 다시 찾을 나 놈을 위한 것이다. (전적으로!)
+
+## 얻는 것과 잃는 것의 대차 대조 
+
+pixi로 깔아서 얻는 것은 앞서와 같다. 그리고 IDE로 VS Code를 쓴다면 천군만마와도 같은 GitHub Copilot을 부릴 수 있다. 엄청난 장점이다. 잃는 것은 무엇인가? R과 최고의 궁합을 자랑하는 RStudio를 잃는다는 뜻이다. RStudio Server에 커널을 연결할 수 있으면 좋겠는데 좀 더 비싼 기업용 버전인 workbench에서만 지원하는 듯 싶다. 
+
+VS Code로도 장점이 충분한 것 같다. 아쉬움을 뒤로 하고 설치로 넘어가보자. 
+
+## pixi setting 
+
+다음과 같은 사용 환경을 전제한다. 
+
+- Windows 11 WSL 2 
+- Ubutu 22.04 LTS 
+- pixi 설치 
+
+R을 깔고자 하는 디렉토리에서 아래와 같이 실행한다. 
+
+```shell
+$ pixi init # 픽시 초기화 
+$ pixi add python=3.11 r-base radian # 파이썬, r-base, radian 추가 
+```
+
+위 명령어를 실행하면 `./.pixi/envs/default` 폴더 아래 파이썬, R-base 그리고 radian이 설치된다. radian은 파이썬으로 작성된 일종의 대안 터미널이다. 꽤 쓸만하다. 
+
+필요한 R 패키지를 설치해야 하는데 아래 두 패키지는 꼭 설치하자. 
+
+```R
+> install.packages("languageserver")
+> install.packages("httpgd")
+```
+
+## 라이브러리 설치 위치 지정
+
+만일 기존에 R이 깔린 환경이 있다면 라이러리가 그쪽으로 설치된다. 라이브러리까지 하위 디렉토리에 설치하기 위해서는 몇가지 설정이 필요하다. `~/.zshrc` 혹은 이에 상당하는 환경에 깔린 설정 파일을 수정하자. 해당 파일을 연 후 아래와 같이 두자. 
+
+```txt
+export R_LIBS_USER="[로컬 디렉토리]/.pixi/envs/default/lib/R/library"
+```
+
+해당 환경을 활성화하면 이제 R의 라이브러가 해당 디렉토리 아래 깔리게 된다. 
+
+## VS Code 설정 
+
+먼저 R의 [extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r)을 받아서 설치하자. 해당 확장을 설치한 후 몇 가지 설정을 바꿔야 한다. 
+
+
+
+
+
+## VS Code에서의 활용 
+
+<https://code.visualstudio.com/docs/languages/r>
+
+전체적인 지침은 링크에 잘 정리가 되어 있다. 
+
