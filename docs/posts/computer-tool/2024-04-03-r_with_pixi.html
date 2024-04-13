@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -79,6 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -212,19 +215,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="왜-pixi인가" class="level2">
 <h2 class="anchored" data-anchor-id="왜-pixi인가">왜 pixi인가?</h2>
-<p>나는 픽시를 사랑한다. 픽시를 쓰고부터 파이썬 패키지를 깔거나 세팅을 하는데 별 고민이 없다. 꼬이면 지우고 다시 깔면 되고, 망해도 지우면 그만이다. R을 이렇게 깔 수는 없을까? 문득 이런 생각이 들었다. pixi의 베이스가 되는 conda에 R이 있다. 그렇다면 pixi를 통해서도 깔 수 있는 거 아닐까?</p>
+<p>픽시를 사랑한다. 픽시를 쓰고부터 파이썬 패키지를 깔거나 세팅을 하는데 별 고민이 없다. 꼬이면 지우고 다시 깔면 되고, (알 수 없는 이유로) 망하면 지워버리자.</p>
+<p>R을 이렇게 깔 수는 없을까? 문득 이런 생각이 들었다. pixi의 베이스가 되는 conda에 R이 있다. 그렇다면 pixi를 통해서도 R을 깔 수 있는 거 아닐까?</p>
 <p>이런 생각으로 쭉 해보니 잘 되더라. 이 포스팅은 까먹고 내용을 다시 찾을 나 놈을 위한 것이다. (전적으로!)</p>
 </section>
 <section id="얻는-것과-잃는-것의-대차-대조" class="level2">
 <h2 class="anchored" data-anchor-id="얻는-것과-잃는-것의-대차-대조">얻는 것과 잃는 것의 대차 대조</h2>
-<p>pixi로 깔아서 얻는 것은 앞서와 같다. 그리고 IDE로 VS Code를 쓴다면 천군만마와도 같은 GitHub Copilot을 부릴 수 있다. 엄청난 장점이다. 잃는 것은 무엇인가? R과 최고의 궁합을 자랑하는 RStudio를 잃는다는 뜻이다. RStudio Server에 커널을 연결할 수 있으면 좋겠는데 좀 더 비싼 기업용 버전인 workbench에서만 지원하는 듯 싶다.</p>
-<p>VS Code로도 장점이 충분한 것 같다. 아쉬움을 뒤로 하고 설치로 넘어가보자.</p>
+<p>pixi로 깔아서 얻는 것은 앞서와 같다. 그리고 IDE로 VS Code를 쓴다면 천군만마와도 같은 GitHub Copilot을 부릴 수 있다. 엄청난 장점이다. 잃는 것은 R과 최고의 궁합을 자랑하는 RStudio이다. RStudio Server에 커널을 연결할 수 있으면 좋겠는데 좀 더 비싼 기업용 버전인 workbench에서만 해당 기능을 지원하는 듯 싶다.</p>
+<p>VS Code로도 장점이 충분한 것 같다. 아쉬움을 뒤로 하고 설치히는 방법으로 넘어가자.</p>
 </section>
 <section id="pixi-setting" class="level2">
 <h2 class="anchored" data-anchor-id="pixi-setting">pixi setting</h2>
 <p>다음과 같은 사용 환경을 전제한다.</p>
 <ul>
-<li>Windows 11 WSL 2</li>
+<li>Windows 11 WSL 2 or Macos (Sonoma with Silicon)</li>
 <li>Ubutu 22.04 LTS</li>
 <li>pixi 설치</li>
 </ul>
@@ -240,18 +244,61 @@ $ pixi add python=3.11 r-base radian # 파이썬, r-base, radian 추가 </code><
 <h2 class="anchored" data-anchor-id="라이브러리-설치-위치-지정">라이브러리 설치 위치 지정</h2>
 <p>만일 기존에 R이 깔린 환경이 있다면 라이러리가 그쪽으로 설치된다. 라이브러리까지 하위 디렉토리에 설치하기 위해서는 몇가지 설정이 필요하다. <code>~/.zshrc</code> 혹은 이에 상당하는 환경에 깔린 설정 파일을 수정하자. 해당 파일을 연 후 아래와 같이 두자.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>export R_LIBS_USER="[로컬 디렉토리]/.pixi/envs/default/lib/R/library"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>해당 환경을 활성화하면 이제 R의 라이브러가 해당 디렉토리 아래 깔리게 된다.</p>
+<p>해당 환경을 활성화하면 이제 R의 라이브러가 해당 디렉토리 아래 깔리게 된다. 만일 기존에 설치된 R이 없거나 지웠다면 라이브러리의 위치는 픽시 아래로 잡힌다. 확인하는 방법은 R에서 <code>.libPaths()</code>를 실행하면 된다.</p>
 </section>
 <section id="vs-code-설정" class="level2">
 <h2 class="anchored" data-anchor-id="vs-code-설정">VS Code 설정</h2>
 <p>먼저 R의 <a href="https://marketplace.visualstudio.com/items?itemName=REditorSupport.r">extension</a>을 받아서 설치하자. 해당 확장을 설치한 후 몇 가지 설정을 바꿔야 한다.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/pixi-r-1-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="익스텐션의 설정으로 가자."><img src="./images/pixi-r-1-min.png" class="img-fluid figure-img" alt="익스텐션의 설정으로 가자."></a></p>
+<figcaption>익스텐션의 설정으로 가자.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/pixi-r-2-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="두 개 모두 적절한 위칠 바꿔주자"><img src="./images/pixi-r-2-min.png" class="img-fluid figure-img" alt="두 개 모두 적절한 위칠 바꿔주자"></a></p>
+<figcaption>두 개 모두 적절한 위칠 바꿔주자</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>이외에 <code>httpgd</code>를 쓰는 것을 체크하자.</p>
 </section>
 <section id="vs-code에서의-활용" class="level2">
 <h2 class="anchored" data-anchor-id="vs-code에서의-활용">VS Code에서의 활용</h2>
+<section id="wsl2" class="level3">
+<h3 class="anchored" data-anchor-id="wsl2">WSL2</h3>
 <p><a href="https://code.visualstudio.com/docs/languages/r" class="uri">https://code.visualstudio.com/docs/languages/r</a></p>
 <p>전체적인 지침은 링크에 잘 정리가 되어 있다.</p>
+<ol type="1">
+<li><code>install.packages("languageserver")</code>를 설치한다.</li>
+<li><code>install.packages("httpgd")</code>를 설치한다.</li>
+</ol>
+<p>이제 그냥 쓰면 된다. 혹시 R 코드가 실행되지 않으면 터미널에 R을 띄우자.</p>
+</section>
+<section id="macos" class="level3">
+<h3 class="anchored" data-anchor-id="macos">Macos</h3>
+<p>그냥 쓰는 데는 별 문제가 없다. C++을 컴파일할 때 제대로 하지 못한다. 따라서 C++을 쓰는 패키지들이 제대로 깔리지 않는다. 어떻게 해야 할까? 패키지를 깔 때, pixi의 셸 환경으로 들어가면 된다.</p>
+<pre class="shell"><code>$ pixi shell
+$ R or radian 
+&gt; install.packages("...")</code></pre>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">익스텐션의 설정으로 가자.</span>
+<span class="glightbox-desc lightbox-desc-2">두 개 모두 적절한 위칠 바꿔주자</span>
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -478,6 +525,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/www\.lostineconomics\.com\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -512,7 +577,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -787,6 +856,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 
