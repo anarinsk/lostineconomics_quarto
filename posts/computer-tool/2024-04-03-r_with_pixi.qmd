@@ -22,29 +22,30 @@ format:
 
 ## TL; DR
 
-R을 pixi를 통해서 깔 수 있다. 
+Pixi로 R을 부릴 수 있다.  
 
 ## 왜 pixi인가? 
 
-픽시를 사랑한다. 픽시를 쓰고부터 파이썬 패키지를 깔거나 세팅을 하는데 별 고민이 없다. 꼬이면 지우고 다시 깔면 되고, (알 수 없는 이유로) 망하면 지워버리자. 
+픽시를 사랑한다. 픽시를 쓰면서 파이썬 패키지를 깔거나 세팅을 할 때 고민하지 않는다. (알 수 없는 이유로) 꼬이면 지우고 다시 깔면 그만이다. 
 
-R을 이렇게 깔 수는 없을까? 문득 이런 생각이 들었다. pixi의 베이스가 되는 conda에 R이 있다. 그렇다면 pixi를 통해서도 R을 깔 수 있는 거 아닐까? 
+R을 이렇게 파이썬처럼 운용할 수 없을까? 문득 이런 생각이 들더라. Pixi의 베이스가 되는 conda에 R이 있다. 그렇다면 pixi를 통해 R을 깔 수 있지 않을까? 
 
-이런 생각으로 쭉 해보니 잘 되더라. 이 포스팅은 까먹고 내용을 다시 찾을 나 놈을 위한 것이다. (전적으로!)
+이런 생각으로 쭉 해보니 의외로 되더라. 이 포스팅은 (전적으로!) 내용을 까먹고 헤맬 미래의 나 놈을 위한 것이다.
 
-## 얻는 것과 잃는 것의 대차 대조 
+## 얻는 것과 잃는 것
 
-pixi로 깔아서 얻는 것은 앞서와 같다. 그리고 IDE로 VS Code를 쓴다면 천군만마와도 같은 GitHub Copilot을 부릴 수 있다. 엄청난 장점이다. 잃는 것은 R과 최고의 궁합을 자랑하는 RStudio이다. RStudio Server에 커널을 연결할 수 있으면 좋겠는데 좀 더 비싼 기업용 버전인 workbench에서만 해당 기능을 지원하는 듯 싶다. 
+R의 IDE로 VS Code를 쓴다면 천군만마와도 같은 GitHub Copilot을 부릴 수 있다. 엄청난 장점이다. 잃는 것은 R과 최고의 궁합을 자랑하는 RStudio이다. RStudio Server에 커널을 연결할 수 있으면 좋겠는데 좀 더 비싼 기업용 버전인 workbench에서만 해당 기능을 지원하는 듯 싶다. 
 
-VS Code로도 장점이 충분한 것 같다. 아쉬움을 뒤로 하고 설치히는 방법으로 넘어가자. 
+RStudio는 아쉽지만, VS Code + pixi를 쓰는 것의 장점은 충분하다.  
 
-## pixi setting 
+## Pixi setting 
 
 다음과 같은 사용 환경을 전제한다. 
 
-- Windows 11 WSL 2 or Macos (Sonoma with Silicon)
-- Ubutu 22.04 LTS 
-- pixi 설치 
+- OS
+  - Windows 11 WSL 2 + Ubutu 22.04 LTS 
+  - Macos (Sonoma, Silicon)
+- pixi
 
 R을 깔고자 하는 디렉토리에서 아래와 같이 실행한다. 
 
@@ -88,11 +89,13 @@ export R_LIBS_USER="[로컬 디렉토리]/.pixi/envs/default/lib/R/library"
 
 ## VS Code에서의 활용 
 
-### WSL2
-
 <https://code.visualstudio.com/docs/languages/r>
 
 전체적인 지침은 링크에 잘 정리가 되어 있다. 
+
+### WSL2
+
+WSL2 환경에서 pixi+R의 조합이 문제 없이 잘 돌아간다. 
 
 1. `install.packages("languageserver")`를 설치한다. 
 2. `install.packages("httpgd")`를 설치한다.
@@ -101,12 +104,12 @@ export R_LIBS_USER="[로컬 디렉토리]/.pixi/envs/default/lib/R/library"
 
 ### Macos 
 
-그냥 쓰는 데는 별 문제가 없다. C++을 컴파일할 때 제대로 하지 못한다. 따라서 C++을 쓰는 패키지들이 제대로 깔리지 않는다. 어떻게 해야 할까? 패키지를 깔 때, pixi의 셸 환경으로 들어가면 된다. 
+활용하는 데는 별 문제가 없다. 다만 C++ 코드가 제대로 컴파일되지 않아서 C++을 쓰는 패키지들이 제대로 깔리지 않는다. 어떻게 해야 할까? 패키지를 깔 때, pixi의 셸 환경으로 들어가면 된다. 
 
-```shell
+```bash
 $ pixi shell
 $ R or radian 
 > install.packages("...")
 ```
 
-
+일단 패키지가 한번 설치된 이후에 활용할 때는 쉘 환경이 필요하지 않다. 
