@@ -1,5 +1,5 @@
 ---
-title: "R을 pixi로 깔아보자!" 
+title: "Pixi + R" 
 description: "R이 꼬여도 걱정 없다"   
 author: "JS HUHH"
 date: "04/03/2024"
