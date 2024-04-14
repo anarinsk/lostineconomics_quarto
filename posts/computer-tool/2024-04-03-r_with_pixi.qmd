@@ -4,7 +4,7 @@ description: "꼬이면 지우고 말지!"
 author: "JS HUHH"
 date: "04/03/2024"
 image: "./images/cat-packages.webp"
-categories: [computer-tool, r-stat]
+categories: [computer-tool, r-stat, pixi]
 lightbox: auto
 #fig-align: center
 filters:
@@ -27,6 +27,10 @@ Pixi로 R도 부릴 수 있다.
 ## 왜 pixi인가? 
 
 픽시를 사랑한다. 픽시를 쓰면서 파이썬 패키지를 깔거나 세팅을 할 때 고민하지 않는다. (알 수 없는 이유로) 꼬이면 지우고 다시 깔면 그만이다. R을 이렇게 파이썬처럼 운용할 수 없을까? 문득 이런 생각이 들더라. Pixi의 베이스가 되는 conda에 R이 있다. 그렇다면 pixi를 통해 R을 깔 수 있지 않을까? 
+
+:::{ .column-margin }
+다만 매 프로젝트마다 파이썬과 필요한 패키지를 깔아야 하는 것이 불만족스러운 혹은 불가능한 환경이 있을 수 있다. 
+:::
 
 이런 생각으로 쭉 해보니 의외로 잘 되더라. 이 포스팅은 (전적으로!) 이 내용을 까먹고 헤맬 미래의 나 놈을 위한 것이다.
 

@@ -113,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -165,9 +165,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -175,6 +177,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="quarto-categories">
     <div class="quarto-category">computer-tool</div>
     <div class="quarto-category">r-stat</div>
+    <div class="quarto-category">pixi</div>
   </div>
   </div>
 
@@ -213,10 +216,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <p>Pixi로 R도 부릴 수 있다.</p>
 </section>
-<section id="왜-pixi인가" class="level2">
+<section id="왜-pixi인가" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="왜-pixi인가">왜 pixi인가?</h2>
 <p>픽시를 사랑한다. 픽시를 쓰면서 파이썬 패키지를 깔거나 세팅을 할 때 고민하지 않는다. (알 수 없는 이유로) 꼬이면 지우고 다시 깔면 그만이다. R을 이렇게 파이썬처럼 운용할 수 없을까? 문득 이런 생각이 들더라. Pixi의 베이스가 되는 conda에 R이 있다. 그렇다면 pixi를 통해 R을 깔 수 있지 않을까?</p>
-<p>이런 생각으로 쭉 해보니 의외로 잘 되더라. 이 포스팅은 (전적으로!) 이 내용을 까먹고 헤맬 미래의 나 놈을 위한 것이다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>다만 매 프로젝트마다 파이썬과 필요한 패키지를 깔아야 하는 것이 불만족스러운 혹은 불가능한 환경이 있을 수 있다.</p>
+</div></div><p>이런 생각으로 쭉 해보니 의외로 잘 되더라. 이 포스팅은 (전적으로!) 이 내용을 까먹고 헤맬 미래의 나 놈을 위한 것이다.</p>
 </section>
 <section id="얻는-것과-잃는-것" class="level2">
 <h2 class="anchored" data-anchor-id="얻는-것과-잃는-것">얻는 것과 잃는 것</h2>
@@ -259,7 +265,7 @@ $ pixi add python=3.11 r-base radian # 파이썬, r-base, radian 추가 </code><
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/pixi-r-1-min.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="익스텐션의 설정으로 가자."><img src="./images/pixi-r-1-min.png" class="img-fluid figure-img" alt="익스텐션의 설정으로 가자."></a></p>
+<p><a href="./images/pixi-r-1-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="익스텐션의 설정으로 가자."><img src="./images/pixi-r-1-min.png" class="img-fluid figure-img" alt="익스텐션의 설정으로 가자."></a></p>
 <figcaption>익스텐션의 설정으로 가자.</figcaption>
 </figure>
 </div>
@@ -267,7 +273,7 @@ $ pixi add python=3.11 r-base radian # 파이썬, r-base, radian 추가 </code><
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/pixi-r-2-min.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="두 개 모두 적절한 위칠 바꿔주자"><img src="./images/pixi-r-2-min.png" class="img-fluid figure-img" alt="두 개 모두 적절한 위칠 바꿔주자"></a></p>
+<p><a href="./images/pixi-r-2-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="두 개 모두 적절한 위칠 바꿔주자"><img src="./images/pixi-r-2-min.png" class="img-fluid figure-img" alt="두 개 모두 적절한 위칠 바꿔주자"></a></p>
 <figcaption>두 개 모두 적절한 위칠 바꿔주자</figcaption>
 </figure>
 </div>
@@ -855,7 +861,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false,"closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
