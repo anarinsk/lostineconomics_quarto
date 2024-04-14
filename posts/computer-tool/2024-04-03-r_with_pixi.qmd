@@ -1,9 +1,9 @@
 ---
 title: "Pixi + R" 
-description: "R이 꼬여도 걱정 없다"   
+description: "꼬이면 지우고 말지!"   
 author: "JS HUHH"
 date: "04/03/2024"
-image: "./images/r-pixi.webp"
+image: "./images/cat-packages.webp"
 categories: [computer-tool, r-stat]
 lightbox: auto
 #fig-align: center
@@ -22,7 +22,7 @@ format:
 
 ## TL; DR
 
-Pixi로 R을 부릴 수 있다.  
+Pixi로 R도 부릴 수 있다.  
 
 ## 왜 pixi인가? 
 
