@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -108,7 +108,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -229,9 +228,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div></div></section>
 <section id="리포지토리-주소-변경" class="level2">
 <h2 class="anchored" data-anchor-id="리포지토리-주소-변경">리포지토리 주소 변경</h2>
-<p>우분투 업데이트에 필요한 리포지토리 주소를 바꾸도록 하자. 만일 WSL을 통해 설치했다면 우분투 메인 리포(<code>http://archive.ubuntu.com/ubuntu/</code>)로 설정되어 있을 것이고, iso 이미지로 설치했다면, <code>archive</code> 앞에 <code>kr.</code>이 앞에 붙어 있다. apt 패키지 업데이트를 위한 주소는 <code>/etc/apt/sources.list</code> 파일을 직접 편집하면 된다. 편집용 에디터는 취향껏 쓰면 된다. 편리한 nano로 예를 들자.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> sudo <span class="fu">nano</span> /etc/apt/sources.list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>기본 저장소보다는 카카오의 미러 저장소가 국내에서 빠르다. 해당 파일을 적당한 편집기로 열어 기본 패키지 저장소가 어떻게 되어 있는지 살펴보자. 파일 내의 모든 저장소 URL을 찾아 <code>http://archive.ubuntu.com/ubuntu/</code> 또는 <code>http://kr.archive.ubuntu.com/ubuntu/</code> 등의 주소를 <code>http://mirror.kakao.com/ubuntu/</code>로 변경하면 된다. 둘 중 뭘로 되어 있는지 모르니 확인 후 작업하는 것을 권한다. nano 앱에서 <code>crtl-w</code> <code>&gt;</code> <code>crtl-r</code>로 해당 부분을 찾아서 바꾸자.</p>
+<p>우분투 업데이트에 필요한 리포지토리 주소를 바꾸도록 하자. 만일 WSL을 통해 설치했다면 우분투 메인 리포(<code>http://archive.ubuntu.com/ubuntu</code>)로 설정되어 있을 것이고, iso 이미지로 설치했다면, <code>archive</code> 앞에 <code>kr.</code>이 앞에 붙어 있을 것이다. apt 패키지 업데이트를 위한 주소는</p>
+<ul>
+<li>22.04 LTS까지 <code>/etc/apt/sources.list</code></li>
+<li>24.04 LTS부터 <code>/etc/apt/sources.list.d/ubuntu.sources</code></li>
+</ul>
+<p>파일을 직접 편집하면 된다. 편집용 에디터는 취향껏 쓰면 된다. 편리한 nano로 예를 들자.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> sudo <span class="fu">nano</span> /etc/apt/sources.list <span class="co"># or</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> sudo <span class="fu">nano</span> /etc/apt/sources.list.d/ubuntu.sources</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>기본 저장소보다는 카카오의 미러 저장소가 국내에서 빠르다. 해당 파일을 적당한 편집기로 열어 기본 패키지 저장소가 어떻게 되어 있는지 살펴보자. 파일 내의 모든 저장소 URL을 찾아 <code>http://archive.ubuntu.com/ubuntu</code> 또는 <code>http://kr.archive.ubuntu.com/ubuntu</code> 등의 주소를 <code>http://mirror.kakao.com/ubuntu</code>로 변경하면 된다. 둘 중 뭘로 되어 있는지 모르니 확인 후 작업하는 것을 권한다. nano 앱에서 <code>crtl-w</code> <code>&gt;</code> <code>crtl-r</code>로 해당 부분을 찾아서 바꾸자.</p>
 </section>
 <section id="zsh-관련-설치" class="level2">
 <h2 class="anchored" data-anchor-id="zsh-관련-설치">zsh 관련 설치</h2>
@@ -529,6 +534,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/www\.lostineconomics\.com\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -563,7 +586,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

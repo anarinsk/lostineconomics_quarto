@@ -40,13 +40,19 @@ WSL을 예로 들어 보자. 윈도와 나란히 설치되어 독립적으로 �
 
 ## 리포지토리 주소 변경 
 
-우분투 업데이트에 필요한 리포지토리 주소를 바꾸도록 하자. 만일 WSL을 통해 설치했다면 우분투 메인 리포(`http://archive.ubuntu.com/ubuntu/`)로 설정되어 있을 것이고, iso 이미지로 설치했다면, `archive` 앞에 `kr.`이 앞에 붙어 있다. apt 패키지 업데이트를 위한 주소는 `/etc/apt/sources.list` 파일을 직접 편집하면 된다. 편집용 에디터는 취향껏 쓰면 된다. 편리한 nano로 예를 들자. 
+우분투 업데이트에 필요한 리포지토리 주소를 바꾸도록 하자. 만일 WSL을 통해 설치했다면 우분투 메인 리포(`http://archive.ubuntu.com/ubuntu`)로 설정되어 있을 것이고, iso 이미지로 설치했다면, `archive` 앞에 `kr.`이 앞에 붙어 있을 것이다. apt 패키지 업데이트를 위한 주소는 
+
+- 22.04 LTS까지 `/etc/apt/sources.list` 
+- 24.04 LTS부터 `/etc/apt/sources.list.d/ubuntu.sources`
+
+파일을 직접 편집하면 된다. 편집용 에디터는 취향껏 쓰면 된다. 편리한 nano로 예를 들자. 
 
 ```zsh
-> sudo nano /etc/apt/sources.list
+> sudo nano /etc/apt/sources.list # or
+> sudo nano /etc/apt/sources.list.d/ubuntu.sources
 ```
 
-기본 저장소보다는 카카오의 미러 저장소가 국내에서 빠르다. 해당 파일을 적당한 편집기로 열어 기본 패키지 저장소가 어떻게 되어 있는지 살펴보자. 파일 내의 모든 저장소 URL을 찾아 `http://archive.ubuntu.com/ubuntu/` 또는 `http://kr.archive.ubuntu.com/ubuntu/` 등의 주소를 `http://mirror.kakao.com/ubuntu/`로 변경하면 된다. 둘 중 뭘로 되어 있는지 모르니 확인 후 작업하는 것을 권한다. nano 앱에서 `crtl-w` `>`  `crtl-r`로 해당 부분을 찾아서 바꾸자.  
+기본 저장소보다는 카카오의 미러 저장소가 국내에서 빠르다. 해당 파일을 적당한 편집기로 열어 기본 패키지 저장소가 어떻게 되어 있는지 살펴보자. 파일 내의 모든 저장소 URL을 찾아 `http://archive.ubuntu.com/ubuntu` 또는 `http://kr.archive.ubuntu.com/ubuntu` 등의 주소를 `http://mirror.kakao.com/ubuntu`로 변경하면 된다. 둘 중 뭘로 되어 있는지 모르니 확인 후 작업하는 것을 권한다. nano 앱에서 `crtl-w` `>`  `crtl-r`로 해당 부분을 찾아서 바꾸자.  
 
 ## zsh 관련 설치 
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -111,7 +111,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -235,6 +234,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="matplotlib과-한글의-라벨링">matplotlib과 한글의 라벨링</h2>
 <p>matplotlib은 표준적인 파이썬 시각화 패키지다. 아쉽게도 이 녀석이 한글과 별로 안 친하다. 그래픽 렌더링 엔진에 한글 폰트가 빠져 있어서 이를 추가로 인식을 시켜야 결과물 내에서 한글 라벨을 쓸 수 있다. 가장 간단한 해결 방법은 나눔고딕 폰트를 쓸 수 있게 해주는 패키지 <a href="https://github.com/seongminp/koreanize-matplotlib">koreanize-matplotlib</a>를 쓰는 것이다.</p>
 <p>먼저 문제부터 살펴보자. 테스트를 위해서 아래 코드에 간단한 함수 <code>draw_sample(fontprop)</code>를 작성했다. 인자 <code>fontprop</code>은 그래프 요소에 적용될 폰트 특성이다. 값이 없으면 전역적으로 설정된 내용에 따른다.</p>
+<details open="" class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> matplotlib <span class="im">as</span> mpl</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> matplotlib.font_manager <span class="im">as</span> fm</span>
@@ -250,6 +251,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-13"><a href="#cb1-13"></a>    plt.show()</span>
 <span id="cb1-14"><a href="#cb1-14"></a></span>
 <span id="cb1-15"><a href="#cb1-15"></a>draw_sample()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stderr">
 <pre><code>/home/anari/github/lostineconomics_quarto/.pixi/env/lib/python3.11/site-packages/IPython/core/pylabtools.py:152: UserWarning: Glyph 44032 (\N{HANGUL SYLLABLE GA}) missing from current font.
   fig.canvas.print_figure(bytes_io, **kw)
@@ -264,18 +266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 /home/anari/github/lostineconomics_quarto/.pixi/env/lib/python3.11/site-packages/IPython/core/pylabtools.py:152: UserWarning: Glyph 51060 (\N{HANGUL SYLLABLE I}) missing from current font.
   fig.canvas.print_figure(bytes_io, **kw)</code></pre>
 </div>
-<div id="2ba4a361" class="cell quarto-layout-panel" data-execution_count="1" data-layout="[[-0.5,1,-0.5]]">
-<div class="quarto-layout-row">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<details open="" class="code-fold">
-<summary>Code</summary>
-</details>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-</div>
+<div id="2ba4a361" class="cell quarto-layout-panel" data-layout="[[-0.5,1,-0.5]]" data-execution_count="1">
 <div class="quarto-layout-row">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
 <p>&nbsp;</p>
@@ -291,20 +282,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>위 결과에서 보듯이 한글 폰트가 없으니 출력이 제대로 되지 않는다. 이제 <code>koreanize-matplotlib</code> 패키지를 설치하고 import 후 실행해보자</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">$</span> pip install koreanize-matplotlib </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>위에서 보다시피, <code>koreanize-matplotlib</code>는 PyPI에만 있다. conda와 같은 다른 저장소를 통해서는 설치할 수 없다는 것은 유의하시라.</p>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> koreanize_matplotlib</span>
-<span id="cb4-2"><a href="#cb4-2"></a>draw_sample()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="37ab628c" class="cell quarto-layout-panel" data-execution_count="2" data-layout="[[-0.5,1,-0.5]]">
-<div class="quarto-layout-row">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
 <details open="" class="code-fold">
 <summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> koreanize_matplotlib</span>
+<span id="cb4-2"><a href="#cb4-2"></a>draw_sample()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-</div>
+<div id="37ab628c" class="cell quarto-layout-panel" data-layout="[[-0.5,1,-0.5]]" data-execution_count="2">
 <div class="quarto-layout-row">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
 <p>&nbsp;</p>
@@ -373,20 +356,12 @@ Code Tips
 <section id="호출해서-활용" class="level3">
 <h3 class="anchored" data-anchor-id="호출해서-활용">호출해서 활용</h3>
 <p>아래 결과에서 보듯이, fontprop을 통해 지정된 폰트 양식을 그래프 요소에 적용해보자.</p>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>fontprop <span class="op">=</span> fm.FontProperties(fname<span class="op">=</span>font_path, size<span class="op">=</span><span class="dv">13</span>)</span>
-<span id="cb8-2"><a href="#cb8-2"></a>draw_sample(fontprop)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="bddea013" class="cell quarto-layout-panel" data-execution_count="5" data-layout="[[-0.5,1,-0.5]]">
-<div class="quarto-layout-row">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
 <details open="" class="code-fold">
 <summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>fontprop <span class="op">=</span> fm.FontProperties(fname<span class="op">=</span>font_path, size<span class="op">=</span><span class="dv">13</span>)</span>
+<span id="cb8-2"><a href="#cb8-2"></a>draw_sample(fontprop)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-</div>
+<div id="bddea013" class="cell quarto-layout-panel" data-layout="[[-0.5,1,-0.5]]" data-execution_count="5">
 <div class="quarto-layout-row">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
 <p>&nbsp;</p>
@@ -403,6 +378,8 @@ Code Tips
 <section id="전역으로-활용" class="level3">
 <h3 class="anchored" data-anchor-id="전역으로-활용">전역으로 활용</h3>
 <p>폰트 속성을 전역으로 지정하고 그래프를 그려보자.</p>
+<details open="" class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># rcParams 설정</span></span>
 <span id="cb9-2"><a href="#cb9-2"></a>plt.rcParams[<span class="st">"font.family"</span>] <span class="op">=</span> <span class="st">'D2 Coding Nerd'</span></span>
 <span id="cb9-3"><a href="#cb9-3"></a>plt.rcParams[<span class="st">'font.size'</span>] <span class="op">=</span> <span class="fl">15.</span></span>
@@ -413,18 +390,8 @@ Code Tips
 <span id="cb9-8"><a href="#cb9-8"></a></span>
 <span id="cb9-9"><a href="#cb9-9"></a><span class="co"># 그림 그리기 </span></span>
 <span id="cb9-10"><a href="#cb9-10"></a>draw_sample()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="fc1a72d8" class="cell quarto-layout-panel" data-execution_count="6" data-layout="[[-0.5,1,-0.5]]">
-<div class="quarto-layout-row">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<details open="" class="code-fold">
-<summary>Code</summary>
 </details>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-</div>
+<div id="fc1a72d8" class="cell quarto-layout-panel" data-layout="[[-0.5,1,-0.5]]" data-execution_count="6">
 <div class="quarto-layout-row">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
 <p>&nbsp;</p>
@@ -666,6 +633,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/www\.lostineconomics\.com\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -700,7 +685,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -975,7 +964,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","loop":false,"closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

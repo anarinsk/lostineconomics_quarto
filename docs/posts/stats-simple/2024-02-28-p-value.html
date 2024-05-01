@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -106,7 +106,6 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -229,7 +228,7 @@ P(A|B) \neq P(B|A)
 <div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://mastersandmagic.com/cdn/shop/products/product-image-1468072041_2000x.jpg?v=1602738728" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="1~20까지 숫자를 지닌 D&amp;D용 주사위"><img src="https://mastersandmagic.com/cdn/shop/products/product-image-1468072041_2000x.jpg?v=1602738728" class="img-fluid figure-img" alt="1~20까지 숫자를 지닌 D&amp;D용 주사위"></a></p>
+<p><a href="https://mastersandmagic.com/cdn/shop/products/product-image-1468072041_2000x.jpg?v=1602738728" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="1~20까지 숫자를 지닌 D&amp;D용 주사위"><img src="https://mastersandmagic.com/cdn/shop/products/product-image-1468072041_2000x.jpg?v=1602738728" class="img-fluid figure-img" alt="1~20까지 숫자를 지닌 D&amp;D용 주사위"></a></p>
 <figcaption>1~20까지 숫자를 지닌 D&amp;D용 주사위</figcaption>
 </figure>
 </div>
@@ -240,7 +239,7 @@ P(A|B) \neq P(B|A)
 <div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://ae01.alicdn.com/kf/S35f98360675d434e94b5d9b20e19ed6bE.jpg_640x640Q90.jpg_.webp" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="녹색 모자!"><img src="https://ae01.alicdn.com/kf/S35f98360675d434e94b5d9b20e19ed6bE.jpg_640x640Q90.jpg_.webp" class="img-fluid figure-img" alt="녹색 모자!"></a></p>
+<p><a href="https://ae01.alicdn.com/kf/S35f98360675d434e94b5d9b20e19ed6bE.jpg_640x640Q90.jpg_.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="녹색 모자!"><img src="https://ae01.alicdn.com/kf/S35f98360675d434e94b5d9b20e19ed6bE.jpg_640x640Q90.jpg_.webp" class="img-fluid figure-img" alt="녹색 모자!"></a></p>
 <figcaption>녹색 모자!</figcaption>
 </figure>
 </div>
@@ -396,7 +395,7 @@ P(H_0|\text{E}) = \dfrac{\alpha P(H_0)}{\alpha P(H_0) + (1-\beta)P(\neg H_0)}
 <div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://i.stack.imgur.com/x1GQ1.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="기준 점을 잡게 되면 1종 오류와 2종 오류의 트레이드오프가 발생한다."><img src="https://i.stack.imgur.com/x1GQ1.png" class="img-fluid figure-img" alt="기준 점을 잡게 되면 1종 오류와 2종 오류의 트레이드오프가 발생한다."></a></p>
+<p><a href="https://i.stack.imgur.com/x1GQ1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3" title="기준 점을 잡게 되면 1종 오류와 2종 오류의 트레이드오프가 발생한다."><img src="https://i.stack.imgur.com/x1GQ1.png" class="img-fluid figure-img" alt="기준 점을 잡게 되면 1종 오류와 2종 오류의 트레이드오프가 발생한다."></a></p>
 <figcaption>기준 점을 잡게 되면 1종 오류와 2종 오류의 트레이드오프가 발생한다.</figcaption>
 </figure>
 </div>
@@ -677,6 +676,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/www\.lostineconomics\.com\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -711,7 +728,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -986,7 +1007,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","loop":false});
+<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
