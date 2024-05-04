@@ -6,7 +6,7 @@ $h4-font-size: 100%  !default;
 $h5-font-size: 100%  !default;
 $g6-font-size: 100%  !default;
 //$figure-caption-font-size: 70% !default;
-$headings-font-weight:  200% !default;
+$headings-font-weight:  400% !default;
 
 //@import url("https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css");
 //@import url("https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/static/woff2/SUITE.css");
@@ -27,7 +27,7 @@ $headings-font-weight:  200% !default;
 @font-face {
   font-family: 'D2Coding';
   font-weight: 400;
-  src: url("./fonts/STIXTwoMath-Regular.woff2") format('woff2'),
+  src: url("./fonts/D2Coding-ligature-subset.woff2") format('woff2'),
   // unicode-range: U+000-5FF;    /* 라틴어만 다운로드 */
 }
 
