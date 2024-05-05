@@ -25,6 +25,13 @@ $headings-font-weight:  600 !default;
 }
 
 @font-face {
+  font-family: 'IBM Plex Mono';
+  font-weight: 400;
+  src: url("https://github.com/anarinsk/setup_webfonts/raw/main/IBMPlexMono-Regular.woff2") format('woff2'),
+  // unicode-range: U+000-5FF;    /* 라틴어만 다운로드 */
+}
+
+@font-face {
   font-family: 'D2Coding';
   font-weight: 400;
   src: url("./fonts/D2Coding-ligature-subset.woff2") format('woff2'),
@@ -71,12 +78,12 @@ table {
 }
 
 .sourceCode {
-  font-family: 'D2Coding', monospace !important;
+  font-family: 'IBM Plex Mono', 'D2Coding', monospace !important;
   font-size: 95%;
 }
 
 code {
-  font-family: 'D2Coding', monospace !important;
+  font-family: 'IBM Plex Mono', 'D2Coding', monospace !important;
   font-size: 85%;
 }
 
@@ -104,54 +111,3 @@ code {
     font-family: 'SUIT Variable', sans-serif !important;
     font-size: 80%;
    }
-
-.figurec{
-    display: inline-block; 
-    margin: 0 auto;
-    border:0px silver solid; 
-    padding: 5px;
-    text-align: right; 
-    background:#FFFFFF;
-    font-family: 'SUIT Variable', sans-serif !important;
-    font-size: 80%;
-  }
-
-
-// Obsolete but backward compatibility 
-
-.my-figure7 {
-    display: inline-block; 
-    margin: 0 auto;
-    //border:1.5px silver solid; 
-    padding: 5px;
-    text-align: left; 
-    width: 70%;
-    background:#FFFFFF;
-    font-family: 'SUIT Variable', sans-serif !important;
-    font-size: 80%;
-  }
-  
-.my-figure5 {
-    display: inline-block; 
-    margin: 0 auto;
-    //border:1.5px silver solid; 
-    padding: 5px;
-    text-align: left; 
-    width: 50%;
-    background:#FFFFFF;
-    font-family: 'SUIT Variable', sans-serif !important;
-    font-size: 80%;
-  }
-  
-.my-figure3 {
-    display: inline-block; 
-    margin: 0 auto;
-    //border:1.5px silver solid; 
-    padding: 5px;
-    text-align: left; 
-    width: 30%;
-    background:#FFFFFF;
-    font-family: 'SUIT Variable', sans-serif !important;
-    font-size: 80%;
-  }
-  
