@@ -103,10 +103,10 @@ WSL2 환경에서 pixi+R의 조합이 문제 없이 잘 돌아간다. 그냥 쓰
 
 활용하는 데는 별 문제가 없다. 다만 C++ 코드가 제대로 컴파일되지 않아서 C++을 쓰는 패키지들이 제대로 깔리지 않는다. 어떻게 해야 할까? 패키지를 깔 때, pixi의 셸 환경으로 들어가면 된다. 
 
-```bash
-$ pixi shell
-$ R or radian 
-> install.packages("...")
+```shell
+> pixi shell
+> R or radian 
+> install.packages("...") # R에서 패키지 설치
 ```
 
 일단 패키지가 한번 설치된 이후에 활용할 때는 쉘 환경이 필요하지 않다. 

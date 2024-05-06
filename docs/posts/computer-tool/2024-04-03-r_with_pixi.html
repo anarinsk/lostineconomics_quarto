@@ -265,7 +265,7 @@ $ pixi add python=3.11 r-base radian # 파이썬, r-base, radian 추가 </code><
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/pixi-r-1-min.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="익스텐션의 설정으로 가자."><img src="./images/pixi-r-1-min.png" class="img-fluid figure-img" alt="익스텐션의 설정으로 가자."></a></p>
+<p><a href="./images/pixi-r-1-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="익스텐션의 설정으로 가자."><img src="./images/pixi-r-1-min.png" class="img-fluid figure-img" alt="익스텐션의 설정으로 가자."></a></p>
 <figcaption>익스텐션의 설정으로 가자.</figcaption>
 </figure>
 </div>
@@ -273,7 +273,7 @@ $ pixi add python=3.11 r-base radian # 파이썬, r-base, radian 추가 </code><
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/pixi-r-2-min.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="두 개 모두 적절한 위칠 바꿔주자"><img src="./images/pixi-r-2-min.png" class="img-fluid figure-img" alt="두 개 모두 적절한 위칠 바꿔주자"></a></p>
+<p><a href="./images/pixi-r-2-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="두 개 모두 적절한 위칠 바꿔주자"><img src="./images/pixi-r-2-min.png" class="img-fluid figure-img" alt="두 개 모두 적절한 위칠 바꿔주자"></a></p>
 <figcaption>두 개 모두 적절한 위칠 바꿔주자</figcaption>
 </figure>
 </div>
@@ -293,9 +293,9 @@ $ pixi add python=3.11 r-base radian # 파이썬, r-base, radian 추가 </code><
 <section id="macos" class="level3">
 <h3 class="anchored" data-anchor-id="macos">Macos</h3>
 <p>활용하는 데는 별 문제가 없다. 다만 C++ 코드가 제대로 컴파일되지 않아서 C++을 쓰는 패키지들이 제대로 깔리지 않는다. 어떻게 해야 할까? 패키지를 깔 때, pixi의 셸 환경으로 들어가면 된다.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pixi shell</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> R or radian </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> install.packages<span class="kw">(</span><span class="st">"..."</span><span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre class="shell"><code>&gt; pixi shell
+&gt; R or radian 
+&gt; install.packages("...") # R에서 패키지 설치</code></pre>
 <p>일단 패키지가 한번 설치된 이후에 활용할 때는 쉘 환경이 필요하지 않다.</p>
 
 
@@ -861,7 +861,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

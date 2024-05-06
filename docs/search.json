@@ -683,7 +683,7 @@
     "href": "posts/computer-tool/2024-04-03-r_with_pixi.html#vs-code로-r-쓰기",
     "title": "Pixi + R",
     "section": "VS Code로 R 쓰기",
-    "text": "VS Code로 R 쓰기\nhttps://code.visualstudio.com/docs/languages/r\n전체적인 지침은 링크에 잘 정리가 되어 있다.\n\nWSL2\nWSL2 환경에서 pixi+R의 조합이 문제 없이 잘 돌아간다. 그냥 쓰면 된다. 혹시 R 코드가 실행되지 않으면 터미널에 R을 띄워주자.\n\n\nMacos\n활용하는 데는 별 문제가 없다. 다만 C++ 코드가 제대로 컴파일되지 않아서 C++을 쓰는 패키지들이 제대로 깔리지 않는다. 어떻게 해야 할까? 패키지를 깔 때, pixi의 셸 환경으로 들어가면 된다.\n$ pixi shell\n$ R or radian \n&gt; install.packages(\"...\")\n일단 패키지가 한번 설치된 이후에 활용할 때는 쉘 환경이 필요하지 않다.\n\n\n\n익스텐션의 설정으로 가자.\n두 개 모두 적절한 위칠 바꿔주자"
+    "text": "VS Code로 R 쓰기\nhttps://code.visualstudio.com/docs/languages/r\n전체적인 지침은 링크에 잘 정리가 되어 있다.\n\nWSL2\nWSL2 환경에서 pixi+R의 조합이 문제 없이 잘 돌아간다. 그냥 쓰면 된다. 혹시 R 코드가 실행되지 않으면 터미널에 R을 띄워주자.\n\n\nMacos\n활용하는 데는 별 문제가 없다. 다만 C++ 코드가 제대로 컴파일되지 않아서 C++을 쓰는 패키지들이 제대로 깔리지 않는다. 어떻게 해야 할까? 패키지를 깔 때, pixi의 셸 환경으로 들어가면 된다.\n&gt; pixi shell\n&gt; R or radian \n&gt; install.packages(\"...\") # R에서 패키지 설치\n일단 패키지가 한번 설치된 이후에 활용할 때는 쉘 환경이 필요하지 않다.\n\n\n\n익스텐션의 설정으로 가자.\n두 개 모두 적절한 위칠 바꿔주자"
   },
   {
     "objectID": "posts/computer-tool/2023-05-29-rye.html",
