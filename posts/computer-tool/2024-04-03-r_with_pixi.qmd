@@ -164,7 +164,7 @@ https://github.com/cran/Matrix/releases
 
 https://github.com/cran/MASS/releases
 
-MASS 7.3-60 버전이 설치 가능했다.  
+(이 글을 쓰는 시점에서) MASS 7.3-60 버전이 설치 가능했다.  
 
 ## Julia 설치하기 
 
@@ -174,7 +174,7 @@ R에 비하면 훨씬 깔끔하고 운용이 쉽다. 다만 약간의 우회로�
 > pixi add juliaup
 > pixi shell 
 > juliaup add release 
-> juliaup install 1.7.0
+> juliaup install 1.10.3
 ```
 
 VS Code에서 Julia 확정을 설치하고 확장 설정에서 `Julia: Executable Path`를 찾아서 .pixi 아래 설치된 줄리아의 실행 디렉토리를 설정한다. 

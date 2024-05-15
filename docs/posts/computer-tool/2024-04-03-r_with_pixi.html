@@ -305,7 +305,7 @@ local({r &lt;- getOption("repos")
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/pixi-r-1-min.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="익스텐션의 설정으로 가자."><img src="./images/pixi-r-1-min.png" class="img-fluid figure-img" alt="익스텐션의 설정으로 가자."></a></p>
+<p><a href="./images/pixi-r-1-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="익스텐션의 설정으로 가자."><img src="./images/pixi-r-1-min.png" class="img-fluid figure-img" alt="익스텐션의 설정으로 가자."></a></p>
 <figcaption>익스텐션의 설정으로 가자.</figcaption>
 </figure>
 </div>
@@ -313,7 +313,7 @@ local({r &lt;- getOption("repos")
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/pixi-r-2-min.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="두 개 모두 적절한 위칠 바꿔주자"><img src="./images/pixi-r-2-min.png" class="img-fluid figure-img" alt="두 개 모두 적절한 위칠 바꿔주자"></a></p>
+<p><a href="./images/pixi-r-2-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="두 개 모두 적절한 위칠 바꿔주자"><img src="./images/pixi-r-2-min.png" class="img-fluid figure-img" alt="두 개 모두 적절한 위칠 바꿔주자"></a></p>
 <figcaption>두 개 모두 적절한 위칠 바꿔주자</figcaption>
 </figure>
 </div>
@@ -345,7 +345,7 @@ local({r &lt;- getOption("repos")
 <h3 class="anchored" data-anchor-id="mass">MASS</h3>
 <p>위와 같은 방법으로 접근하면 된다.</p>
 <p>https://github.com/cran/MASS/releases</p>
-<p>MASS 7.3-60 버전이 설치 가능했다.</p>
+<p>(이 글을 쓰는 시점에서) MASS 7.3-60 버전이 설치 가능했다.</p>
 </section>
 </section>
 <section id="julia-설치하기" class="level2">
@@ -354,7 +354,7 @@ local({r &lt;- getOption("repos")
 <div class="sourceCode" id="cb9"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pixi <span class="ex">add</span> juliaup</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pixi <span class="ex">shell</span> </span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> juliaup <span class="ex">add</span> release </span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> juliaup <span class="fu">install</span> 1.7.0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> juliaup <span class="fu">install</span> 1.10.3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>VS Code에서 Julia 확정을 설치하고 확장 설정에서 <code>Julia: Executable Path</code>를 찾아서 .pixi 아래 설치된 줄리아의 실행 디렉토리를 설정한다.</p>
 
 
@@ -919,7 +919,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","loop":false,"selector":".lightbox","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

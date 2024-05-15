@@ -697,14 +697,14 @@
     "href": "posts/computer-tool/2024-04-03-r_with_pixi.html#packages-설치-시-유의사항",
     "title": "Pixi와 쓰는 R과 Julia",
     "section": "Packages 설치 시 유의사항",
-    "text": "Packages 설치 시 유의사항\n패키지 설치 시 만날 수 있는 몇 가지 에러 유형을 패키지 별로 정리해보자.\n\ndevtools\nsystemfonts 패키지가 설치되지 않는다. 발생하는 에러 메시지를 잘 보면서 OS 별로 대응하면 된다.\n\n\ntidyverse\nMatrix 패키지가 버전이 맞지 않아서 설치가 안된다.\nhttps://github.com/cran/Matrix/releases\n(이 글을 쓰는 시점에서) 1.6-5 버전의 Source Code의 링크를 복사한 후 devtools를 통해 설치한다.\n&gt; devtools::install_url(\"https://github.com/cran/Matrix/archive/refs/tags/1.6-5.zip\") \n\n\nMASS\n위와 같은 방법으로 접근하면 된다.\nhttps://github.com/cran/MASS/releases\nMASS 7.3-60 버전이 설치 가능했다."
+    "text": "Packages 설치 시 유의사항\n패키지 설치 시 만날 수 있는 몇 가지 에러 유형을 패키지 별로 정리해보자.\n\ndevtools\nsystemfonts 패키지가 설치되지 않는다. 발생하는 에러 메시지를 잘 보면서 OS 별로 대응하면 된다.\n\n\ntidyverse\nMatrix 패키지가 버전이 맞지 않아서 설치가 안된다.\nhttps://github.com/cran/Matrix/releases\n(이 글을 쓰는 시점에서) 1.6-5 버전의 Source Code의 링크를 복사한 후 devtools를 통해 설치한다.\n&gt; devtools::install_url(\"https://github.com/cran/Matrix/archive/refs/tags/1.6-5.zip\") \n\n\nMASS\n위와 같은 방법으로 접근하면 된다.\nhttps://github.com/cran/MASS/releases\n(이 글을 쓰는 시점에서) MASS 7.3-60 버전이 설치 가능했다."
   },
   {
     "objectID": "posts/computer-tool/2024-04-03-r_with_pixi.html#julia-설치하기",
     "href": "posts/computer-tool/2024-04-03-r_with_pixi.html#julia-설치하기",
     "title": "Pixi와 쓰는 R과 Julia",
     "section": "Julia 설치하기",
-    "text": "Julia 설치하기\nR에 비하면 훨씬 깔끔하고 운용이 쉽다. 다만 약간의 우회로가 필요하다. Julia를 바로 설치하면 OS에 따라서 설치가 되지 않는다. Juliaup을 먼저 설치하고 Pixi의 셸 환경 안에서 이를 이용해서 Julia를 설치하면 된다.\n&gt; pixi add juliaup\n&gt; pixi shell \n&gt; juliaup add release \n&gt; juliaup install 1.7.0\nVS Code에서 Julia 확정을 설치하고 확장 설정에서 Julia: Executable Path를 찾아서 .pixi 아래 설치된 줄리아의 실행 디렉토리를 설정한다.\n\n\n\n익스텐션의 설정으로 가자.\n두 개 모두 적절한 위칠 바꿔주자"
+    "text": "Julia 설치하기\nR에 비하면 훨씬 깔끔하고 운용이 쉽다. 다만 약간의 우회로가 필요하다. Julia를 바로 설치하면 OS에 따라서 설치가 되지 않는다. Juliaup을 먼저 설치하고 Pixi의 셸 환경 안에서 이를 이용해서 Julia를 설치하면 된다.\n&gt; pixi add juliaup\n&gt; pixi shell \n&gt; juliaup add release \n&gt; juliaup install 1.10.3\nVS Code에서 Julia 확정을 설치하고 확장 설정에서 Julia: Executable Path를 찾아서 .pixi 아래 설치된 줄리아의 실행 디렉토리를 설정한다.\n\n\n\n익스텐션의 설정으로 가자.\n두 개 모두 적절한 위칠 바꿔주자"
   },
   {
     "objectID": "posts/computer-tool/2023-05-29-rye.html",
