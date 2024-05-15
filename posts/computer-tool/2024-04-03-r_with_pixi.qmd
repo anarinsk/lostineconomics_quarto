@@ -1,5 +1,5 @@
 ---
-title: "Pixi + R" 
+title: "Pixi와 쓰는 R과 Julia" 
 description: "꼬이면 지우고 말지!"   
 author: "JS HUHH"
 date: "04/03/2024"
@@ -26,7 +26,7 @@ Pixi로 R도 부릴 수 있다.
 
 ## 왜 pixi인가? 
 
-픽시를 사랑한다. 픽시를 쓰면서 파이썬 패키지를 깔거나 세팅을 할 때 고민하지 않는다. (알 수 없는 이유로) 꼬이면 지우고 다시 깔면 그만이다. R을 이렇게 파이썬처럼 운용할 수 없을까? 문득 이런 생각이 들더라. Pixi의 베이스가 되는 conda에 R이 있다. 그렇다면 pixi를 통해 R을 깔 수 있지 않을까? 
+나는 픽시를 사랑한다. 픽시를 쓰면서 파이썬 패키지를 깔거나 세팅을 할 때 고민하지 않는다. (알 수 없는 이유로) 꼬이면 지우고 다시 깔면 그만이다. R을 이렇게 파이썬처럼 운용할 수 없을까? 문득 이런 생각이 들더라. Pixi의 베이스가 되는 conda에 R이 있다. 그렇다면 pixi를 통해 R을 깔 수 있지 않을까? 
 
 :::{ .column-margin }
 다만 매 프로젝트마다 파이썬과 필요한 패키지를 깔아야 하는 것이 불만족스러운 혹은 불가능한 환경이 있을 수 있다. 
@@ -49,31 +49,74 @@ RStudio는 아쉽지만 VS Code + pixi를 쓰는 것의 장점이 아쉬움 이�
   - Macos (Sonoma, Silicon)
 - pixi
 
+일단 R에 관해서 쭉 설명을 하고 Julia에 관한 내용을 더하겠다. R에 비하면 Julia 설치는 별 문제가 없다. 
+
 R을 깔고자 하는 디렉토리에서 아래와 같이 실행한다. 
 
-```shell
-$ pixi init # 픽시 초기화 
-$ pixi add python=3.11 r-base radian # 파이썬, r-base, radian 추가 
+```zsh
+pixi init # 픽시 초기화 
+pixi add python=3.11 r-base radian # 파이썬, r-base, radian 추가 
 ```
 
-위 명령어를 실행하면 `./.pixi/envs/default` 폴더 아래 파이썬, R-base 그리고 radian이 설치된다. radian은 파이썬으로 작성된 일종의 대안 터미널이다. 꽤 쓸만하다. 
+위 명령어를 실행하면 `[pixi 코드를 품은 디렉토리]/.pixi/envs/default` 폴더 아래 파이썬, R-base 그리고 radian이 설치된다. radian은 파이썬으로 작성된 일종의 대안 터미널이다. 꽤 쓸만하다. 
 
-VS Code에서 R을 쓰기 위해서 아래 두 패키지를 설치해야 한다. 
+## Miniforge 
+
+pixi 자체가 Conda에 의존한다. 따라서 Conda를 설치하는 게 좋다. 커뮤니티 버전인 Miniforge를 설치하자. Miniforge는 Macos에서는 brew로 설치할 수 있고, Ubuntu에서는 별도의 설치 파일을 받아서 설치하면 된다.
+
+::: {.panel-tabset}
+### MacOS
+```zsh 
+brew install miniforge
+```
+### Ubuntu
+```zsh
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh
+```
+::: 
+
+미니포지에서 gfortran을 설치하자. 이를 설치하지 않으면 패키지 설치 과정에서 많은 문제가 생길 것이다. 
+
+```zsh
+$ conda install -c conda-forge gfortran
+```
+
+시험삼아서 아래 두 패키지를 설치해보자. VS Code에서 R을 쓰기 위해서 아래 두 패키지를 설치해야 한다. 
 
 ```R
 > install.packages("languageserver")
 > install.packages("httpgd")
 ```
 
-## 라이브러리 설치 위치 지정
+## R을 위한 실행 환경 
 
-만일 기존에 R이 깔린 환경이 있다면 라이러리가 그쪽으로 설치된다. 라이브러리까지 하위 디렉토리에 설치하기 위해서는 몇가지 설정이 필요하다. `~/.zshrc` 혹은 이에 상당하는 환경에 깔린 설정 파일을 수정하자. 해당 파일을 연 후 아래와 같이 두자. 
+R을 패키지로 설치하지 않았기 때문에 몇 가지 설정이 필요하다. R의 설정을 위해 필요한 파일은 `.Renviron`, `.Rprofile` 두 가지이다. 이 두 파일을 `$HOME`에 생성하도록 하자. 
 
-```txt
-export R_LIBS_USER="[로컬 디렉토리]/.pixi/envs/default/lib/R/library"
+::: {.panel-tabset}
+### `.Renviron`
+```shell
+## macrtools - gfortran: start
+# PATH=${PATH}:/opt/gfortran/bin
+## macrtools - gfortran: end
+
+# Setting LIB location
+
+R_LIBS_SITE="/home/anari/github/setup_r-with-pixi/.pixi/envs/default/lib/R/library"
 ```
+### `.Rprofile`
+```shell
+# Setting CRAN Server
 
-해당 환경을 활성화하면 이제 R의 라이브러가 해당 디렉토리 아래 깔리게 된다. 만일 기존에 설치된 R이 없거나 지웠다면 라이브러리의 위치는 픽시 아래로 잡힌다. 확인하는 방법은 R에서 `.libPaths()`를 실행하면 된다.
+local({r <- getOption("repos")
+       r["CRAN"] <- "https://cloud.r-project.org"
+       options(repos=r)})
+```
+:::
+
+`.Renviron` 파일에서는 R의 라이브러리 위치를 지정하고, `Rpofile`에서는 CRAN 서버를 지정한다.
+
+R에서 `.libPaths()`를 패키지가 설치되는 위치를 확인할 수 있다.
 
 ## VS Code 설정 
 
@@ -95,18 +138,43 @@ export R_LIBS_USER="[로컬 디렉토리]/.pixi/envs/default/lib/R/library"
 
 전체적인 지침은 링크에 잘 정리가 되어 있다. 
 
-### WSL2
+## Packages 설치 시 유의사항 
 
-WSL2 환경에서 pixi+R의 조합이 문제 없이 잘 돌아간다. 그냥 쓰면 된다. 혹시 R 코드가 실행되지 않으면 터미널에 R을 띄워주자. 
+패키지 설치 시 만날 수 있는 몇 가지 에러 유형을 패키지 별로 정리해보자. 
 
-### Macos 
+### devtools
 
-활용하는 데는 별 문제가 없다. 다만 C++ 코드가 제대로 컴파일되지 않아서 C++을 쓰는 패키지들이 제대로 깔리지 않는다. 어떻게 해야 할까? 패키지를 깔 때, pixi의 셸 환경으로 들어가면 된다. 
+systemfonts 패키지가 설치되지 않는다. 발생하는 에러 메시지를 잘 보면서 OS 별로 대응하면 된다.  
 
-```shell
-> pixi shell
-> R or radian 
-> install.packages("...") # R에서 패키지 설치
+### tidyverse
+
+Matrix 패키지가 버전이 맞지 않아서 설치가 안된다. 
+
+https://github.com/cran/Matrix/releases
+
+(이 글을 쓰는 시점에서) 1.6-5 버전의 Source Code의 링크를 복사한 후 devtools를 통해 설치한다. 
+
+```R
+devtools::install_url("https://github.com/cran/Matrix/archive/refs/tags/1.6-5.zip") 
 ```
 
-일단 패키지가 한번 설치된 이후에 활용할 때는 쉘 환경이 필요하지 않다. 
+### MASS 
+
+위와 같은 방법으로 접근하면 된다. 
+
+https://github.com/cran/MASS/releases
+
+MASS 7.3-60 버전이 설치 가능했다.  
+
+## Julia 설치하기 
+
+R에 비하면 훨씬 깔끔하고 운용이 쉽다. 다만 약간의 우회로가 필요하다. Julia를 바로 설치하면 OS에 따라서 설치가 되지 않는다. Juliaup을 먼저 설치하고 Pixi의 셸 환경 안에서 이를 이용해서 Julia를 설치하면 된다. 
+
+```zsh
+pixi add juliaup
+pixi shell 
+juliaup add release 
+juliaup install 1.7.0
+```
+
+VS Code에서 Julia 확정을 설치하고 확장 설정에서 `Julia: Executable Path`를 찾아서 .pixi 아래 설치된 줄리아의 실행 디렉토리를 설정한다. 

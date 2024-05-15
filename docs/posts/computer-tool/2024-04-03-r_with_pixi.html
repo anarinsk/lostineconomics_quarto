@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2024-04-03">
 <meta name="description" content="꼬이면 지우고 말지!">
 
-<title>lostineconomics.com - Pixi + R</title>
+<title>lostineconomics.com - Pixi와 쓰는 R과 Julia</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -173,7 +173,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Pixi + R</h1>
+<h1 class="title">Pixi와 쓰는 R과 Julia</h1>
   <div class="quarto-categories">
     <div class="quarto-category">computer-tool</div>
     <div class="quarto-category">r-stat</div>
@@ -218,7 +218,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="왜-pixi인가" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="왜-pixi인가">왜 pixi인가?</h2>
-<p>픽시를 사랑한다. 픽시를 쓰면서 파이썬 패키지를 깔거나 세팅을 할 때 고민하지 않는다. (알 수 없는 이유로) 꼬이면 지우고 다시 깔면 그만이다. R을 이렇게 파이썬처럼 운용할 수 없을까? 문득 이런 생각이 들더라. Pixi의 베이스가 되는 conda에 R이 있다. 그렇다면 pixi를 통해 R을 깔 수 있지 않을까?</p>
+<p>나는 픽시를 사랑한다. 픽시를 쓰면서 파이썬 패키지를 깔거나 세팅을 할 때 고민하지 않는다. (알 수 없는 이유로) 꼬이면 지우고 다시 깔면 그만이다. R을 이렇게 파이썬처럼 운용할 수 없을까? 문득 이런 생각이 들더라. Pixi의 베이스가 되는 conda에 R이 있다. 그렇다면 pixi를 통해 R을 깔 수 있지 않을까?</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>다만 매 프로젝트마다 파이썬과 필요한 패키지를 깔아야 하는 것이 불만족스러운 혹은 불가능한 환경이 있을 수 있다.</p>
@@ -240,19 +240,59 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 <li>pixi</li>
 </ul>
+<p>일단 R에 관해서 쭉 설명을 하고 Julia에 관한 내용을 더하겠다. R에 비하면 Julia 설치는 별 문제가 없다.</p>
 <p>R을 깔고자 하는 디렉토리에서 아래와 같이 실행한다.</p>
-<pre class="shell"><code>$ pixi init # 픽시 초기화 
-$ pixi add python=3.11 r-base radian # 파이썬, r-base, radian 추가 </code></pre>
-<p>위 명령어를 실행하면 <code>./.pixi/envs/default</code> 폴더 아래 파이썬, R-base 그리고 radian이 설치된다. radian은 파이썬으로 작성된 일종의 대안 터미널이다. 꽤 쓸만하다.</p>
-<p>VS Code에서 R을 쓰기 위해서 아래 두 패키지를 설치해야 한다.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"languageserver"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"httpgd"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> init <span class="co"># 픽시 초기화 </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> add python=3.11 r-base radian <span class="co"># 파이썬, r-base, radian 추가 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>위 명령어를 실행하면 <code>[pixi 코드를 품은 디렉토리]/.pixi/envs/default</code> 폴더 아래 파이썬, R-base 그리고 radian이 설치된다. radian은 파이썬으로 작성된 일종의 대안 터미널이다. 꽤 쓸만하다.</p>
 </section>
-<section id="라이브러리-설치-위치-지정" class="level2">
-<h2 class="anchored" data-anchor-id="라이브러리-설치-위치-지정">라이브러리 설치 위치 지정</h2>
-<p>만일 기존에 R이 깔린 환경이 있다면 라이러리가 그쪽으로 설치된다. 라이브러리까지 하위 디렉토리에 설치하기 위해서는 몇가지 설정이 필요하다. <code>~/.zshrc</code> 혹은 이에 상당하는 환경에 깔린 설정 파일을 수정하자. 해당 파일을 연 후 아래와 같이 두자.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>export R_LIBS_USER="[로컬 디렉토리]/.pixi/envs/default/lib/R/library"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>해당 환경을 활성화하면 이제 R의 라이브러가 해당 디렉토리 아래 깔리게 된다. 만일 기존에 설치된 R이 없거나 지웠다면 라이브러리의 위치는 픽시 아래로 잡힌다. 확인하는 방법은 R에서 <code>.libPaths()</code>를 실행하면 된다.</p>
+<section id="miniforge" class="level2">
+<h2 class="anchored" data-anchor-id="miniforge">Miniforge</h2>
+<p>pixi 자체가 Conda에 의존한다. 따라서 Conda를 설치하는 게 좋다. 커뮤니티 버전인 Miniforge를 설치하자. Miniforge는 Macos에서는 brew로 설치할 수 있고, Ubuntu에서는 별도의 설치 파일을 받아서 설치하면 된다.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">MacOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Ubuntu</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="sourceCode" id="cb2"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install miniforge</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="sourceCode" id="cb3"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-L</span> <span class="at">-O</span> <span class="st">"https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-</span><span class="va">$(</span><span class="fu">uname</span><span class="va">)</span><span class="st">-</span><span class="va">$(</span><span class="fu">uname</span> <span class="at">-m</span><span class="va">)</span><span class="st">.sh"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> Miniforge3-<span class="va">$(</span><span class="fu">uname</span><span class="va">)</span>-<span class="va">$(</span><span class="fu">uname</span> <span class="at">-m</span><span class="va">)</span>.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p>미니포지에서 gfortran을 설치하자. 이를 설치하지 않으면 패키지 설치 과정에서 많은 문제가 생길 것이다.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> conda install <span class="at">-c</span> conda-forge gfortran</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>시험삼아서 아래 두 패키지를 설치해보자. VS Code에서 R을 쓰기 위해서 아래 두 패키지를 설치해야 한다.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"languageserver"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"httpgd"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="r을-위한-실행-환경" class="level2">
+<h2 class="anchored" data-anchor-id="r을-위한-실행-환경">R을 위한 실행 환경</h2>
+<p>R을 패키지로 설치하지 않았기 때문에 몇 가지 설정이 필요하다. R의 설정을 위해 필요한 파일은 <code>.Renviron</code>, <code>.Rprofile</code> 두 가지이다. 이 두 파일을 <code>$HOME</code>에 생성하도록 하자.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true"><code>.Renviron</code></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false"><code>.Rprofile</code></a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<pre class="shell"><code>## macrtools - gfortran: start
+# PATH=${PATH}:/opt/gfortran/bin
+## macrtools - gfortran: end
+
+# Setting LIB location
+
+R_LIBS_SITE="/home/anari/github/setup_r-with-pixi/.pixi/envs/default/lib/R/library"</code></pre>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<pre class="shell"><code># Setting CRAN Server
+
+local({r &lt;- getOption("repos")
+       r["CRAN"] &lt;- "https://cloud.r-project.org"
+       options(repos=r)})</code></pre>
+</div>
+</div>
+</div>
+<p><code>.Renviron</code> 파일에서는 R의 라이브러리 위치를 지정하고, <code>Rpofile</code>에서는 CRAN 서버를 지정한다.</p>
+<p>R에서 <code>.libPaths()</code>를 패키지가 설치되는 위치를 확인할 수 있다.</p>
 </section>
 <section id="vs-code-설정" class="level2">
 <h2 class="anchored" data-anchor-id="vs-code-설정">VS Code 설정</h2>
@@ -286,24 +326,42 @@ $ pixi add python=3.11 r-base radian # 파이썬, r-base, radian 추가 </code><
 <h2 class="anchored" data-anchor-id="vs-code로-r-쓰기">VS Code로 R 쓰기</h2>
 <p><a href="https://code.visualstudio.com/docs/languages/r" class="uri">https://code.visualstudio.com/docs/languages/r</a></p>
 <p>전체적인 지침은 링크에 잘 정리가 되어 있다.</p>
-<section id="wsl2" class="level3">
-<h3 class="anchored" data-anchor-id="wsl2">WSL2</h3>
-<p>WSL2 환경에서 pixi+R의 조합이 문제 없이 잘 돌아간다. 그냥 쓰면 된다. 혹시 R 코드가 실행되지 않으면 터미널에 R을 띄워주자.</p>
 </section>
-<section id="macos" class="level3">
-<h3 class="anchored" data-anchor-id="macos">Macos</h3>
-<p>활용하는 데는 별 문제가 없다. 다만 C++ 코드가 제대로 컴파일되지 않아서 C++을 쓰는 패키지들이 제대로 깔리지 않는다. 어떻게 해야 할까? 패키지를 깔 때, pixi의 셸 환경으로 들어가면 된다.</p>
-<pre class="shell"><code>&gt; pixi shell
-&gt; R or radian 
-&gt; install.packages("...") # R에서 패키지 설치</code></pre>
-<p>일단 패키지가 한번 설치된 이후에 활용할 때는 쉘 환경이 필요하지 않다.</p>
+<section id="packages-설치-시-유의사항" class="level2">
+<h2 class="anchored" data-anchor-id="packages-설치-시-유의사항">Packages 설치 시 유의사항</h2>
+<p>패키지 설치 시 만날 수 있는 몇 가지 에러 유형을 패키지 별로 정리해보자.</p>
+<section id="devtools" class="level3">
+<h3 class="anchored" data-anchor-id="devtools">devtools</h3>
+<p>systemfonts 패키지가 설치되지 않는다. 발생하는 에러 메시지를 잘 보면서 OS 별로 대응하면 된다.</p>
+</section>
+<section id="tidyverse" class="level3">
+<h3 class="anchored" data-anchor-id="tidyverse">tidyverse</h3>
+<p>Matrix 패키지가 버전이 맞지 않아서 설치가 안된다.</p>
+<p>https://github.com/cran/Matrix/releases</p>
+<p>(이 글을 쓰는 시점에서) 1.6-5 버전의 Source Code의 링크를 복사한 후 devtools를 통해 설치한다.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_url</span>(<span class="st">"https://github.com/cran/Matrix/archive/refs/tags/1.6-5.zip"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="mass" class="level3">
+<h3 class="anchored" data-anchor-id="mass">MASS</h3>
+<p>위와 같은 방법으로 접근하면 된다.</p>
+<p>https://github.com/cran/MASS/releases</p>
+<p>MASS 7.3-60 버전이 설치 가능했다.</p>
+</section>
+</section>
+<section id="julia-설치하기" class="level2">
+<h2 class="anchored" data-anchor-id="julia-설치하기">Julia 설치하기</h2>
+<p>R에 비하면 훨씬 깔끔하고 운용이 쉽다. 다만 약간의 우회로가 필요하다. Julia를 바로 설치하면 OS에 따라서 설치가 되지 않는다. Juliaup을 먼저 설치하고 Pixi의 셸 환경 안에서 이를 이용해서 Julia를 설치하면 된다.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> add juliaup</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pixi</span> shell </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">juliaup</span> add release </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ex">juliaup</span> install 1.7.0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>VS Code에서 Julia 확정을 설치하고 확장 설정에서 <code>Julia: Executable Path</code>를 찾아서 .pixi 아래 설치된 줄리아의 실행 디렉토리를 설정한다.</p>
 
 
 <div class="hidden" aria-hidden="true">
 <span class="glightbox-desc lightbox-desc-1">익스텐션의 설정으로 가자.</span>
 <span class="glightbox-desc lightbox-desc-2">두 개 모두 적절한 위칠 바꿔주자</span>
 </div>
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -861,7 +919,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
