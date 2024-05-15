@@ -305,7 +305,7 @@ local({r &lt;- getOption("repos")
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/pixi-r-1-min.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="익스텐션의 설정으로 가자."><img src="./images/pixi-r-1-min.png" class="img-fluid figure-img" alt="익스텐션의 설정으로 가자."></a></p>
+<p><a href="./images/pixi-r-1-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="익스텐션의 설정으로 가자."><img src="./images/pixi-r-1-min.png" class="img-fluid figure-img" alt="익스텐션의 설정으로 가자."></a></p>
 <figcaption>익스텐션의 설정으로 가자.</figcaption>
 </figure>
 </div>
@@ -313,7 +313,7 @@ local({r &lt;- getOption("repos")
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/pixi-r-2-min.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="두 개 모두 적절한 위치로 바꿔 사용하자."><img src="./images/pixi-r-2-min.png" class="img-fluid figure-img" alt="두 개 모두 적절한 위치로 바꿔 사용하자."></a></p>
+<p><a href="./images/pixi-r-2-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="두 개 모두 적절한 위치로 바꿔 사용하자."><img src="./images/pixi-r-2-min.png" class="img-fluid figure-img" alt="두 개 모두 적절한 위치로 바꿔 사용하자."></a></p>
 <figcaption>두 개 모두 적절한 위치로 바꿔 사용하자.</figcaption>
 </figure>
 </div>
@@ -348,10 +348,13 @@ local({r &lt;- getOption("repos")
 <p>(이 글을 쓰는 시점에서) MASS 7.3-60 버전이 설치 가능했다.</p>
 </section>
 </section>
-<section id="julia-설치하기" class="level2">
+<section id="julia-설치하기" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="julia-설치하기">Julia 설치하기</h2>
-<p>R에 비하면 훨씬 깔끔하고 운용이 쉽다. 다만 약간의 우회로가 필요하다. Julia를 바로 설치하면 OS에 따라서 설치가 되지 않는다. Juliaup을 먼저 설치하고 Pixi의 셸 환경 안에서 이를 이용해서 Julia를 설치하면 된다.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pixi <span class="ex">add</span> juliaup</span>
+<p>R에 비하면 훨씬 깔끔하고 운용이 쉽다. 다만 약간의 우회로가 필요하다. Conda를 이용해 Julia를 바로 설치해보면, OS에 따라서 설치가 되지 않는 경우가 있다. Juliaup을 먼저 설치하고 Pixi의 셸 환경 안에서 이를 이용해서 Julia를 설치하면 된다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Julia를 써보면 이 언어가 다른 어떤 고수준 프로그래밍 랭귀지에 비해서 “모던”하다는 사실을 느낄 수 있다. 우선 언어 자체의 설치가 간편하고, 패키지 설치 관리가 <code>toml</code>을 통해 이뤄진다.</p>
+</div></div><div class="sourceCode" id="cb9"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pixi <span class="ex">add</span> juliaup</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pixi <span class="ex">shell</span> </span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> juliaup <span class="ex">add</span> release </span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> juliaup <span class="fu">install</span> 1.10.3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -919,7 +922,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":false,"closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
