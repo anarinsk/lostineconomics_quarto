@@ -665,11 +665,18 @@
     "text": "Pixi setting\n다음과 같은 사용 환경을 전제한다.\n\nOS\n\nWindows 11 WSL 2 + Ubutu 22.04 LTS\nMacos (Sonoma, Silicon)\n\npixi\n\n일단 R에 관해서 쭉 설명을 하고 Julia에 관한 내용을 더하겠다. R에 비하면 Julia 설치는 별 문제가 없다.\nR을 깔고자 하는 디렉토리에서 아래와 같이 실행한다.\npixi init # 픽시 초기화 \npixi add python=3.11 r-base radian # 파이썬, r-base, radian 추가 \n위 명령어를 실행하면 [pixi 코드를 품은 디렉토리]/.pixi/envs/default 폴더 아래 파이썬, R-base 그리고 radian이 설치된다. radian은 파이썬으로 작성된 일종의 대안 터미널이다. 꽤 쓸만하다."
   },
   {
-    "objectID": "posts/computer-tool/2024-04-03-r_with_pixi.html#라이브러리-설치-위치-지정",
-    "href": "posts/computer-tool/2024-04-03-r_with_pixi.html#라이브러리-설치-위치-지정",
-    "title": "Pixi + R",
-    "section": "라이브러리 설치 위치 지정",
-    "text": "라이브러리 설치 위치 지정\n만일 기존에 R이 깔린 환경이 있다면 라이러리가 그쪽으로 설치된다. 라이브러리까지 하위 디렉토리에 설치하기 위해서는 몇가지 설정이 필요하다. ~/.zshrc 혹은 이에 상당하는 환경에 깔린 설정 파일을 수정하자. 해당 파일을 연 후 아래와 같이 두자.\nexport R_LIBS_USER=\"[로컬 디렉토리]/.pixi/envs/default/lib/R/library\"\n해당 환경을 활성화하면 이제 R의 라이브러가 해당 디렉토리 아래 깔리게 된다. 만일 기존에 설치된 R이 없거나 지웠다면 라이브러리의 위치는 픽시 아래로 잡힌다. 확인하는 방법은 R에서 .libPaths()를 실행하면 된다."
+    "objectID": "posts/computer-tool/2024-04-03-r_with_pixi.html#miniforge",
+    "href": "posts/computer-tool/2024-04-03-r_with_pixi.html#miniforge",
+    "title": "Pixi와 쓰는 R과 Julia",
+    "section": "Miniforge",
+    "text": "Miniforge\npixi 자체가 Conda에 의존한다. 따라서 Conda를 설치하는 게 좋다. 커뮤니티 버전인 Miniforge를 설치하자. Miniforge는 Macos에서는 brew로 설치할 수 있고, Ubuntu에서는 별도의 설치 파일을 받아서 설치하면 된다.\n\nMacOSUbuntu\n\n\nbrew install miniforge\n\n\ncurl -L -O \"https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh\"\nbash Miniforge3-$(uname)-$(uname -m).sh\n\n\n\n미니포지에서 gfortran을 설치하자. 이를 설치하지 않으면 패키지 설치 과정에서 많은 문제가 생길 것이다.\n$ conda install -c conda-forge gfortran\n시험삼아서 아래 두 패키지를 설치해보자. VS Code에서 R을 쓰기 위해서 아래 두 패키지를 설치해야 한다.\n&gt; install.packages(\"languageserver\")\n&gt; install.packages(\"httpgd\")"
+  },
+  {
+    "objectID": "posts/computer-tool/2024-04-03-r_with_pixi.html#r을-위한-실행-환경",
+    "href": "posts/computer-tool/2024-04-03-r_with_pixi.html#r을-위한-실행-환경",
+    "title": "Pixi와 쓰는 R과 Julia",
+    "section": "R을 위한 실행 환경",
+    "text": "R을 위한 실행 환경\nR을 패키지로 설치하지 않았기 때문에 몇 가지 설정이 필요하다. R의 설정을 위해 필요한 파일은 .Renviron, .Rprofile 두 가지이다. 이 두 파일을 $HOME에 생성하도록 하자.\n\n.Renviron.Rprofile\n\n\n## macrtools - gfortran: start\n# PATH=${PATH}:/opt/gfortran/bin\n## macrtools - gfortran: end\n\n# Setting LIB location\n\nR_LIBS_SITE=\"/home/anari/github/setup_r-with-pixi/.pixi/envs/default/lib/R/library\"\n\n\n# Setting CRAN Server\n\nlocal({r &lt;- getOption(\"repos\")\n       r[\"CRAN\"] &lt;- \"https://cloud.r-project.org\"\n       options(repos=r)})\n\n\n\n.Renviron 파일에서는 R의 라이브러리 위치를 지정하고, Rpofile에서는 CRAN 서버를 지정한다.\nR에서 .libPaths()를 패키지가 설치되는 위치를 확인할 수 있다."
   },
   {
     "objectID": "posts/computer-tool/2024-04-03-r_with_pixi.html#vs-code-설정",
@@ -684,6 +691,20 @@
     "title": "Pixi와 쓰는 R과 Julia",
     "section": "VS Code로 R 쓰기",
     "text": "VS Code로 R 쓰기\nhttps://code.visualstudio.com/docs/languages/r\n전체적인 지침은 링크에 잘 정리가 되어 있다."
+  },
+  {
+    "objectID": "posts/computer-tool/2024-04-03-r_with_pixi.html#packages-설치-시-유의사항",
+    "href": "posts/computer-tool/2024-04-03-r_with_pixi.html#packages-설치-시-유의사항",
+    "title": "Pixi와 쓰는 R과 Julia",
+    "section": "Packages 설치 시 유의사항",
+    "text": "Packages 설치 시 유의사항\n패키지 설치 시 만날 수 있는 몇 가지 에러 유형을 패키지 별로 정리해보자.\n\ndevtools\nsystemfonts 패키지가 설치되지 않는다. 발생하는 에러 메시지를 잘 보면서 OS 별로 대응하면 된다.\n\n\ntidyverse\nMatrix 패키지가 버전이 맞지 않아서 설치가 안된다.\nhttps://github.com/cran/Matrix/releases\n(이 글을 쓰는 시점에서) 1.6-5 버전의 Source Code의 링크를 복사한 후 devtools를 통해 설치한다.\ndevtools::install_url(\"https://github.com/cran/Matrix/archive/refs/tags/1.6-5.zip\") \n\n\nMASS\n위와 같은 방법으로 접근하면 된다.\nhttps://github.com/cran/MASS/releases\nMASS 7.3-60 버전이 설치 가능했다."
+  },
+  {
+    "objectID": "posts/computer-tool/2024-04-03-r_with_pixi.html#julia-설치하기",
+    "href": "posts/computer-tool/2024-04-03-r_with_pixi.html#julia-설치하기",
+    "title": "Pixi와 쓰는 R과 Julia",
+    "section": "Julia 설치하기",
+    "text": "Julia 설치하기\nR에 비하면 훨씬 깔끔하고 운용이 쉽다. 다만 약간의 우회로가 필요하다. Julia를 바로 설치하면 OS에 따라서 설치가 되지 않는다. Juliaup을 먼저 설치하고 Pixi의 셸 환경 안에서 이를 이용해서 Julia를 설치하면 된다.\npixi add juliaup\npixi shell \njuliaup add release \njuliaup install 1.7.0\nVS Code에서 Julia 확정을 설치하고 확장 설정에서 Julia: Executable Path를 찾아서 .pixi 아래 설치된 줄리아의 실행 디렉토리를 설정한다.\n\n\n\n익스텐션의 설정으로 가자.\n두 개 모두 적절한 위칠 바꿔주자"
   },
   {
     "objectID": "posts/computer-tool/2023-05-29-rye.html",
@@ -3367,6 +3388,13 @@
     "text": "넋두리\nWSL이 생기면서 윈도에서도 리눅스를 제대로 쓸 수 있게 되었다. 리눅스(아마도 우분투)를 쓸 일이 많아진 만큼, 우분투 설치하고 (내 기준에서) 해야 할 일을 정리해보려 한다. 물론 이 포스트 멀지 않은 미래에 모든 걸 까먹을 나 놈을 위한 것이다."
   },
   {
+    "objectID": "posts/computer-tool/2023-11-03-first-thing-ubuntu.html#meta",
+    "href": "posts/computer-tool/2023-11-03-first-thing-ubuntu.html#meta",
+    "title": "Ubuntu를 깔고 먼저 해야 할 일들",
+    "section": "Meta",
+    "text": "Meta\n딱히 Ubuntu에 해당하는 내용은 아니지만 WSL에서 Ubuntu 설치하는 방법은 간단하게 다루고 넘어가겠다. 윈도 파워셸이나 명령 프롬프트에서 실행 가능하다.\n&gt; wsl -l # 설치된 WSL 목록 확인\n&gt; wsl -l -o # 설치할 수 있는 배포판 확인 \n\n# 아래에서 UBUNTU는 특정 디스트로의 이름을 의미한다. \n\n&gt; wsl --install -d UBUNTU # 특정 디스트로 Ubuntu 설치\n&gt; wsl --shutdown UBUNTU # Ubuntu 종료\n&gt; wsl --unregister UBUNTU # Ubuntu 삭제"
+  },
+  {
     "objectID": "posts/computer-tool/2023-11-03-first-thing-ubuntu.html#터미널",
     "href": "posts/computer-tool/2023-11-03-first-thing-ubuntu.html#터미널",
     "title": "Ubuntu를 깔고 먼저 해야 할 일들",
@@ -3575,40 +3603,5 @@
     "title": "about",
     "section": "",
     "text": "Who am I?\n허준석 Junsok Huhh | Ph.D. in Economics  Currently works as a data scientist (Pangyo, South Korea).\n\n안녕하세요. 허준석의 블로그입니다. 쓸데 없고 목적 없는 블로그입니다. 뭐라도 도움이 되면 좋겠습니다. 이 블로그는 네번째 버전입니다. 이전 블로그의 역사는 아래 “History of lostineconomics.com”에서 확인하실 수 있습니다.\n블로그의 이름 “lost in economics”는 현재 저의 처지와 같습니다. 경제학에서 길을 잃었지만 여전히 그 안에 빠져 있습니다. 블로그는 Quarto로 제작되었고, 페이지 호스팅은 Github Pages를 이용합니다.\nHi, I’m Junsok Huhh. If you are interested in me, check my c.v. and contact. The blog name, “lost in economics” has double-edge meaning. In one way, I lost my way in economics, but I am still finding a way in it. This blog is serviced by Quarto and Github Pages.\n\n\n\nC.V.\nBrief | Long\n\n\n\nHistory of lostineconomics.com\n\nv3 built with Quarto and Github Pages ⛧⛧⛧\nv2 built with fastpages and Github Pages\nv1 built with markdown and Github\nv0 built with BlogDown and Github Pages\n\n🐈 🐈 🐈 삽화는 Bing의 이미지 작성자에서 a cat lost in something, digital art 키워드로 생성되었습니다. 🐈 🐈 🐈 폰트는 SUIT, SUITE, D2Coding의 웹폰트를 사용합니다."
-  },
-  {
-    "objectID": "posts/computer-tool/2023-11-03-first-thing-ubuntu.html#meta",
-    "href": "posts/computer-tool/2023-11-03-first-thing-ubuntu.html#meta",
-    "title": "Ubuntu를 깔고 먼저 해야 할 일들",
-    "section": "Meta",
-    "text": "Meta\n딱히 Ubuntu에 해당하는 내용은 아니지만 WSL에서 Ubuntu 설치하는 방법은 간단하게 다루고 넘어가겠다. 윈도 파워셸이나 명령 프롬프트에서 실행 가능하다.\n&gt; wsl -l # 설치된 WSL 목록 확인\n&gt; wsl -l -o # 설치할 수 있는 배포판 확인 \n\n# 아래에서 UBUNTU는 특정 디스트로의 이름을 의미한다. \n\n&gt; wsl --install -d UBUNTU # 특정 디스트로 Ubuntu 설치\n&gt; wsl --shutdown UBUNTU # Ubuntu 종료\n&gt; wsl --unregister UBUNTU # Ubuntu 삭제"
-  },
-  {
-    "objectID": "posts/computer-tool/2024-04-03-r_with_pixi.html#miniforge",
-    "href": "posts/computer-tool/2024-04-03-r_with_pixi.html#miniforge",
-    "title": "Pixi와 쓰는 R과 Julia",
-    "section": "Miniforge",
-    "text": "Miniforge\npixi 자체가 Conda에 의존한다. 따라서 Conda를 설치하는 게 좋다. 커뮤니티 버전인 Miniforge를 설치하자. Miniforge는 Macos에서는 brew로 설치할 수 있고, Ubuntu에서는 별도의 설치 파일을 받아서 설치하면 된다.\n\nMacOSUbuntu\n\n\nbrew install miniforge\n\n\ncurl -L -O \"https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh\"\nbash Miniforge3-$(uname)-$(uname -m).sh\n\n\n\n미니포지에서 gfortran을 설치하자. 이를 설치하지 않으면 패키지 설치 과정에서 많은 문제가 생길 것이다.\n$ conda install -c conda-forge gfortran\n시험삼아서 아래 두 패키지를 설치해보자. VS Code에서 R을 쓰기 위해서 아래 두 패키지를 설치해야 한다.\n&gt; install.packages(\"languageserver\")\n&gt; install.packages(\"httpgd\")"
-  },
-  {
-    "objectID": "posts/computer-tool/2024-04-03-r_with_pixi.html#r을-위한-실행-환경",
-    "href": "posts/computer-tool/2024-04-03-r_with_pixi.html#r을-위한-실행-환경",
-    "title": "Pixi와 쓰는 R과 Julia",
-    "section": "R을 위한 실행 환경",
-    "text": "R을 위한 실행 환경\nR을 패키지로 설치하지 않았기 때문에 몇 가지 설정이 필요하다. R의 설정을 위해 필요한 파일은 .Renviron, .Rprofile 두 가지이다. 이 두 파일을 $HOME에 생성하도록 하자.\n\n.Renviron.Rprofile\n\n\n## macrtools - gfortran: start\n# PATH=${PATH}:/opt/gfortran/bin\n## macrtools - gfortran: end\n\n# Setting LIB location\n\nR_LIBS_SITE=\"/home/anari/github/setup_r-with-pixi/.pixi/envs/default/lib/R/library\"\n\n\n# Setting CRAN Server\n\nlocal({r &lt;- getOption(\"repos\")\n       r[\"CRAN\"] &lt;- \"https://cloud.r-project.org\"\n       options(repos=r)})\n\n\n\n.Renviron 파일에서는 R의 라이브러리 위치를 지정하고, Rpofile에서는 CRAN 서버를 지정한다.\nR에서 .libPaths()를 패키지가 설치되는 위치를 확인할 수 있다."
-  },
-  {
-    "objectID": "posts/computer-tool/2024-04-03-r_with_pixi.html#packages-설치-시-유의사항",
-    "href": "posts/computer-tool/2024-04-03-r_with_pixi.html#packages-설치-시-유의사항",
-    "title": "Pixi와 쓰는 R과 Julia",
-    "section": "Packages 설치 시 유의사항",
-    "text": "Packages 설치 시 유의사항\n패키지 설치 시 만날 수 있는 몇 가지 에러 유형을 패키지 별로 정리해보자.\n\ndevtools\nsystemfonts 패키지가 설치되지 않는다. 발생하는 에러 메시지를 잘 보면서 OS 별로 대응하면 된다.\n\n\ntidyverse\nMatrix 패키지가 버전이 맞지 않아서 설치가 안된다.\nhttps://github.com/cran/Matrix/releases\n(이 글을 쓰는 시점에서) 1.6-5 버전의 Source Code의 링크를 복사한 후 devtools를 통해 설치한다.\ndevtools::install_url(\"https://github.com/cran/Matrix/archive/refs/tags/1.6-5.zip\") \n\n\nMASS\n위와 같은 방법으로 접근하면 된다.\nhttps://github.com/cran/MASS/releases\nMASS 7.3-60 버전이 설치 가능했다."
-  },
-  {
-    "objectID": "posts/computer-tool/2024-04-03-r_with_pixi.html#julia-설치하기",
-    "href": "posts/computer-tool/2024-04-03-r_with_pixi.html#julia-설치하기",
-    "title": "Pixi와 쓰는 R과 Julia",
-    "section": "Julia 설치하기",
-    "text": "Julia 설치하기\nR에 비하면 훨씬 깔끔하고 운용이 쉽다. 다만 약간의 우회로가 필요하다. Julia를 바로 설치하면 OS에 따라서 설치가 되지 않는다. Juliaup을 먼저 설치하고 Pixi의 셸 환경 안에서 이를 이용해서 Julia를 설치하면 된다.\npixi add juliaup\npixi shell \njuliaup add release \njuliaup install 1.7.0\nVS Code에서 Julia 확정을 설치하고 확장 설정에서 Julia: Executable Path를 찾아서 .pixi 아래 설치된 줄리아의 실행 디렉토리를 설정한다.\n\n\n\n익스텐션의 설정으로 가자.\n두 개 모두 적절한 위칠 바꿔주자"
   }
 ]
