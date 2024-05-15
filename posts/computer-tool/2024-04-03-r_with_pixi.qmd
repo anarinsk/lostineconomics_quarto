@@ -177,8 +177,8 @@ Julia를 써보면 이 언어가 다른 어떤 고수준 프로그래밍 랭귀�
 ```zsh
 > pixi add juliaup
 > pixi shell 
-> juliaup add release 
-> juliaup install 1.10.3
+> juliaup add release # 최신 버전을 설치한다. 
+> juliaup install 1.10.3 # 특정 버전을 설치한다.
 ```
 
 VS Code에서 Julia 확정을 설치하고 확장 설정에서 `Julia: Executable Path`를 찾아서 .pixi 아래 설치된 줄리아의 실행 디렉토리를 설정한다. 
