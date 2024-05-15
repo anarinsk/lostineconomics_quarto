@@ -683,7 +683,7 @@
     "href": "posts/computer-tool/2024-04-03-r_with_pixi.html#vs-code-설정",
     "title": "Pixi와 쓰는 R과 Julia",
     "section": "VS Code 설정",
-    "text": "VS Code 설정\n먼저 R의 extension을 받아서 설치하자. 해당 확장을 설치한 후 몇 가지 설정을 바꿔야 한다.\n\n\n\n\n\n\n\n\n\n익스텐션의 설정으로 가자.\n\n\n\n\n\n\n\n두 개 모두 적절한 위칠 바꿔주자\n\n\n\n\n\n이외에 httpgd를 쓰는 것을 체크하자."
+    "text": "VS Code 설정\n먼저 R의 extension을 받아서 설치하자. 해당 확장을 설치한 후 몇 가지 설정을 바꿔야 한다.\n\n\n\n\n\n\n\n\n\n익스텐션의 설정으로 가자.\n\n\n\n\n\n\n\n두 개 모두 적절한 위치로 바꿔 사용하자.\n\n\n\n\n\n이외에 httpgd를 쓰는 것을 체크하자."
   },
   {
     "objectID": "posts/computer-tool/2024-04-03-r_with_pixi.html#vs-code로-r-쓰기",
@@ -704,7 +704,7 @@
     "href": "posts/computer-tool/2024-04-03-r_with_pixi.html#julia-설치하기",
     "title": "Pixi와 쓰는 R과 Julia",
     "section": "Julia 설치하기",
-    "text": "Julia 설치하기\nR에 비하면 훨씬 깔끔하고 운용이 쉽다. 다만 약간의 우회로가 필요하다. Julia를 바로 설치하면 OS에 따라서 설치가 되지 않는다. Juliaup을 먼저 설치하고 Pixi의 셸 환경 안에서 이를 이용해서 Julia를 설치하면 된다.\n&gt; pixi add juliaup\n&gt; pixi shell \n&gt; juliaup add release \n&gt; juliaup install 1.10.3\nVS Code에서 Julia 확정을 설치하고 확장 설정에서 Julia: Executable Path를 찾아서 .pixi 아래 설치된 줄리아의 실행 디렉토리를 설정한다.\n\n\n\n익스텐션의 설정으로 가자.\n두 개 모두 적절한 위칠 바꿔주자"
+    "text": "Julia 설치하기\nR에 비하면 훨씬 깔끔하고 운용이 쉽다. 다만 약간의 우회로가 필요하다. Julia를 바로 설치하면 OS에 따라서 설치가 되지 않는다. Juliaup을 먼저 설치하고 Pixi의 셸 환경 안에서 이를 이용해서 Julia를 설치하면 된다.\n&gt; pixi add juliaup\n&gt; pixi shell \n&gt; juliaup add release \n&gt; juliaup install 1.10.3\nVS Code에서 Julia 확정을 설치하고 확장 설정에서 Julia: Executable Path를 찾아서 .pixi 아래 설치된 줄리아의 실행 디렉토리를 설정한다.\n\n\n\n익스텐션의 설정으로 가자.\n두 개 모두 적절한 위치로 바꿔 사용하자."
   },
   {
     "objectID": "posts/computer-tool/2023-05-29-rye.html",
