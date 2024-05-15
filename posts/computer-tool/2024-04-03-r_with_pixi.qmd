@@ -94,7 +94,7 @@ pixi 자체가 Conda에 의존한다. 따라서 Conda를 설치하는 게 좋다
 R을 패키지로 설치하지 않았기 때문에 몇 가지 설정이 필요하다. R의 설정을 위해 필요한 파일은 `.Renviron`, `.Rprofile` 두 가지이다. 이 두 파일을 `$HOME`에 생성하도록 하자. 
 
 ::: {.panel-tabset}
-### `.Renviron`
+### .Renviron
 ```text
 ## macrtools - gfortran: start
 # PATH=${PATH}:/opt/gfortran/bin
@@ -104,7 +104,7 @@ R을 패키지로 설치하지 않았기 때문에 몇 가지 설정이 필요�
 
 R_LIBS_SITE="/home/anari/github/setup_r-with-pixi/.pixi/envs/default/lib/R/library"
 ```
-### `.Rprofile`
+### .Rprofile
 ```text
 # Setting CRAN Server
 
