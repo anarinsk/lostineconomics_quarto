@@ -102,7 +102,7 @@ R을 패키지로 설치하지 않았기 때문에 몇 가지 설정이 필요�
 
 # Setting LIB location
 
-R_LIBS_SITE="/home/anari/github/setup_r-with-pixi/.pixi/envs/default/lib/R/library"
+R_LIBS_SITE="[pixi가 깔린 디렉토리]/.pixi/envs/default/lib/R/library"
 ```
 ### .Rprofile
 ```text
@@ -150,7 +150,7 @@ systemfonts 패키지가 설치되지 않는다. 발생하는 에러 메시지�
 
 Matrix 패키지가 버전이 맞지 않아서 설치가 안된다. 
 
-https://github.com/cran/Matrix/releases
+<https://github.com/cran/Matrix/releases>
 
 (이 글을 쓰는 시점에서) 1.6-5 버전의 Source Code의 링크를 복사한 후 devtools를 통해 설치한다. 
 
@@ -162,7 +162,7 @@ https://github.com/cran/Matrix/releases
 
 위와 같은 방법으로 접근하면 된다. 
 
-https://github.com/cran/MASS/releases
+<https://github.com/cran/MASS/releases>
 
 (이 글을 쓰는 시점에서) MASS 7.3-60 버전이 설치 가능했다.  
 

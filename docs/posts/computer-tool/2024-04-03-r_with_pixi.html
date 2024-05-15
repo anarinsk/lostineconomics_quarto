@@ -280,7 +280,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 # Setting LIB location
 
-R_LIBS_SITE="/home/anari/github/setup_r-with-pixi/.pixi/envs/default/lib/R/library"</code></pre>
+R_LIBS_SITE="[pixi가 깔린 디렉토리]/.pixi/envs/default/lib/R/library"</code></pre>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <pre class="text"><code># Setting CRAN Server
@@ -305,7 +305,7 @@ local({r &lt;- getOption("repos")
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/pixi-r-1-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="익스텐션의 설정으로 가자."><img src="./images/pixi-r-1-min.png" class="img-fluid figure-img" alt="익스텐션의 설정으로 가자."></a></p>
+<p><a href="./images/pixi-r-1-min.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="익스텐션의 설정으로 가자."><img src="./images/pixi-r-1-min.png" class="img-fluid figure-img" alt="익스텐션의 설정으로 가자."></a></p>
 <figcaption>익스텐션의 설정으로 가자.</figcaption>
 </figure>
 </div>
@@ -313,7 +313,7 @@ local({r &lt;- getOption("repos")
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/pixi-r-2-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="두 개 모두 적절한 위칠 바꿔주자"><img src="./images/pixi-r-2-min.png" class="img-fluid figure-img" alt="두 개 모두 적절한 위칠 바꿔주자"></a></p>
+<p><a href="./images/pixi-r-2-min.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="두 개 모두 적절한 위칠 바꿔주자"><img src="./images/pixi-r-2-min.png" class="img-fluid figure-img" alt="두 개 모두 적절한 위칠 바꿔주자"></a></p>
 <figcaption>두 개 모두 적절한 위칠 바꿔주자</figcaption>
 </figure>
 </div>
@@ -337,14 +337,14 @@ local({r &lt;- getOption("repos")
 <section id="tidyverse" class="level3">
 <h3 class="anchored" data-anchor-id="tidyverse">tidyverse</h3>
 <p>Matrix 패키지가 버전이 맞지 않아서 설치가 안된다.</p>
-<p>https://github.com/cran/Matrix/releases</p>
+<p><a href="https://github.com/cran/Matrix/releases" class="uri">https://github.com/cran/Matrix/releases</a></p>
 <p>(이 글을 쓰는 시점에서) 1.6-5 버전의 Source Code의 링크를 복사한 후 devtools를 통해 설치한다.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> devtools<span class="sc">::</span><span class="fu">install_url</span>(<span class="st">"https://github.com/cran/Matrix/archive/refs/tags/1.6-5.zip"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="mass" class="level3">
 <h3 class="anchored" data-anchor-id="mass">MASS</h3>
 <p>위와 같은 방법으로 접근하면 된다.</p>
-<p>https://github.com/cran/MASS/releases</p>
+<p><a href="https://github.com/cran/MASS/releases" class="uri">https://github.com/cran/MASS/releases</a></p>
 <p>(이 글을 쓰는 시점에서) MASS 7.3-60 버전이 설치 가능했다.</p>
 </section>
 </section>
@@ -919,7 +919,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
