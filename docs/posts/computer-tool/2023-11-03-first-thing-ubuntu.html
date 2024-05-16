@@ -311,6 +311,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>To install conda's shell functions for easier access, first activate, then:</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>conda init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>설명이 약간 혼란스러운데, zsh을 사용한다고 가정하면 다음과 같이 하면 된다.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> eval <span class="st">"</span><span class="va">$(</span><span class="ex">/home/anari/miniforge3/bin/conda</span> shell.zsh hook<span class="va">)</span><span class="st">"</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> conda <span class="ex">init</span> zsh </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>삭제를 비롯한 보다 자세한 사항은 아래 링크를 참고하자.</p>
 <p>🔗 <a href="https://github.com/conda-forge/miniforge">miniforge</a></p>
 </section>
@@ -319,17 +322,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>문서 작성에 필수 도구인 Quarto의 경우 우분투에서는 brew를 통해 설치할 수 없다.</p>
 <p>🔗 <a href="https://docs.posit.co/resources/install-quarto/#__tabbed_1_2">Linux에 Quarto 설치하기</a></p>
 <p><code>.deb</code> 확장자 파일을 다운받아서 gdebi 앱을 통해서 설치하는 방식이다.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> sudo <span class="ex">curl</span> <span class="at">-LO</span> https://quarto.org/download/latest/quarto-linux-amd64.deb <span class="co">#deb 다운로드 </span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> sudo <span class="ex">apt-get</span> install gdebi-core</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> sudo <span class="ex">gdebi</span> quarto-linux-amd64.deb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> sudo <span class="ex">curl</span> <span class="at">-LO</span> https://quarto.org/download/latest/quarto-linux-amd64.deb <span class="co">#deb 다운로드 </span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> sudo <span class="ex">apt-get</span> install gdebi-core</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> sudo <span class="ex">gdebi</span> quarto-linux-amd64.deb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="mojo" class="level3">
 <h3 class="anchored" data-anchor-id="mojo">Mojo</h3>
 <p>Ubuntu 22.04 LTS와 VS Code + Mojo Extension을 활용한다고 가정하자.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> curl <span class="ex">https://get.modular.com</span> <span class="kw">|</span> <span class="fu">sh</span> <span class="at">-</span> <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">modular</span> auth mut_c4e7186420c84b86b1f7b5219b4028d9</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> modular <span class="fu">install</span> mojo</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> code <span class="bu">.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> curl <span class="ex">https://get.modular.com</span> <span class="kw">|</span> <span class="fu">sh</span> <span class="at">-</span> <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">modular</span> auth mut_c4e7186420c84b86b1f7b5219b4028d9</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> modular <span class="fu">install</span> mojo</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> code <span class="bu">.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>🔗 <a href="https://github.com/anarinsk/setup_mojo">mojo 설치 및 파이썬 환경 운용</a></p>
 </section>
 </section>

@@ -154,6 +154,13 @@ To install conda's shell functions for easier access, first activate, then:
 conda init
 ```
 
+설명이 약간 혼란스러운데, zsh을 사용한다고 가정하면 다음과 같이 하면 된다. 
+
+```zsh 
+> eval "$(/home/anari/miniforge3/bin/conda shell.zsh hook)"
+> conda init zsh 
+```
+
 삭제를 비롯한 보다 자세한 사항은 아래 링크를 참고하자.
 
 🔗 [miniforge](https://github.com/conda-forge/miniforge)
