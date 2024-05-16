@@ -58,7 +58,11 @@ R을 깔고자 하는 디렉토리에서 아래와 같이 실행한다.
 > pixi add python=3.11 r-base radian # 파이썬, r-base, radian 추가 
 ```
 
-위 명령어를 실행하면 `[pixi 코드를 품은 디렉토리]/.pixi/envs/default` 폴더 아래 파이썬, R-base 그리고 radian이 설치된다. radian은 파이썬으로 작성된 일종의 대안 터미널이다. 꽤 쓸만하다. 
+위 명령어를 실행하면 `[pixi 코드를 품은 디렉토리]/.pixi/envs/default` 폴더 아래 파이썬, R-base 그리고 radian이 설치된다. radian은 파이썬으로 작성된 일종의 대안 터미널이다. 꽤 쓸만하다. 그리고 해당 경로를 사용하는 셸의 PATH로 지정하자. 그래서 radian과 R을 터미널에서 실행할 수 있다. `nano ~/.zshrc` 등을 실행해 아래 구절을 넣고 저장하고 셸을 다시 불러오면 된다. 
+
+```zsh 
+export PATH="$PATH:[pixi가 깔린 디렉토리]/.pixi/envs/default/bin"
+```
 
 ## Miniforge 
 
@@ -76,13 +80,13 @@ pixi 자체가 Conda에 의존한다. 따라서 Conda를 설치하는 게 좋다
 ```
 ::: 
 
-미니포지에서 gfortran을 설치하자. 이를 설치하지 않으면 패키지 설치 과정에서 많은 문제가 생길 것이다. 
+미니포지를 통해 gfortran을 설치하자. 이를 설치하지 않으면 R의 패키지 설치 과정에서 많은 문제가 생길 것이다. 
 
 ```zsh
 > conda install -c conda-forge gfortran
 ```
 
-시험삼아서 아래 두 패키지를 설치해보자. VS Code에서 R을 쓰기 위해서 아래 두 패키지를 설치해야 한다. 
+아래 환경 설정을 마친 후 시험삼아서 아래 두 패키지를 설치해보자. VS Code에서 R을 쓰기 위해서 아래 두 패키지를 설치해야 한다. 
 
 ```R
 > install.packages("languageserver")
@@ -142,9 +146,21 @@ R에서 `.libPaths()`를 패키지가 설치되는 위치를 확인할 수 있�
 
 패키지 설치 시 만날 수 있는 몇 가지 에러 유형을 패키지 별로 정리해보자. 
 
-### devtools
+### systemfonts 
 
-systemfonts 패키지가 설치되지 않는다. 발생하는 에러 메시지를 잘 보면서 OS 별로 대응하면 된다.  
+systemfonts 패키지가 설치되지 않는다. 이게 설치되지 않으면 languageserver, devtools 등등 여러 패키지가 설치되지 않는다. 발생하는 에러 메시지를 잘 보면서 OS 별로 대응하면 된다. 
+
+하지만 때로는 시키는대로 해도 해결되지 않는 경우가 있다. 그럴 땐 어떻게 할까? R에서 이 문제는 C++ 컴파일러와 관련된 이슈다. 가장 깔끔하게 해결하려면 pixi shell로 접근해서 해결하면 된다. 즉, 
+
+```zsh 
+# pixi가 설정된 해당 디렉토리에서 
+> pixi shell 
+> radian 
+# In radian 
+> install.packages("systemfonts")
+```
+
+이렇게 설치하면 OS 상관 없이 대체로 잘 설치가 된다. 패키지를 업데이트하지 않는 이상 이상 설치된 이후 활용에는 별다른 문제가 없다. 
 
 ### tidyverse
 

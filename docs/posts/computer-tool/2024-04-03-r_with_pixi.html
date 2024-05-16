@@ -244,7 +244,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>R을 깔고자 하는 디렉토리에서 아래와 같이 실행한다.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pixi <span class="ex">init</span> <span class="co"># 픽시 초기화 </span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pixi <span class="ex">add</span> python=3.11 r-base radian <span class="co"># 파이썬, r-base, radian 추가 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>위 명령어를 실행하면 <code>[pixi 코드를 품은 디렉토리]/.pixi/envs/default</code> 폴더 아래 파이썬, R-base 그리고 radian이 설치된다. radian은 파이썬으로 작성된 일종의 대안 터미널이다. 꽤 쓸만하다.</p>
+<p>위 명령어를 실행하면 <code>[pixi 코드를 품은 디렉토리]/.pixi/envs/default</code> 폴더 아래 파이썬, R-base 그리고 radian이 설치된다. radian은 파이썬으로 작성된 일종의 대안 터미널이다. 꽤 쓸만하다. 그리고 해당 경로를 사용하는 셸의 PATH로 지정하자. 그래서 radian과 R을 터미널에서 실행할 수 있다. <code>nano ~/.zshrc</code> 등을 실행해 아래 구절을 넣고 저장하고 셸을 다시 불러오면 된다.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">"</span><span class="va">$PATH</span><span class="st">:[pixi가 깔린 디렉토리]/.pixi/envs/default/bin"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="miniforge" class="level2">
 <h2 class="anchored" data-anchor-id="miniforge">Miniforge</h2>
@@ -253,19 +254,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">MacOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Ubuntu</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div class="sourceCode" id="cb2"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> brew <span class="fu">install</span> miniforge</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> brew <span class="fu">install</span> miniforge</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="sourceCode" id="cb3"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> curl <span class="ex">-L</span> <span class="at">-O</span> <span class="st">"https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-</span><span class="va">$(</span><span class="fu">uname</span><span class="va">)</span><span class="st">-</span><span class="va">$(</span><span class="fu">uname</span> <span class="at">-m</span><span class="va">)</span><span class="st">.sh"</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> bash <span class="ex">Miniforge3-</span><span class="va">$(</span><span class="fu">uname</span><span class="va">)</span><span class="ex">-</span><span class="va">$(</span><span class="fu">uname</span> <span class="at">-m</span><span class="va">)</span><span class="ex">.sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> curl <span class="ex">-L</span> <span class="at">-O</span> <span class="st">"https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-</span><span class="va">$(</span><span class="fu">uname</span><span class="va">)</span><span class="st">-</span><span class="va">$(</span><span class="fu">uname</span> <span class="at">-m</span><span class="va">)</span><span class="st">.sh"</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> bash <span class="ex">Miniforge3-</span><span class="va">$(</span><span class="fu">uname</span><span class="va">)</span><span class="ex">-</span><span class="va">$(</span><span class="fu">uname</span> <span class="at">-m</span><span class="va">)</span><span class="ex">.sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
-<p>미니포지에서 gfortran을 설치하자. 이를 설치하지 않으면 패키지 설치 과정에서 많은 문제가 생길 것이다.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> conda <span class="fu">install</span> <span class="at">-c</span> conda-forge gfortran</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>시험삼아서 아래 두 패키지를 설치해보자. VS Code에서 R을 쓰기 위해서 아래 두 패키지를 설치해야 한다.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"languageserver"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"httpgd"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>미니포지를 통해 gfortran을 설치하자. 이를 설치하지 않으면 R의 패키지 설치 과정에서 많은 문제가 생길 것이다.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> conda <span class="fu">install</span> <span class="at">-c</span> conda-forge gfortran</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>아래 환경 설정을 마친 후 시험삼아서 아래 두 패키지를 설치해보자. VS Code에서 R을 쓰기 위해서 아래 두 패키지를 설치해야 한다.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"languageserver"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"httpgd"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="r을-위한-실행-환경" class="level2">
 <h2 class="anchored" data-anchor-id="r을-위한-실행-환경">R을 위한 실행 환경</h2>
@@ -330,16 +331,23 @@ local({r &lt;- getOption("repos")
 <section id="packages-설치-시-유의사항" class="level2">
 <h2 class="anchored" data-anchor-id="packages-설치-시-유의사항">Packages 설치 시 유의사항</h2>
 <p>패키지 설치 시 만날 수 있는 몇 가지 에러 유형을 패키지 별로 정리해보자.</p>
-<section id="devtools" class="level3">
-<h3 class="anchored" data-anchor-id="devtools">devtools</h3>
-<p>systemfonts 패키지가 설치되지 않는다. 발생하는 에러 메시지를 잘 보면서 OS 별로 대응하면 된다.</p>
+<section id="systemfonts" class="level3">
+<h3 class="anchored" data-anchor-id="systemfonts">systemfonts</h3>
+<p>systemfonts 패키지가 설치되지 않는다. 이게 설치되지 않으면 languageserver, devtools 등등 여러 패키지가 설치되지 않는다. 발생하는 에러 메시지를 잘 보면서 OS 별로 대응하면 된다.</p>
+<p>하지만 때로는 시키는대로 해도 해결되지 않는 경우가 있다. 그럴 땐 어떻게 할까? R에서 이 문제는 C++ 컴파일러와 관련된 이슈다. 가장 깔끔하게 해결하려면 pixi shell로 접근해서 해결하면 된다. 즉,</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pixi가 설정된 해당 디렉토리에서 </span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pixi <span class="ex">shell</span> </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> radian </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># In radian </span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> install.packages<span class="op">(</span><span class="st">"systemfonts"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>이렇게 설치하면 OS 상관 없이 대체로 잘 설치가 된다. 패키지를 업데이트하지 않는 이상 이상 설치된 이후 활용에는 별다른 문제가 없다.</p>
 </section>
 <section id="tidyverse" class="level3">
 <h3 class="anchored" data-anchor-id="tidyverse">tidyverse</h3>
 <p>Matrix 패키지가 버전이 맞지 않아서 설치가 안된다.</p>
 <p><a href="https://github.com/cran/Matrix/releases" class="uri">https://github.com/cran/Matrix/releases</a></p>
 <p>(이 글을 쓰는 시점에서) 1.6-5 버전의 Source Code의 링크를 복사한 후 devtools를 통해 설치한다.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> devtools<span class="sc">::</span><span class="fu">install_url</span>(<span class="st">"https://github.com/cran/Matrix/archive/refs/tags/1.6-5.zip"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> devtools<span class="sc">::</span><span class="fu">install_url</span>(<span class="st">"https://github.com/cran/Matrix/archive/refs/tags/1.6-5.zip"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="mass" class="level3">
 <h3 class="anchored" data-anchor-id="mass">MASS</h3>
@@ -354,10 +362,10 @@ local({r &lt;- getOption("repos")
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Julia를 써보면 이 언어가 다른 어떤 고수준 프로그래밍 랭귀지에 비해서 “모던”하다는 사실을 느낄 수 있다. 우선 언어 자체의 설치가 간편하고, 패키지 설치 관리가 <code>toml</code>을 통해 이뤄진다.</p>
-</div></div><div class="sourceCode" id="cb9"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pixi <span class="ex">add</span> juliaup</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pixi <span class="ex">shell</span> </span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> juliaup <span class="ex">add</span> release <span class="co"># 최신 버전을 설치한다. </span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> juliaup <span class="fu">install</span> 1.10.3 <span class="co"># 특정 버전을 설치한다.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div><div class="sourceCode" id="cb11"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pixi <span class="ex">add</span> juliaup</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pixi <span class="ex">shell</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> juliaup <span class="ex">add</span> release <span class="co"># 최신 버전을 설치한다. </span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> juliaup <span class="fu">install</span> 1.10.3 <span class="co"># 특정 버전을 설치한다.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>VS Code에서 Julia 확정을 설치하고 확장 설정에서 <code>Julia: Executable Path</code>를 찾아서 .pixi 아래 설치된 줄리아의 실행 디렉토리를 설정한다.</p>
 
 
@@ -922,7 +930,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":false,"closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
