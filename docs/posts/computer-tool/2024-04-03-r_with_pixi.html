@@ -366,7 +366,7 @@ local({r &lt;- getOption("repos")
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pixi <span class="ex">shell</span> </span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> juliaup <span class="ex">add</span> release <span class="co"># 최신 버전을 설치한다. </span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> juliaup <span class="fu">install</span> 1.10.3 <span class="co"># 특정 버전을 설치한다.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>VS Code에서 Julia 확정을 설치하고 확장 설정에서 <code>Julia: Executable Path</code>를 찾아서 .pixi 아래 설치된 줄리아의 실행 디렉토리를 설정한다.</p>
+<p>VS Code에서 Julia 확정을 설치하고 확장 설정에서 <code>Julia: Executable Path</code>를 찾아서 .pixi 아래 설치된 줄리아의 실행 디렉토리를 설정한다. 터미널에서 julia를 실행하고 싶으면, <code>.zshrc</code>에 해당 디렉토리를 추가하면 된다.</p>
 
 
 <div class="hidden" aria-hidden="true">
@@ -930,7 +930,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":false,"closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
