@@ -333,14 +333,13 @@ local({r &lt;- getOption("repos")
 <p>패키지 설치 시 만날 수 있는 몇 가지 에러 유형을 패키지 별로 정리해보자.</p>
 <section id="systemfonts" class="level3">
 <h3 class="anchored" data-anchor-id="systemfonts">systemfonts</h3>
-<p>systemfonts 패키지가 설치되지 않는다. 이게 설치되지 않으면 languageserver, devtools 등등 여러 패키지가 설치되지 않는다. 발생하는 에러 메시지를 잘 보면서 OS 별로 대응하면 된다.</p>
-<p>하지만 때로는 시키는대로 해도 해결되지 않는 경우가 있다. 그럴 땐 어떻게 할까? R에서 이 문제는 C++ 컴파일러와 관련된 이슈다. 가장 깔끔하게 해결하려면 pixi shell로 접근해서 해결하면 된다. 즉,</p>
+<p>systemfonts 패키지가 대체로 잘 설치되지 않는다. 이 패키지가 없으면 languageserver, devtools 등등 이에 의존하는 주요 패키지가 설치되지 않는다. 발생하는 에러 메시지를 잘 보면서 OS 별로 대응하면 된다. 하지만 때로는 시키는대로 해도 해결되지 않는 경우가 있다. 그럴 땐 어떻게 할까? R 설치에서 이 문제는 C++ 컴파일러와 관련된 이슈다. 가장 깔끔하게 해결하려면 pixi shell로 접근해서 해당 패키지를 설치하면 된다. 즉,</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pixi가 설정된 해당 디렉토리에서 </span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pixi <span class="ex">shell</span> </span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> radian </span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># In radian </span></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> install.packages<span class="op">(</span><span class="st">"systemfonts"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>이렇게 설치하면 OS 상관 없이 대체로 잘 설치가 된다. 패키지를 업데이트하지 않는 이상 이상 설치된 이후 활용에는 별다른 문제가 없다.</p>
+<p>이렇게 설치하면 OS 상관 없이 대체로 잘 설치가 된다. 패키지를 업데이트하지 않는 이상 이상 설치된 이후 활용에는 pixi shell 환경이 필요하지 않다.</p>
 </section>
 <section id="tidyverse" class="level3">
 <h3 class="anchored" data-anchor-id="tidyverse">tidyverse</h3>
@@ -930,7 +929,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
