@@ -126,6 +126,10 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
+    <a class="nav-link" href="https://www.lostinbooks.club"> 
+<span class="menu-text">lostinbooks</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">about</span></a>
   </li>  
@@ -165,6 +169,15 @@ window.Quarto = {
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -205,7 +218,7 @@ window.Quarto = {
 </header>
 
 
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="tl-dr" class="level2">
+<section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <ul>
 <li>샘플 크기가 충분하다면 가설 검정 시 정규 분포 가정에 집착할 필요가 없다!</li>
@@ -867,7 +880,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","loop":false,"openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

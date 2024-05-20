@@ -126,6 +126,10 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
+    <a class="nav-link" href="https://www.lostinbooks.club"> 
+<span class="menu-text">lostinbooks</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">about</span></a>
   </li>  
@@ -165,6 +169,15 @@ window.Quarto = {
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -205,7 +218,7 @@ window.Quarto = {
 </header>
 
 
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><p>당연히 알고 있다고 생각하지만 모르는 게 생각보다 많다. 회귀 분석에서 로그-리니어 모델, 즉 종속 변수에 로그를 취하고 독립 변수가 선형인 모델에서 계수를 어떻게 이해해야 할까?</p>
+<p>당연히 알고 있다고 생각하지만 모르는 게 생각보다 많다. 회귀 분석에서 로그-리니어 모델, 즉 종속 변수에 로그를 취하고 독립 변수가 선형인 모델에서 계수를 어떻게 이해해야 할까?</p>
 <section id="왜-로그로-변환할까" class="level2">
 <h2 class="anchored" data-anchor-id="왜-로그로-변환할까">왜 로그로 변환할까?</h2>
 <p>우선 이것부터 따져보자. 교과서나 자료를 찾아보면 <span class="math inline">\(y_i\)</span>를 로그 변환하는 이유가 <span class="math inline">\(y_i\)</span>의 분포를 정규분포에 가깝게 만들어주기 때문이라는 내용이 있다. 소표본을 다루는 경우라면 오차 항의 정규 분포를 가정하기 때문에 타당한 이야기일 수도 있다. 대표본이라면 중심 극한 정리(Central Limit Theorem)에 의지하는 것으로 충분하다.</p>
@@ -221,7 +234,7 @@ window.Quarto = {
 <div class="quarto-layout-cell" style="flex-basis: 88.2%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./images/log-linear.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="비선형의 함수 형태를 선형으로 바꿔 회귀분석을 활용할 수 있다."><img src="./images/log-linear.png" class="img-fluid figure-img" alt="비선형의 함수 형태를 선형으로 바꿔 회귀분석을 활용할 수 있다."></a></p>
+<p><a href="./images/log-linear.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="비선형의 함수 형태를 선형으로 바꿔 회귀분석을 활용할 수 있다."><img src="./images/log-linear.png" class="img-fluid figure-img" alt="비선형의 함수 형태를 선형으로 바꿔 회귀분석을 활용할 수 있다."></a></p>
 <figcaption>비선형의 함수 형태를 선형으로 바꿔 회귀분석을 활용할 수 있다.</figcaption>
 </figure>
 </div>
@@ -845,7 +858,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":false,"selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":false,"closeEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

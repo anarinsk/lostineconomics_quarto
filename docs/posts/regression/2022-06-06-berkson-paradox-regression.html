@@ -163,6 +163,10 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
+    <a class="nav-link" href="https://www.lostinbooks.club"> 
+<span class="menu-text">lostinbooks</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">about</span></a>
   </li>  
@@ -202,6 +206,15 @@ window.Quarto = {
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -243,7 +256,7 @@ window.Quarto = {
 </header>
 
 
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="회귀-분석으로-보는-벅슨의-역설" class="level2">
+<section id="회귀-분석으로-보는-벅슨의-역설" class="level2">
 <h2 class="anchored" data-anchor-id="회귀-분석으로-보는-벅슨의-역설">회귀 분석으로 보는 벅슨의 역설</h2>
 <p>심슨의 역설과 마찬가지로 벅슨의 역설을 보통 회귀 분석으로 설명하지 않는다. 그런데 이 문제 역시 회귀 분석으로 보면 보다 명확해진다. 벅슨의 역설은 인과 추론에서 말하는 충돌 요인(collider)의 맥락에서 주로 발생한다. 정확히 말하면 벅슨의 역설은 변인의 통제 여부보다는 (인지하지 못하는) 표본의 제한성에서 비롯한다. 아쉽게도 벅슨의 역설을 예시하는 현실 데이터는 별로 없다. 여기서는 충돌 요인을 일으키는 플롯을 상정하고 이에 맞춰 가상의 데이터를 생성한다. 회귀 분석을 통해 이 데이터를 다시 음미하면서 벅슨의 역설을 살펴보도록 하자.</p>
 </section>
@@ -1009,7 +1022,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

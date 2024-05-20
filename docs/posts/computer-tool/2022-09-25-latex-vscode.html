@@ -160,6 +160,10 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
+    <a class="nav-link" href="https://www.lostinbooks.club"> 
+<span class="menu-text">lostinbooks</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">about</span></a>
   </li>  
@@ -199,6 +203,15 @@ window.Quarto = {
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JNRF3S74Z4');
+</script>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -240,7 +253,7 @@ window.Quarto = {
 </header>
 
 
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script><section id="tl-dr" class="level2">
+<section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <ul>
 <li>Tiny<span class="math inline">\(\rm\TeX\)</span>을 씁시다!</li>
@@ -330,7 +343,7 @@ window.Quarto = {
 <div class="quarto-layout-cell" style="flex-basis: 75.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics_quarto/main/posts/computer-tool/images/vscode-tex.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="VS Code에 .tex 파일을 올렸을 때 (클릭시 확대)"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics_quarto/main/posts/computer-tool/images/vscode-tex.png" class="img-fluid figure-img" alt="VS Code에 .tex 파일을 올렸을 때 (클릭시 확대)"></a></p>
+<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics_quarto/main/posts/computer-tool/images/vscode-tex.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="VS Code에 .tex 파일을 올렸을 때 (클릭시 확대)"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics_quarto/main/posts/computer-tool/images/vscode-tex.png" class="img-fluid figure-img" alt="VS Code에 .tex 파일을 올렸을 때 (클릭시 확대)"></a></p>
 <figcaption>VS Code에 <code>.tex</code> 파일을 올렸을 때 (클릭시 확대)</figcaption>
 </figure>
 </div>
@@ -911,7 +924,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
