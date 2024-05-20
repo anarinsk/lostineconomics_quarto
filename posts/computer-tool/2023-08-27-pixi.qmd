@@ -166,6 +166,10 @@ stargazer = "*"
 $ pixi add --pypi koreanize-matplotlib stargazer
 ```
 
+## 유연함 
+
+`pixi init`을 실행할 때 pixi의 설정 파일을 제외하면 `.pixi` 이하의 파일들이 `.gitignore`에 포함된다. 따라서 해당 리포를 동기화한 후 `pixi install`을 실행하면 해당 환경이 그대로 복원된다. 디렉토리 별로 나누어 운용할 수도 있기 때문에 매우 유연한 작업 환경을 부릴 수 있다. 
+
 ## VS Code 
 
 VS Code에서 `.ipynb`로 작업하고 싶다면 간단하다. 윈도의 경우 해당 폴더가 작업 폴더로 잡혀 있다면 커널 선택 시 `.pixi...` 아래 설치된 커널이 바로 선택가능할 것이다. 만일 그렇지 않다면 커널을 직접 선택해주면 된다. 

@@ -3392,7 +3392,7 @@
     "href": "posts/computer-tool/2023-11-03-first-thing-ubuntu.html#meta",
     "title": "Ubuntu를 깔고 먼저 해야 할 일들",
     "section": "Meta",
-    "text": "Meta\n딱히 Ubuntu에 해당하는 내용은 아니지만 WSL에서 Ubuntu 설치하는 방법은 간단하게 다루고 넘어가겠다. 윈도 파워셸이나 명령 프롬프트에서 실행 가능하다.\n&gt; wsl -l # 설치된 WSL 목록 확인\n&gt; wsl -l -o # 설치할 수 있는 배포판 확인 \n\n# 아래에서 UBUNTU는 특정 디스트로의 이름을 의미한다. \n\n&gt; wsl --install -d UBUNTU # 특정 디스트로 Ubuntu 설치\n&gt; wsl --shutdown UBUNTU # Ubuntu 종료\n&gt; wsl --unregister UBUNTU # Ubuntu 삭제"
+    "text": "Meta\n딱히 Ubuntu에 해당하는 내용은 아니지만 WSL에서 Ubuntu 설치하는 방법은 간단하게 다루고 넘어가겠다. 윈도 파워셸이나 명령 프롬프트에서 실행 가능하다.\n&gt; wsl -l # 설치된 WSL 목록 확인\n&gt; wsl -l -o # 설치할 수 있는 배포판 확인 \n\n# 아래에서 \"UBUNTU\"는 특정 배포판(distro)의 이름을 의미한다. \n# 예를 들어, \"Ubuntu-20.04\" 등이 될 수 있다.\n\n&gt; wsl --install -d UBUNTU # Ubuntu 설치\n&gt; wsl --shutdown UBUNTU # Ubuntu 종료\n&gt; wsl --unregister UBUNTU # Ubuntu 삭제"
   },
   {
     "objectID": "posts/computer-tool/2023-11-03-first-thing-ubuntu.html#터미널",
@@ -3603,5 +3603,12 @@
     "title": "about",
     "section": "",
     "text": "Who am I?\n허준석 Junsok Huhh | Ph.D. in Economics  Currently works as a data scientist (Pangyo, South Korea).\n\n안녕하세요. 허준석의 블로그입니다. 쓸데 없고 목적 없는 블로그입니다. 뭐라도 도움이 되면 좋겠습니다. 이 블로그는 네번째 버전입니다. 이전 블로그의 역사는 아래 “History of lostineconomics.com”에서 확인하실 수 있습니다.\n블로그의 이름 “lost in economics”는 현재 저의 처지와 같습니다. 경제학에서 길을 잃었지만 여전히 그 안에 빠져 있습니다. 블로그는 Quarto로 제작되었고, 페이지 호스팅은 Github Pages를 이용합니다.\nHi, I’m Junsok Huhh. If you are interested in me, check my c.v. and contact. The blog name, “lost in economics” has double-edge meaning. In one way, I lost my way in economics, but I am still finding a way in it. This blog is serviced by Quarto and Github Pages.\n\n\n\nC.V.\nBrief | Long\n\n\n\nHistory of lostineconomics.com\n\nv3 built with Quarto and Github Pages ⛧⛧⛧\nv2 built with fastpages and Github Pages\nv1 built with markdown and Github\nv0 built with BlogDown and Github Pages\n\n🐈 🐈 🐈 삽화는 Bing의 이미지 작성자에서 a cat lost in something, digital art 키워드로 생성되었습니다. 🐈 🐈 🐈 폰트는 SUIT, SUITE, D2Coding의 웹폰트를 사용합니다."
+  },
+  {
+    "objectID": "posts/computer-tool/2023-08-27-pixi.html#유연함",
+    "href": "posts/computer-tool/2023-08-27-pixi.html#유연함",
+    "title": "pixi",
+    "section": "유연함",
+    "text": "유연함\npixi init을 실행할 때 pixi의 설정 파일을 제외하면 .pixi 이하의 파일들이 .gitignore에 포함된다. 따라서 해당 리포를 동기화한 후 pixi install을 실행하면 해당 환경이 그대로 복원된다. 디렉토리 별로 나누어 운용할 수도 있기 때문에 매우 유연한 작업 환경을 부릴 수 있다."
   }
 ]

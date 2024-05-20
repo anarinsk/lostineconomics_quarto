@@ -128,6 +128,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
+    <a class="nav-link" href="https://www.lostinbooks.club"> 
+<span class="menu-text">lostinbooks</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">about</span></a>
   </li>  
@@ -339,6 +343,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>아직 실험적인 개발 단계라서 버전 지정 방법 등이 conda와 다르다. <code>*</code>의 경우 최신 버전을 설치한다.</p>
 <p>아니면 터미널 창에서 아래와 같이 실행하자. 이 내용은 <code>pixi add --help</code>로도 확인할 수 있다.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href="#cb7-1"></a>$ pixi add --pypi koreanize-matplotlib stargazer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="유연함" class="level2">
+<h2 class="anchored" data-anchor-id="유연함">유연함</h2>
+<p><code>pixi init</code>을 실행할 때 pixi의 설정 파일을 제외하면 <code>.pixi</code> 이하의 파일들이 <code>.gitignore</code>에 포함된다. 따라서 해당 리포를 동기화한 후 <code>pixi install</code>을 실행하면 해당 환경이 그대로 복원된다. 디렉토리 별로 나누어 운용할 수도 있기 때문에 매우 유연한 작업 환경을 부릴 수 있다.</p>
 </section>
 <section id="vs-code" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="vs-code">VS Code</h2>

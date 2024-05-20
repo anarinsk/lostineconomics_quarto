@@ -34,9 +34,10 @@ WSL이 생기면서 윈도에서도 리눅스를 제대로 쓸 수 있게 되었
 > wsl -l # 설치된 WSL 목록 확인
 > wsl -l -o # 설치할 수 있는 배포판 확인 
 
-# 아래에서 UBUNTU는 특정 디스트로의 이름을 의미한다. 
+# 아래에서 "UBUNTU"는 특정 배포판(distro)의 이름을 의미한다. 
+# 예를 들어, "Ubuntu-20.04" 등이 될 수 있다.
 
-> wsl --install -d UBUNTU # 특정 디스트로 Ubuntu 설치
+> wsl --install -d UBUNTU # Ubuntu 설치
 > wsl --shutdown UBUNTU # Ubuntu 종료
 > wsl --unregister UBUNTU # Ubuntu 삭제
 ```
