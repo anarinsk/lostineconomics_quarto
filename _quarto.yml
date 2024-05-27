@@ -8,8 +8,8 @@ website:
   favicon: "favicon.ico"
   navbar:
     right:
-      - text: "lostinbooks"
-        href: https://www.lostinbooks.club
+      - text: "books"
+        href: https://books.lostineconomics.com
       - about.qmd
       - project.qmd
       - icon: github
