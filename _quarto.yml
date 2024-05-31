@@ -8,10 +8,11 @@ website:
   favicon: "favicon.ico"
   navbar:
     right:
-      - text: "books"
+      - text: "Books"
         href: https://books.lostineconomics.com
-      - about.qmd
       - project.qmd
+      - research.qmd
+      - about.qmd
       - icon: github
         href: https://github.com/anarinsk
       - icon: twitter

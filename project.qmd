@@ -1,5 +1,5 @@
 ---
-title: "project"
+title: "Project"
 #description: (Illustration by Arthur B. Frost)
 image: "title_images/project-3.jfif"
 about:
