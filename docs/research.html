@@ -81,9 +81,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-tags','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-categories','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-tags","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-categories","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -133,7 +133,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -193,7 +193,9 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="mobile-game">mobile-game <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -236,13 +238,18 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-papers-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1716390000000">
+<div class="quarto-post image-right" data-index="0" data-categories="mobile-game" data-listing-date-sort="1716390000000">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="https://www.lostineconomics.com/manuscript_ARPPU-PU/" class="no-external">Decomposing Sales by ARPPU and PU</a>
 </h3>
 <div class="listing-subtitle">
 <a href="https://www.lostineconomics.com/manuscript_ARPPU-PU/" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('mobile-game'); return false;">
+mobile-game
+</div>
 </div>
 <div class="listing-description">
 <a href="https://www.lostineconomics.com/manuscript_ARPPU-PU/" class="no-external">A deep dive into the sales of a mobile game, breaking down the revenue change by the changes of Average Revenue Per Paying User(ARPPU) and Paying Users(PU).</a>
@@ -255,9 +262,6 @@ May 23, 2024
 </div>
 <div class="listing-author">
 Junsok Huhh
-</div>
-<div class="metadata-value listing-tags">
-mobile-games
 </div>
 </a>
 </div>

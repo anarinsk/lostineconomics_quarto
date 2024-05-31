@@ -5,6 +5,7 @@ listing:
   contents:
     - research-items.yaml
   type: default
+  categories: true
 #description: (Illustration by Arthur B. Frost)
 #image: "title_images/project-3.jfif"
 ---
