@@ -132,7 +132,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="https://books.lostineconomics.com"> 
-<span class="menu-text">books</span></a>
+<span class="menu-text">Books</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../project.html"> 
@@ -345,9 +345,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> dig www.lostineconomics.com +nostats +nocomments +nocmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>윈도 파워셸에는 <code>dig</code> 명령어가 없다. 설치가 가능하니 검색을 통해 적절히 방법을 찾으시라. 결과가 <code>{이용자-ID}.github.io</code>까지 잘 타고 들어가는지 확인하면 된다. 뒤에서 다루겠지만 여기서 IP 주소도 확인할 수 있는데, 이 녀석들이 설정에서 다시 활용될 수 있다.</p>
 </section>
-<section id="도메인-연결-2-github-pages" class="level3">
-<h3 class="anchored" data-anchor-id="도메인-연결-2-github-pages">도메인 연결 2 (GitHub Pages)</h3>
-<p>이제 연결을 윈하는 리포지터리의 <code>Settings</code> &gt; <code>Pages</code>로 가자. “Custom domain” 메뉴에 앞서 설정한 주소, 즉 <code>www.lostineconomics.com</code>을 입력하고 저장하면 된다.</p>
+<section id="도메인-연결-github-pages" class="level3">
+<h3 class="anchored" data-anchor-id="도메인-연결-github-pages">도메인 연결 (GitHub Pages)</h3>
+<p>커스텀 도메인, 즉 <code>www.lostineconomics.com</code>을 기본 도메인으로 쓰고 싶다면 어떻게 할까? 즉, 리포지터리 이름들이 <code>/</code>아래 서브 도메인으로 들어가는 것이다. 이를 위해서는 특별한 리포리터리를 만들어야 한다. <code>{이용자-ID}.github.io</code>을 리포의 이름으로 갖는 리포를 만들자.</p>
+<p>그리고 해당 리포의 커스텀 도메인을 <code>www.lostineconomics.com</code>로 설정한다. 해당 리포의 Pages의 경우 <code>index.md</code> 혹은 <code>index.html</code> 파일을 손봐서 적당한 주소로 포워딩되도록 조치하면 된다. 이렇게 해두면 이후 리포의 도메인에서 커스텀 도메인을 지정하지 않아도 <code>www.lostineconomics.com</code>이 기본 도메인이 된다.</p>
+<p>만일 커스텀 도메인이 필요하다면, <code>www</code>을 다른 것으로 바꾸는 방식으로 페이지를 지정할 수 있다. 즉, <code>books.lostineconomics.com</code> 이런 식으로 커스텀 도메인을 지정하고 앞서 살펴본 필요한 조치를 취하면 된다.</p>
 </section>
 <section id="정리-및-응용" class="level3">
 <h3 class="anchored" data-anchor-id="정리-및-응용">정리 및 응용</h3>
@@ -1017,7 +1019,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
