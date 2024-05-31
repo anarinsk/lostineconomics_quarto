@@ -14,19 +14,19 @@ about:
 ### Economic Index Board 
 
 
-⛧ Ouput: [Anari Sees US Economy](https://us-econ.anari.dev/)
+⛧ Ouput: [Anari Sees US Economy](https://www.lostineconomics.com/project_economic-monitoring-quarto)
 
-개인적으로 보려고 만든 경제 지표 보드입니다. 고급스럽게 웹 개발을 하면 좋았겠지만 Quarto Dashboards를 초보적으로 활용했습니다. 이전 버전은 [여기](https://eis.anari.dev/)에 있습니다. 
+개인적으로 보려고 만든 경제 지표 보드입니다. 고급스럽게 웹 개발을 하면 좋았겠지만 Quarto Dashboards를 초보적으로 활용했습니다. 
 
 ### JupyterLite
 
-⛧ Ouput: [Customized JupyterLite](https://jupyterlite.anari.dev/) | Post: [LINK](https://www.lostineconomics.com/posts/computer-tool/2022-12-06-jupyterlite-githubpages.html)
+⛧ Ouput: [Customized JupyterLite](https://www.lostineconomics.com/demo_jupyterlite) | Post: [LINK](https://blog.lostineconomics.com/posts/computer-tool/2022-12-06-jupyterlite-githubpages.html)
 
 JupyterLite는 Wasm(웹 어셈블리)로 구현되는 경량화된 쥬피터IDE + Python 개발 환경입니다. 사용성에 제한이 있지만 파이썬 코딩 경험이 말할 수 없이 빨리지고 편리해집니다! 
 
 ### Presentation with Quarto & Reveal.js 
 
-⛧ Ouput: <a href="https://fun-pt.lostineconomics.com/" target="_blank">Useless PT</a> | 
+⛧ Ouput: <a href="https://www.lostineconomics.com/learn_quarto-revealjs" target="_blank">Useless PT</a> | 
 Post: [LINK](https://www.lostineconomics.com/posts/computer-tool/2022-07-07-pt-with-quarto.html)
 
 Quarto는 Reveal.js를 부릴 수 있습니다. Quarto를 이용한 PT 제작에는 다음과 같은 장점이 있습니다.  
@@ -35,7 +35,7 @@ Quarto는 Reveal.js를 부릴 수 있습니다. Quarto를 이용한 PT 제작에
 - GitHub Pages를 통해서 퍼블리시할 수 있습니다. 
 - 이런 저런 '디자인 지옥'에 고통받지 않을 수 있습니다! 
 
-⛧ Ouput: <a href="https://more-fun-pt.lostineconomics.com/" target="_blank">More on Quarto + Reveal.js</a> 
+⛧ Ouput: <a href="https://www.lostineconomics.com/project_quarto-rjs-advanced" target="_blank">More on Quarto + Reveal.js</a> 
 
 - 위 프로젝트의 자매품입니다. 몇 가지 추가적인 기능을 다루었습니다. 
 
