@@ -7,8 +7,8 @@ image: "./images/ubuntu.png"
 categories: [computer-tool, pc-install, os]
 lightbox: auto
 #fig-align: center
-filters:
-   - lightbox
+#filters:
+#   - lightbox
    #- line-highlight
 #jupyter: python3
 draft: false

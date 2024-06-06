@@ -12,9 +12,6 @@ format:
   html:
     code-line-numbers: true
     highlight-style: arrow
-filters:
-   - lightbox
-   #- line-highlight
 lightbox: auto
 ---
 

@@ -7,8 +7,8 @@ image: "./images/paradox-cat.webp"
 categories: [math-simple]
 #margin-header: subscribe.html
 draft: false
-filters:
-   - lightbox
+#filters:
+#   - lightbox
 lightbox: auto
 ---
 

@@ -6,8 +6,8 @@ date: "02/28/2024"
 image: "./images/cat-stat.png"
 categories: [statistics, stats-simple]
 #fig-align: center
-filters:
-   - lightbox
+#filters:
+#   - lightbox
    #- line-highlight
 lightbox: auto
 #jupyter: python3

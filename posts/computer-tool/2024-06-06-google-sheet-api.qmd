@@ -7,8 +7,7 @@ image: "./images/cats-spreadsheet.webp"
 categories: [computer-tool, google-sheet, dashboard]
 lightbox: auto
 #fig-align: center
-filters:
-   - lightbox
+#filters:
    #- line-highlight
 #jupyter: python3
 draft: false
@@ -28,7 +27,7 @@ format:
 
 ## 데이터 앱 만들기의 0단계
 
-따로 DB를 만들지 않을 것이라면 데이터 소스는 엑셀형태가 가장 흔할 것 같다. 그리고 데이터가 다른 원천에 의해서 변한다면 구글 스프레드 시트가 쉬운 선택지가 아닐까 싶다. 그렇다면 파이썬과 구글 스프레드 시트는 어떻게 연동하면 될까? 이 포스트 역시 내용을 까먹을 미래의 나놈을 위한 것이다. 
+데이터 앱을 만드는 최초의 단계는 데이터와 이를 다룰 도구(언어)의 연동이다. 별도로 DB를 만들지 않을 것이라면 데이터 소스는 아마도 구글 시트를 포함한 스프레드시트 형태일 것이다. 데이터 앱을 만들기로 했다면 가장 먼저 해야 하는 고민이 여기 있다. 파이썬과 구글 스프레드 시트는 어떻게 연동하면 될까? 이 포스트 역시 내용을 까먹을 미래의 나놈을 위한 것이다. 
 
 :::{.column-margin}
 기본적인 내용은 [LINK](ttps://www.analyticsvidhya.com/blog/2020/07/read-and-update-google-spreadsheets-with-python/)를 참고했다. 

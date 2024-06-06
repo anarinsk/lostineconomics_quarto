@@ -6,8 +6,8 @@ date: "10/20/2023"
 image: "./images/codespaces.webp"
 categories: [computer-tool, coding]
 #fig-align: center
-filters:
-   - lightbox
+#filters:
+#   - lightbox
    #- line-highlight
 lightbox: auto
 #jupyter: python3

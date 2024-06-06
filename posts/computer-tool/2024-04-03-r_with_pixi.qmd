@@ -7,8 +7,8 @@ image: "./images/cat-packages.webp"
 categories: [computer-tool, r-stat, pixi]
 lightbox: auto
 #fig-align: center
-filters:
-   - lightbox
+#filters:
+#   - lightbox
    #- line-highlight
 #jupyter: python3
 draft: false

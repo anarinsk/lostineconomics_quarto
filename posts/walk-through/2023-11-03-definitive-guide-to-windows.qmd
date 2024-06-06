@@ -6,8 +6,8 @@ date: "11/03/2023"
 image: "./images/cat-windows.webp"
 categories: [walk-through, pc-install]
 #fig-align: center
-filters:
-   - lightbox
+#filters:
+#   - lightbox
    #- line-highlight
 lightbox: auto
 #jupyter: python3

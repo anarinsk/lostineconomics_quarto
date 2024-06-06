@@ -7,8 +7,8 @@ image: "images/entropy-cat.webp"
 categories: [machine-learning]
 #margin-header: subscribe.html
 draft: false
-filters:
-   - lightbox
+#filters:
+#   - lightbox
 lightbox: auto
 ---
 

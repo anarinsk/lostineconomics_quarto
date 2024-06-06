@@ -10,8 +10,8 @@ format:
   html:
     code-fold: true
 jupyter: python3
-filters:
-   - lightbox
+#filters:
+#   - lightbox
 lightbox: auto
 #margin-header: subscribe.html
 ---

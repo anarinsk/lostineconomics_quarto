@@ -15,8 +15,8 @@ format:
     #fig-height: 3.5
     fig-responsive: true 
 jupyter: python3
-filters:
-   - lightbox
+#filters:
+#   - lightbox
 lightbox: auto
 ---
 

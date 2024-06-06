@@ -5,8 +5,8 @@ author: "JS HUHH"
 date: "11/11/2020"
 image: "https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png"
 categories: [regression]
-filters:
-   - lightbox
+#filters:
+#   - lightbox
 lightbox: auto
 #margin-header: subscribe.html
 ---

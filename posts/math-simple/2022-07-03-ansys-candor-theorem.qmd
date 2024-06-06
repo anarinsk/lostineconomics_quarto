@@ -6,8 +6,8 @@ date: "07/03/2022"
 draft: false
 image: "images/cat-proof.webp"
 categories: [math-simple]
-filters:
-   - lightbox
+#filters:
+#   - lightbox
 lightbox: auto
 #margin-header: subscribe.html
 ---

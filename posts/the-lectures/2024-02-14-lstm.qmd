@@ -7,8 +7,8 @@ image: "./images/cat-network.webp"
 categories: [the-lectures, machine-learning]
 #fig-align: center
 fig-cap-location: bottom
-filters:
-   - lightbox
+#filters:
+#   - lightbox
    #- line-highlight
 lightbox: auto
 #jupyter: python3

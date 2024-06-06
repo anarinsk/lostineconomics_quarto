@@ -6,8 +6,8 @@ date: "05/28/2022"
 image: "images/cat-normality.webp"
 categories: [regression]
 draft: false
-filters:
-   - lightbox
+#filters:
+#   - lightbox
 lightbox: auto
 #margin-header: subscribe.html
 ---

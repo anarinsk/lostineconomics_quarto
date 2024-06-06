@@ -5,8 +5,8 @@ author: "JS HUHH"
 date: "08/27/2023"
 image: "./images/pixi.jpg"
 categories: [computer-tool, coding, pixi]
-filters:
-   - lightbox
+#filters:
+#   - lightbox
    #- line-highlight
 lightbox: auto
 #jupyter: python3

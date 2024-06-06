@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/research.html",
-    "items": []
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/posts/computer-tool/2024-06-06-google-sheet-api.html",
@@ -91,5 +87,9 @@
       "/posts/math-of/2019-05-17-math-pca.html",
       "/posts/math-of/2019-05-06-math-svm.html"
     ]
+  },
+  {
+    "listing": "/research.html",
+    "items": []
   }
 ]

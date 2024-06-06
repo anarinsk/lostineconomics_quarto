@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -127,7 +127,7 @@ window.Quarto = {
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="https://books.lostineconomics.com"> 
-<span class="menu-text">books</span></a>
+<span class="menu-text">Books</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../project.html"> 
@@ -245,7 +245,7 @@ window.Quarto = {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>생각난 김에 짬을 내 회귀식에서 좌변과 우변을 지칭하는 용어를 정리해보자. 취향에 맞춰서 쓰되 일관성만 갖추면 되겠다.</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>좌변</th>
@@ -328,7 +328,7 @@ window.Quarto = {
 <div class="quarto-layout-cell" style="flex-basis: 63.6%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://miro.medium.com/max/1280/0*gKOV65tvGfY8SMem.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="로지스틱 리그레션이 필요한 순간"><img src="https://miro.medium.com/max/1280/0*gKOV65tvGfY8SMem.png" class="img-fluid figure-img" alt="로지스틱 리그레션이 필요한 순간"></a></p>
+<p><a href="https://miro.medium.com/max/1280/0*gKOV65tvGfY8SMem.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="로지스틱 리그레션이 필요한 순간"><img src="https://miro.medium.com/max/1280/0*gKOV65tvGfY8SMem.png" class="img-fluid figure-img" alt="로지스틱 리그레션이 필요한 순간"></a></p>
 <figcaption>로지스틱 리그레션이 필요한 순간</figcaption>
 </figure>
 </div>
@@ -440,7 +440,7 @@ y_i \xrightarrow{\rm prob.~function} \mu_i \xrightarrow{\rm link~function} \eta_
 <p>잠시 로짓 회귀의 추정을 살펴보기 전에 확률과 우도의 차이점에 관해서 알아보자. 분포와 그 분포의 파리미터를 알고 있을 때 해당 샘플이 관찰될 확률을 구할 수 있다. 연속 확률변수 <span class="math inline">\(x\)</span>가 따르는 어떤 분포가 있다고 할 때, 해당 분포를 요약하는 파라미터(정규분포라면 평균과 분산이다) <span class="math inline">\(\theta\)</span>에 대해서 <span class="math inline">\(P(x_1 &lt; x &lt;x_2 | \theta)\)</span>를 구한다면, 이것이 확률이다.</p>
 <p>우도(likelihood)는 무엇일까? 우도는 확률 분포의 수학적인 형태에서 관심의 대상을 바꾼 것이다. 위의 연속 확률변수의 예에서 <span class="math inline">\(P(\theta | x_1 &lt; x &lt; x_2)\)</span>가 우도가 된다. 하나의 관찰 <span class="math inline">\(x_i\)</span>에 대해서는 확률 밀도함수 <span class="math inline">\(f(\theta | x = x_i)\)</span>를 우도로 정의할 수 있다. 연속 확률변수가 아니라 이산 확률변수라면, 확률 질량함수가 될 것이고 이 경우에는 확률과 같다.</p>
 <p>요컨대 주어진 것(conditioning), 즉 무엇을 파라미터로 볼 것인지의 차이에 따라서 확률과 우도의 정의가 달라진다. 다시 정리해보자.</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: center;">명칭</th>
@@ -1089,7 +1089,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

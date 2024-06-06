@@ -5,8 +5,8 @@ author: "JS HUHH"
 date: "09/21/2023"
 image: "./images/cat-server.webp"
 categories: [computer-tool, walk-through]
-filters:
-   - lightbox
+#filters:
+#   - lightbox
    #- line-highlight
 lightbox: auto
 #jupyter: python3

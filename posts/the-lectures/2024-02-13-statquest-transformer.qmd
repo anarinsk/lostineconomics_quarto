@@ -6,8 +6,8 @@ date: "02/13/2024"
 image: "./images/cat-network.webp"
 categories: [the-lectures, machine-learning]
 #fig-align: center
-filters:
-   - lightbox
+#filters:
+#   - lightbox
    #- line-highlight
 lightbox: auto
 #jupyter: python3

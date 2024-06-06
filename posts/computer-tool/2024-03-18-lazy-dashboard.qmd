@@ -7,8 +7,8 @@ image: "./images/cat-sketch.webp"
 categories: [computer-tool, document-tool, quarto]
 lightbox: auto
 #fig-align: center
-filters:
-   - lightbox
+#filters:
+#   - lightbox
    #- line-highlight
 #jupyter: python3
 draft: false

@@ -11,10 +11,7 @@ draft: false
 format:
   html:
     code-line-numbers: true
-    highlight-style: arrow
-filters:
-   - lightbox
-   #- line-highlight
+    highlight-style: github
 lightbox: auto
 ---
 

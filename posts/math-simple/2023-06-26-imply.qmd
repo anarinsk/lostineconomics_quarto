@@ -7,8 +7,8 @@ image: "./images/cat-proof.webp"
 categories: [math-simple]
 #margin-header: subscribe.html
 draft: false
-filters:
-   - lightbox
+#filters:
+#   - lightbox
 lightbox: auto
 ---
 
