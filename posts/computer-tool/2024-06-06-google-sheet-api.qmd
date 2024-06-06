@@ -20,6 +20,7 @@ format:
     code-block-border-left: "#31BAE9"
 ---
 
+
 ## TL; DR
 
 - Google Sheet를 파이썬과 연동하는 방법을 알아보자.
@@ -39,7 +40,9 @@ format:
 
 먼저 새 프로젝트를 적절하게 생성하자. 
 
-![프로젝트를 생성하자.](./images/gss-01.jpeg){width=60% fig-align="center"}
+:::{layout="[[-0.5, 1, -0.5]]"}
+![프로젝트를 생성하자.](./images/gss-01.jpeg){#fig-1}
+:::
 
 ### API 활성화
 
@@ -47,29 +50,29 @@ API를 활성화해야 한다.
 
 활성화해야 하는 API는 `Google Drive API`, `Google Sheets API` 두 가지이다. 
 
-![드라이브와 시트 API 활성화](./images/gss-02.jpeg){width=60% fig-align="center"}
+:::{layout="[[-0.2, 1, -0.2]]"}
+![드라이브와 시트 API 활성화](./images/gss-02.jpeg){#fig-2}
+:::
 
 ### 사용자 인증 정보 만들기 
 
 - "서비스 계정"으로 만들도록 하자. 
 - 사용자 인증 정보 유형은 "어플리케이션 데이터"이다. 
 
-:::{layout="[[1,-0.1, 1]]" layout-valign="center"}
+:::{layout="[[1, -0.1, 1]]" layout-valign="bottom"}
+![서비스 계정 활성화](./images/gss-03.jpeg){#fig-3}
 
-![서비스 계정 활성화](./images/gss-03.jpeg) 
-
-![API 설정](./images/gss-04.jpeg)
+![API 설정](./images/gss-04.jpeg){#fig-4}
 :::
 
 ### 키 생성하기 
 
 - 키를 JSON으로 생성하면 해당 파일이 다운로드 된다. 
 
-:::{layout="[1,-0.1, 1]" layout-valign="center"}
+:::{layout="[[1, -0.1, 1]]" layout-valign="bottom"}
+![로봇 계정 선택](./images/gss-05.jpeg){#fig-5} 
 
-![로봇 계정 선택](./images/gss-05.jpeg) 
-
-![키 생성](./images/gss-06.jpeg)
+![키 생성](./images/gss-06.jpeg){#fig-6}
 :::
 
 ### Google Spread Sheet 공유하기
