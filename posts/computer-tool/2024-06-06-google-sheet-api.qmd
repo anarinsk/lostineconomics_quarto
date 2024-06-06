@@ -3,7 +3,7 @@ title: "Google Sheet와 파이썬 연동하기"
 description: "데이터 앱 만들기의 시작"   
 author: "JS HUHH"
 date: "06/06/2024"
-image: "./images/cat-packages.webp"
+image: "./images/cats-spreadsheet.webp"
 categories: [computer-tool, google-sheet, dashboard]
 lightbox: auto
 #fig-align: center
