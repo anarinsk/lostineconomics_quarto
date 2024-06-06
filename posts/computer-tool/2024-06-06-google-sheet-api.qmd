@@ -24,7 +24,7 @@ format:
 ## TL; DR
 
 - Google Sheet를 파이썬과 연동하는 방법을 알아보자.
-- [🔗LINK](https://blog.lostineconomics.com/posts/computer-tool/2024-03-18-lazy-dashboard.html)와 함께 참고하시라.  
+- 🔗[LINK](https://blog.lostineconomics.com/posts/computer-tool/2024-03-18-lazy-dashboard.html)와 함께 참고하시라.  
 
 ## 데이터 앱 만들기의 0단계
 

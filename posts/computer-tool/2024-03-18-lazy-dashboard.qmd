@@ -22,7 +22,7 @@ format:
 
 ## TL; DR
 - Quarto Dashboards를 활용해서 개인용 보드를 만들어 보자. 
-- [🔗LINK](https://blog.lostineconomics.com/posts/computer-tool/2024-06-06-google-sheet-api.html)와 함께 보자. 
+- 🔗[LINK](https://blog.lostineconomics.com/posts/computer-tool/2024-06-06-google-sheet-api.html)와 함께 보자. 
 
 ## 왜 정적 웹(static web)인가? 
 
