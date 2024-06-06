@@ -1,0 +1,124 @@
+---
+title: "Google Sheet와 파이썬 연동하기" 
+description: "데이터 앱 만들기의 시작"   
+author: "JS HUHH"
+date: "06/06/2024"
+image: "./images/cat-packages.webp"
+categories: [computer-tool, google-sheet, dashboard]
+lightbox: auto
+#fig-align: center
+filters:
+   - lightbox
+   #- line-highlight
+#jupyter: python3
+draft: false
+format:
+  html:
+    highlight-style: github
+    #code-line-numbers: true
+    code-block-bg: true
+    code-block-border-left: "#31BAE9"
+---
+
+## TL; DR
+
+- Google Sheet를 파이썬과 연동하는 방법을 알아보자.
+- [LINK](https://blog.lostineconomics.com/posts/computer-tool/2024-03-18-lazy-dashboard.html)와 함께 참고하시라.  
+
+## 데이터 앱 만들기의 0단계
+
+따로 DB를 만들지 않을 것이라면 데이터 소스는 엑셀형태가 가장 흔할 것 같다. 그리고 데이터가 다른 원천에 의해서 변한다면 구글 스프레드 시트가 쉬운 선택지가 아닐까 싶다. 그렇다면 파이썬과 구글 스프레드 시트는 어떻게 연동하면 될까? 이 포스트 역시 내용을 까먹을 미래의 나놈을 위한 것이다. 
+
+:::{.column-margin}
+기본적인 내용은 [LINK](ttps://www.analyticsvidhya.com/blog/2020/07/read-and-update-google-spreadsheets-with-python/)를 참고했다. 
+:::
+
+## Google Sheet API 설정
+
+### Google Cloud Console에서 프로젝트 생성 
+
+먼저 새 프로젝트를 적절하게 생성하자. 
+
+![프로젝트를 생성하자.](./images/gss-01.jpeg){width=60% fig-align="center"}
+
+### API 활성화
+
+API를 활성화해야 한다. 
+
+활성화해야 하는 API는 `Google Drive API`, `Google Sheets API` 두 가지이다. 
+
+![드라이브와 시트 API 활성화](./images/gss-02.jpeg){width=60% fig-align="center"}
+
+### 사용자 인증 정보 만들기 
+
+- "서비스 계정"으로 만들도록 하자. 
+- 사용자 인증 정보 유형은 "어플리케이션 데이터"이다. 
+
+:::{layout="[[1,-0.1, 1]]" layout-valign="center"}
+
+![서비스 계정 활성화](./images/gss-03.jpeg) 
+
+![API 설정](./images/gss-04.jpeg)
+:::
+
+### 키 생성하기 
+
+- 키를 JSON으로 생성하면 해당 파일이 다운로드 된다. 
+
+:::{layout="[1,-0.1, 1]" layout-valign="center"}
+
+![로봇 계정 선택](./images/gss-05.jpeg) 
+
+![키 생성](./images/gss-06.jpeg)
+:::
+
+### Google Spread Sheet 공유하기
+
+구글 스프레드 시트의 상단의 공유 버튼에서 앞서 크리덴셜을 생성한 로봇 유저를 공유자로 지정한다. 
+
+## 파이썬에서 작업하기 
+
+설치 등의 과정은 생략하고 테스트할 수 있는 코드만 간략하게 소개한다. 
+
+```python
+#!pip3 install gspread
+#!pip3 install --upgrade google-api-python-client oauth2client
+
+#importing the required libraries
+import gspread
+import pandas as pd
+from oauth2client.service_account import ServiceAccountCredentials
+```
+
+이제 크리덴셜을 활용해서 해당 구글 스프레드 시트에 접근할 수 있다. `add_json_file_here.json`에 앞서 다운로드한 JSON 파일을 넣으면 된다. 
+
+```python
+# define the scope
+scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
+
+# add credentials to the account
+creds = ServiceAccountCredentials.from_json_keyfile_name('add_json_file_here.json', scope)
+
+# authorize the clientsheet 
+client = gspread.authorize(creds)
+```
+
+'구글 스프레드 시트 이름'에는 접근할 구글 스프레드 시트의 타이틀을 넣는다. 시트의 선택은 아래 `get_worksheet(0)`로 한다. 0번이 첫번째 위치한 시트이다. 
+
+```python
+# get the instance of the Spreadsheet
+sheet = client.open('구글 스프레드 시트 이름')
+
+# get the first sheet of the Spreadsheet
+sheet_instance = sheet.get_worksheet(0)
+```
+
+get_all_records()를 통해 모든 데이터를 가져올 수 있고, dictionary 형태로 저장된다. 이를 pandas의 DataFrame으로 변환하면 된다.
+
+```python
+# get all the records of the data
+records_data = sheet_instance.get_all_records()
+
+# convert the json to dataframe
+records_df = pd.DataFrame.from_dict(records_data)
+```

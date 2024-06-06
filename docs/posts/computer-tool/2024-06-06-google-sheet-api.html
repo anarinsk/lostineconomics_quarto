@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="JS HUHH">
-<meta name="dcterms.date" content="2022-12-22">
-<meta name="description" content="도메인을 도메인 답게!">
+<meta name="dcterms.date" content="2024-06-06">
+<meta name="description" content="데이터 앱 만들기의 시작">
 
-<title>lostineconomics.com - 내 도메인을 GitHub Pages에 연결하자.</title>
+<title>lostineconomics.com - Google Sheet와 파이썬 연동하기</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -190,16 +190,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">내 도메인을 GitHub Pages에 연결하자.</h1>
+<h1 class="title">Google Sheet와 파이썬 연동하기</h1>
   <div class="quarto-categories">
     <div class="quarto-category">computer-tool</div>
-    <div class="quarto-category">web</div>
+    <div class="quarto-category">google-sheet</div>
+    <div class="quarto-category">dashboard</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    도메인을 도메인 답게!
+    데이터 앱 만들기의 시작
   </div>
 </div>
 
@@ -216,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 22, 2022</p>
+      <p class="date">June 6, 2024</p>
     </div>
   </div>
   
@@ -231,242 +232,159 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <ul>
-<li>도메인과 깃허브 페이지스를 연결하는 법을 알아보자.</li>
-</ul>
-<section id="not-in-this-post" class="level3">
-<h3 class="anchored" data-anchor-id="not-in-this-post">Not in this Post</h3>
-<ul>
-<li>도메인에 관한 상세한 지식</li>
-<li>Github Pages의 일반적인 설정 방법</li>
+<li>Google Sheet를 파이썬과 연동하는 방법을 알아보자.</li>
+<li><a href="https://blog.lostineconomics.com/posts/computer-tool/2024-03-18-lazy-dashboard.html">LINK</a>와 함께 참고하시라.</li>
 </ul>
 </section>
-<section id="what-in-this-post" class="level3">
-<h3 class="anchored" data-anchor-id="what-in-this-post">What in this Post</h3>
-<ul>
-<li>도메인 구입하고 깃헙 페이지스로 연결하는 방법</li>
-</ul>
-</section>
-</section>
-<section id="도메인-구입" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="도메인-구입">도메인 구입</h2>
-<p>구입은 편한 곳에서 하시면 되겠다. 나는 <a href="https://domains.google/">Google Domains</a>를 이용했다. 도메인을 산다는 것은 무엇일까? 예를 들어 이 홈페이지를 위해 구입한 도메인은 <code>lostineconomics.com</code>이다. 나는 <code>www.lostineconomics.com</code>을 산 것이 아니었다! 웹 서비스 <code>www</code>을 도메인의 하위 도메인으로 설정할 수 있지만, 구입한 것은 도메인 <code>lostineconomics.com</code>이다. 그리고 하위 도메인에는 <code>www</code>만 있는 것이 아니다. <code>blog.lostineconomics.com</code>이나 <code>mail.lostineconomics.com</code>도 설정할 수 있다.</p>
+<section id="데이터-앱-만들기의-0단계" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="데이터-앱-만들기의-0단계">데이터 앱 만들기의 0단계</h2>
+<p>따로 DB를 만들지 않을 것이라면 데이터 소스는 엑셀형태가 가장 흔할 것 같다. 그리고 데이터가 다른 원천에 의해서 변한다면 구글 스프레드 시트가 쉬운 선택지가 아닐까 싶다. 그렇다면 파이썬과 구글 스프레드 시트는 어떻게 연동하면 될까? 이 포스트 역시 내용을 까먹을 미래의 나놈을 위한 것이다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>자세한 내용은 <a href="https://joonius.tistory.com/19">여기</a>를 참고하자.</p>
-</div></div><p>보통 도메인 구입처에서 DNS, 즉 도메인네임서버 관련한 기본적인 서비스를 제공한다. 가장 기초적인 서비스는 포워딩 서비스다. 즉, <code>lostineconomics.com</code>을 호출했을 때 이를 다른 도메인으로 연결시켜주는 서비스다. 개념이 직관적이고 이용이 편리하지만, 포워딩되는 주소로 바뀌는 것이 조금 머쓱하다. 도메인 이름이 좋아서 구입했다면, 녀석이 계속 주소 창에 남아야 하지 않겠는가!</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>여기서는 구글 도메인스의 설정을 소개한다. 대체로 많은 도메인 서비스들이 DNS 관련 설정 서비스를 제공하니 업체별로 검색하면 대체로 비슷한 역할을 수행하는 기능을 발견할 수 있을 것이다.</p>
+<p>기본적인 내용은 <a href="ttps://www.analyticsvidhya.com/blog/2020/07/read-and-update-google-spreadsheets-with-python/">LINK</a>를 참고했다.</p>
 </div></div></section>
-<section id="github에-보유-도메인-소유-증명하기" class="level2">
-<h2 class="anchored" data-anchor-id="github에-보유-도메인-소유-증명하기">GitHub에 보유 도메인 소유 증명하기</h2>
-<p>GitHub Pages는 훌륭한 스태틱 웹 서비스다. js, css 정도를 쓰는 html 문서를 전달하는 데에는 이보다 싸고 (무료다!), 편한 서비스를 찾기 어려울 듯 싶다. GitHub Pages는 개별 리포의 주소를 외부 도메인과 연결하는 서비스도 제공한다. 다만 연결을 위해 몇 가지 절차를 거쳐야 한다.</p>
-<section id="도메인-확인하기-1-github" class="level3">
-<h3 class="anchored" data-anchor-id="도메인-확인하기-1-github">도메인 확인하기 1 (GitHub)</h3>
-<p>먼저 연결하고자 하는 도메인이 소유자의 것이 맞는지를 확인하는 절차가 필요하다. 깃허브의 계정 <code>Settings</code> &gt; “Code, planning, and autiomation” 섹션에 <code>Pages</code>라는 항목으로 들어가보자.</p>
-<p><code>www</code>를 제외하고 구입한 도메인 이름을 넣으면 아래와 같은 창이 뜬다. 1번은 도메인의 앞에 붙여줄 하위 주소 이름이고, 2번은 이를 인증할 수 있는 값이다. 이 창을 띄워 두고 도에인 구입처로 가자. 두 값은 아래 그림처럼 버튼을 통해 복사하면 된다.</p>
-<div>
-
+<section id="google-sheet-api-설정" class="level2">
+<h2 class="anchored" data-anchor-id="google-sheet-api-설정">Google Sheet API 설정</h2>
+<section id="google-cloud-console에서-프로젝트-생성" class="level3">
+<h3 class="anchored" data-anchor-id="google-cloud-console에서-프로젝트-생성">Google Cloud Console에서 프로젝트 생성</h3>
+<p>먼저 새 프로젝트를 적절하게 생성하자.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/gss-01.jpeg" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="프로젝트를 생성하자."><img src="./images/gss-01.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="프로젝트를 생성하자."></a></p>
+</figure>
 </div>
-<div class="quarto-layout-panel" data-layout="[[-20, 60, -20]]">
-<div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
+<figcaption>프로젝트를 생성하자.</figcaption>
+</figure>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
-<p><a href="images/verifying-domain-masked.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/verifying-domain-masked.png" class="img-fluid"></a></p>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-</div>
-</div>
-<p>자세한 내용은 <a href="https://docs.github.com/ko/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages">여기</a>를 확인하자. 그런데 이렇게 도메인을 연결해도 actions의 프로세스에 따라서 custom domain이 풀리는 경우가 있다. 이때 필요한 것이 <code>CNAME</code> 파일이다. 페이지가 만들어지는 리포의 디렉토리(보통은 root)에 <code>CNAME</code> 파일을 만들고, 그 안에 연결할 도메인 이름을 적어주면 된다. 이렇게 하면 페이지를 퍼블리싱할 때 해당 도메인이 함께 설정된다. 페이지스 설정에 <code>CNAME</code> 파일이 함께 만들어지는 경우가 있으면 그대로 활용하면 되고 만들어지지 않았다면 추가해서 넣어주면 된다.</p>
 </section>
-<section id="도메인-확인하기-2-google-domains" class="level3">
-<h3 class="anchored" data-anchor-id="도메인-확인하기-2-google-domains">도메인 확인하기 2 (Google Domains)</h3>
-<p>구글 도메인스를 비롯한 도메인 구입처는 대체로 DNS와 관련해서 다양한 서비스를 제공한다.</p>
+<section id="api-활성화" class="level3">
+<h3 class="anchored" data-anchor-id="api-활성화">API 활성화</h3>
+<p>API를 활성화해야 한다.</p>
+<p>활성화해야 하는 API는 <code>Google Drive API</code>, <code>Google Sheets API</code> 두 가지이다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/gss-02.jpeg" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="드라이브와 시트 API 활성화"><img src="./images/gss-02.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="드라이브와 시트 API 활성화"></a></p>
+</figure>
+</div>
+<figcaption>드라이브와 시트 API 활성화</figcaption>
+</figure>
+</div>
+</section>
+<section id="사용자-인증-정보-만들기" class="level3">
+<h3 class="anchored" data-anchor-id="사용자-인증-정보-만들기">사용자 인증 정보 만들기</h3>
 <ul>
-<li>인증하려는 도메인의 DNS 설정 메뉴로 가자.</li>
-<li><code>맞춤 레코드 관리</code> &gt; <code>새 레코드 만들기</code></li>
-<li>아래 그림에 각 번호에 위 GitHub 인증 메뉴의 1, 2번을 붙여 넣고 저장한다.
-<ul>
-<li>1번은 “호스트 이름”이고 2번은 “데이터”다.</li>
-<li>“유형”은 “TXT”로 설정한다.</li>
-<li>옆의 3600은 그대로 두면 된다. 구글 도메인스에서도 이를 권장한다.</li>
-</ul></li>
+<li>“서비스 계정”으로 만들도록 하자.</li>
+<li>사용자 인증 정보 유형은 “어플리케이션 데이터”이다.</li>
 </ul>
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout="[[-20, 60, -20]]">
-<div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
+<div class="quarto-layout-panel" data-layout="[[1,-0.1, 1]]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 47.6%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/gss-03.jpeg" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="서비스 계정 활성화"><img src="./images/gss-03.jpeg" class="img-fluid figure-img" alt="서비스 계정 활성화"></a></p>
+<figcaption>서비스 계정 활성화</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 4.8%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
-<p><a href="images/position.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/position.png" class="img-fluid"></a></p>
+<div class="quarto-layout-cell" style="flex-basis: 47.6%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/gss-04.jpeg" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="API 설정"><img src="./images/gss-04.jpeg" class="img-fluid figure-img" alt="API 설정"></a></p>
+<figcaption>API 설정</figcaption>
+</figure>
 </div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
 </div>
 </div>
 </div>
 </section>
-<section id="도메인-확인하기-3-github" class="level3">
-<h3 class="anchored" data-anchor-id="도메인-확인하기-3-github">도메인 확인하기 3 (GitHub)</h3>
-<p>다시 <code>Pages</code> 설정 메뉴로 돌아가서 <code>verify</code>를 눌러준다. 설정되는데 다소 시간이 걸리지만 “verifyig”을 눌러 요구하다보면 인증이 된다. 앞서 도메인 서비스에서 설정한 값이 해당 DNS에 반영되고 이를 깃허브에서 끌어와 확인하면 도메인 소유 확인이 완료된다.</p>
-</section>
-</section>
-<section id="github-pages를-도메인에-연결하기" class="level2">
-<h2 class="anchored" data-anchor-id="github-pages를-도메인에-연결하기">GitHub Pages를 도메인에 연결하기</h2>
-<p>특정한 리포지터리의 깃허브 페이지(<code>{유저-ID}.github.io/{리포지터리-이름}</code>)를 도메인과 연결하기 위해서는 두 가지 과정이 필요하다. Google Domains에서 DNS 설정을 통해 CNAME을 설정해야 한다. CNAME이란 도메인의 이름에서 도메인의 이름으로 연결해주기 위한 설정이라고 생각하면 쉽다. 앞서와 같이 구글 도메인스의 DNS 설정으로 가자.</p>
-<section id="도메인-연결-1-google-domains" class="level3">
-<h3 class="anchored" data-anchor-id="도메인-연결-1-google-domains">도메인 연결 1 (Google Domains)</h3>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[[-20, 60, -20]]">
-<div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
-<p><a href="images/cname.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/cname.png" class="img-fluid"></a></p>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-</div>
-</div>
-<p>위 그림에서 보듯이 유형을 “CNAME”으로 잡는다. 이제 구입한 도메인 앞에 접두어(하위 도메인)이 들어간다. 가장 흔하게 쓸 수 있는 것이 <code>www</code>다. 즉, <code>www.lostineconomics.com</code>을 치면 어디로 포워딩되어야 하는지를 표시하면 된다. 호스트 이름이 <code>www</code>가 되고, 데이터는 <code>anarinsk.github.io</code>가 된다.</p>
-<p>주의할 점; 데이터에 해당 것허브 페이지스의 주소가 <code>/{리포지터리-이름}</code>까지 전부 전달되어야 할 것 같지만, 깃허브 페이지스의 최상위 페이지까지만 DNS에 전달해야 한다. 이후 과정은 연결은 GitHub Pages의 몫이다. <code>/</code>가 들어간 디렉토리는 전달할 수 없다. <code>{이용자-ID}.github.io</code>까지만 전달하면 해당 깃허브 페이지스의 디렉토리 자원과 도메인의 연결이 자동적으로 이루어진다.</p>
-<p>해당 도메인이 깃허브 페이지까지 잘 연결되는지 보려면, 아래의 셸 명령을 활용해보자.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> dig www.lostineconomics.com +nostats +nocomments +nocmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>윈도 파워셸에는 <code>dig</code> 명령어가 없다. 설치가 가능하니 검색을 통해 적절히 방법을 찾으시라. 결과가 <code>{이용자-ID}.github.io</code>까지 잘 타고 들어가는지 확인하면 된다. 뒤에서 다루겠지만 여기서 IP 주소도 확인할 수 있는데, 이 녀석들이 설정에서 다시 활용될 수 있다.</p>
-</section>
-<section id="도메인-연결-github-pages" class="level3">
-<h3 class="anchored" data-anchor-id="도메인-연결-github-pages">도메인 연결 (GitHub Pages)</h3>
-<p>커스텀 도메인, 즉 <code>www.lostineconomics.com</code>을 기본 도메인으로 쓰면서 각 리포지터리 이름들이 <code>/</code>아래 서브 디렉토리처럼 들어가는 URL을 생각해보자. 이를 구현하려면 특별한 리포리터리를 만들어야 한다. <code>{이용자-ID}.github.io</code>을 이름으로 갖는 리포를 생성하자. 그리고 이 리포의 GitHub Pages 설정에서 커스텀 도메인을 <code>www.lostineconomics.com</code>로 설정한다. 해당 리포의 Pages의 경우 <code>index.md</code> 혹은 <code>index.html</code> 파일을 고쳐서 적당한 주소로 포워딩되도록 처리하자. 이렇게 해두면 이후 리포의 도메인에서 커스텀 도메인을 지정하지 않아도 <code>www.lostineconomics.com</code>이 내 계정의 기본 도메인이 된다.</p>
-<p>만일 커스텀 도메인이 필요하다면, <code>www</code>을 다른 것으로 바꾸는 방식으로 페이지를 지정할 수 있다. 즉, <code>books.lostineconomics.com</code> 이런 식으로 커스텀 도메인을 지정하고 앞서 살펴본 필요한 조치를 취하면 된다. 다만 이런 주소의 경우 <code>/</code>로 시작하는 서브 도메인은 설정할 수 없다.</p>
-</section>
-<section id="정리-및-응용" class="level3">
-<h3 class="anchored" data-anchor-id="정리-및-응용">정리 및 응용</h3>
-<p>흐름을 정리해보자. 구입한 도메인의 네임 서버(DNS)가 {이용자-ID}.github.io까지 타고 들어가면 깃허브 페이지스의 설정이 해당 주소를 해당 페이지스의 랜딩 페이지와 연결한다. 따라서 크게 작업 흐름을 정리해보면 다음과 같다.</p>
-<ol type="1">
-<li>사용하려는 도메인 이름이 것히브 페이지스 도메인(<code>{개별-ID}.github.io</code>)에 연결되도록 설정한다.</li>
-<li>1을 구현하려면 깃허브에서 내가 구입한 도메인을 <code>txt</code> 파일을 통해 인증헤야 한다.</li>
-<li>각 리퍼지토리의 깃허브 페이지스 설정에서 1의 도메인이 해당 리포의 페이지를 호출할 수 있도록 연결한다.</li>
-</ol>
-<p>도메인으로 꼭 <code>www</code>만 써야 할까? 아니다. 다른 이름도 가능하다. 이 페이지를 예로 들어보자.</p>
+<section id="키-생성하기" class="level3">
+<h3 class="anchored" data-anchor-id="키-생성하기">키 생성하기</h3>
 <ul>
-<li>DNS의 레코드 관리에서 호스트의 이름으로 <code>blog</code> 설정하고 <code>blog.lostineconomics.com</code>을 <code>anrinsk.github.io</code>까지 연결한다.</li>
-<li>이 블로그를 담고 있는 리포에서 커스텀 도메인으로 <code>blog.lostineconomics.com</code>을 지정하면 이 주소는 이 블로그의 깃허브 페이지스로 연결된다.</li>
-<li><code>anarinsk.github.io</code>라는 이름의 리포가 생성하고 이 리포의 커스텀 도메인은 <code>www.lostineconomics.com</code>이다. <code>index.html</code>을 통해 <code>blog.lostineconomics.com</code>으로 연결되도록 했다. 즉, <code>www.lostineconomics.com</code>이 호출되면 기본으로 <code>blog.lostineconomics.com</code>으로 연결된다.</li>
-<li>이제 이 계정의 리포들의 페이지스는 기본으로 <code>www.lostineconomics.com</code>을 기본 주소로 지닌다. 만일 별도의 커스텀 도메인이 필요하다면, <code>blog.lostineconomics.com</code>처럼 호스트 이름을 바꾸어서 설정하면 된다.</li>
+<li>키를 JSON으로 생성하면 해당 파일이 다운로드 된다.</li>
 </ul>
-</section>
-</section>
-<section id="곁눈질-www가-없는-호출-포위딩하기" class="level2">
-<h2 class="anchored" data-anchor-id="곁눈질-www가-없는-호출-포위딩하기">곁눈질; <code>www</code>가 없는 호출 포위딩하기</h2>
-<p>웹페이지에 들어갈 때 <code>www</code>를 쓰지 않는 경우가 있다. 이런 경우에도 해당 페이지로 잘 안내되는 것은 최상위 도메인이 <code>www</code> 등이 붙은 하위 도메인으로 연결되기 때문이다. 이를 구현하려면 구글 도메인스 DNS 설정에서 “A” 유형을 추가하면 된다. A 유형은 해당 호출을 바로 IP로 연결해준다. 해당 IP는 앞서 설정한 CNAME과 같기 때문에 원 도메인이 CNAME 도메인으로 연결된다.</p>
-<p>앞서 <code>dig</code> 명령을 실행하면 포워딩되는 IP 주소를 확인할 수 있다. 이를 DNS 레코드 관리에서 설정해주자. 도메인 이름은 비워둔다. 유형에는 “A”를 설정하고, 데이터에는 연결되는 IP 주소를 가급적 다 적어주자.</p>
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout="[[-20, 60, -20]]">
-<div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
+<div class="quarto-layout-panel" data-layout="[1,-0.1, 1]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 47.6%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/gss-05.jpeg" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5" title="로봇 계정 선택"><img src="./images/gss-05.jpeg" class="img-fluid figure-img" alt="로봇 계정 선택"></a></p>
+<figcaption>로봇 계정 선택</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 4.8%;justify-content: flex-start;">
 <p>&nbsp;</p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
-<p><a href="images/atype.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/atype.png" class="img-fluid"></a></p>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-</div>
-</div>
-<p>구글 도메인의 전체적인 DNS 설정을 한번 정리해보자.</p>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout="[[-20, 60, -20]]">
-<div class="quarto-layout-row quarto-layout-valign-bottom">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
-<p><a href="images/google-domains.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/google-domains.png" class="img-fluid"></a></p>
-</div>
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
-<p>&nbsp;</p>
+<div class="quarto-layout-cell" style="flex-basis: 47.6%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./images/gss-06.jpeg" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="키 생성"><img src="./images/gss-06.jpeg" class="img-fluid figure-img" alt="키 생성"></a></p>
+<figcaption>키 생성</figcaption>
+</figure>
 </div>
 </div>
 </div>
-<table class="table">
-<colgroup>
-<col style="width: 23%">
-<col style="width: 19%">
-<col style="width: 19%">
-<col style="width: 19%">
-<col style="width: 19%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">유형</th>
-<th style="text-align: left;">기능</th>
-<th style="text-align: left;">호스트 이름</th>
-<th style="text-align: left;">데이터</th>
-<th style="text-align: left;">예시</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">A</td>
-<td style="text-align: left;">원 도메인을 IP로 연결</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">IP 주소</td>
-<td style="text-align: left;">yours.com → <br> 185.XXX.1X8.15X</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">TXT</td>
-<td style="text-align: left;">도메인 소유 여부 입증</td>
-<td style="text-align: left;">깃허브 계정 설정 제공</td>
-<td style="text-align: left;">깃허브 계정 설정 제공</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">CNAME</td>
-<td style="text-align: left;">해당 DNS에서 호출되는 이름을 다른 이름으로 연결</td>
-<td style="text-align: left;"><code>www</code>, <code>blog</code>, …</td>
-<td style="text-align: left;">연결될 도메인 이름</td>
-<td style="text-align: left;">www.yours.com → <br> yours.github.io (호출한 리포의 페이지스로 연결)</td>
-</tr>
-</tbody>
-</table>
+</div>
 </section>
-<section id="참고자료" class="level2">
-<h2 class="anchored" data-anchor-id="참고자료">참고자료</h2>
-<ul>
-<li><a href="https://docs.github.com/ko/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages">깃허브; 도메인 인증</a></li>
-<li><a href="https://docs.github.com/ko/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages">깃허브; 깃허브 페이지스 커스텀 도메인 설정</a></li>
-<li><a href="https://support.google.com/domains/answer/3290350">구글 도메인스; DNS 레코드 설정</a></li>
-</ul>
+<section id="google-spread-sheet-공유하기" class="level3">
+<h3 class="anchored" data-anchor-id="google-spread-sheet-공유하기">Google Spread Sheet 공유하기</h3>
+<p>구글 스프레드 시트의 상단의 공유 버튼에서 앞서 크리덴셜을 생성한 로봇 유저를 공유자로 지정한다.</p>
 </section>
-<section id="a-follow-up" class="level2">
-<h2 class="anchored" data-anchor-id="a-follow-up">A follow-up</h2>
-<p>빌어먹을 구글이 Domains 서비스를 접었다. 하지만 우리에게는 그에 못지 않은 훌륭한 대안이 있다. 도메인 구매와 DNS 관리 그리고 analytics까지 모두 제공하는 <a href="https://www.cloudflare.com/products/registrar/">Cloudflare</a>를 추천한다. 큰 회사라서 안정성도 큰 염려는 없을 듯 싶다. (하지만 구글은…)</p>
-<p>가입 후 웹 사이트를 등록하면서 DNS을 바꿔주면 그 이후 세부 설정을 할 수 있다. 이 홈페이지의 예시를 간략하게 스샷으로 소개하겠다. 도메인 관리의 모든 기능이 제공되고 인터페이스도 편리하다.</p>
-<p><a href="images/cloudflare.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/cloudflare.png" class="img-fluid"></a></p>
-<ol type="1">
-<li><code>lostineconomics.com</code> → <code>www.lostineconomics.com</code> 으로 연결 <a href="#곁눈질-www가-없는-호출-포위딩하기">이동</a></li>
-<li><code>www.lostineconomics</code> → <code>anarinsk.github.io</code>로 연결 <a href="#도메인-연결-1-google-domains">이동</a></li>
-<li>Bluesky 핸들 사용을 위한 인증 텍스트 파일</li>
-<li>Github Pages 연결을 위한 인증 텍스트 파일 <a href="#도메인-확인하기-2-google-domains">이동</a></li>
-</ol>
+</section>
+<section id="파이썬에서-작업하기" class="level2">
+<h2 class="anchored" data-anchor-id="파이썬에서-작업하기">파이썬에서 작업하기</h2>
+<p>설치 등의 과정은 생략하고 테스트할 수 있는 코드만 간략하게 소개한다.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!pip3 install gspread</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#!pip3 install --upgrade google-api-python-client oauth2client</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#importing the required libraries</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> gspread</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> oauth2client.service_account <span class="im">import</span> ServiceAccountCredentials</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>이제 크리덴셜을 활용해서 해당 구글 스프레드 시트에 접근할 수 있다. <code>add_json_file_here.json</code>에 앞서 다운로드한 JSON 파일을 넣으면 된다.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># define the scope</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>scope <span class="op">=</span> [<span class="st">'https://spreadsheets.google.com/feeds'</span>,<span class="st">'https://www.googleapis.com/auth/drive'</span>]</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># add credentials to the account</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>creds <span class="op">=</span> ServiceAccountCredentials.from_json_keyfile_name(<span class="st">'add_json_file_here.json'</span>, scope)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># authorize the clientsheet </span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> gspread.authorize(creds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>’구글 스프레드 시트 이름’에는 접근할 구글 스프레드 시트의 타이틀을 넣는다. 시트의 선택은 아래 <code>get_worksheet(0)</code>로 한다. 0번이 첫번째 위치한 시트이다.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the instance of the Spreadsheet</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>sheet <span class="op">=</span> client.<span class="bu">open</span>(<span class="st">'구글 스프레드 시트 이름'</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># get the first sheet of the Spreadsheet</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>sheet_instance <span class="op">=</span> sheet.get_worksheet(<span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>get_all_records()를 통해 모든 데이터를 가져올 수 있고, dictionary 형태로 저장된다. 이를 pandas의 DataFrame으로 변환하면 된다.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get all the records of the data</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>records_data <span class="op">=</span> sheet_instance.get_all_records()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># convert the json to dataframe</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>records_df <span class="op">=</span> pd.DataFrame.from_dict(records_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">프로젝트를 생성하자.</span>
+<span class="glightbox-desc lightbox-desc-2">드라이브와 시트 API 활성화</span>
+<span class="glightbox-desc lightbox-desc-3">서비스 계정 활성화</span>
+<span class="glightbox-desc lightbox-desc-4">API 설정</span>
+<span class="glightbox-desc lightbox-desc-5">로봇 계정 선택</span>
+<span class="glightbox-desc lightbox-desc-6">키 생성</span>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1024,7 +942,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
