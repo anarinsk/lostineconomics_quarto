@@ -243,7 +243,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="no-row-height column-margin column-container"><div class="">
 <p>기본적인 내용은 <a href="ttps://www.analyticsvidhya.com/blog/2020/07/read-and-update-google-spreadsheets-with-python/">LINK</a>를 참고했다.</p>
 </div></div></section>
-<section id="google-sheet-api-설정" class="level2">
+<section id="google-sheet-api-설정" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="google-sheet-api-설정">Google Sheet API 설정</h2>
 <section id="google-cloud-console에서-프로젝트-생성" class="level3">
 <h3 class="anchored" data-anchor-id="google-cloud-console에서-프로젝트-생성">Google Cloud Console에서 프로젝트 생성</h3>
@@ -276,7 +276,7 @@ Figure&nbsp;1: 프로젝트를 생성하자.
 </section>
 <section id="api-활성화" class="level3">
 <h3 class="anchored" data-anchor-id="api-활성화">API 활성화</h3>
-<p>API를 활성화해야 한다.</p>
+<p>API를 활성화해야 한다. API를 활성화하는 메뉴에서 <a href="#fig-2" class="quarto-xref">Figure&nbsp;2</a>와 같이 두 개의 API를 활성화하자.</p>
 <p>활성화해야 하는 API는 <code>Google Drive API</code>, <code>Google Sheets API</code> 두 가지이다.</p>
 <div>
 
@@ -293,7 +293,7 @@ Figure&nbsp;1: 프로젝트를 생성하자.
 <a href="./images/gss-02.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="./images/gss-02.jpeg" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: 드라이브와 시트 API 활성화
+Figure&nbsp;2: Google Drive와 Google Sheet API 활성화
 </figcaption>
 </figure>
 </div>
@@ -307,8 +307,8 @@ Figure&nbsp;2: 드라이브와 시트 API 활성화
 <section id="사용자-인증-정보-만들기" class="level3">
 <h3 class="anchored" data-anchor-id="사용자-인증-정보-만들기">사용자 인증 정보 만들기</h3>
 <ul>
-<li>“서비스 계정”으로 만들도록 하자.</li>
-<li>사용자 인증 정보 유형은 “어플리케이션 데이터”이다.</li>
+<li>구글 시트에 접근하기 위해서는 “서비스 계정”(<a href="#fig-3" class="quarto-xref">Figure&nbsp;3</a>)으로 만들도록 하자.</li>
+<li>사용자 인증 정보 유형은 “어플리케이션 데이터”이다(<a href="#fig-4" class="quarto-xref">Figure&nbsp;4</a>).</li>
 </ul>
 <div>
 
@@ -345,10 +345,11 @@ Figure&nbsp;4: API 설정
 </div>
 </div>
 </section>
-<section id="키-생성하기" class="level3">
+<section id="키-생성하기" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="키-생성하기">키 생성하기</h3>
 <ul>
-<li>키를 JSON으로 생성하면 해당 파일이 다운로드 된다.</li>
+<li><a href="#fig-5" class="quarto-xref">Figure&nbsp;5</a>에서 생성된 서비스 계정을 클릭한다.</li>
+<li><a href="#fig-6" class="quarto-xref">Figure&nbsp;6</a>에서 보듯이 “키” 탭에서 JSON으로 생성하면 해당 JSON 파일이 다운로드 된다. 이 파일을 파이썬에서 구글 시트에 접근하는데 활용한다. 이 파일은 패스워드가 같은 것이므로 노출되지 않도록 주의하자.</li>
 </ul>
 <div>
 
@@ -384,7 +385,10 @@ Figure&nbsp;6: 키 생성
 </div>
 </div>
 </div>
-</section>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>가장 흔히 저지르를 실수가 public 계정의 github에 해당 파일을 넣어두는 것이다. 이 점 각별히 주의하도록 하자. public 계정이라도 마스킹 처리가 부분적으로 가능하고, private 계정이라고 해도, GitHub Pages 서비스는 가능하다.</p>
+</div></div></section>
 <section id="google-spread-sheet-공유하기" class="level3">
 <h3 class="anchored" data-anchor-id="google-spread-sheet-공유하기">Google Spread Sheet 공유하기</h3>
 <p>구글 스프레드 시트의 상단의 공유 버튼에서 앞서 크리덴셜을 생성한 로봇 유저를 공유자로 지정한다.</p>
@@ -425,7 +429,7 @@ Figure&nbsp;6: 키 생성
 
 <div class="hidden" aria-hidden="true">
 <span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: 프로젝트를 생성하자.</span>
-<span class="glightbox-desc lightbox-desc-2">Figure&nbsp;2: 드라이브와 시트 API 활성화</span>
+<span class="glightbox-desc lightbox-desc-2">Figure&nbsp;2: Google Drive와 Google Sheet API 활성화</span>
 <span class="glightbox-desc lightbox-desc-3">Figure&nbsp;3: 서비스 계정 활성화</span>
 <span class="glightbox-desc lightbox-desc-4">Figure&nbsp;4: API 설정</span>
 <span class="glightbox-desc lightbox-desc-5">Figure&nbsp;5: 로봇 계정 선택</span>
@@ -988,7 +992,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
