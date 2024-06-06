@@ -129,7 +129,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="https://books.lostineconomics.com"> 
-<span class="menu-text">books</span></a>
+<span class="menu-text">Books</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../project.html"> 
@@ -243,8 +243,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="설치">설치</h2>
 <p><a href="https://prefix.dev/docs/pixi/overview#installation" class="uri">https://prefix.dev/docs/pixi/overview#installation</a></p>
 <p>OS에 따라서 설치 방법이 제공된다. macos나 linux라면 <code>brew</code>를 쓰는 것을 권장한다.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">brew</span> install pixi <span class="co"># for Macos or linux</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="ex">iwr</span> <span class="at">-useb</span> https://pixi.sh/install.ps1 <span class="kw">|</span> <span class="ex">iex</span> <span class="co"># For Windows PowerShell</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install pixi <span class="co"># for Macos or linux</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">iwr</span> <span class="at">-useb</span> https://pixi.sh/install.ps1 <span class="kw">|</span> <span class="ex">iex</span> <span class="co"># For Windows PowerShell</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="활용" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="활용">활용</h2>
@@ -263,28 +263,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>별도의 셸 환경을 제공한다.</li>
 </ul>
 <p>예를 들어보자. 원하는 폴더에 파이썬 환경을 만들고 여기에 pandas와 plotly를 설치하고 싶다고 하자. 해당 폴더를 만들고 터미널을 통해 해당 폴더에 들어가자.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="op">&gt;</span> pixi <span class="ex">init</span> .  <span class="co"># 폴더를 생성하고 싶다면 pixi init {프로젝트-이름}</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="op">&gt;</span> pixi <span class="ex">add</span> python pandas plotly </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pixi <span class="ex">init</span> .  <span class="co"># 폴더를 생성하고 싶다면 pixi init {프로젝트-이름}</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> pixi <span class="ex">add</span> python pandas plotly </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>pixi가 필요한 패키지를 콘다 리포지터리에서 끌어와 설치한다. 만일 터미널에서 활용하고 싶다면 <code>pixi shell</code>을 치면 된다. <code>pixi</code>를 치면 필요한 명령어를 보여준다.</p>
 </section>
 <section id="multi-platform" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="multi-platform">Multi platform</h2>
 <p>pixi의 장점은 os별로 구별해서 패키지를 관리할 수 있다는 것이다. 환경을 담고 있는 <code>pixi.toml</code>을 열어보면 이 점을 쉽게 알 수 있다.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource toml number-lines code-with-copy"><code class="sourceCode toml"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">[project]</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="co"># Default project info....</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="co"># A list of platforms you are supporting with your package.</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="dt">platforms</span> <span class="op">=</span> <span class="op">[</span><span class="st">"win-64"</span><span class="op">,</span> <span class="st">"linux-64"</span><span class="op">,</span> <span class="st">"osx-64"</span><span class="op">,</span> <span class="st">"osx-arm64"</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[project]</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Default project info....</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A list of platforms you are supporting with your package.</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="dt">platforms</span> <span class="op">=</span> <span class="op">[</span><span class="st">"win-64"</span><span class="op">,</span> <span class="st">"linux-64"</span><span class="op">,</span> <span class="st">"osx-64"</span><span class="op">,</span> <span class="st">"osx-arm64"</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>pixi.toml</code>을 열어보면 프로젝트의 메타 데이터로 플랫폼이 있다. 여기에 정의되어 있지 않은 환경에서 <code>.toml</code>에 정의된 패키지를 인스톨해보자.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">❯</span> pixi install</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="ex">×</span> the project is not configured for your current platform</span>
-<span id="cb4-3"><a href="#cb4-3"></a>   <span class="ex">╭─[pixi.toml:6:1]</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a> <span class="ex">6</span> │ channels = <span class="pp">[</span><span class="st">"conda-forge"</span><span class="pp">]</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a> <span class="ex">7</span> │ platforms = <span class="pp">[</span><span class="st">"osx-arm64"</span><span class="pp">]</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>   <span class="ex">·</span>             ────────────────┬────────────────</span>
-<span id="cb4-7"><a href="#cb4-7"></a>   <span class="ex">·</span>                             ╰── add <span class="st">'win-64'</span> here</span>
-<span id="cb4-8"><a href="#cb4-8"></a> <span class="ex">8</span> │</span>
-<span id="cb4-9"><a href="#cb4-9"></a>   <span class="ex">╰────</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a>  <span class="ex">help:</span> The project needs to be configured to support your platform <span class="er">(</span><span class="ex">win-64</span><span class="kw">)</span><span class="bu">.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">❯</span> pixi install</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">×</span> the project is not configured for your current platform</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>   <span class="ex">╭─[pixi.toml:6:1]</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a> <span class="ex">6</span> │ channels = <span class="pp">[</span><span class="st">"conda-forge"</span><span class="pp">]</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a> <span class="ex">7</span> │ platforms = <span class="pp">[</span><span class="st">"osx-arm64"</span><span class="pp">]</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>   <span class="ex">·</span>             ────────────────┬────────────────</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>   <span class="ex">·</span>                             ╰── add <span class="st">'win-64'</span> here</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a> <span class="ex">8</span> │</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>   <span class="ex">╰────</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="ex">help:</span> The project needs to be configured to support your platform <span class="er">(</span><span class="ex">win-64</span><span class="kw">)</span><span class="bu">.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>이렇게 메시지를 띄워준다. <code>pixi.toml</code> 파일을 열어 해당 플랫폼을 추가한 후 다시 <code>pixi install</code>을 실행하면 된다. 만일 에러가 뜬다면 셸 창을 다시 실행하자. 플랫폼 별 의존성을 세밀하게 정의해 설치하거나 이를 <code>pixi.toml</code>에 지정할 수 있다. 바로 이어서 살펴볼 것이다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -302,28 +302,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-with-filename-file">
 <pre><strong>pixi.toml</strong></pre>
 </div>
-<div class="sourceCode" id="cb5" data-filename="pixi.toml"><pre class="sourceCode numberSource toml number-lines code-with-copy"><code class="sourceCode toml"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">[project]</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"pixi_pytorch"</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.1.0"</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="dt">description</span> <span class="op">=</span> <span class="st">"Add a short description here"</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a><span class="dt">authors</span> <span class="op">=</span> <span class="op">[</span><span class="st">"Junsok Huhh &lt;anarinsk@gmail.com&gt;"</span><span class="op">]</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="dt">channels</span> <span class="op">=</span> <span class="op">[</span><span class="st">"pytorch"</span><span class="op">,</span> <span class="st">"nvidia"</span><span class="op">,</span> <span class="st">"conda-forge"</span><span class="op">]</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="dt">platforms</span> <span class="op">=</span> <span class="op">[</span><span class="st">"win-64"</span><span class="op">,</span> <span class="st">"osx-arm64"</span><span class="op">]</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a></span>
-<span id="cb5-9"><a href="#cb5-9"></a><span class="kw">[tasks]</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a></span>
-<span id="cb5-11"><a href="#cb5-11"></a><span class="kw">[target.win-64.dependencies]</span></span>
-<span id="cb5-12"><a href="#cb5-12"></a><span class="dt">pytorch-cuda</span> <span class="op">=</span> <span class="st">"11.8.*"</span></span>
-<span id="cb5-13"><a href="#cb5-13"></a><span class="dt">torchaudio</span> <span class="op">=</span> <span class="st">"2.0.2.*"</span></span>
-<span id="cb5-14"><a href="#cb5-14"></a><span class="dt">pytorch</span> <span class="op">=</span> <span class="st">"2.0.1.*"</span></span>
-<span id="cb5-15"><a href="#cb5-15"></a><span class="dt">torchvision</span> <span class="op">=</span> <span class="st">"0.15.2.*"</span></span>
-<span id="cb5-16"><a href="#cb5-16"></a></span>
-<span id="cb5-17"><a href="#cb5-17"></a><span class="kw">[target.osx-arm64.dependencies]</span></span>
-<span id="cb5-18"><a href="#cb5-18"></a><span class="dt">pytorch</span> <span class="op">=</span> <span class="st">"2.0.1.*"</span></span>
-<span id="cb5-19"><a href="#cb5-19"></a><span class="dt">torchvision</span> <span class="op">=</span> <span class="st">"0.15.2.*"</span></span>
-<span id="cb5-20"><a href="#cb5-20"></a></span>
-<span id="cb5-21"><a href="#cb5-21"></a><span class="kw">[dependencies]</span></span>
-<span id="cb5-22"><a href="#cb5-22"></a><span class="dt">jupyter</span> <span class="op">=</span> <span class="st">"1.0.0"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5" data-filename="pixi.toml"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[project]</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"pixi_pytorch"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.1.0"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="dt">description</span> <span class="op">=</span> <span class="st">"Add a short description here"</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="dt">authors</span> <span class="op">=</span> <span class="op">[</span><span class="st">"Junsok Huhh &lt;anarinsk@gmail.com&gt;"</span><span class="op">]</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="dt">channels</span> <span class="op">=</span> <span class="op">[</span><span class="st">"pytorch"</span><span class="op">,</span> <span class="st">"nvidia"</span><span class="op">,</span> <span class="st">"conda-forge"</span><span class="op">]</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="dt">platforms</span> <span class="op">=</span> <span class="op">[</span><span class="st">"win-64"</span><span class="op">,</span> <span class="st">"osx-arm64"</span><span class="op">]</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="kw">[tasks]</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="kw">[target.win-64.dependencies]</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="dt">pytorch-cuda</span> <span class="op">=</span> <span class="st">"11.8.*"</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="dt">torchaudio</span> <span class="op">=</span> <span class="st">"2.0.2.*"</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="dt">pytorch</span> <span class="op">=</span> <span class="st">"2.0.1.*"</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="dt">torchvision</span> <span class="op">=</span> <span class="st">"0.15.2.*"</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="kw">[target.osx-arm64.dependencies]</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="dt">pytorch</span> <span class="op">=</span> <span class="st">"2.0.1.*"</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="dt">torchvision</span> <span class="op">=</span> <span class="st">"0.15.2.*"</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="kw">[dependencies]</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="dt">jupyter</span> <span class="op">=</span> <span class="st">"1.0.0"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><code>target</code>은 플랫폼별로 특화된 분기를 지정할 수 있다.
@@ -349,13 +349,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-with-filename-file">
 <pre><strong>pixi.toml</strong></pre>
 </div>
-<div class="sourceCode" id="cb6" data-filename="pixi.toml"><pre class="sourceCode numberSource toml number-lines code-with-copy"><code class="sourceCode toml"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">[pypi-dependencies]</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="dt">koreanize-matplotlib</span> <span class="op">=</span> <span class="st">"==0.1.1"</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="dt">stargazer</span> <span class="op">=</span> <span class="st">"*"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6" data-filename="pixi.toml"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[pypi-dependencies]</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">koreanize-matplotlib</span> <span class="op">=</span> <span class="st">"==0.1.1"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dt">stargazer</span> <span class="op">=</span> <span class="st">"*"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>아직 실험적인 개발 단계라서 버전 지정 방법 등이 conda와 다르다. <code>*</code>의 경우 최신 버전을 설치한다.</p>
 <p>아니면 터미널 창에서 아래와 같이 실행하자. 이 내용은 <code>pixi add --help</code>로도 확인할 수 있다.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href="#cb7-1"></a>$ pixi add --pypi koreanize-matplotlib stargazer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre class="shell"><code>$ pixi add --pypi koreanize-matplotlib stargazer</code></pre>
 </section>
 <section id="유연함" class="level2">
 <h2 class="anchored" data-anchor-id="유연함">유연함</h2>
