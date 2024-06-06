@@ -1,3 +1,4 @@
+/.pixi
 *.indentifier
 /.quarto/
 index.qmd
