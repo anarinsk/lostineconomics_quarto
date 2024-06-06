@@ -5,10 +5,7 @@ author: "JS HUHH"
 date: "11/11/2020"
 image: "https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png"
 categories: [regression]
-#filters:
-#   - lightbox
-lightbox: auto
-#margin-header: subscribe.html
+draft: false
 ---
 
 당연히 알고 있다고 생각하지만 모르는 게 생각보다 많다. 회귀 분석에서 로그-리니어 모델, 즉 종속 변수에 로그를 취하고 독립 변수가 선형인 모델에서 계수를 어떻게 이해해야 할까? 

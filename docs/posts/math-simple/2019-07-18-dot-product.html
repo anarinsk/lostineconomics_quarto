@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -45,6 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -240,7 +243,7 @@ window.Quarto = {
 <p>쉽게 말해서 닷 프로덕트는 차원이 같은 두 개의 인풋 벡터를 하나의 스칼라로 바꿔주는 일종의 함수로 이해할 수 있다. 두 개의 벡터를 서로 연관 짓는데 이를 해당 벡터의 길이라는 정보로 압축한다고 보면 얼추 맞을 듯 싶다. 하나의 숫자로 요약된다는 뜻에서 스칼라 프로덕트라고도 불린다. 그림으로 나타내면 아래와 같다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/perpendicularprojection.jpg?raw=true" class="my-figure5 img-fluid figure-img"></p>
+<p><a href="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/perpendicularprojection.jpg?raw=true" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="\mathbf v를 \mathbf u로 프로젝션한다. \mathbf u는 스크린, \mathbf v는 투영체라고 생각하면 좋다."><img src="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/perpendicularprojection.jpg?raw=true" class="my-figure5 img-fluid figure-img" alt="\mathbf v를 \mathbf u로 프로젝션한다. \mathbf u는 스크린, \mathbf v는 투영체라고 생각하면 좋다."></a></p>
 <figcaption><span class="math inline">\(\mathbf v\)</span>를 <span class="math inline">\(\mathbf u\)</span>로 프로젝션한다. <span class="math inline">\(\mathbf u\)</span>는 스크린, <span class="math inline">\(\mathbf v\)</span>는 투영체라고 생각하면 좋다.</figcaption>
 </figure>
 </div>
@@ -249,14 +252,14 @@ window.Quarto = {
 <p>닷 프로덕트에 관한 설명은 정의에서 바로 코사인 법칙으로 넘어간다. 하지만 뭔가 분명하지 않다. 이걸 조금 더 풀어보자.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_components.png.webp" class="my-figure7 img-fluid figure-img"></p>
+<p><a href="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_components.png.webp" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="닷 프로덕트, 내적의 계산법"><img src="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_components.png.webp" class="my-figure7 img-fluid figure-img" alt="닷 프로덕트, 내적의 계산법"></a></p>
 <figcaption>닷 프로덕트, 내적의 계산법</figcaption>
 </figure>
 </div>
 <p>위 그림은 <span class="math inline">\(2 \times 2\)</span> 벡터의 닷 프로덕트를 각 요소로 분해한 것이다. 이중에서 <span class="math inline">\(\dfrac{\pi}{2}\)</span> 각을 이루고 있는 벡터는 서로 곱하면 0이 된다. 따라서 닷 프로덕트 계산에서는 <span class="math inline">\(a_x b_x\)</span>와 <span class="math inline">\(a_y b_y\)</span>가 남게 된다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_rotation.png.webp" class="my-figure7 img-fluid figure-img"></p>
+<p><a href="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_rotation.png.webp" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="\cos\theta 그리고 닷 프로덕트"><img src="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_rotation.png.webp" class="my-figure7 img-fluid figure-img" alt="\cos\theta 그리고 닷 프로덕트"></a></p>
 <figcaption><span class="math inline">\(\cos\theta\)</span> 그리고 닷 프로덕트</figcaption>
 </figure>
 </div>
@@ -319,7 +322,7 @@ window.Quarto = {
 <p>평면 <span class="math inline">\(\mathbf x\)</span>가 <span class="math inline">\(\mathbf{x}^0\)</span>를 지나는 것은 분명하다. 이 평면이 <span class="math inline">\(\mathbf{p}\)</span>에 수직이라는 것은 두 벡터의 닷 프로덕트가 0이 되면 된다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/hyperplane.jpg?raw=true" class="my-figure7 img-fluid figure-img"></p>
+<p><a href="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/hyperplane.jpg?raw=true" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="벡터 \mathbf p와 직교하는 하이퍼플레인 찾기"><img src="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/hyperplane.jpg?raw=true" class="my-figure7 img-fluid figure-img" alt="벡터 \mathbf p와 직교하는 하이퍼플레인 찾기"></a></p>
 <figcaption>벡터 <span class="math inline">\(\mathbf p\)</span>와 직교하는 하이퍼플레인 찾기</figcaption>
 </figure>
 </div>
@@ -333,10 +336,10 @@ window.Quarto = {
 <p>보다 상세한 내용은 <a href="https://www.youtube.com/watch?v=LyGKycYT2v0&amp;t=610s">여기</a>를 참고하라.</p>
 </div></div><p>일단 <span class="math inline">\(\mathbf u\)</span>가 길이 1로 표준화된 벡터라고 정의를 살짝 바꾸겠다. 즉, 새로운 <span class="math inline">\(\mathbf u\)</span>는 <span class="math inline">\(\rVert \mathbf u \lVert\)</span>로 <span class="math inline">\(\mathbf u\)</span>를 나눈 벡터다. 아래 그림처럼 이 벡터를 향해서 2차원 평면의 기저를 구성하는 <span class="math inline">\((1,0)(\equiv i)\)</span>과 <span class="math inline">\((0,1)(\equiv j)\)</span>에서 벡터로 프로젝션을 해보자.</p>
 <p>이렇게 프로젝션을 하면 프로젝션된 지점의 <span class="math inline">\(x\)</span> 좌표는 공교롭게도 원점에서부터 해당 프로젝션된 지점까지의 벡터의 길이가 된다. <span class="math inline">\(y\)</span>에 대해서도 마찬가지다.</p>
-<p><img src="https://github.com/anarinsk/public_writing/blob/master/assets/images/dot_1.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
-<p><img src="https://github.com/anarinsk/public_writing/blob/master/assets/images/dot_2.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><a href="https://github.com/anarinsk/public_writing/blob/master/assets/images/dot_1.jpg?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://github.com/anarinsk/public_writing/blob/master/assets/images/dot_1.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></a></p>
+<p><a href="https://github.com/anarinsk/public_writing/blob/master/assets/images/dot_2.jpg?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://github.com/anarinsk/public_writing/blob/master/assets/images/dot_2.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></a></p>
 <p>이제 (1,1)에서 벡터 <span class="math inline">\(\mathbf u\)</span>로 프로젝션을 해보자. (1,1)은 각각 두 개의 기저를 1의 가중치로 선형결합한 벡터다. 이 벡터의 프로젝션의 길이는 어떻게 구성될까? 그림에서 보듯이 <span class="math inline">\(u_x + u_y\)</span>가 된다. 이를 일반적인 논리로 확장해보자. 어떤 임의의 벡터 <span class="math inline">\(\mathbf v(=(x,y))\)</span>가 존재할 때 해당 벡터는 각각 두 개의 기저의 선형 결합으로 이해할 수 있다.</p>
-<p><img src="https://github.com/anarinsk/public_writing/blob/master/assets/images/dot_3.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><a href="https://github.com/anarinsk/public_writing/blob/master/assets/images/dot_3.jpg?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="https://github.com/anarinsk/public_writing/blob/master/assets/images/dot_3.jpg?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></a></p>
 <p>따라서 <span class="math inline">\(\mathbf v\)</span> 벡터를 <span class="math inline">\(\mathbf u\)</span>로 프로젝션한 길이는 다음과 같다.</p>
 <p><span class="math display">\[
 \underset{\mathbf u 프로젝션}{\left[\begin{array}{ll}{u_{x}} &amp; { u_{y}}\end{array}\right]}\left[\begin{array}{l}{x} \\ {y}\end{array}\right]= u_{x} \cdot x + u_{y} \cdot y = \mathbf u \cdot \mathbf v
@@ -347,6 +350,12 @@ window.Quarto = {
 \]</span></p>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1"><span class="math inline">\(\mathbf v\)</span>를 <span class="math inline">\(\mathbf u\)</span>로 프로젝션한다. <span class="math inline">\(\mathbf u\)</span>는 스크린, <span class="math inline">\(\mathbf v\)</span>는 투영체라고 생각하면 좋다.</span>
+<span class="glightbox-desc lightbox-desc-2">닷 프로덕트, 내적의 계산법</span>
+<span class="glightbox-desc lightbox-desc-3"><span class="math inline">\(\cos\theta\)</span> 그리고 닷 프로덕트</span>
+<span class="glightbox-desc lightbox-desc-4">벡터 <span class="math inline">\(\mathbf p\)</span>와 직교하는 하이퍼플레인 찾기</span>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -904,6 +913,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":false,"selector":".lightbox"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

@@ -8,13 +8,6 @@ categories: [the-books]
 #fig-align: center
 #jupyter: python3
 draft: false
-format:
-  html:
-    code-line-numbers: true
-    highlight-style: arrow
-#filters:
-   #- line-highlight
-lightbox: auto
 ---
 
 ::: columns

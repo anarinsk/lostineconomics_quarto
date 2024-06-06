@@ -5,9 +5,6 @@ author: "JS HUHH"
 date: "05/29/2023"
 image: "./images/tool-cat-2.webp"
 categories: [computer-tool, coding]
-#filters:
-#   - lightbox
-lightbox: auto
 #jupyter: python3
 draft: false
 ---

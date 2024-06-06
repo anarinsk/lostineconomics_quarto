@@ -5,10 +5,7 @@ author: "JS HUHH"
 date: "10/25/2019"
 image: "https://miro.medium.com/max/259/1*Psa5h9I8zm0lPSsqAgaZHw.png"
 categories: [regression]
-#filters:
-#   - lightbox
-lightbox: auto
-#margin-header: subscribe.html
+draft: false
 ---
 
 ## TL; DR

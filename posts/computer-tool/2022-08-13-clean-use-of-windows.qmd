@@ -6,9 +6,6 @@ date: "08/13/2022"
 image: "./images/windows-cat.webp"
 categories: [computer-tool, os]
 draft: false
-#filters:
-#   - lightbox
-lightbox: auto
 ---
 
 ## TL; DR

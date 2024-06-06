@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -79,6 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -317,12 +320,12 @@ window.Quarto = {
 <p>먼저 전체적인 블로그의 구조를 생성해야 한다. 터미날에서 아래와 같이 입력하자.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> quarto create-project {YOUR-BLOG-DIR} <span class="at">--type</span> website:blog</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>YOUR-BLOG-DIR</code> 은 앞서 지정한 깃허브 리포의 디렉토리에 해당한다. 생성하고자 하는 디렉토리 안에 있다면 생략해도 된다. 이 명령을 실행하면 해당 디렉토리에 블로그를 서비스하기 위해 필요한 파일들이 생성된다. <code>/home/tmp/</code> 디렉토리 아래 블로그의 뼈대를 생성한다면 아래와 같이 실행된다.</p>
-<p><img src="./images/quarto_blog_terminal-1.gif" class="img-fluid"></p>
+<p><a href="./images/quarto_blog_terminal-1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="./images/quarto_blog_terminal-1.gif" class="img-fluid"></a></p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>작업 순서상 깃허브와 연동된 리포를 먼저 만들고 그 디렉토리 안에 quarto 프로젝트를 생성하는 것이 자연스럽다.</p>
 </div></div><p>생성된 파일, 디렉토리 중에서 중요한 내용을 간단히 짚어보자.</p>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th style="text-align: left;">File</th>
@@ -1000,6 +1003,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

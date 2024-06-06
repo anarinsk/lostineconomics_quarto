@@ -4,9 +4,8 @@ description: Docker의 대안으로 K8s를 써보자!
 author: "JS HUHH"
 date: "04/26/2022"
 image: "images/container.jfif"
-draft: false
 categories: [container]
-#margin-header: subscribe.html
+draft: false
 ---
 
 :::{.callout-note}

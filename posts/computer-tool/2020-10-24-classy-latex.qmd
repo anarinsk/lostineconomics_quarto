@@ -5,7 +5,7 @@ author: "JS HUHH"
 date: "10/24/2020"
 image: "./images/cat-tex.webp"
 categories: [computer-tool, document-tool]
-#margin-header: subscribe.html
+draft: false
 ---
 
 박사 논문을 $\rm\LaTeX$(이하 그냥 레이텍 혹은 텍이라고 쓰겠다)으로 썼지만... 역시 안 쓰면 잊는다. 갑자기 텍을 다시 써볼까, 라는 생각이 드는 순간 갑갑하더라. 윈도를 쓰건 맥을 쓰건 용량이 적지 않고 관리가 쉽지 않은 텍라이브를 깔게 되지는 않는다. 물론 당신이 논문을 쓰고 있다면... 

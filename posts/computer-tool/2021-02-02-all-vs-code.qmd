@@ -5,7 +5,7 @@ author: "JS HUHH"
 date: "02/02/2021"
 image: "https://velog.velcdn.com/images/jeongjae96/post/0db5fc06-a8bb-4970-bf6c-3b5a69ebe940/vs%20code.png"
 categories: [computer-tool, coding]
-#margin-header: subscribe.html
+draft: false
 ---
 
 

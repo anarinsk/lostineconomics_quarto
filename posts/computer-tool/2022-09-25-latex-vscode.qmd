@@ -5,9 +5,6 @@ author: "JS HUHH"
 date: "09/25/2022"
 image: "images/type_cat_2.jfif"
 categories: [computer-tool, document-tool]
-#filters:
-#   - lightbox
-lightbox: auto
 draft: false
 ---
 

@@ -5,7 +5,7 @@ author: "JS HUHH"
 date: "04/09/2020"
 image: "https://blog.kakaocdn.net/dn/r101a/btrfoS8HzZ5/7Upmj62FYdW6AFxStfFkv0/img.jpg"
 categories: [computer-tool, os]
-#margin-header: subscribe.html
+draft: false
 ---
 
 격세지감이다. 적으로 삼고 아웅다웅하던 윈도가 리눅스를 두 팔로 품었다. (마치 macos에서 처럼) 윈도에서 터미널을 켜고 리눅스를 네이티브로 쓸 수 있을 것이라고 누가 생각했을까. 그런데 그런 날이 왔네. MS, 대단하다.  

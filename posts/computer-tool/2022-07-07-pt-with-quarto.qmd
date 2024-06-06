@@ -6,12 +6,6 @@ date: "07/07/2022"
 image: "images/revealjs.jfif"
 categories: [computer-tool, document-tool, quarto]
 draft: false
-format:
-  html:
-    highlight-style: pygments
-    #code-line-numbers: true
-    code-block-bg: true
-    code-block-border-left: "#31BAE9"
 ---
 
 ## TL; DR

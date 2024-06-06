@@ -5,7 +5,7 @@ author: "JS HUHH"
 date: "10/27/2020"
 image: "https://mybinder.org/static/logo.svg"
 categories: [computer-tool, coding]
-#margin-header: subscribe.html
+draft: false
 ---
 
 내가 보고 있는 것을 남이 그대로 봐야 의사 소통이 온전해지는 경우가 있다. 아마도 코드를 나누는 경우가 그렇지 않을까 싶다. 이 점에서 Github은 꽤 좋은 코드 나눔 도구다. 그런데 문제가 하나 있다. Github을 통해 배포하는 것이 패키지라면 각자 땡겨가서 쓰면 되겠지만, 특정하게 실현된 결과물이라면? 

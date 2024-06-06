@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -45,6 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -242,7 +245,7 @@ window.Quarto = {
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/position-vector-1627294113.png" class="my-figure5 img-fluid figure-img"></p>
+<p><a href="https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/position-vector-1627294113.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="점은 위치만을 지니고 벡터는 방향성과 크기를 지닌다."><img src="https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/position-vector-1627294113.png" class="my-figure5 img-fluid figure-img" alt="점은 위치만을 지니고 벡터는 방향성과 크기를 지닌다."></a></p>
 <figcaption>점은 위치만을 지니고 벡터는 방향성과 크기를 지닌다.</figcaption>
 </figure>
 </div>
@@ -263,7 +266,7 @@ l : \lbrace p_0 + t \vec v, t \in \mathbb R \rbrace
 \]</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://www.maths.usyd.edu.au/u/MOW/vectors/images/v120x.gif" class="my-figure5 img-fluid figure-img"></p>
+<p><a href="https://www.maths.usyd.edu.au/u/MOW/vectors/images/v120x.gif" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="점에서 벡터를 생성해보자."><img src="https://www.maths.usyd.edu.au/u/MOW/vectors/images/v120x.gif" class="my-figure5 img-fluid figure-img" alt="점에서 벡터를 생성해보자."></a></p>
 <figcaption>점에서 벡터를 생성해보자.</figcaption>
 </figure>
 </div>
@@ -306,7 +309,7 @@ l: \lbrace \dfrac{x - p_{0x}}{v_x} = \dfrac{y - p_{0y}}{v_y}  =  \dfrac{z - p_{0
 <h3 class="anchored" data-anchor-id="normal-vector">Normal vector</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Cross_product_parallelogram.svg/960px-Cross_product_parallelogram.svg.png" class="my-figure5 img-fluid figure-img"></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Cross_product_parallelogram.svg/960px-Cross_product_parallelogram.svg.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="두 벡터의 크로스 프로덕트"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Cross_product_parallelogram.svg/960px-Cross_product_parallelogram.svg.png" class="my-figure5 img-fluid figure-img" alt="두 벡터의 크로스 프로덕트"></a></p>
 <figcaption>두 벡터의 크로스 프로덕트</figcaption>
 </figure>
 </div>
@@ -325,6 +328,11 @@ l: \lbrace \dfrac{x - p_{0x}}{v_x} = \dfrac{y - p_{0y}}{v_y}  =  \dfrac{z - p_{0
 <p>거리 역시 세 가지로 나누어 이해해보자. 점과 점 사이의 유클리드 거리는 생략하겠다. 벡터와 점의 거리는 어떻게 구할까? 플레인과 점의 거리는 어떻게 구할까? <a href="https://anarinsk.github.io/lostineconomics_quarto/posts/linear-algebra/2020-12-16-measuring-distance.html">이 포스팅</a>을 참고하라.</p>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">점은 위치만을 지니고 벡터는 방향성과 크기를 지닌다.</span>
+<span class="glightbox-desc lightbox-desc-2">점에서 벡터를 생성해보자.</span>
+<span class="glightbox-desc lightbox-desc-3">두 벡터의 크로스 프로덕트</span>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -882,6 +890,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

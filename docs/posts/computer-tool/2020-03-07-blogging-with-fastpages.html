@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -79,6 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -271,21 +274,21 @@ Note
 <section id="페이지-생성" class="level3">
 <h3 class="anchored" data-anchor-id="페이지-생성">페이지 생성</h3>
 <p><a href="https://github.com/fastai/fastpages/generate">https://github.com/fastai/fastpages/generate</a></p>
-<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_1.png" class="img-fluid" style="margin: auto; display: block; width: 80%;"></p>
+<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_1.png" class="img-fluid" style="margin: auto; display: block; width: 80%;"></a></p>
 <p>깃헙에 로그인한 상태에서 이 곳에 접속해 페이지를 생성한다. 페이지를 생성한 후 내 깃헙 계정에서 조금 기다리면 “Pull Request”(PR) 메시지가 날아온다.</p>
-<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_2.png" class="img-fluid" style="margin: auto; display: block; width: 80%;"></p>
+<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_2.png" class="img-fluid" style="margin: auto; display: block; width: 80%;"></a></p>
 </section>
 <section id="pr" class="level3">
 <h3 class="anchored" data-anchor-id="pr">PR</h3>
 <p>PR을 하기 전에 SSH 키를 생성하는 작업을 해줘야 한다. 메시지에 친절하게 설명이 되어 있으니 그대로 따라하면 된다.</p>
-<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_3.png" class="img-fluid" style="margin: auto; display: block; width: 80%;"></p>
+<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_3.png" class="img-fluid" style="margin: auto; display: block; width: 80%;"></a></p>
 <ol type="1">
 <li>링크를 눌러 웹 페이지에서 private key와 public 키를 생성한다. RSA, 4069를 선택하도록 하다.</li>
 <li>두번째의 링크를 눌러 새 sceret을 생성하고 private key를 넣어준다. 이름은 반드시 <code>SSH_DEPLOY_KEY</code>로 해야 한다.</li>
 <li>세번째의 링크를 눌러 deploy key를 생성하고 여기에 public key를 넣어주면 된다. 이름은 임의로 지정하면 된다.</li>
 </ol>
 <p>마지막으로 PR를 수락하고 이를 아래 화면 같이 merge하면 준비가 완료된다. 깃헙이 작업을 하는 동안 잠시 기다리면 된다. 작업 상태가 궁금하면 github actions 탭을 확인하면 된다. 이후 몇 가지를 더 묻는데 대충 진행해도 문제 없다.</p>
-<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_4.png" class="img-fluid" style="margin: auto; display: block; width: 80%;"></p>
+<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_4.png" class="img-fluid" style="margin: auto; display: block; width: 80%;"></a></p>
 <p>설치가 끝나면 아래와 같이 생성된 페이지를 확인할 수 있다. 아래는 위의 절차에 따라서 테스트계정(test-fastpages)에 페이지를 생성한 결과다.</p>
 <p><a href="https://anarinsk.github.io/test-fastpages/">https://anarinsk.github.io/test-fastpages/</a></p>
 </section>
@@ -386,13 +389,13 @@ Note
 <li>따라서 웹 에디터에서 글을 수정한 후 적절한 주소를 지정해주고 동기화를 하면, 즉 커밋을 하면 바뀐 내용을 반영해 블로그가 다시 빌드 된다.</li>
 </ul></li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_6.png" class="img-fluid" style="margin: auto; display: block; width: 80%;"></p>
+<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_6.png" class="img-fluid" style="margin: auto; display: block; width: 80%;"></a></p>
 </section>
 </section>
 <section id="update는-어떻게-하지" class="level2">
 <h2 class="anchored" data-anchor-id="update는-어떻게-하지">Update는 어떻게 하지?</h2>
 <p>블로그 자체의 Jekyll 기반 코드들도 업데이트될텐데, 이건 어쩌나 생각하셨다면 걱정할 필요가 없다. 깃헙에서 제공하는 PR 기능을 활용해서 내 리포지토리까지 거의 자동으로 업데이트해준다. 다만 커스터마이즈를 많이 했다면 지원이 안될 수도 있다는 점에 유념하시라. - <code>issues</code> &gt; <code>New issue</code> &gt; <code>Get started</code>를 누르면 아래의 그림을 볼 수 있다.</p>
-<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_5.png" class="img-fluid" style="margin: auto; display: block; width: 80%;"></p>
+<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/fastpages/fig_5.png" class="img-fluid" style="margin: auto; display: block; width: 80%;"></a></p>
 <p>여기서 아무 것도 바꾸지 말고 <code>Submit new issue</code>를 하면 업데이트 요청이 들어가고 업데이트 사항이 없을 경우는 이슈가 그낭 종결되고 있을 경우는 그대로 따라가면 된다. 처음 페이지를 깔 때처럼 PR을 해주는 형태로 진행된다. 꽤나 영리한 업데이트 방법이다.</p>
 <section id="바뀌는-파일들" class="level3">
 <h3 class="anchored" data-anchor-id="바뀌는-파일들">바뀌는 파일들</h3>
@@ -964,6 +967,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

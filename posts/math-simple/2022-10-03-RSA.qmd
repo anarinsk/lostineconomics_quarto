@@ -5,11 +5,7 @@ author: "JS HUHH"
 date: "10/03/2022"
 image: "./images/lock-cat-2.webp"
 categories: [math-simple]
-#margin-header: subscribe.html
 draft: false
-#filters:
-#   - lightbox
-lightbox: auto
 ---
 
 ## tl; dr

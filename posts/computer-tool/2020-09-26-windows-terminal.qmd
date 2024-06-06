@@ -5,7 +5,7 @@ author: "JS HUHH"
 date: "09/26/2020"
 image: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Windows_Terminal_Logo.png"
 categories: [computer-tool]
-#margin-header: subscribe.html
+draft: false
 ---
 
 

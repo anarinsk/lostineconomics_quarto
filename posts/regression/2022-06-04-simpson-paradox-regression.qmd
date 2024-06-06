@@ -6,14 +6,7 @@ date: "06/05/2022"
 image: "./images/simpson_2.png"
 categories: [regression, stats-simple]
 draft: false
-format:
-  html:
-    code-fold: true
 jupyter: python3
-#filters:
-#   - lightbox
-lightbox: auto
-#margin-header: subscribe.html
 ---
 
 ## 회귀 분석으로 보는 심슨의 역설 

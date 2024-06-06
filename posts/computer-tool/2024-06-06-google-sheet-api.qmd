@@ -5,18 +5,9 @@ author: "JS HUHH"
 date: "06/06/2024"
 image: "./images/cats-spreadsheet.webp"
 categories: [computer-tool, google-sheet, dashboard]
-lightbox: auto
 #fig-align: center
-#filters:
-   #- line-highlight
 #jupyter: python3
 draft: false
-format:
-  html:
-    highlight-style: github
-    #code-line-numbers: true
-    code-block-bg: true
-    code-block-border-left: "#31BAE9"
 ---
 
 

@@ -5,9 +5,6 @@ author: "JS HUHH"
 date: "12/22/2022"
 image: "./images/web-cat.jpg"
 categories: [computer-tool, web]
-#filters:
-#   - lightbox
-lightbox: auto
 draft: false
 ---
 

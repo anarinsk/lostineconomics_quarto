@@ -5,7 +5,7 @@ author: "JS HUHH"
 date: "05/14/2022"
 image: "images/cat-blog.webp"
 categories: [computer-tool, document-tool, quarto]
-
+draft: false
 ---
 
 ## TL; DR 

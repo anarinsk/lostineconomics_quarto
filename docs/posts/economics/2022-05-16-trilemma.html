@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -45,6 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -202,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
 <p>트릴레마 중에서 가장 많이 알려진 것은 거시 경제의 트릴레마다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://www.economist.com/img/b/640/580/90/sites/default/files/images/print-edition/20160827_EBC992.png" class="my-figure5 img-fluid figure-img"></p>
+<p><a href="https://www.economist.com/img/b/640/580/90/sites/default/files/images/print-edition/20160827_EBC992.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="거시경제의 트릴레마"><img src="https://www.economist.com/img/b/640/580/90/sites/default/files/images/print-edition/20160827_EBC992.png" class="my-figure5 img-fluid figure-img" alt="거시경제의 트릴레마"></a></p>
 <figcaption>거시경제의 트릴레마</figcaption>
 </figure>
 </div>
@@ -222,7 +225,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="스테이블-코인의-트릴레마">스테이블 코인의 트릴레마</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://voxeu.org/sites/default/files/image/FromMay2014/ganesh13mayfig1.png" class="my-figure7 img-fluid figure-img"></p>
+<p><a href="https://voxeu.org/sites/default/files/image/FromMay2014/ganesh13mayfig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="스테이블 코인의 트릴레마"><img src="https://voxeu.org/sites/default/files/image/FromMay2014/ganesh13mayfig1.png" class="my-figure7 img-fluid figure-img" alt="스테이블 코인의 트릴레마"></a></p>
 <figcaption>스테이블 코인의 트릴레마</figcaption>
 </figure>
 </div>
@@ -239,6 +242,10 @@ ul.task-list li input[type="checkbox"] {
 <p>특정한 시점에 레짐 체인지를 통해서 일시적으로 중앙화의 해법을 택한다는 식의 메타 룰을 스마트 컨트랙트에 넣을 수 있는 것인지 잘 모르겠다. 만일 그렇다고 해도 해당 상황에서 누가 통제를 할지 이 통제를 위한 정당성은 어떻게 준비할 수 있는지 등등은 나에게는 여전히 의문이다.</p>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">거시경제의 트릴레마</span>
+<span class="glightbox-desc lightbox-desc-2">스테이블 코인의 트릴레마</span>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -796,6 +803,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

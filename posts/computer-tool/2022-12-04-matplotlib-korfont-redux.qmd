@@ -6,18 +6,7 @@ date: "12/04/2022"
 image: "images/matplotlib.jfif"
 categories: [computer-tool, coding]
 draft: false
-format:
-  html:
-    code-fold: show
-    code-line-numbers: true
-    code-overflow: scroll
-    #fig-width: 5
-    #fig-height: 3.5
-    fig-responsive: true 
 jupyter: python3
-#filters:
-#   - lightbox
-lightbox: auto
 ---
 
 ## TL; DR

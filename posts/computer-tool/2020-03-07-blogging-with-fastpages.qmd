@@ -5,7 +5,7 @@ author: "JS HUHH"
 date: "03/07/2020"
 image: "https://cdn.theatlantic.com/media/mt/food/assets_c/2012/01/Expired-SS-Post-thumb-615x300-74166.jpg"
 categories: [computer-tool]
-#margin-header: subscribe.html
+draft: false
 ---
 
 :::{.callout-note}

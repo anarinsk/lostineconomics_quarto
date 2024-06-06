@@ -6,11 +6,6 @@ date: "05/26/2022"
 image: "images/total_parts.jfif"
 categories: [regression]
 draft: false
-#filters:
-#   - lightbox
-   #- line-highlight
-lightbox: auto
-#margin-header: subscribe.html
 ---
 
 ## TL; DR 

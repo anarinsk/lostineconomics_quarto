@@ -5,7 +5,7 @@ author: "JS HUHH"
 date: "05/06/2019"
 image: "images/cat-mathsolving.webp"
 categories: [math-of]
-#margin-header: subscribe.html
+draft: false
 ---
 
 ## Key Questions 

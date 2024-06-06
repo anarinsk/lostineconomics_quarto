@@ -5,7 +5,7 @@ author: "JS HUHH"
 date: "04/27/2022"
 image: "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmxcpJ%2Fbtq9IDonGa1%2FLGoNFr3kBHT3tm8QnIwjrK%2Fimg.jpg"
 categories: [git]
-#margin-header: subscribe.html
+draft: false
 ---
 
 :::{.callout-note}

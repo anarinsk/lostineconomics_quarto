@@ -5,7 +5,7 @@ author: "JS HUHH"
 date: "01/07/2021"
 image: "https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg"
 categories: [linear-algebra]
-#margin-header: subscribe.html
+draft: false
 ---
 
 ![function vs linear transformation](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func.png?raw=true){ .my-figure7 }

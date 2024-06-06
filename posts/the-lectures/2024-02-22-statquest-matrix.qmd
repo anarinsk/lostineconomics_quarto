@@ -6,17 +6,8 @@ date: "02/22/2024"
 image: "./images/cat-network.webp"
 categories: [the-lectures, machine-learning]
 #fig-align: center
-#filters:
-#   - lightbox
-   #- line-highlight
-lightbox: auto
 #jupyter: python3
 draft: false
-format:
-  html:
-    code-fold: false
-    code-block-bg: true
-    highlight-style: github
 ---
 
 ## TL; DR

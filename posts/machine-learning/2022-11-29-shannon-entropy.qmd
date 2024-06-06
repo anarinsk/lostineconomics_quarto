@@ -5,11 +5,7 @@ author: "JS HUHH"
 date: "11/29/2022"
 image: "images/entropy-cat.webp"
 categories: [machine-learning]
-#margin-header: subscribe.html
 draft: false
-#filters:
-#   - lightbox
-lightbox: auto
 ---
 
 ## TL; DR

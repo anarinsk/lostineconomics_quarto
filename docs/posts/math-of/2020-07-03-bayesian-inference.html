@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -79,6 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -290,7 +293,7 @@ p(\theta\lvert data) = \dfrac{p(data \lvert \theta) p(\theta)}{P(data)} = \dfrac
 </ul>
 <p>식의 분자는 모두 파리미터 <span class="math inline">\(\theta\)</span>의 함수다. 분모는 상수다. 뒤에 다시 설명하겠지만, <span class="math inline">\(p(\theta \lvert  data)\)</span>를 <span class="math inline">\(\theta\)</span>에 대해서 최적화한다면, 분자만 고려하면 된다.</p>
 <p>대소문자를 구별해서 쓴 것에 유의하자. 소문자 <span class="math inline">\(p\)</span>는 확률 분포, 즉 확률 밀도 함수(pmf) 혹은 확률 질량 함수(pdf)를 뜻한다. 대문자 <span class="math inline">\(P\)</span>는 확률이다.</p>
-<p><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/mcmc/fig_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><a href="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/mcmc/fig_1.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/mcmc/fig_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></a></p>
 <p>위 그림을 보자. 사전 분포는 우도에 따라서 재평가 되면서 사후 분포를 만들어 낸다. 우도(때로는 가능도라고 표현하기도 한다)에 관해서 조금 더 살펴보자.</p>
 </section>
 <section id="something-about-likelihood" class="level2">
@@ -505,7 +508,7 @@ r = \min \left( \dfrac{\dfrac{\pi(\theta^i \lvert  data)}{Q(\theta^i\lvert \thet
 <li>metropolis 알고리듬에 따라서 이 값과 최초의 theta 혹은 바로 전에 생성된 theta, 두 값을 평가한다. 평가는 극도로 단순한 방식으로 진행된다. 각기 다음 상태로 넘어갈 확률은 전기의 파라미터에만 의존한다.</li>
 </ul></li>
 </ul>
-<p><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/mcmc/fig_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><a href="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/mcmc/fig_2.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/mcmc/fig_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></a></p>
 <p>위 시각화의 코드는 다음과 같다.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>post <span class="op">=</span> st.beta(h<span class="op">+</span>a, n<span class="op">-</span>h<span class="op">+</span>b)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -516,7 +519,7 @@ r = \min \left( \dfrac{\dfrac{\pi(\theta^i \lvert  data)}{Q(\theta^i\lvert \thet
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>plt.xlim([<span class="dv">0</span>,<span class="dv">1</span>])<span class="op">;</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'best'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>그림에서 보듯이 MCMC가 사후 확률을 잘 따라가고 있다. MCMC는 정말로 잘 수렴할까? 즉, 이론대로 어떤 파라미터에서 출발하더라도 비슷한 분포로 수렴할까? 분포의 수렴은 수치적으로는 따지기 쉽지 않은 개념이다. 느낌만 보도록 하자. 아래에서 보면, 초기값이 관계 없이 모든 값에서 사후 분포에 수렴하는 것을 확인할 수 있다. 즉, <span class="math inline">\(x\)</span> 축에 표시된 반복 횟수가 일정 수준을 넘어서면 모든 마르코프 연쇄가 사후 분포 범위 안에서 움직이고 있다.</p>
-<p><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/mcmc/fig_3.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><a href="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/mcmc/fig_3.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/mcmc/fig_3.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></a></p>
 
 
 </section>
@@ -1076,6 +1079,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

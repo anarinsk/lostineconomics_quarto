@@ -5,7 +5,7 @@ author: "JS HUHH"
 date: "02/14/2024"
 image: "images/econcat-3.webp"
 categories: [economics, econ-simple]
-#margin-header: subscribe.html
+draft: false
 ---
 
 래리 서머스의 [ECONOFACT 대담](https://econofact.org/podcast/todays-economic-challenges) 중에서 경제학자의 현실 (정치)에서의 역할 혹은 임무에 관해 좋은 대목이 있어서 그대로 옮겨 본다. 

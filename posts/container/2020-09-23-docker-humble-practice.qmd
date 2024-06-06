@@ -5,7 +5,7 @@ author: "JS HUHH"
 date: "09/23/2020"
 image: "https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp"
 categories: [container]
-#margin-header: subscribe.html
+draft: false
 ---
 
 

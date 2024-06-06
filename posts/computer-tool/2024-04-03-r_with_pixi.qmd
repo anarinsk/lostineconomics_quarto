@@ -6,18 +6,8 @@ date: "04/03/2024"
 image: "./images/cat-packages.webp"
 categories: [computer-tool, r-stat, pixi]
 lightbox: auto
-#fig-align: center
-#filters:
-#   - lightbox
-   #- line-highlight
 #jupyter: python3
 draft: false
-format:
-  html:
-    highlight-style: github
-    #code-line-numbers: true
-    code-block-bg: true
-    code-block-border-left: "#31BAE9"
 ---
 
 ## TL; DR

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -45,6 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -256,7 +259,7 @@ window.Quarto = {
 \mathbf{w} = \left( \dfrac{x_1}{ \Vert \bf x \Vert }, \dfrac{x_2}{ \Vert \bf x \Vert } \right)
 \]</span></p>
 <p>그림으로 나타내보자.</p>
-<p><img src="https://github.com/anarinsk/public-images/blob/master/svm/alpha_delta.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;"></p>
+<p><a href="https://github.com/anarinsk/public-images/blob/master/svm/alpha_delta.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://github.com/anarinsk/public-images/blob/master/svm/alpha_delta.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;"></a></p>
 <p>이는 다음과 같이 삼각함수로 표시할 수 있다. <span class="math display">\[
 \mathbf{w} = \left(  \cos~\theta, \cos~\alpha  \right)
 \]</span></p>
@@ -264,7 +267,7 @@ window.Quarto = {
 <section id="dot-product-inner-product" class="level4">
 <h4 class="anchored" data-anchor-id="dot-product-inner-product">Dot product (inner product)</h4>
 <p>내적은 <strong>벡터 연산</strong>의 일종으로, 이는 두 벡터를 스칼라 값으로 바꿔주는 일종의 함수다.</p>
-<p><img src="https://github.com/anarinsk/public-images/blob/master/svm/beta.png?raw=True" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;"></p>
+<p><a href="https://github.com/anarinsk/public-images/blob/master/svm/beta.png?raw=True" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://github.com/anarinsk/public-images/blob/master/svm/beta.png?raw=True" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;"></a></p>
 <p><span class="math display">\[
 \begin{aligned}
 \cos \theta &amp; = \cos (\beta -\alpha) \\\\
@@ -280,7 +283,7 @@ window.Quarto = {
 </section>
 <section id="hyperplane" class="level4">
 <h4 class="anchored" data-anchor-id="hyperplane">Hyperplane</h4>
-<p><img src="https://cdn-images-1.medium.com/freeze/max/1000/1*q7Tr-GNbm5HM7T3d1HR-Uw.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;"></p>
+<p><a href="https://cdn-images-1.medium.com/freeze/max/1000/1*q7Tr-GNbm5HM7T3d1HR-Uw.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://cdn-images-1.medium.com/freeze/max/1000/1*q7Tr-GNbm5HM7T3d1HR-Uw.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;"></a></p>
 <p><span class="math inline">\(n\)</span> 차원 공간을 가를 수 있는 해당 공간의 차원보다 하나 낮은 수학적 관계라고 풀어서 쓸 수 있다.</p>
 <ul>
 <li>즉, <span class="math inline">\(x_1\)</span>이나 <span class="math inline">\(x_2\)</span> 중 하나만 주어지면 나머지 위치가 주어진다.<br>
@@ -308,7 +311,7 @@ h({\bf x})  =
 <section id="explained-visually" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="explained-visually">Explained Visually</h2>
 <p>그림으로 보다 직관적으로 이해해보자.</p>
-<p><img src="https://github.com/anarinsk/public-images/blob/master/svm/svm_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;"></p>
+<p><a href="https://github.com/anarinsk/public-images/blob/master/svm/svm_1.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://github.com/anarinsk/public-images/blob/master/svm/svm_1.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;"></a></p>
 <p>어떤 원점을 기준으로 training example까지의 벡터를 <span class="math inline">\({\bf x}_i\)</span>라고 하자. 이때 둘을 가르는 하이퍼플레인이 있을 때 이와 직교하는 벡터 (orthogonal vector) $ $를 생각해보자. 왜 orthogonal해야 하는가? 잠시 후 그 이유를 알 수 있다. 하이퍼플레인은 기본적으로는 두 벡터 사이의 닷 프로덕트다. 닷 프로덕트를 그림으로 나타낼 수 있는 방법은 이를 projection으로 생각해보는 것이다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -325,7 +328,7 @@ h({\bf x})  =
 y_i ( \mathbf{w} \cdot {\bf x}_ i + b) - 1  \geq 0
 \]</span></p>
 <p>앞서 분류기에서 해당 값이 0보다 크면 <span class="math inline">\(y_i ( \mathbf{w} \cdot {\bf x}_ i + b) - 1 \geq 0\)</span>가 성립한다. 반면, 해당 값이 0보다 작으면 음수를 곱하는 것이 되어 부등호가 바뀌게 되고, 이 경우 역시 위의 식이 성립한다.</p>
-<p><img src="https://github.com/anarinsk/public-images/blob/master/svm/svm_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;"></p>
+<p><a href="https://github.com/anarinsk/public-images/blob/master/svm/svm_2.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://github.com/anarinsk/public-images/blob/master/svm/svm_2.png?raw=true" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 50%;"></a></p>
 <p>이제 <span class="math inline">\(\cos \theta\)</span>를 벡터 <span class="math inline">\({\bf x}_{\rm svr} - {\bf x} _{\rm svl}\)</span>와 <span class="math inline">\(\mathbf{w}\)</span>가 이루는 각이라고 생각하자. 이때 <span class="math inline">\(\mathbf{w}\)</span>는 하이퍼플레인과 orthogonal하며 적절한 training sample 즉, 적절한 하나의 서포트 벡터를 지난다. 이때 <span class="math inline">\(\cos \theta\)</span>는 다음과 같이 쉽게 정의된다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -1060,6 +1063,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

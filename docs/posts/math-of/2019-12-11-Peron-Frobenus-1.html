@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -45,6 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -474,7 +477,7 @@ P^j (x, y) &gt; 0~~\text{and}~~P^k(y,x) &gt; 0
 <h3 class="anchored" data-anchor-id="aperiodic-matrix">Aperiodic matrix</h3>
 <p>대충 말하면 마르코프 체인 위의 이동이 예측 가능한 형태로 이루어질 수 있으면 안된다. 먼저 예를 보도록 하자.</p>
 <p><span class="math display">\[\begin{bmatrix} 0&amp; 1&amp; 0 \\0&amp; 0&amp; 1\\ 1&amp; 0&amp; 0 \end{bmatrix}\]</span></p>
-<p><img src="https://python.quantecon.org/_static/lecture_specific/finite_markov/mc_aperiodicity1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><a href="https://python.quantecon.org/_static/lecture_specific/finite_markov/mc_aperiodicity1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://python.quantecon.org/_static/lecture_specific/finite_markov/mc_aperiodicity1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></a></p>
 <p>각 상태가 일정한 간격으로 존재하게 된다. 즉,</p>
 <ul>
 <li>1번, 2번, 3번 상태는 <span class="math inline">\(\{ k, k+3, k+6, \dotsc \}\)</span> 번째에 존재하게 된다.</li>
@@ -1109,6 +1112,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","loop":false,"selector":".lightbox","closeEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

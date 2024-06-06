@@ -5,9 +5,6 @@ author: "JS HUHH"
 date: "12/06/2022"
 image: "images/jupyterlite.jfif"
 categories: [computer-tool, coding]
-#filters:
-#   - lightbox
-lightbox: auto
 draft: false
 ---
 

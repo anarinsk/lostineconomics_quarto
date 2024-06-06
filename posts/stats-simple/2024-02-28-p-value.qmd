@@ -5,18 +5,7 @@ author: "JS HUHH"
 date: "02/28/2024"
 image: "./images/cat-stat.png"
 categories: [statistics, stats-simple]
-#fig-align: center
-#filters:
-#   - lightbox
-   #- line-highlight
-lightbox: auto
-#jupyter: python3
 draft: false
-format:
-  html:
-    code-fold: false
-    code-block-bg: true
-    highlight-style: github
 ---
 
 ## TL; DR

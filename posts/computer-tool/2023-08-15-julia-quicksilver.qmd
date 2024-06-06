@@ -5,16 +5,8 @@ author: "JS HUHH"
 date: "08/15/2023"
 image: "./images/tool-cat-2.webp"
 categories: [computer-tool, coding]
-#filters:
-#   - lightbox
-   #- line-highlight
-lightbox: auto
 #jupyter: python3
 draft: false
-format:
-  html:
-    code-line-numbers: true
-    highlight-style: arrow
 ---
 
 ## TL; DR

@@ -6,7 +6,7 @@ date: "05/10/2022"
 #image: "https://cdn.ourcodeworld.com/public-media/articles/articleocw-5755472112ab3.jpg"
 image: "images/cat-cv.webp"
 categories: [computer-tool, document-tool]
-
+draft: false
 ---
 
 ## TL; DR

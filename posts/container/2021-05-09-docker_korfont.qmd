@@ -5,7 +5,7 @@ author: "JS HUHH"
 date: "05/09/2021"
 image: "https://cdn.mos.cms.futurecdn.net/mfEr7wNtjVMVx2vvSXdErC-1024-80.jpg.webp"
 categories: [container, computer-tool]
-#margin-header: subscribe.html
+draft: false
 ---
 
 :::{ .callout-tip }

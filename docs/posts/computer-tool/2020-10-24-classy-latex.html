@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -79,6 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -332,17 +335,17 @@ window.Quarto = {
 <p>이제 VS Code로 가자. 필요한 Extension은 앞서 살펴본 Latex workshop과 더불어 <a href="https://code.visualstudio.com/docs/remote/remote-overview">Remote-Container</a>를 설치하자. 이 녀석을 설치하면 WSL 내에서 돌아가는 컨테이너 안에도 VS Code를 통해 바로 접속할 수 있다.</p>
 <p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_1.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - 아래 <code>&gt;&lt;</code>으로 된 부분을 클릭하면 상단에 메뉴가 뜬다.</p>
 <p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_2.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"> - “attach to running container”를 실행해서 실행중인 도커 콘테이너를 부착한다.</p>
-<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_3.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_3.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></a></p>
 <ul>
 <li>부착하면 새 창이 뜨면서 아래 녹색 창이 콘테이너 부착되었음을 알려준다.</li>
 <li>콘테이너 내부에 Latex Workshop 확장(extension)을 설치해야 한다.</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_4.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_4.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></a></p>
 <ul>
 <li>설치 후 해당 Extension의 설정을 고쳐주자.</li>
 <li>위에 찾기창에서 디폴트로 떠 있는 내용 뒤에 “pdf” 치면 pdf에 관련된 설정만 필터링된다.</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_5.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></a></p>
 <ul>
 <li>위 항목을 찾아서 적당한 포워딩 포트를 넣어준다.</li>
 <li>포트가 잘 포워딩 된다면, 아래와 같이 VS Code에서 PDF 뷰어를 활성화할 수 있다.</li>
@@ -358,7 +361,7 @@ window.Quarto = {
 <section id="container-setting" class="level4">
 <h4 class="anchored" data-anchor-id="container-setting">Container Setting</h4>
 <p>콘테이너에서 해당 포트가 잘 포워딩되고 있는지 확인하자.</p>
-<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></p>
+<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_7.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 60%;"></a></p>
 <ul>
 <li>옆에 원으로 표시해 둔 곳은 <code>Remote-Container</code> 확장으로 바로 가는 단축 아이콘이다.</li>
 <li>위 그림처럼 35556 포트를 통해 잘 포워딩되고 있음을 알 수 있다.
@@ -367,7 +370,7 @@ window.Quarto = {
 </ul></li>
 </ul>
 <p>이제 VS Code에서 텍 파일을 열고 문서를 작성하고 컴파일하면 된다. Latex Workshop이 설치되어 있다면, <code>.tex</code> 파일에 알아서 반응하니 걱정 마시라.</p>
-<p><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_6.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></p>
+<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/latex/vscode_6.png" class="img-fluid" style="margin: auto; display: block; border:1.5px solid #021a40; width: 80%;"></a></p>
 </section>
 </section>
 </section>
@@ -942,6 +945,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 

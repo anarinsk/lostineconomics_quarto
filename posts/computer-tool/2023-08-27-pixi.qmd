@@ -5,18 +5,8 @@ author: "JS HUHH"
 date: "08/27/2023"
 image: "./images/pixi.jpg"
 categories: [computer-tool, coding, pixi]
-#filters:
-#   - lightbox
-   #- line-highlight
-lightbox: auto
 #jupyter: python3
 draft: false
-format:
-  html:
-    #code-line-numbers: true
-    highlight-style: github
-    code-block-bg: true
-    code-block-border-left: "#31BAE9"
 ---
 
 ## TL; DR
