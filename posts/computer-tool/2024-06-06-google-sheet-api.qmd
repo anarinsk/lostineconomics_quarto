@@ -88,6 +88,8 @@ public 계정의 github에 크리덴셜 파일을 넣어두는 것이 가장 흔
 
 설치 등의 과정은 생략하고 테스트할 수 있는 코드만 간략하게 소개한다. 
 
+- 아래의 패키지를 설치하고 임포트한다. 
+
 ```python
 #!pip3 install gspread
 #!pip3 install --upgrade google-api-python-client oauth2client
@@ -98,7 +100,8 @@ import pandas as pd
 from oauth2client.service_account import ServiceAccountCredentials
 ```
 
-이제 크리덴셜을 활용해서 해당 구글 스프레드 시트에 접근할 수 있다. `add_json_file_here.json`에 앞서 다운로드한 JSON 파일을 넣으면 된다. 
+- 크리덴셜을 활용해서 해당 구글 스프레드 시트에 접근할 수 있다.
+  - `add_json_file_here.json`에 앞서 다운로드한 JSON 파일을 넣으면 된다. 
 
 ```python
 # define the scope
@@ -111,17 +114,19 @@ creds = ServiceAccountCredentials.from_json_keyfile_name('add_json_file_here.jso
 client = gspread.authorize(creds)
 ```
 
-'구글 스프레드 시트 이름'에는 접근할 구글 스프레드 시트의 타이틀을 넣는다. 시트의 선택은 아래 `get_worksheet(0)`로 한다. 0번이 첫번째 위치한 시트이다. 
+- '구글 스프레드 서비스 이름'에는 접근할 구글 스프레드 시트의 타이틀을 넣는다. 왼쪽 상단에 있다. 
+
+- 서비스 내의 개별 시트의 선택은 아래 `get_worksheet(0)`로 한다. 0번이 첫번째 위치한 시트이다. 시트의 위치가 바뀌면 이 역시 따라서 바뀌어야 한다. 
 
 ```python
 # get the instance of the Spreadsheet
-sheet = client.open('구글 스프레드 시트 이름')
+sheet = client.open('구글 스프레드 서비스 이름')
 
 # get the first sheet of the Spreadsheet
 sheet_instance = sheet.get_worksheet(0)
 ```
 
-get_all_records()를 통해 모든 데이터를 가져올 수 있고, dictionary 형태로 저장된다. 이를 pandas의 DataFrame으로 변환하면 된다.
+- `get_all_records()`를 통해 모든 데이터를 가져올 수 있고, 파이썬 dictionary 형태로 저장된다. 이를 pandas의 DataFrame으로 변환하면 된다.
 
 ```python
 # get all the records of the data
