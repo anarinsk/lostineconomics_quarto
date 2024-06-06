@@ -124,14 +124,12 @@ R에서 `.libPaths()`를 패키지가 설치되는 위치를 확인할 수 있�
 
 ## VS Code 설정 
 
-먼저 R의 [extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r)을 받아서 설치하자. 해당 확장을 설치한 후 몇 가지 설정을 바꿔야 한다. 
+먼저 R의 [extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r)을 받아서 설치하자. 해당 확장을 설치한 후 몇 가지 설정을 바꿔야 한다. VS Code의 확장 설정으로 가자(@fig-1). 이후 필요한 설정을 바꾸면 된다.(@fig-2)
 
 :::{ layout="[1,1]" }
+![익스텐션의 설정으로 가자.](./images/pixi-r-1-min.png){#fig-1}
 
-![익스텐션의 설정으로 가자.](./images/pixi-r-1-min.png)
-
-![두 개 모두 적절한 위치로 바꿔 사용하자.](./images/pixi-r-2-min.png)
-
+![두 개 모두 적절한 위치로 바꿔 사용하자.](./images/pixi-r-2-min.png){#fig-2}
 :::
 
 이외에 `httpgd`를 쓰는 것을 체크하자. 

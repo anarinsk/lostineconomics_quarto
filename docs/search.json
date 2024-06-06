@@ -1691,7 +1691,7 @@
     "href": "posts/computer-tool/2024-04-03-r_with_pixi.html#vs-code-설정",
     "title": "Pixi와 쓰는 R과 Julia",
     "section": "VS Code 설정",
-    "text": "VS Code 설정\n먼저 R의 extension을 받아서 설치하자. 해당 확장을 설치한 후 몇 가지 설정을 바꿔야 한다.\n\n\n\n\n\n\n\n\n\n익스텐션의 설정으로 가자.\n\n\n\n\n\n\n\n두 개 모두 적절한 위치로 바꿔 사용하자.\n\n\n\n\n\n이외에 httpgd를 쓰는 것을 체크하자."
+    "text": "VS Code 설정\n먼저 R의 extension을 받아서 설치하자. 해당 확장을 설치한 후 몇 가지 설정을 바꿔야 한다. VS Code의 확장 설정으로 가자(Figure 1). 이후 필요한 설정을 바꾸면 된다.(Figure 2)\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: 익스텐션의 설정으로 가자.\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: 두 개 모두 적절한 위치로 바꿔 사용하자.\n\n\n\n\n\n\n이외에 httpgd를 쓰는 것을 체크하자."
   },
   {
     "objectID": "posts/computer-tool/2024-04-03-r_with_pixi.html#vs-code로-r-쓰기",
@@ -1712,7 +1712,7 @@
     "href": "posts/computer-tool/2024-04-03-r_with_pixi.html#julia-설치하기",
     "title": "Pixi와 쓰는 R과 Julia",
     "section": "Julia 설치하기",
-    "text": "Julia 설치하기\nR에 비하면 훨씬 깔끔하고 운용이 쉽다. 다만 약간의 우회로가 필요하다. Conda를 이용해 Julia를 바로 설치해보면, OS에 따라서 설치가 되지 않는 경우가 있다. Juliaup을 먼저 설치하고 Pixi의 셸 환경 안에서 이를 이용해서 Julia를 설치하면 된다.\n\n\nJulia를 써보면 이 언어가 다른 어떤 고수준 프로그래밍 랭귀지에 비해서 “모던”하다는 사실을 느낄 수 있다. 우선 언어 자체의 설치가 간편하고, 패키지 설치 관리가 toml을 통해 이뤄진다.\n&gt; pixi add juliaup\n&gt; pixi shell \n&gt; juliaup add release # 최신 버전을 설치한다. \n&gt; juliaup install 1.10.3 # 특정 버전을 설치한다.\nVS Code에서 Julia 확정을 설치하고 확장 설정에서 Julia: Executable Path를 찾아서 .pixi 아래 설치된 줄리아의 실행 디렉토리를 설정한다. 터미널에서 julia를 실행하고 싶으면, .zshrc에 해당 디렉토리를 추가하면 된다.\n\n\n\n익스텐션의 설정으로 가자.\n두 개 모두 적절한 위치로 바꿔 사용하자."
+    "text": "Julia 설치하기\nR에 비하면 훨씬 깔끔하고 운용이 쉽다. 다만 약간의 우회로가 필요하다. Conda를 이용해 Julia를 바로 설치해보면, OS에 따라서 설치가 되지 않는 경우가 있다. Juliaup을 먼저 설치하고 Pixi의 셸 환경 안에서 이를 이용해서 Julia를 설치하면 된다.\n\n\nJulia를 써보면 이 언어가 다른 어떤 고수준 프로그래밍 랭귀지에 비해서 “모던”하다는 사실을 느낄 수 있다. 우선 언어 자체의 설치가 간편하고, 패키지 설치 관리가 toml을 통해 이뤄진다.\n&gt; pixi add juliaup\n&gt; pixi shell \n&gt; juliaup add release # 최신 버전을 설치한다. \n&gt; juliaup install 1.10.3 # 특정 버전을 설치한다.\nVS Code에서 Julia 확정을 설치하고 확장 설정에서 Julia: Executable Path를 찾아서 .pixi 아래 설치된 줄리아의 실행 디렉토리를 설정한다. 터미널에서 julia를 실행하고 싶으면, .zshrc에 해당 디렉토리를 추가하면 된다.\n\n\n\nFigure 1: 익스텐션의 설정으로 가자.\nFigure 2: 두 개 모두 적절한 위치로 바꿔 사용하자."
   },
   {
     "objectID": "posts/computer-tool/2024-03-18-lazy-dashboard.html",

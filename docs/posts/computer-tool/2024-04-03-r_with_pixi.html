@@ -314,25 +314,33 @@ local({r &lt;- getOption("repos")
 </section>
 <section id="vs-code-설정" class="level2">
 <h2 class="anchored" data-anchor-id="vs-code-설정">VS Code 설정</h2>
-<p>먼저 R의 <a href="https://marketplace.visualstudio.com/items?itemName=REditorSupport.r">extension</a>을 받아서 설치하자. 해당 확장을 설치한 후 몇 가지 설정을 바꿔야 한다.</p>
+<p>먼저 R의 <a href="https://marketplace.visualstudio.com/items?itemName=REditorSupport.r">extension</a>을 받아서 설치하자. 해당 확장을 설치한 후 몇 가지 설정을 바꿔야 한다. VS Code의 확장 설정으로 가자(<a href="#fig-1" class="quarto-xref">Figure&nbsp;1</a>). 이후 필요한 설정을 바꾸면 된다.(<a href="#fig-2" class="quarto-xref">Figure&nbsp;2</a>)</p>
 <div>
 
 </div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./images/pixi-r-1-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="익스텐션의 설정으로 가자."><img src="./images/pixi-r-1-min.png" class="img-fluid figure-img" alt="익스텐션의 설정으로 가자."></a></p>
-<figcaption>익스텐션의 설정으로 가자.</figcaption>
+<div id="fig-1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./images/pixi-r-1-min.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="./images/pixi-r-1-min.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: 익스텐션의 설정으로 가자.
+</figcaption>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./images/pixi-r-2-min.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="두 개 모두 적절한 위치로 바꿔 사용하자."><img src="./images/pixi-r-2-min.png" class="img-fluid figure-img" alt="두 개 모두 적절한 위치로 바꿔 사용하자."></a></p>
-<figcaption>두 개 모두 적절한 위치로 바꿔 사용하자.</figcaption>
+<div id="fig-2" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="./images/pixi-r-2-min.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="./images/pixi-r-2-min.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: 두 개 모두 적절한 위치로 바꿔 사용하자.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -386,8 +394,8 @@ local({r &lt;- getOption("repos")
 
 
 <div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">익스텐션의 설정으로 가자.</span>
-<span class="glightbox-desc lightbox-desc-2">두 개 모두 적절한 위치로 바꿔 사용하자.</span>
+<span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: 익스텐션의 설정으로 가자.</span>
+<span class="glightbox-desc lightbox-desc-2">Figure&nbsp;2: 두 개 모두 적절한 위치로 바꿔 사용하자.</span>
 </div>
 </section>
 
@@ -946,7 +954,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","loop":false});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
