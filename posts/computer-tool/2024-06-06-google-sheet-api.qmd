@@ -16,19 +16,21 @@ draft: false
 - Google Sheet를 파이썬과 연동하는 방법을 알아보자.
 - 🔗[LINK](https://blog.lostineconomics.com/posts/computer-tool/2024-03-18-lazy-dashboard.html)와 함께 참고하시라.  
 
-## 데이터 앱 만들기의 0단계
+## 데이터 앱 만들기의 시작
 
-데이터 앱을 만드는 최초의 단계는 데이터와 이를 다룰 도구(언어)의 연동이다. 별도로 DB를 만들지 않을 것이라면 데이터 소스는 아마도 구글 시트를 포함한 스프레드시트 형태일 것이다. 데이터 앱을 만들기로 했다면 가장 먼저 해야 하는 고민이 여기 있다. 파이썬과 구글 스프레드 시트는 어떻게 연동하면 될까? 이 포스트 역시 내용을 까먹을 미래의 나놈을 위한 것이다. 
+데이터 앱을 만드는 최초의 단계는 데이터와 이를 다룰 도구(언어)의 연동이다. 별도로 DB를 만들지 않을 것이라면 데이터 소스는 아마도 엑셀, 구글 시트를 포함한 스프레드시트 형태일 것이다. 당신이 데이터 앱을 만들기로 했다면, 첫번째 단계가 여기 있다. 보통 데이터 분석에서 csv 등 데이터 파일을 로드하는 것에서 시작한다는 점을 떠올리면 좋겠다. 데이터 소스를 매번 수동으로 업로드할 것이 아니라면 구글 스프레드 시트와 같은 온라인 서비스와 데이터를 연동할 수 있다면 좋을 것이다. 
+
+단도직입적으로 파이썬과 구글 스프레드 시트는 어떻게 연동하면 될까? 이 포스트 역시 내용을 까먹을 미래의 나놈을 위한 것이다. 
 
 :::{.column-margin}
-기본적인 내용은 [LINK](ttps://www.analyticsvidhya.com/blog/2020/07/read-and-update-google-spreadsheets-with-python/)를 참고했다. 
+기본적인 내용은 [LINK](https://www.analyticsvidhya.com/blog/2020/07/read-and-update-google-spreadsheets-with-python/)를 참고했다. 
 :::
 
 ## Google Sheet API 설정
 
 ### Google Cloud Console에서 프로젝트 생성 
 
-먼저 새 프로젝트를 적절하게 생성하자. 
+[구글 클라우드 콘솔](https://console.cloud.google.com/)로 가서 새 프로젝트를 적절하게 생성하자. 계정이 없다면 적당히 생성하면 된다. 
 
 :::{layout="[[-0.5, 1, -0.5]]"}
 ![프로젝트를 생성하자.](./images/gss-01.jpeg){#fig-1}
@@ -76,9 +78,9 @@ public 계정의 github에 크리덴셜 파일을 넣어두는 것이 가장 흔
 
 ## 파이썬에서 작업하기 
 
-설치 등의 과정은 생략하고 테스트할 수 있는 코드만 간략하게 소개한다. 
+패키지 설치 등의 과정은 생략하고 테스트할 수 있는 코드만 간략하게 소개한다.  
 
-- 아래의 패키지를 설치하고 임포트한다. 
+- 아래의 패키지를 설치하고 임포트한다. 구글 계정과의 연동을 위한 `google-api-python-client`, `oauth2client` 그리고 구글 스프레드 시트를 다루기 위한 `gspread` 패키지가 필요하다.
 
 ```python
 #!pip3 install gspread

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -236,18 +236,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>🔗<a href="https://blog.lostineconomics.com/posts/computer-tool/2024-03-18-lazy-dashboard.html">LINK</a>와 함께 참고하시라.</li>
 </ul>
 </section>
-<section id="데이터-앱-만들기의-0단계" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="데이터-앱-만들기의-0단계">데이터 앱 만들기의 0단계</h2>
-<p>데이터 앱을 만드는 최초의 단계는 데이터와 이를 다룰 도구(언어)의 연동이다. 별도로 DB를 만들지 않을 것이라면 데이터 소스는 아마도 구글 시트를 포함한 스프레드시트 형태일 것이다. 데이터 앱을 만들기로 했다면 가장 먼저 해야 하는 고민이 여기 있다. 파이썬과 구글 스프레드 시트는 어떻게 연동하면 될까? 이 포스트 역시 내용을 까먹을 미래의 나놈을 위한 것이다.</p>
+<section id="데이터-앱-만들기의-시작" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="데이터-앱-만들기의-시작">데이터 앱 만들기의 시작</h2>
+<p>데이터 앱을 만드는 최초의 단계는 데이터와 이를 다룰 도구(언어)의 연동이다. 별도로 DB를 만들지 않을 것이라면 데이터 소스는 아마도 엑셀, 구글 시트를 포함한 스프레드시트 형태일 것이다. 당신이 데이터 앱을 만들기로 했다면, 첫번째 단계가 여기 있다. 보통 데이터 분석에서 csv 등 데이터 파일을 로드하는 것에서 시작한다는 점을 떠올리면 좋겠다. 데이터 소스를 매번 수동으로 업로드할 것이 아니라면 구글 스프레드 시트와 같은 온라인 서비스와 데이터를 연동할 수 있다면 좋을 것이다.</p>
+<p>단도직입적으로 파이썬과 구글 스프레드 시트는 어떻게 연동하면 될까? 이 포스트 역시 내용을 까먹을 미래의 나놈을 위한 것이다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>기본적인 내용은 <a href="ttps://www.analyticsvidhya.com/blog/2020/07/read-and-update-google-spreadsheets-with-python/">LINK</a>를 참고했다.</p>
+<p>기본적인 내용은 <a href="https://www.analyticsvidhya.com/blog/2020/07/read-and-update-google-spreadsheets-with-python/">LINK</a>를 참고했다.</p>
 </div></div></section>
 <section id="google-sheet-api-설정" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="google-sheet-api-설정">Google Sheet API 설정</h2>
 <section id="google-cloud-console에서-프로젝트-생성" class="level3">
 <h3 class="anchored" data-anchor-id="google-cloud-console에서-프로젝트-생성">Google Cloud Console에서 프로젝트 생성</h3>
-<p>먼저 새 프로젝트를 적절하게 생성하자.</p>
+<p><a href="https://console.cloud.google.com/">구글 클라우드 콘솔</a>로 가서 새 프로젝트를 적절하게 생성하자. 계정이 없다면 적당히 생성하면 된다.</p>
 <div>
 
 </div>
@@ -260,7 +261,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="fig-1" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="./images/gss-01.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="./images/gss-01.jpeg" class="img-fluid figure-img"></a>
+<a href="./images/gss-01.jpeg" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="./images/gss-01.jpeg" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: 프로젝트를 생성하자.
@@ -290,7 +291,7 @@ Figure&nbsp;1: 프로젝트를 생성하자.
 <div id="fig-2" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="./images/gss-02.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="./images/gss-02.jpeg" class="img-fluid figure-img"></a>
+<a href="./images/gss-02.jpeg" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="./images/gss-02.jpeg" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Google Drive와 Google Sheet API 활성화
@@ -319,7 +320,7 @@ Figure&nbsp;2: Google Drive와 Google Sheet API 활성화
 <div id="fig-3" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="./images/gss-03.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3"><img src="./images/gss-03.jpeg" class="img-fluid figure-img"></a>
+<a href="./images/gss-03.jpeg" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3"><img src="./images/gss-03.jpeg" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: 서비스 계정 활성화
@@ -334,7 +335,7 @@ Figure&nbsp;3: 서비스 계정 활성화
 <div id="fig-4" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="./images/gss-04.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4"><img src="./images/gss-04.jpeg" class="img-fluid figure-img"></a>
+<a href="./images/gss-04.jpeg" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4"><img src="./images/gss-04.jpeg" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4: API 설정
@@ -360,7 +361,7 @@ Figure&nbsp;4: API 설정
 <div id="fig-5" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="./images/gss-05.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5"><img src="./images/gss-05.jpeg" class="img-fluid figure-img"></a>
+<a href="./images/gss-05.jpeg" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5"><img src="./images/gss-05.jpeg" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5: 로봇 계정 선택
@@ -375,7 +376,7 @@ Figure&nbsp;5: 로봇 계정 선택
 <div id="fig-6" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="./images/gss-06.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6"><img src="./images/gss-06.jpeg" class="img-fluid figure-img"></a>
+<a href="./images/gss-06.jpeg" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6"><img src="./images/gss-06.jpeg" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;6: 키 생성
@@ -396,9 +397,9 @@ Figure&nbsp;6: 키 생성
 </section>
 <section id="파이썬에서-작업하기" class="level2">
 <h2 class="anchored" data-anchor-id="파이썬에서-작업하기">파이썬에서 작업하기</h2>
-<p>설치 등의 과정은 생략하고 테스트할 수 있는 코드만 간략하게 소개한다.</p>
+<p>패키지 설치 등의 과정은 생략하고 테스트할 수 있는 코드만 간략하게 소개한다.</p>
 <ul>
-<li>아래의 패키지를 설치하고 임포트한다.</li>
+<li>아래의 패키지를 설치하고 임포트한다. 구글 계정과의 연동을 위한 <code>google-api-python-client</code>, <code>oauth2client</code> 그리고 구글 스프레드 시트를 다루기 위한 <code>gspread</code> 패키지가 필요하다.</li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!pip3 install gspread</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#!pip3 install --upgrade google-api-python-client oauth2client</span></span>
@@ -1005,7 +1006,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"selector":".lightbox","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
