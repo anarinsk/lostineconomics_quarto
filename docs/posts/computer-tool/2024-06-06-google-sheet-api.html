@@ -350,7 +350,7 @@ Figure&nbsp;4: API 설정
 <h3 class="anchored" data-anchor-id="키-생성하기">키 생성하기</h3>
 <ul>
 <li><a href="#fig-5" class="quarto-xref">Figure&nbsp;5</a>에서 생성된 서비스 계정을 클릭한다.</li>
-<li><a href="#fig-6" class="quarto-xref">Figure&nbsp;6</a>에서 보듯이 “키” 탭에서 JSON으로 생성하면 해당 JSON 파일이 다운로드 된다. 이 파일을 파이썬에서 구글 시트에 접근하는데 활용한다. 이 파일은 패스워드가 같은 것이므로 노출되지 않도록 주의하자.</li>
+<li><a href="#fig-6" class="quarto-xref">Figure&nbsp;6</a>에서 보듯이 “키” 탭에서 JSON으로 생성하면 해당 JSON 파일이 다운로드 된다. 파이썬이 구글 시트에 접근하는데 파일을 활용한다. 이 녀석은 패스워드와 같은 것이므로 노출되지 않도록 주의하자.</li>
 </ul>
 <div>
 
@@ -1006,7 +1006,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"selector":".lightbox","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":false,"closeEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
