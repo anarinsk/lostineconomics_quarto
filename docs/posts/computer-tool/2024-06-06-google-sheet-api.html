@@ -238,8 +238,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="데이터-앱-만들기의-시작" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="데이터-앱-만들기의-시작">데이터 앱 만들기의 시작</h2>
-<p>데이터 앱을 만드는 최초의 단계는 데이터와 이를 다룰 도구(언어)의 연동이다. 별도로 DB를 만들지 않을 것이라면 데이터 소스는 아마도 엑셀, 구글 시트를 포함한 스프레드시트 형태일 것이다. 당신이 데이터 앱을 만들기로 했다면, 첫번째 단계가 여기 있다. 보통 데이터 분석에서 csv 등 데이터 파일을 로드하는 것에서 시작한다는 점을 떠올리면 좋겠다. 데이터 소스를 매번 수동으로 업로드할 것이 아니라면 구글 스프레드 시트와 같은 온라인 서비스와 데이터를 연동할 수 있다면 좋을 것이다.</p>
-<p>단도직입적으로 파이썬과 구글 스프레드 시트는 어떻게 연동하면 될까? 이 포스트 역시 내용을 까먹을 미래의 나놈을 위한 것이다.</p>
+<p>데이터 앱을 만드는 최초의 단계는 데이터와 이를 다룰 도구(언어)의 연동이다. 별도로 DB를 만들지 않을 것이라면 데이터 소스는 아마도 엑셀 혹은 구글 시트와 같은 ‘스프레드시트’ 형태일 것이다. 당신이 소박한 용도의 데이터 앱을 만들기로 했다면 첫번째 단계가 여기다. 소박한 데이터 분석이 csv 등 데이터 파일을 로드하는 것에서 시작한다는 점을 떠올리면 좋겠다. 앱에 쓰일 데이터 소스를 매번 수동으로 업로드할 것이 아니라면 구글 스프레드 시트와 같은 온라인 서비스와 데이터를 연동할 수 있다면 좋을 것이다. 활용할 데이터는 외부에서 별도로 관리하고 앱은 해당 데이터를 받아서 분석하고 시각화하는 방식으로 운영하려는 것이 의도이다.</p>
+<p>거두절미하고 파이썬과 구글 스프레드 시트는 어떻게 연동하면 될까? 이 포스트 역시 이 내용을 까먹을 미래의 나놈을 위한 것이다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>기본적인 내용은 <a href="https://www.analyticsvidhya.com/blog/2020/07/read-and-update-google-spreadsheets-with-python/">LINK</a>를 참고했다.</p>
@@ -1006,7 +1006,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":false,"closeEffect":"zoom","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
