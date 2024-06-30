@@ -39,7 +39,7 @@ $$
 $$
 
 :::{ .column-margin }
-고유치와 고유벡터는 아이겐밸류와 아이겐벡터로로 쓰기로 하자. 
+고유치와 고유벡터는 영어 단어 발음 그대로 아이겐밸류와 아이겐벡터로로 쓰기로 하자. 
 :::
 
 벡터 $x(\in {\mathbb R}^n)$가 있다고 하자. $\boldsymbol{A}$는 일종의 함수이고 이는 $x$를 변형시키게 된다. 이 변형이 그 다시 자신이 되고 벡터의 크기만 조정해주는 형태가 될 때, $\lambda$를 아이겐밸류 그리고 그 벡터 $x$를 아이겐벡터라고 한다. 잠깐! 여기서 아이겐 벡터는 우 아이겐벡터다. 왜냐하면, 벡터가 매트릭스의 오른쪽에 곱해지기 때문이다. 우(right) 아이겐벡터를 보통 아이겐벡터라고 쓴다. 하지만 좌(left) 아이겐벡터도 있다. 일단 이 점만 지적해두도록 하자.
@@ -53,16 +53,16 @@ $$
 벡터들의 집합 중에서 아래의 조건을 만족하면 이를 벡터 (부분) 공간이라고 부른다. 
 
 1. 영 벡터 $\boldsymbol 0$가 원소이다. 
-2. $x$가 원소일 때 $\alpha x$ ($\alpha \in \mathbb{R})$도 원소다. 
+2. $x$가 원소일 때 $\alpha x$ ($\alpha \in \mathbb{R})$도 원소다. $\alpha \in \mathbb R$
 3. $x$, $y$가 원소일 때 $x + y$도 원소다. 
 
-쉽게 말해서 벡터 (부분) 공간 위에서는 덧셈과 스칼라 곱셈이 정의된다. 아이겐벡터로 구성된 공간은 이런 벡터 공간이 될까? 
+쉽게 말해서 벡터 (부분) 공간 위에서 덧셈과 스칼라 곱셈이 정의되고, 0 벡터가 포함되어 있으면 벡터 공간이 구성된다. 그렇다면 아이겐벡터 공간을 정의해보자. 우선, **같은** 아이겐밸류 $\lambda$에 대해서 다음과 같은 벡터 공간이 정의되면 된다. 
 
 1. $A {\boldsymbol 0} = \lambda {\boldsymbol 0}$
 2. $A(\alpha x) = \alpha(A x) = \alpha (\lambda x) = \lambda(\alpha x)$
 3. $A(x_1 + x_2) = A x_1 + A x_2 = \lambda x_1 + \lambda x_2 = \lambda(x_1 + x_2)$
 
-3번의 경우 정의대로 하나의 아이겐밸류 $\lambda$에 대해서 두 개 이상의 아이겐벡터가 대응될 때에 해당한다. 아이겐벡터를 원소로 하는 공간은  벡터 부분 공간이 되며, 이를 아이겐스페이스(eigenspace)라고 부른다. 
+3번의 경우 정의대로 하나의 아이겐밸류 $\lambda$에 대해서 두 개 이상의 아이겐벡터가 대응될 때에 해당한다. 아이겐벡터를 원소로 하는 공간은  벡터 부분 공간이 되며, 이를 아이겐스페이스(eigenspace)라고 부른다. 정리하면, 같은 아이겐밸류를 공유한다면, 아이겐벡터의 어떤 선형 결합도 해당 아이겐밸류의 아이겐벡터가 된다. 
 
 :::{.column-margin}
 얼핏 생각하면 이런 경우가 있나 싶을 수 있다. 가장 좋은 사례는 항등 행렬, ${\boldsymbol I}_n$이다. 이 항등행렬의 경우 아이겐밸류는 1이고, 대응 가능한 어떤 벡터도 아이겐벡터가 된다. 
@@ -247,6 +247,12 @@ $$
 
 이것 역시 벡터 (서브) 스페이스를 형성한다. 여기서 서브 스페이스의 축은 아이겐벡터가 되고, 그 길이를 좌우하는 것은 아이겐밸류가 된다. 이렇게 살펴보면, 왜 아이겐벡터-아이겐밸류가 선형 변환 함수 $A$의 축과 크기를 바꾸는 것인지 이해할 수 있다. 
 
- ![](https://i.stack.imgur.com/JZF5m.gif){ style="margin: auto; display: block; border:1.5px solid #021a40; width: 40%;" }
+ ![](https://bradleyboehmke.github.io/HOML/15-pca_files/figure-html/create-pca-image-1.png){ style="margin: auto; display: block; border:0px solid #021a40; width: 60%;" }
 
-PCA의 예를 들어보자. $x-y$ 축 위에 찍힌 점들에 대해서 변동성(분산-공분산 행렬)이 큰 방향으로 축을 바꾸면 어떻게 될까? 위에서 보는 PCA의 새로운 축은 아이겐벡터의 방향을 중심으로 재정렬된 축을 나타낸다. 이 축에 할당된 변동성의 크기는 각각 축의 길이에 해당하는 아이겐밸류가 된다. 
+PCA를 예로 들어보자. $x-y$ 축 위에 찍힌 점들에 대해서 변동성(분산-공분산 행렬)이 큰 방향으로 축을 바꾸면 어떻게 될까? $x-y$ 축에서 보듯 축은 직교하는 것이 좋다. 그래야 두 개의 성분이 온전하게 쪼개진다. 위에서 보는 PCA의 새로운 축은 아이겐벡터의 방향을 중심으로 재정렬된 축을 나타낸다. 이 축에 할당된 변동성의 크기는 각각 축(아이겐벡터)의 길이에 해당하는 아이겐밸류가 된다. 
+
+## 참고 
+
+Cherney, Denton and Waldron, [12.3 Eigenspaces](https://math.libretexts.org/Bookshelves/Linear_Algebra/Map%3A_Linear_Algebra_(Waldron_Cherney_and_Denton)/12%3A_Eigenvalues_and_Eigenvectors/12.03%3A_Eigenspaces), [Linear Algebra](https://math.libretexts.org/Bookshelves/Linear_Algebra/Map:_Linear_Algebra_(Waldron_Cherney_and_Denton)).
+
+Boehmke & Greenwell, [Principal Compnents Analysis](https://bradleyboehmke.github.io/HOML/pca.html), [Hands-On Machine Learning with R](https://bradleyboehmke.github.io/HOML/15-pca.html)
