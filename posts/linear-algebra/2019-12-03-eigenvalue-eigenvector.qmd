@@ -216,7 +216,7 @@ $$
 
 ### Symmetric matrix 
 
-행렬이 대칭이면 $Q$에 더 좋은 특성이 생긴다.  
+행렬이 대칭일 경우 $Q$는 다루기 편리한 특성을 더 지니게 된다.  
 
 1. $\boldsymbol A$ 의 아이겐밸류는 모두 실수이다. 
 2. $Q$는 직교행렬이다. 즉, $Q^T = Q^{-1}$ 가 성립한다. 
@@ -226,6 +226,11 @@ $$
 $$
 \boldsymbol{A} = \boldsymbol{Q} \boldsymbol{\lambda} \boldsymbol{Q}^{-1} =  \boldsymbol{Q} \boldsymbol{\lambda} \boldsymbol{Q}^{T} 
 $$
+
+:::{.column-margin}
+이런 작업이 왜 필요할까? 계산에 관점에서 접근하면 쉽게 이해할 수 있다. 사람이 하든 컴퓨터가 하든 매트릭스의 곱이나 역행렬을 구하는 과정에는 자원이 소모된다. 만일 매트릭스의 크기가 크다면 더욱 그럴 것이다. 그런데, A를 대각화할 수 있고 A가 선형이면 이 과정이 매우 편리해진다. $\boldsymbol{Q}$와  $\boldsymbol{Q}^{T}$를 구하고 아이겐밸류의 승수를 알고 있으면 매트릭스의 곱을 쉽게 구할 수 있다. 
+:::
+
 
 ### Graphic interpretation with vector space 
 

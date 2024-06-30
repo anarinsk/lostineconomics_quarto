@@ -395,9 +395,9 @@ z = \boldsymbol{Q}^T \boldsymbol{Q} \boldsymbol{\lambda} w
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>아이겐밸류가 중복인데 아이겐벡터가 서로 다를 수 있을까? 가장 좋은 예는 단위행렬이다. <span class="math inline">\(\mathbf I_n\)</span>은 1의 아이겐 밸류만을 지니며 모든 벡터 <span class="math inline">\(x\)</span>가 아이겐벡터가 된다.</p>
-</div></div><section id="symmetric-matrix" class="level3">
+</div></div><section id="symmetric-matrix" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="symmetric-matrix">Symmetric matrix</h3>
-<p>행렬이 대칭이면 <span class="math inline">\(Q\)</span>에 더 좋은 특성이 생긴다.</p>
+<p>행렬이 대칭일 경우 <span class="math inline">\(Q\)</span>는 다루기 편리한 특성을 더 지니게 된다.</p>
 <ol type="1">
 <li><span class="math inline">\(\boldsymbol A\)</span> 의 아이겐밸류는 모두 실수이다.</li>
 <li><span class="math inline">\(Q\)</span>는 직교행렬이다. 즉, <span class="math inline">\(Q^T = Q^{-1}\)</span> 가 성립한다.</li>
@@ -406,7 +406,10 @@ z = \boldsymbol{Q}^T \boldsymbol{Q} \boldsymbol{\lambda} w
 <p><span class="math display">\[
 \boldsymbol{A} = \boldsymbol{Q} \boldsymbol{\lambda} \boldsymbol{Q}^{-1} =  \boldsymbol{Q} \boldsymbol{\lambda} \boldsymbol{Q}^{T}
 \]</span></p>
-</section>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>이런 작업이 왜 필요할까? 계산에 관점에서 접근하면 쉽게 이해할 수 있다. 사람이 하든 컴퓨터가 하든 매트릭스의 곱이나 역행렬을 구하는 과정에는 자원이 소모된다. 만일 매트릭스의 크기가 크다면 더욱 그럴 것이다. 그런데, A를 대각화할 수 있고 A가 선형이면 이 과정이 매우 편리해진다. <span class="math inline">\(\boldsymbol{Q}\)</span>와 <span class="math inline">\(\boldsymbol{Q}^{T}\)</span>를 구하고 아이겐밸류의 승수를 알고 있으면 매트릭스의 곱을 쉽게 구할 수 있다.</p>
+</div></div></section>
 <section id="graphic-interpretation-with-vector-space" class="level3">
 <h3 class="anchored" data-anchor-id="graphic-interpretation-with-vector-space">Graphic interpretation with vector space</h3>
 <p>앞서의 식을 다시 음미해보자.</p>
@@ -989,7 +992,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":false,"selector":".lightbox"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
