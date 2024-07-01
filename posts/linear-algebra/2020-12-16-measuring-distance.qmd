@@ -15,7 +15,9 @@ draft: false
 
 다음과 같은 두 개의 벡터, $\vec a$, $\vec b$를 일단 떠올려보자. 
 
-![벡터 $\mathbf a$를 벡터 $\mathbf b$로 프로젝션 할 때 스칼라 프로젝션은 $\mathbf a_1$의 길이를 벡터 프로젝션은 벡터 $\mathbf a_1$를 나타난다.](https://upload.wikimedia.org/wikipedia/commons/9/98/Projection_and_rejection.png){ .my-figure5 }
+:::{layout="[-5, 10, -5]"}
+![벡터 $\mathbf a$를 벡터 $\mathbf b$로 프로젝션 할 때 스칼라 프로젝션은 $\mathbf a_1$의 길이를 벡터 프로젝션은 벡터 $\mathbf a_1$를 나타난다.](https://upload.wikimedia.org/wikipedia/commons/9/98/Projection_and_rejection.png){ style="margin: auto; display: block; border:1px solid #2d2d2d;" }
+:::
 
 스칼라 프로젝션 $a_1$의 정의는 다음과 같다. 
 
@@ -163,7 +165,9 @@ $$
 열 벡터 $[2,-1, 1]^\rm T$가 노멀 벡터 $\vec n$에 해당한다. 
 :::
 
-![$\vec u = \Pi_{l} (\vec u) + \Pi_{l^{\perp}} (\vec u)$](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj.png?raw=true){.my-figure7}
+:::{layout="[-5, 10, -5]"}
+![$\vec u = \Pi_{l} (\vec u) + \Pi_{l^{\perp}} (\vec u)$](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj.png?raw=true){ style="margin: auto; display: block; border:1px solid #2d2d2d;" }
+:::
 
 그림에서 $\vec u$의 $\vec v$로의 프로젝션은 앞서 살펴본 벡터 프로젝션이다. $\vec v$ 대신 $l$로 표기된 점에 유의하자. 
 
@@ -185,7 +189,9 @@ $\vec u$라는 벡터가 두 개의 직교하는 성분의 결합을 통해 표�
 
 ### Projection onto plane 
 
-![$\vec u = \Pi_P(\vec u) + \Pi_{P^\perp}(\vec u)$](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection//vector_proj_2.png?raw=true){ .my-figure5 }
+:::{layout="[-5, 10, -5]"}
+![$\vec u = \Pi_P(\vec u) + \Pi_{P^\perp}(\vec u)$](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection//vector_proj_2.png?raw=true){ style="margin: auto; display: block; border:1px solid #2d2d2d;" }
+:::
 
 평면 위로의 프로젝션을 생각해 보자. 기본적인 원리는 동일하다. 이에 앞서 평면을 벡터로 표현하는 방법에 대해 알아보자. 가장 편리한 방법은 노멀 벡터를 활용하는 것이다. 즉, 평면 위의 점 $\vec {p_0}$를 지나는 $P$는 다음과 같이 정의할 수 있다. 
 
@@ -199,8 +205,9 @@ $$
 \vec u = \Pi_P(\vec u) + \Pi_{P^\perp}(\vec u)
 $$
 
- 
-![$\vec u$에서 노멀 벡터 $\vec n$으로 프로젝션했을 때 벡터 프로젝션이 바로 $\Pi_{P^\perp}(\vec u)$가 된다.](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj_2a.png?raw=true){ .my-figure5 }
+:::{layout="[-5, 10, -5]"} 
+![$\vec u$에서 노멀 벡터 $\vec n$으로 프로젝션했을 때 벡터 프로젝션이 바로 $\Pi_{P^\perp}(\vec u)$가 된다.](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/vector_proj_2a.png?raw=true){ style="margin: auto; display: block; border:1px solid #2d2d2d;" }
+:::
 
 우리가 알고 싶은 것은 $\Pi_P(\vec u)$다. 그리고 벡터는 위치가 아니라 방향과 크기에 의해 결정되기 때문에 노멀 벡터 $\vec n$은 크기와 뱡향을 유지한다면 어디로든 옮겨도 된다. 이를 $\vec u$가 시작하는 위치로 옮겨보자. 이제 $\vec u$에서 $\vec n$으로 프로젝션을 하자. $\vec n$ 위의 벡터가 바로 $\Pi_{P^\perp}(\vec u)$가 된다. 즉,  
 
@@ -228,7 +235,9 @@ $$
 l: \{ \vec p \in \mathbb R^n | \vec p = \mathbf {p}_0 + t \vec v, t \in \mathbb R \}
 $$
 
-![아래 그림에서 보듯이 적당한 위치에 $\mathbf p_0$가 있다고 하자.](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line.png?raw=true){ .my-figure5 }
+:::{layout="[-5, 10, -5]"}
+![아래 그림에서 보듯이 적당한 위치에 $\mathbf p_0$가 있다고 하자.](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line.png?raw=true){ style="margin: auto; display: block; border:0px solid #2d2d2d;" }
+:::
 
 위 그림에서 원점과 $l$의 거리는 어떻게 나타낼 수 있을까? $l$이 지나가는 $\vec p_0$를 그대로 두고, $l$이 원점을 지나가도록 이동해 보자. 즉, 
 
@@ -236,7 +245,9 @@ $$
 l_0 = \{  \vec p \in \mathbb R^n | \vec p = \mathbf {0} + t \vec v, t \in \mathbb R \}
 $$
 
-![$\mathbf{p_0} = \Pi_{l_0}(\mathbf p_0) + \Pi_{l_0^\perp}(\mathbf p_0)$](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line_2.png?raw=true){ .my-figure5 }
+:::{layout="[-5, 10, -5]"}
+![$\mathbf{p_0} = \Pi_{l_0}(\mathbf p_0) + \Pi_{l_0^\perp}(\mathbf p_0)$](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/line_2.png?raw=true){ style="margin: auto; display: block; border:0px solid #2d2d2d;" }
+:::
 
 이제 이 벡터와 $\vec p_0$ 사이의 거리를 구하면 된다. 이는 앞서 제시한 벡터 프로젝션의 수직 벡터의 길이와 같다. 즉, 
 
@@ -258,8 +269,9 @@ $$
 P = \{ \vec p \in \mathbb R^n : \vec n \cdot(\vec p - \mathbf{p_0}) = 0 \}
 $$
 
-![현재 평면을 지나는 점 $\mathbf p_0$를 두고 평면을 원점으로 밀어보자. 이때 평면을 정의하는 노멀 벡터 $\vec n$을 표현하면 원점과 이 점을 잇는 벡터 $\vec p_0$f를 $\vec n$으로 프로젝션한 벡터의 길이가 평면과 원점의 거리가 된다.](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/plane.png?raw=true){ .my-figure5}
-
+:::{layout="[-5, 10, -5]"}
+![현재 평면을 지나는 점 $\mathbf p_0$를 두고 평면을 원점으로 밀어보자. 이때 평면을 정의하는 노멀 벡터 $\vec n$을 표현하면 원점과 이 점을 잇는 벡터 $\vec p_0$f를 $\vec n$으로 프로젝션한 벡터의 길이가 평면과 원점의 거리가 된다.](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/plane.png?raw=true){ style="margin: auto; display: block; border:0px solid #2d2d2d;" }
+:::
 
 원점을 지나도록 평면을 이동시키고 평면의 노멀 벡터가 정의된 $p_0$와 원점을 지나는 평면 $P_0$ 사이의 거리를 측정하면 된다. 
 
@@ -275,9 +287,11 @@ $$
 
 ## Regression Coefficient  
 
-![선형대수로 본 회귀 분석](https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true){ .my-figure5 }
+:::{layout="[-5, 10, -5]"}
+![선형대수로 본 회귀 분석](https://github.com/anarinsk/lie-regression/blob/master/assets/imgs/reg-in-vectorspace.png?raw=true){ style="margin: auto; display: block; border:0px solid #2d2d2d;" }
+:::
 
-앞서 소개했던 회귀 분석에 관한 포스팅 [Understanding Regression](https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-10-25-understanding-regression.html)을 다시 보자. Origin--Observed Y--Fitted $\hat Y$이 만드는 삼각형을 보자. 직각 삼각형이다. 여기서 잔차에 해당하는 $e$는 $X$의 칼럼 스페이스와 항상 직교한다. 즉, $X' e = 0$이 성립한다. 그리고 $\hat Y = X \hat\beta$이므로 
+앞서 소개했던 회귀 분석에 관한 포스팅 [Understanding Regression](https://anarinsk.github.io/lostineconomics_quarto/posts/regression/2019-10-25-understanding-regression.html)을 다시 보자. Origin--Observed Y--$\hat{Y}-\overline{Y}\boldsymbol{1}_n$이 만드는 삼각형을 보자. 직각 삼각형이다. 여기서 잔차에 해당하는 $e$는 $X$의 칼럼 스페이스와 항상 직교한다. 즉, $X' e = 0$이 성립한다. 그리고 $\hat Y = X \hat\beta$이므로 
 
 $$
 X'(Y - \hat Y)  = X'(Y - X \hat\beta) = 0
