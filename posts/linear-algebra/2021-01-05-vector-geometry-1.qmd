@@ -3,7 +3,7 @@ title: Vector Geometrically, part 1
 description: 벡터 공간의 기하적 특성
 author: "JS HUHH"
 date: "01/05/2021"
-image: "https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg"
+image: "./images/cats-matrix.webp"
 categories: [linear-algebra]
 draft: false
 ---
@@ -27,15 +27,11 @@ draft: false
 - 점은 공간에서 위치를 지니고 있다. 점의 특성은 위치 뿐이다. 
 - 벡터는 크기와 방향을 지니고 있다. 벡터는 공간에서 위치를 지니고 있지 않다. 
 
-![점은 위치만을 지니고 벡터는 방향성과 크기를 지닌다.](https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/position-vector-1627294113.png){ .my-figure5 }
+:::{layout="[-3, 10, -3]"}
+![점은 위치만을 지니고 벡터는 방향성과 크기를 지닌다.](https://img-aws.ehowcdn.com/600x600p/s3-us-west-1.amazonaws.com/contentlab.studiod/1/29/8a412aea5e1c4066a4874e20e072cbcf.png){ style="margin: auto; display: block; border:1px solid #2d2d2d;" }
+:::
 
-점과 벡터를 연결해보자. 위 그림에서 원점 $O$를 기준으로 하면 $P$, $Q$가 정의될 것이다. 이때 $\overrightarrow{OP}$, $\overrightarrow{OQ}$는 벡터가 된다. 이제 $\vec v$를 $P$에서 $Q$로 가는 벡터라고 정의하자. 이는 
-
-$$
-\vec v = Q - P
-$$
-
-앞서 정의한 콘셉트에서 $\vec v = (v_x, v_y, v_z)$에서 $v_k$는 포인트의 위치가 아니라 해당 축으로 움직이는(향하는) 크기를 나타낸다는 점을 다시 음미하시기를! 
+점과 벡터를 연결해보자. 벡터 $a$와 벡터 $b$는 크기와 방향성만 지니고 있을 뿐이다. 이를 어떻게 결합하는지에 따라서 벡터의 합과 벡터의 차가 위 그림처럼 구성될 수 있다. 
 
 ### Vector 
 
@@ -47,7 +43,9 @@ $$
 l : \lbrace p_0 + t \vec v, t \in \mathbb R \rbrace
 $$
 
-![점에서 벡터를 생성해보자.](https://www.maths.usyd.edu.au/u/MOW/vectors/images/v120x.gif){ .my-figure5 }
+:::{layout="[-5, 10, -5]"}
+![점에서 벡터를 생성해보자.](https://www.maths.usyd.edu.au/u/MOW/vectors/images/v120x.gif){ style="margin: auto; display: block; border:0px solid #2d2d2d;" }
+:::
 
 위의 그림을 보면서 식을 도출해보자. 포인트 $P_0$를 (원점 기준) 벡터로 나타내면 $\vec r_0$가 된다. 그리고 $P$ 점을 벡터로 나타내면 $\vec r$이 된다. 벡터 $\overrightarrow{P_0\, P}$와 수평인 벡터를 $\vec v$라고 하자. 이 두 가지 사실을 조합하면 다음과 같다. 
 
@@ -88,7 +86,9 @@ $p_0$를 지나는 무한 평면 P는 다음과 같이 정의된다. 평면을 �
 
 ### Normal vector 
 
-![두 벡터의 크로스 프로덕트](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Cross_product_parallelogram.svg/960px-Cross_product_parallelogram.svg.png){ .my-figure5 }
+:::{layout="[-5, 10, -5]"}
+![두 벡터의 크로스 프로덕트](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Cross_product_parallelogram.svg/960px-Cross_product_parallelogram.svg.png){ style="margin: auto; display: block; border:0px solid #2d2d2d;" }
+:::
 
 노멀 벡터는 아래 평면(plane) 혹은 벡터과 직교하는 성분의 벡터다. 이 녀석을 어떻게 구할까? 평면 $P$의 parametric 식을 보자. 2차원 플레인을 구성하는 두 벡터 $\vec v$, $\vec w$가 있다. 노멀 벡터는 이 두 성분 모두와 직교하는 성분의 벡터이다. 이는 바로 크로스 프로덕트의 정의이다. 
 

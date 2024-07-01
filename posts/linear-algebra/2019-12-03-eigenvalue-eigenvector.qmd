@@ -3,7 +3,7 @@ title: Eigenvalues and Eigenvectors
 description: 고유치와 고유벡터에 관해 알아보자. 
 author: "JS HUHH"
 date: "12/03/2019"
-image: "https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg"
+image: "./images/cats-matrix.webp"
 categories: [linear-algebra]
 draft: false
 ---
