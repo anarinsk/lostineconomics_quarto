@@ -9,6 +9,7 @@ categories: [quarto, document-tool]
 jupyter: python3
 draft: false
 code-overflow: wrap
+code-line-numbers: true
 ---
 
 
@@ -97,7 +98,7 @@ Quarto 문서의 그림 배치에 관한한 공식 문서에 아주 잘 소개�
 
 ```{python}
 #| label: fig-polar
-#| fig-cap: "A line plot on a polar axis"
+#| fig-cap: "A line plot on a polar axis (native Python code)"
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -113,13 +114,18 @@ ax.grid(True)
 plt.show()
 ```
 
-반면 아래의 코드를 보자. 이 코드는 `:::{layout="[-5,10,-5]"} ... :::`가 감싸고 있으며, 그림의 크기는 `fig.set_size_inches(3, 3)`로 지정했다.
+파이썬 코드에서 그림을 생성할 경우 위에서 보듯이 전체폭으로 생성된다. 아래 캡션을 보면 맨 왼쪽으로 정렬된 것을 알 수 있다. R 코드의 경우 `#| fig-width:`를 통해 필요한 그림의 폭을 지정할 수 있으나, 파이썬 코드의 경우 이 옵션이 유효하지 않다. 하고 싶은 것은 두 가지다. 
+
+1. 그림의 크기를 줄이고 싶다.
+2. 캡션이 축소된 그림에 맞춰 시작되도록 하고 싶다.
+
+아래의 코드를 보자. 이 코드는 `:::{layout="[-5,10,-5]"} ... :::`가 감싸고 있으며, 그림의 크기는 `fig.set_size_inches(3, 3)`로 지정했다. `:::{layout...`에 해당하는 부분은 그림의 전체적인 크기를 조절하는 데 사용한다. R의 경우 이 지정만으로 그림의 비율에 맞게 줄어드는데, 파이썬의 경우에는 이렇게 작동하지 않았다. 아럐 사례를 보자. 
 
 :::{layout="[-5, 10, -5]"}
 ```{python}
-#| echo: true
+#| echo: false 
 #| label: fig-polar-2
-#| fig-cap: "A line plot on a polar axis"
+#| fig-cap: "A line plot on a polar axis (with `layout`)"
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -133,8 +139,36 @@ fig, ax = plt.subplots(
 ax.plot(theta, r)
 ax.set_rticks([0.5, 1, 1.5, 2])
 ax.grid(True)
-fig.set_size_inches(3, 3)
+#fig.set_size_inches(4, 4)
 
 plt.show()
 ```
 :::
+
+`fig.set_size_inches()`를 활용해 이를 해결할 수 있다. 이렇게 하면 그림의 크기를 줄이고 캡션도 맞출 수 있다. 
+
+:::{layout="[-2, 10, -2]"}
+```{python}
+#| echo: true
+#| label: fig-polar-3
+#| fig-cap: "A line plot on a polar axis (with `layout` + fig.set_size_inches()"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+#plt.figure(figsize=(3,3))
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+fig.set_size_inches(4, 4)
+
+plt.show()
+```
+:::
+
+아쉽게도 코드에서 생성되는 그의 경우 작동이나 문법이 아직 아쉬운 부분이 있다. 아쉬운대로 필요에 맞춰서 쓰면 되겠다. 

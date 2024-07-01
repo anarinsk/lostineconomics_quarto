@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.557">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,7 +36,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -110,7 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -276,7 +276,7 @@ window.Quarto = {
 <section id="기본-문법" class="level3">
 <h3 class="anchored" data-anchor-id="기본-문법">기본 문법</h3>
 <p>마크다운에서 그림을 배치하는 방법을 그대로 따른다. 즉,</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="al">![그림설명](리소스 주소)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="al">![그림설명](리소스 주소)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="응용-1-외부-그림을-배치할-때" class="level3">
 <h3 class="anchored" data-anchor-id="응용-1-외부-그림을-배치할-때">응용 1: 외부 그림을 배치할 때</h3>
@@ -303,13 +303,13 @@ window.Quarto = {
 </div>
 </div>
 <p>해당 그림의 코드는 아래와 같다. 중요한 것은 <code>layout</code>의 명령을 구현하려면 그림 객체 사이에 줄바꿈이 있어야 한다는 것이다.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>::: {layout="[<span class="co">[</span><span class="ot">1,1</span><span class="co">]</span>, <span class="co">[</span><span class="ot">1</span><span class="co">]</span>]"}</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="al">![Surus](https://.png)</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="al">![Hanno](https://.png)</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="al">![Lin Wang](https://.png)</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a>::: {layout="[<span class="co">[</span><span class="ot">1,1</span><span class="co">]</span>, <span class="co">[</span><span class="ot">1</span><span class="co">]</span>]"}</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="al">![Surus](https://.png)</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="al">![Hanno](https://.png)</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="al">![Lin Wang](https://.png)</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="응용-2-단일-그림-배치-및-커스터마이즈" class="level3">
 <h3 class="anchored" data-anchor-id="응용-2-단일-그림-배치-및-커스터마이즈">응용 2: 단일 그림 배치 및 커스터마이즈</h3>
@@ -340,9 +340,9 @@ Figure&nbsp;1: 현재 평면을 지나는 점 <span class="math inline">\(\mathb
 </div>
 </div>
 <p><a href="#fig-with-layout" class="quarto-xref">Figure&nbsp;1</a> 은 다음과 같은 코드로 생성했다.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode md code-overflow-wrap code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>:::{layout="<span class="co">[</span><span class="ot">-5, 10, -5</span><span class="co">]</span>"}</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="al">![현재 평면을 지나는 점 $\mathbf p_0$를 두고 평면을 원점으로 밀어보자. 이때 평면을 정의하는 노멀 벡터 $\vec n$을 표현하면 원점과 이 점을 잇는 벡터 $\vec p_0$f를 $\vec n$으로 프로젝션한 벡터의 길이가 평면과 원점의 거리가 된다.](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/plane.png?raw=true)</span>{ #fig-with-layout style="margin: auto; display: block; border:0px solid #2d2d2d;" }</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource md code-overflow-wrap number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a>:::{layout="<span class="co">[</span><span class="ot">-5, 10, -5</span><span class="co">]</span>"}</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="al">![현재 평면을 지나는 점 $\mathbf p_0$를 두고 평면을 원점으로 밀어보자. 이때 평면을 정의하는 노멀 벡터 $\vec n$을 표현하면 원점과 이 점을 잇는 벡터 $\vec p_0$f를 $\vec n$으로 프로젝션한 벡터의 길이가 평면과 원점의 거리가 된다.](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/plane.png?raw=true)</span>{ #fig-with-layout style="margin: auto; display: block; border:0px solid #2d2d2d;" }</span>
+<span id="cb3-3"><a href="#cb3-3"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>{style...}</code>에 주목해보자. 이렇게 해당 부분에 css를 지정함으로써 원하는 방식으로 그림을 다룰 수 있다.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -380,18 +380,18 @@ Figure&nbsp;2: 현재 평면을 지나는 점 <span class="math inline">\(\mathb
 <h2 class="anchored" data-anchor-id="응용3-코드-생성-그림">응용3: 코드 생성 그림</h2>
 <p>우선 코드에서 생성된 그림을 먼저 보자.</p>
 <div id="cell-fig-polar" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>ax.plot(theta, r)</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb4-5"><a href="#cb4-5"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb4-6"><a href="#cb4-6"></a>fig, ax <span class="op">=</span> plt.subplots(</span>
+<span id="cb4-7"><a href="#cb4-7"></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
+<span id="cb4-8"><a href="#cb4-8"></a>)</span>
+<span id="cb4-9"><a href="#cb4-9"></a>ax.plot(theta, r)</span>
+<span id="cb4-10"><a href="#cb4-10"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb4-11"><a href="#cb4-11"></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb4-12"><a href="#cb4-12"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="fig-polar" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -399,28 +399,21 @@ Figure&nbsp;2: 현재 평면을 지나는 점 <span class="math inline">\(\mathb
 <a href="2024-07-01-quarto-put-figure_files/figure-html/fig-polar-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" data-glightbox="description: .lightbox-desc-4"><img src="2024-07-01-quarto-put-figure_files/figure-html/fig-polar-output-1.png" width="450" height="439" class="figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: A line plot on a polar axis
+Figure&nbsp;3: A line plot on a polar axis (native Python code)
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>반면 아래의 코드를 보자. 이 코드는 <code>:::{layout="[-5,10,-5]"} ... :::</code>가 감싸고 있으며, 그림의 크기는 <code>fig.set_size_inches(3, 3)</code>로 지정했다.</p>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.figure(figsize=(3,3))</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>ax.plot(theta, r)</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>fig.set_size_inches(<span class="dv">3</span>, <span class="dv">3</span>)</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>파이썬 코드에서 그림을 생성할 경우 위에서 보듯이 전체폭으로 생성된다. 아래 캡션을 보면 맨 왼쪽으로 정렬된 것을 알 수 있다. R 코드의 경우 <code>#| fig-width:</code>를 통해 필요한 그림의 폭을 지정할 수 있으나, 파이썬 코드의 경우 이 옵션이 유효하지 않다. 하고 싶은 것은 두 가지다.</p>
+<ol type="1">
+<li>그림의 크기를 줄이고 싶다.</li>
+<li>캡션이 축소된 그림에 맞춰 시작되도록 하고 싶다.</li>
+</ol>
+<p>아래의 코드를 보자. 이 코드는 <code>:::{layout="[-5,10,-5]"} ... :::</code>가 감싸고 있으며, 그림의 크기는 <code>fig.set_size_inches(3, 3)</code>로 지정했다. <code>:::{layout...</code>에 해당하는 부분은 그림의 전체적인 크기를 조절하는 데 사용한다. R의 경우 이 지정만으로 그림의 비율에 맞게 줄어드는데, 파이썬의 경우에는 이렇게 작동하지 않았다. 아럐 사례를 보자.</p>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[-5, 10, -5]">
 <div class="quarto-layout-row">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
@@ -431,10 +424,10 @@ Figure&nbsp;3: A line plot on a polar axis
 <div id="fig-polar-2" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-polar-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="2024-07-01-quarto-put-figure_files/figure-html/fig-polar-2-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5"><img src="2024-07-01-quarto-put-figure_files/figure-html/fig-polar-2-output-1.png" width="302" height="291" class="figure-img"></a>
+<a href="2024-07-01-quarto-put-figure_files/figure-html/fig-polar-2-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5"><img src="2024-07-01-quarto-put-figure_files/figure-html/fig-polar-2-output-1.png" width="450" height="439" class="figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-polar-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: A line plot on a polar axis
+Figure&nbsp;4: A line plot on a polar axis (with <code>layout</code>)
 </figcaption>
 </figure>
 </div>
@@ -445,14 +438,56 @@ Figure&nbsp;4: A line plot on a polar axis
 </div>
 </div>
 </div>
+<p><code>fig.set_size_inches()</code>를 활용해 이를 해결할 수 있다. 이렇게 하면 그림의 크기를 줄이고 캡션도 맞출 수 있다.</p>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-3"><a href="#cb5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4"></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb5-5"><a href="#cb5-5"></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="co">#plt.figure(figsize=(3,3))</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a>fig, ax <span class="op">=</span> plt.subplots(</span>
+<span id="cb5-8"><a href="#cb5-8"></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
+<span id="cb5-9"><a href="#cb5-9"></a>)</span>
+<span id="cb5-10"><a href="#cb5-10"></a>ax.plot(theta, r)</span>
+<span id="cb5-11"><a href="#cb5-11"></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb5-12"><a href="#cb5-12"></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb5-13"><a href="#cb5-13"></a>fig.set_size_inches(<span class="dv">4</span>, <span class="dv">4</span>)</span>
+<span id="cb5-14"><a href="#cb5-14"></a></span>
+<span id="cb5-15"><a href="#cb5-15"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-layout-panel" data-layout="[-2, 10, -2]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div id="cell-fig-polar-3" class="cell quarto-layout-cell" data-execution_count="3" style="flex-basis: 71.4%;justify-content: flex-start;">
+<div class="cell-output cell-output-display">
+<div id="fig-polar-3" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-polar-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="2024-07-01-quarto-put-figure_files/figure-html/fig-polar-3-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6"><img src="2024-07-01-quarto-put-figure_files/figure-html/fig-polar-3-output-1.png" width="376" height="365" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-polar-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: A line plot on a polar axis (with <code>layout</code> + fig.set_size_inches()
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>아쉽게도 코드에서 생성되는 그의 경우 작동이나 문법이 아직 아쉬운 부분이 있다. 아쉬운대로 필요에 맞춰서 쓰면 되겠다.</p>
 
 
 <div class="hidden" aria-hidden="true">
 <span class="glightbox-desc lightbox-desc-1">그림 배치 사례</span>
 <span class="glightbox-desc lightbox-desc-2">Figure&nbsp;1: 현재 평면을 지나는 점 <span class="math inline">\(\mathbf p_0\)</span>를 두고 평면을 원점으로 밀어보자. 이때 평면을 정의하는 노멀 벡터 <span class="math inline">\(\vec n\)</span>을 표현하면 원점과 이 점을 잇는 벡터 <span class="math inline">\(\vec p_0\)</span>f를 <span class="math inline">\(\vec n\)</span>으로 프로젝션한 벡터의 길이가 평면과 원점의 거리가 된다.</span>
 <span class="glightbox-desc lightbox-desc-3">Figure&nbsp;2: 현재 평면을 지나는 점 <span class="math inline">\(\mathbf p_0\)</span>를 두고 평면을 원점으로 밀어보자. 이때 평면을 정의하는 노멀 벡터 <span class="math inline">\(\vec n\)</span>을 표현하면 원점과 이 점을 잇는 벡터 <span class="math inline">\(\vec p_0\)</span>f를 <span class="math inline">\(\vec n\)</span>으로 프로젝션한 벡터의 길이가 평면과 원점의 거리가 된다.</span>
-<span class="glightbox-desc lightbox-desc-4">Figure&nbsp;3: A line plot on a polar axis</span>
-<span class="glightbox-desc lightbox-desc-5">Figure&nbsp;4: A line plot on a polar axis</span>
+<span class="glightbox-desc lightbox-desc-4">Figure&nbsp;3: A line plot on a polar axis (native Python code)</span>
+<span class="glightbox-desc lightbox-desc-5">Figure&nbsp;4: A line plot on a polar axis (with <code>layout</code>)</span>
+<span class="glightbox-desc lightbox-desc-6">Figure&nbsp;5: A line plot on a polar axis (with <code>layout</code> + fig.set_size_inches()</span>
 </div>
 </section>
 
@@ -1011,7 +1046,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
