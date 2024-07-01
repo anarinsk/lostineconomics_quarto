@@ -16,7 +16,7 @@ draft: false
 다음과 같은 두 개의 벡터, $\vec a$, $\vec b$를 일단 떠올려보자. 
 
 :::{layout="[-5, 10, -5]"}
-![벡터 $\mathbf a$를 벡터 $\mathbf b$로 프로젝션 할 때 스칼라 프로젝션은 $\mathbf a_1$의 길이를 벡터 프로젝션은 벡터 $\mathbf a_1$를 나타난다.](https://upload.wikimedia.org/wikipedia/commons/9/98/Projection_and_rejection.png){ style="margin: auto; display: block; border:1px solid #2d2d2d;" }
+![벡터 $\mathbf a$를 벡터 $\mathbf b$로 프로젝션 할 때 스칼라 프로젝션은 $\mathbf a_1$의 길이를, 벡터 프로젝션은 벡터 $\mathbf a_1$를 나타난다.](https://upload.wikimedia.org/wikipedia/commons/9/98/Projection_and_rejection.png){ style="margin: auto; display: block; border:1px solid #2d2d2d;" }
 :::
 
 스칼라 프로젝션 $a_1$의 정의는 다음과 같다. 
