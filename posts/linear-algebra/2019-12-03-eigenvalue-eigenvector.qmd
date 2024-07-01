@@ -258,6 +258,5 @@ PCA를 예로 들어보자. $x-y$ 축 위에 찍힌 점들에 대해서 변동�
 
 ## 참고 
 
-Cherney, Denton and Waldron, [12.3 Eigenspaces](https://math.libretexts.org/Bookshelves/Linear_Algebra/Map%3A_Linear_Algebra_(Waldron_Cherney_and_Denton)/12%3A_Eigenvalues_and_Eigenvectors/12.03%3A_Eigenspaces), [Linear Algebra](https://math.libretexts.org/Bookshelves/Linear_Algebra/Map:_Linear_Algebra_(Waldron_Cherney_and_Denton)).
-
-Boehmke & Greenwell, [Principal Compnents Analysis](https://bradleyboehmke.github.io/HOML/pca.html), [Hands-On Machine Learning with R](https://bradleyboehmke.github.io/HOML/15-pca.html)
+- Cherney, Denton and Waldron, [12.3 Eigenspaces](https://math.libretexts.org/Bookshelves/Linear_Algebra/Map%3A_Linear_Algebra_(Waldron_Cherney_and_Denton)/12%3A_Eigenvalues_and_Eigenvectors/12.03%3A_Eigenspaces), [Linear Algebra](https://math.libretexts.org/Bookshelves/Linear_Algebra/Map:_Linear_Algebra_(Waldron_Cherney_and_Denton)).
+- Boehmke & Greenwell, [Principal Compnents Analysis](https://bradleyboehmke.github.io/HOML/pca.html), [Hands-On Machine Learning with R](https://bradleyboehmke.github.io/HOML/15-pca.html)
