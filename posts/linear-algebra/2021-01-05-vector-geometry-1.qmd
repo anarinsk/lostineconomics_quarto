@@ -86,8 +86,8 @@ $p_0$를 지나는 무한 평면 P는 다음과 같이 정의된다. 평면을 �
 
 ### Normal vector 
 
-:::{layout="[-5, 10, -5]"}
-![두 벡터의 크로스 프로덕트](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Cross_product_parallelogram.svg/960px-Cross_product_parallelogram.svg.png){ style="margin: auto; display: block; border:0px solid #2d2d2d;" }
+:::{layout="[-8, 10, -8]"}
+![두 벡터의 크로스 프로덕트; 벡터 a와 벡터 b가 형성하는 평행사변형과 직교하면서 해당 평행사변형의 면적을 높이로 지니는 벡터를 나타낸다. 여기서 평형사변형과 직교하는 벡터는 노멀벡터이다.](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Cross_product_parallelogram.svg/960px-Cross_product_parallelogram.svg.png){ style="margin: auto; display: block; border:0px solid #2d2d2d;" }
 :::
 
 노멀 벡터는 아래 평면(plane) 혹은 벡터과 직교하는 성분의 벡터다. 이 녀석을 어떻게 구할까? 평면 $P$의 parametric 식을 보자. 2차원 플레인을 구성하는 두 벡터 $\vec v$, $\vec w$가 있다. 노멀 벡터는 이 두 성분 모두와 직교하는 성분의 벡터이다. 이는 바로 크로스 프로덕트의 정의이다. 
