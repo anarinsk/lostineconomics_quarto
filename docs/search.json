@@ -3714,6 +3714,6 @@
     "href": "posts/computer-tool/2024-07-01-quarto-put-figure.html#몇-가지-질문",
     "title": "Quarto 문서에서 그림 정렬하기",
     "section": "몇 가지 질문",
-    "text": "몇 가지 질문\n\nCaption을 가운데로 정렬할 수 있나?\nLINK를 보면 캡션 가운데 정렬을 일부러 막았다는 것을 알 수 있다. css를 고쳐서 구현할 수는 있으나 원래 취지를 살려두자.\n\n\n\n그림 배치 사례\nFigure 1: 현재 평면을 지나는 점 \\(\\mathbf p_0\\)를 두고 평면을 원점으로 밀어보자. 이때 평면을 정의하는 노멀 벡터 \\(\\vec n\\)을 표현하면 원점과 이 점을 잇는 벡터 \\(\\vec p_0\\)f를 \\(\\vec n\\)으로 프로젝션한 벡터의 길이가 평면과 원점의 거리가 된다.\nFigure 2: 현재 평면을 지나는 점 \\(\\mathbf p_0\\)를 두고 평면을 원점으로 밀어보자. 이때 평면을 정의하는 노멀 벡터 \\(\\vec n\\)을 표현하면 원점과 이 점을 잇는 벡터 \\(\\vec p_0\\)f를 \\(\\vec n\\)으로 프로젝션한 벡터의 길이가 평면과 원점의 거리가 된다.\nFigure 3: A line plot on a polar axis (native Python code)\nFigure 4: A line plot on a polar axis (with layout)\nFigure 5: A line plot on a polar axis (with layout + fig.set_size_inches()"
+    "text": "몇 가지 질문\n\nCaption을 가운데로 정렬할 수 있나?\n🔗LINK를 보면 캡션 가운데 정렬을 일부러 막았다는 것을 알 수 있다. css를 고쳐서 구현할 수는 있으나 원래 취지를 살려두자.\n\n\n\n그림 배치 사례\nFigure 1: 현재 평면을 지나는 점 \\(\\mathbf p_0\\)를 두고 평면을 원점으로 밀어보자. 이때 평면을 정의하는 노멀 벡터 \\(\\vec n\\)을 표현하면 원점과 이 점을 잇는 벡터 \\(\\vec p_0\\)f를 \\(\\vec n\\)으로 프로젝션한 벡터의 길이가 평면과 원점의 거리가 된다.\nFigure 2: 현재 평면을 지나는 점 \\(\\mathbf p_0\\)를 두고 평면을 원점으로 밀어보자. 이때 평면을 정의하는 노멀 벡터 \\(\\vec n\\)을 표현하면 원점과 이 점을 잇는 벡터 \\(\\vec p_0\\)f를 \\(\\vec n\\)으로 프로젝션한 벡터의 길이가 평면과 원점의 거리가 된다.\nFigure 3: A line plot on a polar axis (native Python code)\nFigure 4: A line plot on a polar axis (with layout)\nFigure 5: A line plot on a polar axis (with layout + fig.set_size_inches()"
   }
 ]

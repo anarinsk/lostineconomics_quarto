@@ -8,8 +8,10 @@ categories: [quarto, document-tool]
 #fig-align: center
 jupyter: python3
 draft: false
-code-overflow: wrap
-code-line-numbers: true
+format:
+  html:
+    code-overflow: wrap
+    code-line-numbers: false
 ---
 
 ## TL; DR
@@ -67,7 +69,7 @@ Quarto 문서의 그림 배치에 관한한 공식 문서에 아주 잘 소개�
 
 @fig-with-layout 은 다음과 같은 코드로 생성했다. 
 
-```md {.code-overflow-wrap}
+```md{.code-overflow-wrap}
 :::{layout="[-5, 10, -5]"}
 ![현재 평면을 지나는 점 $\mathbf p_0$를 두고 평면을 원점으로 밀어보자. 이때 평면을 정의하는 노멀 벡터 $\vec n$을 표현하면 원점과 이 점을 잇는 벡터 $\vec p_0$f를 $\vec n$으로 프로젝션한 벡터의 길이가 평면과 원점의 거리가 된다.](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/projection/plane.png?raw=true){ #fig-with-layout style="margin: auto; display: block; border:0px solid #2d2d2d;" }
 :::
@@ -96,6 +98,7 @@ Quarto 문서의 그림 배치에 관한한 공식 문서에 아주 잘 소개�
 우선 코드에서 생성된 그림을 먼저 보자. 
 
 ```{python}
+#| code-line-numbers: true
 #| label: fig-polar
 #| fig-cap: "A line plot on a polar axis (native Python code)"
 
@@ -149,6 +152,7 @@ plt.show()
 :::{layout="[-2, 10, -2]"}
 ```{python}
 #| echo: true
+#| code-line-numbers: true
 #| label: fig-polar-3
 #| fig-cap: "A line plot on a polar axis (with `layout` + fig.set_size_inches()"
 
@@ -176,5 +180,5 @@ plt.show()
 
 ### Caption을 가운데로 정렬할 수 있나? 
 
-[LINK](https://quarto.org/docs/authoring/figures.html#figure-alignment)를 보면 캡션 가운데 정렬을 일부러 막았다는 것을 알 수 있다. css를 고쳐서 구현할 수는 있으나 원래 취지를 살려두자. 
+🔗[LINK](https://quarto.org/docs/authoring/figures.html#figure-alignment)를 보면 캡션 가운데 정렬을 일부러 막았다는 것을 알 수 있다. css를 고쳐서 구현할 수는 있으나 원래 취지를 살려두자. 
 
