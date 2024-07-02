@@ -271,13 +271,13 @@ r(M) = \dim(\mathcal R (M)) = \dim(\mathcal C(M))
 </section>
 <section id="subset-vs-subspace" class="level3">
 <h3 class="anchored" data-anchor-id="subset-vs-subspace">Subset vs subspace</h3>
-<p>부분집합은 원래 집합에 일정한 조건을 부여한 것이고, 이 점에서는 서브 스페이스 역시 부분 집합에 속한다. 다만 모든 부분 집합이 서브 스페이스가 되진 않는다. 이 점에서 서브 스페이스의 조건이 보다 제약적이다.</p>
-<p>다음과 같은 두 방정식의 해를 비교해보자. <span class="math inline">\(A \vec x = \vec b\)</span>, <span class="math inline">\(A \vec x = \vec 0\)</span></p>
-<p><span class="math inline">\(A \vec v_1 = \vec b\)</span>와 <span class="math inline">\(A \vec v_2 = \vec b\)</span>를 생각해보자. <span class="math inline">\(A(\vec v_1 + \vec v_2)\)</span>는 원래의 벡터 스페이스에 들어 있는가?</p>
-<p><span class="math display">\[
-A(\vec v_1 + \vec v_2) = 2 \vec b
-\]</span></p>
-<p><span class="math inline">\(\vec b = \vec 0\)</span>가 아니라면, <span class="math inline">\(\vec v_1 + \vec v_2\)</span>는 해가 될 수 없다. 조금 더 자세하게 표현해보자.</p>
+<p>부분집합은 원래 집합에 일정한 조건을 부여한 것이다. 즉 원래 집합의 원소를 모아서 만든 집합니다. 이 점에서는 서브 스페이스 역시 부분 집합에 속한다.</p>
+<p>반대로 모든 부분 집합이 서브 스페이스가 되진 않는다. 이 점에서 서브 스페이스의 조건이 보다 제약적이다. 서브 스페이스란 해당 부분 집합이 자체로 벡터 스페이스가 되어야 한다. 즉, 영 벡터를 포함하고, 덧셈과 스칼라 곱에 대해 닫혀 있어야 한다.</p>
+<p>예를 들어보자. <span class="math inline">\(\mathbb R^3\)</span>에서 모든 벡터의 첫번째 요소가 0인 집합은 <span class="math inline">\(\{ (0, y, z) | y, z \in \mathbb R \}\)</span>은 서브 스페이스다. 이는 영 벡터를 포함하고, 덧셈과 스칼라 곱에 대해 닫혀 있기 떄문이다.</p>
+<p>반면 <span class="math inline">\((1,0,0)\)</span>, <span class="math inline">\((0, 1, 1)\)</span>, <span class="math inline">\((0, 0, 1)\)</span>을 원소로 하는 부분 집합이 있다고 하자. 이 부분 집합은 벡터 스페이스가 될 수 없다. 우선 <span class="math inline">\((0,0,0)\)</span>을 포함하고 있지 않으며 덧셈이 대해서 닫혀 있지도 않고, 스칼라 곱에 대해서도 닫혀 있지 않다.</p>
+</section>
+<section id="solution-space" class="level3">
+<h3 class="anchored" data-anchor-id="solution-space">Solution space</h3>
 <p><span class="math inline">\(A \vec v = \vec b\)</span>의 해 공간은 다음과 같은 완전해의 집합이다.</p>
 <p><span class="math display">\[
 \{ \vec c + \vec v_n\} \text{ where }\vec v_n \in \mathcal N (A)
@@ -908,7 +908,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
