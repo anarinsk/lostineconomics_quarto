@@ -252,10 +252,14 @@ window.Quarto = {
 <p>&nbsp;</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 62.5%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://img-aws.ehowcdn.com/600x600p/s3-us-west-1.amazonaws.com/contentlab.studiod/1/29/8a412aea5e1c4066a4874e20e072cbcf.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="점은 위치만을 지니고 벡터는 방향성과 크기를 지닌다."><img src="https://img-aws.ehowcdn.com/600x600p/s3-us-west-1.amazonaws.com/contentlab.studiod/1/29/8a412aea5e1c4066a4874e20e072cbcf.png" class="img-fluid figure-img" style="margin: auto; display: block; border:1px solid #2d2d2d;" alt="점은 위치만을 지니고 벡터는 방향성과 크기를 지닌다."></a></p>
-<figcaption>점은 위치만을 지니고 벡터는 방향성과 크기를 지닌다.</figcaption>
+<div id="fig-vector" class="quarto-figure quarto-figure-center quarto-float anchored" style="margin: auto; display: block; border:0px solid #2d2d2d;">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-vector-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://img-aws.ehowcdn.com/600x600p/s3-us-west-1.amazonaws.com/contentlab.studiod/1/29/8a412aea5e1c4066a4874e20e072cbcf.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="https://img-aws.ehowcdn.com/600x600p/s3-us-west-1.amazonaws.com/contentlab.studiod/1/29/8a412aea5e1c4066a4874e20e072cbcf.png" class="img-fluid figure-img" style="margin: auto; display: block; border:0px solid #2d2d2d;"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vector-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: 점은 위치만을 지니고 벡터는 방향성과 크기를 지닌다.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -264,11 +268,11 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>점과 벡터를 연결해보자. 벡터 <span class="math inline">\(a\)</span>와 벡터 <span class="math inline">\(b\)</span>는 크기와 방향성만 지니고 있을 뿐이다. 이를 어떻게 결합하는지에 따라서 벡터의 합과 벡터의 차가 위 그림처럼 구성될 수 있다.</p>
+<p><strong>?@fig-vector/a에서</strong> 보듯이 벡터 <span class="math inline">\(a\)</span>와 벡터 <span class="math inline">\(b\)</span>는 크기와 방향성만 지니고 있을 뿐이다.</p>
 </section>
-<section id="vector" class="level3">
+<section id="vector" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="vector">Vector</h3>
-<p><span class="math inline">\(p_0\)</span>를 지나는 무한의 1차원 벡터는 다음과 같이 정의된다.</p>
+<p>좌표에서 점과 점을 연결하면 이를 통해 벡터를 얻을 수 있다. <span class="math inline">\(P_0\)</span>를 지나는 무한의 1차원 벡터는 다음과 같이 정의된다.</p>
 <ul>
 <li>Parametric equation:</li>
 </ul>
@@ -308,7 +312,10 @@ l : \lbrace p_0 + t \vec v, t \in \mathbb R \rbrace
 <p><span class="math display">\[
 l: \lbrace \dfrac{x - p_{0x}}{v_x} = \dfrac{y - p_{0y}}{v_y}  =  \dfrac{z - p_{0z}}{v_z} \rbrace
 \]</span></p>
-<p>도출 과정은 아래와 같다. 앞서 파리메트릭 표현에서 임의 <span class="math inline">\(P\)</span>의 좌표 <span class="math inline">\((x, y, z)\)</span>는 다음과 같다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="math inline">\(p_{ab}\)</span>에서 <span class="math inline">\(a\)</span>는 해당 점의 인덱스이며, <span class="math inline">\(b\)</span>는 해당 점의 개별 좌표를 나타낸다. 즉, <span class="math inline">\(b \in \{ x, y, z \}\)</span>이다.</p>
+</div></div><p>도출 과정은 아래와 같다. 앞서 파리메트릭 표현에서 임의 <span class="math inline">\(P\)</span>의 좌표 <span class="math inline">\((x, y, z)\)</span>는 다음과 같다.</p>
 <p><span class="math display">\[
 \vec r = (x, y, z) = ( p_{0x} + t v_x, p_{0y} + t v_y, p_{0z} + t v_z )
 \]</span></p>
@@ -331,8 +338,8 @@ l: \lbrace \dfrac{x - p_{0x}}{v_x} = \dfrac{y - p_{0y}}{v_y}  =  \dfrac{z - p_{0
 <li>Geometric equation: <span class="math inline">\(P : \lbrace (x, y, z) \in \mathbb R^3 | \vec n \cdot [(x,y,z) - p_0] = 0 \rbrace \text{~with normal vector $\vec n$}\)</span></li>
 </ul>
 </section>
-<section id="normal-vector" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="normal-vector">Normal vector</h3>
+<section id="more-on-normal-vector" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="more-on-normal-vector">More on normal vector</h3>
 <div>
 
 </div>
@@ -344,8 +351,8 @@ l: \lbrace \dfrac{x - p_{0x}}{v_x} = \dfrac{y - p_{0y}}{v_y}  =  \dfrac{z - p_{0
 <div class="quarto-layout-cell" style="flex-basis: 38.5%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Cross_product_parallelogram.svg/960px-Cross_product_parallelogram.svg.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="두 벡터의 크로스 프로덕트; 벡터 a와 벡터 b가 형성하는 평행사변형과 직교하면서 해당 평행사변형의 면적을 높이로 지니는 벡터를 나타낸다. 여기서 평형사변형과 직교하는 벡터는 노멀벡터이다."><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Cross_product_parallelogram.svg/960px-Cross_product_parallelogram.svg.png" class="img-fluid figure-img" style="margin: auto; display: block; border:0px solid #2d2d2d;" alt="두 벡터의 크로스 프로덕트; 벡터 a와 벡터 b가 형성하는 평행사변형과 직교하면서 해당 평행사변형의 면적을 높이로 지니는 벡터를 나타낸다. 여기서 평형사변형과 직교하는 벡터는 노멀벡터이다."></a></p>
-<figcaption>두 벡터의 크로스 프로덕트; 벡터 a와 벡터 b가 형성하는 평행사변형과 직교하면서 해당 평행사변형의 면적을 높이로 지니는 벡터를 나타낸다. 여기서 평형사변형과 직교하는 벡터는 노멀벡터이다.</figcaption>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Cross_product_parallelogram.svg/960px-Cross_product_parallelogram.svg.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="두 벡터의 크로스 프로덕트; 벡터 a와 벡터 b가 형성하는 평행사변형과 직교하면서 해당 평행사변형의 면적(|a \times b|)을 높이로 지니는 벡터를 나타낸다. 여기서 평형사변형과 직교하는 벡터는 노멀벡터이다."><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Cross_product_parallelogram.svg/960px-Cross_product_parallelogram.svg.png" class="img-fluid figure-img" style="margin: auto; display: block; border:0px solid #2d2d2d;" alt="두 벡터의 크로스 프로덕트; 벡터 a와 벡터 b가 형성하는 평행사변형과 직교하면서 해당 평행사변형의 면적(|a \times b|)을 높이로 지니는 벡터를 나타낸다. 여기서 평형사변형과 직교하는 벡터는 노멀벡터이다."></a></p>
+<figcaption>두 벡터의 크로스 프로덕트; 벡터 a와 벡터 b가 형성하는 평행사변형과 직교하면서 해당 평행사변형의 면적(<span class="math inline">\(|a \times b|\)</span>)을 높이로 지니는 벡터를 나타낸다. 여기서 평형사변형과 직교하는 벡터는 노멀벡터이다.</figcaption>
 </figure>
 </div>
 </div>
@@ -370,9 +377,9 @@ l: \lbrace \dfrac{x - p_{0x}}{v_x} = \dfrac{y - p_{0y}}{v_y}  =  \dfrac{z - p_{0
 
 
 <div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">점은 위치만을 지니고 벡터는 방향성과 크기를 지닌다.</span>
+<span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: 점은 위치만을 지니고 벡터는 방향성과 크기를 지닌다.</span>
 <span class="glightbox-desc lightbox-desc-2">점에서 벡터를 생성해보자.</span>
-<span class="glightbox-desc lightbox-desc-3">두 벡터의 크로스 프로덕트; 벡터 a와 벡터 b가 형성하는 평행사변형과 직교하면서 해당 평행사변형의 면적을 높이로 지니는 벡터를 나타낸다. 여기서 평형사변형과 직교하는 벡터는 노멀벡터이다.</span>
+<span class="glightbox-desc lightbox-desc-3">두 벡터의 크로스 프로덕트; 벡터 a와 벡터 b가 형성하는 평행사변형과 직교하면서 해당 평행사변형의 면적(<span class="math inline">\(|a \times b|\)</span>)을 높이로 지니는 벡터를 나타낸다. 여기서 평형사변형과 직교하는 벡터는 노멀벡터이다.</span>
 </div>
 </section>
 
@@ -931,7 +938,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
