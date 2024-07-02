@@ -3,15 +3,15 @@ title:  Matrix as Linear Transformation
 description: Matrix as Linear Transformation
 author: "JS HUHH"
 date: "01/07/2021"
-image: "https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg"
+image: "./images/cats-matrix.webp"
 categories: [linear-algebra]
 draft: false
 ---
+:::{layout="[-2, 10, -2]"}
+![function vs linear transformation ](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func.png?raw=true){ style="margin: auto; display: block; border:1px solid #2d2d2d;"}
+:::
 
-![function vs linear transformation](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func.png?raw=true){ .my-figure7 }
-
-<br>
-위의 내용을 이해할 수 있다면, 더 할 것이 없다. 일단 잘 봐두도록 하자. 나중에 돌아와서 음미하면 의미가 와 닿을 것이다. 
+위의 내용을 이해할 수 있다면, 여기 내용에서 더 배울 것이 없다. 일단 잘 봐두도록 하자. 나중에 돌아와서 음미하면 의미가 와 닿을 것이다. 
 
 선형 변환은 특별한 형태의 함수로 이해할 수 있다. 다만 투입과 산출이 다양한 차원(벡터)을 취할 수 있다. 그리고 이 선형 변환이 매트릭스로 표현될 수 있다. 때문에 매트릭스 표현이 강력하다. 추상적인 선형 변환 함수를 구체적으로 표현하고 쉽게 계산할 수 있게 만드는 것이 매트릭스다. 
 
@@ -24,9 +24,10 @@ draft: false
 - $T: V \to W$: $V$에서 $W$로의 선형 변환 
 	- $T(\vec v) = \vec w$. 즉, $\vec v \in V$를 $\vec w \in W$로 변환하는 것을 나타낸다. 
 
-![함수로서의 행렬](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func_fig.png?raw=true){ .my-figure7 }
+:::{layout="[-2, 10, -2]"}
+![함수로서의 행렬](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func_fig.png?raw=true){ style="margin: auto; display: block; border:1px solid #2d2d2d;"}
+:::
 
-<br>
 함수와 마찬가지로 위의 선형 변환에서 치역(Im($T$))와 커널(스칼라 함수에서는 $f(x) = 0$의 해)이 정의된다. 
 
 $$
@@ -62,7 +63,9 @@ $$
 
 선형의 의미는 무엇일까? 기하적으로 선을 다룬다는 뜻이 아니다. 선형의 의미는 함수적인 의미다. 아래 그림을 보자. 
 
-![선형 매핑의 의미](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/linearity.png?raw=true){ .my-figure7 }
+:::{layout="[-2, 10, -2]"}
+![선형 매핑의 의미](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/linearity.png?raw=true){ style="margin: auto; display: block; border:1px solid #2d2d2d;"}
+:::
 
 즉, 
 
@@ -88,7 +91,7 @@ T(\hat e_1) & \cdots & T(\hat e_n) \\
 \end{aligned}
 $$
 
-## Eat This!  
+## 그냥 외우자! 
 
 ### Mapping Spaces 
 
@@ -125,7 +128,7 @@ $$
 W = V_1 \oplus V_2 \oplus \dotsb \oplus V_k
 $$
 
-이때 $V_i, V_j$ for $i, j \in \lbrace 1, 2, \dotsc, k \rbrace$가 서로 orthogonal한 것이 orthogonal direct usm이다. 
+이때 $V_i, V_j$ for $i, j \in \lbrace 1, 2, \dotsc, k \rbrace$가 서로 orthogonal한 것이 orthogonal direct sum이다. 
 :::
 
 $$
@@ -147,7 +150,9 @@ $$
 
 ### Surjective and Injective 
 
-![전사 함수와 단사 함수](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/sur_inj.png?raw=true){ .my-figure7 }
+:::{layout="[-2, 10, -2]"}
+![전사 함수와 단사 함수](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/sur_inj.png?raw=true){ style="margin: auto; display: block; border:1px solid #2d2d2d;"}
+:::
 
 함수에서 전사 함수와 단사 함수의 개념을 그대로 적용할 수 있다. 선형 변환 혹은 행렬도 함수다. 
 
