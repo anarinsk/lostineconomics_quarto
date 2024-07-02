@@ -12,7 +12,6 @@ code-overflow: wrap
 code-line-numbers: true
 ---
 
-
 ## TL; DR
 
 - 그림 크기, 위치를 잡는 데에는 `layout`을 쓰자. 
