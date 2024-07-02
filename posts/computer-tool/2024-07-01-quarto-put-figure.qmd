@@ -171,3 +171,10 @@ plt.show()
 :::
 
 아쉽게도 코드에서 생성되는 그의 경우 작동이나 문법이 아직 아쉬운 부분이 있다. 아쉬운대로 필요에 맞춰서 쓰면 되겠다. 
+
+## 몇 가지 질문 
+
+### Caption을 가운데로 정렬할 수 있나? 
+
+[LINK](https://quarto.org/docs/authoring/figures.html#figure-alignment)를 보면 캡션 가운데 정렬을 일부러 막았다는 것을 알 수 있다. css를 고쳐서 구현할 수는 있으나 원래 취지를 살려두자. 
+

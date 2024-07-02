@@ -479,6 +479,12 @@ Figure&nbsp;5: A line plot on a polar axis (with <code>layout</code> + fig.set_s
 </div>
 </div>
 <p>아쉽게도 코드에서 생성되는 그의 경우 작동이나 문법이 아직 아쉬운 부분이 있다. 아쉬운대로 필요에 맞춰서 쓰면 되겠다.</p>
+</section>
+<section id="몇-가지-질문" class="level2">
+<h2 class="anchored" data-anchor-id="몇-가지-질문">몇 가지 질문</h2>
+<section id="caption을-가운데로-정렬할-수-있나" class="level3">
+<h3 class="anchored" data-anchor-id="caption을-가운데로-정렬할-수-있나">Caption을 가운데로 정렬할 수 있나?</h3>
+<p><a href="https://quarto.org/docs/authoring/figures.html#figure-alignment">LINK</a>를 보면 캡션 가운데 정렬을 일부러 막았다는 것을 알 수 있다. css를 고쳐서 구현할 수는 있으나 원래 취지를 살려두자.</p>
 
 
 <div class="hidden" aria-hidden="true">
@@ -489,6 +495,7 @@ Figure&nbsp;5: A line plot on a polar axis (with <code>layout</code> + fig.set_s
 <span class="glightbox-desc lightbox-desc-5">Figure&nbsp;4: A line plot on a polar axis (with <code>layout</code>)</span>
 <span class="glightbox-desc lightbox-desc-6">Figure&nbsp;5: A line plot on a polar axis (with <code>layout</code> + fig.set_size_inches()</span>
 </div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1046,7 +1053,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
