@@ -3,7 +3,7 @@ title:  Eigenspace, part 2
 description: 아이겐 공간을 이해하자. 
 author: "JS HUHH"
 date: "01/18/2021"
-image: "https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg"
+image: "./images/cats-matrix.webp"
 categories: [linear-algebra]
 draft: false
 ---

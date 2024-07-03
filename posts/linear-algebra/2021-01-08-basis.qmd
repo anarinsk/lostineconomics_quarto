@@ -3,7 +3,7 @@ title:  Basis
 description: 두서 없이 정리
 author: "JS HUHH"
 date: "01/08/2021"
-image: "https://i.ytimg.com/vi/kjBOesZCoqc/maxresdefault.jpg"
+image: "./images/cats-matrix.webp"
 categories: [linear-algebra]
 draft: false
 ---
@@ -71,7 +71,7 @@ $$
 
 $b_i$의 값을 제대로 반영하기 위해서는 정규화된 orthorgonal basis가 필요하고, $\frac{e_i}{\Vert e_i \Vert}$가 내적 계산에 들어간다. 
 
-## Eat This! 
+## 외우자!
 
 ### Generic basis 
 
@@ -166,7 +166,7 @@ $$
 기저 변환(change-of-basis)은 매트릭스를 이해하는 매우 중요한 방식이다. 이를 통해 역시 매트릭스 표현에 도달할 수 있다. 선형 번환 $T: V \to W$가 있다고 하자. 
 
 :::{ .column-margin }
-표기법 상 룰을 하나 정하도록 하자. $\phantom{}_{B_W}{M_T}_{B_V}$이라고 쓰는 이는 매트릭스 전후로 투입과 산출 벡터를 표기해주는 것이다. 죽, $M_T$의 투입은 ${B_V}$ 이고 산출은 $B_W$이다.  
+표기법 상 룰을 하나 정하도록 하자. $\phantom{}_{B_W}{M_T}_{B_V}$이라고 쓰는 이는 매트릭스 전후로 산출과 투입 벡터를 표기해주는 것이다. 죽, $M_T$의 투입은 ${B_V}$ 이고 산출은 $B_W$이다. 보통의 함수 $y=f(x)$를 떠올리면 된다. 
 :::
 
 $$
@@ -242,7 +242,7 @@ $$
 이제 기저를 $B \to B^\prime$으로 바꾸는 어떤 변환이 있다고 하자. 이 변환을 $\phantom{}_{B^{\prime}}[1]_B$라고 표기하자. 이 표기의 뜻은 매트릭스의 인풋(오른쪽)이 원래의 기저 $B$이고 변환을 통해 산출되는 기저를 $B^{\prime}$으로 나타낸 것이다. $1$의 의미는 벡터의 기저만 바뀌었을 뿐 동일한 벡터의 변환이라는 의미를 지닌다 즉,
 
 $$
-(v^{\prime}_1, v^{\prime}_2, v^{\prime}_3) = v^{\prime}_1 \hat e^{\prime}_1 +  + v_2 \hat e^{\prime}_2 + v_3 \hat e^{\prime}_3 = \vec v = v_1 \hat e_1 + v_2 \hat e_2 + v_3 \hat e_3 
+(v^{\prime}_1, v^{\prime}_2, v^{\prime}_3) = v^{\prime}_1 \hat e^{\prime}_1 + v_2 \hat e^{\prime}_2 + v_3 \hat e^{\prime}_3 = \vec v = v_1 \hat e_1 + v_2 \hat e_2 + v_3 \hat e_3 
 $$
 
 $_{B^{\prime}}1_B$을 찾기 위해서 $\hat e_1$을 $B^{\prime}$ 기저로 표현해보자. 

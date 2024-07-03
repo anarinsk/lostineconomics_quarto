@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -310,8 +310,8 @@ Q \Lambda Q^{-1}[\vec v]_{B_S} = \underbrace{\phantom{}_{B_S}[1]_{B_\lambda}}_{Q
 \]</span></p>
 <p>행렬의 대각화란 일정한 변환 혹은 매트릭스를 아이겐 공간을 통해 다시 해석하는 과정이다. 즉, <span class="math inline">\(B_S \to B_\lambda \to B_S\)</span>의 과정을 거친다.</p>
 <p>대각 행렬 <span class="math inline">\(\Lambda\)</span>는 아이겐벡터들로 구성된 아이겐 공간의 기저(아이겐벡터)의 크기를 나타낸다.</p>
-<section id="eat-this" class="level3">
-<h3 class="anchored" data-anchor-id="eat-this">Eat this!</h3>
+<section id="외우자" class="level3">
+<h3 class="anchored" data-anchor-id="외우자">외우자!</h3>
 <p>대각화를 통해서 아이겐밸류의 중요한 특성 두 가지를 다시 음미해보자.</p>
 <p><span class="math display">\[
 {\rm det}(A) = \vert A \vert = \prod_{i} \lambda_i
@@ -404,19 +404,49 @@ v = \langle v, \hat e_1 \rangle  \hat e_1 + \dotsb + \langle v, \hat e_n \rangle
 <li><span class="math inline">\(e_1 = v_1\)</span></li>
 <li><span class="math inline">\(e_2 = v_2 - \Pi_{e_1}(v_2)\)</span></li>
 </ul>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[-2, 10, -2]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="Gram-Schmidt 분해"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="my-figure7 img-fluid figure-img" alt="Gram-Schmidt 분해"></a></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="Gram-Schmidt 분해"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gram%E2%80%93Schmidt_process.svg/450px-Gram%E2%80%93Schmidt_process.svg.png" class="img-fluid figure-img" style="margin: auto; display: block; border:0px solid #2d2d2d;" alt="Gram-Schmidt 분해"></a></p>
 <figcaption>Gram-Schmidt 분해</figcaption>
 </figure>
 </div>
-<p><br> 위의 그림에서 보듯이 <span class="math inline">\(v_2\)</span>는 <span class="math inline">\(v_1\)</span> 프로젝션된 벡터와 이와 직교하는 <span class="math inline">\(e_2\)</span>와의 합으로 계산할 수 있다. 따라서 <span class="math inline">\(e_2 = v_2 - \Pi_{e_1}(v_2)\)</span>가 성립한다. 벡터의 빼기 관점에서 생각해보면 어떨까? <span class="math inline">\(v_2\)</span>와 <span class="math inline">\(\Pi_{e_1}(v_2)\)</span>의 차이가 <span class="math inline">\(e_2\)</span>다. 벡터는 방향과 크기로 정의된다는 점을 다시 기억하자. 같은 방식으로 아래 그림에서 보듯이 더 많은 축과 직교하는 벡터들을 구성할 수 있다.</p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<p>위의 그림에서 보듯이 <span class="math inline">\(v_2\)</span>는 <span class="math inline">\(v_1\)</span> 프로젝션된 벡터와 이와 직교하는 <span class="math inline">\(e_2\)</span>와의 합으로 계산할 수 있다. 따라서 <span class="math inline">\(e_2 = v_2 - \Pi_{e_1}(v_2)\)</span>가 성립한다. 벡터의 빼기 관점에서 생각해보면 어떨까? <span class="math inline">\(v_2\)</span>와 <span class="math inline">\(\Pi_{e_1}(v_2)\)</span>의 차이가 <span class="math inline">\(e_2\)</span>다. 벡터는 방향과 크기로 정의된다는 점을 다시 기억하자. 같은 방식으로 아래 그림에서 보듯이 더 많은 축과 직교하는 벡터들을 구성할 수 있다.</p>
 <p>이후 <span class="math inline">\(\hat e_i = \dfrac{e_i}{\Vert e_i \Vert}\)</span>로 <span class="math inline">\(e_i\)</span>를 표준화하면 된다.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[-2, 10, -2]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 71.4%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="Gram-Schmidt 3차원 분해"><img src="https://gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="my-figure7 img-fluid figure-img" alt="Gram-Schmidt 3차원 분해"></a></p>
+<p><a href="https://gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2" title="Gram-Schmidt 3차원 분해"><img src="https://gaussian37.github.io/assets/img/math/la/gram_schmidt_process/2.png" class="img-fluid figure-img" style="margin: auto; display: block; border:0px solid #2d2d2d;" alt="Gram-Schmidt 3차원 분해"></a></p>
 <figcaption>Gram-Schmidt 3차원 분해</figcaption>
 </figure>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 14.3%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
 </div>
 <p><span class="math display">\[
 v = {\rm proj}_{u_1} (v) + {\rm proj}_{u_2}(v) + w
@@ -442,8 +472,8 @@ e_n &amp; = v_n - \sum_{i=1}^{n-1} \Pi_{e_i}(v_n)
 <li>아이겐분해(eigendecomposition)이란 닮음 행렬을 통해서 기저를 바꾸는 과정인데, 이때 기저를 바꾸는 매트릭스로 동원되는 것이 아이겐벡터 매트릭스다.</li>
 </ol>
 </section>
-<section id="eat-this-1" class="level3">
-<h3 class="anchored" data-anchor-id="eat-this-1">Eat this!</h3>
+<section id="외우자-1" class="level3">
+<h3 class="anchored" data-anchor-id="외우자-1">외우자!</h3>
 <ol type="1">
 <li><span class="math inline">\(A\)</span> positive semidefinite <span class="math inline">\(\Rightarrow\)</span> 아이겐밸류는 비음이다.</li>
 <li><span class="math inline">\(A\)</span> symmetric <span class="math inline">\(\Rightarrow\)</span> 아이겐밸류는 실수</li>
@@ -1013,7 +1043,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

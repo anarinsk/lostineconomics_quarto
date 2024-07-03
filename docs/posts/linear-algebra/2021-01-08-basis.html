@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -276,8 +276,8 @@ e_i \cdot e_j = 0 &amp; \text{if $i \neq j$}
 <p><span class="math inline">\(b_i\)</span>의 값을 제대로 반영하기 위해서는 정규화된 orthorgonal basis가 필요하고, <span class="math inline">\(\frac{e_i}{\Vert e_i \Vert}\)</span>가 내적 계산에 들어간다.</p>
 </section>
 </section>
-<section id="eat-this" class="level2">
-<h2 class="anchored" data-anchor-id="eat-this">Eat This!</h2>
+<section id="외우자" class="level2">
+<h2 class="anchored" data-anchor-id="외우자">외우자!</h2>
 <section id="generic-basis" class="level3">
 <h3 class="anchored" data-anchor-id="generic-basis">Generic basis</h3>
 <p>서로 직교하지 않는 기저,</p>
@@ -358,7 +358,7 @@ t_{2y}
 <p>기저 변환(change-of-basis)은 매트릭스를 이해하는 매우 중요한 방식이다. 이를 통해 역시 매트릭스 표현에 도달할 수 있다. 선형 번환 <span class="math inline">\(T: V \to W\)</span>가 있다고 하자.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>표기법 상 룰을 하나 정하도록 하자. <span class="math inline">\(\phantom{}_{B_W}{M_T}_{B_V}\)</span>이라고 쓰는 이는 매트릭스 전후로 투입과 산출 벡터를 표기해주는 것이다. 죽, <span class="math inline">\(M_T\)</span>의 투입은 <span class="math inline">\({B_V}\)</span> 이고 산출은 <span class="math inline">\(B_W\)</span>이다.</p>
+<p>표기법 상 룰을 하나 정하도록 하자. <span class="math inline">\(\phantom{}_{B_W}{M_T}_{B_V}\)</span>이라고 쓰는 이는 매트릭스 전후로 산출과 투입 벡터를 표기해주는 것이다. 죽, <span class="math inline">\(M_T\)</span>의 투입은 <span class="math inline">\({B_V}\)</span> 이고 산출은 <span class="math inline">\(B_W\)</span>이다. 보통의 함수 <span class="math inline">\(y=f(x)\)</span>를 떠올리면 된다.</p>
 </div></div><p><span class="math display">\[
 \begin{aligned}
 B_V &amp; = \{ \hat e_1, \dotsc, \hat e_n \} \\
@@ -421,7 +421,7 @@ c_{m1}  &amp; \cdots &amp; c_{mn} \\
 \]</span></p>
 <p>이제 기저를 <span class="math inline">\(B \to B^\prime\)</span>으로 바꾸는 어떤 변환이 있다고 하자. 이 변환을 <span class="math inline">\(\phantom{}_{B^{\prime}}[1]_B\)</span>라고 표기하자. 이 표기의 뜻은 매트릭스의 인풋(오른쪽)이 원래의 기저 <span class="math inline">\(B\)</span>이고 변환을 통해 산출되는 기저를 <span class="math inline">\(B^{\prime}\)</span>으로 나타낸 것이다. <span class="math inline">\(1\)</span>의 의미는 벡터의 기저만 바뀌었을 뿐 동일한 벡터의 변환이라는 의미를 지닌다 즉,</p>
 <p><span class="math display">\[
-(v^{\prime}_1, v^{\prime}_2, v^{\prime}_3) = v^{\prime}_1 \hat e^{\prime}_1 +  + v_2 \hat e^{\prime}_2 + v_3 \hat e^{\prime}_3 = \vec v = v_1 \hat e_1 + v_2 \hat e_2 + v_3 \hat e_3
+(v^{\prime}_1, v^{\prime}_2, v^{\prime}_3) = v^{\prime}_1 \hat e^{\prime}_1 + v_2 \hat e^{\prime}_2 + v_3 \hat e^{\prime}_3 = \vec v = v_1 \hat e_1 + v_2 \hat e_2 + v_3 \hat e_3
 \]</span></p>
 <p><span class="math inline">\(_{B^{\prime}}1_B\)</span>을 찾기 위해서 <span class="math inline">\(\hat e_1\)</span>을 <span class="math inline">\(B^{\prime}\)</span> 기저로 표현해보자.</p>
 <p><span class="math display">\[
@@ -488,7 +488,7 @@ A = C B C^{-1}
 <p>로 나타낼 수 있다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="기저 변환의 의미"><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="my-figure7 img-fluid figure-img" alt="기저 변환의 의미"></a></p>
+<p><a href="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="기저 변환의 의미"><img src="https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/basis/coord.png?raw=true" class="my-figure7 img-fluid figure-img" alt="기저 변환의 의미"></a></p>
 <figcaption>기저 변환의 의미</figcaption>
 </figure>
 </div>
@@ -1061,7 +1061,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","loop":false});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

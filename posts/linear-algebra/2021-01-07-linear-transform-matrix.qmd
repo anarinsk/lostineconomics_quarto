@@ -7,6 +7,7 @@ image: "./images/cats-matrix.webp"
 categories: [linear-algebra]
 draft: false
 ---
+
 :::{layout="[-2, 10, -2]"}
 ![function vs linear transformation ](https://github.com/anarinsk/lostineconomics-v2-1/blob/master/images/linear-transform/matrix_func.png?raw=true){ style="margin: auto; display: block; border:1px solid #2d2d2d;"}
 :::
