@@ -61,7 +61,7 @@ Noahpinion에서 예시했듯이 이렇게 볼 수도 있을 것이다.
 
 ## 참고 
 
-Noahpinion, [Imports do not subtract from GDP](https://noahpinion.substack.com/p/imports-do-not-subtract-from-gdp?s=r)
-Saylor Academy, [GDP and National Academy](https://saylordotorg.github.io/text_international-economics-theory-and-policy/s16-02-national-income-or-product-ide.html)
+- Noahpinion, [Imports do not subtract from GDP](https://noahpinion.substack.com/p/imports-do-not-subtract-from-gdp?s=r)
+- Saylor Academy, [GDP and National Academy](https://saylordotorg.github.io/text_international-economics-theory-and-policy/s16-02-national-income-or-product-ide.html)
 
 
