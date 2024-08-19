@@ -1,5 +1,5 @@
 ---
-title: "Pixi와 쓰는 R과 Julia" 
+title: "Pixi와 쓰는 R" 
 description: "꼬이면 지우고 말지!"   
 author: "JS HUHH"
 date: "04/03/2024"
@@ -170,17 +170,17 @@ Matrix 패키지가 버전이 맞지 않아서 설치가 안된다.
 
 ## Julia 설치하기 
 
-R에 비하면 훨씬 깔끔하고 운용이 쉽다. 다만 약간의 우회로가 필요하다. Conda를 이용해 Julia를 바로 설치해보면, OS에 따라서 설치가 되지 않는 경우가 있다. Juliaup을 먼저 설치하고 Pixi의 셸 환경 안에서 이를 이용해서 Julia를 설치하면 된다. 
+R에 비하면 훨씬 깔끔하고 운용이 쉽다. brew를 이용해서 juliaup을 설치하자. Linux와 Macos에서 R보다는 훨씬 편리하게 사용할 수 있다. 
 
 :::{.column-margin}
 Julia를 써보면 이 언어가 다른 어떤 고수준 프로그래밍 랭귀지에 비해서 "모던"하다는 사실을 느낄 수 있다. 우선 언어 자체의 설치가 간편하고, 패키지 설치 관리가 `toml`을 통해 이뤄진다. 
 :::
 
 ```zsh
-> pixi add juliaup
-> pixi shell 
+> brew install juliaup
 > juliaup add release # 최신 버전을 설치한다. 
 > juliaup install 1.10.3 # 특정 버전을 설치한다.
+> juliaup update # 업데이트 
 ```
 
 VS Code에서 Julia 확정을 설치하고 확장 설정에서 `Julia: Executable Path`를 찾아서 .pixi 아래 설치된 줄리아의 실행 디렉토리를 설정한다. 터미널에서 julia를 실행하고 싶으면, `.zshrc`에 해당 디렉토리를 추가하면 된다.
