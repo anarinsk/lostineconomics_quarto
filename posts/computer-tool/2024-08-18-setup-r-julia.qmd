@@ -55,8 +55,8 @@ Symlink란 윈도의 바로가기라고 생각하면 된다.
 
 패키지 폴더의 위치는 다음과 같다. 
 
-- macos: `/Users/anari/.julia/packages`
-- linux:
+- macOS: `/Users/anari/.julia/packages`
+- Linux:
 
 ### VS Code 설정 
 
@@ -116,8 +116,8 @@ lrwxr-xr-x    1 root   admin       53  8 19 19:21 Rscript -> /Library/Frameworks
 
 라이브러리의 폴더의 위치는 다음과 같다. 
 
-- macos: `/Users/anari/Library/R`
-- linux: 
+- macOS: `/Users/anari/Library/R`
+- Linux: 
 
 ### VS Code 설정 
 
