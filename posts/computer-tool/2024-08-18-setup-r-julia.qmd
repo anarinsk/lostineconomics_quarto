@@ -72,7 +72,7 @@ R 역시 Linux에서 까는 것이 그다지 용이하지 않다. Macos에서는
 
 Rig를 통해 R을 설치하자. 
 
-```shell
+```bash
 > rig install release # 최신 버전을 설치한다.
 > rig --help 
 ```
