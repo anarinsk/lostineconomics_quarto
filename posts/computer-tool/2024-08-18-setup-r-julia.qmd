@@ -20,7 +20,7 @@ format:
 
 ## Pixi는 쓰지 말자. 
 
-앞서 pixi로 R과 Julia를 세팅하는 방법을 소개했다. 하지만 그다지 쓸모가 있지는 않더라. 그래서 이번에는 직접 설치하는 방법을 정리한다. 
+앞서 pixi로 R과 Julia를 세팅하는 [방법](https://blog.lostineconomics.com/posts/computer-tool/2024-04-03-r_with_pixi.html)을 소개했다. 하지만 그다지 쓸모가 있지는 않더라. 그래서 이번에는 직접 설치하는 방법을 정리한다. 
 
 ## 전제 조건 
 
@@ -98,7 +98,7 @@ Radian: Conda를 통해 radian을 설치하자. 메인 터미널 대신 활용�
 
 `where R`를 실행하면 `/usr/local/bin/R`이 뜬다. 이 역시 Symlink다. 
 
-```shell
+```bash
 lrwxr-xr-x    1 root   admin       47  8 19 19:21 R -> /Library/Frameworks/R.framework/Resources/bin/R
 lrwxr-xr-x    1 root   admin       66  8 19 19:21 R-4.4-arm64 -> /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R
 lrwxr-xr-x    1 root   admin       66  8 19 19:21 R-release -> /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R

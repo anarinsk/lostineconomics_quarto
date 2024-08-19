@@ -233,7 +233,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="pixi는-쓰지-말자." class="level2">
 <h2 class="anchored" data-anchor-id="pixi는-쓰지-말자.">Pixi는 쓰지 말자.</h2>
-<p>앞서 pixi로 R과 Julia를 세팅하는 방법을 소개했다. 하지만 그다지 쓸모가 있지는 않더라. 그래서 이번에는 직접 설치하는 방법을 정리한다.</p>
+<p>앞서 pixi로 R과 Julia를 세팅하는 <a href="https://blog.lostineconomics.com/posts/computer-tool/2024-04-03-r_with_pixi.html">방법</a>을 소개했다. 하지만 그다지 쓸모가 있지는 않더라. 그래서 이번에는 직접 설치하는 방법을 정리한다.</p>
 </section>
 <section id="전제-조건" class="level2">
 <h2 class="anchored" data-anchor-id="전제-조건">전제 조건</h2>
@@ -297,10 +297,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="symlink-1" class="level3">
 <h3 class="anchored" data-anchor-id="symlink-1">symlink</h3>
 <p><code>where R</code>를 실행하면 <code>/usr/local/bin/R</code>이 뜬다. 이 역시 Symlink다.</p>
-<pre class="shell"><code>lrwxr-xr-x    1 root   admin       47  8 19 19:21 R -&gt; /Library/Frameworks/R.framework/Resources/bin/R
-lrwxr-xr-x    1 root   admin       66  8 19 19:21 R-4.4-arm64 -&gt; /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R
-lrwxr-xr-x    1 root   admin       66  8 19 19:21 R-release -&gt; /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R
-lrwxr-xr-x    1 root   admin       53  8 19 19:21 Rscript -&gt; /Library/Frameworks/R.framework/Resources/bin/Rscript</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       47  8 19 19:21 R <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Resources/bin/R</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       66  8 19 19:21 R-4.4-arm64 <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       66  8 19 19:21 R-release <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       53  8 19 19:21 Rscript <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Resources/bin/Rscript</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="vs-code-설정-1" class="level3">
 <h3 class="anchored" data-anchor-id="vs-code-설정-1">VS Code 설정</h3>
