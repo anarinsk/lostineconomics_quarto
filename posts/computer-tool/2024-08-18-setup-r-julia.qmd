@@ -53,6 +53,11 @@ Symlink란 윈도의 바로가기라고 생각하면 된다.
 
 위 경로가 정확한 바이너리의 경로는 아니다. 하지만 진짜 경로를 파악할 필요는 없다. Symlink의 위치면 충분하다. 
 
+패키지 폴더의 위치는 다음과 같다. 
+
+- macos: `/Users/anari/.julia/packages`
+- linux:
+
 ### VS Code 설정 
 
 Julia 익스텐션을 설치하고, `settings.json` 혹은 확장 설정에서 아래와 같이 설정하자. json 파일을 수정하는 대신 설정 화면에서 비슷한 내용을 찾아서 고쳐도 된다. 
@@ -108,6 +113,11 @@ lrwxr-xr-x    1 root   admin       66  8 19 19:21 R-4.4-arm64 -> /Library/Framew
 lrwxr-xr-x    1 root   admin       66  8 19 19:21 R-release -> /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R
 lrwxr-xr-x    1 root   admin       53  8 19 19:21 Rscript -> /Library/Frameworks/R.framework/Resources/bin/Rscript
 ```
+
+라이브러리의 폴더의 위치는 다음과 같다. 
+
+- macos: `/Users/anari/Library/R`
+- linux: 
 
 ### VS Code 설정 
 
