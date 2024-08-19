@@ -110,7 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -170,9 +170,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script>
 <script>
@@ -245,26 +247,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Julia와 R 모두 직접 설치하는 데 다소 애로사항이 있다. 다행히도 둘 모두 활용할 수 있는 전용 installer가 나와 있다. 이 녀석들을 쓰면 두 플랫폼 모두에서 쉽게 설치해서 랭귀지를 활용할 수 있다.</p>
 </section>
-<section id="julia" class="level2">
+<section id="julia" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="julia">Julia</h2>
 <section id="juliaup" class="level3">
 <h3 class="anchored" data-anchor-id="juliaup">Juliaup</h3>
 <p>뛰어난 인스톨러다. 설명이 필요 없다. 이 녀석만 있으면 플랫폼에 관계 없이 Julia를 깔고 지우고 버전 관리를 할 수 있다.</p>
 </section>
-<section id="symlink" class="level3">
+<section id="symlink" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="symlink">Symlink</h3>
-<p>아래 명령어로 확인하자.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> where <span class="ex">julia</span> <span class="co"># 설치 경로를 확인하자. </span></span>
+<p>아래 명령어로 주 실행 명령의 위치를 확인할 수 있다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Symlink란 윈도의 바로가기라고 생각하면 된다.</p>
+</div></div><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> where <span class="ex">julia</span> <span class="co"># 설치 경로를 확인하자. </span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">/opt/homebrew/bin/julia</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>위 경로가 정확한 바이너리의 경로는 아니다. 하지만 진짜 경로를 파악할 필요는 없다. Symlink의 주소를 파악하면 된다.</p>
+<p>위 경로가 정확한 바이너리의 경로는 아니다. 하지만 진짜 경로를 파악할 필요는 없다. Symlink의 위치면 충분하다.</p>
 </section>
 <section id="vs-code-설정" class="level3">
 <h3 class="anchored" data-anchor-id="vs-code-설정">VS Code 설정</h3>
-<p>Julia 익스텐션을 설치하고, <code>settings.json</code> 혹은 확장 설정에서 아래와 같이 설정하자.</p>
+<p>Julia 익스텐션을 설치하고, <code>settings.json</code> 혹은 확장 설정에서 아래와 같이 설정하자. json 파일을 수정하는 대신 설정 화면에서 비슷한 내용을 찾아서 고쳐도 된다.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"julia.executablePath"</span><span class="fu">:</span> <span class="st">"/opt/homebrew/bin/julia"</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Julia extension을 설치하면 Jupyter 커널까지 함께 이용할 수 있다.</p>
+<p>Julia extension을 설치하면 커널 선택 화면에서 “Julia Channel”을 선택할 수 있다.</p>
 </section>
 </section>
 <section id="rstat" class="level2">
@@ -296,7 +301,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="symlink-1" class="level3">
 <h3 class="anchored" data-anchor-id="symlink-1">symlink</h3>
-<p><code>where R</code>를 실행하면 <code>/usr/local/bin/R</code>이 뜬다. 이 역시 Symlink다.</p>
+<p><code>where R</code>를 실행하면 <code>/usr/local/bin/R</code>이 뜬다. 이 역시 Symlink다. 해당 폴더에 R 관련된 파일을 살펴보면 아래와 같다. Symlink가 향하는 원 파일의 위치를 알 수 있다.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       47  8 19 19:21 R <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Resources/bin/R</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       66  8 19 19:21 R-4.4-arm64 <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       66  8 19 19:21 R-release <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R</span>
@@ -304,7 +309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="vs-code-설정-1" class="level3">
 <h3 class="anchored" data-anchor-id="vs-code-설정-1">VS Code 설정</h3>
-<p>R extension을 깐다. 역시 터미널의 실행 파일 경로를 설정하면 되는데, 위 symlink 경로를 제시하면 된다. Jupyter의 경우 IRkernel을 설치했다면 쉽게 커널을 선택할 수 있을 것이다.</p>
+<p>R extension을 깐다. 역시 터미널의 실행 파일 경로를 설정하면 되는데, 위 symlink 경로를 제시하면 된다. Jupyter의 경우 R에서 IRkernel을 설치했다면 쉽게 R 커널을 선택할 수 있을 것이다.</p>
 
 
 </section>
