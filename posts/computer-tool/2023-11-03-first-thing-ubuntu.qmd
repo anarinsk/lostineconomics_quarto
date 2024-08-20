@@ -158,9 +158,11 @@ conda init
 
 ### Quarto 
 
-문서 작성에 필수 도구인 Quarto의 경우 우분투에서는 brew를 통해 설치할 수 없다. 
+문서 작성에 필수 도구인 Quarto의 경우 우분투에서는 brew를 통해 설치할 수 없다. 두 가지 방법으로 설치할 수 있다.
 
-🔗 [Linux에 Quarto 설치하기](https://docs.posit.co/resources/install-quarto/#__tabbed_1_2)
+#### deb 파일 이용
+
+🔗 [Quarto 설치하기 with deb](https://docs.posit.co/resources/install-quarto/#__tabbed_1_2)
 
 `.deb` 확장자 파일을 다운받아서 gdebi 앱을 통해서 설치하는 방식이다. 
 
@@ -169,6 +171,32 @@ conda init
 > sudo apt-get install gdebi-core
 > sudo gdebi quarto-linux-amd64.deb
 ```
+
+#### 
+
+[Quarto 설치하기 with tar](https://docs.posit.co/resources/install-quarto.html#download-install-quarto-tar)
+
+tar 파일을 다운받아서 압축을 풀고 실행 파일을 실행하는 방식이다.
+
+```bash
+> export QUARTO_VERSION="1.5.56" # 설치할 버전 지정
+> sudo mkdir -p /opt/quarto/${QUARTO_VERSION}
+
+> sudo curl -o quarto.tar.gz -L \
+    "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz"
+
+> sudo tar -zxvf quarto.tar.gz \
+    -C "/opt/quarto/${QUARTO_VERSION}" \
+    --strip-components=1
+    
+> sudo rm quarto.tar.gz
+
+> /opt/quarto/"${QUARTO_VERSION}"/bin/quarto check # 설치가 잘 되었는지 확인한다. 
+
+# symlink를 만들어준다. 
+sudo ln -s /opt/quarto/${QUARTO_VERSION}/bin/quarto /usr/local/bin/quarto
+```
+
 
 ### Mojo 
 

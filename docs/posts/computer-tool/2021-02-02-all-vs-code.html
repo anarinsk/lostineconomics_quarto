@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2021-02-02">
 <meta name="description" content="Python, Julia, R을 하나의 도구로 코딩하자.">
 
-<title>lostineconomics.com - All into VS Code</title>
+<title>All into VS Code – lostineconomics.com</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -36,7 +36,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -125,7 +125,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -163,7 +163,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -262,7 +262,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="핵심">핵심</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="컨테이너 원격 접속"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="my-figure7 img-fluid figure-img" alt="컨테이너 원격 접속"></a></p>
+<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="컨테이너 원격 접속"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_1.png?raw=true" class="my-figure7 img-fluid figure-img" alt="컨테이너 원격 접속"></a></p>
 <figcaption>컨테이너 원격 접속</figcaption>
 </figure>
 </div>
@@ -366,7 +366,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="주피터 노트북"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="my-figure7 img-fluid figure-img" alt="주피터 노트북"></a></p>
+<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="주피터 노트북"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_3.png?raw=true" class="my-figure7 img-fluid figure-img" alt="주피터 노트북"></a></p>
 <figcaption>주피터 노트북</figcaption>
 </figure>
 </div>
@@ -376,7 +376,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>앞서 보았듯이 도커를 활용하면 윈도우 혹은 다른 플랫폼의 VS Code를 통해 네트워크로 도커 내의 컨테이너로 접근하게 된다. 따라서 작업을 마치고 나오게 되면 매번 해당 컨테이너에 다시 접속을 해주고 워크 스페이스 등 여러가지 작업을 해줘야 하는 번거로움이 있다. 항상 도커 컨테이너를 거쳐 작업한다면 그냥 한방에 작업하던 환경이 뜨는 편이 나을 것이다. 아래와 같이 하자.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="리모트 익스플로러"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="my-figure5 img-fluid figure-img" alt="리모트 익스플로러"></a></p>
+<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="리모트 익스플로러"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_2.png?raw=true" class="my-figure5 img-fluid figure-img" alt="리모트 익스플로러"></a></p>
 <figcaption>리모트 익스플로러</figcaption>
 </figure>
 </div>
@@ -385,7 +385,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="컨테이너 부착"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="my-figure5 img-fluid figure-img" alt="컨테이너 부착"></a></p>
+<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="컨테이너 부착"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_4.png?raw=true" class="my-figure5 img-fluid figure-img" alt="컨테이너 부착"></a></p>
 <figcaption>컨테이너 부착</figcaption>
 </figure>
 </div>
@@ -414,7 +414,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5" title="리모트 워크스페이스 설정"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="my-figure7 img-fluid figure-img" alt="리모트 워크스페이스 설정"></a></p>
+<p><a href="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="리모트 워크스페이스 설정"><img src="https://raw.githubusercontent.com/anarinsk/lostineconomics-v2-1/master/images/all-in-vs_code/avscode_5.png?raw=true" class="my-figure7 img-fluid figure-img" alt="리모트 워크스페이스 설정"></a></p>
 <figcaption>리모트 워크스페이스 설정</figcaption>
 </figure>
 </div>
@@ -424,13 +424,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 
 
-<div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1">컨테이너 원격 접속</span>
-<span class="glightbox-desc lightbox-desc-2">주피터 노트북</span>
-<span class="glightbox-desc lightbox-desc-3">리모트 익스플로러</span>
-<span class="glightbox-desc lightbox-desc-4">컨테이너 부착</span>
-<span class="glightbox-desc lightbox-desc-5">리모트 워크스페이스 설정</span>
-</div>
 </section>
 
 </main> <!-- /main -->
@@ -613,18 +606,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -656,7 +638,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/www\.lostineconomics\.com\/");
@@ -664,7 +668,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -989,29 +993,36 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 </div> <!-- /content -->
 <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
     }
-  });
-
-};
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
           </script>
 
 

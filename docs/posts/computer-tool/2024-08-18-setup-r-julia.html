@@ -265,19 +265,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>패키지 폴더의 위치는 다음과 같다.</p>
 <ul>
 <li>macOS: <code>/Users/anari/.julia/packages</code></li>
-<li>Linux:</li>
+<li>Linux: (homebrew를 썼다면) <code>/home/linuxbrew/.linuxbrew/bin/julia</code></li>
 </ul>
 </section>
 <section id="vs-code-설정" class="level3">
 <h3 class="anchored" data-anchor-id="vs-code-설정">VS Code 설정</h3>
 <p>Julia 익스텐션을 설치하고, <code>settings.json</code> 혹은 확장 설정에서 아래와 같이 설정하자. json 파일을 수정하는 대신 설정 화면에서 비슷한 내용을 찾아서 고쳐도 된다.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"julia.executablePath"</span><span class="fu">:</span> <span class="st">"/opt/homebrew/bin/julia"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="er">"platformSettings.platforms":</span> <span class="fu">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"win32"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"julia.executablePath"</span><span class="fu">:</span> <span class="st">""</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"darwin"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"julia.executablePath"</span><span class="fu">:</span> <span class="st">"/opt/homebrew/bin/julia"</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span>   </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"linux"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"julia.executablePath"</span><span class="fu">:</span> <span class="st">"/home/linuxbrew/.linuxbrew/bin/julia"</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Julia extension을 설치하면 커널 선택 화면에서 “Julia Channel”을 선택할 수 있다.</p>
 </section>
 </section>
-<section id="rstat" class="level2">
+<section id="rstat" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="rstat">Rstat</h2>
 <section id="rig" class="level3">
 <h3 class="anchored" data-anchor-id="rig">Rig</h3>
@@ -290,31 +298,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> rig <span class="fu">install</span> release <span class="co"># 최신 버전을 설치한다.</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> rig <span class="ex">--help</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="설치-패키지" class="level3">
+<section id="설치-패키지" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="설치-패키지">설치 패키지</h3>
 <p>우선 몇 가지 패키지부터 Conda와 R에 설치하도록 하자.</p>
 <section id="radian" class="level4">
 <h4 class="anchored" data-anchor-id="radian">Radian</h4>
-<p>Radian: Conda를 통해 radian을 설치하자. 메인 터미널 대신 활용할 앱니다.</p>
+<p>Radian: Conda를 통해 radian을 설치하자. 메인 터미널 대신 활용할 앱이다. 그리고 Jupyter도 설치되어 있어야 한다. 그래야 VS Code에서 Jupyter 커널로 R을 부릴 수 있다.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> conda <span class="fu">install</span> radian jupyter </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="r-packages" class="level4">
+<section id="r-packages" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="r-packages">R packages</h4>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"languageserver"</span>) <span class="co"># 랭귀지서버 설치한다. (그래야 vscode에서 에러 안 뜬다)</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"IRkernel/IRkernel"</span>) <span class="co"># Jupyter notebook에서 R을 사용하려면 설치한다.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R 터미널에서 아래를 실행한다. </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"languageserver"</span>) <span class="co"># 랭귀지서버 설치한다. (그래야 vscode에서 에러 안 뜬다)</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"IRkernel/IRkernel"</span>) <span class="co"># Jupyter notebook에서 R을 사용하려면 설치한다.</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> IRkernel<span class="sc">::</span><span class="fu">installspec</span>() <span class="co"># Jupyter 커널 활성화 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>languageserver, devtools를 설치하는 과정에서 에러가 발생할 수 있다. 이 에러를 해결할 방법이 현재로서는 분명하지 않다. 이렇게 꼬였을 때는 WSL을 재설정하는 것이 답이다.</p>
+</div></div></section>
 </section>
 <section id="symlink-1" class="level3">
 <h3 class="anchored" data-anchor-id="symlink-1">symlink</h3>
 <p><code>where R</code>를 실행하면 <code>/usr/local/bin/R</code>이 뜬다. 이 역시 Symlink다. 해당 폴더에 R 관련된 파일을 살펴보면 아래와 같다. Symlink가 향하는 원 파일의 위치를 알 수 있다.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       47  8 19 19:21 R <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Resources/bin/R</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       66  8 19 19:21 R-4.4-arm64 <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       66  8 19 19:21 R-release <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       53  8 19 19:21 Rscript <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Resources/bin/Rscript</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       47  8 19 19:21 R <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Resources/bin/R</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       66  8 19 19:21 R-4.4-arm64 <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       66  8 19 19:21 R-release <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       53  8 19 19:21 Rscript <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Resources/bin/Rscript</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>라이브러리의 폴더의 위치는 다음과 같다.</p>
 <ul>
-<li>macOS: <code>/Users/anari/Library/R</code></li>
-<li>Linux:</li>
+<li>macOS: <code>~/Library/R</code></li>
+<li>WSL: <code>~/R/x86_64-pc-linux-gnu-library</code></li>
 </ul>
 </section>
 <section id="vs-code-설정-1" class="level3">

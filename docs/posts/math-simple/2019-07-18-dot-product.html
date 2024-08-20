@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2019-07-18">
 <meta name="description" content="기하학적으로 내적을 살펴보자.">
 
-<title>lostineconomics.com - Dot Product with Geometry</title>
+<title>Dot Product with Geometry – lostineconomics.com</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -76,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -120,7 +120,7 @@ window.Quarto = {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -158,7 +158,7 @@ window.Quarto = {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -168,7 +168,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
@@ -243,7 +243,7 @@ window.Quarto = {
 <p>쉽게 말해서 닷 프로덕트는 차원이 같은 두 개의 인풋 벡터를 하나의 스칼라로 바꿔주는 일종의 함수로 이해할 수 있다. 두 개의 벡터를 서로 연관 짓는데 이를 해당 벡터의 길이라는 정보로 압축한다고 보면 얼추 맞을 듯 싶다. 하나의 숫자로 요약된다는 뜻에서 스칼라 프로덕트라고도 불린다. 그림으로 나타내면 아래와 같다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/perpendicularprojection.jpg?raw=true" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="\mathbf v를 \mathbf u로 프로젝션한다. \mathbf u는 스크린, \mathbf v는 투영체라고 생각하면 좋다."><img src="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/perpendicularprojection.jpg?raw=true" class="my-figure5 img-fluid figure-img" alt="\mathbf v를 \mathbf u로 프로젝션한다. \mathbf u는 스크린, \mathbf v는 투영체라고 생각하면 좋다."></a></p>
+<p><a href="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/perpendicularprojection.jpg?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="\mathbf v를 \mathbf u로 프로젝션한다. \mathbf u는 스크린, \mathbf v는 투영체라고 생각하면 좋다."><img src="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/perpendicularprojection.jpg?raw=true" class="my-figure5 img-fluid figure-img" alt="\mathbf v를 \mathbf u로 프로젝션한다. \mathbf u는 스크린, \mathbf v는 투영체라고 생각하면 좋다."></a></p>
 <figcaption><span class="math inline">\(\mathbf v\)</span>를 <span class="math inline">\(\mathbf u\)</span>로 프로젝션한다. <span class="math inline">\(\mathbf u\)</span>는 스크린, <span class="math inline">\(\mathbf v\)</span>는 투영체라고 생각하면 좋다.</figcaption>
 </figure>
 </div>
@@ -252,14 +252,14 @@ window.Quarto = {
 <p>닷 프로덕트에 관한 설명은 정의에서 바로 코사인 법칙으로 넘어간다. 하지만 뭔가 분명하지 않다. 이걸 조금 더 풀어보자.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_components.png.webp" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="닷 프로덕트, 내적의 계산법"><img src="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_components.png.webp" class="my-figure7 img-fluid figure-img" alt="닷 프로덕트, 내적의 계산법"></a></p>
+<p><a href="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_components.png.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="닷 프로덕트, 내적의 계산법"><img src="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_components.png.webp" class="my-figure7 img-fluid figure-img" alt="닷 프로덕트, 내적의 계산법"></a></p>
 <figcaption>닷 프로덕트, 내적의 계산법</figcaption>
 </figure>
 </div>
 <p>위 그림은 <span class="math inline">\(2 \times 2\)</span> 벡터의 닷 프로덕트를 각 요소로 분해한 것이다. 이중에서 <span class="math inline">\(\dfrac{\pi}{2}\)</span> 각을 이루고 있는 벡터는 서로 곱하면 0이 된다. 따라서 닷 프로덕트 계산에서는 <span class="math inline">\(a_x b_x\)</span>와 <span class="math inline">\(a_y b_y\)</span>가 남게 된다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_rotation.png.webp" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3" title="\cos\theta 그리고 닷 프로덕트"><img src="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_rotation.png.webp" class="my-figure7 img-fluid figure-img" alt="\cos\theta 그리고 닷 프로덕트"></a></p>
+<p><a href="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_rotation.png.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="\cos\theta 그리고 닷 프로덕트"><img src="https://betterexplained.com/wp-content/webp-express/webp-images/uploads/dotproduct/dot_product_rotation.png.webp" class="my-figure7 img-fluid figure-img" alt="\cos\theta 그리고 닷 프로덕트"></a></p>
 <figcaption><span class="math inline">\(\cos\theta\)</span> 그리고 닷 프로덕트</figcaption>
 </figure>
 </div>
@@ -322,7 +322,7 @@ window.Quarto = {
 <p>평면 <span class="math inline">\(\mathbf x\)</span>가 <span class="math inline">\(\mathbf{x}^0\)</span>를 지나는 것은 분명하다. 이 평면이 <span class="math inline">\(\mathbf{p}\)</span>에 수직이라는 것은 두 벡터의 닷 프로덕트가 0이 되면 된다.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/hyperplane.jpg?raw=true" class="lightbox" data-glightbox="description: .lightbox-desc-4" data-gallery="quarto-lightbox-gallery-4" title="벡터 \mathbf p와 직교하는 하이퍼플레인 찾기"><img src="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/hyperplane.jpg?raw=true" class="my-figure7 img-fluid figure-img" alt="벡터 \mathbf p와 직교하는 하이퍼플레인 찾기"></a></p>
+<p><a href="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/hyperplane.jpg?raw=true" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="벡터 \mathbf p와 직교하는 하이퍼플레인 찾기"><img src="https://github.com/anarinsk/lie-dot_product/blob/master/assets/images/hyperplane.jpg?raw=true" class="my-figure7 img-fluid figure-img" alt="벡터 \mathbf p와 직교하는 하이퍼플레인 찾기"></a></p>
 <figcaption>벡터 <span class="math inline">\(\mathbf p\)</span>와 직교하는 하이퍼플레인 찾기</figcaption>
 </figure>
 </div>
@@ -350,12 +350,6 @@ window.Quarto = {
 \]</span></p>
 
 
-<div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-1"><span class="math inline">\(\mathbf v\)</span>를 <span class="math inline">\(\mathbf u\)</span>로 프로젝션한다. <span class="math inline">\(\mathbf u\)</span>는 스크린, <span class="math inline">\(\mathbf v\)</span>는 투영체라고 생각하면 좋다.</span>
-<span class="glightbox-desc lightbox-desc-2">닷 프로덕트, 내적의 계산법</span>
-<span class="glightbox-desc lightbox-desc-3"><span class="math inline">\(\cos\theta\)</span> 그리고 닷 프로덕트</span>
-<span class="glightbox-desc lightbox-desc-4">벡터 <span class="math inline">\(\mathbf p\)</span>와 직교하는 하이퍼플레인 찾기</span>
-</div>
 </section>
 
 </main> <!-- /main -->
@@ -538,18 +532,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -581,7 +564,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/www\.lostineconomics\.com\/");
@@ -589,7 +594,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -913,30 +918,37 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":false,"closeEffect":"zoom"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","loop":false,"selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
     }
-  });
-
-};
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
           </script>
 
 
