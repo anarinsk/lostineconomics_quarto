@@ -301,19 +301,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="설치-패키지" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="설치-패키지">설치 패키지</h3>
 <p>우선 몇 가지 패키지부터 Conda와 R에 설치하도록 하자.</p>
-<section id="radian" class="level4">
-<h4 class="anchored" data-anchor-id="radian">Radian</h4>
+<section id="radian-and-conda" class="level4">
+<h4 class="anchored" data-anchor-id="radian-and-conda">Radian and Conda</h4>
 <p>Radian: Conda를 통해 radian을 설치하자. 메인 터미널 대신 활용할 앱이다. 그리고 Jupyter도 설치되어 있어야 한다. 그래야 VS Code에서 Jupyter 커널로 R을 부릴 수 있다.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> conda <span class="fu">install</span> radian jupyter </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
+<section id="리눅스에-깔아야-할-것들" class="level4">
+<h4 class="anchored" data-anchor-id="리눅스에-깔아야-할-것들">리눅스에 깔아야 할 것들</h4>
+<p>윈도나 맥처럼 패키지로 나오는 녀석들과 달리 리눅스에서 R을 구동하기 위해서는 여러가지 의존성 도구들을 OS에 설치해야 한다. 어떤 것들이 필요한지 파악하는 방법이 있다. R을 실행한 후 아래와 같이 명령어를 치자.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> pak<span class="sc">::</span><span class="fu">pkg_sysreqs</span>(<span class="st">"devtools"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>명령어를 실행하면 어떤 도구를 깔아야 하는지 알려준다. 이 녀석들을 설치하도록 하자.</p>
+</section>
 <section id="r-packages" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="r-packages">R packages</h4>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R 터미널에서 아래를 실행한다. </span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"languageserver"</span>) <span class="co"># 랭귀지서버 설치한다. (그래야 vscode에서 에러 안 뜬다)</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"IRkernel/IRkernel"</span>) <span class="co"># Jupyter notebook에서 R을 사용하려면 설치한다.</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> IRkernel<span class="sc">::</span><span class="fu">installspec</span>() <span class="co"># Jupyter 커널 활성화 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R 터미널에서 아래를 실행한다. </span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"languageserver"</span>) <span class="co"># 랭귀지서버 설치한다. (그래야 vscode에서 에러 안 뜬다)</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"IRkernel/IRkernel"</span>) <span class="co"># Jupyter notebook에서 R을 사용하려면 설치한다.</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> IRkernel<span class="sc">::</span><span class="fu">installspec</span>() <span class="co"># Jupyter 커널 활성화 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>languageserver, devtools를 설치하는 과정에서 에러가 발생할 수 있다. 이 에러를 해결할 방법이 현재로서는 분명하지 않다. 이렇게 꼬였을 때는 WSL을 재설정하는 것이 답이다.</p>
@@ -322,10 +328,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="symlink-1" class="level3">
 <h3 class="anchored" data-anchor-id="symlink-1">symlink</h3>
 <p><code>where R</code>를 실행하면 <code>/usr/local/bin/R</code>이 뜬다. 이 역시 Symlink다. 해당 폴더에 R 관련된 파일을 살펴보면 아래와 같다. Symlink가 향하는 원 파일의 위치를 알 수 있다.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       47  8 19 19:21 R <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Resources/bin/R</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       66  8 19 19:21 R-4.4-arm64 <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       66  8 19 19:21 R-release <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       53  8 19 19:21 Rscript <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Resources/bin/Rscript</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       47  8 19 19:21 R <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Resources/bin/R</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       66  8 19 19:21 R-4.4-arm64 <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       66  8 19 19:21 R-release <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">lrwxr-xr-x</span>    1 root   admin       53  8 19 19:21 Rscript <span class="at">-</span><span class="op">&gt;</span> /Library/Frameworks/R.framework/Resources/bin/Rscript</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>라이브러리의 폴더의 위치는 다음과 같다.</p>
 <ul>
 <li>macOS: <code>~/Library/R</code></li>
@@ -334,7 +340,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="vs-code-설정-1" class="level3">
 <h3 class="anchored" data-anchor-id="vs-code-설정-1">VS Code 설정</h3>
-<p>R extension을 깐다. 역시 터미널의 실행 파일 경로를 설정하면 되는데, 위 symlink 경로를 제시하면 된다. Jupyter의 경우 R에서 IRkernel을 설치했다면 쉽게 R 커널을 선택할 수 있을 것이다.</p>
+<p>R extension을 깐다. 역시 터미널의 실행 파일 경로를 설정하면 되는데, 위 symlink 경로를 제시하면 된다. Jupyter의 경우 R에서 IRkernel을 설치하고 활성화했으면,Jupyter 커널 아래 R 커널을 택할 수 있다.</p>
 
 
 </section>
