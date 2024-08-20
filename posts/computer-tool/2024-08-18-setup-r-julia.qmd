@@ -1,6 +1,6 @@
 ---
 title: "Julia와 R을 잘 깔아보자." 
-description: "Macos/Linux에서 활용하기"   
+description: "macOS/WSL-Ubuntu의 활용법"   
 author: "JS HUHH"
 date: "08/18/2024"
 image: "./images/cat-julia.webp"
