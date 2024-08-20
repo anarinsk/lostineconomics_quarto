@@ -20,7 +20,7 @@ WSL이 생기면서 윈도에서도 리눅스를 제대로 쓸 수 있게 되었
 
 딱히 Ubuntu에 해당하는 내용은 아니지만 WSL에서 Ubuntu 설치하는 방법은 간단하게 다루고 넘어가겠다. 윈도 파워셸이나 명령 프롬프트에서 실행 가능하다. 
 
-```powershell
+```bash
 > wsl -l # 설치된 WSL 목록 확인
 > wsl -l -o # 설치할 수 있는 배포판 확인 
 
@@ -172,7 +172,7 @@ conda init
 > sudo gdebi quarto-linux-amd64.deb
 ```
 
-#### 
+#### tar 파일 할용
 
 [Quarto 설치하기 with tar](https://docs.posit.co/resources/install-quarto.html#download-install-quarto-tar)
 
@@ -193,8 +193,8 @@ tar 파일을 다운받아서 압축을 풀고 실행 파일을 실행하는 방
 
 > /opt/quarto/"${QUARTO_VERSION}"/bin/quarto check # 설치가 잘 되었는지 확인한다. 
 
-# symlink를 만들어준다. 
-sudo ln -s /opt/quarto/${QUARTO_VERSION}/bin/quarto /usr/local/bin/quarto
+# symlink를 심는다. 
+> sudo ln -s /opt/quarto/${QUARTO_VERSION}/bin/quarto /usr/local/bin/quarto
 ```
 
 

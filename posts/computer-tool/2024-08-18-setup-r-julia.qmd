@@ -56,7 +56,7 @@ Symlink란 윈도의 바로가기라고 생각하면 된다.
 패키지 폴더의 위치는 다음과 같다. 
 
 - macOS: `/Users/anari/.julia/packages`
-- Linux:  (homebrew를 썼다면) `/home/linuxbrew/.linuxbrew/bin/julia`
+- WSL:  (homebrew를 썼다면) `/home/linuxbrew/.linuxbrew/bin/julia`
 
 ### VS Code 설정 
 
@@ -117,6 +117,10 @@ Radian: Conda를 통해 radian을 설치하자. 메인 터미널 대신 활용�
 
 명령어를 실행하면 어떤 도구를 깔아야 하는지 알려준다. 이 녀석들을 설치하도록 하자. 
 
+:::{.column-margin}
+macOS ARM 버전에서는 이 명령어가 먹지 않는다. 
+:::
+
 
 #### R packages 
 
@@ -151,7 +155,7 @@ lrwxr-xr-x    1 root   admin       53  8 19 19:21 Rscript -> /Library/Frameworks
 
 ### VS Code 설정 
 
-R extension을 깐다. 역시 터미널의 실행 파일 경로를 설정하면 되는데, 위 symlink 경로를 제시하면 된다. Jupyter의 경우 R에서 IRkernel을 설치하고 활성화했으면,Jupyter 커널 아래 R 커널을 택할 수 있다. 
+R extension을 VS Code에 설치하자. 역시 R 터미널의 실행 파일 경로를 설정하면 되는데, 위 symlink 경로를 제시하면 된다. Jupyter의 경우 R에서 IRkernel을 설치하고 활성화했으면,Jupyter 커널 아래 R 커널을 택할 수 있다. 
 
 
 
