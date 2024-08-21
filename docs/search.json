@@ -3728,14 +3728,14 @@
     "href": "posts/computer-tool/2024-08-18-setup-r-julia.html",
     "title": "Julia와 R을 잘 깔아보자.",
     "section": "",
-    "text": "Macos와 Linux에서 Julia와 R을 세팅하는 방법을 알아보자."
+    "text": "macOS와 Linux(WSL-Ubuntu)에서 Julia와 R을 세팅하는 방법을 알아보자."
   },
   {
     "objectID": "posts/computer-tool/2024-08-18-setup-r-julia.html#tl-dr",
     "href": "posts/computer-tool/2024-08-18-setup-r-julia.html#tl-dr",
     "title": "Julia와 R을 잘 깔아보자.",
     "section": "",
-    "text": "Macos와 Linux에서 Julia와 R을 세팅하는 방법을 알아보자."
+    "text": "macOS와 Linux(WSL-Ubuntu)에서 Julia와 R을 세팅하는 방법을 알아보자."
   },
   {
     "objectID": "posts/computer-tool/2024-08-18-setup-r-julia.html#pixi는-쓰지-말자.",
@@ -3749,20 +3749,20 @@
     "href": "posts/computer-tool/2024-08-18-setup-r-julia.html#전제-조건",
     "title": "Julia와 R을 잘 깔아보자.",
     "section": "전제 조건",
-    "text": "전제 조건\n아래와 같은 조건에서 활용한다.\n\nOS는 Macos 또는 Linux\nR과 Julia를 설치하고자 한다.\nVS Code에서 활용한다.\n\nJulia와 R 모두 직접 설치하는 데 다소 애로사항이 있다. 다행히도 둘 모두 활용할 수 있는 전용 installer가 나와 있다. 이 녀석들을 쓰면 두 플랫폼 모두에서 쉽게 랭귀지를 설치하고, 제거하고 버전을 관리할 수 있다. 인스톨러를 쓰면 Pixi를 쓰고자 했던 원래의 의도를 살릴 수 있다."
+    "text": "전제 조건\n아래와 같은 조건에서 활용한다.\n\nOS는 Macos 또는 WSL-Ubuntu(WSL)를 사용한다.\nR과 Julia를 설치하고자 한다.\nVS Code에서 활용한다.\n\nJulia와 R 모두 직접 설치하는 데 다소 애로사항이 있다. 다행히도 둘 모두 활용할 수 있는 전용 installer가 나와 있다. 이 녀석들을 쓰면 두 플랫폼 모두에서 쉽게 랭귀지를 설치하고, 제거하고 버전을 관리할 수 있다. 인스톨러를 쓰면 Pixi를 쓰고자 했던 원래의 의도를 살릴 수 있다."
   },
   {
     "objectID": "posts/computer-tool/2024-08-18-setup-r-julia.html#julia",
     "href": "posts/computer-tool/2024-08-18-setup-r-julia.html#julia",
     "title": "Julia와 R을 잘 깔아보자.",
     "section": "Julia",
-    "text": "Julia\n\nJuliaup\n뛰어난 인스톨러다. 설명이 필요 없다. 이 녀석만 있으면 플랫폼에 관계 없이 Julia를 깔고 지우고 버전 관리를 할 수 있다.\n\n\nSymlink\n아래 명령어로 주 실행 명령의 위치를 확인할 수 있다.\n\n\nSymlink란 윈도의 바로가기라고 생각하면 된다.\n&gt; where julia # 설치 경로를 확인하자. \n/opt/homebrew/bin/julia\n위 경로가 정확한 바이너리의 경로는 아니다. 하지만 진짜 경로를 파악할 필요는 없다. Symlink의 위치면 충분하다.\n패키지 폴더의 위치는 다음과 같다.\n\nmacOS: /Users/anari/.julia/packages\nWSL: (homebrew를 썼다면) /home/linuxbrew/.linuxbrew/bin/julia\n\n\n\nVS Code 설정\nJulia 익스텐션을 설치하고, settings.json 혹은 확장 설정에서 아래와 같이 설정하자. json 파일을 수정하는 대신 설정 화면에서 비슷한 내용을 찾아서 고쳐도 된다.\n\"platformSettings.platforms\": {\n  \"win32\": {\n    \"julia.executablePath\": \"\"\n  },\n  \"darwin\": {\n    \"julia.executablePath\": \"/opt/homebrew/bin/julia\"\n  },   \n  \"linux\": {\n    \"julia.executablePath\": \"/home/linuxbrew/.linuxbrew/bin/julia\"\n  }\n}\nJulia extension을 설치하면 커널 선택 화면에서 “Julia Channel”을 선택할 수 있다."
+    "text": "Julia\n\nJuliaup\n뛰어난 인스톨러다. 설명이 필요 없다. 이 녀석만 있으면 플랫폼에 관계 없이 Julia를 깔고 지우고 버전 관리를 할 수 있다.\n\n\nSymlink\n아래 명령어로 주 실행 명령의 위치를 확인할 수 있다.\n\n\nSymlink란 윈도의 바로가기라고 생각하면 된다.\n&gt; where julia # 설치 경로를 확인하자. \n/opt/homebrew/bin/julia\n위 경로가 정확한 바이너리의 경로는 아니다. 하지만 진짜 경로를 파악할 필요는 없다. Symlink의 위치면 충분하다.\n패키지 폴더의 위치는 다음과 같다.\n\nmacOS: ~/.julia/packages\nWSL: (homebrew를 썼다면) /home/linuxbrew/.linuxbrew/bin/julia\n\n\n\nVS Code 설정\nJulia 익스텐션을 설치하고, settings.json 혹은 확장 설정에서 아래와 같이 설정하자. json 파일을 수정하는 대신 설정 화면에서 비슷한 내용을 찾아서 고쳐도 된다.\n\"platformSettings.platforms\": {\n  \"win32\": {\n    \"julia.executablePath\": \"\"\n  },\n  \"darwin\": {\n    \"julia.executablePath\": \"/opt/homebrew/bin/julia\"\n  },   \n  \"linux\": {\n    \"julia.executablePath\": \"/home/linuxbrew/.linuxbrew/bin/julia\"\n  }\n}\nJulia extension을 설치하면 커널 선택 화면에서 “Julia Channel”을 선택할 수 있다."
   },
   {
     "objectID": "posts/computer-tool/2024-08-18-setup-r-julia.html#rstat",
     "href": "posts/computer-tool/2024-08-18-setup-r-julia.html#rstat",
     "title": "Julia와 R을 잘 깔아보자.",
     "section": "Rstat",
-    "text": "Rstat\n\nRig\nR 역시 Linux에서 까는 것이 그다지 용이하지 않다. Macos에서는 어렵지는 않지만 터미널에 깔아서 쓰려면 역시 쉽지 않다. R에도 juliaup과 비슷한 인스톨러가 존재한다. Rig를 각 플랫폼에 맞게 설치하도록 하자.\n\nFor Macos: LINK\nFor Linux: LINK\n\nRig를 통해 R을 설치하자.\n&gt; rig install release # 최신 버전을 설치한다.\n&gt; rig --help \n\n\n설치 패키지\n우선 몇 가지 패키지부터 Conda와 R에 설치하도록 하자.\n\nRadian and Conda\nRadian: Conda를 통해 radian을 설치하자. 메인 터미널 대신 활용할 앱이다. 그리고 Jupyter도 설치되어 있어야 한다. 그래야 VS Code에서 Jupyter 커널로 R을 부릴 수 있다.\n&gt; conda install radian jupyter \n\n\n리눅스에 깔아야 할 것들\n윈도나 맥처럼 패키지로 나오는 녀석들과 달리 리눅스에서 R을 구동하기 위해서는 여러가지 의존성 도구들을 OS에 설치해야 한다. 어떤 것들이 필요한지 파악하는 방법이 있다. R을 실행한 후 아래와 같이 명령어를 치자.\n&gt; pak::pkg_sysreqs(\"devtools\")\n명령어를 실행하면 어떤 도구를 깔아야 하는지 알려준다. 이 녀석들을 설치하도록 하자.\n\n\nmacOS ARM 버전에서는 이 명령어가 먹지 않는다.\n\n\nR packages\n# R 터미널에서 아래를 실행한다. \n\n&gt; install.packages(\"languageserver\") # 랭귀지서버 설치한다. (그래야 vscode에서 에러 안 뜬다)\n&gt; install.packages(\"devtools\")\n&gt; devtools::install_github(\"IRkernel/IRkernel\") # Jupyter notebook에서 R을 사용하려면 설치한다.\n&gt; IRkernel::installspec() # Jupyter 커널 활성화 \n\n\nlanguageserver, devtools를 설치하는 과정에서 에러가 발생할 수 있다. 이 에러를 해결할 방법이 현재로서는 분명하지 않다. 이렇게 꼬였을 때는 WSL을 재설정하는 것이 답이다.\n\n\n\nsymlink\nwhere R를 실행하면 /usr/local/bin/R이 뜬다. 이 역시 Symlink다. 해당 폴더에 R 관련된 파일을 살펴보면 아래와 같다. Symlink가 향하는 원 파일의 위치를 알 수 있다.\nlrwxr-xr-x    1 root   admin       47  8 19 19:21 R -&gt; /Library/Frameworks/R.framework/Resources/bin/R\nlrwxr-xr-x    1 root   admin       66  8 19 19:21 R-4.4-arm64 -&gt; /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R\nlrwxr-xr-x    1 root   admin       66  8 19 19:21 R-release -&gt; /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R\nlrwxr-xr-x    1 root   admin       53  8 19 19:21 Rscript -&gt; /Library/Frameworks/R.framework/Resources/bin/Rscript\n라이브러리의 폴더의 위치는 다음과 같다.\n\nmacOS: ~/Library/R\nWSL: ~/R/x86_64-pc-linux-gnu-library\n\n\n\nVS Code 설정\nR extension을 VS Code에 설치하자. 역시 R 터미널의 실행 파일 경로를 설정하면 되는데, 위 symlink 경로를 제시하면 된다. Jupyter의 경우 R에서 IRkernel을 설치하고 활성화했으면,Jupyter 커널 아래 R 커널을 택할 수 있다."
+    "text": "Rstat\n\nRig\nR 역시 Linux에서 까는 것이 그다지 용이하지 않다. Macos에서는 어렵지는 않지만 터미널에 깔아서 쓰려면 역시 쉽지 않다. R에도 juliaup과 비슷한 인스톨러가 존재한다. Rig를 각 플랫폼에 맞게 설치하도록 하자.\n\nmacOS: LINK\nWSL: LINK\n\nRig를 통해 R을 설치하자.\n&gt; rig install release # 최신 버전을 설치한다.\n&gt; rig --help \n\n\n사전 설치 항목\n우선 몇 가지 패키지들부터 설치하도록 하자. OS에 깔아야 할 것들과 R에 패키지로 설치해야 하는 것으로 구별된다.\n\nConda, Radian, Jupyter\n\nConda는 miniforge를 설치하자.\nConda를 통해 radian과 Jupyter를 설치하자.\n\nRadian은 메인 터미널 대신 활용할 R 앱이다.\nJupyter를 설치해야 VS Code에서 Jupyter 커널로 R을 부릴 수 있다.\n\n\n&gt; conda install radian jupyter # radian과 Jupyter 설치\n\n\nOS에 깔아야 할 것들\n윈도나 맥용으로 패키지로 나오는 녀석들과 달리 리눅스에서 R을 구동하기 위해서는 여러가지 의존성 도구들을 OS에 설치해야 한다. 어떤 것들이 필요한지 파악하는 방법이 있다. R을 실행한 후 아래와 같이 명령어를 치자.\n&gt; pak::pkg_sysreqs(\"devtools\")\n명령어를 실행하면 어떤 도구를 깔아야 하는지 알려준다. 이 녀석들을 설치하도록 하자.\n\n\nmacOS ARM 버전에서는 이 명령어가 먹지 않는다.\n\n\nR packages\n# R 터미널에서 아래를 실행한다. \n\n&gt; install.packages(\"languageserver\") # 랭귀지서버 설치한다. (그래야 vscode에서 에러 안 뜬다)\n&gt; install.packages(\"devtools\")\n&gt; devtools::install_github(\"IRkernel/IRkernel\") # Jupyter notebook에서 R을 사용하려면 설치한다.\n&gt; IRkernel::installspec() # Jupyter 커널 활성화 \n\n\nlanguageserver, devtools를 설치하는 과정에서 에러가 발생할 수 있다. 이 에러를 해결할 방법이 현재로서는 분명하지 않다. 이렇게 꼬였을 때는 WSL을 재설정하는 것이 답이다.\n\n\n\nsymlink\nwhere R를 실행하면 /usr/local/bin/R이 뜬다. 이 역시 Symlink다. 해당 폴더에 R 관련된 파일을 살펴보면 아래와 같다. Symlink가 향하는 원 파일의 위치를 알 수 있다.\nlrwxr-xr-x    1 root   admin       47  8 19 19:21 R -&gt; /Library/Frameworks/R.framework/Resources/bin/R\nlrwxr-xr-x    1 root   admin       66  8 19 19:21 R-4.4-arm64 -&gt; /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R\nlrwxr-xr-x    1 root   admin       66  8 19 19:21 R-release -&gt; /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/bin/R\nlrwxr-xr-x    1 root   admin       53  8 19 19:21 Rscript -&gt; /Library/Frameworks/R.framework/Resources/bin/Rscript\n라이브러리의 폴더의 위치는 다음과 같다.\n\nmacOS: ~/Library/R\nWSL: ~/R/x86_64-pc-linux-gnu-library\n\n\n\nVS Code 설정\nR extension을 VS Code에 설치하자. 역시 R 터미널의 실행 파일 경로를 설정하면 되는데, 위 symlink 경로를 제시하면 된다. Jupyter의 경우 R에서 IRkernel을 설치하고 활성화했으면,Jupyter 커널 아래 R 커널을 택할 수 있다."
   }
 ]

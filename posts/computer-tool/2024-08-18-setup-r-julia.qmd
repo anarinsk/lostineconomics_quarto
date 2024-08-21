@@ -16,7 +16,7 @@ format:
 
 ## TL; DR
 
-- Macos와 Linux에서 Julia와 R을 세팅하는 방법을 알아보자. 
+- macOS와 Linux(WSL-Ubuntu)에서 Julia와 R을 세팅하는 방법을 알아보자. 
 
 ## Pixi는 쓰지 말자. 
 
@@ -26,7 +26,7 @@ format:
 
 아래와 같은 조건에서 활용한다. 
 
-- OS는 Macos 또는 Linux 
+- OS는 Macos 또는 WSL-Ubuntu(WSL)를 사용한다.
 - R과 Julia를 설치하고자 한다.
 - VS Code에서 활용한다. 
 
@@ -55,8 +55,8 @@ Symlink란 윈도의 바로가기라고 생각하면 된다.
 
 패키지 폴더의 위치는 다음과 같다. 
 
-- macOS: `/Users/anari/.julia/packages`
-- WSL:  (homebrew를 썼다면) `/home/linuxbrew/.linuxbrew/bin/julia`
+- macOS: `~/.julia/packages`
+- WSL: (homebrew를 썼다면) `/home/linuxbrew/.linuxbrew/bin/julia`
 
 ### VS Code 설정 
 
@@ -84,8 +84,8 @@ Julia extension을 설치하면 커널 선택 화면에서 "Julia Channel"을 �
 
 R 역시 Linux에서 까는 것이 그다지 용이하지 않다. Macos에서는 어렵지는 않지만 터미널에 깔아서 쓰려면 역시 쉽지 않다. R에도 juliaup과 비슷한 인스톨러가 존재한다. Rig를 각 플랫폼에 맞게 설치하도록 하자. 
 
-- For Macos: [LINK](https://github.com/r-lib/rig?tab=readme-ov-file#installing-rig-on-macos-)
-- For Linux: [LINK](https://github.com/r-lib/rig?tab=readme-ov-file#installing-rig-on-linux-)
+- macOS: [LINK](https://github.com/r-lib/rig?tab=readme-ov-file#installing-rig-on-macos-)
+- WSL: [LINK](https://github.com/r-lib/rig?tab=readme-ov-file#installing-rig-on-linux-)
 
 Rig를 통해 R을 설치하자. 
 
@@ -95,21 +95,24 @@ Rig를 통해 R을 설치하자.
 ```
 
 
-### 설치 패키지 
+### 사전 설치 항목 
 
-우선 몇 가지 패키지부터 Conda와 R에 설치하도록 하자. 
+우선 몇 가지 패키지들부터 설치하도록 하자. OS에 깔아야 할 것들과 R에 패키지로 설치해야 하는 것으로 구별된다. 
 
-#### Radian and Conda 
+#### Conda, Radian, Jupyter 
 
-Radian: Conda를 통해 radian을 설치하자. 메인 터미널 대신 활용할 앱이다. 그리고 Jupyter도 설치되어 있어야 한다. 그래야 VS Code에서 Jupyter 커널로 R을 부릴 수 있다. 
+- Conda는 [miniforge](https://github.com/conda-forge/miniforge?tab=readme-ov-file#unix-like-platforms-mac-os--linux)를 설치하자. 
+- Conda를 통해 radian과 Jupyter를 설치하자.
+  - Radian은 메인 터미널 대신 활용할 R 앱이다. 
+  - Jupyter를 설치해야 VS Code에서 Jupyter 커널로 R을 부릴 수 있다. 
 
 ```bash
-> conda install radian jupyter 
+> conda install radian jupyter # radian과 Jupyter 설치
 ```
 
-#### 리눅스에 깔아야 할 것들 
+#### OS에 깔아야 할 것들 
 
-윈도나 맥처럼 패키지로 나오는 녀석들과 달리 리눅스에서 R을 구동하기 위해서는 여러가지 의존성 도구들을 OS에 설치해야 한다. 어떤 것들이 필요한지 파악하는 방법이 있다. R을 실행한 후 아래와 같이 명령어를 치자. 
+윈도나 맥용으로 패키지로 나오는 녀석들과 달리 리눅스에서 R을 구동하기 위해서는 여러가지 의존성 도구들을 OS에 설치해야 한다. 어떤 것들이 필요한지 파악하는 방법이 있다. R을 실행한 후 아래와 같이 명령어를 치자. 
 
 ```r
 > pak::pkg_sysreqs("devtools")
