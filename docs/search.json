@@ -3741,8 +3741,8 @@
     "objectID": "posts/computer-tool/2024-08-18-setup-r-julia.html#pixi는-쓰지-말자.",
     "href": "posts/computer-tool/2024-08-18-setup-r-julia.html#pixi는-쓰지-말자.",
     "title": "Julia와 R을 잘 깔아보자.",
-    "section": "Pixi는 쓰지 말자.",
-    "text": "Pixi는 쓰지 말자.\n앞서 pixi로 R과 Julia를 세팅하는 방법을 소개했다. 하지만 Python과 달리 Julia와 R에서는 pixi의 쓸모가 크지 않았다. 그래서 이번에는 직접 설치하는 방법을 정리한다. 직접 설치하면 단순하고 편리할 것 같지만, macOS 터미널 설치나 리눅스에서는 딱히 그렇지 않다. 이 포스트를 남겨두는 까닭이다."
+    "section": "pixi는 쓰지 말자.",
+    "text": "pixi는 쓰지 말자.\n앞서 pixi로 R과 Julia를 세팅하는 방법을 소개했다. 하지만 Python과 달리 Julia와 R에서는 pixi의 쓸모가 크지 않았다. 그래서 이번에는 직접 설치하는 방법을 정리한다. 직접 설치하면 단순하고 편리할 것 같지만, macOS 터미널 설치나 리눅스에서는 딱히 그렇지 않다. 이 포스트를 남겨두는 까닭이다."
   },
   {
     "objectID": "posts/computer-tool/2024-08-18-setup-r-julia.html#전제-조건",
