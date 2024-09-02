@@ -108,9 +108,9 @@ toml을 좀 들여다 보자.
     "torchaudio>=2.4.0"
 ```
 
-- OS가 'darwin'일 때 즉 macOS일 때는 여타 며신에서 CPU를 쓰는 상황과 동일하게 설치하면 된다. 따라서 별다른 옵션을 주지 않아도 된다. 
+macOS의 경우 `sys_platform`으로 'darwin'을 지정하면 된다. macOS의 경우 CPU를 쓰는 상황과 동일하기 떄문에 별달리 OS를 지정하지 않았다. 
 
-cuda를 쓰는 상황을 가정해서 cuda라는 이름의 별도 옵션을 만들었다. `[tool.uv.sources]`는 pip로 설치할 때 `--index-url`의 옵션을 넣어주면 된다. 즉 끌고 올 패키지의 위치를 지정하는 것이다. 만일 cuda 옵션과 설치하고 싶다면 아래와 같이 실행하면 된다. 
+cuda를 쓰는 상황을 가정해서 cuda라는 이름의 별도 옵션을 만들었다. `[tool.uv.sources]`는 pip로 설치할 때 `--index-url`의 옵션을 넣어주면 된다. 위 toml의 경우 cuda 12.4를 활용했다. 이렇게 지정해 둔 cuda 옵션으로 Pytorch를 설치하고 싶다면 아래와 같이 실행하면 된다. 
 
 ```bash
 > uv sync --extra cuda
