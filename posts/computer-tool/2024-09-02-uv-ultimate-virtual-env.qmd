@@ -44,7 +44,7 @@ uv 개발진의 야심처럼 uv는 pip, pip-tools, pipx, poetry, pyenv, virtuale
 
 ### 프로젝트 초기화 및 복원 
 
-보다 상세하고 자세한 내용은 [공식 문서](https://docs.astral.sh/uv/)를 참고하면 된다. 여기서는 내가 활용하는 간단한 사례를 소개하도록 한다. 이 역시 미래의 나 놈을 위한 것이다. 설치는 아래와 같다. brew 같은 데 포함되면 더 좋을 듯 싶다. 
+보다 상세하고 내용은 [공식 문서](https://docs.astral.sh/uv/)를 참고하자. 여기서는 내가 활용하는 간단한 사례를 소개하도록 한다. 이 역시 미래의 나 놈을 위한 것이다. 설치는 아래와 같다. brew 같은 데 포함되면 더 좋을 듯 싶다. 
 
 ```bash
 > curl -LsSf https://astral.sh/uv/install.sh | sh
