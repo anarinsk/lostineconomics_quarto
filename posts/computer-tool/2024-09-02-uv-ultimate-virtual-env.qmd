@@ -100,7 +100,7 @@ cuda = [
 cuda = { url = "https://download.pytorch.org/whl/cu124" }
 ```
 
-코드를 좀 보자. 
+toml을 좀 들여다 보자. 
 
 ```
     "torch>=2.4.0",
