@@ -3798,7 +3798,7 @@
     "href": "posts/computer-tool/2024-09-02-uv-ultimate-virtual-env.html#uv",
     "title": "uv, 궁극의 가상 환경",
     "section": "uv",
-    "text": "uv\n고맙게도 이런 용도/욕구에 딱 맞는 가상 환경이 등장했다. 바로 uv가 그것이다. 패키지 전체가 Rust로 제작되어서 속도가 무지막지하게 빠르다. conda 같은 사설 패키지 저장소가 아니라 PyPI를 직접 활용해서 보다 편리하다. 예를 들어 한글 이용자라면 matplotlib에서 한글 폰트를 미리 설정해줘야 한다. 아주 번거롭지는 않지만 바쁠 때는 이마저 귀찮을 수 있다. koreanize-matplotlib 패키지는 나눔고딕폰트를 matplotlib의 기본 폰트로 설정해주는 간단한 패키지다. 이 녀석은 conda에는 없고 PyPI에만 있다. uv를 쓰면 이 패키지도 어럽제 않게 치할 수 있다.\n\n\n물론 Pixi나 Rye에서도 PyPI를 통해 패키지를 설치할 수 있다. 그리 번거롭지는 않지만, PyPI를 뼈대로 하는 uv 쪽이 살짝 더 편리하다.\nuv 개발진의 야심처럼 uv는 pip, pip-tools, pipx, poetry, pyenv, virtualenv를 대체하기 위한 툴이다. 새롭게 뭔가를 만들었다기보다는 기존에 존재하는 툴은 잘 연결해주는 성격이 강하다. 패키지를 pip를 통해 설치하는 것처럼 가상 환경 역시 venv를 그대로 쓰면 된다. 프로젝트 디렉토리 아래 .venv 폴더를 생성하고 그 아래 가상 환경의 요소들이 설치된다. VS Code에서도 이 가상 환경이 쉽게 인식되고 그대로 활용하면 된다."
+    "text": "uv\n고맙게도 이런 용도/욕구에 딱 맞는 가상 환경이 등장했다. 바로 uv가 그것이다. 패키지 전체가 Rust로 제작되어서 속도가 무지막지하게 빠르다. conda 같은 사설 패키지 저장소가 아니라 PyPI를 직접 활용해서 보다 편리하다. 예를 들어 한글 이용자라면 matplotlib에서 한글 폰트를 미리 설정해줘야 한다. 아주 번거롭지는 않지만 바쁠 때는 이마저 귀찮을 수 있다. koreanize-matplotlib 패키지는 나눔고딕폰트를 matplotlib의 기본 폰트로 설정해주는 간단한 패키지다. 이 녀석은 conda에는 없고 PyPI에만 있다. uv를 쓰면 이 패키지도 어럽제 않게 치할 수 있다.\n\n\n물론 Pixi나 Rye에서도 PyPI를 통해 패키지를 설치할 수 있다. 아주 번거롭지는 않지만 한번에 떠오르지 않을 때가 있다. 그래서 PyPI를 뼈대로 하는 uv 쪽이 살짝 더 편리하다.\nuv 개발진의 야심처럼 uv는 pip, pip-tools, pipx, poetry, pyenv, virtualenv를 대체하기 위한 툴이다. 새롭게 뭔가를 만들었다기보다는 기존에 존재하는 툴은 잘 연결해주는 성격이 강하다. 패키지를 pip를 통해 설치하는 것처럼 가상 환경 역시 venv를 그대로 쓰면 된다. 프로젝트 디렉토리 아래 .venv 폴더를 생성하고 그 아래 가상 환경의 요소들이 설치된다. VS Code에서도 이 가상 환경이 쉽게 인식되고 그대로 활용하면 된다."
   },
   {
     "objectID": "posts/computer-tool/2024-09-02-uv-ultimate-virtual-env.html#사용-사례",
