@@ -84,7 +84,6 @@ dependencies = [
     "torchvision>=0.9.0",
     "torchaudio>=2.4.0"
     ]
- 
 
 [project.optional-dependencies]
 
