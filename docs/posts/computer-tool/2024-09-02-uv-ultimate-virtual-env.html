@@ -305,10 +305,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>OS가 ’darwin’일 때 즉 macOS일 때는 여타 며신에서 CPU를 쓰는 상황과 동일하게 설치하면 된다. 따라서 별다른 옵션을 주지 않아도 된다.</li>
 </ul>
-<p>cuda를 쓰는 상황을 가정해서 cuda라는 이름의 특별한 옵션을 만들었다. <code>[tool.uv.sources]</code>는 pip로 설치할 때 <code>--index-url</code>의 옵션을 넣어주면 된다. 즉 끌고 올 패키지의 위치를 지정하는 것이다. 만일 cuda 옵션과 설치하고 싶다면 아래와 같이 실행하면 된다.</p>
+<p>cuda를 쓰는 상황을 가정해서 cuda라는 이름의 별도 옵션을 만들었다. <code>[tool.uv.sources]</code>는 pip로 설치할 때 <code>--index-url</code>의 옵션을 넣어주면 된다. 즉 끌고 올 패키지의 위치를 지정하는 것이다. 만일 cuda 옵션과 설치하고 싶다면 아래와 같이 실행하면 된다.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="fu">sync</span> <span class="at">--extra</span> cuda</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li><code>--extra</code>는 toml 파일에 있는 특별한 의존성을 이용하겠다느 뜻이고 그 의존성의 이름이 cuda이다.</li>
+<li><code>--extra</code>는 toml 파일에 있는 특별한 의존성을 이용하겠다는 뜻이다.</li>
 </ul>
 </section>
 </section>
