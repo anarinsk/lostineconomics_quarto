@@ -4,7 +4,7 @@ description: "Python 가상 환경은 이걸로 끝이다!"
 author: "JS HUHH"
 date: "09/02/2024"
 image: "./images/cat-virtual-env.webp"
-categories: [computer-tool, python, virtual-env]
+categories: [computer-tool, coding, python, virtual-env]
 #fig-align: center
 #jupyter: python3
 draft: false
@@ -32,7 +32,7 @@ Python 환경의 가상 환경은 선택지가 많다. 선택지가 많다는 �
 
 ## Here Comes the uv!
 
-uv는 패키지 전체가 Rust로 제작되어서 속도가 무지막지하게 빠르다. conda 같은 사설 패키지 저장소가 아니라 PyPI를 직접 활용해서 때떄로 살짝 편리하다. 예를 들어 한글 이용자라면 matplotlib에서 한글 폰트를 미리 설정해줘야 한다. 아주 번거롭지는 않지만 바쁠 때는 이마저 귀찮을 수 있다. koreanize-matplotlib 패키지는 나눔고딕폰트를 matplotlib의 기본 폰트로 설정해주는 간단한 패키지다. 이 녀석은 conda에는 없고 PyPI에만 있다. uv를 쓰면 이 패키지도 어럽제 않게 치할 수 있다.
+Conda가 편리하지만 사설은 사설이다. 예를 들어 한글 이용자라면 matplotlib에서 한글 폰트를 미리 설정해줘야 한다. 아주 번거롭지는 않지만 바쁠 때는 이마저 귀찮을 수 있다. koreanize-matplotlib 패키지는 나눔고딕폰트를 matplotlib의 기본 폰트로 설정해주는 간단한 패키지다. 이 녀석은 conda에는 없고 PyPI에만 있다. uv를 쓰면 이 패키지도 어럽제 않게 치할 수 있다.
 
 :::{.column-margin}
 물론 Pixi나 Rye에서도 PyPI를 통해 패키지를 설치할 수 있다. 아주 번거롭지는 않지만 한번에 떠오르지 않을 때가 있다. 그래서 PyPI를 뼈대로 하는 uv 쪽이 살짝 더 편리하다. 
@@ -44,10 +44,10 @@ uv 개발진의 야심처럼 uv는 pip, pip-tools, pipx, poetry, pyenv, virtuale
 
 ### 프로젝트 초기화 및 복원 
 
-보다 상세하고 내용은 [공식 문서](https://docs.astral.sh/uv/)를 참고하자. 여기서는 내가 활용하는 간단한 사례를 소개하도록 한다. 이 역시 미래의 나 놈을 위한 것이다. 설치는 아래와 같다. brew 같은 데 포함되면 더 좋을 듯 싶다. 
+보다 상세하고 내용은 [공식 문서](https://docs.astral.sh/uv/)를 참고하자. 여기서는 내가 활용하는 간단한 사례를 소개하도록 한다. 이 역시 미래의 나 놈을 위한 것이다. 설치는 고민하지 말고 brew를 이용하자. brew 없이 까는 방법은 링크에 소개되어 있다. 
 
 ```bash
-> curl -LsSf https://astral.sh/uv/install.sh | sh
+> brew install uv 
 ```
 
 이제 프로젝트 폴더를 생성하고 아래와 같이 기초 작업을 해준다. 
