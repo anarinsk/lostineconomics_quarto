@@ -4,7 +4,7 @@ description: "Python 가상 환경은 이걸로 끝이다!"
 author: "JS HUHH"
 date: "09/02/2024"
 image: "./images/cat-virtual-env.webp"
-categories: [Python, virtual-env]
+categories: [computer-tool, python, virtual-env]
 #fig-align: center
 #jupyter: python3
 draft: false

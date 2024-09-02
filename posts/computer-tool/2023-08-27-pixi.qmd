@@ -4,7 +4,7 @@ description: 의존성 지옥을 벗어날 또 다른 방법
 author: "JS HUHH"
 date: "08/27/2023"
 image: "./images/pixi.jpg"
-categories: [computer-tool, coding, pixi]
+categories: [computer-tool, coding, python, virtual-env]
 #jupyter: python3
 draft: false
 ---
