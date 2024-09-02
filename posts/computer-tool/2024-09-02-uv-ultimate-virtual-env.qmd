@@ -1,0 +1,131 @@
+---
+title: "uv, 궁극의 가상 환경" 
+description: "가상 환경은 이걸로 끝이다!"   
+author: "JS HUHH"
+date: "09/02/2024"
+image: "./images/cat-virtual-env.webp"
+categories: [Python, virtual-env]
+#fig-align: center
+#jupyter: python3
+draft: false
+format:
+  html:
+    code-overflow: wrap
+    code-line-numbers: false
+---
+
+## TL; DR
+
+- 가상 환경, 더 이상 헤매지 마세요. 
+
+## 방황이 끝났다. 
+
+Python 환경의 가상 환경은 선택지가 여러 개이다. 여러 개의 선택지가 있는 것의 장점도 있다. 환경의 번화 및 기술 발전에 따라서 유연한 대응이 가능할 수 있기 떄문이다. 다만 (나 같은) 저급한 이용자 입장에서는 이 점이 혼란스러울 수 있다. 그냥 닥치고 선택할 수 있는 간편한 해결책이 있으면 싶었다. Rye, Pixi 모두 이런 시도의 일환이다. 둘 모두 설치 후 거의 CLI에서 거의 원스톱에 가깝게 무지성으로 쓸 수 있는 가상 환경이다. 다만 이 둘은 모두 conda에 의존하고 있다는 점에서 약간의 의구심 혹은 불편함이 있다. 그리고 Python 버전 3.12부터 [pyproject.toml](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/)을 활용한 보다 체계적이고 편리한 패키지 설정이 되입되었다. 우리가 이용할 가상 환경도 같은 방향성 위에 구축된다면 이후의 호환성도 크게 염려하지 않아도 될 것이다. 
+
+
+## 전제 조건 
+
+나는 주로 macOS와 WSL-Ubuntu를 이용한다. 이 글은 macOS와 WSL-Ubuntu를 기준으로 작성되었다. 윈도 역시 필요하다면 어럽제 않게 쓸 수 있으리라 추정한다. 
+
+## uv
+
+고맙게도 이런 용도/욕구에 딱 맞는 가상 환경이 등장했다. 바로 [uv](https://github.com/astral-sh/uv)가 그것이다. 패키지 전체가 Rust로 제작되어서 속도가 무지막지하게 빠르다. conda 같은 사설 패키지 저장소가 아니라 PyPI를 직접 활용해서 보다 편리하다. 예를 들어 한글 이용자라면 matplotlib에서 한글 폰트를 미리 설정해줘야 한다. 아주 번거롭지는 않지만 바쁠 때는 이마저 귀찮을 수 있다. koreanize-matplotlib 패키지는 나눔고딕폰트를 matplotlib의 기본 폰트로 설정해주는 간단한 패키지다. 이 녀석은 conda에는 없고 PyPI에만 있다. uv를 쓰면 이 패키지도 어럽제 않게 치할 수 있다.
+
+:::{.column-margin}
+물론 Pixi나 Rye에서도 PyPI를 통해 패키지를 설치할 수 있다. 그리 번거롭지는 않지만, PyPI를 뼈대로 하는 uv 쪽이 살짝 더 편리하다. 
+:::
+
+uv 개발진의 야심처럼 uv는 pip, pip-tools, pipx, poetry, pyenv, virtualenv를 대체하기 위한 툴이다. 새롭게 뭔가를 만들었다기보다는 기존에 존재하는 툴은 잘 연결해주는 성격이 강하다. 패키지를 pip를 통해 설치하는 것처럼 가상 환경 역시 venv를 그대로 쓰면 된다. 프로젝트 디렉토리 아래 `.venv` 폴더를 생성하고 그 아래 가상 환경의 요소들이 설치된다. VS Code에서도 이 가상 환경이 쉽게 인식되고 그대로 활용하면 된다. 
+
+## 사용 사례 
+
+### 프로젝트 초기화 및 복원 
+
+보다 상세하고 자세한 내용은 [공식 문서](https://docs.astral.sh/uv/)를 참고하면 된다. 여기서는 내가 활용하는 간단한 사례를 소개하도록 한다. 이 역시 미래의 나 놈을 위한 것이다. 설치는 아래와 같다. brew 같은 데 포함되면 더 좋을 듯 싶다. 
+
+```bash
+> curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+이제 프로젝트 폴더를 생성하고 아래와 같이 기초 작업을 해준다. 
+
+```bash 
+>  uv init . # 프로젝트 초기화
+> uv venv --python 3.12.0 # venv 조건 활성화 및 파이썬 설치  
+> uv add jupyter polars # pyproject.toml에 넣자. 
+
+----
+
+> un sync # pyproject.toml #내용 동기화 
+```
+
+- 프로젝트를 초기화하고, venv를 통해 가상환경을 설치한다. 이떄 파이썬 버전을 지정할 수 있다. 
+- 필요한 패키지를 설치한다. `add` 명령을 활용하면 `pyproject.toml`에 추가된다.
+- 해당 프로젝트 디렉토리를 github 등을 통해 수입했다면, `uv sync`를 통해 `pyproject.toml`의 내용을 해당 로컬 머신이 설치할 수 있다. 
+
+
+### OS 특정 패키지 설치 
+
+OS에 따라서 서로 다른 파이썬 패키지가 필요한 경우가 있다. 대표적으로 torch가 그렇다. 리눅스에서는 nvidia CUDA를 쓰로 macOS에서는 metal(MPS)를 쓰는 상황을 가정해보자. 토치의 홈페이지에서는 각각 상황에 디해서 pip로 어떻게 설치해야 하는지를 알려준다. 이 내용을 `pyproject.toml`에 반영하면 된다. 
+
+```toml
+[project]
+
+name = "test-uv-torch"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    "jupyter>=1.1.1",
+    "matplotlib>=3.9.2",
+    "torch>=2.4.0",
+    "torchvision>=0.9.0",
+    "torchaudio>=2.4.0"
+    ]
+ 
+
+[project.optional-dependencies]
+
+cuda = [
+    "torch>=2.4.0; sys_platform == 'linux'",
+    "torchvision>=0.9.0; sys_platform == 'linux'",
+    "torchaudio>=2.4.0; sys_platform == 'linux'"
+    ]
+  
+[tool.uv.sources]
+cuda = { url = "https://download.pytorch.org/whl/cu124" }
+```
+
+코드를 좀 보자. 
+
+```
+    "torch>=2.4.0",
+    "torchvision>=0.9.0",
+    "torchaudio>=2.4.0"
+```
+
+- OS가 'darwin'일 떄 즉 macOS일 때는 여타 며신에서 CPU를 쓰는 상황과 동일하게 설치하면 된다. 따라서 별다른 옵션을 주지 않아도 된다. 
+
+cuda를 쓰는 상황을 가정해서 cuda라는 이름의 특별한 옵션을 만들었다. `[tool.uv.sources]`는 pip로 설치할 때 `--index-url`의 옵션을 넣어주면 된다. 즉 끌고 올 패키지의 위치를 지정하는 것이다. 만일 cuda 옵션과 설치하고 싶다면 아래와 같이 실행하면 된다. 
+
+```bash
+> uv sync --extra cuda
+```
+
+- `--extra`는 toml 파일에 있는 특별한 의존성을 이용하겠다느 뜻이고 그 의존성의 이름이 cuda이다. 
+
+## `requirements.txt` 생성 
+
+간혹 `pyproject.toml`이 아닌 `requirements.txt`가 필요한 경우가 있다. 이 역시 `uv`를 통해 쉽게 생성할 수 있다.
+
+```bash
+> uv pip compile pyproject.toml -o requirements.txt
+```
+
+
+
+
+
+
