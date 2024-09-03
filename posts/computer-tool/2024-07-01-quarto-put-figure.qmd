@@ -1,6 +1,6 @@
 ---
 title: "Quarto 문서에서 그림 정렬하기" 
-description: "그림을 다음대로 놓자!"   
+description: "그림을 마음대로 놓자!"   
 author: "JS HUHH"
 date: "07/01/2024"
 image: "./images/cats-put-figure.webp"
@@ -17,7 +17,7 @@ format:
 ## TL; DR
 
 - 그림 크기, 위치를 잡는 데에는 `layout`을 쓰자. 
-- 이외의 세부적인 조정은 css를 활용하면 된다. 
+- 이외의 미묘한 세부 조정은 css를 활용하면 된다. 
 
 ## 의외로 잘 나오지 않는 것들 
 
