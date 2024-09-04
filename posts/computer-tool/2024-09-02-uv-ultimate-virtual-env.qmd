@@ -73,9 +73,9 @@ uv 개발진의 야심처럼 uv는 pip, pip-tools, pipx, poetry, pyenv, virtuale
 
 ### OS 특정 패키지 설치 
 
-OS에 따라서 서로 다른 파이썬 패키지가 필요한 경우가 있다. 대표적으로 torch가 그렇다. 리눅스에서는 nvidia CUDA를 쓰로 macOS에서는 metal(MPS)를 쓰는 상황을 가정해보자. 토치의 홈페이지에서는 각각 상황에 디해서 pip로 어떻게 설치해야 하는지를 알려준다. 이 내용을 `pyproject.toml`에 반영하면 된다. 
+OS에 따라서 서로 다른 파이썬 패키지가 필요한 경우가 있다. 대표적으로 torch가 그렇다. 리눅스에서는 nvidia CUDA를, macOS에서는 metal(MPS)를 쓰는 상황을 가정해보자. 토치의 홈페이지에서는 각각 상황에 디해서 pip로 어떻게 설치해야 하는지를 알려준다. 이 내용을 `pyproject.toml`에 반영하면 된다. 아래의 예를 보자. 
 
-```toml
+```{.toml filename="pyproject.toml"}
 [project]
 
 name = "test-uv-torch"
@@ -93,7 +93,6 @@ dependencies = [
     ]
 
 [project.optional-dependencies]
-
 cuda = [
     "torch>=2.4.0; sys_platform == 'linux'",
     "torchvision>=0.9.0; sys_platform == 'linux'",
@@ -106,13 +105,25 @@ cuda = { url = "https://download.pytorch.org/whl/cu124" }
 
 toml을 좀 들여다 보자. 
 
-```
+```{.toml}
     "torch>=2.4.0",
-    "torchvision>=0.9.0",
-    "torchaudio>=2.4.0"
+    "torchvision>=0.9.0",
+    "torchaudio>=2.4.0"
 ```
 
 macOS의 경우 `sys_platform`으로 'darwin'을 지정하면 된다. macOS의 경우 CPU를 쓰는 상황과 동일하기 떄문에 별달리 OS를 지정하지 않았다. 
+
+```{.toml}
+[project.optional-dependencies]
+cuda = [
+    "torch>=2.4.0; sys_platform == 'linux'",
+    "torchvision>=0.9.0; sys_platform == 'linux'",
+    "torchaudio>=2.4.0; sys_platform == 'linux'"
+    ]
+  
+[tool.uv.sources]
+cuda = { url = "https://download.pytorch.org/whl/cu124" }
+```
 
 cuda를 쓰는 상황을 가정해서 cuda라는 이름의 별도 옵션을 만들었다. `[tool.uv.sources]`는 pip로 설치할 때 `--index-url`의 옵션을 넣어주면 된다. 위 toml의 경우 cuda 12.4를 활용했다. 이렇게 지정해 둔 cuda 옵션으로 Pytorch를 설치하고 싶다면 아래와 같이 실행하면 된다. 
 
