@@ -1,0 +1,66 @@
+---
+title: "Ubuntu를 깔고 먼저 해야 할 일들(Updated)" 
+description: 우분투 설치 후 이것부터!   
+author: "JS HUHH"
+date: "09/05/2024"
+image: "./images/ubuntu.png"
+categories: [computer-tool, pc-install, os, linux]
+lightbox: auto
+#jupyter: python3
+draft: false
+---
+
+## TL; DR
+[LINK](https://blog.lostineconomics.com/posts/computer-tool/2023-11-03-first-thing-ubuntu.html), "Ubuntu를 깔고 먼저 해야 할 일들"의 업데이트 버전이다. 이 글을 보지 않았다면 이걸 먼저 보시기를 바란다.  
+
+## Before you "brew" something
+
+앞 포스트에서 brew를 설치하는 데까지는 별달리 변한 내용이 없다. brew 이후를 설명하도록 하자. 
+
+## brew-able
+
+앞서도 밝혔지만, brew로 할 수 있는 일이 있다면 다 brew로 하는 것이 좋다. 업데이트, 삭제, 설치 등의 관리가 온전하게 이루어지기 때문이다. (나는 매년 일정 액수를 brew에 기부한다.) brew로 깔아야 하는 것들의 목록을 살펴보고 필요한 몇 가지를 설명하도록 하자. 
+
+| 패키지 이름 | 용도 |
+|--------------|-------------|
+| fzf     | 퍼지 서치. zoxide가 활용한다. |
+| gh     | GitHub CLI |
+| juliaup     | Julialang 관리 도구 |
+| rustup-init     | Rustup 설치 관리 도구 |
+| uv     | 가상 환경 및 패키지 관리 도구 |
+| zoxide     | 빠르고 퍼지한 cd 구현 |
+
+위 툴은 일상적으로 많이 쓰는 툴이고 brew로 설치가 가능하다. brew로 설치해서 운용하자. 
+
+## non-brew-able
+
+아래 패키지들은 필요하지만 brew로 설치할 수 없다. 이들은 직접 설치해야 한다.
+
+| 패키지 이름 | 용도 |
+|--------------|-------------|
+| [Quarto](https://docs.posit.co/resources/install-quarto.html) | 문서 작성 도구. macOS, brew 설치 가능 |
+| [Rig](https://github.com/r-lib/rig?tab=readme-ov-file#id-macos-installer)  | R installer. macOS, brew 설치 가능 |
+
+## uv, best practice? 
+
+uv에 관한 소개는 [LINK](https://blog.lostineconomics.com/posts/computer-tool/2024-09-02-uv-ultimate-virtual-env.html)를 참고하자. 여기서는 uv를 쓰는 하나의 방법을 소개하고자 한다. 개별 프로젝트 별로 별도의 파이썬 환경을 써도 좋지만, 그냥 두루두루 쓰는 범용 환경을 하나 설정해두어도 좋겠다. `$HOME` 폴더 아래 `.venv` 폴더를 만들어두고, 그 아래 가상 환경을 만들어두자.
+
+```zsh
+# ~ 폴더에서 실행하자. 
+> uv init . 
+> uv venv --python 3.12 
+> uv add jupyter pandas polas matpotlib koreanized_matplotlib
+```
+
+가상 환경이 `~/.venv` 폴더 아래 생성되고, 그 안에 필요한 패키지들이 설치된다. 이제 `/.zshrc`에 아래와 같은 내용을 포함하자. 
+
+```{.zshrc}
+source .venv/bin/activate
+```
+
+이렇게 해두면 OS 부트업 시 해당 가상 환경이 시스템에 올라오고. 디폴트 파이썬 환경이 된다. 문제가 생기면 `~/.venv`을 날리면 된다. 
+
+
+
+
+
