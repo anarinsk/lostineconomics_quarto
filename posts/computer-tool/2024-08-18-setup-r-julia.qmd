@@ -4,7 +4,7 @@ description: "Macos/Linux에서 활용하기"
 author: "JS HUHH"
 date: "08/18/2024"
 image: "./images/cat-julia.webp"
-categories: [Rstat, Julia, Jupyter, VSCode]
+categories: [r-stat, julia, jupyter, vs-code]
 #fig-align: center
 jupyter: python3
 draft: false

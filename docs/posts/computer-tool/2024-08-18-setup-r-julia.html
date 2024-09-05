@@ -8,7 +8,7 @@
 
 <meta name="author" content="JS HUHH">
 <meta name="dcterms.date" content="2024-08-18">
-<meta name="description" content="macOS/WSL-Ubuntu의 활용법">
+<meta name="description" content="Macos/Linux에서 활용하기">
 
 <title>Julia와 R을 잘 깔아보자. – lostineconomics.com</title>
 <style>
@@ -189,16 +189,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title">
 <h1 class="title">Julia와 R을 잘 깔아보자.</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Rstat</div>
-    <div class="quarto-category">Julia</div>
-    <div class="quarto-category">Jupyter</div>
-    <div class="quarto-category">VSCode</div>
+    <div class="quarto-category">r-stat</div>
+    <div class="quarto-category">julia</div>
+    <div class="quarto-category">jupyter</div>
+    <div class="quarto-category">vs-code</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    macOS/WSL-Ubuntu의 활용법
+    Macos/Linux에서 활용하기
   </div>
 </div>
 
@@ -230,22 +230,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <ul>
-<li>macOS와 Linux(WSL-Ubuntu)에서 Julia와 R을 세팅하는 방법을 알아보자.</li>
+<li>Macos와 Linux에서 Julia와 R을 세팅하는 방법을 알아보자.</li>
 </ul>
 </section>
 <section id="pixi는-쓰지-말자." class="level2">
-<h2 class="anchored" data-anchor-id="pixi는-쓰지-말자.">pixi는 쓰지 말자.</h2>
-<p>앞서 pixi로 R과 Julia를 세팅하는 <a href="https://blog.lostineconomics.com/posts/computer-tool/2024-04-03-r_with_pixi.html">방법</a>을 소개했다. 하지만 Python과 달리 Julia와 R에서는 pixi의 쓸모가 크지 않았다. 그래서 이번에는 직접 설치하는 방법을 정리한다. 직접 설치하면 단순하고 편리할 것 같지만, macOS 터미널 설치나 리눅스에서는 딱히 그렇지 않다. 이 포스트를 남겨두는 까닭이다.</p>
+<h2 class="anchored" data-anchor-id="pixi는-쓰지-말자.">Pixi는 쓰지 말자.</h2>
+<p>앞서 pixi로 R과 Julia를 세팅하는 <a href="https://blog.lostineconomics.com/posts/computer-tool/2024-04-03-r_with_pixi.html">방법</a>을 소개했다. 하지만 그다지 쓸모가 있지는 않더라. 그래서 이번에는 직접 설치하는 방법을 정리한다.</p>
 </section>
 <section id="전제-조건" class="level2">
 <h2 class="anchored" data-anchor-id="전제-조건">전제 조건</h2>
-<p>여기 내용은 아래와 같은 조건에서 적용할 수 있다.</p>
+<p>아래와 같은 조건에서 활용한다.</p>
 <ul>
-<li>OS는 Macos 또는 WSL-Ubuntu(WSL)를 사용한다.</li>
+<li>OS는 Macos 또는 Linux</li>
 <li>R과 Julia를 설치하고자 한다.</li>
 <li>VS Code에서 활용한다.</li>
 </ul>
-<p>Julia와 R 모두 직접 설치하는 데 다소 애로사항이 있다. 다행히도 둘 모두 활용할 수 있는 전용 installer가 나와 있다. 이 녀석들을 쓰면 두 플랫폼 모두에서 쉽게 랭귀지를 설치하고, 제거하고 버전을 관리할 수 있다. 인스톨러를 쓰면 pixi를 쓰고자 했던 원래의 의도를 살릴 수 있다.</p>
+<p>Julia와 R 모두 직접 설치하는 데 다소 애로사항이 있다. 다행히도 둘 모두 활용할 수 있는 전용 installer가 나와 있다. 이 녀석들을 쓰면 두 플랫폼 모두에서 쉽게 랭귀지를 설치하고, 제거하고 버전을 관리할 수 있다. 인스톨러를 쓰면 Pixi를 쓰고자 했던 원래의 의도를 살릴 수 있다.</p>
 </section>
 <section id="julia" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="julia">Julia</h2>
@@ -264,8 +264,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>위 경로가 정확한 바이너리의 경로는 아니다. 하지만 진짜 경로를 파악할 필요는 없다. Symlink의 위치면 충분하다.</p>
 <p>패키지 폴더의 위치는 다음과 같다.</p>
 <ul>
-<li>macOS: <code>~/.julia/packages</code></li>
-<li>WSL: (homebrew를 썼다면) <code>/home/linuxbrew/.linuxbrew/bin/julia</code></li>
+<li>macOS: <code>/Users/anari/.julia/packages</code></li>
+<li>Linux: (homebrew를 썼다면) <code>/home/linuxbrew/.linuxbrew/bin/julia</code></li>
 </ul>
 </section>
 <section id="vs-code-설정" class="level3">
@@ -291,37 +291,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="rig">Rig</h3>
 <p>R 역시 Linux에서 까는 것이 그다지 용이하지 않다. Macos에서는 어렵지는 않지만 터미널에 깔아서 쓰려면 역시 쉽지 않다. R에도 juliaup과 비슷한 인스톨러가 존재한다. Rig를 각 플랫폼에 맞게 설치하도록 하자.</p>
 <ul>
-<li>macOS: <a href="https://github.com/r-lib/rig?tab=readme-ov-file#installing-rig-on-macos-">LINK</a></li>
-<li>WSL: <a href="https://github.com/r-lib/rig?tab=readme-ov-file#installing-rig-on-linux-">LINK</a></li>
+<li>For Macos: <a href="https://github.com/r-lib/rig?tab=readme-ov-file#installing-rig-on-macos-">LINK</a></li>
+<li>For Linux: <a href="https://github.com/r-lib/rig?tab=readme-ov-file#installing-rig-on-linux-">LINK</a></li>
 </ul>
 <p>Rig를 통해 R을 설치하자.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> rig <span class="fu">install</span> release <span class="co"># 최신 버전을 설치한다.</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> rig <span class="ex">--help</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="사전-설치-항목" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="사전-설치-항목">사전 설치 항목</h3>
-<p>우선 몇 가지 패키지들부터 설치하도록 하자. OS에 깔아야 할 것들과 R에 패키지로 설치해야 하는 것으로 구별된다.</p>
-<section id="conda-radian-jupyter" class="level4">
-<h4 class="anchored" data-anchor-id="conda-radian-jupyter">Conda, Radian, Jupyter</h4>
-<ul>
-<li>Conda는 <a href="https://github.com/conda-forge/miniforge?tab=readme-ov-file#unix-like-platforms-mac-os--linux">miniforge</a>를 설치하자.</li>
-<li>Conda를 통해 radian과 Jupyter를 설치하자.
-<ul>
-<li>Radian은 메인 터미널 대신 활용할 R 앱이다.</li>
-<li>Jupyter를 설치해야 VS Code에서 Jupyter 커널로 R을 부릴 수 있다.</li>
-</ul></li>
-</ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> conda <span class="fu">install</span> radian jupyter <span class="co"># radian과 Jupyter 설치</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="설치-패키지" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="설치-패키지">설치 패키지</h3>
+<p>우선 몇 가지 패키지부터 Conda와 R에 설치하도록 하자.</p>
+<section id="radian-and-conda" class="level4">
+<h4 class="anchored" data-anchor-id="radian-and-conda">Radian and Conda</h4>
+<p>Radian: Conda를 통해 radian을 설치하자. 메인 터미널 대신 활용할 앱이다. 그리고 Jupyter도 설치되어 있어야 한다. 그래야 VS Code에서 Jupyter 커널로 R을 부릴 수 있다.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> conda <span class="fu">install</span> radian jupyter </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="os에-깔아야-할-것들" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="os에-깔아야-할-것들">OS에 깔아야 할 것들</h4>
-<p>윈도나 맥용으로 패키지로 나오는 녀석들과 달리 리눅스에서 R을 구동하기 위해서는 여러가지 의존성 도구들을 OS에 설치해야 한다. 어떤 것들이 필요한지 파악하는 방법이 있다. R을 실행한 후 아래와 같이 명령어를 치자.</p>
+<section id="리눅스에-깔아야-할-것들" class="level4">
+<h4 class="anchored" data-anchor-id="리눅스에-깔아야-할-것들">리눅스에 깔아야 할 것들</h4>
+<p>윈도나 맥처럼 패키지로 나오는 녀석들과 달리 리눅스에서 R을 구동하기 위해서는 여러가지 의존성 도구들을 OS에 설치해야 한다. 어떤 것들이 필요한지 파악하는 방법이 있다. R을 실행한 후 아래와 같이 명령어를 치자.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="sc">&gt;</span> pak<span class="sc">::</span><span class="fu">pkg_sysreqs</span>(<span class="st">"devtools"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>명령어를 실행하면 어떤 도구를 깔아야 하는지 알려준다. 이 녀석들을 설치하도록 하자.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>macOS ARM 버전에서는 이 명령어가 먹지 않는다.</p>
-</div></div></section>
+</section>
 <section id="r-packages" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="r-packages">R packages</h4>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R 터미널에서 아래를 실행한다. </span></span>
@@ -350,7 +340,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="vs-code-설정-1" class="level3">
 <h3 class="anchored" data-anchor-id="vs-code-설정-1">VS Code 설정</h3>
-<p>R extension을 VS Code에 설치하자. 역시 R 터미널의 실행 파일 경로를 설정하면 되는데, 위 symlink 경로를 제시하면 된다. Jupyter의 경우 R에서 IRkernel을 설치하고 활성화했다면, VS Code에서 Jupyter 커널 아래 R 커널을 택할 수 있다.</p>
+<p>R extension을 깐다. 역시 터미널의 실행 파일 경로를 설정하면 되는데, 위 symlink 경로를 제시하면 된다. Jupyter의 경우 R에서 IRkernel을 설치하고 활성화했으면,Jupyter 커널 아래 R 커널을 택할 수 있다.</p>
 
 
 </section>
