@@ -43,7 +43,7 @@ draft: false
 
 ## uv, best practice? 
 
-uv에 관한 소개는 [LINK](https://blog.lostineconomics.com/posts/computer-tool/2024-09-02-uv-ultimate-virtual-env.html)를 참고하자. 여기서는 uv를 쓰는 하나의 방법을 소개하고자 한다. 개별 프로젝트 별로 별도의 파이썬 환경을 써도 좋지만, 그냥 두루두루 쓰는 범용 환경을 하나 설정해두어도 좋겠다. `$HOME` 폴더 아래 `.venv` 폴더를 만들어두고, 그 아래 가상 환경을 만들어두자.
+uv에 관한 소개는 [LINK](https://blog.lostineconomics.com/posts/computer-tool/2024-09-02-uv-ultimate-virtual-env.html)를 참고하자. 여기서는 uv를 쓰는 하나의 방법을 소개하고자 한다. 개별 프로젝트 별로 별도의 파이썬 환경과 더불어 두루두루 쓰는 범용 개인 파이썬 환경을 하나 설정해두어도 좋겠다. `$HOME` 폴더 아래 `.venv` 폴더를 만들어두고, 그 아래 가상 환경을 만들어두자.
 
 ```zsh
 # ~ 폴더에서 실행하자. 

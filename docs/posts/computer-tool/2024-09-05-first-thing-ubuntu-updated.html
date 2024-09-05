@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -296,7 +296,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="uv-best-practice" class="level2">
 <h2 class="anchored" data-anchor-id="uv-best-practice">uv, best practice?</h2>
-<p>uv에 관한 소개는 <a href="https://blog.lostineconomics.com/posts/computer-tool/2024-09-02-uv-ultimate-virtual-env.html">LINK</a>를 참고하자. 여기서는 uv를 쓰는 하나의 방법을 소개하고자 한다. 개별 프로젝트 별로 별도의 파이썬 환경을 써도 좋지만, 그냥 두루두루 쓰는 범용 환경을 하나 설정해두어도 좋겠다. <code>$HOME</code> 폴더 아래 <code>.venv</code> 폴더를 만들어두고, 그 아래 가상 환경을 만들어두자.</p>
+<p>uv에 관한 소개는 <a href="https://blog.lostineconomics.com/posts/computer-tool/2024-09-02-uv-ultimate-virtual-env.html">LINK</a>를 참고하자. 여기서는 uv를 쓰는 하나의 방법을 소개하고자 한다. 개별 프로젝트 별로 별도의 파이썬 환경과 더불어 두루두루 쓰는 범용 개인 파이썬 환경을 하나 설정해두어도 좋겠다. <code>$HOME</code> 폴더 아래 <code>.venv</code> 폴더를 만들어두고, 그 아래 가상 환경을 만들어두자.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ~ 폴더에서 실행하자. </span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">init</span> . <span class="co"># 가상 환경 생성</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">venv</span> <span class="at">--python</span> 3.12 <span class="co"># 파이썬 버전 지정 설치 </span></span>
