@@ -2251,14 +2251,14 @@
     "href": "posts/computer-tool/2023-11-03-first-thing-ubuntu.html",
     "title": "Ubuntu를 깔고 먼저 해야 할 일들",
     "section": "",
-    "text": "우분투 설치하고 먼저 해야 할 일들을 정리해보자."
+    "text": "우분투 설치하고 먼저 해야 할 일들을 정리해보자.\nhomebrew 설치 이후부터는 LINK를 참고하자."
   },
   {
     "objectID": "posts/computer-tool/2023-11-03-first-thing-ubuntu.html#tl-dr",
     "href": "posts/computer-tool/2023-11-03-first-thing-ubuntu.html#tl-dr",
     "title": "Ubuntu를 깔고 먼저 해야 할 일들",
     "section": "",
-    "text": "우분투 설치하고 먼저 해야 할 일들을 정리해보자."
+    "text": "우분투 설치하고 먼저 해야 할 일들을 정리해보자.\nhomebrew 설치 이후부터는 LINK를 참고하자."
   },
   {
     "objectID": "posts/computer-tool/2023-11-03-first-thing-ubuntu.html#넋두리",
@@ -3847,7 +3847,7 @@
     "href": "posts/computer-tool/2024-09-05-first-thing-ubuntu-updated.html#before-you-brew-something",
     "title": "Ubuntu를 깔고 먼저 해야 할 일들(Updated)",
     "section": "Before you “brew” something",
-    "text": "Before you “brew” something\n앞 포스트에서 brew를 설치하는 데까지는 별달리 변한 내용이 없다. brew 이후를 설명하도록 하자."
+    "text": "Before you “brew” something\n앞 포스트에서 brew를 설치하는 데까지는 별달리 변한 내용이 없다. brew 이후를 설명하도록 하자. conda 기반 생태계를 없애는 것이 주된 목적이다."
   },
   {
     "objectID": "posts/computer-tool/2024-09-05-first-thing-ubuntu-updated.html#brew-able",

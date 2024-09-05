@@ -15,7 +15,7 @@ draft: false
 
 ## Before you "brew" something
 
-앞 포스트에서 brew를 설치하는 데까지는 별달리 변한 내용이 없다. brew 이후를 설명하도록 하자. 
+앞 포스트에서 brew를 설치하는 데까지는 별달리 변한 내용이 없다. brew 이후를 설명하도록 하자. conda 기반 생태계를 없애는 것이 주된 목적이다. 
 
 ## brew-able
 
@@ -25,10 +25,10 @@ draft: false
 |--------------|-------------|
 | fzf     | 퍼지 서치. zoxide가 활용한다. |
 | gh     | GitHub CLI |
-| juliaup     | Julialang 관리 도구 |
-| rustup-init     | Rustup 설치 관리 도구 |
-| uv     | 가상 환경 및 패키지 관리 도구 |
-| zoxide     | 빠르고 퍼지한 cd 구현 |
+| [juliaup](https://github.com/JuliaLang/juliaup)  | Julialang 관리 도구 |
+| [rustup-init](https://rust-lang.github.io/rustup/installation/other.html#homebrew)  | Rustup 설치 관리 도구 |
+| [uv](https://github.com/astral-sh/uv)  | 가상 환경 및 패키지 관리 도구 |
+| [zoxide](https://github.com/ajeetdsouza/zoxide) | 빠르고 퍼지한 cd 구현 |
 
 위 툴은 일상적으로 많이 쓰는 툴이고 brew로 설치가 가능하다. brew로 설치해서 운용하자. 
 
