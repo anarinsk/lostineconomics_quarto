@@ -47,14 +47,14 @@ uv에 관한 소개는 [LINK](https://blog.lostineconomics.com/posts/computer-to
 
 ```zsh
 # ~ 폴더에서 실행하자. 
-> uv init . 
-> uv venv --python 3.12 
-> uv add jupyter pandas polas matpotlib koreanized_matplotlib
+> uv init . # 가상 환경 생성
+> uv venv --python 3.12 # 파이썬 버전 지정 설치 
+> uv add jupyter pandas polas matpotlib koreanized_matplotlib # 가상 환경 패키지 추가 
 ```
 
-가상 환경이 `~/.venv` 폴더 아래 생성되고, 그 안에 필요한 패키지들이 설치된다. 이제 `/.zshrc`에 아래와 같은 내용을 포함하자. 
+가상 환경이 `~/.venv` 폴더 아래 생성되고, 그 안에 필요한 패키지들이 설치된다. 프로젝트 관리를 `pyproject.toml`은 `$HOME` 폴더 아래 있다. 마지막으로 `/.zshrc`에 아래와 같은 내용을 추가하자. 
 
-```{.zshrc}
+```{zshrc}
 source .venv/bin/activate
 ```
 
