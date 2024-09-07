@@ -3,7 +3,7 @@ title: "Ubuntu를 깔고 먼저 해야 할 일들(Updated)"
 description: 우분투 설치 후 이것부터!   
 author: "JS HUHH"
 date: "09/05/2024"
-image: "./images/cat-ubuntu.webp"
+image: "./images/cats-ubuntu.webp"
 categories: [computer-tool, pc-install, os, linux]
 lightbox: auto
 #jupyter: python3
