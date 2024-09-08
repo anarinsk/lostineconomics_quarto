@@ -3,7 +3,7 @@ title: "uv, 궁극의 가상 환경"
 description: "Python 가상 환경은 이걸로 끝이다!"   
 author: "JS HUHH"
 date: "09/02/2024"
-image: "./images/cat-virtual-env.webp"
+image: "./images/cat-virtual-env-2.webp"
 categories: [computer-tool, coding, python, virtual-env]
 #fig-align: center
 #jupyter: python3
