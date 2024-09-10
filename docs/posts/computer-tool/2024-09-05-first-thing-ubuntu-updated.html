@@ -110,7 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -170,9 +170,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script>
 <script>
@@ -233,10 +235,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="before-you-brew-something">Before you “brew” something</h2>
 <p>앞 포스트에서 brew를 설치하는 데까지는 별달리 변한 내용이 없다. brew 이후를 설명하도록 하자. conda 기반 생태계를 없애는 것이 주된 목적이다.</p>
 </section>
-<section id="brew-able" class="level2">
+<section id="brew-able" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="brew-able">brew-able</h2>
 <p>앞서도 밝혔지만, brew로 할 수 있는 일이 있다면 다 brew로 하는 것이 좋다. 업데이트, 삭제, 설치 등의 관리가 온전하게 이루어지기 때문이다. (나는 매년 일정 액수를 brew에 기부한다.) brew로 깔아야 하는 것들의 목록을 살펴보고 필요한 몇 가지를 설명하도록 하자.</p>
-<table class="caption-top table">
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>macOS의 경우 cask 옵션을 통해서 GUI 앱도 설치할 수 있다. Linux의 경우 이보다는 못하지만 그래도 유용한 패키지 관리툴이다.</p>
+</div></div><table class="caption-top table">
 <thead>
 <tr class="header">
 <th>패키지 이름</th>
