@@ -46,7 +46,7 @@ uv 개발진의 야심처럼 uv는 pip, pip-tools, pipx, poetry, pyenv, virtuale
 
 ## 사용 사례 
 
-### 프로젝트 초기화 및 복원 
+### 설치 
 
 보다 상세한 내용은 [공식 문서](https://docs.astral.sh/uv/)를 참고하자. 여기서는 내가 활용하는 간단한 사례를 소개하도록 한다. 이 역시 미래의 나 놈을 위한 것이다. 설치는 고민하지 말고 brew를 이용하자. brew 없이 까는 방법은 링크에 소개되어 있다. 
 
@@ -54,10 +54,17 @@ uv 개발진의 야심처럼 uv는 pip, pip-tools, pipx, poetry, pyenv, virtuale
 > brew install uv 
 ```
 
+### 프로젝트 개시 
+
 이제 프로젝트 폴더를 생성하고 아래와 같이 기초 작업을 해준다. 
 
 ```bash 
->  uv init . # 프로젝트 초기화
+> deactivate # 시작시 가능하면 venv 가상 환경 비활성화
+> uv init --no-workspace # 워크 스페이스에 소속되지 않은 프로젝트 초기화
+> uv init . # 상위 프로젝트가 있을 경우 해당 프로젝트 하위로 초기화 
+```
+
+```bash 
 > uv venv --python 3.12.0 # venv 조건 활성화 및 파이썬 설치  
 > uv add jupyter polars # pyproject.toml에 해당 패키지 넣기 
 
@@ -66,7 +73,15 @@ uv 개발진의 야심처럼 uv는 pip, pip-tools, pipx, poetry, pyenv, virtuale
 > un sync # pyproject.toml 내용 동기화 
 ```
 
-- 프로젝트를 초기화하고, venv를 통해 가상환경을 설치한다. 이떄 파이썬 버전을 지정할 수 있다. 
+- 프로젝트를 초기화하는 두 가지 방식이 있다. 만일 해당 폴더를 워크스페이스에 소속시키지 않는다면 `--no-workspace` 옵션을 넣어주면 된다. 어딘가 워크 스페이스에 소속이 되어 있다면 그냥 `uv init .`을 실행하면 된다. 
+    - 예를 들어보자. 만일 상위 프로젝트의 `pyproject.toml`에 다음과 같은 내용이 포함되어 있다면 이는 워크스페이스에 소속된 프로젝트라는 뜻이다. 
+
+```toml
+[tool.uv.workspace]
+members = ["github/test_uv_workspace"]
+```
+
+- venv를 통해 가상환경을 설치한다. 이떄 파이썬 버전을 지정할 수 있다. 
 - 필요한 패키지를 설치한다. `add` 명령을 활용하면 `pyproject.toml`에 추가된다.
 - 해당 프로젝트 디렉토리를 github 등을 통해 수입했다면, `uv sync`를 통해 `pyproject.toml`의 내용을 해당 로컬 머신에 설치할 수 있다. 즉, 없거나 업데이트된 요소를 갱신하는 명령이다. 
 
@@ -77,6 +92,7 @@ uv 개발진의 야심처럼 uv는 pip, pip-tools, pipx, poetry, pyenv, virtuale
 > source .venv/bin/activate
 ```
 
+만일 프로젝트의 가상 환경이 적절하지 않다면 경고 메시지를 띄운다. 이를 보면서 적절하게 대응하도록 하자. 
 
 ### OS 특정 패키지 설치 
 
