@@ -61,7 +61,7 @@ uv 개발진의 야심처럼 uv는 pip, pip-tools, pipx, poetry, pyenv, virtuale
 ```bash 
 > deactivate # 시작시 가능하면 venv 가상 환경 비활성화
 > uv init --no-workspace # 워크 스페이스에 소속되지 않은 프로젝트 초기화
-> uv init . # 상위 프로젝트가 있을 경우 해당 프로젝트 하위로 초기화 
+> uv init . # 상위 폴더에 프로젝트가 있을 경우 해당 프로젝트 하위로 초기화 
 ```
 
 ```bash 

@@ -53,6 +53,7 @@ uv에 관한 소개는 [LINK](https://blog.lostineconomics.com/posts/computer-to
 # ~ 폴더에서 실행하자. 
 > deactivate # venv 가상 환경 해제 
 > uv init --no-workspace # 종속 없이 가상 환경 생성
+# 만일 상위 폴더의 환경을 유지하려면 `uv init .`을 실행하자.
 > uv venv --python 3.12 # 파이썬 버전 지정 설치 
 > uv add jupyter pandas polars matplotlib koreanize_matplotlib # 가상 환경 패키지 추가 
 ```
