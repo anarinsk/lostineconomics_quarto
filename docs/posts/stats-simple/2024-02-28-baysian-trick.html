@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="JS HUHH">
-<meta name="dcterms.date" content="2024-09-02">
-<meta name="description" content="Python 가상 환경은 이걸로 끝이다!">
+<meta name="dcterms.date" content="2025-01-06">
+<meta name="description" content="어떤 내용을 검토해야 할까?">
 
-<title>uv, 궁극의 가상 환경 – lostineconomics.com</title>
+<title>베이즈 정리의 응용 – lostineconomics.com</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,40 +22,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -77,7 +43,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-5c6c0ad7bdfb89369003da8042cd4f02.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-5d773f0488cf1d7b50b4ca4bc8805056.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-11da94c32c123c22a7ecc70b3e91746a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -106,14 +72,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<meta name="quarto:status" content="draft">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -170,11 +166,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script>
 <script>
@@ -187,18 +181,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">uv, 궁극의 가상 환경</h1>
+<h1 class="title">베이즈 정리의 응용</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">computer-tool</div>
-    <div class="quarto-category">coding</div>
-    <div class="quarto-category">python</div>
-    <div class="quarto-category">virtual-env</div>
+    <div class="quarto-category">statistics</div>
+    <div class="quarto-category">stats-simple</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Python 가상 환경은 이걸로 끝이다!
+    어떤 내용을 검토해야 할까?
   </div>
 </div>
 
@@ -215,7 +207,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 2, 2024</p>
+      <p class="date">January 6, 2025</p>
     </div>
   </div>
   
@@ -229,128 +221,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="tl-dr" class="level2">
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
-<ul>
-<li>Python 가상 환경, 더 이상 헤매지 마세요.</li>
-</ul>
+<p>베이즈 정리, 잘못 쓰지 않는 것도 중요하다.</p>
 </section>
-<section id="방황은-끝났다." class="level2">
-<h2 class="anchored" data-anchor-id="방황은-끝났다.">방황은 끝났다.</h2>
-<p>Python의 가상 환경에는 선택지가 많다. 선택지가 많다는 게 꼭 나쁜 것은 아니다. 다양한 선택지가 있으면, 이용 환경의 차이 및 변화 따라서 유연하게 대응할 수 있게 된다. 다만 (나 같은) 초급 이용자 입장에서는 이 점이 혼란스러울 때가 있다. 그냥 닥치고 선택할 수 있는 ‘간편한’ 무지성적 해결책이 있으면 싶다. 최근 등장한 Rye, Pixi 모두 이런 시도의 한 갈래다. 둘 모두 CLI에서 거의 원스톱에 가깝게 쓸 수 있는 좋은 가상 환경 및 패키지 관리 도구이다. 다만 이들이 모두 conda에 의존하고 있다는 점에서 살짝 거슬리는 대목이 있다.</p>
-<p>그리고 Python 버전 3.12부터 <a href="https://packaging.python.org/en/latest/guides/writing-pyproject-toml/">pyproject.toml</a>을 활용한 보다 체계적이고 편리한 패키지 설정 및 관리가 도입되었다. 편리한 가상 환경이 이와 같은 흐름 위에 구축된다면 이후의 호환성을 크게 염려하지 않아도 될 것이다. 물론 설정 과정이 복잡하거나 이것저것 따로 깔아야 하는 것도 피했으면 싶다. 예를 들어 Poetry의 경우 다재다능한 패키지 관리를 제공하나 가상 환경을 번들로 제공하지 않는다. (물론 따로 까는게 어렵진 않지만, 역시 초보는 귀찮을 따름이고…)</p>
-<p>이 모든 조건과 요구를 만족시키는 가상 환경과 패키지 관리 도구가 있을까? 있다!</p>
-<p><a href="https://github.com/astral-sh/uv">uv</a></p>
-<section id="사용-조건" class="level3">
-<h3 class="anchored" data-anchor-id="사용-조건">사용 조건</h3>
-<p>macOS와 WSL-Ubuntu이 가정하는 사용 조건이다. 윈도 역시 필요하다면 어렵지 않게 쓸 수 있으리라 짐작한다. (하지만 WSL을 쓸 수 있는 마당에 윈도에서 윈도 네이티브를 고집할 이유가 있을까…)</p>
-</section>
-</section>
-<section id="here-comes-the-uv" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="here-comes-the-uv">Here Comes the uv!</h2>
-<p>Conda가 편리하지만 사설은 사설이다. 예를 들어 한글 이용자라면 matplotlib에서 한글 폰트를 미리 설정해줘야 한다. 아주 번거롭지는 않지만 바쁠 때는 이마저 귀찮을 수 있다. <a href="https://pypi.org/project/koreanize-matplotlib/">koreanize-matplotlib</a> 패키지는 나눔고딕폰트를 matplotlib의 기본 폰트로 설정해주는 간단한 패키지다. 이 녀석은 conda에는 없고 PyPI에만 있다. uv를 쓰면 이 패키지도 바로 설치할 수 있다.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>물론 Pixi나 Rye에서도 PyPI를 통해 패키지를 설치할 수 있다. 아주 번거롭지는 않지만 한번에 떠오르지 않을 때가 있다. 그래서 PyPI를 뼈대로 하는 uv 쪽이 살짝 더 편하다.</p>
-</div></div><p>uv 개발진의 야심처럼 uv는 pip, pip-tools, pipx, poetry, pyenv, virtualenv를 대체하기 위한 툴이다. 새롭게 뭔가를 만들었다기보다는 기존에 존재하는 툴은 잘 연결해주는 성격이 강하다. 패키지를 pip를 통해 설치하는 것처럼 가상 환경 역시 venv를 그대로 쓰면 된다. 프로젝트 디렉토리 아래 <code>.venv</code> 폴더를 생성하고 그 아래 가상 환경의 요소들이 설치된다. VS Code에서도 이 가상 환경이 쉽게 인식되고 그대로 활용하면 된다.</p>
-<p>그리고 Rust로 제작되서 무엇보다도 빠르다. 개발진의 벤치마크가 결코 허언이 아니다.</p>
-</section>
-<section id="사용-사례" class="level2">
-<h2 class="anchored" data-anchor-id="사용-사례">사용 사례</h2>
-<section id="설치" class="level3">
-<h3 class="anchored" data-anchor-id="설치">설치</h3>
-<p>보다 상세한 내용은 <a href="https://docs.astral.sh/uv/">공식 문서</a>를 참고하자. 여기서는 내가 활용하는 간단한 사례를 소개하도록 한다. 이 역시 미래의 나 놈을 위한 것이다. 설치는 고민하지 말고 brew를 이용하자. brew 없이 까는 방법은 링크에 소개되어 있다.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> brew <span class="fu">install</span> uv </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="프로젝트-개시" class="level3">
-<h3 class="anchored" data-anchor-id="프로젝트-개시">프로젝트 개시</h3>
-<p>이제 프로젝트 폴더를 생성하고 아래와 같이 기초 작업을 해준다.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> deactivate <span class="co"># 시작시 가능하면 venv 가상 환경 비활성화</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">init</span> <span class="at">--no-workspace</span> <span class="co"># 워크 스페이스에 소속되지 않은 프로젝트 초기화</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">init</span> . <span class="co"># 상위 폴더에 프로젝트가 있을 경우 해당 프로젝트 하위로 초기화 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>만일 필요한 패키지를 그대로 해당 프로젝트(폴더) 아래 들어가기를 원한다면 다음의 사항을 살펴보자. 해당 프로젝트 상위 폴더에 <code>pyproject.toml</code>이 있다면 여기 설정의 문제를 일으킬 수 있다. 이를 지워주자.</li>
-</ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">venv</span> <span class="at">--python</span> 3.12.0 <span class="co"># venv 조건 활성화 및 파이썬 설치  </span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">add</span> jupyter polars <span class="co"># pyproject.toml에 해당 패키지 넣기 </span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">----</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="fu">sync</span> <span class="co"># pyproject.toml 내용 동기화 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>프로젝트를 초기화하는 두 가지 방식이 있다. 만일 해당 폴더를 워크스페이스에 소속시키지 않는다면 <code>--no-workspace</code> 옵션을 넣어주면 된다. 어딘가 워크 스페이스에 소속이 되어 있다면 그냥 <code>uv init .</code>을 실행하면 된다.
-<ul>
-<li>예를 들어보자. 만일 상위 프로젝트의 <code>pyproject.toml</code>에 다음과 같은 내용이 포함되어 있다면 이는 워크스페이스에 소속된 프로젝트라는 뜻이다.</li>
-</ul></li>
-</ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[tool.uv.workspace]</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">members</span> <span class="op">=</span> <span class="op">[</span><span class="st">"github/test_uv_workspace"</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>venv를 통해 가상환경을 설치한다. 이떄 파이썬 버전을 지정할 수 있다.</li>
-<li>필요한 패키지를 설치한다. <code>add</code> 명령을 활용하면 <code>pyproject.toml</code>에 추가된다.</li>
-<li>해당 프로젝트 디렉토리를 github 등을 통해 수입했다면, <code>uv sync</code>를 통해 <code>pyproject.toml</code>의 내용을 해당 로컬 머신에 설치할 수 있다. 즉, 없거나 업데이트된 요소를 갱신하는 명령이다.</li>
-</ul>
-<p>가상환경 활성화는 venv와 동일하다.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 프로젝트 폴더에서 실행 </span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> source <span class="ex">.venv/bin/activate</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>만일 프로젝트의 가상 환경이 적절하지 않다면 경고 메시지를 띄운다. 이를 보면서 적절하게 대응하도록 하자.</p>
-</section>
-<section id="os-특정-패키지-설치" class="level3">
-<h3 class="anchored" data-anchor-id="os-특정-패키지-설치">OS 특정 패키지 설치</h3>
-<p>OS에 따라서 서로 다른 파이썬 패키지가 필요한 경우가 있다. 대표적으로 torch가 그렇다. 리눅스에서는 nvidia CUDA를, macOS에서는 metal(MPS)를 쓰는 상황을 가정해보자. 토치의 홈페이지에서는 각각 상황에 디해서 pip로 어떻게 설치해야 하는지를 알려준다. 이 내용을 <code>pyproject.toml</code>에 반영하면 된다. 아래의 예를 보자.</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>pyproject.toml</strong></pre>
-</div>
-<div class="sourceCode" id="cb6" data-filename="pyproject.toml"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[project]</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dt">name</span> <span class="op">=</span> <span class="st">"test-uv-torch"</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="dt">version</span> <span class="op">=</span> <span class="st">"0.1.0"</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="dt">description</span> <span class="op">=</span> <span class="st">"Add your description here"</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="dt">readme</span> <span class="op">=</span> <span class="st">"README.md"</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="dt">requires-python</span> <span class="op">=</span> <span class="st">"&gt;=3.11"</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="dt">dependencies</span> <span class="op">=</span> <span class="op">[</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"jupyter&gt;=1.1.1"</span><span class="op">,</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"matplotlib&gt;=3.9.2"</span><span class="op">,</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"torch&gt;=2.4.0"</span><span class="op">,</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"torchvision&gt;=0.9.0"</span><span class="op">,</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"torchaudio&gt;=2.4.0"</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">]</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="kw">[project.optional-dependencies]</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="dt">cuda</span> <span class="op">=</span> <span class="op">[</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"torch&gt;=2.4.0; sys_platform == 'linux'"</span><span class="op">,</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"torchvision&gt;=0.9.0; sys_platform == 'linux'"</span><span class="op">,</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">"torchaudio&gt;=2.4.0; sys_platform == 'linux'"</span></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">]</span></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="kw">[tool.uv.sources]</span></span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="dt">cuda</span> <span class="op">=</span> <span class="op">{ </span><span class="dt">url</span><span class="op"> =</span> <span class="st">"https://download.pytorch.org/whl/cu124"</span><span class="op"> }</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>toml을 좀 들여다 보자.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"torch&gt;=2.4.0"</span><span class="er">,</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"torchvision&gt;=0.9.0"</span><span class="er">,</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"torchaudio&gt;=2.4.0"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>macOS의 경우 <code>sys_platform</code>으로 ’darwin’을 지정하면 된다. macOS의 경우 CPU를 쓰는 상황과 동일하기 떄문에 별달리 OS를 지정하지 않았다.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[project.optional-dependencies]</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dt">cuda</span> <span class="op">=</span> <span class="op">[</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"torch&gt;=2.4.0; sys_platform == 'linux'"</span><span class="op">,</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"torchvision&gt;=0.9.0; sys_platform == 'linux'"</span><span class="op">,</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"torchaudio&gt;=2.4.0; sys_platform == 'linux'"</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">]</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="kw">[tool.uv.sources]</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="dt">cuda</span> <span class="op">=</span> <span class="op">{ </span><span class="dt">url</span><span class="op"> =</span> <span class="st">"https://download.pytorch.org/whl/cu124"</span><span class="op"> }</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>cuda를 쓰는 상황을 가정해서 cuda라는 이름의 별도 옵션을 만들었다. <code>[tool.uv.sources]</code>는 pip로 설치할 때 <code>--index-url</code>의 옵션을 넣어주면 된다. 위 toml의 경우 cuda 12.4를 활용했다. 이렇게 지정해 둔 cuda 옵션으로 Pytorch를 설치하고 싶다면 아래와 같이 실행하면 된다.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="fu">sync</span> <span class="at">--extra</span> cuda</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li><code>--extra</code>는 toml 파일에 있는 별도의 의존성 옵션을 이용하겠다는 뜻이다.</li>
-</ul>
-</section>
-</section>
-<section id="requirements.txt-생성" class="level2">
-<h2 class="anchored" data-anchor-id="requirements.txt-생성"><code>requirements.txt</code> 생성</h2>
-<p>간혹 <code>pyproject.toml</code>이 아닌 <code>requirements.txt</code>가 필요한 경우가 있다. 이 역시 <code>uv</code>를 통해 쉽게 생성할 수 있다.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">pip</span> compile pyproject.toml <span class="at">-o</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="베이즈-정리의-핵심" class="level2">
+<h2 class="anchored" data-anchor-id="베이즈-정리의-핵심">베이즈 정리의 핵심</h2>
+<p>베이즈 정리는 조건부 확률을 다루는 데에 있어서 중요한 개념이다. 이는 두 사건 A, B에 대해 다음과 같이 정의된다.</p>
+<p><span class="math display">\[\begin{align*}
+P(A|B) = \frac{P(B|A)P(A)}{P(B)}
+\end{align*}\]</span></p>
+<p>식을 조금만 바뀌서 보자.</p>
+<p><span class="math display">\[\begin{align*}
+P(A|B) = \underbrace{\frac{P(B|A)}{P(B)}}_{(*)} {P(A)}
+\end{align*}\]</span></p>
+<p>이렇게 보면, <span class="math inline">\(B\)</span>라는 새로운 사실이 주어졌을 때 <span class="math inline">\(P(A)\)</span>를 업데이트하는 일종의 룰이다. 이 룰을 보여주는 것이 <span class="math inline">\((*)\)</span> 부분이다.</p>
+<p>간단한 예를 들어보자. <span class="math inline">\(A\)</span>는 “갑돌이가 범인”이라는 사건이고, <span class="math inline">\(B\)</span>는 범행 현장의 유전자 감식 결과 감돌이의 유전자가 식별된 사건이라고 하자. 보통 유전자 감식의 정확도는 99.999999%라고 하자. 이때 <span class="math inline">\(B\)</span>라는 사건의 발생이 갑돌이가 범인일 확률을 얼마나 확정할까? 위 식에서 보면 애초에 갑돌이가 범인이 되는 사건의 확률 <span class="math inline">\(P(A)\)</span>가 중요하다. 증거에 따른 업데이트 부분 <span class="math inline">\((*)\)</span>이 굉장히 큰 값이라고 해도, <span class="math inline">\(P(A)\)</span>의 값이 충분히 0에 가깝다면 <span class="math inline">\(P(A|B)\)</span>의 값은 여전히 작을 것이다.</p>
+<p>또 하나 기억해야 하는 사실이 있다. 당연하지만, <span class="math inline">\(P(A|B) \neq P(B|A)\)</span>이다. 식으로 보면 자명하지만 자연어 진술 속에서는 의외로 이 사실이 무시되고는 한다.</p>
 
 
 </section>
