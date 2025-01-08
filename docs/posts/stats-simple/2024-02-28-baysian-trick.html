@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.32">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="JS HUHH">
 <meta name="dcterms.date" content="2025-01-06">
-<meta name="description" content="어떤 내용을 검토해야 할까?">
+<meta name="description" content="좋은 사례를 살펴보자">
 
 <title>베이즈 정리의 응용 – lostineconomics.com</title>
 <style>
@@ -39,12 +39,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-fc6d358c97f25a8ea829b86655043430.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-5c6c0ad7bdfb89369003da8042cd4f02.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-86daaaaad7353f9cc0c554efc1dd6d94.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f8dc6eab18fde03278982b0b35885446.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-11da94c32c123c22a7ecc70b3e91746a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-df3b39ae67a86dbbcce17cdad41943dd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ef2bd699ecdbffd8ed34ff6fc2fe69bd.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,7 +72,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<meta name="quarto:status" content="draft">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -106,10 +105,10 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -166,9 +165,11 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JNRF3S74Z4"></script>
 <script>
@@ -190,7 +191,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    어떤 내용을 검토해야 할까?
+    좋은 사례를 살펴보자
   </div>
 </div>
 
@@ -223,7 +224,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
 <p>베이즈 정리, 잘못 쓰지 않는 것도 중요하다.</p>
 </section>
-<section id="베이즈-정리의-핵심" class="level2">
+<section id="베이즈-정리의-핵심" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="베이즈-정리의-핵심">베이즈 정리의 핵심</h2>
 <p>베이즈 정리는 조건부 확률을 다루는 데에 있어서 중요한 개념이다. 이는 두 사건 A, B에 대해 다음과 같이 정의된다.</p>
 <p><span class="math display">\[\begin{align*}
@@ -235,9 +236,105 @@ P(A|B) = \underbrace{\frac{P(B|A)}{P(B)}}_{(*)} {P(A)}
 \end{align*}\]</span></p>
 <p>이렇게 보면, <span class="math inline">\(B\)</span>라는 새로운 사실이 주어졌을 때 <span class="math inline">\(P(A)\)</span>를 업데이트하는 일종의 룰이다. 이 룰을 보여주는 것이 <span class="math inline">\((*)\)</span> 부분이다.</p>
 <p>간단한 예를 들어보자. <span class="math inline">\(A\)</span>는 “갑돌이가 범인”이라는 사건이고, <span class="math inline">\(B\)</span>는 범행 현장의 유전자 감식 결과 감돌이의 유전자가 식별된 사건이라고 하자. 보통 유전자 감식의 정확도는 99.999999%라고 하자. 이때 <span class="math inline">\(B\)</span>라는 사건의 발생이 갑돌이가 범인일 확률을 얼마나 확정할까? 위 식에서 보면 애초에 갑돌이가 범인이 되는 사건의 확률 <span class="math inline">\(P(A)\)</span>가 중요하다. 증거에 따른 업데이트 부분 <span class="math inline">\((*)\)</span>이 굉장히 큰 값이라고 해도, <span class="math inline">\(P(A)\)</span>의 값이 충분히 0에 가깝다면 <span class="math inline">\(P(A|B)\)</span>의 값은 여전히 작을 것이다.</p>
-<p>또 하나 기억해야 하는 사실이 있다. 당연하지만, <span class="math inline">\(P(A|B) \neq P(B|A)\)</span>이다. 식으로 보면 자명하지만 자연어 진술 속에서는 의외로 이 사실이 무시되고는 한다.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>극단적인 예를 들어보자. 만일 갑돌이가 10년 전에 죽은 인물이라면? 이때 <span class="math inline">\(P(A)\)</span>는 0이다. 그렇다면 <span class="math inline">\(P(A|B)\)</span>는 어떻게 될까? 위 식에서 보면, <span class="math inline">\(P(B|A)\)</span>가 1에 가깝다고 해도 <span class="math inline">\(P(A|B)\)</span>는 0이다.</p>
+</div></div><p>또 하나 기억해야 하는 사실이 있다. 당연하지만, <span class="math inline">\(P(A|B) \neq P(B|A)\)</span>이다. 식으로 보면 자명하지만 자연어 진술 속에서는 의외로 이 사실이 무시되고는 한다.</p>
+</section>
+<section id="베이즈-정리의-함정-i" class="level2">
+<h2 class="anchored" data-anchor-id="베이즈-정리의-함정-i">베이즈 정리의 함정 I</h2>
+<p>톰 치버스의 “모든 것이 예측 가능하다”에 베이즈 정리를 쉽게 무기로 활용될 수 있는 사례를 소개하고 있다. 코로나 때의 일화이다. 코로나 면역을 검사할 수 있는 새로운 항체 검사가 등장했다고 하자. 두 검사의 민감도(sensitivity)와 특이도(specificity)는 모두 95%이다. 검사의 결과가 높은 수치이므로, 이런 주장을 펼칠 수 있다. 이 검사를 통해 면역을 지닌 것으로 확인된 사람에게는 면역 여권을 발행하고 통행의 자유를 보장하자!</p>
+<p>맞는 말일까? 좀 따져보자. 그 전에 용어부터 정리하자.</p>
+<section id="민감도와-특이도" class="level3">
+<h3 class="anchored" data-anchor-id="민감도와-특이도">민감도와 특이도</h3>
+<p>민감도는 실제로 양성인 사람을 양성으로 판정하는 비율이다. 특이도는 실제로 음성인 사람을 음성으로 판정하는 비율이다. 정의는 다음과 같다.</p>
+<p><span class="math display">\[\begin{align*}
+\text{sensitivity} = \frac{\text{TP}}{\text{TP + FN}}\\
+\text{specificity} = \frac{\text{TN}}{\text{TN + FP}}
+\end{align*}\]</span></p>
+<p>식을 잘 보자. 민감도란 실제로 양성을 갖고 있는 존재(TP+FN) 중에서 양성으로 판정된 존재(TP)의 비율이다. 특이도는 실제로 음성을 갖고 있는 존재(TN+FP) 중에서 음성으로 판정된 존재(TN)의 비율이다. 그렇다면, 이 1에서 이 두 값을 뺀 수치는 어떻게 정의될까?</p>
+<p><span class="math display">\[\begin{align*}
+\text{FN rate} &amp; = 1 -  \frac{\text{TP}}{\text{TP + FN}} = \frac{\text{FN}}{\text{TP + FN}}\\
+\text{FP rate} &amp; = 1 - \frac{\text{TN}}{\text{TN + FP}} = \frac{\text{FP}}{\text{TN + FP}}
+\end{align*}\]</span></p>
+<p>민감도는 미탐률(false negative rate)과 연결되고, 특이도는 오탐률(false positive rate)과 연결된다.</p>
+</section>
+<section id="가정" class="level3">
+<h3 class="anchored" data-anchor-id="가정">가정</h3>
+<ul>
+<li>검사 대상은 100 만명이다.</li>
+<li>면역력을 지닌 인구의 비율이 3%이다.</li>
+</ul>
+</section>
+<section id="사고-실험" class="level3">
+<h3 class="anchored" data-anchor-id="사고-실험">사고 실험</h3>
+<ul>
+<li>면역을 지닌 사람의 비율은 3만 명이다.</li>
+<li>3만명 중에서 95%인 28,500 명이 면역을 지닌 것(양성)으로 판정된다.</li>
+<li>나머지 97만 명의 비면역력자 중에서 5%인 48,500명이 면역을 지닌 것(양성)으로 판정된다.</li>
+<li>면역력이 있는 것으로 판정된 사람 7.5만 명 중에서 약 62%가 가짜 면역자다.</li>
+</ul>
+<p>이들이 자유롭게 활보하게 두는 것이 타당한 정책일까?</p>
+</section>
+</section>
+<section id="베이즈-정리의-함정-ii" class="level2">
+<h2 class="anchored" data-anchor-id="베이즈-정리의-함정-ii">베이즈 정리의 함정 II</h2>
+<p>책에서는 보다 교묘한 사례가 소개되어 있다. 이게 더 흥미롭다. 주장은 이렇다. 코로나 검사에서 양성이 나왔다고 해도 이는 오탐(false positive)일 가능성이 높다. 따라서 검사 결과의 양성 사례가 늘어난다고 해도 크게 긴장한 필요는 없다.</p>
+<p>이 주장은 베이즈 정리를 활용한다. 앞서 언급했듯이 베이즈 정리는 기저 확률에 크게 영향을 받는다. 위와 같이 어떤 주장의 중요성을 줄이고 싶다면 기저 확률을 크게 낮추면 된다.</p>
+<section id="가정-1" class="level3">
+<h3 class="anchored" data-anchor-id="가정-1">가정</h3>
+<ul>
+<li>전체 인구에서 코로나 감염자의 비율은 0.1%이다.</li>
+<li>민감도는 90%, 특이도는 99%이다.</li>
+</ul>
+</section>
+<section id="사고-실험-1" class="level3">
+<h3 class="anchored" data-anchor-id="사고-실험-1">사고 실험</h3>
+<ul>
+<li>100만 명을 검사한다고 하자.</li>
+<li>실제 감염자는 1,000명이다.
+<ul>
+<li>민감도에 따르면 900명이 양성으로 판정된다.</li>
+</ul></li>
+<li>비감염자는 999,000명이다.
+<ul>
+<li>특이도에 따르면 989,010명이 음성으로 판정된</li>
+<li>양성 판정은 9,990명이다.</li>
+</ul></li>
+<li>양성판정자(900+9,990) 중에서 실제 감염자는 900명이므로 이는 약 8.3%에 불과하다.</li>
+</ul>
+<p>이는 맞는 주장일까?</p>
+</section>
+<section id="가정-재검토-i" class="level3">
+<h3 class="anchored" data-anchor-id="가정-재검토-i">가정 재검토 I</h3>
+<ul>
+<li>전체 인구에서 코로나 감염자의 비율은 0.1%라는 주장을 맞을 수 있다.</li>
+<li>검사자 100만 명을 무작위 추출한 것이라면 위의 주장이 맞을 수 있다. 하지만 보통 코로나 검사는 의심할 만한 맥락이 존재하는 경우에 받게 된다. 검염자가 1%라고 가정하자.</li>
+</ul>
+</section>
+<section id="사고-실험-2" class="level3">
+<h3 class="anchored" data-anchor-id="사고-실험-2">사고 실험</h3>
+<ul>
+<li>감염자 중 양성판정자는 9,000명</li>
+<li>비감염자 중 영성판정자는 9,900명<br>
+</li>
+<li>거의 50%에 가까운 숫자가 감염자가 된다.</li>
+<li>감염자가 10%라고 가정하자.
+<ul>
+<li>양성 결과의 90%가 감염자가 된다.</li>
+</ul></li>
+</ul>
+</section>
+<section id="가정-재검토-ii" class="level3">
+<h3 class="anchored" data-anchor-id="가정-재검토-ii">가정 재검토 II</h3>
+<ul>
+<li>특이도가 99%라는 주장은 타당한가? 이는 오탐률이 1%라는 이야기이다.</li>
+<li>그런데 실제 데이터를 보면 전체 피검사자 중에서 양성이 나올 비율은 0.05%에 불과하다.</li>
+<li>오탐률이 이 숫자를 넘을 수는없다. 오탐률이 0.05% 혹은 특이도가 99.95% 그리고 감염자 비율 0.1%를 가정하면, 양성 결과 중 거짓은 35% 정도로 떨어진다.</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -467,8 +564,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -579,7 +674,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
