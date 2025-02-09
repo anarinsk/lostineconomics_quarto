@@ -234,19 +234,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="문제-왜-github-actions에-uv를-올리고자-하는가" class="level2">
 <h2 class="anchored" data-anchor-id="문제-왜-github-actions에-uv를-올리고자-하는가">문제; 왜 GitHub Actions에 uv를 올리고자 하는가?</h2>
-<p>다음과 같은 툴로 (몹시 개인적인) 대시보드를 개발하고 배포한다고 고민해보자.</p>
+<p>구체적인 사례에서 시작하자. 다음과 같은 툴의 집합으로 (몹시 개인적인) 대시보드를 개발하고 배포하는 작업을 고민중이다.</p>
 <ul>
-<li>개발 환경 - uv</li>
-<li>개발 툴 - quarto</li>
-<li>배포 툴 - GitHub Actions</li>
-<li>배포 환경 - GitHub Pages</li>
+<li>개발 (가상) 환경; uv</li>
+<li>대시 보드 개발 툴; quarto</li>
+<li>배포 자동화 툴; GitHub Actions</li>
+<li>배포 환경; GitHub Pages</li>
 </ul>
 <p>각 툴에 대한 설명은 생략하겠다. 해야 할 일은 다음과 같다.</p>
 <ul>
-<li>로컬 개발 환경에서는 uv, quarto, python을 활용한다.</li>
-<li>데이터 업데이트와 배포는 GitHub Actions를 활용한다.</li>
+<li>로컬 개발 환경에서는 uv, quarto, python(jupyter)을 활용해 개발한다.</li>
+<li>데이터 업데이트와 배포는 GitHub Actions를 활용해 자동화한다.</li>
+<li>Static 페이지 배포는 GitHub Pages를 활용한다.</li>
 </ul>
-<p>보통 GitHub Actions는 배포 환경이 제한되기 때문에 <code>requirements.txt</code>를 활용해 패키지를 설치하고 사용한다. 통상적으로 conda 등의 가상 환경이 무겁거나 느린 것도 사실이다. 그런데 uv라면 어떨까? uv 정도로 가볍고 빠른 환경이라면 개발에서 썼던 가상환경을 그대로 쓰는 것도 가능할 듯 싶다.</p>
+<p>보통 GitHub Actions는 배포 환경이 제한되기 때문에 <code>requirements.txt</code>를 활용해 원시적인 방식으로 의존성을 확보하고는 했다. conda 등 많이 쓰는 가상 환경이 무겁거나 느린 것도 선택을 주저하게 만드는 한 요소였다. 그런데 uv라면 어떨까? uv 정도로 가볍고 빠른 환경이라면 개발에서 썼던 가상환경을 그대로 쓰는 것도 가능할 듯 싶다.</p>
 </section>
 <section id="github-actions에서-uv-쓰기" class="level2">
 <h2 class="anchored" data-anchor-id="github-actions에서-uv-쓰기">GitHub Actions에서 uv 쓰기</h2>
