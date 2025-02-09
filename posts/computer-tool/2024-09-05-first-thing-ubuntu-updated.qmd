@@ -6,7 +6,6 @@ date: "09/05/2024"
 image: "./images/cats-ubuntu.webp"
 categories: [computer-tool, pc-install, os, linux]
 lightbox: auto
-#jupyter: python3
 draft: false
 ---
 
@@ -49,10 +48,10 @@ macOS의 경우 cask 옵션을 통해서 GUI 앱도 설치할 수 있다. Linux�
 
 uv에 관한 소개는 [LINK](https://blog.lostineconomics.com/posts/computer-tool/2024-09-02-uv-ultimate-virtual-env.html)를 참고하자. 여기서는 uv를 쓰는 하나의 방법을 소개하고자 한다. 개별 프로젝트 별로 별도의 파이썬 환경과 더불어 두루두루 쓰는 범용 개인 파이썬 환경을 하나 설정해두어도 좋겠다. `$HOME` 폴더 아래 `.venv` 폴더를 만들어두고, 그 아래 가상 환경을 만들어두자.
 
-```zsh
+```{zsh}
 # ~ 폴더에서 실행하자. 
 > deactivate # venv 가상 환경 해제 
-> uv init --no-workspace # 종속 없이 가상 환경 생성
+> uv init --no-wouvrkspace # 종속 없이 가상 환경 생성
 # 만일 상위 폴더의 환경을 유지하려면 `uv init .`을 실행하자.
 > uv venv --python 3.12 # 파이썬 버전 지정 설치 
 > uv add jupyter pandas polars matplotlib koreanize_matplotlib # 가상 환경 패키지 추가 
@@ -60,13 +59,8 @@ uv에 관한 소개는 [LINK](https://blog.lostineconomics.com/posts/computer-to
 
 가상 환경이 `~/.venv` 폴더 아래 생성되고, 그 안에 필요한 패키지들이 설치된다. 프로젝트 관리를 `pyproject.toml`은 `$HOME` 폴더 아래 있다. 마지막으로 `/.zshrc`에 아래와 같은 내용을 추가하자. 
 
-```{zshrc}
-source .venv/bin/activate
+```{zsh}
+> source .venv/bin/activate
 ```
 
 이렇게 해두면 OS 부트업 시 해당 가상 환경이 시스템에 올라오고. 디폴트 파이썬 환경이 된다. 문제가 생기면 `~/.venv`을 날리면 된다. 
-
-
-
-
-
