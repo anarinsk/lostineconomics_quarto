@@ -3595,7 +3595,7 @@
     "href": "posts/computer-tool/2024-09-05-first-thing-ubuntu-updated.html#uv-best-practice",
     "title": "Ubuntu를 깔고 먼저 해야 할 일들(Updated)",
     "section": "uv, best practice?",
-    "text": "uv, best practice?\nuv에 관한 소개는 LINK를 참고하자. 까먹을 때를 대비해서 간략하게 설정하는 과정을 적어두자.\n# 원하는 폴더에서 실행하자. \n&gt; deactivate # 혹시 venv 가상 환경이 잡혀 있다면 해제하자\n&gt; uv init --no-wouvrkspace # 종속 없이 가상 환경 생성\n# 만일 상위 폴더의 환경을 유지하려면 `uv init .`을 실행하자.\n\n# Python 셋업\n&gt; uv venv --python 3.12 # 파이썬 버전 지정 설치 \n# 아래 add되는 패키지와 venv의 파이썬 버전이 맞지 않을 경우 알아서 버전을 내린다. \n&gt; uv add jupyter pandas polars matplotlib koreanize_matplotlib # 가상 환경 의존성 추가 \n가상 환경이 현재 위치의 .venv 폴더 아래 생성되고, 그 안에 필요한 패키지들이 설치된다. 설치와 제거가 간단하므로 파이썬 프로젝트를 시작할 때마다 이 과정을 해주는 편이 오히려 좋다."
+    "text": "uv, best practice?\nuv에 관한 소개는 LINK를 참고하자. 까먹을 때를 대비해서 간략하게 설정하는 과정을 적어두자.\n# 원하는 폴더에서 실행하자. \n&gt; deactivate # 혹시 venv 가상 환경이 잡혀 있다면 해제하자\n&gt; uv init --no-wouvrkspace # 종속 없이 가상 환경 생성\n# 만일 상위 폴더의 환경을 유지하려면 `uv init .`을 실행하자.\n\n# Python 셋업\n&gt; uv venv --python 3.12 # 파이썬 버전 지정 설치 \n# 아래 add되는 패키지와 venv의 파이썬 버전이 맞지 않을 경우 알아서 버전을 내린다. \n&gt; uv add jupyter pandas polars matplotlib koreanize_matplotlib # 가상 환경 의존성 추가 \n가상 환경이 현재 위치의 .venv 폴더 아래 생성되고, 그 안에 필요한 패키지들이 설치된다. 설치와 제거가 간단하므로 파이썬 프로젝트를 시작할 때마다 이 과정을 해주는 것이 여러모로 낫다. 전체 환경을 하나 설정하지 말로 프로젝트 별로 안심하고 이렇게 저렇게 삽질하면서 써보는 것이 좋다는 뜻이다."
   },
   {
     "objectID": "posts/computer-tool/2020-10-27-viva-binder.html",
