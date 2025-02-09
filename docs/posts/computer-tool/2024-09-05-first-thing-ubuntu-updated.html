@@ -227,13 +227,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="tl-dr" class="level2">
-<h2 class="anchored" data-anchor-id="tl-dr">TL; DR</h2>
-<p><a href="https://blog.lostineconomics.com/posts/computer-tool/2023-11-03-first-thing-ubuntu.html">LINK</a>, “Ubuntu를 깔고 먼저 해야 할 일들”의 업데이트 버전이다. 이 글을 보지 않았다면 이걸 먼저 보시기를 바란다.</p>
+<section id="tldr" class="level2">
+<h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
+<p><a href="https://blog.lostineconomics.com/posts/computer-tool/2023-11-03-first-thing-ubuntu.html">이전 글</a>, “Ubuntu를 깔고 먼저 해야 할 일들”의 업데이트 버전이다. 아직 이전 글을 읽지 않았다면 먼저 읽어보시면 좋겠다.</p>
 </section>
-<section id="before-you-brew-something" class="level2">
-<h2 class="anchored" data-anchor-id="before-you-brew-something">Before you “brew” something</h2>
-<p>앞 포스트에서 brew를 설치하는 데까지는 별달리 변한 내용이 없다. brew 이후를 설명하도록 하자. conda 기반 생태계를 없애는 것이 주된 목적이다.</p>
+<section id="homebrew-설치-전-준비" class="level2">
+<h2 class="anchored" data-anchor-id="homebrew-설치-전-준비">Homebrew 설치 전 준비</h2>
+<p>Homebrew 설치 과정 자체는 이전 글과 동일하다. 여기서는 Homebrew 설치 이후, 가상 환경으로 conda 기반 환경을 제거하는 것을 목표로 설정 과정을 설명하겠다.</p>
 </section>
 <section id="brew-able" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="brew-able">brew-able</h2>
@@ -301,16 +301,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="uv-best-practice" class="level2">
 <h2 class="anchored" data-anchor-id="uv-best-practice">uv, best practice?</h2>
-<p>uv에 관한 소개는 <a href="https://blog.lostineconomics.com/posts/computer-tool/2024-09-02-uv-ultimate-virtual-env.html">LINK</a>를 참고하자. 여기서는 uv를 쓰는 하나의 방법을 소개하고자 한다. 개별 프로젝트 별로 별도의 파이썬 환경과 더불어 두루두루 쓰는 범용 개인 파이썬 환경을 하나 설정해두어도 좋겠다. <code>$HOME</code> 폴더 아래 <code>.venv</code> 폴더를 만들어두고, 그 아래 가상 환경을 만들어두자.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ~ 폴더에서 실행하자. </span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> deactivate <span class="co"># venv 가상 환경 해제 </span></span>
+<p>uv에 관한 소개는 <a href="https://blog.lostineconomics.com/posts/computer-tool/2024-09-02-uv-ultimate-virtual-env.html">LINK</a>를 참고하자. 까먹을 때를 대비해서 간략하게 설정하는 과정을 적어두자.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 원하는 폴더에서 실행하자. </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> deactivate <span class="co"># 혹시 venv 가상 환경이 잡혀 있다면 해제하자</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">init</span> <span class="at">--no-wouvrkspace</span> <span class="co"># 종속 없이 가상 환경 생성</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 만일 상위 폴더의 환경을 유지하려면 `uv init .`을 실행하자.</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">venv</span> <span class="at">--python</span> 3.12 <span class="co"># 파이썬 버전 지정 설치 </span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">add</span> jupyter pandas polars matplotlib koreanize_matplotlib <span class="co"># 가상 환경 패키지 추가 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>가상 환경이 <code>~/.venv</code> 폴더 아래 생성되고, 그 안에 필요한 패키지들이 설치된다. 프로젝트 관리를 <code>pyproject.toml</code>은 <code>$HOME</code> 폴더 아래 있다. 마지막으로 <code>/.zshrc</code>에 아래와 같은 내용을 추가하자.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> source <span class="ex">.venv/bin/activate</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>이렇게 해두면 OS 부트업 시 해당 가상 환경이 시스템에 올라오고. 디폴트 파이썬 환경이 된다. 문제가 생기면 <code>~/.venv</code>을 날리면 된다.</p>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Python 셋업</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">venv</span> <span class="at">--python</span> 3.12 <span class="co"># 파이썬 버전 지정 설치 </span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 아래 add되는 패키지와 venv의 파이썬 버전이 맞지 않을 경우 알아서 버전을 내린다. </span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">add</span> jupyter pandas polars matplotlib koreanize_matplotlib <span class="co"># 가상 환경 의존성 추가 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>가상 환경이 현재 위치의 <code>.venv</code> 폴더 아래 생성되고, 그 안에 필요한 패키지들이 설치된다. 설치와 제거가 간단하므로 파이썬 프로젝트를 시작할 때마다 이 과정을 해주는 편이 오히려 좋다.</p>
 
 
 </section>
