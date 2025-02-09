@@ -3595,7 +3595,7 @@
     "href": "posts/computer-tool/2024-09-05-first-thing-ubuntu-updated.html#uv-best-practice",
     "title": "Ubuntu를 깔고 먼저 해야 할 일들(Updated)",
     "section": "uv, best practice?",
-    "text": "uv, best practice?\nuv에 관한 소개는 LINK를 참고하자. 여기서는 uv를 쓰는 하나의 방법을 소개하고자 한다. 개별 프로젝트 별로 별도의 파이썬 환경과 더불어 두루두루 쓰는 범용 개인 파이썬 환경을 하나 설정해두어도 좋겠다. $HOME 폴더 아래 .venv 폴더를 만들어두고, 그 아래 가상 환경을 만들어두자.\n# ~ 폴더에서 실행하자. \n&gt; deactivate # venv 가상 환경 해제 \n&gt; uv init --no-workspace # 종속 없이 가상 환경 생성\n# 만일 상위 폴더의 환경을 유지하려면 `uv init .`을 실행하자.\n&gt; uv venv --python 3.12 # 파이썬 버전 지정 설치 \n&gt; uv add jupyter pandas polars matplotlib koreanize_matplotlib # 가상 환경 패키지 추가 \n가상 환경이 ~/.venv 폴더 아래 생성되고, 그 안에 필요한 패키지들이 설치된다. 프로젝트 관리를 pyproject.toml은 $HOME 폴더 아래 있다. 마지막으로 /.zshrc에 아래와 같은 내용을 추가하자.\nsource .venv/bin/activate\n이렇게 해두면 OS 부트업 시 해당 가상 환경이 시스템에 올라오고. 디폴트 파이썬 환경이 된다. 문제가 생기면 ~/.venv을 날리면 된다."
+    "text": "uv, best practice?\nuv에 관한 소개는 LINK를 참고하자. 여기서는 uv를 쓰는 하나의 방법을 소개하고자 한다. 개별 프로젝트 별로 별도의 파이썬 환경과 더불어 두루두루 쓰는 범용 개인 파이썬 환경을 하나 설정해두어도 좋겠다. $HOME 폴더 아래 .venv 폴더를 만들어두고, 그 아래 가상 환경을 만들어두자.\n# ~ 폴더에서 실행하자. \n&gt; deactivate # venv 가상 환경 해제 \n&gt; uv init --no-wouvrkspace # 종속 없이 가상 환경 생성\n# 만일 상위 폴더의 환경을 유지하려면 `uv init .`을 실행하자.\n&gt; uv venv --python 3.12 # 파이썬 버전 지정 설치 \n&gt; uv add jupyter pandas polars matplotlib koreanize_matplotlib # 가상 환경 패키지 추가 \n가상 환경이 ~/.venv 폴더 아래 생성되고, 그 안에 필요한 패키지들이 설치된다. 프로젝트 관리를 pyproject.toml은 $HOME 폴더 아래 있다. 마지막으로 /.zshrc에 아래와 같은 내용을 추가하자.\n&gt; source .venv/bin/activate\n이렇게 해두면 OS 부트업 시 해당 가상 환경이 시스템에 올라오고. 디폴트 파이썬 환경이 된다. 문제가 생기면 ~/.venv을 날리면 된다."
   },
   {
     "objectID": "posts/computer-tool/2020-10-27-viva-binder.html",

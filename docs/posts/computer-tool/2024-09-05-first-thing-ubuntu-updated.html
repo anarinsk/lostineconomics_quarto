@@ -304,12 +304,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>uv에 관한 소개는 <a href="https://blog.lostineconomics.com/posts/computer-tool/2024-09-02-uv-ultimate-virtual-env.html">LINK</a>를 참고하자. 여기서는 uv를 쓰는 하나의 방법을 소개하고자 한다. 개별 프로젝트 별로 별도의 파이썬 환경과 더불어 두루두루 쓰는 범용 개인 파이썬 환경을 하나 설정해두어도 좋겠다. <code>$HOME</code> 폴더 아래 <code>.venv</code> 폴더를 만들어두고, 그 아래 가상 환경을 만들어두자.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ~ 폴더에서 실행하자. </span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> deactivate <span class="co"># venv 가상 환경 해제 </span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">init</span> <span class="at">--no-workspace</span> <span class="co"># 종속 없이 가상 환경 생성</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">init</span> <span class="at">--no-wouvrkspace</span> <span class="co"># 종속 없이 가상 환경 생성</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 만일 상위 폴더의 환경을 유지하려면 `uv init .`을 실행하자.</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">venv</span> <span class="at">--python</span> 3.12 <span class="co"># 파이썬 버전 지정 설치 </span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">add</span> jupyter pandas polars matplotlib koreanize_matplotlib <span class="co"># 가상 환경 패키지 추가 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>가상 환경이 <code>~/.venv</code> 폴더 아래 생성되고, 그 안에 필요한 패키지들이 설치된다. 프로젝트 관리를 <code>pyproject.toml</code>은 <code>$HOME</code> 폴더 아래 있다. 마지막으로 <code>/.zshrc</code>에 아래와 같은 내용을 추가하자.</p>
-<pre class="{zshrc}"><code>source .venv/bin/activate</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> source <span class="ex">.venv/bin/activate</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>이렇게 해두면 OS 부트업 시 해당 가상 환경이 시스템에 올라오고. 디폴트 파이썬 환경이 된다. 문제가 생기면 <code>~/.venv</code>을 날리면 된다.</p>
 
 
