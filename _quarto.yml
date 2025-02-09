@@ -32,5 +32,5 @@ format:
     #code-line-numbers: true
     code-block-bg: true
     code-block-border-left: "#31BAE9"
-# excute: 
-#  cache: true 
+  # execute: 
+  #  cache: true 

@@ -7,6 +7,7 @@ image: "./images/cat-octocat.webp"
 categories: [computer-tool, quarto, uv, github]
 lightbox: auto
 #jupyter: python3
+#code-line-numbers: true
 draft: false
 ---
 
@@ -45,7 +46,7 @@ uv를 활용은 간단하다. [여기](https://docs.astral.sh/uv/guides/integrat
 
 최초에 아래 명령어를 실행해서 gh-pages 브랜치를 만들어야 한다.
 
-```
+```zsh
 > quarto publish gh-pages
 ```
 
@@ -53,7 +54,7 @@ uv를 활용은 간단하다. [여기](https://docs.astral.sh/uv/guides/integrat
 
 내가 활용한 Actions 스크랩트는 다음과 같다. 
 
-```yaml
+```{.yaml code-line-numbers="true"}
 on:
   schedule:
     - cron: '0 */3 * * *' # 3시간 마다 00분에 실행 
@@ -105,32 +106,12 @@ jobs:
 
 스크립트의 핵심은 uv를 설치한 후 가상환경의 변수를 quarto 환경으로 넘겨주는 대목이다. 
 
-```yaml
-jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-
-    ...
-
-      - name: Activate venv
-         run: |
-           echo "$PWD/.venv/bin" >> $GITHUB_PATH  # PATH에 가상환경 경로 추가
-           echo "VIRTUAL_ENV=$PWD/.venv" >> $GITHUB_ENV # 환경 변수 설정
-    ...
-      - name: publish
-        
-        ...
-
-            VIRTUAL_ENV: ${{ env.VIRTUAL_ENV }}  # 환경 변수 상속      
-```
+- `34--35`: 가상 환경 경로를 설정하고 이를 환경 변수로 지정한다. 
+- `46`: Quarto에서 publish를 실행할 때 가상 환경을 활성화한다.
 
 ## Github Pages 설정 
 
 마지막으로 GitHub Pages 설정을 아래 그림처럼 해주어야 한다.
-
 
 :::{layout="[[-0.2, 1, -0.2]]"}
 ![GitHub Pages 설정](./images/github-pages-01.png){#fig-1}
