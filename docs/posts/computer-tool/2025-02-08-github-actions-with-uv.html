@@ -77,8 +77,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f8dc6eab18fde03278982b0b35885446.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-d5addf87ca25f43659adadcc3303d1c8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-277fe431a84afdff1e8289dd742b16dd.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-df3b39ae67a86dbbcce17cdad41943dd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ef2bd699ecdbffd8ed34ff6fc2fe69bd.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -244,22 +244,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>각 툴에 대한 설명은 생략하겠다. 해야 할 일은 다음과 같다.</p>
 <ul>
 <li>로컬 개발 환경에서는 uv, quarto, python(jupyter)을 활용해 개발한다.</li>
-<li>데이터 업데이트와 배포는 GitHub Actions를 활용해 자동화한다.</li>
+<li>데이터 업데이트와 배포는 GitHub Actions를 활용해 자동화한다.
+<ul>
+<li>이떄 개발 환경에서 uv로 설정한 가상 환경을 Actions에서 그대로 활용한다.</li>
+</ul></li>
 <li>Static 페이지 배포는 GitHub Pages를 활용한다.</li>
 </ul>
-<p>보통 GitHub Actions는 배포 환경이 제한되기 때문에 <code>requirements.txt</code>를 활용해 원시적인 방식으로 의존성을 확보하고는 했다. conda 등 많이 쓰는 가상 환경이 무겁거나 느린 것도 Actions에서의 활용을 꺼리게 만드는 요소이다. uv라면 어떨까? uv 정도로 가볍고 빠른 환경이라면 개발에서 썼던 가상환경을 그대로 쓰는 것도 가능할 듯 싶다.</p>
+<p>보통 GitHub Actions는 배포 환경이 제한되기 때문에 <code>requirements.txt</code>를 활용해 pip로 의존성을 확보하고는 했다. conda 등 많이 쓰는 가상 환경이 무겁거나 느린 것도 Actions에서의 활용을 꺼리게 만드는 요소이다. uv라면 어떨까? uv 정도로 가볍고 빠르고 유연한 환경이라면, 개발에서 썼던 가상환경을 그대로 쓰는 것도 가능할 듯 싶다.</p>
 </section>
 <section id="github-actions에서-uv-쓰기" class="level2">
 <h2 class="anchored" data-anchor-id="github-actions에서-uv-쓰기">GitHub Actions에서 uv 쓰기</h2>
-<p>uv를 활용은 간단하다. <a href="https://docs.astral.sh/uv/guides/integration/github/">여기</a>에서 보듯이 다른 actions 설정과 비슷하게 쓰면 된다. 정작 헤맨 것은 Actions의 다른 단계에서 uv의 가상 환경을 활성화하는 방법이다.</p>
-<section id="개발-환경" class="level3">
-<h3 class="anchored" data-anchor-id="개발-환경">개발 환경</h3>
-<ul>
-<li>보통 함수 등의 기능을 Jupyter에서 테스트해가며 개발한다.</li>
-<li>이때 활상화한 venv 환경을 그대로 활용하고 싶다.</li>
-<li>이 venv 환경이 quarto 배포까지 이어져야 한다.</li>
-</ul>
-</section>
+<p>Actions에서 간단히 uv를 활용할 수 있다. <a href="https://docs.astral.sh/uv/guides/integration/github/">여기</a>에서 보듯이 다른 actions 설정과 비슷하게 쓰면 된다. 정작 헤맨 것은 Actions의 다른 단계에서 uv의 가상 환경을 활성화하는 방법이다.</p>
 </section>
 <section id="uv-활성화를-위한-actions-스크립트-설정" class="level2">
 <h2 class="anchored" data-anchor-id="uv-활성화를-위한-actions-스크립트-설정">uv 활성화를 위한 actions 스크립트 설정</h2>
@@ -323,7 +318,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="github-pages-설정" class="level2">
 <h2 class="anchored" data-anchor-id="github-pages-설정">Github Pages 설정</h2>
-<p>마지막으로 GitHub Pages 설정을 아래 그림처럼 해주어야 한다. branch에서 Pages를 배포하며 배포할 브랜치를 <code>gh-pages</code>로 설정한다.</p>
+<p>마지막으로 GitHub Pages 설정을 아래 그림처럼 해주어야 한다. Git branch에서 Pages를 배포하며 배포할 브랜치를 <code>gh-pages</code>로 설정한다.</p>
 <div>
 
 </div>
