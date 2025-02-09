@@ -111,7 +111,7 @@ jobs:
 
 ## Github Pages 설정 
 
-마지막으로 GitHub Pages 설정을 아래 그림처럼 해주어야 한다.
+마지막으로 GitHub Pages 설정을 아래 그림처럼 해주어야 한다. branch에서 Pages를 배포하며 배포할 브랜치를 `gh-pages`로 설정한다.
 
 :::{layout="[[-0.2, 1, -0.2]]"}
 ![GitHub Pages 설정](./images/github-pages-01.png){#fig-1}

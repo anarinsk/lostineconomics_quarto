@@ -1019,7 +1019,7 @@
     "href": "posts/computer-tool/2025-02-08-github-actions-with-uv.html#github-pages-설정",
     "title": "Quarto with GitHub Actions + uv",
     "section": "Github Pages 설정",
-    "text": "Github Pages 설정\n마지막으로 GitHub Pages 설정을 아래 그림처럼 해주어야 한다.\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\nFigure 1: GitHub Pages 설정"
+    "text": "Github Pages 설정\n마지막으로 GitHub Pages 설정을 아래 그림처럼 해주어야 한다. branch에서 Pages를 배포하며 배포할 브랜치를 gh-pages로 설정한다.\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\nFigure 1: GitHub Pages 설정"
   },
   {
     "objectID": "posts/machine-learning/2020-04-19-classification-metrics.html",
