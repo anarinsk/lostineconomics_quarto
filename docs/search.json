@@ -3910,7 +3910,7 @@
     "href": "posts/computer-tool/2025-02-08-github-actions-with-uv.html#문제-왜-github-actions에-uv를-올리고자-하는가",
     "title": "Quarto with GitHub Actions + uv",
     "section": "문제; 왜 GitHub Actions에 uv를 올리고자 하는가?",
-    "text": "문제; 왜 GitHub Actions에 uv를 올리고자 하는가?\n구체적인 사례에서 시작하자. 다음과 같은 툴의 집합으로 (몹시 개인적인) 대시보드를 개발하고 배포하는 작업을 고민중이다.\n\n개발 (가상) 환경; uv\n대시 보드 개발 툴; quarto\n배포 자동화 툴; GitHub Actions\n배포 환경; GitHub Pages\n\n각 툴에 대한 설명은 생략하겠다. 해야 할 일은 다음과 같다.\n\n로컬 개발 환경에서는 uv, quarto, python(jupyter)을 활용해 개발한다.\n데이터 업데이트와 배포는 GitHub Actions를 활용해 자동화한다.\nStatic 페이지 배포는 GitHub Pages를 활용한다.\n\n보통 GitHub Actions는 배포 환경이 제한되기 때문에 requirements.txt를 활용해 원시적인 방식으로 의존성을 확보하고는 했다. conda 등 많이 쓰는 가상 환경이 무겁거나 느린 것도 선택을 주저하게 만드는 한 요소였다. 그런데 uv라면 어떨까? uv 정도로 가볍고 빠른 환경이라면 개발에서 썼던 가상환경을 그대로 쓰는 것도 가능할 듯 싶다."
+    "text": "문제; 왜 GitHub Actions에 uv를 올리고자 하는가?\n구체적인 사례에서 시작하자. 다음과 같은 툴의 집합으로 (몹시 개인적인) 대시보드를 개발하고 배포하는 작업을 고민중이다.\n\n개발 (가상) 환경; uv\n대시 보드 개발 툴; quarto\n배포 자동화 툴; GitHub Actions\n배포 환경; GitHub Pages\n\n각 툴에 대한 설명은 생략하겠다. 해야 할 일은 다음과 같다.\n\n로컬 개발 환경에서는 uv, quarto, python(jupyter)을 활용해 개발한다.\n데이터 업데이트와 배포는 GitHub Actions를 활용해 자동화한다.\nStatic 페이지 배포는 GitHub Pages를 활용한다.\n\n보통 GitHub Actions는 배포 환경이 제한되기 때문에 requirements.txt를 활용해 원시적인 방식으로 의존성을 확보하고는 했다. conda 등 많이 쓰는 가상 환경이 무겁거나 느린 것도 Actions에서의 활용을 꺼리게 만드는 요소이다. uv라면 어떨까? uv 정도로 가볍고 빠른 환경이라면 개발에서 썼던 가상환경을 그대로 쓰는 것도 가능할 듯 싶다."
   },
   {
     "objectID": "posts/computer-tool/2024-09-05-first-thing-ubuntu-updated.html#tldr",

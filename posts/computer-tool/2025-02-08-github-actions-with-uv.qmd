@@ -29,7 +29,7 @@ GitHub Actions와 uv를 활용해 GiHub Pages 자동 빌드 및 배포 환경을
 - 데이터 업데이트와 배포는 GitHub Actions를 활용해 자동화한다.
 - Static 페이지 배포는 GitHub Pages를 활용한다. 
 
-보통 GitHub Actions는 배포 환경이 제한되기 때문에 `requirements.txt`를 활용해 원시적인 방식으로 의존성을 확보하고는 했다. conda 등 많이 쓰는 가상 환경이 무겁거나 느린 것도 선택을 주저하게 만드는 한 요소였다. 그런데 uv라면 어떨까? uv 정도로 가볍고 빠른 환경이라면 개발에서 썼던 가상환경을 그대로 쓰는 것도 가능할 듯 싶다. 
+보통 GitHub Actions는 배포 환경이 제한되기 때문에 `requirements.txt`를 활용해 원시적인 방식으로 의존성을 확보하고는 했다. conda 등 많이 쓰는 가상 환경이 무겁거나 느린 것도 Actions에서의 활용을 꺼리게 만드는 요소이다. uv라면 어떨까? uv 정도로 가볍고 빠른 환경이라면 개발에서 썼던 가상환경을 그대로 쓰는 것도 가능할 듯 싶다. 
 
 ## GitHub Actions에서 uv 쓰기 
 
