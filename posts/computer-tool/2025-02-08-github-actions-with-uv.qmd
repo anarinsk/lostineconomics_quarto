@@ -1,5 +1,5 @@
 ---
-title: "Quarto with GitHub Actions + uv" 
+title: "Quarto with GitHub Actions `+` uv" 
 description: uv를 Actions에서 쓰자   
 author: "JS HUHH"
 date: "02/09/2025"
@@ -32,7 +32,7 @@ GitHub Actions와 uv를 활용해 GiHub Pages 자동 빌드 및 배포 환경을
 
 ## GitHub Actions에서 uv 쓰기 
 
-uv를 활용은 간단하다. [여기](https://docs.astral.sh/uv/guides/integration/github/)에서 보듯이 다른 actions 설정과 비슷하게 쓰면 된다. 정작 헤맨 것은 Actions에서 가상 환경 활성화하는 이슈였다.
+uv를 활용은 간단하다. [여기](https://docs.astral.sh/uv/guides/integration/github/)에서 보듯이 다른 actions 설정과 비슷하게 쓰면 된다. 정작 헤맨 것은 Actions의 다른 단계에서 uv의 가상 환경을 활성화하는 방법이다.
 
 ### 개발 환경 
 
