@@ -77,8 +77,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f8dc6eab18fde03278982b0b35885446.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-74e7d2d6b1388abac47d170f6432153a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-d0efa248a276343f2247705c0da86296.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-7fad4cebd59b5acdcae300ef341a6b11.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-0ba63cbfb9a1bbba055bca5e41892f16.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -269,12 +269,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>만일 필요한 패키지를 그대로 해당 프로젝트(폴더) 아래 들어가기를 원한다면 다음의 사항을 살펴보자. 해당 프로젝트 상위 폴더에 <code>pyproject.toml</code>이 있다면 여기 설정의 문제를 일으킬 수 있다. 이를 지워주자.</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">venv</span> <span class="at">--python</span> 3.12.0 <span class="co"># venv 조건 활성화 및 파이썬 설치  </span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">add</span> jupyter polars <span class="co"># pyproject.toml에 해당 패키지 넣기 </span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">----</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="fu">sync</span> <span class="co"># pyproject.toml 내용 동기화 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 프로젝트 폴더에서 실행; 최초 설정</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">venv</span> <span class="at">--python</span> 3.12.0 <span class="co"># venv 조건 활성화 및 파이썬 설치  </span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">add</span> ruff jupyter polars <span class="co"># pyproject.toml에 해당 패키지 넣기 </span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">----</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 프로젝트 폴더에서 실행; pyproject.toml이 있을 때 </span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="fu">sync</span> <span class="co"># pyproject.toml 내용 동기화 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>프로젝트를 초기화하는 두 가지 방식이 있다. 만일 해당 폴더를 워크스페이스에 소속시키지 않는다면 <code>--no-workspace</code> 옵션을 넣어주면 된다. 어딘가 워크 스페이스에 소속이 되어 있다면 그냥 <code>uv init .</code>을 실행하면 된다.
 <ul>
@@ -291,7 +292,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>가상환경 활성화는 venv와 동일하다.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 프로젝트 폴더에서 실행 </span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> source <span class="ex">.venv/bin/activate</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>만일 프로젝트의 가상 환경이 적절하지 않다면 경고 메시지를 띄운다. 이를 보면서 적절하게 대응하도록 하자.</p>
+<p>만일 프로젝트의 가상 환경이 적절하지 않다면 경고 메시지를 띄운다. 이를 보면서 적절하게 대응하도록 하자. venv 환경이 활성화되어 있다면,<code>uv add</code> 명령은 venv 환경 아래로 패키지를 설치한다.</p>
 </section>
 <section id="os-특정-패키지-설치" class="level3">
 <h3 class="anchored" data-anchor-id="os-특정-패키지-설치">OS 특정 패키지 설치</h3>

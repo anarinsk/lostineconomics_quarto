@@ -67,11 +67,12 @@ uv 개발진의 야심처럼 uv는 pip, pip-tools, pipx, poetry, pyenv, virtuale
 - 만일 필요한 패키지를 그대로 해당 프로젝트(폴더) 아래 들어가기를 원한다면 다음의 사항을 살펴보자. 해당 프로젝트 상위 폴더에 `pyproject.toml`이 있다면 여기 설정의 문제를 일으킬 수 있다. 이를 지워주자. 
 
 ```bash 
+# 프로젝트 폴더에서 실행; 최초 설정
 > uv venv --python 3.12.0 # venv 조건 활성화 및 파이썬 설치  
-> uv add jupyter polars # pyproject.toml에 해당 패키지 넣기 
+> uv add ruff jupyter polars # pyproject.toml에 해당 패키지 넣기 
 
 ----
-
+# 프로젝트 폴더에서 실행; pyproject.toml이 있을 때 
 > uv sync # pyproject.toml 내용 동기화 
 ```
 
@@ -94,7 +95,9 @@ members = ["github/test_uv_workspace"]
 > source .venv/bin/activate
 ```
 
-만일 프로젝트의 가상 환경이 적절하지 않다면 경고 메시지를 띄운다. 이를 보면서 적절하게 대응하도록 하자. 
+만일 프로젝트의 가상 환경이 적절하지 않다면 경고 메시지를 띄운다. 이를 보면서 적절하게 대응하도록 하자. venv 환경이 활성화되어 있다면,`uv add` 명령은 venv 환경 아래로 패키지를 설치한다.
+
+
 
 ### OS 특정 패키지 설치 
 
