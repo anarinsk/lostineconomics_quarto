@@ -310,8 +310,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Python 셋업</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">venv</span> <span class="at">--python</span> 3.12 <span class="co"># 파이썬 버전 지정 설치 </span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 아래 add되는 패키지와 venv의 파이썬 버전이 맞지 않을 경우 알아서 버전을 내린다. </span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">add</span> jupyter pandas polars matplotlib koreanize_matplotlib <span class="co"># 가상 환경 의존성 추가 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>가상 환경이 현재 위치의 <code>.venv</code> 폴더 아래 생성되고, 그 안에 필요한 패키지들이 설치된다. 설치와 제거가 간단하므로 파이썬 프로젝트를 시작할 때마다 이 과정을 해주는 것이 여러모로 낫다. 전체 환경을 하나 설정하지 말로 프로젝트 별로 안심하고 이렇게 저렇게 삽질하면서 써보는 것이 좋다는 뜻이다.</p>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">add</span> jupyter ruff pandas polars matplotlib koreanize_matplotlib <span class="co"># 가상 환경 의존성 추가 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>가상 환경이 현재 위치의 <code>.venv</code> 폴더 아래 생성되고, 그 안에 필요한 패키지들이 설치된다. 설치와 제거가 간단하므로 파이썬 프로젝트를 시작할 때마다 이 과정을 해주는 것이 여러모로 낫다. 전체 환경을 하나 설정하지 말로 프로젝트 별로 안심하고 이렇게 저렇게 삽질하면서 써보는 것이 좋다는 뜻이다. 만일 add의 패키지 환경이 venv의 파이썬 버전보다 낮다면 낮은 버전의 파이썬이 설치된다.</p>
 
 
 </section>

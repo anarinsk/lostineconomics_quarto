@@ -58,7 +58,7 @@ uv에 관한 소개는 [LINK](https://blog.lostineconomics.com/posts/computer-to
 # Python 셋업
 > uv venv --python 3.12 # 파이썬 버전 지정 설치 
 # 아래 add되는 패키지와 venv의 파이썬 버전이 맞지 않을 경우 알아서 버전을 내린다. 
-> uv add jupyter pandas polars matplotlib koreanize_matplotlib # 가상 환경 의존성 추가 
+> uv add jupyter ruff pandas polars matplotlib koreanize_matplotlib # 가상 환경 의존성 추가 
 ```
 
-가상 환경이 현재 위치의 `.venv` 폴더 아래 생성되고, 그 안에 필요한 패키지들이 설치된다. 설치와 제거가 간단하므로 파이썬 프로젝트를 시작할 때마다 이 과정을 해주는 것이 여러모로 낫다. 전체 환경을 하나 설정하지 말로 프로젝트 별로 안심하고 이렇게 저렇게 삽질하면서 써보는 것이 좋다는 뜻이다.  
+가상 환경이 현재 위치의 `.venv` 폴더 아래 생성되고, 그 안에 필요한 패키지들이 설치된다. 설치와 제거가 간단하므로 파이썬 프로젝트를 시작할 때마다 이 과정을 해주는 것이 여러모로 낫다. 전체 환경을 하나 설정하지 말로 프로젝트 별로 안심하고 이렇게 저렇게 삽질하면서 써보는 것이 좋다는 뜻이다. 만일 add의 패키지 환경이 venv의 파이썬 버전보다 낮다면 낮은 버전의 파이썬이 설치된다. 
