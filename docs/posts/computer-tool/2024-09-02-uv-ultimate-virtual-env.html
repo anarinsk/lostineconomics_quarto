@@ -451,10 +451,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="pyproject.toml-.python-version" class="level3">
 <h3 class="anchored" data-anchor-id="pyproject.toml-.python-version"><code>pyproject.toml</code> + <code>.python-version</code></h3>
 <p>이는 uv에서 제공하는 방법이다. 해당 파이썬을 구동하려면 <code>uv run python</code> 명령을 사용해야 한다.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Upgrade to Python 3.11.2</span></span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># move to Python 3.11.2</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">python</span> install 3.11.2</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">python</span> pin 3.11.2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>앞서 설명한 것처럼 <code>pyproject.toml</code>에 파이썬 버전 제약을 설정할 수 있다. 이 경우 <code>uv python pin</code> 명령은 무시된다.</p>
+<p>앞서 설명한 것처럼 <code>pyproject.toml</code>에 파이썬 버전 제약을 설정할 수 있다. 이 경우 <code>uv python install</code> 명령은 무시된다.</p>
 </section>
 <section id="pyproject.toml-venv" class="level3">
 <h3 class="anchored" data-anchor-id="pyproject.toml-venv"><code>pyproject.toml</code> + venv</h3>
@@ -537,11 +537,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>간혹 <code>pyproject.toml</code>이 아닌 <code>requirements.txt</code>가 필요한 경우가 있다. 이 역시 <code>uv</code>를 통해 쉽게 생성할 수 있다.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">pip</span> compile pyproject.toml <span class="at">-o</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="uv의-쏠쏠한-활용법" class="level2">
+<section id="uv의-쏠쏠한-활용법" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="uv의-쏠쏠한-활용법">uv의 쏠쏠한 활용법</h2>
-<section id="특정-패키지가-없는-상황에서-코드-돌리기" class="level3">
+<section id="특정-패키지가-없는-상황에서-코드-돌리기" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="특정-패키지가-없는-상황에서-코드-돌리기">특정 패키지가 없는 상황에서 코드 돌리기</h3>
-<ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><a href="https://codecut.ai/why-uv-might-all-you-need">여기</a>를 참고했다.</p>
+</div></div><ul>
 <li>seaborn을 설치하지 않은 상황에서 아래 코드를 실행하면 seaborn을 임시로 설치하고 해당 코드를 돌린다.</li>
 </ul>
 <div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> uv <span class="ex">run</span> <span class="at">--with</span> seaborn example.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

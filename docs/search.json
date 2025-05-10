@@ -3945,7 +3945,7 @@
     "href": "posts/computer-tool/2024-09-02-uv-ultimate-virtual-env.html#python-버전-설정",
     "title": "uv, 궁극의 가상 환경",
     "section": "Python 버전 설정",
-    "text": "Python 버전 설정\nuv에서 python 버전을 관리하는 방법은 크게 두 가지가 있다.\n\npyproject.toml + .python-version 파일을 활용하는 방법\npyproject.toml + venv를 활용하는 방법\n\n\npyproject.toml + .python-version\n이는 uv에서 제공하는 방법이다. 해당 파이썬을 구동하려면 uv run python 명령을 사용해야 한다.\n# Upgrade to Python 3.11.2\n&gt; uv python install 3.11.2\n&gt; uv python pin 3.11.2\n앞서 설명한 것처럼 pyproject.toml에 파이썬 버전 제약을 설정할 수 있다. 이 경우 uv python pin 명령은 무시된다.\n\n\npyproject.toml + venv\n프로젝트에서 venv를 활성화하고 여기서 파이썬 버전을 설정할 수 있다. 만일 pyproject.toml에 파이썬 버전 제약이 있다면, 경고가 뜬다. 파이썬은 venv 환경을 따른다. 파이썬 바이너리의 설치 역시 .venv/bin에 설치된다.\n&gt; uv venv --python 3.12.0 # venv 조건 활성화 및 파이썬 설치  \n이 경우 uv가 호출하는 파이썬과는 별도이고, venv 환경이 활성화된 상태에서 python 명령을 실행하면 venv 환경의 파이썬이 실행된다."
+    "text": "Python 버전 설정\nuv에서 python 버전을 관리하는 방법은 크게 두 가지가 있다.\n\npyproject.toml + .python-version 파일을 활용하는 방법\npyproject.toml + venv를 활용하는 방법\n\n\npyproject.toml + .python-version\n이는 uv에서 제공하는 방법이다. 해당 파이썬을 구동하려면 uv run python 명령을 사용해야 한다.\n# move to Python 3.11.2\n&gt; uv python install 3.11.2\n&gt; uv python pin 3.11.2\n앞서 설명한 것처럼 pyproject.toml에 파이썬 버전 제약을 설정할 수 있다. 이 경우 uv python install 명령은 무시된다.\n\n\npyproject.toml + venv\n프로젝트에서 venv를 활성화하고 여기서 파이썬 버전을 설정할 수 있다. 만일 pyproject.toml에 파이썬 버전 제약이 있다면, 경고가 뜬다. 파이썬은 venv 환경을 따른다. 파이썬 바이너리의 설치 역시 .venv/bin에 설치된다.\n&gt; uv venv --python 3.12.0 # venv 조건 활성화 및 파이썬 설치  \n이 경우 uv가 호출하는 파이썬과는 별도이고, venv 환경이 활성화된 상태에서 python 명령을 실행하면 venv 환경의 파이썬이 실행된다."
   },
   {
     "objectID": "posts/computer-tool/2024-09-02-uv-ultimate-virtual-env.html#패키지-설치",
@@ -3980,6 +3980,6 @@
     "href": "posts/computer-tool/2024-09-02-uv-ultimate-virtual-env.html#uv의-쏠쏠한-활용법",
     "title": "uv, 궁극의 가상 환경",
     "section": "uv의 쏠쏠한 활용법",
-    "text": "uv의 쏠쏠한 활용법\n\n특정 패키지가 없는 상황에서 코드 돌리기\n\nseaborn을 설치하지 않은 상황에서 아래 코드를 실행하면 seaborn을 임시로 설치하고 해당 코드를 돌린다.\n\n&gt; uv run --with seaborn example.py\n\n\n도구 설행\n\nruff를 설치하지 않은 상황에서 아래 코드를 실행하면 ruff를 임시로 설치하고 해당 코드를 돌린다.\n\n&gt; uvx ruff check example.py\n\n\n설치된 내부 도구 불러오기\n\n만일 마리모와 같은 도구를 프로젝트에 설치했다면 아래와 같이 불러다가 브라우저에서 쉽게 쓸 수 있다.\n\n&gt; uv run marimo edit notebook.py --sandbox"
+    "text": "uv의 쏠쏠한 활용법\n\n특정 패키지가 없는 상황에서 코드 돌리기\n\n\n여기를 참고했다.\n\nseaborn을 설치하지 않은 상황에서 아래 코드를 실행하면 seaborn을 임시로 설치하고 해당 코드를 돌린다.\n\n&gt; uv run --with seaborn example.py\n\n\n도구 설행\n\nruff를 설치하지 않은 상황에서 아래 코드를 실행하면 ruff를 임시로 설치하고 해당 코드를 돌린다.\n\n&gt; uvx ruff check example.py\n\n\n설치된 내부 도구 불러오기\n\n만일 마리모와 같은 도구를 프로젝트에 설치했다면 아래와 같이 불러다가 브라우저에서 쉽게 쓸 수 있다.\n\n&gt; uv run marimo edit notebook.py --sandbox"
   }
 ]

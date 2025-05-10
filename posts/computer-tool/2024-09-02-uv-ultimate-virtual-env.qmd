@@ -80,12 +80,12 @@ uv에서 python 버전을 관리하는 방법은 크게 두 가지가 있다.
 이는 uv에서 제공하는 방법이다. 해당 파이썬을 구동하려면 `uv run python` 명령을 사용해야 한다.
 
 ```bash
-# Upgrade to Python 3.11.2
+# move to Python 3.11.2
 > uv python install 3.11.2
 > uv python pin 3.11.2
 ```
 
-앞서 설명한 것처럼 `pyproject.toml`에 파이썬 버전 제약을 설정할 수 있다. 이 경우 `uv python pin` 명령은 무시된다.
+앞서 설명한 것처럼 `pyproject.toml`에 파이썬 버전 제약을 설정할 수 있다. 이 경우 `uv python install` 명령은 무시된다.
 
 ### `pyproject.toml` + venv
 
@@ -187,6 +187,10 @@ cuda를 쓰는 상황을 가정해서 cuda라는 이름의 별도 옵션을 만�
 ## uv의 쏠쏠한 활용법
 
 ### 특정 패키지가 없는 상황에서 코드 돌리기 
+
+:::{.column-margin}
+[여기](https://codecut.ai/why-uv-might-all-you-need)를 참고했다. 
+:::
 
 - seaborn을 설치하지 않은 상황에서 아래 코드를 실행하면 seaborn을 임시로 설치하고 해당 코드를 돌린다. 
 
