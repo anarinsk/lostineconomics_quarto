@@ -411,8 +411,30 @@ P(H|E) = \underbrace{\frac{P(E|H)}{P(E)}}_{(*)} {P(H)}
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>극단적인 예를 들어보자. 만일 갑돌이가 사건 발생 10년 전에 사망한한 인물이라면? 이때 <span class="math inline">\(P(A)\)</span>는 0이다. 그렇다면 <span class="math inline">\(P(A|B)\)</span>는 어떻게 될까? 위 식에서 보면, <span class="math inline">\((*)\)</span>이 엄청나게 큰 값이라고 해도, 유한하다면, <span class="math inline">\(P(A|B)\)</span>는 0이다.</p>
-</div></div><p>이 사례는 언술에 의한 조건부 확률과 실제 관심을 두어야 하는 조건부 확률이 다를 수 있음을 보여준다. 즉, <span class="math inline">\(P(E|H)\)</span>이 높다고 해서 <span class="math inline">\(P(H|E)\)</span>가 항상 높은 것은 아니다. 형사법의 정의는 어떤 진실 혹은 어떤 확률을 추구해야 할까? 보통 법정에서는 <span class="math inline">\(P(E|H)\)</span>가 강하게 주장된다. 하지만 법적인 정의를 반영하는 것은 <span class="math inline">\(P(H|E)\)</span>가 아닐까?</p>
+</div></div><section id="고전적인-예시" class="level3">
+<h3 class="anchored" data-anchor-id="고전적인-예시">고전적인 예시</h3>
+<ul>
+<li><span class="math inline">\(H\)</span>: 어떤 질병에 감염되었다.</li>
+<li><span class="math inline">\(E\)</span>: 양성 판정이 나왔다.</li>
+</ul>
+<p>우리가 알고 싶은 것은 <span class="math inline">\(P(H|E)\)</span>이다. 이를 베이즈 정리로 계산해보자.</p>
+<p><span class="math display">\[
+P(H|E) = \frac{P(E|H)}{P(E)}P(H)
+\]</span></p>
+<ul>
+<li><span class="math inline">\(P(H)\)</span>: 1% (유병률)</li>
+<li><span class="math inline">\(P(E|H)\)</span>: 99% (뒤에서 보겠지만 이를 민감도라고 한다)</li>
+<li><span class="math inline">\(P(E|\neg H)\)</span>: 5% (오탐율)</li>
+<li><span class="math inline">\(P(E)\)</span>: <span class="math inline">\(P(E|H)P(H) + P(E|\neg H)P(\neg H)\)</span></li>
+<li><span class="math inline">\(P(E)\)</span>: <span class="math inline">\(0.99 \times 0.01 + 0.05 \times 0.99 = 0.0594\)</span></li>
+</ul>
+<p>이제 계산을 해보자.</p>
+<p><span class="math display">\[
+P(H|E) = \frac{0.99}{0.0594}0.01 = 0.167
+\]</span></p>
+<p>이 사례는 언술에 의한 조건부 확률과 실제 관심을 두어야 하는 조건부 확률이 다를 수 있음을 보여준다. 즉, <span class="math inline">\(P(E|H)\)</span>이 높다고 해서 <span class="math inline">\(P(H|E)\)</span>가 항상 높은 것은 아니다. 형사법의 정의는 어떤 진실 혹은 어떤 확률을 추구해야 할까? 보통 법정에서는 <span class="math inline">\(P(E|H)\)</span>가 강하게 주장된다. 하지만 법적인 정의를 반영하는 것은 <span class="math inline">\(P(H|E)\)</span>가 아닐까?</p>
 <p>다른 경우를 하나 더 살펴보자. <span class="math inline">\(P(E) \approx P(H)\)</span>라고 하자. 두 값이 서로 상쇄되어 <span class="math inline">\(P(H|E) = P(E|H)\)</span>가 된다. 이 경우라면 <span class="math inline">\(P(H|E) \approx P(E|H)\)</span>를 주장할 수 있다. 흥미로운 경우는 <span class="math inline">\(P(E)\)</span>, <span class="math inline">\(P(H)\)</span>는 낮고, <span class="math inline">\(P(E|H)\)</span>는 큰 경우다. 일반적으로 가설이 참일 확률(<span class="math inline">\(P(H)\)</span>)은 낮지만, 증거가 주어지면 가설이 참일 확률이 급격하게 높아진다. 이것이 베이즈 업데이트가 작동하는 방식이다.</p>
+</section>
 </section>
 <section id="베이즈-정리의-함정-i" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="베이즈-정리의-함정-i">베이즈 정리의 함정 I</h2>
