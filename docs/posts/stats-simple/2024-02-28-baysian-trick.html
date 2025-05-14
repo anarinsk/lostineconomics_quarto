@@ -45,9 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4a990d8dcb58f517c7c86712b8f2ac7c.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-cf9147d598c2b8106ddf836ac5960fba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-7f5827dff6ebd1d0dc7b1a1dbeade151.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-cf9147d598c2b8106ddf836ac5960fba.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-a39e84c95ace4cadb8f63313e1d66974.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-319d601a9a99fbc4574c1fb5b743cb59.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-a39e84c95ace4cadb8f63313e1d66974.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -401,7 +401,13 @@ P(H|E) = \frac{P(E|H)P(H)}{P(E)}
 P(H|E) = \underbrace{\frac{P(E|H)}{P(E)}}_{(*)} {P(H)}
 \end{align*}\]</span></p>
 <p>이렇게 보면, <span class="math inline">\(E\)</span>라는 새로운 증거가 주어졌을 때 가설 <span class="math inline">\(H\)</span>가 맞을 확률 업데이트하는 일종의 룰이다. 이 룰을 보여주는 것이 <span class="math inline">\((*)\)</span> 부분이다. <span class="math inline">\((*)\)</span>을 직관적으로 이해하기는 쉽지 않다. <span class="math inline">\(P(E)=1\)</span>을 가정한다면 <span class="math inline">\((*)\)</span>는 H가 E에 미치는 영향력 정도로 볼 수 있다. 이를 기준으로 생각해보면 <span class="math inline">\(P(E)\)</span>의 값이 줄어들수록 H가 E에 미치는 영향력이 커지게 된다.</p>
-<p>많이 활용되는 흥미로운 예를 들어보자. <span class="math inline">\(H\)</span>는 “갑돌이가 범인”이라는 수사 기간의 결론, <span class="math inline">\(E\)</span>는 범행 현장의 유전자 감식 결과 감돌이의 유전자가 식별된 증거라고 하자. 보통 유전자 감식의 정확도는 99.999999%라고 하자. 이때 E라는 증거가 갑돌이가 범인일 확률을 얼마나 확정할까? 위 식에서 보면 애초에 갑돌이가 범인이 되는 사건의 확률 <span class="math inline">\(P(H)\)</span>가 중요하다. 증거에 따른 업데이트인 <span class="math inline">\((*)\)</span>이 굉장히 큰 값이라고 해도, <span class="math inline">\(P(H)\)</span>의 값이 충분히 0에 가깝다면 <span class="math inline">\(P(H|E)\)</span>의 값은 여전히 작을 것이다.</p>
+<p>많이 활용되는 흥미로운 예를 들어보자.</p>
+<ul>
+<li><span class="math inline">\(H\)</span>: “갑돌이가 범인”이라는 사법 기관의 결론</li>
+<li><span class="math inline">\(E\)</span>: 범행 현장의 유전자 감식 결과 갑돌이의 유전자로 확인된 증거</li>
+</ul>
+<p>보통 유전자 감식의 정확도는 99.999999%라고 하자. 이때 정확도란 <span class="math inline">\(P(E|H)\)</span>를 의미한다. 즉 갑돌이가 범인일 때 그의 유전자가 범행 현장에서 발견될 확률이다.</p>
+<p>여기서 <span class="math inline">\(E\)</span>라는 증거가 갑돌이를 범인으로 특정할 확률은 얼마나 될까? 베이즈 정리로 보면 갑돌이가 범인일 확률 <span class="math inline">\(P(H)\)</span>가 밑에 깔린다. 증거에 따른 업데이트인 <span class="math inline">\((*)\)</span>이 굉장히 큰 값이라고 해도, <span class="math inline">\(P(H)\)</span>의 값이 충분히 0에 가깝다면 <span class="math inline">\(P(H|E)\)</span>의 값은 여전히 작을 수 있다.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>극단적인 예를 들어보자. 만일 갑돌이가 사건 발생 10년 전에 사망한한 인물이라면? 이때 <span class="math inline">\(P(A)\)</span>는 0이다. 그렇다면 <span class="math inline">\(P(A|B)\)</span>는 어떻게 될까? 위 식에서 보면, <span class="math inline">\((*)\)</span>이 엄청나게 큰 값이라고 해도, 유한하다면, <span class="math inline">\(P(A|B)\)</span>는 0이다.</p>
