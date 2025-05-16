@@ -1,0 +1,15 @@
+---
+title: "Today I Wrote 2025" 
+description: 2025년에 끄적인 뭔가 
+author: "JS HUHH"
+date: "12/31/2025"
+image: "./images/cats-tiw.png"
+categories: [computer-tool]
+lightbox: auto
+#jupyter: python3
+#code-line-numbers: true
+draft: false
+---
+
+## TL; DR
+TIW 2025 버전. 수시로 바뀐다. 

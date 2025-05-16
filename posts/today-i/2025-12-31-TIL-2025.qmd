@@ -2,7 +2,7 @@
 title: "Today I Learned 2025" 
 description: 2025년에 배운 소소한 것들들  
 author: "JS HUHH"
-date: "05/15/2025"
+date: "12/31/2025"
 image: "./images/cats-til.png"
 categories: [computer-tool]
 lightbox: auto
