@@ -4051,5 +4051,12 @@
     "title": "Today I Wrote 2025",
     "section": "",
     "text": "TIW 2025 버전. 수시로 바뀐다."
+  },
+  {
+    "objectID": "posts/today-i/2025-12-31-TIL-2025.html#zoxide",
+    "href": "posts/today-i/2025-12-31-TIL-2025.html#zoxide",
+    "title": "Today I Learned 2025",
+    "section": "zoxide",
+    "text": "zoxide\nzoxide는 디렉토리 탐색을 도와주는 툴이다. zsh의 cd 명령어를 대체하는 툴이다. zoxide는 cd 명령어를 대체하는 툴로, 사용자가 자주 사용하는 디렉토리를 기억하고, 이를 기반으로 빠르게 이동할 수 있도록 도와준다.\n\ngithub zioxide\n\nbrew install zoxide # install zoxide\nbrew install fzf # install fzf\n\n# zoxide를 zsh에 통합\necho 'eval \"$(zoxide init zsh)\"' &gt;&gt; ~/.zshrc # zsh 실행시 zoxide 초기화\necho 'eval \"alias cd = 'z'\"' &gt;&gt; ~/.zshrc # cd 명령어를 zoxide로 대체\nsource ~/.zshrc # zshrc 재실행"
   }
 ]

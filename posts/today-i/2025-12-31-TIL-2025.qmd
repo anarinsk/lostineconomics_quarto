@@ -25,7 +25,7 @@ Linux 혹은 WSL 환경에서는 어떻게 해야 할까?
 
 최신 버전이 바뀌기 때문에 여기서 확인하는 것이 좋다.
 
-## zioxide 
+## zoxide 
 zoxide는 디렉토리 탐색을 도와주는 툴이다. zsh의 `cd` 명령어를 대체하는 툴이다. zoxide는 `cd` 명령어를 대체하는 툴로, 사용자가 자주 사용하는 디렉토리를 기억하고, 이를 기반으로 빠르게 이동할 수 있도록 도와준다.
 
 - [github zioxide](https://github.com/ajeetdsouza/zoxide)
