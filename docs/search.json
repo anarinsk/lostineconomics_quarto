@@ -4058,5 +4058,12 @@
     "title": "Today I Learned 2025",
     "section": "zoxide",
     "text": "zoxide\nzoxide는 디렉토리 탐색을 도와주는 툴이다. zsh의 cd 명령어를 대체하는 툴이다. zoxide는 cd 명령어를 대체하는 툴로, 사용자가 자주 사용하는 디렉토리를 기억하고, 이를 기반으로 빠르게 이동할 수 있도록 도와준다.\n\ngithub zioxide\n\nbrew install zoxide # install zoxide\nbrew install fzf # install fzf\n\n# zoxide를 zsh에 통합\necho 'eval \"$(zoxide init zsh)\"' &gt;&gt; ~/.zshrc # zsh 실행시 zoxide 초기화\necho 'eval \"alias cd = 'z'\"' &gt;&gt; ~/.zshrc # cd 명령어를 zoxide로 대체\nsource ~/.zshrc # zshrc 재실행"
+  },
+  {
+    "objectID": "posts/today-i/2025-12-31-TIW-2025.html#범죄율-감소-2025-05-16",
+    "href": "posts/today-i/2025-12-31-TIW-2025.html#범죄율-감소-2025-05-16",
+    "title": "Today I Wrote 2025",
+    "section": "범죄율 감소 | 2025-05-16",
+    "text": "범죄율 감소 | 2025-05-16\n\nFlashpoint\nEconomist.com\n\n\nHighlight\n볼티모어를 비롯해 미국 전역에서 강력범죄율이 빠르게 감소하고 있다. 원인에 대해서는 추가 연구가 필요하지만, 기사에서는 볼티모어의 Group Violence Reduction Strategy(GVRS)를 주요 요인으로 지목한다.\nGVRS의 핵심 요소는 다음과 같다.\n\n집중 억제(Focused Deterrence): 폭력에 연루될 가능성이 높은 개인 및 집단을 선별해, 폭력 시 법적 처벌을 명확히 경고하는 동시에 사회적 지원을 제공한다.\n맞춤형 개입(Custom Notifications): 경찰, 지역사회 리더, 사회복지사가 함께 고위험군에게 직접 접근해 폭력 중단을 촉구하고 직업 훈련, 주거 지원, 정신 건강 서비스 등을 안내한다.\n사회적 지원 서비스: 생활 코칭, 긴급 이주, 고용 지원, 인지 행동 치료 등을 통해 참여자가 폭력에서 벗어날 수 있도록 돕는다.\n\n범죄는 결국 인간 네트워크의 산물이다. 이 전략은 그 네트워크의 약한 고리에 사법 역량을 집중함으로써 전체 구조를 범죄에서 보호하려는 시도다. 단, 전략이 작동하려면 지역사회가 경찰과 사법체계에 신뢰를 가져야 한다. 이 조건이 충족되지 않으면 정책은 자원의 낭비에 그칠 것이다.\n\n\nInteresting\n범죄 예방의 경우 어떤 전략이든 일단 그것이 작동하기 시작하면 양의 피드백이 발생한다. 동일한 사법 역량을 전제로 할 때, 감소한 범죄율은 잔여 범죄에 투입할 수 있는 여분의 자원을 창출하고, 이는 다시 범죄율을 낮추는 방향으로 작용한다."
   }
 ]
