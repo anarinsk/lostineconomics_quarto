@@ -1,6 +1,6 @@
 ---
 title: "Today I Learned 2025" 
-description: 2025년에 배운 소소한 것들들  
+description: 2025년에 배운 소소한 무엇  
 author: "JS HUHH"
 date: "12/31/2025"
 image: "./images/cats-til.png"
@@ -31,6 +31,11 @@ zoxide는 디렉토리 탐색을 도와주는 툴이다. zsh의 `cd` 명령어�
 - [github zioxide](https://github.com/ajeetdsouza/zoxide)
 
 ```bash
-brew install zoxide
-brew install fzf
+brew install zoxide # install zoxide
+brew install fzf # install fzf
+
+# zoxide를 zsh에 통합
+echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc # zsh 실행시 zoxide 초기화
+echo 'eval "alias cd = 'z'"' >> ~/.zshrc # cd 명령어를 zoxide로 대체
+source ~/.zshrc # zshrc 재실행
 ```
