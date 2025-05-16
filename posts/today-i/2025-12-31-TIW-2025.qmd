@@ -4,7 +4,7 @@ description: 2025년에 끄적인 뭔가
 author: "JS HUHH"
 date: "12/31/2025"
 image: "./images/cats-tiw.png"
-categories: [computer-tool]
+categories: [taday-i-do]
 lightbox: auto
 #jupyter: python3
 #code-line-numbers: true

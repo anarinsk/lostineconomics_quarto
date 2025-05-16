@@ -4,7 +4,7 @@ description: 2025년에 배운 소소한 무엇
 author: "JS HUHH"
 date: "12/31/2025"
 image: "./images/cats-til.png"
-categories: [computer-tool]
+categories: [taday-i-do]
 lightbox: auto
 #jupyter: python3
 #code-line-numbers: true
@@ -14,7 +14,7 @@ draft: false
 ## TL; DR
 TIL 2025 버전. 수시로 바뀐다. 
 
-## Quarto Installation
+## Quarto Installation | 2025-03-25
 OS 별로 다르게 접근하면 좋다. Moacos의 경우 brew를 쓰도록 하자. 
 
 - [brew quarto](https://formulae.brew.sh/cask/quarto#default)
@@ -25,7 +25,7 @@ Linux 혹은 WSL 환경에서는 어떻게 해야 할까?
 
 최신 버전이 바뀌기 때문에 여기서 확인하는 것이 좋다.
 
-## zoxide 
+## zoxide | 2025-01-20
 zoxide는 디렉토리 탐색을 도와주는 툴이다. zsh의 `cd` 명령어를 대체하는 툴이다. zoxide는 `cd` 명령어를 대체하는 툴로, 사용자가 자주 사용하는 디렉토리를 기억하고, 이를 기반으로 빠르게 이동할 수 있도록 도와준다.
 
 - [github zioxide](https://github.com/ajeetdsouza/zoxide)
