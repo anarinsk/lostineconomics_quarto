@@ -15,7 +15,7 @@ draft: false
 TIL 2025 버전. 수시로 바뀐다. 
 
 ## Quarto Installation | 2025-03-25
-OS 별로 다르게 접근하면 좋다. Moacos의 경우 brew를 쓰도록 하자. 
+OS 별로 다르게 접근하면 좋다. Macos라면, brew를 쓰도록 하자. 
 
 - [brew quarto](https://formulae.brew.sh/cask/quarto#default)
 
