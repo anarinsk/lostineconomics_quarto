@@ -22,7 +22,7 @@ TIL 2025 버전. 수시로 바뀐다.
 - 판관비(selling, general and administrative expenses, SG&A): 판매 및 관리 활동에 소요되는 비용
   - 영업, 마케팅, 관리, 기획, 재무, 인사 등 사무직 직원의 급여, 상여금, 각종 수당
   - 복리 후생비 
-  - 감가 상각비, 무형자산 상각비
+  - 감가 상각비(depreciation), 무형자산 상각비(amortization)
 - 영업외비용 (non-operating expenses): 기업의 주된 영업활동과 관련 없이 발생하는 비용 (예: 이자 비용, 외환차손, 투자자산 처분손실, 재해손실 등)
 - 법인세 비용 (income tax expense): 기업이 벌어들인 이익에 대해 국가에 납부하는 세금
 
@@ -31,9 +31,10 @@ TIL 2025 버전. 수시로 바뀐다.
 
 ### 이윤 정의 
 - 매출총이익(gross profit): 매출에서 매출원가를 뺀 금액
-- EBITDA (Earnings Before Interest, Taxes, Depreciation, and Amortization): 매출총이익에서 영업 비용을 뺸 후 감가상각비와 무형자산 상각비를 더한 금액
+- EBITDA(Earnings Before Interest, Taxes, Depreciation, and Amortization): 매출총이익에서 영업 비용을 뺸 후 감가상각비와 무형자산 상각비를 더한 금액
 - 영업이익(operating income, EBIT): 매출총이익에서 영업비용을 뺀 금액
-- 순이익(net income, E): 영업이익에서 이자비용, 세금 등을 뺀 최종 이익
+- EBT(Earnings Before Taxes): EBITDA에서 영업외비용을 뺀 금액
+- 순이익(net income, EAT): 영업이익에서 이자비용, 세금 등을 뺀 최종 이익
 
 ### EBITA는 왜 중요한가? 
 
@@ -41,7 +42,36 @@ TIL 2025 버전. 수시로 바뀐다.
 2. 감각상각, 유무형 자산 상각비는 회사의 구조에 따라서 천차 만별이다. 따라서 회사간 비교를 위해서는 에비따를 보는 게 좋다.
 3. M&A 및 투자 평가시 중요한 지표. 회사의 영업이익이 낮더라도 에비따 마진이 높다면 이는 투자할 가치가 있는 경우다.
 
-![](images/EBITDA.png)
+![](images/EBITDA.jpg)
+
+### 사례; 한국 이케아 
+
+[LINK](https://www.youtube.com/watch?v=PbC3pbbzb5c)
+
+#### SG&A 비용을 보자 
+
+::: {layout="[[1,1]]"}
+![](images/IKEA_%EB%A7%A4%EC%B6%9C%EC%B4%9D%EC%9D%B4%EC%9D%B5.png)
+
+![](images/IKEA_%EC%98%81%EC%97%85%EC%9D%B4%EC%9D%B5.png)
+:::
+
+- 매출 총이익은 나쁘지 않은데, 영업 이익은 낮다? 
+  - 영업 이익이 높을 경우 한국에 높은 세금을 내야 한다. 
+  - 따라서 이 경우에는 S&GA 비용을 유심히 봐야 한다. 
+
+![](images/IKEA_%ED%8C%90%EA%B4%80%EB%B9%84.png)
+
+- 판관비 중 규모가 큰 내역을 확인하자. 
+  - 지급 수수료; 본사로 가는 여러가지 수수료이다. 
+
+#### EBITDA 
+
+- 대규모 자산(부동산)을 소유하고 있는 경우 영업이믹보다는 DA(Depreciation and Amortization) 더한 현금 창출 능력을 보는 것이 좋다.
+- DA는 회계상으로 상각될 뿐 실제로 상각되는 비용이 아니다. 
+
+![](images/IKEA_EBITDA.png)
+
 
 ## Quarto Installation | 2025-03-25
 OS 별로 다르게 접근하면 좋다. Macos라면, brew를 쓰도록 하자. 
