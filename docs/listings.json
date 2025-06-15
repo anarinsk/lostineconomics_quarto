@@ -2,8 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/today-i/2025-12-31-TIL-2025.html",
       "/posts/today-i/2025-12-31-TIW-2025.html",
+      "/posts/today-i/2025-12-31-TIL-2025.html",
       "/posts/computer-tool/2025-02-08-github-actions-with-uv.html",
       "/posts/stats-simple/2024-02-28-baysian-trick.html",
       "/posts/computer-tool/2024-09-05-first-thing-ubuntu-updated.html",
@@ -17,9 +17,9 @@
       "/posts/the-lectures/2024-02-22-statquest-matrix.html",
       "/posts/the-lectures/2024-02-16-statquest-attention.html",
       "/posts/the-lectures/2024-02-15-statquest-seq2seq.html",
+      "/posts/econ-simple/2024-02-14-larry-summers.html",
       "/posts/the-lectures/2024-02-14-lstm.html",
       "/posts/the-lectures/2024-02-13-statquest-rnn.html",
-      "/posts/econ-simple/2024-02-14-larry-summers.html",
       "/posts/the-lectures/2024-02-13-statquest-transformer.html",
       "/posts/the-lectures/2024-02-08-intro-2-llms.html",
       "/posts/the-lectures/2024-02-07-statquest-w2v.html",
