@@ -1,0 +1,213 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: matplotlib + 한글 Redux\n",
+        "description: 마지막으로 정리해봅시다!\n",
+        "author: \"JS HUHH\"\n",
+        "date: \"12/04/2022\"\n",
+        "image: \"images/matplotlib.jfif\"\n",
+        "categories: [computer-tool, coding]\n",
+        "draft: false\n",
+        "jupyter: python3\n",
+        "---\n",
+        "\n",
+        "## TL; DR\n",
+        "\n",
+        "- matplotlib에서 한글 사용 마지막으로 정리한다. \n",
+        "\n",
+        "## Not in this Post  \n",
+        "\n",
+        "- 한글 폰트 설치 등의 문제는 다루지 않는다. \n",
+        "\t-  OS 별 한글 폰트 설치 및 활용 [LINK](https://zephyrus1111.tistory.com/7) \n",
+        "\t- (리눅스) 컨테이너 내에서 한글 폰트 설치 [LINK](https://anarinsk.github.io/lostineconomics_quarto/posts/container/2020-09-24-install-hangul-in-docker.html)\n",
+        "\n",
+        "## What in this Post \n",
+        "\n",
+        "- matplotlib 그림 안에서 한글 활용의 최종 버전\n",
+        "\n",
+        "## matplotlib과 한글의 라벨링\n",
+        "\n",
+        "matplotlib은 표준적인 파이썬 시각화 패키지다. 아쉽게도 이 녀석이 한글과 별로 안 친하다. 그래픽 렌더링 엔진에 한글 폰트가 빠져 있어서 이를 추가로 인식을 시켜야 결과물 내에서 한글 라벨을 쓸 수 있다. 가장 간단한 해결 방법은 나눔고딕 폰트를 쓸 수 있게 해주는 패키지 [koreanize-matplotlib](https://github.com/seongminp/koreanize-matplotlib)를 쓰는 것이다. \n",
+        "\n",
+        "먼저 문제부터 살펴보자. 테스트를 위해서 아래 코드에 간단한 함수 `draw_sample(fontprop)`를 작성했다. 인자 `fontprop`은 그래프 요소에 적용될 폰트 특성이다. 값이 없으면 전역적으로 설정된 내용에 따른다. \n"
+      ],
+      "id": "8aa6351b"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| layout: [[-0.5,1,-0.5]]\n",
+        "import matplotlib as mpl\n",
+        "import matplotlib.pyplot as plt\n",
+        "import matplotlib.font_manager as fm\n",
+        "import numpy as np\n",
+        "\n",
+        "# 그릴 데이터 생성 \n",
+        "def draw_sample(fontprop=None):\n",
+        "    plt.rcParams['figure.figsize'] = [4, 4]\n",
+        "    data = np.random.randint(-100, 100, 50).cumsum()\n",
+        "    plt.plot(range(50), data, 'r')\n",
+        "    plt.title('가격변동 추이', fontproperties=fontprop)\n",
+        "    plt.ylabel('가격', fontproperties=fontprop)\n",
+        "    plt.show()\n",
+        "\n",
+        "draw_sample()"
+      ],
+      "id": "a7d165a1",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "위 결과에서 보듯이 한글 폰트가 없으니 출력이 제대로 되지 않는다. 이제 `koreanize-matplotlib` 패키지를 설치하고 import 후 실행해보자 \n",
+        "\n",
+        "```bash\n",
+        "$ pip install koreanize-matplotlib \n",
+        "```\n",
+        "\n",
+        "위에서 보다시피, `koreanize-matplotlib`는 PyPI에만 있다. conda와 같은 다른 저장소를 통해서는 설치할 수 없다는 것은 유의하시라. "
+      ],
+      "id": "3b2ccd06"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| layout: [[-0.5,1,-0.5]]\n",
+        "import koreanize_matplotlib\n",
+        "draw_sample()"
+      ],
+      "id": "f9214baa",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "`koreanize-matplotlib` 패키지는 나눔고딕 폰트를 자동으로 설치하고 이를 폰트로 잡아 준다. 위에 보는 것처럼 한글 출력에 문제가 없다. \n",
+        "\n",
+        "## koreanize-matploitlib 이외의 대안\n",
+        "\n",
+        "`koreanize-matplotlib`이 간편하고 좋은 해결책이지만 다른 방법도 있다. 만일을 위해 두 가지를 더 알아보자.  \n",
+        "\n",
+        "## 노트북에서 한글 폰트 가져오기 \n",
+        "\n",
+        "앞서 링크에서 소개한 폰트 추가 방법은 시스템에 폰트를 먼저 깔고 해당 폰트를 matplotlib에 등록하는 방법이다. pyodide에서 활용할 수 있는 다른 방법은 없을까? 아래 소개할 방법은 ttf 폰트 파일을 바로 matplotlib이 쓸 수 있게 해주는 방법이다.    "
+      ],
+      "id": "4cd616bc"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "font_path = './font/D2Coding v.1.3.2 ligature Nerd Font Complete.ttf' # 폰트 파일의 위치에 따라서 조정\n",
+        "font_callsign = 'D2 Coding Nerd'\n",
+        "fe = fm.FontEntry(\n",
+        "    fname=font_path,\n",
+        "    name=font_callsign) # 원하는 폰트 호출 이름 설정 \n",
+        "fm.fontManager.ttflist.insert(0, fe) # or simply append"
+      ],
+      "id": "c40239ae",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        ":::{.callout-tip}\n",
+        "#### Code Tips\n",
+        "- `fm.FontEntry...` 한글 폰트를 matplotlib의 폰트 매니저에 바로 심어주는 명령 \n",
+        "\t- `font_path`: 폰트의 ttf 파일의 위치와 파일 이름을 지정한다. 각자 알맞게 조정하자.\n",
+        "\t- `font_callsign`: 내가 지정할 폰트의 이름, 폰트를 호출할 때 활용한다. 각자 취향대로 바꾸자. \n",
+        ":::\n",
+        "\n",
+        "위 방법의 장점은 폰트의 위치를 가리지 않는다는 것이다. 적당한 위치에 두고 matplotlib이 쓸 수 있도록 폰트를 인식시키는 방식이다. 폰트가 잘 인식되었는지 확인해보자.  "
+      ],
+      "id": "61cc700d"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "print([(f.name, f.fname) for f in mpl.font_manager.fontManager.ttflist if ('D2' in f.name) | ('Nanum' in f.name) ])"
+      ],
+      "id": "7fa05df6",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## 활용 \n",
+        "\n",
+        "matplotlib에서 폰트를 활용하는 방법은 두 가지다. 하나는 폰트의 속성을 지정해놓고 해당 폰트가 활용될 때 이를 호출해서 쓰는 방법이고, 다른 하나는 전역적으로 해당 폰트를 기본 폰트로 지정하는 것이다. \n",
+        "\n",
+        "### 호출해서 활용\n",
+        "\n",
+        "아래 결과에서 보듯이, fontprop을 통해 지정된 폰트 양식을 그래프 요소에 적용해보자. "
+      ],
+      "id": "497a3271"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| layout: [[-0.5,1,-0.5]]\n",
+        "fontprop = fm.FontProperties(fname=font_path, size=13)\n",
+        "draw_sample(fontprop)"
+      ],
+      "id": "d5e33645",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### 전역으로 활용\n",
+        "\n",
+        "폰트 속성을 전역으로 지정하고 그래프를 그려보자. "
+      ],
+      "id": "57df9c06"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| layout: [[-0.5,1,-0.5]]\n",
+        "# rcParams 설정\n",
+        "plt.rcParams[\"font.family\"] = 'D2 Coding Nerd'\n",
+        "plt.rcParams['font.size'] = 15.\n",
+        "plt.rcParams['xtick.labelsize'] = 12.\n",
+        "plt.rcParams['ytick.labelsize'] = 12.\n",
+        "plt.rcParams['axes.labelsize'] = 12.\n",
+        "plt.rcParams['axes.unicode_minus'] = False\n",
+        "\n",
+        "# 그림 그리기 \n",
+        "draw_sample()"
+      ],
+      "id": "d7c1f518",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

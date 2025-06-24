@@ -1,0 +1,164 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: Simpson's Paradox with Regression\n",
+        "description: 펭귄의 부리로 직접 계산해보자. \n",
+        "author: \"JS HUHH\"\n",
+        "date: \"06/05/2022\"\n",
+        "image: \"./images/simpson_2.png\"\n",
+        "categories: [regression, stats-simple]\n",
+        "draft: false\n",
+        "jupyter: python3\n",
+        "---\n",
+        "\n",
+        "## 회귀 분석으로 보는 심슨의 역설 \n",
+        "\n",
+        "심슨의 역설을 보통은 회귀 분석으로 설명하지 않는다. 그런데 회귀 분석으로 보면 보다 명확하다. 심슨 역설의 전형적인 사례를 펭귄 부리의 길이와 높이를 통해 살펴보도록 하자.\n",
+        "\n",
+        ":::{ .column-margin }\n",
+        "데이터는 [여기](https://towardsdatascience.com/the-curious-case-of-simpsons-paradox-6f178548d7e8)를 참고하자.\n",
+        "\n",
+        "![펭귄 부리의 길이와 높이](https://user-images.githubusercontent.com/39834789/86522451-84949f00-be38-11ea-9555-6409579f3b58.png){}\n",
+        ":::\n",
+        "\n",
+        " `culmen`은 새의 부리를 뜻한다. 옆 그림에서 보듯이 `length`는 부리의 앞으로 튀어나온 길이를, `depth`는 부리의 높이를 의미한다. 아래 보듯이 이 데이터는 펭귄의 세 가지 종족, 성별 등을 별도로 담고 있다."
+      ],
+      "id": "c2accecf"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        " # Basic packages\n",
+        "import pandas as pd \n",
+        "import numpy as np\n",
+        "import pandas as pd\n",
+        "import seaborn as sns\n",
+        "from scipy import stats\n",
+        "import matplotlib.pyplot as plt\n",
+        "# Stats models pip \n",
+        "import statsmodels.formula.api as sm\n",
+        "import statsmodels as statsmodels\n",
+        "%matplotlib inline\n",
+        "\n",
+        "csv_addr = \"data/penguins_size.csv\"\n",
+        "plt.style.use(\"fivethirtyeight\")# for pretty graphs\n",
+        "df  = pd.read_csv('data/penguins_size.csv')\n",
+        "df.head();\n",
+        "#df.info();\n",
+        "df = df.dropna()\n",
+        "df.info()"
+      ],
+      "id": "c5405027",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "plt.rcParams['figure.figsize'] = [8, 4]\n",
+        "sns.set(font_scale=0.7)\n",
+        "\n",
+        "fig, (ax1, ax2) = plt.subplots(ncols=2, sharey=True)\n",
+        "sns.regplot(x = 'culmen_length_mm',y = 'culmen_depth_mm', data = df, scatter_kws={'alpha': 0.4}, ax=ax1)\n",
+        "r = stats.pearsonr(df['culmen_length_mm'], df['culmen_depth_mm'])[0]\n",
+        "ax1.text(.03, 1, 'r={:.3f}'.format(r), transform=ax1.transAxes)\n",
+        "colors = ['darkorange', 'royalblue', '#555555']\n",
+        "markers = ['.', '+', 'x']\n",
+        "#\n",
+        "for i, value in enumerate(df['species'].unique()):\n",
+        "    ax2 = sns.regplot(x=\"culmen_length_mm\", y=\"culmen_depth_mm\", ax=ax2,\n",
+        "                      scatter_kws={'alpha': 0.4},\n",
+        "                     color=colors[i],\n",
+        "                     #marker=markers[i],                      \n",
+        "                     data=df[df['species'] == value],\n",
+        "                     label=value)\n",
+        "ax2.legend(loc='best');"
+      ],
+      "id": "c9b3bef3",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "패널의 왼쪽 그림에서 보듯이 종 구분 없이 펭귄 부리의 길이와 높이를 보면 서로 음의 상관성을 지니고 있는 듯 보인다. 그런데 이를 종별로 구별해서 살펴보면 오히려 길이와 높이는 양의 상관성을 지니고 있다. \n",
+        "\n",
+        ":::{ .column-margin }\n",
+        "![펭귄 종류](https://user-images.githubusercontent.com/39834789/86522450-7f375480-be38-11ea-9437-9fd2a382aa7b.png){}\n",
+        ":::"
+      ],
+      "id": "413dbc0b"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "ols1 = sm.ols(formula=\"culmen_depth_mm ~ culmen_length_mm\", data=df).fit(use_t=True)\n",
+        "ols2 = sm.ols(formula=\"culmen_depth_mm ~ species + culmen_length_mm\", data=df).fit(use_t=True)\n",
+        "ols3 = sm.ols(formula=\"culmen_depth_mm ~ species * culmen_length_mm\", data=df).fit(use_t=True)\n",
+        "#ols1.summary()\n",
+        "#ols2.summary()\n",
+        "\n",
+        "from stargazer.stargazer import Stargazer\n",
+        "stargazer = Stargazer([ols1, ols2, ols3])\n",
+        "stargazer\n",
+        "\n",
+        "#regs = [ols1, ols2, ols3]\n",
+        "#from statsmodels.iolib.summary2 import summary_col\n",
+        "#print(summary_col(\n",
+        "#                  regs,\n",
+        "#                  stars=True, \n",
+        "#                  float_format='%0.2f',\n",
+        "#                  model_names=['(1)','(2)','(3)'],\n",
+        "#                  info_dict={\n",
+        "#                    'N':lambda x: \"{0:d}\".format(int(x.nobs)), \n",
+        "#                    'F': lambda x: \"{0:.2f}\".format(x.fvalue),\n",
+        "#                    }, \n",
+        "#                  regressor_order=['Intercept','culmen_length_mm','secies'])\n",
+        "#    )"
+      ],
+      "id": "7f808781",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "회귀 분석에서 종을 통제한 경우와 그렇지 않은 경우의 `culmen_length_mm`(부리의 길이)의 계수를 비교해보자. (1)은 종족을 통제하지 않은 회귀식으로 `culmen_length_mm`의 계수는 음수이다. 반면 종족을 통제한 (2)의 회귀식은 종족의 구분해 각 절편과 해당 종족 내의 부리의 길이와 높이의 관계를 계산해 이를 적절하게 가중 평균한 값이 `culmen_length_mm`의 계수가 된다. 회귀 테이블에서 보듯이 `culmen_length_mm`의 계수는 음수에서 양수로 바뀌어 있다. \n",
+        "\n",
+        ":::{ .column-margin }\n",
+        "나머지 계수의 의미는 기본이 되는 Adelie 종족을 기준으로 다른 두 개의 종족의 절편이 얼마나 떨어져 있는지를 보여준다. 회귀식을 적어보면 다음과 같다. \n",
+        "\n",
+        "식 (1) $y_i = \\alpha_i + \\beta x_i$\n",
+        "\n",
+        "식 (2) $y_i = \\alpha_i + \\beta x_i + D_{1i} + D_{2i}$\n",
+        "\n",
+        "- $y_i$: `culmen_depth_mm` 부리의 높이 \n",
+        "- $x_i$: `culmen_length_mm` 부리의 길이\n",
+        "- $D_{1i}$: 종족이 `Chinstrap`일 경우 1 이외는 0 \n",
+        "- $D_{2i}$: 종족이 `Gentoo`일 경우 1이외는 0\n",
+        "\n",
+        "식 (3)은 $\\beta_i$가 그룹별로 달라지는지 여부를 교호작용 항목을 통해 확인했다. (3)이 보여주듯이 그룹별로 $\\beta_i$는 통계적으로 유의미한 차이가 없다. \n",
+        ":::"
+      ],
+      "id": "0c09556d"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
