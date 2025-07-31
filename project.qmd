@@ -11,6 +11,12 @@ about:
 
 ---
 
+### What's on View
+
+⛧ Ouput: [What's on View](https://www.lostineconomics.com/project_whats-on-view) 
+
+IDMb의 개인 Watchlist를 기반으로, 간략하게 영화평을 남기는 프로젝트입니다.
+
 ### Economic Index Board 
 
 
