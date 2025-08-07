@@ -14,6 +14,15 @@ draft: false
 ## TL; DR
 TIL 2025 버전. 수시로 바뀐다. 
 
+## Steepening & Flattening | 2025-08-07
+
+개념을 잡아보자. 
+
+- 장단기 금리차가 늘면 스티프닝, 줄면 플래트닝 
+- 금리가 내리면 채권 가격 상승 > 불, 금리가 오르면 채권 가격 하락 > 베어 
+
+![](images/steepen_flatten.png){ style="width: 70%; height: auto;" }
+
 ## Yield Curve Control | 2025-07-14
 
 ![](images/graphic-three-yield-curves.png){ style="width: 70%; height: auto;" }
