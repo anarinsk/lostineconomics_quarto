@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/research.html",
+    "items": []
+  },
+  {
     "listing": "/index.html",
     "items": [
       "/posts/today-i/2025-12-31-TIL-2025.html",
@@ -95,9 +99,5 @@
       "/posts/math-of/2019-05-17-math-pca.html",
       "/posts/math-of/2019-05-06-math-svm.html"
     ]
-  },
-  {
-    "listing": "/research.html",
-    "items": []
   }
 ]

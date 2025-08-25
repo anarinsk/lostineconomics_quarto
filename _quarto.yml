@@ -10,6 +10,8 @@ website:
     right:
       - text: "Books"
         href: https://books.lostineconomics.com
+      - text: "Show"
+        href: https://show.lostineconomics.com
       - project.qmd
       - research.qmd
       - about.qmd
