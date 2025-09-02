@@ -12,6 +12,8 @@ website:
         href: https://books.lostineconomics.com
       - text: "Show"
         href: https://show.lostineconomics.com
+      - text: "Learn"
+        href: https://learn.lostineconomics.com
       - project.qmd
       - research.qmd
       - about.qmd
