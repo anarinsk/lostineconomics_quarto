@@ -13,7 +13,7 @@ website:
       - text: "Show"
         href: https://show.lostineconomics.com
       - text: "Learn"
-        href: https://learn.lostineconomics.com
+        href: http://learn.lostineconomics.com
       - project.qmd
       - research.qmd
       - about.qmd
